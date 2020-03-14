@@ -1,0 +1,204 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     IBM Deskstar 40GV & 75GXP (all other firmware)
+Device Model:     IBM-DTLA-305020
+Serial Number:    --
+Firmware Version: TW2OA60A
+User Capacity:    20 576 747 520 bytes [20,5 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
+Local Time is:    Sun Jan 17 16:38:01 2016 MSK
+
+==> WARNING: IBM Deskstar 40GV and 75GXP drives may need upgraded SMART firmware.
+Please see http://haque.net/dtla_update/
+
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 1559) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  15) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   095   095   060    -    262152
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Spin_Up_Time            POS---   107   107   024    -    123 (Average 119)
+  4 Start_Stop_Count        -O--C-   097   097   000    -    14903
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    28
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   100   100   020    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    4431
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    12829
+192 Power-Off_Retract_Count -O--CK   088   088   050    -    14903
+193 Load_Cycle_Count        -O--C-   088   088   050    -    14903
+194 Temperature_Celsius     -O----   161   161   000    -    34
+196 Reallocated_Event_Count -O--CK   100   100   000    -    31
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error aborted command
+
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
+Read GP Log Directory failed
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 204 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 204 occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 1e bb 02 af  Error: UNC at LBA = 0x0f02bb1e = 251837214
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 00 01 1e bb 02 af 00      00:18:24.600  READ MULTIPLE
+  c6 00 10 00 00 00 e0 00      00:18:24.600  SET MULTIPLE MODE
+  91 00 3f 00 00 00 af 00      00:18:24.600  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 a0 00      00:18:24.600  RECALIBRATE [OBS-4]
+  c4 00 01 01 00 00 a0 04      00:18:24.600  READ MULTIPLE
+
+Error 203 occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 1e bb 02 af  Error: UNC at LBA = 0x0f02bb1e = 251837214
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 00 01 1e bb 02 af 00      00:18:18.700  READ MULTIPLE
+  c6 00 10 00 00 00 e0 00      00:18:18.700  SET MULTIPLE MODE
+  91 00 3f 00 00 00 af 00      00:18:18.700  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 a0 00      00:18:18.700  RECALIBRATE [OBS-4]
+  c4 00 01 01 00 00 a0 04      00:18:18.700  READ MULTIPLE
+
+Error 202 occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 1e bb 02 af  Error: UNC at LBA = 0x0f02bb1e = 251837214
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 00 01 1e bb 02 af 00      00:18:12.800  READ MULTIPLE
+  c6 00 10 00 00 00 e0 00      00:18:12.800  SET MULTIPLE MODE
+  91 00 3f 00 00 00 af 00      00:18:12.800  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 a0 00      00:18:12.800  RECALIBRATE [OBS-4]
+  c4 00 01 01 00 00 a0 04      00:18:12.800  READ MULTIPLE
+
+Error 201 occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 1e bb 02 af  Error: UNC at LBA = 0x0f02bb1e = 251837214
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 00 01 1e bb 02 af 00      00:18:06.900  READ MULTIPLE
+  c6 00 10 00 00 00 e0 00      00:18:06.900  SET MULTIPLE MODE
+  91 00 3f 00 00 00 af 00      00:18:06.900  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 a0 00      00:18:06.900  RECALIBRATE [OBS-4]
+  c4 00 01 01 00 00 a0 04      00:18:06.900  READ MULTIPLE
+
+Error 200 occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 1e bb 02 af  Error: UNC at LBA = 0x0f02bb1e = 251837214
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 00 01 1e bb 02 af 00      00:18:01.000  READ MULTIPLE
+  c4 00 01 1d bb 02 af 00      00:18:01.000  READ MULTIPLE
+  c4 00 01 1c bb 02 af 00      00:18:01.000  READ MULTIPLE
+  c4 00 01 1b bb 02 af 00      00:18:01.000  READ MULTIPLE
+  c4 00 01 1a bb 02 af 00      00:18:01.000  READ MULTIPLE
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

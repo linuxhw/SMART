@@ -1,0 +1,183 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     IBM/Hitachi Deskstar 120GXP
+Device Model:     IC35L040AVVA07-0
+Serial Number:    --
+Firmware Version: VA2OA52A
+User Capacity:    41 174 138 880 bytes [41,1 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
+Local Time is:    Sun Apr 17 14:40:00 2016 MSK
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 1177) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  20) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   060    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Spin_Up_Time            POS---   136   136   024    -    130 (Average 112)
+  4 Start_Stop_Count        -O--C-   098   098   000    -    9489
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   100   100   020    -    0
+  9 Power_On_Hours          -O--C-   097   097   000    -    21715
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    8865
+192 Power-Off_Retract_Count -O--CK   092   092   050    -    9778
+193 Load_Cycle_Count        -O--C-   092   092   050    -    9778
+194 Temperature_Celsius     -O----   119   119   000    -    46 (Min/Max 14/108)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+General Purpose Log Directory Version 1
+Address    Access  R/W   Size  Description
+0x00       GPL     R/O      1  Log Directory
+0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
+0x07       GPL     R/O      1  Extended self-test log
+0x80-0x9f  GPL     R/W      1  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
+Device Error Count: 1394 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1394 [1] occurred at disk power-on lifetime: 2461 hours (102 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 1f 00 a7 00 00 75 2c e0 00  Error: UNC 31 sectors at LBA = 0xa70000752c = 717259568428
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 da d8 00 80 00 00 00 a7 74 cb e0 00     03:04:30.000  READ DMA
+  c8 da d8 00 01 00 00 00 00 00 00 e0 00     03:04:29.100  READ DMA
+  c8 da d8 00 01 00 00 00 00 00 00 e0 00     03:04:29.100  READ DMA
+  c8 da d8 00 01 00 00 01 00 00 00 e0 00     03:04:29.100  READ DMA
+  91 da d8 01 3f 00 00 00 00 00 01 af 00     03:04:26.000  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 1393 [0] occurred at disk power-on lifetime: 2461 hours (102 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 1f 00 a7 00 00 75 2c e0 00  Error: UNC 31 sectors at LBA = 0xa70000752c = 717259568428
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 da d8 00 80 00 00 00 a7 74 cb e0 00     03:04:21.000  READ DMA
+  c8 da d8 00 01 00 00 00 00 00 00 e0 00     03:04:20.100  READ DMA
+  c8 da d8 00 01 00 00 00 00 00 00 e0 00     03:04:20.100  READ DMA
+  c8 da d8 00 01 00 00 01 00 00 00 e0 00     03:04:20.000  READ DMA
+  91 da d8 01 3f 00 00 00 00 00 01 af 00     03:04:17.000  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 1392 [3] occurred at disk power-on lifetime: 2461 hours (102 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 1f 00 a7 00 00 75 2c e0 00  Error: UNC 31 sectors at LBA = 0xa70000752c = 717259568428
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 da d8 00 80 a7 77 4a a7 74 cb e0 00     03:04:12.000  READ DMA
+  c8 da d8 00 80 a7 76 ca a7 76 cb e0 00     03:04:12.000  READ DMA
+  c8 da d8 00 80 00 00 00 a7 76 4b e0 00     03:04:12.000  READ DMA
+  c8 da d8 00 01 00 00 00 00 00 00 e0 00     03:04:12.000  READ DMA
+  c8 da d8 00 01 a7 76 4a 00 00 00 e0 00     03:04:12.000  READ DMA
+
+Error 1391 [2] occurred at disk power-on lifetime: 2461 hours (102 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 1f 00 a7 00 00 75 2c e0 00  Error: UNC 31 sectors at LBA = 0xa70000752c = 717259568428
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 da d8 00 80 00 00 00 a7 74 cb e0 00     03:04:04.000  READ DMA
+  c8 da d8 00 01 00 00 00 00 00 00 e0 00     03:04:03.000  READ DMA
+  c8 da d8 00 01 00 00 00 00 00 00 e0 00     03:04:03.000  READ DMA
+  c8 da d8 00 01 00 00 01 00 00 00 e0 00     03:04:03.000  READ DMA
+  91 da d8 01 3f 00 00 00 00 00 01 af 00     03:03:59.900  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     10454         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+

@@ -1,0 +1,263 @@
+=== START OF INFORMATION SECTION ===
+Device Model:     TOSHIBA THNS064GE4BBDC
+Serial Number:    --
+Firmware Version: Z1000001
+User Capacity:    64,023,257,088 bytes [64.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
+Local Time is:    Thu Jul 28 06:07:52 2016 CEST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Unavailable
+Write cache is:   Enabled
+ATA Security is:  ENABLED, PW level MAX, not locked, frozen [SEC6]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Total time to complete Offline 
+data collection: 		(    0) seconds.
+Offline data collection
+capabilities: 			 (0x00) 	Offline data collection not supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   200   100   050    -    0
+  2 Throughput_Performance  POS---   100   100   050    -    0
+  3 Spin_Up_Time            PO---K   100   100   050    -    0
+  5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   050    -    0
+  8 Seek_Time_Performance   POS---   100   100   050    -    0
+  9 Power_On_Hours          -O---K   080   080   000    -    8117
+ 10 Spin_Retry_Count        PO--C-   100   100   050    -    0
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2090
+170 Unknown_Attribute       PO---K   197   197   100    -    0
+173 Unknown_Attribute       PO--C-   189   189   100    -    0
+175 Program_Fail_Count_Chip PO--C-   200   200   100    -    0
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    141
+194 Temperature_Celsius     -O---K   100   100   000    -    53 (Min/Max 23/60)
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+240 Head_Flying_Hours       PO--C-   100   100   050    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xa0       GPL,SL  VS      64  Device vendor specific log
+0xa1       GPL,SL  VS      32  Device vendor specific log
+0xa2       GPL,SL  VS       4  Device vendor specific log
+0xa3       GPL,SL  VS      16  Device vendor specific log
+0xa4-0xa5  GPL,SL  VS     128  Device vendor specific log
+0xa6-0xa7  GPL     VS     512  Device vendor specific log
+0xa8-0xa9  GPL     VS    1024  Device vendor specific log
+0xaa       GPL,SL  VS     192  Device vendor specific log
+0xab       GPL,SL  VS      65  Device vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 24
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 24 [23] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:32.816  SECURITY UNLOCK
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:32.816  SECURITY UNLOCK
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:15.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET FEATURES [Set transfer mode]
+
+Error 23 [22] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:32.816  SECURITY UNLOCK
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:15.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET FEATURES [Set transfer mode]
+  c6 00 ff 00 10 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET MULTIPLE MODE
+
+Error 22 [21] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 ff ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:15.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET FEATURES [Set transfer mode]
+  c6 00 ff 00 10 00 00 00 00 ff ff e0 08 15d+04:18:12.816  SET MULTIPLE MODE
+  91 00 03 00 3f 00 00 00 00 00 00 ef 08 15d+04:18:12.816  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 21 [20] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:09.816  SECURITY UNLOCK
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:09.816  SECURITY UNLOCK
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:08.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET FEATURES [Set transfer mode]
+
+Error 20 [19] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:09.816  SECURITY UNLOCK
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:08.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET FEATURES [Set transfer mode]
+  c6 00 ff 00 10 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET MULTIPLE MODE
+
+Error 19 [18] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 ff ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:18:08.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET FEATURES [Set transfer mode]
+  c6 00 ff 00 10 00 00 00 00 ff ff e0 08 15d+04:18:03.816  SET MULTIPLE MODE
+  91 00 03 00 3f 00 00 00 00 00 00 ef 08 15d+04:18:03.816  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 18 [17] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:17:56.816  SECURITY UNLOCK
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:17:32.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:17:31.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:17:31.816  SET FEATURES [Set transfer mode]
+  c6 00 ff 00 10 00 00 00 00 ff ff e0 08 15d+04:17:31.816  SET MULTIPLE MODE
+
+Error 17 [16] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 ff ff 00 00 ff e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 01 00 00 00 00 00 ff e0 08 15d+04:17:32.816  SECURITY UNLOCK
+  ef 00 03 00 45 00 00 00 00 ff ff e0 08 15d+04:17:31.816  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 ff ff e0 08 15d+04:17:31.816  SET FEATURES [Set transfer mode]
+  c6 00 ff 00 10 00 00 00 00 ff ff e0 08 15d+04:17:31.816  SET MULTIPLE MODE
+  91 00 03 00 3f 00 00 00 00 00 00 ef 08 15d+04:17:31.816  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test Log not supported
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  4            0  Command failed due to ICRC error
+0x0002  4            0  R_ERR response for data FIS
+0x0003  4            0  R_ERR response for device-to-host data FIS
+0x0004  4            0  R_ERR response for host-to-device data FIS
+0x0005  4            0  R_ERR response for non-data FIS
+0x0006  4            0  R_ERR response for device-to-host non-data FIS
+0x0007  4            0  R_ERR response for host-to-device non-data FIS
+0x0008  4            0  Device-to-host non-data FIS retries
+0x0009  4            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000b  4            0  CRC errors within host-to-device FIS
+0x000d  4            0  Non-CRC errors within host-to-device FIS
+0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  4            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  4            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  4            0  R_ERR response for host-to-device non-data FIS, non-CRC
+0x0200  0: Invalid entry
+

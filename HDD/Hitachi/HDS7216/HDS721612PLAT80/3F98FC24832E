@@ -1,0 +1,222 @@
+=== START OF INFORMATION SECTION ===
+Device Model:     Hitachi HDS721612PLAT80
+Serial Number:    --
+LU WWN Device Id: 5 000cca ...
+Firmware Version: P23OA85A
+User Capacity:    123 519 237 632 bytes [123 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
+Local Time is:    Sun Aug 20 21:35:09 2017 MSK
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 2397) seconds.
+Offline data collection
+capabilities: 			 (0x5b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  40) minutes.
+SCT capabilities: 	       (0x003f)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
+  2 Throughput_Performance  P-S---   161   161   050    -    195
+  3 Spin_Up_Time            POS---   149   149   024    -    144 (Average 123)
+  4 Start_Stop_Count        -O--C-   097   097   000    -    15239
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    1
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   136   136   020    -    31
+  9 Power_On_Hours          -O--C-   096   096   000    -    32784
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    10221
+192 Power-Off_Retract_Count -O--CK   087   087   000    -    15706
+193 Load_Cycle_Count        -O--C-   087   087   000    -    15706
+194 Temperature_Celsius     -O----   187   187   000    -    32 (Min/Max 12/56)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    95
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x20       GPL     R/O      1  Streaming performance log [OBS-8]
+0x21       GPL     R/O      1  Write stream error log
+0x22       GPL     R/O      1  Read stream error log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xe0       GPL,SL  R/W      1  SCT Command/Status
+0xe1       GPL,SL  R/W      1  SCT Data Transfer
+
+SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
+Device Error Count: 631 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 631 [2] occurred at disk power-on lifetime: 32695 hours (1362 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 06 00 00 00 5c 58 da f0 00  Error: UNC 6 sectors at LBA = 0x005c58da = 6052058
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 06 08 5c 58 da 5c 58 d8 f0 00     00:04:00.700  READ DMA
+  c8 00 00 00 08 5c 58 d7 5c 58 d8 f0 00     00:03:55.700  READ DMA
+  c8 00 00 00 08 5c 58 cf 5c 58 d0 f0 00     00:03:55.600  READ DMA
+  c8 00 00 00 08 5c 58 c7 5c 58 c8 f0 00     00:03:55.600  READ DMA
+  c8 00 00 00 08 5c 58 bf 5c 58 c0 f0 00     00:03:55.600  READ DMA
+
+Error 630 [1] occurred at disk power-on lifetime: 32695 hours (1362 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 06 00 00 00 5c 58 da f0 00  Error: UNC 6 sectors at LBA = 0x005c58da = 6052058
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 5c 58 d7 5c 58 d8 f0 00     00:03:55.700  READ DMA
+  c8 00 00 00 08 5c 58 cf 5c 58 d0 f0 00     00:03:55.600  READ DMA
+  c8 00 00 00 08 5c 58 c7 5c 58 c8 f0 00     00:03:55.600  READ DMA
+  c8 00 00 00 08 5c 58 bf 5c 58 c0 f0 00     00:03:55.600  READ DMA
+  c8 00 00 00 08 5c 58 b7 5c 58 b8 f0 00     00:03:55.600  READ DMA
+
+Error 629 [0] occurred at disk power-on lifetime: 20630 hours (859 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 06 00 00 01 e0 b4 b1 e1 00  Error: UNC 6 sectors at LBA = 0x01e0b4b1 = 31503537
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 da d8 00 08 00 00 00 e0 b4 af e1 00     00:12:29.000  READ DMA
+  c8 da d8 06 01 e0 b4 b1 00 00 00 e0 00     00:12:29.000  READ DMA
+  c8 da d8 00 08 61 9e 9e e0 b4 af e1 00     00:12:23.800  READ DMA
+  c8 da d8 00 08 e0 b6 06 61 9e 97 e0 00     00:12:23.800  READ DMA
+  c8 da d8 00 08 61 a9 46 e0 b5 ff e1 00     00:12:23.800  READ DMA
+
+Error 628 [3] occurred at disk power-on lifetime: 20630 hours (859 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 06 00 00 01 e0 b4 b1 e1 00  Error: UNC 6 sectors at LBA = 0x01e0b4b1 = 31503537
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 da d8 00 08 61 9e 9e e0 b4 af e1 00     00:12:23.800  READ DMA
+  c8 da d8 00 08 e0 b6 06 61 9e 97 e0 00     00:12:23.800  READ DMA
+  c8 da d8 00 08 61 a9 46 e0 b5 ff e1 00     00:12:23.800  READ DMA
+  c8 da d8 00 08 61 a8 9e 61 a9 3f e0 00     00:12:23.800  READ DMA
+  c8 da d8 00 08 e0 b1 86 61 a8 97 e0 00     00:12:23.800  READ DMA
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      5836         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Status Version:                  2
+SCT Version (vendor specific):       256 (0x0100)
+SCT Support Level:                   1
+Device State:                        Active (0)
+Current Temperature:                 32 Celsius
+Power Cycle Max Temperature:         32 Celsius
+Lifetime    Max Temperature:         56 Celsius
+
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        1 minute
+Min/Max recommended Temperature:      5/60 Celsius
+Min/Max Temperature Limit:           -40/65 Celsius
+Temperature History Size (Index):    128 (57)
+
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

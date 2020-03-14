@@ -1,0 +1,262 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     Fujitsu MHV
+Device Model:     FUJITSU MHV2040AH
+Serial Number:    --
+Firmware Version: 00000096
+User Capacity:    40,007,761,920 bytes [40,0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-6 T13/1410D revision 3a
+Local Time is:    Tue Aug  4 15:33:20 2015 CEST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM level is:     128 (quiet), recommended: 254
+APM level is:     128 (minimum power consumption without standby)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unknown
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  221) seconds.
+Offline data collection
+capabilities: 			 (0x7b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  28) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   2) minutes.
+SCT capabilities: 	       (0x003d)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    111557
+  2 Throughput_Performance  --S---   100   100   000    -    11993272
+  3 Spin_Up_Time            PO----   100   100   025    -    1
+  4 Start_Stop_Count        -O--CK   098   098   000    -    8016
+  5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
+  7 Seek_Error_Rate         -OSR--   100   100   000    -    2068
+  8 Seek_Time_Performance   --S---   100   100   000    -    0
+  9 Power_On_Seconds        -O--CK   046   046   000    -    27111h+09m+14s
+ 10 Spin_Retry_Count        -O--C-   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    7953
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    205
+193 Load_Cycle_Count        -O--CK   083   083   000    -    350087
+194 Temperature_Celsius     -O---K   100   100   000    -    45 (Min/Max 11/54)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    298
+196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 7028)
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    13
+200 Multi_Zone_Error_Rate   -OSR--   100   100   000    -    22106
+203 Run_Out_Cancel          -O----   100   100   000    -    429538147465
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
+Read GP Log Directory failed
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa1           SL  VS       1  Device vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 12 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12 occurred at disk power-on lifetime: 5842 hours (243 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 dc 0d 94 e0  Error: ICRC, ABRT at LBA = 0x00940ddc = 9702876
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 03 40 9d 0d 94 e0 00      00:03:55.653  READ DMA
+  c8 03 40 5d 0d 94 e0 00      00:03:55.628  READ DMA
+  c8 03 40 1d 0d 94 e0 00      00:03:55.625  READ DMA
+  c8 03 40 dd 0c 94 e0 00      00:03:55.623  READ DMA
+  c8 03 30 6d 0c 94 e0 00      00:03:55.621  READ DMA
+
+Error 11 occurred at disk power-on lifetime: 5839 hours (243 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 14 2b 4e e2  Error: ICRC, ABRT at LBA = 0x024e2b14 = 38677268
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 03 80 95 2a 4e e2 00      00:27:57.138  READ DMA
+  c8 03 80 15 2a 4e e2 00      00:27:57.136  READ DMA
+  c8 03 80 95 29 4e e2 00      00:27:57.134  READ DMA
+  c8 03 80 15 29 4e e2 00      00:27:57.131  READ DMA
+  c8 03 80 95 28 4e e2 00      00:27:57.129  READ DMA
+
+Error 10 occurred at disk power-on lifetime: 5839 hours (243 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 a4 b2 ca e1  Error: ICRC, ABRT at LBA = 0x01cab2a4 = 30061220
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 03 80 25 b2 ca e1 00      00:25:24.650  READ DMA
+  c8 03 80 a5 b1 ca e1 00      00:25:24.648  READ DMA
+  c8 03 80 25 b1 ca e1 00      00:25:24.646  READ DMA
+  c8 03 80 a5 b0 ca e1 00      00:25:24.644  READ DMA
+  c8 03 80 25 b0 ca e1 00      00:25:24.641  READ DMA
+
+Error 9 occurred at disk power-on lifetime: 5839 hours (243 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 24 a3 ae e1  Error: ICRC, ABRT at LBA = 0x01aea324 = 28222244
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 03 80 a5 a2 ae e1 00      00:24:53.554  READ DMA
+  c8 03 80 25 a2 ae e1 00      00:24:53.552  READ DMA
+  c8 03 80 a5 a1 ae e1 00      00:24:53.550  READ DMA
+  c8 03 80 25 a1 ae e1 00      00:24:53.548  READ DMA
+  c8 03 80 a5 a0 ae e1 00      00:24:53.545  READ DMA
+
+Error 8 occurred at disk power-on lifetime: 5839 hours (243 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 4c 8a 5e e1  Error: ICRC, ABRT at LBA = 0x015e8a4c = 22973004
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 03 80 cd 89 5e e1 00      00:22:16.359  READ DMA
+  c8 03 3d 3d 8b 5e e1 00      00:22:16.328  READ DMA
+  c8 03 40 8d 89 5e e1 00      00:22:16.316  READ DMA
+  c8 03 40 fd 33 43 e1 00      00:22:16.311  READ DMA
+  c8 03 80 7d 33 43 e1 00      00:22:16.309  READ DMA
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     26941         -
+# 2  Short offline       Completed without error       00%     26941         -
+# 3  Short offline       Completed without error       00%     21253         -
+# 4  Short offline       Completed without error       00%     20885         -
+# 5  Short offline       Completed without error       00%     20855         -
+# 6  Short offline       Completed without error       00%     20855         -
+# 7  Short offline       Completed without error       00%     18364         -
+# 8  Short offline       Interrupted (host reset)      30%     18364         -
+# 9  Short offline       Completed without error       00%     18341         -
+#10  Short offline       Completed without error       00%     18341         -
+#11  Short offline       Completed without error       00%     18340         -
+#12  Short offline       Completed without error       00%     15803         -
+#13  Short offline       Completed without error       00%     10971         -
+#14  Short offline       Completed without error       00%      8298         -
+#15  Short offline       Completed without error       00%      6518         -
+#16  Short offline       Completed without error       00%      6518         -
+#17  Short offline       Completed without error       00%      6518         -
+#18  Short offline       Completed without error       00%      5878         -
+#19  Short offline       Interrupted (host reset)      90%      2830         -
+#20  Short offline       Completed without error       00%      2830         -
+#21  Short offline       Completed without error       00%      2392         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Status Version:                  2
+SCT Version (vendor specific):       0 (0x0000)
+SCT Support Level:                   1
+Device State:                        Active (0)
+Current Temperature:                 45 Celsius
+Power Cycle Max Temperature:         47 Celsius
+Lifetime    Max Temperature:         54 Celsius
+
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        1 minute
+Min/Max recommended Temperature:      5/60 Celsius
+Min/Max Temperature Limit:           -40/65 Celsius
+Temperature History Size (Index):    128 (20)
+
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
+
+Device Statistics (GP Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+

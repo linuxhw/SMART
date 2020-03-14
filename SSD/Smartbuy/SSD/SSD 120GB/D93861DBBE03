@@ -1,0 +1,301 @@
+=== START OF INFORMATION SECTION ===
+Device Model:     SSD Smartbuy 120GB
+Serial Number:    --
+LU WWN Device Id: 5 000000 ...
+Firmware Version: SBFM50.8
+User Capacity:    120,034,123,776 bytes [120 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ACS-4 (minor revision not indicated)
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Thu Sep 13 18:16:16 2018 +04
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(65535) seconds.
+Offline data collection
+capabilities: 			 (0x79) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   4) minutes.
+Extended self-test routine
+recommended polling time: 	 (  32) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   8) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    5060
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1238
+168 Unknown_Attribute       -O--C-   100   100   000    -    0
+170 Unknown_Attribute       PO----   088   088   010    -    261993005166
+173 Unknown_Attribute       -O--C-   100   100   000    -    3211338
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    308
+194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
+218 Unknown_Attribute       PO-R--   100   100   050    -    7756
+231 Temperature_Celsius     PO--C-   100   100   000    -    95
+241 Total_LBAs_Written      -O--C-   100   100   000    -    3782
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x04       GPL,SL  R/O      8  Device Statistics log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 7704 (device log contains only the most recent 256 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 7704 [23] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 2a 4b 90 2a 4b 90 e3 00  Error: ABRT at LBA = 0x2a4b932a4b90 = 46504079936400
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c5 00 00 00 00 2a 4b 90 2a 4b 90 e3 00     00:00:00.000  WRITE MULTIPLE
+  ca 00 00 00 00 2a 4a 90 2a 4b 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 49 90 2a 4a 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 48 90 2a 49 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 47 90 2a 48 90 e3 00     00:00:00.000  WRITE DMA
+
+Error 7703 [22] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 2a 4a 90 2a 4b 90 e3 00  Error: ICRC, ABRT at LBA = 0x2a4a932a4b90 = 46499784969104
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 00 2a 4a 90 2a 4b 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 49 90 2a 4a 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 48 90 2a 49 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 47 90 2a 48 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 46 90 2a 47 90 e3 00     00:00:00.000  WRITE DMA
+
+Error 7702 [21] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 48 53 20 48 54 20 e0 00  Error: ICRC, ABRT at LBA = 0x485320485420 = 79521861096480
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 00 48 53 20 48 54 20 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 48 52 20 48 53 20 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 48 51 20 48 52 20 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 48 50 20 48 51 20 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 48 4f 20 48 50 20 e0 00     00:00:00.000  WRITE DMA
+
+Error 7701 [20] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 1a d4 c0 1a d5 c0 e1 00  Error: ICRC, ABRT at LBA = 0x1ad4c11ad5c0 = 29501075150272
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 00 1a d4 c0 1a d5 c0 e1 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 1a d3 c0 1a d4 c0 e1 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 1a d2 c0 1a d3 c0 e1 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 1a d1 c0 1a d2 c0 e1 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 00 00 00 1a d1 c0 e1 00     00:00:00.000  WRITE DMA
+
+Error 7700 [19] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 f3 09 90 f3 0a 90 e0 00  Error: ICRC, ABRT at LBA = 0xf30990f30a90 = 267222412102288
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 00 f3 09 90 f3 0a 90 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 0a 00 04 ad 38 f3 09 90 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 08 0a 03 7d 78 04 ad 38 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 08 08 65 59 58 03 7d 78 e0 00     00:00:00.000  WRITE DMA
+  c8 00 00 00 08 f2 6f 58 65 59 58 e0 00     00:00:00.000  READ DMA
+
+Error 7699 [18] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 00 00 00 00 f2 6f 58 e0 00  Error: ICRC, ABRT at LBA = 0x00f26f58 = 15888216
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 01 00 01 00 00 00 00 f2 6f 58 e0 00     00:00:00.000  WRITE DMA
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:00:00.000  DATA SET MANAGEMENT
+  ca 00 00 08 08 5f 0c 10 5f 0c 00 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 10 08 60 cb 60 5f 0c 10 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 08 10 03 6c 20 60 cb 60 e0 00     00:00:00.000  WRITE DMA
+
+Error 7698 [17] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 f0 b4 b0 1a c7 58 e1 00  Error: ICRC, ABRT at LBA = 0xf0b4b11ac758 = 264658856101720
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 00 f0 b4 b0 1a c7 58 e1 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 f0 b3 b0 f0 b4 b0 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 c7 56 c0 f0 b3 b0 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 c7 55 c0 c7 56 c0 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 c7 54 c0 c7 55 c0 e0 00     00:00:00.000  WRITE DMA
+
+Error 7697 [16] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 cf c4 b8 96 3a 98 e7 00  Error: ICRC, ABRT at LBA = 0xcfc4bf963a98 = 228443934833304
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 00 cf c4 b8 96 3a 98 e7 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 3b 90 cf c4 b8 e0 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 3a 90 2a 3b 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 39 90 2a 3a 90 e3 00     00:00:00.000  WRITE DMA
+  ca 00 00 00 00 2a 38 90 2a 39 90 e3 00     00:00:00.000  WRITE DMA
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+SMART Selective self-test log data structure revision number 0
+Note: revision number not 1 implies that no selective self-test has ever been run
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04)
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 1) ==
+0x01  0x008  4            1238  ---  Lifetime Power-On Resets
+0x01  0x010  4            5060  ---  Power-on Hours
+0x01  0x018  6      7931502046  ---  Logical Sectors Written
+0x01  0x028  6      9825465229  ---  Logical Sectors Read
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x020  1              33  ---  Highest Temperature
+0x05  0x028  1              33  ---  Lowest Temperature
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x018  4            7756  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+

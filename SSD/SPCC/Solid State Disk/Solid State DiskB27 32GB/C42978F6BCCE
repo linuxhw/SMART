@@ -1,0 +1,257 @@
+=== START OF INFORMATION SECTION ===
+Device Model:     SPCC Solid State DiskB27
+Serial Number:    --
+Firmware Version: 101202
+User Capacity:    32,017,047,552 bytes [32.0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.6, 3.0 Gb/s
+Local Time is:    Sun Aug 27 18:30:06 2017 CEST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      ( 151)	Reserved.
+Total time to complete Offline 
+data collection: 		(   30) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (   1) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    16777215
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Spin_Up_Time            POS---   100   100   050    -    0
+  5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
+  7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
+  8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    556
+ 10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    901
+168 Unknown_Attribute       -O--C-   100   100   000    -    0
+175 Program_Fail_Count_Chip PO----   100   100   010    -    14
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    0
+194 Temperature_Celsius     -O---K   040   100   000    -    40 (Min/Max 30/60)
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
+170 Unknown_Attribute       PO----   100   100   010    -    60130983941
+173 Unknown_Attribute       -O--C-   100   100   000    -    197658150044
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 151
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 151 [150] occurred at disk power-on lifetime: 175 hours (7 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 04 00 e0 00  Error: UNC at LBA = 0x00000400 = 1024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 00 00 00 00 00 04 00 e0 08     00:15:48.600  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.600  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 00 01 00 00 00 a0 08     00:15:48.600  IDENTIFY DEVICE
+  ef 00 03 04 46 00 00 00 00 00 00 a0 08     00:15:48.600  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.600  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 150 [149] occurred at disk power-on lifetime: 175 hours (7 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 04 00 e0 00  Error: UNC at LBA = 0x00000400 = 1024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 00 00 00 00 00 04 00 e0 08     00:15:48.600  READ DMA EXT
+  c8 00 00 01 28 00 00 01 ba 2e 78 e3 08     00:15:48.600  READ DMA
+  c8 00 00 04 30 00 00 00 ba 2e 40 e3 08     00:15:48.600  READ DMA
+  c8 00 00 02 40 00 00 00 ba 2d c0 e3 08     00:15:48.600  READ DMA
+  c8 00 00 01 08 00 00 00 ba 2d b8 e3 08     00:15:48.600  READ DMA
+
+Error 149 [148] occurred at disk power-on lifetime: 146 hours (6 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 01 00 00 00 00 00 01 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 ff 00 01 00 00 03 00 00 01 a0 00     00:05:57.200  IDENTIFY DEVICE
+  a1 00 ff 00 01 00 00 03 00 00 01 a0 00     00:05:57.000  IDENTIFY PACKET DEVICE
+  25 00 00 00 7f 00 00 03 a2 a4 10 e0 ff     00:05:47.800  READ DMA EXT
+  25 00 00 00 7f 00 00 03 a2 a3 91 e0 ff     00:05:47.700  READ DMA EXT
+  25 00 00 00 7f 00 00 03 a2 a5 8d e0 00     00:05:47.600  READ DMA EXT
+
+Error 148 [147] occurred at disk power-on lifetime: 175 hours (7 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 04 00 e0 00  Error: UNC at LBA = 0x00000400 = 1024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 00 00 00 00 00 04 00 e0 08     00:15:48.700  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:15:48.700  IDENTIFY DEVICE
+  ef 00 03 01 46 00 00 01 00 00 00 a0 08     00:15:48.700  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 147 [146] occurred at disk power-on lifetime: 175 hours (7 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 04 00 e0 00  Error: UNC at LBA = 0x00000400 = 1024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 00 00 00 00 00 04 00 e0 08     00:15:48.600  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.600  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 00 01 00 00 00 a0 08     00:15:48.600  IDENTIFY DEVICE
+  ef 00 03 04 46 00 00 00 00 00 00 a0 08     00:15:48.600  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.600  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 146 [145] occurred at disk power-on lifetime: 175 hours (7 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 04 00 e0 00  Error: UNC at LBA = 0x00000400 = 1024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 00 00 00 00 00 04 00 e0 08     00:15:48.600  READ DMA EXT
+  c8 00 00 01 28 00 00 01 ba 2e 78 e3 08     00:15:48.600  READ DMA
+  c8 00 00 04 30 00 00 00 ba 2e 40 e3 08     00:15:48.600  READ DMA
+  c8 00 00 02 40 00 00 00 ba 2d c0 e3 08     00:15:48.600  READ DMA
+  c8 00 00 01 08 00 00 00 ba 2d b8 e3 08     00:15:48.600  READ DMA
+
+Error 145 [144] occurred at disk power-on lifetime: 146 hours (6 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 01 00 00 00 00 00 01 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 ff 00 01 00 00 03 00 00 01 a0 00     00:05:57.200  IDENTIFY DEVICE
+  a1 00 ff 00 01 00 00 03 00 00 01 a0 00     00:05:57.000  IDENTIFY PACKET DEVICE
+  25 00 00 00 7f 00 00 03 a2 a4 10 e0 ff     00:05:47.800  READ DMA EXT
+  25 00 00 00 7f 00 00 03 a2 a3 91 e0 ff     00:05:47.700  READ DMA EXT
+  25 00 00 00 7f 00 00 03 a2 a5 8d e0 00     00:05:47.600  READ DMA EXT
+
+Error 144 [143] occurred at disk power-on lifetime: 175 hours (7 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 04 00 e0 00  Error: UNC at LBA = 0x00000400 = 1024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 00 00 00 00 00 04 00 e0 08     00:15:48.700  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:15:48.700  IDENTIFY DEVICE
+  ef 00 03 01 46 00 00 01 00 00 00 a0 08     00:15:48.700  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:15:48.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+

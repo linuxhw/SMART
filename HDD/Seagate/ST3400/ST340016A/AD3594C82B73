@@ -1,0 +1,207 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     Seagate Barracuda ATA IV
+Device Model:     ST340016A
+Serial Number:    --
+Firmware Version: 3.19
+User Capacity:    40 020 664 320 bytes [40,0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 (minor revision not indicated)
+Local Time is:    Thu Jun  2 18:58:55 2016 NOVT
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  422) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  31) minutes.
+
+SMART Attributes Data Structure revision number: 10
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   076   066   034    -    178033770
+  3 Spin_Up_Time            PO----   071   070   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    617
+  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
+  7 Seek_Error_Rate         POSR--   082   060   030    -    8934239443
+  9 Power_On_Hours          -O--CK   082   082   000    -    16344
+ 10 Spin_Retry_Count        PO--C-   100   100   097    -    0
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5797
+194 Temperature_Celsius     -O---K   029   056   000    -    29
+195 Hardware_ECC_Recovered  -O-RC-   076   066   000    -    178033770
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    2783
+200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
+202 Data_Address_Mark_Errs  -O--CK   099   252   000    -    1
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
+Read GP Log Directory failed
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      5  Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa0           SL  VS       1  Device vendor specific log
+0xa1           SL  VS      20  Device vendor specific log
+0xa2           SL  VS     101  Device vendor specific log
+0xa8           SL  VS      20  Device vendor specific log
+0xa9           SL  VS       1  Device vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 383 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 383 occurred at disk power-on lifetime: 16301 hours (679 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 94 7f fa e1  Error: UNC at LBA = 0x01fa7f94 = 33193876
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 90 7f fa e1 00      00:08:24.648  READ DMA
+  f8 00 00 00 00 00 e0 00      00:08:24.648  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 02      00:08:24.640  IDENTIFY DEVICE
+  ef 03 45 00 00 00 a0 02      00:08:24.640  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 e0 00      00:08:24.640  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 382 occurred at disk power-on lifetime: 16301 hours (679 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 94 7f fa e1  Error: UNC at LBA = 0x01fa7f94 = 33193876
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 90 7f fa e1 00      00:08:21.168  READ DMA
+  c8 00 00 08 80 fa e1 00      00:08:21.149  READ DMA
+  f8 00 00 00 00 00 e0 00      00:08:21.148  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 02      00:08:21.140  IDENTIFY DEVICE
+  ef 03 45 00 00 00 a0 02      00:08:21.140  SET FEATURES [Set transfer mode]
+
+Error 381 occurred at disk power-on lifetime: 16301 hours (679 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 94 7f fa e1  Error: UNC at LBA = 0x01fa7f94 = 33193876
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 08 7f fa e1 00      00:08:17.681  READ DMA
+  c8 00 08 c0 89 fe e1 00      00:08:17.678  READ DMA
+  c8 00 08 a0 89 fe e1 00      00:08:17.678  READ DMA
+  c8 00 08 68 89 fe e1 00      00:08:17.671  READ DMA
+  c8 00 08 c8 89 fe e1 00      00:08:17.663  READ DMA
+
+Error 380 occurred at disk power-on lifetime: 16301 hours (679 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 94 7f fa e1  Error: UNC at LBA = 0x01fa7f94 = 33193876
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 90 7f fa e1 00      00:03:16.961  READ DMA
+  f8 00 00 00 00 00 e0 00      00:03:16.960  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 02      00:03:16.953  IDENTIFY DEVICE
+  ef 03 45 00 00 00 a0 02      00:03:16.952  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 e0 00      00:03:16.952  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 379 occurred at disk power-on lifetime: 16301 hours (679 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 94 7f fa e1  Error: UNC at LBA = 0x01fa7f94 = 33193876
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 90 7f fa e1 00      00:03:13.451  READ DMA
+  c8 00 08 c0 89 fe e1 00      00:03:13.448  READ DMA
+  c8 00 08 a0 89 fe e1 00      00:03:13.448  READ DMA
+  c8 00 08 68 89 fe e1 00      00:03:13.440  READ DMA
+  c8 00 08 c8 89 fe e1 00      00:03:13.433  READ DMA
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+

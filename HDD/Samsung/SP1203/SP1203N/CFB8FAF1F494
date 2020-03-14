@@ -1,0 +1,252 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     SAMSUNG SpinPoint P80
+Device Model:     SAMSUNG SP1203N
+Serial Number:    --
+Firmware Version: TL100-30
+User Capacity:    120 060 444 672 bytes [120 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
+Local Time is:    Fri Apr 29 09:34:16 2016 FET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 4500) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  75) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
+  3 Spin_Up_Time            POS---   100   100   025    -    5696
+  4 Start_Stop_Count        -O--CK   095   095   000    -    6013
+  5 Reallocated_Sector_Ct   PO--CK   100   100   011    -    0
+  7 Seek_Error_Rate         POSR--   100   100   051    -    0
+  8 Seek_Time_Performance   P-S--K   100   100   015    -    0
+  9 Power_On_Half_Minutes   -O--CK   097   097   000    -    17900h+28m
+ 10 Spin_Retry_Count        PO--CK   100   100   051    -    0
+ 11 Calibration_Retry_Count -O--C-   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3064
+194 Temperature_Celsius     -O---K   175   052   000    -    21
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    340512
+196 Reallocated_Event_Count -O--CK   076   076   000    -    53
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Total_Offl_Uncorrectabl ----CK   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   100   051    -    0
+201 Soft_Read_Error_Rate    -O-R--   100   100   051    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      2  Comprehensive SMART error log
+0x03       GPL     R/O      2  Ext. Comprehensive SMART error log
+0x06           SL  R/O      2  SMART self-test log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
+Invalid Error Log index = 0x0000, trying reserved byte (0x06) instead
+Device Error Count: 294 (device log contains only the most recent 8 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 294 [5] occurred at disk power-on lifetime: 17899 hours (745 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6b 22 00 1f e1 00  Error: UNC at LBA = 0x6b22001f = 1797390367
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 00 00 00 00 6b 22 1f e1 00     00:12:00.000  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:12:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 00 00 00 00 00 00 00 a0 00     00:12:00.000  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:12:00.000  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:12:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 293 [4] occurred at disk power-on lifetime: 17899 hours (745 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6b 22 00 1f e1 00  Error: UNC at LBA = 0x6b22001f = 1797390367
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 00 00 00 00 6b 22 1f e1 00     00:11:29.063  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:11:29.063  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 00 00 00 00 00 00 00 a0 00     00:11:29.063  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:11:29.063  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:11:29.063  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 292 [3] occurred at disk power-on lifetime: 17899 hours (745 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6b 22 00 1f e1 00  Error: UNC at LBA = 0x6b22001f = 1797390367
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 00 00 00 00 6b 22 1f e1 00     00:10:58.063  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:10:58.063  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 00 00 00 00 00 00 00 a0 00     00:10:58.063  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:10:58.063  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:10:58.063  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 291 [2] occurred at disk power-on lifetime: 17899 hours (745 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6b 22 00 1f e1 00  Error: UNC at LBA = 0x6b22001f = 1797390367
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 00 00 00 00 6b 22 1f e1 00     00:10:27.313  READ DMA
+  c8 00 00 00 00 00 00 00 6b 21 1f e1 00     00:10:27.313  READ DMA
+  c8 00 00 00 00 00 00 00 6b 20 1f e1 00     00:10:27.313  READ DMA
+  c8 00 00 00 00 00 00 00 6b 1f 1f e1 00     00:10:27.313  READ DMA
+  c8 00 00 00 00 00 00 00 6b 1e 1f e1 00     00:10:27.313  READ DMA
+
+Error 290 [1] occurred at disk power-on lifetime: 17896 hours (745 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 46 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 03 03 00 46 00 00 00 00 00 00 e0 00     00:00:08.688  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:08.688  SET FEATURES [Set transfer mode]
+
+Error 289 [0] occurred at disk power-on lifetime: 17851 hours (743 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 25 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 02 00 00 01 00 00 00 00 00 25 e0 00     02:24:08.500  READ LOG EXT
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:24:08.500  SET FEATURES [Enable write cache]
+  f5 66 00 00 00 00 00 00 00 00 00 a0 00     02:24:08.500  SECURITY FREEZE LOCK
+  ef 00 66 00 00 00 00 00 00 00 00 a0 00     02:24:08.500  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 00 00 00 00 00 a0 00     02:24:08.500  SECURITY FREEZE LOCK
+
+Error 288 [7] occurred at disk power-on lifetime: 17848 hours (743 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 25 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 02 00 00 01 00 00 00 00 00 25 e0 00     00:00:26.438  READ LOG EXT
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     00:00:26.438  SET FEATURES [Enable write cache]
+  f5 66 00 00 00 00 00 00 00 00 00 a0 00     00:00:26.438  SECURITY FREEZE LOCK
+  ef 00 66 00 00 00 00 00 00 00 00 a0 00     00:00:26.438  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:26.438  SECURITY FREEZE LOCK
+
+Error 287 [6] occurred at disk power-on lifetime: 17846 hours (743 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 25 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 02 00 00 01 00 00 00 00 00 25 e0 00     00:02:35.250  READ LOG EXT
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     00:02:35.250  SET FEATURES [Enable write cache]
+  f5 66 00 00 00 00 00 00 00 00 00 a0 00     00:02:35.250  SECURITY FREEZE LOCK
+  ef 00 66 00 00 00 00 00 00 00 00 a0 00     00:02:35.250  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:35.250  SECURITY FREEZE LOCK
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+

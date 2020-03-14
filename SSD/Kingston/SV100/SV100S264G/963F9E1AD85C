@@ -1,0 +1,260 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     JMicron based SSDs
+Device Model:     KINGSTON SV100S264G
+Serial Number:    --
+Firmware Version: D110225a
+User Capacity:    64 023 257 088 bytes [64,0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.6, 3.0 Gb/s
+Local Time is:    Mon Sep 28 10:12:38 2015 YEKT
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM level is:     254 (maximum performance)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      ( 163)	Reserved.
+Total time to complete Offline 
+data collection: 		(   30) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (   1) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Unknown_Attribute       POS---   100   100   050    -    0
+  5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
+  7 Unknown_Attribute       PO-R--   100   100   050    -    0
+  8 Unknown_Attribute       P-S---   100   100   050    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    13182
+ 10 Unknown_Attribute       PO--C-   100   100   050    -    0
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3277
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+175 Bad_Cluster_Table_Count PO----   100   100   010    -    0
+192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    0
+194 Temperature_Celsius     -O---K   039   100   020    -    39 (Min/Max 39/46)
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+240 Unknown_Attribute       PO--C-   100   100   050    -    0
+170 Bad_Block_Count         PO----   100   100   010    -    0 239 0
+173 Erase_Count             -O--C-   100   100   000    -    5 14259 12271
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 17
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 17 [16] occurred at disk power-on lifetime: 9405 hours (391 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 01 5b 4b c0 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 08 01 5b 4b c0 00 00 00 e0 00     09:14:42.400  DATA SET MANAGEMENT
+  ca 00 00 00 20 6c 01 f8 ee ac c0 e3 00     09:14:42.400  WRITE DMA
+  ca 00 00 00 08 66 3e bb 6b c3 10 e0 00     09:14:42.400  WRITE DMA
+  ca 00 00 00 0b aa 79 80 66 bd c0 e0 00     09:14:42.400  WRITE DMA
+  ca 00 00 00 05 6c 2e 00 61 3f f3 e0 00     09:14:42.400  WRITE DMA
+
+Error 16 [15] occurred at disk power-on lifetime: 9405 hours (391 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 01 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 01 01 01 01 00 00 00 00 00 00 e0 00     09:13:40.200  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     09:13:40.200  DATA SET MANAGEMENT
+  e7 00 00 00 00 a4 0e da 00 00 00 a0 00     09:13:40.200  FLUSH CACHE
+  ca 00 00 00 08 00 00 00 5d 3a c0 e1 00     09:13:40.200  WRITE DMA
+  ca 00 00 00 08 6d 54 62 6d c8 78 e0 00     09:13:40.200  WRITE DMA
+
+Error 15 [14] occurred at disk power-on lifetime: 9405 hours (391 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 01 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 01 01 01 01 00 00 00 00 00 00 e0 00     09:12:38.100  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     09:12:38.100  DATA SET MANAGEMENT
+  e7 00 00 00 00 fa 04 b0 00 00 00 a0 00     09:12:38.100  FLUSH CACHE
+  ca 00 00 00 08 f4 a1 b8 66 f1 28 e0 00     09:12:38.100  WRITE DMA
+  06 00 01 00 01 cc 32 f8 00 00 00 e0 00     09:12:38.100  DATA SET MANAGEMENT
+
+Error 14 [13] occurred at disk power-on lifetime: 9405 hours (391 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 01 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 01 01 01 01 00 00 00 00 00 00 e0 00     09:11:36.600  DATA SET MANAGEMENT
+  06 00 01 00 01 7d 66 2a 00 00 00 e0 00     09:11:36.600  DATA SET MANAGEMENT
+  c8 00 00 00 40 00 00 00 7d 66 2a e0 00     09:11:36.600  READ DMA
+  06 00 01 00 01 7d 67 8a 00 00 00 e0 00     09:11:36.600  DATA SET MANAGEMENT
+  c8 00 00 00 3a 66 bb c0 7d 67 8a e0 00     09:11:36.600  READ DMA
+
+Error 13 [12] occurred at disk power-on lifetime: 9405 hours (391 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 f8 01 9b 5d 08 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 f8 01 9b 5d 08 00 00 00 e0 00     09:10:34.500  DATA SET MANAGEMENT
+  c8 00 00 00 08 0b 00 00 0b 00 00 e0 00     09:10:34.500  READ DMA
+  06 00 01 00 01 0b 00 00 00 00 00 e0 00     09:10:34.500  DATA SET MANAGEMENT
+  c8 00 00 00 08 0b 00 00 0b 00 00 e0 00     09:10:34.500  READ DMA
+  06 00 01 00 01 0b 00 00 00 00 00 e0 00     09:10:34.500  DATA SET MANAGEMENT
+
+Error 12 [11] occurred at disk power-on lifetime: 8120 hours (338 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 01 5b 35 48 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 08 01 5b 35 48 00 00 00 e0 00     01:11:59.900  DATA SET MANAGEMENT
+  c8 00 00 00 40 9b 7a f0 0d 3b 9b e1 00     01:11:59.900  READ DMA
+  ca 00 00 b0 08 75 1d 20 78 a7 a2 e0 00     01:11:59.900  WRITE DMA
+  c8 00 00 00 08 9b 75 40 0a f8 00 e0 00     01:11:59.900  READ DMA
+  c8 00 00 00 39 75 1b 20 0d 3c 93 e1 00     01:11:59.900  READ DMA
+
+Error 11 [10] occurred at disk power-on lifetime: 8120 hours (338 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 b0 01 75 1d 20 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 b0 01 75 1d 20 00 00 00 e0 00     01:10:57.900  DATA SET MANAGEMENT
+  c8 00 00 00 08 9b 75 40 0a f8 00 e0 00     01:10:57.900  READ DMA
+  06 00 01 00 01 75 1b 20 00 00 00 e0 00     01:10:57.900  DATA SET MANAGEMENT
+  c8 00 00 00 08 9b 73 40 0a f8 00 e0 00     01:10:57.900  READ DMA
+  06 00 01 00 01 75 18 20 00 00 00 e0 00     01:10:57.900  DATA SET MANAGEMENT
+
+Error 10 [9] occurred at disk power-on lifetime: 8120 hours (338 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 e0 01 9e f8 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 e0 01 9e f8 00 00 00 00 e0 00     01:09:54.900  DATA SET MANAGEMENT
+  c8 00 00 00 08 9b 58 60 0a f8 00 e0 00     01:09:54.900  READ DMA
+  ca 00 00 00 08 9e f1 00 fb c5 b8 e0 00     01:09:54.900  WRITE DMA
+  06 00 01 00 01 9e f5 00 00 00 00 e0 00     01:09:54.800  DATA SET MANAGEMENT
+  ca 00 00 00 08 9b 4f 60 fb c5 c8 e0 00     01:09:54.800  WRITE DMA
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x000a  2           74  Device-to-host register FISes sent due to a COMRESET
+
+
+

@@ -1,0 +1,274 @@
+=== START OF INFORMATION SECTION ===
+Device Model:     Corsair Neutron SSD
+Serial Number:    --
+Firmware Version: M310
+User Capacity:    64 023 257 088 bytes [64,0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.5, 6.0 Gb/s
+Local Time is:    Sun Mar 20 17:39:43 2016 MSK
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(    0) seconds.
+Offline data collection
+capabilities: 			 (0x19) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0002)	Does not save SMART data before
+					entering power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (   5) minutes.
+
+SMART Attributes Data Structure revision number: 0
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   143   001   006    Past 609
+  5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
+  9 Power_On_Hours          -O--CK   097   097   000    -    3184
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    840
+171 Unknown_Attribute       -O--CK   253   253   000    -    0
+172 Unknown_Attribute       -O--CK   253   253   000    -    0
+181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
+182 Erase_Fail_Count_Total  -O--CK   253   253   000    -    0
+194 Temperature_Celsius     -O----   029   000   000    -    29 (Min/Max 19/42)
+201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
+204 Soft_ECC_Correction     -OSR--   100   001   000    -    3
+231 Temperature_Celsius     PO--CK   095   095   010    -    6
+234 Unknown_Attribute       -O--CK   100   100   000    -    51702
+241 Total_LBAs_Written      -O--CK   100   100   000    -    3924
+242 Total_LBAs_Read         -O--CK   100   100   000    -    5162
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    778430
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      4  Comprehensive SMART error log
+0x03       GPL,SL  R/O      5  Ext. Comprehensive SMART error log
+0x04           SL  R/O      8  Device Statistics log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      2  Extended self-test log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters
+
+SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
+Device Error Count: 6379 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6379 [18] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 c8 01 c0 0d 00 c2 4f 00 e0 08  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 08 db 01 f8 00 00 00 c2 4f 00 00 00     01:44:52.190  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  b0 08 d1 01 01 00 00 00 c2 4f 01 00 00     01:44:52.190  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 08 d0 70 01 01 0b e8 c2 4f 00 00 00     01:44:52.190  SMART READ DATA
+  60 00 08 00 70 00 00 02 01 0b e8 40 40     01:44:52.190  READ FPDMA QUEUED
+  60 00 08 00 68 00 00 02 45 07 f8 40 40     01:44:52.190  READ FPDMA QUEUED
+
+Error 6378 [17] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 50 3f 01 00 00 00 00 00 00 e0 08   16129 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 ff aa 55 00 00 55 76 77 aa a0 a0     01:44:41.370  READ DMA EXT
+  25 00 ff aa 55 00 00 55 76 77 aa a0 a0     01:44:41.380  READ DMA EXT
+  25 ff 00 00 23 00 00 00 76 77 5d e0 e0     01:44:37.510  READ DMA EXT
+  25 ff 00 00 1d 00 00 00 76 77 40 e0 e0     01:44:37.510  READ DMA EXT
+  25 ff 00 00 22 00 00 00 76 77 1e e0 e0     01:44:37.510  READ DMA EXT
+
+Error 6377 [16] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 50 3f 01 00 00 00 00 00 00 e0 08
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c6 00 ff 3f 01 00 00 00 00 00 00 a0 a0     01:44:21.530  SET MULTIPLE MODE
+  c6 00 ff 3f 01 00 00 00 00 00 00 a0 a0     01:44:21.540  SET MULTIPLE MODE
+  c6 ff 00 3f 01 00 00 00 00 00 00 e0 e0     01:44:21.220  SET MULTIPLE MODE
+  91 ff 00 00 3f 00 00 00 00 00 00 ef ef     01:44:21.220  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 ff 00 01 00 00 00 01 00 00 00 e0 e0     01:44:21.220  RECALIBRATE [OBS-4]
+
+Error 6376 [15] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 50 3f 00 c2 4f 00 00 00 00 e0 08   16128 sectors at LBA = 0xc24f00000000 = 213644558204928
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 ff 00 00 00 00 00 00 00 00 a0 a0     01:44:21.220  READ DMA EXT
+  25 00 ff 00 00 00 00 00 00 00 00 a0 a0     01:44:21.220  READ DMA EXT
+  25 ff 00 00 01 00 00 00 00 00 00 e0 e0     01:44:12.390  READ DMA EXT
+  f5 ff 00 3f 00 c2 4f 00 00 00 00 e0 e0     01:44:12.380  SECURITY FREEZE LOCK
+  b0 ff da 3f 00 00 00 00 c2 4f 00 e0 e0     01:44:12.380  SMART RETURN STATUS
+
+Error 6375 [14] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 50 0c 46 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 03 ff 0c 46 00 00 00 00 00 00 a0 a0     01:44:12.080  SET FEATURES [Reserved for CFA]
+  ef 03 ff 0c 46 00 00 00 00 00 00 a0 a0     01:44:12.080  SET FEATURES [Reserved for CFA]
+  ef ff 03 0c 46 00 00 00 00 00 00 e0 e0     01:44:11.830  SET FEATURES [Set transfer mode]
+  ef ff 03 01 0c 00 00 00 00 00 00 e0 e0     01:44:11.830  SET FEATURES [Set transfer mode]
+  ec ff ff 00 01 00 00 00 00 00 01 e0 e0     01:44:11.750  IDENTIFY DEVICE
+
+Error 6374 [13] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 01 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  a1 ff ff 00 01 00 00 00 00 00 01 e0 e0     01:44:11.420  IDENTIFY PACKET DEVICE
+  e7 00 20 00 d8 00 00 02 04 94 20 a0 a0     01:44:00.920  FLUSH CACHE
+  60 00 20 00 d8 00 00 02 04 94 20 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 d0 00 00 02 00 0c f8 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 c8 00 00 02 00 0d 00 40 40     01:44:00.870  READ FPDMA QUEUED
+
+Error 6373 [12] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e7 00 20 00 d8 00 00 02 04 94 20 a0 a0     01:44:00.920  FLUSH CACHE
+  60 00 20 00 d8 00 00 02 04 94 20 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 d0 00 00 02 00 0c f8 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 c8 00 00 02 00 0d 00 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 02 00 0c f0 40 40     01:44:00.870  READ FPDMA QUEUED
+
+Error 6372 [11] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e7 00 20 00 d8 00 00 02 04 94 20 a0 a0     01:44:00.920  FLUSH CACHE
+  60 00 20 00 d8 00 00 02 04 94 20 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 d0 00 00 02 00 0c f8 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 c8 00 00 02 00 0d 00 40 40     01:44:00.870  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 02 00 0c f0 40 40     01:44:00.870  READ FPDMA QUEUED
+
+SMART Extended Self-test Log Version: 1 (2 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
+

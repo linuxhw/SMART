@@ -1,0 +1,220 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     Fujitsu MHT
+Device Model:     FUJITSU MHT2040AH PL
+Serial Number:    --
+Firmware Version: 006C
+User Capacity:    40.007.761.920 bytes [40,0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-6 T13/1410D revision 3a
+Local Time is:    Sun Mar 18 05:56:34 2018 +03
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM level is:     254 (maximum performance), recommended: 254
+APM level is:     128 (minimum power consumption without standby)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  293) seconds.
+Offline data collection
+capabilities: 			 (0x7b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  40) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   2) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    202092
+  2 Throughput_Performance  P-S---   100   100   030    -    9961630
+  3 Spin_Up_Time            PO----   100   100   025    -    1
+  4 Start_Stop_Count        -O--CK   098   098   000    -    8282
+  5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    1 (1999 1)
+  7 Seek_Error_Rate         POSR--   100   100   047    -    2349
+  8 Seek_Time_Performance   P-S---   100   100   019    -    0
+  9 Power_On_Seconds        -O--CK   086   086   000    -    7358h+34m+21s
+ 10 Spin_Retry_Count        PO--C-   100   100   020    -    0
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    5012
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    572
+193 Load_Cycle_Count        -O--CK   093   093   000    -    72570
+194 Temperature_Celsius     -O---K   100   095   000    -    49 (Min/Max 9/61)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    527
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1 (22 4361)
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    56
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    30888
+203 Run_Out_Cancel          -O----   100   100   000    -    1533293363388
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa1           SL  VS       1  Device vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 56 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 56 occurred at disk power-on lifetime: 6780 hours (282 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 ff 01 01 00 00 a0 00      00:00:06.350  READ DMA
+  c6 ff 08 01 00 00 a0 00      00:00:06.350  SET MULTIPLE MODE
+  10 ff 01 01 c8 03 a1 00      00:00:06.347  RECALIBRATE [OBS-4]
+  91 ff 3f 18 cf 03 af 00      00:00:06.347  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  00 ff 01 01 00 00 a0 04      00:00:06.321  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 55 occurred at disk power-on lifetime: 6780 hours (282 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 ff 01 01 00 00 a0 00      00:00:06.063  READ DMA
+  c6 ff 08 01 00 00 a0 00      00:00:06.062  SET MULTIPLE MODE
+  10 ff 01 01 c8 03 a1 00      00:00:06.059  RECALIBRATE [OBS-4]
+  91 ff 3f 18 cf 03 af 00      00:00:06.059  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  00 ff 01 01 00 00 a0 04      00:00:06.034  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 54 occurred at disk power-on lifetime: 6780 hours (282 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 ff 01 01 00 00 a0 00      00:00:05.842  READ DMA
+  c6 ff 08 01 00 00 a0 00      00:00:05.841  SET MULTIPLE MODE
+  10 ff 01 01 c8 03 a1 00      00:00:05.838  RECALIBRATE [OBS-4]
+  91 ff 3f 18 cf 03 af 00      00:00:05.838  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  00 ff 01 01 00 00 a0 04      00:00:05.813  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 53 occurred at disk power-on lifetime: 6780 hours (282 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 ff 01 01 00 00 a0 00      00:00:05.620  READ DMA
+  c6 ff 08 01 00 00 a0 00      00:00:05.620  SET MULTIPLE MODE
+  10 ff 01 01 c8 03 a1 00      00:00:05.617  RECALIBRATE [OBS-4]
+  91 ff 3f 18 cf 03 af 00      00:00:05.617  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  00 ff 01 01 00 00 a0 04      00:00:05.591  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 52 occurred at disk power-on lifetime: 6780 hours (282 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 ff 01 01 00 00 a0 00      00:00:05.392  READ DMA
+  c6 ff 08 01 00 00 a0 00      00:00:04.948  SET MULTIPLE MODE
+  10 ff 01 01 c8 03 a1 00      00:00:04.946  RECALIBRATE [OBS-4]
+  91 ff 3f 18 cf 03 af 00      00:00:04.945  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  00 d2 01 01 00 00 a0 04      00:00:04.920  NOP [Reserved subcommand] [OBS-ACS-2]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      7324         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
