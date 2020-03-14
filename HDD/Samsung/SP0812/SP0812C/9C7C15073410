@@ -7,7 +7,7 @@ User Capacity:    80 060 424 192 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Wed Dec 16 22:46:09 2015 MSK
+Local Time is:    Fri Dec 25 09:23:10 2015 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -21,8 +21,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -52,17 +52,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   100   100   025    -    4160
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7356
+  3 Spin_Up_Time            POS---   100   100   025    -    4096
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7400
   5 Reallocated_Sector_Ct   PO--CK   100   100   011    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Half_Minutes   -O--CK   099   099   000    -    8392h+01m
+  9 Power_On_Half_Minutes   -O--CK   099   099   000    -    8482h+05m
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3900
-194 Temperature_Celsius     -O---K   175   070   000    -    21
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    398712
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3922
+194 Temperature_Celsius     -O---K   169   070   000    -    23
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2945104
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Total_Offl_Uncorrectabl ----CK   100   100   000    -    1
@@ -88,7 +88,7 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
 Invalid Error Log index = 0x0000, trying reserved byte (0x08) instead
-Device Error Count: 3848 (device log contains only the most recent 8 errors)
+Device Error Count: 3880 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -104,7 +104,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 3848 [7] occurred at disk power-on lifetime: 8387 hours (349 days + 11 hours)
+Error 3880 [7] occurred at disk power-on lifetime: 8481 hours (353 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -115,13 +115,13 @@ Error 3848 [7] occurred at disk power-on lifetime: 8387 hours (349 days + 11 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:53.500  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 15 8f 08 e8 00     00:00:53.500  READ DMA
-  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:53.500  IDENTIFY DEVICE
-  c8 00 00 00 48 00 00 00 d2 33 60 e7 00     00:00:53.500  READ DMA
-  c8 00 00 00 20 00 00 00 d2 33 40 e7 00     00:00:53.500  READ DMA
+  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:53.625  SET FEATURES [Enable APM]
+  c8 00 00 00 08 00 00 00 15 8f 08 e8 00     00:00:53.625  READ DMA
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:53.625  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 0c 6b 80 e7 00     00:00:53.563  READ DMA
+  c8 00 00 00 08 00 00 00 e9 5d f0 e3 00     00:00:53.563  READ DMA
 
-Error 3847 [6] occurred at disk power-on lifetime: 8380 hours (349 days + 4 hours)
+Error 3879 [6] occurred at disk power-on lifetime: 8478 hours (353 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -132,13 +132,13 @@ Error 3847 [6] occurred at disk power-on lifetime: 8380 hours (349 days + 4 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:58.563  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 15 8f 08 e8 00     00:00:58.563  READ DMA
-  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:58.500  IDENTIFY DEVICE
-  c8 00 00 00 48 00 00 00 d2 33 60 e7 00     00:00:58.500  READ DMA
-  c8 00 00 00 20 00 00 00 d2 33 40 e7 00     00:00:58.500  READ DMA
+  ef 00 05 00 fe 00 00 00 00 00 00 40 00     01:27:33.438  SET FEATURES [Enable APM]
+  c8 00 00 00 08 00 00 00 e9 6d f4 e3 00     01:27:32.938  READ DMA
+  c8 00 00 00 08 00 00 00 eb 5d f4 e3 00     01:27:32.938  READ DMA
+  c8 00 00 00 08 00 00 00 49 5d f4 e4 00     01:27:32.938  READ DMA
+  c8 00 00 00 08 00 00 00 e9 5f f4 e3 00     01:27:32.938  READ DMA
 
-Error 3846 [5] occurred at disk power-on lifetime: 8377 hours (349 days + 1 hours)
+Error 3878 [5] occurred at disk power-on lifetime: 8478 hours (353 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -149,13 +149,13 @@ Error 3846 [5] occurred at disk power-on lifetime: 8377 hours (349 days + 1 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:43.250  SET FEATURES [Enable APM]
-  c8 00 00 00 88 00 00 00 1a 5c 30 e9 00     00:00:43.188  READ DMA
-  c8 00 00 00 20 00 00 00 1d 7d 38 e9 00     00:00:43.188  READ DMA
-  c8 00 00 00 28 00 00 00 16 98 a8 e8 00     00:00:43.188  READ DMA
-  c8 00 00 00 20 00 00 00 1a 5a 98 e9 00     00:00:43.188  READ DMA
+  ef d5 05 00 fe 00 00 00 00 00 00 40 00     00:49:59.188  SET FEATURES [Enable APM]
+  b0 d5 d5 00 01 00 00 00 c2 4f 01 00 00     00:49:58.750  SMART READ LOG
+  b0 d0 d5 00 01 00 00 00 c2 4f 06 00 00     00:49:58.750  SMART READ LOG
+  b0 da d0 00 01 00 00 00 c2 4f 00 00 00     00:49:58.688  SMART READ DATA
+  b0 d5 da 00 00 00 00 00 c2 4f 00 00 00     00:49:58.625  SMART RETURN STATUS
 
-Error 3845 [4] occurred at disk power-on lifetime: 8374 hours (348 days + 22 hours)
+Error 3877 [4] occurred at disk power-on lifetime: 8475 hours (353 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -166,13 +166,13 @@ Error 3845 [4] occurred at disk power-on lifetime: 8374 hours (348 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     03:30:51.313  SET FEATURES [Enable APM]
-  c8 00 00 00 90 00 00 00 1d 82 88 e9 00     03:30:51.313  READ DMA
-  c8 00 00 00 30 00 00 00 22 0b 00 e9 00     03:30:51.313  READ DMA
-  c8 00 00 00 28 00 00 00 16 98 a8 e8 00     03:30:51.313  READ DMA
-  c8 00 00 00 08 00 00 00 1d 7d 38 e9 00     03:30:51.313  READ DMA
+  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:01:00.750  SET FEATURES [Enable APM]
+  c8 00 00 00 08 00 00 00 15 8f 08 e8 00     00:01:00.750  READ DMA
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:01:00.688  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 0c 6b 80 e7 00     00:01:00.688  READ DMA
+  c8 00 00 00 08 00 00 00 e9 5d f0 e3 00     00:01:00.688  READ DMA
 
-Error 3844 [3] occurred at disk power-on lifetime: 8374 hours (348 days + 22 hours)
+Error 3876 [3] occurred at disk power-on lifetime: 8473 hours (353 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -183,13 +183,13 @@ Error 3844 [3] occurred at disk power-on lifetime: 8374 hours (348 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     02:49:40.813  SET FEATURES [Enable APM]
-  c8 00 00 00 20 00 00 00 27 f1 e0 e9 00     02:49:40.750  READ DMA
-  c8 00 00 00 08 00 00 00 22 59 70 e9 00     02:49:40.750  READ DMA
-  c8 00 00 00 20 00 00 00 1f d0 e0 e9 00     02:49:40.750  READ DMA
-  c8 00 00 00 88 00 00 00 19 2b 50 e9 00     02:49:40.750  READ DMA
+  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:54.250  SET FEATURES [Enable APM]
+  c8 00 00 00 08 00 00 00 15 8f 08 e8 00     00:00:54.250  READ DMA
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:54.188  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 0c 6b 80 e7 00     00:00:54.188  READ DMA
+  c8 00 00 00 08 00 00 00 e9 5d f0 e3 00     00:00:54.188  READ DMA
 
-Error 3843 [2] occurred at disk power-on lifetime: 8373 hours (348 days + 21 hours)
+Error 3875 [2] occurred at disk power-on lifetime: 8465 hours (352 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -200,13 +200,13 @@ Error 3843 [2] occurred at disk power-on lifetime: 8373 hours (348 days + 21 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     02:34:49.813  SET FEATURES [Enable APM]
-  ec 00 00 00 01 00 00 00 00 00 00 00 00     02:34:49.000  IDENTIFY DEVICE
-  c8 00 00 00 08 00 00 00 0c 6b 80 e7 00     02:34:49.000  READ DMA
-  c8 00 00 00 08 00 00 00 e9 5d f0 e3 00     02:34:49.000  READ DMA
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     02:34:49.000  READ DMA
+  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:01:00.375  SET FEATURES [Enable APM]
+  c8 00 00 00 08 00 00 00 15 8f 08 e8 00     00:01:00.375  READ DMA
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:01:00.375  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 0c 6b 80 e7 00     00:01:00.375  READ DMA
+  c8 00 00 00 08 00 00 00 e9 5d f0 e3 00     00:01:00.313  READ DMA
 
-Error 3842 [1] occurred at disk power-on lifetime: 8370 hours (348 days + 18 hours)
+Error 3874 [1] occurred at disk power-on lifetime: 8464 hours (352 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -217,13 +217,13 @@ Error 3842 [1] occurred at disk power-on lifetime: 8370 hours (348 days + 18 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:59.625  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 50 d4 38 e8 00     00:00:59.625  READ DMA
-  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:59.563  IDENTIFY DEVICE
-  c8 00 00 00 48 00 00 00 d2 11 00 e8 00     00:00:59.563  READ DMA
-  c8 00 00 00 20 00 00 00 d2 10 e0 e8 00     00:00:59.563  READ DMA
+  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:54.000  SET FEATURES [Enable APM]
+  c8 00 00 00 08 00 00 00 15 8f 08 e8 00     00:00:54.000  READ DMA
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:54.000  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 0c 6b 80 e7 00     00:00:54.000  READ DMA
+  c8 00 00 00 08 00 00 00 e9 5d f0 e3 00     00:00:53.938  READ DMA
 
-Error 3841 [0] occurred at disk power-on lifetime: 8366 hours (348 days + 14 hours)
+Error 3873 [0] occurred at disk power-on lifetime: 8464 hours (352 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -234,11 +234,11 @@ Error 3841 [0] occurred at disk power-on lifetime: 8366 hours (348 days + 14 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:52.438  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 50 d4 38 e8 00     00:00:52.438  READ DMA
-  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:52.375  IDENTIFY DEVICE
-  c8 00 00 00 48 00 00 00 d2 11 00 e8 00     00:00:52.375  READ DMA
-  c8 00 00 00 20 00 00 00 d2 10 e0 e8 00     00:00:52.375  READ DMA
+  ef 00 05 00 fe 00 00 00 00 00 00 40 00     04:48:13.250  SET FEATURES [Enable APM]
+  c8 00 00 00 08 00 00 00 00 10 40 e0 00     04:48:12.625  READ DMA
+  c8 00 00 00 08 00 00 00 02 00 40 e0 00     04:48:12.625  READ DMA
+  c8 00 00 00 08 00 00 00 60 00 40 e0 00     04:48:12.563  READ DMA
+  c8 00 00 00 08 00 00 00 00 02 40 e0 00     04:48:12.563  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

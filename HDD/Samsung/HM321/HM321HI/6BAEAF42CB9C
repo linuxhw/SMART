@@ -4,20 +4,21 @@ Device Model:     SAMSUNG HM321HI
 Serial Number:    --
 LU WWN Device Id: 5 0024e9 ...
 Firmware Version: 2AJ10002
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Mar  1 13:13:22 2017 MSK
+Local Time is:    Mon Aug 27 09:21:24 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -61,26 +62,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    22
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   089   089   025    -    3415
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7636
+  3 Spin_Up_Time            PO---K   089   089   025    -    3411
+  4 Start_Stop_Count        -O--CK   093   093   000    -    8034
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    4055
+  9 Power_On_Hours          -O--CK   100   100   000    -    4875
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   099   099   000    -    1995
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2953
-191 G-Sense_Error_Rate      -O---K   092   092   000    -    82785
+ 11 Calibration_Retry_Count -O--CK   098   098   000    -    2051
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3351
+191 G-Sense_Error_Rate      -O---K   092   092   000    -    83627
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   047   000    -    30 (Min/Max 4/55)
+194 Temperature_Celsius     -O----   064   047   000    -    26 (Min/Max 4/55)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    2624
-223 Load_Retry_Count        -O--CK   099   099   000    -    1995
-225 Load_Cycle_Count        -O--CK   085   085   000    -    153441
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    2673
+223 Load_Retry_Count        -O--CK   098   098   000    -    2051
+225 Load_Cycle_Count        -O--CK   082   082   000    -    183358
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -127,8 +128,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     22/30 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     22/27 Celsius
 Lifetime    Min/Max Temperature:      4/64 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -137,13 +138,15 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (101)
+Temperature History Size (Index):    128 (91)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

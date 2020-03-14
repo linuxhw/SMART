@@ -11,11 +11,11 @@ Form Factor:      Unknown (0x000a)
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Sep  8 15:38:53 2015 MSK
+Local Time is:    Tue Jul 19 12:47:55 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -56,24 +56,24 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   253   100   ---    -    7474
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    1682
+  9 Power_On_Hours          -O--CK   253   100   ---    -    9050
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    2132
 166 Min_W/E_Cycle           -O--CK   100   100   ---    -    1
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    30
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    298
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    351
 169 Total_Bad_Block         -O--CK   100   100   ---    -    214
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Avg_Write_Erase_Ct      -O--CK   100   100   ---    -    194
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    83
+173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    225
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    91
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   073   041   ---    -    27 (Min/Max 17/41)
+194 Temperature_Celsius     -O---K   067   041   ---    -    33 (Min/Max 17/41)
 212 SATA_PHY_Error          -O--CK   100   100   ---    -    38
-230 Perc_Write_Erase_Count  -O--CK   100   100   ---    -    1582
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    1842
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    25278
-241 Total_Writes_GiB        ----CK   253   253   ---    -    8611
-242 Total_Reads_GiB         ----CK   253   253   ---    -    4563
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    29282
+241 Total_Writes_GiB        ----CK   253   253   ---    -    9930
+242 Total_Reads_GiB         ----CK   253   253   ---    -    5268
 243 Unknown_Attribute       -O--CK   100   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -92,8 +92,8 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
@@ -108,14 +108,17 @@ Selective Self-tests/Logging not supported
 SCT Commands not supported
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1                6  Percentage Used Endurance Indicator
+Page  Offset Size        Value Flags Description
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           13  Device-to-host register FISes sent due to a COMRESET
 

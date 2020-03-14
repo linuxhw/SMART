@@ -3,11 +3,11 @@ Model Family:     Seagate Barracuda 7200.7 and 7200.7 Plus
 Device Model:     ST340014A
 Serial Number:    --
 Firmware Version: 3.54
-User Capacity:    40 020 664 320 bytes [40,0 GB]
+User Capacity:    40,020,664,320 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Tue Dec  5 22:49:57 2017 MSK
+Local Time is:    Tue Dec 19 21:36:04 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 (  31) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   067   053   006    -    172014948
-  3 Spin_Up_Time            PO----   098   098   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    997
+  1 Raw_Read_Error_Rate     POSR--   065   053   006    -    18445494
+  3 Spin_Up_Time            PO----   100   098   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    1012
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   075   060   030    -    35209708
-  9 Power_On_Hours          -O--CK   080   080   000    -    17571
+  7 Seek_Error_Rate         POSR--   076   060   030    -    42317109
+  9 Power_On_Hours          -O--CK   080   080   000    -    17848
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3701
-194 Temperature_Celsius     -O---K   039   063   000    -    39
-195 Hardware_ECC_Recovered  -O-RC-   067   053   000    -    172014948
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3725
+194 Temperature_Celsius     -O---K   041   063   000    -    41
+195 Hardware_ECC_Recovered  -O-RC-   065   053   000    -    18445494
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    8613
+199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    8619
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -98,7 +98,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 8893 (device log contains only the most recent five errors)
+ATA Error Count: 8895 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -112,6 +112,40 @@ ATA Error Count: 8893 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 8895 occurred at disk power-on lifetime: 17726 hours (738 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 bf f2 5b f1  Error: ICRC, ABRT 1 sectors at LBA = 0x015bf2bf = 22803135
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 68 58 f2 5b f1 00      21:37:46.201  READ DMA
+  c8 00 28 68 c1 4f f1 00      21:37:46.197  READ DMA
+  c8 00 10 58 63 44 f1 00      21:37:46.187  READ DMA
+  c8 00 08 48 63 44 f1 00      21:37:46.187  READ DMA
+  c8 00 08 38 63 44 f1 00      21:37:46.184  READ DMA
+
+Error 8894 occurred at disk power-on lifetime: 17726 hours (738 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 10 a3 52 f1  Error: ICRC, ABRT at LBA = 0x0152a310 = 22192912
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 10 a3 52 f1 00      21:37:43.421  READ DMA
+  c8 00 c0 c0 2f 59 f1 00      21:37:43.409  READ DMA
+  c8 00 00 58 35 59 f1 00      21:37:43.402  READ DMA
+  c8 00 c8 78 34 59 f1 00      21:37:43.537  READ DMA
+  c8 00 20 38 97 b9 f2 00      21:37:43.527  READ DMA
 
 Error 8893 occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -164,44 +198,12 @@ Error 8891 occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   c8 00 80 47 7a 3f f0 00      00:03:11.976  READ DMA
   c8 00 80 c7 79 3f f0 00      00:03:11.975  READ DMA
 
-Error 8890 occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 01 6e 75 60 f0  Error: ICRC, ABRT 1 sectors at LBA = 0x0060756e = 6321518
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 67 75 60 f0 00      00:03:04.088  READ DMA
-  c8 00 08 a7 35 3f f0 00      00:03:02.674  READ DMA
-  c8 00 08 3f 75 60 f0 00      00:03:02.674  READ DMA
-  c8 00 08 9f 35 3f f0 00      00:03:10.971  READ DMA
-  c8 00 08 2f 75 60 f0 00      00:03:10.970  READ DMA
-
-Error 8889 occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 01 e6 26 3f f0  Error: ICRC, ABRT 1 sectors at LBA = 0x003f26e6 = 4138726
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 df 26 3f f0 00      00:03:04.088  READ DMA
-  c8 00 08 67 dd 3e f0 00      00:03:02.674  READ DMA
-  ca 00 08 2f 7a 60 f0 00      00:03:02.674  WRITE DMA
-  ca 00 08 3f 7a 60 f0 00      00:03:02.674  WRITE DMA
-  ca 00 08 a7 7a 60 f0 00      00:03:02.532  WRITE DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     17760         -
+# 2  Extended offline    Completed without error       00%     17631         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

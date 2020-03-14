@@ -5,13 +5,13 @@ Serial Number:    --
 LU WWN Device Id: 5 002303 ...
 Add. Product Id:  HC8020R0
 Firmware Version: 1.08
-User Capacity:    256 060 514 304 bytes [256 GB]
+User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Dec 13 20:02:47 2017 GMT
+Local Time is:    Thu Sep  6 00:37:06 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,16 +61,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    2121
- 12 Power_Cycle_Count       PO----   100   100   000    -    3090
+  9 Power_On_Hours          -O----   100   100   000    -    2615
+ 12 Power_Cycle_Count       PO----   100   100   000    -    4063
 170 Unknown_Plextor_Attrib  -O--CK   100   100   000    -    0
 171 Unknown_Plextor_Attrib  PO----   100   100   000    -    0
 172 Unknown_Plextor_Attrib  PO----   100   100   000    -    0
-173 Unknown_Plextor_Attrib  PO----   100   100   000    -    55
-174 Unknown_Plextor_Attrib  PO----   100   100   000    -    182
+173 Unknown_Plextor_Attrib  PO----   100   100   000    -    64
+174 Unknown_Plextor_Attrib  PO----   100   100   000    -    238
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
-177 Wear_Leveling_Count     PO----   100   100   000    -    57047
+177 Wear_Leveling_Count     PO----   100   100   000    -    65779
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    1152
@@ -80,15 +80,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO--CK   100   100   000    -    0
 187 Reported_Uncorrect      PO----   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count PO----   100   100   000    -    182
+192 Power-Off_Retract_Count PO----   100   100   000    -    238
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
 196 Reallocated_Event_Count PO----   100   100   000    -    0
 198 Offline_Uncorrectable   PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    0
-233 Media_Wearout_Indicator PO----   100   100   000    -    14261
-241 Host_Writes_32MiB       PO----   100   100   000    -    279837
-242 Host_Reads_32MiB        PO----   100   100   000    -    458625
+233 Media_Wearout_Indicator PO----   100   100   000    -    16444
+241 Host_Writes_32MiB       PO----   100   100   000    -    318104
+242 Host_Reads_32MiB        PO----   100   100   000    -    521399
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -113,7 +113,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 0 inconsistent with error log pointer 4
+Warning: ATA error count 0 inconsistent with error log pointer 2
 
 ATA Error Count: 0
 	CR = Command Register [HEX]
@@ -136,52 +136,18 @@ Error 0 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  ff 00 ff 25 d1 02 00
+  01 ff 00 00 00 00 02
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  00 ff ff 25 a1 02 00 ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 ff ff 25 61 01 00 ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 ff ff 25 30 01 00 ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 ff ff 25 70 7e 00 ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 03 00 00 00 00  49d+12:26:26.432  NOP [Abort queued commands]
-
-Error -1 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  25 00 43 7e 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ff 25 7f b6 00 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
-  ff 25 53 b6 00 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
-  ff 25 5a 37 00 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
-  ff 25 2e 37 00 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
-  ff 03 00 00 00 00 00 00  49d+17:02:47.042  [VENDOR SPECIFIC]
-
-Error -2 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  b2 ff 00 00 00 00 02
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ff b2 00 00 00 ff 02 3b   7d+09:05:34.207  [VENDOR SPECIFIC]
-  ff 6e 04 00 00 ff 02 ac   7d+09:05:34.207  [VENDOR SPECIFIC]
-  ff 6e 04 00 00 ff 02 80   7d+09:05:34.207  [VENDOR SPECIFIC]
-  ff d9 00 00 00 ff 02 cb   7d+09:05:34.207  [VENDOR SPECIFIC]
+  ff 38 02 00 00 ff 02 38   7d+09:05:34.207  [VENDOR SPECIFIC]
+  ff 37 02 00 00 ff 02 fb   7d+09:05:34.207  [VENDOR SPECIFIC]
+  ff d2 02 00 00 ff 02 54   7d+09:05:34.207  [VENDOR SPECIFIC]
+  ff d2 02 00 00 ff 02 17   7d+09:05:34.207  [VENDOR SPECIFIC]
   ff 00 00 00 00 ff 02 00   7d+09:05:34.207  [VENDOR SPECIFIC]
 
-Error -3 occurred at disk power-on lifetime: 768 hours (32 days + 0 hours)
+Error -1 occurred at disk power-on lifetime: 768 hours (32 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -192,11 +158,45 @@ Error -3 occurred at disk power-on lifetime: 768 hours (32 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ff 00 00 ff 02 ff ff 03  42d+06:04:52.607  [VENDOR SPECIFIC]
-  ff 00 00 ff 02 ff ff 03  45d+14:42:31.551  [VENDOR SPECIFIC]
-  ff 00 00 ff 02 ff ff 00  45d+13:54:27.967  [VENDOR SPECIFIC]
-  ff 00 00 ff 02 ff ff 00   9d+02:20:48.511  [VENDOR SPECIFIC]
-  ff 00 00 ff 02 ff ff 00   9d+01:29:28.319  [VENDOR SPECIFIC]
+  ff 00 00 ff 02 ff ff 00  45d+12:43:28.127  [VENDOR SPECIFIC]
+  ff 00 00 ff 02 ff ff 00  45d+11:36:50.431  [VENDOR SPECIFIC]
+  ff 00 00 ff 02 ff ff 00  43d+05:24:04.223  [VENDOR SPECIFIC]
+  ff 00 00 ff 02 ff ff 02  43d+04:18:32.063  [VENDOR SPECIFIC]
+  ff 00 00 ff 02 ff ff 00  39d+01:17:41.759  [VENDOR SPECIFIC]
+
+Error -2 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  ff c8 ff ff ff 25 e8
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  80 ff ff ff ff 25 28 02  49d+12:23:10.080  [VENDOR SPECIFIC]
+  7f ff ff ff ff 25 ec 02  49d+12:23:10.080  SEEK [RET-4]
+  76 ff ff ff ff 25 20 02  49d+12:23:10.081  SEEK [RET-4]
+  75 ff ff ff ff 25 e9 02  49d+12:23:10.081  SEEK [RET-4]
+  00 00 00 00 00 03 02 00  49d+12:23:10.080  NOP [Abort queued commands]
+
+Error -3 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  ff 00 ff 25 ea 93 0e
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  00 ff ff 25 b2 93 0e ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 ff ff 25 75 01 00 ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 ff ff 25 43 01 00 ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 ff ff 25 ee 48 0a ff  49d+12:26:26.432  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 00 03 00 00 00 00  49d+12:26:26.432  NOP [Abort queued commands]
 
 Error -4 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -204,16 +204,16 @@ Error -4 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  ff 49 ff ff ff 25 26  Error: ICRC, UNC, MC, IDNF, MCR, ABRT, NM, AMNF at LBA = 0x0625ffff = 103153663
+  25 00 48 e2 03 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c9 ff ff ff ff 25 52 02  49d+12:23:10.080  READ DMA (w/o retry) [OBS-5]
-  c9 ff ff ff ff 25 24 02  49d+12:23:10.080  READ DMA (w/o retry) [OBS-5]
-  7b ff ff ff ff 25 c5 02  49d+12:23:10.081  SEEK [RET-4]
-  7b ff ff ff ff 25 93 02  49d+12:23:10.081  SEEK [RET-4]
-  00 00 00 00 00 03 00 00  49d+12:23:10.080  NOP [Abort queued commands]
+  ff 25 0c e2 03 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
+  ff 25 b8 1b 05 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
+  ff 25 81 1b 05 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
+  ff 25 74 01 00 00 00 ff  49d+17:02:47.042  [VENDOR SPECIFIC]
+  ff 03 00 00 00 00 00 00  49d+17:02:47.042  [VENDOR SPECIFIC]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -242,8 +242,8 @@ Min/Max Temperature Limit:            ?/ ? Celsius
 Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
-           Read:      2 (0,2 seconds)
-          Write:      2 (0,2 seconds)
+           Read:      2 (0.2 seconds)
+          Write:      2 (0.2 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -258,7 +258,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

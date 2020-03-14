@@ -4,19 +4,20 @@ Device Model:     WDC WD3200BPVT-80ZEST0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01A01
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Mar 16 20:21:22 2017 +07
+Local Time is:    Mon Jun 18 14:42:17 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -60,18 +61,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    1
-  3 Spin_Up_Time            POS--K   154   131   021    -    1266
-  4 Start_Stop_Count        -O--CK   056   056   000    -    44974
+  3 Spin_Up_Time            POS--K   151   131   021    -    1425
+  4 Start_Stop_Count        -O--CK   050   050   000    -    50622
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    2088
+  9 Power_On_Hours          -O--CK   096   096   000    -    3137
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2085
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    16243
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    91
-193 Load_Cycle_Count        -O--CK   118   118   000    -    248315
-194 Temperature_Celsius     -O---K   101   092   000    -    42
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2516
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    49903
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    111
+193 Load_Cycle_Count        -O--CK   094   094   000    -    319340
+194 Temperature_Celsius     -O---K   114   092   000    -    29
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -94,7 +95,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -141,24 +142,24 @@ Error 1 [0] occurred at disk power-on lifetime: 1710 hours (71 days + 6 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      30%      2024         -
-# 2  Extended offline    Interrupted (host reset)      80%      2005         -
-# 3  Extended offline    Interrupted (host reset)      80%      1996         -
-# 4  Extended offline    Completed without error       00%      1993         -
-# 5  Extended offline    Completed without error       00%      1988         -
-# 6  Extended offline    Interrupted (host reset)      80%      1970         -
-# 7  Extended offline    Interrupted (host reset)      90%      1969         -
-# 8  Extended offline    Interrupted (host reset)      90%      1968         -
-# 9  Extended offline    Interrupted (host reset)      60%      1962         -
-#10  Extended offline    Interrupted (host reset)      90%      1952         -
-#11  Extended offline    Completed without error       00%      1943         -
-#12  Extended offline    Interrupted (host reset)      50%      1936         -
-#13  Extended offline    Interrupted (host reset)      10%      1927         -
-#14  Extended offline    Completed without error       00%      1923         -
-#15  Extended offline    Interrupted (host reset)      90%      1920         -
-#16  Extended offline    Interrupted (host reset)      90%      1920         -
-#17  Extended offline    Completed without error       00%      1908         -
-#18  Extended offline    Interrupted (host reset)      90%      1905         -
+# 1  Extended offline    Completed without error       00%      3130         -
+# 2  Extended offline    Interrupted (host reset)      10%      3071         -
+# 3  Extended offline    Completed without error       00%      3020         -
+# 4  Extended offline    Completed without error       00%      3010         -
+# 5  Extended offline    Interrupted (host reset)      90%      2957         -
+# 6  Extended offline    Completed without error       00%      2907         -
+# 7  Extended offline    Completed without error       00%      2851         -
+# 8  Extended offline    Completed without error       00%      2838         -
+# 9  Extended offline    Interrupted (host reset)      20%      2811         -
+#10  Extended offline    Interrupted (host reset)      40%      2806         -
+#11  Extended offline    Completed without error       00%      2799         -
+#12  Extended offline    Interrupted (host reset)      40%      2794         -
+#13  Extended offline    Completed without error       00%      2786         -
+#14  Extended offline    Interrupted (host reset)      60%      2762         -
+#15  Extended offline    Interrupted (host reset)      80%      2737         -
+#16  Extended offline    Interrupted (host reset)      70%      2660         -
+#17  Extended offline    Interrupted (host reset)      80%      2654         -
+#18  Extended offline    Completed without error       00%      2634         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -175,9 +176,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     30/43 Celsius
-Lifetime    Min/Max Temperature:     31/51 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     27/28 Celsius
+Lifetime    Min/Max Temperature:     26/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -188,11 +189,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (41)
+Temperature History Size (Index):    128 (15)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -203,7 +206,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         7979  Vendor specific
+0x8000  4          160  Vendor specific
 

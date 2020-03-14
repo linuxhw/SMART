@@ -4,19 +4,20 @@ Device Model:     ST9250827AS
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: 3.AAA
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Sun Sep  2 06:45:40 2018 EEST
+Local Time is:    Sun Oct 14 10:20:12 2018 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -58,20 +59,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5664
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5734
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   079   060   030    -    17576671599
-  9 Power_On_Hours          -O--CK   087   087   000    -    11929
+  7 Seek_Error_Rate         POSR--   080   060   030    -    17582636364
+  9 Power_On_Hours          -O--CK   087   087   000    -    12110
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5434
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5506
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   054   038   045    Past 46 (Min/Max 14/62 #313)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    741
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    2608
-193 Load_Cycle_Count        -O---K   001   001   000    -    211917
-194 Temperature_Celsius     -O-RC-   046   062   000    -    46 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   062   049   000    -    114660099
+190 Airflow_Temperature_Cel -O---K   062   038   045    Past 38 (Min/Max 14/62 #313)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    747
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    2677
+193 Load_Cycle_Count        -O---K   001   001   000    -    219559
+194 Temperature_Celsius     -O-RC-   038   062   000    -    38 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   069   049   000    -    118173519
 197 Current_Pending_Sector  ----C-   100   100   000    -    0
 198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
@@ -95,7 +96,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07           SL  R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10           SL  R/O      1  SATA NCQ Queued Error log
+0x10           SL  R/O      1  NCQ Command Error log
 0x11           SL  R/O      1  SATA Phy Event Counters log
 0x20           SL  R/O      1  Streaming performance log [OBS-8]
 0x21           SL  R/O      1  Write stream error log
@@ -135,7 +136,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 46 Celsius
+Current Temperature:                 38 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -145,16 +146,18 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           22  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            7  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
 

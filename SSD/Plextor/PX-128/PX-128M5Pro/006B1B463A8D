@@ -1,5 +1,5 @@
 === START OF INFORMATION SECTION ===
-Model Family:     Plextor M3/M5 (Pro) Series SSDs
+Model Family:     Plextor M3/M5/M6 Series SSDs
 Device Model:     PLEXTOR PX-128M5Pro
 Serial Number:    --
 LU WWN Device Id: 0 250313 ...
@@ -11,7 +11,7 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Nov  7 00:56:25 2014 KRAT
+Local Time is:    Sat Apr 30 14:14:11 2016 KRAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,20 +61,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO----   100   100   070    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    485
- 12 Power_Cycle_Count       -O----   100   100   000    -    217
-177 Wear_Leveling_Count     PO----   100   100   000    -    4519
+  9 Power_On_Hours          -O----   100   100   000    -    6325
+ 12 Power_Cycle_Count       -O----   100   100   000    -    730
+177 Wear_Leveling_Count     PO----   100   100   000    -    21433
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 181 Program_Fail_Cnt_Total  PO----   100   100   000    -    0
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    0
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-192 Power-Off_Retract_Count PO----   100   100   000    -    67
+192 Power-Off_Retract_Count PO----   100   100   000    -    116
 196 Reallocated_Event_Count PO----   100   100   000    -    0
 198 Offline_Uncorrectable   PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    0
-241 Host_Writes_32MiB       PO----   100   100   000    -    14060
-242 Host_Reads_32MiB        PO----   100   100   000    -    17668
+241 Host_Writes_32MiB       PO----   100   100   000    -    66043
+242 Host_Reads_32MiB        PO----   100   100   000    -    65116
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,8 +89,8 @@ Address    Access  R/W   Size  Description
 0x01       GPL,SL  R/O      1  Summary SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W      1  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
@@ -102,22 +102,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     39681         -
-# 2  Extended offline    Completed without error       00%     11009         -
-# 3  Extended offline    Completed without error       00%     48896         -
-# 4  Extended offline    Completed without error       00%     36096         -
-# 5  Extended offline    Completed without error       00%     34048         -
-# 6  Extended offline    Completed without error       00%     32000         -
-# 7  Extended offline    Completed without error       00%     29952         -
-# 8  Extended offline    Completed without error       00%     27904         -
-# 9  Extended offline    Completed without error       00%     20736         -
-#10  Extended offline    Completed without error       00%     18688         -
-#11  Extended offline    Completed without error       00%     16384         -
-#12  Extended offline    Completed without error       00%     14336         -
-#13  Extended offline    Completed without error       00%      7936         -
-#14  Extended offline    Completed without error       00%      4608         -
-#15  Extended offline    Completed without error       00%      2304         -
-#16  Extended offline    Completed without error       00%       768         -
+# 1  Extended offline    Completed without error       00%     31767         -
+# 2  Extended offline    Completed without error       00%     53773         -
+# 3  Extended offline    Completed without error       00%     19213         -
+# 4  Extended offline    Completed without error       00%     61452         -
+# 5  Extended offline    Completed without error       00%     35596         -
+# 6  Extended offline    Completed without error       00%     15116         -
+# 7  Extended offline    Completed without error       00%     11531         -
+# 8  Extended offline    Completed without error       00%     53258         -
+# 9  Extended offline    Completed without error       00%     25610         -
+#10  Extended offline    Completed without error       00%      5386         -
+#11  Extended offline    Completed without error       00%     49929         -
+#12  Extended offline    Completed without error       00%     26633         -
+#13  Extended offline    Completed without error       00%      5385         -
+#14  Extended offline    Completed without error       00%     25864         -
+#15  Extended offline    Completed without error       00%     65287         -
+#16  Extended offline    Completed without error       00%     41991         -
+#17  Extended offline    Completed without error       00%     14855         -
+#18  Extended offline    Completed without error       00%     57862         -
+#19  Extended offline    Completed without error       00%     21766         -
 
 Selective Self-tests/Logging not supported
 
@@ -141,7 +144,7 @@ SCT Error Recovery Control:
            Read:      2 (0,2 seconds)
           Write:      2 (0,2 seconds)
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

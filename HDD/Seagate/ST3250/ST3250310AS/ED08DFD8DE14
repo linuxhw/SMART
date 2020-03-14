@@ -7,13 +7,14 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Mar 11 10:14:11 2018 +08
+Local Time is:    Fri Dec 13 22:56:08 2019 +08
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -53,18 +54,18 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   098   098   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2149
+  3 Spin_Up_Time            PO----   099   098   000    -    0
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2294
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   085   060   030    -    365882830
-  9 Power_On_Hours          -O--CK   087   087   000    -    11738
+  7 Seek_Error_Rate         POSR--   085   060   030    -    373205777
+  9 Power_On_Hours          -O--CK   087   087   000    -    12131
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2105
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2255
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   051   045    -    40 (Min/Max 14/49)
-194 Temperature_Celsius     -O---K   040   049   000    -    40 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   064   000    -    224630048
+190 Airflow_Temperature_Cel -O---K   058   051   045    -    42 (Min/Max 14/49)
+194 Temperature_Celsius     -O---K   042   049   000    -    42 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   070   064   000    -    92321834
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   173   000    -    4680
@@ -87,7 +88,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -104,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 1
+Device Error Count: 9
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,7 +121,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1 [0] occurred at disk power-on lifetime: 11732 hours (488 days + 20 hours)
+Error 9 [8] occurred at disk power-on lifetime: 11732 hours (488 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -136,6 +137,125 @@ Error 1 [0] occurred at disk power-on lifetime: 11732 hours (488 days + 20 hours
   25 00 00 00 40 00 1d 58 00 1c c0 e0 00     07:47:58.895  READ DMA EXT
   25 00 00 00 40 00 1d 58 00 1c 80 e0 00     07:47:58.893  READ DMA EXT
   25 00 00 00 40 00 1d 58 00 1c 40 e0 00     07:47:58.893  READ DMA EXT
+
+Error 8 [7] occurred at disk power-on lifetime: 11929 hours (497 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: IDNF 64 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:44:07.418  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:44:07.417  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:44:07.417  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:44:07.416  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:44:07.424  READ DMA EXT
+
+Error 7 [6] occurred at disk power-on lifetime: 11929 hours (497 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: IDNF 64 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:14:06.813  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:14:06.813  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:14:06.812  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:14:06.812  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:14:06.811  READ DMA EXT
+
+Error 6 [5] occurred at disk power-on lifetime: 11804 hours (491 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: IDNF 64 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     01:29:55.057  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     01:29:55.056  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     01:29:55.056  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     01:29:55.055  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     01:29:55.055  READ DMA EXT
+
+Error 5 [4] occurred at disk power-on lifetime: 11732 hours (488 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: IDNF 64 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     07:47:58.896  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     07:47:58.896  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     07:47:58.895  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     07:47:58.893  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     07:47:58.893  READ DMA EXT
+
+Error 4 [3] occurred at disk power-on lifetime: 11929 hours (497 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: IDNF 64 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:44:07.418  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:44:07.417  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:44:07.417  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:44:07.416  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:44:07.424  READ DMA EXT
+
+Error 3 [2] occurred at disk power-on lifetime: 11929 hours (497 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: IDNF 64 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:14:06.813  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:14:06.813  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:14:06.812  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:14:06.812  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:14:06.811  READ DMA EXT
+
+Error 2 [1] occurred at disk power-on lifetime: 11804 hours (491 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 40 00 00 00 00 00 00 e0 00  Error: IDNF 64 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     01:29:55.057  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     01:29:55.056  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     01:29:55.056  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     01:29:55.055  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     01:29:55.055  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 
@@ -154,7 +274,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 40 Celsius
+Current Temperature:                 42 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -164,16 +284,18 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            1  Vendor specific
+0x8003  2            3  Vendor specific
 0x8004  2            0  Vendor specific
 

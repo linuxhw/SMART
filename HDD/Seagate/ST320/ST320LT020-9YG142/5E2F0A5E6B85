@@ -3,19 +3,20 @@ Device Model:     ST320LT020-9YG142
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: 0001SDM1
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Jan 21 12:16:17 2018 +07
+Local Time is:    Sun Jun 10 16:07:23 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
@@ -59,33 +60,33 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   096   006    -    191241256
+  1 Raw_Read_Error_Rate     POSR--   114   096   006    -    83426544
   3 Spin_Up_Time            PO----   099   099   085    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    8187
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8426
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    18
-  7 Seek_Error_Rate         POSR--   078   060   030    -    17429537962
-  9 Power_On_Hours          -O--CK   082   082   000    -    15887
+  7 Seek_Error_Rate         POSR--   078   060   030    -    17443620615
+  9 Power_On_Hours          -O--CK   081   081   000    -    17144
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3803
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    4042
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   001   001   000    -    241
 188 Command_Timeout         -O--CK   100   098   000    -    4295032893
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   072   048   045    -    28 (Min/Max 24/28)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    127
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    75
-193 Load_Cycle_Count        -O--CK   001   001   000    -    370631
-194 Temperature_Celsius     -O---K   028   052   000    -    28 (0 3 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   048   035   000    -    191241256
+190 Airflow_Temperature_Cel -O---K   058   046   045    -    42 (Min/Max 31/43)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    130
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    83
+193 Load_Cycle_Count        -O--CK   001   001   000    -    393491
+194 Temperature_Celsius     -O---K   042   054   000    -    42 (0 3 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   048   028   000    -    83426544
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
-240 Head_Flying_Hours       ------   100   253   000    -    13336 (123 168 0)
-241 Total_LBAs_Written      ------   100   253   000    -    3288702802
-242 Total_LBAs_Read         ------   100   253   000    -    3610723758
-250 Read_Error_Retry_Rate   ------   100   001   000    -    1832
-251 Unknown_Attribute       ------   100   001   000    -    529
-252 Unknown_Attribute       ------   100   001   000    -    0
+240 Head_Flying_Hours       ------   100   253   000    -    14531 (204 102 0)
+241 Total_LBAs_Written      ------   100   253   000    -    2485537414
+242 Total_LBAs_Read         ------   100   253   000    -    416278526
+250 Read_Error_Retry_Rate   ------   001   001   000    -    24928
+251 Unknown_Attribute       ------   100   001   000    -    220
+252 Unknown_Attribute       ------   100   001   000    -    2
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -104,7 +105,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -124,7 +125,26 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     17130         -
+# 2  Extended offline    Completed without error       00%     17024         -
+# 3  Extended offline    Completed without error       00%     16970         -
+# 4  Extended offline    Completed without error       00%     16874         -
+# 5  Extended offline    Completed without error       00%     16823         -
+# 6  Extended offline    Completed without error       00%     16746         -
+# 7  Extended offline    Completed without error       00%     16675         -
+# 8  Extended offline    Completed without error       00%     16597         -
+# 9  Extended offline    Completed without error       00%     16549         -
+#10  Extended offline    Completed without error       00%     16489         -
+#11  Extended offline    Completed without error       00%     16437         -
+#12  Extended offline    Completed without error       00%     16386         -
+#13  Extended offline    Completed without error       00%     16352         -
+#14  Extended offline    Completed without error       00%     16329         -
+#15  Extended offline    Completed without error       00%     16286         -
+#16  Extended offline    Completed without error       00%     16219         -
+#17  Extended offline    Completed without error       00%     16111         -
+#18  Extended offline    Completed without error       00%     16017         -
+#19  Extended offline    Completed without error       00%     15951         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -141,9 +161,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     24/28 Celsius
-Lifetime    Min/Max Temperature:      3/52 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     31/43 Celsius
+Lifetime    Min/Max Temperature:      3/54 Celsius
 Lifetime    Average Temperature:        34 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -152,7 +172,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (119)
+Temperature History Size (Index):    128 (58)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -160,9 +180,11 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

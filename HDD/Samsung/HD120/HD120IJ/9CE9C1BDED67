@@ -7,7 +7,7 @@ User Capacity:    120 033 041 920 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Wed Jan  6 18:17:02 2016 MSK
+Local Time is:    Tue Mar 15 20:58:38 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		( 2774) seconds.
 Offline data collection
@@ -55,27 +54,27 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   091   051    -    0
-  3 Spin_Up_Time            POS---   253   253   025    -    5888
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1573
-  5 Reallocated_Sector_Ct   PO--CK   081   081   010    -    182
+  1 Raw_Read_Error_Rate     POSR--   253   091   051    -    0
+  3 Spin_Up_Time            POS---   253   253   025    -    4992
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1776
+  5 Reallocated_Sector_Ct   PO--CK   081   081   010    -    185
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    35817
+  9 Power_On_Hours          -O--CK   100   100   000    -    36482
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1036
-187 Reported_Uncorrect      -O--CK   001   001   000    -    262718
-190 Airflow_Temperature_Cel -O---K   124   082   000    -    38
-194 Temperature_Celsius     -O---K   124   082   000    -    38
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1897864
-196 Reallocated_Event_Count -O--CK   081   081   000    -    182
-197 Current_Pending_Sector  -O--C-   253   099   000    -    0
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1174
+187 Reported_Uncorrect      -O--CK   001   001   000    -    328301
+190 Airflow_Temperature_Cel -O---K   118   082   000    -    40
+194 Temperature_Celsius     -O---K   118   082   000    -    40
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    788
+196 Reallocated_Event_Count -O--CK   081   081   000    -    185
+197 Current_Pending_Sector  -O--C-   100   099   000    -    1
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
-200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   001   000    -    0
-202 Data_Address_Mark_Errs  -O--CK   100   100   000    -    5
+200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   253   001   000    -    0
+202 Data_Address_Mark_Errs  -O--CK   001   001   000    -    32767
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -100,7 +99,8 @@ Invalid Error Log index = 0x0200 (reserved = 0x00)
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: read failure       90%     35906         232085274
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -118,8 +118,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 38 Celsius
-Power Cycle Max Temperature:         40 Celsius
+Current Temperature:                 40 Celsius
+Power Cycle Max Temperature:         41 Celsius
 Lifetime    Max Temperature:         54 Celsius
 
 SCT Temperature History Version:     2
@@ -127,7 +127,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/55 Celsius
 Min/Max Temperature Limit:            5/60 Celsius
-Temperature History Size (Index):    128 (59)
+Temperature History Size (Index):    128 (89)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -138,7 +138,7 @@ Device Statistics (GP Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

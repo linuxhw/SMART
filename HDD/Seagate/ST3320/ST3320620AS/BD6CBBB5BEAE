@@ -7,7 +7,7 @@ User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Jan 27 11:10:31 2016 PST
+Local Time is:    Wed Aug 24 09:03:05 2016 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   094   006    -    131882355
-  3 Spin_Up_Time            PO----   098   095   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    568
+  1 Raw_Read_Error_Rate     POSR--   117   094   006    -    133280703
+  3 Spin_Up_Time            PO----   097   095   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    672
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    38
-  7 Seek_Error_Rate         POSR--   069   060   030    -    43043208398
-  9 Power_On_Hours          -O--CK   094   094   000    -    5702
+  7 Seek_Error_Rate         POSR--   070   060   030    -    43050341541
+  9 Power_On_Hours          -O--CK   094   094   000    -    5782
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    560
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    664
 187 Reported_Uncorrect      -O--CK   001   001   000    -    1144
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   074   048   045    -    26 (Min/Max 21/26)
-194 Temperature_Celsius     -O---K   026   052   000    -    26 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   081   056   000    -    0
+190 Airflow_Temperature_Cel -O---K   069   048   045    -    31 (Min/Max 24/31)
+194 Temperature_Celsius     -O---K   031   052   000    -    31 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   074   056   000    -    202035697
 197 Current_Pending_Sector  -O--C-   100   099   000    -    17
 198 Offline_Uncorrectable   ----C-   100   099   000    -    17
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -86,8 +86,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -130,11 +130,11 @@ Error 1153 [12] occurred at disk power-on lifetime: 5700 hours (237 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:56.157  READ DMA EXT
-  ea 00 00 00 00 00 0f 27 00 8c e0 a0 00     00:30:56.095  FLUSH CACHE EXT
-  ca 00 00 00 08 00 0f 27 00 8c e0 ef 00     00:30:56.430  WRITE DMA
-  ea 00 00 00 00 00 0f 27 00 8c 48 a0 00     00:30:56.258  FLUSH CACHE EXT
-  ca 00 00 00 98 00 0f 27 00 8c 48 ef 00     00:30:56.258  WRITE DMA
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:25.364  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:30:25.363  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:30:25.363  IDENTIFY DEVICE
+  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:30:25.113  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:30:25.112  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 1152 [11] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -147,11 +147,11 @@ Error 1152 [11] occurred at disk power-on lifetime: 5700 hours (237 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:53.905  READ DMA EXT
-  25 00 00 00 20 00 22 d0 00 87 e0 e0 00     00:30:53.904  READ DMA EXT
-  25 00 00 00 08 00 22 ca 00 83 d8 e0 00     00:30:53.848  READ DMA EXT
-  25 00 00 00 08 00 23 5c 00 09 10 e0 00     00:30:54.172  READ DMA EXT
-  25 00 00 00 08 00 23 d4 00 03 60 e0 00     00:30:54.036  READ DMA EXT
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:34.905  READ DMA EXT
+  ea 00 00 00 00 00 22 7a 00 07 f0 a0 00     00:30:34.887  FLUSH CACHE EXT
+  35 00 00 01 08 00 22 7a 00 07 f0 e0 00     00:30:34.886  WRITE DMA EXT
+  35 00 00 00 08 00 21 70 00 cc 20 e0 00     00:30:34.570  WRITE DMA EXT
+  35 00 00 00 10 00 1f 12 00 13 40 e0 00     00:30:34.570  WRITE DMA EXT
 
 Error 1151 [10] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -164,11 +164,11 @@ Error 1151 [10] occurred at disk power-on lifetime: 5700 hours (237 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:51.433  READ DMA EXT
-  ea 00 00 00 00 00 0f 27 00 8c 40 a0 00     00:30:49.410  FLUSH CACHE EXT
-  ca 00 00 00 08 00 0f 27 00 8c 40 ef 00     00:30:49.392  WRITE DMA
-  ea 00 00 00 00 00 0f 27 00 8c 28 a0 00     00:30:49.391  FLUSH CACHE EXT
-  ea 00 00 00 00 00 0f 27 00 8c 28 a0 00     00:30:51.919  FLUSH CACHE EXT
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:32.511  READ DMA EXT
+  35 00 00 00 10 00 18 50 00 9a b8 e0 00     00:30:32.156  WRITE DMA EXT
+  35 00 00 00 10 00 18 50 00 9a 98 e0 00     00:30:32.156  WRITE DMA EXT
+  35 00 00 00 08 00 18 40 00 8e e0 e0 00     00:30:32.155  WRITE DMA EXT
+  35 00 00 00 08 00 18 b3 00 88 88 e0 00     00:30:32.155  WRITE DMA EXT
 
 Error 1150 [9] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -181,11 +181,11 @@ Error 1150 [9] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:49.335  READ DMA EXT
-  ea 00 00 00 00 00 22 7e 00 07 68 a0 00     00:30:49.410  FLUSH CACHE EXT
-  35 00 00 00 f8 00 22 7e 00 07 68 e0 00     00:30:49.392  WRITE DMA EXT
-  35 00 00 00 08 00 1f fa 00 0c 10 e0 00     00:30:49.391  WRITE DMA EXT
-  35 00 00 00 08 00 21 2f 00 cc b8 e0 00     00:30:49.391  WRITE DMA EXT
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:29.738  READ DMA EXT
+  ea 00 00 00 00 00 22 7a 00 07 e8 a0 00     00:30:29.738  FLUSH CACHE EXT
+  35 00 00 00 08 00 22 7a 00 07 e8 e0 00     00:30:29.735  WRITE DMA EXT
+  ea 00 00 00 00 00 22 7a 00 07 30 a0 00     00:30:29.735  FLUSH CACHE EXT
+  35 00 00 00 b8 00 22 7a 00 07 30 e0 00     00:30:29.734  WRITE DMA EXT
 
 Error 1149 [8] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -198,11 +198,11 @@ Error 1149 [8] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:44.302  READ DMA EXT
-  35 00 00 00 08 00 18 65 00 9a e0 e0 00     00:30:46.909  WRITE DMA EXT
-  35 00 00 00 40 00 18 72 00 9a 30 e0 00     00:30:46.688  WRITE DMA EXT
-  35 00 00 00 40 00 18 72 00 9a 30 e0 00     00:30:46.688  WRITE DMA EXT
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:30:46.687  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:25.364  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:30:25.363  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:30:25.363  IDENTIFY DEVICE
+  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:30:25.113  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:30:25.112  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 1148 [7] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -215,11 +215,11 @@ Error 1148 [7] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:44.302  READ DMA EXT
-  35 00 00 00 10 00 1f fa 00 0c 08 e0 00     00:30:44.302  WRITE DMA EXT
-  ea 00 00 00 00 00 22 7d 00 07 68 a0 00     00:30:44.301  FLUSH CACHE EXT
-  35 00 00 00 08 00 22 7d 00 07 68 e0 00     00:30:44.244  WRITE DMA EXT
-  ea 00 00 00 00 00 22 7c 00 07 f0 a0 00     00:30:44.243  FLUSH CACHE EXT
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:34.905  READ DMA EXT
+  ea 00 00 00 00 00 22 7a 00 07 f0 a0 00     00:30:34.887  FLUSH CACHE EXT
+  35 00 00 01 08 00 22 7a 00 07 f0 e0 00     00:30:34.886  WRITE DMA EXT
+  35 00 00 00 08 00 21 70 00 cc 20 e0 00     00:30:34.570  WRITE DMA EXT
+  35 00 00 00 10 00 1f 12 00 13 40 e0 00     00:30:34.570  WRITE DMA EXT
 
 Error 1147 [6] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -232,11 +232,11 @@ Error 1147 [6] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:42.026  READ DMA EXT
-  35 00 00 00 08 00 21 60 00 cc 00 e0 00     00:30:42.026  WRITE DMA EXT
-  35 00 00 01 38 00 1f 14 00 0c 70 e0 00     00:30:42.025  WRITE DMA EXT
-  35 00 00 00 08 00 1f 12 00 0c c0 e0 00     00:30:42.025  WRITE DMA EXT
-  35 00 00 00 08 00 1f 12 00 0c b0 e0 00     00:30:42.025  WRITE DMA EXT
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:32.511  READ DMA EXT
+  35 00 00 00 10 00 18 50 00 9a b8 e0 00     00:30:32.156  WRITE DMA EXT
+  35 00 00 00 10 00 18 50 00 9a 98 e0 00     00:30:32.156  WRITE DMA EXT
+  35 00 00 00 08 00 18 40 00 8e e0 e0 00     00:30:32.155  WRITE DMA EXT
+  35 00 00 00 08 00 18 b3 00 88 88 e0 00     00:30:32.155  WRITE DMA EXT
 
 Error 1146 [5] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -249,11 +249,11 @@ Error 1146 [5] occurred at disk power-on lifetime: 5700 hours (237 days + 12 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:39.389  READ DMA EXT
-  35 00 00 00 10 00 1f ec 00 0a b0 e0 00     00:30:39.389  WRITE DMA EXT
-  35 00 00 00 10 00 1f ec 00 0a 98 e0 00     00:30:39.387  WRITE DMA EXT
-  35 00 00 00 08 00 1f ec 00 0a 80 e0 00     00:30:39.386  WRITE DMA EXT
-  35 00 00 00 08 00 1f ec 00 0a 68 e0 00     00:30:39.386  WRITE DMA EXT
+  25 00 00 00 08 00 21 62 00 4a e8 e0 00     00:30:29.738  READ DMA EXT
+  ea 00 00 00 00 00 22 7a 00 07 e8 a0 00     00:30:29.738  FLUSH CACHE EXT
+  35 00 00 00 08 00 22 7a 00 07 e8 e0 00     00:30:29.735  WRITE DMA EXT
+  ea 00 00 00 00 00 22 7a 00 07 30 a0 00     00:30:29.735  FLUSH CACHE EXT
+  35 00 00 00 b8 00 22 7a 00 07 30 e0 00     00:30:29.734  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 
@@ -270,11 +270,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

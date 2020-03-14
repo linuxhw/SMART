@@ -1,23 +1,24 @@
 === START OF INFORMATION SECTION ===
-Model Family:     Seagate Laptop Thin HDD
+Model Family:     Seagate Laptop HDD
 Device Model:     ST500LT012-9WS142
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: 0001SDM1
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Dec 21 02:21:49 2018 MSK
+Local Time is:    Sun Dec 23 16:59:09 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -60,30 +61,30 @@ SCT capabilities: 	       (0x1035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   081   006    -    94709816
+  1 Raw_Read_Error_Rate     POSR--   118   081   006    -    187638120
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    8386
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8392
   5 Reallocated_Sector_Ct   PO--CK   098   098   036    -    360
-  7 Seek_Error_Rate         POSR--   084   060   030    -    4576405119
-  9 Power_On_Hours          -O--CK   092   092   000    -    7218 (233 1 0)
+  7 Seek_Error_Rate         POSR--   084   060   030    -    4576614285
+  9 Power_On_Hours          -O--CK   092   092   000    -    7230 (170 210 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   020    -    8288
+ 12 Power_Cycle_Count       -O--CK   092   092   020    -    8294
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   001   001   000    -    4387
 188 Command_Timeout         -O--CK   100   099   000    -    8590065777
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   050   045    -    40 (Min/Max 29/40)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    268
+190 Airflow_Temperature_Cel -O---K   061   050   045    -    39 (Min/Max 22/39)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    269
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    45
-193 Load_Cycle_Count        -O--CK   092   092   000    -    17889
-194 Temperature_Celsius     -O---K   040   050   000    -    40 (0 18 0 0 0)
-196 Reallocated_Event_Count POSR--   092   092   030    -    7188 (55866 0)
+193 Load_Cycle_Count        -O--CK   091   091   000    -    18589
+194 Temperature_Celsius     -O---K   039   050   000    -    39 (0 18 0 0 0)
+196 Reallocated_Event_Count POSR--   092   092   030    -    7196 (29764 0)
 197 Current_Pending_Sector  -O--C-   099   097   000    -    32
 198 Offline_Uncorrectable   ----C-   099   097   000    -    32
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   092   092   000    -    7188 (218 58 0)
-241 Total_LBAs_Written      ------   100   253   000    -    2116153899
-242 Total_LBAs_Read         ------   100   253   000    -    1993915717
+240 Head_Flying_Hours       ------   092   092   000    -    7196 (116 68 0)
+241 Total_LBAs_Written      ------   100   253   000    -    2167263043
+242 Total_LBAs_Read         ------   100   253   000    -    2002878239
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -102,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -272,7 +273,8 @@ Error 5000 [19] occurred at disk power-on lifetime: 7205 hours (300 days + 5 hou
   60 00 00 00 03 00 00 00 05 4c 0e 40 00     00:04:51.465  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: read failure       90%      7220         214416
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -289,8 +291,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     29/41 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     22/39 Celsius
 Lifetime    Min/Max Temperature:     18/51 Celsius
 Lifetime    Average Temperature:        38 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -300,15 +302,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (55)
+Temperature History Size (Index):    128 (84)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

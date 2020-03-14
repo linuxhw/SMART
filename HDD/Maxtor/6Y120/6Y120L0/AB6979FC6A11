@@ -7,7 +7,7 @@ User Capacity:    122 942 324 736 bytes [122 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Thu Jul 14 22:08:40 2016 MSK
+Local Time is:    Fri Aug 19 18:38:18 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -51,33 +51,33 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   207   204   063    -    18502
-  4 Start_Stop_Count        -O--CK   252   252   000    -    2297
+  3 Spin_Up_Time            POS--K   206   204   063    -    16759
+  4 Start_Stop_Count        -O--CK   252   252   000    -    2386
   5 Reallocated_Sector_Ct   PO--CK   252   252   063    -    15
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   248   238   187    -    56405
-  9 Power_On_Minutes        -O--CK   240   240   000    -    314h+51m
+  8 Seek_Time_Performance   POS--K   252   238   187    -    61988
+  9 Power_On_Minutes        -O--CK   239   239   000    -    752h+16m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   250   250   000    -    1545
+ 12 Power_Cycle_Count       -O--CK   250   250   000    -    1551
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    48
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    2435
+194 Temperature_Celsius     -O--CK   253   253   000    -    44
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    2747
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   199   199   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    6
-202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    1
+201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    4
+202 Data_Address_Mark_Errs  -O-R--   253   239   000    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    2
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   193   193   000    -    0
+209 Offline_Seek_Performnce --S--K   196   193   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -90,18 +90,82 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 
 Read SMART Log Directory failed: scsi error badly formed scsi parameters
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 3
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 occurred at disk power-on lifetime: 4752 hours (198 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 f0 74 0a f2  Error: UNC 8 sectors at LBA = 0x020a74f0 = 34239728
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 18 f0 74 0a f2 08   5d+01:27:46.432  READ DMA
+  e7 00 00 ff ca 07 b0 08   5d+01:27:46.432  FLUSH CACHE
+  e7 00 00 ff ca 07 b0 08   5d+01:27:46.416  FLUSH CACHE
+  ca 00 08 f8 ca 07 f1 08   5d+01:27:46.416  WRITE DMA
+  e7 00 00 f7 ca 07 b0 08   5d+01:27:46.416  FLUSH CACHE
+
+Error 2 occurred at disk power-on lifetime: 4752 hours (198 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 00 74 0a f2  Error: UNC 8 sectors at LBA = 0x020a7400 = 34239488
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 00 74 0a f2 08   5d+01:27:43.056  READ DMA
+  ca 00 08 f0 0d 81 f8 08   5d+01:27:43.056  WRITE DMA
+  e7 00 00 ef 0d 81 b0 08   5d+01:27:42.848  FLUSH CACHE
+  ca 00 10 e0 0d 81 f8 08   5d+01:27:42.848  WRITE DMA
+  ca 00 08 b8 35 c0 f0 08   5d+01:27:42.848  WRITE DMA
+
+Error 1 occurred at disk power-on lifetime: 4752 hours (198 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 20 00 74 0a f2  Error: UNC 32 sectors at LBA = 0x020a7400 = 34239488
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 20 00 74 0a f2 08   5d+01:27:41.728  READ DMA
+  e7 00 00 ff c1 07 b0 08   5d+01:27:41.728  FLUSH CACHE
+  e7 00 00 ff c1 07 b0 08   5d+01:27:41.712  FLUSH CACHE
+  ca 00 08 f8 c1 07 f1 08   5d+01:27:41.712  WRITE DMA
+  e7 00 00 f7 c1 07 b0 08   5d+01:27:41.712  FLUSH CACHE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      4730         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -116,7 +180,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

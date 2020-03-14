@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Jan  8 17:09:00 2017 MSK
+Local Time is:    Mon Sep 17 22:24:40 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,21 +62,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   062    -    0
   2 Throughput_Performance  P-S--K   198   100   040    -    118
   3 Spin_Up_Time            PO---K   200   100   033    -    1
-  4 Start_Stop_Count        -O--CK   098   098   000    -    3995
+  4 Start_Stop_Count        -O--CK   097   097   000    -    5807
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         POSR-K   100   100   067    -    0
   8 Seek_Time_Performance   P-S--K   107   100   040    -    37
-  9 Power_On_Hours          -O--CK   088   088   000    -    5275
+  9 Power_On_Hours          -O--CK   081   081   000    -    8391
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    3368
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    4363
 183 Runtime_Bad_Block       -O--CK   099   099   000    -    1
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   099   000    -    2818057
-188 Command_Timeout         -O--CK   100   097   000    -    5703848362094
-190 Airflow_Temperature_Cel -O---K   062   055   045    -    38 (Min/Max 23/38)
-191 G-Sense_Error_Rate      -O--CK   098   098   000    -    548
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    5963867
-193 Load_Cycle_Count        -O--CK   081   081   000    -    198844
+187 Reported_Uncorrect      -O--CK   100   099   000    -    3997714
+188 Command_Timeout         -O--CK   100   097   000    -    5798341836954
+190 Airflow_Temperature_Cel -O---K   065   055   045    -    35 (Min/Max 25/39)
+191 G-Sense_Error_Rate      -O--CK   098   098   000    -    672
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    9830550
+193 Load_Cycle_Count        -O--CK   045   045   000    -    552834
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -192,16 +192,17 @@ Error 5 [0] occurred at disk power-on lifetime: 1789 hours (74 days + 13 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      4546         -
-# 2  Extended offline    Aborted by host               40%      4533         -
-# 3  Short offline       Completed without error       00%      4532         -
-# 4  Short offline       Completed without error       00%       453         -
-# 5  Short offline       Completed without error       00%       427         -
-# 6  Short offline       Completed without error       00%       268         -
-# 7  Short offline       Aborted by host               70%       268         -
-# 8  Short offline       Completed without error       00%       268         -
-# 9  Short offline       Completed without error       00%        99         -
-#10  Short offline       Completed without error       00%        62         -
+# 1  Short offline       Aborted by host               80%      8319         -
+# 2  Short offline       Completed without error       00%      4546         -
+# 3  Extended offline    Aborted by host               40%      4533         -
+# 4  Short offline       Completed without error       00%      4532         -
+# 5  Short offline       Completed without error       00%       453         -
+# 6  Short offline       Completed without error       00%       427         -
+# 7  Short offline       Completed without error       00%       268         -
+# 8  Short offline       Aborted by host               70%       268         -
+# 9  Short offline       Completed without error       00%       268         -
+#10  Short offline       Completed without error       00%        99         -
+#11  Short offline       Completed without error       00%        62         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -218,8 +219,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     23/38 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     25/39 Celsius
 Lifetime    Min/Max Temperature:     14/45 Celsius
 Lifetime    Average Temperature:        34 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -229,7 +230,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (4)
+Temperature History Size (Index):    128 (79)
 
 SCT Error Recovery Control:
            Read:     85 (8,5 seconds)
@@ -246,8 +247,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2         3562  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

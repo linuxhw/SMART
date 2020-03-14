@@ -10,7 +10,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Mar  7 17:16:10 2017 MSK
+Local Time is:    Wed Mar 15 10:53:54 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,24 +60,24 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   098   090   006    -    232289170
+  1 Raw_Read_Error_Rate     POSR--   116   090   006    -    113720659
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5861
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5872
   5 Reallocated_Sector_Ct   PO--CK   046   046   036    -    1110
-  7 Seek_Error_Rate         POSR--   079   060   030    -    17521265443
-  9 Power_On_Hours          -O--CK   079   079   000    -    19202
+  7 Seek_Error_Rate         POSR--   079   060   030    -    17522201417
+  9 Power_On_Hours          -O--CK   078   078   000    -    19303
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   037   020    -    5553
+ 12 Power_Cycle_Count       -O--CK   095   037   020    -    5564
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    2893
-188 Command_Timeout         -O--CK   100   097   000    -    12885098790
+187 Reported_Uncorrect      -O--CK   001   001   000    -    2897
+188 Command_Timeout         -O--CK   100   097   000    -    12885098802
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   068   055   045    -    32 (Min/Max 32/35)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    268
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    48
-193 Load_Cycle_Count        -O--CK   001   001   000    -    282279
-194 Temperature_Celsius     -O---K   032   045   000    -    32 (0 5 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   052   044   000    -    232289170
+190 Airflow_Temperature_Cel -O---K   070   055   045    -    30 (Min/Max 24/31)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    269
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    47
+193 Load_Cycle_Count        -O--CK   001   001   000    -    284700
+194 Temperature_Celsius     -O---K   030   045   000    -    30 (0 5 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   055   044   000    -    113720659
 197 Current_Pending_Sector  -O--C-   100   100   000    -    2
 198 Offline_Uncorrectable   ----C-   100   100   000    -    2
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -114,7 +114,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 2864 (device log contains only the most recent 20 errors)
+Device Error Count: 2868 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -129,6 +129,74 @@ Device Error Count: 2864 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2868 [7] occurred at disk power-on lifetime: 19222 hours (800 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 0b 4f 00 fb 8d 00 00  Error: UNC at LBA = 0xb4f00fb8d = 48570104717
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 0b 4f 00 fb 20 e0 00     05:42:01.830  READ DMA EXT
+  35 00 00 00 58 00 01 03 00 d4 d0 e0 00     05:42:01.829  WRITE DMA EXT
+  25 00 00 00 58 00 0c 5a 00 bb b0 e0 00     05:42:01.828  READ DMA EXT
+  35 00 00 00 80 00 01 03 00 d4 50 e0 00     05:42:01.828  WRITE DMA EXT
+  25 00 00 00 80 00 0c 5a 00 bb 30 e0 00     05:42:01.827  READ DMA EXT
+
+Error 2867 [6] occurred at disk power-on lifetime: 19222 hours (800 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 0b 26 00 fb 09 00 00  Error: UNC at LBA = 0xb2600fb09 = 47882238729
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 0b 25 00 fb a0 e0 00     05:40:58.230  READ DMA EXT
+  35 00 00 00 80 00 0c 35 00 c0 08 e0 00     05:40:58.229  WRITE DMA EXT
+  25 00 00 00 80 00 01 27 00 b9 50 e0 00     05:40:58.228  READ DMA EXT
+  35 00 00 00 80 00 0c 34 00 c0 88 e0 00     05:40:58.228  WRITE DMA EXT
+  25 00 00 00 80 00 01 26 00 b9 d0 e0 00     05:40:58.227  READ DMA EXT
+
+Error 2866 [5] occurred at disk power-on lifetime: 19222 hours (800 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 0b 26 00 fb 09 00 00  Error: UNC at LBA = 0xb2600fb09 = 47882238729
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 0b 25 00 fb a0 e0 00     05:40:19.633  READ DMA EXT
+  35 00 00 00 80 00 01 27 00 b9 50 e0 00     05:40:19.632  WRITE DMA EXT
+  25 00 00 00 80 00 0b 25 00 fb 20 e0 00     05:40:19.632  READ DMA EXT
+  35 00 00 00 80 00 01 26 00 b9 d0 e0 00     05:40:19.630  WRITE DMA EXT
+  25 00 00 00 80 00 0b 24 00 fb a0 e0 00     05:40:19.627  READ DMA EXT
+
+Error 2865 [4] occurred at disk power-on lifetime: 19222 hours (800 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 0b 4f 00 fb 8d 00 00  Error: UNC at LBA = 0xb4f00fb8d = 48570104717
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 0b 4f 00 fb 20 e0 00     05:39:45.257  READ DMA EXT
+  35 00 00 00 80 00 0c 5a 00 bb 88 e0 00     05:39:45.254  WRITE DMA EXT
+  25 00 00 00 80 00 0b 4e 00 fb a0 e0 00     05:39:45.253  READ DMA EXT
+  35 00 00 00 80 00 0c 5a 00 bb 08 e0 00     05:39:45.253  WRITE DMA EXT
+  25 00 00 00 80 00 0b 4e 00 fb 20 e0 00     05:39:45.252  READ DMA EXT
 
 Error 2864 [3] occurred at disk power-on lifetime: 19200 hours (800 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -198,74 +266,6 @@ Error 2861 [0] occurred at disk power-on lifetime: 19200 hours (800 days + 0 hou
   35 00 00 00 80 00 0b e6 00 80 e8 e0 00     00:31:59.357  WRITE DMA EXT
   35 00 00 00 80 00 0b e6 00 80 68 e0 00     00:31:59.356  WRITE DMA EXT
 
-Error 2860 [19] occurred at disk power-on lifetime: 19200 hours (800 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 0b 4f 00 fb 8d 00 00  Error: UNC at LBA = 0xb4f00fb8d = 48570104717
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 0b 4f 00 fb 88 e0 00     00:28:38.349  READ DMA EXT
-  25 00 00 00 08 00 0b 51 00 0a e0 e0 00     00:28:38.348  READ DMA EXT
-  35 00 00 00 08 00 01 11 00 a3 c0 e0 00     00:28:38.348  WRITE DMA EXT
-  35 00 00 00 08 00 00 11 00 5c 60 e0 00     00:28:38.348  WRITE DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:28:38.347  READ DMA EXT
-
-Error 2859 [18] occurred at disk power-on lifetime: 19200 hours (800 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 0b 4f 00 fb 8d 00 00  Error: UNC at LBA = 0xb4f00fb8d = 48570104717
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 0b 4f 00 fb 88 e0 00     00:28:35.930  READ DMA EXT
-  25 00 00 00 08 00 09 5f 00 e3 78 e0 00     00:28:35.915  READ DMA EXT
-  35 00 00 00 08 00 01 11 00 a3 c0 e0 00     00:28:35.914  WRITE DMA EXT
-  35 00 00 00 20 00 00 1b 00 5c 30 e0 00     00:28:35.908  WRITE DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:28:35.836  READ DMA EXT
-
-Error 2858 [17] occurred at disk power-on lifetime: 19200 hours (800 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 0b 4f 00 fb 8d 00 00  Error: UNC at LBA = 0xb4f00fb8d = 48570104717
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 0b 4f 00 fb 88 e0 00     00:28:33.306  READ DMA EXT
-  25 00 00 00 80 00 0b 4f 00 fb 88 e0 00     00:28:30.827  READ DMA EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:28:29.743  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 11 00 5c 68 e0 00     00:28:29.743  WRITE DMA EXT
-  35 00 00 00 08 00 00 1b 00 5c 28 e0 00     00:28:29.743  WRITE DMA EXT
-
-Error 2857 [16] occurred at disk power-on lifetime: 19200 hours (800 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 0b 4f 00 fb 8d 00 00  Error: UNC at LBA = 0xb4f00fb8d = 48570104717
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 0b 4f 00 fb 88 e0 00     00:28:30.827  READ DMA EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:28:29.743  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 11 00 5c 68 e0 00     00:28:29.743  WRITE DMA EXT
-  35 00 00 00 08 00 00 1b 00 5c 28 e0 00     00:28:29.743  WRITE DMA EXT
-  35 00 00 00 22 00 01 66 00 3f 20 e0 00     00:28:29.742  WRITE DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -284,17 +284,17 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     32/35 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     24/32 Celsius
 Lifetime    Min/Max Temperature:      5/45 Celsius
-Under/Over Temperature Limit Count:   0/132
+Under/Over Temperature Limit Count:   0/237
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (51)
+Temperature History Size (Index):    128 (127)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -304,7 +304,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -8,7 +8,7 @@ User Capacity:    1,000,203,804,160 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Wed Dec 25 15:41:53 2019 CET
+Local Time is:    Fri Jan 10 00:00:57 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -26,7 +26,7 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 114)	The previous self-test completed having
+Self-test execution status:      ( 121)	The previous self-test completed having
 					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(13553) seconds.
@@ -58,30 +58,30 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   059   051    -    63
-  3 Spin_Up_Time            POS---   069   069   011    -    10070
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6490
+  1 Raw_Read_Error_Rate     POSR--   099   059   051    -    33
+  3 Spin_Up_Time            POS---   075   075   011    -    8420
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6511
   5 Reallocated_Sector_Ct   PO--CK   092   092   010    -    354
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
-  8 Seek_Time_Performance   P-S--K   100   100   015    -    13393
-  9 Power_On_Hours          -O--CK   088   088   000    -    62200
+  8 Seek_Time_Performance   P-S--K   100   100   015    -    12188
+  9 Power_On_Hours          -O--CK   088   088   000    -    62560
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    1
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3000
- 13 Read_Soft_Error_Rate    -OSR--   100   082   000    -    26
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3021
+ 13 Read_Soft_Error_Rate    -OSR--   100   082   000    -    14
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    2
 184 End-to-End_Error        PO--CK   100   100   000    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    2859
+187 Reported_Uncorrect      -O--CK   100   100   000    -    2861
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   053   000    -    37 (Min/Max 32/37)
-194 Temperature_Celsius     -O---K   063   049   000    -    37 (Min/Max 32/39)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1846724
+190 Airflow_Temperature_Cel -O---K   067   053   000    -    33 (Min/Max 33/33)
+194 Temperature_Celsius     -O---K   067   049   000    -    33 (Min/Max 33/33)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    88807
 196 Reallocated_Event_Count -O--CK   092   092   000    -    354
 197 Current_Pending_Sector  -O--C-   100   098   000    -    3
 198 Offline_Uncorrectable   ----CK   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -264,28 +264,28 @@ Error 4702 [5] occurred at disk power-on lifetime: 61125 hours (2546 days + 21 h
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: read failure       20%     62040         161193382
-# 2  Short offline       Completed: read failure       20%     60601         161186565
-# 3  Short offline       Completed: read failure       20%     60600         161191778
-# 4  Extended offline    Completed without error       00%     56655         -
-# 5  Extended offline    Completed without error       00%     56347         -
-# 6  Extended offline    Completed: read failure       90%     56176         275152849
-# 7  Extended offline    Completed without error       00%     56011         -
-# 8  Extended offline    Interrupted (host reset)      90%     55840         -
-# 9  Extended offline    Completed: read failure       90%     55671         274782833
-#10  Extended offline    Interrupted (host reset)      90%     55504         -
-#11  Extended offline    Completed: read failure       90%     55205         274782833
-#12  Extended offline    Completed: read failure       90%     55038         275066041
-#13  Extended offline    Completed: read failure       90%     54870         274782833
-#14  Extended offline    Completed: read failure       90%     54702         275066041
-#15  Extended offline    Completed: read failure       90%     54534         274782833
-#16  Extended offline    Completed: read failure       90%     54366         274782833
-#17  Extended offline    Completed: read failure       90%     54198         275085681
-#18  Extended offline    Completed: read failure       90%     54034         274782833
-#19  Extended offline    Completed: read failure       90%     53872         274782833
-#20  Extended offline    Completed: read failure       90%     53704         274782833
-#21  Extended offline    Interrupted (host reset)      90%     53536         -
-12 of 15 failed self-tests are outdated by newer successful extended offline self-test # 4
+# 1  Extended offline    Completed: read failure       90%     62427         161186565
+# 2  Extended offline    Completed: read failure       90%     62259         161186565
+# 3  Short offline       Completed: read failure       20%     62040         161193382
+# 4  Short offline       Completed: read failure       20%     60601         161186565
+# 5  Short offline       Completed: read failure       20%     60600         161191778
+# 6  Extended offline    Completed without error       00%     56655         -
+# 7  Extended offline    Completed without error       00%     56347         -
+# 8  Extended offline    Completed: read failure       90%     56176         275152849
+# 9  Extended offline    Completed without error       00%     56011         -
+#10  Extended offline    Interrupted (host reset)      90%     55840         -
+#11  Extended offline    Completed: read failure       90%     55671         274782833
+#12  Extended offline    Interrupted (host reset)      90%     55504         -
+#13  Extended offline    Completed: read failure       90%     55205         274782833
+#14  Extended offline    Completed: read failure       90%     55038         275066041
+#15  Extended offline    Completed: read failure       90%     54870         274782833
+#16  Extended offline    Completed: read failure       90%     54702         275066041
+#17  Extended offline    Completed: read failure       90%     54534         274782833
+#18  Extended offline    Completed: read failure       90%     54366         274782833
+#19  Extended offline    Completed: read failure       90%     54198         275085681
+#20  Extended offline    Completed: read failure       90%     54034         274782833
+#21  Extended offline    Completed: read failure       90%     53872         274782833
+11 of 16 failed self-tests are outdated by newer successful extended offline self-test # 6
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -302,8 +302,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 37 Celsius
-Power Cycle Max Temperature:         39 Celsius
+Current Temperature:                 33 Celsius
+Power Cycle Max Temperature:         33 Celsius
 Lifetime    Max Temperature:         51 Celsius
 
 SCT Temperature History Version:     2
@@ -311,7 +311,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (93)
+Temperature History Size (Index):    128 (90)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -324,7 +324,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
@@ -333,7 +333,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2        52930  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

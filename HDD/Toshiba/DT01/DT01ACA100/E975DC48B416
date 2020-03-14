@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.3.0-28-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-28-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 3.5" DT01ACA... Desktop HDD
@@ -14,14 +14,13 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Feb  6 14:38:17 2020 EET
+Local Time is:    Thu Feb  6 14:45:10 2020 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -63,7 +62,7 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    1
+  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   141   141   054    -    72
   3 Spin_Up_Time            POS---   108   108   024    -    205 (Average 218)
   4 Start_Stop_Count        -O--C-   100   100   000    -    926
@@ -75,7 +74,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  12 Power_Cycle_Count       -O--CK   100   100   000    -    926
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    1020
 193 Load_Cycle_Count        -O--C-   100   100   000    -    1020
-194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 15/43)
+194 Temperature_Celsius     -O----   193   193   000    -    31 (Min/Max 15/43)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -98,7 +97,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      1  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x20       GPL     R/O      1  Streaming performance log [OBS-8]
 0x21       GPL     R/O      1  Write stream error log
@@ -126,9 +125,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
+SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     23/31 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     23/32 Celsius
 Lifetime    Min/Max Temperature:     15/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -137,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (14)
+Temperature History Size (Index):    128 (21)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -148,10 +148,10 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4             926  ---  Lifetime Power-On Resets
 0x01  0x010  4           11496  ---  Power-on Hours
-0x01  0x018  6     10767462165  ---  Logical Sectors Written
-0x01  0x020  6        77919458  ---  Number of Write Commands
-0x01  0x028  6    956897206249  ---  Logical Sectors Read
-0x01  0x030  6       174277331  ---  Number of Read Commands
+0x01  0x018  6     10770729861  ---  Logical Sectors Written
+0x01  0x020  6        77928398  ---  Number of Write Commands
+0x01  0x028  6    956899194737  ---  Logical Sectors Read
+0x01  0x030  6       174310138  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4           11493  ---  Spindle Motor Power-on Hours
 0x03  0x010  4           11493  ---  Head Flying Hours
@@ -163,7 +163,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              26  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  ---  Current Temperature
+0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              28  N--  Average Short Term Temperature
 0x05  0x018  1              27  N--  Average Long Term Temperature
 0x05  0x020  1              43  ---  Highest Temperature
@@ -183,8 +183,6 @@ Page  Offset Size        Value Flags Description
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
-
-Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

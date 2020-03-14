@@ -4,14 +4,14 @@ Device Model:     WDC WD7500LPCX-60KHST0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01A01
-User Capacity:    750 156 374 016 bytes [750 GB]
+User Capacity:    750,156,374,016 bytes [750 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 11 02:00:22 2016 MSK
+Local Time is:    Sat Dec 23 14:30:28 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  37)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(12000) seconds.
 Offline data collection
@@ -60,28 +59,28 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   188   187   021    -    1600
-  4 Start_Stop_Count        -O--CK   100   100   000    -    291
+  3 Spin_Up_Time            POS--K   190   187   021    -    1475
+  4 Start_Stop_Count        -O--CK   100   100   000    -    852
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    962
+  9 Power_On_Hours          -O--CK   097   097   000    -    2751
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    289
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    850
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   051   041   040    -    49 (Min/Max 32/50)
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    351
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    5
-193 Load_Cycle_Count        -O--CK   187   187   000    -    41620
-194 Temperature_Celsius     -O---K   098   088   000    -    49
+187 Reported_Uncorrect      -O--CK   100   097   000    -    3
+188 Command_Timeout         -O--CK   100   096   000    -    17180131332
+190 Airflow_Temperature_Cel -O---K   070   041   040    -    30 (Min/Max 23/30)
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    852
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    13
+193 Load_Cycle_Count        -O--CK   163   163   000    -    113614
+194 Temperature_Celsius     -O---K   117   088   000    -    30
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   P--R--   100   253   051    -    0
+200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,10 +111,94 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 4
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 2380 hours (99 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 10 00 00 23 93 f0 20 e0 00  Error: IDNF 16 sectors at LBA = 0x2393f020 = 596897824
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 10 00 00 23 93 f0 20 e0 08     05:53:43.569  WRITE DMA EXT
+  35 00 00 00 08 00 00 22 3e 4a 88 e0 08     05:53:37.220  WRITE DMA EXT
+  35 00 00 00 08 00 00 22 37 2d f0 e0 08     05:53:37.216  WRITE DMA EXT
+  35 00 00 00 08 00 00 22 28 41 38 e0 08     05:53:37.205  WRITE DMA EXT
+  35 00 00 00 08 00 00 22 27 34 b8 e0 08     05:53:37.145  WRITE DMA EXT
+
+Error 3 [2] occurred at disk power-on lifetime: 2380 hours (99 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 08 00 00 00 80 73 78 e0 00  Error: IDNF at LBA = 0x00807378 = 8418168
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 08 00 00 00 80 73 78 e0 08     05:47:16.812  WRITE DMA
+  ea 00 00 00 00 00 00 06 82 41 07 e0 08     05:47:15.168  FLUSH CACHE EXT
+  ca 00 00 00 10 00 00 06 82 40 f8 e6 08     05:47:15.135  WRITE DMA
+  35 00 00 00 08 00 00 32 f1 0e 70 e0 08     05:47:15.108  WRITE DMA EXT
+  ea 00 00 00 00 00 00 32 f1 0e 6f e0 08     05:47:13.676  FLUSH CACHE EXT
+
+Error 2 [1] occurred at disk power-on lifetime: 2380 hours (99 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 32 eb ae 2c ab 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 32 f1 0d 1f e0 08     05:46:32.501  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 32 f1 0d 18 e0 08     05:46:32.490  WRITE DMA EXT
+  ea 00 00 00 00 00 00 32 f1 0d 17 e0 08     05:46:32.490  FLUSH CACHE EXT
+  35 00 00 00 28 00 00 32 f1 0c f0 e0 08     05:46:32.459  WRITE DMA EXT
+  35 00 00 00 08 00 00 21 4d 43 e8 e0 08     05:46:32.428  WRITE DMA EXT
+
+Error 1 [0] occurred at disk power-on lifetime: 2380 hours (99 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 10 00 00 00 80 a7 08 e0 00  Error: IDNF at LBA = 0x0080a708 = 8431368
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 10 00 00 00 80 a7 08 e0 08     05:44:57.142  WRITE DMA
+  ca 00 00 00 08 00 00 00 80 a6 90 e0 08     05:44:57.131  WRITE DMA
+  ca 00 00 00 08 00 00 00 80 a5 f8 e0 08     05:44:57.119  WRITE DMA
+  ca 00 00 00 08 00 00 00 80 a5 98 e0 08     05:44:57.108  WRITE DMA
+  ca 00 00 00 10 00 00 00 80 a5 30 e0 08     05:44:57.082  WRITE DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      50%      2748         -
+# 2  Extended offline    Completed without error       00%      1733         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -132,9 +215,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    50 Celsius
-Power Cycle Min/Max Temperature:     32/50 Celsius
-Lifetime    Min/Max Temperature:     23/60 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     23/30 Celsius
+Lifetime    Min/Max Temperature:     19/60 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -145,11 +228,11 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (42)
+Temperature History Size (Index):    128 (78)
 
 SCT Error Recovery Control:
-           Read:     85 (8,5 seconds)
-          Write:     85 (8,5 seconds)
+           Read:     85 (8.5 seconds)
+          Write:     85 (8.5 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -168,5 +251,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         7099  Vendor specific
+0x8000  4          400  Vendor specific
 

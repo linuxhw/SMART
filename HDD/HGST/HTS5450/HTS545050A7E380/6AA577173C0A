@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Aug 18 12:44:26 2016 OMST
+Local Time is:    Fri Aug 19 08:20:41 2016 OMST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,21 +62,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   198   198   040    -    123
   3 Spin_Up_Time            POS---   218   218   033    -    1
-  4 Start_Stop_Count        -O--C-   100   100   000    -    45
+  4 Start_Stop_Count        -O--C-   100   100   000    -    46
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   112   112   040    -    35
-  9 Power_On_Hours          -O--C-   100   100   000    -    414
+  9 Power_On_Hours          -O--C-   100   100   000    -    416
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    21
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    22
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    4
-193 Load_Cycle_Count        -O--C-   099   099   000    -    17096
-194 Temperature_Celsius     -O----   111   111   000    -    54 (Min/Max 22/61)
+193 Load_Cycle_Count        -O--C-   099   099   000    -    17357
+194 Temperature_Celsius     -O----   122   122   000    -    49 (Min/Max 22/61)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    366
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    382
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 366 (device log contains only the most recent 4 errors)
+Device Error Count: 382 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,7 +118,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 366 [1] occurred at disk power-on lifetime: 414 hours (17 days + 6 hours)
+Error 382 [1] occurred at disk power-on lifetime: 416 hours (17 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -129,13 +129,13 @@ Error 366 [1] occurred at disk power-on lifetime: 414 hours (17 days + 6 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 81 2d a7 00 00 00 00 0a     02:19:48.992  IDENTIFY DEVICE
-  c8 00 00 00 08 81 2d 9f 81 2d a0 e1 0a     02:19:48.987  READ DMA
-  c8 00 00 00 08 81 2d 97 81 2d 98 e1 0a     02:19:48.984  READ DMA
-  c8 00 00 00 08 81 2d 8f 81 2d 90 e1 0a     02:19:48.979  READ DMA
-  c8 00 00 00 08 81 2d 87 81 2d 88 e1 0a     02:19:48.962  READ DMA
+  ec 00 00 00 01 d1 a8 07 00 00 00 40 0a     00:38:52.803  IDENTIFY DEVICE
+  ca 00 00 00 08 04 f3 6f d1 a8 00 e0 0a     00:38:52.802  WRITE DMA
+  c8 00 00 00 38 04 f3 ff 04 f3 38 e0 0a     00:38:52.802  READ DMA
+  c8 00 00 00 90 00 00 00 04 f3 70 e0 0a     00:38:52.800  READ DMA
+  ea 00 00 00 00 00 00 00 04 f3 37 a0 0a     00:38:52.775  FLUSH CACHE EXT
 
-Error 365 [0] occurred at disk power-on lifetime: 414 hours (17 days + 6 hours)
+Error 381 [0] occurred at disk power-on lifetime: 415 hours (17 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -146,30 +146,13 @@ Error 365 [0] occurred at disk power-on lifetime: 414 hours (17 days + 6 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 49 87 cf 00 00 00 00 0a     02:18:41.204  IDENTIFY DEVICE
-  c8 00 00 00 30 49 87 9f 49 87 a0 e0 0a     02:18:41.173  READ DMA
-  c8 00 00 00 20 48 f4 07 49 87 80 e0 0a     02:18:41.163  READ DMA
-  c8 00 00 00 e8 48 f5 47 48 f3 20 e0 0a     02:18:41.119  READ DMA
-  c8 00 00 00 00 4a 95 3f 48 f4 48 e0 0a     02:18:41.109  READ DMA
+  ec 00 00 00 01 00 00 00 00 00 00 00 0a     00:31:28.448  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 1e 81 28 ef a0 0a     00:31:16.183  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 1e 81 28 e8 e0 0a     00:31:16.183  WRITE DMA EXT
+  ea 00 00 00 00 00 00 1e 81 28 e7 a0 0a     00:31:16.154  FLUSH CACHE EXT
+  35 00 00 00 48 00 00 1e 81 28 a0 e0 0a     00:31:16.153  WRITE DMA EXT
 
-Error 364 [3] occurred at disk power-on lifetime: 414 hours (17 days + 6 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 03 00 00 00 00 00 00 00 00 00 a0 0a     02:18:25.759  IDENTIFY DEVICE
-  ef 00 03 00 46 38 60 2f 00 00 00 a0 0a     02:18:25.757  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     02:18:25.756  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 20 00 01 00 00 00 01 00 00 00 a0 0a     02:18:25.753  IDENTIFY DEVICE
-  25 20 20 00 00 00 00 00 34 ea 3f e0 04     02:18:25.602  READ DMA EXT
-
-Error 363 [2] occurred at disk power-on lifetime: 414 hours (17 days + 6 hours)
+Error 380 [3] occurred at disk power-on lifetime: 415 hours (17 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -180,17 +163,36 @@ Error 363 [2] occurred at disk power-on lifetime: 414 hours (17 days + 6 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d0 00 01 82 8c 1f c2 4f 00 00 0a     02:02:19.190  SMART READ DATA
-  35 00 00 00 18 00 00 1e 82 8c 08 e0 0a     02:02:19.190  WRITE DMA EXT
-  b0 00 d1 ff 01 00 00 00 c2 4f 00 00 0a     02:02:18.954  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  e5 00 00 01 00 00 00 00 00 00 00 00 0a     02:02:18.954  CHECK POWER MODE
-  ec 00 00 00 01 13 47 e7 00 00 00 00 0a     02:02:18.944  IDENTIFY DEVICE
+  b0 00 d5 00 01 80 24 07 c2 4f 01 00 0a     00:30:47.105  SMART READ LOG
+  c8 d5 00 01 08 c2 4f 06 80 24 00 e2 0a     00:30:47.081  READ DMA
+  b0 00 d5 00 01 80 1f df c2 4f 06 00 0a     00:30:46.730  SMART READ LOG
+  c8 00 00 00 08 80 1f cf 80 1f d8 e2 0a     00:30:46.729  READ DMA
+  c8 00 00 00 08 80 22 5f 80 1f c8 e2 0a     00:30:46.729  READ DMA
+
+Error 379 [2] occurred at disk power-on lifetime: 415 hours (17 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 01 00 00 00 00 00 00 00 0a     00:16:23.963  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 02 fd 08 17 a0 0a     00:16:23.906  FLUSH CACHE EXT
+  c8 00 00 00 08 fd 08 47 fd 08 10 e2 0a     00:16:23.905  READ DMA
+  c8 00 00 00 08 38 47 ff fd 08 40 e2 0a     00:16:23.904  READ DMA
+  25 00 00 00 08 00 00 3a 38 47 f8 e0 0a     00:16:23.883  READ DMA EXT
 
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 0 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
-SMART Selective self-test log data structure revision number 1
+Warning! SMART Selective Self-Test Log Structure error: invalid SMART checksum.
+SMART Selective self-test log data structure revision number 0
+Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
     2        0        0  Not_testing
@@ -205,8 +207,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    54 Celsius
-Power Cycle Min/Max Temperature:     38/54 Celsius
+Current Temperature:                    49 Celsius
+Power Cycle Min/Max Temperature:     28/49 Celsius
 Lifetime    Min/Max Temperature:     22/61 Celsius
 Lifetime    Average Temperature:        46 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -216,7 +218,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (57)
+Temperature History Size (Index):    128 (1)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -227,14 +229,14 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0002  2           22  R_ERR response for data FIS
-0x0003  2           22  R_ERR response for device-to-host data FIS
+0x0002  2           12  R_ERR response for data FIS
+0x0003  2           12  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

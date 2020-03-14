@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Nov 30 18:19:30 2015 SAMT
+Local Time is:    Wed Dec  9 16:23:55 2015 SAMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,7 +18,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
 ATA Security is:  Unavailable
-Read SCT Status failed: scsi error aborted command
+Read SCT Status failed: scsi error badly formed scsi parameters
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
@@ -63,23 +63,23 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    0
-  9 Power_On_Hours          ------   100   100   050    -    37
- 12 Power_Cycle_Count       ------   100   100   050    -    54
+  9 Power_On_Hours          ------   100   100   050    -    53
+ 12 Power_Cycle_Count       ------   100   100   050    -    74
 160 Unknown_Attribute       ------   100   100   050    -    0
 161 Unknown_Attribute       ------   100   100   050    -    490
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    114
-164 Unknown_Attribute       ------   100   100   050    -    10123
-165 Unknown_Attribute       ------   100   100   050    -    3
-166 Unknown_Attribute       ------   100   100   050    -    1
-167 Unknown_Attribute       ------   100   100   050    -    2
-192 Power-Off_Retract_Count ------   100   100   050    -    15
-194 Temperature_Celsius     ------   100   100   050    -    28
+164 Unknown_Attribute       ------   100   100   050    -    14970
+165 Unknown_Attribute       ------   100   100   050    -    4
+166 Unknown_Attribute       ------   100   100   050    -    2
+167 Unknown_Attribute       ------   100   100   050    -    3
+192 Power-Off_Retract_Count ------   100   100   050    -    18
+194 Temperature_Celsius     ------   100   100   050    -    34
 195 Hardware_ECC_Recovered  ------   100   100   050    -    0
 196 Reallocated_Event_Count ------   100   100   050    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
-241 Total_LBAs_Written      ------   100   100   050    -    8999
-242 Total_LBAs_Read         ------   100   100   050    -    7286
+241 Total_LBAs_Written      ------   100   100   050    -    13388
+242 Total_LBAs_Read         ------   100   100   050    -    11112
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -122,32 +122,32 @@ Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
 
-Read SCT Status failed: scsi error aborted command
+Read SCT Status failed: scsi error badly formed scsi parameters
 
-Read SCT Status failed: scsi error aborted command
+Read SCT Status failed: scsi error badly formed scsi parameters
 SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP Log 0x04)
 Page Offset Size         Value  Description
   1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4               54  Lifetime Power-On Resets
-  1  0x010  4               37  Power-on Hours
-  1  0x018  6             8999  Logical Sectors Written
-  1  0x020  6          9316734  Number of Write Commands
-  1  0x028  6             7286  Logical Sectors Read
-  1  0x030  6          7599272  Number of Read Commands
+  1  0x008  4               74  Lifetime Power-On Resets
+  1  0x010  4               53  Power-on Hours
+  1  0x018  6            13388  Logical Sectors Written
+  1  0x020  6         11296380  Number of Write Commands
+  1  0x028  6            11112  Logical Sectors Read
+  1  0x030  6          9804648  Number of Read Commands
   2  =====  =                =  == Free-Fall Statistics (empty) ==
   3  =====  =                =  == Rotating Media Statistics (empty) ==
   4  =====  =                =  == General Errors Statistics (rev 1) ==
   4  0x008  4                0  Number of Reported Uncorrectable Errors
-  4  0x010  4               15  Resets Between Cmd Acceptance and Completion
+  4  0x010  4               18  Resets Between Cmd Acceptance and Completion
   5  =====  =                =  == Temperature Statistics (rev 1) ==
-  5  0x008  1               28  Current Temperature
-  5  0x010  1              101  Average Short Term Temperature
-  5  0x018  1              -68  Average Long Term Temperature
+  5  0x008  1               34  Current Temperature
+  5  0x010  1             -121  Average Short Term Temperature
+  5  0x018  1               81  Average Long Term Temperature
   5  0x020  1               41  Highest Temperature
   5  0x028  1               15  Lowest Temperature
-  5  0x030  1              101  Highest Average Short Term Temperature
+  5  0x030  1             -121  Highest Average Short Term Temperature
   5  0x038  1                6  Lowest Average Short Term Temperature
   5  0x040  1               -3  Highest Average Long Term Temperature
   5  0x048  1                0  Lowest Average Long Term Temperature
@@ -156,7 +156,7 @@ Page Offset Size         Value  Description
   5  0x060  4                0  Time in Under-Temperature
   5  0x068  1                0  Specified Minimum Operating Temperature
   6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4              227  Number of Hardware Resets
+  6  0x008  4              347  Number of Hardware Resets
   6  0x018  4                0  Number of Interface CRC Errors
   7  =====  =                =  == Solid State Device Statistics (rev 1) ==
   7  0x008  1                0  Percentage Used Endurance Indicator
@@ -172,7 +172,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -7,7 +7,7 @@ User Capacity:    80 025 280 000 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Wed Mar 16 17:14:45 2016 YAKT
+Local Time is:    Mon Aug 14 12:37:17 2017 +09
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -56,22 +56,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   253   253   025    -    4416
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2563
+  3 Spin_Up_Time            POS---   253   253   025    -    4352
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3430
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    4
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    13258
+  9 Power_On_Hours          -O--CK   100   100   000    -    16087
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1184
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    20869073
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1626
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    32232917
 184 End-to-End_Error        PO--CK   253   253   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    132241
+187 Reported_Uncorrect      -O--CK   001   001   000    -    197777
 188 Command_Timeout         -O--CK   253   253   000    -    0
-190 Airflow_Temperature_Cel -O---K   151   100   000    -    29 (Min/Max 9/46)
-194 Temperature_Celsius     -O---K   148   097   000    -    30 (Min/Max 9/47)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    20869073
+190 Airflow_Temperature_Cel -O---K   148   100   000    -    30 (Min/Max 9/46)
+194 Temperature_Celsius     -O---K   145   097   000    -    31 (Min/Max 9/47)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    32232917
 196 Reallocated_Event_Count -O--CK   100   100   000    -    4
 197 Current_Pending_Sector  -O--C-   253   099   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -94,8 +94,8 @@ Address    Access  R/W   Size  Description
 0x02           SL  R/O      2  Comprehensive SMART error log
 0x03       GPL     R/O      2  Ext. Comprehensive SMART error log
 0x06           SL  R/O      1  SMART self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
@@ -198,7 +198,7 @@ Error 1165 [4] occurred at disk power-on lifetime: 5981 hours (249 days + 5 hour
   60 00 08 00 1f 25 00 00 e0 5e de 00 00     00:00:00.000  READ FPDMA QUEUED
   60 00 08 00 17 25 00 00 e0 5e de 00 00     00:00:00.000  READ FPDMA QUEUED
   60 00 08 00 0f 25 00 00 e0 5e de 00 00     00:00:00.000  READ FPDMA QUEUED
-  04 11 89 11 91 00 00 11 01 c9 b1 00 11     00:00:00.000  [RESERVED]
+  04 11 89 11 91 00 00 11 01 c9 b1 01 11     00:00:00.000  [RESERVED]
 
 Error 1164 [3] occurred at disk power-on lifetime: 12722 hours (530 days + 2 hours)
   When the command that caused the error occurred, the device was in a reserved state.
@@ -249,7 +249,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     13257         -
+# 1  Extended offline    Completed without error       00%     16083         -
+# 2  Extended offline    Completed without error       00%     16051         -
+# 3  Extended offline    Completed without error       00%     15996         -
+# 4  Extended offline    Completed without error       00%     15948         -
+# 5  Extended offline    Completed without error       00%     15900         -
+# 6  Extended offline    Completed without error       00%     15836         -
+# 7  Extended offline    Completed without error       00%     15799         -
+# 8  Extended offline    Completed without error       00%     15769         -
+# 9  Extended offline    Completed without error       00%     15768         -
+#10  Extended offline    Completed without error       00%     15747         -
+#11  Extended offline    Completed without error       00%     15711         -
+#12  Extended offline    Completed without error       00%     15697         -
+#13  Extended offline    Completed without error       00%     15674         -
+#14  Extended offline    Completed without error       00%     15638         -
+#15  Extended offline    Completed without error       00%     15599         -
+#16  Extended offline    Completed without error       00%     15558         -
+#17  Extended offline    Completed without error       00%     15518         -
+#18  Extended offline    Completed without error       00%     15475         -
+#19  Extended offline    Completed without error       00%     15355         -
+#20  Extended offline    Completed without error       00%     15318         -
+#21  Extended offline    Completed without error       00%     15264         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -267,8 +287,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     16/32 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     15/32 Celsius
 Lifetime    Min/Max Temperature:      9/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -277,13 +297,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (75)
+Temperature History Size (Index):    128 (25)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -295,8 +315,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

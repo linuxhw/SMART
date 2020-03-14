@@ -7,7 +7,7 @@ User Capacity:    120 033 041 920 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Feb 22 14:28:23 2017 +07
+Local Time is:    Wed Feb 22 14:30:53 2017 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 31 (device log contains only the most recent 24 errors)
+Device Error Count: 32 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -116,6 +116,22 @@ Device Error Count: 31 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 32 [7] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 00 0d 00 53 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 a3 b0 74 56 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 74 a2 00 56 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 95 ec 74 56 00 01 00 00 00 00 00 00     02:07:04.342  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 00 00 00 74 76 00 56 ec 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 31 [6] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -229,22 +245,6 @@ Error 25 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 77 c8 01 a8 00 00 00 00 00 00 00 02     00:01:48.664  NOP [Reserved subcommand] [OBS-ACS-2]
   00 00 00 00 41 01 76 02 a8 c8 00 00 00     00:00:16.640  NOP [Abort queued commands]
 
-Error 24 [23] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 e2 01 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 dd c8 01 a0 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 00 41 01 dc 02 a0 c8 00 00 00     00:00:16.640  NOP [Abort queued commands]
-  02 da c8 01 a0 00 00 00 41 00 00 00 02     00:01:46.715  [RESERVED]
-  00 08 00 00 58 01 da 00 a0 ca 00 00 00     00:00:16.640  NOP [Abort queued commands]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -272,7 +272,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (79)
+Temperature History Size (Index):    128 (82)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -284,7 +284,7 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         7475  Vendor specific
+0x8000  4         7624  Vendor specific
 
 
 

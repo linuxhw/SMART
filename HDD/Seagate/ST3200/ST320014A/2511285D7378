@@ -7,14 +7,14 @@ User Capacity:    20 019 314 176 bytes [20,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Thu Aug 27 19:54:01 2015 EEST
+Local Time is:    Wed Nov  7 02:02:44 2018 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     128 (quiet), recommended: 128
+AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -51,15 +51,15 @@ recommended polling time: 	 (  20) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   095   075   025    -    22260013
+  1 Raw_Read_Error_Rate     POSR--   089   075   025    -    129182091
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    762
+  4 Start_Stop_Count        -O--CK   100   100   020    -    787
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    234969783
-  9 Power_On_Hours          -O--CK   086   086   000    -    12900
+  7 Seek_Error_Rate         POSR--   084   060   030    -    239132097
+  9 Power_On_Hours          -O--CK   086   086   000    -    13060
  10 Spin_Retry_Count        -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6594
-194 Temperature_Celsius     -O---K   038   049   000    -    38
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6890
+194 Temperature_Celsius     -O---K   035   049   000    -    35
 195 Hardware_ECC_Recovered  -O-RC-   100   253   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
@@ -73,8 +73,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
@@ -93,7 +92,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 842 (device log contains only the most recent five errors)
+ATA Error Count: 857 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -108,90 +107,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 842 occurred at disk power-on lifetime: 12358 hours (514 days + 22 hours)
+Error 857 occurred at disk power-on lifetime: 13058 hours (544 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 1f a0 a9 5f 40  Error: UNC 31 sectors at LBA = 0x005fa9a0 = 6269344
+  84 51 00 00 00 00 e0  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 03 20 a0 a9 5f 40 00      00:00:00.056  READ DMA
-  c8 03 08 98 a9 5f 40 00      00:00:10.728  READ DMA
-  c8 03 20 f8 07 5e 40 00      00:00:00.336  READ DMA
-  c8 03 08 f0 07 5e 40 00      00:00:19.727  READ DMA
-  c8 03 08 f8 4b 2a 41 00      00:00:19.969  READ DMA
+  c8 00 01 00 00 00 e0 00      00:00:00.657  READ DMA
+  c6 00 01 00 00 00 e0 00      00:00:00.054  SET MULTIPLE MODE
+  91 00 01 00 00 00 ef 00      00:00:00.453  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 00 00 00 e0 00      00:00:00.116  RECALIBRATE [OBS-4]
+  00 00 01 00 00 00 00 04      00:00:08.979  NOP [Abort queued commands]
 
-Error 841 occurred at disk power-on lifetime: 12343 hours (514 days + 7 hours)
+Error 856 occurred at disk power-on lifetime: 13058 hours (544 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 11 26 b2 5e 40  Error: UNC 17 sectors at LBA = 0x005eb226 = 6205990
+  84 51 00 00 00 00 e0  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 03 20 18 b2 5e 40 00      00:00:00.046  READ DMA
-  c8 03 08 10 b2 5e 40 00      00:00:07.087  READ DMA
-  c8 03 20 f8 07 5e 40 00      00:00:00.336  READ DMA
-  c8 03 08 f0 07 5e 40 00      00:00:19.726  READ DMA
-  c8 03 08 f8 4b 2a 41 00      00:00:19.969  READ DMA
+  c8 00 01 00 00 00 e0 00      00:00:00.656  READ DMA
+  c6 00 01 00 00 00 e0 00      00:00:00.054  SET MULTIPLE MODE
+  91 00 01 00 00 00 ef 00      00:00:00.452  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 00 00 00 e0 00      00:00:00.153  RECALIBRATE [OBS-4]
+  00 00 01 00 00 00 00 04      00:00:09.693  NOP [Abort queued commands]
 
-Error 840 occurred at disk power-on lifetime: 11845 hours (493 days + 13 hours)
+Error 855 occurred at disk power-on lifetime: 13058 hours (544 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 4f 47 1a e0  Error: ICRC, ABRT at LBA = 0x001a474f = 1722191
+  84 51 00 00 00 00 e0  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 40 4f 47 1a e0 00      00:00:00.759  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:00.076  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:00.060  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:00.141  READ DMA
-  c8 00 40 4f 47 1a e0 00      00:00:05.412  READ DMA
+  c8 00 01 00 00 00 e0 00      00:00:00.652  READ DMA
+  c6 00 01 00 00 00 e0 00      00:00:00.053  SET MULTIPLE MODE
+  91 00 01 00 00 00 ef 00      00:00:00.452  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 00 00 00 e0 00      00:00:00.130  RECALIBRATE [OBS-4]
+  00 00 01 00 00 00 00 04      00:00:08.940  NOP [Abort queued commands]
 
-Error 839 occurred at disk power-on lifetime: 11845 hours (493 days + 13 hours)
+Error 854 occurred at disk power-on lifetime: 13058 hours (544 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 4f 47 1a e0  Error: ICRC, ABRT at LBA = 0x001a474f = 1722191
+  84 51 00 00 00 00 e0  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 40 4f 47 1a e0 00      00:00:00.739  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:00.057  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:00.057  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:13.745  READ DMA
-  c8 00 40 4f 47 1a e0 00      00:00:02.914  READ DMA
+  c8 00 01 00 00 00 e0 00      00:00:00.672  READ DMA
+  c6 00 01 00 00 00 e0 00      00:00:00.053  SET MULTIPLE MODE
+  91 00 01 00 00 00 ef 00      00:00:00.453  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 00 00 00 e0 00      00:00:00.106  RECALIBRATE [OBS-4]
+  00 00 01 00 00 00 00 04      00:00:08.939  NOP [Abort queued commands]
 
-Error 838 occurred at disk power-on lifetime: 11845 hours (493 days + 13 hours)
+Error 853 occurred at disk power-on lifetime: 13058 hours (544 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 4f 47 1a e0  Error: ICRC, ABRT at LBA = 0x001a474f = 1722191
+  84 51 00 00 00 00 e0  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 40 4f 47 1a e0 00      00:00:00.770  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:00.059  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:00.059  READ DMA
-  c8 00 01 00 00 00 e0 00      00:00:06.240  READ DMA
-  c8 00 40 4f 47 1a e0 00      00:00:00.681  READ DMA
+  c8 00 01 00 00 00 e0 00      00:00:00.674  READ DMA
+  c6 00 10 00 00 00 e0 00      00:00:00.054  SET MULTIPLE MODE
+  91 00 10 00 00 00 ef 00      00:00:00.452  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 10 00 00 00 e0 00      00:00:00.091  RECALIBRATE [OBS-4]
+  00 00 10 00 00 00 00 04      00:00:08.871  NOP [Abort queued commands]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -212,9 +211,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 

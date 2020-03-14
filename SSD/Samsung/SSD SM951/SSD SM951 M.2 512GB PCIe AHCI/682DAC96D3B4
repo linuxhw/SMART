@@ -9,13 +9,15 @@ Rotation Rate:    Solid State Device
 Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
-Local Time is:    Fri Mar 11 00:40:25 2016 CET
+Transport Type:   PCIe (0x000)
+Local Time is:    Sat Sep  8 02:14:45 2018 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -58,10 +60,10 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
- 12 Power_Cycle_Count       PO--CK   099   099   000    -    52
+ 12 Power_Cycle_Count       PO--CK   099   099   000    -    115
 175 Program_Fail_Count_Chip PO--CK   100   100   010    -    0
 176 Erase_Fail_Count_Chip   PO--CK   100   100   010    -    0
-177 Wear_Leveling_Count     PO--C-   097   097   005    -    82
+177 Wear_Leveling_Count     PO--C-   087   087   005    -    412
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   100   100   010    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    1692
@@ -69,8 +71,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count_Total  PO--CK   100   100   010    -    0
 187 Reported_Uncorrect      PO--CK   100   100   000    -    0
 195 Hardware_ECC_Recovered  PO-RC-   200   200   000    -    0
-241 Total_LBAs_Written      PO--CK   099   099   000    -    44704693105
-242 Total_LBAs_Read         PO--CK   099   099   000    -    13167425253
+241 Total_LBAs_Written      PO--CK   099   099   000    -    220285046752
+242 Total_LBAs_Read         PO--CK   099   099   000    -    78684912012
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -88,7 +90,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x13       GPL     R/O      1  SATA NCQ Send and Receive log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
@@ -99,25 +101,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      5248         -
-# 2  Short offline       Completed without error       00%      5224         -
-# 3  Short offline       Completed without error       00%      5200         -
-# 4  Short offline       Completed without error       00%      5176         -
-# 5  Extended offline    Completed without error       00%      5156         -
-# 6  Short offline       Completed without error       00%      5152         -
-# 7  Short offline       Completed without error       00%      5128         -
-# 8  Short offline       Completed without error       00%      5104         -
-# 9  Short offline       Completed without error       00%      5080         -
-#10  Short offline       Completed without error       00%      5056         -
-#11  Short offline       Completed without error       00%      5032         -
-#12  Short offline       Completed without error       00%      5008         -
-#13  Extended offline    Completed without error       00%      4988         -
-#14  Short offline       Completed without error       00%      4984         -
-#15  Short offline       Completed without error       00%      4960         -
-#16  Short offline       Completed without error       00%      4936         -
-#17  Short offline       Completed without error       00%      4912         -
-#18  Short offline       Completed without error       00%      4888         -
-#19  Short offline       Completed without error       00%      4864         -
+# 1  Short offline       Completed without error       00%     26930         -
+# 2  Short offline       Completed without error       00%     26906         -
+# 3  Short offline       Completed without error       00%     26882         -
+# 4  Short offline       Completed without error       00%     26858         -
+# 5  Short offline       Completed without error       00%     26834         -
+# 6  Short offline       Completed without error       00%     26810         -
+# 7  Extended offline    Completed without error       00%     26791         -
+# 8  Short offline       Completed without error       00%     26786         -
+# 9  Short offline       Completed without error       00%     26762         -
+#10  Short offline       Completed without error       00%     26738         -
+#11  Short offline       Completed without error       00%     26690         -
+#12  Short offline       Completed without error       00%     26666         -
+#13  Extended offline    Completed without error       00%     26623         -
+#14  Short offline       Completed without error       00%     26619         -
+#15  Short offline       Completed without error       00%     26595         -
+#16  Short offline       Completed without error       00%     26571         -
+#17  Short offline       Completed without error       00%     26547         -
+#18  Short offline       Completed without error       00%     26499         -
+#19  Short offline       Completed without error       00%     26475         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -135,8 +137,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        SCT command executing in background (5)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     17/40 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     25/40 Celsius
 Lifetime    Min/Max Temperature:      0/70 Celsius
 Under/Over Temperature Limit Count:  4294967295/4294901760
 SMART Status:                        0xffff (Reserved)
@@ -146,7 +148,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (119)
+Temperature History Size (Index):    128 (72)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -154,8 +156,10 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4           65  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 

@@ -4,20 +4,21 @@ Device Model:     TOSHIBA MK3276GSX
 Serial Number:    --
 LU WWN Device Id: 5 000039 ...
 Firmware Version: GS001C
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun May 19 19:57:43 2019 MSK
+Local Time is:    Sun Jun  2 19:30:43 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -25,9 +26,9 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
+Offline data collection status:  (0x05)	Offline data collection activity
 					was aborted by an interrupting command from host.
-					Auto Offline Data Collection: Enabled.
+					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
@@ -61,24 +62,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   2 Throughput_Performance  POS--K   100   100   050    -    0
-  3 Spin_Up_Time            PO---K   100   100   002    -    1229
-  4 Start_Stop_Count        -O--CK   100   100   000    -    9660
+  3 Spin_Up_Time            PO---K   100   100   002    -    1238
+  4 Start_Stop_Count        -O--CK   100   100   000    -    9737
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR-K   100   100   050    -    0
   8 Seek_Time_Performance   P-S--K   100   100   050    -    0
-  9 Power_On_Minutes        -O--CK   036   036   000    -    429h+22m
+  9 Power_On_Minutes        -O--CK   036   036   000    -    433h+13m
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    8824
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    8901
 183 Runtime_Bad_Block       -O--CK   100   100   001    -    2
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 185 Unknown_Attribute       -O--CK   100   100   001    -    65535
 187 Reported_Uncorrect      -O--CK   001   001   000    -    28390
 188 Command_Timeout         -O--CK   100   096   000    -    35
 189 High_Fly_Writes         -O-RCK   100   100   001    -    0
-190 Airflow_Temperature_Cel -O---K   055   042   040    -    45 (Min/Max 23/45)
+190 Airflow_Temperature_Cel -O---K   058   042   040    -    42 (Min/Max 24/46)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    137174
-192 Power-Off_Retract_Count -O---K   097   097   000    -    126420873
-193 Load_Cycle_Count        -O--CK   062   062   000    -    383724
+192 Power-Off_Retract_Count -O---K   097   097   000    -    128124835
+193 Load_Cycle_Count        -O--CK   062   062   000    -    386732
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    5
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -260,19 +261,20 @@ Error 35434 [105] occurred at disk power-on lifetime: 25270 hours (1052 days + 2
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     25737         -
-# 2  Extended offline    Completed without error       00%     25615         -
-# 3  Extended offline    Completed without error       00%     25428         -
-# 4  Extended offline    Aborted by host               60%     25054         -
-# 5  Extended offline    Aborted by host               10%     24928         -
-# 6  Extended offline    Aborted by host               30%     24642         -
-# 7  Extended offline    Completed without error       00%     24584         -
-# 8  Extended offline    Completed without error       00%     24524         -
-# 9  Extended offline    Interrupted (host reset)      90%     24091         -
-#10  Extended offline    Completed without error       00%     23974         -
-#11  Short offline       Completed: read failure       90%      2065         53758355
-#12  Short offline       Completed: read failure       90%      2063         53758355
-#13  Short offline       Completed: read failure       90%       999         53758355
+# 1  Extended offline    Completed without error       00%     25835         -
+# 2  Extended offline    Completed without error       00%     25737         -
+# 3  Extended offline    Completed without error       00%     25615         -
+# 4  Extended offline    Completed without error       00%     25428         -
+# 5  Extended offline    Aborted by host               60%     25054         -
+# 6  Extended offline    Aborted by host               10%     24928         -
+# 7  Extended offline    Aborted by host               30%     24642         -
+# 8  Extended offline    Completed without error       00%     24584         -
+# 9  Extended offline    Completed without error       00%     24524         -
+#10  Extended offline    Interrupted (host reset)      90%     24091         -
+#11  Extended offline    Completed without error       00%     23974         -
+#12  Short offline       Completed: read failure       90%      2065         53758355
+#13  Short offline       Completed: read failure       90%      2063         53758355
+#14  Short offline       Completed: read failure       90%       999         53758355
 3 of 3 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
@@ -290,8 +292,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
-Power Cycle Min/Max Temperature:     23/45 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     24/46 Celsius
 Lifetime    Min/Max Temperature:      5/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -300,13 +302,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (33)
+Temperature History Size (Index):    478 (22)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -318,8 +322,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           14  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           24  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           19  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           34  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

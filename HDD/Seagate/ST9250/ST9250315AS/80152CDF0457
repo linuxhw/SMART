@@ -10,13 +10,14 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Aug 29 09:41:49 2018 MSK
+Local Time is:    Wed Aug 29 11:51:52 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
@@ -60,12 +61,12 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   112   090   006    -    49773822
+  1 Raw_Read_Error_Rate     POSR--   113   090   006    -    50975724
   3 Spin_Up_Time            PO----   099   099   000    -    0
   4 Start_Stop_Count        -O--CK   095   091   020    -    5836
   5 Reallocated_Sector_Ct   PO--CK   097   097   036    -    78
-  7 Seek_Error_Rate         POSR--   081   060   030    -    118075464
-  9 Power_On_Hours          -O--CK   068   068   000    -    28224
+  7 Seek_Error_Rate         POSR--   081   060   030    -    118076284
+  9 Power_On_Hours          -O--CK   068   068   000    -    28226
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   098   098   020    -    2827
 184 End-to-End_Error        -O--CK   100   100   099    -    0
@@ -77,7 +78,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    1907
 193 Load_Cycle_Count        -O--CK   001   001   000    -    1140016
 194 Temperature_Celsius     -O---K   037   043   000    -    37 (0 2 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   043   042   000    -    49773822
+195 Hardware_ECC_Recovered  -O-RC-   044   042   000    -    50975724
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -287,14 +288,14 @@ Device State:                        Active (0)
 Current Temperature:                    37 Celsius
 Power Cycle Min/Max Temperature:     24/37 Celsius
 Lifetime    Min/Max Temperature:      2/43 Celsius
-Under/Over Temperature Limit Count:   0/89
+Under/Over Temperature Limit Count:   0/219
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (109)
+Temperature History Size (Index):    128 (111)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -302,9 +303,11 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           55  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

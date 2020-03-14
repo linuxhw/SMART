@@ -7,7 +7,7 @@ User Capacity:    81 963 220 480 bytes [81,9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Fri Aug 28 22:03:08 2015 MSK
+Local Time is:    Mon Oct 31 00:45:34 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     192 (intermediate), recommended: 192
@@ -18,15 +18,17 @@ ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: PASSED
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
+See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  64)	The previous self-test completed having
+					a test element that failed and the test
+					element that failed is not known.
 Total time to complete Offline 
 data collection: 		(  241) seconds.
 Offline data collection
@@ -51,33 +53,33 @@ recommended polling time: 	 (  37) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   225   225   063    -    8994
-  4 Start_Stop_Count        -O--CK   252   252   000    -    3077
-  5 Reallocated_Sector_Ct   PO--CK   143   143   063    -    1116
+  3 Spin_Up_Time            POS--K   225   225   063    -    5913
+  4 Start_Stop_Count        -O--CK   252   252   000    -    3451
+  5 Reallocated_Sector_Ct   PO--CK   062   062   063    NOW  1935
   6 Read_Channel_Margin     P-----   253   253   100    -    0
-  7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   250   226   187    -    41856
-  9 Power_On_Minutes        -O--CK   054   054   000    -    182h+15m
+  7 Seek_Error_Rate         -O-R--   253   252   000    -    1
+  8 Seek_Time_Performance   POS--K   252   226   187    -    52131
+  9 Power_On_Minutes        -O--CK   043   043   000    -    706h+25m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   246   246   000    -    2772
+ 12 Power_Cycle_Count       -O--CK   246   246   000    -    3148
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    37
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    8564
-196 Reallocated_Event_Count ---R--   244   244   000    -    9
+194 Temperature_Celsius     -O--CK   253   253   000    -    39
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    16054
+196 Reallocated_Event_Count ---R--   243   243   000    -    10
 197 Current_Pending_Sector  ---R--   253   251   000    -    0
-198 Offline_Uncorrectable   ---R--   240   240   000    -    13
+198 Offline_Uncorrectable   ---R--   253   240   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   199   199   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   234   000    -    40
+201 Soft_Read_Error_Rate    -O-R--   253   228   000    -    0
 202 Data_Address_Mark_Errs  -O-R--   253   001   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    1
+203 Run_Out_Cancel          PO-R--   253   252   180    -    0
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   144   144   000    -    0
+209 Offline_Seek_Performnce --S--K   144   114   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -88,17 +90,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-Read SMART Log Directory failed: scsi error aborted command
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 1099 inconsistent with error log pointer 5
+Warning: ATA error count 1114 inconsistent with error log pointer 5
 
-ATA Error Count: 1099 (device log contains only the most recent five errors)
+ATA Error Count: 1114 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -113,95 +114,116 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1099 occurred at disk power-on lifetime: 64575 hours (2690 days + 15 hours)
+Error 1114 occurred at disk power-on lifetime: 1338 hours (55 days + 18 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 5f 82 bc e0  Error: UNC 8 sectors at LBA = 0x00bc825f = 12354143
+  40 51 08 68 69 c9 e5  Error: UNC 8 sectors at LBA = 0x05c96968 = 97085800
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 10 5f 82 bc e0 00      04:08:03.440  READ DMA
-  ca 00 20 97 de b0 e0 00      04:08:03.360  WRITE DMA
-  c8 00 20 b7 00 b1 e0 00      04:08:03.360  READ DMA
-  ca 00 28 6f de b0 e0 00      04:08:03.360  WRITE DMA
-  c8 00 28 4f 09 b1 e0 00      04:08:03.360  READ DMA
+  c8 00 08 68 69 c9 e5 08      00:10:35.248  READ DMA
+  c8 00 08 d0 68 c9 e5 08      00:10:35.248  READ DMA
+  c8 00 08 28 69 c9 e5 08      00:10:35.248  READ DMA
+  c8 00 08 f8 68 c9 e5 08      00:10:35.248  READ DMA
+  c8 00 08 b8 68 c9 e5 08      00:10:35.248  READ DMA
 
-Error 1098 occurred at disk power-on lifetime: 64575 hours (2690 days + 15 hours)
+Error 1113 occurred at disk power-on lifetime: 1338 hours (55 days + 18 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 5f 82 bc e0  Error: UNC 8 sectors at LBA = 0x00bc825f = 12354143
+  40 51 28 98 68 c9 e5  Error: UNC 40 sectors at LBA = 0x05c96898 = 97085592
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 10 5f 82 bc e0 00      04:08:37.376  READ DMA
-  ca 00 28 5f 4c c0 e0 00      04:08:37.360  WRITE DMA
-  c8 00 28 97 b4 73 e2 00      04:08:37.360  READ DMA
-  ca 00 10 9f b4 73 e2 00      04:08:37.344  WRITE DMA
-  ca 00 08 6f 14 b4 e0 00      04:08:37.232  WRITE DMA
+  c8 00 f8 98 68 c9 e5 08      00:10:32.624  READ DMA
+  c8 00 08 60 9c c4 e5 08      00:10:32.624  READ DMA
+  c8 00 98 30 50 da e4 08      00:10:32.608  READ DMA
+  c8 00 08 68 3a 14 e5 08      00:10:32.592  READ DMA
+  c8 00 10 70 3a 14 e5 08      00:10:32.592  READ DMA
 
-Error 1097 occurred at disk power-on lifetime: 64575 hours (2690 days + 15 hours)
+Error 1112 occurred at disk power-on lifetime: 65248 hours (2718 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 5f 82 bc e0  Error: UNC 8 sectors at LBA = 0x00bc825f = 12354143
+  04 71 00 00 00 00 a0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 10 5f 82 bc e0 00      04:07:18.112  READ DMA
-  ca 00 20 1f de b3 e0 00      04:07:18.048  WRITE DMA
-  c8 00 20 6f 03 b7 e0 00      04:07:18.048  READ DMA
-  ca 00 30 ef dd b3 e0 00      04:07:18.032  WRITE DMA
-  c8 00 30 cf 00 b8 e0 00      04:07:18.032  READ DMA
+  ec 00 00 00 00 00 a0 0a      13:01:54.576  IDENTIFY DEVICE
+  a1 00 00 00 00 00 a0 0e      13:01:54.464  IDENTIFY PACKET DEVICE
+  a1 00 00 00 00 00 a0 0a      13:01:50.656  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 a0 0a      13:01:50.640  IDENTIFY DEVICE
+  a1 00 00 00 00 00 a0 0e      13:01:50.528  IDENTIFY PACKET DEVICE
 
-Error 1096 occurred at disk power-on lifetime: 64575 hours (2690 days + 15 hours)
+Error 1111 occurred at disk power-on lifetime: 65248 hours (2718 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 5f 82 bc e0  Error: UNC 8 sectors at LBA = 0x00bc825f = 12354143
+  04 71 00 00 00 00 a0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 10 5f 82 bc e0 00      04:07:55.744  READ DMA
-  ca 00 10 d7 b4 73 e2 00      04:07:55.728  WRITE DMA
-  c8 00 10 ef 1d b9 e0 00      04:07:55.728  READ DMA
-  ca 00 08 cf b4 73 e2 00      04:07:55.728  WRITE DMA
-  c8 00 08 b7 2e b9 e0 00      04:07:55.728  READ DMA
+  ec 00 00 00 00 00 a0 0a      13:01:50.640  IDENTIFY DEVICE
+  a1 00 00 00 00 00 a0 0e      13:01:50.528  IDENTIFY PACKET DEVICE
+  a1 00 00 00 00 00 a0 0a      13:01:46.720  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 a0 0a      13:01:46.704  IDENTIFY DEVICE
+  e7 00 00 af c1 30 a0 0e      13:01:46.400  FLUSH CACHE
 
-Error 1095 occurred at disk power-on lifetime: 64575 hours (2690 days + 15 hours)
+Error 1110 occurred at disk power-on lifetime: 65248 hours (2718 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 5f 82 bc e0  Error: UNC 8 sectors at LBA = 0x00bc825f = 12354143
+  00 70 00 af c1 30 a0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 10 5f 82 bc e0 00      04:06:34.000  READ DMA
-  ca 00 18 6f 05 b9 e0 00      04:06:34.000  WRITE DMA
-  c8 00 18 77 83 bc e0 00      04:06:33.984  READ DMA
-  ca 00 18 57 05 b9 e0 00      04:06:33.984  WRITE DMA
-  c8 00 18 97 83 bc e0 00      04:06:33.984  READ DMA
+  ec 00 00 00 00 00 a0 0a      13:01:46.704  IDENTIFY DEVICE
+  e7 00 00 af c1 30 a0 0e      13:01:46.400  FLUSH CACHE
+  e7 00 00 af c1 30 a0 08      13:00:15.328  FLUSH CACHE
+  ca 00 08 a8 c1 30 e6 08      13:00:04.176  WRITE DMA
+  ca 00 10 00 50 ac e5 08      13:00:02.512  WRITE DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: unknown failure    00%      2579         0
+# 2  Extended offline    Completed: unknown failure    00%      2504         0
+# 3  Extended offline    Completed: unknown failure    00%      2406         0
+# 4  Extended offline    Completed: unknown failure    00%      2350         0
+# 5  Extended offline    Completed: unknown failure    00%      1914         0
+# 6  Extended offline    Completed: unknown failure    00%      1851         0
+# 7  Extended offline    Completed: unknown failure    00%      1698         0
+# 8  Extended offline    Completed: unknown failure    00%      1235         0
+# 9  Extended offline    Completed: unknown failure    00%      1056         0
+#10  Extended offline    Completed: unknown failure    00%       961         0
+#11  Extended offline    Completed: unknown failure    00%       889         0
+#12  Extended offline    Completed: unknown failure    00%       755         0
+#13  Extended offline    Completed: unknown failure    00%       676         0
+#14  Extended offline    Completed: unknown failure    00%       612         0
+#15  Extended offline    Completed: unknown failure    00%       545         0
+#16  Extended offline    Completed: unknown failure    00%       423         0
+#17  Extended offline    Completed: unknown failure    00%       328         0
+#18  Extended offline    Completed: unknown failure    00%       254         0
+#19  Extended offline    Completed: unknown failure    00%       215         0
+#20  Extended offline    Completed: unknown failure    00%       135         0
+#21  Extended offline    Completed: unknown failure    00%        19         0
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -216,7 +238,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

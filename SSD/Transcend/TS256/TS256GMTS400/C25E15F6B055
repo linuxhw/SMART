@@ -8,7 +8,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Apr 27 16:40:49 2016 CEST
+Local Time is:    Wed Apr 27 19:40:50 2016 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,8 +22,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -57,11 +57,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
   9 Power_On_Hours          ------   100   100   000    -    71
- 12 Power_Cycle_Count       ------   100   100   000    -    239
+ 12 Power_Cycle_Count       ------   100   100   000    -    240
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       ------   100   100   000    -    42
 163 Unknown_Attribute       ------   100   100   000    -    28
-164 Unknown_Attribute       ------   100   100   000    -    3462
+164 Unknown_Attribute       ------   100   100   000    -    3477
 165 Unknown_Attribute       ------   100   100   000    -    13
 166 Unknown_Attribute       ------   100   100   000    -    0
 167 Unknown_Attribute       ------   100   100   000    -    3
@@ -71,15 +71,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 192 Power-Off_Retract_Count ------   100   100   000    -    36
-194 Temperature_Celsius     ------   100   100   000    -    50
-195 Hardware_ECC_Recovered  ------   100   100   000    -    5380
+194 Temperature_Celsius     ------   100   100   000    -    49
+195 Hardware_ECC_Recovered  ------   100   100   000    -    5381
 196 Reallocated_Event_Count ------   100   100   016    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Total_LBAs_Written      ------   100   100   000    -    17609
-242 Total_LBAs_Read         ------   100   100   000    -    19274
-245 Unknown_Attribute       ------   100   100   000    -    27696
+241 Total_LBAs_Written      ------   100   100   000    -    17712
+242 Total_LBAs_Read         ------   100   100   000    -    19429
+245 Unknown_Attribute       ------   100   100   000    -    27816
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,7 +98,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
@@ -141,25 +141,28 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4              239  Lifetime Power-On Resets
-  1  0x010  4               71  Power-on Hours
-  1  0x018  6       1154064967  Logical Sectors Written
-  1  0x020  6          8938513  Number of Write Commands
-  1  0x028  6       1263203884  Logical Sectors Read
-  1  0x030  6         17264791  Number of Read Commands
-  2  =====  =                =  == Free-Fall Statistics (empty) ==
-  3  =====  =                =  == Rotating Media Statistics (empty) ==
-  4  =====  =                =  == General Errors Statistics (rev 1) ==
-  4  0x008  4                0  Number of Reported Uncorrectable Errors
-  4  0x010  4               36  Resets Between Cmd Acceptance and Completion
-  5  =====  =                =  == Temperature Statistics (empty) ==
-  6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4             2240  Number of Hardware Resets
-  6  0x018  4                0  Number of Interface CRC Errors
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1                0  Percentage Used Endurance Indicator
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4             240  ---  Lifetime Power-On Resets
+0x01  0x010  4              71  ---  Power-on Hours
+0x01  0x018  6      1160797194  ---  Logical Sectors Written
+0x01  0x020  6         9091546  ---  Number of Write Commands
+0x01  0x028  6      1273346238  ---  Logical Sectors Read
+0x01  0x030  6        17413821  ---  Number of Read Commands
+0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
+0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4              36  ---  Resets Between Cmd Acceptance and Completion
+0x05  =====  =               =  ===  == Temperature Statistics (empty) ==
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4            2268  ---  Number of Hardware Resets
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

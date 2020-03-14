@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Wed Aug 31 17:34:11 2016 KRAT
+Local Time is:    Thu Sep  1 18:35:40 2016 KRAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,16 +51,16 @@ recommended polling time: 	 ( 111) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   059   048   006    -    35547155
+  1 Raw_Read_Error_Rate     POSR--   059   048   006    -    118971375
   3 Spin_Up_Time            PO----   097   096   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    3036
+  4 Start_Stop_Count        -O--CK   098   098   020    -    3037
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   083   060   030    -    228843525
-  9 Power_On_Hours          -O--CK   070   070   000    -    26459
+  7 Seek_Error_Rate         POSR--   083   060   030    -    230428408
+  9 Power_On_Hours          -O--CK   070   070   000    -    26481
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3972
-194 Temperature_Celsius     -O---K   039   057   000    -    39
-195 Hardware_ECC_Recovered  -O-RC-   058   048   000    -    35547155
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3988
+194 Temperature_Celsius     -O---K   042   057   000    -    42
+195 Hardware_ECC_Recovered  -O-RC-   059   048   000    -    118971375
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -73,134 +73,182 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory not supported
-
-SMART Log Directory Version 1 [multi-sector log support]
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00           SL  R/O      1  Log Directory
-0x01           SL  R/O      1  Summary SMART error log
-0x02           SL  R/O      5  Comprehensive SMART error log
-0x03           SL  R/O      5  Ext. Comprehensive SMART error log
-0x06           SL  R/O      1  SMART self-test log
-0x07           SL  R/O      1  Extended self-test log
-0x09           SL  R/W      1  Selective self-test log
-0x20           SL  R/O      1  Streaming performance log [OBS-8]
-0x21           SL  R/O      1  Write stream error log
-0x22           SL  R/O      1  Read stream error log
-0x23           SL  R/O      1  Delayed sector log [OBS-8]
-0x80-0x9f      SL  R/W     16  Host vendor specific log
-0xa0           SL  VS       1  Device vendor specific log
-0xa1           SL  VS      20  Device vendor specific log
-0xa2           SL  VS     101  Device vendor specific log
-0xa8           SL  VS      20  Device vendor specific log
-0xa9           SL  VS       1  Device vendor specific log
+0x00       GPL,SL  R/O      1  Log Directory
+0x01       GPL,SL  R/O      1  Summary SMART error log
+0x02       GPL,SL  R/O      5  Comprehensive SMART error log
+0x03       GPL,SL  R/O      5  Ext. Comprehensive SMART error log
+0x06       GPL,SL  R/O      1  SMART self-test log
+0x07       GPL,SL  R/O      1  Extended self-test log
+0x09       GPL,SL  R/W      1  Selective self-test log
+0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
+0x21       GPL,SL  R/O      1  Write stream error log
+0x22       GPL,SL  R/O      1  Read stream error log
+0x23       GPL,SL  R/O      1  Delayed sector log [OBS-8]
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xa0       GPL,SL  VS       1  Device vendor specific log
+0xa1       GPL,SL  VS      20  Device vendor specific log
+0xa2       GPL,SL  VS     101  Device vendor specific log
+0xa8       GPL,SL  VS      20  Device vendor specific log
+0xa9       GPL,SL  VS       1  Device vendor specific log
+0xff       GPL     -    24064  Reserved
 
-SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
-
-SMART Error Log Version: 1
-ATA Error Count: 12080 (device log contains only the most recent five errors)
-	CR = Command Register [HEX]
-	FR = Features Register [HEX]
-	SC = Sector Count Register [HEX]
-	SN = Sector Number Register [HEX]
-	CL = Cylinder Low Register [HEX]
-	CH = Cylinder High Register [HEX]
-	DH = Device/Head Register [HEX]
-	DC = Device Command Register [HEX]
-	ER = Error register [HEX]
-	ST = Status register [HEX]
+SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
+Device Error Count: 12080 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 12080 occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
+Error 12080 [19] occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 4d 2a 7f e0  Error: UNC at LBA = 0x007f2a4d = 8333901
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
 
   Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 47 2a 7f e0 00      00:01:01.432  READ DMA EXT
-  35 00 02 17 27 7a e0 00      00:01:01.420  WRITE DMA EXT
-  25 00 40 d1 11 79 e0 00      00:01:01.338  READ DMA EXT
-  35 00 08 0f fc 77 e0 00      00:01:01.338  WRITE DMA EXT
-  25 00 08 cf 6a 60 e0 00      00:01:01.338  READ DMA EXT
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:01.432  READ DMA EXT
+  35 00 00 00 02 00 01 27 00 7a 17 e0 00     00:01:01.420  WRITE DMA EXT
+  25 00 00 00 40 00 01 11 00 79 d1 e0 00     00:01:01.338  READ DMA EXT
+  35 00 00 00 08 00 01 fc 00 77 0f e0 00     00:01:01.338  WRITE DMA EXT
+  25 00 00 00 08 00 00 6a 00 60 cf e0 00     00:01:01.338  READ DMA EXT
 
-Error 12079 occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
+Error 12079 [18] occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 4d 2a 7f e0  Error: UNC at LBA = 0x007f2a4d = 8333901
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
 
   Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 47 2a 7f e0 00      00:01:01.432  READ DMA EXT
-  25 00 08 df 68 60 e0 00      00:01:01.420  READ DMA EXT
-  25 00 08 bf 42 09 e0 00      00:01:01.338  READ DMA EXT
-  25 00 08 3f 1e 78 e0 00      00:01:01.338  READ DMA EXT
-  35 00 08 67 6d 60 e0 00      00:01:01.338  WRITE DMA EXT
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:01.432  READ DMA EXT
+  25 00 00 00 08 00 00 68 00 60 df e0 00     00:01:01.420  READ DMA EXT
+  25 00 00 00 08 00 00 42 00 09 bf e0 00     00:01:01.338  READ DMA EXT
+  25 00 00 00 08 00 01 1e 00 78 3f e0 00     00:01:01.338  READ DMA EXT
+  35 00 00 00 08 00 00 6d 00 60 67 e0 00     00:01:01.338  WRITE DMA EXT
 
-Error 12078 occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
+Error 12078 [17] occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 4d 2a 7f e0  Error: UNC at LBA = 0x007f2a4d = 8333901
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
 
   Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 47 2a 7f e0 00      00:01:05.826  READ DMA EXT
-  35 00 08 8f 18 78 e0 00      00:01:01.899  WRITE DMA EXT
-  35 00 08 0f fc 77 e0 00      00:01:01.835  WRITE DMA EXT
-  35 00 78 c7 18 a4 e0 00      00:01:01.828  WRITE DMA EXT
-  35 00 70 2f 99 a2 e0 00      00:01:01.815  WRITE DMA EXT
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:05.826  READ DMA EXT
+  35 00 00 00 08 00 01 18 00 78 8f e0 00     00:01:01.899  WRITE DMA EXT
+  35 00 00 00 08 00 01 fc 00 77 0f e0 00     00:01:01.835  WRITE DMA EXT
+  35 00 00 00 78 00 00 18 00 a4 c7 e0 00     00:01:01.828  WRITE DMA EXT
+  35 00 00 00 70 00 00 99 00 a2 2f e0 00     00:01:01.815  WRITE DMA EXT
 
-Error 12077 occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
+Error 12077 [16] occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 4d 2a 7f e0  Error: UNC at LBA = 0x007f2a4d = 8333901
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
 
   Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 47 2a 7f e0 00      00:01:01.733  READ DMA EXT
-  25 00 08 0f 67 60 e0 00      00:01:01.899  READ DMA EXT
-  25 00 08 bf 42 09 e0 00      00:01:01.835  READ DMA EXT
-  25 00 08 3f 1e 78 e0 00      00:01:01.828  READ DMA EXT
-  35 00 08 57 b7 60 e0 00      00:01:01.815  WRITE DMA EXT
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:01.733  READ DMA EXT
+  25 00 00 00 08 00 00 67 00 60 0f e0 00     00:01:01.899  READ DMA EXT
+  25 00 00 00 08 00 00 42 00 09 bf e0 00     00:01:01.835  READ DMA EXT
+  25 00 00 00 08 00 01 1e 00 78 3f e0 00     00:01:01.828  READ DMA EXT
+  35 00 00 00 08 00 00 b7 00 60 57 e0 00     00:01:01.815  WRITE DMA EXT
 
-Error 12076 occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
+Error 12076 [15] occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 4d 2a 7f e0  Error: UNC at LBA = 0x007f2a4d = 8333901
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
 
   Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 47 2a 7f e0 00      00:01:04.579  READ DMA EXT
-  25 00 40 d1 11 79 e0 00      00:01:04.570  READ DMA EXT
-  35 00 78 c7 18 a4 e0 00      00:01:04.569  WRITE DMA EXT
-  35 00 70 2f 99 a2 e0 00      00:01:04.568  WRITE DMA EXT
-  35 00 08 27 99 a2 e0 00      00:01:04.568  WRITE DMA EXT
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:04.579  READ DMA EXT
+  25 00 00 00 40 00 01 11 00 79 d1 e0 00     00:01:04.570  READ DMA EXT
+  35 00 00 00 78 00 00 18 00 a4 c7 e0 00     00:01:04.569  WRITE DMA EXT
+  35 00 00 00 70 00 00 99 00 a2 2f e0 00     00:01:04.568  WRITE DMA EXT
+  35 00 00 00 08 00 00 99 00 a2 27 e0 00     00:01:04.568  WRITE DMA EXT
 
-SMART Extended Self-test Log (GP Log 0x07) not supported
+Error 12075 [14] occurred at disk power-on lifetime: 20882 hours (870 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
-SMART Self-test log structure revision number 1
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:00.495  READ DMA EXT
+  25 00 00 00 08 00 00 42 00 09 bf e0 00     00:01:00.494  READ DMA EXT
+  25 00 00 00 08 00 01 1e 00 78 3f e0 00     00:01:00.494  READ DMA EXT
+  35 00 00 00 08 00 00 3f 00 61 df e0 00     00:01:00.494  WRITE DMA EXT
+  35 00 00 00 08 00 00 3d 00 61 37 e0 00     00:01:00.494  WRITE DMA EXT
+
+Error 12074 [13] occurred at disk power-on lifetime: 20881 hours (870 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:05.223  READ DMA EXT
+  25 00 00 00 08 00 01 78 00 7a 01 e0 00     00:01:05.223  READ DMA EXT
+  35 00 00 00 08 00 01 18 00 78 8f e0 00     00:01:05.223  WRITE DMA EXT
+  35 00 00 00 08 00 01 fc 00 77 0f e0 00     00:01:05.223  WRITE DMA EXT
+  35 00 00 00 78 00 00 18 00 a4 c7 e0 00     00:01:01.288  WRITE DMA EXT
+
+Error 12073 [12] occurred at disk power-on lifetime: 20881 hours (870 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 2a 4d 7f 4d e0 00  Error: UNC at LBA = 0x12a4d7f4d = 5004689229
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 01 2a 00 7f 47 e0 00     00:01:01.123  READ DMA EXT
+  25 00 00 00 08 00 00 42 00 09 bf e0 00     00:01:01.122  READ DMA EXT
+  25 00 00 00 08 00 01 1e 00 78 3f e0 00     00:01:01.122  READ DMA EXT
+  35 00 00 00 08 00 00 d3 00 60 97 e0 00     00:01:01.122  WRITE DMA EXT
+  35 00 00 00 08 00 00 d3 00 60 7f e0 00     00:01:01.288  WRITE DMA EXT
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
@@ -216,7 +264,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP/SMART Log 0x04) not supported
+Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

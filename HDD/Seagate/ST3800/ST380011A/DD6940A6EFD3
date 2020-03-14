@@ -3,18 +3,18 @@ Model Family:     Seagate Barracuda 7200.7 and 7200.7 Plus
 Device Model:     ST380011A
 Serial Number:    --
 Firmware Version: 8.01
-User Capacity:    80 026 361 856 bytes [80,0 GB]
+User Capacity:    80 025 280 000 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Sat Mar  5 16:42:29 2016 EET
+Local Time is:    Sun May 14 03:17:42 2017 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -51,19 +51,19 @@ recommended polling time: 	 (  58) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   055   051   006    -    232603570
+  1 Raw_Read_Error_Rate     POSR--   057   049   006    -    44556608
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    830
+  4 Start_Stop_Count        -O--CK   100   100   020    -    831
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   085   060   030    -    337679297
-  9 Power_On_Hours          -O--CK   063   063   000    -    32801
+  7 Seek_Error_Rate         POSR--   087   060   030    -    600626852
+  9 Power_On_Hours          -O--CK   059   059   000    -    36212
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2312
-194 Temperature_Celsius     -O---K   037   055   000    -    37
-195 Hardware_ECC_Recovered  -O-RC-   055   050   000    -    232603570
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2406
+194 Temperature_Celsius     -O---K   039   055   000    -    39
+195 Hardware_ECC_Recovered  -O-RC-   057   049   000    -    44556608
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   197   000    -    6
+199 UDMA_CRC_Error_Count    -OSRCK   200   197   000    -    7
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -96,7 +96,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    24064  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 5
+Device Error Count: 6
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -112,7 +112,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 5 [4] occurred at disk power-on lifetime: 32747 hours (1364 days + 11 hours)
+Error 6 [5] occurred at disk power-on lifetime: 30051 hours (1252 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -123,11 +123,28 @@ Error 5 [4] occurred at disk power-on lifetime: 32747 hours (1364 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 40 e0 00     00:00:28.751  READ DMA EXT
-  25 00 20 00 01 00 00 00 00 00 3f e0 00     00:00:28.751  READ DMA EXT
-  25 00 20 00 01 00 00 00 00 00 3f e0 00     00:00:28.751  READ DMA EXT
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:00:28.657  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:00:32.055  SET MULTIPLE MODE
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:03:24.488  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:03:24.481  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:03:18.848  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:03:18.824  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:03:18.824  NOP [Abort queued commands]
+
+Error 5 [4] occurred at disk power-on lifetime: 30051 hours (1252 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:03:24.488  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:03:24.481  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:03:18.848  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:03:18.824  RECALIBRATE [OBS-4]
+  00 00 00 01 00 00 00 00 00 00 00 00 00     00:03:18.824  NOP [Abort queued commands]
 
 Error 4 [3] occurred at disk power-on lifetime: 32747 hours (1364 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -215,7 +232,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Sun Jan 10 13:52:45 2016 MSK
+Local Time is:    Sun Sep 11 09:27:56 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,21 +60,21 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    69434364
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    159151711
   3 Spin_Up_Time            PO----   094   094   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3436
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3690
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   078   060   030    -    4355762565
-  9 Power_On_Hours          -O--CK   085   085   000    -    13160
+  7 Seek_Error_Rate         POSR--   078   060   030    -    4359934137
+  9 Power_On_Hours          -O--CK   084   084   000    -    14170
  10 Spin_Retry_Count        PO--C-   100   100   097    -    8
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3259
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3513
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   091   000    -    1434541097298
+188 Command_Timeout         -O--CK   100   091   000    -    1443131162964
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   065   052   045    -    35 (Min/Max 26/35)
-194 Temperature_Celsius     -O---K   035   048   000    -    35 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   031   012   000    -    69434364
+190 Airflow_Temperature_Cel -O---K   066   052   045    -    34 (Min/Max 32/34)
+194 Temperature_Celsius     -O---K   034   048   000    -    34 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   022   012   000    -    159151711
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -95,8 +95,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -133,23 +133,23 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     26/35 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     32/34 Celsius
 Lifetime    Min/Max Temperature:     10/48 Celsius
-Under/Over Temperature Limit Count:   0/24
+Under/Over Temperature Limit Count:   0/11
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (29)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

@@ -8,7 +8,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 6.0 Gb/s
-Local Time is:    Sun Mar 20 17:39:43 2016 MSK
+Local Time is:    Mon Mar 21 18:25:46 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,8 +19,9 @@ ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: PASSED
-See vendor-specific Attribute list for marginal Attributes.
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
+See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -53,22 +54,22 @@ recommended polling time: 	 (   5) minutes.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   143   001   006    Past 609
+  1 Raw_Read_Error_Rate     POSR--   001   001   006    NOW  2339
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    3184
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    840
+  9 Power_On_Hours          -O--CK   097   097   000    -    3190
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    843
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   253   000    -    0
 181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   029   000   000    -    29 (Min/Max 19/42)
+194 Temperature_Celsius     -O----   027   000   000    -    27 (Min/Max 19/42)
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
-204 Soft_ECC_Correction     -OSR--   100   001   000    -    3
+204 Soft_ECC_Correction     -OSR--   100   001   000    -    4
 231 Temperature_Celsius     PO--CK   095   095   010    -    6
-234 Unknown_Attribute       -O--CK   100   100   000    -    51702
+234 Unknown_Attribute       -O--CK   100   100   000    -    51711
 241 Total_LBAs_Written      -O--CK   100   100   000    -    3924
 242 Total_LBAs_Read         -O--CK   100   100   000    -    5162
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    778430
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    782100
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -90,7 +91,7 @@ Address    Access  R/W   Size  Description
 0x11       GPL     R/O      1  SATA Phy Event Counters
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 6379 (device log contains only the most recent 20 errors)
+Device Error Count: 6395 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -106,24 +107,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6379 [18] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6395 [14] occurred at disk power-on lifetime: 3189 hours (132 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 c8 01 c0 0d 00 c2 4f 00 e0 08  Error: ABRT
+  04 -- 51 00 10 00 00 02 c2 4f 00 e0 08  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 08 db 01 f8 00 00 00 c2 4f 00 00 00     01:44:52.190  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 08 d1 01 01 00 00 00 c2 4f 01 00 00     01:44:52.190  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 08 d0 70 01 01 0b e8 c2 4f 00 00 00     01:44:52.190  SMART READ DATA
-  60 00 08 00 70 00 00 02 01 0b e8 40 40     01:44:52.190  READ FPDMA QUEUED
-  60 00 08 00 68 00 00 02 45 07 f8 40 40     01:44:52.190  READ FPDMA QUEUED
+  b0 08 db a0 f8 81 3b b0 c2 4f 00 00 00     00:00:42.150  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  60 00 08 00 a0 00 00 01 81 3b b0 40 40     00:00:42.150  READ FPDMA QUEUED
+  60 00 48 00 98 00 00 01 84 5f a0 40 40     00:00:42.150  READ FPDMA QUEUED
+  61 00 08 00 90 00 00 00 84 7e 28 40 40     00:00:42.150  WRITE FPDMA QUEUED
+  b0 88 d1 60 01 84 5f e8 c2 4f 01 00 00     00:00:42.150  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 6378 [17] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6394 [13] occurred at disk power-on lifetime: 3189 hours (132 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -134,13 +135,13 @@ Error 6378 [17] occurred at disk power-on lifetime: 3182 hours (132 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 ff aa 55 00 00 55 76 77 aa a0 a0     01:44:41.370  READ DMA EXT
-  25 00 ff aa 55 00 00 55 76 77 aa a0 a0     01:44:41.380  READ DMA EXT
-  25 ff 00 00 23 00 00 00 76 77 5d e0 e0     01:44:37.510  READ DMA EXT
-  25 ff 00 00 1d 00 00 00 76 77 40 e0 e0     01:44:37.510  READ DMA EXT
-  25 ff 00 00 22 00 00 00 76 77 1e e0 e0     01:44:37.510  READ DMA EXT
+  25 00 ff aa 55 00 00 55 76 77 aa a0 a0     00:00:30.680  READ DMA EXT
+  25 00 ff aa 55 00 00 55 76 77 aa a0 a0     00:00:30.690  READ DMA EXT
+  25 ff 00 00 23 00 00 00 76 77 5d e0 e0     00:00:26.830  READ DMA EXT
+  25 ff 00 00 1d 00 00 00 76 77 40 e0 e0     00:00:26.830  READ DMA EXT
+  25 ff 00 00 22 00 00 00 76 77 1e e0 e0     00:00:26.830  READ DMA EXT
 
-Error 6377 [16] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6393 [12] occurred at disk power-on lifetime: 3189 hours (132 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -151,13 +152,13 @@ Error 6377 [16] occurred at disk power-on lifetime: 3182 hours (132 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 ff 3f 01 00 00 00 00 00 00 a0 a0     01:44:21.530  SET MULTIPLE MODE
-  c6 00 ff 3f 01 00 00 00 00 00 00 a0 a0     01:44:21.540  SET MULTIPLE MODE
-  c6 ff 00 3f 01 00 00 00 00 00 00 e0 e0     01:44:21.220  SET MULTIPLE MODE
-  91 ff 00 00 3f 00 00 00 00 00 00 ef ef     01:44:21.220  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 ff 00 01 00 00 00 01 00 00 00 e0 e0     01:44:21.220  RECALIBRATE [OBS-4]
+  c6 00 ff 3f 01 00 00 00 00 00 00 a0 a0     00:00:19.000  SET MULTIPLE MODE
+  c6 00 ff 3f 01 00 00 00 00 00 00 a0 a0     00:00:19.010  SET MULTIPLE MODE
+  c6 ff 00 3f 01 00 00 00 00 00 00 e0 e0     00:00:18.700  SET MULTIPLE MODE
+  91 ff 00 00 3f 00 00 00 00 00 00 ef ef     00:00:18.700  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 ff 00 01 00 00 00 01 00 00 00 e0 e0     00:00:18.700  RECALIBRATE [OBS-4]
 
-Error 6376 [15] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6392 [11] occurred at disk power-on lifetime: 3189 hours (132 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -168,13 +169,13 @@ Error 6376 [15] occurred at disk power-on lifetime: 3182 hours (132 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 ff 00 00 00 00 00 00 00 00 a0 a0     01:44:21.220  READ DMA EXT
-  25 00 ff 00 00 00 00 00 00 00 00 a0 a0     01:44:21.220  READ DMA EXT
-  25 ff 00 00 01 00 00 00 00 00 00 e0 e0     01:44:12.390  READ DMA EXT
-  f5 ff 00 3f 00 c2 4f 00 00 00 00 e0 e0     01:44:12.380  SECURITY FREEZE LOCK
-  b0 ff da 3f 00 00 00 00 c2 4f 00 e0 e0     01:44:12.380  SMART RETURN STATUS
+  25 00 ff 00 00 00 00 00 00 00 00 a0 a0     00:00:18.690  READ DMA EXT
+  25 00 ff 00 00 00 00 00 00 00 00 a0 a0     00:00:18.690  READ DMA EXT
+  25 ff 00 00 01 00 00 00 00 00 00 e0 e0     00:00:10.930  READ DMA EXT
+  f5 ff 00 3f 00 c2 4f 00 00 00 00 e0 e0     00:00:10.930  SECURITY FREEZE LOCK
+  b0 ff da 3f 00 00 00 00 c2 4f 00 e0 e0     00:00:10.920  SMART RETURN STATUS
 
-Error 6375 [14] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6391 [10] occurred at disk power-on lifetime: 3189 hours (132 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -185,13 +186,13 @@ Error 6375 [14] occurred at disk power-on lifetime: 3182 hours (132 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 03 ff 0c 46 00 00 00 00 00 00 a0 a0     01:44:12.080  SET FEATURES [Reserved for CFA]
-  ef 03 ff 0c 46 00 00 00 00 00 00 a0 a0     01:44:12.080  SET FEATURES [Reserved for CFA]
-  ef ff 03 0c 46 00 00 00 00 00 00 e0 e0     01:44:11.830  SET FEATURES [Set transfer mode]
-  ef ff 03 01 0c 00 00 00 00 00 00 e0 e0     01:44:11.830  SET FEATURES [Set transfer mode]
-  ec ff ff 00 01 00 00 00 00 00 01 e0 e0     01:44:11.750  IDENTIFY DEVICE
+  ef 03 ff 0c 46 00 00 00 00 00 00 a0 a0     00:00:10.620  SET FEATURES [Reserved for CFA]
+  ef 03 ff 0c 46 00 00 00 00 00 00 a0 a0     00:00:10.630  SET FEATURES [Reserved for CFA]
+  ef ff 03 0c 46 00 00 00 00 00 00 e0 e0     00:00:10.370  SET FEATURES [Set transfer mode]
+  ef ff 03 01 0c 00 00 00 00 00 00 e0 e0     00:00:10.370  SET FEATURES [Set transfer mode]
+  ec ff ff 00 01 00 00 00 00 00 01 e0 e0     00:00:10.290  IDENTIFY DEVICE
 
-Error 6374 [13] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6390 [9] occurred at disk power-on lifetime: 3189 hours (132 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -202,13 +203,9 @@ Error 6374 [13] occurred at disk power-on lifetime: 3182 hours (132 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 ff ff 00 01 00 00 00 00 00 01 e0 e0     01:44:11.420  IDENTIFY PACKET DEVICE
-  e7 00 20 00 d8 00 00 02 04 94 20 a0 a0     01:44:00.920  FLUSH CACHE
-  60 00 20 00 d8 00 00 02 04 94 20 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 d0 00 00 02 00 0c f8 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 c8 00 00 02 00 0d 00 40 40     01:44:00.870  READ FPDMA QUEUED
+  a1 ff ff 00 01 00 00 00 00 00 01 e0 e0     00:00:09.960  IDENTIFY PACKET DEVICE
 
-Error 6373 [12] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6389 [8] occurred at disk power-on lifetime: 3189 hours (132 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -219,13 +216,8 @@ Error 6373 [12] occurred at disk power-on lifetime: 3182 hours (132 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  e7 00 20 00 d8 00 00 02 04 94 20 a0 a0     01:44:00.920  FLUSH CACHE
-  60 00 20 00 d8 00 00 02 04 94 20 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 d0 00 00 02 00 0c f8 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 c8 00 00 02 00 0d 00 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 c0 00 00 02 00 0c f0 40 40     01:44:00.870  READ FPDMA QUEUED
 
-Error 6372 [11] occurred at disk power-on lifetime: 3182 hours (132 days + 14 hours)
+Error 6388 [7] occurred at disk power-on lifetime: 3186 hours (132 days + 18 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -236,11 +228,11 @@ Error 6372 [11] occurred at disk power-on lifetime: 3182 hours (132 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  e7 00 20 00 d8 00 00 02 04 94 20 a0 a0     01:44:00.920  FLUSH CACHE
-  60 00 20 00 d8 00 00 02 04 94 20 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 d0 00 00 02 00 0c f8 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 c8 00 00 02 00 0d 00 40 40     01:44:00.870  READ FPDMA QUEUED
-  60 00 08 00 c0 00 00 02 00 0c f0 40 40     01:44:00.870  READ FPDMA QUEUED
+  ea 01 00 00 00 00 00 00 00 00 00 00 00     01:22:35.690  FLUSH CACHE EXT
+  60 00 01 00 00 00 00 02 fd 00 00 40 40     00:37:28.930  READ FPDMA QUEUED
+  60 00 01 00 00 00 00 02 80 00 00 40 40     00:37:28.930  READ FPDMA QUEUED
+  60 00 01 00 00 00 00 00 00 00 00 40 40     00:37:28.930  READ FPDMA QUEUED
+  60 00 01 00 00 00 00 02 fd 00 00 40 40     00:37:28.930  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -262,7 +254,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -4,19 +4,20 @@ Device Model:     ST250DM000-1BC141
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: JC4B
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Nov 23 15:07:29 2016 MSK
+Local Time is:    Tue Jul 17 07:56:15 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     128 (quiet), recommended: 208
+AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unknown
 
@@ -60,28 +61,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   099   006    -    235623065
+  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    69330028
   3 Spin_Up_Time            PO----   097   096   000    -    0
-  4 Start_Stop_Count        -O--CK   085   085   020    -    15569
+  4 Start_Stop_Count        -O--CK   079   079   020    -    21672
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   082   060   030    -    4481527435
-  9 Power_On_Hours          -O--CK   084   084   000    -    14265
+  7 Seek_Error_Rate         POSR--   084   060   030    -    4609223983
+  9 Power_On_Hours          -O--CK   079   079   000    -    18402
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7407
+ 12 Power_Cycle_Count       -O--CK   090   090   020    -    10476
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   096   000    -    37 37 793
+188 Command_Timeout         -O--CK   100   096   000    -    57 57 847
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   072   053   045    -    28 (Min/Max 21/28)
-194 Temperature_Celsius     -O---K   028   047   000    -    28 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   034   019   000    -    235623065
+190 Airflow_Temperature_Cel -O---K   065   053   045    -    35 (Min/Max 26/35)
+194 Temperature_Celsius     -O---K   035   047   000    -    35 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   037   019   000    -    69330028
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    32305h+58m+48.449s
-241 Total_LBAs_Written      ------   100   253   000    -    17517973
-242 Total_LBAs_Read         ------   100   253   000    -    151527481
+240 Head_Flying_Hours       ------   100   253   000    -    43948h+00m+59.112s
+241 Total_LBAs_Written      ------   100   253   000    -    1780841713
+242 Total_LBAs_Read         ------   100   253   000    -    57670287
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -119,7 +120,8 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     15264         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -136,8 +138,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     21/27 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     26/35 Celsius
 Lifetime    Min/Max Temperature:     10/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -146,13 +148,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (104)
+Temperature History Size (Index):    128 (97)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

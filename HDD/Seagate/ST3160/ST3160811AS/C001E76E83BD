@@ -7,14 +7,14 @@ User Capacity:    160 040 803 840 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Jun  5 09:17:29 2016 MSK
+Local Time is:    Sun Sep 11 19:53:52 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -52,19 +52,19 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   083   006    -    145151438
+  1 Raw_Read_Error_Rate     POSR--   118   083   006    -    170376089
   3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    4023
+  4 Start_Stop_Count        -O--CK   097   097   020    -    4043
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    9085808389
-  9 Power_On_Hours          -O--CK   091   091   000    -    7912
+  7 Seek_Error_Rate         POSR--   084   060   030    -    9086809319
+  9 Power_On_Hours          -O--CK   091   091   000    -    8007
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4723
+ 12 Power_Cycle_Count       -O--CK   096   096   020    -    4743
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   070   041   045    Past 30 (Min/Max 25/30)
-194 Temperature_Celsius     -O---K   030   059   000    -    30 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   060   045   000    -    34570138
+190 Airflow_Temperature_Cel -O---K   068   041   045    Past 32 (Min/Max 29/32)
+194 Temperature_Celsius     -O---K   032   059   000    -    32 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   057   045   000    -    9483162
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    74
@@ -87,8 +87,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -120,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 508 [7] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hours)
+Error 508 [7] occurred at disk power-on lifetime: 6305 hours (262 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -131,13 +131,13 @@ Error 508 [7] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     02:42:04.567  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     02:42:04.507  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     02:42:04.283  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 01 01 00 12 96 00 a1 6e e0 00     02:42:04.210  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     02:42:02.130  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     01:21:25.261  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     01:21:25.144  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     01:21:25.074  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 01 01 00 12 96 00 a1 6e e0 00     01:21:22.765  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     01:21:22.732  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 507 [6] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hours)
+Error 507 [6] occurred at disk power-on lifetime: 6305 hours (262 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -148,13 +148,13 @@ Error 507 [6] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     02:41:59.076  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     02:41:59.076  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     02:41:59.076  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 00 01 00 12 9e 00 a1 af e0 00     02:41:59.075  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 12 9e 00 a1 af e0 00     02:42:02.130  READ MULTIPLE EXT
+  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     01:21:25.261  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     01:21:25.144  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     01:21:25.074  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 00 01 00 12 9e 00 a1 af e0 00     01:21:22.765  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 12 9e 00 a1 af e0 00     01:21:22.732  READ MULTIPLE EXT
 
-Error 506 [5] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hours)
+Error 506 [5] occurred at disk power-on lifetime: 6304 hours (262 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,13 +165,13 @@ Error 506 [5] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     02:03:27.060  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     02:03:26.835  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     02:03:26.768  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 01 01 00 12 96 00 a1 6e e0 00     02:03:26.593  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     02:03:26.468  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     00:39:47.455  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     00:39:47.231  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     00:39:47.164  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 01 01 00 12 96 00 a1 6e e0 00     00:39:46.989  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     00:39:46.872  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 505 [4] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hours)
+Error 505 [4] occurred at disk power-on lifetime: 6304 hours (262 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -182,11 +182,11 @@ Error 505 [4] occurred at disk power-on lifetime: 6306 hours (262 days + 18 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     02:03:27.060  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     02:03:26.835  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     02:03:26.768  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 00 01 00 12 9e 00 a1 af e0 00     02:03:26.593  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 12 9e 00 a1 af e0 00     02:03:26.468  READ MULTIPLE EXT
+  37 00 ff 01 01 00 12 96 00 a1 6e e2 00     00:39:47.455  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 00 00 00 12 96 00 a1 6e e0 00     00:39:47.231  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 00 00 00 12 96 00 a1 6e e2 00     00:39:47.164  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 00 01 00 12 9e 00 a1 af e0 00     00:39:46.989  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 12 9e 00 a1 af e0 00     00:39:46.872  READ MULTIPLE EXT
 
 Error 504 [3] occurred at disk power-on lifetime: 6305 hours (262 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -271,11 +271,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

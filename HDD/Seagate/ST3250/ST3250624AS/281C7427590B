@@ -7,7 +7,7 @@ User Capacity:    250 059 350 016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Aug 18 16:15:15 2015 MSK
+Local Time is:    Mon May  9 17:21:46 2016 SAMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,21 +51,21 @@ recommended polling time: 	 ( 100) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   091   006    -    94958751
-  3 Spin_Up_Time            PO----   094   090   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5831
+  1 Raw_Read_Error_Rate     POSR--   107   091   006    -    110008995
+  3 Spin_Up_Time            PO----   091   090   000    -    0
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6615
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    730314979
-  9 Power_On_Hours          -O--CK   082   082   000    -    16006
+  7 Seek_Error_Rate         POSR--   088   060   030    -    798714563
+  9 Power_On_Hours          -O--CK   080   080   000    -    17562
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6299
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7456
 187 Reported_Uncorrect      -O--CK   074   074   000    -    26
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   061   053   045    -    39 (Min/Max 39/39)
-194 Temperature_Celsius     -O---K   039   047   000    -    39 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   070   048   000    -    239752617
-197 Current_Pending_Sector  -O--C-   100   100   000    -    1
-198 Offline_Uncorrectable   ----C-   100   100   000    -    1
+190 Airflow_Temperature_Cel -O---K   054   053   045    -    46 (Min/Max 29/47)
+194 Temperature_Celsius     -O---K   046   047   000    -    46 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   050   045   000    -    240452731
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   190   000    -    6383
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -86,8 +86,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -130,11 +130,11 @@ Error 8695 [14] occurred at disk power-on lifetime: 15957 hours (664 days + 21 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     03:02:16.779  READ DMA EXT
-  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     03:02:14.852  READ DMA EXT
-  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     03:02:14.852  READ DMA EXT
-  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     03:02:16.866  READ DMA EXT
-  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     03:02:16.863  READ DMA EXT
+  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     02:55:23.520  READ DMA EXT
 
 Error 8694 [13] occurred at disk power-on lifetime: 15957 hours (664 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -147,13 +147,13 @@ Error 8694 [13] occurred at disk power-on lifetime: 15957 hours (664 days + 21 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 10 00 00 cd 40 e0 00     03:02:14.850  READ DMA EXT
-  35 00 00 00 20 00 0e 25 00 01 a0 e0 00     03:02:14.852  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 20 e0 00     03:02:14.852  READ DMA EXT
-  35 00 00 00 20 00 0e 25 00 01 80 e0 00     03:02:14.852  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 00 e0 00     03:02:14.852  READ DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 40 e0 00     02:55:21.467  READ DMA EXT
+  35 00 00 00 20 00 0d 14 00 d9 c0 e0 00     02:55:21.466  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 20 e0 00     02:55:21.466  READ DMA EXT
+  35 00 00 00 20 00 0d 14 00 d9 a0 e0 00     02:55:21.466  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 00 e0 00     02:55:21.466  READ DMA EXT
 
-Error 8693 [12] occurred at disk power-on lifetime: 15957 hours (664 days + 21 hours)
+Error 8693 [12] occurred at disk power-on lifetime: 15922 hours (663 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -164,11 +164,11 @@ Error 8693 [12] occurred at disk power-on lifetime: 15957 hours (664 days + 21 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     03:02:07.303  READ DMA EXT
-  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     03:02:07.291  READ DMA EXT
-  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     03:02:07.276  READ DMA EXT
-  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     03:02:05.321  READ DMA EXT
-  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     03:02:05.321  READ DMA EXT
+  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     03:52:19.347  READ DMA EXT
+  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     03:52:19.347  READ DMA EXT
+  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     03:52:17.295  READ DMA EXT
+  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     03:52:17.295  READ DMA EXT
+  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     03:52:17.295  READ DMA EXT
 
 Error 8692 [11] occurred at disk power-on lifetime: 15957 hours (664 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -181,11 +181,11 @@ Error 8692 [11] occurred at disk power-on lifetime: 15957 hours (664 days + 21 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 10 00 00 cd 40 e0 00     03:02:05.319  READ DMA EXT
-  35 00 00 00 20 00 0d cd 00 d8 40 e0 00     03:02:05.319  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 20 e0 00     03:02:05.319  READ DMA EXT
-  35 00 00 00 20 00 0d cd 00 d8 20 e0 00     03:02:05.321  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 00 e0 00     03:02:05.321  READ DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 40 e0 00     03:00:17.604  READ DMA EXT
+  35 00 00 00 20 00 0a d4 00 ef 80 e0 00     03:00:17.604  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 20 e0 00     03:00:17.604  READ DMA EXT
+  35 00 00 00 20 00 0a d4 00 ef 60 e0 00     03:00:17.603  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 00 e0 00     03:00:17.603  READ DMA EXT
 
 Error 8691 [10] occurred at disk power-on lifetime: 15957 hours (664 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -198,11 +198,11 @@ Error 8691 [10] occurred at disk power-on lifetime: 15957 hours (664 days + 21 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     03:01:56.165  READ DMA EXT
-  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     03:01:56.162  READ DMA EXT
-  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     03:01:56.149  READ DMA EXT
-  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     03:01:56.140  READ DMA EXT
-  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     03:01:56.133  READ DMA EXT
+  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     02:55:23.537  READ DMA EXT
+  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     02:55:23.520  READ DMA EXT
 
 Error 8690 [9] occurred at disk power-on lifetime: 15957 hours (664 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -215,13 +215,13 @@ Error 8690 [9] occurred at disk power-on lifetime: 15957 hours (664 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 10 00 00 cd 40 e0 00     03:01:54.143  READ DMA EXT
-  35 00 00 00 20 00 0d 31 00 d8 20 e0 00     03:01:54.143  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 20 e0 00     03:01:54.143  READ DMA EXT
-  35 00 00 00 20 00 0d 31 00 d8 00 e0 00     03:01:54.143  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 00 e0 00     03:01:54.142  READ DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 40 e0 00     02:55:21.467  READ DMA EXT
+  35 00 00 00 20 00 0d 14 00 d9 c0 e0 00     02:55:21.466  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 20 e0 00     02:55:21.466  READ DMA EXT
+  35 00 00 00 20 00 0d 14 00 d9 a0 e0 00     02:55:21.466  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 00 e0 00     02:55:21.466  READ DMA EXT
 
-Error 8689 [8] occurred at disk power-on lifetime: 15957 hours (664 days + 21 hours)
+Error 8689 [8] occurred at disk power-on lifetime: 15922 hours (663 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -232,11 +232,11 @@ Error 8689 [8] occurred at disk power-on lifetime: 15957 hours (664 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     03:01:38.200  READ DMA EXT
-  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     03:01:38.200  READ DMA EXT
-  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     03:01:40.281  READ DMA EXT
-  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     03:01:40.277  READ DMA EXT
-  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     03:01:40.275  READ DMA EXT
+  25 00 00 01 00 00 10 ff 00 cc c0 e0 00     03:52:19.347  READ DMA EXT
+  25 00 00 01 00 00 10 fe 00 cc c0 e0 00     03:52:19.347  READ DMA EXT
+  25 00 00 01 00 00 10 fd 00 cc c0 e0 00     03:52:17.295  READ DMA EXT
+  25 00 00 01 00 00 10 fc 00 cc c0 e0 00     03:52:17.295  READ DMA EXT
+  25 00 00 01 00 00 10 fb 00 cc c0 e0 00     03:52:17.295  READ DMA EXT
 
 Error 8688 [7] occurred at disk power-on lifetime: 15957 hours (664 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -249,13 +249,33 @@ Error 8688 [7] occurred at disk power-on lifetime: 15957 hours (664 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 10 00 00 cd 40 e0 00     03:01:38.200  READ DMA EXT
-  35 00 00 00 20 00 0d b2 00 a3 e0 e0 00     03:01:38.200  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 20 e0 00     03:01:38.200  READ DMA EXT
-  35 00 00 00 20 00 0d b2 00 a3 c0 e0 00     03:01:38.199  WRITE DMA EXT
-  25 00 00 00 20 00 10 00 00 cd 00 e0 00     03:01:38.199  READ DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 40 e0 00     03:00:17.604  READ DMA EXT
+  35 00 00 00 20 00 0a d4 00 ef 80 e0 00     03:00:17.604  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 20 e0 00     03:00:17.604  READ DMA EXT
+  35 00 00 00 20 00 0a d4 00 ef 60 e0 00     03:00:17.603  WRITE DMA EXT
+  25 00 00 00 20 00 10 00 00 cd 00 e0 00     03:00:17.603  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     16664         -
+# 2  Extended offline    Aborted by host               70%     16645         -
+# 3  Extended offline    Completed without error       00%     16634         -
+# 4  Extended offline    Aborted by host               10%     16632         -
+# 5  Extended offline    Aborted by host               10%     16624         -
+# 6  Extended offline    Aborted by host               20%     16457         -
+# 7  Extended offline    Interrupted (host reset)      50%     16416         -
+# 8  Extended offline    Interrupted (host reset)      50%     16405         -
+# 9  Extended offline    Interrupted (host reset)      30%     16367         -
+#10  Extended offline    Interrupted (host reset)      90%     16361         -
+#11  Extended offline    Completed without error       00%     16349         -
+#12  Extended offline    Completed without error       00%     16345         -
+#13  Extended offline    Completed without error       00%     16339         -
+#14  Extended offline    Aborted by host               30%     16327         -
+#15  Extended offline    Interrupted (host reset)      50%     16296         -
+#16  Extended offline    Completed without error       00%     16223         -
+#17  Extended offline    Completed without error       00%     16212         -
+#18  Extended offline    Completed without error       00%     16192         -
+#19  Extended offline    Completed without error       00%     16185         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -270,11 +290,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

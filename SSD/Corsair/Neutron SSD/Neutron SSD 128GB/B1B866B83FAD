@@ -2,13 +2,13 @@
 Device Model:     Corsair Neutron SSD
 Serial Number:    --
 Firmware Version: M306
-User Capacity:    128 035 676 160 bytes [128 GB]
+User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 6.0 Gb/s
-Local Time is:    Wed Jan 18 15:26:00 2017 VLAT
+Local Time is:    Thu Mar 15 14:40:39 2018 +10
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,14 +23,14 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(  235) seconds.
 Offline data collection
 capabilities: 			 (0x19) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -53,22 +53,22 @@ recommended polling time: 	 (   5) minutes.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   165   001   006    Past 137
-  5 Reallocated_Sector_Ct   -O--CK   100   100   036    -    15
+  1 Raw_Read_Error_Rate     POSR--   162   001   006    Past 52
+  5 Reallocated_Sector_Ct   -O--CK   100   100   036    -    48
   9 Power_On_Hours          -O--CK   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    1160
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    1584
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
-172 Unknown_Attribute       -O--CK   100   100   000    -    60
+172 Unknown_Attribute       -O--CK   100   100   000    -    212
 181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
-182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    60
-194 Temperature_Celsius     -O----   029   000   000    -    29 (Min/Max 17/42)
+182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    212
+194 Temperature_Celsius     -O----   036   000   000    -    36 (Min/Max 17/42)
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
-204 Soft_ECC_Correction     -OSR--   100   078   000    -    2
-231 Temperature_Celsius     PO--CK   096   096   010    -    5
-234 Unknown_Attribute       -O--CK   100   100   000    -    85078
-241 Total_LBAs_Written      -O--CK   100   100   000    -    8103
-242 Total_LBAs_Read         -O--CK   100   100   000    -    4520
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    1991811
+204 Soft_ECC_Correction     -OSR--   100   078   000    -    5
+231 Temperature_Celsius     PO--CK   095   095   010    -    6
+234 Unknown_Attribute       -O--CK   100   100   000    -    106046
+241 Total_LBAs_Written      -O--CK   100   100   000    -    11259
+242 Total_LBAs_Read         -O--CK   100   100   000    -    6255
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    31071718
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -90,7 +90,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 9106 (device log contains only the most recent five errors)
+ATA Error Count: 12634 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -105,75 +105,41 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 9106 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 12634 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 02 00 4f c2 e0  Error: ABRT
+  04 51 00 00 4f c2 e0  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 db f8 00 4f c2 00 00      02:01:52.000  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 d1 01 01 4f c2 00 00      02:01:52.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 d0 01 00 4f c2 00 00      02:01:52.000  SMART READ DATA
-  b0 da 00 00 4f c2 00 00      02:01:51.990  SMART RETURN STATUS
-  b0 d2 f1 00 4f c2 00 00      02:01:51.990  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 db f8 00 4f c2 00 00      00:00:24.440  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  60 08 80 28 16 4c 40 40      00:00:24.440  READ FPDMA QUEUED
+  60 a8 78 b0 b5 27 40 40      00:00:24.440  READ FPDMA QUEUED
+  60 20 70 00 60 5c 40 40      00:00:24.440  READ FPDMA QUEUED
+  60 08 68 88 05 49 40 40      00:00:24.440  READ FPDMA QUEUED
 
-Error 9105 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 12633 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+  01 50 01 01 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 00 00 00 40 40      02:01:39.820  READ DMA EXT
-  25 00 01 00 08 00 40 40      02:01:38.810  READ DMA EXT
-  25 00 01 00 00 00 40 40      02:01:38.810  READ DMA EXT
-  25 00 02 00 a8 6f 40 40      02:01:38.610  READ DMA EXT
-  25 00 01 00 a8 0f 40 40      02:01:38.610  READ DMA EXT
+  00 00 00 00 00 00 a0 a0      00:00:11.120  NOP [Abort queued commands]
+  00 00 00 00 00 00 a0 a0      00:00:11.130  NOP [Abort queued commands]
+  c8 00 40 00 cf bb e0 e0      00:00:08.390  READ DMA
+  c8 00 40 c0 ce bb e0 e0      00:00:08.390  READ DMA
+  c8 00 40 80 ce bb e0 e0      00:00:08.390  READ DMA
 
-Error 9104 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 da 00 00 4f c2 00 00      01:52:33.810  SMART RETURN STATUS
-  b0 d0 01 00 4f c2 00 00      01:52:33.810  SMART READ DATA
-  b0 d1 01 00 4f c2 00 00      01:52:33.810  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  e5 00 00 00 00 00 00 00      01:52:33.810  CHECK POWER MODE
-  ec 00 01 00 00 00 00 00      01:52:33.810  IDENTIFY DEVICE
-
-Error 9103 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 02 00 4f c2 e0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 db f8 00 4f c2 00 00      01:42:15.400  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 d1 01 01 4f c2 00 00      01:42:15.390  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 d0 01 00 4f c2 00 00      01:42:15.390  SMART READ DATA
-  b0 da 00 00 4f c2 00 00      01:42:15.390  SMART RETURN STATUS
-  b0 d2 f1 00 4f c2 00 00      01:42:15.390  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-
-Error 9102 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 12632 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -184,16 +150,50 @@ Error 9102 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 00 00 00 40 40      01:41:52.710  READ DMA EXT
-  25 00 01 00 08 00 40 40      01:41:50.310  READ DMA EXT
-  25 00 01 00 00 00 40 40      01:41:50.310  READ DMA EXT
-  25 00 02 00 a8 6f 40 40      01:41:50.260  READ DMA EXT
-  25 00 01 00 a8 0f 40 40      01:41:50.260  READ DMA EXT
+  c8 00 40 00 cf bb e0 e0      00:00:08.390  READ DMA
+  c8 00 40 c0 ce bb e0 e0      00:00:08.390  READ DMA
+  c8 00 40 80 ce bb e0 e0      00:00:08.390  READ DMA
+  c8 00 40 40 ce bb e0 e0      00:00:08.390  READ DMA
+  c8 00 40 00 ce bb e0 e0      00:00:08.390  READ DMA
+
+Error 12631 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  01 50 01 01 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  00 00 01 01 00 00 00 00      00:00:01.050  NOP [Abort queued commands]
+  00 00 01 01 00 00 00 00      00:00:01.050  NOP [Abort queued commands]
+
+Error 12630 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  61 10 90 28 81 e0 40 40      00:19:54.490  WRITE FPDMA QUEUED
+  61 08 88 90 fe dd 40 40      00:19:54.490  WRITE FPDMA QUEUED
+  61 08 80 30 00 c5 40 40      00:19:40.520  WRITE FPDMA QUEUED
+  61 08 78 18 01 45 40 40      00:19:40.520  WRITE FPDMA QUEUED
+  61 08 70 08 01 05 40 40      00:19:40.520  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%         0         -
+# 2  Extended offline    Completed without error       00%         0         -
+# 3  Extended offline    Completed without error       00%         0         -
 
 Selective Self-tests/Logging not supported
 
@@ -215,7 +215,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           24  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

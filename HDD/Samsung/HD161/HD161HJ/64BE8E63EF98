@@ -3,18 +3,19 @@ Device Model:     SAMSUNG HD161HJ
 Serial Number:    --
 LU WWN Device Id: 5 0000f0 ...
 Firmware Version: GF100-07
-User Capacity:    160 041 885 696 bytes [160 GB]
+User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3b
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Mon Oct 17 03:25:58 2016 MSK
+Local Time is:    Tue Nov  5 00:45:48 2019 +09
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -59,26 +60,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   073   001   011    Past 4000
-  4 Start_Stop_Count        -O--CK   094   094   000    -    5787
+  4 Start_Stop_Count        -O--CK   079   079   000    -    20879
   5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    3
   7 Seek_Error_Rate         POSR--   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    357199
+  9 Power_On_Hours          -O--CK   098   098   000    -    1098462
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--C-   099   099   000    -    643
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    2772
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    5412
 184 End-to-End_Error        -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   069   069   000    -    31
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O---K   163   124   000    -    30
-194 Temperature_Celsius     -O---K   163   124   000    -    30
+190 Airflow_Temperature_Cel -O---K   130   124   000    -    41
+194 Temperature_Celsius     -O---K   130   124   000    -    41
 195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   099   099   000    -    3
 197 Current_Pending_Sector  -O--C-   252   099   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   252   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   252   252   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   252   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -96,14 +97,14 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 612 (device log contains only the most recent 8 errors)
+Device Error Count: 4438 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 612 [3] occurred at disk power-on lifetime: 2976 hours (124 days + 0 hours)
+Error 4438 [5] occurred at disk power-on lifetime: 9152 hours (381 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -130,13 +131,30 @@ Error 612 [3] occurred at disk power-on lifetime: 2976 hours (124 days + 0 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:02:15.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 ff     00:02:15.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     00:02:15.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     00:02:15.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:02:15.000  SET MULTIPLE MODE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:27:09.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 ff     00:27:09.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff     00:27:09.000  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 00 ff     00:27:09.000  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:27:09.000  SET MULTIPLE MODE
 
-Error 611 [2] occurred at disk power-on lifetime: 2976 hours (124 days + 0 hours)
+Error 4437 [4] occurred at disk power-on lifetime: 9151 hours (381 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 04 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 00 00 00 01 00 00 00 00 00 04 e0 00     00:11:16.000  READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     00:11:16.000  SMART READ DATA
+  b0 00 da 00 01 00 00 00 c2 4f 00 a0 00     00:11:16.000  SMART RETURN STATUS
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 ff     00:07:54.000  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:07:54.000  SMART RETURN STATUS
+
+Error 4436 [3] occurred at disk power-on lifetime: 9152 hours (381 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -147,13 +165,30 @@ Error 611 [2] occurred at disk power-on lifetime: 2976 hours (124 days + 0 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 ff     05:50:14.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     05:50:14.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     05:50:14.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     05:50:14.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 ff     05:50:14.000  SET MULTIPLE MODE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:54:27.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:54:27.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff     00:54:27.000  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 00 ff     00:54:27.000  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:54:27.000  SET MULTIPLE MODE
 
-Error 610 [1] occurred at disk power-on lifetime: 2975 hours (123 days + 23 hours)
+Error 4435 [2] occurred at disk power-on lifetime: 9152 hours (381 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 04 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 00 00 00 01 00 00 00 00 00 04 e0 00     00:38:34.000  READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 ff     00:38:34.000  SMART READ DATA
+  b0 00 da 00 01 00 00 00 c2 4f 00 a0 00     00:38:34.000  SMART RETURN STATUS
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:36:41.000  IDENTIFY DEVICE
+  b0 00 d8 00 01 00 00 00 c2 4f 01 a0 00     00:36:41.000  SMART ENABLE OPERATIONS
+
+Error 4434 [1] occurred at disk power-on lifetime: 9152 hours (381 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -164,13 +199,30 @@ Error 610 [1] occurred at disk power-on lifetime: 2975 hours (123 days + 23 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     04:54:52.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     04:54:52.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     04:54:52.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     04:54:52.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     04:54:52.000  SET MULTIPLE MODE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:27:09.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 ff     00:27:09.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff     00:27:09.000  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 00 ff     00:27:09.000  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:27:09.000  SET MULTIPLE MODE
 
-Error 609 [0] occurred at disk power-on lifetime: 2974 hours (123 days + 22 hours)
+Error 4433 [0] occurred at disk power-on lifetime: 9151 hours (381 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 04 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 00 00 00 01 00 00 00 00 00 04 e0 00     00:11:16.000  READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     00:11:16.000  SMART READ DATA
+  b0 00 da 00 01 00 00 00 c2 4f 00 a0 00     00:11:16.000  SMART RETURN STATUS
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 ff     00:07:54.000  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:07:54.000  SMART RETURN STATUS
+
+Error 4432 [7] occurred at disk power-on lifetime: 9152 hours (381 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -181,79 +233,28 @@ Error 609 [0] occurred at disk power-on lifetime: 2974 hours (123 days + 22 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     04:18:34.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 ff     04:18:34.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     04:18:34.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     04:18:34.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     04:18:34.000  SET MULTIPLE MODE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:54:27.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:54:27.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff     00:54:27.000  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 00 ff     00:54:27.000  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:54:27.000  SET MULTIPLE MODE
 
-Error 608 [7] occurred at disk power-on lifetime: 2976 hours (124 days + 0 hours)
+Error 4431 [6] occurred at disk power-on lifetime: 9152 hours (381 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 00 00
+  04 -- 51 00 01 00 00 00 00 00 04 e0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:02:15.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 ff     00:02:15.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     00:02:15.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     00:02:15.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:02:15.000  SET MULTIPLE MODE
-
-Error 607 [6] occurred at disk power-on lifetime: 2976 hours (124 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 ff     05:50:14.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     05:50:14.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     05:50:14.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     05:50:14.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 ff     05:50:14.000  SET MULTIPLE MODE
-
-Error 606 [5] occurred at disk power-on lifetime: 2975 hours (123 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     04:54:52.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     04:54:52.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     04:54:52.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     04:54:52.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     04:54:52.000  SET MULTIPLE MODE
-
-Error 605 [4] occurred at disk power-on lifetime: 2974 hours (123 days + 22 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     04:18:34.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 ff     04:18:34.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff     04:18:34.000  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 ff     04:18:34.000  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     04:18:34.000  SET MULTIPLE MODE
+  2f 00 00 00 01 00 00 00 00 00 04 e0 00     00:38:34.000  READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 ff     00:38:34.000  SMART READ DATA
+  b0 00 da 00 01 00 00 00 c2 4f 00 a0 00     00:38:34.000  SMART RETURN STATUS
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:36:41.000  IDENTIFY DEVICE
+  b0 00 d8 00 01 00 00 00 c2 4f 01 a0 00     00:36:41.000  SMART ENABLE OPERATIONS
 
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 0 (1 sectors)
@@ -276,22 +277,24 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 30 Celsius
-Power Cycle Max Temperature:         30 Celsius
-Lifetime    Max Temperature:         30 Celsius
+Current Temperature:                 41 Celsius
+Power Cycle Max Temperature:         41 Celsius
+Lifetime    Max Temperature:         43 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/105 Celsius
 Min/Max Temperature Limit:            5/110 Celsius
-Temperature History Size (Index):    128 (41)
+Temperature History Size (Index):    128 (118)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -303,12 +306,14 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

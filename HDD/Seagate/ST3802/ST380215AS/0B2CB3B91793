@@ -7,7 +7,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Feb  4 07:01:31 2020 +06
+Local Time is:    Tue Feb  4 20:01:12 2020 +06
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -53,18 +53,18 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   111   099   006    -    37682049
-  3 Spin_Up_Time            PO----   099   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    653
+  3 Spin_Up_Time            PO----   098   097   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    658
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   076   060   030    -    46784792
-  9 Power_On_Hours          -O--CK   098   098   000    -    1774
+  7 Seek_Error_Rate         POSR--   076   060   030    -    47362118
+  9 Power_On_Hours          -O--CK   098   098   000    -    1778
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    641
-187 Reported_Uncorrect      -O--CK   001   001   000    -    471
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    646
+187 Reported_Uncorrect      -O--CK   001   001   000    -    474
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   054   045    -    40 (Min/Max 25/40)
-194 Temperature_Celsius     -O---K   040   046   000    -    40 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   085   072   000    -    54756474
+190 Airflow_Temperature_Cel -O---K   058   054   045    -    42 (Min/Max 25/42)
+194 Temperature_Celsius     -O---K   042   046   000    -    42 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   085   072   000    -    218690238
 197 Current_Pending_Sector  -O--C-   100   001   000    -    3
 198 Offline_Uncorrectable   ----C-   100   001   000    -    3
 199 UDMA_CRC_Error_Count    -OSRCK   200   186   000    -    113
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 517 (device log contains only the most recent 20 errors)
+Device Error Count: 520 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,6 +119,57 @@ Device Error Count: 517 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 520 [19] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 05 3c 42 25 42 e5 00  Error: UNC at LBA = 0x53d422542 = 22502581570
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 01 00 00 05 3c 00 25 40 e5 00     00:20:40.388  READ DMA
+  ca 00 00 00 18 00 03 5d 00 a9 e0 e3 00     00:20:40.388  WRITE DMA
+  c8 00 00 00 18 00 04 8c 00 2c a0 e4 00     00:20:40.388  READ DMA
+  ca 00 00 00 20 00 03 5d 00 a9 c0 e3 00     00:20:40.388  WRITE DMA
+  c8 00 00 00 20 00 04 8c 00 2c 80 e4 00     00:20:40.387  READ DMA
+
+Error 519 [18] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 05 fb 7a 51 7a e5 00  Error: UNC at LBA = 0x5ff7a517a = 25761042810
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 80 00 05 fb 00 51 08 e5 00     00:20:03.159  READ DMA
+  ca 00 00 00 04 00 04 8b 00 2c 28 e4 00     00:20:03.159  WRITE DMA
+  ca 00 00 00 08 00 00 fc 00 5f 98 e0 00     00:20:06.178  WRITE DMA
+  c8 00 00 00 20 00 05 fb 00 51 60 e5 00     00:20:06.142  READ DMA
+  ca 00 00 00 20 00 03 7c 00 5c 20 e3 00     00:20:06.127  WRITE DMA
+
+Error 518 [17] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 05 fb 7a 51 7a e5 00  Error: UNC at LBA = 0x5ff7a517a = 25761042810
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 20 00 05 fb 00 51 60 e5 00     00:20:03.159  READ DMA
+  ca 00 00 00 20 00 03 7c 00 5c 20 e3 00     00:20:03.159  WRITE DMA
+  c8 00 00 00 20 00 05 fb 00 51 40 e5 00     00:20:03.158  READ DMA
+  ca 00 00 00 20 00 03 7c 00 5c 00 e3 00     00:20:03.158  WRITE DMA
+  c8 00 00 00 20 00 05 fb 00 51 20 e5 00     00:20:03.158  READ DMA
 
 Error 517 [16] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -205,57 +256,6 @@ Error 513 [12] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours
   ca 00 00 00 08 00 00 f5 00 5b 60 e0 00     00:19:40.902  WRITE DMA
   ca 00 00 00 10 00 00 93 00 5c a8 e0 00     00:19:40.902  WRITE DMA
 
-Error 512 [11] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 05 3c 42 25 42 e5 00  Error: UNC at LBA = 0x53d422542 = 22502581570
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 01 00 00 05 3c 00 25 40 e5 00     00:20:40.388  READ DMA
-  ca 00 00 00 18 00 03 5d 00 a9 e0 e3 00     00:20:40.388  WRITE DMA
-  c8 00 00 00 18 00 04 8c 00 2c a0 e4 00     00:20:40.388  READ DMA
-  ca 00 00 00 20 00 03 5d 00 a9 c0 e3 00     00:20:40.388  WRITE DMA
-  c8 00 00 00 20 00 04 8c 00 2c 80 e4 00     00:20:40.387  READ DMA
-
-Error 511 [10] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 05 fb 7a 51 7a e5 00  Error: UNC at LBA = 0x5ff7a517a = 25761042810
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 80 00 05 fb 00 51 08 e5 00     00:20:03.159  READ DMA
-  ca 00 00 00 04 00 04 8b 00 2c 28 e4 00     00:20:03.159  WRITE DMA
-  ca 00 00 00 08 00 00 fc 00 5f 98 e0 00     00:20:06.178  WRITE DMA
-  c8 00 00 00 20 00 05 fb 00 51 60 e5 00     00:20:06.142  READ DMA
-  ca 00 00 00 20 00 03 7c 00 5c 20 e3 00     00:20:06.127  WRITE DMA
-
-Error 510 [9] occurred at disk power-on lifetime: 1639 hours (68 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 05 fb 7a 51 7a e5 00  Error: UNC at LBA = 0x5ff7a517a = 25761042810
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 20 00 05 fb 00 51 60 e5 00     00:20:03.159  READ DMA
-  ca 00 00 00 20 00 03 7c 00 5c 20 e3 00     00:20:03.159  WRITE DMA
-  c8 00 00 00 20 00 05 fb 00 51 40 e5 00     00:20:03.158  READ DMA
-  ca 00 00 00 20 00 03 7c 00 5c 00 e3 00     00:20:03.158  WRITE DMA
-  c8 00 00 00 20 00 05 fb 00 51 20 e5 00     00:20:03.158  READ DMA
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 
 SMART Selective self-test log data structure revision number 1
@@ -277,7 +277,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

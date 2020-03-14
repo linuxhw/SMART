@@ -7,7 +7,7 @@ User Capacity:    20 490 559 488 bytes [20,4 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Thu Jan 28 21:54:40 2016 MSK
+Local Time is:    Sat Jan 30 10:38:16 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -51,28 +51,28 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   235   235   063    -    5500
-  4 Start_Stop_Count        -O--CK   253   253   000    -    923
+  3 Spin_Up_Time            POS--K   235   235   063    -    5664
+  4 Start_Stop_Count        -O--CK   253   253   000    -    925
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   249   234   187    -    38959
-  9 Power_On_Minutes        -O--CK   253   253   000    -    67h+31m
+  8 Seek_Time_Performance   POS--K   249   234   187    -    37925
+  9 Power_On_Minutes        -O--CK   253   253   000    -    68h+14m
  10 Spin_Retry_Count        PO-R-K   253   252   223    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   245   245   000    -    3411
+ 12 Power_Cycle_Count       -O--CK   245   245   000    -    3413
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    151
-193 Load_Cycle_Count        -O--CK   253   253   000    -    2881
+193 Load_Cycle_Count        -O--CK   253   253   000    -    2885
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    144
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    141
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   199   199   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   229   000    -    13
+201 Soft_Read_Error_Rate    -O-R--   253   229   000    -    7
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    1
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
@@ -96,9 +96,9 @@ Read GP Log Directory failed
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 26808 inconsistent with error log pointer 5
+Warning: ATA error count 26812 inconsistent with error log pointer 5
 
-ATA Error Count: 26808 (device log contains only the most recent five errors)
+ATA Error Count: 26812 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -112,6 +112,66 @@ ATA Error Count: 26808 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 26812 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 00 00 00 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  2f 00 01 00 00 00 00 08      00:13:33.232  READ LOG EXT
+  e7 d5 01 0b 4f c2 a0 08      00:13:33.232  FLUSH CACHE
+  b0 d5 01 00 4f c2 00 08      00:13:33.104  SMART READ LOG
+  ca 00 20 c8 6d 84 e0 08      00:13:33.104  WRITE DMA
+  ca 00 10 a8 28 08 e2 08      00:13:33.104  WRITE DMA
+
+Error 26811 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 0b 4f c2 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 00 4f c2 00 08      00:13:33.104  SMART READ LOG
+  ca 00 20 c8 6d 84 e0 08      00:13:33.104  WRITE DMA
+  ca 00 10 a8 28 08 e2 08      00:13:33.104  WRITE DMA
+  ca 00 08 b0 cb fe e0 08      00:13:33.104  WRITE DMA
+  e7 da 00 00 4f c2 a0 08      00:13:33.104  FLUSH CACHE
+
+Error 26810 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 05 01 aa 00 a0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  a1 00 05 01 aa 00 a0 00      00:02:17.984  IDENTIFY PACKET DEVICE
+
+Error 26809 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 05 01 aa 00 a0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  a1 00 05 01 aa 00 a0 00      00:02:18.000  IDENTIFY PACKET DEVICE
 
 Error 26808 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -129,74 +189,6 @@ Error 26808 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
   ca 00 08 00 78 04 e2 08      02:59:16.240  WRITE DMA
   e7 d5 01 0b 4f c2 a0 08      02:59:16.240  FLUSH CACHE
   b0 d5 01 00 4f c2 00 08      02:59:16.160  SMART READ LOG
-
-Error 26807 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 0b 4f c2 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 08      02:59:16.160  SMART READ LOG
-  e7 00 00 ff 77 04 a0 08      02:59:16.144  FLUSH CACHE
-  ca 00 40 c0 77 04 e2 08      02:59:16.128  WRITE DMA
-  ca 00 08 50 34 84 e0 08      02:59:16.128  WRITE DMA
-  e7 da 00 00 4f c2 a0 08      02:59:16.128  FLUSH CACHE
-
-Error 26806 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 05 01 aa 00 a0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 05 01 aa 00 a0 08      02:36:11.040  IDENTIFY PACKET DEVICE
-  e7 00 00 5f 94 88 a0 08      02:36:03.072  FLUSH CACHE
-  c8 00 20 40 94 88 e0 08      02:36:02.880  READ DMA
-  c8 00 f0 18 0d 80 e0 08      02:36:02.880  READ DMA
-  c8 00 08 00 0d 80 e0 08      02:36:02.880  READ DMA
-
-Error 26805 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 05 01 aa 00 a0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 05 01 aa 00 a0 08      02:14:40.768  IDENTIFY PACKET DEVICE
-  e7 00 00 5f 94 88 a0 08      02:14:32.800  FLUSH CACHE
-  c8 00 20 40 94 88 e0 08      02:14:32.624  READ DMA
-  c8 00 f0 18 0d 80 e0 08      02:14:32.608  READ DMA
-  c8 00 08 00 0d 80 e0 08      02:14:32.608  READ DMA
-
-Error 26804 occurred at disk power-on lifetime: 63 hours (2 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 05 01 aa 00 a0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 05 01 aa 00 a0 08      02:13:08.800  IDENTIFY PACKET DEVICE
-  e7 00 00 5f 94 88 a0 08      02:13:00.832  FLUSH CACHE
-  c8 00 20 40 94 88 e0 08      02:13:00.656  READ DMA
-  c8 00 f0 18 0d 80 e0 08      02:13:00.640  READ DMA
-  c8 00 08 00 0d 80 e0 08      02:13:00.640  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

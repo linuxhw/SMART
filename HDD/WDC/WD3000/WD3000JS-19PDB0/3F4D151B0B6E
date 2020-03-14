@@ -7,7 +7,7 @@ User Capacity:    300 069 052 416 bytes [300 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Sep  7 21:57:14 2015 MSK
+Local Time is:    Fri Feb 12 12:35:15 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -21,8 +21,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -58,15 +58,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   204   179   021    -    4783
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7763
+  3 Spin_Up_Time            PO----   191   179   021    -    5433
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8162
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   077   077   000    -    16943
+  9 Power_On_Hours          -O--CK   076   076   000    -    18038
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7186
-190 Airflow_Temperature_Cel -O---K   065   038   000    -    35
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7582
+190 Airflow_Temperature_Cel -O---K   064   038   000    -    36
 194 Temperature_Celsius     -O---K   115   088   000    -    35
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
@@ -119,9 +119,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                 35 Celsius
-Power Cycle Max Temperature:         35 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                 36 Celsius
+Power Cycle Max Temperature:         36 Celsius
 Lifetime    Max Temperature:         63 Celsius
 
 SCT Temperature History Version:     2
@@ -129,7 +129,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (113)
+Temperature History Size (Index):    128 (68)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -140,8 +140,8 @@ Device Statistics (GP Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         2073  Vendor specific
+0x000a  2           16  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         3521  Vendor specific
 
 
 

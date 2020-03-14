@@ -4,17 +4,18 @@ Device Model:     Hitachi HDS721680PLA380
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: P21OABEA
-User Capacity:    80 026 361 856 bytes [80,0 GB]
+User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Sun Feb 12 14:14:04 2017 MSK
+Local Time is:    Fri Jul 13 14:57:53 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -57,22 +58,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS---   125   125   024    -    159 (Average 159)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    1067
+  2 Throughput_Performance  P-S---   100   100   050    -    42
+  3 Spin_Up_Time            POS---   129   129   024    -    155 (Average 155)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    1726
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   138   138   020    -    30
-  9 Power_On_Hours          -O--C-   100   100   000    -    2644
+  8 Seek_Time_Performance   P-S---   136   136   020    -    31
+  9 Power_On_Hours          -O--C-   100   100   000    -    5819
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    916
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1112
-193 Load_Cycle_Count        -O--C-   100   100   000    -    1112
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1575
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1774
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1774
 194 Temperature_Celsius     -O----   157   157   000    -    38 (Min/Max 10/57)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    11846
+199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    11847
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,7 +90,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x20       GPL     R/O      1  Streaming performance log [OBS-8]
 0x21       GPL     R/O      1  Write stream error log
@@ -99,11 +100,45 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 3024 hours (126 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 06 01 44 df 46 00  Error: ICRC, ABRT at LBA = 0x060144df = 100746463
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 98 00 00 06 01 44 d8 40 08     00:05:40.300  WRITE FPDMA QUEUED
+  e7 00 20 00 20 00 00 06 01 44 b8 a0 08     00:05:40.200  FLUSH CACHE
+  61 00 20 00 88 00 00 06 01 44 b8 40 08     00:05:40.200  WRITE FPDMA QUEUED
+  61 00 08 00 80 00 00 05 26 5a 60 40 08     00:05:38.200  WRITE FPDMA QUEUED
+  61 00 10 00 78 00 00 05 26 4c 78 40 08     00:05:38.200  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       496         -
+# 1  Extended offline    Completed without error       00%      4478         -
+# 2  Extended offline    Completed without error       00%      4324         -
+# 3  Extended offline    Completed without error       00%      4123         -
+# 4  Short offline       Completed without error       00%       496         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,7 +164,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (107)
+Temperature History Size (Index):    128 (114)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -137,11 +172,15 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

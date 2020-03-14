@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Jun 26 22:45:06 2016 MSK
+Local Time is:    Sat Jul  2 18:24:21 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,9 +29,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 117)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
@@ -61,30 +60,30 @@ SCT capabilities: 	       (0x1035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    132737448
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    162689416
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    3034
+  4 Start_Stop_Count        -O--CK   098   098   020    -    3047
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   074   060   030    -    21641529263
-  9 Power_On_Hours          -O--CK   093   093   000    -    6399 (102 176 0)
+  7 Seek_Error_Rate         POSR--   074   060   030    -    21641673848
+  9 Power_On_Hours          -O--CK   093   093   000    -    6412 (2 195 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2847
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2860
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   099   099   000    -    1
 188 Command_Timeout         -O--CK   100   099   000    -    3
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   045   045    Past 38 (Min/Max 30/38)
+190 Airflow_Temperature_Cel -O---K   058   045   045    Past 42 (Min/Max 28/48)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    529
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    150
-193 Load_Cycle_Count        -O--CK   043   043   000    -    114668
-194 Temperature_Celsius     -O---K   038   055   000    -    38 (0 2 0 0 0)
-196 Reallocated_Event_Count POSR--   094   094   030    -    5977 (5855 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    151
+193 Load_Cycle_Count        -O--CK   043   043   000    -    114898
+194 Temperature_Celsius     -O---K   042   055   000    -    42 (0 2 0 0 0)
+196 Reallocated_Event_Count POSR--   094   094   030    -    5990 (11960 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    8
 198 Offline_Uncorrectable   ----C-   100   100   000    -    8
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   094   094   000    -    5977 (22 223 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1288070142
-242 Total_LBAs_Read         ------   100   253   000    -    3422220514
+240 Head_Flying_Hours       ------   094   094   000    -    5990 (46 184 0)
+241 Total_LBAs_Written      ------   100   253   000    -    1302366588
+242 Total_LBAs_Read         ------   100   253   000    -    3425929309
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -155,11 +154,12 @@ Error 1 [0] occurred at disk power-on lifetime: 3805 hours (158 days + 13 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       50%      6382         297203040
-# 2  Extended offline    Completed: read failure       50%      6359         297203040
-# 3  Extended offline    Completed: read failure       50%      6337         297203040
-# 4  Extended offline    Completed: read failure       50%      6317         297203040
-# 5  Extended offline    Completed: read failure       50%      6269         297203040
+# 1  Extended offline    Completed: read failure       50%      6412         297203040
+# 2  Extended offline    Completed: read failure       50%      6382         297203040
+# 3  Extended offline    Completed: read failure       50%      6359         297203040
+# 4  Extended offline    Completed: read failure       50%      6337         297203040
+# 5  Extended offline    Completed: read failure       50%      6317         297203040
+# 6  Extended offline    Completed: read failure       50%      6269         297203040
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -176,8 +176,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     30/38 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     28/49 Celsius
 Lifetime    Min/Max Temperature:      2/55 Celsius
 Lifetime    Average Temperature:        38 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -187,7 +187,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (85)
+Temperature History Size (Index):    128 (2)
 
 SCT Error Recovery Control command not supported
 

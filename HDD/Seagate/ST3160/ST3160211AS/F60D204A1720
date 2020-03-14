@@ -7,13 +7,14 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Oct 30 14:54:17 2017 EET
+Local Time is:    Fri Nov 16 08:20:49 2018 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -25,8 +26,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  41)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +53,19 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   102   073   006    -    14390329
+  1 Raw_Read_Error_Rate     POSR--   117   073   006    -    126699112
   3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   089   089   020    -    11968
+  4 Start_Stop_Count        -O--CK   088   088   020    -    12393
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    27
-  7 Seek_Error_Rate         POSR--   081   060   030    -    139068105
-  9 Power_On_Hours          -O--CK   077   077   000    -    20568
+  7 Seek_Error_Rate         POSR--   083   060   030    -    209691206
+  9 Power_On_Hours          -O--CK   076   076   000    -    21741
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   086   086   020    -    14921
+ 12 Power_Cycle_Count       -O--CK   086   086   020    -    15299
 187 Reported_Uncorrect      -O--CK   001   001   000    -    14690
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   038   045    Past 41 (Min/Max 23/42 #10866)
-194 Temperature_Celsius     -O---K   041   062   000    -    41 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   050   045   000    -    209341744
+190 Airflow_Temperature_Cel -O---K   072   038   045    Past 28 (42 114 28 21 0)
+194 Temperature_Celsius     -O---K   028   062   000    -    28 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   082   045   000    -    234960437
 197 Current_Pending_Sector  -O--C-   100   001   000    -    0
 198 Offline_Uncorrectable   ----C-   100   001   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   197   000    -    31
@@ -86,7 +88,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -257,18 +259,22 @@ Error 2323 [2] occurred at disk power-on lifetime: 19274 hours (803 days + 2 hou
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      90%     18693         -
-# 2  Extended offline    Completed without error       00%     11285         -
-# 3  Extended offline    Interrupted (host reset)      40%     11214         -
-# 4  Extended offline    Aborted by host               90%      9556         -
-# 5  Extended offline    Aborted by host               50%      9248         -
-# 6  Extended offline    Aborted by host               80%      8954         -
-# 7  Extended offline    Completed without error       00%      8833         -
-# 8  Extended offline    Aborted by host               70%      8678         -
-# 9  Extended offline    Aborted by host               80%      8677         -
-#10  Extended offline    Completed without error       00%      8592         -
-#11  Extended offline    Interrupted (host reset)      50%      8417         -
-#12  Extended offline    Aborted by host               20%      4991         -
+# 1  Extended offline    Completed without error       00%     21079         -
+# 2  Extended offline    Completed without error       00%     20706         -
+# 3  Extended offline    Completed without error       00%     20624         -
+# 4  Extended offline    Completed without error       00%     20588         -
+# 5  Extended offline    Interrupted (host reset)      90%     18693         -
+# 6  Extended offline    Completed without error       00%     11285         -
+# 7  Extended offline    Interrupted (host reset)      40%     11214         -
+# 8  Extended offline    Aborted by host               90%      9556         -
+# 9  Extended offline    Aborted by host               50%      9248         -
+#10  Extended offline    Aborted by host               80%      8954         -
+#11  Extended offline    Completed without error       00%      8833         -
+#12  Extended offline    Aborted by host               70%      8678         -
+#13  Extended offline    Aborted by host               80%      8677         -
+#14  Extended offline    Completed without error       00%      8592         -
+#15  Extended offline    Interrupted (host reset)      50%      8417         -
+#16  Extended offline    Aborted by host               20%      4991         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -284,6 +290,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

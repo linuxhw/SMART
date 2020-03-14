@@ -8,7 +8,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Jan 27 20:53:01 2017 MSK
+Local Time is:    Tue Jan 31 20:06:08 2017 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,8 +22,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    65
-  3 Spin_Up_Time            PO----   186   184   021    -    1658
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3145
+  3 Spin_Up_Time            PO----   185   184   021    -    1725
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3152
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         POSR--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   090   090   000    -    7611
+  7 Seek_Error_Rate         POSR--   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   090   090   000    -    7638
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3044
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    218
-193 Load_Cycle_Count        -O--CK   190   190   000    -    30682
-194 Temperature_Celsius     -O---K   102   089   000    -    45
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3051
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    219
+193 Load_Cycle_Count        -O--CK   190   190   000    -    32205
+194 Temperature_Celsius     -O---K   108   089   000    -    39
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   100   253   000    -    0
@@ -121,9 +121,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                 46 Celsius
-Power Cycle Max Temperature:         46 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                 26 Celsius
+Power Cycle Max Temperature:         26 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
 SCT Temperature History Version:     2
@@ -131,7 +131,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (44)
+Temperature History Size (Index):    128 (58)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -148,8 +148,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         3402  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        22261  Vendor specific
 
 
 

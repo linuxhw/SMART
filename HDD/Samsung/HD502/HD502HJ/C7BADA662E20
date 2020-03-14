@@ -11,7 +11,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Oct 14 16:37:06 2015 EEST
+Local Time is:    Sat Dec 10 17:42:47 2016 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -61,26 +61,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    8
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   082   080   025    -    5571
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6601
+  3 Spin_Up_Time            PO---K   082   079   025    -    5517
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8102
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    20890
+  9 Power_On_Hours          -O--CK   100   100   000    -    25349
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6081
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    43
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7542
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    48
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   036   000    -    29 (Min/Max 12/64)
+194 Temperature_Celsius     -O----   063   036   000    -    37 (Min/Max 12/64)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   078   078   000    -    12135
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    6
+199 UDMA_CRC_Error_Count    -OS-CK   078   078   000    -    12144
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    10
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   100   100   000    -    6647
+225 Load_Cycle_Count        -O--CK   100   100   000    -    8171
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,8 +99,8 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xbb       GPL     VS       4  Device vendor specific log
 0xbc       GPL     VS       2  Device vendor specific log
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 12135 (device log contains only the most recent 8 errors)
+Device Error Count: 12144 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,7 +124,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 12135 [6] occurred at disk power-on lifetime: 20766 hours (865 days + 6 hours)
+Error 12144 [7] occurred at disk power-on lifetime: 22043 hours (918 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 36 80 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 13952 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 01 00 00 00 04 5c 35 80 e0 00     00:00:00.050  WRITE DMA EXT
+  25 00 00 00 08 00 00 00 df 14 58 e0 00     00:00:00.050  READ DMA EXT
+  25 00 00 00 08 00 00 00 70 44 88 e0 00     00:00:00.050  READ DMA EXT
+  25 00 00 00 08 00 00 00 12 70 c8 e0 00     00:00:00.050  READ DMA EXT
+  25 00 00 00 08 00 00 00 18 71 a0 e0 00     00:00:00.050  READ DMA EXT
+
+Error 12143 [6] occurred at disk power-on lifetime: 21332 hours (888 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -135,13 +152,13 @@ Error 12135 [6] occurred at disk power-on lifetime: 20766 hours (865 days + 6 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:05.164  READ DMA
-  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:05.164  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:05.164  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:05.164  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:05.163  NOP [Abort queued commands]
+  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:16.780  READ DMA
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:16.780  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:16.780  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:16.779  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:16.779  NOP [Abort queued commands]
 
-Error 12134 [5] occurred at disk power-on lifetime: 20765 hours (865 days + 5 hours)
+Error 12142 [5] occurred at disk power-on lifetime: 21329 hours (888 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -152,13 +169,13 @@ Error 12134 [5] occurred at disk power-on lifetime: 20765 hours (865 days + 5 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:03.525  READ DMA
-  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:03.525  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:03.525  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:03.525  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:03.525  NOP [Abort queued commands]
+  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:08.214  READ DMA
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:08.214  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:08.214  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:08.214  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:08.214  NOP [Abort queued commands]
 
-Error 12133 [4] occurred at disk power-on lifetime: 20762 hours (865 days + 2 hours)
+Error 12141 [4] occurred at disk power-on lifetime: 21329 hours (888 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -169,13 +186,13 @@ Error 12133 [4] occurred at disk power-on lifetime: 20762 hours (865 days + 2 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:11.111  READ DMA
-  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:11.111  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:11.111  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:11.111  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:11.110  NOP [Abort queued commands]
+  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:07.730  READ DMA
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:07.730  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:07.730  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:07.730  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:07.730  NOP [Abort queued commands]
 
-Error 12132 [3] occurred at disk power-on lifetime: 20761 hours (865 days + 1 hours)
+Error 12140 [3] occurred at disk power-on lifetime: 21329 hours (888 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -186,13 +203,13 @@ Error 12132 [3] occurred at disk power-on lifetime: 20761 hours (865 days + 1 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:09.072  READ DMA
-  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:09.072  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:09.072  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:09.072  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:09.071  NOP [Abort queued commands]
+  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:06.881  READ DMA
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:06.881  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.881  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:06.881  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:06.880  NOP [Abort queued commands]
 
-Error 12131 [2] occurred at disk power-on lifetime: 20753 hours (864 days + 17 hours)
+Error 12139 [2] occurred at disk power-on lifetime: 21309 hours (887 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -203,62 +220,45 @@ Error 12131 [2] occurred at disk power-on lifetime: 20753 hours (864 days + 17 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:15.914  READ DMA
-  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:15.914  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:15.914  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:15.914  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:15.913  NOP [Abort queued commands]
+  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:13.730  READ DMA
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:13.730  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:13.730  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:13.730  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:13.730  NOP [Abort queued commands]
 
-Error 12130 [1] occurred at disk power-on lifetime: 19895 hours (828 days + 23 hours)
+Error 12138 [1] occurred at disk power-on lifetime: 21248 hours (885 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 cd 90 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 52624 sectors at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 10 00 00 03 41 cd 80 e0 00     00:00:03.476  WRITE DMA EXT
-  25 00 00 00 40 00 00 03 23 0a 83 e0 00     00:00:03.476  READ DMA EXT
-  35 00 00 00 10 00 00 02 fa b8 12 e0 00     00:00:03.476  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 5b ed 60 e0 00     00:00:03.476  WRITE DMA EXT
-  35 00 00 00 10 00 00 03 16 8e 00 e0 00     00:00:03.476  WRITE DMA EXT
+  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:06.219  READ DMA
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:06.219  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:06.219  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:06.218  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:06.218  NOP [Abort queued commands]
 
-Error 12129 [0] occurred at disk power-on lifetime: 19895 hours (828 days + 23 hours)
+Error 12137 [0] occurred at disk power-on lifetime: 21247 hours (885 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 96 e8 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 38632 sectors at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 40 00 00 03 ec 96 a8 e0 00     00:00:03.470  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 5b ed 68 e0 00     00:00:03.470  WRITE DMA EXT
-  35 00 00 00 08 00 00 04 20 c3 20 e0 00     00:00:03.470  WRITE DMA EXT
-  35 00 00 00 08 00 00 04 20 c3 20 e0 00     00:00:03.470  WRITE DMA EXT
-  35 00 00 00 08 00 00 04 20 c3 20 e0 00     00:00:03.470  WRITE DMA EXT
-
-Error 12128 [7] occurred at disk power-on lifetime: 19895 hours (828 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 ef 20 00 00 00 00 00 00 e0 00  Error: ABRT at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  39 00 00 01 00 00 00 07 b7 ee 20 e0 00     00:00:03.182  WRITE MULTIPLE EXT
-  35 00 00 00 d8 00 00 07 b7 f1 20 e0 00     00:00:03.182  WRITE DMA EXT
-  35 00 00 01 00 00 00 07 b7 f0 20 e0 00     00:00:03.182  WRITE DMA EXT
-  35 00 00 01 00 00 00 07 b7 ef 20 e0 00     00:00:03.182  WRITE DMA EXT
-  35 00 00 01 00 00 00 07 b7 ee 20 e0 00     00:00:03.182  WRITE DMA EXT
+  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:05.072  READ DMA
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     00:00:05.072  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:05.072  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:05.072  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:05.071  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -281,8 +281,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     28/28 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     37/37 Celsius
 Lifetime    Min/Max Temperature:     16/64 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -291,13 +291,13 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (59)
+Temperature History Size (Index):    128 (123)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -309,7 +309,7 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS

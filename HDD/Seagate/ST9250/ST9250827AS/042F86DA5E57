@@ -10,7 +10,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Sep 11 22:12:29 2015 KRAT
+Local Time is:    Thu Sep 17 20:10:05 2015 KRAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  24)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      ( 116)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -57,22 +57,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1686
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1691
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    10
-  7 Seek_Error_Rate         POSR--   085   060   030    -    367673391
-  9 Power_On_Hours          -O--CK   081   081   000    -    16876
+  7 Seek_Error_Rate         POSR--   085   060   030    -    368396220
+  9 Power_On_Hours          -O--CK   081   081   000    -    16961
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1178
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1183
 187 Reported_Uncorrect      -O--CK   045   045   000    -    55
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   042   045    Past 40 (Min/Max 13/58 #2)
+190 Airflow_Temperature_Cel -O---K   064   042   045    Past 36 (Min/Max 13/58 #2)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    24
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    963
-193 Load_Cycle_Count        -O---K   001   001   000    -    332109
-194 Temperature_Celsius     -O-RC-   040   058   000    -    40 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   064   057   000    -    76888915
-197 Current_Pending_Sector  ----C-   100   100   000    -    0
-198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    965
+193 Load_Cycle_Count        -O---K   001   001   000    -    343013
+194 Temperature_Celsius     -O-RC-   036   058   000    -    36 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   065   057   000    -    114653639
+197 Current_Pending_Sector  ----C-   100   100   000    -    1
+198 Offline_Uncorrectable   -OSRCK   100   100   000    -    1
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O--CK   100   253   000    -    0
 202 Data_Address_Mark_Errs  ------   100   253   000    -    0
@@ -264,10 +264,11 @@ Error 48 [7] occurred at disk power-on lifetime: 10844 hours (451 days + 20 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               80%         0         -
+# 1  Extended offline    Completed: read failure       40%     16881         195374037644292
 # 2  Extended offline    Aborted by host               80%         0         -
-# 3  Short offline       Completed without error       00%         0         -
+# 3  Extended offline    Aborted by host               80%         0         -
 # 4  Short offline       Completed without error       00%         0         -
+# 5  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -284,7 +285,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 40 Celsius
+Current Temperature:                 36 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -296,14 +297,14 @@ Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            9  Vendor specific
+0x8003  2            4  Vendor specific
 0x8004  2            0  Vendor specific
 

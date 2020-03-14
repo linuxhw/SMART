@@ -1,22 +1,23 @@
 === START OF INFORMATION SECTION ===
-Model Family:     Plextor M3/M5 (Pro) Series SSDs
+Model Family:     Plextor M3/M5/M6 Series SSDs
 Device Model:     PLEXTOR PX-64M3
 Serial Number:    --
 LU WWN Device Id: 5 000000 ...
 Firmware Version: 1.00
-User Capacity:    64 023 257 088 bytes [64,0 GB]
+User Capacity:    64,023,257,088 bytes [64.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.0, 6.0 Gb/s
-Local Time is:    Sun Jan 24 15:16:03 2016 MSK
+Local Time is:    Wed Dec  5 00:04:22 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -60,11 +61,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO----   100   100   070    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    12990
- 12 Power_Cycle_Count       -O----   100   100   000    -    1933
+  9 Power_On_Hours          -O----   100   100   000    -    22487
+ 12 Power_Cycle_Count       -O----   100   100   000    -    3231
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-192 Power-Off_Retract_Count PO----   100   100   000    -    288
+192 Power-Off_Retract_Count PO----   100   100   000    -    848
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -80,7 +81,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W      1  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
@@ -112,10 +113,12 @@ Min/Max Temperature Limit:            ?/ ? Celsius
 Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
-           Read:      2 (0,2 seconds)
-          Write:      2 (0,2 seconds)
+           Read:      2 (0.2 seconds)
+          Write:      2 (0.2 seconds)
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -128,7 +131,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           21  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

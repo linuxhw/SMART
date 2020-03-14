@@ -10,7 +10,7 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar 11 07:38:28 2017 MSK
+Local Time is:    Sat Mar 11 07:48:49 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,8 +24,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -71,7 +71,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    47
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    29
 193 Load_Cycle_Count        -O--CK   100   100   000    -    505
-194 Temperature_Celsius     -O---K   100   100   000    -    34 (Min/Max 16/40)
+194 Temperature_Celsius     -O---K   100   100   000    -    35 (Min/Max 16/40)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -130,8 +130,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    34 Celsius
+Device State:                        Active (0)
+Current Temperature:                    35 Celsius
 Power Cycle Min/Max Temperature:     22/36 Celsius
 Lifetime    Min/Max Temperature:     16/40 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -141,7 +141,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (166)
+Temperature History Size (Index):    478 (172)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -154,8 +154,8 @@ Page  Offset Size        Value Flags Description
 0x01  0x010  4            3074  ---  Power-on Hours
 0x01  0x018  6     30597175275  ---  Logical Sectors Written
 0x01  0x020  6       145606186  ---  Number of Write Commands
-0x01  0x028  6     29800164159  ---  Logical Sectors Read
-0x01  0x030  6       175352544  ---  Number of Read Commands
+0x01  0x028  6     29800410792  ---  Logical Sectors Read
+0x01  0x030  6       175354015  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4              47  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
@@ -169,7 +169,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              34  ---  Current Temperature
+0x05  0x008  1              35  ---  Current Temperature
 0x05  0x010  1              33  N--  Average Short Term Temperature
 0x05  0x018  1              32  N--  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
@@ -183,7 +183,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             899  ---  Number of Hardware Resets
+0x06  0x008  4             903  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -200,8 +200,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           39  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           38  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           43  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           42  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -7,7 +7,7 @@ User Capacity:    160 040 803 840 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Mar  7 09:45:02 2017 +05
+Local Time is:    Tue Mar  7 10:38:01 2017 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,15 +55,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            PO----   099   099   000    -    0
   4 Start_Stop_Count        -O--CK   098   098   020    -    2987
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   072   060   030    -    103534425481
-  9 Power_On_Hours          -O--CK   075   075   000    -    22059
+  7 Seek_Error_Rate         POSR--   072   060   030    -    103534440479
+  9 Power_On_Hours          -O--CK   075   075   000    -    22060
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   097   097   020    -    3122
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   062   062   000    -    38
 190 Airflow_Temperature_Cel -O---K   065   054   045    -    35 (Min/Max 19/36)
 194 Temperature_Celsius     -O---K   035   046   000    -    35 (0 8 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   055   045   000    -    36713228
+195 Hardware_ECC_Recovered  -O-RC-   064   045   000    -    42043826
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    1
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 1783 (device log contains only the most recent 20 errors)
+Device Error Count: 1785 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,40 @@ Device Error Count: 1783 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1785 [4] occurred at disk power-on lifetime: 22057 hours (919 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 01 01 00 00 00 00 00 00 e2 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 00 00 01 01 00 12 96 00 a1 6e e2 00     01:03:31.968  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 12 96 00 a1 6e e0 00     01:03:31.042  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 12 96 00 a1 6e e2 00     01:03:31.011  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 12 96 00 a1 6e e0 00     01:03:31.011  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 12 96 00 a1 6e e2 00     01:03:36.025  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 1784 [3] occurred at disk power-on lifetime: 22059 hours (919 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 01 01 00 00 00 00 00 00 e2 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 00 00 01 01 00 12 96 00 a1 6e e2 00     02:16:39.401  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 12 96 00 a1 6e e0 00     02:16:39.283  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 12 96 00 a1 6e e2 00     02:16:39.221  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 01 00 12 9e 00 a1 af e0 00     02:16:38.288  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 12 9e 00 a1 af e0 00     02:16:37.375  READ MULTIPLE EXT
 
 Error 1783 [2] occurred at disk power-on lifetime: 22058 hours (919 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -170,7 +204,7 @@ Error 1781 [0] occurred at disk power-on lifetime: 22057 hours (919 days + 1 hou
   27 00 00 01 01 00 12 96 00 a1 6e e0 00     01:03:31.011  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   37 00 00 01 01 00 12 96 00 a1 6e e2 00     01:03:36.025  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 1780 [19] occurred at disk power-on lifetime: 22054 hours (918 days + 22 hours)
+Error 1780 [19] occurred at disk power-on lifetime: 22059 hours (919 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -181,11 +215,11 @@ Error 1780 [19] occurred at disk power-on lifetime: 22054 hours (918 days + 22 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 12 96 00 a1 6e e2 00     00:18:45.296  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 12 96 00 a1 6e e0 00     00:18:45.296  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 12 96 00 a1 6e e2 00     00:18:45.296  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 01 00 12 9e 00 a1 af e0 00     00:18:47.996  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 12 9e 00 a1 af e0 00     00:18:47.936  READ MULTIPLE EXT
+  37 00 00 01 01 00 12 96 00 a1 6e e2 00     02:16:39.401  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 12 96 00 a1 6e e0 00     02:16:39.283  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 12 96 00 a1 6e e2 00     02:16:39.221  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 01 00 12 9e 00 a1 af e0 00     02:16:38.288  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 12 9e 00 a1 af e0 00     02:16:37.375  READ MULTIPLE EXT
 
 Error 1779 [18] occurred at disk power-on lifetime: 22058 hours (919 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -221,40 +255,6 @@ Error 1778 [17] occurred at disk power-on lifetime: 22058 hours (919 days + 2 ho
   27 00 00 00 01 00 12 9e 00 a1 af e0 00     00:29:59.917  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   29 00 00 00 01 00 12 9e 00 a1 af e0 00     00:29:59.775  READ MULTIPLE EXT
 
-Error 1777 [16] occurred at disk power-on lifetime: 22057 hours (919 days + 1 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 01 01 00 00 00 00 00 00 e2 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 12 96 00 a1 6e e2 00     01:03:31.968  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 12 96 00 a1 6e e0 00     01:03:31.042  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 12 96 00 a1 6e e2 00     01:03:31.011  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 12 96 00 a1 6e e0 00     01:03:31.011  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 12 96 00 a1 6e e2 00     01:03:36.025  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-
-Error 1776 [15] occurred at disk power-on lifetime: 22054 hours (918 days + 22 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 01 01 00 00 00 00 00 00 e2 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 12 96 00 a1 6e e2 00     00:18:45.296  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 12 96 00 a1 6e e0 00     00:18:45.296  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 12 96 00 a1 6e e2 00     00:18:45.296  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 01 00 12 9e 00 a1 af e0 00     00:18:47.996  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 12 9e 00 a1 af e0 00     00:18:47.936  READ MULTIPLE EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -275,7 +275,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

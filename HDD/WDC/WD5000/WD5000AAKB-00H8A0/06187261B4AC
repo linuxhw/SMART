@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 Transport Type:   Parallel, ATA8-APT
-Local Time is:    Sun Sep 24 21:29:13 2017 MSK
+Local Time is:    Thu Mar 22 16:07:10 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,16 +60,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   172   160   021    -    4400
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3159
+  3 Spin_Up_Time            POS--K   162   160   021    -    4900
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3178
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   079   079   000    -    15937
+  9 Power_On_Hours          -O--CK   079   079   000    -    15959
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3012
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    942
-193 Load_Cycle_Count        -O--CK   199   199   000    -    3159
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3029
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    950
+193 Load_Cycle_Count        -O--CK   199   199   000    -    3178
 194 Temperature_Celsius     -O---K   106   100   000    -    41
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
@@ -278,10 +278,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        Active (0)
+Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     30/41 Celsius
-Lifetime    Min/Max Temperature:     29/47 Celsius
+Power Cycle Min/Max Temperature:     35/41 Celsius
+Lifetime    Min/Max Temperature:     25/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -289,7 +289,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (51)
+Temperature History Size (Index):    128 (47)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -306,8 +306,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         2072  Vendor specific
-
-
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         1630  Vendor specific
 

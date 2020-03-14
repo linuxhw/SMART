@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-68.5rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar SE Serial ATA
 Device Model:     WDC WD1200JS-00MHB0
@@ -7,7 +10,7 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Feb 20 15:19:15 2020 MSK
+Local Time is:    Thu Feb 27 11:57:34 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -61,16 +64,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   187   178   021    -    3616
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2897
+  3 Spin_Up_Time            PO----   188   178   021    -    3566
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2901
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    6513
+  9 Power_On_Hours          -O--CK   092   092   000    -    6520
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2882
-190 Airflow_Temperature_Cel -O---K   059   043   045    Past 41
-194 Temperature_Celsius     -O---K   106   090   000    -    41
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2886
+190 Airflow_Temperature_Cel -O---K   056   043   045    Past 44
+194 Temperature_Celsius     -O---K   103   090   000    -    44
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -102,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 3
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,6 +120,22 @@ Device Error Count: 3
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 00 0d 00 53 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 84 b0 3d ee 00 00 00 00 00 01 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 3d 84 00 ee b0 00 01 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 7b ec 3d ee 00 01 00 00 00 01 00 00     05:47:15.964  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 00 00 00 3d 66 00 ee ec 00 01 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 3 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -182,18 +201,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 38 Celsius
-Power Cycle Max Temperature:         42 Celsius
-Lifetime    Max Temperature:         58 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     --/46 Celsius
+Lifetime    Min/Max Temperature:     --/58 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (70)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -206,6 +224,6 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         1445  Vendor specific
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        20836  Vendor specific
 

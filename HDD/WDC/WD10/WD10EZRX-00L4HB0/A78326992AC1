@@ -9,8 +9,8 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Tue Apr 21 20:35:29 2015 MSK
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sun Jan 31 23:56:26 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,17 +60,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   133   130   021    -    4350
-  4 Start_Stop_Count        -O--CK   100   100   000    -    204
+  3 Spin_Up_Time            POS--K   132   130   021    -    4366
+  4 Start_Stop_Count        -O--CK   100   100   000    -    452
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    589
+  9 Power_On_Hours          -O--CK   099   099   000    -    1404
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    204
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    11
-193 Load_Cycle_Count        -O--CK   197   197   000    -    9008
-194 Temperature_Celsius     -O---K   113   107   000    -    30
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    447
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    50
+193 Load_Cycle_Count        -O--CK   192   192   000    -    24030
+194 Temperature_Celsius     -O---K   115   107   000    -    28
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 2569 (device log contains only the most recent 24 errors)
+Device Error Count: 34750 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,7 +121,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2569 [0] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34750 [21] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -132,130 +132,130 @@ Error 2569 [0] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  91 00 20 00 3f 00 00 0f 00 00 01 af 00     00:46:41.403  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 00 00 00 00 00 00 00 00 01 a0 00     00:46:41.401  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:46:41.363  IDENTIFY DEVICE
-  61 01 00 00 00 00 00 00 da fa ef 40 00     00:46:25.138  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:25.127  READ LOG EXT
+  91 00 20 00 3f 00 00 0f 00 00 01 af 00     03:26:47.420  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 00 00 00 00 00 00 00 00 01 a0 00     03:26:47.418  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     03:26:47.376  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.397  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.394  IDENTIFY DEVICE
 
-Error 2568 [23] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34749 [20] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 01 01 00 00 00 00 00 10 00 00  Device Fault; Error: ABRT at LBA = 0x00000010 = 16
+  04 -- 61 00 08 00 00 16 c7 9e 7f e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x16c79e7f = 382180991
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 01 00 00 00 00 00 00 da fa ef 40 00     00:46:25.138  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:25.127  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f9 ef 40 00     00:46:25.004  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.993  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f8 ef 40 00     00:46:24.871  WRITE FPDMA QUEUED
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.397  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.394  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.391  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.388  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.378  READ DMA EXT
 
-Error 2567 [22] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34748 [19] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 01 01 00 00 00 00 00 10 00 00  Device Fault; Error: ABRT at LBA = 0x00000010 = 16
+  04 -- 61 00 46 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 01 00 00 00 00 00 00 da f9 ef 40 00     00:46:25.004  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.993  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f8 ef 40 00     00:46:24.871  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.860  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f7 ef 40 00     00:46:24.738  WRITE FPDMA QUEUED
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.391  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.388  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.378  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.375  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.372  SET FEATURES [Set transfer mode]
 
-Error 2566 [21] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34747 [18] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 01 01 00 00 00 00 00 10 00 00  Device Fault; Error: ABRT at LBA = 0x00000010 = 16
+  04 -- 61 00 08 00 00 16 c7 9e 7f e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x16c79e7f = 382180991
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 01 00 00 00 00 00 00 da f8 ef 40 00     00:46:24.871  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.860  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f7 ef 40 00     00:46:24.738  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.727  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f6 ef 40 00     00:46:24.616  WRITE FPDMA QUEUED
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.378  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.375  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.372  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.369  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.359  READ DMA EXT
 
-Error 2565 [20] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34746 [17] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 01 01 00 00 00 00 00 10 00 00  Device Fault; Error: ABRT at LBA = 0x00000010 = 16
+  04 -- 61 00 46 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 01 00 00 00 00 00 00 da f7 ef 40 00     00:46:24.738  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.727  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f6 ef 40 00     00:46:24.616  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.605  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f5 ef 40 00     00:46:24.494  WRITE FPDMA QUEUED
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.372  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.369  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.359  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.356  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.353  SET FEATURES [Set transfer mode]
 
-Error 2564 [19] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34745 [16] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 01 01 00 00 00 00 00 10 00 00  Device Fault; Error: ABRT at LBA = 0x00000010 = 16
+  04 -- 61 00 08 00 00 16 c7 9e 7f e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x16c79e7f = 382180991
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 01 00 00 00 00 00 00 da f6 ef 40 00     00:46:24.616  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.605  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f5 ef 40 00     00:46:24.494  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.483  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f4 ef 40 00     00:46:24.372  WRITE FPDMA QUEUED
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.359  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.356  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.353  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.350  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.341  READ DMA EXT
 
-Error 2563 [18] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34744 [15] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 01 01 00 00 00 00 00 10 00 00  Device Fault; Error: ABRT at LBA = 0x00000010 = 16
+  04 -- 61 00 46 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 01 00 00 00 00 00 00 da f5 ef 40 00     00:46:24.494  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.483  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f4 ef 40 00     00:46:24.372  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.361  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f3 ef 40 00     00:46:24.250  WRITE FPDMA QUEUED
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.353  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.350  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.341  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.337  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.334  SET FEATURES [Set transfer mode]
 
-Error 2562 [17] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
+Error 34743 [14] occurred at disk power-on lifetime: 617 hours (25 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 01 01 00 00 00 00 00 10 00 00  Device Fault; Error: ABRT at LBA = 0x00000010 = 16
+  04 -- 61 00 08 00 00 16 c7 9e 7f e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x16c79e7f = 382180991
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 01 00 00 00 00 00 00 da f4 ef 40 00     00:46:24.372  WRITE FPDMA QUEUED
-  2f 00 00 01 01 00 00 00 00 00 10 40 00     00:46:24.361  READ LOG EXT
-  61 01 00 00 00 00 00 00 da f3 ef 40 00     00:46:24.250  WRITE FPDMA QUEUED
-  2f 08 00 01 01 00 00 00 00 00 10 40 00     00:46:24.239  READ LOG EXT
-  61 00 08 00 00 00 00 00 03 e4 4f 40 00     00:46:24.116  WRITE FPDMA QUEUED
+  25 00 00 00 08 00 00 16 c7 9e 7f e0 08     03:26:12.341  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.337  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     03:26:12.334  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     03:26:12.331  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 16 c7 a9 3f e0 08     03:26:12.321  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -275,8 +275,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     29/31 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     21/30 Celsius
 Lifetime    Min/Max Temperature:     18/36 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -285,7 +285,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (105)
+Temperature History Size (Index):    478 (180)
 
 SCT Error Recovery Control command not supported
 
@@ -297,14 +297,14 @@ ID      Size     Value  Description
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2           37  R_ERR response for non-data FIS
-0x0006  2           37  R_ERR response for device-to-host non-data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0008  2           37  Device-to-host non-data FIS retries
-0x0009  2           19  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        16508  Vendor specific
+0x8000  4        42419  Vendor specific
 

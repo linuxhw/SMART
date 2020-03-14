@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Tue Mar  8 23:37:50 2016 MSK
+Local Time is:    Sat Dec 23 16:32:52 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,17 +60,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
   3 Spin_Up_Time            POS---   253   253   033    -    0
-  4 Start_Stop_Count        -O--C-   099   099   000    -    1989
+  4 Start_Stop_Count        -O--C-   099   099   000    -    2613
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   092   092   000    -    3757
+  9 Power_On_Hours          -O--C-   084   084   000    -    7359
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1879
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    2498
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    121
-193 Load_Cycle_Count        -O--C-   093   093   000    -    70448
-194 Temperature_Celsius     -O----   157   157   000    -    35 (Min/Max 6/49)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    150
+193 Load_Cycle_Count        -O--C-   093   093   000    -    74364
+194 Temperature_Celsius     -O----   161   161   000    -    34 (Min/Max 6/49)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    110
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -93,8 +93,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
@@ -183,8 +183,7 @@ Error 42 [1] occurred at disk power-on lifetime: 3060 hours (127 days + 12 hours
   61 00 01 00 01 00 00 0d f9 67 ff 40 ff     00:06:27.300  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
-
+Invalid Self-test Log index = 0x2502 (reserved = 0x00)
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
@@ -200,10 +199,10 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     30/42 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     32/36 Celsius
 Lifetime    Min/Max Temperature:      6/49 Celsius
-Lifetime    Average Temperature:        36 Celsius
+Lifetime    Average Temperature:        34 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 Unexpected SCT status 0x0000 (action_code=5, function_code=0)
@@ -213,13 +212,13 @@ SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2           26  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           24  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

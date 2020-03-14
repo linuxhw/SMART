@@ -4,18 +4,18 @@ Device Model:     Hitachi HTS547575A9E384
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: JE4OA50A
-User Capacity:    750 156 374 016 bytes [750 GB]
+User Capacity:    750,156,374,016 bytes [750 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Aug 18 23:56:57 2017 MSK
+Local Time is:    Thu Feb 15 20:45:45 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
@@ -61,26 +61,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  --S---   198   198   000    -    137
-  3 Spin_Up_Time            POS---   194   194   033    -    1
-  4 Start_Stop_Count        -O--C-   099   099   000    -    1806
+  3 Spin_Up_Time            POS---   180   180   033    -    1
+  4 Start_Stop_Count        -O--C-   099   099   000    -    2102
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         -O-R--   100   100   000    -    0
   8 Seek_Time_Performance   --S---   120   120   000    -    32
-  9 Power_On_Hours          -O--C-   089   089   000    -    5069
+  9 Power_On_Hours          -O--C-   087   087   000    -    5941
  10 Spin_Retry_Count        -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1802
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    2098
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    23
-193 Load_Cycle_Count        -O--C-   098   098   000    -    27695
-194 Temperature_Celsius     -O----   146   146   000    -    41 (Min/Max 12/42)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    24
+193 Load_Cycle_Count        -O--C-   095   095   000    -    51657
+194 Temperature_Celsius     -O----   171   171   000    -    35 (Min/Max 12/42)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
-240 Head_Flying_Hours       -O--CK   089   089   000    -    4980
-241 Total_LBAs_Written      -O--CK   100   100   000    -    18174480759
-242 Total_LBAs_Read         -O--CK   100   100   000    -    22688722207
+240 Head_Flying_Hours       -O--CK   087   087   000    -    5796
+241 Total_LBAs_Written      -O--CK   100   100   000    -    22772146350
+242 Total_LBAs_Read         -O--CK   100   100   000    -    27126536596
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -110,9 +110,11 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      90%      2566         -
-# 2  Short offline       Completed without error       00%      2565         -
-# 3  Short offline       Completed without error       00%         0         -
+# 1  Extended offline    Interrupted (host reset)      60%      5074         -
+# 2  Short offline       Completed without error       00%      5073         -
+# 3  Extended offline    Interrupted (host reset)      90%      2566         -
+# 4  Short offline       Completed without error       00%      2565         -
+# 5  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,10 +131,10 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     35/42 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     25/35 Celsius
 Lifetime    Min/Max Temperature:     12/42 Celsius
-Lifetime    Average Temperature:        30 Celsius
+Lifetime    Average Temperature:        31 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -140,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (27)
+Temperature History Size (Index):    128 (88)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -157,8 +159,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           90  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           75  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

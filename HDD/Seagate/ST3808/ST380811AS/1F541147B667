@@ -3,17 +3,18 @@ Model Family:     Seagate Barracuda 7200.9
 Device Model:     ST380811AS
 Serial Number:    --
 Firmware Version: 3.AAE
-User Capacity:    80 026 361 856 bytes [80,0 GB]
+User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Oct 22 12:29:57 2016 MSK
+Local Time is:    Tue Jun 12 15:58:32 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -53,18 +54,18 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   105   091   006    -    7888000
-  3 Spin_Up_Time            PO----   096   095   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2908
+  3 Spin_Up_Time            PO----   095   095   000    -    0
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2934
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    259732892
-  9 Power_On_Hours          -O--CK   089   089   000    -    10312
+  7 Seek_Error_Rate         POSR--   084   060   030    -    261035466
+  9 Power_On_Hours          -O--CK   089   089   000    -    10345
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2929
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2955
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   045   045    Past 41 (Min/Max 27/41)
-194 Temperature_Celsius     -O---K   041   055   000    -    41 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   063   046   000    -    118875534
+190 Airflow_Temperature_Cel -O---K   070   045   045    Past 30 (Min/Max 26/30)
+194 Temperature_Celsius     -O---K   030   055   000    -    30 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   062   046   000    -    51518309
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,7 +88,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -123,9 +124,11 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -3,13 +3,13 @@ Model Family:     Seagate Barracuda 7200.11
 Device Model:     ST3320613AS
 Serial Number:    --
 Firmware Version: SD11
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Jul  3 21:16:23 2016 YEKT
+Local Time is:    Thu Dec  6 19:21:28 2018 +05
 
 ==> WARNING: There are known problems with these drives,
 see the following Seagate web pages:
@@ -23,6 +23,7 @@ AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
@@ -67,21 +68,21 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   111   099   006    -    31752031
+  1 Raw_Read_Error_Rate     POSR--   116   099   006    -    112793522
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1725
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1829
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   077   060   030    -    26170343123
-  9 Power_On_Hours          -O--CK   077   077   000    -    20281
+  7 Seek_Error_Rate         POSR--   078   060   030    -    26173418775
+  9 Power_On_Hours          -O--CK   077   077   000    -    20338
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1660
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1768
 184 End-to-End_Error        -O--CK   097   097   099    NOW  3
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    27
+188 Command_Timeout         -O--CK   100   099   000    -    28
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   069   056   045    -    31 (Min/Max 24/31)
-194 Temperature_Celsius     -O---K   031   044   000    -    31 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   047   025   000    -    31752031
+190 Airflow_Temperature_Cel -O---K   073   056   045    -    27 (Min/Max 23/27)
+194 Temperature_Celsius     -O---K   027   044   000    -    27 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   047   025   000    -    112793522
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -102,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -121,7 +122,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     20267         -
+# 1  Extended offline    Interrupted (host reset)      00%     20302         -
+# 2  Extended offline    Completed without error       00%     20267         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -138,23 +140,25 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     24/30 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     23/26 Celsius
 Lifetime    Min/Max Temperature:     11/44 Celsius
-Under/Over Temperature Limit Count:   0/8
+Under/Over Temperature Limit Count:   0/5
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (115)
+Temperature History Size (Index):    128 (103)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

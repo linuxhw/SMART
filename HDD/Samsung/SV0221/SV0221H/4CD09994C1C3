@@ -6,7 +6,7 @@ User Capacity:    20 060 135 424 bytes [20,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 1
-Local Time is:    Mon Aug  1 18:52:03 2016 YAKT
+Local Time is:    Sun Jan 15 15:10:27 2017 YAKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -50,18 +50,18 @@ recommended polling time: 	 (  16) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    654
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5728
+  1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    711
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5856
   5 Reallocated_Sector_Ct   PO--CK   099   099   009    -    7
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
-  8 Seek_Time_Performance   --S--K   086   084   000    -    11701
-  9 Power_On_Hours          -O--CK   099   099   000    -    1081773
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3120
-194 Temperature_Celsius     -O---K   150   117   000    -    89 (0 0 0 0 1)
+  8 Seek_Time_Performance   --S--K   084   083   000    -    12282
+  9 Power_On_Hours          -O--CK   099   099   000    -    1107574
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3165
+194 Temperature_Celsius     -O---K   168   117   000    -    30 (0 0 0 0 1)
 197 Current_Pending_Sector  PO--CK   253   253   009    -    0
-198 Offline_Uncorrectable   P---CK   253   253   009    -    0
+198 Offline_Uncorrectable   P---CK   100   100   009    -    1
 199 UDMA_CRC_Error_Count    -O-R--   100   100   000    -    27
-200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    1
+200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
 201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    10
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -70,8 +70,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
@@ -84,7 +83,9 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 22100 (device log contains only the most recent five errors)
+Warning: ATA error count 42068 inconsistent with error log pointer 5
+
+ATA Error Count: 42068 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -99,24 +100,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 22100 occurred at disk power-on lifetime: 13859 hours (577 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 00 00 00 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  2f 00 01 00 00 00 00 00  31d+03:39:28.126  READ LOG EXT
-  b0 d5 01 00 c2 4f 00 00  31d+03:39:28.126  SMART READ LOG
-  b0 da 00 00 c2 4f 00 00  31d+03:39:28.126  SMART RETURN STATUS
-  b0 d1 01 01 c2 4f 00 00  31d+03:39:28.126  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 d0 01 00 c2 4f 00 00  31d+03:39:28.126  SMART READ DATA
-
-Error 22099 occurred at disk power-on lifetime: 13859 hours (577 days + 11 hours)
+Error 42068 occurred at disk power-on lifetime: 3108 hours (129 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -127,47 +111,13 @@ Error 22099 occurred at disk power-on lifetime: 13859 hours (577 days + 11 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 c2 4f a0 00  32d+19:26:55.745  SMART DISABLE OPERATIONS
-  ec 20 3f 01 00 00 a0 00  32d+19:26:55.745  IDENTIFY DEVICE
-  10 20 3f 01 00 00 a0 00  32d+19:26:55.745  RECALIBRATE [OBS-4]
-  91 20 3f 01 00 00 af 00  32d+19:26:55.745  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 01 01 00 00 a0 00  32d+19:26:55.745  IDENTIFY DEVICE
+  b0 d9 00 01 c2 4f a0 00  34d+05:12:08.960  SMART DISABLE OPERATIONS
+  ec 20 3f 01 00 00 a0 00  34d+05:12:08.960  IDENTIFY DEVICE
+  10 20 3f 01 00 00 a0 00  34d+05:12:08.960  RECALIBRATE [OBS-4]
+  91 20 3f 01 00 00 af 00  34d+05:12:08.960  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 01 01 00 00 a0 00  34d+05:12:08.960  IDENTIFY DEVICE
 
-Error 22098 occurred at disk power-on lifetime: 13859 hours (577 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 20 5e d3 e0  Error: UNC at LBA = 0x00d35e20 = 13852192
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 20 5e d3 e0 00  12d+11:24:20.865  READ DMA
-  c8 00 00 20 5e d2 e0 00  12d+11:24:20.865  READ DMA
-  c8 00 00 20 5e d1 e0 00  12d+11:24:20.865  READ DMA
-  c8 00 00 20 5e d0 e0 00  12d+11:24:20.865  READ DMA
-  c8 00 20 c0 08 cb e0 00  12d+11:24:20.865  READ DMA
-
-Error 22097 occurred at disk power-on lifetime: 13859 hours (577 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 20 5e d3 e0  Error: UNC at LBA = 0x00d35e20 = 13852192
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 20 5e d3 e0 00   6d+09:44:01.025  READ DMA
-  c8 00 00 20 5e d2 e0 00   6d+09:44:01.025  READ DMA
-  c8 00 00 20 5e d1 e0 00   6d+09:44:01.025  READ DMA
-  c8 00 00 20 5e d0 e0 00   6d+09:44:01.025  READ DMA
-  c8 00 00 20 5e cf e0 00   6d+09:44:01.025  READ DMA
-
-Error 22096 occurred at disk power-on lifetime: 13859 hours (577 days + 11 hours)
+Error 42067 occurred at disk power-on lifetime: 3108 hours (129 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -178,11 +128,62 @@ Error 22096 occurred at disk power-on lifetime: 13859 hours (577 days + 11 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 c2 4f a0 00   3d+04:10:57.665  SMART DISABLE OPERATIONS
-  ec 20 3f 01 00 00 a0 00   3d+04:10:57.665  IDENTIFY DEVICE
-  10 20 3f 01 00 00 a0 00   3d+04:10:57.665  RECALIBRATE [OBS-4]
-  91 20 3f 01 00 00 af 00   3d+04:10:57.665  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 01 01 00 00 a0 00   3d+04:10:57.665  IDENTIFY DEVICE
+  b0 d9 00 01 c2 4f a0 00  34d+05:12:08.960  SMART DISABLE OPERATIONS
+  ec 20 3f 01 00 00 a0 00  34d+05:12:08.960  IDENTIFY DEVICE
+  10 20 3f 01 00 00 a0 00  34d+05:12:08.960  RECALIBRATE [OBS-4]
+  91 20 3f 01 00 00 af 00  34d+05:12:08.960  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 01 01 00 00 a0 00  34d+05:12:08.960  IDENTIFY DEVICE
+
+Error 42066 occurred at disk power-on lifetime: 3108 hours (129 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 00 01 c2 4f a0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d9 00 01 c2 4f a0 00  34d+05:12:08.960  SMART DISABLE OPERATIONS
+  ec 20 3f 01 00 00 a0 00  34d+05:12:08.960  IDENTIFY DEVICE
+  10 20 3f 01 00 00 a0 00  34d+05:12:08.960  RECALIBRATE [OBS-4]
+  91 20 3f 01 00 00 af 00  34d+05:12:08.960  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 01 01 00 00 a0 00  34d+05:12:08.960  IDENTIFY DEVICE
+
+Error 42065 occurred at disk power-on lifetime: 3108 hours (129 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 00 00 00 00 a0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  a1 00 00 00 00 00 a0 00  45d+02:58:57.920  IDENTIFY PACKET DEVICE
+  c8 20 01 00 00 00 e0 00   4d+17:30:18.240  READ DMA
+  c6 20 10 01 00 00 ef 00  24d+21:06:22.080  SET MULTIPLE MODE
+  91 20 3f 01 00 00 ef 00  24d+21:06:22.080  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 20 01 01 00 00 e1 00  24d+21:06:22.080  RECALIBRATE [OBS-4]
+
+Error 42064 occurred at disk power-on lifetime: 3108 hours (129 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 00 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 20 01 00 00 00 e0 00   4d+17:30:18.240  READ DMA
+  c8 20 01 00 00 00 e0 00   4d+17:30:18.240  READ DMA
+  c6 20 10 01 00 00 ef 00  24d+21:06:22.080  SET MULTIPLE MODE
+  91 20 3f 01 00 00 ef 00  24d+21:06:22.080  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 20 01 01 00 00 e1 00  24d+21:06:22.080  RECALIBRATE [OBS-4]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -193,7 +194,7 @@ Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

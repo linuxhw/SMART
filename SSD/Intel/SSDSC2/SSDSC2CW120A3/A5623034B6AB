@@ -4,20 +4,20 @@ Device Model:     INTEL SSDSC2CW120A3
 Serial Number:    --
 LU WWN Device Id: 5 001517 ...
 Firmware Version: 400i
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,033,041,920 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct 11 22:05:43 2015 CEST
+SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Thu Jan  4 03:09:34 2018 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -59,24 +59,24 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    901606h+59m+25.030s
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1807
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    903527h+32m+46.020s
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2432
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1775
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    2389
 184 End-to-End_Error        PO--CK   100   100   090    -    0
-187 Uncorrectable_Error_Cnt POSR--   120   120   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1775
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    196662
+187 Uncorrectable_Error_Cnt POSR--   106   106   050    -    13795922
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    2389
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    249535
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    29
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    31
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   100   100   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    196662
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    80786
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    3838
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    249535
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    115490
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    4747
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -91,8 +91,8 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      1  Device Statistics log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xb7       GPL,SL  VS      16  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -126,32 +126,35 @@ Power Cycle Min/Max Temperature:     127/-127 Celsius
 Lifetime    Min/Max Temperature:     30/30 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     10 (Unknown, should be 2)
+SCT Temperature History Version:     0 (Unknown, should be 2)
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
-Min/Max recommended Temperature:      0/100 Celsius
+Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    3683 (37)
-Invalid Temperature History Size or Index
+Temperature History Size (Index):    0 (252)
+Temperature History is empty
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4             1816  Lifetime Power-On Resets
-  1  0x010  4             6811  Power-on Hours
-  1  0x018  6      13276200112  Logical Sectors Written
-  1  0x028  6       5655637382  Logical Sectors Read
-  4  =====  =                =  == General Errors Statistics (rev 1) ==
-  4  0x008  4                0  Number of Reported Uncorrectable Errors
-  4  0x010  4            29806  Resets Between Cmd Acceptance and Completion
-  6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4            29806  Number of Hardware Resets
-  6  0x010  4            24250  Number of ASR Events
-  6  0x018  4                0  Number of Interface CRC Errors
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1              255  Percentage Used Endurance Indicator
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4            2441  ---  Lifetime Power-On Resets
+0x01  0x010  4            8733  ---  Power-on Hours
+0x01  0x018  6     16741297951  ---  Logical Sectors Written
+0x01  0x028  6      7929970457  ---  Logical Sectors Read
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4           38120  ---  Resets Between Cmd Acceptance and Completion
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4           38120  ---  Number of Hardware Resets
+0x06  0x010  4           30389  ---  Number of ASR Events
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -161,8 +164,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

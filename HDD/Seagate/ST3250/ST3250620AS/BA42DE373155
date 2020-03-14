@@ -7,7 +7,7 @@ User Capacity:    250 059 350 016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Oct  2 12:17:05 2015 MSK
+Local Time is:    Sat Nov 21 05:30:15 2015 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +50,19 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   082   006    -    87148614
-  3 Spin_Up_Time            PO----   097   095   000    -    0
-  4 Start_Stop_Count        -O--CK   091   091   020    -    9334
+  1 Raw_Read_Error_Rate     POSR--   095   082   006    -    6053151
+  3 Spin_Up_Time            PO----   096   095   000    -    0
+  4 Start_Stop_Count        -O--CK   091   091   020    -    9335
   5 Reallocated_Sector_Ct   PO--CK   098   098   036    -    88
-  7 Seek_Error_Rate         POSR--   076   060   030    -    26046901697
-  9 Power_On_Hours          -O--CK   068   068   000    -    28080
+  7 Seek_Error_Rate         POSR--   077   060   030    -    26106135893
+  9 Power_On_Hours          -O--CK   067   067   000    -    29105
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5788
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5789
 187 Reported_Uncorrect      -O--CK   001   001   000    -    2443
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   058   047   045    -    42 (Min/Max 42/45 #1)
-194 Temperature_Celsius     -O---K   042   053   000    -    42 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   064   055   000    -    16643070
+190 Airflow_Temperature_Cel -O---K   059   047   045    -    41 (Min/Max 38/45 #1)
+194 Temperature_Celsius     -O---K   041   053   000    -    41 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   062   055   000    -    42098116
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -256,6 +255,14 @@ Error 216 [15] occurred at disk power-on lifetime: 19879 hours (828 days + 7 hou
   25 00 20 00 10 00 00 5f 00 00 d0 e0 00     00:09:36.541  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      90%     29105         -
+# 2  Extended offline    Completed without error       00%     28827         -
+# 3  Extended offline    Completed without error       00%     28680         -
+# 4  Extended offline    Completed without error       00%     28534         -
+# 5  Extended offline    Completed without error       00%     28387         -
+# 6  Extended offline    Completed without error       00%     28240         -
+# 7  Extended offline    Completed without error       00%     28094         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -274,7 +281,7 @@ Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           73  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

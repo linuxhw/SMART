@@ -11,7 +11,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Jul  9 21:26:33 2018 MSK
+Local Time is:    Mon Jul  9 21:38:23 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -26,8 +26,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -79,7 +79,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   099   099   000    -    666
+222 Loaded_Hours            -O--CK   099   099   000    -    667
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
 226 Load-in_Time            -OS--K   100   100   000    -    535
@@ -282,7 +282,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
-Device State:                        Active (0)
+Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    44 Celsius
 Power Cycle Min/Max Temperature:     43/46 Celsius
 Lifetime    Min/Max Temperature:     21/56 Celsius
@@ -293,7 +293,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (477)
+Temperature History Size (Index):    478 (6)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -304,15 +304,15 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4             700  ---  Lifetime Power-On Resets
 0x01  0x010  4             675  ---  Power-on Hours
-0x01  0x018  6      8251985869  ---  Logical Sectors Written
-0x01  0x020  6        36380231  ---  Number of Write Commands
-0x01  0x028  6      4347709254  ---  Logical Sectors Read
-0x01  0x030  6        26396068  ---  Number of Read Commands
+0x01  0x018  6      8251985877  ---  Logical Sectors Written
+0x01  0x020  6        36380232  ---  Number of Write Commands
+0x01  0x028  6      4347845399  ---  Logical Sectors Read
+0x01  0x030  6        26396854  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4               6  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4             671  ---  Spindle Motor Power-on Hours
-0x03  0x010  4             666  ---  Head Flying Hours
+0x03  0x010  4             667  ---  Head Flying Hours
 0x03  0x018  4             760  ---  Head Load Events
 0x03  0x020  4               8  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               1  ---  Read Recovery Attempts
@@ -335,7 +335,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3861  ---  Number of Hardware Resets
+0x06  0x008  4            3864  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -354,8 +354,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           47  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           46  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           50  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           49  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

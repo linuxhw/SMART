@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Dec 15 22:15:22 2016 MSK
+Local Time is:    Sat Dec 31 20:21:29 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -25,8 +25,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,24 +60,24 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   100   100   040    -    1514
+  2 Throughput_Performance  P-S---   100   100   040    -    432
   3 Spin_Up_Time            POS---   135   135   033    -    2
-  4 Start_Stop_Count        -O--C-   098   098   000    -    4289
+  4 Start_Stop_Count        -O--C-   098   098   000    -    4301
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   055   055   000    -    19968
+  9 Power_On_Hours          -O--C-   055   055   000    -    19978
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1982
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1994
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    91
-193 Load_Cycle_Count        -O--C-   066   066   000    -    342034
-194 Temperature_Celsius     -O----   152   152   000    -    36 (Min/Max 15/47)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    92
+193 Load_Cycle_Count        -O--C-   066   066   000    -    342219
+194 Temperature_Celsius     -O----   161   161   000    -    34 (Min/Max 15/47)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
-223 Load_Retry_Count        -O-R--   100   100   000    -    0
+223 Load_Retry_Count        -O-R--   099   099   000    -    65536
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,9 +121,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     20/36 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     21/38 Celsius
 Lifetime    Min/Max Temperature:     15/47 Celsius
 Lifetime    Average Temperature:        33 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -133,7 +133,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (362)
+Temperature History Size (Index):    478 (37)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -146,8 +146,8 @@ ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0005  2            0  R_ERR response for non-data FIS
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

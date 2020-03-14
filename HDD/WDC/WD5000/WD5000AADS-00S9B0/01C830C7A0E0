@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jul 13 13:02:38 2016 NZST
+Local Time is:    Fri Jul 22 15:26:23 2016 NZST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,17 +60,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    295
-  3 Spin_Up_Time            POS--K   149   145   021    -    3550
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3311
+  3 Spin_Up_Time            POS--K   148   145   021    -    3583
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3333
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   087   087   000    -    9642
+  9 Power_On_Hours          -O--CK   087   087   000    -    9725
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3309
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    619
-193 Load_Cycle_Count        -O--CK   078   078   000    -    367352
-194 Temperature_Celsius     -O---K   113   102   000    -    30
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3330
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    620
+193 Load_Cycle_Count        -O--CK   076   076   000    -    372856
+194 Temperature_Celsius     -O---K   114   102   000    -    29
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -273,10 +273,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     23/30 Celsius
-Lifetime    Min/Max Temperature:     29/41 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     22/29 Celsius
+Lifetime    Min/Max Temperature:     28/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -284,7 +284,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (243)
+Temperature History Size (Index):    478 (460)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -303,5 +303,5 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         2092  Vendor specific
+0x8000  4        20436  Vendor specific
 

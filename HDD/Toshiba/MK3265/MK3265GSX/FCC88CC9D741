@@ -10,8 +10,8 @@ Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Apr 14 16:40:32 2019 CEST
+SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 1.5 Gb/s)
+Local Time is:    Tue Apr 16 22:31:02 2019 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,27 +64,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1274
-  4 Start_Stop_Count        -O--CK   100   100   000    -    7406
+  3 Spin_Up_Time            POS--K   100   100   001    -    1277
+  4 Start_Stop_Count        -O--CK   100   100   000    -    7418
   5 Reallocated_Sector_Ct   PO--CK   001   001   050    NOW  2047
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   082   082   000    -    7400
+  9 Power_On_Hours          -O--CK   082   082   000    -    7410
  10 Spin_Retry_Count        PO--CK   247   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    5103
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    5115
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    344
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    328
-193 Load_Cycle_Count        -O--CK   088   088   000    -    120337
-194 Temperature_Celsius     -O---K   100   100   000    -    25 (Min/Max 9/53)
+193 Load_Cycle_Count        -O--CK   088   088   000    -    120349
+194 Temperature_Celsius     -O---K   100   100   000    -    34 (Min/Max 9/53)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    378
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    29
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-220 Disk_Shift              -O----   100   100   000    -    14
-222 Loaded_Hours            -O--CK   084   084   000    -    6437
+220 Disk_Shift              -O----   100   100   000    -    15
+222 Loaded_Hours            -O--CK   084   084   000    -    6444
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    303
+226 Load-in_Time            -OS--K   100   100   000    -    225
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 4568 (device log contains only the most recent 256 errors)
+Device Error Count: 4596 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,7 +126,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4568 [215] occurred at disk power-on lifetime: 7084 hours (295 days + 4 hours)
+Error 4596 [243] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 02 00 00 00 00 00 38 57 e0 00  Error: ABRT at LBA = 0x00003857 = 14423
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 10 00 02 08 00 00 00 00 38 50 e0 00     00:07:09.233  WRITE DMA
+  ef 00 10 00 02 42 ea af 00 00 00 a0 00     00:07:09.232  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:07:09.232  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 44 00 00 00 00 00 00 00 a0 00     00:07:09.232  IDENTIFY DEVICE
+  ef 10 03 02 44 00 00 00 00 00 00 a0 00     00:07:09.232  SET FEATURES [Set transfer mode]
+
+Error 4595 [242] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -137,13 +154,81 @@ Error 4568 [215] occurred at disk power-on lifetime: 7084 hours (295 days + 4 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:23:05.010  [RESERVED]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:23:04.995  [RESERVED]
-  25 00 00 00 1b 00 00 02 36 2a 25 e0 00     00:23:01.905  READ DMA EXT
-  25 00 00 00 25 00 00 02 36 2a 00 e0 00     00:23:01.905  READ DMA EXT
-  25 00 00 00 1a 00 00 02 36 29 e6 e0 00     00:23:01.905  READ DMA EXT
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:07:08.849  [RESERVED]
+  ca 10 00 02 08 00 00 00 00 38 50 e0 00     00:07:01.621  WRITE DMA
+  ef 00 10 00 02 42 ea af 00 00 00 a0 00     00:07:01.621  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:07:01.621  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:07:01.621  IDENTIFY DEVICE
 
-Error 4567 [214] occurred at disk power-on lifetime: 7084 hours (295 days + 4 hours)
+Error 4594 [241] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 02 00 00 00 00 00 38 57 e0 00  Error: ABRT at LBA = 0x00003857 = 14423
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 10 00 02 08 00 00 00 00 38 50 e0 00     00:07:01.621  WRITE DMA
+  ef 00 10 00 02 42 ea af 00 00 00 a0 00     00:07:01.621  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:07:01.621  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:07:01.621  IDENTIFY DEVICE
+  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:07:01.621  SET FEATURES [Set transfer mode]
+
+Error 4593 [240] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 02 00 00 00 00 00 38 57 e0 00  Error: ABRT at LBA = 0x00003857 = 14423
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 10 00 02 08 00 00 00 00 38 50 e0 00     00:06:57.677  WRITE DMA
+  ef 00 10 00 02 42 ea af 00 00 00 a0 00     00:06:57.677  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:06:57.677  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:06:57.676  IDENTIFY DEVICE
+  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:06:57.676  SET FEATURES [Set transfer mode]
+
+Error 4592 [239] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 02 00 00 00 00 00 38 57 e0 00  Error: ABRT at LBA = 0x00003857 = 14423
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 10 00 02 08 00 00 00 00 38 50 e0 00     00:06:53.732  WRITE DMA
+  ef 00 10 00 02 42 ea af 00 00 00 a0 00     00:06:53.732  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:06:53.732  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:06:53.731  IDENTIFY DEVICE
+  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:06:53.731  SET FEATURES [Set transfer mode]
+
+Error 4591 [238] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 02 00 00 00 00 00 38 57 e0 00  Error: ABRT at LBA = 0x00003857 = 14423
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 10 00 02 08 00 00 00 00 38 50 e0 00     00:06:46.865  WRITE DMA
+  ef 00 10 00 02 42 ea af 00 00 00 a0 00     00:06:46.865  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:06:46.865  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:06:46.865  IDENTIFY DEVICE
+  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:06:46.865  SET FEATURES [Set transfer mode]
+
+Error 4590 [237] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -154,109 +239,28 @@ Error 4567 [214] occurred at disk power-on lifetime: 7084 hours (295 days + 4 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:22:53.656  [RESERVED]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:22:51.021  [RESERVED]
-  60 00 08 00 a0 00 00 01 49 05 60 40 00     00:22:50.239  READ FPDMA QUEUED
-  60 00 08 00 98 00 00 01 49 05 68 40 00     00:22:50.236  READ FPDMA QUEUED
-  60 00 08 00 90 00 00 01 40 1e a0 40 00     00:22:50.233  READ FPDMA QUEUED
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:06:46.481  [RESERVED]
+  ca 00 00 00 08 31 88 e7 00 38 50 e0 00     00:06:40.671  WRITE DMA
+  ca 00 00 00 08 08 3e 5f 31 88 e0 e2 00     00:06:40.657  WRITE DMA
+  35 00 00 00 28 00 00 14 08 3e 38 e0 00     00:06:35.941  WRITE DMA EXT
+  ca 00 00 00 08 00 38 2f 00 38 38 e0 00     00:06:35.897  WRITE DMA
 
-Error 4566 [213] occurred at disk power-on lifetime: 7084 hours (295 days + 4 hours)
+Error 4589 [236] occurred at disk power-on lifetime: 7408 hours (308 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  30 -- 00 00 01 00 00 00 00 00 01 00 00
+  04 -- 11 00 00 31 88 e7 00 38 57 e0 00  Error: ABRT at LBA = 0x3188e7003857 = 54464060864599
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:22:51.021  [RESERVED]
-  60 00 08 00 a0 00 00 01 49 05 60 40 00     00:22:50.239  READ FPDMA QUEUED
-  60 00 08 00 98 00 00 01 49 05 68 40 00     00:22:50.236  READ FPDMA QUEUED
-  60 00 08 00 90 00 00 01 40 1e a0 40 00     00:22:50.233  READ FPDMA QUEUED
-  60 00 08 00 88 00 00 01 40 1f 00 40 00     00:22:50.205  READ FPDMA QUEUED
-
-Error 4565 [212] occurred at disk power-on lifetime: 7070 hours (294 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  30 -- 00 00 01 00 00 00 00 00 01 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:19.207  [RESERVED]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:19.192  [RESERVED]
-  25 00 00 00 1b 00 00 02 36 2a 25 e0 00     00:00:16.107  READ DMA EXT
-  25 00 00 00 25 00 00 02 36 2a 00 e0 00     00:00:16.107  READ DMA EXT
-  25 00 00 00 1a 00 00 02 36 29 e6 e0 00     00:00:16.106  READ DMA EXT
-
-Error 4564 [211] occurred at disk power-on lifetime: 7070 hours (294 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  30 -- 00 00 01 00 00 00 00 00 01 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:03.987  [RESERVED]
-
-Error 4563 [210] occurred at disk power-on lifetime: 7047 hours (293 days + 15 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 02 00 00 00 00 00 38 7f e0 00  Error: ABRT at LBA = 0x0000387f = 14463
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 10 00 02 10 00 00 00 00 38 70 e0 00     01:07:15.124  WRITE DMA
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     01:07:15.124  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     01:07:15.123  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 42 00 00 00 00 00 00 00 a0 00     01:07:15.123  IDENTIFY DEVICE
-  ef 10 03 02 42 00 00 00 00 00 00 a0 00     01:07:15.123  SET FEATURES [Set transfer mode]
-
-Error 4562 [209] occurred at disk power-on lifetime: 7047 hours (293 days + 15 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 04 ac 87 00 38 7f e0 00  Error: ABRT at LBA = 0x4ac8700387f = 5139045824639
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 00 00 00 10 04 ac 87 00 38 70 e0 00     01:07:12.538  WRITE DMA
-  ca 00 00 00 08 04 ac 7f 04 ac 80 e1 00     01:07:12.519  WRITE DMA
-  ca 00 00 00 c0 01 87 6f 04 ab c0 e1 00     01:07:12.499  WRITE DMA
-  35 00 00 00 08 00 00 14 01 87 68 e0 00     01:07:12.480  WRITE DMA EXT
-  35 00 00 00 80 00 00 14 01 86 e8 e0 00     01:07:12.460  WRITE DMA EXT
-
-Error 4561 [208] occurred at disk power-on lifetime: 7046 hours (293 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 02 00 00 00 00 00 38 7f e0 00  Error: ABRT at LBA = 0x0000387f = 14463
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 10 00 02 38 00 00 00 00 38 48 e0 00     00:05:44.117  WRITE DMA
-  ef 00 10 00 02 42 ea af 00 00 00 a0 00     00:05:44.116  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:44.116  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 42 00 00 00 00 00 00 00 a0 00     00:05:44.116  IDENTIFY DEVICE
-  ef 10 03 02 42 00 00 00 00 00 00 a0 00     00:05:44.115  SET FEATURES [Set transfer mode]
+  ca 00 00 00 08 31 88 e7 00 38 50 e0 00     00:06:40.671  WRITE DMA
+  ca 00 00 00 08 08 3e 5f 31 88 e0 e2 00     00:06:40.657  WRITE DMA
+  35 00 00 00 28 00 00 14 08 3e 38 e0 00     00:06:35.941  WRITE DMA EXT
+  ca 00 00 00 08 00 38 2f 00 38 38 e0 00     00:06:35.897  WRITE DMA
+  ca 10 00 02 10 00 00 00 00 38 20 e0 00     00:06:34.921  WRITE DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -295,8 +299,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     18/25 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     25/34 Celsius
 Lifetime    Min/Max Temperature:      9/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -305,7 +309,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (119)
+Temperature History Size (Index):    478 (232)
 
 SCT Error Recovery Control:
            Read: Disabled

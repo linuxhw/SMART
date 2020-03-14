@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Jan  8 19:10:53 2019 MSK
+Local Time is:    Tue Jan  8 19:28:26 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,14 +62,14 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   099   099   062    -    3
+  1 Raw_Read_Error_Rate     PO-R--   097   097   062    -    262147
   2 Throughput_Performance  P-S---   198   198   040    -    98
   3 Spin_Up_Time            POS---   217   217   033    -    1
   4 Start_Stop_Count        -O--C-   098   098   000    -    3283
   5 Reallocated_Sector_Ct   PO--CK   001   001   005    NOW  0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   110   110   040    -    36
-  9 Power_On_Hours          -O--C-   094   094   000    -    2993
+  9 Power_On_Hours          -O--C-   094   094   000    -    2994
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   099   099   000    -    2626
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
@@ -121,73 +121,73 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [3] occurred at disk power-on lifetime: 2993 hours (124 days + 17 hours)
+Error 65535 [3] occurred at disk power-on lifetime: 2994 hours (124 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 a8 00 00 00 4e 9a 68 00 00  Error: UNC 168 sectors at LBA = 0x004e9a68 = 5151336
+  40 -- 51 00 08 00 00 00 4e 87 f0 00 00  Error: UNC 8 sectors at LBA = 0x004e87f0 = 5146608
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 4c 03 27 4e 9a 10 e0 0a     01:04:28.734  READ DMA
-  c8 00 00 00 38 4c 02 ef 4c 02 f0 e0 0a     01:04:28.732  READ DMA
-  c8 00 00 00 20 4b fe 4f 4c 02 d0 e0 0a     01:04:28.727  READ DMA
-  c8 00 00 00 38 45 37 ef 4b fe 18 e0 0a     01:04:28.726  READ DMA
-  c8 00 00 00 08 4b fe 17 45 37 e8 e0 0a     01:04:28.726  READ DMA
+  c8 00 00 00 08 38 60 2f 4e 87 f0 e0 0a     01:29:32.327  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 0a     01:29:32.326  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     01:29:32.305  IDENTIFY DEVICE
+  ef 00 03 00 46 38 60 2f 00 00 00 a0 0a     01:29:32.303  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 0a     01:29:32.303  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 65534 [2] occurred at disk power-on lifetime: 2993 hours (124 days + 17 hours)
+Error 65534 [2] occurred at disk power-on lifetime: 2994 hours (124 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 b0 00 00 00 4e 9a 60 00 00  Error: UNC 176 sectors at LBA = 0x004e9a60 = 5151328
+  40 -- 51 00 30 00 00 00 4e 87 d8 00 00  Error: UNC 48 sectors at LBA = 0x004e87d8 = 5146584
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 4e 97 6f 4e 9a 10 e0 0a     00:59:46.478  READ DMA
-  c8 00 00 00 00 4c 04 7f 4e 96 70 e0 0a     00:59:46.467  READ DMA
-  c8 00 00 00 20 c6 67 c7 4c 04 60 e0 0a     00:59:46.458  READ DMA
-  c8 00 00 00 18 c1 18 47 c6 67 b0 e0 0a     00:59:46.454  READ DMA
-  c8 00 00 00 08 c1 18 2f c1 18 40 e0 0a     00:59:46.454  READ DMA
+  c8 00 00 00 98 75 0a af 4e 87 70 e0 0a     01:29:29.239  READ DMA
+  ca 00 00 00 28 4e 7f 3f 75 0a 88 e0 0a     01:29:29.229  WRITE DMA
+  c8 00 00 00 00 75 09 ff 4e 7e 40 e0 0a     01:29:29.222  READ DMA
+  ca 00 00 00 10 52 e5 07 75 09 f0 e0 0a     01:29:29.211  WRITE DMA
+  c8 00 00 00 70 75 08 d7 52 e4 98 e0 0a     01:29:29.204  READ DMA
 
-Error 65533 [1] occurred at disk power-on lifetime: 2992 hours (124 days + 16 hours)
+Error 65533 [1] occurred at disk power-on lifetime: 2994 hours (124 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 05 10 00 00 02 5e e2 f0 02 00  Error: IDNF 1296 sectors at LBA = 0x025ee2f0 = 39772912
+  40 -- 51 00 80 00 00 00 4e a3 88 00 00  Error: UNC 128 sectors at LBA = 0x004ea388 = 5153672
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 08 00 00 00 02 5e e0 00 e0 0a     00:18:46.059  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 5e d8 00 e0 0a     00:18:46.043  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 5e d0 00 e0 0a     00:18:46.028  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 5e c8 00 e0 0a     00:18:46.011  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 5e c0 00 e0 0a     00:18:45.996  WRITE DMA EXT
+  c8 00 00 00 00 72 80 87 4e a3 08 e0 0a     01:29:22.177  READ DMA
+  35 00 00 01 78 00 00 00 72 7f 10 e0 0a     01:29:22.166  WRITE DMA EXT
+  35 00 00 01 70 00 00 00 72 7d 98 e0 0a     01:29:22.154  WRITE DMA EXT
+  c8 00 00 00 58 72 7d 8f 53 23 30 e0 0a     01:29:22.148  READ DMA
+  ca 00 00 00 60 4b c5 17 72 7d 30 e0 0a     01:29:22.136  WRITE DMA
 
-Error 65532 [0] occurred at disk power-on lifetime: 2992 hours (124 days + 16 hours)
+Error 65532 [0] occurred at disk power-on lifetime: 2994 hours (124 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 01 48 00 00 02 38 96 b8 02 00  Error: IDNF 328 sectors at LBA = 0x023896b8 = 37263032
+  40 -- 51 01 00 00 00 00 4e 79 a8 00 00  Error: UNC 256 sectors at LBA = 0x004e79a8 = 5142952
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 08 00 00 00 02 38 90 00 e0 0a     00:18:23.839  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 38 88 00 e0 0a     00:18:23.815  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 38 80 00 e0 0a     00:18:23.799  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 38 78 00 e0 0a     00:18:23.782  WRITE DMA EXT
-  35 00 00 08 00 00 00 02 38 70 00 e0 0a     00:18:23.767  WRITE DMA EXT
+  c8 00 00 00 00 6d 27 3f 4e 79 a8 e0 0a     01:29:15.401  READ DMA
+  ca 00 00 00 08 4e 67 cf 6d 27 38 e0 0a     01:29:15.390  WRITE DMA
+  c8 00 00 00 00 6d 25 77 4e 66 d0 e0 0a     01:29:15.383  READ DMA
+  ca 00 00 00 08 51 6c 6f 6d 25 70 e0 0a     01:29:15.363  WRITE DMA
+  c8 00 00 00 28 6d 21 c7 51 6c 48 e0 0a     01:29:15.354  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -218,7 +218,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (49)
+Temperature History Size (Index):    128 (67)
 
 SCT Error Recovery Control:
            Read: Disabled

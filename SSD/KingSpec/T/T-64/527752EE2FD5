@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jun  1 08:00:34 2018 +07
+Local Time is:    Mon Dec 31 21:05:48 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,22 +58,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    7
- 12 Power_Cycle_Count       ------   100   100   000    -    2
+  5 Reallocated_Sector_Ct   ------   100   100   000    -    1
+  9 Power_On_Hours          -O--CK   100   100   000    -    960
+ 12 Power_Cycle_Count       ------   100   100   000    -    230
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       ------   100   100   000    -    0
 163 Unknown_Attribute       ------   100   100   000    -    0
-164 Unknown_Attribute       ------   100   100   000    -    505
-165 Unknown_Attribute       ------   100   100   000    -    2
-166 Unknown_Attribute       ------   100   100   000    -    0
-167 Unknown_Attribute       ------   100   100   000    -    1
-192 Power-Off_Retract_Count ------   100   100   000    -    2
+164 Unknown_Attribute       ------   100   100   000    -    8794
+165 Unknown_Attribute       ------   100   100   000    -    49
+166 Unknown_Attribute       ------   100   100   000    -    1
+167 Unknown_Attribute       ------   100   100   000    -    18
+192 Power-Off_Retract_Count ------   100   100   000    -    9
 194 Temperature_Celsius     ------   100   100   000    -    33
-195 Hardware_ECC_Recovered  ------   100   100   000    -    308
-196 Reallocated_Event_Count ------   100   100   000    -    0
-241 Total_LBAs_Written      ------   100   100   000    -    665
-242 Total_LBAs_Read         ------   100   100   000    -    282
+195 Hardware_ECC_Recovered  ------   100   100   000    -    47258658
+196 Reallocated_Event_Count ------   100   100   000    -    4
+241 Total_LBAs_Written      ------   100   100   000    -    14657
+242 Total_LBAs_Read         ------   100   100   000    -    11104
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +101,13 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       799         -
+# 2  Extended offline    Completed without error       00%       678         -
+# 3  Extended offline    Completed without error       00%       603         -
+# 4  Extended offline    Completed without error       00%       462         -
+# 5  Extended offline    Completed without error       00%       348         -
+# 6  Extended offline    Completed without error       00%       157         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -120,10 +126,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4               2  ---  Lifetime Power-On Resets
-0x01  0x010  4               7  ---  Power-on Hours
-0x01  0x018  6        43646144  ---  Logical Sectors Written
-0x01  0x028  6        18491329  ---  Logical Sectors Read
+0x01  0x008  4             230  ---  Lifetime Power-On Resets
+0x01  0x010  4             960  ---  Power-on Hours
+0x01  0x018  6       960579084  ---  Logical Sectors Written
+0x01  0x028  6       727763678  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -133,7 +139,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -148,8 +154,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          112  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4          112  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

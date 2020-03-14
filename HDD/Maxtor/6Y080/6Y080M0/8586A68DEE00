@@ -7,7 +7,7 @@ User Capacity:    81 964 302 336 bytes [81,9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Dec  7 06:19:13 2015 IRKT
+Local Time is:    Sat Oct  6 21:51:26 2018 +08
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -51,33 +51,33 @@ recommended polling time: 	 (  37) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   225   224   063    -    11516
-  4 Start_Stop_Count        -O--CK   250   250   000    -    7197
-  5 Reallocated_Sector_Ct   PO--CK   253   240   063    -    4
+  3 Spin_Up_Time            POS--K   225   224   063    -    10344
+  4 Start_Stop_Count        -O--CK   249   249   000    -    9737
+  5 Reallocated_Sector_Ct   PO--CK   211   211   063    -    426
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   250   234   187    -    48546
-  9 Power_On_Minutes        -O--CK   203   203   000    -    956h+50m
+  8 Seek_Time_Performance   POS--K   253   234   187    -    37273
+  9 Power_On_Minutes        -O--CK   189   189   000    -    541h+24m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   235   235   000    -    7185
+ 12 Power_Cycle_Count       -O--CK   231   231   000    -    8912
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    31
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    2622
+194 Temperature_Celsius     -O--CK   253   253   000    -    62
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    7944
 196 Reallocated_Event_Count ---R--   124   124   000    -    129
 197 Current_Pending_Sector  ---R--   253   240   000    -    1
 198 Offline_Uncorrectable   ---R--   253   120   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   198   188   000    -    11
+199 UDMA_CRC_Error_Count    ---R--   194   185   000    -    14
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   247   000    -    55
+201 Soft_Read_Error_Rate    -O-R--   253   243   000    -    21
 202 Data_Address_Mark_Errs  -O-R--   253   175   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    19
+203 Run_Out_Cancel          PO-R--   253   252   180    -    13
 204 Soft_ECC_Correction     -O-R--   253   216   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   187   187   000    -    0
+209 Offline_Seek_Performnce --S--K   191   187   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -88,17 +88,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-Read SMART Log Directory failed: scsi error aborted command
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 66 inconsistent with error log pointer 5
+Warning: ATA error count 69 inconsistent with error log pointer 5
 
-ATA Error Count: 66 (device log contains only the most recent five errors)
+ATA Error Count: 69 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -112,6 +111,57 @@ ATA Error Count: 66 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 69 occurred at disk power-on lifetime: 17014 hours (708 days + 22 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 58 6d 24 e0  Error: ICRC, ABRT at LBA = 0x00246d58 = 2387288
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 58 6d 24 e0 00      00:31:20.112  READ DMA
+  c8 00 00 58 6c 24 e0 00      00:31:20.112  READ DMA
+  c8 00 00 58 6b 24 e0 00      00:31:20.112  READ DMA
+  c8 00 00 58 6a 24 e0 00      00:31:20.112  READ DMA
+  c8 00 00 58 69 24 e0 00      00:31:20.112  READ DMA
+
+Error 68 occurred at disk power-on lifetime: 16395 hours (683 days + 3 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 08 70 60 e0  Error: ICRC, ABRT at LBA = 0x00607008 = 6320136
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 08 70 60 e0 00      00:05:26.672  READ DMA
+  c8 00 08 48 39 60 e0 00      00:05:26.672  READ DMA
+  c8 00 08 a8 38 60 e0 00      00:05:26.672  READ DMA
+  c8 00 08 48 38 60 e0 00      00:05:26.672  READ DMA
+  c8 00 08 38 34 60 e0 00      00:05:26.672  READ DMA
+
+Error 67 occurred at disk power-on lifetime: 16344 hours (681 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 d0 d8 be e1  Error: ICRC, ABRT at LBA = 0x01bed8d0 = 29284560
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 58 d0 d8 be e1 00      02:00:26.960  READ DMA
+  c8 00 40 70 5e 0a e0 00      02:00:26.960  READ DMA
+  c8 00 58 18 5e 0a e0 00      02:00:26.960  READ DMA
+  c8 00 20 f0 5d 0a e0 00      02:00:26.960  READ DMA
+  c8 00 18 98 5d 0a e0 00      02:00:26.960  READ DMA
 
 Error 66 occurred at disk power-on lifetime: 15630 hours (651 days + 6 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -147,57 +197,6 @@ Error 65 occurred at disk power-on lifetime: 12304 hours (512 days + 16 hours)
   ca 00 80 28 a2 7e e0 00      01:28:32.416  WRITE DMA
   ca 00 18 10 a2 7e e0 00      01:28:32.416  WRITE DMA
 
-Error 64 occurred at disk power-on lifetime: 12045 hours (501 days + 21 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 00 cf 95 83 e0  Error: ICRC, ABRT at LBA = 0x008395cf = 8623567
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 06 cf 95 83 e0 00      00:07:02.464  READ DMA
-  c8 00 08 d7 4e 23 e5 00      00:07:02.448  READ DMA
-  c8 00 13 d7 95 83 e0 00      00:07:02.432  READ DMA
-  c8 00 08 df 0f 01 e1 00      00:07:02.416  READ DMA
-  c8 00 17 67 92 c2 e0 00      00:07:02.400  READ DMA
-
-Error 63 occurred at disk power-on lifetime: 11817 hours (492 days + 9 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 00 d7 f0 44 e0  Error: ICRC, ABRT at LBA = 0x0044f0d7 = 4518103
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 1a d7 f0 44 e0 00      00:04:44.384  READ DMA
-  c8 00 17 d7 2b 9f e1 00      00:04:44.368  READ DMA
-  c8 00 18 87 0c 74 e0 00      00:04:44.352  READ DMA
-  c8 00 2a af 79 32 e1 00      00:04:44.352  READ DMA
-  c8 00 16 ff e3 73 e0 00      00:04:44.352  READ DMA
-
-Error 62 occurred at disk power-on lifetime: 11817 hours (492 days + 9 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 00 9f 2b 2a e4  Error: ICRC, ABRT at LBA = 0x042a2b9f = 69872543
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 9f 2b 2a e4 00      00:47:10.864  READ DMA
-  c8 00 0f b7 52 9d e0 00      00:47:10.848  READ DMA
-  c8 00 08 07 8b 62 e0 00      00:47:10.848  READ DMA
-  c8 00 08 9f ef 55 e2 00      00:47:10.832  READ DMA
-  c8 00 08 9f e4 62 e0 00      00:47:10.832  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -217,7 +216,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

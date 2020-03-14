@@ -13,11 +13,11 @@ Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov 20 14:40:52 2019 MSK
+Local Time is:    Wed Nov 20 15:19:46 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Disabled
@@ -76,13 +76,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   044   048   000    -    44 (Min/Max 25/46)
+194 Temperature_Celsius     -O---K   029   048   000    -    29 (Min/Max 25/46)
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 201 Unknown_SSD_Attribute   PO---K   100   100   005    -    2000
-241 Total_LBAs_Written      -O--CK   100   100   000    -    5227
-242 Total_LBAs_Read         -O--CK   100   100   000    -    3373
-243 Unknown_Attribute       -O--CK   100   100   000    -    7734
+241 Total_LBAs_Written      -O--CK   100   100   000    -    5347
+242 Total_LBAs_Read         -O--CK   100   100   000    -    3542
+243 Unknown_Attribute       -O--CK   100   100   000    -    8006
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -130,7 +130,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 SCT Support Level:                   0
 Device State:                        Active (0)
-Current Temperature:                    44 Celsius
+Current Temperature:                    29 Celsius
 Power Cycle Min/Max Temperature:     25/46 Celsius
 Lifetime    Min/Max Temperature:      0/48 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -140,7 +140,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (11)
+Temperature History Size (Index):    128 (37)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -151,20 +151,20 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               8  ---  Lifetime Power-On Resets
 0x01  0x010  4               4  ---  Power-on Hours
-0x01  0x018  6            5227  ---  Logical Sectors Written
-0x01  0x020  6            5227  ---  Number of Write Commands
-0x01  0x028  6            3373  ---  Logical Sectors Read
-0x01  0x030  6            7734  ---  Number of Read Commands
+0x01  0x018  6            5347  ---  Logical Sectors Written
+0x01  0x020  6            5347  ---  Number of Write Commands
+0x01  0x028  6            3542  ---  Logical Sectors Read
+0x01  0x030  6            8006  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              44  ---  Current Temperature
+0x05  0x008  1              29  ---  Current Temperature
 0x05  0x020  1              46  ---  Highest Temperature
 0x05  0x028  1              25  ---  Lowest Temperature
 0x05  0x058  1             100  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3785  ---  Number of Hardware Resets
+0x06  0x008  4            4292  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1             100  ---  Percentage Used Endurance Indicator
@@ -185,7 +185,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           26  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

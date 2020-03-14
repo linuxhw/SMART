@@ -4,21 +4,22 @@ Device Model:     MTFDDAK256MAM-1K12
 Serial Number:    --
 LU WWN Device Id: 5 00a075 ...
 Firmware Version: 08TH
-User Capacity:    256 060 514 304 bytes [256 GB]
+User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat May 19 06:21:46 2018 MSK
+Local Time is:    Mon Jun 11 14:27:13 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     0 (reserved)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  ENABLED, PW level MAX, not locked, frozen [SEC6]
+DSN feature is:   Unavailable
+ATA Security is:  ENABLED, PW level HIGH, not locked, frozen [SEC6]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -63,17 +64,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    4
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    8192
-  9 Power_On_Hours          -O--CK   100   100   000    -    1302
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    4316
+  9 Power_On_Hours          -O--CK   100   100   000    -    1316
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4417
 170 Grown_Failing_Block_Ct  PO--CK   100   100   010    -    2
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Wear_Leveling_Count     PO--CK   097   097   010    -    116
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    68
-181 Non4k_Aligned_Access    -O---K   100   100   000    -    2112 533 1578
+173 Wear_Leveling_Count     PO--CK   097   097   010    -    119
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    73
+181 Non4k_Aligned_Access    -O---K   100   100   000    -    2123 536 1587
 183 SATA_Iface_Downshift    -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    4972
+187 Reported_Uncorrect      -O--CK   100   100   000    -    6174
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 Factory_Bad_Block_Ct    -OSR--   100   100   000    -    118
 194 Temperature_Celsius     -O---K   100   100   000    -    0
@@ -102,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x83      SL  R/W      1  Host vendor specific log
 0x84-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -116,7 +117,8 @@ SMART Extended Comprehensive Error Log Version: 1 (16383 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Aborted by host               00%      1310         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -142,23 +144,23 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (14)
+Temperature History Size (Index):    478 (119)
 
 SCT Error Recovery Control:
-           Read:     40 (4,0 seconds)
-          Write:     40 (4,0 seconds)
+           Read:     40 (4.0 seconds)
+          Write:     40 (4.0 seconds)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            4316  ---  Lifetime Power-On Resets
-0x01  0x010  4            1302  ---  Power-on Hours
-0x01  0x018  6     23402719767  ---  Logical Sectors Written
-0x01  0x020  6       432977257  ---  Number of Write Commands
-0x01  0x028  6     25837147488  ---  Logical Sectors Read
-0x01  0x030  6       372315721  ---  Number of Read Commands
+0x01  0x008  4            4417  ---  Lifetime Power-On Resets
+0x01  0x010  4            1316  ---  Power-on Hours
+0x01  0x018  6     23739987726  ---  Logical Sectors Written
+0x01  0x020  6       439844769  ---  Number of Write Commands
+0x01  0x028  6     26020594507  ---  Logical Sectors Read
+0x01  0x030  6       375105348  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4            4972  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4            6174  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1               0  ---  Current Temperature
@@ -184,10 +186,12 @@ Page  Offset Size        Value Flags Description
                                 ||__ D supports DSN
                                 |___ N normalized value
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
 
 
 

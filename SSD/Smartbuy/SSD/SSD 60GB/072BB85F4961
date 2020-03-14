@@ -2,21 +2,21 @@
 Device Model:     SSD Smartbuy 60GB
 Serial Number:    --
 Firmware Version: S8FM07.7
-User Capacity:    60 022 480 896 bytes [60,0 GB]
+User Capacity:    60 021 399 040 bytes [60,0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Jan 20 21:15:13 2016 MSK
+Local Time is:    Fri Apr 28 16:49:58 2017 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -54,14 +54,14 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    9159
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    135
-168 Unknown_Attribute       -O--C-   100   100   000    -    4271
+  9 Power_On_Hours          -O--C-   100   100   000    -    9364
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    285
+168 Unknown_Attribute       -O--C-   100   100   000    -    6494
 170 Unknown_Attribute       PO----   100   100   010    -    204
-173 Unknown_Attribute       -O--C-   100   100   000    -    4391001
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    99
-218 Unknown_Attribute       PO-R--   100   100   050    -    5
-241 Total_LBAs_Written      -O--C-   100   100   000    -    2334
+173 Unknown_Attribute       -O--C-   100   100   000    -    5111900
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    126
+218 Unknown_Attribute       PO-R--   100   100   050    -    893
+241 Total_LBAs_Written      -O--C-   100   100   000    -    2752
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -79,13 +79,13 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Invalid Error Log index = 0x4453 (reserved = 0x00)
+Invalid Error Log index = 0x4000 (reserved = 0x00)
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -94,10 +94,12 @@ Selective Self-tests/Logging not supported
 SCT Commands not supported
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1                0~ Percentage Used Endurance Indicator
-                              |_ ~ normalized value
+Page  Offset Size        Value Flags Description
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -107,8 +109,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           18  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           19  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           12  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

@@ -4,20 +4,21 @@ Device Model:     SAMSUNG HD502HJ
 Serial Number:    --
 LU WWN Device Id: 5 0024e9 ...
 Firmware Version: 1AJ10001
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat May 27 10:01:31 2017 MSK
+Local Time is:    Tue Dec 18 22:29:34 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -60,17 +61,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1
-  2 Throughput_Performance  -OS--K   055   053   000    -    4412
-  3 Spin_Up_Time            PO---K   082   078   025    -    5754
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6755
+  2 Throughput_Performance  -OS--K   055   053   000    -    4386
+  3 Spin_Up_Time            PO---K   082   078   025    -    5683
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8427
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    15764
+  9 Power_On_Hours          -O--CK   100   100   000    -    19152
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6534
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    16
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8209
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    19
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
 194 Temperature_Celsius     -O----   064   057   000    -    29 (Min/Max -2/43)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
@@ -78,9 +79,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   057   001   000    -    22872
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    23254
+200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    39466
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   100   100   000    -    6866
+225 Load_Cycle_Count        -O--CK   100   100   000    -    8555
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -260,18 +261,27 @@ Error 22871 [6] occurred at disk power-on lifetime: 9788 hours (407 days + 20 ho
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     15709         -
-# 2  Extended offline    Aborted by host               60%     15677         -
-# 3  Extended offline    Completed without error       00%     14547         -
-# 4  Extended offline    Completed without error       00%     14430         -
-# 5  Extended offline    Completed without error       00%     14096         -
-# 6  Extended offline    Completed without error       00%     13748         -
-# 7  Extended offline    Aborted by host               40%     13696         -
-# 8  Extended offline    Aborted by host               80%     13695         -
-# 9  Extended offline    Aborted by host               70%     13492         -
-#10  Extended offline    Completed without error       00%     13361         -
-#11  Short offline       Interrupted (host reset)      70%     11954         -
-#12  Short offline       Completed without error       00%     11261         -
+# 1  Extended offline    Completed without error       00%     18955         -
+# 2  Extended offline    Interrupted (host reset)      50%     18921         -
+# 3  Extended offline    Completed without error       00%     18610         -
+# 4  Extended offline    Aborted by host               30%     18524         -
+# 5  Extended offline    Aborted by host               80%     18404         -
+# 6  Extended offline    Aborted by host               80%     18319         -
+# 7  Extended offline    Aborted by host               30%     18211         -
+# 8  Extended offline    Completed without error       00%     18174         -
+# 9  Extended offline    Completed without error       00%     18116         -
+#10  Extended offline    Completed without error       00%     18050         -
+#11  Extended offline    Interrupted (host reset)      90%     18007         -
+#12  Extended offline    Interrupted (host reset)      30%     17957         -
+#13  Extended offline    Aborted by host               40%     17918         -
+#14  Extended offline    Completed without error       00%     17869         -
+#15  Extended offline    Interrupted (host reset)      20%     17733         -
+#16  Extended offline    Completed without error       00%     17533         -
+#17  Extended offline    Aborted by host               20%     17480         -
+#18  Extended offline    Completed without error       00%     17415         -
+#19  Extended offline    Completed without error       00%     17226         -
+#20  Extended offline    Interrupted (host reset)      80%     17161         -
+#21  Extended offline    Completed without error       00%     16261         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -290,7 +300,7 @@ SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     22/30 Celsius
+Power Cycle Min/Max Temperature:     24/30 Celsius
 Lifetime    Min/Max Temperature:      6/60 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -299,13 +309,15 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (44)
+Temperature History Size (Index):    128 (60)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

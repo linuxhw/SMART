@@ -1,5 +1,4 @@
 === START OF INFORMATION SECTION ===
-Model Family:     Crucial/Micron BX/MX1/2/3/500, M5/600, 1100 SSDs
 Device Model:     Micron_1100_MTFDDAV512TBN
 Serial Number:    --
 LU WWN Device Id: 5 00a075 ...
@@ -8,17 +7,16 @@ User Capacity:    512,110,190,592 bytes [512 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      < 1.8 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Nov 11 19:56:21 2019 +0330
+Local Time is:    Mon Nov 11 20:14:32 2019 +0330
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -62,28 +60,28 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   000   000    -    1
-  5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    1
+  5 Reallocated_Sector_Ct   -O--CK   100   100   010    -    1
   9 Power_On_Hours          -O--CK   100   100   000    -    2232
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1374
-171 Program_Fail_Count      -O--CK   100   100   000    -    0
-172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   095   095   000    -    86
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    420
-183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
-184 Error_Correction_Count  -O--CK   100   100   000    -    0
+171 Unknown_Attribute       -O--CK   100   100   000    -    0
+172 Unknown_Attribute       -O--CK   100   100   000    -    0
+173 Unknown_Attribute       -O--CK   095   095   000    -    86
+174 Unknown_Attribute       -O--CK   100   100   000    -    420
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
+184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 194 Temperature_Celsius     -O---K   067   044   000    -    33 (Min/Max 15/56)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   095   095   001    -    5
-206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Total_Host_Sector_Write -O--CK   100   100   000    -    47261160169
-247 Host_Program_Page_Count -O--CK   100   100   000    -    1479199868
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    452678582
-180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    2463
-210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    8
+202 Unknown_SSD_Attribute   ----CK   095   095   001    -    5
+206 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
+246 Unknown_Attribute       -O--CK   100   100   000    -    47262023593
+247 Unknown_Attribute       -O--CK   100   100   000    -    1479226850
+248 Unknown_Attribute       -O--CK   100   100   000    -    452687496
+180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    2463
+210 Unknown_Attribute       -O--CK   100   100   000    -    8
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -102,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x13       GPL     R/O      1  SATA NCQ Send and Receive log
 0x24       GPL     R/O   8000  Current Device Internal Status Data log
@@ -156,6 +154,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
+SCT Support Level:                   0
 Device State:                        Active (0)
 Current Temperature:                    33 Celsius
 Power Cycle Min/Max Temperature:     27/42 Celsius
@@ -176,10 +175,10 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            1374  ---  Lifetime Power-On Resets
 0x01  0x010  4            2232  ---  Power-on Hours
-0x01  0x018  6     47261160169  ---  Logical Sectors Written
-0x01  0x020  6       820005006  ---  Number of Write Commands
-0x01  0x028  6    166568785287  ---  Logical Sectors Read
-0x01  0x030  6      1161496120  ---  Number of Read Commands
+0x01  0x018  6     47262023593  ---  Logical Sectors Written
+0x01  0x020  6       820012322  ---  Number of Write Commands
+0x01  0x028  6    166569769343  ---  Logical Sectors Read
+0x01  0x030  6      1161502561  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4            1381  ---  Resets Between Cmd Acceptance and Completion
@@ -206,8 +205,6 @@ Page  Offset Size        Value Flags Description
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
-
-Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

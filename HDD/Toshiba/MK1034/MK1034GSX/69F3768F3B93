@@ -6,14 +6,14 @@ User Capacity:    100 030 242 816 bytes [100 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Aug  3 21:09:51 2017 MSK
+Local Time is:    Thu May  3 01:05:16 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -23,8 +23,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 249)	Self-test routine in progress...
-					90% of test remaining.
+Self-test execution status:      (  25)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -51,26 +51,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1556
-  4 Start_Stop_Count        -O--CK   100   100   000    -    2685
+  3 Spin_Up_Time            POS--K   100   100   001    -    1711
+  4 Start_Stop_Count        -O--CK   100   100   000    -    2706
   5 Reallocated_Sector_Ct   PO--CK   052   052   050    -    920
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    3473
+  9 Power_On_Hours          -O--CK   092   092   000    -    3491
  10 Spin_Retry_Count        PO--CK   153   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2583
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    1121
-193 Load_Cycle_Count        -O--CK   092   092   000    -    87030
-194 Temperature_Celsius     -O---K   100   100   000    -    46 (Min/Max 16/51)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2604
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    1126
+193 Load_Cycle_Count        -O--CK   092   092   000    -    87477
+194 Temperature_Celsius     -O---K   100   100   000    -    42 (Min/Max 16/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    918
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    5
-220 Disk_Shift              -O----   100   100   000    -    144
-222 Loaded_Hours            -O--CK   095   095   000    -    2048
+220 Disk_Shift              -O----   100   100   000    -    149
+222 Loaded_Hours            -O--CK   095   095   000    -    2063
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    463
+226 Load-in_Time            -OS--K   100   100   000    -    431
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -247,7 +247,12 @@ Error 10554 [57] occurred at disk power-on lifetime: 3423 hours (142 days + 15 h
   c8 00 00 00 08 00 36 b7 00 36 e8 e0 00     00:02:36.047  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Aborted by host               90%      3488         -
+# 2  Extended offline    Interrupted (host reset)      80%      3486         -
+# 3  Extended offline    Aborted by host               70%      3477         -
+# 4  Extended offline    Interrupted (host reset)      10%      3476         -
+# 5  Extended offline    Aborted by host               90%      3474         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -275,7 +280,7 @@ ID      Size     Value  Description
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

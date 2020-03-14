@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Nov 28 14:00:02 2015 MSK
+Local Time is:    Sat Sep 24 02:31:38 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,22 +51,22 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   116   094   006    -    114667924
+  1 Raw_Read_Error_Rate     POSR--   118   094   006    -    192028551
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5840
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6464
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   090   060   030    -    943667745
-  9 Power_On_Hours          -O--CK   080   080   000    -    18385
+  7 Seek_Error_Rate         POSR--   075   060   030    -    34301037
+  9 Power_On_Hours          -O--CK   075   075   000    -    22311
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    6019
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6643
 187 Reported_Uncorrect      -O--CK   096   096   000    -    4
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   076   048   045    -    24 (Min/Max 13/24)
-194 Temperature_Celsius     -O---K   024   052   000    -    24 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   083   074   000    -    42401740
+190 Airflow_Temperature_Cel -O---K   060   048   045    -    40 (Min/Max 27/41)
+194 Temperature_Celsius     -O---K   040   052   000    -    40 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   091   074   000    -    209719820
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   198   000    -    63
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23552  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 6
+Device Error Count: 292 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,109 +117,163 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6 [5] occurred at disk power-on lifetime: 13877 hours (578 days + 5 hours)
+Error 292 [11] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 07 00 00 00 3b 5e 3b f0 00  Error: UNC at LBA = 0x003b5e3b = 3890747
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:35.851  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:35.850  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 2f f0 00     00:00:35.849  READ MULTIPLE EXT
-  29 00 00 00 08 00 09 c5 00 50 7f f0 00     00:00:35.849  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 60 3f f0 00     00:00:35.569  READ MULTIPLE EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:55.982  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:55.864  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:57.167  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:57.167  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     05:11:57.167  NOP [Abort queued commands]
 
-Error 5 [4] occurred at disk power-on lifetime: 13877 hours (578 days + 5 hours)
+Error 291 [10] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 07 00 00 00 3b 5e 3b f0 00  Error: UNC at LBA = 0x003b5e3b = 3890747
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:35.851  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 2f f0 00     00:00:35.850  READ MULTIPLE EXT
-  29 00 00 00 08 00 09 c5 00 50 7f f0 00     00:00:35.849  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 60 3f f0 00     00:00:35.849  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 00 3f f0 00     00:00:35.569  READ MULTIPLE EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:55.982  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:55.864  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:55.395  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:55.395  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     05:11:55.395  NOP [Abort queued commands]
 
-Error 4 [3] occurred at disk power-on lifetime: 13870 hours (577 days + 22 hours)
+Error 290 [9] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 07 00 00 00 3b 5e 3b f0 00  Error: UNC at LBA = 0x003b5e3b = 3890747
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:36.278  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:36.277  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 2f f0 00     00:00:36.276  READ MULTIPLE EXT
-  29 00 00 00 08 00 09 c5 00 50 7f f0 00     00:00:36.276  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 60 3f f0 00     00:00:36.080  READ MULTIPLE EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:55.982  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:55.864  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:55.395  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:55.395  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     05:11:55.395  NOP [Abort queued commands]
 
-Error 3 [2] occurred at disk power-on lifetime: 13870 hours (577 days + 22 hours)
+Error 289 [8] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 07 00 00 00 3b 5e 3b f0 00  Error: UNC at LBA = 0x003b5e3b = 3890747
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:36.278  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 2f f0 00     00:00:36.277  READ MULTIPLE EXT
-  29 00 00 00 08 00 09 c5 00 50 7f f0 00     00:00:36.276  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 60 3f f0 00     00:00:36.276  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 00 3f f0 00     00:00:36.080  READ MULTIPLE EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:50.597  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:50.595  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:55.395  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:55.395  RECALIBRATE [OBS-4]
+  00 00 00 00 44 00 00 00 00 01 01 00 00     05:11:55.395  NOP [Abort queued commands]
 
-Error 2 [1] occurred at disk power-on lifetime: 13778 hours (574 days + 2 hours)
+Error 288 [7] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 07 00 00 00 49 5e 49 f0 00  Error: UNC at LBA = 0x00495e49 = 4808265
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  29 00 00 00 08 00 00 00 00 5e 47 f0 00     00:00:37.479  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 47 f0 00     00:00:37.478  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:37.477  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 2f f0 00     00:00:37.477  READ MULTIPLE EXT
-  29 00 00 00 08 00 09 c5 00 50 7f f0 00     00:00:37.265  READ MULTIPLE EXT
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     05:11:50.597  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     05:11:50.595  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 3f 00 00 00 a0 00     05:11:50.595  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     05:11:50.595  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     05:11:50.593  SMART RETURN STATUS
 
-Error 1 [0] occurred at disk power-on lifetime: 13778 hours (574 days + 2 hours)
+Error 287 [6] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 07 00 00 00 49 5e 49 f0 00  Error: UNC at LBA = 0x00495e49 = 4808265
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  29 00 00 00 08 00 00 00 00 5e 47 f0 00     00:00:37.479  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 37 f0 00     00:00:37.478  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 5e 2f f0 00     00:00:37.477  READ MULTIPLE EXT
-  29 00 00 00 08 00 09 c5 00 50 7f f0 00     00:00:37.477  READ MULTIPLE EXT
-  29 00 00 00 08 00 00 00 00 60 3f f0 00     00:00:37.265  READ MULTIPLE EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     02:30:23.215  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     02:30:23.215  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     02:30:23.215  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     02:30:23.097  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     02:30:24.400  NOP [Abort queued commands]
+
+Error 286 [5] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     02:30:23.215  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     02:30:23.215  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     02:30:23.215  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     02:30:23.097  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     02:30:22.624  NOP [Abort queued commands]
+
+Error 285 [4] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     02:30:23.215  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     02:30:23.215  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     02:30:23.215  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     02:30:23.097  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     02:30:22.624  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     22089         -
+# 2  Extended offline    Completed without error       00%     22008         -
+# 3  Extended offline    Completed without error       00%     21843         -
+# 4  Extended offline    Completed without error       00%     21626         -
+# 5  Extended offline    Completed without error       00%     21495         -
+# 6  Extended offline    Completed without error       00%     21396         -
+# 7  Extended offline    Completed without error       00%     21324         -
+# 8  Extended offline    Completed without error       00%     21222         -
+# 9  Extended offline    Completed without error       00%     21107         -
+#10  Extended offline    Completed without error       00%     20854         -
+#11  Extended offline    Completed without error       00%     20715         -
+#12  Extended offline    Completed without error       00%     20626         -
+#13  Extended offline    Completed without error       00%     20506         -
+#14  Extended offline    Completed without error       00%     20435         -
+#15  Extended offline    Completed without error       00%     20328         -
+#16  Extended offline    Completed without error       00%     19948         -
+#17  Extended offline    Completed without error       00%     19874         -
+#18  Extended offline    Aborted by host               70%     19787         -
+#19  Extended offline    Aborted by host               30%     19701         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

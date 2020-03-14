@@ -11,11 +11,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar 10 12:48:46 2018 UTC
+Local Time is:    Wed Oct  9 17:09:35 2019 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -57,9 +57,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   100   000    -    5043h+00m+00.000s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    697
-165 Unknown_Attribute       -O--CK   100   100   000    -    8595439651
+  9 Power_On_Hours_and_Msec -O--CK   000   100   000    -    10025h+00m+00.000s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1253
+165 Unknown_Attribute       -O--CK   100   100   000    -    51621462070
 166 Unknown_Attribute       -O--CK   100   100   000    -    1
 167 Unknown_Attribute       -O--CK   100   100   000    -    0
 168 Unknown_Attribute       -O--CK   100   100   000    -    2
@@ -68,17 +68,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 173 Unknown_SandForce_Attr  -O--CK   100   100   000    -    1
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    36
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    73
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   065   038   000    -    35 (Min/Max 0/62)
+194 Temperature_Celsius     -O---K   063   038   000    -    37 (Min/Max 0/62)
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
-230 Life_Curve_Status       -O--CK   100   100   000    -    47245688848
+230 Life_Curve_Status       -O--CK   100   100   000    -    77310656531
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 SandForce_Internal      -O--CK   100   100   000    -    266
-234 SandForce_Internal      -O--CK   100   100   000    -    327
-241 Lifetime_Writes_GiB     ----CK   253   253   000    -    303
-242 Lifetime_Reads_GiB      ----CK   253   253   000    -    147
+233 SandForce_Internal      -O--CK   100   100   000    -    322
+234 SandForce_Internal      -O--CK   100   100   000    -    423
+241 Lifetime_Writes_GiB     ----CK   253   253   000    -    379
+242 Lifetime_Reads_GiB      ----CK   253   253   000    -    182
 244 Unknown_Attribute       -O--CK   000   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -107,7 +107,8 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Offline             Aborted by host               00%      8029         -
 
 Selective Self-tests/Logging not supported
 
@@ -116,12 +117,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             697  ---  Lifetime Power-On Resets
-0x01  0x010  4            5043  ---  Power-on Hours
-0x01  0x018  6       636546499  ---  Logical Sectors Written
-0x01  0x020  6         1072613  ---  Number of Write Commands
-0x01  0x028  6       310335256  ---  Logical Sectors Read
-0x01  0x030  6         3860885  ---  Number of Read Commands
+0x01  0x008  4            1253  ---  Lifetime Power-On Resets
+0x01  0x010  4           10025  ---  Power-on Hours
+0x01  0x018  6       796540224  ---  Logical Sectors Written
+0x01  0x020  6         1979931  ---  Number of Write Commands
+0x01  0x028  6       382751820  ---  Logical Sectors Read
+0x01  0x030  6         6490882  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

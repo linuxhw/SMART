@@ -11,7 +11,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Jul 15 17:20:07 2017 CEST
+Local Time is:    Tue Aug 22 15:00:50 2017 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		( 4620) seconds.
 Offline data collection
@@ -60,27 +59,27 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    580
-  2 Throughput_Performance  -OS--K   055   055   000    -    4325
-  3 Spin_Up_Time            PO---K   083   082   025    -    5206
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5388
+  2 Throughput_Performance  -OS--K   055   055   000    -    4324
+  3 Spin_Up_Time            PO---K   083   082   025    -    5279
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5727
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8412
+  9 Power_On_Hours          -O--CK   100   100   000    -    8748
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6221
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6566
 191 G-Sense_Error_Rate      -O---K   252   252   000    -    0
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
 194 Temperature_Celsius     -O----   064   055   000    -    33 (Min/Max 7/45)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
-197 Current_Pending_Sector  -O--CK   100   100   000    -    5
+197 Current_Pending_Sector  -O--CK   100   100   000    -    7
 198 Offline_Uncorrectable   ----CK   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    863
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   100   100   000    -    6223
+225 Load_Cycle_Count        -O--CK   100   100   000    -    6568
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -260,14 +259,16 @@ Error 153 [0] occurred at disk power-on lifetime: 7085 hours (295 days + 5 hours
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      8405         -
-# 2  Extended offline    Completed: read failure       90%      8236         77138905
-1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed: read failure       90%      8535         77138905
+# 2  Extended offline    Completed without error       00%      8470         -
+# 3  Extended offline    Completed without error       00%      8405         -
+# 4  Extended offline    Completed: read failure       90%      8236         77138905
+1 of 2 failed self-tests are outdated by newer successful extended offline self-test # 2
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Completed [00% left] (0-65535)
+    1        0        0  Completed_read_failure [90% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -280,8 +281,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     30/33 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     24/32 Celsius
 Lifetime    Min/Max Temperature:     11/62 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -290,7 +291,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (40)
+Temperature History Size (Index):    128 (12)
 
 SCT Error Recovery Control:
            Read: Disabled

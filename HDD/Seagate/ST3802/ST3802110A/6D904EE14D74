@@ -7,7 +7,7 @@ User Capacity:    80 025 280 000 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Oct 14 03:27:38 2016 OMST
+Local Time is:    Fri Oct 28 12:58:38 2016 OMST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 (  27) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   080   006    -    0
+  1 Raw_Read_Error_Rate     POSR--   111   080   006    -    32160788
   3 Spin_Up_Time            PO----   094   093   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    188
+  4 Start_Stop_Count        -O--CK   100   100   020    -    199
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   077   060   030    -    51972466
-  9 Power_On_Hours          -O--CK   089   089   000    -    10200
+  7 Seek_Error_Rate         POSR--   077   060   030    -    54015255
+  9 Power_On_Hours          -O--CK   089   089   000    -    10252
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    450
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    493
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   044   045    Past 40 (Min/Max 28/41)
-194 Temperature_Celsius     -O---K   040   056   000    -    40 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   067   044   000    -    154005133
+190 Airflow_Temperature_Cel -O---K   063   044   045    Past 37 (Min/Max 37/38)
+194 Temperature_Celsius     -O---K   037   056   000    -    37 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   066   044   000    -    60649139
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23552  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 12
+Device Error Count: 13
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -116,6 +116,23 @@ Device Error Count: 12
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 13 [12] occurred at disk power-on lifetime: 9582 hours (399 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:00:09.916  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:00:09.913  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:00:09.316  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:00:04.739  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     09:10:38.209  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
 Error 12 [11] occurred at disk power-on lifetime: 9582 hours (399 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -235,23 +252,6 @@ Error 6 [5] occurred at disk power-on lifetime: 9582 hours (399 days + 6 hours)
   c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:00:55.518  SET MULTIPLE MODE
   27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:55.518  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   f8 00 00 01 00 00 00 00 00 00 00 e0 00     00:00:55.459  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-
-Error 5 [4] occurred at disk power-on lifetime: 9582 hours (399 days + 6 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:00:09.916  READ DMA
-  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:00:09.913  SET FEATURES [Set transfer mode]
-  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:00:09.316  SET MULTIPLE MODE
-  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:00:04.739  SMART RETURN STATUS
-  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     09:10:38.209  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error

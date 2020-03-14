@@ -8,7 +8,7 @@ User Capacity:    1 000 203 804 160 bytes [1,00 TB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sun Apr 24 22:33:47 2016 EEST
+Local Time is:    Mon Jul 11 22:40:46 2016 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -25,9 +25,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 247)	Self-test routine in progress...
+					70% of test remaining.
 Total time to complete Offline 
 data collection: 		(12813) seconds.
 Offline data collection
@@ -59,29 +58,29 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   016   016   011    -    25460
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8414
+  3 Spin_Up_Time            POS---   084   084   011    -    5820
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8520
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
-  8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    13442
+  8 Seek_Time_Performance   P-S--K   100   100   015    -    11035
+  9 Power_On_Hours          -O--CK   097   097   000    -    13721
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
- 11 Calibration_Retry_Count -O--C-   100   100   000    -    137
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    2611
+ 11 Calibration_Retry_Count -O--C-   100   100   000    -    219
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    2693
  13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   082   064   000    -    18 (Min/Max 14/18)
-194 Temperature_Celsius     -O---K   079   063   000    -    21 (Min/Max 14/21)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    51436
+190 Airflow_Temperature_Cel -O---K   074   064   000    -    26 (Min/Max 26/26)
+194 Temperature_Celsius     -O---K   072   063   000    -    28 (Min/Max 26/28)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2236465
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   100   099   000    -    15
-201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   099   000    -    17
+201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -100,8 +99,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      2  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x20       GPL     R/O      2  Streaming performance log [OBS-8]
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -113,7 +112,9 @@ SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Self-test routine in progress 70%     13721         -
+# 2  Extended offline    Aborted by host               80%     13719         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,9 +130,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                 21 Celsius
-Power Cycle Max Temperature:         21 Celsius
+Device State:                        DST executing in background (3)
+Current Temperature:                 28 Celsius
+Power Cycle Max Temperature:         28 Celsius
 Lifetime    Max Temperature:         38 Celsius
 
 SCT Temperature History Version:     2
@@ -139,18 +140,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (73)
+Temperature History Size (Index):    128 (32)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 ATA_READ_LOG_EXT (addr=0x04:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
-Read Device Statistics page 0 failed
+Read Device Statistics page 0x00 failed
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
@@ -159,7 +160,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           10  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -9,14 +9,14 @@ Rotation Rate:    5400 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Nov 25 00:10:19 2015 VLAT
+Local Time is:    Wed Sep 21 00:27:43 2016 SAKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -59,23 +59,23 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    123
-  3 Spin_Up_Time            POS--K   152   144   021    -    9358
-  4 Start_Stop_Count        -O--CK   096   096   000    -    4820
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    124
+  3 Spin_Up_Time            POS--K   177   144   021    -    8133
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5285
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   083   083   000    -    12689
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   079   079   000    -    16009
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1326
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    173
-193 Load_Cycle_Count        -O--CK   134   134   000    -    200990
-194 Temperature_Celsius     -O---K   112   078   000    -    40
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1791
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    192
+193 Load_Cycle_Count        -O--CK   120   120   000    -    240187
+194 Temperature_Celsius     -O---K   116   078   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    1
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    3
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -93,8 +93,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
@@ -110,7 +110,18 @@ SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     15804         -
+# 2  Extended offline    Completed without error       00%     15641         -
+# 3  Extended offline    Completed without error       00%     15567         -
+# 4  Extended offline    Completed without error       00%     15391         -
+# 5  Extended offline    Interrupted (host reset)      90%     15009         -
+# 6  Extended offline    Completed without error       00%     14933         -
+# 7  Extended offline    Completed without error       00%     14334         -
+# 8  Extended offline    Completed without error       00%     14228         -
+# 9  Extended offline    Completed without error       00%     13286         -
+#10  Extended offline    Completed without error       00%     13133         -
+#11  Extended offline    Completed without error       00%     13006         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -127,9 +138,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     22/40 Celsius
-Lifetime    Min/Max Temperature:     21/74 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     36/36 Celsius
+Lifetime    Min/Max Temperature:     20/74 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -137,13 +148,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (169)
+Temperature History Size (Index):    478 (432)
 
 SCT Error Recovery Control:
            Read:     70 (7,0 seconds)
           Write:     70 (7,0 seconds)
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -154,7 +165,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         4524  Vendor specific
+0x8000  4           47  Vendor specific
 

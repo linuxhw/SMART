@@ -8,7 +8,7 @@ User Capacity:    200 049 647 616 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Wed Apr 19 20:08:39 2017 +03
+Local Time is:    Tue Jul  2 22:13:18 2019 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -57,26 +57,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   097   051    -    0
   3 Spin_Up_Time            POS---   253   253   025    -    4288
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9214
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9975
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    27733
+  9 Power_On_Hours          -O--CK   100   100   000    -    28407
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4506
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    1542886
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4754
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    2531851
 184 End-to-End_Error        PO--CK   253   253   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    2637117
+187 Reported_Uncorrect      -O--CK   001   001   000    -    2702663
 188 Command_Timeout         -O--CK   253   253   000    -    0
-190 Airflow_Temperature_Cel -O---K   187   091   000    -    17 (Min/Max 1/49)
-194 Temperature_Celsius     -O---K   181   091   000    -    19 (Min/Max 1/49)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1542886
+190 Airflow_Temperature_Cel -O---K   145   091   000    -    31 (Min/Max 1/49)
+194 Temperature_Celsius     -O---K   133   091   000    -    35 (Min/Max 1/49)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2531851
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
-197 Current_Pending_Sector  -O--C-   100   089   000    -    7
+197 Current_Pending_Sector  -O--C-   100   089   000    -    2
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   093   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   253   253   000    -    0
                             ||||||_ K auto-keep
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 15677 (device log contains only the most recent 8 errors)
+Device Error Count: 15687 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,7 +117,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 15677 [4] occurred at disk power-on lifetime: 10060 hours (419 days + 4 hours)
+Error 15687 [6] occurred at disk power-on lifetime: 9806 hours (408 days + 14 hours)
   When the command that caused the error occurred, the device was in a reserved state.
 
   After command completion occurred, registers were:
@@ -128,9 +128,43 @@ Error 15677 [4] occurred at disk power-on lifetime: 10060 hours (419 days + 4 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  3d 11 89 11 91 00 00 11 05 c9 b1 02 11     00:00:00.000  WRITE DMA FUA EXT
+  8b 00 01 04 e6 35 00 00 e0 fd e3 00 00     00:00:00.023  [VENDOR SPECIFIC]
+  8b 00 01 04 e6 25 00 00 e0 fd e3 00 00     00:00:00.023  [VENDOR SPECIFIC]
+  00 00 18 00 80 00 00 00 06 00 b5 00 a0     00:00:28.206  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 15676 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
+Error 15686 [5] occurred at disk power-on lifetime: 9803 hours (408 days + 11 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 00 e7 00 e0 fd e3 00 00 04 25 00   at LBA = 0xe0fde7000004 = 247381106884612
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 01 04 e6 25 00 00 e0 fd e3 00 00     00:00:00.023  READ VERIFY SECTOR(S) EXT
+  42 00 01 04 e6 35 00 00 e0 fd e3 00 00     00:00:00.023  READ VERIFY SECTOR(S) EXT
+  42 00 01 04 e5 35 00 00 e0 fd e3 00 00     00:00:00.023  READ VERIFY SECTOR(S) EXT
+  42 00 01 04 e6 35 00 00 e0 fd e3 00 00     00:00:00.023  READ VERIFY SECTOR(S) EXT
+  00 00 18 00 80 00 00 00 05 00 b5 00 a0     00:00:28.206  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 15685 [4] occurred at disk power-on lifetime: 9800 hours (408 days + 8 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 00 e6 00 e0 fd e3 00 00 04 25 00   at LBA = 0xe0fde7000004 = 247381106884612
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 01 04 e5 35 00 00 e0 fd e3 00 00     00:00:00.023  WRITE FPDMA QUEUED
+  61 00 01 04 e5 25 00 00 e0 fd e3 00 00     00:00:00.023  WRITE FPDMA QUEUED
+  3d 11 89 11 91 00 00 11 07 c9 b1 00 11     00:00:00.000  WRITE DMA FUA EXT
+
+Error 15684 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
   When the command that caused the error occurred, the device was in a reserved state.
 
   After command completion occurred, registers were:
@@ -142,7 +176,7 @@ Error 15676 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
-Error 15675 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 15683 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -157,7 +191,7 @@ Error 15675 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   ac 00 00 00 40 00 e5 a6 51 22 e5 11 a7  4d+18:45:48.998  [RESERVED]
   a6 00 00 00 00 00 00 00 00 00 00 e5 00 12d+13:18:22.949  [RESERVED]
 
-Error 15674 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 15682 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -174,7 +208,7 @@ Error 15674 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 01 00 a6 e2 a7 84 e5 31 40 22 00 00  6d+17:29:22.433  NOP [Abort queued commands]
   e5 84 40 a7 31 a6 01 00 e1 00 00 22 e5     03:02:37.188  CHECK POWER MODE
 
-Error 15673 [0] occurred at disk power-on lifetime: 8870 hours (369 days + 14 hours)
+Error 15681 [0] occurred at disk power-on lifetime: 8870 hours (369 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -191,7 +225,7 @@ Error 15673 [0] occurred at disk power-on lifetime: 8870 hours (369 days + 14 ho
   01 00 00 00 cc 00 8e 00 20 03 00 00 00 12d+14:25:58.438  [RESERVED]
   a0 a6 cc e5 22 4d ac 00 98 11 51 27 00 28d+13:11:16.736  PACKET
 
-Error 15672 [7] occurred at disk power-on lifetime: 10052 hours (418 days + 20 hours)
+Error 15680 [7] occurred at disk power-on lifetime: 9796 hours (408 days + 4 hours)
   When the command that caused the error occurred, the device was in a reserved state.
 
   After command completion occurred, registers were:
@@ -202,33 +236,11 @@ Error 15672 [7] occurred at disk power-on lifetime: 10052 hours (418 days + 20 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 18 00 80 00 00 00 07 00 b5 00 a0     00:00:23.945  NOP [Reserved subcommand] [OBS-ACS-2]
-
-Error 15671 [6] occurred at disk power-on lifetime: 10053 hours (418 days + 21 hours)
-  When the command that caused the error occurred, the device was in a reserved state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  01 -- 00 e8 00 e0 fd e3 00 00 04 25 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 18 00 80 00 00 00 06 00 b5 00 a0     00:00:23.945  NOP [Reserved subcommand] [OBS-ACS-2]
-
-Error 15670 [5] occurred at disk power-on lifetime: 10059 hours (419 days + 3 hours)
-  When the command that caused the error occurred, the device was in a reserved state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  01 -- 00 e7 00 e0 fd e3 00 00 04 25 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 18 00 80 00 00 00 06 00 b5 00 a0     00:00:23.945  NOP [Reserved subcommand] [OBS-ACS-2]
+  96 00 01 04 e7 25 00 00 e0 fd e3 00 00     00:00:00.023  STANDBY [RET-4]
+  96 00 01 04 e7 35 00 00 e0 fd e3 00 00     00:00:00.023  STANDBY [RET-4]
+  96 00 01 04 e6 35 00 00 e0 fd e3 00 00     00:00:00.023  STANDBY [RET-4]
+  96 00 01 04 e7 35 00 00 e0 fd e3 00 00     00:00:00.023  STANDBY [RET-4]
+  00 00 18 00 80 00 00 00 06 00 b5 00 a0     00:00:28.206  NOP [Reserved subcommand] [OBS-ACS-2]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -252,8 +264,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    19 Celsius
-Power Cycle Min/Max Temperature:     16/19 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     19/35 Celsius
 Lifetime    Min/Max Temperature:      2/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -262,7 +274,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (117)
+Temperature History Size (Index):    128 (76)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -280,8 +292,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
@@ -289,4 +301,6 @@ ID      Size     Value  Description
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
 0x8001  2            0  Vendor specific
+
+
 

@@ -6,7 +6,7 @@ User Capacity:    60 011 642 880 bytes [60,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 3a
-Local Time is:    Wed Apr 27 18:11:45 2016 MSK
+Local Time is:    Sat May 27 16:34:40 2017 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,29 +51,29 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     P-SR--   100   100   050    -    0
-  2 Throughput_Performance  P-S---   100   100   050    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    23460
   3 Spin_Up_Time            POS---   100   100   050    -    0
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1479
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   100   100   050    -    293
-  8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   076   076   000    -    749652
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1859
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1
+  7 Seek_Error_Rate         POSR--   100   100   050    -    87
+  8 Seek_Time_Performance   P-S---   100   100   050    -    1252
+  9 Power_On_Hours          -O--CK   075   075   000    -    772739
  10 Spin_Retry_Count        PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1036
-191 G-Sense_Error_Rate      -O-R--   100   065   000    -    4289648383
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    78
-193 Load_Cycle_Count        -O--CK   085   085   000    -    1589238657621
-194 Temperature_Celsius     -O---K   100   064   000    -    37 (Min/Max 15/58)
-195 Hardware_ECC_Recovered  -O-RC-   100   055   000    -    304
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1354
+191 G-Sense_Error_Rate      -O-R--   100   065   000    -    4291887103
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    92
+193 Load_Cycle_Count        -O--CK   083   083   000    -    1731190690672
+194 Temperature_Celsius     -O---K   098   064   000    -    41 (Min/Max 15/58)
+195 Hardware_ECC_Recovered  -O-RC-   100   055   000    -    326
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   PO--C-   100   100   050    -    0
 201 Soft_Read_Error_Rate    -O--C-   100   100   000    -    0
 223 Load_Retry_Count        -O--C-   100   100   000    -    0
-230 Head_Amplitude          -O--CK   076   076   000    -    721971
-250 Read_Error_Retry_Rate   -O-R--   100   100   000    -    75
+230 Head_Amplitude          -O--CK   076   076   000    -    743294
+250 Read_Error_Retry_Rate   -O-R--   100   080   000    -    170
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,12 +98,95 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 4
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 occurred at disk power-on lifetime: 12871 hours (536 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 05 83 5f d4 e4  Error: UNC 5 sectors at LBA = 0x04d45f83 = 81026947
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 80 5f d4 e4 00      00:28:20.540  READ DMA
+  ca 00 00 00 07 b2 e4 00      00:12:11.060  WRITE DMA
+  ca 00 00 00 06 b2 e4 00      00:12:11.050  WRITE DMA
+  ca 00 00 00 05 b2 e4 00      00:12:11.040  WRITE DMA
+  ca 00 00 00 04 b2 e4 00      00:12:11.040  WRITE DMA
+
+Error 3 occurred at disk power-on lifetime: 12871 hours (536 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 05 83 5f d4 e4  Error: UNC 5 sectors at LBA = 0x04d45f83 = 81026947
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 80 5f d4 e4 00      00:11:57.790  READ DMA
+  f8 00 00 00 00 00 e0 00      00:11:57.790  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      00:11:57.780  IDENTIFY DEVICE
+  ef 03 45 00 00 00 a0 00      00:11:57.770  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 e0 00      00:11:57.770  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 2 occurred at disk power-on lifetime: 12871 hours (536 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 05 83 5f d4 e4  Error: UNC 5 sectors at LBA = 0x04d45f83 = 81026947
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 80 5f d4 e4 00      00:11:55.310  READ DMA
+  ca 00 00 00 42 ae e4 00      00:11:55.300  WRITE DMA
+  ca 00 00 00 41 ae e4 00      00:11:55.300  WRITE DMA
+  ca 00 00 00 40 ae e4 00      00:11:55.290  WRITE DMA
+  ca 00 00 00 3f ae e4 00      00:11:55.280  WRITE DMA
+
+Error 1 occurred at disk power-on lifetime: 12871 hours (536 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 7d 83 5f d4 e4  Error: UNC 125 sectors at LBA = 0x04d45f83 = 81026947
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 00 5f d4 e4 00      00:11:51.470  READ DMA
+  c8 00 00 00 5e d4 e4 00      00:11:51.460  READ DMA
+  c8 00 00 00 5d d4 e4 00      00:11:51.450  READ DMA
+  c8 00 00 00 5c d4 e4 00      00:11:51.440  READ DMA
+  c8 00 00 00 5b d4 e4 00      00:11:51.440  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     12580         -
+# 2  Extended offline    Aborted by host               50%     12529         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

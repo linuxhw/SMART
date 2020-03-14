@@ -7,7 +7,7 @@ User Capacity:    250 058 268 160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Sep  4 11:29:41 2015 MSK
+Local Time is:    Mon Jun  4 21:42:25 2018 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   089   006    -    227959714
+  1 Raw_Read_Error_Rate     POSR--   105   089   006    -    8508874
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   094   094   020    -    6153
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7623
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    488711270
-  9 Power_On_Hours          -O--CK   086   086   000    -    12394
+  7 Seek_Error_Rate         POSR--   087   060   030    -    635957265
+  9 Power_On_Hours          -O--CK   082   082   000    -    16035
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4446
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5914
 187 Reported_Uncorrect      -O--CK   001   001   000    -    6085
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   069   050   045    -    31 (Min/Max 23/31)
-194 Temperature_Celsius     -O---K   031   050   000    -    31 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   055   000    -    108560340
+190 Airflow_Temperature_Cel -O---K   066   050   045    -    34 (Min/Max 24/34)
+194 Temperature_Celsius     -O---K   034   050   000    -    34 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   073   055   000    -    177427382
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   116   000    -    2519
@@ -86,8 +86,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -119,90 +119,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 8398 [17] occurred at disk power-on lifetime: 9717 hours (404 days + 21 hours)
+Error 8398 [17] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 01 63 00 93 b4 e0 00  Error: UNC at LBA = 0x1630093b4 = 5955949492
+  40 -- 51 00 00 00 00 22 00 63 1b e0 00  Error: UNC at LBA = 0x2200631b = 570450715
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 01 63 00 93 80 e0 00     00:16:08.930  READ DMA EXT
-  25 00 00 00 80 00 01 63 00 93 00 e0 00     00:16:08.928  READ DMA EXT
-  25 00 00 00 80 00 01 62 00 93 80 e0 00     00:16:08.926  READ DMA EXT
-  25 00 00 00 80 00 01 62 00 93 00 e0 00     00:16:08.924  READ DMA EXT
-  25 00 00 00 80 00 01 61 00 93 80 e0 00     00:16:08.922  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 c0 e0 00     00:01:27.325  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 40 e0 00     00:01:27.323  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 c0 e0 00     00:01:27.321  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 40 e0 00     00:01:27.307  READ DMA EXT
+  25 00 00 00 80 00 00 1f 00 63 c0 e0 00     00:01:27.307  READ DMA EXT
 
-Error 8397 [16] occurred at disk power-on lifetime: 9717 hours (404 days + 21 hours)
+Error 8397 [16] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 01 47 00 7d 52 e0 00  Error: UNC at LBA = 0x147007d52 = 5486181714
+  40 -- 51 00 00 00 00 22 00 63 1b e0 00  Error: UNC at LBA = 0x2200631b = 570450715
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 01 47 00 7d 00 e0 00     00:15:40.855  READ DMA EXT
-  25 00 00 00 80 00 01 46 00 7d 80 e0 00     00:15:40.853  READ DMA EXT
-  25 00 00 00 80 00 01 46 00 7d 00 e0 00     00:15:40.851  READ DMA EXT
-  25 00 00 00 80 00 01 45 00 7d 80 e0 00     00:15:40.849  READ DMA EXT
-  25 00 00 00 80 00 01 45 00 7d 00 e0 00     00:15:40.847  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 18 e0 00     00:01:23.157  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 10 e0 00     00:01:23.156  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 08 e0 00     00:01:23.155  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 00 e0 00     00:01:23.155  READ DMA EXT
+  25 00 00 00 08 00 00 21 00 63 f8 e0 00     00:01:23.154  READ DMA EXT
 
-Error 8396 [15] occurred at disk power-on lifetime: 9717 hours (404 days + 21 hours)
+Error 8396 [15] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 01 52 00 00 95 e0 00  Error: UNC at LBA = 0x152000095 = 5670699157
+  40 -- 51 00 00 00 00 22 00 63 1b e0 00  Error: UNC at LBA = 0x2200631b = 570450715
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 01 52 00 00 80 e0 00     00:13:20.987  READ DMA EXT
-  25 00 00 00 80 00 01 52 00 00 00 e0 00     00:13:20.985  READ DMA EXT
-  25 00 00 00 80 00 01 51 00 00 80 e0 00     00:13:20.983  READ DMA EXT
-  25 00 00 00 80 00 01 51 00 00 00 e0 00     00:13:20.981  READ DMA EXT
-  25 00 00 00 80 00 01 50 00 00 80 e0 00     00:13:20.979  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 c0 e0 00     00:01:35.860  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 40 e0 00     00:01:35.857  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 c0 e0 00     00:01:35.855  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 40 e0 00     00:01:35.852  READ DMA EXT
+  25 00 00 00 80 00 00 1f 00 63 c0 e0 00     00:01:35.850  READ DMA EXT
 
-Error 8395 [14] occurred at disk power-on lifetime: 9717 hours (404 days + 21 hours)
+Error 8395 [14] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 01 2c 00 00 26 e0 00  Error: UNC at LBA = 0x12c000026 = 5033164838
+  40 -- 51 00 00 00 00 22 00 63 1b e0 00  Error: UNC at LBA = 0x2200631b = 570450715
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 01 2c 00 00 00 e0 00     00:13:12.386  READ DMA EXT
-  25 00 00 00 80 00 01 2c 00 00 80 e0 00     00:13:12.384  READ DMA EXT
-  25 00 00 00 80 00 01 2c 00 00 00 e0 00     00:13:12.382  READ DMA EXT
-  25 00 00 00 80 00 01 2b 00 00 80 e0 00     00:13:12.380  READ DMA EXT
-  25 00 00 00 80 00 01 2b 00 00 00 e0 00     00:13:12.377  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 18 e0 00     00:01:31.633  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 10 e0 00     00:01:31.633  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 08 e0 00     00:01:31.632  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 00 e0 00     00:01:31.631  READ DMA EXT
+  25 00 00 00 08 00 00 21 00 63 f8 e0 00     00:01:31.630  READ DMA EXT
 
-Error 8394 [13] occurred at disk power-on lifetime: 9717 hours (404 days + 21 hours)
+Error 8394 [13] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 01 2c 00 00 26 e0 00  Error: UNC at LBA = 0x12c000026 = 5033164838
+  40 -- 51 00 00 00 00 22 00 63 1b e0 00  Error: UNC at LBA = 0x2200631b = 570450715
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 01 2c 00 00 00 e0 00     00:13:12.386  READ DMA EXT
-  25 00 00 00 80 00 01 2b 00 00 80 e0 00     00:13:12.384  READ DMA EXT
-  25 00 00 00 80 00 01 2b 00 00 00 e0 00     00:13:12.382  READ DMA EXT
-  25 00 00 00 80 00 01 2a 00 00 80 e0 00     00:13:12.380  READ DMA EXT
-  25 00 00 00 80 00 01 2a 00 00 00 e0 00     00:13:12.377  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 c0 e0 00     00:01:27.325  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 40 e0 00     00:01:27.323  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 c0 e0 00     00:01:27.321  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 40 e0 00     00:01:27.307  READ DMA EXT
+  25 00 00 00 80 00 00 1f 00 63 c0 e0 00     00:01:27.307  READ DMA EXT
 
 Error 8393 [12] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -215,11 +215,11 @@ Error 8393 [12] occurred at disk power-on lifetime: 9711 hours (404 days + 15 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 22 00 63 18 e0 00     00:02:14.359  READ DMA EXT
-  25 00 00 00 08 00 00 22 00 63 10 e0 00     00:02:14.358  READ DMA EXT
-  25 00 00 00 08 00 00 22 00 63 08 e0 00     00:02:14.357  READ DMA EXT
-  25 00 00 00 08 00 00 22 00 63 00 e0 00     00:02:14.356  READ DMA EXT
-  25 00 00 00 08 00 00 21 00 63 f8 e0 00     00:02:14.355  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 18 e0 00     00:01:23.157  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 10 e0 00     00:01:23.156  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 08 e0 00     00:01:23.155  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 00 e0 00     00:01:23.155  READ DMA EXT
+  25 00 00 00 08 00 00 21 00 63 f8 e0 00     00:01:23.154  READ DMA EXT
 
 Error 8392 [11] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -232,11 +232,11 @@ Error 8392 [11] occurred at disk power-on lifetime: 9711 hours (404 days + 15 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 00 21 00 63 c0 e0 00     00:02:10.142  READ DMA EXT
-  25 00 00 00 80 00 00 21 00 63 40 e0 00     00:02:10.139  READ DMA EXT
-  25 00 00 00 80 00 00 20 00 63 c0 e0 00     00:02:10.137  READ DMA EXT
-  25 00 00 00 80 00 00 20 00 63 40 e0 00     00:02:10.135  READ DMA EXT
-  25 00 00 00 80 00 00 1f 00 63 c0 e0 00     00:02:10.133  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 c0 e0 00     00:01:35.860  READ DMA EXT
+  25 00 00 00 80 00 00 21 00 63 40 e0 00     00:01:35.857  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 c0 e0 00     00:01:35.855  READ DMA EXT
+  25 00 00 00 80 00 00 20 00 63 40 e0 00     00:01:35.852  READ DMA EXT
+  25 00 00 00 80 00 00 1f 00 63 c0 e0 00     00:01:35.850  READ DMA EXT
 
 Error 8391 [10] occurred at disk power-on lifetime: 9711 hours (404 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -249,11 +249,11 @@ Error 8391 [10] occurred at disk power-on lifetime: 9711 hours (404 days + 15 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 22 00 63 18 e0 00     00:02:05.892  READ DMA EXT
-  25 00 00 00 08 00 00 22 00 63 10 e0 00     00:02:05.891  READ DMA EXT
-  25 00 00 00 08 00 00 22 00 63 08 e0 00     00:02:05.891  READ DMA EXT
-  25 00 00 00 08 00 00 22 00 63 00 e0 00     00:02:05.890  READ DMA EXT
-  25 00 00 00 08 00 00 21 00 63 f8 e0 00     00:02:05.889  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 18 e0 00     00:01:31.633  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 10 e0 00     00:01:31.633  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 08 e0 00     00:01:31.632  READ DMA EXT
+  25 00 00 00 08 00 00 22 00 63 00 e0 00     00:01:31.631  READ DMA EXT
+  25 00 00 00 08 00 00 21 00 63 f8 e0 00     00:01:31.630  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -272,19 +272,19 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            4  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
 
 

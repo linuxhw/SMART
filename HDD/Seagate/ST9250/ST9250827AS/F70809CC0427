@@ -4,19 +4,20 @@ Device Model:     ST9250827AS
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: 3.AAA
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Apr 27 12:12:02 2017 MSK
+Local Time is:    Sun Nov 11 00:36:15 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -28,9 +29,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -58,22 +58,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1069
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   076   060   030    -    34732815087
-  9 Power_On_Hours          -O--CK   097   097   000    -    3275
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1637
+  5 Reallocated_Sector_Ct   PO--CK   097   097   036    -    125
+  7 Seek_Error_Rate         POSR--   076   060   030    -    34746938305
+  9 Power_On_Hours          -O--CK   095   095   000    -    4700
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1069
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1652
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   050   017   045    Past 50 (Min/Max 17/83 #1346)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    6
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    556
-193 Load_Cycle_Count        -O---K   074   074   000    -    52846
-194 Temperature_Celsius     -O-RC-   050   083   000    -    50 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   064   053   000    -    24986893
-197 Current_Pending_Sector  ----C-   100   100   000    -    0
-198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   044   017   045    NOW  56 (Min/Max 17/83 #1382)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    7
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    888
+193 Load_Cycle_Count        -O---K   010   010   000    -    180206
+194 Temperature_Celsius     -O-RC-   056   083   000    -    56 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   052   047   000    -    170779009
+197 Current_Pending_Sector  ----C-   099   001   000    -    40
+198 Offline_Uncorrectable   -OSRCK   099   001   000    -    40
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O--CK   100   253   000    -    0
 202 Data_Address_Mark_Errs  ------   100   253   000    -    0
@@ -95,7 +95,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07           SL  R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10           SL  R/O      1  SATA NCQ Queued Error log
+0x10           SL  R/O      1  NCQ Command Error log
 0x11           SL  R/O      1  SATA Phy Event Counters log
 0x20           SL  R/O      1  Streaming performance log [OBS-8]
 0x21           SL  R/O      1  Write stream error log
@@ -118,7 +118,11 @@ No Errors Logged
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      90%      4234         -
+# 2  Extended offline    Aborted by host               10%      4100         -
+# 3  Extended offline    Completed without error       00%      3735         -
+# 4  Extended offline    Aborted by host               90%      3504         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -135,7 +139,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 50 Celsius
+Current Temperature:                 56 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -144,6 +148,8 @@ SCT Data Table command not supported
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -155,6 +161,6 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2           11  Vendor specific
+0x8003  2            9  Vendor specific
 0x8004  2            0  Vendor specific
 

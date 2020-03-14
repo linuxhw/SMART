@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Jul 28 13:59:36 2017 CEST
+Local Time is:    Tue Aug  1 18:40:42 2017 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -62,17 +62,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   110   110   040    -    4360
   3 Spin_Up_Time            POS---   132   132   033    -    2
-  4 Start_Stop_Count        -O--C-   096   096   000    -    7377
+  4 Start_Stop_Count        -O--C-   096   096   000    -    7391
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   115   115   040    -    34
-  9 Power_On_Hours          -O--C-   068   068   000    -    14019
+  9 Power_On_Hours          -O--C-   068   068   000    -    14036
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    7065
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    7079
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    197
-193 Load_Cycle_Count        -O--C-   080   080   000    -    203054
-194 Temperature_Celsius     -O----   141   141   000    -    39 (Min/Max -1/46)
+193 Load_Cycle_Count        -O--C-   080   080   000    -    205301
+194 Temperature_Celsius     -O----   189   189   000    -    29 (Min/Max -1/46)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    17
 197 Current_Pending_Sector  -O---K   100   100   000    -    13
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -188,8 +188,9 @@ Error 51 [2] occurred at disk power-on lifetime: 12453 hours (518 days + 21 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               90%     13742         -
-# 2  Short offline       Completed without error       00%     13742         -
+# 1  Extended offline    Completed: read failure       90%     14025         8678554
+# 2  Extended offline    Aborted by host               90%     13742         -
+# 3  Short offline       Completed without error       00%     13742         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -206,8 +207,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     35/40 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     25/29 Celsius
 Lifetime    Min/Max Temperature:     -1/46 Celsius
 Lifetime    Average Temperature:        32 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -217,7 +218,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (254)
+Temperature History Size (Index):    478 (357)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -230,8 +231,8 @@ ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0005  2            0  R_ERR response for non-data FIS
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

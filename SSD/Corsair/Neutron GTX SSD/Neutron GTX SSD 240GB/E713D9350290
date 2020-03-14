@@ -8,7 +8,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 6.0 Gb/s
-Local Time is:    Mon Jul 27 05:34:48 2015 CEST
+Local Time is:    Mon Jul 27 06:42:06 2015 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -54,17 +54,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   098   098   036    -    293
-  9 Power_On_Hours          -O--CK   097   097   000    -    3116
+  9 Power_On_Hours          -O--CK   097   097   000    -    3117
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1683
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    300
 181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    300
-194 Temperature_Celsius     -O----   036   000   000    -    36 (0 18 0 147 0)
+194 Temperature_Celsius     -O----   037   000   000    -    37 (0 18 0 147 0)
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   000    -    0
 231 Temperature_Celsius     PO--CK   096   096   010    -    5
-234 Unknown_Attribute       -O--CK   100   100   000    -    54416
+234 Unknown_Attribute       -O--CK   100   100   000    -    54417
 241 Total_LBAs_Written      -O--CK   100   100   000    -    4857
 242 Total_LBAs_Read         -O--CK   100   100   000    -    4008
 250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    2002
@@ -89,7 +89,7 @@ Address    Access  R/W   Size  Description
 0x11       GPL     R/O      1  SATA Phy Event Counters
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 13083 (device log contains only the most recent 20 errors)
+Device Error Count: 13124 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -105,7 +105,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 13083 [2] occurred at disk power-on lifetime: 3116 hours (129 days + 20 hours)
+Error 13124 [3] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -116,30 +116,13 @@ Error 13083 [2] occurred at disk power-on lifetime: 3116 hours (129 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:23:06.500  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 00 d1 00 01 00 00 00 c2 4f 01 00 00     00:23:06.500  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     00:23:06.500  SMART READ DATA
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     00:23:06.490  SMART RETURN STATUS
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:23:06.490  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     01:25:37.030  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  b0 00 d1 00 01 00 00 00 c2 4f 01 00 00     01:25:37.030  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     01:25:37.030  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     01:25:37.020  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     01:25:37.020  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 13082 [1] occurred at disk power-on lifetime: 3116 hours (129 days + 20 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 e0 e0     00:22:54.790  READ DMA EXT
-  b0 00 da 00 00 00 00 00 c2 4f 00 e0 e0     00:22:36.610  SMART RETURN STATUS
-  b0 00 d8 00 00 00 00 00 c2 4f 00 e0 e0     00:22:36.610  SMART ENABLE OPERATIONS
-  42 00 00 00 01 00 00 00 fa c5 3e e0 e0     00:22:36.610  READ VERIFY SECTOR(S) EXT
-  ec 00 00 00 01 00 00 00 00 00 00 e0 e0     00:22:36.610  IDENTIFY DEVICE
-
-Error 13081 [0] occurred at disk power-on lifetime: 3116 hours (129 days + 20 hours)
+Error 13123 [2] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -150,13 +133,13 @@ Error 13081 [0] occurred at disk power-on lifetime: 3116 hours (129 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.170  FLUSH CACHE EXT
-  61 00 08 00 20 00 00 0e c0 19 00 40 40     00:22:31.160  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.150  FLUSH CACHE EXT
-  61 00 08 00 10 00 00 0d 84 d4 90 40 40     00:22:31.150  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.140  FLUSH CACHE EXT
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.170  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.180  NOP [Abort queued commands]
+  25 00 00 00 6b 00 00 00 00 00 02 e0 e0     01:25:15.170  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 01 e0 e0     01:25:15.170  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 e0     01:25:15.170  READ DMA EXT
 
-Error 13080 [19] occurred at disk power-on lifetime: 3116 hours (129 days + 20 hours)
+Error 13122 [1] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -167,13 +150,47 @@ Error 13080 [19] occurred at disk power-on lifetime: 3116 hours (129 days + 20 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.170  FLUSH CACHE EXT
-  61 00 08 00 20 00 00 0e c0 19 00 40 40     00:22:31.160  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.150  FLUSH CACHE EXT
-  61 00 08 00 10 00 00 0d 84 d4 90 40 40     00:22:31.150  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.140  FLUSH CACHE EXT
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.170  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.180  NOP [Abort queued commands]
+  25 00 00 00 6b 00 00 00 00 00 02 e0 e0     01:25:15.170  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 01 e0 e0     01:25:15.170  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 e0     01:25:15.170  READ DMA EXT
 
-Error 13079 [18] occurred at disk power-on lifetime: 3116 hours (129 days + 20 hours)
+Error 13121 [0] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 50 00 01 00 00 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.170  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.180  NOP [Abort queued commands]
+  25 00 00 00 6b 00 00 00 00 00 02 e0 e0     01:25:15.170  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 01 e0 e0     01:25:15.170  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 e0     01:25:15.170  READ DMA EXT
+
+Error 13120 [19] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 50 00 01 00 00 00 c2 4f 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.160  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 e0 e0     01:25:15.160  NOP [Abort queued commands]
+  b0 00 da 00 00 00 00 00 c2 4f 00 e0 e0     01:25:12.080  SMART RETURN STATUS
+  b0 00 d8 00 00 00 00 00 c2 4f 00 e0 e0     01:25:12.080  SMART ENABLE OPERATIONS
+  42 00 00 00 01 00 00 00 fa c5 3e e0 e0     01:25:12.080  READ VERIFY SECTOR(S) EXT
+
+Error 13119 [18] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -184,62 +201,45 @@ Error 13079 [18] occurred at disk power-on lifetime: 3116 hours (129 days + 20 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.170  FLUSH CACHE EXT
-  61 00 08 00 20 00 00 0e c0 19 00 40 40     00:22:31.160  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.150  FLUSH CACHE EXT
-  61 00 08 00 10 00 00 0d 84 d4 90 40 40     00:22:31.150  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     00:22:31.140  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     01:25:07.050  FLUSH CACHE EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART RETURN STATUS
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART READ DATA
+  b0 00 d1 00 01 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     01:19:04.610  CHECK POWER MODE
 
-Error 13078 [17] occurred at disk power-on lifetime: 3115 hours (129 days + 19 hours)
+Error 13118 [17] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 08  Error: ABRT
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 40     00:00:18.920  SET FEATURES [Enable APM]
-  60 00 10 00 a8 00 00 08 41 51 f0 40 40     00:00:18.910  READ FPDMA QUEUED
-  60 00 40 00 a0 00 00 08 40 56 c0 40 40     00:00:18.910  READ FPDMA QUEUED
-  60 00 b8 00 98 00 00 08 40 56 08 40 40     00:00:18.910  READ FPDMA QUEUED
-  60 00 08 00 90 00 00 08 40 56 00 40 40     00:00:18.910  READ FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     01:25:07.050  FLUSH CACHE EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART RETURN STATUS
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART READ DATA
+  b0 00 d1 00 01 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     01:19:04.610  CHECK POWER MODE
 
-Error 13077 [16] occurred at disk power-on lifetime: 3115 hours (129 days + 19 hours)
+Error 13117 [16] occurred at disk power-on lifetime: 3117 hours (129 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 39 00 00 18 d8 d7 07 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 07 00 00 18 d8 d7 00 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 38 00 00 18 d8 d6 c8 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 08 00 00 18 d8 d6 c0 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 37 00 00 18 d8 d6 89 e0 e0     00:00:11.760  READ DMA EXT
-
-Error 13076 [15] occurred at disk power-on lifetime: 3115 hours (129 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 39 00 00 18 d8 d7 07 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 07 00 00 18 d8 d7 00 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 38 00 00 18 d8 d6 c8 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 08 00 00 18 d8 d6 c0 e0 e0     00:00:11.760  READ DMA EXT
-  25 00 00 00 37 00 00 18 d8 d6 89 e0 e0     00:00:11.760  READ DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 a0     01:25:07.050  FLUSH CACHE EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART RETURN STATUS
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART READ DATA
+  b0 00 d1 00 01 00 00 00 c2 4f 00 00 00     01:19:04.610  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     01:19:04.610  CHECK POWER MODE
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -272,7 +272,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           37  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

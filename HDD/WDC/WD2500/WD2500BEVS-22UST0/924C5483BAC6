@@ -4,17 +4,18 @@ Device Model:     WDC WD2500BEVS-22UST0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01A01
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-Local Time is:    Sun Sep  1 12:40:56 2019 MSK
+Local Time is:    Thu Jan  2 05:46:26 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -22,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,16 +61,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    2
   3 Spin_Up_Time            PO----   187   186   021    -    1608
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7050
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7678
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   082   082   000    -    13567
+  9 Power_On_Hours          -O--CK   080   080   000    -    14817
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5377
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    471
-193 Load_Cycle_Count        -O--CK   133   133   000    -    202155
-194 Temperature_Celsius     -O---K   118   095   000    -    29
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5821
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    545
+193 Load_Cycle_Count        -O--CK   130   130   000    -    210343
+194 Temperature_Celsius     -O---K   119   095   000    -    28
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   199   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -92,7 +93,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -106,21 +107,23 @@ SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 Invalid Error Log index = 0x0000 (reserved = 0x00)
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     11961         -
-# 2  Short offline       Completed without error       00%     11840         -
-# 3  Short offline       Completed: read failure       90%     11668         320398441
-# 4  Short offline       Completed: read failure       90%     11638         320398441
-# 5  Short offline       Completed without error       00%     11232         -
-# 6  Short offline       Completed without error       00%     11221         -
-# 7  Short offline       Completed without error       00%     11219         -
-# 8  Short offline       Completed: read failure       40%     10930         292734057
-# 9  Short offline       Aborted by host               30%     10821         -
-#10  Short offline       Completed without error       00%     10821         -
-#11  Short offline       Completed without error       00%     10797         -
-#12  Short offline       Completed without error       00%     10599         -
-#13  Short offline       Aborted by host               70%      9383         -
-#14  Extended offline    Completed without error       00%      8185         -
-#15  Extended offline    Completed without error       00%      6934         -
+# 1  Extended offline    Completed without error       00%     13745         -
+# 2  Short offline       Completed without error       00%     11961         -
+# 3  Short offline       Completed without error       00%     11840         -
+# 4  Short offline       Completed: read failure       90%     11668         320398441
+# 5  Short offline       Completed: read failure       90%     11638         320398441
+# 6  Short offline       Completed without error       00%     11232         -
+# 7  Short offline       Completed without error       00%     11221         -
+# 8  Short offline       Completed without error       00%     11219         -
+# 9  Short offline       Completed: read failure       40%     10930         292734057
+#10  Short offline       Aborted by host               30%     10821         -
+#11  Short offline       Completed without error       00%     10821         -
+#12  Short offline       Completed without error       00%     10797         -
+#13  Short offline       Completed without error       00%     10599         -
+#14  Short offline       Aborted by host               70%      9383         -
+#15  Extended offline    Completed without error       00%      8185         -
+#16  Extended offline    Completed without error       00%      6934         -
+3 of 3 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -136,10 +139,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     27/29 Celsius
-Lifetime    Min/Max Temperature:     27/54 Celsius
+Device State:                        Active (0)
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     28/28 Celsius
+Lifetime    Min/Max Temperature:     28/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -150,13 +153,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:            1/85 Celsius
-Temperature History Size (Index):    128 (22)
+Temperature History Size (Index):    128 (15)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -167,6 +172,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         2218  Vendor specific
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          582  Vendor specific
 

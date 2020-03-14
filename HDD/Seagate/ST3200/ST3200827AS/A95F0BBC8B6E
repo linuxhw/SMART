@@ -7,7 +7,7 @@ User Capacity:    200 049 647 616 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Jul 17 01:27:55 2016 SAKT
+Local Time is:    Sun Jul 17 02:57:11 2016 YAKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 (  70) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   110   088   006    -    25500703
+  1 Raw_Read_Error_Rate     POSR--   103   088   006    -    90933167
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7575
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7578
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    665553212
-  9 Power_On_Hours          -O--CK   062   062   000    -    33719
+  7 Seek_Error_Rate         POSR--   087   060   030    -    665654485
+  9 Power_On_Hours          -O--CK   062   062   000    -    33722
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5595
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5598
 187 Reported_Uncorrect      -O--CK   099   099   000    -    1
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   052   045    -    36 (Min/Max 35/36)
-194 Temperature_Celsius     -O---K   036   048   000    -    36 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   052   000    -    161153988
+190 Airflow_Temperature_Cel -O---K   063   052   045    -    37 (Min/Max 35/37)
+194 Temperature_Celsius     -O---K   037   048   000    -    37 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   066   052   000    -    242698522
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -86,8 +86,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -169,11 +169,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

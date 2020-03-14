@@ -11,13 +11,14 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu May  3 20:32:44 2018 UTC
+Local Time is:    Tue Nov  6 19:32:06 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -25,8 +26,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -61,26 +62,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   086   086   025    -    4455
-  4 Start_Stop_Count        -O--CK   100   100   000    -    220
+  3 Spin_Up_Time            PO---K   086   086   025    -    4460
+  4 Start_Stop_Count        -O--CK   100   100   000    -    314
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    438
+  9 Power_On_Hours          -O--CK   100   100   000    -    519
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    4
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    194
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    1
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    261
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    2
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   059   000    -    30 (Min/Max 19/42)
+194 Temperature_Celsius     -O----   064   053   000    -    25 (Min/Max 19/47)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    122
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    123
 223 Load_Retry_Count        -O--CK   100   100   000    -    4
-225 Load_Cycle_Count        -O--CK   100   100   000    -    8569
+225 Load_Cycle_Count        -O--CK   100   100   000    -    9451
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xc0-0xdf  GPL,SL  VS      16  Device vendor specific log
@@ -128,9 +129,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     30/30 Celsius
-Lifetime    Min/Max Temperature:     17/42 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     24/26 Celsius
+Lifetime    Min/Max Temperature:     17/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -138,13 +139,15 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (25)
+Temperature History Size (Index):    128 (111)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -156,8 +159,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
@@ -171,15 +174,15 @@ ID      Size     Value  Description
 0x8e04  4            0  Vendor specific
 0x8e05  4            0  Vendor specific
 0x8e06  4            0  Vendor specific
-0x8e07  4            0  Vendor specific
-0x8e08  4            0  Vendor specific
+0x8e07  4           27  Vendor specific
+0x8e08  4            3  Vendor specific
 0x8e09  4            0  Vendor specific
-0x8e0a  4            0  Vendor specific
-0x8e0b  4            0  Vendor specific
-0x8e0c  4            0  Vendor specific
+0x8e0a  4           31  Vendor specific
+0x8e0b  4         3456  Vendor specific
+0x8e0c  4          124  Vendor specific
 0x8e0d  4            0  Vendor specific
-0x8e0e  4            0  Vendor specific
+0x8e0e  4           32  Vendor specific
 0x8e0f  4            0  Vendor specific
-0x8e10  4            0  Vendor specific
-0x8e11  4            0  Vendor specific
+0x8e10  4          128  Vendor specific
+0x8e11  4            1  Vendor specific
 

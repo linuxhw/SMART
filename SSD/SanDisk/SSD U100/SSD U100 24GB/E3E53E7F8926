@@ -10,8 +10,8 @@ Rotation Rate:    Solid State Device
 Form Factor:      1.8 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Aug 22 08:37:49 2016 KRAT
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 1.5 Gb/s)
+Local Time is:    Fri Dec  9 09:32:55 2016 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -56,18 +56,18 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    641
- 12 Power_Cycle_Count       -O----   100   100   000    -    1309
+  9 Power_On_Hours          -O----   100   100   000    -    1182
+ 12 Power_Cycle_Count       -O----   100   100   000    -    1582
 171 Program_Fail_Count      -O----   100   100   000    -    0
 172 Erase_Fail_Count        -O----   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O----   100   100   000    -    262
-174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    43
+173 Avg_Write/Erase_Count   -O----   100   100   000    -    295
+174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    93
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-230 Perc_Write/Erase_Count  -O----   100   100   000    -    873
+230 Perc_Write/Erase_Count  -O----   100   100   000    -    983
 232 Perc_Avail_Resrvd_Space PO----   100   100   005    -    0
-234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    550
-241 Total_LBAs_Written      -O----   100   100   000    -    3690577097
-242 Total_LBAs_Read         -O----   100   100   000    -    6093187338
+234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    686
+241 Total_LBAs_Written      -O----   100   100   000    -    5258046823
+242 Total_LBAs_Read         -O----   100   100   000    -    7446754104
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -91,9 +91,124 @@ Address    Access  R/W   Size  Description
 0xa2       GPL,SL  VS       2  Device vendor specific log
 0xa3       GPL,SL  VS       1  Device vendor specific log
 
-Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
 SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
-No Errors Logged
+Device Error Count: 6
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6 [5] occurred at disk power-on lifetime: 703 hours (29 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 02 00 00 0f ff ff ff e0 00  Error: IDNF 2 sectors at LBA = 0x0fffffff = 268435455
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 0f ff ff ff e0 00     00:00:12.089  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:00:12.088  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:00:12.088  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:00:12.087  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:00:12.086  READ DMA EXT
+
+Error 5 [4] occurred at disk power-on lifetime: 703 hours (29 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 02 00 00 0f ff ff ff e0 00  Error: IDNF 2 sectors at LBA = 0x0fffffff = 268435455
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 0f ff ff ff e0 00     00:00:11.482  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:00:11.482  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:00:11.481  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:00:11.480  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:00:11.480  READ DMA EXT
+
+Error 4 [3] occurred at disk power-on lifetime: 703 hours (29 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 02 00 00 0f ff ff ff e0 00  Error: IDNF 2 sectors at LBA = 0x0fffffff = 268435455
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 0f ff ff ff e0 00     00:48:19.660  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:48:19.659  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:48:19.659  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:48:19.658  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:48:19.658  READ DMA EXT
+
+Error 3 [2] occurred at disk power-on lifetime: 703 hours (29 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 02 00 00 0f ff ff ff e0 00  Error: IDNF 2 sectors at LBA = 0x0fffffff = 268435455
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 0f ff ff ff e0 00     00:48:19.054  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:48:19.054  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:48:19.053  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:48:19.052  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:48:19.052  READ DMA EXT
+
+Error 2 [1] occurred at disk power-on lifetime: 703 hours (29 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 02 00 00 0f ff ff ff e0 00  Error: IDNF 2 sectors at LBA = 0x0fffffff = 268435455
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 0f ff ff ff e0 00     00:31:50.586  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:31:50.585  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:31:50.585  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:31:50.584  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:31:50.583  READ DMA EXT
+
+Error 1 [0] occurred at disk power-on lifetime: 703 hours (29 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 02 00 00 0f ff ff ff e0 00  Error: IDNF 2 sectors at LBA = 0x0fffffff = 268435455
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 0f ff ff ff e0 00     00:31:49.978  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:31:49.978  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 fb 04 e0 00     00:31:49.977  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:31:49.976  READ DMA EXT
+  25 00 00 00 3f 00 00 00 00 bc 43 e0 00     00:31:49.976  READ DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -116,11 +231,11 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
+0x05  0x008  1              35  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              47  ---  Highest Temperature
-0x05  0x028  1              20  ---  Lowest Temperature
+0x05  0x028  1              18  ---  Lowest Temperature
 0x05  0x030  1               -  ---  Highest Average Short Term Temperature
 0x05  0x038  1               -  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -130,7 +245,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               8  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -141,8 +256,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

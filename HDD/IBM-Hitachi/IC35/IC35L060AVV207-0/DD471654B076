@@ -3,17 +3,18 @@ Model Family:     IBM/Hitachi Deskstar GXP-180
 Device Model:     IC35L060AVV207-0
 Serial Number:    --
 Firmware Version: V22OA66A
-User Capacity:    40 000 000 000 bytes [40,0 GB]
+User Capacity:    40,000,000,000 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 3a
-Local Time is:    Wed Jan  3 16:35:27 2018 MSK
+Local Time is:    Sun Nov 17 16:57:06 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -24,9 +25,8 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  38)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		( 1452) seconds.
 Offline data collection
@@ -53,20 +53,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   060    -    0
   2 Throughput_Performance  P-S---   155   155   050    -    225
-  3 Spin_Up_Time            POS---   104   104   024    -    160 (Average 156)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    3292
+  3 Spin_Up_Time            POS---   097   097   024    -    165 (Average 172)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    3400
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   130   130   000    -    34
-  9 Power_On_Hours          -O--C-   099   099   000    -    7814
+  9 Power_On_Hours          -O--C-   099   099   000    -    7842
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2911
-192 Power-Off_Retract_Count -O--CK   098   098   050    -    3324
-193 Load_Cycle_Count        -O--C-   098   098   050    -    3324
-194 Temperature_Celsius     -O----   137   137   000    -    40 (Min/Max 7/65)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3018
+192 Power-Off_Retract_Count -O--CK   098   098   050    -    3432
+193 Load_Cycle_Count        -O--C-   098   098   050    -    3432
+194 Temperature_Celsius     -O----   141   141   000    -    39 (Min/Max 7/65)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
-198 Offline_Uncorrectable   ---R--   100   100   000    -    24
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    4
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -171,13 +171,20 @@ Error 13 [0] occurred at disk power-on lifetime: 6713 hours (279 days + 17 hours
   25 00 00 00 80 00 00 00 5f 1f af f0 00     00:02:47.700  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      60%      7841         -
+# 2  Extended offline    Interrupted (host reset)      70%      7839         -
+# 3  Extended offline    Interrupted (host reset)      70%      7837         -
+# 4  Extended offline    Completed without error       00%      7831         -
+# 5  Extended offline    Completed without error       00%      7819         -
 
 Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

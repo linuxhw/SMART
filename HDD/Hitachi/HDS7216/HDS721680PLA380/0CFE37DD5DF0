@@ -4,17 +4,18 @@ Device Model:     Hitachi HDS721680PLA380
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: P21OABEA
-User Capacity:    82 348 277 760 bytes [82,3 GB]
+User Capacity:    82,348,277,760 bytes [82.3 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Sun Sep 24 14:22:21 2017 MSK
+Local Time is:    Sat Feb 15 22:17:06 2020 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -56,19 +57,19 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    1
-  2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS---   125   125   024    -    160 (Average 159)
-  4 Start_Stop_Count        -O--C-   097   097   000    -    14584
+  1 Raw_Read_Error_Rate     PO-R--   099   099   016    -    131072
+  2 Throughput_Performance  P-S---   164   164   050    -    180
+  3 Spin_Up_Time            POS---   123   123   024    -    164 (Average 160)
+  4 Start_Stop_Count        -O--C-   095   095   000    -    20286
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   100   100   020    -    0
-  9 Power_On_Hours          -O--C-   098   098   000    -    19866
+  8 Seek_Time_Performance   P-S---   136   136   020    -    31
+  9 Power_On_Hours          -O--C-   097   097   000    -    25866
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    11436
-192 Power-Off_Retract_Count -O--CK   088   088   000    -    14634
-193 Load_Cycle_Count        -O--C-   088   088   000    -    14634
-194 Temperature_Celsius     -O----   150   150   000    -    40 (Min/Max 14/49)
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    14711
+192 Power-Off_Retract_Count -O--CK   084   084   000    -    20338
+193 Load_Cycle_Count        -O--C-   084   084   000    -    20338
+194 Temperature_Celsius     -O----   157   157   000    -    38 (Min/Max 14/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -89,7 +90,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x20       GPL     R/O      1  Streaming performance log [OBS-8]
 0x21       GPL     R/O      1  Write stream error log
@@ -99,7 +100,55 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 21295 hours (887 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 07 5b f4 00 5b f4 d9 e0 00  Error: UNC 7 sectors at LBA = 0x5bf4005bf4d9 = 101103536174297
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 07 08 5b f4 d9 5b f4 d8 e0 00     00:00:26.900  READ DMA
+  c8 00 00 00 08 5b f4 cf 5b f4 d8 e0 00     00:00:21.300  READ DMA
+  c8 00 00 00 08 5b f4 c7 5b f4 c8 e0 00     00:00:21.300  READ DMA
+  c8 00 00 00 08 00 08 17 5b f4 c0 e0 00     00:00:21.300  READ DMA
+  c8 00 00 00 08 60 08 07 00 08 10 e0 00     00:00:21.300  READ DMA
+
+Error 1 [0] occurred at disk power-on lifetime: 21295 hours (887 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 07 5b f4 00 5b f4 d9 e0 00  Error: UNC 7 sectors at LBA = 0x5bf4005bf4d9 = 101103536174297
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 5b f4 cf 5b f4 d8 e0 00     00:00:21.300  READ DMA
+  c8 00 00 00 08 5b f4 c7 5b f4 c8 e0 00     00:00:21.300  READ DMA
+  c8 00 00 00 08 00 08 17 5b f4 c0 e0 00     00:00:21.300  READ DMA
+  c8 00 00 00 08 60 08 07 00 08 10 e0 00     00:00:21.300  READ DMA
+  c8 00 00 00 08 00 08 00 60 08 00 e0 00     00:00:21.300  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -119,16 +168,16 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 40 Celsius
-Power Cycle Max Temperature:         44 Celsius
-Lifetime    Max Temperature:         49 Celsius
+Current Temperature:                 38 Celsius
+Power Cycle Max Temperature:         38 Celsius
+Lifetime    Max Temperature:         54 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (127)
+Temperature History Size (Index):    128 (42)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -136,11 +185,15 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2           25  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           25  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

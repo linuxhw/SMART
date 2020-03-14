@@ -7,7 +7,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat May 26 09:36:09 2018 +07
+Local Time is:    Tue Nov 20 20:57:15 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -15,7 +15,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -57,19 +57,19 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1426
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1793
   5 Reallocated_Sector_Ct   PO--CK   001   001   036    NOW  23346
-  7 Seek_Error_Rate         POSR--   059   059   030    -    184724477035
-  9 Power_On_Hours          -O--CK   098   098   000    -    1995
+  7 Seek_Error_Rate         POSR--   060   059   030    -    184732472409
+  9 Power_On_Hours          -O--CK   098   098   000    -    2325
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1419
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1799
 187 Reported_Uncorrect      -O--CK   001   001   000    -    26261
 189 High_Fly_Writes         -O-RCK   086   086   000    -    14
-190 Airflow_Temperature_Cel -O---K   067   031   045    Past 33 (35 160 33 25 0)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    803
-193 Load_Cycle_Count        -O--CK   099   099   000    -    3541
-194 Temperature_Celsius     -O---K   033   069   000    -    33 (0 8 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   079   063   000    -    170269993
+190 Airflow_Temperature_Cel -O---K   069   031   045    Past 31 (35 160 31 27 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    869
+193 Load_Cycle_Count        -O--CK   084   084   000    -    33363
+194 Temperature_Celsius     -O---K   031   069   000    -    31 (0 8 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   082   063   000    -    45726228
 197 Current_Pending_Sector  -O--C-   001   001   000    -    3938
 198 Offline_Uncorrectable   ----C-   001   001   000    -    3938
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -215,7 +215,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: unknown failure    90%      1986         224942953
+# 1  Extended offline    Completed: unknown failure    90%      2321         217570720
+# 2  Extended offline    Completed: unknown failure    90%      2306         239784343
+# 3  Extended offline    Completed: unknown failure    90%      2293         230029826
+# 4  Extended offline    Completed: unknown failure    90%      2282         118154133
+# 5  Extended offline    Completed: unknown failure    90%      2265         17590391
+# 6  Extended offline    Completed: unknown failure    90%      2249         34253796
+# 7  Extended offline    Completed: unknown failure    90%      2224         224951915
+# 8  Extended offline    Completed: unknown failure    90%      2209         191404651
+# 9  Extended offline    Completed: unknown failure    90%      2205         153746979
+#10  Extended offline    Completed: unknown failure    90%      2183         37532406
+#11  Extended offline    Completed: unknown failure    90%      2150         243806611
+#12  Extended offline    Completed: unknown failure    90%      2137         59054885
+#13  Extended offline    Completed: unknown failure    90%      2136         172612140
+#14  Extended offline    Completed: unknown failure    90%      2121         80374359
+#15  Extended offline    Completed: unknown failure    90%      2115         290056198
+#16  Extended offline    Completed: unknown failure    90%      2114         41009871
+#17  Extended offline    Completed: unknown failure    90%      2113         59825146
+#18  Extended offline    Completed: unknown failure    90%      2111         213773762
+#19  Extended offline    Completed: unknown failure    90%      2109         133268
+#20  Extended offline    Completed: unknown failure    90%      2108         200549830
+#21  Extended offline    Completed: unknown failure    90%      2106         30605770
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -232,7 +252,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 33 Celsius
+Current Temperature:                 31 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -246,13 +266,13 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
 0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific

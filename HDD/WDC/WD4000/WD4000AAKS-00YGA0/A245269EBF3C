@@ -4,18 +4,19 @@ Device Model:     WDC WD4000AAKS-00YGA0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 12.01C02
-User Capacity:    400 088 457 216 bytes [400 GB]
+User Capacity:    400,088,457,216 bytes [400 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Tue Feb 23 10:49:12 2016 MSK
+Local Time is:    Sat Oct 26 16:48:56 2019 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -60,21 +61,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   178   175   021    -    6091
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9231
+  3 Spin_Up_Time            PO----   181   175   021    -    5950
+  4 Start_Stop_Count        -O--CK   086   086   000    -    14209
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   075   075   000    -    18976
+  9 Power_On_Hours          -O--CK   061   061   000    -    28831
  10 Spin_Retry_Count        -O--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   000    -    9160
-192 Power-Off_Retract_Count -O--CK   197   197   000    -    2334
-193 Load_Cycle_Count        -O--CK   197   197   000    -    9245
-194 Temperature_Celsius     -O---K   116   108   000    -    34
+ 12 Power_Cycle_Count       -O--CK   086   086   000    -    14129
+192 Power-Off_Retract_Count -O--CK   197   197   000    -    2842
+193 Load_Cycle_Count        -O--CK   196   196   000    -    14229
+194 Temperature_Celsius     -O---K   114   103   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--C-   200   200   000    -    1
-198 Offline_Uncorrectable   ----C-   200   200   000    -    1
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2700
+197 Current_Pending_Sector  -O--C-   200   200   000    -    0
+198 Offline_Uncorrectable   ----C-   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    69443
 200 Multi_Zone_Error_Rate   ---R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -94,7 +95,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
 0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb7  GPL,SL  VS       1  Device vendor specific log
@@ -249,7 +250,25 @@ Error 1432 [15] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 08 00 00 b0 00 15 00 90 25 00 00 00     00:00:43.016  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     28590         -
+# 2  Extended offline    Completed without error       00%     28261         -
+# 3  Extended offline    Completed without error       00%     28153         -
+# 4  Extended offline    Completed without error       00%     27830         -
+# 5  Extended offline    Completed without error       00%     27702         -
+# 6  Extended offline    Completed without error       00%     27625         -
+# 7  Extended offline    Completed without error       00%     27527         -
+# 8  Extended offline    Completed without error       00%     27431         -
+# 9  Extended offline    Completed without error       00%     27028         -
+#10  Extended offline    Completed without error       00%     26373         -
+#11  Extended offline    Completed without error       00%     25964         -
+#12  Extended offline    Completed without error       00%     25890         -
+#13  Extended offline    Completed without error       00%     25679         -
+#14  Extended offline    Completed without error       00%     25616         -
+#15  Extended offline    Completed without error       00%     25552         -
+#16  Extended offline    Completed without error       00%     25487         -
+#17  Extended offline    Completed without error       00%     24756         -
+#18  Extended offline    Completed without error       00%     24695         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -266,9 +285,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     22/34 Celsius
-Lifetime    Min/Max Temperature:     22/43 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     35/36 Celsius
+Lifetime    Min/Max Temperature:     35/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -276,13 +295,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            1/85 Celsius
-Temperature History Size (Index):    128 (11)
+Temperature History Size (Index):    128 (5)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -293,8 +314,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           16  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         8540  Vendor specific
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         2112  Vendor specific
 
 
 

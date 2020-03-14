@@ -9,7 +9,7 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Jan 31 20:03:55 2016 IRKT
+Local Time is:    Wed Apr 27 23:24:10 2016 IRKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   178   175   021    -    6058
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9166
+  3 Spin_Up_Time            POS--K   180   175   021    -    5991
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9683
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   077   077   000    -    17145
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   076   076   000    -    18168
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4479
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    936
-193 Load_Cycle_Count        -O--CK   159   159   000    -    123122
-194 Temperature_Celsius     -O---K   117   103   000    -    33
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4716
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    958
+193 Load_Cycle_Count        -O--CK   157   157   000    -    130022
+194 Temperature_Celsius     -O---K   120   103   000    -    30
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -92,8 +92,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb7  GPL,SL  VS       1  Device vendor specific log
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 184 (device log contains only the most recent 24 errors)
+Device Error Count: 188 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,74 @@ Device Error Count: 184 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 188 [19] occurred at disk power-on lifetime: 17383 hours (724 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d5 00 01 00 00 00 c2 4f e1 a0 00     08:36:00.303  SMART READ LOG
+  b0 00 d5 00 01 00 00 00 c2 4f e0 a0 00     08:36:00.302  SMART READ LOG
+  b0 00 d5 00 01 00 00 00 c2 4f 00 a0 00     08:36:00.301  SMART READ LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     08:36:00.300  SMART WRITE LOG
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     08:36:00.214  SMART RETURN STATUS
+
+Error 187 [18] occurred at disk power-on lifetime: 17383 hours (724 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     08:36:00.300  SMART WRITE LOG
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     08:36:00.214  SMART RETURN STATUS
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     08:36:00.210  SMART READ DATA
+  b0 00 d1 00 01 00 00 00 c2 4f 00 a0 00     08:36:00.205  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     08:36:00.124  SMART ENABLE OPERATIONS
+
+Error 186 [17] occurred at disk power-on lifetime: 17230 hours (717 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d5 00 01 00 00 00 c2 4f e1 a0 00     10:36:52.199  SMART READ LOG
+  b0 00 d5 00 01 00 00 00 c2 4f e0 a0 00     10:36:52.198  SMART READ LOG
+  b0 00 d5 00 01 00 00 00 c2 4f 00 a0 00     10:36:52.198  SMART READ LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     10:36:52.198  SMART WRITE LOG
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     10:36:52.122  SMART RETURN STATUS
+
+Error 185 [16] occurred at disk power-on lifetime: 17230 hours (717 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     10:36:52.198  SMART WRITE LOG
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     10:36:52.122  SMART RETURN STATUS
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     10:36:52.117  SMART READ DATA
+  b0 00 d1 00 01 00 00 00 c2 4f 00 a0 00     10:36:52.113  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     10:36:52.033  SMART ENABLE OPERATIONS
 
 Error 184 [15] occurred at disk power-on lifetime: 17054 hours (710 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -187,74 +255,6 @@ Error 181 [12] occurred at disk power-on lifetime: 16007 hours (666 days + 23 ho
   b0 00 d1 00 01 00 00 00 c2 4f 00 a0 00     01:06:05.180  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
   b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     01:06:05.099  SMART ENABLE OPERATIONS
 
-Error 180 [11] occurred at disk power-on lifetime: 15834 hours (659 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d5 00 01 00 00 00 c2 4f e1 a0 00     00:04:58.015  SMART READ LOG
-  61 00 10 00 e8 00 00 12 69 d1 28 40 00     00:04:58.014  WRITE FPDMA QUEUED
-  b0 00 d5 00 01 00 00 00 c2 4f e0 a0 00     00:04:58.014  SMART READ LOG
-  61 00 08 00 d8 00 00 12 69 d1 10 40 00     00:04:58.014  WRITE FPDMA QUEUED
-  61 00 08 00 d0 00 00 12 69 d1 00 40 00     00:04:58.014  WRITE FPDMA QUEUED
-
-Error 179 [10] occurred at disk power-on lifetime: 15834 hours (659 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:04:58.013  SMART WRITE LOG
-  61 00 18 00 b0 00 00 12 69 d0 c8 40 00     00:04:58.012  WRITE FPDMA QUEUED
-  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:04:57.909  SMART RETURN STATUS
-  61 00 08 00 a0 00 00 12 69 d0 a8 40 00     00:04:57.909  WRITE FPDMA QUEUED
-  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     00:04:57.814  SMART READ DATA
-
-Error 178 [9] occurred at disk power-on lifetime: 15834 hours (659 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d5 00 01 00 00 00 c2 4f e1 a0 00     00:00:51.435  SMART READ LOG
-  b0 00 d5 00 01 00 00 00 c2 4f e0 a0 00     00:00:51.434  SMART READ LOG
-  b0 00 d5 00 01 00 00 00 c2 4f 00 a0 00     00:00:51.434  SMART READ LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:00:51.434  SMART WRITE LOG
-  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:51.359  SMART RETURN STATUS
-
-Error 177 [8] occurred at disk power-on lifetime: 15834 hours (659 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:00:51.434  SMART WRITE LOG
-  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:51.359  SMART RETURN STATUS
-  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     00:00:51.355  SMART READ DATA
-  b0 00 d1 00 01 00 00 00 c2 4f 00 a0 00     00:00:51.350  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 00 d8 00 00 00 00 00 c2 4f 00 a0 00     00:00:51.269  SMART ENABLE OPERATIONS
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -273,9 +273,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     23/34 Celsius
-Lifetime    Min/Max Temperature:      ?/48 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     30/35 Celsius
+Lifetime    Min/Max Temperature:     30/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -283,11 +283,11 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (319)
+Temperature History Size (Index):    478 (265)
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -298,9 +298,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        30035  Vendor specific
+0x8000  4        22057  Vendor specific
 
 
 

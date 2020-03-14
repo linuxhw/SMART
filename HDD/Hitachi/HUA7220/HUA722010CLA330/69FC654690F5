@@ -11,7 +11,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Aug  7 21:39:31 2015 OMST
+Local Time is:    Fri Aug  7 22:00:39 2015 OMST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,7 +59,7 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    1
+  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    65536
   2 Throughput_Performance  P-S---   135   135   054    -    96
   3 Spin_Up_Time            POS---   141   141   024    -    238 (Average 298)
   4 Start_Stop_Count        -O--C-   100   100   000    -    2283
@@ -71,7 +71,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  12 Power_Cycle_Count       -O--CK   100   100   000    -    2011
 192 Power-Off_Retract_Count -O--CK   099   099   000    -    2366
 193 Load_Cycle_Count        -O--C-   099   099   000    -    2366
-194 Temperature_Celsius     -O----   166   166   000    -    36 (Min/Max 10/52)
+194 Temperature_Celsius     -O----   171   171   000    -    35 (Min/Max 10/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    28
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -224,7 +224,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    36 Celsius
+Current Temperature:                    35 Celsius
 Power Cycle Min/Max Temperature:     23/38 Celsius
 Lifetime    Min/Max Temperature:     10/52 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -234,7 +234,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (43)
+Temperature History Size (Index):    128 (64)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -247,11 +247,11 @@ Page Offset Size         Value  Description
   1  0x010  4            10155  Power-on Hours
   1  0x018  6      56006454027  Logical Sectors Written
   1  0x020  6       1268768724  Number of Write Commands
-  1  0x028  6     297725823401  Logical Sectors Read
-  1  0x030  6        603302813  Number of Read Commands
+  1  0x028  6     297727101569  Logical Sectors Read
+  1  0x030  6        603302832  Number of Read Commands
   3  =====  =                =  == Rotating Media Statistics (rev 1) ==
-  3  0x008  4            10034  Spindle Motor Power-on Hours
-  3  0x010  4            10034  Head Flying Hours
+  3  0x008  4            10035  Spindle Motor Power-on Hours
+  3  0x010  4            10035  Head Flying Hours
   3  0x018  4             2366  Head Load Events
   3  0x020  4               21  Number of Reallocated Logical Sectors
   3  0x028  4             7455  Read Recovery Attempts
@@ -260,7 +260,7 @@ Page Offset Size         Value  Description
   4  0x008  4             1420  Number of Reported Uncorrectable Errors
   4  0x010  4             2530  Resets Between Cmd Acceptance and Completion
   5  =====  =                =  == Temperature Statistics (rev 1) ==
-  5  0x008  1               36  Current Temperature
+  5  0x008  1               35  Current Temperature
   5  0x010  1               36~ Average Short Term Temperature
   5  0x018  1               37~ Average Long Term Temperature
   5  0x020  1               52  Highest Temperature

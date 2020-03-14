@@ -4,20 +4,21 @@ Device Model:     OCZ-VERTEX3
 Serial Number:    --
 LU WWN Device Id: 5 e83a97 ...
 Firmware Version: 2.25
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Apr 22 10:21:59 2016 MSK
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Thu Apr 25 13:46:25 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -60,12 +61,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   120   120   050    -    0/0
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   093   093   000    -    6526h+56m+41.500s
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2769
+  9 Power_On_Hours_and_Msec -O--CK   089   089   000    -    10192h+48m+02.760s
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3861
 171 Program_Fail_Count      -O--CK   000   000   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    240
-177 Wear_Range_Delta        ------   000   000   000    -    3
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    421
+177 Wear_Range_Delta        ------   000   000   000    -    4
 181 Program_Fail_Count      -O--CK   000   000   000    -    0
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
@@ -76,10 +77,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 204 Soft_ECC_Correct_Rate   --SRC-   100   100   000    -    0/0
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           PO--C-   100   100   010    -    0
-233 SandForce_Internal      ------   000   000   000    -    4233
-234 SandForce_Internal      -O--CK   000   000   000    -    3177
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    3177
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    4599
+233 SandForce_Internal      ------   000   000   000    -    6486
+234 SandForce_Internal      -O--CK   000   000   000    -    5776
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    5776
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    5870
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -94,7 +95,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
 0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xb7       GPL,SL  VS      16  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -128,15 +129,17 @@ Lifetime    Min/Max Temperature:     30/30 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
-Temperature Sampling Period:         0 minutes
-Temperature Logging Interval:        0 minutes
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    478 (1)
+Temperature History Size (Index):    478 (3)
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -146,8 +149,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           34  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           35  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

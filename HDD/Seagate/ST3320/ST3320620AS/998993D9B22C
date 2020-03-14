@@ -7,7 +7,7 @@ User Capacity:    320 071 851 520 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Mar 31 21:53:06 2016 MSK
+Local Time is:    Tue Nov  1 14:49:07 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -52,19 +52,19 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   102   087   006    -    161129981
-  3 Spin_Up_Time            PO----   097   095   000    -    0
-  4 Start_Stop_Count        -O--CK   087   087   020    -    13942
+  1 Raw_Read_Error_Rate     POSR--   118   087   006    -    189689494
+  3 Spin_Up_Time            PO----   096   095   000    -    0
+  4 Start_Stop_Count        -O--CK   087   087   020    -    14193
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    694742487
-  9 Power_On_Hours          -O--CK   033   033   000    -    59248
+  7 Seek_Error_Rate         POSR--   088   060   030    -    744754691
+  9 Power_On_Hours          -O--CK   032   032   000    -    60435
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2173
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2417
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   056   031   045    Past 44 (Min/Max 22/45)
-194 Temperature_Celsius     -O---K   044   069   000    -    44 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   057   051   000    -    160903159
+190 Airflow_Temperature_Cel -O---K   061   031   045    Past 39 (Min/Max 25/39)
+194 Temperature_Celsius     -O---K   039   069   000    -    39 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   069   051   000    -    144312809
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,8 +87,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -155,6 +155,8 @@ Error 1 [0] occurred at disk power-on lifetime: 20312 hours (846 days + 8 hours)
   39 00 00 00 10 00 25 ea 00 42 5f e0 00     00:01:52.991  WRITE MULTIPLE EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     60303         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -169,7 +171,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

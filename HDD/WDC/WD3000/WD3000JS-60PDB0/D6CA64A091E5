@@ -3,17 +3,18 @@ Model Family:     Western Digital Caviar SE Serial ATA
 Device Model:     WDC WD3000JS-60PDB0
 Serial Number:    --
 Firmware Version: 21.00M21
-User Capacity:    300 069 052 416 bytes [300 GB]
+User Capacity:    300,069,052,416 bytes [300 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Dec  2 15:01:20 2016 MSK
+Local Time is:    Wed Oct 31 14:53:27 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Unavailable
 Wt Cache Reorder: Enabled
 
@@ -58,20 +59,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   202   174   021    -    4875
-  4 Start_Stop_Count        -O--CK   096   096   000    -    4512
-  5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
+  3 Spin_Up_Time            PO----   185   174   021    -    5725
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5049
+  5 Reallocated_Sector_Ct   PO--CK   153   153   140    -    371
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   079   079   000    -    15971
+  9 Power_On_Hours          -O--CK   076   076   000    -    18200
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3359
-194 Temperature_Celsius     -O---K   108   001   000    -    42
-196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--C-   200   200   000    -    0
-198 Offline_Uncorrectable   ----C-   200   200   000    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3890
+194 Temperature_Celsius     -O---K   115   001   000    -    35
+196 Reallocated_Event_Count -O--CK   001   001   000    -    252
+197 Current_Pending_Sector  -O--C-   192   191   000    -    392
+198 Offline_Uncorrectable   ----C-   197   195   000    -    149
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    4
-200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
+200 Multi_Zone_Error_Rate   P--R--   196   186   051    -    199
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,7 +90,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -261,8 +262,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 42 Celsius
-Power Cycle Max Temperature:         43 Celsius
+Current Temperature:                 35 Celsius
+Power Cycle Max Temperature:         35 Celsius
 Lifetime    Max Temperature:         61 Celsius
 
 SCT Temperature History Version:     2
@@ -270,7 +271,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (103)
+Temperature History Size (Index):    128 (43)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -278,9 +279,11 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        13009  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         1610  Vendor specific
 

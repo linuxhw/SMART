@@ -7,7 +7,7 @@ User Capacity:    500 107 862 016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Mar 26 01:09:22 2016 EET
+Local Time is:    Sat May 28 20:07:17 2016 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -52,19 +52,19 @@ recommended polling time: 	 ( 163) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   116   067   006    -    221354659
+  1 Raw_Read_Error_Rate     POSR--   116   067   006    -    108578542
   3 Spin_Up_Time            PO----   095   092   000    -    0
-  4 Start_Stop_Count        -O--CK   075   075   020    -    26501
+  4 Start_Stop_Count        -O--CK   074   074   020    -    26771
   5 Reallocated_Sector_Ct   PO--CK   099   099   036    -    46
-  7 Seek_Error_Rate         POSR--   081   035   030    -    122463754
-  9 Power_On_Hours          -O--CK   073   073   000    -    24152
+  7 Seek_Error_Rate         POSR--   081   035   030    -    159263315
+  9 Power_On_Hours          -O--CK   073   073   000    -    24470
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   077   077   020    -    24423
+ 12 Power_Cycle_Count       -O--CK   076   076   020    -    24690
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   033   045    Past 37 (Min/Max 33/37)
-194 Temperature_Celsius     -O---K   037   067   000    -    37 (0 21 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   066   051   000    -    76331638
+190 Airflow_Temperature_Cel -O---K   062   033   045    Past 38 (Min/Max 32/38)
+194 Temperature_Celsius     -O---K   038   067   000    -    38 (0 21 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   070   051   000    -    110920169
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   187   000    -    147
@@ -124,16 +124,16 @@ Error 589 [8] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hour
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 40 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:56.372  READ DMA EXT
-  ef 00 03 00 40 00 ff ff 00 ff ff a0 00     00:01:55.813  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:55.368  READ DMA EXT
-  ef 00 03 00 41 00 ff ff 00 ff ff a0 00     00:01:54.812  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:54.364  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:26.020  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:01:26.013  NOP [Abort queued commands]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:25.536  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:01:25.529  NOP [Abort queued commands]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:25.061  READ DMA EXT
 
 Error 588 [7] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -147,10 +147,10 @@ Error 588 [7] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hour
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
   25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:50.006  READ DMA EXT
-  ef 00 03 00 41 00 ff ff 00 ff ff a0 00     00:01:49.939  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:55.368  READ DMA EXT
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:01:54.812  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:54.364  READ DMA EXT
+  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:49.939  READ DMA EXT
+  25 00 03 00 01 00 3a 60 00 38 2f 40 00     00:01:49.907  READ DMA EXT
+  ef 00 03 00 45 00 ff ff 00 ff ff a0 00     00:01:49.892  SET FEATURES [Set transfer mode]
+  00 00 00 01 00 00 ff ff 00 ff ff 00 00     00:01:28.891  NOP [Abort queued commands]
 
 Error 587 [6] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -164,10 +164,10 @@ Error 587 [6] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hour
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
   25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:50.006  READ DMA EXT
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:01:49.939  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:49.907  READ DMA EXT
-  ef 00 03 00 43 00 ff ff 00 ff ff a0 00     00:01:49.892  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:54.364  READ DMA EXT
+  25 00 03 00 01 00 3a 60 00 38 2f 40 00     00:01:49.939  READ DMA EXT
+  ef 00 03 00 45 00 ff ff 00 ff ff a0 00     00:01:49.907  SET FEATURES [Set transfer mode]
+  00 00 00 01 00 00 ff ff 00 ff ff 00 00     00:01:49.892  NOP [Abort queued commands]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:01:28.891  IDENTIFY DEVICE
 
 Error 586 [5] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -180,11 +180,11 @@ Error 586 [5] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:50.006  READ DMA EXT
-  ef 00 03 00 43 00 ff ff 00 ff ff a0 00     00:01:49.939  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:49.907  READ DMA EXT
-  ef 00 03 00 44 00 ff ff 00 ff ff a0 00     00:01:49.892  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:28.891  READ DMA EXT
+  25 00 03 00 01 00 3a 60 00 38 2f 40 00     00:01:50.006  READ DMA EXT
+  ef 00 03 00 45 00 ff ff 00 ff ff a0 00     00:01:49.939  SET FEATURES [Set transfer mode]
+  00 00 00 01 00 00 ff ff 00 ff ff 00 00     00:01:49.907  NOP [Abort queued commands]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:01:49.892  IDENTIFY DEVICE
+  f5 00 00 01 00 00 ff ff 00 ff ff a0 00     00:01:28.891  SECURITY FREEZE LOCK
 
 Error 585 [4] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -192,16 +192,16 @@ Error 585 [4] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hour
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 40 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:50.006  READ DMA EXT
-  ef 00 03 00 44 00 ff ff 00 ff ff a0 00     00:01:49.939  SET FEATURES [Set transfer mode]
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:49.907  READ DMA EXT
-  25 00 03 00 01 00 00 00 00 00 00 40 00     00:01:49.892  READ DMA EXT
-  25 00 03 00 01 00 3a 60 00 38 2f 40 00     00:01:28.891  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:26.020  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:01:26.013  NOP [Abort queued commands]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:25.536  READ DMA EXT
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:01:25.529  NOP [Abort queued commands]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:25.061  READ DMA EXT
 
 Error 584 [3] occurred at disk power-on lifetime: 20790 hours (866 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -273,7 +273,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

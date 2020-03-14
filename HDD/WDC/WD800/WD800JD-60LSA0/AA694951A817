@@ -7,7 +7,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Mar 26 01:26:49 2019 MSK
+Local Time is:    Tue Mar 26 12:18:22 2019 +06
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   165   158   021    -    2725
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2744
+  3 Spin_Up_Time            PO----   165   158   021    -    2716
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2746
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   058   058   000    -    30970
+  9 Power_On_Hours          -O--CK   058   058   000    -    30971
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2742
-190 Airflow_Temperature_Cel -O---K   065   038   045    Past 35
-194 Temperature_Celsius     -O---K   108   081   000    -    35
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2744
+190 Airflow_Temperature_Cel -O---K   067   038   045    Past 33
+194 Temperature_Celsius     -O---K   110   081   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    1
 198 Offline_Uncorrectable   ----C-   200   200   000    -    1
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 561 (device log contains only the most recent 24 errors)
+Device Error Count: 562 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,6 +117,22 @@ Device Error Count: 561 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 562 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 01 01 00 53 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 b1 b0 26 f6 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 26 b1 00 f6 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 a8 ec 26 f6 00 01 00 00 00 00 00 00     00:42:33.513  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 00 00 58 26 41 03 f5 35 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 561 [8] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -230,22 +246,6 @@ Error 555 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 76 e7 11 83 00 08 00 70 00 00 00 00     00:19:07.776  NOP [Reserved subcommand] [OBS-ACS-2]
   00 08 00 00 70 11 ee 02 7b c8 00 00 00     00:00:00.000  NOP [Abort queued commands]
 
-Error 554 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 08 00 51 00 00 e2 01 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 5c c8 11 87 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 00 00 70 11 80 00 83 ca 00 00 00     00:00:28.680  NOP [Abort queued commands]
-  00 ee c8 11 7b 00 00 00 00 00 00 00 02     00:19:07.766  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 00 00 f8 11 ed 00 7b ca 00 00 00     00:00:28.680  NOP [Abort queued commands]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Interrupted (host reset)      40%         0         -
@@ -265,8 +265,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 35 Celsius
-Power Cycle Max Temperature:         37 Celsius
+Current Temperature:                 33 Celsius
+Power Cycle Max Temperature:         34 Celsius
 Lifetime    Max Temperature:         62 Celsius
 
 SCT Temperature History Version:     2
@@ -274,7 +274,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (18)
+Temperature History Size (Index):    128 (99)
 
 SCT Error Recovery Control:
            Read:     75 (7.5 seconds)
@@ -287,6 +287,6 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         3790  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         2553  Vendor specific
 

@@ -10,11 +10,11 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Dec  4 20:19:50 2015 CET
+Local Time is:    Sat Dec 19 23:41:14 2015 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     96 (intermediate level with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -24,8 +24,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,22 +60,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   151   151   021    -    1425
-  4 Start_Stop_Count        -O--CK   100   100   000    -    324
+  3 Spin_Up_Time            POS--K   153   150   021    -    1350
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2670
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    156
+  9 Power_On_Hours          -O--CK   100   100   000    -    283
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    133
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    73
-193 Load_Cycle_Count        -O--CK   199   199   000    -    4735
-194 Temperature_Celsius     -O---K   110   107   000    -    33
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    190
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    100
+193 Load_Cycle_Count        -O--CK   187   187   000    -    40739
+194 Temperature_Celsius     -O---K   111   102   000    -    32
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
-198 Offline_Uncorrectable   ----CK   100   253   000    -    0
+198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 37129 (device log contains only the most recent 24 errors)
+Device Error Count: 46141 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,76 +121,8 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 37129 [16] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 45 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:36:31.963  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:31.955  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:26.820  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:36:26.812  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:26.804  IDENTIFY DEVICE
-
-Error 37128 [15] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 45 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:36:26.812  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:26.804  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:22.404  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:36:22.396  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:21.653  IDENTIFY DEVICE
-
-Error 37127 [14] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 45 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:36:22.396  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:21.653  IDENTIFY DEVICE
-  35 00 00 02 a0 00 00 00 fb 30 00 e0 08     00:36:20.874  WRITE DMA EXT
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.849  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.841  SET FEATURES [Set transfer mode]
-
-Error 37126 [13] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 02 a0 00 00 00 fb 30 00 e0 00  Device Fault; Error: ABRT 672 sectors at LBA = 0x00fb3000 = 16461824
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 02 a0 00 00 00 fb 30 00 e0 08     00:36:20.874  WRITE DMA EXT
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.849  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.841  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.834  IDENTIFY DEVICE
-  35 00 00 04 00 00 00 00 fb 2c 00 e0 08     00:36:20.834  WRITE DMA EXT
-
-Error 37125 [12] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 46141 [4] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -200,31 +132,31 @@ Error 37125 [12] occurred at disk power-on lifetime: 131 hours (5 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.841  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.834  IDENTIFY DEVICE
-  35 00 00 04 00 00 00 00 fb 2c 00 e0 08     00:36:20.834  WRITE DMA EXT
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.809  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.801  SET FEATURES [Set transfer mode]
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.850  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.847  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.847  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.844  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.841  SET FEATURES [Set transfer mode]
 
-Error 37124 [11] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 46140 [3] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 04 00 00 00 00 fb 2c 00 e0 00  Device Fault; Error: ABRT 1024 sectors at LBA = 0x00fb2c00 = 16460800
+  04 -- 61 00 08 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 04 00 00 00 00 fb 2c 00 e0 08     00:36:20.834  WRITE DMA EXT
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.809  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.801  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.794  IDENTIFY DEVICE
-  35 00 00 04 00 00 00 00 fb 2c 00 e0 08     00:36:20.794  WRITE DMA EXT
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.847  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.844  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.841  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.838  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.838  READ DMA
 
-Error 37123 [10] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 46139 [2] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -234,33 +166,102 @@ Error 37123 [10] occurred at disk power-on lifetime: 131 hours (5 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.801  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.794  IDENTIFY DEVICE
-  35 00 00 04 00 00 00 00 fb 2c 00 e0 08     00:36:20.794  WRITE DMA EXT
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.769  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.761  SET FEATURES [Set transfer mode]
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.841  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.838  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.838  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.835  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.832  SET FEATURES [Set transfer mode]
 
-Error 37122 [9] occurred at disk power-on lifetime: 131 hours (5 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 46138 [1] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 04 00 00 00 00 fb 2c 00 e0 00  Device Fault; Error: ABRT 1024 sectors at LBA = 0x00fb2c00 = 16460800
+  04 -- 61 00 08 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 04 00 00 00 00 fb 2c 00 e0 08     00:36:20.794  WRITE DMA EXT
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.769  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:36:20.761  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:36:20.754  IDENTIFY DEVICE
-  35 00 00 04 00 00 00 00 fb 2c 00 e0 08     00:36:20.754  WRITE DMA EXT
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.838  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.835  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.832  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.829  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.829  READ DMA
+
+Error 46137 [0] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 46 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.832  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.829  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.829  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.826  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.823  SET FEATURES [Set transfer mode]
+
+Error 46136 [23] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.829  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.826  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.823  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.820  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.820  READ DMA
+
+Error 46135 [22] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 46 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.823  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.820  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.820  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.817  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.814  SET FEATURES [Set transfer mode]
+
+Error 46134 [21] occurred at disk power-on lifetime: 246 hours (10 days + 6 hours)
+  When the command that caused the error occurred, the device was in standby mode.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.820  READ DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.817  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     01:05:43.814  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     01:05:43.811  IDENTIFY DEVICE
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     01:05:43.811  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%        56         -
-# 2  Short offline       Completed without error       00%         9         -
+# 1  Extended offline    Completed without error       00%       270         -
+# 2  Short offline       Completed without error       00%        56         -
+# 3  Short offline       Completed without error       00%         9         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -277,9 +278,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     18/33 Celsius
-Lifetime    Min/Max Temperature:     18/36 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     21/34 Celsius
+Lifetime    Min/Max Temperature:     21/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -287,7 +288,8 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (41)
+Temperature History Size (Index):    128 (65535)
+Invalid Temperature History Size or Index
 
 SCT Error Recovery Control command not supported
 
@@ -303,12 +305,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           19  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        14670  Vendor specific
-
-
+0x8000  4        18827  Vendor specific
 

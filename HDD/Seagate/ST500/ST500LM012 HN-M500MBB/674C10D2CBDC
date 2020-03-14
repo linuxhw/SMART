@@ -11,14 +11,14 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jan  8 05:07:49 2016 MSK
+Local Time is:    Sat Jan  6 21:43:44 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -59,28 +59,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    25
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    14232
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   092   091   025    -    2457
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1409
+  3 Spin_Up_Time            PO---K   092   073   025    -    2456
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2640
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6254
+  9 Power_On_Hours          -O--CK   100   100   000    -    17734
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    558
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1409
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    443
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    562
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2645
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    464
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   050   000    -    35 (Min/Max 18/50)
+194 Temperature_Celsius     -O----   064   049   000    -    36 (Min/Max 17/51)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
-197 Current_Pending_Sector  -O--CK   252   252   000    -    0
-198 Offline_Uncorrectable   ----CK   252   252   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    2221
-223 Load_Retry_Count        -O--CK   100   100   000    -    558
-225 Load_Cycle_Count        -O--CK   094   094   000    -    64064
+197 Current_Pending_Sector  -O--CK   100   099   000    -    75
+198 Offline_Uncorrectable   ----CK   099   099   000    -    100
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    176
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    5213
+223 Load_Retry_Count        -O--CK   100   100   000    -    562
+225 Load_Cycle_Count        -O--CK   086   086   000    -    141552
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,23 +107,181 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-No Errors Logged
+Device Error Count: 29682 (device log contains only the most recent 8 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 29682 [1] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 38 a7 89 60 e0 00  Error: UNC 8 sectors at LBA = 0x38a78960 = 950503776
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 38 a7 89 60 e0 00     00:00:12.124  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.124  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:12.124  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:12.124  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.124  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 29681 [0] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 38 a7 89 60 e0 00  Error: UNC 8 sectors at LBA = 0x38a78960 = 950503776
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 38 a7 89 60 e0 00     00:00:12.122  READ DMA EXT
+  25 00 00 01 00 00 00 30 cb 03 70 e0 00     00:00:12.122  READ DMA EXT
+  25 00 00 01 00 00 00 30 cb 02 70 e0 00     00:00:12.122  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.122  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:12.122  IDENTIFY DEVICE
+
+Error 29680 [7] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 a0 00 00 38 a7 89 60 e0 00  Error: UNC 160 sectors at LBA = 0x38a78960 = 950503776
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 01 80 00 00 38 a7 88 80 e0 00     00:00:12.120  READ DMA EXT
+  25 00 00 00 38 00 00 38 a7 88 40 e0 00     00:00:12.120  READ DMA EXT
+  25 00 00 00 08 00 00 38 a7 88 10 e0 00     00:00:12.120  READ DMA EXT
+  25 00 00 00 18 00 00 38 a7 88 20 e0 00     00:00:12.120  READ DMA EXT
+  25 00 00 00 08 00 00 38 a7 88 78 e0 00     00:00:12.120  READ DMA EXT
+
+Error 29679 [6] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 06 00 00 38 a7 89 62 e0 00  Error: UNC 6 sectors at LBA = 0x38a78962 = 950503778
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 06 00 00 38 a7 89 62 e0 00     00:00:12.118  READ DMA EXT
+  25 00 00 02 00 00 00 30 ca fd 70 e0 00     00:00:12.118  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.118  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:12.118  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:12.118  SET FEATURES [Set transfer mode]
+
+Error 29678 [5] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 00 38 a7 89 61 e0 00  Error: UNC 1 sectors at LBA = 0x38a78961 = 950503777
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 38 a7 89 61 e0 00     00:00:12.116  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.116  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:12.116  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:12.116  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.116  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 29677 [4] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 00 38 a7 89 60 e0 00  Error: UNC 1 sectors at LBA = 0x38a78960 = 950503776
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 38 a7 89 60 e0 00     00:00:12.114  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.114  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:12.114  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:12.114  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.114  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 29676 [3] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 38 a7 89 60 e0 00  Error: UNC 8 sectors at LBA = 0x38a78960 = 950503776
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 38 a7 89 60 e0 00     00:00:12.112  READ DMA EXT
+  25 00 00 00 08 00 00 39 05 cd 90 e0 00     00:00:12.112  READ DMA EXT
+  25 00 00 00 58 00 00 38 a7 88 c0 e0 00     00:00:12.112  READ DMA EXT
+  25 00 00 00 a8 00 00 38 a7 88 18 e0 00     00:00:12.112  READ DMA EXT
+  25 00 00 00 20 00 00 39 07 88 10 e0 00     00:00:12.112  READ DMA EXT
+
+Error 29675 [2] occurred at disk power-on lifetime: 17733 hours (738 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 38 a7 89 60 e0 00  Error: UNC 8 sectors at LBA = 0x38a78960 = 950503776
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 38 a7 89 60 e0 00     00:00:12.062  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.062  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:12.062  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:12.062  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.062  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0x50)       Completed without error       00%      2697         -
-# 2  Short offline       Completed without error       00%      2697         -
-# 3  Vendor (0x50)       Completed without error       00%      1634         -
-# 4  Short offline       Completed without error       00%      1634         -
-# 5  Vendor (0x50)       Completed without error       00%      1312         -
-# 6  Short offline       Completed without error       00%      1312         -
-# 7  Vendor (0x50)       Completed without error       00%       957         -
-# 8  Short offline       Completed without error       00%       957         -
-# 9  Vendor (0x50)       Completed without error       00%       755         -
-#10  Short offline       Completed without error       00%       755         -
-#11  Vendor (0x50)       Completed without error       00%       418         -
-#12  Short offline       Completed without error       00%       418         -
-#13  Vendor (0x50)       Completed without error       00%         0         -
+# 1  Vendor (0x50)       Completed without error       00%     17510         -
+# 2  Short offline       Completed: read failure       90%     17510         538551320
+# 3  Vendor (0x50)       Completed without error       00%     17056         -
+# 4  Short offline       Completed: read failure       90%     17056         538551320
+# 5  Vendor (0x50)       Completed: read failure       90%     16552         8110792
+# 6  Short offline       Completed: read failure       90%     16552         581364488
+# 7  Vendor (0x50)       Completed without error       00%     16094         -
+# 8  Short offline       Completed: read failure       90%     16094         717334784
+# 9  Vendor (0x50)       Completed without error       00%     15600         -
+#10  Short offline       Completed without error       00%     15600         -
+#11  Vendor (0x50)       Completed without error       00%     15052         -
+#12  Short offline       Completed without error       00%     15052         -
+#13  Vendor (0x50)       Completed without error       00%     14599         -
+#14  Short offline       Completed: read failure       90%     14599         582369680
+#15  Vendor (0x50)       Completed without error       00%     14125         -
+#16  Short offline       Completed without error       00%     14125         -
+#17  Vendor (0x50)       Completed without error       00%     13583         -
+#18  Short offline       Completed without error       00%     13583         -
+#19  Vendor (0x50)       Completed without error       00%     13108         -
+#20  Short offline       Completed without error       00%     13108         -
+#21  Vendor (0x50)       Completed without error       00%     12704         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -141,9 +299,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     35/39 Celsius
-Lifetime    Min/Max Temperature:     18/50 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     24/38 Celsius
+Lifetime    Min/Max Temperature:     17/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -151,7 +309,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (38)
+Temperature History Size (Index):    128 (4)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -169,8 +327,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           15  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

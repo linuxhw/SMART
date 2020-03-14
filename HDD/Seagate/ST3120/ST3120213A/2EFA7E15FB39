@@ -7,7 +7,7 @@ User Capacity:    120 034 123 776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Dec  5 15:11:15 2017 +04
+Local Time is:    Wed Jan  3 00:53:17 2018 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  19)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,22 +50,22 @@ recommended polling time: 	 (  51) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   097   006    -    229226772
-  3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   096   096   020    -    4107
+  1 Raw_Read_Error_Rate     POSR--   112   097   006    -    46290566
+  3 Spin_Up_Time            PO----   099   099   000    -    0
+  4 Start_Stop_Count        -O--CK   096   096   020    -    4153
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   073   060   030    -    34538300061
-  9 Power_On_Hours          -O--CK   092   092   000    -    7510
+  7 Seek_Error_Rate         POSR--   073   060   030    -    34541457265
+  9 Power_On_Hours          -O--CK   092   092   000    -    7682
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4323
+ 12 Power_Cycle_Count       -O--CK   096   096   020    -    4407
 187 Reported_Uncorrect      -O--CK   001   001   000    -    236
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   062   055   045    -    38 (Min/Max 35/39)
-194 Temperature_Celsius     -O---K   038   045   000    -    38 (0 18 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   052   000    -    222572929
+190 Airflow_Temperature_Cel -O---K   063   055   045    -    37 (Min/Max 25/37)
+194 Temperature_Celsius     -O---K   037   045   000    -    37 (0 18 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   081   052   000    -    154156601
 197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967295
 198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967295
-199 UDMA_CRC_Error_Count    -OSRCK   200   150   000    -    111
+199 UDMA_CRC_Error_Count    -OSRCK   200   150   000    -    116
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -101,7 +100,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23552  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 540 (device log contains only the most recent 20 errors)
+Device Error Count: 574 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,7 +116,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 540 [19] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 574 [13] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -128,13 +127,13 @@ Error 540 [19] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:37:37.193  READ DMA EXT
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:37:37.193  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:37:36.580  SET MULTIPLE MODE
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:37:36.375  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:37:18.266  RECALIBRATE [OBS-4]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:54.140  READ DMA EXT
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:00:54.117  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:00:54.116  SET MULTIPLE MODE
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:00:53.510  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:00:53.305  RECALIBRATE [OBS-4]
 
-Error 539 [18] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 573 [12] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -145,13 +144,13 @@ Error 539 [18] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:14:16.644  READ DMA EXT
-  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:14:16.584  SET MAX ADDRESS [OBS-6]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:14:16.525  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:14:16.466  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:14:16.406  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:00:20.942  READ DMA EXT
+  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:00:20.883  SET MAX ADDRESS [OBS-6]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:20.824  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:20.764  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:20.697  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
-Error 538 [17] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 572 [11] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -162,13 +161,13 @@ Error 538 [17] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:14:15.251  READ DMA EXT
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:14:15.251  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:14:14.639  SET MULTIPLE MODE
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:14:14.434  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:13:56.310  RECALIBRATE [OBS-4]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:21.937  READ DMA EXT
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:01:21.640  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:01:21.617  SET MULTIPLE MODE
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:01:21.617  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:01:21.011  RECALIBRATE [OBS-4]
 
-Error 537 [16] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 571 [10] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -179,13 +178,13 @@ Error 537 [16] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:00:20.076  READ DMA EXT
-  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:00:20.017  SET MAX ADDRESS [OBS-6]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:19.957  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:19.898  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:19.839  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:00:55.523  READ DMA EXT
+  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:00:55.464  SET MAX ADDRESS [OBS-6]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:55.405  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:55.345  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:55.286  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
-Error 536 [15] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 570 [9] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -196,13 +195,13 @@ Error 536 [15] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:37:37.193  READ DMA EXT
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:37:37.193  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:37:36.580  SET MULTIPLE MODE
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:37:36.375  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:37:18.266  RECALIBRATE [OBS-4]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:54.140  READ DMA EXT
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:00:54.117  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:00:54.116  SET MULTIPLE MODE
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:00:53.510  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:00:53.305  RECALIBRATE [OBS-4]
 
-Error 535 [14] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 569 [8] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -213,13 +212,13 @@ Error 535 [14] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:14:16.644  READ DMA EXT
-  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:14:16.584  SET MAX ADDRESS [OBS-6]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:14:16.525  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:14:16.466  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:14:16.406  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:00:20.942  READ DMA EXT
+  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:00:20.883  SET MAX ADDRESS [OBS-6]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:20.824  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:20.764  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:20.697  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
-Error 534 [13] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 568 [7] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -230,13 +229,13 @@ Error 534 [13] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:14:15.251  READ DMA EXT
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:14:15.251  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:14:14.639  SET MULTIPLE MODE
-  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:14:14.434  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:13:56.310  RECALIBRATE [OBS-4]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:21.937  READ DMA EXT
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:01:21.640  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  c6 00 00 00 10 00 00 00 00 00 00 e0 00     00:01:21.617  SET MULTIPLE MODE
+  91 00 00 00 3f 00 0f 00 00 00 00 ef 00     00:01:21.617  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 01 00 00 00 00 00 00 00 e0 00     00:01:21.011  RECALIBRATE [OBS-4]
 
-Error 533 [12] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hours)
+Error 567 [6] occurred at disk power-on lifetime: 7513 hours (313 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -247,11 +246,11 @@ Error 533 [12] occurred at disk power-on lifetime: 7497 hours (312 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:00:20.076  READ DMA EXT
-  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:00:20.017  SET MAX ADDRESS [OBS-6]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:19.957  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:19.898  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:19.839  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  25 00 00 00 01 00 0d 4b 00 f9 af e0 00     00:00:55.523  READ DMA EXT
+  f9 00 00 01 00 00 0d 4b 00 f9 af 4d 00     00:00:55.464  SET MAX ADDRESS [OBS-6]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:55.405  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:55.345  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f8 00 00 01 00 00 00 4b 00 f9 af 40 00     00:00:55.286  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]

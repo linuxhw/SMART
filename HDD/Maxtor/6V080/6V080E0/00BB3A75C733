@@ -8,7 +8,7 @@ User Capacity:    81,964,302,336 bytes [81.9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sat Dec 22 19:02:17 2018 MSK
+Local Time is:    Tue Feb 11 15:03:04 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -26,8 +26,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  961) seconds.
 Offline data collection
@@ -54,21 +55,21 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   224   223   063    -    7442
-  4 Start_Stop_Count        -O--CK   238   238   000    -    29864
+  3 Spin_Up_Time            POS--K   224   223   063    -    8480
+  4 Start_Stop_Count        -O--CK   238   238   000    -    30422
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   248   236   187    -    32875
-  9 Power_On_Hours          -O--CK   184   184   000    -    24124
+  8 Seek_Time_Performance   POS--K   250   236   187    -    36142
+  9 Power_On_Hours          -O--CK   163   163   000    -    31472
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   223   223   000    -    11996
+ 12 Power_Cycle_Count       -O--CK   222   222   000    -    12563
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   057   047   000    -    43 (Min/Max 21/44)
+190 Airflow_Temperature_Cel -O---K   054   047   000    -    46 (Min/Max 22/46)
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   039   253   000    -    43
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    11503
+194 Temperature_Celsius     -O--CK   040   253   000    -    46
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    18261
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
@@ -76,7 +77,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    0
 202 Data_Address_Mark_Errs  -O-R--   253   227   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    5
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
@@ -262,7 +263,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               90%     24118         -
+# 1  Extended offline    Completed without error       00%     30701         -
+# 2  Extended offline    Completed without error       00%     30557         -
+# 3  Extended offline    Completed without error       00%     30401         -
+# 4  Extended offline    Completed without error       00%     30150         -
+# 5  Extended offline    Completed without error       00%     30012         -
+# 6  Extended offline    Completed without error       00%     29876         -
+# 7  Extended offline    Completed without error       00%     29733         -
+# 8  Extended offline    Completed without error       00%     29609         -
+# 9  Extended offline    Completed without error       00%     29489         -
+#10  Extended offline    Completed without error       00%     29388         -
+#11  Extended offline    Completed without error       00%     29249         -
+#12  Extended offline    Completed without error       00%     29114         -
+#13  Extended offline    Completed without error       00%     28845         -
+#14  Extended offline    Completed without error       00%     28614         -
+#15  Extended offline    Self-test routine in progress 40%     28479         -
+#16  Extended offline    Completed without error       00%     28176         -
+#17  Extended offline    Completed without error       00%     28055         -
+#18  Extended offline    Completed without error       00%     27793         -
+#19  Extended offline    Completed without error       00%     27702         -
+#20  Extended offline    Completed without error       00%     27537         -
+#21  Extended offline    Aborted by host               70%     27384         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -279,8 +300,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 43 Celsius
-Power Cycle Max Temperature:         44 Celsius
+Current Temperature:                 46 Celsius
+Power Cycle Max Temperature:         46 Celsius
 Lifetime    Max Temperature:         61 Celsius
 
 SCT Temperature History Version:     2

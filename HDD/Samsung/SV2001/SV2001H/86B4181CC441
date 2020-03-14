@@ -6,7 +6,7 @@ User Capacity:    20,060,135,424 bytes [20.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 1
-Local Time is:    Tue Jan 23 11:09:14 2018 MSK
+Local Time is:    Fri Oct 19 07:11:32 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -50,13 +50,13 @@ recommended polling time: 	 (   4) minutes.
 SMART Attributes Data Structure revision number: 9
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O-R--   100   099   000    -    3643
-  4 Start_Stop_Count        -O--CK   099   099   000    -    2005
+  1 Raw_Read_Error_Rate     -O-R--   100   099   000    -    3650
+  4 Start_Stop_Count        -O--CK   099   099   000    -    2017
   5 Reallocated_Sector_Ct   PO--CK   253   253   009    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1015995
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1887
+  9 Power_On_Hours          -O--CK   099   099   000    -    1016806
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1893
 194 Temperature_Celsius     -O---K   160   121   000    -    26
 197 Current_Pending_Sector  PO--CK   253   253   009    -    0
 198 Offline_Uncorrectable   P---CK   253   253   009    -    0
@@ -77,7 +77,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 190 (device log contains only the most recent five errors)
+Warning: ATA error count 118 inconsistent with error log pointer 4
+
+ATA Error Count: 118 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -92,7 +94,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 190 occurred at disk power-on lifetime: 8466 hours (352 days + 18 hours)
+Error 118 occurred at disk power-on lifetime: 8473 hours (353 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -103,79 +105,79 @@ Error 190 occurred at disk power-on lifetime: 8466 hours (352 days + 18 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 00      00:32:37.000  SMART READ LOG
-  b0 da 00 00 4f c2 00 00      00:32:37.000  SMART RETURN STATUS
-  b0 d1 01 01 4f c2 00 00      00:32:37.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 d0 01 00 4f c2 00 00      00:32:37.000  SMART READ DATA
-  ec 00 01 00 00 00 00 00      00:32:37.000  IDENTIFY DEVICE
+  b0 d5 01 00 4f c2 00 00      00:06:25.000  SMART READ LOG
+  b0 da 00 00 4f c2 00 00      00:06:25.000  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 00 00      00:06:25.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 d0 01 00 4f c2 00 00      00:06:25.000  SMART READ DATA
+  ec 00 01 00 00 00 00 00      00:06:25.000  IDENTIFY DEVICE
 
-Error 189 occurred at disk power-on lifetime: 8438 hours (351 days + 14 hours)
+Error 117 occurred at disk power-on lifetime: 8472 hours (353 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 40
+  04 80 01 01 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:02:49.000  SET FEATURES [Enable APM]
-  ec 00 01 00 00 00 00 00      00:02:31.000  IDENTIFY DEVICE
-  c8 00 08 00 e0 35 e2 00      00:02:23.000  READ DMA
-  c8 00 08 08 e0 35 e2 00      00:02:23.000  READ DMA
-  c8 00 08 00 e0 35 e2 00      00:02:23.000  READ DMA
+  b0 00 01 01 00 00 00 00      00:00:11.000  SMART [Reserved subcommand]
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
 
-Error 188 occurred at disk power-on lifetime: 8438 hours (351 days + 14 hours)
+Error 116 occurred at disk power-on lifetime: 8472 hours (353 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 40
+  04 80 01 01 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:03:21.000  SET FEATURES [Enable APM]
-  ec 00 01 00 00 00 00 00      00:02:45.000  IDENTIFY DEVICE
-  c8 00 08 00 e0 35 e2 00      00:02:37.000  READ DMA
-  c8 00 08 08 e0 35 e2 00      00:02:37.000  READ DMA
-  c8 00 08 00 e0 35 e2 00      00:02:37.000  READ DMA
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
 
-Error 187 occurred at disk power-on lifetime: 8438 hours (351 days + 14 hours)
+Error 115 occurred at disk power-on lifetime: 8472 hours (353 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 40
+  04 80 01 01 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:08:26.000  SET FEATURES [Enable APM]
-  c8 00 08 a8 23 41 e0 00      00:08:26.000  READ DMA
-  c8 00 f0 48 6b 4c e0 00      00:08:26.000  READ DMA
-  c8 00 20 10 17 4a e0 00      00:08:26.000  READ DMA
-  c8 00 08 b0 58 84 e1 00      00:08:26.000  READ DMA
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
 
-Error 186 occurred at disk power-on lifetime: 8438 hours (351 days + 14 hours)
+Error 114 occurred at disk power-on lifetime: 8472 hours (353 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 40
+  04 80 01 01 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 01 4f c2 00 00      00:32:37.000  SMART READ LOG
-  ef 05 fe 00 00 00 40 00      00:02:02.000  SET FEATURES [Enable APM]
-  c8 00 00 a8 30 4d e0 00      00:02:02.000  READ DMA
-  c8 00 08 a8 23 41 e0 00      00:02:02.000  READ DMA
-  c8 00 e0 60 bc 88 e1 00      00:02:02.000  READ DMA
+  b0 d5 01 01 4f c2 00 00      00:06:25.000  SMART READ LOG
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
+  a0 00 01 01 00 00 00 00      00:00:11.000  PACKET
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

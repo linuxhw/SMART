@@ -3,18 +3,18 @@ Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250820AS
 Serial Number:    --
 Firmware Version: 3.AAE
-User Capacity:    250,058,268,160 bytes [250 GB]
+User Capacity:    250 058 268 160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun May 31 01:05:21 2015 ALMT
+Local Time is:    Thu Nov 19 05:10:23 2015 ALMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  22)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +50,19 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   114   095   006    -    232301174
+  1 Raw_Read_Error_Rate     POSR--   112   095   006    -    202926135
   3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    8569
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8883
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    2
-  7 Seek_Error_Rate         POSR--   051   051   030    -    15462375099189
-  9 Power_On_Hours          -O--CK   069   069   000    -    27473
+  7 Seek_Error_Rate         POSR--   051   051   030    -    16364375119344
+  9 Power_On_Hours          -O--CK   068   068   000    -    28627
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   020    -    10049
+ 12 Power_Cycle_Count       -O--CK   090   090   020    -    10367
 187 Reported_Uncorrect      -O--CK   088   088   000    -    12
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   058   049   045    -    42 (Min/Max 23/43)
-194 Temperature_Celsius     -O---K   042   051   000    -    42 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   065   051   000    -    229430241
+190 Airflow_Temperature_Cel -O---K   068   049   045    -    32 (Min/Max 27/34)
+194 Temperature_Celsius     -O---K   032   051   000    -    32 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   061   051   000    -    186293835
 197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967295
 198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967295
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    16
@@ -257,17 +256,25 @@ Error 1955 [14] occurred at disk power-on lifetime: 25354 hours (1056 days + 10 
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     27463         -
-# 2  Extended offline    Completed without error       00%     27384         -
-# 3  Extended offline    Completed without error       00%     27317         -
-# 4  Extended offline    Completed without error       00%     27238         -
-# 5  Extended offline    Aborted by host               80%     27152         -
-# 6  Extended offline    Completed without error       00%     27084         -
-# 7  Extended offline    Aborted by host               80%     26996         -
-# 8  Extended offline    Aborted by host               80%     26891         -
-# 9  Extended offline    Aborted by host               50%     26791         -
-#10  Short offline       Aborted by host               60%     25377         -
-#11  Extended offline    Aborted by host               90%     25298         -
+# 1  Extended offline    Aborted by host               60%     28589         -
+# 2  Extended offline    Completed without error       00%     28408         -
+# 3  Extended offline    Interrupted (host reset)      70%     28341         -
+# 4  Extended offline    Completed without error       00%     28217         -
+# 5  Extended offline    Completed without error       00%     28162         -
+# 6  Extended offline    Completed without error       00%     28095         -
+# 7  Extended offline    Completed without error       00%     28022         -
+# 8  Extended offline    Completed without error       00%     27948         -
+# 9  Extended offline    Completed without error       00%     27862         -
+#10  Extended offline    Completed without error       00%     27649         -
+#11  Extended offline    Completed without error       00%     27581         -
+#12  Extended offline    Completed without error       00%     27540         -
+#13  Extended offline    Completed without error       00%     27463         -
+#14  Extended offline    Completed without error       00%     27384         -
+#15  Extended offline    Completed without error       00%     27317         -
+#16  Extended offline    Completed without error       00%     27238         -
+#17  Extended offline    Aborted by host               80%     27152         -
+#18  Extended offline    Completed without error       00%     27084         -
+#19  Extended offline    Aborted by host               80%     26996         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -286,7 +293,7 @@ Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

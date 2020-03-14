@@ -7,7 +7,7 @@ User Capacity:    250 059 350 016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Oct 15 02:48:19 2016 MSK
+Local Time is:    Sat Oct 15 01:40:36 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -56,17 +55,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            PO----   099   097   000    -    0
   4 Start_Stop_Count        -O--CK   099   099   020    -    1578
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    7
-  7 Seek_Error_Rate         POSR--   078   060   030    -    71154552
-  9 Power_On_Hours          -O--CK   096   096   000    -    3729
+  7 Seek_Error_Rate         POSR--   078   060   030    -    71635695
+  9 Power_On_Hours          -O--CK   096   096   000    -    3731
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   099   099   020    -    1912
 187 Reported_Uncorrect      -O--CK   001   001   000    -    2829
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   065   053   045    -    35 (Min/Max 1/47)
-194 Temperature_Celsius     -O---K   035   047   000    -    35 (0 1 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   079   063   000    -    161021
-197 Current_Pending_Sector  -O--C-   100   099   000    -    0
-198 Offline_Uncorrectable   ----C-   100   099   000    -    0
+190 Airflow_Temperature_Cel -O---K   064   053   045    -    36 (Min/Max 1/47)
+194 Temperature_Celsius     -O---K   036   047   000    -    36 (0 1 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   067   063   000    -    184767650
+197 Current_Pending_Sector  -O--C-   100   099   000    -    1
+198 Offline_Uncorrectable   ----C-   100   099   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -87,8 +86,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -182,11 +181,11 @@ Error 2900 [19] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:14.768  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:14.763  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:10.625  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:10.625  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:10.617  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:08:13.111  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:08:13.107  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:08:09.088  IDENTIFY DEVICE
+  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:08:09.088  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:08:09.080  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 2899 [18] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -199,11 +198,11 @@ Error 2899 [18] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:14.768  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:14.763  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:10.625  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:10.625  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:10.617  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:22.965  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:22.957  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:31.187  IDENTIFY DEVICE
+  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:31.187  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:31.179  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 2898 [17] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -216,11 +215,11 @@ Error 2898 [17] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:02.416  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:02.407  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:10.625  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:10.625  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:10.617  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:22.965  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:22.957  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:22.949  IDENTIFY DEVICE
+  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:22.949  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:22.939  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 2897 [16] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -233,11 +232,11 @@ Error 2897 [16] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:02.416  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:02.407  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:02.400  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:02.400  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:02.389  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:22.965  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:22.957  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:22.949  IDENTIFY DEVICE
+  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:22.949  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:22.939  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 2896 [15] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -250,13 +249,15 @@ Error 2896 [15] occurred at disk power-on lifetime: 3726 hours (155 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:09:02.416  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:02.407  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:09:02.400  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:09:02.400  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:09:02.389  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 3b 00 00 98 e0 00     00:08:13.111  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:08:13.107  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:08:09.088  IDENTIFY DEVICE
+  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:08:09.088  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:08:09.080  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: read failure       90%      3729         135596433833903
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -273,7 +274,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 35 Celsius
+Current Temperature:                 36 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -281,7 +282,7 @@ SCT Data Table command not supported
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

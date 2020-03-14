@@ -4,17 +4,18 @@ Device Model:     WDC WD1200BEVS-22UST0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01A01
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-Local Time is:    Wed Oct  9 17:14:40 2019 +04
+Local Time is:    Wed Oct  9 21:25:06 2019 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -62,14 +63,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            PO----   159   158   021    -    1016
   4 Start_Stop_Count        -O--CK   097   097   000    -    3910
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   085   085   000    -    11155
+  7 Seek_Error_Rate         -OSR--   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   085   085   000    -    11159
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
  12 Power_Cycle_Count       -O--CK   097   097   000    -    3781
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    477
-193 Load_Cycle_Count        -O--CK   072   072   000    -    385345
-194 Temperature_Celsius     -O---K   108   087   000    -    35
+193 Load_Cycle_Count        -O--CK   072   072   000    -    385403
+194 Temperature_Celsius     -O---K   102   087   000    -    41
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   199   000    -    8
 198 Offline_Uncorrectable   ----C-   100   253   000    -    0
@@ -92,7 +93,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -265,9 +266,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     35/36 Celsius
-Lifetime    Min/Max Temperature:     35/59 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     35/43 Celsius
+Lifetime    Min/Max Temperature:     40/59 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -278,13 +279,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:            1/85 Celsius
-Temperature History Size (Index):    128 (122)
+Temperature History Size (Index):    128 (114)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -295,6 +298,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         3723  Vendor specific
+0x000a  2           26  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        18708  Vendor specific
 

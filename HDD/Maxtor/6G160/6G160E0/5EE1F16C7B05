@@ -4,17 +4,17 @@ Device Model:     Maxtor 6G160E0
 Serial Number:    --
 LU WWN Device Id: 0 150500 ...
 Firmware Version: KA101V00
-User Capacity:    160 040 803 840 bytes [160 GB]
+User Capacity:    160,040,803,840 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sun Jan 24 13:06:26 2016 MSK
+Local Time is:    Sun Feb 18 18:43:21 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -22,14 +22,14 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
-					Auto Offline Data Collection: Enabled.
+Offline data collection status:  (0x05)	Offline data collection activity
+					was aborted by an interrupting command from host.
+					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 2161) seconds.
+data collection: 		(   30) seconds.
 Offline data collection
 capabilities: 			 (0x5b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -52,29 +52,29 @@ recommended polling time: 	 (  65) minutes.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   100   100   025    -    18699
-  4 Start_Stop_Count        -O--CK   099   099   000    -    5149
+  3 Spin_Up_Time            POS--K   100   100   025    -    14421
+  4 Start_Stop_Count        -O--CK   099   099   000    -    6530
   5 Reallocated_Sector_Ct   PO--CK   100   100   025    -    0
   7 Seek_Error_Rate         -O-R--   100   100   000    -    0
-  8 Seek_Time_Performance   POS--K   099   095   074    -    52392
-  9 Power_On_Hours          -O--CK   089   089   000    -    10138
+  8 Seek_Time_Performance   POS--K   099   095   074    -    48649
+  9 Power_On_Hours          -O--CK   088   088   000    -    11375
  10 Spin_Retry_Count        PO-R-K   100   100   004    -    0
  11 Calibration_Retry_Count PO-R-K   100   100   070    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6302
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7220
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-187 Reported_Uncorrect      -O--CK   098   098   000    -    2
-188 Command_Timeout         -O--CK   001   001   000    -    60130853143
+187 Reported_Uncorrect      -O--CK   001   001   000    -    888
+188 Command_Timeout         -O--CK   001   001   000    -    103085834524
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   057   043   040    -    43 (Min/Max 28/43)
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    4869
-193 Load_Cycle_Count        -O--CK   100   100   000    -    8945
-194 Temperature_Celsius     -O--CK   040   253   000    -    43
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    6571
+190 Airflow_Temperature_Cel -O---K   049   043   040    -    51 (Min/Max 44/52)
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    5780
+193 Load_Cycle_Count        -O--CK   099   099   000    -    11824
+194 Temperature_Celsius     -O--CK   039   253   000    -    51
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    5709
 196 Reallocated_Event_Count ---R--   100   100   000    -    0
 197 Current_Pending_Sector  ---R--   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   100   100   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   100   091   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   001   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
 203 Run_Out_Cancel          PO-R--   100   100   027    -    0
 207 Spin_High_Current       -O-R-K   100   100   000    -    0
@@ -98,13 +98,13 @@ Address    Access  R/W   Size  Description
 0x03       GPL,SL  R/O      4  Ext. Comprehensive SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
 
 SMART Extended Comprehensive Error Log Version: 1 (4 sectors)
-Device Error Count: 5743 (device log contains only the most recent 16 errors)
+Device Error Count: 8036 (device log contains only the most recent 16 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,148 +120,149 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 5743 [14] occurred at disk power-on lifetime: 7561 hours (315 days + 1 hours)
+Error 8036 [3] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 70 00 44 00 00 00 01 00 01 a0 00
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 03 00 45 00 00 00 01 00 01 a0 00     00:08:23.153  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:08:23.125  IDENTIFY DEVICE
-  81 00 04 00 01 00 00 00 00 00 01 00 04     00:08:22.575  [VENDOR SPECIFIC]
-  81 00 01 00 01 00 00 00 00 00 01 00 00     00:08:14.600  [VENDOR SPECIFIC]
-  81 00 01 00 08 00 00 06 a6 0c 08 e0 00     00:08:13.785  [VENDOR SPECIFIC]
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
-Error 5742 [13] occurred at disk power-on lifetime: 7561 hours (315 days + 1 hours)
+Error 8035 [2] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 70 00 00 00 00 00 00 00 01 a0 00
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:08:23.125  IDENTIFY DEVICE
-  81 00 04 00 01 00 00 00 00 00 01 00 04     00:08:22.575  [VENDOR SPECIFIC]
-  81 00 01 00 01 00 00 00 00 00 01 00 00     00:08:14.600  [VENDOR SPECIFIC]
-  81 00 01 00 08 00 00 06 a6 0c 08 e0 00     00:08:13.785  [VENDOR SPECIFIC]
-  ea 00 00 08 00 00 00 60 00 00 00 a0 00     00:06:05.691  FLUSH CACHE EXT
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
-Error 5741 [12] occurred at disk power-on lifetime: 7561 hours (315 days + 1 hours)
+Error 8034 [1] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 08 00 00 06 a6 0c 08 e0 00
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 08 00 00 00 60 00 00 00 a0 00     00:06:05.691  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 00 5b f7 f0 e0 00     00:01:44.512  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 5b f8 08 e0 00     00:01:44.512  WRITE DMA EXT
-  35 00 00 00 08 00 00 03 05 01 b0 e0 00     00:01:43.220  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 60 05 38 e0 00     00:01:43.220  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
-Error 5740 [11] occurred at disk power-on lifetime: 7561 hours (315 days + 1 hours)
+Error 8033 [0] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 05 00 00 06 a6 0c 18 e0 00
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 08 00 00 00 60 00 00 00 a0 00     00:06:05.691  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 00 5b f7 f0 e0 00     00:01:44.512  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 5b f8 08 e0 00     00:01:44.512  WRITE DMA EXT
-  35 00 00 00 08 00 00 03 05 01 b0 e0 00     00:01:43.220  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 60 05 38 e0 00     00:01:43.220  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
-Error 5739 [10] occurred at disk power-on lifetime: 7561 hours (315 days + 1 hours)
+Error 8032 [15] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 08 00 00 00 60 be a8 e0 00
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 08 00 00 00 60 00 00 00 a0 00     00:06:05.691  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 00 5b f7 f0 e0 00     00:01:44.512  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 5b f8 08 e0 00     00:01:44.512  WRITE DMA EXT
-  35 00 00 00 08 00 00 03 05 01 b0 e0 00     00:01:43.220  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 60 05 38 e0 00     00:01:43.220  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
-Error 5738 [9] occurred at disk power-on lifetime: 10132 hours (422 days + 4 hours)
+Error 8031 [14] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 08 00 00 00 5c 29 e0 e0 00   8 sectors at LBA = 0x005c29e0 = 6040032
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 5c 29 e0 e0 00     00:00:44.626  READ DMA EXT
-  35 00 00 00 08 00 00 00 60 08 00 e0 00     00:00:44.626  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 00 08 10 e0 00     00:00:44.625  WRITE DMA EXT
-  25 00 00 00 08 00 00 00 60 08 00 e0 00     00:00:44.569  READ DMA EXT
-  25 00 00 00 08 00 00 00 5b e2 b8 e0 00     00:00:41.313  READ DMA EXT
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
-Error 5737 [8] occurred at disk power-on lifetime: 10132 hours (422 days + 4 hours)
+Error 8030 [13] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 08 00 00 00 5b e2 b8 e0 00   8 sectors at LBA = 0x005be2b8 = 6021816
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 5b e2 b8 e0 00     00:00:41.313  READ DMA EXT
-  25 00 00 00 08 00 00 00 5b e2 b8 e0 00     00:00:34.950  READ DMA EXT
-  25 00 00 00 08 00 00 00 5b e2 c0 e0 00     00:00:34.943  READ DMA EXT
-  25 00 00 00 08 00 00 00 5b e2 b0 e0 00     00:00:34.942  READ DMA EXT
-  25 00 00 00 08 00 00 00 5b e2 a8 e0 00     00:00:34.930  READ DMA EXT
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
-Error 5736 [7] occurred at disk power-on lifetime: 7561 hours (315 days + 1 hours)
+Error 8029 [12] occurred at disk power-on lifetime: 11372 hours (473 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 08 00 00 00 5b f8 00 e0 00   8 sectors at LBA = 0x005bf800 = 6027264
+  04 -- 71 00 01 00 00 0b 86 30 49 e0 00  Device Fault; Error: ABRT 1 sectors at LBA = 0x0b863049 = 193343561
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 5b f8 00 e0 00     00:00:43.042  READ DMA EXT
-  35 00 00 00 08 00 00 00 60 08 00 e0 00     00:00:43.041  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 00 08 10 e0 00     00:00:43.041  WRITE DMA EXT
-  25 00 00 00 08 00 00 00 60 08 00 e0 00     00:00:42.989  READ DMA EXT
-  25 00 00 00 08 00 00 00 5b f8 08 e0 00     00:00:39.741  READ DMA EXT
+  35 00 00 01 00 00 00 0b 86 35 00 e0 00     02:14:24.616  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 34 00 e0 00     02:14:23.940  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 33 00 e0 00     02:14:23.402  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 32 00 e0 00     02:14:22.978  WRITE DMA EXT
+  35 00 00 01 00 00 00 0b 86 31 00 e0 00     02:14:22.504  WRITE DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
-SMART Selective self-test log data structure revision number 1
+SMART Selective self-test log data structure revision number 32
+Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
     2        0        0  Not_testing
@@ -274,7 +275,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

@@ -8,7 +8,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Sep 17 18:55:57 2015 EEST
+Local Time is:    Wed Feb  3 22:23:42 2016 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,22 +59,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   187   185   021    -    1633
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8792
+  3 Spin_Up_Time            PO----   188   185   021    -    1600
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9062
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   073   073   000    -    19776
+  9 Power_On_Hours          -O--CK   072   072   000    -    20978
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   000    -    8616
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    301
-193 Load_Cycle_Count        -O--CK   130   130   000    -    210431
-194 Temperature_Celsius     -O---K   108   092   000    -    39
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8881
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    375
+193 Load_Cycle_Count        -O--CK   109   109   000    -    273281
+194 Temperature_Celsius     -O---K   107   092   000    -    40
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
-198 Offline_Uncorrectable   ----C-   100   253   000    -    0
+198 Offline_Uncorrectable   ----C-   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   P--R--   100   253   051    -    0
+200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -151,7 +151,13 @@ Error 1 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 00 00 00 d8 4b 05 06 e3 35 00 00 00     00:00:55.424  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     20451         -
+# 2  Extended offline    Completed without error       00%     20215         -
+# 3  Extended offline    Completed without error       00%     20145         -
+# 4  Extended offline    Completed without error       00%     20055         -
+# 5  Extended offline    Completed without error       00%     19960         -
+# 6  Extended offline    Completed without error       00%     19841         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -168,8 +174,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 28 Celsius
-Power Cycle Max Temperature:         28 Celsius
+Current Temperature:                 42 Celsius
+Power Cycle Max Temperature:         42 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
 SCT Temperature History Version:     2
@@ -177,7 +183,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (127)
+Temperature History Size (Index):    128 (22)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -194,6 +200,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         2995  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          687  Vendor specific
 

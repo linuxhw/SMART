@@ -4,20 +4,21 @@ Device Model:     SAMSUNG HM250HI
 Serial Number:    --
 LU WWN Device Id: 5 0024e9 ...
 Firmware Version: 2AC101C4
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Dec 18 14:38:44 2018 +10
+Local Time is:    Thu Apr 11 15:37:02 2019 +10
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -61,31 +62,31 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    3
   2 Throughput_Performance  POS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   093   092   025    -    2350
-  4 Start_Stop_Count        -O--CK   093   093   000    -    8042
+  3 Spin_Up_Time            PO---K   093   092   025    -    2400
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8320
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    7348
+  9 Power_On_Hours          -O--CK   100   100   000    -    8406
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   099   099   000    -    1503
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5465
+ 11 Calibration_Retry_Count -O--CK   099   099   000    -    1509
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5773
 183 Runtime_Bad_Block       -O--CK   252   252   010    -    0
 184 End-to-End_Error        PO--CK   252   252   048    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    22
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   067   050   040    -    33 (Min/Max 14/51)
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    747
+190 Airflow_Temperature_Cel -O----   068   050   040    -    32 (Min/Max 7/51)
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    753
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-193 Load_Cycle_Count        -O--CK   082   082   000    -    185231
-194 Temperature_Celsius     -O----   064   050   000    -    33 (Min/Max 14/51)
+193 Load_Cycle_Count        -O--CK   079   079   000    -    214741
+194 Temperature_Celsius     -O----   064   050   000    -    32 (Min/Max 7/51)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    23
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    1932
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    1933
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      2  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xbb       GPL     VS       4  Device vendor specific log
@@ -286,9 +287,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     31/34 Celsius
-Lifetime    Min/Max Temperature:     18/60 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     32/32 Celsius
+Lifetime    Min/Max Temperature:     12/60 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -296,13 +297,15 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (4)
+Temperature History Size (Index):    128 (44)
 
 SCT Error Recovery Control:
-           Read:     85 (8,5 seconds)
-          Write:     85 (8,5 seconds)
+           Read:     85 (8.5 seconds)
+          Write:     85 (8.5 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -340,4 +343,6 @@ ID      Size     Value  Description
 0x8e0f  4            0  Vendor specific
 0x8e10  4            0  Vendor specific
 0x8e11  4            0  Vendor specific
+
+
 

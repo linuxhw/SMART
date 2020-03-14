@@ -1,5 +1,5 @@
 === START OF INFORMATION SECTION ===
-Model Family:     Seagate Momentus SpinPoint M8 (AF)
+Model Family:     Seagate Samsung SpinPoint M8 (AF)
 Device Model:     ST750LM022 HN-M750MBB
 Serial Number:    --
 LU WWN Device Id: 5 0004cf ...
@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Jun  7 15:19:46 2016 MSK
+Local Time is:    Thu Mar 29 00:09:21 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -59,27 +59,27 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    0
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    6
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   090   089   025    -    3100
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3453
+  3 Spin_Up_Time            PO---K   090   089   025    -    3108
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6942
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8443
+  9 Power_On_Hours          -O--CK   100   100   000    -    12412
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3428
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    803
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5758
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    1787
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   061   054   000    -    39 (Min/Max 13/47)
+194 Temperature_Celsius     -O----   060   050   000    -    40 (Min/Max 13/50)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    1141
-223 Load_Retry_Count        -O--CK   100   100   000    -    365
-225 Load_Cycle_Count        -O--CK   091   091   000    -    94146
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    1752
+223 Load_Retry_Count        -O--CK   100   100   000    -    432
+225 Load_Cycle_Count        -O--CK   088   088   000    -    128072
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,8 +98,8 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xc0-0xdf  GPL,SL  VS      16  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -127,9 +127,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     38/39 Celsius
-Lifetime    Min/Max Temperature:     13/47 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     38/40 Celsius
+Lifetime    Min/Max Temperature:     13/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -137,13 +137,13 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (24)
+Temperature History Size (Index):    128 (123)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -155,8 +155,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           17  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           26  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

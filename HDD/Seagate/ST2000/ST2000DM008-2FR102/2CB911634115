@@ -1,3 +1,6 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.0.0-27-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     ST2000DM008-2FR102
 Serial Number:    --
@@ -10,14 +13,13 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Sep 11 22:24:28 2019 CST
+Local Time is:    Wed Sep 11 22:44:38 2019 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -59,12 +61,12 @@ SCT capabilities: 	       (0x30a5)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   078   064   006    -    66680600
+  1 Raw_Read_Error_Rate     POSR--   078   064   006    -    66684264
   3 Spin_Up_Time            PO----   099   098   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    715
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   077   060   045    -    50912931
-  9 Power_On_Hours          -O--CK   097   097   000    -    3208 (5 165 0)
+  7 Seek_Error_Rate         POSR--   077   060   045    -    50913044
+  9 Power_On_Hours          -O--CK   097   097   000    -    3208 (124 101 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    284
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
@@ -77,13 +79,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    87
 193 Load_Cycle_Count        -O--CK   096   096   000    -    9412
 194 Temperature_Celsius     -O---K   044   045   000    -    44 (0 21 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   078   064   000    -    66680600
+195 Hardware_ECC_Recovered  -O-RC-   078   064   000    -    66684264
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    2056 (65 239 0)
+240 Head_Flying_Hours       ------   100   253   000    -    2057 (202 46 0)
 241 Total_LBAs_Written      ------   100   253   000    -    7981231030
-242 Total_LBAs_Read         ------   100   253   000    -    8865487417
+242 Total_LBAs_Read         ------   100   253   000    -    8865491081
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +105,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
 0x0c       GPL     R/O   2048  Pending Defects log
-0x10       GPL     R/O      1  NCQ Command Error log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -147,6 +149,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
+SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    44 Celsius
 Power Cycle Min/Max Temperature:     42/45 Celsius
@@ -169,8 +172,8 @@ Page  Offset Size        Value Flags Description
 0x01  0x010  4            3208  ---  Power-on Hours
 0x01  0x018  6      7979770399  ---  Logical Sectors Written
 0x01  0x020  6        30886215  ---  Number of Write Commands
-0x01  0x028  6      8863474860  ---  Logical Sectors Read
-0x01  0x030  6        70528919  ---  Number of Read Commands
+0x01  0x028  6      8863478524  ---  Logical Sectors Read
+0x01  0x030  6        70528969  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4            3035  ---  Spindle Motor Power-on Hours
@@ -205,9 +208,6 @@ Page  Offset Size        Value Flags Description
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
-
-Pending Defects log (GP Log 0x0c)
-No Defects Logged
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

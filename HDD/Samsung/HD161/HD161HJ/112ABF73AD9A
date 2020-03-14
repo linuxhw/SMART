@@ -7,7 +7,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Fri Apr 19 05:48:34 2019 -04
+Local Time is:    Sun May 12 17:26:06 2019 -04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -58,26 +58,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   253   253   025    -    4352
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3504
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3586
   5 Reallocated_Sector_Ct   PO--CK   086   086   010    -    138
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    37709
+  9 Power_On_Hours          -O--CK   100   100   000    -    37887
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2357
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    803285
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2412
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    494639
 184 End-to-End_Error        PO--CK   253   253   099    -    0
 187 Reported_Uncorrect      -O--CK   253   253   000    -    65536
 188 Command_Timeout         -O--CK   253   253   000    -    0
-190 Airflow_Temperature_Cel -O---K   154   109   000    -    28 (Min/Max 17/43)
-194 Temperature_Celsius     -O---K   151   103   000    -    29 (Min/Max 17/45)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    803285
+190 Airflow_Temperature_Cel -O---K   157   109   000    -    27 (Min/Max 17/43)
+194 Temperature_Celsius     -O---K   157   103   000    -    27 (Min/Max 17/45)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    494639
 196 Reallocated_Event_Count -O--CK   086   086   000    -    138
 197 Current_Pending_Sector  -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    491
-200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    245
+200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   100   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   253   253   000    -    0
                             ||||||_ K auto-keep
@@ -235,7 +235,7 @@ Error 5557 [4] occurred at disk power-on lifetime: 10104 hours (421 days + 0 hou
   37 00 00 00 00 ec 00 00 a0 00 00 00 03     00:00:00.031  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   37 00 42 00 00 ef 00 00 a0 00 00 00 00     00:00:00.031  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   37 00 00 00 00 27 00 00 e0 00 00 00 00     13:58:51.679  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  15 11 89 11 91 00 00 11 03 c9 b1 01 11     00:00:00.000  RECALIBRATE [RET-4]
+  15 11 89 11 91 00 00 11 03 c9 b1 03 11     00:00:00.000  RECALIBRATE [RET-4]
 
 Error 5556 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
   When the command that caused the error occurred, the device was in a reserved state.
@@ -253,7 +253,8 @@ Error 5556 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 h
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     37723         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -271,8 +272,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     25/30 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     23/28 Celsius
 Lifetime    Min/Max Temperature:     16/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -281,7 +282,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (56)
+Temperature History Size (Index):    128 (53)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -301,8 +302,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

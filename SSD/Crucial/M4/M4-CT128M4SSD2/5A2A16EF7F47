@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Feb 27 00:56:55 2016 MSK
+Local Time is:    Sun Apr 30 22:00:34 2017 MSK
 
 ==> WARNING: This drive may hang after 5184 hours of power-on time:
 http://www.tomshardware.com/news/Crucial-m4-Firmware-BSOD,14544.html
@@ -70,14 +70,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   001    -    1123
- 12 Power_Cycle_Count       -O--CK   100   100   001    -    877
+  9 Power_On_Hours          -O--CK   100   100   001    -    1135
+ 12 Power_Cycle_Count       -O--CK   100   100   001    -    899
 170 Grown_Failing_Block_Ct  PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   001    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Wear_Leveling_Count     PO--CK   100   100   010    -    10
+173 Wear_Leveling_Count     PO--CK   100   100   010    -    11
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   001    -    9
-181 Non4k_Aligned_Access    -O---K   100   100   001    -    369 95 274
+181 Non4k_Aligned_Access    -O---K   100   100   001    -    396 100 295
 183 SATA_Iface_Downshift    -O--CK   100   100   001    -    0
 184 End-to-End_Error        PO--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   001    -    0
@@ -109,8 +109,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O   3449  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0       GPL     VS    2000  Device vendor specific log
 0xa0       SL      VS     208  Device vendor specific log
@@ -120,9 +120,7 @@ Address    Access  R/W   Size  Description
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
-SMART Extended Comprehensive Error Log size 16383 not supported
-
-SMART Error Log Version: 1
+SMART Extended Comprehensive Error Log Version: 1 (16383 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log size 3449 not supported
@@ -154,45 +152,47 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (269)
+Temperature History Size (Index):    478 (297)
 
 SCT Error Recovery Control:
            Read:     40 (4,0 seconds)
           Write:     40 (4,0 seconds)
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4              877  Lifetime Power-On Resets
-  1  0x010  4             1123  Power-on Hours
-  1  0x018  6       2199430448  Logical Sectors Written
-  1  0x020  6         44290980  Number of Write Commands
-  1  0x028  6       4125833020  Logical Sectors Read
-  1  0x030  6         91787664  Number of Read Commands
-  4  =====  =                =  == General Errors Statistics (rev 1) ==
-  4  0x008  4                0  Number of Reported Uncorrectable Errors
-  4  0x010  4                0  Resets Between Cmd Acceptance and Completion
-  5  =====  =                =  == Temperature Statistics (rev 1) ==
-  5  0x008  1                0  Current Temperature
-  5  0x010  1                0  Average Short Term Temperature
-  5  0x018  1                0  Average Long Term Temperature
-  5  0x020  1                0  Highest Temperature
-  5  0x028  1                0  Lowest Temperature
-  5  0x030  1                0  Highest Average Short Term Temperature
-  5  0x038  1                0  Lowest Average Short Term Temperature
-  5  0x040  1                0  Highest Average Long Term Temperature
-  5  0x048  1                0  Lowest Average Long Term Temperature
-  5  0x050  4                -  Time in Over-Temperature
-  5  0x058  1               70  Specified Maximum Operating Temperature
-  5  0x060  4                -  Time in Under-Temperature
-  5  0x068  1                0  Specified Minimum Operating Temperature
-  6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4                0  Number of Hardware Resets
-  6  0x010  4                0  Number of ASR Events
-  6  0x018  4                0  Number of Interface CRC Errors
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1               45~ Percentage Used Endurance Indicator
-                              |_ ~ normalized value
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4             899  ---  Lifetime Power-On Resets
+0x01  0x010  4            1135  ---  Power-on Hours
+0x01  0x018  6      2415839792  ---  Logical Sectors Written
+0x01  0x020  6        47165898  ---  Number of Write Commands
+0x01  0x028  6      4344313346  ---  Logical Sectors Read
+0x01  0x030  6        95093928  ---  Number of Read Commands
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
+0x05  0x008  1               0  ---  Current Temperature
+0x05  0x010  1               0  ---  Average Short Term Temperature
+0x05  0x018  1               0  ---  Average Long Term Temperature
+0x05  0x020  1               0  ---  Highest Temperature
+0x05  0x028  1               0  ---  Lowest Temperature
+0x05  0x030  1               0  ---  Highest Average Short Term Temperature
+0x05  0x038  1               0  ---  Lowest Average Short Term Temperature
+0x05  0x040  1               0  ---  Highest Average Long Term Temperature
+0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
+0x05  0x050  4               -  ---  Time in Over-Temperature
+0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
+0x05  0x060  4               -  ---  Time in Under-Temperature
+0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4               0  ---  Number of Hardware Resets
+0x06  0x010  4               0  ---  Number of ASR Events
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1              45  N--  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

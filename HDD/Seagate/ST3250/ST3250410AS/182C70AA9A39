@@ -3,17 +3,18 @@ Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250410AS
 Serial Number:    --
 Firmware Version: 4.AAA
-User Capacity:    250 058 268 160 bytes [250 GB]
+User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Nov 23 15:07:30 2016 MSK
+Local Time is:    Tue Jul 17 07:56:14 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -53,18 +54,18 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   099   097   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3613
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   082   060   030    -    200145180
-  9 Power_On_Hours          -O--CK   091   091   000    -    8229
+  3 Spin_Up_Time            PO----   098   097   000    -    0
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6490
+  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
+  7 Seek_Error_Rate         POSR--   084   060   030    -    241583516
+  9 Power_On_Hours          -O--CK   089   089   000    -    9947
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3828
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5817
 187 Reported_Uncorrect      -O--CK   013   013   000    -    87
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   047   045    -    33 (Min/Max 13/53)
-194 Temperature_Celsius     -O---K   033   053   000    -    33 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   099   055   000    -    209528736
+190 Airflow_Temperature_Cel -O---K   062   047   045    -    38 (Min/Max 13/53)
+194 Temperature_Celsius     -O---K   038   053   000    -    38 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   073   055   000    -    54849933
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,7 +88,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -257,6 +258,8 @@ Error 1153 [12] occurred at disk power-on lifetime: 7861 hours (327 days + 13 ho
   25 00 00 01 00 00 01 74 00 9c 00 e0 00     01:00:07.833  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      8537         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -273,7 +276,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 33 Celsius
+Current Temperature:                 38 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -282,6 +285,8 @@ SCT Data Table command not supported
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -295,4 +300,6 @@ ID      Size     Value  Description
 0x8002  2            0  Vendor specific
 0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific
+
+
 

@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Nov 19 20:53:13 2015 MSK
+Local Time is:    Tue Dec 22 20:40:17 2015 YEKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,20 +61,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
   3 Spin_Up_Time            POS--K   172   171   021    -    2400
-  4 Start_Stop_Count        -O--CK   100   100   000    -    951
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1032
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    2143
+  9 Power_On_Hours          -O--CK   097   097   000    -    2305
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    951
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    267
-193 Load_Cycle_Count        -O--CK   200   200   000    -    683
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1032
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    344
+193 Load_Cycle_Count        -O--CK   200   200   000    -    687
 194 Temperature_Celsius     -O---K   108   096   000    -    35
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   155   000    -    21330
+199 UDMA_CRC_Error_Count    -O--CK   200   155   000    -    21334
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 13
+Device Error Count: 4683 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,7 +121,109 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 13 [12] occurred at disk power-on lifetime: 2076 hours (86 days + 12 hours)
+Error 4683 [2] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 00 09 90 40 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x00000990 = 2448
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 08 00 00 00 00 09 90 40 00     01:29:09.551  WRITE DMA EXT
+  25 00 00 00 08 00 00 3a 82 2f 98 40 00     01:29:09.363  READ DMA EXT
+  25 00 00 00 40 00 00 72 bb c6 e0 40 00     01:29:09.362  READ DMA EXT
+  35 00 00 00 08 00 00 00 09 33 40 40 00     01:29:08.605  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 02 21 f0 40 00     01:29:08.598  WRITE DMA EXT
+
+Error 4682 [1] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 3a 82 2f 98 40 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x3a822f98 = 981610392
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 3a 82 2f 98 40 00     01:29:09.363  READ DMA EXT
+  25 00 00 00 40 00 00 72 bb c6 e0 40 00     01:29:09.362  READ DMA EXT
+  35 00 00 00 08 00 00 00 09 33 40 40 00     01:29:08.605  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 02 21 f0 40 00     01:29:08.598  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 00 09 90 40 00     01:29:08.552  WRITE DMA EXT
+
+Error 4681 [0] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 40 00 00 72 bb c6 e0 40 00  Device Fault; Error: ABRT 64 sectors at LBA = 0x72bbc6e0 = 1924908768
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 72 bb c6 e0 40 00     01:29:09.362  READ DMA EXT
+  35 00 00 00 08 00 00 00 09 33 40 40 00     01:29:08.605  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 02 21 f0 40 00     01:29:08.598  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 00 09 90 40 00     01:29:08.552  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.552  FLUSH CACHE EXT
+
+Error 4680 [23] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 09 33 40 40 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x00093340 = 602944
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 08 00 00 00 09 33 40 40 00     01:29:08.605  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 02 21 f0 40 00     01:29:08.598  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 00 09 90 40 00     01:29:08.552  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.552  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+
+Error 4679 [22] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 02 21 f0 40 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x000221f0 = 139760
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 08 00 00 00 02 21 f0 40 00     01:29:08.598  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 00 09 90 40 00     01:29:08.552  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.552  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+
+Error 4678 [21] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 00 09 90 40 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x00000990 = 2448
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 08 00 00 00 00 09 90 40 00     01:29:08.552  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.552  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+
+Error 4677 [20] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -132,13 +234,13 @@ Error 13 [12] occurred at disk power-on lifetime: 2076 hours (86 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:22.516  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:20.335  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:18.155  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:15.975  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:13.788  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.552  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
 
-Error 12 [11] occurred at disk power-on lifetime: 2076 hours (86 days + 12 hours)
+Error 4676 [19] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -149,113 +251,11 @@ Error 12 [11] occurred at disk power-on lifetime: 2076 hours (86 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:20.335  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:18.155  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:15.975  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:13.788  FLUSH CACHE EXT
-  25 00 00 00 34 00 00 50 24 a9 e8 40 00     00:03:18.303  READ DMA EXT
-
-Error 11 [10] occurred at disk power-on lifetime: 2076 hours (86 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:18.155  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:15.975  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:13.788  FLUSH CACHE EXT
-  25 00 00 00 34 00 00 50 24 a9 e8 40 00     00:03:18.303  READ DMA EXT
-  25 00 00 01 00 00 00 50 24 a8 e8 40 00     00:03:18.302  READ DMA EXT
-
-Error 10 [9] occurred at disk power-on lifetime: 2076 hours (86 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:15.975  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:13.788  FLUSH CACHE EXT
-  25 00 00 00 34 00 00 50 24 a9 e8 40 00     00:03:18.303  READ DMA EXT
-  25 00 00 01 00 00 00 50 24 a8 e8 40 00     00:03:18.302  READ DMA EXT
-  25 00 00 01 00 00 00 50 24 a7 e8 40 00     00:03:18.301  READ DMA EXT
-
-Error 9 [8] occurred at disk power-on lifetime: 2076 hours (86 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 40 00     00:08:13.788  FLUSH CACHE EXT
-  25 00 00 00 34 00 00 50 24 a9 e8 40 00     00:03:18.303  READ DMA EXT
-  25 00 00 01 00 00 00 50 24 a8 e8 40 00     00:03:18.302  READ DMA EXT
-  25 00 00 01 00 00 00 50 24 a7 e8 40 00     00:03:18.301  READ DMA EXT
-  25 00 00 01 00 00 00 50 24 a6 e8 40 00     00:03:18.300  READ DMA EXT
-
-Error 8 [7] occurred at disk power-on lifetime: 2046 hours (85 days + 6 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 c2 4f 01 00 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d8 00 01 00 00 00 c2 4f 01 00 00     02:29:56.358  SMART ENABLE OPERATIONS
-  25 d0 00 00 7a 00 00 60 f9 d1 c8 40 00     02:29:00.408  READ DMA EXT
-  25 d0 00 01 00 00 00 60 f9 d0 c8 40 00     02:29:00.407  READ DMA EXT
-  25 d0 00 01 00 00 00 60 f9 cf c8 40 00     02:29:00.406  READ DMA EXT
-  25 d0 00 01 00 00 00 60 f9 ce c8 40 00     02:29:00.405  READ DMA EXT
-
-Error 7 [6] occurred at disk power-on lifetime: 2045 hours (85 days + 5 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 c2 4f 01 00 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d8 00 01 00 00 00 c2 4f 01 00 00     01:21:50.434  SMART ENABLE OPERATIONS
-  25 d0 00 00 4e 00 00 4d 78 7c 28 40 00     01:21:04.443  READ DMA EXT
-  25 d0 00 01 00 00 00 4d 78 7b 28 40 00     01:21:04.442  READ DMA EXT
-  25 d0 00 01 00 00 00 4d 78 7a 28 40 00     01:21:04.441  READ DMA EXT
-  25 d0 00 01 00 00 00 4d 78 79 28 40 00     01:21:04.441  READ DMA EXT
-
-Error 6 [5] occurred at disk power-on lifetime: 2044 hours (85 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 c2 4f 01 00 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d8 00 01 00 00 00 c2 4f 01 00 00     00:52:31.319  SMART ENABLE OPERATIONS
-  25 d8 00 00 33 00 00 13 03 5a 88 40 00     00:52:06.166  READ DMA EXT
-  25 d8 00 01 00 00 00 13 03 59 88 40 00     00:52:06.165  READ DMA EXT
-  25 d8 00 01 00 00 00 13 03 58 88 40 00     00:52:06.164  READ DMA EXT
-  25 d8 00 01 00 00 00 13 03 57 88 40 00     00:52:06.164  READ DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 40 00     01:29:08.551  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 00 00 09 a0 40 00     01:29:08.551  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -276,7 +276,7 @@ SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     21/35 Celsius
+Power Cycle Min/Max Temperature:     34/35 Celsius
 Lifetime    Min/Max Temperature:     16/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -285,7 +285,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (343)
+Temperature History Size (Index):    478 (47)
 
 SCT Error Recovery Control command not supported
 
@@ -301,10 +301,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        22822  Vendor specific
+0x8000  4         6048  Vendor specific
 

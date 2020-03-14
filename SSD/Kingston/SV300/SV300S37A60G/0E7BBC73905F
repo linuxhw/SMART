@@ -10,14 +10,14 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Jul  5 09:04:29 2015 MSK
+Local Time is:    Mon May 29 20:23:40 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -58,29 +58,29 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   050    -    0/4062116
+  1 Raw_Read_Error_Rate     POSR--   120   120   050    -    0/0
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   099   099   000    -    1671h+27m+47.030s
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3839
+  9 Power_On_Hours_and_Msec -O--CK   095   095   000    -    4587h+08m+16.650s
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    6103
 171 Program_Fail_Count      -O--CK   000   000   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    2728
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    3431
 177 Wear_Range_Delta        ------   000   000   000    -    8
 181 Program_Fail_Count      -O--CK   000   000   000    -    0
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   036   068   000    -    36 (Min/Max 18/68)
-194 Temperature_Celsius     -O---K   036   068   000    -    36 (Min/Max 18/68)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/4062116
+189 Airflow_Temperature_Cel ------   032   068   000    -    32 (Min/Max 18/68)
+194 Temperature_Celsius     -O---K   032   068   000    -    32 (Min/Max 18/68)
+195 ECC_Uncorr_Error_Count  --SRC-   100   100   000    -    0/0
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/4062116
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/4062116
+201 Unc_Soft_Read_Err_Rate  --SRC-   100   100   000    -    0/0
+204 Soft_ECC_Correct_Rate   --SRC-   100   100   000    -    0/0
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           PO--C-   100   100   010    -    0
-233 SandForce_Internal      ------   000   000   000    -    3606
-234 SandForce_Internal      -O--CK   000   000   000    -    1469
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    1469
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    1093
+233 SandForce_Internal      ------   000   000   000    -    6685
+234 SandForce_Internal      -O--CK   000   000   000    -    2629
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    2629
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    2428
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,8 +117,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     25/36 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     23/32 Celsius
 Lifetime    Min/Max Temperature:     18/68 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -127,29 +127,31 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    0 (170)
+Temperature History Size (Index):    0 (60)
 Temperature History is empty
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            4  Command failed due to ICRC error
+0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2          286  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2          136  Device-to-host register FISes sent due to a COMRESET
-0x000f  2            4  R_ERR response for host-to-device data FIS, CRC
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
 0x0002  2            0  R_ERR response for data FIS
 0x0005  2            0  R_ERR response for non-data FIS
-0x000b  2            4  CRC errors within host-to-device FIS
+0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

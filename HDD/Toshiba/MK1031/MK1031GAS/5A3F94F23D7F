@@ -7,26 +7,25 @@ User Capacity:    100 030 242 816 bytes [100 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Sat Mar 19 18:45:46 2016 EET
+Local Time is:    Sun Aug 14 09:30:20 2016 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  22)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  484) seconds.
 Offline data collection
@@ -53,26 +52,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    693
-  4 Start_Stop_Count        -O--CK   100   100   000    -    4697
+  3 Spin_Up_Time            POS--K   100   100   001    -    1298
+  4 Start_Stop_Count        -O--CK   100   100   000    -    4752
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   057   057   000    -    17580
- 10 Spin_Retry_Count        PO--CK   193   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    4693
+  9 Power_On_Hours          -O--CK   056   056   000    -    17733
+ 10 Spin_Retry_Count        PO--CK   195   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4748
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    42
-193 Load_Cycle_Count        -O--CK   070   070   000    -    305957
-194 Temperature_Celsius     -O---K   100   100   000    -    28 (Min/Max 15/48)
+193 Load_Cycle_Count        -O--CK   068   068   000    -    320261
+194 Temperature_Celsius     -O---K   100   100   000    -    34 (Min/Max 15/48)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-220 Disk_Shift              -O----   100   100   000    -    8264
-222 Loaded_Hours            -O--CK   066   066   000    -    13643
+220 Disk_Shift              -O----   100   100   000    -    8265
+222 Loaded_Hours            -O--CK   066   066   000    -    13741
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    315
+226 Load-in_Time            -OS--K   100   100   000    -    306
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -98,18 +97,19 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     17423         -
-# 2  Extended offline    Aborted by host               30%     17354         -
-# 3  Extended offline    Aborted by host               90%     17353         -
-# 4  Extended offline    Completed without error       00%     17344         -
-# 5  Extended offline    Aborted by host               90%     17303         -
-# 6  Extended offline    Aborted by host               80%     17263         -
-# 7  Extended offline    Aborted by host               90%     17054         -
-# 8  Extended offline    Completed without error       00%     17005         -
-# 9  Extended offline    Aborted by host               90%      5590         -
-#10  Short offline       Completed without error       00%      5590         -
-#11  Extended offline    Aborted by host               90%      5527         -
-#12  Short offline       Completed without error       00%      5527         -
+# 1  Extended offline    Aborted by host               60%     17671         -
+# 2  Extended offline    Completed without error       00%     17423         -
+# 3  Extended offline    Aborted by host               30%     17354         -
+# 4  Extended offline    Aborted by host               90%     17353         -
+# 5  Extended offline    Completed without error       00%     17344         -
+# 6  Extended offline    Aborted by host               90%     17303         -
+# 7  Extended offline    Aborted by host               80%     17263         -
+# 8  Extended offline    Aborted by host               90%     17054         -
+# 9  Extended offline    Completed without error       00%     17005         -
+#10  Extended offline    Aborted by host               90%      5590         -
+#11  Short offline       Completed without error       00%      5590         -
+#12  Extended offline    Aborted by host               90%      5527         -
+#13  Short offline       Completed without error       00%      5527         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -124,7 +124,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

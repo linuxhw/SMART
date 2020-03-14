@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Sep 20 02:10:00 2018 +04
+Local Time is:    Mon Oct 15 10:19:08 2018 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -56,26 +56,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    3
-  9 Power_On_Hours          ------   100   100   050    -    396
- 12 Power_Cycle_Count       ------   100   100   050    -    963
+  9 Power_On_Hours          ------   100   100   050    -    423
+ 12 Power_Cycle_Count       ------   100   100   050    -    1003
 160 Unknown_Attribute       ------   100   100   050    -    1524
 161 Unknown_Attribute       ------   100   100   050    -    114
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    4
-164 Unknown_Attribute       ------   100   100   050    -    87482
-165 Unknown_Attribute       ------   100   100   050    -    97
-166 Unknown_Attribute       ------   100   100   050    -    52
-167 Unknown_Attribute       ------   100   100   050    -    85
+164 Unknown_Attribute       ------   100   100   050    -    93793
+165 Unknown_Attribute       ------   100   100   050    -    101
+166 Unknown_Attribute       ------   100   100   050    -    56
+167 Unknown_Attribute       ------   100   100   050    -    92
 168 Unknown_Attribute       ------   100   100   050    -    3000
-169 Unknown_Attribute       ------   098   098   050    -    98
-192 Power-Off_Retract_Count ------   100   100   050    -    96
+169 Unknown_Attribute       ------   097   097   050    -    97
+192 Power-Off_Retract_Count ------   100   100   050    -    102
 194 Temperature_Celsius     ------   100   100   050    -    40
-195 Hardware_ECC_Recovered  ------   100   100   050    -    89359
+195 Hardware_ECC_Recovered  ------   100   100   050    -    93813
 196 Reallocated_Event_Count ------   100   100   050    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
-241 Total_LBAs_Written      ------   100   100   050    -    95664
-242 Total_LBAs_Read         ------   100   100   050    -    92795
-245 Unknown_Attribute       ------   100   100   050    -    140190
+241 Total_LBAs_Written      ------   100   100   050    -    101220
+242 Total_LBAs_Read         ------   100   100   050    -    99255
+245 Unknown_Attribute       ------   100   100   050    -    149684
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -128,19 +128,19 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             963  ---  Lifetime Power-On Resets
-0x01  0x010  4             396  ---  Power-on Hours
-0x01  0x018  6      1974475589  ---  Logical Sectors Written
-0x01  0x020  6       100121050  ---  Number of Write Commands
-0x01  0x028  6      1786495509  ---  Logical Sectors Read
-0x01  0x030  6        80449136  ---  Number of Read Commands
+0x01  0x008  4            1003  ---  Lifetime Power-On Resets
+0x01  0x010  4             423  ---  Power-on Hours
+0x01  0x018  6      2338650875  ---  Logical Sectors Written
+0x01  0x020  6       106466515  ---  Number of Write Commands
+0x01  0x028  6      2209869979  ---  Logical Sectors Read
+0x01  0x030  6        85564021  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4            1524  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4          349225  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4          397930  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              40  ---  Current Temperature
-0x05  0x010  1            -122  ---  Average Short Term Temperature
-0x05  0x018  1              40  ---  Average Long Term Temperature
+0x05  0x010  1             -79  ---  Average Short Term Temperature
+0x05  0x018  1             -36  ---  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              40  ---  Lowest Temperature
 0x05  0x030  1              -1  ---  Highest Average Short Term Temperature
@@ -152,10 +152,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           67801  ---  Number of Hardware Resets
+0x06  0x008  4           75731  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -171,7 +171,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

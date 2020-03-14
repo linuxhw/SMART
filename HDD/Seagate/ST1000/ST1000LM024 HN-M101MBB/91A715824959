@@ -11,14 +11,14 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Oct  6 13:40:50 2016 IRKT
+Local Time is:    Tue Oct 11 10:37:41 2016 IRKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -58,34 +58,34 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    6891
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    7505
   2 Throughput_Performance  POS--K   252   252   000    -    0
   3 Spin_Up_Time            PO---K   089   089   025    -    3457
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1354
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1373
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    9331
+  9 Power_On_Hours          -O--CK   100   100   000    -    9422
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    280
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1232
-181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    4043425
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    284
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1252
+181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    4091007
 183 Runtime_Bad_Block       -O--CK   252   252   010    -    0
 184 End-to-End_Error        PO--CK   252   252   048    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    6507
+187 Reported_Uncorrect      -O--CK   100   100   000    -    7069
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   058   043   040    -    42 (Min/Max 9/58)
+190 Airflow_Temperature_Cel -O----   063   043   040    -    37 (Min/Max 9/58)
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    55
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-193 Load_Cycle_Count        -O--CK   049   049   000    -    518189
-194 Temperature_Celsius     -O----   058   043   000    -    42 (Min/Max 9/58)
+193 Load_Cycle_Count        -O--CK   049   049   000    -    522565
+194 Temperature_Celsius     -O----   063   043   000    -    37 (Min/Max 9/58)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
-197 Current_Pending_Sector  -O--CK   100   100   000    -    12
+197 Current_Pending_Sector  -O--CK   100   100   000    -    6
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    9272
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    9353
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 6509 (device log contains only the most recent 8 errors)
+Device Error Count: 7071 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,7 +128,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6509 [4] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7071 [6] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -139,13 +139,13 @@ Error 6509 [4] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 06 00 00 00 1d 39 4a e1 08     00:00:03.216  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.216  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.216  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.216  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.216  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 06 00 00 00 1d 39 4a e1 08     00:00:00.618  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.618  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.618  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.618  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.618  SET FEATURES [Enable SATA feature]
 
-Error 6508 [3] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7070 [5] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -156,13 +156,13 @@ Error 6508 [3] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 1d 39 49 e1 08     00:00:03.215  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.215  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.215  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.215  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.215  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 01 00 00 00 1d 39 49 e1 08     00:00:00.616  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.616  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.616  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.616  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.616  SET FEATURES [Enable SATA feature]
 
-Error 6507 [2] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7069 [4] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -173,13 +173,13 @@ Error 6507 [2] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 1d 39 48 e1 08     00:00:03.213  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.213  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.213  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.213  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.213  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 01 00 00 00 1d 39 48 e1 08     00:00:00.614  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.614  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.614  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.614  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.614  SET FEATURES [Enable SATA feature]
 
-Error 6506 [1] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7068 [3] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -190,13 +190,13 @@ Error 6506 [1] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 06 00 00 00 1d 39 4a e1 08     00:00:03.211  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.211  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.211  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.211  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.211  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 06 00 00 00 1d 39 4a e1 08     00:00:00.612  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.612  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.612  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.612  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.612  SET FEATURES [Enable SATA feature]
 
-Error 6505 [0] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7067 [2] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -207,13 +207,13 @@ Error 6505 [0] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 1d 39 49 e1 08     00:00:03.209  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.209  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.209  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.209  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.209  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 01 00 00 00 1d 39 49 e1 08     00:00:00.610  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.610  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.610  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.610  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.610  SET FEATURES [Enable SATA feature]
 
-Error 6504 [7] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7066 [1] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -224,13 +224,13 @@ Error 6504 [7] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 1d 39 48 e1 08     00:00:03.207  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.207  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.207  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.207  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.207  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 01 00 00 00 1d 39 48 e1 08     00:00:00.609  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.609  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.609  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.609  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.609  SET FEATURES [Enable SATA feature]
 
-Error 6503 [6] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7065 [0] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -241,13 +241,13 @@ Error 6503 [6] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 06 00 00 00 1d 39 4a e1 08     00:00:03.206  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.206  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.206  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.206  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.206  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 06 00 00 00 1d 39 4a e1 08     00:00:00.607  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.607  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.607  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.607  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.607  SET FEATURES [Enable SATA feature]
 
-Error 6502 [5] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hours)
+Error 7064 [7] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -258,11 +258,11 @@ Error 6502 [5] occurred at disk power-on lifetime: 9331 hours (388 days + 19 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 1d 39 49 e1 08     00:00:03.204  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.204  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:03.204  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:03.204  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:03.204  SET FEATURES [Enable SATA feature]
+  c8 00 00 00 01 00 00 00 1d 39 49 e1 08     00:00:00.605  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.605  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.605  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.605  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.605  SET FEATURES [Enable SATA feature]
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -304,8 +304,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     26/42 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     23/37 Celsius
 Lifetime    Min/Max Temperature:      9/59 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -314,7 +314,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (59)
+Temperature History Size (Index):    128 (121)
 
 SCT Error Recovery Control:
            Read:     85 (8,5 seconds)
@@ -332,8 +332,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          341  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
@@ -346,16 +346,16 @@ ID      Size     Value  Description
 0x8e03  4            0  Vendor specific
 0x8e04  4            0  Vendor specific
 0x8e05  4            0  Vendor specific
-0x8e06  4         2038  Vendor specific
-0x8e07  4       242821  Vendor specific
-0x8e08  4          142  Vendor specific
-0x8e09  4        24278  Vendor specific
-0x8e0a  4       231336  Vendor specific
-0x8e0b  4    454641536  Vendor specific
-0x8e0c  4       760589  Vendor specific
-0x8e0d  4        31648  Vendor specific
-0x8e0e  4        71890  Vendor specific
-0x8e0f  4     59201408  Vendor specific
-0x8e10  4       287560  Vendor specific
-0x8e11  4           27  Vendor specific
+0x8e06  4            0  Vendor specific
+0x8e07  4            0  Vendor specific
+0x8e08  4            0  Vendor specific
+0x8e09  4            0  Vendor specific
+0x8e0a  4            0  Vendor specific
+0x8e0b  4            0  Vendor specific
+0x8e0c  4            0  Vendor specific
+0x8e0d  4            0  Vendor specific
+0x8e0e  4            0  Vendor specific
+0x8e0f  4            0  Vendor specific
+0x8e10  4            0  Vendor specific
+0x8e11  4            0  Vendor specific
 

@@ -3,11 +3,11 @@ Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3320620AS
 Serial Number:    --
 Firmware Version: 3.AAJ
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri May 15 11:52:00 2015 NOVT
+Local Time is:    Mon Mar 12 12:11:18 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -52,19 +52,19 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   102   082   006    -    5138531
-  3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    2013
+  1 Raw_Read_Error_Rate     POSR--   112   082   006    -    49711503
+  3 Spin_Up_Time            PO----   096   095   000    -    0
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2213
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    801611653
-  9 Power_On_Hours          -O--CK   080   080   000    -    18241
+  7 Seek_Error_Rate         POSR--   090   060   030    -    956443989
+  9 Power_On_Hours          -O--CK   061   061   000    -    34370
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2059
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2261
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   055   042   045    Past 45 (Min/Max 43/45)
-194 Temperature_Celsius     -O---K   045   058   000    -    45 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   077   050   000    -    229826995
+190 Airflow_Temperature_Cel -O---K   054   039   045    Past 46 (Min/Max 45/54 #56)
+194 Temperature_Celsius     -O---K   046   061   000    -    46 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   057   049   000    -    166934194
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,8 +87,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -107,6 +107,26 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     34315         -
+# 2  Extended offline    Completed without error       00%     34148         -
+# 3  Extended offline    Completed without error       00%     33984         -
+# 4  Extended offline    Completed without error       00%     33814         -
+# 5  Extended offline    Completed without error       00%     33646         -
+# 6  Extended offline    Completed without error       00%     33479         -
+# 7  Extended offline    Completed without error       00%     33313         -
+# 8  Extended offline    Completed without error       00%     33144         -
+# 9  Extended offline    Completed without error       00%     32977         -
+#10  Extended offline    Completed without error       00%     32733         -
+#11  Extended offline    Completed without error       00%     32565         -
+#12  Extended offline    Completed without error       00%     32398         -
+#13  Extended offline    Completed without error       00%     32231         -
+#14  Extended offline    Completed without error       00%     32063         -
+#15  Extended offline    Completed without error       00%     31896         -
+#16  Extended offline    Completed without error       00%     31728         -
+#17  Extended offline    Completed without error       00%     31561         -
+#18  Extended offline    Completed without error       00%     31394         -
+#19  Extended offline    Completed without error       00%     31243         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -121,11 +141,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

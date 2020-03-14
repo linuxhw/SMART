@@ -8,15 +8,15 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jan  5 10:41:12 2020 CET
+Local Time is:    Sun Feb  2 15:56:31 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -55,33 +55,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   095   095   000    -    4651
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    1106
-100 Unknown_Attribute       -O--CK   100   100   000    -    14799198
+  9 Power_On_Hours          -O--CK   095   095   000    -    4718
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    1291
+100 Unknown_Attribute       -O--CK   100   100   000    -    14892283
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   100   000    -    0
-174 Unknown_Attribute       ----CK   100   100   000    -    218
+174 Unknown_Attribute       ----CK   100   100   000    -    323
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   100   100   000    -    14664544
+177 Wear_Leveling_Count     -O--CK   100   100   000    -    14757024
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    2
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    2
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    2494
 181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   253   100   000    -    0
 183 Runtime_Bad_Block       -O--CK   253   253   000    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    33
+187 Reported_Uncorrect      -O--CK   100   100   000    -    73
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   028   000   000    -    28 (Min/Max 8/70)
-195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    916286120
+194 Temperature_Celsius     -O----   036   000   000    -    36 (Min/Max 8/70)
+195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    416824482
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 Temperature_Celsius     PO--CK   098   098   ---    -    3
-234 Unknown_Attribute       -O--CK   100   100   ---    -    57394
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    9247
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    14418
-250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    36677
+234 Unknown_Attribute       -O--CK   100   100   ---    -    57722
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    9462
+242 Total_LBAs_Read         -O--CK   100   100   ---    -    14509
+250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    38732
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 9619 (device log contains only the most recent 20 errors)
+Device Error Count: 10193 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,7 +120,58 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 9619 [18] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
+Error 10193 [12] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 08  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 c2 00 00 00 00 00 00 00 00 40 40     00:00:28.090  SET FEATURES [Disable AAM] [OBS-ACS-2]
+  60 01 00 00 d8 00 00 00 1d da 90 40 40     00:00:28.090  READ FPDMA QUEUED
+  ef 00 05 00 fe 00 00 00 00 00 00 40 40     00:00:28.080  SET FEATURES [Enable APM]
+  60 00 48 00 c0 00 00 0e ae 0a d8 40 40     00:00:28.070  READ FPDMA QUEUED
+  60 00 90 00 b8 00 00 0e ae 0b 20 40 40     00:00:28.070  READ FPDMA QUEUED
+
+Error 10192 [11] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:21.800  READ DMA EXT
+  25 00 00 00 37 00 00 00 3d 74 09 40 40     00:00:20.500  READ DMA EXT
+  25 00 00 00 09 00 00 00 3d 74 00 40 40     00:00:20.500  READ DMA EXT
+  25 00 00 00 36 00 00 00 3d 73 ca 40 40     00:00:20.500  READ DMA EXT
+  25 00 00 00 0a 00 00 00 3d 73 c0 40 40     00:00:20.500  READ DMA EXT
+
+Error 10191 [10] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:21.800  READ DMA EXT
+  25 00 00 00 37 00 00 00 3d 74 09 40 40     00:00:20.500  READ DMA EXT
+  25 00 00 00 09 00 00 00 3d 74 00 40 40     00:00:20.500  READ DMA EXT
+  25 00 00 00 36 00 00 00 3d 73 ca 40 40     00:00:20.500  READ DMA EXT
+  25 00 00 00 0a 00 00 00 3d 73 c0 40 40     00:00:20.500  READ DMA EXT
+
+Error 10190 [9] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -131,8 +182,13 @@ Error 9619 [18] occurred at disk power-on lifetime: 4651 hours (193 days + 19 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:02.560  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:02.560  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:02.530  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:02.500  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:02.500  IDENTIFY DEVICE
 
-Error 9618 [17] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
+Error 10189 [8] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -143,8 +199,27 @@ Error 9618 [17] occurred at disk power-on lifetime: 4651 hours (193 days + 19 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:06:17.080  SET FEATURES [Disable SATA feature]
+  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     00:06:16.910  FLUSH CACHE
+  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     00:05:03.080  FLUSH CACHE
+  61 00 08 00 90 00 00 00 0b 78 00 40 40     00:05:03.080  WRITE FPDMA QUEUED
+  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     00:05:03.080  FLUSH CACHE
 
-Error 9617 [16] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
+Error 10188 [7] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 08  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 c2 00 00 00 00 00 00 00 00 40 40     00:00:00.000  SET FEATURES [Disable AAM] [OBS-ACS-2]
+  ef 00 05 00 fe 00 00 00 00 00 00 40 40     00:00:00.000  SET FEATURES [Enable APM]
+
+Error 10187 [6] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -155,13 +230,13 @@ Error 9617 [16] occurred at disk power-on lifetime: 4651 hours (193 days + 19 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 42 00 fe 00 00 00 00 00 00 40 40     00:00:40.250  SET FEATURES [Enable AAM] [OBS-ACS-2]
-  60 00 40 00 90 00 00 05 97 49 e0 40 40     00:00:40.250  READ FPDMA QUEUED
-  ef 00 05 00 01 00 00 00 00 00 00 40 40     00:00:40.200  SET FEATURES [Enable APM]
-  60 00 48 00 78 00 00 05 6c 58 c0 40 40     00:00:40.200  READ FPDMA QUEUED
-  60 00 90 00 70 00 00 05 6c 59 08 40 40     00:00:40.200  READ FPDMA QUEUED
+  ef 00 42 00 fe 00 00 00 00 00 00 40 40     00:00:53.200  SET FEATURES [Enable AAM] [OBS-ACS-2]
+  ef 00 05 00 01 00 00 00 00 00 00 40 40     00:00:53.200  SET FEATURES [Enable APM]
+  60 00 08 00 c8 00 00 00 0b 78 80 40 40     00:00:51.200  READ FPDMA QUEUED
+  60 00 08 00 b0 00 00 00 0b 77 f8 40 40     00:00:51.200  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 00 00 00 00 40 40     00:00:51.200  READ FPDMA QUEUED
 
-Error 9616 [15] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
+Error 10186 [5] occurred at disk power-on lifetime: 4718 hours (196 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -172,74 +247,11 @@ Error 9616 [15] occurred at disk power-on lifetime: 4651 hours (193 days + 19 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 00 00 30 ec 00 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb c0 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb 80 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb 40 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb 00 40 40     00:00:32.720  READ DMA EXT
-
-Error 9615 [14] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 00 00 30 ec 00 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb c0 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb 80 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb 40 40 40     00:00:32.720  READ DMA EXT
-  25 00 00 00 40 00 00 00 30 eb 00 40 40     00:00:32.720  READ DMA EXT
-
-Error 9614 [13] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.490  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.490  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.370  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.250  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.250  IDENTIFY DEVICE
-
-Error 9613 [12] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-
-Error 9612 [11] occurred at disk power-on lifetime: 4651 hours (193 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:43.300  SET FEATURES [Disable SATA feature]
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:14.170  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:14.170  READ DMA EXT
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.590  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.590  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:35.230  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:18.080  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:18.080  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:18.050  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:18.050  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -265,5 +277,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 

@@ -3,11 +3,11 @@ Model Family:     SAMSUNG SpinPoint P120
 Device Model:     SAMSUNG SP2014N
 Serial Number:    --
 Firmware Version: VC100-33
-User Capacity:    200 048 565 760 bytes [200 GB]
+User Capacity:    200,048,565,760 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Tue Jan 16 12:22:39 2018 +03
+Local Time is:    Sat Feb 17 11:44:55 2018 +03
 
 ==> WARNING: May need -F samsung3 enabled; see manual for details.
 
@@ -56,23 +56,23 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   100   100   025    -    4672
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5695
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5912
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    9676
+  9 Power_On_Hours          -O--CK   100   100   000    -    9773
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   002   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2832
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2923
 190 Airflow_Temperature_Cel -O---K   151   106   000    -    29
 194 Temperature_Celsius     -O---K   151   106   000    -    29
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2608066
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    200877
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   253   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -91,8 +91,8 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x03) instead
-Device Error Count: 483 (device log contains only the most recent 8 errors)
+Invalid Error Log index = 0x0000, trying reserved byte (0x07) instead
+Device Error Count: 591 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -108,7 +108,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 483 [2] occurred at disk power-on lifetime: 9674 hours (403 days + 2 hours)
+Error 591 [6] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -119,13 +119,13 @@ Error 483 [2] occurred at disk power-on lifetime: 9674 hours (403 days + 2 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:51:29.125  READ DMA EXT
-  35 00 00 00 78 00 00 17 1c dc 3b f0 00     01:51:29.125  WRITE DMA EXT
-  35 00 00 01 00 00 00 17 1c db 3b f0 00     01:51:29.125  WRITE DMA EXT
-  35 00 00 01 00 00 00 17 1c da 3b f0 00     01:51:29.125  WRITE DMA EXT
-  35 00 00 01 00 00 00 17 1c d9 3b f0 00     01:51:29.125  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:14:36.938  READ DMA EXT
+  35 00 00 00 78 00 00 17 1a ee 13 f0 00     01:14:36.938  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1a ed 13 f0 00     01:14:36.938  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1a ec 13 f0 00     01:14:36.938  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1a eb 13 f0 00     01:14:36.938  WRITE DMA EXT
 
-Error 482 [1] occurred at disk power-on lifetime: 9669 hours (402 days + 21 hours)
+Error 590 [5] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -136,13 +136,13 @@ Error 482 [1] occurred at disk power-on lifetime: 9669 hours (402 days + 21 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     03:48:57.188  READ DMA EXT
-  35 00 00 00 08 00 00 02 4b 35 13 f0 00     03:48:57.188  WRITE DMA EXT
-  35 00 00 00 08 00 00 02 4b 35 1b f0 00     03:48:57.188  WRITE DMA EXT
-  35 00 00 00 18 00 00 02 4c 31 0b f0 00     03:48:57.188  WRITE DMA EXT
-  35 00 00 00 48 00 00 02 4c 30 c3 f0 00     03:48:57.125  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:13:18.625  READ DMA EXT
+  35 00 00 00 78 00 00 13 f0 13 43 f0 00     01:13:18.625  WRITE DMA EXT
+  35 00 00 01 00 00 00 13 f0 12 43 f0 00     01:13:18.625  WRITE DMA EXT
+  35 00 00 01 00 00 00 13 f0 11 43 f0 00     01:13:18.625  WRITE DMA EXT
+  35 00 00 01 00 00 00 13 f0 10 43 f0 00     01:13:18.625  WRITE DMA EXT
 
-Error 481 [0] occurred at disk power-on lifetime: 9668 hours (402 days + 20 hours)
+Error 589 [4] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -153,13 +153,13 @@ Error 481 [0] occurred at disk power-on lifetime: 9668 hours (402 days + 20 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     03:23:05.375  READ DMA EXT
-  35 00 00 00 78 00 00 16 74 30 53 f0 00     03:23:05.375  WRITE DMA EXT
-  35 00 00 01 00 00 00 16 74 2f 53 f0 00     03:23:05.375  WRITE DMA EXT
-  35 00 00 01 00 00 00 16 74 2e 53 f0 00     03:23:05.375  WRITE DMA EXT
-  35 00 00 01 00 00 00 16 74 2d 53 f0 00     03:23:05.375  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:11:53.500  READ DMA EXT
+  35 00 00 00 78 00 00 17 1d 34 1b f0 00     01:11:53.500  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1d 33 1b f0 00     01:11:53.500  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1d 32 1b f0 00     01:11:53.500  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1d 31 1b f0 00     01:11:53.500  WRITE DMA EXT
 
-Error 480 [7] occurred at disk power-on lifetime: 9615 hours (400 days + 15 hours)
+Error 588 [3] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -170,13 +170,13 @@ Error 480 [7] occurred at disk power-on lifetime: 9615 hours (400 days + 15 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:43:59.875  READ DMA EXT
-  35 00 00 00 20 00 00 13 a1 e1 e3 f0 00     01:43:59.875  WRITE DMA EXT
-  25 00 00 00 20 00 00 02 18 7d e3 f0 00     01:43:59.875  READ DMA EXT
-  35 00 00 00 58 00 00 13 a1 e1 8b f0 00     01:43:59.875  WRITE DMA EXT
-  35 00 00 01 00 00 00 13 a1 e0 8b f0 00     01:43:59.875  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:16:04.000  READ DMA EXT
+  35 00 00 00 78 00 00 16 59 16 bb f0 00     01:16:04.000  WRITE DMA EXT
+  35 00 00 01 00 00 00 16 59 15 bb f0 00     01:16:04.000  WRITE DMA EXT
+  35 00 00 01 00 00 00 16 59 14 bb f0 00     01:16:04.000  WRITE DMA EXT
+  35 00 00 01 00 00 00 16 59 13 bb f0 00     01:16:04.000  WRITE DMA EXT
 
-Error 479 [6] occurred at disk power-on lifetime: 9674 hours (403 days + 2 hours)
+Error 587 [2] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -187,13 +187,13 @@ Error 479 [6] occurred at disk power-on lifetime: 9674 hours (403 days + 2 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:51:29.125  READ DMA EXT
-  35 00 00 00 78 00 00 17 1c dc 3b f0 00     01:51:29.125  WRITE DMA EXT
-  35 00 00 01 00 00 00 17 1c db 3b f0 00     01:51:29.125  WRITE DMA EXT
-  35 00 00 01 00 00 00 17 1c da 3b f0 00     01:51:29.125  WRITE DMA EXT
-  35 00 00 01 00 00 00 17 1c d9 3b f0 00     01:51:29.125  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:14:36.938  READ DMA EXT
+  35 00 00 00 78 00 00 17 1a ee 13 f0 00     01:14:36.938  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1a ed 13 f0 00     01:14:36.938  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1a ec 13 f0 00     01:14:36.938  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1a eb 13 f0 00     01:14:36.938  WRITE DMA EXT
 
-Error 478 [5] occurred at disk power-on lifetime: 9669 hours (402 days + 21 hours)
+Error 586 [1] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -204,13 +204,13 @@ Error 478 [5] occurred at disk power-on lifetime: 9669 hours (402 days + 21 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     03:48:57.188  READ DMA EXT
-  35 00 00 00 08 00 00 02 4b 35 13 f0 00     03:48:57.188  WRITE DMA EXT
-  35 00 00 00 08 00 00 02 4b 35 1b f0 00     03:48:57.188  WRITE DMA EXT
-  35 00 00 00 18 00 00 02 4c 31 0b f0 00     03:48:57.188  WRITE DMA EXT
-  35 00 00 00 48 00 00 02 4c 30 c3 f0 00     03:48:57.125  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:13:18.625  READ DMA EXT
+  35 00 00 00 78 00 00 13 f0 13 43 f0 00     01:13:18.625  WRITE DMA EXT
+  35 00 00 01 00 00 00 13 f0 12 43 f0 00     01:13:18.625  WRITE DMA EXT
+  35 00 00 01 00 00 00 13 f0 11 43 f0 00     01:13:18.625  WRITE DMA EXT
+  35 00 00 01 00 00 00 13 f0 10 43 f0 00     01:13:18.625  WRITE DMA EXT
 
-Error 477 [4] occurred at disk power-on lifetime: 9668 hours (402 days + 20 hours)
+Error 585 [0] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -221,13 +221,13 @@ Error 477 [4] occurred at disk power-on lifetime: 9668 hours (402 days + 20 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     03:23:05.375  READ DMA EXT
-  35 00 00 00 78 00 00 16 74 30 53 f0 00     03:23:05.375  WRITE DMA EXT
-  35 00 00 01 00 00 00 16 74 2f 53 f0 00     03:23:05.375  WRITE DMA EXT
-  35 00 00 01 00 00 00 16 74 2e 53 f0 00     03:23:05.375  WRITE DMA EXT
-  35 00 00 01 00 00 00 16 74 2d 53 f0 00     03:23:05.375  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:11:53.500  READ DMA EXT
+  35 00 00 00 78 00 00 17 1d 34 1b f0 00     01:11:53.500  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1d 33 1b f0 00     01:11:53.500  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1d 32 1b f0 00     01:11:53.500  WRITE DMA EXT
+  35 00 00 01 00 00 00 17 1d 31 1b f0 00     01:11:53.500  WRITE DMA EXT
 
-Error 476 [3] occurred at disk power-on lifetime: 9615 hours (400 days + 15 hours)
+Error 584 [7] occurred at disk power-on lifetime: 9732 hours (405 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -238,11 +238,11 @@ Error 476 [3] occurred at disk power-on lifetime: 9615 hours (400 days + 15 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:43:59.875  READ DMA EXT
-  35 00 00 00 20 00 00 13 a1 e1 e3 f0 00     01:43:59.875  WRITE DMA EXT
-  25 00 00 00 20 00 00 02 18 7d e3 f0 00     01:43:59.875  READ DMA EXT
-  35 00 00 00 58 00 00 13 a1 e1 8b f0 00     01:43:59.875  WRITE DMA EXT
-  35 00 00 01 00 00 00 13 a1 e0 8b f0 00     01:43:59.875  WRITE DMA EXT
+  25 00 00 00 78 00 00 08 f2 03 4b f0 00     01:16:04.000  READ DMA EXT
+  35 00 00 00 78 00 00 16 59 16 bb f0 00     01:16:04.000  WRITE DMA EXT
+  35 00 00 01 00 00 00 16 59 15 bb f0 00     01:16:04.000  WRITE DMA EXT
+  35 00 00 01 00 00 00 16 59 14 bb f0 00     01:16:04.000  WRITE DMA EXT
+  35 00 00 01 00 00 00 16 59 13 bb f0 00     01:16:04.000  WRITE DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

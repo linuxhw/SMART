@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.15-arch1-1] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Crucial/Micron RealSSD m4/C400/P400
 Device Model:     MTFDDAK256MAM-1K12
@@ -11,24 +14,24 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Nov 17 08:09:00 2019 CET
+Local Time is:    Fri Jan 31 19:25:37 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     0 (reserved)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
+Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
-					Auto Offline Data Collection: Disabled.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
@@ -64,14 +67,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2613
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    850
+  9 Power_On_Hours          -O--CK   100   100   000    -    2858
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    975
 170 Grown_Failing_Block_Ct  PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Wear_Leveling_Count     PO--CK   094   094   010    -    203
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    110
-181 Non4k_Aligned_Access    -O---K   100   100   000    -    22937 4923 18014
+173 Wear_Leveling_Count     PO--CK   094   094   010    -    209
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    196
+181 Non4k_Aligned_Access    -O---K   100   100   000    -    22948 4923 18024
 183 SATA_Iface_Downshift    -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
@@ -143,7 +146,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (374)
+Temperature History Size (Index):    478 (21)
 
 SCT Error Recovery Control:
            Read:     40 (4.0 seconds)
@@ -152,12 +155,12 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             850  ---  Lifetime Power-On Resets
-0x01  0x010  4            2613  ---  Power-on Hours
-0x01  0x018  6     57780655750  ---  Logical Sectors Written
-0x01  0x020  6      1589378106  ---  Number of Write Commands
-0x01  0x028  6     51830143167  ---  Logical Sectors Read
-0x01  0x030  6      1951400143  ---  Number of Read Commands
+0x01  0x008  4             975  ---  Lifetime Power-On Resets
+0x01  0x010  4            2858  ---  Power-on Hours
+0x01  0x018  6     59567843967  ---  Logical Sectors Written
+0x01  0x020  6      1599898616  ---  Number of Write Commands
+0x01  0x028  6     52224777108  ---  Logical Sectors Read
+0x01  0x030  6      1958770349  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -190,5 +193,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+
+
 

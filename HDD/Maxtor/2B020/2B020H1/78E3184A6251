@@ -3,17 +3,18 @@ Model Family:     Maxtor Fireball 541DX
 Device Model:     Maxtor 2B020H1
 Serial Number:    --
 Firmware Version: WAH21PB0
-User Capacity:    20 020 396 032 bytes [20,0 GB]
+User Capacity:    20,019,314,176 bytes [20.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Sat Apr 28 14:28:12 2018 MSK
+Local Time is:    Mon Oct  1 10:00:59 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Unavailable
 Wt Cache Reorder: Unavailable
 
@@ -51,33 +52,33 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   235   234   063    -    6320
-  4 Start_Stop_Count        -O--CK   248   248   000    -    10086
-  5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    2
+  3 Spin_Up_Time            POS--K   236   234   063    -    3769
+  4 Start_Stop_Count        -O--CK   248   248   000    -    10303
+  5 Reallocated_Sector_Ct   PO--CK   253   252   063    -    2
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   240   000    -    0
-  8 Seek_Time_Performance   POS--K   251   235   187    -    43183
-  9 Power_On_Minutes        -O--CK   216   216   000    -    828h+03m
+  8 Seek_Time_Performance   POS--K   249   235   187    -    55770
+  9 Power_On_Minutes        -O--CK   216   216   000    -    932h+07m
  10 Spin_Retry_Count        PO-R-K   253   252   223    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   236   236   000    -    7080
-192 Power-Off_Retract_Count -O--CK   253   253   000    -    174
-193 Load_Cycle_Count        -O--CK   246   246   000    -    29586
+ 12 Power_Cycle_Count       -O--CK   235   235   000    -    7387
+192 Power-Off_Retract_Count -O--CK   253   253   000    -    197
+193 Load_Cycle_Count        -O--CK   246   246   000    -    30230
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1148
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1072
 196 Reallocated_Event_Count ---R--   252   252   000    -    1
-197 Current_Pending_Sector  ---R--   253   253   000    -    0
+197 Current_Pending_Sector  ---R--   253   252   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   194   148   000    -    50
+199 UDMA_CRC_Error_Count    ---R--   185   148   000    -    51
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    6
+201 Soft_Read_Error_Rate    -O-R--   253   237   000    -    0
 202 Data_Address_Mark_Errs  -O-R--   253   251   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    2
+203 Run_Out_Cancel          PO-R--   253   252   180    -    0
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   204   203   000    -    0
+209 Offline_Seek_Performnce --S--K   205   203   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -95,9 +96,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 408 inconsistent with error log pointer 5
+Warning: ATA error count 409 inconsistent with error log pointer 5
 
-ATA Error Count: 408 (device log contains only the most recent five errors)
+ATA Error Count: 409 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -111,6 +112,23 @@ ATA Error Count: 408 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 409 occurred at disk power-on lifetime: 12121 hours (505 days + 1 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 01 67 75 3c f0  Error: UNC 1 sectors at LBA = 0x003c7567 = 3962215
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 67 75 3c f0 00      04:03:36.976  READ DMA
+  c8 00 08 df d3 af f1 00      04:03:36.976  READ DMA
+  c8 00 40 5f be a4 f0 00      04:03:36.960  READ DMA
+  c8 00 40 07 70 5c f0 00      04:03:36.944  READ DMA
+  c8 00 40 07 79 3c f0 00      04:03:36.928  READ DMA
 
 Error 408 occurred at disk power-on lifetime: 11907 hours (496 days + 3 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -180,23 +198,6 @@ Error 405 occurred at disk power-on lifetime: 11906 hours (496 days + 2 hours)
   c8 00 20 6f f6 af f1 00      00:10:27.728  READ DMA
   c8 00 00 6f f5 af f1 00      00:10:27.728  READ DMA
 
-Error 404 occurred at disk power-on lifetime: 11905 hours (496 days + 1 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  10 51 40 00 d8 42 f5  Error: IDNF 64 sectors at LBA = 0x0542d800 = 88266752
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 40 00 d8 42 f5 00      00:14:12.352  READ DMA
-  c8 00 40 b0 9a 42 f5 00      00:14:12.320  READ DMA
-  c8 00 01 00 00 00 f0 00      00:14:12.288  READ DMA
-  ec 00 00 00 00 00 b0 00      00:14:12.144  IDENTIFY DEVICE
-  c8 00 48 47 f6 af f1 00      00:13:22.112  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -207,6 +208,8 @@ Selective Self-tests/Logging not supported
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

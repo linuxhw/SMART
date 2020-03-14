@@ -7,7 +7,7 @@ User Capacity:    20 489 477 632 bytes [20,4 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Sat Aug  1 01:01:37 2015 MSK
+Local Time is:    Sat Aug 29 09:28:21 2015 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -21,12 +21,11 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  36)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(   30) seconds.
 Offline data collection
@@ -51,33 +50,33 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   235   233   063    -    7288
-  4 Start_Stop_Count        -O--CK   252   252   000    -    3947
+  3 Spin_Up_Time            POS--K   235   233   063    -    6522
+  4 Start_Stop_Count        -O--CK   251   251   000    -    4038
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   250   248   187    -    41946
-  9 Power_On_Minutes        -O--CK   232   232   000    -    811h+42m
+  8 Seek_Time_Performance   POS--K   249   248   187    -    41931
+  9 Power_On_Minutes        -O--CK   232   232   000    -    817h+20m
  10 Spin_Retry_Count        PO-R-K   253   252   223    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   243   243   000    -    4104
-192 Power-Off_Retract_Count -O--CK   252   252   000    -    1903
-193 Load_Cycle_Count        -O--CK   250   250   000    -    12243
+ 12 Power_Cycle_Count       -O--CK   243   243   000    -    4193
+192 Power-Off_Retract_Count -O--CK   252   252   000    -    1951
+193 Load_Cycle_Count        -O--CK   250   250   000    -    12539
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    150
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    131
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   199   199   000    -    0
+199 UDMA_CRC_Error_Count    ---R--   199   190   000    -    9
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    55
+201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    145
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    4
+203 Run_Out_Cancel          PO-R--   253   252   180    -    2
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   253   253   000    -    0
+209 Offline_Seek_Performnce --S--K   204   204   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -96,9 +95,9 @@ Read GP Log Directory failed
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 11358 inconsistent with error log pointer 5
+Warning: ATA error count 11536 inconsistent with error log pointer 5
 
-ATA Error Count: 11358 (device log contains only the most recent five errors)
+ATA Error Count: 11536 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -113,7 +112,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 11358 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
+Error 11536 occurred at disk power-on lifetime: 6910 hours (287 days + 22 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -124,13 +123,13 @@ Error 11358 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  2f 00 01 00 00 00 00 08      00:07:01.360  READ LOG EXT
-  ca 00 10 d0 ea 4f e0 08      00:07:01.360  WRITE DMA
-  ca 00 08 60 99 d5 e0 08      00:07:01.360  WRITE DMA
-  b0 d5 01 00 4f c2 00 08      00:07:01.280  SMART READ LOG
-  e7 00 00 bf 33 84 a0 08      00:07:01.264  FLUSH CACHE
+  2f 00 01 00 00 00 00 08      01:20:16.336  READ LOG EXT
+  c8 00 30 08 de 57 e0 08      01:20:16.336  READ DMA
+  e7 d5 01 0b 4f c2 a0 08      01:20:16.320  FLUSH CACHE
+  b0 d5 01 00 4f c2 00 08      01:20:16.240  SMART READ LOG
+  ca 00 10 60 ec ec e0 08      01:20:16.240  WRITE DMA
 
-Error 11357 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
+Error 11535 occurred at disk power-on lifetime: 6910 hours (287 days + 22 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -141,13 +140,13 @@ Error 11357 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 08      00:07:01.280  SMART READ LOG
-  e7 00 00 bf 33 84 a0 08      00:07:01.264  FLUSH CACHE
-  ca 00 08 b8 33 84 e0 08      00:07:01.264  WRITE DMA
-  e7 da 00 00 4f c2 a0 08      00:07:01.264  FLUSH CACHE
-  b0 da 00 00 4f c2 00 08      00:07:01.216  SMART RETURN STATUS
+  b0 d5 01 00 4f c2 00 08      01:20:16.240  SMART READ LOG
+  ca 00 10 60 ec ec e0 08      01:20:16.240  WRITE DMA
+  ca 00 10 80 2d dc e0 08      01:20:16.224  WRITE DMA
+  e7 da 00 00 4f c2 a0 08      01:20:16.224  FLUSH CACHE
+  b0 da 00 00 4f c2 00 08      01:20:16.192  SMART RETURN STATUS
 
-Error 11356 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
+Error 11534 occurred at disk power-on lifetime: 6910 hours (287 days + 22 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -158,9 +157,9 @@ Error 11356 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 05 01 aa 00 a0 00      00:02:17.776  IDENTIFY PACKET DEVICE
+  a1 00 05 01 aa 00 a0 00      00:02:17.440  IDENTIFY PACKET DEVICE
 
-Error 11355 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
+Error 11533 occurred at disk power-on lifetime: 6910 hours (287 days + 22 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -171,20 +170,24 @@ Error 11355 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 05 01 aa 00 a0 00      00:02:17.920  IDENTIFY PACKET DEVICE
+  a1 00 05 01 aa 00 a0 00      00:02:17.600  IDENTIFY PACKET DEVICE
 
-Error 11354 occurred at disk power-on lifetime: 6904 hours (287 days + 16 hours)
+Error 11532 occurred at disk power-on lifetime: 6910 hours (287 days + 22 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 05 01 aa 00 a0  Error: ABRT
+  10 51 01 4e a2 62 e2
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 05 01 aa 00 a0 00      00:02:17.920  IDENTIFY PACKET DEVICE
+  f9 00 01 4e a2 62 e2 08      00:59:45.424  SET MAX ADDRESS [OBS-6]
+  f8 00 00 4e a2 62 e0 08      00:59:45.424  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f9 00 00 4e a2 62 e2 08      00:59:45.328  SET MAX ADDRESS [OBS-6]
+  f8 00 01 4e a2 62 e0 08      00:59:45.328  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  f9 00 01 4e a2 62 e2 08      00:59:43.728  SET MAX ADDRESS [OBS-6]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

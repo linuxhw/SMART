@@ -11,11 +11,11 @@ Form Factor:      Unknown (0x000a)
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon May 22 20:24:48 2017 MSK
+Local Time is:    Tue May 23 18:49:25 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -56,8 +56,8 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   253   100   ---    -    22666
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    406
+  9 Power_On_Hours          -O--CK   253   100   ---    -    22642
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    408
 166 Min_W/E_Cycle           -O--CK   100   100   ---    -    1
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    16
 168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    656
@@ -65,15 +65,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
 173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    469
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    149
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    151
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   073   096   ---    -    27 (Min/Max 15/96)
+194 Temperature_Celsius     -O---K   072   096   ---    -    28 (Min/Max 15/96)
 212 SATA_PHY_Error          -O--CK   100   100   ---    -    0
 230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    3903
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    61025
-241 Total_Writes_GiB        ----CK   253   253   ---    -    15134
-242 Total_Reads_GiB         ----CK   253   253   ---    -    12604
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    61046
+241 Total_Writes_GiB        ----CK   253   253   ---    -    15140
+242 Total_Reads_GiB         ----CK   253   253   ---    -    12614
 243 Unknown_Attribute       -O--CK   100   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -120,7 +120,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           65  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 
 
 

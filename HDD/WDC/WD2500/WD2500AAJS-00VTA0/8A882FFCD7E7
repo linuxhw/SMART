@@ -8,13 +8,14 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-Local Time is:    Thu May  3 23:53:44 2018 MSK
+Local Time is:    Mon Jun  4 22:18:39 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -59,17 +60,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   176   175   021    -    2166
-  4 Start_Stop_Count        -O--CK   084   084   000    -    16264
+  3 Spin_Up_Time            PO----   176   175   021    -    2175
+  4 Start_Stop_Count        -O--CK   084   084   000    -    16347
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR--   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   064   064   000    -    26862
+  9 Power_On_Hours          -O--CK   063   063   000    -    27189
  10 Spin_Retry_Count        -O--C-   100   100   000    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   089   089   000    -    11729
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    541
-193 Load_Cycle_Count        -O--CK   197   197   000    -    11729
-194 Temperature_Celsius     -O---K   096   090   000    -    47
+ 12 Power_Cycle_Count       -O--CK   089   089   000    -    11894
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    543
+193 Load_Cycle_Count        -O--CK   197   197   000    -    11894
+194 Temperature_Celsius     -O---K   101   090   000    -    42
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    3
 198 Offline_Uncorrectable   ----C-   200   200   000    -    3
@@ -92,7 +93,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -103,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 711 (device log contains only the most recent 24 errors)
+Device Error Count: 803 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 711 [14] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 803 [10] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -130,12 +131,12 @@ Error 711 [14] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 e4 61 72 f8 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 10 08 00 82 72 e3 00 f8 61 00 00 00     00:00:27.152  NOP [Reserved subcommand] [OBS-ACS-2]
-  1a e3 ef 72 f8 00 08 00 ee 00 00 00 00     02:05:34.819  RECALIBRATE [RET-4]
-  00 18 00 00 ee 72 28 1a ec 60 00 00 00     00:00:00.000  NOP [Abort queued commands]
+  00 15 60 b2 18 00 00 00 00 00 00 00 1a     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 02 00 00 b2 15 00 18 ef 00 00 00     00:01:00.944  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 f0 61 b2 09 00 10 00 6a 08 00 00 00     03:14:27.954  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 00 00 ee b2 f0 1a 09 60 00 00 00     00:00:33.296  NOP [Abort queued commands]
 
-Error 710 [13] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 802 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -146,12 +147,12 @@ Error 710 [13] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 28 60 72 ec 00 00 00 00 00 00 00 1a     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 02 00 00 72 13 00 ec ef 00 00 00     00:01:00.952  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 a7 61 72 de 00 10 00 72 08 00 00 00     02:05:28.103  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 10 08 00 3a 72 a5 00 de 61 00 00 00     00:00:31.248  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 f2 61 b2 09 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 10 08 00 82 b2 f0 00 09 61 00 00 00     00:00:27.152  NOP [Reserved subcommand] [OBS-ACS-2]
+  1a f0 ef b2 09 00 08 00 ee 00 00 00 00     03:14:27.952  RECALIBRATE [RET-4]
+  00 10 00 00 ee b1 39 1a fd 60 00 00 00     00:00:00.000  NOP [Abort queued commands]
 
-Error 709 [12] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 801 [8] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -162,12 +163,12 @@ Error 709 [12] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 a7 61 72 de 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 10 08 00 7a 72 a7 00 de 61 00 00 00     00:00:29.200  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 a5 60 72 de 00 10 00 3a 08 00 00 1a     02:05:28.101  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 02 00 00 72 a5 00 de ef 00 00 00     00:01:00.936  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 39 60 b1 fd 00 00 00 00 00 00 00 1a     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 02 00 00 b1 39 00 fd ef 00 00 00     00:01:00.944  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 cb 61 b1 ef 00 10 00 72 08 00 00 00     03:14:21.260  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 00 00 ee b1 cb 1a ef 60 00 00 00     00:00:31.256  NOP [Abort queued commands]
 
-Error 708 [11] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 800 [7] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -178,12 +179,12 @@ Error 708 [11] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 2e 60 72 d1 00 00 00 00 00 00 00 1a     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 02 00 00 72 2e 00 d1 ef 00 00 00     00:01:00.944  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 c1 61 72 c3 00 10 00 6a 08 00 00 00     02:05:21.218  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 00 00 ee 72 c1 1a c3 60 00 00 00     00:00:33.296  NOP [Abort queued commands]
+  00 cc 61 b1 ef 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 18 08 00 7a b1 cb 00 ef 61 00 00 00     00:00:29.200  NOP [Reserved subcommand] [OBS-ACS-2]
+  1a ca ef b1 ef 00 08 00 ee 00 00 00 00     03:14:21.259  RECALIBRATE [RET-4]
+  00 08 08 00 6a b1 13 00 e3 61 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 707 [10] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 799 [6] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -194,12 +195,12 @@ Error 707 [10] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 c2 61 72 c3 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 10 08 00 82 72 c1 00 c3 61 00 00 00     00:00:27.152  NOP [Reserved subcommand] [OBS-ACS-2]
-  1a c1 ef 72 c3 00 08 00 ee 00 00 00 00     02:05:21.217  RECALIBRATE [RET-4]
-  00 10 00 00 ee 72 4e 1a b6 60 00 00 00     00:00:00.000  NOP [Abort queued commands]
+  00 13 61 b1 e3 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 b0 00 00 ee b1 11 1a e3 60 00 00 00     00:00:27.144  NOP [Abort queued commands]
+  00 fb ef b1 e2 00 08 00 82 08 00 00 00     03:14:18.001  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 a0 08 00 8a b1 7c 00 d4 61 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 706 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 798 [5] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -210,12 +211,12 @@ Error 706 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 4e 60 72 b6 00 00 00 00 00 00 00 1a     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 08 00 c2 72 4e 00 b6 61 00 00 00     00:01:00.944  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 83 61 72 a9 00 00 00 00 02 00 00 00     02:05:17.753  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 00 00 ee 72 83 1a a9 60 00 00 00     00:00:29.200  NOP [Abort queued commands]
+  00 7c 61 b1 d4 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 98 10 00 da b1 7b 00 d4 61 00 00 00     00:00:35.488  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 7b 61 b1 d4 00 90 00 92 10 00 00 00     03:14:14.267  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 80 08 00 5a b1 7b 00 d4 61 00 00 00     00:00:23.176  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 705 [8] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 797 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -226,12 +227,12 @@ Error 705 [8] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 83 61 72 a9 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 00 00 ee 72 83 1a a9 60 00 00 00     00:00:29.200  NOP [Abort queued commands]
-  00 ec 60 72 9b 00 00 00 00 02 00 00 1a     02:05:14.490  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 30 00 00 ee 72 ec 1a 9b 60 00 00 00     00:01:01.016  NOP [Abort queued commands]
+  00 a3 61 b1 c7 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 10 08 00 7a b1 a3 00 c7 61 00 00 00     00:00:29.200  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 a1 60 b1 c7 00 10 00 42 10 00 00 1a     03:14:10.977  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 02 00 00 b1 a1 00 c7 ef 00 00 00     00:01:00.936  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 704 [7] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 796 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -242,10 +243,10 @@ Error 704 [7] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 ec 60 72 9b 00 00 00 00 00 00 00 1a     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 30 00 00 ee 72 ec 1a 9b 60 00 00 00     00:01:01.016  NOP [Abort queued commands]
-  1a ec 60 72 9b 00 28 00 ee 00 00 00 1a     02:05:11.020  RECALIBRATE [RET-4]
-  00 18 00 00 ee 72 ea 1a 9b 60 00 00 00     00:01:00.960  NOP [Abort queued commands]
+  00 c8 60 b1 ba 00 00 00 00 00 00 00 1a     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 30 00 00 ee b1 c8 1a ba 60 00 00 00     00:01:01.000  NOP [Abort queued commands]
+  1a c8 60 b1 ba 00 28 00 ee 00 00 00 1a     03:14:07.688  RECALIBRATE [RET-4]
+  00 18 00 00 ee b1 c7 1a ba 60 00 00 00     00:01:00.960  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -265,9 +266,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    47 Celsius
-Power Cycle Min/Max Temperature:     34/47 Celsius
-Lifetime    Min/Max Temperature:     25/53 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     27/42 Celsius
+Lifetime    Min/Max Temperature:     22/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -275,13 +276,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/85 Celsius
-Temperature History Size (Index):    128 (10)
+Temperature History Size (Index):    128 (41)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -292,8 +295,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         3180  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         7591  Vendor specific
 
 
 

@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Dec 23 04:03:38 2015 IRKT
+Local Time is:    Sat Jan 23 21:48:05 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,17 +60,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    2596
-  3 Spin_Up_Time            POS--K   140   136   021    -    3991
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6314
+  3 Spin_Up_Time            POS--K   139   136   021    -    4033
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6590
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   050   050   000    -    36540
+  9 Power_On_Hours          -O--CK   050   050   000    -    36899
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4573
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1417
-193 Load_Cycle_Count        -O--CK   199   199   000    -    4896
-194 Temperature_Celsius     -O---K   100   089   000    -    43
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4665
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1421
+193 Load_Cycle_Count        -O--CK   199   199   000    -    5168
+194 Temperature_Celsius     -O---K   102   089   000    -    41
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -260,24 +260,24 @@ Error 3839 [22] occurred at disk power-on lifetime: 12143 hours (505 days + 23 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     35885         -
-# 2  Short offline       Completed without error       00%     35600         -
-# 3  Short offline       Completed without error       00%     35371         -
-# 4  Short offline       Completed without error       00%     35177         -
-# 5  Short offline       Completed without error       00%     35175         -
-# 6  Short offline       Completed without error       00%     35136         -
-# 7  Short offline       Completed without error       00%     35134         -
-# 8  Conveyance offline  Interrupted (host reset)      90%     35022         -
-# 9  Short offline       Completed without error       00%     33981         -
-#10  Short offline       Completed without error       00%     33884         -
-#11  Short offline       Completed without error       00%     33817         -
-#12  Short offline       Completed without error       00%     33760         -
-#13  Short offline       Completed without error       00%     33675         -
-#14  Short offline       Completed without error       00%     33669         -
-#15  Short offline       Completed without error       00%     33639         -
-#16  Short offline       Completed without error       00%     33624         -
-#17  Short offline       Completed without error       00%     33503         -
-#18  Short offline       Completed without error       00%     33499         -
+# 1  Short offline       Aborted by host               90%     36829         -
+# 2  Short offline       Completed without error       00%     36829         -
+# 3  Short offline       Completed without error       00%     36782         -
+# 4  Short offline       Completed without error       00%     36609         -
+# 5  Short offline       Completed without error       00%     36554         -
+# 6  Short offline       Completed without error       00%     35885         -
+# 7  Short offline       Completed without error       00%     35600         -
+# 8  Short offline       Completed without error       00%     35371         -
+# 9  Short offline       Completed without error       00%     35177         -
+#10  Short offline       Completed without error       00%     35175         -
+#11  Short offline       Completed without error       00%     35136         -
+#12  Short offline       Completed without error       00%     35134         -
+#13  Conveyance offline  Interrupted (host reset)      90%     35022         -
+#14  Short offline       Completed without error       00%     33981         -
+#15  Short offline       Completed without error       00%     33884         -
+#16  Short offline       Completed without error       00%     33817         -
+#17  Short offline       Completed without error       00%     33760         -
+#18  Short offline       Completed without error       00%     33675         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -293,10 +293,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    43 Celsius
-Power Cycle Min/Max Temperature:     23/43 Celsius
-Lifetime    Min/Max Temperature:     43/54 Celsius
+Device State:                        Active (0)
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     22/43 Celsius
+Lifetime    Min/Max Temperature:     34/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -304,7 +304,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (267)
+Temperature History Size (Index):    478 (116)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -321,7 +321,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         3839  Vendor specific
+0x8000  4        42307  Vendor specific
 

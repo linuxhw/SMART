@@ -4,21 +4,22 @@ Device Model:     SAMSUNG HD502HJ
 Serial Number:    --
 LU WWN Device Id: 5 0024e9 ...
 Firmware Version: 1AJ100E4
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Jun  4 19:37:25 2016 ALMT
+Local Time is:    Mon Jul 23 15:42:49 2018 +06
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -59,28 +60,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    11
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    13
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   083   083   025    -    5223
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2063
+  3 Spin_Up_Time            PO---K   084   083   025    -    5139
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2569
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10360
+  9 Power_On_Hours          -O--CK   100   100   000    -    12062
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1864
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    3671
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2392
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    3768
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   054   000    -    32 (Min/Max 15/46)
+194 Temperature_Celsius     -O----   061   050   000    -    39 (Min/Max 14/50)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    1
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    263
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    98
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    317
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   100   100   000    -    2085
+225 Load_Cycle_Count        -O--CK   100   100   000    -    2625
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xbb       GPL     VS       4  Device vendor specific log
@@ -108,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 1
+Device Error Count: 110 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,25 +125,147 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1 [0] occurred at disk power-on lifetime: 2735 hours (113 days + 23 hours)
+Error 110 [5] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 e6 10 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 58896 sectors at LBA = 0x00000000 = 0
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 60 00 00 02 e4 e5 b0 e0 08     00:00:10.873  READ DMA EXT
-  25 00 00 00 48 00 00 02 e4 fe 90 e0 08     00:00:10.873  READ DMA EXT
-  25 00 00 00 28 00 00 02 e4 89 58 e0 08     00:00:10.873  READ DMA EXT
-  25 00 00 00 40 00 00 00 0a 44 7a e0 08     00:00:10.873  READ DMA EXT
-  25 00 00 00 40 00 00 02 e4 92 10 e0 08     00:00:10.873  READ DMA EXT
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.782  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.782  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.782  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.782  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:00.782  NOP [Abort queued commands]
+
+Error 109 [4] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.782  READ DMA EXT
+  25 00 00 00 01 00 00 0c 80 38 00 e0 08     00:00:00.781  READ DMA EXT
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.781  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.781  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.781  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 108 [3] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.781  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.781  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.781  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.781  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:00.781  NOP [Abort queued commands]
+
+Error 107 [2] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.781  READ DMA EXT
+  25 00 00 00 08 00 00 00 00 00 57 e0 08     00:00:00.781  READ DMA EXT
+  25 00 00 00 08 00 00 00 02 1a cf e0 08     00:00:00.781  READ DMA EXT
+  25 00 00 00 24 00 00 00 02 1a ab e0 08     00:00:00.781  READ DMA EXT
+  25 00 00 00 4a 00 00 00 02 1a 61 e0 08     00:00:00.781  READ DMA EXT
+
+Error 106 [1] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.781  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.781  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.781  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.781  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:00.781  NOP [Abort queued commands]
+
+Error 105 [0] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.781  READ DMA EXT
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.781  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.781  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.781  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.781  RECALIBRATE [OBS-4]
+
+Error 104 [7] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.781  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:00.781  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:00.781  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.781  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:00.780  NOP [Abort queued commands]
+
+Error 103 [6] occurred at disk power-on lifetime: 11291 hours (470 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 08     00:00:00.780  READ DMA EXT
+  25 00 00 00 01 00 00 0c 80 40 07 e0 08     00:00:00.780  READ DMA EXT
+  25 00 00 00 01 00 00 0c 80 40 07 e0 08     00:00:00.780  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.780  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 3f e0 08     00:00:00.780  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     11668         -
+# 2  Extended offline    Aborted by host               90%     11668         -
+# 3  Short offline       Completed without error       00%     11280         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -160,9 +283,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     22/33 Celsius
-Lifetime    Min/Max Temperature:     18/46 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     25/38 Celsius
+Lifetime    Min/Max Temperature:     16/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -170,13 +293,15 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (93)
+Temperature History Size (Index):    128 (86)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -188,8 +313,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           17  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
@@ -214,4 +339,6 @@ ID      Size     Value  Description
 0x8e0f  4            0  Vendor specific
 0x8e10  4            0  Vendor specific
 0x8e11  4            0  Vendor specific
+
+
 

@@ -1,4 +1,5 @@
 === START OF INFORMATION SECTION ===
+Model Family:     Silicon Motion based SSDs
 Device Model:     ADATA SU900
 Serial Number:    --
 LU WWN Device Id: 5 707c18 ...
@@ -6,16 +7,17 @@ Firmware Version: Q1018HD
 User Capacity:    1,024,209,543,168 bytes [1.02 TB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jan 23 19:32:02 2020 UTC
+Local Time is:    Sun Feb  2 16:59:54 2020 +0330
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown (0xe000)
 
@@ -61,34 +63,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    82
- 12 Power_Cycle_Count       ------   100   100   000    -    7
-148 Unknown_Attribute       ------   100   100   000    -    32
-149 Unknown_Attribute       ------   100   100   000    -    3
-150 Unknown_Attribute       ------   100   100   000    -    1
-151 Unknown_Attribute       ------   100   100   000    -    1
-159 Unknown_Attribute       ------   100   100   000    -    0
-160 Unknown_Attribute       ------   100   100   000    -    0
-161 Unknown_Attribute       ------   100   100   000    -    35
-163 Unknown_Attribute       ------   100   100   000    -    10
-164 Unknown_Attribute       ------   100   100   000    -    946
-165 Unknown_Attribute       ------   100   100   000    -    3
-166 Unknown_Attribute       ------   100   100   000    -    1
-167 Unknown_Attribute       ------   100   100   000    -    1
-168 Unknown_Attribute       ------   100   100   000    -    3000
-169 Unknown_Attribute       ------   100   100   000    -    100
+  9 Power_On_Hours          ------   100   100   000    -    314
+ 12 Power_Cycle_Count       ------   100   100   000    -    14
+148 Total_SLC_Erase_Ct      ------   100   100   000    -    145
+149 Max_SLC_Erase_Ct        ------   100   100   000    -    14
+150 Min_SLC_Erase_Ct        ------   100   100   000    -    1
+151 Average_SLC_Erase_Ct    ------   100   100   000    -    7
+159 Unkn_SiliconMotion_Attr ------   100   100   000    -    0
+160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
+161 Valid_Spare_Block_Cnt   ------   100   100   000    -    35
+163 Initial_Bad_Block_Count ------   100   100   000    -    10
+164 Total_Erase_Count       ------   100   100   000    -    1701
+165 Max_Erase_Count         ------   100   100   000    -    5
+166 Min_Erase_Count         ------   100   100   000    -    2
+167 Average_Erase_Count     ------   100   100   000    -    3
+168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
+169 Remaining_Lifetime_Perc ------   100   100   000    -    100
 177 Wear_Leveling_Count     ------   100   100   050    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    1
-194 Temperature_Celsius     ------   100   100   000    -    34
+192 Power-Off_Retract_Count ------   100   100   000    -    8
+194 Temperature_Celsius     ------   100   100   000    -    45
 196 Reallocated_Event_Count ------   100   100   016    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Total_LBAs_Written      ------   100   100   000    -    12788
-242 Total_LBAs_Read         ------   100   100   000    -    7611
-245 Unknown_Attribute       ------   100   100   000    -    60544
+241 Host_Writes_32MiB       ------   100   100   000    -    28872
+242 Host_Reads_32MiB        ------   100   100   000    -    12301
+245 TLC_Writes_32MiB        ------   100   100   000    -    108864
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,7 +109,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x24       GPL     R/O     88  Current Device Internal Status Data log
 0x25       GPL     R/O    128  Saved Device Internal Status Data log
@@ -135,11 +137,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
-SCT Support Level:                   0
 Device State:                        Active (0)
 Current Temperature:                     0 Celsius
-Power Cycle Min/Max Temperature:     -1/ 0 Celsius
-Lifetime    Min/Max Temperature:      0/ 0 Celsius
+Power Cycle Min/Max Temperature:     45/46 Celsius
+Lifetime    Min/Max Temperature:      0/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -147,7 +148,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (1)
+Temperature History Size (Index):    128 (81)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -156,23 +157,25 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4               7  ---  Lifetime Power-On Resets
-0x01  0x010  4              82  ---  Power-on Hours
-0x01  0x018  6       838102910  ---  Logical Sectors Written
-0x01  0x020  6         5717110  ---  Number of Write Commands
-0x01  0x028  6       498795356  ---  Logical Sectors Read
-0x01  0x030  6         2476455  ---  Number of Read Commands
+0x01  0x008  4              14  ---  Lifetime Power-On Resets
+0x01  0x010  4             314  ---  Power-on Hours
+0x01  0x018  6      1892205138  ---  Logical Sectors Written
+0x01  0x020  6        45362313  ---  Number of Write Commands
+0x01  0x028  6       806175213  ---  Logical Sectors Read
+0x01  0x030  6         7108739  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               8  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4               3  ---  Number of Hardware Resets
+0x06  0x008  4              69  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -185,7 +188,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

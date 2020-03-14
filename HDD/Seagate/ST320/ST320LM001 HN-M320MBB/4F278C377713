@@ -4,14 +4,14 @@ Device Model:     ST320LM001 HN-M320MBB
 Serial Number:    --
 LU WWN Device Id: 5 0004cf ...
 Firmware Version: 2AR10002
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Aug 31 12:27:32 2017 +05
+Local Time is:    Thu Dec 13 10:29:06 2018 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -60,26 +60,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1141
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   091   086   025    -    2871
-  4 Start_Stop_Count        -O--CK   033   033   000    -    68658
+  3 Spin_Up_Time            PO---K   091   086   025    -    2860
+  4 Start_Stop_Count        -O--CK   032   032   000    -    69295
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    14083
+  9 Power_On_Hours          -O--CK   100   100   000    -    17510
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    803
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4364
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    1136
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    885
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    5004
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    1165
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   052   000    -    34 (Min/Max 8/49)
+194 Temperature_Celsius     -O----   064   052   000    -    35 (Min/Max 8/49)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    7
 198 Offline_Uncorrectable   ----CK   100   100   000    -    7
-199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    15
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    3475
-223 Load_Retry_Count        -O--CK   100   100   000    -    803
-225 Load_Cycle_Count        -O--CK   040   040   000    -    609314
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    76
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    3619
+223 Load_Retry_Count        -O--CK   100   100   000    -    885
+225 Load_Cycle_Count        -O--CK   001   001   000    -    1014615
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 1027 (device log contains only the most recent 8 errors)
+Device Error Count: 1088 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,163 +122,164 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1027 [2] occurred at disk power-on lifetime: 6450 hours (268 days + 18 hours)
+Error 1088 [7] occurred at disk power-on lifetime: 17508 hours (729 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 06 20 9d 98 40 00  Error: UNC at LBA = 0x06209d98 = 102800792
+  84 -- 51 00 20 00 00 00 96 24 50 e0 00  Error: ICRC, ABRT 32 sectors at LBA = 0x00962450 = 9839696
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 40 00 00 00 28 36 80 40 00     00:00:01.484  READ FPDMA QUEUED
-  60 00 00 00 20 00 00 06 20 9d 80 40 00     00:00:01.478  READ FPDMA QUEUED
-  61 00 00 00 08 00 00 00 5e dd 80 40 00     00:00:01.479  WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 03 bc 08 04 40 00     00:00:01.479  WRITE FPDMA QUEUED
-  60 00 00 00 40 00 00 00 72 46 80 40 00     00:00:01.479  READ FPDMA QUEUED
+  c8 00 00 00 20 00 00 00 96 24 50 e0 08     00:00:03.411  READ DMA
+  ca 00 00 00 08 00 00 00 04 82 20 e1 08     00:00:03.411  WRITE DMA
+  ea 00 00 00 00 00 00 01 04 82 1f e0 08     00:00:03.411  FLUSH CACHE EXT
+  ca 00 00 00 10 00 00 00 04 82 10 e1 08     00:00:03.410  WRITE DMA
+  ca 00 00 00 08 00 00 00 cf 48 00 e0 08     00:00:03.410  WRITE DMA
 
-Error 1026 [1] occurred at disk power-on lifetime: 6450 hours (268 days + 18 hours)
+Error 1087 [6] occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 06 20 9d 98 40 00  Error: UNC at LBA = 0x06209d98 = 102800792
+  84 -- 51 00 60 00 00 00 5e 99 80 e0 00  Error: ICRC, ABRT 96 sectors at LBA = 0x005e9980 = 6199680
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 18 00 00 00 15 2b e2 40 00     00:00:01.363  READ FPDMA QUEUED
-  60 00 00 00 20 00 00 06 20 9d 80 40 00     00:00:01.357  READ FPDMA QUEUED
-  60 00 00 00 05 00 00 00 04 6a 10 40 00     00:00:01.358  READ FPDMA QUEUED
-  61 00 00 00 08 00 00 03 bc 02 bc 40 00     00:00:01.358  WRITE FPDMA QUEUED
-  60 00 00 00 40 00 00 00 28 2f 80 40 00     00:00:01.358  READ FPDMA QUEUED
+  c8 00 00 00 00 00 00 00 5e 98 e0 e0 08     00:00:00.435  READ DMA
+  c8 00 00 00 00 00 00 00 5e 97 e0 e0 08     00:00:00.435  READ DMA
+  c8 00 00 00 00 00 00 00 5e 96 e0 e0 08     00:00:00.435  READ DMA
+  c8 00 00 00 00 00 00 00 5e 95 e0 e0 08     00:00:00.435  READ DMA
+  c8 00 00 00 00 00 00 00 5e 94 e0 e0 08     00:00:00.435  READ DMA
 
-Error 1025 [0] occurred at disk power-on lifetime: 6450 hours (268 days + 18 hours)
+Error 1086 [5] occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 06 20 9d 98 40 00  Error: UNC at LBA = 0x06209d98 = 102800792
+  84 -- 51 00 d8 00 00 00 2d ea 40 e0 00  Error: ICRC, ABRT 216 sectors at LBA = 0x002dea40 = 3009088
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 02 00 00 03 87 5a 40 40 00     00:00:01.243  READ FPDMA QUEUED
-  60 00 00 00 20 00 00 06 20 9d 80 40 00     00:00:01.237  READ FPDMA QUEUED
-  60 00 00 00 40 00 00 00 0a ce 50 40 00     00:00:01.237  READ FPDMA QUEUED
-  61 00 00 00 08 00 00 03 bb fe dc 40 00     00:00:01.237  WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 03 bb fe d4 40 00     00:00:01.237  WRITE FPDMA QUEUED
+  25 00 00 01 98 00 00 00 2d e9 80 e0 08     00:00:00.083  READ DMA EXT
+  c8 00 00 00 a0 00 00 00 3b 53 a0 e0 08     00:00:00.083  READ DMA
+  c8 00 00 00 18 00 00 00 08 25 b0 e0 08     00:00:00.083  READ DMA
+  c8 00 00 00 20 00 00 00 08 25 90 e0 08     00:00:00.083  READ DMA
+  c8 00 00 00 00 00 00 00 3b 54 40 e0 08     00:00:00.083  READ DMA
 
-Error 1024 [7] occurred at disk power-on lifetime: 6450 hours (268 days + 18 hours)
+Error 1085 [4] occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 06 20 9d 98 40 00  Error: UNC at LBA = 0x06209d98 = 102800792
+  84 -- 51 01 00 00 00 00 58 37 88 e0 00  Error: ICRC, ABRT 256 sectors at LBA = 0x00583788 = 5781384
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 00 63 39 50 40 00     00:00:01.121  READ FPDMA QUEUED
-  60 00 00 00 20 00 00 06 20 9d 80 40 00     00:00:00.994  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 8c 5b 08 40 00     00:00:01.116  READ FPDMA QUEUED
-  61 00 d8 00 40 00 00 01 bb 09 98 40 00     00:00:01.116  WRITE FPDMA QUEUED
-  60 00 00 00 40 00 00 03 87 5e a2 40 00     00:00:01.116  READ FPDMA QUEUED
+  c8 00 00 00 00 00 00 00 58 37 88 e0 08     00:00:00.096  READ DMA
+  25 00 00 00 08 00 00 13 01 5f 98 e0 08     00:00:00.096  READ DMA EXT
+  c8 00 00 00 08 00 00 00 c7 cd a0 e0 08     00:00:00.096  READ DMA
+  c8 00 00 00 48 00 00 00 08 24 00 e0 08     00:00:00.096  READ DMA
+  c8 00 00 00 88 00 00 00 08 24 48 e0 08     00:00:00.096  READ DMA
 
-Error 1023 [6] occurred at disk power-on lifetime: 6450 hours (268 days + 18 hours)
+Error 1084 [3] occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 06 20 9d 98 40 00  Error: UNC at LBA = 0x06209d98 = 102800792
+  84 -- 51 00 c0 00 00 00 46 a2 40 e0 00  Error: ICRC, ABRT 192 sectors at LBA = 0x0046a240 = 4629056
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 10 00 00 02 a3 57 90 40 00     00:00:01.000  READ FPDMA QUEUED
-  60 00 d8 00 20 00 00 06 20 9d 80 40 00     00:00:00.890  READ FPDMA QUEUED
-  60 00 00 00 60 00 00 02 a0 97 38 40 00     00:00:00.994  READ FPDMA QUEUED
-  60 00 00 00 40 00 00 00 16 c1 3a 40 00     00:00:00.994  READ FPDMA QUEUED
-  60 00 00 00 10 00 00 02 a0 bb 40 40 00     00:00:00.994  READ FPDMA QUEUED
+  c8 00 00 00 c0 00 00 00 46 a2 40 e0 08     00:00:00.090  READ DMA
+  c8 00 00 00 88 00 00 00 46 a3 00 e0 08     00:00:00.090  READ DMA
+  ea 00 00 00 00 00 00 00 46 a2 3f e0 08     00:00:00.090  FLUSH CACHE EXT
+  c8 00 00 00 20 00 00 00 46 a2 20 e0 08     00:00:00.090  READ DMA
+  ca 00 00 00 08 00 00 00 04 0f 88 e1 08     00:00:00.090  WRITE DMA
 
-Error 1022 [5] occurred at disk power-on lifetime: 6450 hours (268 days + 18 hours)
+Error 1083 [2] occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 08 00 00 06 20 9d 98 40 00  Error: UNC at LBA = 0x06209d98 = 102800792
+  84 -- 51 00 50 00 00 00 58 3b 80 e0 00  Error: ICRC, ABRT 80 sectors at LBA = 0x00583b80 = 5782400
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 d8 00 08 00 00 00 63 f8 80 40 00     00:00:00.910  READ FPDMA QUEUED
-  60 00 d8 00 20 00 00 06 20 9d 80 40 00     00:00:00.890  READ FPDMA QUEUED
-  61 00 d8 00 70 00 00 01 c7 58 c8 40 00     00:00:00.904  WRITE FPDMA QUEUED
-  60 00 d8 00 20 00 00 06 20 9d 80 40 00     00:00:00.904  READ FPDMA QUEUED
-  61 00 d8 00 20 00 00 01 9a 79 40 40 00     00:00:00.904  WRITE FPDMA QUEUED
+  c8 00 00 00 a8 00 00 00 58 3b 28 e0 08     00:00:00.084  READ DMA
+  c8 00 00 00 00 00 00 00 58 36 70 e0 08     00:00:00.084  READ DMA
+  c8 00 00 00 38 00 00 00 88 a2 30 e1 08     00:00:00.084  READ DMA
+  c8 00 00 00 08 00 00 00 48 8b 70 e1 08     00:00:00.084  READ DMA
+  c8 00 00 00 08 00 00 00 48 8b 50 e1 08     00:00:00.084  READ DMA
 
-Error 1021 [4] occurred at disk power-on lifetime: 6446 hours (268 days + 14 hours)
+Error 1082 [1] occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 10 00 00 06 20 d4 10 40 00  Error: UNC at LBA = 0x0620d410 = 102814736
+  84 -- 51 00 58 00 00 00 2d e9 c0 e0 00  Error: ICRC, ABRT 88 sectors at LBA = 0x002de9c0 = 3008960
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 10 00 00 00 16 16 ec 40 00     00:00:05.511  READ FPDMA QUEUED
-  60 00 d0 00 20 00 00 06 20 d4 00 40 00     00:00:05.429  READ FPDMA QUEUED
-  60 00 00 00 1b 00 00 00 4c 21 51 40 00     00:00:05.499  READ FPDMA QUEUED
-  60 00 00 00 0d 00 00 00 4c 21 7c 40 00     00:00:05.499  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 02 a1 03 28 40 00     00:00:05.499  READ FPDMA QUEUED
+  c8 00 00 00 98 00 00 00 2d e9 80 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 80 00 00 00 06 09 00 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 68 00 00 00 2d e8 18 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 08 00 00 00 1e 07 70 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 88 00 00 00 1e 07 78 e0 08     00:00:00.132  READ DMA
 
-Error 1020 [3] occurred at disk power-on lifetime: 6446 hours (268 days + 14 hours)
+Error 1081 [0] occurred at disk power-on lifetime: 17507 hours (729 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 10 00 00 06 20 d4 10 40 00  Error: UNC at LBA = 0x0620d410 = 102814736
+  84 -- 51 00 30 00 00 00 24 03 40 e0 00  Error: ICRC, ABRT 48 sectors at LBA = 0x00240340 = 2360128
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 d0 00 08 00 00 00 65 b5 f0 40 00     00:00:05.441  READ FPDMA QUEUED
-  60 00 d0 00 20 00 00 06 20 d4 00 40 00     00:00:05.427  READ FPDMA QUEUED
-  61 00 d0 00 58 00 00 02 0b 2b 90 40 00     00:00:05.429  WRITE FPDMA QUEUED
-  61 00 d0 00 08 00 00 02 8d fe 30 40 00     00:00:05.429  WRITE FPDMA QUEUED
-  60 00 d0 00 20 00 00 06 20 d4 00 40 00     00:00:05.429  READ FPDMA QUEUED
+  c8 00 00 00 50 00 00 00 24 03 20 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 20 00 00 00 24 03 00 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 e0 00 00 00 06 08 20 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 88 00 00 00 06 09 80 e0 08     00:00:00.132  READ DMA
+  c8 00 00 00 20 00 00 00 06 08 00 e0 08     00:00:00.132  READ DMA
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       90%     12234         92440960
-# 2  Extended offline    Aborted by host               90%     12054         -
-# 3  Extended offline    Completed: read failure       90%     11977         92440960
-# 4  Extended offline    Completed: read failure       90%     10880         92440960
-# 5  Extended offline    Completed: read failure       90%     10788         92440960
-# 6  Extended offline    Completed: read failure       90%     10687         92440960
-# 7  Extended offline    Completed: read failure       90%     10414         92440960
-# 8  Extended offline    Completed: read failure       80%     10242         92440960
-# 9  Extended offline    Completed: read failure       90%     10163         92440960
-#10  Extended offline    Completed: read failure       90%      9902         92440960
-#11  Extended offline    Completed: read failure       80%      9645         92440960
-#12  Extended offline    Completed: read failure       80%      9124         92440960
-#13  Extended offline    Completed: read failure       90%      8916         92440960
-#14  Extended offline    Completed: read failure       80%      8626         92440960
-#15  Extended offline    Completed: read failure       90%      8547         92440960
-#16  Extended offline    Completed: read failure       80%      8134         92440960
-#17  Extended offline    Completed: read failure       80%      7101         92440960
-#18  Extended offline    Completed: read failure       80%      7036         92440960
-#19  Extended offline    Completed: read failure       90%      6767         92440960
+# 1  Extended offline    Completed: read failure       90%     17462         92440960
+# 2  Extended offline    Completed: read failure       90%     12234         92440960
+# 3  Extended offline    Aborted by host               90%     12054         -
+# 4  Extended offline    Completed: read failure       90%     11977         92440960
+# 5  Extended offline    Completed: read failure       90%     10880         92440960
+# 6  Extended offline    Completed: read failure       90%     10788         92440960
+# 7  Extended offline    Completed: read failure       90%     10687         92440960
+# 8  Extended offline    Completed: read failure       90%     10414         92440960
+# 9  Extended offline    Completed: read failure       80%     10242         92440960
+#10  Extended offline    Completed: read failure       90%     10163         92440960
+#11  Extended offline    Completed: read failure       90%      9902         92440960
+#12  Extended offline    Completed: read failure       80%      9645         92440960
+#13  Extended offline    Completed: read failure       80%      9124         92440960
+#14  Extended offline    Completed: read failure       90%      8916         92440960
+#15  Extended offline    Completed: read failure       80%      8626         92440960
+#16  Extended offline    Completed: read failure       90%      8547         92440960
+#17  Extended offline    Completed: read failure       80%      8134         92440960
+#18  Extended offline    Completed: read failure       80%      7101         92440960
+#19  Extended offline    Completed: read failure       80%      7036         92440960
+#20  Extended offline    Completed: read failure       90%      6767         92440960
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -296,8 +297,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     23/35 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     33/35 Celsius
 Lifetime    Min/Max Temperature:      8/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -306,7 +307,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (47)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -324,7 +325,7 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4            1  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS

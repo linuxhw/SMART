@@ -10,7 +10,7 @@ Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Feb  2 18:45:18 2018 +03
+Local Time is:    Sat Feb  3 22:20:55 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,27 +62,27 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    1014
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    397
+  9 Power_On_Hours          -O--C-   100   100   000    -    1024
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    398
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   010    -    237
-173 Unknown_Attribute       -O--C-   100   100   000    -    786469
+173 Unknown_Attribute       -O--C-   100   100   000    -    852005
 175 Program_Fail_Count_Chip PO--C-   100   100   050    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    26
-194 Temperature_Celsius     PO---K   074   058   030    -    26 (Min/Max 17/42)
+194 Temperature_Celsius     PO---K   072   058   030    -    28 (Min/Max 17/42)
 196 Reallocated_Event_Count -O----   100   100   010    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    0
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
 231 Temperature_Celsius     PO--C-   100   100   000    -    100
-233 Media_Wearout_Indicator PO-R--   100   100   000    -    989
+233 Media_Wearout_Indicator PO-R--   100   100   000    -    1007
 240 Unknown_SSD_Attribute   PO--C-   100   100   000    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    1437
-242 Total_LBAs_Read         -O--C-   100   100   000    -    1816
-244 Unknown_Attribute       -O----   100   100   000    -    12
+241 Total_LBAs_Written      -O--C-   100   100   000    -    1473
+242 Total_LBAs_Read         -O--C-   100   100   000    -    1821
+244 Unknown_Attribute       -O----   100   100   000    -    13
 245 Unknown_Attribute       -O----   100   100   000    -    37
-246 Unknown_Attribute       -O--C-   100   100   000    -    437232
+246 Unknown_Attribute       -O--C-   100   100   000    -    447360
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -130,13 +130,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             397  ---  Lifetime Power-On Resets
-0x01  0x018  6      3013789118  ---  Logical Sectors Written
-0x01  0x020  6        54855756  ---  Number of Write Commands
-0x01  0x028  6      3809526164  ---  Logical Sectors Read
-0x01  0x030  6        62953162  ---  Number of Read Commands
+0x01  0x008  4             398  ---  Lifetime Power-On Resets
+0x01  0x018  6      3090184486  ---  Logical Sectors Written
+0x01  0x020  6        55215138  ---  Number of Write Commands
+0x01  0x028  6      3819798569  ---  Logical Sectors Read
+0x01  0x030  6        63145378  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4            8632  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4            8638  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
@@ -153,7 +153,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             177  ---  Number of Hardware Resets
+0x06  0x008  4             191  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
@@ -169,8 +169,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4     10706446  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4          572  Device-to-host register FISes sent due to a COMRESET
+0x0009  4     10706460  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4          587  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

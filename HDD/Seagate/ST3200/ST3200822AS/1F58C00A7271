@@ -7,7 +7,7 @@ User Capacity:    200 049 647 616 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Tue Feb 21 21:25:47 2017 MSK
+Local Time is:    Mon Dec  4 23:13:41 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,8 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (  35)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -50,16 +50,16 @@ recommended polling time: 	 ( 111) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   058   051   006    -    4531126
+  1 Raw_Read_Error_Rate     POSR--   058   051   006    -    53706218
   3 Spin_Up_Time            PO----   096   096   000    -    0
-  4 Start_Stop_Count        -O--CK   091   091   020    -    9298
+  4 Start_Stop_Count        -O--CK   091   091   020    -    9684
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   088   060   030    -    727815928
-  9 Power_On_Hours          -O--CK   083   083   000    -    15589
+  7 Seek_Error_Rate         POSR--   089   060   030    -    818881634
+  9 Power_On_Hours          -O--CK   081   081   000    -    17207
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   082   082   020    -    18457
-194 Temperature_Celsius     -O---K   039   054   000    -    39
-195 Hardware_ECC_Recovered  -O-RC-   058   050   000    -    4531126
+ 12 Power_Cycle_Count       -O--CK   082   082   020    -    18843
+194 Temperature_Celsius     -O---K   040   054   000    -    40
+195 Hardware_ECC_Recovered  -O-RC-   058   050   000    -    53706218
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    2
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 225 (device log contains only the most recent five errors)
+ATA Error Count: 258 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -115,7 +115,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 225 occurred at disk power-on lifetime: 15206 hours (633 days + 14 hours)
+Error 258 occurred at disk power-on lifetime: 17200 hours (716 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -126,13 +126,13 @@ Error 225 occurred at disk power-on lifetime: 15206 hours (633 days + 14 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 80 f1 49 40 00      00:31:03.316  READ DMA EXT
-  25 00 40 40 f1 49 40 00      00:31:03.315  READ DMA EXT
-  25 00 40 00 f1 49 40 00      00:31:03.314  READ DMA EXT
-  25 00 40 c0 f0 49 40 00      00:31:03.313  READ DMA EXT
-  25 00 40 80 f0 49 40 00      00:31:03.312  READ DMA EXT
+  25 00 40 80 f1 49 40 00      01:53:28.907  READ DMA EXT
+  25 00 40 40 f1 49 40 00      01:53:28.906  READ DMA EXT
+  25 00 40 00 f1 49 40 00      01:53:28.906  READ DMA EXT
+  25 00 40 c0 f0 49 40 00      01:53:28.905  READ DMA EXT
+  25 00 40 80 f0 49 40 00      01:53:28.905  READ DMA EXT
 
-Error 224 occurred at disk power-on lifetime: 15205 hours (633 days + 13 hours)
+Error 257 occurred at disk power-on lifetime: 16985 hours (707 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -143,13 +143,13 @@ Error 224 occurred at disk power-on lifetime: 15205 hours (633 days + 13 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 80 f1 49 40 00      02:35:18.307  READ DMA EXT
-  25 00 40 40 f1 49 40 00      02:35:18.306  READ DMA EXT
-  25 00 40 00 f1 49 40 00      02:35:18.305  READ DMA EXT
-  25 00 40 c0 f0 49 40 00      02:35:18.318  READ DMA EXT
-  25 00 40 80 f0 49 40 00      02:35:18.317  READ DMA EXT
+  25 00 40 80 f1 49 40 00      00:11:04.513  READ DMA EXT
+  25 00 40 38 ba d6 40 00      00:11:04.512  READ DMA EXT
+  25 00 40 40 f1 49 40 00      00:11:04.512  READ DMA EXT
+  25 00 06 3b 7b 1d 40 00      00:11:04.504  READ DMA EXT
+  25 00 40 00 f1 49 40 00      00:11:04.503  READ DMA EXT
 
-Error 223 occurred at disk power-on lifetime: 15182 hours (632 days + 14 hours)
+Error 256 occurred at disk power-on lifetime: 16982 hours (707 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -160,13 +160,13 @@ Error 223 occurred at disk power-on lifetime: 15182 hours (632 days + 14 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 80 f1 49 40 00      07:48:15.708  READ DMA EXT
-  25 00 40 40 f1 49 40 00      07:48:15.707  READ DMA EXT
-  25 00 40 00 f1 49 40 00      07:48:15.707  READ DMA EXT
-  25 00 40 c0 f0 49 40 00      07:48:15.706  READ DMA EXT
-  25 00 40 80 f0 49 40 00      07:48:15.705  READ DMA EXT
+  25 00 40 80 f1 49 40 00      05:47:24.325  READ DMA EXT
+  35 00 08 00 1e 5f 40 00      05:47:24.408  WRITE DMA EXT
+  25 00 40 40 f1 49 40 00      05:47:24.408  READ DMA EXT
+  35 00 08 98 04 60 40 00      05:47:24.407  WRITE DMA EXT
+  25 00 12 03 48 7a 40 00      05:47:24.407  READ DMA EXT
 
-Error 222 occurred at disk power-on lifetime: 15146 hours (631 days + 2 hours)
+Error 255 occurred at disk power-on lifetime: 16980 hours (707 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -177,13 +177,13 @@ Error 222 occurred at disk power-on lifetime: 15146 hours (631 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 80 f1 49 40 00      08:11:59.115  READ DMA EXT
-  25 00 40 40 f1 49 40 00      08:11:59.115  READ DMA EXT
-  25 00 80 c0 93 b2 40 00      08:11:59.115  READ DMA EXT
-  25 00 80 40 93 b2 40 00      08:11:59.315  READ DMA EXT
-  25 00 40 00 f1 49 40 00      08:11:59.299  READ DMA EXT
+  25 00 40 80 f1 49 40 00      04:08:37.713  READ DMA EXT
+  25 00 40 40 f1 49 40 00      04:08:37.712  READ DMA EXT
+  25 00 40 00 f1 49 40 00      04:08:37.707  READ DMA EXT
+  25 00 40 c0 f0 49 40 00      04:08:37.699  READ DMA EXT
+  25 00 40 80 f0 49 40 00      04:08:37.698  READ DMA EXT
 
-Error 221 occurred at disk power-on lifetime: 15124 hours (630 days + 4 hours)
+Error 254 occurred at disk power-on lifetime: 16980 hours (707 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -194,37 +194,37 @@ Error 221 occurred at disk power-on lifetime: 15124 hours (630 days + 4 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 80 f1 49 40 00      04:56:14.401  READ DMA EXT
-  25 00 40 40 f1 49 40 00      04:56:14.400  READ DMA EXT
-  25 00 40 00 f1 49 40 00      04:56:14.399  READ DMA EXT
-  25 00 40 c0 f0 49 40 00      04:56:14.398  READ DMA EXT
-  25 00 40 80 f0 49 40 00      04:56:14.397  READ DMA EXT
+  25 00 40 80 f1 49 40 00      04:01:30.380  READ DMA EXT
+  25 00 10 b8 82 cf 40 00      04:01:30.380  READ DMA EXT
+  25 00 10 00 58 f6 40 00      04:01:30.379  READ DMA EXT
+  25 00 40 40 f1 49 40 00      04:01:30.357  READ DMA EXT
+  25 00 10 40 58 f6 40 00      04:01:30.336  READ DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               90%     15001         -
-# 2  Short offline       Aborted by host               80%     14260         -
-# 3  Short offline       Aborted by host               80%     14058         -
-# 4  Extended offline    Completed without error       00%     13944         -
-# 5  Short offline       Completed without error       00%     13943         -
-# 6  Short offline       Completed without error       00%     13942         -
-# 7  Extended offline    Aborted by host               90%     13939         -
-# 8  Short offline       Completed without error       00%     13939         -
-# 9  Short offline       Completed without error       00%     13889         -
-#10  Short offline       Aborted by host               80%     11187         -
-#11  Short offline       Aborted by host               50%      9692         -
-#12  Extended offline    Aborted by host               90%      9691         -
-#13  Short offline       Completed without error       00%      9691         -
-#14  Extended offline    Aborted by host               90%      9691         -
-#15  Short offline       Completed without error       00%      9691         -
-#16  Extended offline    Aborted by host               90%      9689         -
-#17  Short offline       Completed without error       00%      9689         -
-#18  Extended offline    Aborted by host               90%      9684         -
-#19  Short offline       Completed without error       00%      9684         -
-#20  Extended offline    Aborted by host               90%      9683         -
-#21  Short offline       Completed without error       00%      9683         -
+# 1  Extended offline    Interrupted (host reset)      30%     16274         -
+# 2  Extended offline    Completed without error       00%     16230         -
+# 3  Extended offline    Interrupted (host reset)      20%     16194         -
+# 4  Extended offline    Completed without error       00%     16165         -
+# 5  Short offline       Aborted by host               90%     15001         -
+# 6  Short offline       Aborted by host               80%     14260         -
+# 7  Short offline       Aborted by host               80%     14058         -
+# 8  Extended offline    Completed without error       00%     13944         -
+# 9  Short offline       Completed without error       00%     13943         -
+#10  Short offline       Completed without error       00%     13942         -
+#11  Extended offline    Aborted by host               90%     13939         -
+#12  Short offline       Completed without error       00%     13939         -
+#13  Short offline       Completed without error       00%     13889         -
+#14  Short offline       Aborted by host               80%     11187         -
+#15  Short offline       Aborted by host               50%      9692         -
+#16  Extended offline    Aborted by host               90%      9691         -
+#17  Short offline       Completed without error       00%      9691         -
+#18  Extended offline    Aborted by host               90%      9691         -
+#19  Short offline       Completed without error       00%      9691         -
+#20  Extended offline    Aborted by host               90%      9689         -
+#21  Short offline       Completed without error       00%      9689         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   Unknown(0x0ff8) (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jan 19 11:47:22 2018 +05
+Local Time is:    Sun Jan 28 20:45:41 2018 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,17 +58,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    84
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    14
+  9 Power_On_Hours          -O--C-   100   100   000    -    227
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    26
 163 Unknown_Attribute       PO----   100   100   050    -    142
 166 Unknown_Attribute       ------   100   100   000    -    0
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 172 Unknown_Attribute       -O--C-   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    3
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    4
 194 Temperature_Celsius     PO---K   060   060   000    -    40
 198 Offline_Uncorrectable   -O--C-   100   100   000    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    96
-242 Total_LBAs_Read         -O--C-   100   100   000    -    48
+241 Total_LBAs_Written      -O--C-   100   100   000    -    156
+242 Total_LBAs_Read         -O--C-   100   100   000    -    63
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -96,7 +96,9 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       201         -
+# 2  Extended offline    Completed without error       00%        97         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -115,10 +117,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              14  ---  Lifetime Power-On Resets
-0x01  0x010  4              84  ---  Power-on Hours
-0x01  0x018  6       202226309  ---  Logical Sectors Written
-0x01  0x028  6       101227168  ---  Logical Sectors Read
+0x01  0x008  4              26  ---  Lifetime Power-On Resets
+0x01  0x010  4             227  ---  Power-on Hours
+0x01  0x018  6       328530847  ---  Logical Sectors Written
+0x01  0x028  6       133299230  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -141,8 +143,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

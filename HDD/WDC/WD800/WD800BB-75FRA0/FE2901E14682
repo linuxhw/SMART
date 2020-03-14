@@ -7,10 +7,10 @@ User Capacity:    79 998 918 144 bytes [79,9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Tue Jul  5 19:49:24 2016 YEKT
+Local Time is:    Tue Sep 27 20:04:10 2016 YEKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     128 (quiet), recommended: 128
+AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -21,11 +21,12 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 249)	Self-test routine in progress...
-					90% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		( 2472) seconds.
 Offline data collection
@@ -53,15 +54,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   200   200   051    -    0
-  3 Spin_Up_Time            POS---   090   082   021    -    2016
-  4 Start_Stop_Count        -O--CK   093   093   040    -    7652
+  3 Spin_Up_Time            POS---   087   082   021    -    2175
+  4 Start_Stop_Count        -O--CK   093   093   040    -    7956
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         PO-R--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   080   080   000    -    14702
+  9 Power_On_Hours          -O--CK   079   079   000    -    15445
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7073
-194 Temperature_Celsius     -O---K   094   253   000    -    49
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7370
+194 Temperature_Celsius     -O---K   098   253   000    -    45
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   -O--C-   200   200   000    -    0
@@ -76,8 +77,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 
 Read SMART Log Directory failed: scsi error badly formed scsi parameters
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
@@ -175,27 +175,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Conveyance offline  Interrupted (host reset)      90%       913         -
-# 2  Conveyance offline  Completed without error       00%       753         -
-# 3  Conveyance offline  Completed without error       00%       731         -
-# 4  Extended offline    Aborted by host               90%       741         -
-# 5  Extended offline    Completed without error       00%      1065         -
-# 6  Conveyance offline  Completed without error       00%       572         -
-# 7  Conveyance offline  Completed without error       00%       572         -
-# 8  Conveyance offline  Completed without error       00%       182         -
-# 9  Extended offline    Completed without error       00%        76         -
-#10  Conveyance offline  Completed without error       00%        45         -
-#11  Conveyance offline  Completed without error       00%        36         -
-#12  Conveyance offline  Completed without error       00%       539         -
-#13  Conveyance offline  Completed without error       00%       537         -
-#14  Conveyance offline  Completed without error       00%        94         -
-#15  Conveyance offline  Completed without error       00%        87         -
-#16  Conveyance offline  Completed without error       00%        86         -
-#17  Extended captive    Interrupted (host reset)      90%        85         -
-#18  Short offline       Completed without error       00%      1085         -
-#19  Short offline       Completed without error       00%      1081         -
-#20  Short offline       Aborted by host               70%      1081         -
-#21  Extended offline    Completed without error       00%       788         -
+# 1  Extended offline    Completed without error       00%      1017         -
+# 2  Conveyance offline  Completed without error       00%       918         -
+# 3  Conveyance offline  Completed without error       00%       814         -
+# 4  Conveyance offline  Completed without error       00%       524         -
+# 5  Conveyance offline  Completed without error       00%       524         -
+# 6  Conveyance offline  Completed without error       00%       523         -
+# 7  Conveyance offline  Interrupted (host reset)      90%       913         -
+# 8  Conveyance offline  Completed without error       00%       753         -
+# 9  Conveyance offline  Completed without error       00%       731         -
+#10  Extended offline    Aborted by host               90%       741         -
+#11  Extended offline    Completed without error       00%      1065         -
+#12  Conveyance offline  Completed without error       00%       572         -
+#13  Conveyance offline  Completed without error       00%       572         -
+#14  Conveyance offline  Completed without error       00%       182         -
+#15  Extended offline    Completed without error       00%        76         -
+#16  Conveyance offline  Completed without error       00%        45         -
+#17  Conveyance offline  Completed without error       00%        36         -
+#18  Conveyance offline  Completed without error       00%       539         -
+#19  Conveyance offline  Completed without error       00%       537         -
+#20  Conveyance offline  Completed without error       00%        94         -
+#21  Conveyance offline  Completed without error       00%        87         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -210,7 +210,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

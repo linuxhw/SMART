@@ -4,20 +4,20 @@ Device Model:     ST9120817AS
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: 3.AAA
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Jan 27 04:53:16 2017 MSK
+Local Time is:    Thu Mar  8 19:54:02 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  ENABLED, PW level HIGH, not locked, not frozen [SEC5]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -57,23 +56,23 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1933
+  3 Spin_Up_Time            PO----   099   099   000    -    0
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2237
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    16
-  7 Seek_Error_Rate         POSR--   079   060   030    -    100144318
-  9 Power_On_Hours          -O--CK   096   096   000    -    3646
+  7 Seek_Error_Rate         POSR--   080   060   030    -    109761835
+  9 Power_On_Hours          -O--CK   096   096   000    -    3885
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1944
-187 Reported_Uncorrect      -O--CK   070   070   000    -    30
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2362
+187 Reported_Uncorrect      -O--CK   036   036   000    -    64
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   052   031   045    Past 48 (Min/Max 8/69 #2)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1106
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    877
-193 Load_Cycle_Count        -O---K   076   076   000    -    49326
-194 Temperature_Celsius     -O-RC-   048   069   000    -    48 (0 8 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   064   054   000    -    13396893
-197 Current_Pending_Sector  ----C-   100   100   000    -    1
-198 Offline_Uncorrectable   -OSRCK   100   100   000    -    1
+190 Airflow_Temperature_Cel -O---K   055   031   045    Past 45 (Min/Max 1/69 #2)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1227
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1051
+193 Load_Cycle_Count        -O---K   068   068   000    -    65696
+194 Temperature_Celsius     -O-RC-   045   069   000    -    45 (0 1 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   072   054   000    -    237548647
+197 Current_Pending_Sector  ----C-   100   100   000    -    2
+198 Offline_Uncorrectable   -OSRCK   100   100   000    -    2
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O--CK   100   253   000    -    0
 202 Data_Address_Mark_Errs  ------   100   253   000    -    0
@@ -113,7 +112,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 35 (device log contains only the most recent five errors)
+ATA Error Count: 70 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -128,99 +127,102 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 35 occurred at disk power-on lifetime: 3628 hours (151 days + 4 hours)
+Error 70 occurred at disk power-on lifetime: 3823 hours (159 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 c8 52 78 e1  Error: UNC at LBA = 0x017852c8 = 24662728
+  40 51 00 44 1f 6f ea  Error: UNC at LBA = 0x0a6f1f44 = 175054660
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 c0 52 78 e1 00      00:13:03.535  READ DMA
-  c8 00 00 18 49 78 e1 00      00:13:03.530  READ DMA
-  c8 00 08 50 47 c4 e1 00      00:13:03.523  READ DMA
-  c8 00 60 f0 5b 01 e0 00      00:13:03.521  READ DMA
-  c8 00 20 b8 5b 01 e0 00      00:13:03.519  READ DMA
+  c8 00 f0 80 1e 6f ea 00      00:15:45.650  READ DMA
+  c8 00 08 78 1e 6f ea 00      00:15:45.649  READ DMA
+  c8 00 08 70 1e 6f ea 00      00:15:45.649  READ DMA
+  c8 00 40 f0 1d 6f ea 00      00:15:45.647  READ DMA
+  c8 00 28 c8 1d 6f ea 00      00:15:45.657  READ DMA
 
-Error 34 occurred at disk power-on lifetime: 3619 hours (150 days + 19 hours)
+Error 69 occurred at disk power-on lifetime: 3823 hours (159 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 c8 52 78 e1  Error: UNC at LBA = 0x017852c8 = 24662728
+  40 51 00 44 1f 6f ea  Error: UNC at LBA = 0x0a6f1f44 = 175054660
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 c0 52 78 e1 00      00:14:41.808  READ DMA
-  c8 00 00 18 49 78 e1 00      00:14:41.807  READ DMA
-  c8 00 e8 c0 45 78 e1 00      00:14:41.804  READ DMA
-  c8 00 60 f0 5b 01 e0 00      00:14:41.799  READ DMA
-  c8 00 20 b8 5b 01 e0 00      00:14:41.783  READ DMA
+  c8 00 f0 80 1e 6f ea 00      00:15:04.059  READ DMA
+  c8 00 08 78 1e 6f ea 00      00:15:04.066  READ DMA
+  c8 00 08 70 1e 6f ea 00      00:15:04.066  READ DMA
+  c8 00 40 f0 1d 6f ea 00      00:15:04.064  READ DMA
+  c8 00 20 d0 1d 6f ea 00      00:15:04.063  READ DMA
 
-Error 33 occurred at disk power-on lifetime: 3617 hours (150 days + 17 hours)
+Error 68 occurred at disk power-on lifetime: 3823 hours (159 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 c8 52 78 e1  Error: UNC at LBA = 0x017852c8 = 24662728
+  40 51 00 44 1f 6f ea  Error: UNC at LBA = 0x0a6f1f44 = 175054660
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 c0 52 78 e1 00      00:00:59.820  READ DMA
-  c8 00 00 18 49 78 e1 00      00:00:59.955  READ DMA
-  c8 00 28 d8 07 2a e0 00      00:00:59.946  READ DMA
-  c8 00 08 c8 07 2a e0 00      00:00:59.937  READ DMA
-  c8 00 08 b0 07 2a e0 00      00:00:59.937  READ DMA
+  c8 00 f0 80 1e 6f ea 00      00:13:16.707  READ DMA
+  c8 00 08 78 1e 6f ea 00      00:13:16.706  READ DMA
+  c8 00 08 70 1e 6f ea 00      00:13:16.705  READ DMA
+  c8 00 30 00 1e 6f ea 00      00:13:16.705  READ DMA
+  c8 00 08 f8 1d 6f ea 00      00:13:16.705  READ DMA
 
-Error 32 occurred at disk power-on lifetime: 3613 hours (150 days + 13 hours)
+Error 67 occurred at disk power-on lifetime: 3823 hours (159 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 c8 52 78 e1  Error: UNC at LBA = 0x017852c8 = 24662728
+  40 51 00 44 1f 6f ea  Error: UNC at LBA = 0x0a6f1f44 = 175054660
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 c0 52 78 e1 00      05:48:31.264  READ DMA
-  c8 00 00 18 49 78 e1 00      05:48:31.247  READ DMA
-  c8 00 08 48 1d 8e e2 00      05:48:31.240  READ DMA
-  c8 00 10 a8 8b 78 e1 00      05:48:31.228  READ DMA
-  c8 00 18 c0 c9 6f e0 00      05:48:31.228  READ DMA
+  c8 00 f0 80 1e 6f ea 00      00:12:15.533  READ DMA
+  c8 00 08 78 1e 6f ea 00      00:12:15.532  READ DMA
+  c8 00 08 70 1e 6f ea 00      00:12:15.532  READ DMA
+  c8 00 58 d8 1d 6f ea 00      00:12:15.531  READ DMA
+  c8 00 08 d0 1d 6f ea 00      00:12:15.531  READ DMA
 
-Error 31 occurred at disk power-on lifetime: 3492 hours (145 days + 12 hours)
+Error 66 occurred at disk power-on lifetime: 3823 hours (159 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 84 ca fc e0  Error: UNC at LBA = 0x00fcca84 = 16566916
+  40 51 00 44 1f 6f ea  Error: UNC at LBA = 0x0a6f1f44 = 175054660
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 f0 00 ca fc e0 00      01:19:42.999  READ DMA EXT
-  25 00 20 e0 c9 fc e0 00      01:19:42.999  READ DMA EXT
-  25 00 f0 f0 c8 fc e0 00      01:19:42.996  READ DMA EXT
-  25 00 f0 00 c8 fc e0 00      01:19:43.046  READ DMA EXT
-  25 00 20 e0 c7 fc e0 00      01:19:43.046  READ DMA EXT
+  c8 00 f0 80 1e 6f ea 00      00:08:43.286  READ DMA
+  c8 00 08 78 1e 6f ea 00      00:08:43.286  READ DMA
+  c8 00 08 70 1e 6f ea 00      00:08:43.286  READ DMA
+  c8 00 40 f0 1d 6f ea 00      00:08:43.285  READ DMA
+  c8 00 38 b8 1d 6f ea 00      00:08:43.285  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3554         -
-# 2  Short offline       Completed without error       00%      3525         -
-# 3  Short offline       Completed: read failure       90%      3517         184440699
-# 4  Extended offline    Completed: read failure       90%      3514         184440699
+# 1  Extended offline    Completed: read failure       90%      3752         24662728
+# 2  Extended offline    Completed: read failure       90%      3693         24662728
+# 3  Extended offline    Completed: read failure       90%      3664         24662728
+# 4  Short offline       Completed without error       00%      3554         -
+# 5  Short offline       Completed without error       00%      3525         -
+# 6  Short offline       Completed: read failure       90%      3517         184440699
+# 7  Extended offline    Completed: read failure       90%      3514         184440699
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -237,7 +239,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 48 Celsius
+Current Temperature:                 45 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 

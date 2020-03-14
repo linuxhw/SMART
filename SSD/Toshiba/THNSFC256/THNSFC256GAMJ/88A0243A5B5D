@@ -9,7 +9,7 @@ Form Factor:      1.8 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Aug 22 15:31:57 2016 SAST
+Local Time is:    Mon Mar  5 08:51:22 2018 SAST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -26,9 +26,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  16)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -63,17 +62,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    12288
+  9 Power_On_Hours          -O--C-   100   100   000    -    12943
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    2049
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2934
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 169 Unknown_Attribute       PO--C-   100   100   010    -    1095433653231
 170 Unknown_Attribute       PO--C-   100   100   010    -    163225272402
-173 Unknown_Attribute       -O--C-   100   100   000    -    4316201111
+173 Unknown_Attribute       -O--C-   100   100   000    -    4316594332
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    102
-194 Temperature_Celsius     PO---K   074   049   030    -    26 (Min/Max 11/51)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    105
+194 Temperature_Celsius     PO---K   067   049   030    -    33 (Min/Max 11/51)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -103,9 +102,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     12252         -
-# 2  Short offline       Completed without error       00%     12188         -
-# 3  Short offline       Completed without error       00%     10850         -
+# 1  Short offline       Aborted by host               00%     12337         -
+# 2  Short offline       Completed without error       00%     12306         -
+# 3  Short offline       Completed without error       00%     12300         -
+# 4  Short offline       Completed without error       00%     12252         -
+# 5  Short offline       Completed without error       00%     12188         -
+# 6  Short offline       Completed without error       00%     10850         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -122,20 +124,20 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   0
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     20/26 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     24/33 Celsius
 Lifetime    Min/Max Temperature:     11/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 04 00 01 01 00 05 05 00 00 00 00 00 00 00
-00 02 02 00 d0 04 a3 02 04 00 00 00 00 00 00 03
+00 02 02 00 fe fe c6 02 04 00 00 00 00 00 00 03
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (104)
+Temperature History Size (Index):    128 (18)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -153,8 +155,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

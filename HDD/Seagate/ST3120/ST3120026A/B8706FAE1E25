@@ -7,7 +7,7 @@ User Capacity:    120 033 041 920 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Thu Sep  1 23:54:19 2016 MSK
+Local Time is:    Thu Sep  8 23:22:05 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,16 +51,16 @@ recommended polling time: 	 (  85) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   060   054   006    -    227501503
-  3 Spin_Up_Time            PO----   096   096   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    185
+  1 Raw_Read_Error_Rate     POSR--   060   054   006    -    222135405
+  3 Spin_Up_Time            PO----   097   096   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    187
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    638071976
-  9 Power_On_Hours          -O--CK   086   086   000    -    12625
+  7 Seek_Error_Rate         POSR--   087   060   030    -    639809766
+  9 Power_On_Hours          -O--CK   086   086   000    -    12657
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7725
-194 Temperature_Celsius     -O---K   035   063   000    -    35
-195 Hardware_ECC_Recovered  -O-RC-   060   053   000    -    227501503
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7738
+194 Temperature_Celsius     -O---K   037   063   000    -    37
+195 Hardware_ECC_Recovered  -O-RC-   060   053   000    -    222135405
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    1
@@ -249,7 +249,12 @@ Error 237 [16] occurred at disk power-on lifetime: 12544 hours (522 days + 16 ho
   40 00 00 00 20 00 03 53 00 16 df e3 00     02:32:06.995  READ VERIFY SECTOR(S)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     12648         -
+# 2  Extended offline    Interrupted (host reset)      50%     12645         -
+# 3  Extended offline    Completed without error       00%     12637         -
+# 4  Extended offline    Completed: read failure       80%     12633         51794906
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

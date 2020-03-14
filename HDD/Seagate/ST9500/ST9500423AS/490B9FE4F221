@@ -10,13 +10,14 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Feb 19 22:47:42 2018 MSK
+Local Time is:    Wed Oct 17 22:18:48 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -60,30 +61,30 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    191331952
+  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    170336504
   3 Spin_Up_Time            PO----   098   098   085    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    8000
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8722
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   078   060   030    -    66265201
-  9 Power_On_Hours          -O--CK   094   094   000    -    5999
+  7 Seek_Error_Rate         POSR--   078   060   030    -    75195884
+  9 Power_On_Hours          -O--CK   093   093   000    -    6652
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3659
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    4020
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   099   000    -    5
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   061   049   045    -    39 (Min/Max 24/39)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    31
-192 Power-Off_Retract_Count -O--CK   097   097   000    -    6411
-193 Load_Cycle_Count        -O--CK   040   040   000    -    121812
-194 Temperature_Celsius     -O---K   039   051   000    -    39 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   118   099   000    -    191331952
+190 Airflow_Temperature_Cel -O---K   060   046   045    -    40 (Min/Max 24/40)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    32
+192 Power-Off_Retract_Count -O--CK   097   097   000    -    6435
+193 Load_Cycle_Count        -O--CK   024   024   000    -    152987
+194 Temperature_Celsius     -O---K   040   054   000    -    40 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   118   099   000    -    170336504
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    5541 (229 210 0)
-241 Total_LBAs_Written      ------   100   253   000    -    692942743
-242 Total_LBAs_Read         ------   100   253   000    -    1018508832
+240 Head_Flying_Hours       ------   100   253   000    -    6083 (203 252 0)
+241 Total_LBAs_Written      ------   100   253   000    -    958880158
+242 Total_LBAs_Read         ------   100   253   000    -    2486622354
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +102,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -123,9 +124,10 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      4277         -
-# 2  Extended offline    Completed without error       00%      3596         -
-# 3  Short offline       Completed without error       00%      2329         -
+# 1  Extended offline    Completed without error       00%      6014         -
+# 2  Extended offline    Completed without error       00%      4277         -
+# 3  Extended offline    Completed without error       00%      3596         -
+# 4  Short offline       Completed without error       00%      2329         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -142,9 +144,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     24/39 Celsius
-Lifetime    Min/Max Temperature:     14/51 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     24/40 Celsius
+Lifetime    Min/Max Temperature:     14/54 Celsius
 Lifetime    Average Temperature:        38 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -153,13 +155,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (86)
+Temperature History Size (Index):    128 (92)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

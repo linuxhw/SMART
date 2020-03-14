@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Jul  7 01:41:03 2016 MSK
+Local Time is:    Fri Jul 15 14:16:12 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   197   188   021    -    6108
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10292
+  3 Spin_Up_Time            POS--K   196   188   021    -    6191
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10332
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   067   067   000    -    24789
+  9 Power_On_Hours          -O--CK   066   066   000    -    24918
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5775
-192 Power-Off_Retract_Count -O--CK   196   196   000    -    3209
-193 Load_Cycle_Count        -O--CK   104   104   000    -    288353
-194 Temperature_Celsius     -O---K   121   099   000    -    26
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5813
+192 Power-Off_Retract_Count -O--CK   196   196   000    -    3221
+193 Load_Cycle_Count        -O--CK   104   104   000    -    289636
+194 Temperature_Celsius     -O---K   110   099   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -257,12 +257,12 @@ Error 87 [14] occurred at disk power-on lifetime: 20873 hours (869 days + 17 hou
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               90%      3655         -
-# 2  Short offline       Aborted by host               90%      3654         -
+# 1  Extended offline    Interrupted (host reset)      80%     24822         -
+# 2  Short offline       Aborted by host               90%      3655         -
 # 3  Short offline       Aborted by host               90%      3654         -
 # 4  Short offline       Aborted by host               90%      3654         -
 # 5  Short offline       Aborted by host               90%      3654         -
-# 6  Short offline       Aborted by host               90%      3652         -
+# 6  Short offline       Aborted by host               90%      3654         -
 # 7  Short offline       Aborted by host               90%      3652         -
 # 8  Short offline       Aborted by host               90%      3652         -
 # 9  Short offline       Aborted by host               90%      3652         -
@@ -274,7 +274,7 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 #15  Short offline       Aborted by host               90%      3652         -
 #16  Short offline       Aborted by host               90%      3652         -
 #17  Short offline       Aborted by host               90%      3652         -
-#18  Short offline       Aborted by host               90%      3651         -
+#18  Short offline       Aborted by host               90%      3652         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -291,9 +291,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     24/26 Celsius
-Lifetime    Min/Max Temperature:     21/49 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     30/37 Celsius
+Lifetime    Min/Max Temperature:     26/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -301,7 +301,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (121)
+Temperature History Size (Index):    478 (229)
 
 SCT Error Recovery Control command not supported
 
@@ -318,5 +318,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4          436  Vendor specific
+0x8000  4         4001  Vendor specific
+
+
 

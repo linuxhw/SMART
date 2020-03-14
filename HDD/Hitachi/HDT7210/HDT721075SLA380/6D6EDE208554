@@ -9,7 +9,7 @@ Rotation Rate:    7200 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Sep  2 21:42:55 2015 FET
+Local Time is:    Tue Mar 29 20:35:43 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -58,22 +58,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   133   133   054    -    110
-  3 Spin_Up_Time            POS---   121   121   024    -    336 (Average 365)
-  4 Start_Stop_Count        -O--C-   099   099   000    -    5678
+  2 Throughput_Performance  P-S---   133   133   054    -    111
+  3 Spin_Up_Time            POS---   123   123   024    -    317 (Average 369)
+  4 Start_Stop_Count        -O--C-   099   099   000    -    6228
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   128   128   020    -    32
-  9 Power_On_Hours          -O--C-   097   097   000    -    24219
+  8 Seek_Time_Performance   P-S---   125   125   020    -    33
+  9 Power_On_Hours          -O--C-   097   097   000    -    25792
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    5578
-192 Power-Off_Retract_Count -O--CK   096   096   000    -    5678
-193 Load_Cycle_Count        -O--C-   096   096   000    -    5678
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    6103
+192 Power-Off_Retract_Count -O--CK   095   095   000    -    6228
+193 Load_Cycle_Count        -O--C-   095   095   000    -    6228
 194 Temperature_Celsius     -O----   162   162   000    -    37 (Min/Max 17/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    141
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    149
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 2
+Device Error Count: 3
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -115,6 +115,23 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 25765 hours (1073 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 90 00 00 00 c3 1a 70 e0 00  Error: ICRC, ABRT 144 sectors at LBA = 0x00c31a70 = 12786288
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 01 00 00 00 00 c3 1a 00 e0 00     00:00:49.600  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 01 4f f0 e0 00     00:00:49.500  WRITE DMA EXT
+  25 00 00 00 40 00 00 00 0a e9 22 e0 00     00:00:49.500  READ DMA EXT
+  35 00 00 00 08 00 00 00 01 4f 98 e0 00     00:00:49.500  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 1a aa 80 e0 00     00:00:49.500  WRITE DMA EXT
 
 Error 2 [1] occurred at disk power-on lifetime: 23970 hours (998 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -169,7 +186,7 @@ SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     27/37 Celsius
+Power Cycle Min/Max Temperature:     25/37 Celsius
 Lifetime    Min/Max Temperature:     17/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -178,7 +195,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (45)
+Temperature History Size (Index):    128 (116)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -189,8 +206,8 @@ Device Statistics (GP Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2           12  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

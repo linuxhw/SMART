@@ -7,7 +7,7 @@ User Capacity:    80,060,424,192 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Wed Apr 19 01:47:32 2017 CEST
+Local Time is:    Mon Apr 24 23:51:13 2017 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -53,15 +53,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    0
   3 Spin_Up_Time            POS---   077   054   000    -    4352
-  4 Start_Stop_Count        -O--CK   088   088   000    -    12637
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12715
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Half_Minutes   -O--CK   095   095   000    -    27938h+32m
+  9 Power_On_Half_Minutes   -O--CK   095   095   000    -    27978h+08m
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6505
-194 Temperature_Celsius     -O---K   184   067   000    -    18
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    133298492
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6532
+194 Temperature_Celsius     -O---K   190   067   000    -    16
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    158217172
 196 Reallocated_Event_Count -O--C-   099   099   000    -    3
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   099   099   010    -    3
@@ -88,7 +88,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 6957 (device log contains only the most recent five errors)
+ATA Error Count: 7008 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -103,96 +103,97 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6957 occurred at disk power-on lifetime: 27930 hours (1163 days + 18 hours)
+Error 7008 occurred at disk power-on lifetime: 27977 hours (1165 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 fe 00 00 00 40  Error: ABRT
+  04 51 e1 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:01:06.500  SET FEATURES [Enable APM]
-  c8 00 f8 b8 02 d3 e0 00      00:01:06.500  READ DMA
-  c8 00 20 a8 f1 d1 e0 00      00:01:06.500  READ DMA
-  c8 00 08 20 17 81 e1 00      00:01:06.500  READ DMA
-  c8 00 60 c0 30 c4 e5 00      00:01:06.500  READ DMA
+  ef 05 e1 00 00 00 40 00      00:06:41.250  SET FEATURES [Enable APM]
+  e3 00 fa 00 00 00 40 00      00:06:41.250  IDLE
+  ec 00 01 00 00 00 40 00      00:05:50.875  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:05:40.125  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:05:40.125  IDENTIFY DEVICE
 
-Error 6956 occurred at disk power-on lifetime: 27930 hours (1163 days + 18 hours)
+Error 7007 occurred at disk power-on lifetime: 27971 hours (1165 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 fe 00 00 00 40  Error: ABRT
+  04 51 e1 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:58:14.875  SET FEATURES [Enable APM]
-  ec 00 01 00 00 00 40 00      00:58:14.875  IDENTIFY DEVICE
-  b0 da 00 00 4f c2 00 00      00:51:41.063  SMART RETURN STATUS
-  b0 d0 01 00 4f c2 00 00      00:51:41.000  SMART READ DATA
-  b0 d1 01 00 4f c2 00 00      00:51:41.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ef 05 e1 00 00 00 40 00      00:32:09.188  SET FEATURES [Enable APM]
+  e3 00 fa 00 00 00 40 00      00:32:09.125  IDLE
+  b0 da 00 00 4f c2 00 00      00:31:36.063  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 00 00      00:31:36.063  SMART READ DATA
+  b0 d1 01 00 4f c2 00 00      00:31:36.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 6955 occurred at disk power-on lifetime: 27930 hours (1163 days + 18 hours)
+Error 7006 occurred at disk power-on lifetime: 27970 hours (1165 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 fe 00 00 00 40  Error: ABRT
+  04 51 e1 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:09:38.000  SET FEATURES [Enable APM]
-  ec 00 01 00 00 00 40 00      00:09:38.000  IDENTIFY DEVICE
-  c8 00 08 00 18 00 e0 00      00:08:10.250  READ DMA
-  c8 00 08 00 e0 35 e9 00      00:08:10.250  READ DMA
-  c8 00 68 98 33 bb e8 00      00:08:10.250  READ DMA
+  ef 05 e1 00 00 00 40 00      00:12:14.000  SET FEATURES [Enable APM]
+  e3 00 fa 00 00 00 40 00      00:12:14.000  IDLE
+  b0 da 00 00 4f c2 00 00      00:11:55.938  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 00 00      00:11:55.875  SMART READ DATA
+  b0 d1 01 00 4f c2 00 00      00:11:55.875  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 6954 occurred at disk power-on lifetime: 27930 hours (1163 days + 18 hours)
+Error 7005 occurred at disk power-on lifetime: 27968 hours (1165 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 fe 00 00 00 40  Error: ABRT
+  04 51 e1 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:08:09.500  SET FEATURES [Enable APM]
-  c8 00 08 00 10 00 e0 00      00:08:00.688  READ DMA
-  c8 00 68 98 fb 51 e9 00      00:08:00.688  READ DMA
-  c8 00 80 08 fb 51 e9 00      00:08:00.688  READ DMA
-  c8 00 b8 48 fa 51 e9 00      00:08:00.625  READ DMA
+  ef 05 e1 00 00 00 40 00      00:04:20.500  SET FEATURES [Enable APM]
+  e3 00 fa 00 00 00 40 00      00:04:20.438  IDLE
+  b0 da 00 00 4f c2 00 00      00:03:55.438  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 00 00      00:03:55.375  SMART READ DATA
+  b0 d1 01 00 4f c2 00 00      00:03:55.375  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 6953 occurred at disk power-on lifetime: 27923 hours (1163 days + 11 hours)
+Error 7004 occurred at disk power-on lifetime: 27956 hours (1164 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 fe 00 00 00 40  Error: ABRT
+  04 51 e1 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:00:59.938  SET FEATURES [Enable APM]
-  c8 00 00 50 88 5d e0 00      00:00:59.938  READ DMA
-  c8 00 00 38 25 56 e0 00      00:00:59.938  READ DMA
-  c8 00 00 00 69 14 e0 00      00:00:59.875  READ DMA
-  c8 00 08 b8 09 01 e1 00      00:00:59.875  READ DMA
+  ef 05 e1 00 00 00 40 00      00:03:57.625  SET FEATURES [Enable APM]
+  e3 00 fa 00 00 00 40 00      00:03:57.625  IDLE
+  b0 da 00 00 4f c2 00 00      00:03:56.375  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 00 00      00:03:56.313  SMART READ DATA
+  b0 d1 01 00 4f c2 00 00      00:03:56.313  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     25229         -
+# 1  Extended offline    Completed without error       00%     27964         -
+# 2  Extended offline    Completed without error       00%     25229         -
 
 Selective Self-tests/Logging not supported
 

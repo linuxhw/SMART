@@ -8,7 +8,7 @@ User Capacity:    251 000 193 024 bytes [251 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Feb 29 21:20:17 2016 VLAT
+Local Time is:    Mon Jan 30 00:48:01 2017 +10
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,15 +59,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   186   184   021    -    5658
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1858
+  3 Spin_Up_Time            PO----   185   182   021    -    5750
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1982
   5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    1
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    4464
+  9 Power_On_Hours          -O--CK   093   093   000    -    5405
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1656
-194 Temperature_Celsius     -O---K   128   098   000    -    22
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1776
+194 Temperature_Celsius     -O---K   125   098   000    -    25
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -90,8 +90,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb7  GPL,SL  VS       1  Device vendor specific log
@@ -104,7 +104,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3882         -
+# 1  Extended offline    Completed without error       00%      5000         -
+# 2  Extended offline    Completed without error       00%      4915         -
+# 3  Extended offline    Completed without error       00%      4846         -
+# 4  Extended offline    Completed without error       00%      4765         -
+# 5  Extended offline    Completed without error       00%      4510         -
+# 6  Short offline       Completed without error       00%      3882         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -121,8 +126,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 22 Celsius
-Power Cycle Max Temperature:         23 Celsius
+Current Temperature:                 25 Celsius
+Power Cycle Max Temperature:         26 Celsius
 Lifetime    Max Temperature:         50 Celsius
 
 SCT Temperature History Version:     2
@@ -130,17 +135,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (43)
+Temperature History Size (Index):    128 (26)
 
 SCT Error Recovery Control:
            Read:     75 (7,5 seconds)
           Write:     75 (7,5 seconds)
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        11245  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        30094  Vendor specific
 

@@ -11,11 +11,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Dec 15 17:15:31 2018 MSK
+Local Time is:    Mon Jan 28 13:54:45 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     1 (minimum power consumption with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -29,8 +29,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 244)	Self-test routine in progress...
-					40% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
@@ -60,29 +61,29 @@ SCT capabilities: 	       (0x1035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   111   099   006    -    37109888
+  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    205010808
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1254
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1346
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    32
-  7 Seek_Error_Rate         POSR--   075   060   030    -    8653152980
-  9 Power_On_Hours          -O--CK   098   098   000    -    2207 (177 190 0)
+  7 Seek_Error_Rate         POSR--   075   060   030    -    8654116942
+  9 Power_On_Hours          -O--CK   098   098   000    -    2329 (106 166 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1054
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1114
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   097   000    -    8590065677
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   058   051   045    -    42 (Min/Max 26/42)
-191 G-Sense_Error_Rate      -O--CK   098   098   000    -    5855
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    34
-193 Load_Cycle_Count        -O--CK   097   097   000    -    6892
-194 Temperature_Celsius     -O---K   042   049   000    -    42 (0 7 0 0 0)
+190 Airflow_Temperature_Cel -O---K   063   051   045    -    37 (Min/Max 37/37)
+191 G-Sense_Error_Rate      -O--CK   097   097   000    -    6011
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    36
+193 Load_Cycle_Count        -O--CK   097   097   000    -    7014
+194 Temperature_Celsius     -O---K   037   049   000    -    37 (0 7 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   098   098   000    -    2160 (14 58 0)
-241 Total_LBAs_Written      ------   100   253   000    -    5904661338
-242 Total_LBAs_Read         ------   100   253   000    -    6517827681
+240 Head_Flying_Hours       ------   098   098   000    -    2282 (203 245 0)
+241 Total_LBAs_Written      ------   100   253   000    -    5994964634
+242 Total_LBAs_Read         ------   100   253   000    -    6567244013
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -125,7 +126,9 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Self-test routine in progress 40%      2207         -
+# 1  Extended offline    Completed without error       00%      2311         -
+# 2  Extended offline    Completed without error       00%      2224         -
+# 3  Extended offline    Completed without error       00%      2207         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -142,8 +145,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     26/42 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     37/37 Celsius
 Lifetime    Min/Max Temperature:      7/49 Celsius
 Lifetime    Average Temperature:        35 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -153,7 +156,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (61)
+Temperature History Size (Index):    128 (23)
 
 SCT Error Recovery Control command not supported
 
@@ -163,7 +166,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -9,7 +9,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Nov 21 17:39:34 2015 MSK
+Local Time is:    Fri Oct  7 22:59:42 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -20,7 +20,9 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: PASSED
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
+See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x83)	Offline data collection activity
@@ -54,11 +56,11 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    8544
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    2493
+  9 Power_On_Hours          -O--CK   098   098   000    -    9393
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    2993
 175 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
-177 Wear_Leveling_Count     PO--C-   048   048   010    -    1875
+177 Wear_Leveling_Count     PO--C-   001   001   010    NOW  4029
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   095   095   010    -    20
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   096   096   010    -    30
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   096   096   010    -    786
@@ -70,8 +72,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   253   253   000    -    0
 232 Available_Reservd_Space PO--C-   095   095   000    -    388
-241 Total_LBAs_Written      -O--CK   099   099   000    -    47264453616
-242 Total_LBAs_Read         -O--CK   099   099   000    -    66375297205
+241 Total_LBAs_Written      -O--CK   099   099   000    -    52638816855
+242 Total_LBAs_Read         -O--CK   099   099   000    -    72935758875
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,8 +91,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      2  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
@@ -99,31 +101,31 @@ No Errors Logged
 Warning! SMART Extended Self-test Log Structure (1/2) error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      8538         -
-# 2  Short offline       Completed without error       00%      8469         -
-# 3  Short offline       Completed without error       00%      8469         -
-# 4  Short offline       Completed without error       00%      8244         -
-# 5  Short offline       Completed without error       00%      8244         -
-# 6  Short offline       Completed without error       00%      8244         -
-# 7  Short offline       Completed without error       00%      8244         -
-# 8  Short offline       Completed without error       00%      8213         -
-# 9  Short offline       Completed without error       00%      8181         -
-#10  Short offline       Completed without error       00%      8181         -
-#11  Extended offline    Completed without error       00%      7896         -
-#12  Short offline       Completed without error       00%      7896         -
-#13  Short offline       Completed without error       00%      7500         -
-#14  Short offline       Completed without error       00%      7365         -
-#15  Short offline       Completed without error       00%      7247         -
-#16  Short offline       Completed without error       00%      7247         -
-#17  Short offline       Completed without error       00%      7224         -
-#18  Short offline       Completed without error       00%      7206         -
-#19  Extended offline    Completed without error       00%      7165         -
-#20  Short offline       Completed without error       00%      7165         -
-#21  Short offline       Completed without error       00%      7165         -
-#22  Short offline       Completed without error       00%      7165         -
-#23  Extended offline    Completed without error       00%      7148         -
-#24  Short offline       Completed without error       00%      7144         -
-#25  Short offline       Completed without error       00%      7144         -
+# 1  Short offline       Completed without error       00%      9125         -
+# 2  Short offline       Completed without error       00%      9125         -
+# 3  Extended offline    Interrupted (host reset)      60%      8561         -
+# 4  Extended offline    Aborted by host               50%      8561         -
+# 5  Extended offline    Aborted by host               10%      8561         -
+# 6  Short offline       Completed without error       00%      8561         -
+# 7  Short offline       Completed without error       00%      8561         -
+# 8  Short offline       Completed without error       00%      8547         -
+# 9  Short offline       Completed without error       00%      8547         -
+#10  Short offline       Completed without error       00%      8547         -
+#11  Short offline       Completed without error       00%      8538         -
+#12  Short offline       Completed without error       00%      8469         -
+#13  Short offline       Completed without error       00%      8469         -
+#14  Short offline       Completed without error       00%      8244         -
+#15  Short offline       Completed without error       00%      8244         -
+#16  Short offline       Completed without error       00%      8244         -
+#17  Short offline       Completed without error       00%      8244         -
+#18  Short offline       Completed without error       00%      8213         -
+#19  Short offline       Completed without error       00%      8181         -
+#20  Short offline       Completed without error       00%      8181         -
+#21  Extended offline    Completed without error       00%      7896         -
+#22  Short offline       Completed without error       00%      7896         -
+#23  Short offline       Completed without error       00%      7500         -
+#24  Short offline       Completed without error       00%      7365         -
+#25  Short offline       Completed without error       00%      7247         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -138,7 +140,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -151,7 +153,7 @@ ID      Size     Value  Description
 0x0007  2         4096  R_ERR response for host-to-device non-data FIS
 0x0008  2         7952  Device-to-host non-data FIS retries
 0x0009  2         7953  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2        14007  Device-to-host register FISes sent due to a COMRESET
+0x000a  2        17529  Device-to-host register FISes sent due to a COMRESET
 0x000b  2         6145  CRC errors within host-to-device FIS
 0x000d  2         7953  Non-CRC errors within host-to-device FIS
 0x000f  2         8176  R_ERR response for host-to-device data FIS, CRC

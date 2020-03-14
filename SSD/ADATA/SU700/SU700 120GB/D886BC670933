@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.18-100.fc30.x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     ADATA SU700
 Serial Number:    --
@@ -10,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Mar 17 12:35:11 2019 EET
+Local Time is:    Mon Feb 10 08:14:36 2020 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +31,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  32)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(   33) seconds.
 Offline data collection
@@ -60,21 +64,21 @@ SCT capabilities: 	       (0x0039)	SCT Status supported.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    2642
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1130
+  9 Power_On_Hours          -O--C-   100   100   000    -    4231
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1729
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 169 Unknown_Attribute       PO--C-   100   100   010    -    0
-173 Unknown_Attribute       -O--C-   200   200   000    -    16276455586
+173 Unknown_Attribute       -O--C-   200   200   000    -    24866980019
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    456
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    0
 194 Temperature_Celsius     -O---K   063   063   030    -    37 (Min/Max 26/40)
 231 Temperature_Celsius     PO--CK   095   095   005    -    5
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    10464275968
-234 Unknown_Attribute       -O--CK   100   100   000    -    6598663159808
-241 Total_LBAs_Written      -O--CK   100   100   000    -    7061147280
-242 Total_LBAs_Read         -O--CK   100   100   000    -    8178604027
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    14025441920
+234 Unknown_Attribute       -O--CK   100   100   000    -    11015126630400
+241 Total_LBAs_Written      -O--CK   100   100   000    -    9400717902
+242 Total_LBAs_Read         -O--CK   100   100   000    -    13009693041
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,141 +120,139 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 239 [238] occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 239 [238] occurred at disk power-on lifetime: 8 hours (0 days + 8 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 08 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000800 = 2048
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 01 00 00 00 00 08 00 e0 00     00:03:11.100  READ DMA EXT
-  25 c1 00 00 01 00 00 08 90 10 00 a0 08     00:03:11.100  READ DMA EXT
-  25 c1 00 00 01 00 00 0b 20 10 00 40 00     00:03:06.600  READ DMA EXT
-  25 c1 00 00 01 00 00 0a 20 08 00 40 00     00:03:06.600  READ DMA EXT
-  25 c1 00 00 01 00 00 00 20 08 00 40 00     00:03:06.600  READ DMA EXT
+  2d e8 50 04 c8 08 00 00 40 00 f1 b8 2d     00:00:20.968  [RESERVED]
+  00 08 00 00 00 04 a0 00 ec 00 00 f1 00 35d+17:38:52.040  NOP [Abort queued commands]
+  00 a0 00 04 ec 46 08 00 03 00 f1 00 00 46d+19:13:52.544  NOP [Abort queued commands]
+  00 08 02 08 00 04 e8 2d c8 50 b8 f1 5f     00:00:00.008  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 00 00 00 00 00 00 00 00 00 00 00     13:58:51.648  NOP [Abort queued commands]
 
-Error 238 [237] occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 238 [237] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was sleeping.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 01 00 00 00 00 08 00 e0 00   1 sectors at LBA = 0x00000800 = 2048
+  00 -- 00 00 00 f1 ec 00 04 a0 00 00 08
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 01 00 00 00 00 08 00 e0 00     00:03:11.100  READ DMA EXT
-  25 c1 00 00 01 00 00 08 90 10 00 a0 08     00:03:11.100  READ DMA EXT
-  25 c1 00 00 01 00 00 0b 20 10 00 40 00     00:03:06.600  READ DMA EXT
-  25 c1 00 00 01 00 00 0a 20 08 00 40 00     00:03:06.600  READ DMA EXT
-  25 c1 00 00 01 00 00 00 20 08 00 40 00     00:03:06.600  READ DMA EXT
+  a0 04 ec 00 f1 00 46 08 00 03 00 00 a0     00:01:01.700  PACKET
+  08 08 00 2d b8 00 04 e8 f1 c8 50 00 08     00:00:00.000  DEVICE RESET
+  00 00 00 00 00 00 00 00 00 00 00 00 00     11:03:01.120  NOP [Abort queued commands]
+  e8 04 c8 00 f1 2d 08 00 b8 40 00 50 e8     00:00:00.000  WRITE BUFFER
+  08 08 00 2d b0 00 04 e8 f1 c8 50 00 08 15d+13:39:33.512  DEVICE RESET
 
-Error 237 [236] occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 237 [236] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was sleeping.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 33 00 00 00 0a 39 80 40 00  Error: ICRC, ABRT 51 sectors at LBA = 0x000a3980 = 670080
+  98 -- 00 50 2d 00 f0 c8 00 a0 e8 08 08
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 33 00 00 00 0a 39 80 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 0c 00 00 00 0a 39 74 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 34 00 00 00 0a 39 40 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 0b 00 00 00 0a 39 35 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 35 00 00 00 0a 39 00 40 00     00:00:53.200  READ DMA EXT
+  00 00 00 00 00 00 00 00 00 00 00 00 00     00:08:44.895  NOP [Abort queued commands]
+  00 00 f0 00 00 e8 2d 00 50 b8 40 51 a0     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 2c 80 e8 50 08 00 a0 00 f0 c8 00 00 39d+00:17:48.077  NOP [Reserved subcommand] [OBS-ACS-2]
+  a0 00 f0 08 00 e8 2b 00 50 80 00 c8 a0     00:08:44.288  PACKET
+  00 29 80 e8 50 08 00 a0 00 f0 c8 00 00 39d+00:17:48.074  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 236 [235] occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 236 [235] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 33 00 00 00 0a 39 80 40 00  Error: ICRC, ABRT 51 sectors at LBA = 0x000a3980 = 670080
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 33 00 00 00 0a 39 80 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 0c 00 00 00 0a 39 74 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 34 00 00 00 0a 39 40 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 0b 00 00 00 0a 39 35 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 35 00 00 00 0a 39 00 40 00     00:00:53.200  READ DMA EXT
+  00 5f 03 00 02 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 2d b8 e8 50 00 00 08 00 39 c8 40 08 15d+21:42:59.373  DEVICE RESET
+  08 00 39 08 00 a0 00 00 00 00 00 ec 08     00:08:44.288  DEVICE RESET
+  46 00 00 a0 00 08 00 08 00 39 ec 03 00 46d+12:44:00.384  [RESERVED]
 
-Error 235 [234] occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 235 [234] occurred at disk power-on lifetime: 8 hours (0 days + 8 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 33 00 00 00 0a 39 80 40 00   51 sectors at LBA = 0x000a3980 = 670080
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 33 00 00 00 0a 39 80 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 0c 00 00 00 0a 39 74 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 34 00 00 00 0a 39 40 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 0b 00 00 00 0a 39 35 40 00     00:00:53.200  READ DMA EXT
-  25 00 00 00 35 00 00 00 0a 39 00 40 00     00:00:53.200  READ DMA EXT
+  2d e8 50 08 c8 08 00 00 40 00 39 b8 2d     00:00:20.968  [RESERVED]
+  00 08 00 00 00 08 a0 00 ec 00 00 39 00 35d+17:38:52.040  NOP [Abort queued commands]
+  00 a0 00 08 ec 46 08 00 03 00 39 00 00 11d+01:48:06.944  NOP [Abort queued commands]
+  00 08 02 08 00 08 e8 2d c8 50 b8 39 5f     00:00:00.008  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 00 00 00 00 00 00 00 00 00 00 00     13:58:51.648  NOP [Abort queued commands]
 
-Error 234 [233] occurred at disk power-on lifetime: 2104 hours (87 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 234 [233] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was sleeping.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 00 00 00 00 00 00 00 00 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  00 -- 00 00 00 39 ec 00 08 a0 00 00 08
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 c0 00 00 03 17 53 d0 40 08     00:01:09.100  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:01:08.900  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:08.900  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:01:08.900  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:01:08.900  SET FEATURES [Enable SATA feature]
+  a0 08 ec 00 39 00 46 08 00 03 00 00 a0     00:00:14.600  PACKET
+  08 08 00 2d b8 00 08 e8 39 c8 50 00 08     00:00:00.000  DEVICE RESET
+  00 00 00 00 00 00 00 00 00 00 00 00 00     11:03:01.120  NOP [Abort queued commands]
+  e8 08 c8 00 39 2d 08 00 b8 40 00 50 e8     00:00:00.000  WRITE BUFFER
+  08 08 00 2d b0 00 08 e8 39 c8 50 00 08 15d+13:39:33.512  DEVICE RESET
 
-Error 233 [232] occurred at disk power-on lifetime: 2104 hours (87 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 233 [232] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 c0 00 00 03 17 53 d0 40 08   at LBA = 0x031753d0 = 51860432
+  98 -- 00 50 2d 00 39 c8 00 08 e8 08 08
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 c0 00 00 03 17 53 d0 40 08     00:01:09.100  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:01:08.900  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:08.900  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:01:08.900  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:01:08.900  SET FEATURES [Enable SATA feature]
+  00 00 00 00 00 00 00 00 00 00 00 00 00     00:08:44.895  NOP [Abort queued commands]
+  00 00 39 00 00 e8 2d 00 50 b8 40 51 08     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 2c 80 e8 50 08 00 08 00 39 c8 00 00 39d+00:17:48.077  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 00 39 08 00 e8 2b 00 50 80 00 c8 08     00:08:44.288  DEVICE RESET
+  00 29 80 e8 50 08 00 08 00 39 c8 00 00 39d+00:17:48.074  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 232 [231] occurred at disk power-on lifetime: 2104 hours (87 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 232 [231] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 00 00 00 00 00 00 00 00 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 20 00 a0 00 00 02 7c 48 00 40 08     00:01:08.500  READ FPDMA QUEUED
-  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:06.000  FLUSH CACHE
-  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:06.000  FLUSH CACHE
-  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:06.000  FLUSH CACHE
-  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:03.900  FLUSH CACHE
+  00 5f 03 00 02 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 2d b8 e8 50 00 01 0c 00 11 c8 40 08 15d+21:42:59.373  DEVICE RESET
+  0c 01 11 08 00 a0 00 00 00 00 00 ec 0c     00:08:44.289  [RESERVED]
+  46 00 00 a0 00 08 01 0c 00 11 ec 03 00 46d+12:44:00.384  [RESERVED]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -286,7 +288,6 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   0
 Device State:                        Active (0)
 Current Temperature:                     ? Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
@@ -298,7 +299,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (177)
+Temperature History Size (Index):    478 (300)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)

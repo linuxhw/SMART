@@ -7,7 +7,7 @@ User Capacity:    80 023 182 848 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Fri Apr 28 18:52:13 2017 MSK
+Local Time is:    Sat Nov 18 13:53:49 2017 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -54,20 +54,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   092   051    -    0
   3 Spin_Up_Time            POS---   100   001   025    Past 5568
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3557
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3793
   5 Reallocated_Sector_Ct   PO--CK   066   066   011    -    74
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Half_Minutes   -O--CK   100   100   000    -    3741h+42m
+  9 Power_On_Half_Minutes   -O--CK   100   100   000    -    3981h+02m
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
- 11 Calibration_Retry_Count -O--C-   100   100   000    -    33
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2416
-194 Temperature_Celsius     -O---K   100   067   000    -    46
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2289
+ 11 Calibration_Retry_Count -O--C-   100   100   000    -    39
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2538
+194 Temperature_Celsius     -O---K   106   067   000    -    44
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    3572
 196 Reallocated_Event_Count -O--CK   060   060   000    -    87
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Total_Offl_Uncorrectabl ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   197   000    -    188
+199 UDMA_CRC_Error_Count    -OSRCK   200   197   000    -    94
 200 Multi_Zone_Error_Rate   -O-R--   100   100   051    -    0
 201 Soft_Read_Error_Rate    -O-R--   100   100   051    -    0
                             ||||||_ K auto-keep
@@ -90,7 +90,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 2680 (device log contains only the most recent five errors)
+ATA Error Count: 2692 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -105,87 +105,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2680 occurred at disk power-on lifetime: 3733 hours (155 days + 13 hours)
+Error 2692 occurred at disk power-on lifetime: 3843 hours (160 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  10 51 c4 c0 fe ff 30  Error: IDNF at LBA = 0x00fffec0 = 16776896
+  04 51 fe 00 00 00 50  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  21 c0 c4 c0 fe ff 30 00      00:08:44.188  READ SECTOR(S) [OBS-5]
-  00 c0 01 01 00 00 a0 00      00:00:14.875  NOP [Reserved subcommand] [OBS-ACS-2]
+  ef 05 fe 00 00 00 50 00      00:49:51.625  SET FEATURES [Enable APM]
+  e7 da 00 00 4f c2 b0 00      00:49:51.625  FLUSH CACHE
+  b0 da 00 00 4f c2 10 00      00:43:27.563  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 10 00      00:43:27.500  SMART READ DATA
+  b0 d1 01 00 4f c2 10 00      00:43:27.500  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 2679 occurred at disk power-on lifetime: 3720 hours (155 days + 0 hours)
+Error 2691 occurred at disk power-on lifetime: 3842 hours (160 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 01 8f 13 fe f2  Error: UNC 1 sectors at LBA = 0x02fe138f = 50205583
+  04 51 fe 00 00 00 50  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 01 8f 13 fe f2 00      00:06:05.250  READ DMA
-  c8 00 08 e0 9b 19 f0 00      00:06:05.250  READ DMA
-  c8 00 68 60 9c 19 f0 00      00:06:05.250  READ DMA
-  ec 00 00 00 00 00 b0 00      00:06:05.188  IDENTIFY DEVICE
-  ef 03 45 00 00 00 b0 00      00:06:05.188  SET FEATURES [Set transfer mode]
+  ef 05 fe 00 00 00 50 00      00:01:06.438  SET FEATURES [Enable APM]
+  c8 00 07 68 e0 50 f9 00      00:01:02.375  READ DMA
+  c8 00 08 68 da 50 f9 00      00:01:02.375  READ DMA
+  c8 00 08 68 dc 50 f9 00      00:01:02.375  READ DMA
+  c8 00 08 68 de 50 f9 00      00:01:02.375  READ DMA
 
-Error 2678 occurred at disk power-on lifetime: 3720 hours (155 days + 0 hours)
+Error 2690 occurred at disk power-on lifetime: 3842 hours (160 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 01 8f 13 fe f2  Error: UNC 1 sectors at LBA = 0x02fe138f = 50205583
+  04 51 fe 00 00 00 50  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 01 8f 13 fe f2 00      00:06:04.188  READ DMA
-  c8 00 08 e8 1d 82 f0 00      00:06:04.125  READ DMA
-  c8 00 10 18 1e 82 f0 00      00:06:04.125  READ DMA
-  c8 00 30 00 1f 82 f0 00      00:06:04.125  READ DMA
-  c8 00 08 b0 1e 82 f0 00      00:06:04.125  READ DMA
+  ef 05 fe 00 00 00 50 00      05:45:40.625  SET FEATURES [Enable APM]
+  e7 da 00 00 4f c2 b0 00      05:45:40.563  FLUSH CACHE
+  b0 da 00 00 4f c2 10 00      05:38:05.438  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 10 00      05:38:05.375  SMART READ DATA
+  b0 d1 01 00 4f c2 10 00      05:38:05.313  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 2677 occurred at disk power-on lifetime: 3720 hours (155 days + 0 hours)
+Error 2689 occurred at disk power-on lifetime: 3841 hours (160 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 01 8f 13 fe f2  Error: UNC 1 sectors at LBA = 0x02fe138f = 50205583
+  04 51 fe 00 00 00 50  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 01 8f 13 fe f2 00      00:06:03.063  READ DMA
-  c8 00 10 60 94 19 f0 00      00:06:03.063  READ DMA
-  c8 00 48 e0 93 19 f0 00      00:06:03.063  READ DMA
-  c8 00 08 70 93 19 f0 00      00:06:03.063  READ DMA
-  e7 00 00 2f 19 44 b0 00      00:06:03.063  FLUSH CACHE
+  ef 05 fe 00 00 00 50 00      04:46:53.188  SET FEATURES [Enable APM]
+  c8 00 07 68 e0 50 f9 00      04:46:48.875  READ DMA
+  c8 00 08 68 da 50 f9 00      04:46:48.875  READ DMA
+  c8 00 08 68 dc 50 f9 00      04:46:48.875  READ DMA
+  c8 00 08 68 de 50 f9 00      04:46:48.875  READ DMA
 
-Error 2676 occurred at disk power-on lifetime: 3720 hours (155 days + 0 hours)
+Error 2688 occurred at disk power-on lifetime: 3841 hours (160 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 01 8f 13 fe f2  Error: UNC 1 sectors at LBA = 0x02fe138f = 50205583
+  04 51 fe 00 00 00 50  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 01 8f 13 fe f2 00      00:06:02.000  READ DMA
-  ca 00 90 60 20 82 f0 00      00:06:02.000  WRITE DMA
-  ca 00 08 30 20 82 f0 00      00:06:02.000  WRITE DMA
-  ca 00 08 e8 1f 82 f0 00      00:06:02.000  WRITE DMA
-  ca 00 28 60 1f 82 f0 00      00:06:02.000  WRITE DMA
+  ef 05 fe 00 00 00 50 00      04:44:23.188  SET FEATURES [Enable APM]
+  b0 da 00 00 4f c2 10 00      04:41:56.625  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 10 00      04:41:56.563  SMART READ DATA
+  b0 d1 01 00 4f c2 10 00      04:41:56.500  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ec 00 01 00 00 00 10 00      04:41:56.500  IDENTIFY DEVICE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

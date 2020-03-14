@@ -4,12 +4,12 @@ Device Model:     SAMSUNG HD321KJ
 Serial Number:    --
 LU WWN Device Id: 5 0000f0 ...
 Firmware Version: CP100-12
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3b
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Mon Jul  3 10:56:27 2017 +03
+Local Time is:    Tue Dec 19 20:09:44 2017 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -57,22 +57,22 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   100   100   015    -    5504
-  4 Start_Stop_Count        -O--CK   079   079   000    -    21220
+  4 Start_Stop_Count        -O--CK   079   079   000    -    21986
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    9059
-  9 Power_On_Hours          -O--CK   100   100   000    -    21859
+  9 Power_On_Hours          -O--CK   100   100   000    -    22622
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   089   089   000    -    11260
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    57978
+ 12 Power_Cycle_Count       -O--CK   089   089   000    -    11652
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    594917
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    57
-190 Airflow_Temperature_Cel -O---K   080   054   000    -    20
-194 Temperature_Celsius     -O---K   166   100   000    -    24
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    57978
+188 Command_Timeout         -O--CK   100   100   000    -    67
+190 Airflow_Temperature_Cel -O---K   063   054   000    -    37
+194 Temperature_Celsius     -O---K   124   100   000    -    38
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    594917
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Total_Pending_Sectors   -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -103,8 +103,8 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x05) instead
-Device Error Count: 5
+Invalid Error Log index = 0x0000, trying reserved byte (0x06) instead
+Device Error Count: 6
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,6 +119,23 @@ Device Error Count: 5
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6 [5] occurred at disk power-on lifetime: 22378 hours (932 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 80 00 00 19 e5 6c d8 e0 00  Error: ABRT 128 sectors at LBA = 0x19e56cd8 = 434466008
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 ff ff 00 80 00 00 19 e5 6c d8 e0 00     00:21:36.938  WRITE DMA EXT
+  35 ff ff 00 80 00 00 19 e5 6c 58 e0 00     00:21:36.938  WRITE DMA EXT
+  35 ff ff 00 80 00 00 19 e5 6b d8 e0 00     00:21:36.938  WRITE DMA EXT
+  35 ff ff 00 80 00 00 19 e5 6b 58 e0 00     00:21:36.938  WRITE DMA EXT
+  35 ff ff 00 80 00 00 19 e5 6a d8 e0 00     00:21:36.938  WRITE DMA EXT
 
 Error 5 [4] occurred at disk power-on lifetime: 18234 hours (759 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -226,8 +243,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     17/24 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     20/38 Celsius
 Lifetime    Min/Max Temperature:     11/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -236,7 +253,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (122)
+Temperature History Size (Index):    128 (41)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -255,7 +272,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           16  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

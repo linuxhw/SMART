@@ -4,13 +4,13 @@ Device Model:     Hitachi HDT721032SLA360
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: ST2OA3AA
-User Capacity:    320 072 933 376 bytes [320 GB]
+User Capacity:    320 071 851 520 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Aug 18 03:08:56 2016 MSK
+Local Time is:    Sat Apr  7 19:51:51 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -24,8 +24,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,17 +60,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   130   130   054    -    123
-  3 Spin_Up_Time            POS---   108   108   024    -    230 (Average 229)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    3557
+  3 Spin_Up_Time            POS---   109   109   024    -    229 (Average 229)
+  4 Start_Stop_Count        -O--C-   099   099   000    -    4760
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   125   125   020    -    33
-  9 Power_On_Hours          -O--C-   095   095   000    -    35570
+  9 Power_On_Hours          -O--C-   095   095   000    -    40740
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3537
-192 Power-Off_Retract_Count -O--CK   097   097   000    -    3684
-193 Load_Cycle_Count        -O--C-   097   097   000    -    3684
-194 Temperature_Celsius     -O----   193   193   000    -    31 (Min/Max 15/44)
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    4739
+192 Power-Off_Retract_Count -O--CK   096   096   000    -    4932
+193 Load_Cycle_Count        -O--C-   096   096   000    -    4932
+194 Temperature_Celsius     -O----   176   176   000    -    34 (Min/Max 15/48)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -186,7 +186,25 @@ Error 13 [0] occurred at disk power-on lifetime: 29279 hours (1219 days + 23 hou
   27 00 00 00 00 00 00 00 00 00 00 e0 08     03:10:15.800  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     40162         -
+# 2  Extended offline    Completed without error       00%     40101         -
+# 3  Extended offline    Completed without error       00%     40035         -
+# 4  Extended offline    Completed without error       00%     39991         -
+# 5  Extended offline    Completed without error       00%     39945         -
+# 6  Extended offline    Completed without error       00%     39737         -
+# 7  Extended offline    Completed without error       00%     39686         -
+# 8  Extended offline    Completed without error       00%     39641         -
+# 9  Extended offline    Completed without error       00%     39599         -
+#10  Extended offline    Completed without error       00%     39549         -
+#11  Extended offline    Completed without error       00%     39451         -
+#12  Extended offline    Completed without error       00%     39417         -
+#13  Extended offline    Completed without error       00%     39371         -
+#14  Extended offline    Interrupted (host reset)      70%     38684         -
+#15  Extended offline    Completed without error       00%     38640         -
+#16  Extended offline    Completed without error       00%     38529         -
+#17  Extended offline    Completed without error       00%     38438         -
+#18  Extended offline    Completed without error       00%     38295         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -202,10 +220,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     24/34 Celsius
-Lifetime    Min/Max Temperature:     15/44 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     27/43 Celsius
+Lifetime    Min/Max Temperature:     15/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -213,7 +231,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (48)
+Temperature History Size (Index):    128 (56)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -224,8 +242,8 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Aug  7 00:54:15 2016 CEST
+Local Time is:    Thu Sep  8 21:37:23 2016 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,22 +59,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    203
-  3 Spin_Up_Time            POS--K   143   142   021    -    3808
-  4 Start_Stop_Count        -O--CK   096   096   000    -    4257
+  3 Spin_Up_Time            POS--K   143   142   021    -    3833
+  4 Start_Stop_Count        -O--CK   096   096   000    -    4317
   5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    1
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   084   084   000    -    11906
+  9 Power_On_Hours          -O--CK   084   084   000    -    12094
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4069
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    377
-193 Load_Cycle_Count        -O--CK   199   199   000    -    3879
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4129
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    405
+193 Load_Cycle_Count        -O--CK   199   199   000    -    3911
 194 Temperature_Celsius     -O---K   101   093   000    -    42
 196 Reallocated_Event_Count -O--CK   199   199   000    -    1
 197 Current_Pending_Sector  -O--CK   200   200   000    -    13
-198 Offline_Uncorrectable   ----CK   200   200   000    -    10
+198 Offline_Uncorrectable   ----CK   200   200   000    -    6
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    12
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    13
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -276,8 +276,8 @@ SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     24/42 Celsius
-Lifetime    Min/Max Temperature:     42/50 Celsius
+Power Cycle Min/Max Temperature:     26/42 Celsius
+Lifetime    Min/Max Temperature:     40/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -285,7 +285,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (384)
+Temperature History Size (Index):    478 (314)
 
 SCT Error Recovery Control command not supported
 
@@ -297,10 +297,10 @@ ID      Size     Value  Description
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2            2  R_ERR response for non-data FIS
-0x0006  2            2  R_ERR response for device-to-host non-data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        15378  Vendor specific
+0x8000  4         2821  Vendor specific
 

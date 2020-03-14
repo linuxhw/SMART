@@ -6,7 +6,7 @@ User Capacity:    40 059 321 856 bytes [40,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 1
-Local Time is:    Fri Nov 13 04:57:17 2015 MSK
+Local Time is:    Sat Jan  1 02:39:11 2005 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -50,14 +50,14 @@ recommended polling time: 	 (   8) minutes.
 SMART Attributes Data Structure revision number: 9
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    258
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10462
+  1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    260
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10477
   5 Reallocated_Sector_Ct   PO--CK   253   253   009    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    1999168
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5938
-194 Temperature_Celsius     -O---K   133   118   000    -    35
+  9 Power_On_Hours          -O--CK   097   097   000    -    2001984
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5948
+194 Temperature_Celsius     -O---K   196   118   000    -    14
 197 Current_Pending_Sector  PO--CK   253   253   009    -    0
 198 Offline_Uncorrectable   P---CK   253   253   009    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
@@ -78,9 +78,9 @@ Read GP Log Directory failed
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 11 inconsistent with error log pointer 3
+Warning: ATA error count 13 inconsistent with error log pointer 5
 
-ATA Error Count: 11 (device log contains only the most recent five errors)
+ATA Error Count: 13 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -94,6 +94,40 @@ ATA Error Count: 11 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 13 occurred at disk power-on lifetime: 16683 hours (695 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 88 01 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  2f 00 01 00 00 00 00 00      00:02:48.000  READ LOG EXT
+  ca 00 58 06 e6 be e2 00      00:02:48.000  WRITE DMA
+  f9 00 00 9f e4 a9 e4 00      00:00:04.000  SET MAX ADDRESS [OBS-6]
+  f8 00 00 00 00 00 e0 00      00:00:04.000  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  e3 00 00 00 00 00 a0 00      00:00:04.000  IDLE
+
+Error 12 occurred at disk power-on lifetime: 16683 hours (695 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 88 01 00 4f c2 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 00 4f c2 00 00      00:02:48.000  SMART READ LOG
+  ca 00 18 1e 47 51 e1 00      00:02:48.000  WRITE DMA
+  ca 00 08 8e 16 51 e1 00      00:02:48.000  WRITE DMA
+  b0 da 00 00 4f c2 00 00      00:02:48.000  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 00 00      00:02:48.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
 Error 11 occurred at disk power-on lifetime: 16659 hours (694 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -140,45 +174,11 @@ Error 9 occurred at disk power-on lifetime: 16657 hours (694 days + 1 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 01 4f c2 00 00      00:02:48.000  SMART READ LOG
+  ca 00 08 a6 16 51 e1 00      00:02:48.000  WRITE DMA
+  ca 00 08 5e e6 be e2 00      00:02:48.000  WRITE DMA
+  e7 00 01 00 00 00 a0 00      00:02:48.000  FLUSH CACHE
   f9 00 00 9f e4 a9 e4 00      01:38:59.000  SET MAX ADDRESS [OBS-6]
-  f8 00 00 00 00 00 e0 00      01:38:59.000  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  e3 00 00 00 00 00 a0 00      01:38:59.000  IDLE
-  c8 00 01 00 00 00 e0 00      01:38:59.000  READ DMA
-  b0 d9 00 00 4f c2 e0 00      01:38:59.000  SMART DISABLE OPERATIONS
-
-Error 8 occurred at disk power-on lifetime: 16624 hours (692 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  00 88 00 9f e4 a9 e4
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  f9 00 00 9f e4 a9 e4 00      00:00:04.000  SET MAX ADDRESS [OBS-6]
-  f8 00 00 00 00 00 e0 00      00:00:04.000  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  e3 00 00 00 00 00 a0 00      00:00:04.000  IDLE
-  c8 00 01 00 00 00 e0 00      00:00:04.000  READ DMA
-  b0 d9 00 00 4f c2 e0 00      00:00:04.000  SMART DISABLE OPERATIONS
-
-Error 7 occurred at disk power-on lifetime: 16624 hours (692 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  00 88 00 9f e4 a9 e4
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 01 4f c2 00 00      02:02:15.000  SMART READ LOG
-  f9 00 00 9f e4 a9 e4 00      00:00:03.000  SET MAX ADDRESS [OBS-6]
-  f8 00 00 00 00 00 e0 00      00:00:03.000  READ NATIVE MAX ADDRESS [OBS-ACS-3]
-  e3 00 00 00 00 00 a0 00      00:00:03.000  IDLE
-  c8 00 01 00 00 00 e0 00      00:00:03.000  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

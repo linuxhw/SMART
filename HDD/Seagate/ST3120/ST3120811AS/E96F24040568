@@ -3,17 +3,18 @@ Model Family:     Seagate Barracuda 7200.9
 Device Model:     ST3120811AS
 Serial Number:    --
 Firmware Version: 3.AAE
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Sep  9 21:02:41 2015 NOVT
+Local Time is:    Thu Jan 16 23:15:14 2020 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -51,21 +52,21 @@ recommended polling time: 	 (  51) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   116   090   006    -    109636263
+  1 Raw_Read_Error_Rate     POSR--   105   090   006    -    10457999
   3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1839
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3303
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    14
-  7 Seek_Error_Rate         POSR--   078   060   030    -    8753172715
-  9 Power_On_Hours          -O--CK   088   088   000    -    11032
+  7 Seek_Error_Rate         POSR--   084   060   030    -    9061490642
+  9 Power_On_Hours          -O--CK   081   081   000    -    16768
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1858
-187 Reported_Uncorrect      -O--CK   001   001   000    -    106
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3295
+187 Reported_Uncorrect      -O--CK   001   001   000    -    107
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   066   054   045    -    34 (Min/Max 24/34)
-194 Temperature_Celsius     -O---K   034   046   000    -    34 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   066   055   000    -    6021353
-197 Current_Pending_Sector  -O--C-   100   100   000    -    1
-198 Offline_Uncorrectable   ----C-   100   100   000    -    1
+190 Airflow_Temperature_Cel -O---K   063   054   045    -    37 (Min/Max 26/37)
+194 Temperature_Celsius     -O---K   037   046   000    -    37 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   069   055   000    -    80190365
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -87,7 +88,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -103,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 117 (device log contains only the most recent 20 errors)
+Device Error Count: 118 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 117 [16] occurred at disk power-on lifetime: 10950 hours (456 days + 6 hours)
+Error 118 [17] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -130,13 +131,13 @@ Error 117 [16] occurred at disk power-on lifetime: 10950 hours (456 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 90 00 00 1c 00 60 6f e0 00     02:34:18.533  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     02:34:18.525  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     02:34:18.388  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     02:34:16.459  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     02:34:20.865  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:51.184  READ DMA EXT
+  25 00 20 00 03 00 01 e5 00 aa 50 e0 00     00:02:51.183  READ DMA EXT
+  25 00 20 00 3b 00 01 e5 00 aa 15 e0 00     00:02:51.183  READ DMA EXT
+  25 00 20 00 04 00 01 e5 00 aa 11 e0 00     00:02:51.183  READ DMA EXT
+  25 00 20 00 3c 00 01 e4 00 aa d5 e0 00     00:02:51.183  READ DMA EXT
 
-Error 116 [15] occurred at disk power-on lifetime: 9078 hours (378 days + 6 hours)
+Error 117 [16] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -147,113 +148,113 @@ Error 116 [15] occurred at disk power-on lifetime: 9078 hours (378 days + 6 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 01 00 00 00 1c 00 60 00 e0 00     00:52:27.509  READ DMA
-  c8 00 00 01 00 00 00 1b 00 60 00 e0 00     00:52:27.507  READ DMA
-  c8 00 00 01 00 00 00 1a 00 60 00 e0 00     00:52:27.506  READ DMA
-  c8 00 00 01 00 00 00 19 00 60 00 e0 00     00:52:27.505  READ DMA
-  c8 00 00 01 00 00 00 18 00 60 00 e0 00     00:52:27.500  READ DMA
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:48.980  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:02:48.980  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:02:48.980  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:02:48.980  RECALIBRATE [OBS-4]
+  00 00 00 00 34 00 00 1c 00 60 7f 00 00     00:02:48.980  NOP [Abort queued commands]
 
-Error 115 [14] occurred at disk power-on lifetime: 9077 hours (378 days + 5 hours)
+Error 116 [15] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 01 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
+  40 -- 51 00 00 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  40 00 02 00 01 00 00 1c 00 60 aa e0 00     00:04:20.697  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:20.689  READ DMA
-  40 00 02 00 01 00 00 1c 00 60 a9 e0 00     00:04:20.680  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:20.656  READ DMA
-  40 00 02 00 02 00 00 1c 00 60 a9 e0 00     00:04:19.029  READ VERIFY SECTOR(S)
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:55.541  READ DMA EXT
+  25 00 20 00 13 00 01 f9 00 ab ec e0 00     00:02:55.531  READ DMA EXT
+  25 00 20 00 2d 00 01 f9 00 ab bf e0 00     00:02:55.530  READ DMA EXT
+  25 00 20 00 13 00 01 ca 00 b3 b7 e0 00     00:02:55.515  READ DMA EXT
+  25 00 20 00 25 00 00 13 00 60 1a e0 00     00:02:55.514  READ DMA EXT
 
-Error 114 [13] occurred at disk power-on lifetime: 9077 hours (378 days + 5 hours)
+Error 115 [14] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 01 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
+  40 -- 51 00 00 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  40 00 02 00 02 00 00 1c 00 60 a9 e0 00     00:04:20.697  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:20.689  READ DMA
-  40 00 02 00 02 00 00 1c 00 60 a7 e0 00     00:04:20.680  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:20.656  READ DMA
-  40 00 02 00 04 00 00 1c 00 60 ab e0 00     00:04:19.029  READ VERIFY SECTOR(S)
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:51.184  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:02:51.183  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:02:51.183  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:02:51.183  RECALIBRATE [OBS-4]
+  00 00 00 00 34 00 00 1c 00 60 7f 00 00     00:02:51.183  NOP [Abort queued commands]
 
-Error 113 [12] occurred at disk power-on lifetime: 9077 hours (378 days + 5 hours)
+Error 114 [13] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 05 01 60 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x60001caa60aa = 105553597194410
+  40 -- 51 00 00 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  40 00 02 00 04 00 00 1c 00 60 a7 e0 00     00:04:12.495  READ VERIFY SECTOR(S)
-  40 00 02 00 08 00 00 1c 00 60 a7 e0 00     00:04:12.488  READ VERIFY SECTOR(S)
-  40 00 02 00 08 00 00 1c 00 60 9f e0 00     00:04:12.478  READ VERIFY SECTOR(S)
-  40 00 02 00 10 00 00 1c 00 60 af e0 00     00:04:12.455  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:19.029  READ DMA
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:51.184  READ DMA EXT
+  25 00 20 00 03 00 01 e5 00 aa 50 e0 00     00:02:51.183  READ DMA EXT
+  25 00 20 00 3b 00 01 e5 00 aa 15 e0 00     00:02:51.183  READ DMA EXT
+  25 00 20 00 04 00 01 e5 00 aa 11 e0 00     00:02:51.183  READ DMA EXT
+  25 00 20 00 3c 00 01 e4 00 aa d5 e0 00     00:02:51.183  READ DMA EXT
 
-Error 112 [11] occurred at disk power-on lifetime: 9077 hours (378 days + 5 hours)
+Error 113 [12] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 05 60 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x60001caa60aa = 105553597194410
+  40 -- 51 00 00 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  40 00 02 00 08 00 00 1c 00 60 a7 e0 00     00:04:12.495  READ VERIFY SECTOR(S)
-  40 00 02 00 08 00 00 1c 00 60 9f e0 00     00:04:12.488  READ VERIFY SECTOR(S)
-  40 00 02 00 10 00 00 1c 00 60 af e0 00     00:04:12.478  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:12.455  READ DMA
-  40 00 02 00 10 00 00 1c 00 60 9f e0 00     00:04:10.843  READ VERIFY SECTOR(S)
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:48.980  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:02:48.980  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:02:48.980  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:02:48.980  RECALIBRATE [OBS-4]
+  00 00 00 00 34 00 00 1c 00 60 7f 00 00     00:02:48.980  NOP [Abort queued commands]
 
-Error 111 [10] occurred at disk power-on lifetime: 9077 hours (378 days + 5 hours)
+Error 112 [11] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 05 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
+  40 -- 51 00 00 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  40 00 02 00 10 00 00 1c 00 60 9f e0 00     00:04:12.495  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:12.488  READ DMA
-  40 00 02 00 20 00 00 1c 00 60 9f e0 00     00:04:12.478  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:12.455  READ DMA
-  40 00 02 00 20 00 00 1c 00 60 7f e0 00     00:04:10.843  READ VERIFY SECTOR(S)
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:55.541  READ DMA EXT
+  25 00 20 00 13 00 01 f9 00 ab ec e0 00     00:02:55.531  READ DMA EXT
+  25 00 20 00 2d 00 01 f9 00 ab bf e0 00     00:02:55.530  READ DMA EXT
+  25 00 20 00 13 00 01 ca 00 b3 b7 e0 00     00:02:55.515  READ DMA EXT
+  25 00 20 00 25 00 00 13 00 60 1a e0 00     00:02:55.514  READ DMA EXT
 
-Error 110 [9] occurred at disk power-on lifetime: 9077 hours (378 days + 5 hours)
+Error 111 [10] occurred at disk power-on lifetime: 9022 hours (375 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 15 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
+  40 -- 51 00 00 00 00 1c aa 60 aa e0 00  Error: UNC at LBA = 0x1caa60aa = 480927914
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  40 00 02 00 20 00 00 1c 00 60 9f e0 00     00:04:12.495  READ VERIFY SECTOR(S)
-  c8 00 02 00 01 00 00 00 00 00 00 e0 00     00:04:12.488  READ DMA
-  40 00 02 00 20 00 00 1c 00 60 7f e0 00     00:04:12.478  READ VERIFY SECTOR(S)
-  40 00 02 00 40 00 00 1c 00 60 7f e0 00     00:04:12.455  READ VERIFY SECTOR(S)
-  40 00 02 00 40 00 00 1c 00 60 3f e0 00     00:04:10.843  READ VERIFY SECTOR(S)
+  25 00 20 00 34 00 00 1c 00 60 7f e0 00     00:02:51.184  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:02:51.183  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:02:51.183  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:02:51.183  RECALIBRATE [OBS-4]
+  00 00 00 00 34 00 00 1c 00 60 7f 00 00     00:02:51.183  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -272,7 +273,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -280,6 +283,8 @@ ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0006  2            1  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

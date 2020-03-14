@@ -10,14 +10,14 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Aug 17 21:16:06 2016 MSK
+Local Time is:    Thu Aug 18 16:13:45 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 208
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -60,28 +60,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   082   082   006    -    129434049
+  1 Raw_Read_Error_Rate     POSR--   083   082   006    -    171201024
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7834
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7838
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   072   060   030    -    18058295
-  9 Power_On_Hours          -O--CK   100   100   000    -    491
+  7 Seek_Error_Rate         POSR--   072   060   030    -    18087240
+  9 Power_On_Hours          -O--CK   100   100   000    -    493
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    408
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    410
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    4255
-188 Command_Timeout         -O--CK   100   098   000    -    4295032846
+187 Reported_Uncorrect      -O--CK   001   001   000    -    4667
+188 Command_Timeout         -O--CK   100   098   000    -    4295032852
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   060   045    -    36 (Min/Max 22/36)
-194 Temperature_Celsius     -O---K   036   040   000    -    36 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   046   041   000    -    129434049
-197 Current_Pending_Sector  -O--C-   080   080   000    -    850
-198 Offline_Uncorrectable   ----C-   080   080   000    -    850
+190 Airflow_Temperature_Cel -O---K   070   060   045    -    30 (Min/Max 22/30)
+194 Temperature_Celsius     -O---K   030   040   000    -    30 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   046   041   000    -    171201024
+197 Current_Pending_Sector  -O--C-   079   079   000    -    875
+198 Offline_Uncorrectable   ----C-   079   079   000    -    875
 199 UDMA_CRC_Error_Count    -OSRCK   200   155   000    -    21976
-240 Head_Flying_Hours       ------   100   253   000    -    1225 (2 108 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1464167985
-242 Total_LBAs_Read         ------   100   253   000    -    724464797
+240 Head_Flying_Hours       ------   100   253   000    -    1232 (58 223 0)
+241 Total_LBAs_Written      ------   100   253   000    -    1466154099
+242 Total_LBAs_Read         ------   100   253   000    -    730887947
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,7 +116,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 4216 (device log contains only the most recent 20 errors)
+Device Error Count: 4628 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -132,7 +132,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4216 [15] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4628 [7] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -143,13 +143,13 @@ Error 4216 [15] occurred at disk power-on lifetime: 491 hours (20 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 60 28 e0 00     04:02:50.735  READ DMA EXT
-  ca 00 00 00 08 00 00 00 01 5d 88 e0 00     04:02:50.735  WRITE DMA
-  ca 00 00 00 08 00 00 00 01 5d 48 e0 00     04:02:50.734  WRITE DMA
-  ca 00 00 00 08 00 00 00 01 5c d0 e0 00     04:02:50.734  WRITE DMA
-  ca 00 00 00 08 00 00 00 01 5c b0 e0 00     04:02:50.733  WRITE DMA
+  25 00 00 00 08 00 00 3a 38 60 28 e0 00     00:04:30.465  READ DMA EXT
+  ea 00 00 00 00 04 0d ef 04 0d f7 a0 00     00:04:30.456  FLUSH CACHE EXT
+  ca 00 00 00 08 00 00 01 04 0d f0 e1 00     00:04:30.456  WRITE DMA
+  ea 00 00 00 00 38 60 2f 04 0d ef a0 00     00:04:30.428  FLUSH CACHE EXT
+  ca 00 00 00 18 00 00 01 04 0d d8 e1 00     00:04:30.428  WRITE DMA
 
-Error 4215 [14] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4627 [6] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -160,13 +160,13 @@ Error 4215 [14] occurred at disk power-on lifetime: 491 hours (20 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 60 28 e0 00     04:02:47.928  READ DMA EXT
-  c8 00 00 00 08 00 00 0f ff ff b0 ef 00     04:02:47.903  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     04:02:47.902  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     04:02:47.899  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     04:02:47.896  SET FEATURES [Set transfer mode]
+  25 00 00 00 08 00 00 3a 38 60 28 e0 00     00:04:27.723  READ DMA EXT
+  c8 00 00 00 08 00 00 0f ff ff b0 ef 00     00:04:27.698  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:27.697  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:04:27.694  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:04:27.691  SET FEATURES [Set transfer mode]
 
-Error 4214 [13] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4626 [5] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -177,13 +177,13 @@ Error 4214 [13] occurred at disk power-on lifetime: 491 hours (20 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 5c 78 e0 00     04:02:45.167  READ DMA EXT
-  ea 00 00 00 00 04 0d 1f 04 0d 27 a0 00     04:02:45.158  FLUSH CACHE EXT
-  ca 00 00 00 08 00 00 01 04 0d 20 e1 00     04:02:45.158  WRITE DMA
-  ea 00 00 00 00 38 60 2f 04 0d 1f a0 00     04:02:45.131  FLUSH CACHE EXT
-  ca 00 00 00 18 00 00 01 04 0d 08 e1 00     04:02:45.130  WRITE DMA
+  25 00 00 00 08 00 00 3a 38 5c 78 e0 00     00:04:24.970  READ DMA EXT
+  ea 00 00 00 00 04 0d cf 04 0d d7 a0 00     00:04:24.961  FLUSH CACHE EXT
+  ca 00 00 00 08 00 00 01 04 0d d0 e1 00     00:04:24.961  WRITE DMA
+  ea 00 00 00 00 38 60 2f 04 0d cf a0 00     00:04:24.934  FLUSH CACHE EXT
+  ca 00 00 00 18 00 00 01 04 0d b8 e1 00     00:04:24.934  WRITE DMA
 
-Error 4213 [12] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4625 [4] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -194,13 +194,13 @@ Error 4213 [12] occurred at disk power-on lifetime: 491 hours (20 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 5c 68 e0 00     04:02:42.425  READ DMA EXT
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     04:02:42.424  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     04:02:42.421  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     04:02:42.418  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     04:02:42.393  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 08 00 00 3a 38 5c 68 e0 00     00:04:22.245  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:22.244  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:04:22.241  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:04:22.238  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:22.213  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 4212 [11] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4624 [3] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -211,13 +211,13 @@ Error 4212 [11] occurred at disk power-on lifetime: 491 hours (20 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 5c 68 e0 00     04:02:39.697  READ DMA EXT
-  ea 00 00 00 00 04 0c ff 04 0d 07 a0 00     04:02:39.688  FLUSH CACHE EXT
-  ca 00 00 00 08 00 00 01 04 0d 00 e1 00     04:02:39.688  WRITE DMA
-  ea 00 00 00 00 38 60 2f 04 0c ff a0 00     04:02:39.661  FLUSH CACHE EXT
-  ca 00 00 00 18 00 00 01 04 0c e8 e1 00     04:02:39.660  WRITE DMA
+  25 00 00 00 08 00 00 3a 38 5c 68 e0 00     00:04:19.476  READ DMA EXT
+  ca 00 00 00 28 00 00 00 01 81 00 e0 00     00:04:19.475  WRITE DMA
+  ca 00 00 00 10 00 00 00 01 80 e8 e0 00     00:04:19.474  WRITE DMA
+  ea 00 00 00 00 04 0d af 04 0d b7 a0 00     00:04:19.466  FLUSH CACHE EXT
+  ca 00 00 00 08 00 00 01 04 0d b0 e1 00     00:04:19.466  WRITE DMA
 
-Error 4211 [10] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4623 [2] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -228,13 +228,13 @@ Error 4211 [10] occurred at disk power-on lifetime: 491 hours (20 days + 11 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 5c 58 e0 00     04:02:36.954  READ DMA EXT
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     04:02:36.953  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     04:02:36.950  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     04:02:36.928  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     04:02:36.848  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 08 00 00 3a 38 5c 58 e0 00     00:04:16.751  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:16.750  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:04:16.731  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:04:16.674  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:16.658  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 4210 [9] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4622 [1] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -245,13 +245,13 @@ Error 4210 [9] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 5c 58 e0 00     04:02:34.193  READ DMA EXT
-  ea 00 00 00 00 04 0c df 04 0c e7 a0 00     04:02:34.184  FLUSH CACHE EXT
-  ca 00 00 00 08 00 00 01 04 0c e0 e1 00     04:02:34.184  WRITE DMA
-  ea 00 00 00 00 38 60 2f 04 0c df a0 00     04:02:34.158  FLUSH CACHE EXT
-  ca 00 00 00 18 00 00 01 04 0c c8 e1 00     04:02:34.157  WRITE DMA
+  25 00 00 00 08 00 00 3a 38 5c 58 e0 00     00:04:13.904  READ DMA EXT
+  ca 00 00 00 08 00 00 00 04 b8 00 e0 00     00:04:13.904  WRITE DMA
+  ca 00 00 00 08 00 00 00 01 80 f8 e0 00     00:04:13.903  WRITE DMA
+  ca 00 00 00 10 00 00 00 01 80 d0 e0 00     00:04:13.903  WRITE DMA
+  ca 00 00 00 10 00 00 00 01 80 b8 e0 00     00:04:13.903  WRITE DMA
 
-Error 4209 [8] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours)
+Error 4621 [0] occurred at disk power-on lifetime: 492 hours (20 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -262,11 +262,11 @@ Error 4209 [8] occurred at disk power-on lifetime: 491 hours (20 days + 11 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 3a 38 5c 50 e0 00     04:02:31.452  READ DMA EXT
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     04:02:31.451  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     04:02:31.448  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     04:02:31.445  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     04:02:31.424  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 08 00 00 3a 38 5c 50 e0 00     00:04:11.175  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:11.174  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:04:11.152  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:04:11.095  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:11.079  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -286,8 +286,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     22/36 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     22/30 Celsius
 Lifetime    Min/Max Temperature:     15/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -296,7 +296,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (47)
+Temperature History Size (Index):    128 (53)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -306,7 +306,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           41  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

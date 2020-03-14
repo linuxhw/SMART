@@ -1,5 +1,5 @@
 === START OF INFORMATION SECTION ===
-Model Family:     Western Digital Black
+Model Family:     Western Digital Caviar Black
 Device Model:     WDC WD1002FAEX-00Z3A0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
@@ -9,14 +9,14 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 6.0 Gb/s
-Local Time is:    Sun Jun 19 13:15:13 2016 MSK
+Local Time is:    Fri Dec 29 08:11:14 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   173   170   021    -    4333
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2442
+  3 Spin_Up_Time            POS--K   174   170   021    -    4275
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3150
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   063   063   000    -    27169
+  9 Power_On_Hours          -O--CK   052   052   000    -    35378
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2301
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    132
-193 Load_Cycle_Count        -O--CK   200   200   000    -    2309
-194 Temperature_Celsius     -O---K   107   095   000    -    40
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2833
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    156
+193 Load_Cycle_Count        -O--CK   200   200   000    -    2993
+194 Temperature_Celsius     -O---K   110   095   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -92,8 +92,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
@@ -109,7 +109,22 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     21182         -
+# 1  Extended offline    Completed without error       00%     35233         -
+# 2  Extended offline    Completed without error       00%     35065         -
+# 3  Extended offline    Completed without error       00%     34898         -
+# 4  Extended offline    Completed without error       00%     34731         -
+# 5  Extended offline    Completed without error       00%     34563         -
+# 6  Extended offline    Completed without error       00%     34399         -
+# 7  Extended offline    Completed without error       00%     34065         -
+# 8  Extended offline    Completed without error       00%     33660         -
+# 9  Extended offline    Completed without error       00%     33466         -
+#10  Extended offline    Completed without error       00%     32985         -
+#11  Extended offline    Completed without error       00%     32483         -
+#12  Extended offline    Completed without error       00%     32044         -
+#13  Extended offline    Completed without error       00%     31679         -
+#14  Extended offline    Completed without error       00%     31089         -
+#15  Extended offline    Completed without error       00%     30223         -
+#16  Extended offline    Completed without error       00%     21182         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -126,9 +141,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     23/40 Celsius
-Lifetime    Min/Max Temperature:     39/52 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     23/45 Celsius
+Lifetime    Min/Max Temperature:     36/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -136,11 +151,11 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (384)
+Temperature History Size (Index):    478 (235)
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -151,9 +166,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2          176  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        13244  Vendor specific
+0x8000  4      3356717  Vendor specific
 
 
 

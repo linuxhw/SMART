@@ -7,7 +7,7 @@ User Capacity:    200 049 647 616 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue May 19 23:57:59 2015 MSK
+Local Time is:    Mon Mar 14 20:00:50 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -52,21 +52,21 @@ recommended polling time: 	 (  74) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   100   006    -    132623516
+  1 Raw_Read_Error_Rate     POSR--   115   100   006    -    97915519
   3 Spin_Up_Time            PO----   096   095   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3618
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3936
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    295170169
-  9 Power_On_Hours          -O--CK   078   078   000    -    20121
+  7 Seek_Error_Rate         POSR--   084   060   030    -    323635652
+  9 Power_On_Hours          -O--CK   077   077   000    -    20489
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3741
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    4094
 187 Reported_Uncorrect      -O--CK   097   097   000    -    3
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   055   034   045    Past 45 (Min/Max 44/45 #132)
-194 Temperature_Celsius     -O---K   045   066   000    -    45 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   077   060   000    -    28442000
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   057   034   045    Past 43 (Min/Max 20/43 #132)
+194 Temperature_Celsius     -O---K   043   066   000    -    43 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   069   060   000    -    74382203
+197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967295
+198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967295
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 3
+Device Error Count: 5
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,6 +119,40 @@ Device Error Count: 3
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 5 [4] occurred at disk power-on lifetime: 20153 hours (839 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 11 a0 90 6b 90 e0 00  Error: UNC at LBA = 0x11a0906b90 = 75708263312
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 11 a0 00 6b 90 e0 00     00:26:13.443  READ DMA EXT
+  25 00 00 00 01 00 11 a0 00 6b 8f e0 00     00:26:13.443  READ DMA EXT
+  25 00 00 00 01 00 11 a0 00 6b 8e e0 00     00:26:13.443  READ DMA EXT
+  25 00 00 00 01 00 11 a0 00 6b 8d e0 00     00:26:13.443  READ DMA EXT
+  25 00 00 00 01 00 11 a0 00 6b 8c e0 00     00:26:13.443  READ DMA EXT
+
+Error 4 [3] occurred at disk power-on lifetime: 20153 hours (839 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 11 a0 90 6b 90 e0 00  Error: UNC at LBA = 0x11a0906b90 = 75708263312
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 01 00 00 11 9f 00 6b e0 e0 00     00:26:11.490  READ DMA EXT
+  25 00 00 01 00 00 11 9e 00 6b e0 e0 00     00:26:11.481  READ DMA EXT
+  25 00 00 01 00 00 11 9d 00 6b e0 e0 00     00:26:11.480  READ DMA EXT
+  25 00 00 01 00 00 11 9c 00 6b e0 e0 00     00:26:11.479  READ DMA EXT
+  25 00 00 00 08 00 0d 9c 00 47 d0 e0 00     00:26:11.479  READ DMA EXT
 
 Error 3 [2] occurred at disk power-on lifetime: 19328 hours (805 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -190,10 +224,12 @@ Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

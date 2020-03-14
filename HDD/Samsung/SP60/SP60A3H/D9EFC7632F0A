@@ -6,7 +6,7 @@ User Capacity:    60 060 155 904 bytes [60,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 1
-Local Time is:    Thu Jun 18 18:34:11 2015 MSK
+Local Time is:    Fri Jun 19 16:40:56 2015 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -50,14 +50,14 @@ recommended polling time: 	 (  45) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    280
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2856
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    282
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2860
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   088   088   000    -    10865
-  9 Power_On_Hours          -O--CK   088   088   000    -    7449497
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1913
-194 Temperature_Celsius     -O---K   139   085   000    -    33
+  9 Power_On_Hours          -O--CK   088   088   000    -    7451303
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1916
+194 Temperature_Celsius     -O---K   130   085   000    -    36
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   253   253   010    -    0
 199 UDMA_CRC_Error_Count    -O-R--   100   100   000    -    1
@@ -84,9 +84,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 21709 inconsistent with error log pointer 5
-
-ATA Error Count: 21709 (device log contains only the most recent five errors)
+ATA Error Count: 21965 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -101,7 +99,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 21709 occurred at disk power-on lifetime: 32754 hours (1364 days + 18 hours)
+Error 21965 occurred at disk power-on lifetime: 36594 hours (1524 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 00 00 00 10  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  2f 00 01 00 00 00 10 00  14d+00:55:45.665  READ LOG EXT
+  e7 d5 01 00 c2 4f b0 00  14d+00:55:45.665  FLUSH CACHE
+  b0 d5 01 00 c2 4f 10 00  14d+00:55:45.665  SMART READ LOG
+  e7 00 08 88 0b cc b0 00  14d+00:55:45.665  FLUSH CACHE
+  ca 00 08 88 0b cc f6 00  14d+00:55:45.665  WRITE DMA
+
+Error 21964 occurred at disk power-on lifetime: 32754 hours (1364 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -118,7 +133,7 @@ Error 21709 occurred at disk power-on lifetime: 32754 hours (1364 days + 18 hour
   b0 d5 01 00 c2 4f 10 00  29d+14:28:08.831  SMART READ LOG
   ca 00 50 00 0b b7 f6 00  29d+14:28:08.831  WRITE DMA
 
-Error 21708 occurred at disk power-on lifetime: 19698 hours (820 days + 18 hours)
+Error 21963 occurred at disk power-on lifetime: 19698 hours (820 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -135,7 +150,7 @@ Error 21708 occurred at disk power-on lifetime: 19698 hours (820 days + 18 hours
   c8 00 18 20 dd d8 f2 00  14d+02:47:05.985  READ DMA
   c8 00 40 48 de e5 f2 00  14d+02:47:05.985  READ DMA
 
-Error 21707 occurred at disk power-on lifetime: 19442 hours (810 days + 2 hours)
+Error 21962 occurred at disk power-on lifetime: 19442 hours (810 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -152,7 +167,7 @@ Error 21707 occurred at disk power-on lifetime: 19442 hours (810 days + 2 hours)
   c8 00 88 58 d9 eb f2 00  34d+08:29:41.760  READ DMA
   c8 00 00 88 d8 eb f2 00  34d+08:29:41.760  READ DMA
 
-Error 21706 occurred at disk power-on lifetime: 19442 hours (810 days + 2 hours)
+Error 21961 occurred at disk power-on lifetime: 19442 hours (810 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -168,23 +183,6 @@ Error 21706 occurred at disk power-on lifetime: 19442 hours (810 days + 2 hours)
   e7 00 08 d8 d4 92 b0 00  17d+03:43:38.240  FLUSH CACHE
   ca 00 08 d8 d4 92 f2 00  17d+03:43:38.240  WRITE DMA
   e7 00 08 d8 d4 92 b0 00  17d+03:43:38.240  FLUSH CACHE
-
-Error 21705 occurred at disk power-on lifetime: 19442 hours (810 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 fe 00 00 00 50  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 50 00  20d+08:18:45.120  SET FEATURES [Enable APM]
-  c8 00 08 98 fd ee f6 00   3d+05:42:40.640  READ DMA
-  c8 00 08 98 fd e8 f6 00   3d+05:42:40.640  READ DMA
-  c8 00 08 98 fd ea f6 00   3d+05:42:40.640  READ DMA
-  c8 00 08 98 fd ec f6 00   3d+05:42:40.640  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

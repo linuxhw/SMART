@@ -7,7 +7,7 @@ User Capacity:    41,109,061,120 bytes [41.1 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Tue Mar 19 19:39:47 2019 MSK
+Local Time is:    Thu May  9 19:35:59 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -52,33 +52,33 @@ recommended polling time: 	 (  17) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   221   220   063    -    8772
-  4 Start_Stop_Count        -O--CK   253   253   000    -    165
-  5 Reallocated_Sector_Ct   PO--CK   225   224   063    -    146
+  3 Spin_Up_Time            POS--K   220   220   063    -    13467
+  4 Start_Stop_Count        -O--CK   253   253   000    -    249
+  5 Reallocated_Sector_Ct   PO--CK   222   222   063    -    158
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   250   242   187    -    60465
-  9 Power_On_Minutes        -O--CK   247   247   000    -    55h+38m
+  8 Seek_Time_Performance   POS--K   251   242   187    -    49376
+  9 Power_On_Minutes        -O--CK   246   246   000    -    303h+22m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   249   249   000    -    1912
-192 Power-Off_Retract_Count -O--CK   253   253   000    -    146
-193 Load_Cycle_Count        -O--CK   253   253   000    -    523
-194 Temperature_Celsius     -O--CK   253   253   000    -    43
-195 Hardware_ECC_Recovered  -O-R--   251   246   000    -    59723
+ 12 Power_Cycle_Count       -O--CK   248   248   000    -    1996
+192 Power-Off_Retract_Count -O--CK   253   253   000    -    225
+193 Load_Cycle_Count        -O--CK   253   253   000    -    749
+194 Temperature_Celsius     -O--CK   253   253   000    -    22
+195 Hardware_ECC_Recovered  -O-R--   250   246   000    -    41786
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   196   194   000    -    6
+199 UDMA_CRC_Error_Count    ---R--   199   194   000    -    6
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    0
-202 Data_Address_Mark_Errs  -O-R--   253   001   000    -    0
-203 Run_Out_Cancel          PO-R--   253   225   180    -    72
+201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    1
+202 Data_Address_Mark_Errs  -O-R--   253   001   000    -    1
+203 Run_Out_Cancel          PO-R--   253   225   180    -    512
 204 Soft_ECC_Correction     -O-R--   253   249   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   183   183   000    -    0
+209 Offline_Seek_Performnce --S--K   188   183   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -96,9 +96,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 54 inconsistent with error log pointer 5
+Warning: ATA error count 56 inconsistent with error log pointer 5
 
-ATA Error Count: 54 (device log contains only the most recent five errors)
+ATA Error Count: 56 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -112,6 +112,40 @@ ATA Error Count: 54 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 56 occurred at disk power-on lifetime: 2195 hours (91 days + 11 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 16 5a bf 45 e3  Error: UNC 22 sectors at LBA = 0x0345bf5a = 54902618
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 5a bf 45 e3 00      00:14:55.696  READ DMA
+  c8 00 20 a1 5a 9b e2 00      00:14:55.680  READ DMA
+  c8 00 40 9a e0 77 e2 00      00:14:55.664  READ DMA
+  c8 00 40 18 92 2e e2 00      00:14:55.632  READ DMA
+  c8 00 20 11 62 20 e0 00      00:14:55.632  READ DMA
+
+Error 55 occurred at disk power-on lifetime: 2195 hours (91 days + 11 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 47 20 6e eb e0  Error: UNC 71 sectors at LBA = 0x00eb6e20 = 15429152
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 80 20 6e eb e0 00      00:06:30.048  READ DMA
+  c8 00 80 a0 6d eb e0 00      00:06:30.032  READ DMA
+  c8 00 80 20 6d eb e0 00      00:06:30.032  READ DMA
+  c8 00 40 20 6d eb e0 00      00:06:30.016  READ DMA
+  c8 00 80 a0 6c eb e0 00      00:06:30.016  READ DMA
 
 Error 54 occurred at disk power-on lifetime: 1932 hours (80 days + 12 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -163,40 +197,6 @@ Error 52 occurred at disk power-on lifetime: 1932 hours (80 days + 12 hours)
   c8 00 d8 ab 40 62 e2 00      01:29:44.000  READ DMA
   c8 00 00 ab 3f 62 e2 00      01:29:44.000  READ DMA
   c8 00 58 53 3f 62 e2 00      01:29:44.000  READ DMA
-
-Error 51 occurred at disk power-on lifetime: 1932 hours (80 days + 12 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 00 73 bd 61 e2  Error: ICRC, ABRT at LBA = 0x0261bd73 = 39959923
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 73 bd 61 e2 00      01:29:37.216  READ DMA
-  c8 00 00 73 bc 61 e2 00      01:29:37.216  READ DMA
-  c8 00 40 33 bc 61 e2 00      01:29:37.216  READ DMA
-  c8 00 18 eb bb 61 e2 00      01:29:37.216  READ DMA
-  c8 00 00 eb ba 61 e2 00      01:29:37.216  READ DMA
-
-Error 50 occurred at disk power-on lifetime: 1932 hours (80 days + 12 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 00 7b 66 61 e2  Error: ICRC, ABRT at LBA = 0x0261667b = 39937659
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 40 7b 66 61 e2 00      01:30:32.544  READ DMA
-  c8 00 40 53 62 61 e2 00      01:30:32.544  READ DMA
-  c8 00 40 4b 5e 61 e2 00      01:30:32.528  READ DMA
-  c8 00 40 c3 5c 61 e2 00      01:30:32.528  READ DMA
-  c8 00 40 e3 5b 61 e2 00      01:30:32.528  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

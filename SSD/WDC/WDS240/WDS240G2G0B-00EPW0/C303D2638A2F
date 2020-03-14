@@ -10,7 +10,7 @@ Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Nov 22 18:15:16 2019 MSK
+Local Time is:    Fri Dec 13 12:49:00 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,9 +55,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    25
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    18
-165 Unknown_Attribute       -O--CK   100   100   000    -    16
+  9 Power_On_Hours          -O--CK   100   100   000    -    71
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    71
+165 Unknown_Attribute       -O--CK   100   100   000    -    24
 166 Unknown_Attribute       -O--CK   100   100   ---    -    1
 167 Unknown_Attribute       -O--CK   100   100   ---    -    0
 168 Unknown_Attribute       -O--CK   100   100   ---    -    3
@@ -66,18 +66,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
 173 Unknown_Attribute       -O--CK   100   100   000    -    1
-174 Unknown_Attribute       -O--CK   100   100   000    -    5
+174 Unknown_Attribute       -O--CK   100   100   000    -    8
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   067   038   000    -    33 (Min/Max 18/38)
+194 Temperature_Celsius     -O---K   066   038   000    -    34 (Min/Max 16/38)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Unknown_SSD_Attribute   -O--CK   100   100   000    -    17181179908
+230 Unknown_SSD_Attribute   -O--CK   100   100   000    -    25771114502
 232 Available_Reservd_Space PO--CK   100   100   005    -    100
-233 Media_Wearout_Indicator -O--CK   100   100   ---    -    53
-234 Unknown_Attribute       -O--CK   100   100   000    -    122
-241 Total_LBAs_Written      ----CK   100   100   000    -    59
-242 Total_LBAs_Read         ----CK   100   100   000    -    27
+233 Media_Wearout_Indicator -O--CK   100   100   ---    -    74
+234 Unknown_Attribute       -O--CK   100   100   000    -    187
+241 Total_LBAs_Written      ----CK   100   100   000    -    88
+242 Total_LBAs_Read         ----CK   100   100   000    -    45
 244 Unknown_Attribute       -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -111,7 +111,22 @@ SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Self-test routine in progress 60%        56         -
+# 2  Extended offline    Self-test routine in progress 20%        44         -
+# 3  Extended offline    Self-test routine in progress 20%        44         -
+# 4  Extended offline    Self-test routine in progress 20%        44         -
+# 5  Extended offline    Self-test routine in progress 20%        44         -
+# 6  Extended offline    Self-test routine in progress 20%        44         -
+# 7  Extended offline    Self-test routine in progress 20%        44         -
+# 8  Extended offline    Self-test routine in progress 30%        44         -
+# 9  Extended offline    Self-test routine in progress 30%        44         -
+#10  Extended offline    Self-test routine in progress 30%        44         -
+#11  Extended offline    Self-test routine in progress 30%        44         -
+#12  Extended offline    Self-test routine in progress 50%        44         -
+#13  Extended offline    Self-test routine in progress 50%        44         -
+#14  Extended offline    Completed without error       00%        31         -
+#15  Extended offline    Self-test routine in progress 40%        31         -
 
 Selective Self-tests/Logging not supported
 
@@ -120,17 +135,17 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              18  ---  Lifetime Power-On Resets
-0x01  0x010  4              25  ---  Power-on Hours
-0x01  0x018  6       125528312  ---  Logical Sectors Written
-0x01  0x028  6        57169780  ---  Logical Sectors Read
-0x01  0x038  6              25  ---  Date and Time TimeStamp
+0x01  0x008  4              71  ---  Lifetime Power-On Resets
+0x01  0x010  4              71  ---  Power-on Hours
+0x01  0x018  6       186629738  ---  Logical Sectors Written
+0x01  0x028  6        94795656  ---  Logical Sectors Read
+0x01  0x038  6              71  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              33  ---  Current Temperature
+0x05  0x008  1              34  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              37  ---  Highest Temperature
-0x05  0x028  1              28  ---  Lowest Temperature
+0x05  0x028  1              24  ---  Lowest Temperature
 0x05  0x030  1               -  ---  Highest Average Short Term Temperature
 0x05  0x038  1               -  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -153,8 +168,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           14  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

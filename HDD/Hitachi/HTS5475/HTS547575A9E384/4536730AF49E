@@ -11,14 +11,13 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Oct  7 12:34:18 2018 MSK
+Local Time is:    Sun Jan  6 05:45:51 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -63,22 +62,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   095   062    -    0
   2 Throughput_Performance  P-S--K   100   100   040    -    0
-  3 Spin_Up_Time            PO---K   197   100   033    -    1
-  4 Start_Stop_Count        -O--CK   096   096   000    -    7133
+  3 Spin_Up_Time            PO---K   243   100   033    -    1
+  4 Start_Stop_Count        -O--CK   096   096   000    -    7539
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    568 (0 66)
   7 Seek_Error_Rate         POSR-K   100   099   067    -    0
   8 Seek_Time_Performance   P-S--K   100   100   040    -    0
-  9 Power_On_Hours          -O--CK   052   052   000    -    21243
+  9 Power_On_Hours          -O--CK   050   050   000    -    22189
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    6750
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    6978
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    59404809404416
-188 Command_Timeout         -O--CK   100   098   000    -    438154100751
-190 Airflow_Temperature_Cel -O---K   062   041   045    Past 38 (Min/Max 35/38)
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    459195
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    28836280
-193 Load_Cycle_Count        -O--CK   074   074   000    -    263358
+188 Command_Timeout         -O--CK   100   098   000    -    438154100753
+190 Airflow_Temperature_Cel -O---K   064   041   045    Past 36 (Min/Max 36/37)
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    459467
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    29229502
+193 Load_Cycle_Count        -O--CK   072   072   000    -    287793
 196 Reallocated_Event_Count -O--CK   100   100   000    -    81
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -101,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -193,7 +192,10 @@ Error 106 [1] occurred at disk power-on lifetime: 18428 hours (767 days + 20 hou
   61 00 08 00 b0 00 00 00 37 c3 18 40 00     01:40:49.927  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     21944         -
+# 2  Short offline       Completed without error       00%     21868         -
+# 3  Short offline       Completed without error       00%     21834         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -210,10 +212,10 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     35/38 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     36/37 Celsius
 Lifetime    Min/Max Temperature:     -1/59 Celsius
-Lifetime    Average Temperature:        38 Celsius
+Lifetime    Average Temperature:        37 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -221,15 +223,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (120)
+Temperature History Size (Index):    128 (109)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
           Write:     85 (8.5 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
-
-Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -240,8 +240,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

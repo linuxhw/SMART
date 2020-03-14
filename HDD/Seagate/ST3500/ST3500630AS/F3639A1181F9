@@ -3,17 +3,18 @@ Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3500630AS
 Serial Number:    --
 Firmware Version: 3.AAE
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Dec 19 22:34:33 2016 MSK
+Local Time is:    Sat Mar 16 08:34:27 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -24,8 +25,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -50,19 +52,19 @@ recommended polling time: 	 ( 163) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   101   093   006    -    28175116
+  1 Raw_Read_Error_Rate     POSR--   108   084   006    -    15989681
   3 Spin_Up_Time            PO----   096   093   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3295
+  4 Start_Stop_Count        -O--CK   095   095   020    -    6024
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   089   060   030    -    851508249
-  9 Power_On_Hours          -O--CK   060   060   000    -    35580
+  7 Seek_Error_Rate         POSR--   069   060   030    -    7960348
+  9 Power_On_Hours          -O--CK   056   056   000    -    39115
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3324
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    7017
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   048   045    -    41 (Min/Max 41/42)
-194 Temperature_Celsius     -O---K   041   052   000    -    41 (0 18 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   065   057   000    -    226817640
+190 Airflow_Temperature_Cel -O---K   063   048   045    -    37 (Min/Max 36/37)
+194 Temperature_Celsius     -O---K   037   052   000    -    37 (0 18 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   086   051   000    -    187037592
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -85,7 +87,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -106,8 +108,21 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               90%     23056         -
-# 2  Short offline       Aborted by host               90%     23056         -
+# 1  Short offline       Completed without error       00%     38978         -
+# 2  Short offline       Completed without error       00%     38968         -
+# 3  Short offline       Completed without error       00%     38962         -
+# 4  Short offline       Completed without error       00%     38960         -
+# 5  Short offline       Completed without error       00%     38950         -
+# 6  Short offline       Completed without error       00%     38945         -
+# 7  Short offline       Completed without error       00%     38620         -
+# 8  Short offline       Completed without error       00%     38608         -
+# 9  Short offline       Completed without error       00%     38596         -
+#10  Short offline       Completed without error       00%     38593         -
+#11  Short offline       Completed without error       00%     36869         -
+#12  Extended offline    Aborted by host               90%     36869         -
+#13  Short offline       Completed without error       00%     36749         -
+#14  Short offline       Completed without error       00%     36709         -
+#15  Short offline       Aborted by host               90%     23056         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -124,12 +139,16 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           64  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

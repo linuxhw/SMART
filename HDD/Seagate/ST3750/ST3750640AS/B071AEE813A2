@@ -7,7 +7,7 @@ User Capacity:    750 155 292 160 bytes [750 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Nov 27 01:03:35 2016 MSK
+Local Time is:    Sat Jan  6 01:45:54 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,8 +25,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  39)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +52,19 @@ recommended polling time: 	 ( 202) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   105   088   006    -    34665538
-  3 Spin_Up_Time            PO----   099   092   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7630
+  1 Raw_Read_Error_Rate     POSR--   107   082   006    -    13117199
+  3 Spin_Up_Time            PO----   098   092   000    -    0
+  4 Start_Stop_Count        -O--CK   093   093   020    -    8058
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    557985160
-  9 Power_On_Hours          -O--CK   052   052   000    -    42180
+  7 Seek_Error_Rate         POSR--   089   060   030    -    866405914
+  9 Power_On_Hours          -O--CK   044   044   000    -    49835
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6738
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    7031
 187 Reported_Uncorrect      -O--CK   001   001   000    -    195
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   058   028   045    Past 42 (Min/Max 25/44 #9628)
-194 Temperature_Celsius     -O---K   042   072   000    -    42 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   063   054   000    -    96072461
+190 Airflow_Temperature_Cel -O---K   056   028   045    Past 44 (Min/Max 44/44 #9628)
+194 Temperature_Celsius     -O---K   044   072   000    -    44 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   073   054   000    -    126554019
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   195   000    -    181
@@ -257,14 +258,15 @@ Error 206 [5] occurred at disk power-on lifetime: 18514 hours (771 days + 10 hou
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0x50)       Fatal or unknown error        00%     29810         51805895524352
+# 1  Extended offline    Completed without error       00%     43501         -
 # 2  Vendor (0x50)       Fatal or unknown error        00%     29810         51805895524352
 # 3  Vendor (0x50)       Fatal or unknown error        00%     29810         51805895524352
 # 4  Vendor (0x50)       Fatal or unknown error        00%     29810         51805895524352
 # 5  Vendor (0x50)       Fatal or unknown error        00%     29810         51805895524352
 # 6  Vendor (0x50)       Fatal or unknown error        00%     29810         51805895524352
-# 7  Short offline       Completed without error       00%     29810         -
-# 8  Extended offline    Self-test routine in progress 70%     41675         -
+# 7  Vendor (0x50)       Fatal or unknown error        00%     29810         51805895524352
+# 8  Short offline       Completed without error       00%     29810         -
+6 of 6 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -283,7 +285,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
