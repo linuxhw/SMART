@@ -7,7 +7,7 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Jan 12 22:14:14 2019 +03
+Local Time is:    Sun Feb  3 14:43:12 2019 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,20 +55,20 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3775
+  3 Spin_Up_Time            PO----   099   099   000    -    0
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3826
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   081   060   030    -    133752923
-  9 Power_On_Hours          -O--CK   096   096   000    -    4257
+  7 Seek_Error_Rate         POSR--   081   060   030    -    137265895
+  9 Power_On_Hours          -O--CK   095   095   000    -    4406
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3755
-187 Reported_Uncorrect      -O--CK   090   090   000    -    10
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3814
+187 Reported_Uncorrect      -O--CK   088   088   000    -    12
 189 High_Fly_Writes         -O-RCK   026   026   000    -    74
-190 Airflow_Temperature_Cel -O---K   068   040   045    Past 32 (Min/Max 25/32)
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    2237
-193 Load_Cycle_Count        -O--CK   044   044   000    -    112197
-194 Temperature_Celsius     -O---K   032   060   000    -    32 (0 9 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   071   047   000    -    84921214
+190 Airflow_Temperature_Cel -O---K   062   040   045    Past 38 (Min/Max 36/38)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    2275
+193 Load_Cycle_Count        -O--CK   040   040   000    -    121645
+194 Temperature_Celsius     -O---K   038   060   000    -    38 (0 9 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   063   047   000    -    13023210
 197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967294
 198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967294
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 35 (device log contains only the most recent five errors)
+ATA Error Count: 37 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -124,6 +124,40 @@ ATA Error Count: 35 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 37 occurred at disk power-on lifetime: 4282 hours (178 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 cf 4a 11 ec  Error: UNC at LBA = 0x0c114acf = 202459855
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 c8 4a 11 ec 00      00:33:05.888  READ DMA
+  c8 00 08 c0 4a 11 ec 00      00:33:05.888  READ DMA
+  c8 00 00 00 4b 11 ec 00      00:33:05.887  READ DMA
+  c8 00 08 b8 4a 11 ec 00      00:33:05.928  READ DMA
+  c8 00 08 b0 4a 11 ec 00      00:33:05.923  READ DMA
+
+Error 36 occurred at disk power-on lifetime: 4282 hours (178 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 cf 4a 11 ec  Error: UNC at LBA = 0x0c114acf = 202459855
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 00 4a 11 ec 00      00:33:02.752  READ DMA
+  c8 00 00 f0 7b ba e0 00      00:33:02.739  READ DMA
+  c8 00 08 a8 12 01 ec 00      00:33:02.735  READ DMA
+  c8 00 18 50 20 05 ec 00      00:33:02.731  READ DMA
+  c8 00 00 78 c5 ad e0 00      00:33:02.721  READ DMA
 
 Error 35 occurred at disk power-on lifetime: 4238 hours (176 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -176,40 +210,6 @@ Error 33 occurred at disk power-on lifetime: 4238 hours (176 days + 14 hours)
   25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
   25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
 
-Error 32 occurred at disk power-on lifetime: 4238 hours (176 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 9c 93 91 40  Error: UNC at LBA = 0x0091939c = 9540508
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 97 93 91 40 00      00:00:59.820  READ DMA EXT
-  25 00 08 97 93 91 40 00      00:01:01.999  READ DMA EXT
-  25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
-  25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
-  25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
-
-Error 31 occurred at disk power-on lifetime: 4238 hours (176 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 9c 93 91 40  Error: UNC at LBA = 0x0091939c = 9540508
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 97 93 91 40 00      00:00:59.820  READ DMA EXT
-  25 00 08 8f 93 91 40 00      00:00:59.819  READ DMA EXT
-  25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
-  25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
-  25 00 08 8f 93 91 40 00      00:00:59.822  READ DMA EXT
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -229,7 +229,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 32 Celsius
+Current Temperature:                 38 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 

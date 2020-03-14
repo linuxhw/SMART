@@ -9,11 +9,11 @@ Rotation Rate:    5400 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Jul 21 16:33:49 2017 CDT
+Local Time is:    Wed Aug 30 10:37:28 2017 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -32,11 +32,11 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
-capabilities: 			 (0x5b) SMART execute Offline immediate.
+capabilities: 			 (0x53) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					Offline surface scan supported.
+					No Offline surface scan supported.
 					Self-test supported.
 					No Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -56,20 +56,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1715
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1717
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   082   060   030    -    174737793
-  9 Power_On_Hours          -O--CK   096   096   000    -    3715
+  7 Seek_Error_Rate         POSR--   082   060   030    -    175340356
+  9 Power_On_Hours          -O--CK   096   096   000    -    3736
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1706
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1708
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   070   070   000    -    30
-190 Airflow_Temperature_Cel -O---K   062   052   045    -    38 (Min/Max 23/38)
+190 Airflow_Temperature_Cel -O---K   068   052   045    -    32 (Min/Max 30/36)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    812
-193 Load_Cycle_Count        -O---K   077   077   000    -    47002
-194 Temperature_Celsius     -O-RC-   038   048   000    -    38 (0 20 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   061   057   000    -    95037478
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    813
+193 Load_Cycle_Count        -O---K   077   077   000    -    47292
+194 Temperature_Celsius     -O-RC-   032   048   000    -    32 (0 20 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   073   057   000    -    207461241
 197 Current_Pending_Sector  ----C-   100   100   000    -    0
 198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   200   145   000    -    13331
@@ -82,186 +82,138 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory Version 1
-SMART           Log Directory Version 1 [multi-sector log support]
-Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
-0x01       GPL,SL  R/O      1  Summary SMART error log
-0x02       GPL,SL  R/O      5  Comprehensive SMART error log
-0x03       GPL,SL  R/O      5  Ext. Comprehensive SMART error log
-0x06       GPL,SL  R/O      1  SMART self-test log
-0x07       GPL,SL  R/O      1  Extended self-test log
-0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
-0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
-0x21       GPL,SL  R/O      1  Write stream error log
-0x22       GPL,SL  R/O      1  Read stream error log
-0x23       GPL,SL  R/O      1  Delayed sector log [OBS-8]
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
-0xa0       GPL,SL  VS       1  Device vendor specific log
-0xa1       GPL,SL  VS      20  Device vendor specific log
-0xa2       GPL,SL  VS     101  Device vendor specific log
-0xa8       GPL,SL  VS      20  Device vendor specific log
-0xa9       GPL,SL  VS       1  Device vendor specific log
-0xe0       GPL,SL  R/W      1  SCT Command/Status
-0xe1       GPL,SL  R/W      1  SCT Data Transfer
-0xff       GPL     -    23040  Reserved
+General Purpose Log Directory not supported
 
-SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 755 (device log contains only the most recent 20 errors)
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      5  Comprehensive SMART error log
+0x03           SL  R/O      5  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07           SL  R/O      1  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x10           SL  R/O      1  SATA NCQ Queued Error log
+0x11           SL  R/O      1  SATA Phy Event Counters log
+0x20           SL  R/O      1  Streaming performance log [OBS-8]
+0x21           SL  R/O      1  Write stream error log
+0x22           SL  R/O      1  Read stream error log
+0x23           SL  R/O      1  Delayed sector log [OBS-8]
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa0           SL  VS       1  Device vendor specific log
+0xa1           SL  VS      20  Device vendor specific log
+0xa2           SL  VS     101  Device vendor specific log
+0xa8           SL  VS      20  Device vendor specific log
+0xa9           SL  VS       1  Device vendor specific log
+0xe0           SL  R/W      1  SCT Command/Status
+0xe1           SL  R/W      1  SCT Data Transfer
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 755 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 755 [14] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
+Error 755 occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 0f 71 fa a0 e0  Error: ICRC, ABRT 15 sectors at LBA = 0x00a0fa71 = 10549873
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 20 00 03 fa 00 a0 60 e0 00     00:03:48.084  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:48.084  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:48.083  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:48.083  SECURITY FREEZE LOCK
-  ef 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:48.083  SET FEATURES [Set transfer mode]
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 03 20 60 fa a0 e0 00      00:03:48.084  READ DMA EXT
+  c6 03 10 01 a5 a5 a0 00      00:03:48.084  SET MULTIPLE MODE
+  91 03 3f 01 a5 a5 af 00      00:03:48.083  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  f5 03 46 01 a5 a5 a0 00      00:03:48.083  SECURITY FREEZE LOCK
+  ef 03 46 01 a5 a5 a0 00      00:03:48.083  SET FEATURES [Set transfer mode]
 
-Error 754 [13] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
+Error 754 occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 0f 71 fa a0 e0  Error: ICRC, ABRT 15 sectors at LBA = 0x00a0fa71 = 10549873
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 20 00 03 fa 00 a0 60 e0 00     00:03:47.206  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:47.206  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:45.589  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:45.065  SECURITY FREEZE LOCK
-  ef 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:45.064  SET FEATURES [Set transfer mode]
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 03 20 60 fa a0 e0 00      00:03:47.206  READ DMA EXT
+  c6 03 10 01 a5 a5 a0 00      00:03:47.206  SET MULTIPLE MODE
+  91 03 3f 01 a5 a5 af 00      00:03:45.589  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  f5 03 46 01 a5 a5 a0 00      00:03:45.065  SECURITY FREEZE LOCK
+  ef 03 46 01 a5 a5 a0 00      00:03:45.064  SET FEATURES [Set transfer mode]
 
-Error 753 [12] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
+Error 753 occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 0f 71 fa a0 e0  Error: ICRC, ABRT 15 sectors at LBA = 0x00a0fa71 = 10549873
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 20 00 03 fa 00 a0 60 e0 00     00:03:44.030  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:44.029  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:45.589  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:45.065  SECURITY FREEZE LOCK
-  ef 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:45.064  SET FEATURES [Set transfer mode]
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 03 20 60 fa a0 e0 00      00:03:44.030  READ DMA EXT
+  c6 03 10 01 a5 a5 a0 00      00:03:44.029  SET MULTIPLE MODE
+  91 03 3f 01 a5 a5 af 00      00:03:45.589  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  f5 03 46 01 a5 a5 a0 00      00:03:45.065  SECURITY FREEZE LOCK
+  ef 03 46 01 a5 a5 a0 00      00:03:45.064  SET FEATURES [Set transfer mode]
 
-Error 752 [11] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
+Error 752 occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 0f 71 fa a0 e0  Error: ICRC, ABRT 15 sectors at LBA = 0x00a0fa71 = 10549873
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 20 00 03 fa 00 a0 60 e0 00     00:03:44.030  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:44.029  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:44.029  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:44.029  SECURITY FREEZE LOCK
-  ef 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:44.029  SET FEATURES [Set transfer mode]
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 03 20 60 fa a0 e0 00      00:03:44.030  READ DMA EXT
+  c6 03 10 01 a5 a5 a0 00      00:03:44.029  SET MULTIPLE MODE
+  91 03 3f 01 a5 a5 af 00      00:03:44.029  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  f5 03 46 01 a5 a5 a0 00      00:03:44.029  SECURITY FREEZE LOCK
+  ef 03 46 01 a5 a5 a0 00      00:03:44.029  SET FEATURES [Set transfer mode]
 
-Error 751 [10] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
+Error 751 occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 0f 71 fa a0 e0  Error: ICRC, ABRT 15 sectors at LBA = 0x00a0fa71 = 10549873
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 20 00 03 fa 00 a0 60 e0 00     00:03:40.850  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:40.849  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:40.849  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:40.849  SECURITY FREEZE LOCK
-  ef 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:40.849  SET FEATURES [Set transfer mode]
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 03 20 60 fa a0 e0 00      00:03:40.850  READ DMA EXT
+  c6 03 10 01 a5 a5 a0 00      00:03:40.849  SET MULTIPLE MODE
+  91 03 3f 01 a5 a5 af 00      00:03:40.849  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  f5 03 46 01 a5 a5 a0 00      00:03:40.849  SECURITY FREEZE LOCK
+  ef 03 46 01 a5 a5 a0 00      00:03:40.849  SET FEATURES [Set transfer mode]
 
-Error 750 [9] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+SMART Extended Self-test Log (GP Log 0x07) not supported
 
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 20 00 03 fa 00 a0 60 e0 00     00:03:40.850  READ DMA EXT
-  25 00 03 00 20 00 03 fa 00 a0 40 e0 00     00:03:40.849  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:40.849  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:40.849  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:40.849  SECURITY FREEZE LOCK
-
-Error 749 [8] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 2f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 47 sectors at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 80 00 03 fa 00 a0 40 e0 00     00:03:40.257  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:40.257  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:40.257  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:38.678  SECURITY FREEZE LOCK
-  ef 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:38.677  SET FEATURES [Set transfer mode]
-
-Error 748 [7] occurred at disk power-on lifetime: 3626 hours (151 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 4f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 79 sectors at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 80 00 03 fa 00 a0 40 e0 00     00:03:37.096  READ DMA EXT
-  c6 00 03 00 10 00 02 39 00 8c b0 a0 00     00:03:37.096  SET MULTIPLE MODE
-  91 00 03 00 3f 00 02 3d 00 8c 61 af 00     00:03:37.096  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  f5 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:38.678  SECURITY FREEZE LOCK
-  ef 00 03 00 46 00 02 39 00 8c b0 a0 00     00:03:38.677  SET FEATURES [Set transfer mode]
-
-SMART Extended Self-test Log Version: 1 (1 sectors)
+SMART Self-test log structure revision number 1
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
@@ -279,7 +231,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 38 Celsius
+Current Temperature:                 32 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -287,18 +239,18 @@ SCT Data Table command not supported
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            5  Vendor specific
+0x8003  2            4  Vendor specific
 0x8004  2            0  Vendor specific
 

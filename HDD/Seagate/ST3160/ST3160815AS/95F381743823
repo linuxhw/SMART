@@ -7,7 +7,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Jan 30 13:00:09 2018 EET
+Local Time is:    Tue Feb 27 08:36:30 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   099   006    -    241328977
-  3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1068
+  1 Raw_Read_Error_Rate     POSR--   120   099   006    -    242805608
+  3 Spin_Up_Time            PO----   097   097   000    -    0
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1089
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   085   061   030    -    374506718
-  9 Power_On_Hours          -O--CK   074   074   000    -    23195
+  7 Seek_Error_Rate         POSR--   085   061   030    -    375605893
+  9 Power_On_Hours          -O--CK   074   074   000    -    23438
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1067
-187 Reported_Uncorrect      -O--CK   095   095   000    -    5
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1088
+187 Reported_Uncorrect      -O--CK   094   094   000    -    6
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   073   051   045    -    27 (Min/Max 18/29)
-194 Temperature_Celsius     -O---K   027   049   000    -    27 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   074   066   000    -    52002766
+190 Airflow_Temperature_Cel -O---K   071   051   045    -    29 (Min/Max 26/30)
+194 Temperature_Celsius     -O---K   029   049   000    -    29 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   081   066   000    -    115207995
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 394 (device log contains only the most recent 20 errors)
+Device Error Count: 395 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,23 @@ Device Error Count: 394 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 395 [14] occurred at disk power-on lifetime: 6898 hours (287 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 0d 24 f0 0f f0 e0 00  Error: UNC at LBA = 0xd24f00ff0 = 56454287344
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 a8 00 0d 23 00 0f 1d e0 00     00:21:03.530  READ DMA EXT
+  c8 00 00 00 01 00 0d 23 00 0f 1c ed 00     00:21:03.522  READ DMA
+  25 00 00 04 00 00 0d 1f 00 0f 1c e0 00     00:21:03.521  READ DMA EXT
+  25 00 00 03 ff 00 0d 1b 00 0f 1d e0 00     00:21:03.512  READ DMA EXT
+  c8 00 00 00 01 00 0d 1b 00 0f 1c ed 00     00:21:03.504  READ DMA
 
 Error 394 [13] occurred at disk power-on lifetime: 6898 hours (287 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -238,23 +255,6 @@ Error 388 [7] occurred at disk power-on lifetime: 6898 hours (287 days + 10 hour
   ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:21:03.512  SET FEATURES [Set transfer mode]
   27 00 00 00 00 00 00 00 00 00 00 e0 00     00:21:06.611  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 387 [6] occurred at disk power-on lifetime: 6898 hours (287 days + 10 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 0d 24 f0 0f f0 e0 00  Error: UNC at LBA = 0xd24f00ff0 = 56454287344
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 02 a8 00 0d 23 00 0f 1d e0 00     00:21:03.530  READ DMA EXT
-  c8 00 00 00 01 00 0d 23 00 0f 1c ed 00     00:21:03.522  READ DMA
-  25 00 00 04 00 00 0d 1f 00 0f 1c e0 00     00:21:03.521  READ DMA EXT
-  25 00 00 03 ff 00 0d 1b 00 0f 1d e0 00     00:21:03.512  READ DMA EXT
-  c8 00 00 00 01 00 0d 1b 00 0f 1c ed 00     00:21:03.504  READ DMA
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 
 SMART Selective self-test log data structure revision number 1
@@ -274,7 +274,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

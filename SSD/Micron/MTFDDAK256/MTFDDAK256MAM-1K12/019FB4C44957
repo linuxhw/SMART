@@ -10,28 +10,28 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Dec 17 23:46:18 2015 EET
+Local Time is:    Sun Dec 20 23:52:49 2015 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     0 (reserved)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 1190) seconds.
+data collection: 		(  280) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -62,13 +62,13 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    3
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    911
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1152
+  9 Power_On_Hours          -O--CK   100   100   000    -    928
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1178
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    79
 173 Unknown_Attribute       PO--CK   100   100   010    -    7
-174 Unknown_Attribute       -O--CK   100   100   000    -    86
+174 Unknown_Attribute       -O--CK   100   100   000    -    90
 181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    2452440220007
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
@@ -217,11 +217,13 @@ Error -4 occurred at disk power-on lifetime: 837 hours (34 days + 21 hours)
   60 02 10 db 10 1a 40 00  34d+21:19:00.000  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Vendor (0xff)       Completed without error       00%       928         -
+# 2  Extended offline    Completed without error       00%       917         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Not_testing
+    1        0        0  Completed [00% left] (278142984-278208519)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -233,7 +235,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   0
-Device State:                        Active (0)
+Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                  0 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
@@ -243,7 +245,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (203)
+Temperature History Size (Index):    478 (225)
 
 SCT Error Recovery Control:
            Read:     40 (4,0 seconds)
@@ -252,12 +254,12 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page Offset Size         Value  Description
   1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4             1152  Lifetime Power-On Resets
-  1  0x010  4              911  Power-on Hours
-  1  0x018  6       2670823241  Logical Sectors Written
-  1  0x020  6         49230619  Number of Write Commands
-  1  0x028  6       4681016169  Logical Sectors Read
-  1  0x030  6         64102254  Number of Read Commands
+  1  0x008  4             1178  Lifetime Power-On Resets
+  1  0x010  4              928  Power-on Hours
+  1  0x018  6       2733577121  Logical Sectors Written
+  1  0x020  6         49339921  Number of Write Commands
+  1  0x028  6       4689448854  Logical Sectors Read
+  1  0x030  6         64177653  Number of Read Commands
   4  =====  =                =  == General Errors Statistics (rev 1) ==
   4  0x008  4            11827  Number of Reported Uncorrectable Errors
   4  0x010  4                0  Resets Between Cmd Acceptance and Completion
@@ -286,5 +288,5 @@ Page Offset Size         Value  Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

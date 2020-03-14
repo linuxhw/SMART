@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 0
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Wed Oct 17 23:27:49 2018 MSK
+Local Time is:    Sun Oct 28 14:59:34 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -57,19 +57,19 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    63
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    90
   3 Spin_Up_Time            POS---   252   079   025    -    2000
-  4 Start_Stop_Count        -O--CK   070   070   000    -    30931
+  4 Start_Stop_Count        -O--CK   070   070   000    -    31004
   5 Reallocated_Sector_Ct   PO--CK   053   053   010    -    442
   7 Seek_Error_Rate         POSR--   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   041   041   000    -    30461
- 10 Spin_Retry_Count        -O--CK   100   100   051    -    36
- 12 Power_Cycle_Count       -O--CK   087   087   000    -    13507
-191 G-Sense_Error_Rate      -O--CK   088   088   000    -    125982
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1683
-194 Temperature_Celsius     -O---K   097   067   000    -    47 (Min/Max 1/57)
-195 Hardware_ECC_Recovered  -O-RC-   001   001   000    -    59073
+  9 Power_On_Hours          -O--CK   040   040   000    -    30625
+ 10 Spin_Retry_Count        -O--CK   100   100   051    -    37
+ 12 Power_Cycle_Count       -O--CK   087   087   000    -    13548
+191 G-Sense_Error_Rate      -O--CK   088   088   000    -    126141
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1692
+194 Temperature_Celsius     -O---K   094   067   000    -    48 (Min/Max 1/57)
+195 Hardware_ECC_Recovered  -O-RC-   001   001   000    -    91356
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--C-   252   100   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
@@ -169,12 +169,13 @@ Error 1 [0] occurred at disk power-on lifetime: 2674 hours (111 days + 10 hours)
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     30597         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Not_testing
+    1        0        0  Interrupted [00% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -187,8 +188,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    47 Celsius
-Power Cycle Min/Max Temperature:     20/47 Celsius
+Current Temperature:                    48 Celsius
+Power Cycle Min/Max Temperature:     23/50 Celsius
 Lifetime    Min/Max Temperature:      0/59 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -197,7 +198,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     15/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (90)
+Temperature History Size (Index):    128 (117)
 
 SCT Error Recovery Control:
            Read: Disabled

@@ -3,27 +3,30 @@ Model Family:     Western Digital Caviar
 Device Model:     WDC WD800BB-00JKC0
 Serial Number:    --
 Firmware Version: 05.01C05
-User Capacity:    80 026 361 856 bytes [80,0 GB]
+User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Fri Aug  3 02:21:43 2018 MSK
+Local Time is:    Sat Mar 16 19:15:54 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Unknown SCT Status format version 1, should be 2 or 3.
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: PASSED
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
+See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,16 +62,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   164   159   021    -    2758
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1622
-  5 Reallocated_Sector_Ct   PO--CK   186   186   140    -    109
-  7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   083   083   000    -    12721
+  3 Spin_Up_Time            PO----   163   159   021    -    2841
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1864
+  5 Reallocated_Sector_Ct   PO--CK   117   117   140    NOW  661
+  7 Seek_Error_Rate         POSR--   200   199   051    -    10
+  9 Power_On_Hours          -O--CK   083   083   000    -    13078
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1606
-194 Temperature_Celsius     -O---K   089   070   000    -    54
-196 Reallocated_Event_Count -O--CK   194   194   000    -    6
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1848
+194 Temperature_Celsius     -O---K   102   070   000    -    41
+196 Reallocated_Event_Count -O--CK   052   052   000    -    148
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,7 +90,105 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 246 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 246 occurred at disk power-on lifetime: 13072 hours (544 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 01 ef 97 47 e9  Device Fault; Error: ABRT at LBA = 0x094797ef = 155686895
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ca 00 00 c0 97 47 09 28      00:11:27.825  WRITE DMA
+  ca 00 00 c0 96 47 09 28      00:11:27.815  WRITE DMA
+  ca 00 00 c0 95 47 09 28      00:11:27.795  WRITE DMA
+  ca 00 c8 00 8d 47 09 28      00:11:27.785  WRITE DMA
+  ca 00 00 00 8c 47 09 28      00:11:27.770  WRITE DMA
+
+Error 245 occurred at disk power-on lifetime: 13072 hours (544 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 01 4c ad 4e e9  Device Fault; Error: ABRT at LBA = 0x094ead4c = 156151116
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ca 00 00 08 ad 4e 09 28      00:09:48.825  WRITE DMA
+  ca 00 00 08 ac 4e 09 28      00:09:48.795  WRITE DMA
+  ca 00 00 78 33 15 08 28      00:09:48.770  WRITE DMA
+  ca 00 00 08 ab 4e 09 28      00:09:48.745  WRITE DMA
+  ca 00 00 08 aa 4e 09 28      00:09:48.725  WRITE DMA
+
+Error 244 occurred at disk power-on lifetime: 13072 hours (544 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 01 cc a6 4e e9  Device Fault; Error: ABRT at LBA = 0x094ea6cc = 156149452
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ca 00 00 e0 a5 4e 09 28      00:09:48.395  WRITE DMA
+  f8 00 00 00 00 00 00 28      00:09:48.395  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 00 28      00:09:48.390  IDENTIFY DEVICE
+  ef 03 42 00 00 00 00 28      00:09:48.390  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 00 28      00:09:48.390  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 243 occurred at disk power-on lifetime: 13072 hours (544 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 01 cc a6 4e e9  Device Fault; Error: ABRT at LBA = 0x094ea6cc = 156149452
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ca 00 00 e0 a5 4e 09 28      00:09:48.280  WRITE DMA
+  ca 00 68 98 7f 48 09 28      00:09:48.270  WRITE DMA
+  ca 00 00 98 7e 48 09 28      00:09:48.255  WRITE DMA
+  ca 00 00 98 7d 48 09 28      00:09:48.245  WRITE DMA
+  ca 00 00 98 7c 48 09 28      00:09:48.235  WRITE DMA
+
+Error 242 occurred at disk power-on lifetime: 13072 hours (544 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 01 cf 98 4b e9  Device Fault; Error: ABRT at LBA = 0x094b98cf = 155949263
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ca 00 00 78 98 4b 09 28      00:07:45.430  WRITE DMA
+  ca 00 00 78 97 4b 09 28      00:07:45.400  WRITE DMA
+  ca 00 00 98 b1 4c 09 28      00:07:45.380  WRITE DMA
+  ca 00 00 78 96 4b 09 28      00:07:45.355  WRITE DMA
+  ca 00 00 78 95 4b 09 28      00:07:45.335  WRITE DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -111,6 +212,8 @@ Unknown SCT Status format version 1, should be 2 or 3.
 SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

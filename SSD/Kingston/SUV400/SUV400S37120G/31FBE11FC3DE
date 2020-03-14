@@ -10,7 +10,7 @@ Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Dec 11 12:04:15 2019 IST
+Local Time is:    Wed Dec 11 14:15:33 2019 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,10 +63,10 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    5086
+  9 Power_On_Hours          -O--CK   100   100   000    -    5088
  12 Power_Cycle_Count       -O--CK   100   100   000    -    492
-100 Unknown_Attribute       -O--CK   100   100   000    -    1414512
-101 Unknown_Attribute       -O--CK   100   100   000    -    212592
+100 Unknown_Attribute       -O--CK   100   100   000    -    1415120
+101 Unknown_Attribute       -O--CK   100   100   000    -    212720
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
@@ -78,7 +78,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 180 Unused_Rsvd_Blk_Cnt_Tot -O----   100   100   000    -    688
 183 Runtime_Bad_Block       -O--CK   099   099   000    -    9
 187 Reported_Uncorrect      PO--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   035   100   000    -    35 (Min/Max 19/43)
+194 Temperature_Celsius     -O---K   033   100   000    -    33 (Min/Max 19/43)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
@@ -86,10 +86,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
 204 Soft_ECC_Correction     -O--CK   100   100   000    -    0
 231 Temperature_Celsius     -O--CK   098   098   000    -    2
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    2044
-234 Unknown_Attribute       -O--CK   100   100   000    -    981
-241 Total_LBAs_Written      -O--CK   100   100   000    -    1677
-242 Total_LBAs_Read         -O--CK   100   100   000    -    2008
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    2046
+234 Unknown_Attribute       -O--CK   100   100   000    -    982
+241 Total_LBAs_Written      -O--CK   100   100   000    -    1678
+242 Total_LBAs_Read         -O--CK   100   100   000    -    2010
 250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -143,7 +143,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
+Current Temperature:                    33 Celsius
 Power Cycle Min/Max Temperature:     27/36 Celsius
 Lifetime    Min/Max Temperature:     19/43 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -154,7 +154,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (402)
+Temperature History Size (Index):    478 (55)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -164,19 +164,19 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4             492  ---  Lifetime Power-On Resets
-0x01  0x010  4            5086  ---  Power-on Hours
-0x01  0x018  6      3517875334  ---  Logical Sectors Written
-0x01  0x020  6        65571358  ---  Number of Write Commands
-0x01  0x028  6      4212497802  ---  Logical Sectors Read
-0x01  0x030  6        41497417  ---  Number of Read Commands
-0x01  0x038  6     18312335130  ---  Date and Time TimeStamp
+0x01  0x010  4            5088  ---  Power-on Hours
+0x01  0x018  6      3519861193  ---  Logical Sectors Written
+0x01  0x020  6        65588906  ---  Number of Write Commands
+0x01  0x028  6      4216403084  ---  Logical Sectors Read
+0x01  0x030  6        41554875  ---  Number of Read Commands
+0x01  0x038  6     18320213230  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            6131  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            6135  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              35  -D-  Current Temperature
+0x05  0x008  1              34  -D-  Current Temperature
 0x05  0x010  1               -  -D-  Average Short Term Temperature
 0x05  0x018  1               0  -D-  Average Long Term Temperature
 0x05  0x020  1              43  ---  Highest Temperature
@@ -190,7 +190,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  -D-  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6131  ---  Number of Hardware Resets
+0x06  0x008  4            6135  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
@@ -203,5 +203,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4           32  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           36  Device-to-host register FISes sent due to a COMRESET
+
+
 

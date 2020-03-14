@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Mon Jan  2 18:47:03 2017 MSK
+Local Time is:    Fri Jun  2 20:31:02 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,22 +59,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
-  3 Spin_Up_Time            PO---K   223   100   033    -    1
-  4 Start_Stop_Count        -O--CK   099   099   000    -    2504
+  3 Spin_Up_Time            PO---K   225   100   033    -    1
+  4 Start_Stop_Count        -O--CK   099   099   000    -    2610
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    4 (0 1)
   7 Seek_Error_Rate         POSR--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--CK   077   077   000    -    10339
+  9 Power_On_Hours          -O--CK   077   077   000    -    10460
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    2482
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    2588
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    5308628
-188 Command_Timeout         -O--CK   100   098   000    -    8590131232
-190 Airflow_Temperature_Cel -O---K   051   048   000    -    49 (Min/Max 49/50)
+187 Reported_Uncorrect      -O--CK   001   001   000    -    5374233
+188 Command_Timeout         -O--CK   100   098   000    -    8590131293
+190 Airflow_Temperature_Cel -O---K   058   046   000    -    42 (Min/Max 37/42)
 191 G-Sense_Error_Rate      -O-R--   100   095   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    8323199
-193 Load_Cycle_Count        -O--CK   094   094   000    -    60907
-194 Temperature_Celsius     -O---K   112   100   000    -    49 (Min/Max 6/52)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    8519810
+193 Load_Cycle_Count        -O--CK   094   094   000    -    68811
+194 Temperature_Celsius     -O---K   130   100   000    -    42 (Min/Max 6/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 216 (device log contains only the most recent 4 errors)
+Device Error Count: 287 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,7 +118,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 216 [3] occurred at disk power-on lifetime: 10338 hours (430 days + 18 hours)
+Error 287 [2] occurred at disk power-on lifetime: 10459 hours (435 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 ff ff ff ff e0 00  Error: IDNF 1 sectors at LBA = 0xffffffff = 4294967295
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 ff ff ff ff e0 00     00:00:07.600  READ DMA EXT
+  27 00 00 01 c0 ff ff ff 00 00 fe e0 00     00:00:07.600  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 c0 00 00 03 ff ff ff a0 00     00:00:07.600  IDENTIFY DEVICE
+  27 00 00 01 c0 00 00 03 ff ff ff e0 00     00:00:07.600  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 7b 00 00 00 00 00 03 a0 00     00:00:07.600  IDENTIFY DEVICE
+
+Error 286 [1] occurred at disk power-on lifetime: 10458 hours (435 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -135,7 +152,7 @@ Error 216 [3] occurred at disk power-on lifetime: 10338 hours (430 days + 18 hou
   27 00 00 01 c0 00 00 03 ff ff ff e0 00     00:00:07.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   ec 03 00 00 7b 00 00 00 00 00 03 a0 00     00:00:07.700  IDENTIFY DEVICE
 
-Error 215 [2] occurred at disk power-on lifetime: 10338 hours (430 days + 18 hours)
+Error 285 [0] occurred at disk power-on lifetime: 10458 hours (435 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -146,13 +163,13 @@ Error 215 [2] occurred at disk power-on lifetime: 10338 hours (430 days + 18 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 ff ff ff ff e0 00     00:00:07.700  READ DMA EXT
-  27 00 00 01 c0 ff ff ff 00 00 fe e0 00     00:00:07.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 c0 00 00 03 ff ff ff a0 00     00:00:07.700  IDENTIFY DEVICE
-  27 00 00 01 c0 00 00 03 ff ff ff e0 00     00:00:07.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 00 7b 00 00 00 00 00 03 a0 00     00:00:07.700  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 ff ff ff ff e0 00     00:00:07.800  READ DMA EXT
+  27 00 00 01 c0 ff ff ff 00 00 fe e0 00     00:00:07.800  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 c0 00 00 03 ff ff ff a0 00     00:00:07.800  IDENTIFY DEVICE
+  27 00 00 01 c0 00 00 03 ff ff ff e0 00     00:00:07.800  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 7b 00 00 00 00 00 03 a0 00     00:00:07.800  IDENTIFY DEVICE
 
-Error 214 [1] occurred at disk power-on lifetime: 10338 hours (430 days + 18 hours)
+Error 284 [3] occurred at disk power-on lifetime: 10458 hours (435 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -163,28 +180,11 @@ Error 214 [1] occurred at disk power-on lifetime: 10338 hours (430 days + 18 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 ff ff ff ff e0 00     00:00:08.000  READ DMA EXT
-  27 00 00 01 c0 ff ff ff 00 00 fe e0 00     00:00:08.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 c0 00 00 03 ff ff ff a0 00     00:00:08.000  IDENTIFY DEVICE
-  27 00 00 01 c0 00 00 03 ff ff ff e0 00     00:00:08.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 00 7b 00 00 00 00 00 03 a0 00     00:00:08.000  IDENTIFY DEVICE
-
-Error 213 [0] occurred at disk power-on lifetime: 10337 hours (430 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 ff ff ff ff e0 00  Error: IDNF 1 sectors at LBA = 0xffffffff = 4294967295
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 ff ff ff ff e0 00     00:00:08.500  READ DMA EXT
-  27 00 00 01 c0 ff ff ff 00 00 fe e0 00     00:00:08.500  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 c0 00 00 03 ff ff ff a0 00     00:00:08.500  IDENTIFY DEVICE
-  27 00 00 01 c0 00 00 03 ff ff ff e0 00     00:00:08.500  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 03 00 00 7b 00 00 00 00 00 03 a0 00     00:00:08.500  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 ff ff ff ff e0 00     00:00:07.900  READ DMA EXT
+  27 00 00 01 c0 ff ff ff 00 00 fe e0 00     00:00:07.900  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 c0 00 00 03 ff ff ff a0 00     00:00:07.900  IDENTIFY DEVICE
+  27 00 00 01 c0 00 00 03 ff ff ff e0 00     00:00:07.900  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 7b 00 00 00 00 00 03 a0 00     00:00:07.900  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -205,9 +205,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    49 Celsius
-Power Cycle Min/Max Temperature:     49/50 Celsius
-Lifetime    Min/Max Temperature:      6/52 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     37/42 Celsius
+Lifetime    Min/Max Temperature:      6/54 Celsius
 Lifetime    Average Temperature:        36 Celsius
 Under/Over Temperature Limit Count:   0/0
 

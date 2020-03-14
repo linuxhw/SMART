@@ -7,7 +7,7 @@ User Capacity:    20 576 747 520 bytes [20,5 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
-Local Time is:    Thu Jul 14 19:02:43 2016 EEST
+Local Time is:    Mon May 20 03:28:25 2019 EEST
 
 ==> WARNING: IBM Deskstar 40GV and 75GXP drives may need upgraded SMART firmware.
 Please see http://haque.net/dtla_update/
@@ -25,12 +25,11 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 241)	Self-test routine in progress...
+					10% of test remaining.
 Total time to complete Offline 
 data collection: 		( 1559) seconds.
 Offline data collection
@@ -55,19 +54,19 @@ recommended polling time: 	 (  15) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   099   099   060    -    65537
-  2 Throughput_Performance  P-S---   119   119   050    -    408
-  3 Spin_Up_Time            POS---   126   126   024    -    117 (Average 89)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    1729
+  1 Raw_Read_Error_Rate     PO-R--   086   086   060    -    720998
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Spin_Up_Time            POS---   121   121   024    -    107 (Average 107)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    1909
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    2
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   125   125   020    -    36
-  9 Power_On_Hours          -O--C-   091   091   000    -    66613
+  9 Power_On_Hours          -O--C-   091   091   000    -    67083
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1576
-192 Power-Off_Retract_Count -O--CK   099   099   050    -    1729
-193 Load_Cycle_Count        -O--C-   099   099   050    -    1729
-194 Temperature_Celsius     -O----   161   161   000    -    34
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1756
+192 Power-Off_Retract_Count -O--CK   099   099   050    -    1909
+193 Load_Cycle_Count        -O--C-   099   099   050    -    1909
+194 Temperature_Celsius     -O----   152   152   000    -    36
 196 Reallocated_Event_Count -O--CK   100   100   000    -    2
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -81,8 +80,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 
 Read SMART Log Directory failed: scsi error aborted command
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
@@ -191,13 +189,16 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%       716         -
+# 1  Extended offline    Completed without error       00%      1529         -
+# 2  Extended offline    Completed without error       00%      1510         -
+# 3  Extended offline    Completed without error       00%      1206         -
+# 4  Extended offline    Completed without error       00%       716         -
 
 Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

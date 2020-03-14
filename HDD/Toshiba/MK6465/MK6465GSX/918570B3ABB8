@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Nov 24 07:12:30 2016 CET
+Local Time is:    Sat Sep 16 14:15:28 2017 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,24 +63,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   099   050    -    0
   2 Throughput_Performance  POS---   100   100   050    -    0
-  3 Spin_Up_Time            PO----   100   100   002    -    2112
-  4 Start_Stop_Count        -O--CK   100   100   000    -    2163
+  3 Spin_Up_Time            PO----   100   100   002    -    2117
+  4 Start_Stop_Count        -O--CK   100   100   000    -    2787
   5 Reallocated_Sector_Ct   PO--CK   001   001   010    NOW  2047
   7 Seek_Error_Rate         POSR--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   091   091   000    -    3963
- 10 Spin_Retry_Count        PO--C-   143   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1964
-183 Runtime_Bad_Block       -O---K   100   100   001    -    0
+  9 Power_On_Hours          -O--CK   089   089   000    -    4440
+ 10 Spin_Retry_Count        PO--C-   155   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2111
+183 Runtime_Bad_Block       -O---K   100   100   001    -    8
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 185 Unknown_Attribute       -O--CK   100   100   001    -    65535
-187 Reported_Uncorrect      -O--CK   001   001   000    -    20500
+187 Reported_Uncorrect      -O--CK   001   001   000    -    20503
 188 Command_Timeout         -O--CK   100   060   000    -    53
 189 High_Fly_Writes         -O-RCK   100   100   001    -    0
-190 Airflow_Temperature_Cel -O---K   066   041   045    Past 34 (Min/Max 25/34)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    316
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    5636182
-193 Load_Cycle_Count        -O--CK   095   095   000    -    57622
+190 Airflow_Temperature_Cel -O---K   058   041   045    Past 42 (Min/Max 24/42)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    317
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    6488163
+193 Load_Cycle_Count        -O--CK   093   093   000    -    75567
 196 Reallocated_Event_Count -O--CK   100   100   000    -    252
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 22090 (device log contains only the most recent 256 errors)
+Device Error Count: 22254 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,92 +124,41 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 22090 [73] occurred at disk power-on lifetime: 3903 hours (162 days + 15 hours)
+Error 22254 [237] occurred at disk power-on lifetime: 4435 hours (184 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 88 00 00 00 3e f3 55 60 00  Error: ABRT at LBA = 0x003ef355 = 4125525
+  04 -- 41 00 38 00 00 00 06 de 22 60 00  Error: ABRT at LBA = 0x0006de22 = 450082
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 02 00 00 c0 00 00 00 56 48 00 40 08     00:01:39.171  READ FPDMA QUEUED
-  60 00 08 00 b8 00 00 41 00 08 80 40 08     00:01:38.275  READ FPDMA QUEUED
-  61 04 78 00 b0 00 00 24 c4 22 18 40 08     00:01:38.127  WRITE FPDMA QUEUED
-  60 00 20 00 a8 00 00 2d 96 28 28 40 08     00:01:38.126  READ FPDMA QUEUED
-  61 00 10 00 a0 00 00 12 8a a8 10 40 08     00:01:38.125  WRITE FPDMA QUEUED
+  61 00 08 00 38 00 00 00 06 de 20 40 08     00:02:29.719  WRITE FPDMA QUEUED
+  61 01 28 00 30 00 00 01 04 2f 40 40 08     00:02:29.719  WRITE FPDMA QUEUED
+  61 00 28 00 28 00 00 00 06 f6 78 40 08     00:02:29.719  WRITE FPDMA QUEUED
+  61 00 08 00 20 00 00 00 06 f2 d8 40 08     00:02:29.719  WRITE FPDMA QUEUED
+  61 00 08 00 18 00 00 00 06 f1 68 40 08     00:02:29.719  WRITE FPDMA QUEUED
 
-Error 22089 [72] occurred at disk power-on lifetime: 3850 hours (160 days + 10 hours)
+Error 22253 [236] occurred at disk power-on lifetime: 4435 hours (184 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 41 5b 37 41 5b cf e0 00  Error: ABRT at LBA = 0x415b37415bcf = 71860024859599
+  04 -- 41 00 b0 00 00 00 06 de 22 60 00  Error: ABRT at LBA = 0x0006de22 = 450082
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 00 00 00 80 41 5b 37 41 5b 50 e0 00     00:02:17.266  WRITE DMA
-  ca 00 00 00 e8 81 1b 37 41 5a 50 e0 00     00:02:15.665  WRITE DMA
-  c8 00 00 00 08 41 5a 3f 81 1b 30 e0 00     00:02:15.665  READ DMA
-  ca 00 00 00 08 41 5a 27 41 5a 38 e0 00     00:02:15.654  WRITE DMA
-  ca 00 00 00 08 41 5a 17 41 5a 20 e0 00     00:02:15.642  WRITE DMA
+  61 00 08 00 d0 00 00 00 06 f1 68 40 08     00:02:25.336  WRITE FPDMA QUEUED
+  61 00 08 00 c8 00 00 00 06 f2 d8 40 08     00:02:25.336  WRITE FPDMA QUEUED
+  61 00 28 00 c0 00 00 00 06 f6 78 40 08     00:02:25.336  WRITE FPDMA QUEUED
+  61 01 28 00 b8 00 00 01 04 2f 40 40 08     00:02:25.336  WRITE FPDMA QUEUED
+  61 00 08 00 b0 00 00 00 06 de 20 40 08     00:02:25.336  WRITE FPDMA QUEUED
 
-Error 22088 [71] occurred at disk power-on lifetime: 3850 hours (160 days + 10 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 02 00 00 00 00 41 52 cf e0 00  Error: ABRT at LBA = 0x004152cf = 4281039
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 10 00 02 58 00 00 00 41 52 78 e0 00     00:02:06.325  WRITE DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:02:06.325  SET FEATURES [Enable SATA feature]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:02:06.324  IDENTIFY DEVICE
-  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:02:06.324  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:02:06.324  SET FEATURES [Enable SATA feature]
-
-Error 22087 [70] occurred at disk power-on lifetime: 3850 hours (160 days + 10 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 02 00 00 00 00 41 52 cf e0 00  Error: ABRT at LBA = 0x004152cf = 4281039
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 10 00 02 58 00 00 00 41 52 78 e0 00     00:02:02.358  WRITE DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:02:02.358  SET FEATURES [Enable SATA feature]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:02:02.357  IDENTIFY DEVICE
-  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:02:02.357  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:02:02.357  SET FEATURES [Enable SATA feature]
-
-Error 22086 [69] occurred at disk power-on lifetime: 3850 hours (160 days + 10 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 02 00 00 00 00 41 52 cf e0 00  Error: ABRT at LBA = 0x004152cf = 4281039
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 10 00 02 58 00 00 00 41 52 78 e0 00     00:01:55.998  WRITE DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:01:55.997  SET FEATURES [Enable SATA feature]
-  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:01:55.997  IDENTIFY DEVICE
-  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:01:55.997  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:01:55.996  SET FEATURES [Enable SATA feature]
-
-Error 22085 [68] occurred at disk power-on lifetime: 3850 hours (160 days + 10 hours)
+Error 22252 [235] occurred at disk power-on lifetime: 4435 hours (184 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -220,13 +169,13 @@ Error 22085 [68] occurred at disk power-on lifetime: 3850 hours (160 days + 10 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ff ff ff ff ff ff ff ff ff ff ff ff 0c     00:01:55.739  [VENDOR SPECIFIC]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:01:55.436  [RESERVED]
-  ca 00 00 00 58 41 52 6f 41 52 78 e0 00     00:01:48.666  WRITE DMA
-  ca 00 00 00 20 41 52 47 41 52 50 e0 00     00:01:48.655  WRITE DMA
-  ca 00 00 00 20 41 52 1f 41 52 28 e0 00     00:01:48.644  WRITE DMA
+  ff ff ff ff ff ff ff ff ff ff ff ff 0c     00:02:25.071  [VENDOR SPECIFIC]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:02:24.764  [RESERVED]
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:24.762  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:24.761  READ LOG DMA EXT
+  61 01 28 00 18 00 00 01 04 2f 40 40 08     00:02:21.678  WRITE FPDMA QUEUED
 
-Error 22084 [67] occurred at disk power-on lifetime: 3850 hours (160 days + 10 hours)
+Error 22251 [234] occurred at disk power-on lifetime: 4435 hours (184 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -237,28 +186,79 @@ Error 22084 [67] occurred at disk power-on lifetime: 3850 hours (160 days + 10 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:01:55.436  [RESERVED]
-  ca 00 00 00 58 41 52 6f 41 52 78 e0 00     00:01:48.666  WRITE DMA
-  ca 00 00 00 20 41 52 47 41 52 50 e0 00     00:01:48.655  WRITE DMA
-  ca 00 00 00 20 41 52 1f 41 52 28 e0 00     00:01:48.644  WRITE DMA
-  ca 00 00 00 18 41 51 bf 41 52 08 e0 00     00:01:48.632  WRITE DMA
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:02:24.764  [RESERVED]
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:24.762  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:24.761  READ LOG DMA EXT
+  61 01 28 00 18 00 00 01 04 2f 40 40 08     00:02:21.678  WRITE FPDMA QUEUED
+  61 00 28 00 10 00 00 00 06 f6 78 40 08     00:02:20.493  WRITE FPDMA QUEUED
 
-Error 22083 [66] occurred at disk power-on lifetime: 3850 hours (160 days + 10 hours)
+Error 22250 [233] occurred at disk power-on lifetime: 4435 hours (184 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 41 52 6f 41 52 cf e0 00  Error: ABRT at LBA = 0x41526f4152cf = 71822309675727
+  04 -- 01 00 70 00 00 00 06 de 22 60 00  Error: ABRT at LBA = 0x0006de22 = 450082
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 00 00 00 58 41 52 6f 41 52 78 e0 00     00:01:48.666  WRITE DMA
-  ca 00 00 00 20 41 52 47 41 52 50 e0 00     00:01:48.655  WRITE DMA
-  ca 00 00 00 20 41 52 1f 41 52 28 e0 00     00:01:48.644  WRITE DMA
-  ca 00 00 00 18 41 51 bf 41 52 08 e0 00     00:01:48.632  WRITE DMA
-  ca 00 00 00 08 41 51 af 41 51 b8 e0 00     00:01:48.621  WRITE DMA
+  61 01 28 00 18 00 00 01 04 2f 40 40 08     00:02:21.678  WRITE FPDMA QUEUED
+  61 00 28 00 10 00 00 00 06 f6 78 40 08     00:02:20.493  WRITE FPDMA QUEUED
+  61 00 08 00 08 00 00 00 06 f2 d8 40 08     00:02:20.470  WRITE FPDMA QUEUED
+  61 00 08 00 00 00 00 00 06 f1 68 40 08     00:02:20.469  WRITE FPDMA QUEUED
+  61 00 08 00 f0 00 00 00 06 f0 c0 40 08     00:02:20.468  WRITE FPDMA QUEUED
+
+Error 22249 [232] occurred at disk power-on lifetime: 4297 hours (179 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  30 -- 50 00 01 00 00 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ff ff ff ff ff ff ff ff ff ff ff ff 0c     00:00:23.881  [VENDOR SPECIFIC]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:23.579  [RESERVED]
+  c8 00 00 00 3c 60 86 c3 60 86 c4 e0 00     00:00:21.084  READ DMA
+  c8 00 00 00 04 60 86 bf 60 86 c0 e0 00     00:00:21.084  READ DMA
+  c8 00 00 00 3b 60 86 84 60 86 85 e0 00     00:00:21.083  READ DMA
+
+Error 22248 [231] occurred at disk power-on lifetime: 4297 hours (179 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  30 -- 00 00 01 00 00 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:23.579  [RESERVED]
+  c8 00 00 00 3c 60 86 c3 60 86 c4 e0 00     00:00:21.084  READ DMA
+  c8 00 00 00 04 60 86 bf 60 86 c0 e0 00     00:00:21.084  READ DMA
+  c8 00 00 00 3b 60 86 84 60 86 85 e0 00     00:00:21.083  READ DMA
+  c8 00 00 00 05 60 86 7f 60 86 80 e0 00     00:00:21.083  READ DMA
+
+Error 22247 [230] occurred at disk power-on lifetime: 4297 hours (179 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 02 00 00 00 00 74 4f 17 e0 00  Error: ABRT at LBA = 0x00744f17 = 7622423
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 10 00 02 30 00 00 00 74 4e e8 e0 00     00:01:28.414  WRITE DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:01:28.414  SET FEATURES [Enable SATA feature]
+  ec 03 00 45 00 00 00 00 00 00 00 a0 00     00:01:28.413  IDENTIFY DEVICE
+  ef 10 03 02 45 00 00 00 00 00 00 a0 00     00:01:28.413  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:01:28.413  SET FEATURES [Enable SATA feature]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -278,8 +278,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     25/34 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     24/42 Celsius
 Lifetime    Min/Max Temperature:      8/59 Celsius
 Under/Over Temperature Limit Count:   0/129
 
@@ -288,7 +288,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (353)
+Temperature History Size (Index):    478 (355)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -306,8 +306,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

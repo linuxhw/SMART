@@ -8,14 +8,14 @@ User Capacity:    82 348 277 760 bytes [82,3 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Sat May 28 17:18:58 2016 MSK
+Local Time is:    Mon Oct  9 00:19:45 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -58,16 +58,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   167   167   050    -    169
-  3 Spin_Up_Time            POS---   122   122   024    -    162 (Average 165)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    593
+  3 Spin_Up_Time            POS---   124   124   024    -    159 (Average 162)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    768
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   136   136   020    -    31
-  9 Power_On_Hours          -O--C-   100   100   000    -    814
+  9 Power_On_Hours          -O--C-   100   100   000    -    926
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    593
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    600
-193 Load_Cycle_Count        -O--C-   100   100   000    -    600
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    768
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    775
+193 Load_Cycle_Count        -O--C-   100   100   000    -    775
 194 Temperature_Celsius     -O----   139   139   000    -    43 (Min/Max 13/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -133,7 +133,8 @@ Error 1 [0] occurred at disk power-on lifetime: 763 hours (31 days + 19 hours)
   c8 00 00 00 00 5b 5f bf 5e 35 98 e1 08     00:25:58.700  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       909         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -159,7 +160,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (8)
+Temperature History Size (Index):    128 (125)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -170,8 +171,8 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2           29  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           29  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           18  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

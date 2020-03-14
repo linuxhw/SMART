@@ -9,7 +9,7 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Mar 19 20:13:53 2017 MSK
+Local Time is:    Sun Apr  2 10:31:35 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,23 +58,23 @@ SCT capabilities: 	       (0x3035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    266
-  3 Spin_Up_Time            POS--K   165   156   021    -    6716
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10025
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    272
+  3 Spin_Up_Time            POS--K   164   156   021    -    6766
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10166
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   079   079   000    -    15664
+  9 Power_On_Hours          -O--CK   079   079   000    -    15821
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3059
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    897
-193 Load_Cycle_Count        -O--CK   169   169   000    -    93447
-194 Temperature_Celsius     -O---K   116   102   000    -    34
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3111
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    914
+193 Load_Cycle_Count        -O--CK   168   168   000    -    96034
+194 Temperature_Celsius     -O---K   117   102   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    5
-198 Offline_Uncorrectable   ----CK   200   200   000    -    7
+197 Current_Pending_Sector  -O--CK   200   200   000    -    6
+198 Offline_Uncorrectable   ----CK   200   200   000    -    6
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    3
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    2
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 708 (device log contains only the most recent 24 errors)
+Device Error Count: 749 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 708 [11] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hours)
+Error 749 [4] occurred at disk power-on lifetime: 15785 hours (657 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -131,13 +131,13 @@ Error 708 [11] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 00 0b e6 d6 17 e0 08     01:37:37.216  READ DMA EXT
-  35 00 00 00 18 00 00 00 60 5e 47 e0 08     01:37:36.766  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 60 5e 27 e0 08     01:37:36.766  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 60 5e 07 e0 08     01:37:36.766  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 60 5d f7 e0 08     01:37:36.766  WRITE DMA EXT
+  25 00 00 00 80 00 00 0b e6 d6 17 e0 08     01:43:04.093  READ DMA EXT
+  35 00 00 01 00 00 00 19 09 58 47 e0 08     01:43:04.091  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 57 47 e0 08     01:43:04.091  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 56 47 e0 08     01:43:04.090  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 55 47 e0 08     01:43:04.090  WRITE DMA EXT
 
-Error 707 [10] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hours)
+Error 748 [3] occurred at disk power-on lifetime: 15785 hours (657 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -148,13 +148,13 @@ Error 707 [10] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 00 0d a9 e6 ef e0 08     01:37:30.692  READ DMA EXT
-  25 00 00 01 00 00 00 0d a9 e5 ef e0 08     01:37:30.684  READ DMA EXT
-  35 00 00 01 00 00 00 0d ee 8a 0f e0 08     01:37:30.683  WRITE DMA EXT
-  35 00 00 01 00 00 00 0d ee 89 0f e0 08     01:37:30.682  WRITE DMA EXT
-  35 00 00 01 00 00 00 0d ee 88 0f e0 08     01:37:30.681  WRITE DMA EXT
+  25 00 00 01 00 00 00 0d a9 e6 ef e0 08     01:42:56.869  READ DMA EXT
+  25 00 00 01 00 00 00 0d a9 e5 ef e0 08     01:42:56.860  READ DMA EXT
+  35 00 00 01 00 00 00 0d b2 fe 1f e0 08     01:42:56.859  WRITE DMA EXT
+  35 00 00 01 00 00 00 0d b2 fd 1f e0 08     01:42:56.858  WRITE DMA EXT
+  35 00 00 01 00 00 00 0d b2 fc 1f e0 08     01:42:56.858  WRITE DMA EXT
 
-Error 706 [9] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hours)
+Error 747 [2] occurred at disk power-on lifetime: 15785 hours (657 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,13 +165,13 @@ Error 706 [9] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 00 0b e6 d6 17 e0 08     01:36:54.391  READ DMA EXT
-  25 00 00 00 08 00 00 74 70 6c f7 e0 08     01:36:54.371  READ DMA EXT
-  25 00 00 00 08 00 00 04 47 30 cf e0 08     01:36:54.371  READ DMA EXT
-  25 00 00 00 08 00 00 04 47 30 cf e0 08     01:36:54.358  READ DMA EXT
-  25 00 00 00 08 00 00 00 14 b7 0f e0 08     01:36:54.352  READ DMA EXT
+  25 00 00 00 80 00 00 0b e6 d6 17 e0 08     01:42:40.306  READ DMA EXT
+  35 00 00 01 00 00 00 19 09 58 47 e0 08     01:42:40.304  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 57 47 e0 08     01:42:40.303  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 56 47 e0 08     01:42:40.302  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 55 47 e0 08     01:42:40.302  WRITE DMA EXT
 
-Error 705 [8] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hours)
+Error 746 [1] occurred at disk power-on lifetime: 15785 hours (657 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -182,13 +182,13 @@ Error 705 [8] occurred at disk power-on lifetime: 15625 hours (651 days + 1 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 00 0d a9 e6 ef e0 08     01:36:16.966  READ DMA EXT
-  25 00 00 01 00 00 00 0d a9 e5 ef e0 08     01:36:16.950  READ DMA EXT
-  35 00 00 01 00 00 00 0b 7c 9c 87 e0 08     01:36:16.949  WRITE DMA EXT
-  35 00 00 01 00 00 00 0b 7c 9b 87 e0 08     01:36:16.948  WRITE DMA EXT
-  35 00 00 01 00 00 00 0b 7c 9a 87 e0 08     01:36:16.947  WRITE DMA EXT
+  25 00 00 01 00 00 00 0d a9 e6 ef e0 08     01:42:33.169  READ DMA EXT
+  25 00 00 01 00 00 00 0d a9 e5 ef e0 08     01:42:33.155  READ DMA EXT
+  35 00 00 01 00 00 00 0d b2 a9 cf e0 08     01:42:33.151  WRITE DMA EXT
+  35 00 00 01 00 00 00 0d b2 a8 cf e0 08     01:42:33.151  WRITE DMA EXT
+  35 00 00 01 00 00 00 0d b2 a7 cf e0 08     01:42:33.150  WRITE DMA EXT
 
-Error 704 [7] occurred at disk power-on lifetime: 15620 hours (650 days + 20 hours)
+Error 745 [0] occurred at disk power-on lifetime: 15780 hours (657 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -199,13 +199,13 @@ Error 704 [7] occurred at disk power-on lifetime: 15620 hours (650 days + 20 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 00 0b e6 d6 17 e0 08     00:35:22.648  READ DMA EXT
-  35 00 00 00 08 00 00 00 60 42 ef e0 08     00:35:21.058  WRITE DMA EXT
-  35 00 00 00 10 00 00 00 60 42 d7 e0 08     00:35:21.058  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 60 11 6f e0 08     00:35:21.058  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 5e 3a 5f e0 08     00:35:21.058  WRITE DMA EXT
+  25 00 00 00 80 00 00 0b e6 d6 17 e0 08     00:44:27.636  READ DMA EXT
+  35 00 00 01 00 00 00 19 09 58 47 e0 08     00:44:27.635  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 57 47 e0 08     00:44:27.634  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 56 47 e0 08     00:44:27.634  WRITE DMA EXT
+  35 00 00 01 00 00 00 19 09 55 47 e0 08     00:44:27.633  WRITE DMA EXT
 
-Error 703 [6] occurred at disk power-on lifetime: 15620 hours (650 days + 20 hours)
+Error 744 [23] occurred at disk power-on lifetime: 15780 hours (657 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -216,45 +216,45 @@ Error 703 [6] occurred at disk power-on lifetime: 15620 hours (650 days + 20 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 00 0d a9 e6 ef e0 08     00:35:16.191  READ DMA EXT
-  25 00 00 01 00 00 00 0d a9 e5 ef e0 08     00:35:16.191  READ DMA EXT
-  35 00 00 01 00 00 00 0d f2 b9 47 e0 08     00:35:16.190  WRITE DMA EXT
-  35 00 00 01 00 00 00 0d f2 b8 47 e0 08     00:35:16.189  WRITE DMA EXT
-  35 00 00 01 00 00 00 0d f2 b7 47 e0 08     00:35:16.188  WRITE DMA EXT
+  25 00 00 01 00 00 00 0d a9 e6 ef e0 08     00:44:00.214  READ DMA EXT
+  25 00 00 01 00 00 00 0d a9 e5 ef e0 08     00:44:00.202  READ DMA EXT
+  35 00 00 01 00 00 00 05 d0 5e 5f e0 08     00:44:00.201  WRITE DMA EXT
+  35 00 00 01 00 00 00 05 d0 5d 5f e0 08     00:44:00.200  WRITE DMA EXT
+  35 00 00 01 00 00 00 05 d0 5c 5f e0 08     00:44:00.200  WRITE DMA EXT
 
-Error 702 [5] occurred at disk power-on lifetime: 15620 hours (650 days + 20 hours)
+Error 743 [22] occurred at disk power-on lifetime: 15723 hours (655 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 80 00 00 0b e6 d6 48 e0 00  Error: UNC 128 sectors at LBA = 0x0be6d648 = 199677512
+  40 -- 51 00 08 00 00 a4 b0 b0 28 e0 00  Error: UNC 8 sectors at LBA = 0xa4b0b028 = 2763042856
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 00 0b e6 d6 17 e0 08     00:35:03.684  READ DMA EXT
-  35 00 00 00 10 00 00 74 70 50 a7 e0 08     00:35:03.064  WRITE DMA EXT
-  35 00 00 00 08 00 00 74 70 50 97 e0 08     00:35:03.064  WRITE DMA EXT
-  35 00 00 00 20 00 00 74 70 50 67 e0 08     00:35:03.064  WRITE DMA EXT
-  35 00 00 00 20 00 00 74 70 50 17 e0 08     00:35:03.064  WRITE DMA EXT
+  25 00 00 00 08 00 00 a4 b0 b0 28 e0 08     00:04:03.264  READ DMA EXT
+  35 00 00 00 08 00 00 a5 af 46 68 e0 08     00:04:03.264  WRITE DMA EXT
+  ea 00 00 00 00 00 00 a5 af 46 67 e0 08     00:04:03.235  FLUSH CACHE EXT
+  35 00 00 00 90 00 00 a5 af 45 d8 e0 08     00:04:03.235  WRITE DMA EXT
+  35 00 00 09 e8 00 00 a4 db b8 00 e0 08     00:04:03.211  WRITE DMA EXT
 
-Error 701 [4] occurred at disk power-on lifetime: 15620 hours (650 days + 20 hours)
+Error 742 [21] occurred at disk power-on lifetime: 15723 hours (655 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 0d a9 e7 88 e0 00  Error: UNC 256 sectors at LBA = 0x0da9e788 = 229238664
+  40 -- 51 00 08 00 00 a4 b0 b0 28 e0 00  Error: UNC 8 sectors at LBA = 0xa4b0b028 = 2763042856
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 00 0d a9 e6 ef e0 08     00:34:54.641  READ DMA EXT
-  25 00 00 01 00 00 00 0d a9 e5 ef e0 08     00:34:54.624  READ DMA EXT
-  35 00 00 01 00 00 00 0d f2 bb 7f e0 08     00:34:54.623  WRITE DMA EXT
-  35 00 00 01 00 00 00 0d f2 ba 7f e0 08     00:34:54.623  WRITE DMA EXT
-  35 00 00 01 00 00 00 0d f2 b9 7f e0 08     00:34:54.622  WRITE DMA EXT
+  25 00 00 00 08 00 00 a4 b0 b0 28 e0 08     00:04:00.231  READ DMA EXT
+  35 00 00 00 08 00 00 af ad b8 40 e0 08     00:03:58.803  WRITE DMA EXT
+  35 00 00 00 08 00 00 af ad b8 38 e0 08     00:03:58.739  WRITE DMA EXT
+  35 00 00 00 08 00 00 af ad b8 30 e0 08     00:03:58.631  WRITE DMA EXT
+  35 00 00 00 08 00 00 af ac 2a 88 e0 08     00:03:58.631  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -274,8 +274,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     26/35 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     29/33 Celsius
 Lifetime    Min/Max Temperature:      0/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -284,7 +284,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (242)
+Temperature History Size (Index):    478 (347)
 
 SCT Error Recovery Control command not supported
 
@@ -299,9 +299,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        19437  Vendor specific
+0x8000  4         8796  Vendor specific
 
 
 

@@ -3,18 +3,19 @@ Model Family:     SAMSUNG SpinPoint P80 SD
 Device Model:     SAMSUNG HD160JJ
 Serial Number:    --
 Firmware Version: ZM100-41
-User Capacity:    160.041.885.696 bytes [160 GB]
+User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Tue Jul  3 21:40:27 2018 CEST
+Local Time is:    Tue Jul 31 11:55:12 2018 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -55,20 +56,20 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    3
-  3 Spin_Up_Time            POS---   100   100   025    -    5504
-  4 Start_Stop_Count        -O--CK   085   085   000    -    15342
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
+  3 Spin_Up_Time            POS---   100   100   025    -    5568
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15722
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    40015
+  9 Power_On_Hours          -O--CK   100   100   000    -    40380
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7239
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7340
 187 Reported_Uncorrect      -O--CK   253   253   000    -    1835008
-190 Airflow_Temperature_Cel -O---K   145   067   000    -    31
-194 Temperature_Celsius     -O---K   145   067   000    -    31
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2392590
+190 Airflow_Temperature_Cel -O---K   124   067   000    -    38
+194 Temperature_Celsius     -O---K   124   067   000    -    38
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    327511
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -91,7 +92,7 @@ Address    Access  R/W   Size  Description
 0x02           SL  R/O      2  Comprehensive SMART error log
 0x03       GPL     R/O      2  Ext. Comprehensive SMART error log
 0x06           SL  R/O      1  SMART self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
@@ -253,8 +254,9 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     36481         -
-# 2  Short offline       Completed without error       00%      1140         -
+# 1  Short offline       Completed without error       00%     40076         -
+# 2  Extended offline    Completed without error       00%     36481         -
+# 3  Short offline       Completed without error       00%      1140         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -272,8 +274,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 31 Celsius
-Power Cycle Max Temperature:         42 Celsius
+Current Temperature:                 38 Celsius
+Power Cycle Max Temperature:         38 Celsius
 Lifetime    Max Temperature:         56 Celsius
 
 SCT Temperature History Version:     2
@@ -281,7 +283,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/55 Celsius
 Min/Max Temperature Limit:            5/60 Celsius
-Temperature History Size (Index):    128 (74)
+Temperature History Size (Index):    128 (43)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -289,10 +291,12 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           35  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

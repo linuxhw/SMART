@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Feb 21 21:18:30 2019 +07
+Local Time is:    Mon Apr  1 07:08:17 2019 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,23 +61,23 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   198   198   040    -    140
-  3 Spin_Up_Time            POS---   217   217   033    -    1
-  4 Start_Stop_Count        -O--C-   099   099   000    -    2316
+  2 Throughput_Performance  P-S---   198   198   040    -    141
+  3 Spin_Up_Time            POS---   225   225   033    -    1
+  4 Start_Stop_Count        -O--C-   099   099   000    -    2435
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   115   115   040    -    34
-  9 Power_On_Hours          -O--C-   069   069   000    -    13626
+  8 Seek_Time_Performance   P-S---   117   117   040    -    33
+  9 Power_On_Hours          -O--C-   069   069   000    -    13855
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    2304
-191 G-Sense_Error_Rate      -O-R--   099   099   000    -    65538
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    473
-193 Load_Cycle_Count        -O--C-   093   093   000    -    79665
-194 Temperature_Celsius     -O----   162   162   000    -    37 (Min/Max 10/55)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    2423
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    515
+193 Load_Cycle_Count        -O--C-   089   089   000    -    114537
+194 Temperature_Celsius     -O----   214   214   000    -    28 (Min/Max 10/55)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    12311
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    12345
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 12316 (device log contains only the most recent 4 errors)
+Device Error Count: 12350 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,77 +119,78 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 12316 [3] occurred at disk power-on lifetime: 13626 hours (567 days + 18 hours)
+Error 12350 [1] occurred at disk power-on lifetime: 13728 hours (572 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 51 00 00 09 76 69 d0 09 00  Error: ICRC, ABRT at LBA = 0x097669d0 = 158755280
+  84 -- 51 00 01 00 00 06 b6 69 28 06 00  Error: ICRC, ABRT at LBA = 0x06b66928 = 112617768
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 68 00 00 09 76 69 21 40 00     00:06:09.282  READ FPDMA QUEUED
-  60 00 90 00 60 00 00 4f 7d 2b 38 40 00     00:06:09.281  READ FPDMA QUEUED
-  60 00 38 00 58 00 00 4f 7f a0 70 40 00     00:06:09.281  READ FPDMA QUEUED
-  60 00 58 00 50 00 00 4f 7d 49 30 40 00     00:06:09.280  READ FPDMA QUEUED
-  60 01 00 00 48 00 00 4f 7d 49 88 40 00     00:06:09.273  READ FPDMA QUEUED
+  60 00 08 00 a0 00 00 06 b6 69 21 40 00     00:00:11.572  READ FPDMA QUEUED
+  60 00 08 00 98 00 00 1f b7 07 19 40 00     00:00:11.571  READ FPDMA QUEUED
+  60 00 08 00 90 00 00 1f b7 08 19 40 00     00:00:11.571  READ FPDMA QUEUED
+  60 00 08 00 88 00 00 06 b6 61 29 40 00     00:00:11.571  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 06 b6 61 21 40 00     00:00:11.556  READ FPDMA QUEUED
 
-Error 12315 [2] occurred at disk power-on lifetime: 13625 hours (567 days + 17 hours)
+Error 12349 [0] occurred at disk power-on lifetime: 13727 hours (571 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 00 00
+  84 -- 51 01 11 00 00 49 1c ef af 09 00  Error: ICRC, ABRT at LBA = 0x491cefaf = 1226633135
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.637  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:00:00.242  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:00:00.241  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:00:00.240  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff  2d+08:54:38.261  NOP [Abort queued commands]
+  60 02 00 00 38 00 00 49 1c ee c0 40 00     00:08:57.658  READ FPDMA QUEUED
+  60 02 00 00 30 00 00 49 1c ec c0 40 00     00:08:57.653  READ FPDMA QUEUED
+  60 01 00 00 28 00 00 49 1c eb c0 40 00     00:08:57.648  READ FPDMA QUEUED
+  60 00 80 00 20 00 00 49 1c eb 40 40 00     00:08:57.647  READ FPDMA QUEUED
+  60 00 40 00 18 00 00 49 1c eb 00 40 00     00:08:57.647  READ FPDMA QUEUED
 
-Error 12314 [1] occurred at disk power-on lifetime: 13625 hours (567 days + 17 hours)
+Error 12348 [3] occurred at disk power-on lifetime: 13727 hours (571 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 00 00
+  84 -- 51 00 71 00 00 49 1d 5a 8f 09 00  Error: ICRC, ABRT at LBA = 0x491d5a8f = 1226660495
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:16:29.923  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 a0 ff     00:16:29.619  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:16:24.361  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 ff     00:16:24.056  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:16:19.019  IDENTIFY DEVICE
+  60 01 00 00 40 00 00 49 1d 5a 00 40 00     00:08:57.230  READ FPDMA QUEUED
+  60 01 00 00 38 00 00 49 1d 59 00 40 00     00:08:57.228  READ FPDMA QUEUED
+  60 01 00 00 30 00 00 49 1d 58 00 40 00     00:08:57.225  READ FPDMA QUEUED
+  60 01 00 00 28 00 00 49 1d 57 00 40 00     00:08:57.223  READ FPDMA QUEUED
+  60 01 00 00 20 00 00 49 1d 56 00 40 00     00:08:57.218  READ FPDMA QUEUED
 
-Error 12313 [0] occurred at disk power-on lifetime: 13625 hours (567 days + 17 hours)
+Error 12347 [2] occurred at disk power-on lifetime: 13727 hours (571 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 00 00
+  84 -- 51 00 11 00 00 49 1b d6 ff 09 00  Error: ICRC, ABRT at LBA = 0x491bd6ff = 1226561279
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:16:19.019  IDENTIFY DEVICE
-  61 00 70 04 d0 00 00 09 a1 52 f1 49 ff     00:16:18.000  WRITE FPDMA QUEUED
-  61 00 70 00 c8 00 00 49 17 36 60 40 00     00:15:47.974  WRITE FPDMA QUEUED
-  61 00 10 00 c0 00 00 49 17 35 f8 40 00     00:15:47.974  WRITE FPDMA QUEUED
-  61 00 10 00 b8 00 00 49 17 35 98 40 00     00:15:47.974  WRITE FPDMA QUEUED
+  60 00 40 00 20 00 00 49 1b d6 d0 40 00     00:08:56.561  READ FPDMA QUEUED
+  60 00 20 00 18 00 00 49 1b d6 b0 40 00     00:08:56.560  READ FPDMA QUEUED
+  60 00 08 00 10 00 00 49 1b d6 a8 40 00     00:08:56.560  READ FPDMA QUEUED
+  60 00 80 00 08 00 00 49 1b d5 70 40 00     00:08:56.559  READ FPDMA QUEUED
+  60 00 40 00 00 00 00 49 1b d5 30 40 00     00:08:56.559  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     13500         -
+# 1  Extended offline    Interrupted (host reset)      90%     13773         -
+# 2  Short offline       Completed without error       00%     13500         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -206,8 +207,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     36/37 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     24/28 Celsius
 Lifetime    Min/Max Temperature:     10/55 Celsius
 Lifetime    Average Temperature:        33 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -217,7 +218,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (30)
+Temperature History Size (Index):    128 (97)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -229,15 +230,15 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            1  Command failed due to ICRC error
-0x0002  2            2  R_ERR response for data FIS
-0x0003  2            2  R_ERR response for device-to-host data FIS
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

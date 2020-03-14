@@ -3,18 +3,19 @@ Model Family:     Seagate Barracuda 7200.9
 Device Model:     ST3120213A
 Serial Number:    --
 Firmware Version: 3.AAJ
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue May 17 15:10:20 2016 NOVT
+Local Time is:    Tue Jul 24 19:34:18 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -51,21 +52,21 @@ recommended polling time: 	 (  51) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   080   006    -    170863803
+  1 Raw_Read_Error_Rate     POSR--   116   080   006    -    105677998
   3 Spin_Up_Time            PO----   094   093   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7474
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7518
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    23
-  7 Seek_Error_Rate         POSR--   074   060   030    -    28964298
-  9 Power_On_Hours          -O--CK   072   072   000    -    24760
+  7 Seek_Error_Rate         POSR--   075   060   030    -    31409346
+  9 Power_On_Hours          -O--CK   072   072   000    -    24912
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7392
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7439
 187 Reported_Uncorrect      -O--CK   094   094   000    -    6
 189 High_Fly_Writes         -O-RCK   084   084   000    -    16
-190 Airflow_Temperature_Cel -O---K   067   022   045    Past 33 (Min/Max 32/33)
-194 Temperature_Celsius     -O---K   033   078   000    -    33 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   069   045   000    -    204001922
-197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967295
-198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967295
+190 Airflow_Temperature_Cel -O---K   058   022   045    Past 42 (Min/Max 42/43)
+194 Temperature_Celsius     -O---K   042   078   000    -    42 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   058   045   000    -    37633008
+197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967294
+198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967294
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    10
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -117,107 +118,107 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 14 [13] occurred at disk power-on lifetime: 21742 hours (905 days + 22 hours)
+Error 14 [13] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 04 01 4e 04 04 04 f1 00  Error: UNC at LBA = 0x4014f040404 = 4403667141636
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 70 00 01 4d 00 04 b0 f1 00     00:06:59.600  READ DMA
-  c8 00 00 00 08 00 01 4d 00 04 a8 f1 00     00:06:59.600  READ DMA
-  c8 00 00 00 08 00 01 4d 00 04 a0 f1 00     00:06:59.599  READ DMA
-  c8 00 00 00 78 00 01 4d 00 04 28 f1 00     00:06:59.599  READ DMA
-  c8 00 00 00 78 00 01 4c 00 04 b0 f1 00     00:06:59.598  READ DMA
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:03:41.485  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:03:41.484  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:03:41.482  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:03:40.940  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     00:03:40.850  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 13 [12] occurred at disk power-on lifetime: 21742 hours (905 days + 22 hours)
+Error 13 [12] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 04 01 46 29 04 29 f1 00  Error: UNC at LBA = 0x40147290429 = 4403535348777
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 58 00 01 45 00 04 e8 f1 00     00:06:57.530  READ DMA
-  c8 00 00 00 58 00 01 45 00 04 90 f1 00     00:06:57.529  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 88 f1 00     00:06:57.528  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 80 f1 00     00:06:57.528  READ DMA
-  c8 00 00 00 80 00 01 44 00 04 e8 f1 00     00:06:57.528  READ DMA
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:00:08.398  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:00:08.395  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:00:07.853  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:00:07.763  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     00:00:04.854  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 12 [11] occurred at disk power-on lifetime: 21742 hours (905 days + 22 hours)
+Error 12 [11] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 04 01 4e 04 04 04 e1 00  Error: UNC at LBA = 0x4014f040404 = 4403667141636
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 f0 00 01 4d 00 04 b0 e1 00     00:00:30.626  READ DMA
-  c8 00 00 00 08 00 01 4d 00 04 a8 e1 00     00:00:30.644  READ DMA
-  c8 00 00 00 08 00 01 4d 00 04 a0 e1 00     00:00:30.643  READ DMA
-  c8 00 00 00 f0 00 01 4c 00 04 b0 e1 00     00:00:30.643  READ DMA
-  c8 00 00 00 08 00 01 4c 00 04 a8 e1 00     00:00:30.639  READ DMA
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:04:37.241  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:04:37.240  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:04:54.066  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:04:54.065  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     00:04:54.065  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 11 [10] occurred at disk power-on lifetime: 21742 hours (905 days + 22 hours)
+Error 11 [10] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 04 01 46 29 04 29 e1 00  Error: UNC at LBA = 0x40147290429 = 4403535348777
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 b0 00 01 45 00 04 90 e1 00     00:00:28.544  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 88 e1 00     00:00:28.544  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 80 e1 00     00:00:28.544  READ DMA
-  c8 00 00 00 f0 00 01 44 00 04 78 e1 00     00:00:28.540  READ DMA
-  c8 00 00 00 08 00 01 44 00 04 70 e1 00     00:00:28.539  READ DMA
+  25 00 20 00 01 00 00 25 00 12 71 e0 00     00:04:37.241  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 70 e0 00     00:04:37.240  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 6f e0 00     00:04:37.240  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 6e e0 00     00:04:37.240  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 6d e0 00     00:04:37.240  READ DMA EXT
 
-Error 10 [9] occurred at disk power-on lifetime: 21742 hours (905 days + 22 hours)
+Error 10 [9] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 04 01 46 29 04 29 e1 00  Error: UNC at LBA = 0x40147290429 = 4403535348777
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 f0 00 01 45 00 04 90 e1 00     00:02:27.626  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 88 e1 00     00:02:27.625  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 80 e1 00     00:02:27.622  READ DMA
-  c8 00 00 00 f0 00 01 44 00 04 78 e1 00     00:02:27.621  READ DMA
-  c8 00 00 00 08 00 01 44 00 04 70 e1 00     00:02:27.621  READ DMA
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:03:41.485  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:03:41.484  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:03:41.482  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:03:40.940  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     00:03:40.850  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 9 [8] occurred at disk power-on lifetime: 21742 hours (905 days + 22 hours)
+Error 9 [8] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 04 01 46 29 04 29 e1 00  Error: UNC at LBA = 0x40147290429 = 4403535348777
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 f0 00 01 45 00 04 90 e1 00     00:00:41.061  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 88 e1 00     00:00:41.061  READ DMA
-  c8 00 00 00 08 00 01 45 00 04 80 e1 00     00:00:41.079  READ DMA
-  c8 00 00 00 f0 00 01 44 00 04 78 e1 00     00:00:41.079  READ DMA
-  c8 00 00 00 08 00 01 44 00 04 70 e1 00     00:00:41.078  READ DMA
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:00:08.398  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:00:08.395  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:00:07.853  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:00:07.763  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     00:00:04.854  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
 Error 8 [7] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -225,16 +226,16 @@ Error 8 [7] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 08 00 5a 00 00 00 00 00 e2 00  Error: ICRC, ABRT 2048 sectors at LBA = 0x5a0002000000 = 98956080054272
+  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 02 90 00 5a ff e2 00     00:01:39.759  READ DMA
-  c8 00 00 00 01 00 00 00 00 00 00 e0 00     00:01:39.739  READ DMA
-  c8 00 00 00 08 00 00 a4 00 63 cf e0 00     00:01:39.739  READ DMA
-  ca 00 00 00 08 00 02 90 00 5a ef e2 00     00:01:39.588  WRITE DMA
-  ca 00 00 00 80 00 02 f1 00 50 a7 e2 00     00:01:39.436  WRITE DMA
+  c8 00 20 00 01 00 00 00 00 00 00 a0 00     00:04:37.241  READ DMA
+  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     00:04:37.240  SET FEATURES [Set transfer mode]
+  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     00:04:54.066  SET MULTIPLE MODE
+  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     00:04:54.065  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 02 17 00 fd 10 a0 00     00:04:54.065  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
 Error 7 [6] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -242,16 +243,16 @@ Error 7 [6] occurred at disk power-on lifetime: 3432 hours (143 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 08 00 3b 00 00 00 00 00 e2 00  Error: ICRC, ABRT 2048 sectors at LBA = 0x3b0002000000 = 64871219593216
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 02 59 00 3b 57 e2 00     00:01:38.449  READ DMA
-  ca 00 00 00 20 00 02 eb 00 4b 37 e2 00     00:01:38.449  WRITE DMA
-  c8 00 00 00 08 00 02 59 00 3b 4f e2 00     00:01:38.438  READ DMA
-  ca 00 00 00 20 00 02 06 00 4c 17 e2 00     00:01:38.438  WRITE DMA
-  c8 00 00 00 08 00 02 59 00 3b 47 e2 00     00:01:38.427  READ DMA
+  25 00 20 00 01 00 00 25 00 12 71 e0 00     00:04:37.241  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 70 e0 00     00:04:37.240  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 6f e0 00     00:04:37.240  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 6e e0 00     00:04:37.240  READ DMA EXT
+  25 00 20 00 01 00 00 25 00 12 6d e0 00     00:04:37.240  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -275,7 +276,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

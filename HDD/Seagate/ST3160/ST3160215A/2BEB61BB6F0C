@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Sep 24 02:31:38 2016 MSK
+Local Time is:    Sun Oct  2 20:25:43 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -53,20 +53,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   118   094   006    -    192028551
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   094   094   020    -    6464
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6524
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   075   060   030    -    34301037
-  9 Power_On_Hours          -O--CK   075   075   000    -    22311
+  7 Seek_Error_Rate         POSR--   075   060   030    -    39351733
+  9 Power_On_Hours          -O--CK   075   075   000    -    22430
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6643
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6703
 187 Reported_Uncorrect      -O--CK   096   096   000    -    4
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   048   045    -    40 (Min/Max 27/41)
+190 Airflow_Temperature_Cel -O---K   060   048   045    -    40 (Min/Max 31/40)
 194 Temperature_Celsius     -O---K   040   052   000    -    40 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   091   074   000    -    209719820
+195 Hardware_ECC_Recovered  -O-RC-   089   074   000    -    185162843
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   198   000    -    63
+199 UDMA_CRC_Error_Count    -OSRCK   200   198   000    -    126
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23552  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 292 (device log contains only the most recent 20 errors)
+Device Error Count: 365 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,7 +117,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 292 [11] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
+Error 365 [4] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -128,13 +128,13 @@ Error 292 [11] occurred at disk power-on lifetime: 20060 hours (835 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:55.982  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:55.864  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:57.167  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:57.167  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     05:11:57.167  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:12:00.568  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:12:00.567  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:12:00.567  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:12:00.567  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:12:00.449  NOP [Abort queued commands]
 
-Error 291 [10] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
+Error 364 [3] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -145,13 +145,13 @@ Error 291 [10] occurred at disk power-on lifetime: 20060 hours (835 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:55.982  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:55.864  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:55.395  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:55.395  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     05:11:55.395  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:12:00.568  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:12:00.567  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:12:00.567  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:12:00.567  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:12:00.449  NOP [Abort queued commands]
 
-Error 290 [9] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
+Error 363 [2] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -162,13 +162,13 @@ Error 290 [9] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:55.982  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:55.864  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:55.395  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:55.395  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     05:11:55.395  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:12:00.568  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:12:00.567  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:12:00.567  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:12:00.567  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:12:00.449  NOP [Abort queued commands]
 
-Error 289 [8] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
+Error 362 [1] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -179,30 +179,13 @@ Error 289 [8] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     05:11:50.597  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     05:11:50.595  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     05:11:55.395  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     05:11:55.395  RECALIBRATE [OBS-4]
-  00 00 00 00 44 00 00 00 00 01 01 00 00     05:11:55.395  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:11:53.751  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:11:53.751  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:11:53.751  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:11:53.632  RECALIBRATE [OBS-4]
+  00 00 00 00 10 00 0f 00 00 00 01 00 00     00:11:53.159  NOP [Abort queued commands]
 
-Error 288 [7] occurred at disk power-on lifetime: 20060 hours (835 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 01 01 00 00 00 00 00 00 a0 00  Error: ICRC, ABRT 257 sectors at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 20 00 01 00 00 00 00 00 00 a0 00     05:11:50.597  READ DMA
-  ef 00 03 00 45 00 00 3f 00 00 00 a0 00     05:11:50.595  SET FEATURES [Set transfer mode]
-  ef 00 03 00 0c 00 00 3f 00 00 00 a0 00     05:11:50.595  SET FEATURES [Set transfer mode]
-  c6 00 da 00 10 00 02 17 00 fd 10 a0 00     05:11:50.595  SET MULTIPLE MODE
-  b0 00 da 01 00 00 02 17 00 fd 10 a0 00     05:11:50.593  SMART RETURN STATUS
-
-Error 287 [6] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hours)
+Error 361 [0] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -213,13 +196,13 @@ Error 287 [6] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     02:30:23.215  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     02:30:23.215  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     02:30:23.215  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     02:30:23.097  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     02:30:24.400  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:11:53.751  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:11:53.751  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:11:53.751  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:11:53.632  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:11:53.159  NOP [Abort queued commands]
 
-Error 286 [5] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hours)
+Error 360 [19] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -230,13 +213,13 @@ Error 286 [5] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     02:30:23.215  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     02:30:23.215  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     02:30:23.215  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     02:30:23.097  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     02:30:22.624  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:11:51.979  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:11:51.979  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:11:51.979  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:11:51.861  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:11:53.159  NOP [Abort queued commands]
 
-Error 285 [4] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hours)
+Error 359 [18] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -247,33 +230,50 @@ Error 285 [4] occurred at disk power-on lifetime: 20055 hours (835 days + 15 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     02:30:23.215  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     02:30:23.215  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     02:30:23.215  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     02:30:23.097  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     02:30:22.624  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:11:51.979  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:11:51.979  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:11:51.979  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:11:51.861  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:11:51.723  NOP [Abort queued commands]
+
+Error 358 [17] occurred at disk power-on lifetime: 22424 hours (934 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:11:51.979  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:11:51.979  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:11:51.979  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:11:51.861  RECALIBRATE [OBS-4]
+  00 00 00 00 10 00 0f 00 00 00 01 00 00     00:11:51.723  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     22089         -
-# 2  Extended offline    Completed without error       00%     22008         -
-# 3  Extended offline    Completed without error       00%     21843         -
-# 4  Extended offline    Completed without error       00%     21626         -
-# 5  Extended offline    Completed without error       00%     21495         -
-# 6  Extended offline    Completed without error       00%     21396         -
-# 7  Extended offline    Completed without error       00%     21324         -
-# 8  Extended offline    Completed without error       00%     21222         -
-# 9  Extended offline    Completed without error       00%     21107         -
-#10  Extended offline    Completed without error       00%     20854         -
-#11  Extended offline    Completed without error       00%     20715         -
-#12  Extended offline    Completed without error       00%     20626         -
-#13  Extended offline    Completed without error       00%     20506         -
-#14  Extended offline    Completed without error       00%     20435         -
-#15  Extended offline    Completed without error       00%     20328         -
-#16  Extended offline    Completed without error       00%     19948         -
-#17  Extended offline    Completed without error       00%     19874         -
-#18  Extended offline    Aborted by host               70%     19787         -
-#19  Extended offline    Aborted by host               30%     19701         -
+# 1  Extended offline    Completed without error       00%     22411         -
+# 2  Extended offline    Completed without error       00%     22313         -
+# 3  Extended offline    Completed without error       00%     22089         -
+# 4  Extended offline    Completed without error       00%     22008         -
+# 5  Extended offline    Completed without error       00%     21843         -
+# 6  Extended offline    Completed without error       00%     21626         -
+# 7  Extended offline    Completed without error       00%     21495         -
+# 8  Extended offline    Completed without error       00%     21396         -
+# 9  Extended offline    Completed without error       00%     21324         -
+#10  Extended offline    Completed without error       00%     21222         -
+#11  Extended offline    Completed without error       00%     21107         -
+#12  Extended offline    Completed without error       00%     20854         -
+#13  Extended offline    Completed without error       00%     20715         -
+#14  Extended offline    Completed without error       00%     20626         -
+#15  Extended offline    Completed without error       00%     20506         -
+#16  Extended offline    Completed without error       00%     20435         -
+#17  Extended offline    Completed without error       00%     20328         -
+#18  Extended offline    Completed without error       00%     19948         -
+#19  Extended offline    Completed without error       00%     19874         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

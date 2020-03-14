@@ -7,7 +7,7 @@ User Capacity:    250 059 350 016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed May 18 17:49:04 2016 MSK
+Local Time is:    Sun Oct  8 14:45:20 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -56,19 +56,19 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   097   006    -    123544328
+  1 Raw_Read_Error_Rate     POSR--   117   097   006    -    160178407
   3 Spin_Up_Time            PO----   096   095   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2307
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2360
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   080   060   030    -    116674547
-  9 Power_On_Hours          -O--CK   093   093   000    -    6604
+  7 Seek_Error_Rate         POSR--   081   060   030    -    118096189
+  9 Power_On_Hours          -O--CK   093   093   000    -    6624
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2278
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2331
 187 Reported_Uncorrect      -O--CK   078   078   000    -    22
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   058   053   045    -    42 (Min/Max 21/42)
-194 Temperature_Celsius     -O---K   042   047   000    -    42 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   071   052   000    -    219227964
+190 Airflow_Temperature_Cel -O---K   059   053   045    -    41 (Min/Max 40/41)
+194 Temperature_Celsius     -O---K   041   047   000    -    41 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   068   052   000    -    135935773
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -91,8 +91,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -169,11 +169,11 @@ Error 20 [19] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:38.228  READ DMA EXT
-  35 00 00 00 08 00 09 5b 00 67 07 e0 00     00:04:38.228  WRITE DMA EXT
-  35 00 00 00 30 00 09 60 00 52 bf e0 00     00:04:38.228  WRITE DMA EXT
-  35 00 00 00 06 00 02 0f 00 7d bf e0 00     00:04:38.228  WRITE DMA EXT
-  35 00 00 00 08 00 00 a6 00 37 47 e0 00     00:04:36.337  WRITE DMA EXT
+  25 00 d8 01 00 00 09 a7 00 67 4f e0 00     00:00:33.761  READ DMA EXT
+  25 00 d8 01 00 00 09 a6 00 67 4f e0 00     00:00:33.758  READ DMA EXT
+  25 00 d8 00 48 00 09 a5 00 67 8f e0 00     00:00:33.757  READ DMA EXT
+  25 00 d8 01 00 00 09 a4 00 67 8f e0 00     00:00:33.795  READ DMA EXT
+  25 00 d8 00 08 00 09 a4 00 67 07 e0 00     00:00:33.791  READ DMA EXT
 
 Error 19 [18] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -186,11 +186,11 @@ Error 19 [18] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:36.294  READ DMA EXT
-  35 00 00 00 08 00 00 6c 00 30 48 e0 00     00:04:36.294  WRITE DMA EXT
-  25 00 00 00 01 00 10 13 00 e7 f4 e0 00     00:04:36.294  READ DMA EXT
-  35 00 00 00 08 00 00 6c 00 30 40 e0 00     00:04:36.294  WRITE DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:04:36.337  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:00:50.345  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 cf e0 00     00:00:50.345  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 c7 e0 00     00:00:50.344  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 bf e0 00     00:00:50.328  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 b7 e0 00     00:00:50.328  READ DMA EXT
 
 Error 18 [17] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -203,11 +203,11 @@ Error 18 [17] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:32.478  READ DMA EXT
-  35 00 00 00 08 00 09 e7 00 64 c7 e0 00     00:04:32.478  WRITE DMA EXT
-  35 00 00 00 08 00 09 e6 00 64 87 e0 00     00:04:32.463  WRITE DMA EXT
-  35 00 00 00 08 00 09 b1 00 1b a7 e0 00     00:04:32.463  WRITE DMA EXT
-  ea 00 00 00 00 00 11 14 00 45 33 a0 00     00:04:32.446  FLUSH CACHE EXT
+  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:38.228  READ DMA EXT
+  35 00 00 00 48 00 09 61 00 52 37 e0 00     00:04:38.228  WRITE DMA EXT
+  35 00 00 00 28 00 00 76 00 5e ff e0 00     00:04:38.228  WRITE DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:04:38.228  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:42.040  READ DMA EXT
 
 Error 17 [16] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -220,11 +220,11 @@ Error 17 [16] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:32.478  READ DMA EXT
-  35 00 00 00 08 00 00 00 00 5e 47 e0 00     00:04:32.478  WRITE DMA EXT
-  35 00 00 00 08 00 00 97 00 1a af e0 00     00:04:32.463  WRITE DMA EXT
-  35 00 00 00 10 00 00 90 00 1a af e0 00     00:04:32.463  WRITE DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:04:32.446  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:38.228  READ DMA EXT
+  35 00 00 00 10 00 09 5b 00 67 07 e0 00     00:04:38.228  WRITE DMA EXT
+  35 00 00 00 48 00 09 60 00 52 ef e0 00     00:04:38.228  WRITE DMA EXT
+  35 00 00 00 40 00 00 76 00 5e bf e0 00     00:04:38.228  WRITE DMA EXT
+  35 00 00 00 08 00 00 a6 00 37 47 e0 00     00:04:36.337  WRITE DMA EXT
 
 Error 16 [15] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -237,11 +237,11 @@ Error 16 [15] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:28.640  READ DMA EXT
-  35 00 00 00 48 00 09 98 00 53 d7 e0 00     00:04:28.640  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 00 5e 2f e0 00     00:04:28.640  WRITE DMA EXT
-  35 00 00 00 01 00 00 6c 00 30 27 e0 00     00:04:28.624  WRITE DMA EXT
-  35 00 00 00 08 00 09 38 00 75 57 e0 00     00:04:26.789  WRITE DMA EXT
+  25 00 d8 01 00 00 09 a7 00 67 4f e0 00     00:00:33.761  READ DMA EXT
+  25 00 d8 01 00 00 09 a6 00 67 4f e0 00     00:00:33.758  READ DMA EXT
+  25 00 d8 00 48 00 09 a5 00 67 8f e0 00     00:00:33.757  READ DMA EXT
+  25 00 d8 01 00 00 09 a4 00 67 8f e0 00     00:00:33.795  READ DMA EXT
+  25 00 d8 00 08 00 09 a4 00 67 07 e0 00     00:00:33.791  READ DMA EXT
 
 Error 15 [14] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -254,11 +254,11 @@ Error 15 [14] occurred at disk power-on lifetime: 953 hours (39 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:04:28.640  READ DMA EXT
-  35 00 00 00 08 00 00 00 00 5e 3f e0 00     00:04:28.640  WRITE DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:04:28.640  READ DMA EXT
-  25 00 00 00 70 00 09 a7 00 67 df e0 00     00:04:28.624  READ DMA EXT
-  25 00 00 00 08 00 09 a7 00 67 cf e0 00     00:04:26.789  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 d7 e0 00     00:00:50.345  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 cf e0 00     00:00:50.345  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 c7 e0 00     00:00:50.344  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 bf e0 00     00:00:50.328  READ DMA EXT
+  25 00 00 00 08 00 09 a7 00 67 b7 e0 00     00:00:50.328  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 
@@ -277,8 +277,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 42 Celsius
-Power Cycle Max Temperature:         42 Celsius
+Current Temperature:                 41 Celsius
+Power Cycle Max Temperature:         41 Celsius
 Lifetime    Max Temperature:         47 Celsius
 
 Another SCT command is executing, abort Read Data Table
@@ -289,11 +289,11 @@ Another SCT command is executing, abort Error Recovery Control
 (SCT ext_status_code 0xffff, action_code=4, function_code=2)
 SCT (Get) Error Recovery Control command failed
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

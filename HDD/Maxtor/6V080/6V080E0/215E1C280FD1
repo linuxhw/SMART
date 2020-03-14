@@ -8,11 +8,11 @@ User Capacity:    81 963 220 480 bytes [81,9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sat Mar 12 22:01:50 2016 YEKT
+Local Time is:    Sun Oct 16 15:23:17 2016 YEKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -54,25 +54,25 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   223   218   063    -    11432
-  4 Start_Stop_Count        -O--CK   251   251   000    -    5744
+  3 Spin_Up_Time            POS--K   222   218   063    -    6836
+  4 Start_Stop_Count        -O--CK   251   251   000    -    5855
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   243   238   187    -    36025
-  9 Power_On_Hours          -O--CK   224   224   000    -    10237
+  8 Seek_Time_Performance   POS--K   248   238   187    -    55318
+  9 Power_On_Hours          -O--CK   223   223   000    -    10480
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   229   229   000    -    9740
+ 12 Power_Cycle_Count       -O--CK   229   229   000    -    9826
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   056   043   000    -    44 (Min/Max 43/44)
+190 Airflow_Temperature_Cel -O---K   059   043   000    -    41 (Min/Max 33/43)
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   041   253   000    -    44
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    615
+194 Temperature_Celsius     -O--CK   041   253   000    -    41
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    841
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   145   001   000    -    7508
+199 UDMA_CRC_Error_Count    ---R--   084   001   000    -    7508
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    0
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x03       GPL,SL  R/O      4  Ext. Comprehensive SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -190,7 +190,7 @@ Error 37937 [0] occurred at disk power-on lifetime: 10117 hours (421 days + 13 h
   27 00 00 00 00 00 00 09 8a b9 ff e0 08     00:11:01.133  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   29 00 00 00 01 00 00 09 8a b9 ff e0 08     00:11:00.997  READ MULTIPLE EXT
 
-Error 37936 [15] occurred at disk power-on lifetime: 10116 hours (421 days + 12 hours)
+Error 37936 [15] occurred at disk power-on lifetime: 10117 hours (421 days + 13 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -201,13 +201,13 @@ Error 37936 [15] occurred at disk power-on lifetime: 10116 hours (421 days + 12 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:07:56.584  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:07:56.583  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:07:56.444  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 00 09 8a b1 be e0 00     00:07:56.443  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:07:54.339  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:14:50.350  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:14:50.349  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:14:50.212  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 00 09 8a b1 be e0 00     00:14:50.211  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:14:48.106  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 37935 [14] occurred at disk power-on lifetime: 10116 hours (421 days + 12 hours)
+Error 37935 [14] occurred at disk power-on lifetime: 10117 hours (421 days + 13 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -218,13 +218,13 @@ Error 37935 [14] occurred at disk power-on lifetime: 10116 hours (421 days + 12 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:07:54.339  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:07:54.338  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:07:54.203  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 00 09 8a b9 ff e0 08     00:07:54.202  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 00 09 8a b9 ff e0 08     00:07:54.065  READ MULTIPLE EXT
+  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:14:48.106  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:14:48.105  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:14:47.961  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 00 09 8a b9 ff e0 08     00:14:47.960  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 00 09 8a b9 ff e0 08     00:14:47.823  READ MULTIPLE EXT
 
-Error 37934 [13] occurred at disk power-on lifetime: 10116 hours (421 days + 12 hours)
+Error 37934 [13] occurred at disk power-on lifetime: 10117 hours (421 days + 13 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -235,13 +235,13 @@ Error 37934 [13] occurred at disk power-on lifetime: 10116 hours (421 days + 12 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:04:27.872  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:04:27.871  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:04:27.738  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 00 09 8a b1 be e0 00     00:04:27.737  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:04:25.569  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:11:03.516  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:11:03.515  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:11:03.377  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 00 09 8a b1 be e0 00     00:11:03.376  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:11:01.271  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 37933 [12] occurred at disk power-on lifetime: 10116 hours (421 days + 12 hours)
+Error 37933 [12] occurred at disk power-on lifetime: 10117 hours (421 days + 13 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -252,11 +252,11 @@ Error 37933 [12] occurred at disk power-on lifetime: 10116 hours (421 days + 12 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:04:25.569  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:04:25.568  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:04:25.433  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 00 09 8a b9 ff e0 08     00:04:25.431  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 00 09 8a b9 ff e0 08     00:04:25.295  READ MULTIPLE EXT
+  37 00 00 01 01 00 00 09 8a b1 be e9 00     00:11:01.271  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 00 09 8a b1 be e0 00     00:11:01.270  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 00 09 8a b1 be e9 00     00:11:01.134  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 00 09 8a b9 ff e0 08     00:11:01.133  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 00 09 8a b9 ff e0 08     00:11:00.997  READ MULTIPLE EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -278,8 +278,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 44 Celsius
-Power Cycle Max Temperature:         44 Celsius
+Current Temperature:                 41 Celsius
+Power Cycle Max Temperature:         43 Celsius
 Lifetime    Max Temperature:         60 Celsius
 
 SCT Temperature History Version:     2
@@ -291,7 +291,9 @@ Temperature History Size (Index):    478 (477)
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
+
+
 

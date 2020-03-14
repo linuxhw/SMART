@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu May 26 13:05:49 2016 MSK
+Local Time is:    Fri Sep 16 20:00:05 2016 MSK
 
 ==> WARNING: This drive may hang after 5184 hours of power-on time:
 http://www.tomshardware.com/news/Crucial-m4-Firmware-BSOD,14544.html
@@ -70,14 +70,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   001    -    6371
- 12 Power_Cycle_Count       -O--CK   100   100   001    -    1532
+  9 Power_On_Hours          -O--CK   100   100   001    -    6630
+ 12 Power_Cycle_Count       -O--CK   100   100   001    -    1665
 170 Grown_Failing_Block_Ct  PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   001    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Wear_Leveling_Count     PO--CK   097   097   010    -    90
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   001    -    115
-181 Non4k_Aligned_Access    -O---K   100   100   001    -    594 177 417
+173 Wear_Leveling_Count     PO--CK   097   097   010    -    91
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   001    -    127
+181 Non4k_Aligned_Access    -O---K   100   100   001    -    599 177 422
 183 SATA_Iface_Downshift    -O--CK   100   100   001    -    0
 184 End-to-End_Error        PO--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   001    -    0
@@ -126,7 +126,8 @@ No Errors Logged
 SMART Extended Self-test Log size 3449 not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      6505         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -152,7 +153,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (101)
+Temperature History Size (Index):    478 (232)
 
 SCT Error Recovery Control:
            Read:     40 (4,0 seconds)
@@ -161,12 +162,12 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1532  ---  Lifetime Power-On Resets
-0x01  0x010  4            6371  ---  Power-on Hours
-0x01  0x018  6     12186802449  ---  Logical Sectors Written
-0x01  0x020  6        72384719  ---  Number of Write Commands
-0x01  0x028  6      9869284709  ---  Logical Sectors Read
-0x01  0x030  6       141691646  ---  Number of Read Commands
+0x01  0x008  4            1665  ---  Lifetime Power-On Resets
+0x01  0x010  4            6630  ---  Power-on Hours
+0x01  0x018  6     12480392986  ---  Logical Sectors Written
+0x01  0x020  6        76068780  ---  Number of Write Commands
+0x01  0x028  6     10417170566  ---  Logical Sectors Read
+0x01  0x030  6       148163677  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -197,5 +198,5 @@ Page  Offset Size        Value Flags Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 

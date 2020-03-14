@@ -10,7 +10,7 @@ Rotation Rate:    5900 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Oct 10 17:53:15 2015 OMST
+Local Time is:    Thu Jun  9 18:15:14 2016 OMST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,21 +60,21 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    63832670
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    159151514
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1672
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3564
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   072   060   030    -    12938667885
-  9 Power_On_Hours          -O--CK   099   099   000    -    1186
+  7 Seek_Error_Rate         POSR--   073   060   030    -    12962572429
+  9 Power_On_Hours          -O--CK   098   098   000    -    2518
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    707
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1655
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   099   099   000    -    1
-188 Command_Timeout         -O--CK   100   099   000    -    9
+187 Reported_Uncorrect      -O--CK   098   098   000    -    2
+188 Command_Timeout         -O--CK   100   095   000    -    4295032888
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   065   057   045    -    35 (Min/Max 20/35)
-194 Temperature_Celsius     -O---K   035   043   000    -    35 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   053   033   000    -    63832670
+190 Airflow_Temperature_Cel -O---K   059   053   045    -    41 (Min/Max 40/41)
+194 Temperature_Celsius     -O---K   041   047   000    -    41 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   054   033   000    -    159151514
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -111,7 +111,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 1
+Device Error Count: 2
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,6 +126,23 @@ Device Error Count: 1
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 1247 hours (51 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 01 29 00 64 ef 00 00  Error: UNC at LBA = 0x1290064ef = 4982858991
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 20 00 01 28 00 64 90 40 00     00:14:13.961  READ FPDMA QUEUED
+  60 00 00 00 08 00 01 28 00 64 88 40 00     00:14:13.961  READ FPDMA QUEUED
+  60 00 00 00 20 00 01 28 00 64 10 40 00     00:14:13.960  READ FPDMA QUEUED
+  60 00 00 00 08 00 01 28 00 64 08 40 00     00:14:13.960  READ FPDMA QUEUED
+  60 00 00 00 20 00 01 27 00 64 78 40 00     00:14:13.960  READ FPDMA QUEUED
 
 Error 1 [0] occurred at disk power-on lifetime: 1139 hours (47 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -146,7 +163,14 @@ Error 1 [0] occurred at disk power-on lifetime: 1139 hours (47 days + 11 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               80%        44         -
+# 1  Extended offline    Completed without error       00%      2363         -
+# 2  Extended offline    Completed without error       00%      2013         -
+# 3  Extended offline    Completed without error       00%      1700         -
+# 4  Extended offline    Completed without error       00%      1431         -
+# 5  Extended offline    Completed without error       00%      1341         -
+# 6  Extended offline    Completed: read failure       80%      1259         128411995
+# 7  Short offline       Aborted by host               80%        44         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -163,9 +187,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     20/35 Celsius
-Lifetime    Min/Max Temperature:     13/42 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     40/41 Celsius
+Lifetime    Min/Max Temperature:     13/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -173,7 +197,7 @@ Temperature Sampling Period:         2 minutes
 Temperature Logging Interval:        94 minutes
 Min/Max recommended Temperature:      1/61 Celsius
 Min/Max Temperature Limit:            2/60 Celsius
-Temperature History Size (Index):    128 (25)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -183,7 +207,7 @@ Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

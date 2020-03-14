@@ -4,20 +4,21 @@ Device Model:     Hitachi HTS725025A9A364
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: PC2OC72E
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Oct 31 17:01:43 2018 MSK
+Local Time is:    Fri Mar  8 22:41:12 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -25,8 +26,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,23 +61,23 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   062    -    0
-  2 Throughput_Performance  P-S--K   118   100   040    -    3292
-  3 Spin_Up_Time            PO---K   236   100   033    -    1
-  4 Start_Stop_Count        -O--CK   097   097   000    -    5020
+  2 Throughput_Performance  P-S--K   100   100   040    -    576
+  3 Spin_Up_Time            PO---K   224   100   033    -    1
+  4 Start_Stop_Count        -O--CK   097   097   000    -    5217
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         POSR-K   100   100   067    -    0
-  8 Seek_Time_Performance   P-S--K   108   100   040    -    37
-  9 Power_On_Hours          -O--CK   064   064   000    -    16172
+  8 Seek_Time_Performance   P-S--K   100   100   040    -    0
+  9 Power_On_Hours          -O--CK   062   062   000    -    16763
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    3561
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    3701
 183 Runtime_Bad_Block       -O--CK   089   089   000    -    11
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    4294901767
-188 Command_Timeout         -O--CK   096   013   000    -    2093
-190 Airflow_Temperature_Cel -O---K   060   048   045    -    40 (Min/Max 36/40)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    92
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    14614751
-193 Load_Cycle_Count        -O--CK   062   062   000    -    386472
+188 Command_Timeout         -O--CK   089   013   000    -    2320
+190 Airflow_Temperature_Cel -O---K   061   048   045    -    39 (Min/Max 23/39)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    107
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    15335658
+193 Load_Cycle_Count        -O--CK   058   058   000    -    429501
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -192,8 +193,11 @@ Error 3 [2] occurred at disk power-on lifetime: 862 hours (35 days + 22 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      1595         -
-# 2  Short offline       Completed without error       00%         4         -
+# 1  Extended offline    Completed without error       00%     16695         -
+# 2  Extended offline    Interrupted (host reset)      90%     16474         -
+# 3  Extended offline    Completed without error       00%     16449         -
+# 4  Short offline       Completed without error       00%      1595         -
+# 5  Short offline       Completed without error       00%         4         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -210,8 +214,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     36/40 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     23/39 Celsius
 Lifetime    Min/Max Temperature:      6/52 Celsius
 Lifetime    Average Temperature:        37 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -221,21 +225,23 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (456)
+Temperature History Size (Index):    478 (116)
 
 SCT Error Recovery Control:
-           Read:     85 (8,5 seconds)
-          Write:     85 (8,5 seconds)
+           Read:     85 (8.5 seconds)
+          Write:     85 (8.5 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0005  2            0  R_ERR response for non-data FIS
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

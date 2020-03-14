@@ -7,7 +7,7 @@ User Capacity:    250 059 350 016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Sep 26 18:06:41 2017 MSK
+Local Time is:    Sat Oct 28 20:13:05 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,22 +51,22 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   096   088   006    -    230982771
+  1 Raw_Read_Error_Rate     POSR--   099   088   006    -    7073245
   3 Spin_Up_Time            PO----   096   095   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1653
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1731
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   089   060   030    -    933990332
-  9 Power_On_Hours          -O--CK   083   083   000    -    15622
+  7 Seek_Error_Rate         POSR--   090   060   030    -    952608086
+  9 Power_On_Hours          -O--CK   082   082   000    -    15970
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1727
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1804
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   049   045    -    40 (Min/Max 21/41)
-194 Temperature_Celsius     -O---K   040   051   000    -    40 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   067   051   000    -    181647249
+190 Airflow_Temperature_Cel -O---K   062   049   045    -    38 (Min/Max 20/39)
+194 Temperature_Celsius     -O---K   038   051   000    -    38 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   056   051   000    -    84508165
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    40
+199 UDMA_CRC_Error_Count    -OSRCK   200   188   000    -    117
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23552  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 40 (device log contains only the most recent 20 errors)
+Device Error Count: 117 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,7 +117,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 40 [19] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 117 [16] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -128,13 +128,13 @@ Error 40 [19] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:06:32.169  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:06:32.112  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:06:32.111  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:06:32.111  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:06:32.048  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:33:05.723  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.672  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:33:05.665  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:33:05.665  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.599  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 39 [18] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 116 [15] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -145,13 +145,13 @@ Error 39 [18] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:05:26.367  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.366  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:05:26.366  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:05:26.301  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.300  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:34:40.064  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.390  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:34:08.338  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:34:08.332  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.331  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 38 [17] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 115 [14] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -162,13 +162,13 @@ Error 38 [17] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:05:26.367  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.366  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:05:26.366  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:05:26.301  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.300  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:33:05.723  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.390  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:34:08.338  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:34:08.332  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.331  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 37 [16] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 114 [13] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -179,13 +179,13 @@ Error 37 [16] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:04:22.682  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:22.682  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:04:22.610  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:04:22.609  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:22.586  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:33:05.723  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.672  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:33:05.665  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:33:05.665  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.599  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 36 [15] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 113 [12] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -196,13 +196,13 @@ Error 36 [15] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:06:32.169  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:06:32.112  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:06:32.111  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:06:32.111  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:06:32.048  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:33:05.723  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.672  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:33:05.665  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:33:05.665  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.599  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 35 [14] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 112 [11] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -213,13 +213,13 @@ Error 35 [14] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:05:26.367  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.366  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:05:26.366  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:05:26.301  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.300  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:34:40.064  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.390  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:34:08.338  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:34:08.332  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.331  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 34 [13] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 111 [10] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -230,13 +230,13 @@ Error 34 [13] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:05:26.367  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.366  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:05:26.366  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:05:26.301  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:26.300  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:33:05.723  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.390  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:34:08.338  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:34:08.332  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:34:08.331  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 33 [12] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hours)
+Error 110 [9] occurred at disk power-on lifetime: 15636 hours (651 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -247,11 +247,11 @@ Error 33 [12] occurred at disk power-on lifetime: 15608 hours (650 days + 8 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:04:22.682  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:22.682  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:04:22.610  IDENTIFY DEVICE
-  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:04:22.609  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:22.586  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 00 00 e0 00     00:33:05.723  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.672  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:33:05.665  IDENTIFY DEVICE
+  ef 00 03 00 42 00 ff ff 00 ff ff a0 00     00:33:05.665  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:33:05.599  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 

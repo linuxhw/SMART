@@ -8,14 +8,14 @@ User Capacity:    203 927 027 200 bytes [203 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Jan 18 23:15:45 2016 KRAT
+Local Time is:    Sat Mar 19 00:32:41 2016 KRAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -25,7 +25,7 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  24)	The self-test routine was aborted by
+Self-test execution status:      (  25)	The self-test routine was aborted by
 					the host.
 Total time to complete Offline 
 data collection: 		( 4682) seconds.
@@ -53,21 +53,21 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   208   204   063    -    9563
-  4 Start_Stop_Count        -O--CK   252   252   000    -    3504
+  3 Spin_Up_Time            POS--K   208   204   063    -    9219
+  4 Start_Stop_Count        -O--CK   252   252   000    -    3602
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   246   231   187    -    37390
-  9 Power_On_Hours          -O--CK   203   203   000    -    17518
+  8 Seek_Time_Performance   POS--K   246   231   187    -    52696
+  9 Power_On_Hours          -O--CK   201   201   000    -    18118
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   244   244   000    -    3655
+ 12 Power_Cycle_Count       -O--CK   244   244   000    -    3754
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   071   045   000    -    29 (Min/Max 18/29)
+190 Airflow_Temperature_Cel -O---K   069   045   000    -    31 (Min/Max 18/31)
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   036   253   000    -    29
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    643
+194 Temperature_Celsius     -O--CK   035   253   000    -    31
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1097
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
@@ -261,13 +261,19 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               80%     17484         -
-# 2  Extended offline    Aborted by host               80%     17416         -
-# 3  Extended offline    Interrupted (host reset)      80%     16973         -
-# 4  Extended offline    Interrupted (host reset)      80%     16972         -
-# 5  Extended offline    Completed without error       00%     16513         -
-# 6  Extended offline    Completed without error       00%     16404         -
-# 7  Extended offline    Aborted by host               50%     16015         -
+# 1  Extended offline    Aborted by host               90%     18059         -
+# 2  Extended offline    Aborted by host               80%     17973         -
+# 3  Extended offline    Aborted by host               50%     17833         -
+# 4  Extended offline    Aborted by host               30%     17753         -
+# 5  Extended offline    Aborted by host               70%     17692         -
+# 6  Extended offline    Aborted by host               90%     17559         -
+# 7  Extended offline    Aborted by host               80%     17484         -
+# 8  Extended offline    Aborted by host               80%     17416         -
+# 9  Extended offline    Interrupted (host reset)      80%     16973         -
+#10  Extended offline    Interrupted (host reset)      80%     16972         -
+#11  Extended offline    Completed without error       00%     16513         -
+#12  Extended offline    Completed without error       00%     16404         -
+#13  Extended offline    Aborted by host               50%     16015         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -284,8 +290,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 29 Celsius
-Power Cycle Max Temperature:         29 Celsius
+Current Temperature:                 31 Celsius
+Power Cycle Max Temperature:         31 Celsius
 Lifetime    Max Temperature:         60 Celsius
 
 SCT Temperature History Version:     2

@@ -7,11 +7,11 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Wed Jun 20 09:10:59 2018 +03
+Local Time is:    Sat Dec 22 09:27:02 2018 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -56,28 +56,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    7
   3 Spin_Up_Time            POS---   253   253   025    -    4480
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7252
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7569
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    16225
+  9 Power_On_Hours          -O--CK   100   100   000    -    17099
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3696
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    11208
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3847
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    11372109
 184 End-to-End_Error        PO--CK   253   253   099    -    0
-187 Reported_Uncorrect      -O--CK   052   052   000    -    1114161
+187 Reported_Uncorrect      -O--CK   052   052   000    -    1310769
 188 Command_Timeout         -O--CK   253   253   000    -    0
-190 Airflow_Temperature_Cel -O---K   133   115   000    -    35 (Min/Max 7/41)
-194 Temperature_Celsius     -O---K   133   112   000    -    35 (Min/Max 7/42)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    11208
+190 Airflow_Temperature_Cel -O---K   148   115   000    -    30 (Min/Max 7/41)
+194 Temperature_Celsius     -O---K   148   112   000    -    30 (Min/Max 7/42)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    11372109
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O--C-   253   100   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   100   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   100   000    -    1
                             ||||||_ K auto-keep
@@ -185,7 +185,7 @@ Error 45 [4] occurred at disk power-on lifetime: 9379 hours (390 days + 19 hours
   db 00 08 02 a7 25 00 00 40 e7 00 00 00     00:00:00.001  ACKNOWLEDGE MEDIA CHANGE [RET-4]
   db 00 08 02 9f 25 00 00 40 e7 00 00 00     00:00:00.001  ACKNOWLEDGE MEDIA CHANGE [RET-4]
   db 00 08 02 97 25 00 00 40 e7 00 00 00     00:00:00.001  ACKNOWLEDGE MEDIA CHANGE [RET-4]
-  00 11 89 11 91 00 00 11 01 c9 b1 01 11     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 11 89 11 91 00 00 11 01 c9 b1 04 11     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
 
 Error 44 [3] occurred at disk power-on lifetime: 12722 hours (530 days + 2 hours)
   When the command that caused the error occurred, the device was in a reserved state.
@@ -222,8 +222,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     21/36 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     12/30 Celsius
 Lifetime    Min/Max Temperature:     10/42 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -232,7 +232,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (39)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -253,7 +253,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

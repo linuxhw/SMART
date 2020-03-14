@@ -7,11 +7,11 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Thu Apr 19 12:30:01 2018 CEST
+Local Time is:    Sat Apr 21 07:37:38 2018 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -30,11 +30,11 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 Total time to complete Offline 
 data collection: 		(  645) seconds.
 Offline data collection
-capabilities: 			 (0x51) SMART execute Offline immediate.
-					No Auto Offline data collection support.
+capabilities: 			 (0x5b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					No Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -52,19 +52,19 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   106   100   040    -    4517
-  3 Spin_Up_Time            POS---   194   100   033    -    1
-  4 Start_Stop_Count        -O--C-   094   094   000    -    9800
+  2 Throughput_Performance  P-S---   106   100   040    -    4516
+  3 Spin_Up_Time            POS---   236   100   033    -    1
+  4 Start_Stop_Count        -O--C-   094   094   000    -    9813
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    51 (0 5)
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   134   100   040    -    33
-  9 Power_On_Hours          -O--C-   052   052   000    -    21259
+  8 Seek_Time_Performance   P-S---   136   100   040    -    32
+  9 Power_On_Hours          -O--C-   052   052   000    -    21281
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    9133
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    9146
 191 G-Sense_Error_Rate      -O-R--   100   094   000    -    0
 192 Power-Off_Retract_Count -O--CK   096   096   000    -    959
-193 Load_Cycle_Count        -O--C-   059   059   000    -    416858
-194 Temperature_Celsius     -O----   157   100   000    -    35 (Min/Max 5/52)
+193 Load_Cycle_Count        -O--C-   059   059   000    -    417111
+194 Temperature_Celsius     -O----   171   100   000    -    32 (Min/Max 5/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    6
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -95,12 +95,13 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     20849         -
+# 1  Extended offline    Completed without error       00%     21278         -
 # 2  Extended offline    Completed without error       00%     20849         -
-# 3  Extended offline    Aborted by host               90%        87         -
-# 4  Short offline       Completed without error       00%        87         -
-# 5  Short offline       Aborted by host               30%        84         -
-# 6  Short offline       Completed without error       00%         0         -
+# 3  Extended offline    Completed without error       00%     20849         -
+# 4  Extended offline    Aborted by host               90%        87         -
+# 5  Short offline       Completed without error       00%        87         -
+# 6  Short offline       Aborted by host               30%        84         -
+# 7  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -120,8 +121,8 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           30  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

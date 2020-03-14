@@ -10,7 +10,7 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Jun  3 14:20:35 2017 +07
+Local Time is:    Fri Jul 14 21:42:23 2017 KRAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,9 @@ ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: PASSED
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
+See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -58,28 +60,28 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   094   094   050    -    0/5097090
-  5 Retired_Block_Count     PO--CK   100   100   003    -    29
-  9 Power_On_Hours_and_Msec -O--CK   053   053   000    -    41741h+37m+55.000s
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2496
-171 Program_Fail_Count      -O--CK   000   000   000    -    29
+  1 Raw_Read_Error_Rate     POSR--   092   092   050    -    0/28992880
+  5 Retired_Block_Count     PO--CK   100   100   003    -    31
+  9 Power_On_Hours_and_Msec -O--CK   052   052   000    -    42721h+18m+16.750s
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2540
+171 Program_Fail_Count      -O--CK   000   000   000    -    31
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    378
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    394
 177 Wear_Range_Delta        ------   000   000   000    -    5
-181 Program_Fail_Count      -O--CK   000   000   000    -    29
+181 Program_Fail_Count      -O--CK   000   000   000    -    31
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   033   061   000    -    33 (Min/Max 5/61)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/5097090
-196 Reallocated_Event_Count PO--CK   100   100   003    -    29
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/5097090
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/5097090
+194 Temperature_Celsius     -O---K   030   061   000    -    30 (Min/Max 5/61)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/28992880
+196 Reallocated_Event_Count PO--CK   100   100   003    -    31
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/28992880
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/28992880
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
-231 SSD_Life_Left           PO--C-   011   011   010    -    1
-233 SandForce_Internal      ------   000   000   000    -    31715
-234 SandForce_Internal      -O--CK   000   000   000    -    28946
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    28946
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    32085
+231 SSD_Life_Left           PO--C-   006   006   010    NOW  1
+233 SandForce_Internal      ------   000   000   000    -    32928
+234 SandForce_Internal      -O--CK   000   000   000    -    30492
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    30492
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    33125
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -93,8 +95,8 @@ Address    Access  R/W   Size  Description
 0x00       GPL,SL  R/O      1  Log Directory
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xb7       GPL,SL  VS      16  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -125,22 +127,22 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     32/34 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     30/35 Celsius
 Lifetime    Min/Max Temperature:      5/61 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     10 (Unknown, should be 2)
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
-Min/Max recommended Temperature:     -93/92 Celsius
-Min/Max Temperature Limit:           42/-15 Celsius
-Temperature History Size (Index):    52790 (379)
+Min/Max recommended Temperature:     115/89 Celsius
+Min/Max Temperature Limit:           -77/-21 Celsius
+Temperature History Size (Index):    4661 (214)
 Invalid Temperature History Size or Index
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP/SMART Log 0x04) not supported
+Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -150,8 +152,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           14  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
@@ -160,4 +162,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

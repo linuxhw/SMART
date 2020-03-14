@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jan 23 23:51:31 2019 MSK
+Local Time is:    Sun Mar 24 14:55:40 2019 MSK
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -68,24 +68,24 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   117   099   006    -    143396461
+  1 Raw_Read_Error_Rate     -OSR--   108   081   006    -    18647497
   3 Spin_Up_Time            PO----   100   100   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3682
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    560202009
-  9 Power_On_Hours          -O--CK   080   080   000    -    18393
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3803
+  5 Reallocated_Sector_Ct   PO--CK   090   090   036    -    443
+  7 Seek_Error_Rate         POSR--   087   060   030    -    577706256
+  9 Power_On_Hours          -O--CK   079   079   000    -    19247
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3636
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3757
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    0
+187 Reported_Uncorrect      -O--CK   001   001   000    -    7533
+188 Command_Timeout         -O--CK   084   084   000    -    55836213341
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   049   040   045    Past 51 (255 255 51 24 0)
-194 Temperature_Celsius     -O---K   051   060   000    -    51 (0 18 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   036   023   000    -    143396461
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
+190 Airflow_Temperature_Cel -O---K   043   040   045    NOW  57 (255 255 57 46 0)
+194 Temperature_Celsius     -O---K   057   060   000    -    57 (0 18 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   045   023   000    -    18647497
+197 Current_Pending_Sector  -O--C-   079   046   000    -    901
+198 Offline_Uncorrectable   ----C-   079   046   000    -    901
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    6
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,29 +120,179 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 7532 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 7532 [11] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 3e ec 04 e0 00 00  Error: UNC at LBA = 0x3eec04e0 = 1055655136
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 3e ec 04 00 40 00     01:48:26.440  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 3e e0 ef 00 40 00     01:48:22.704  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 3e d0 fd 00 40 00     01:48:17.557  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 3e c1 0a 00 40 00     01:48:12.500  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 3e b1 18 00 40 00     01:48:07.416  READ VERIFY SECTOR(S) EXT
+
+Error 7531 [10] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 3a 0a 60 57 00 00  Error: UNC at LBA = 0x3a0a6057 = 973758551
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 3a 0a 60 00 40 00     01:40:57.552  READ VERIFY SECTOR(S) EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     01:40:57.524  SMART READ DATA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     01:40:57.523  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:40:57.522  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:40:57.481  IDENTIFY DEVICE
+
+Error 7530 [9] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 31 ee 9e 38 00 00  Error: UNC at LBA = 0x31ee9e38 = 837721656
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 31 ee 9e 00 40 00     01:29:16.021  READ VERIFY SECTOR(S) EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     01:29:16.020  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:29:16.019  IDENTIFY DEVICE
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     01:29:16.018  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     01:29:15.999  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 7529 [8] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 31 ee 9d 9c 00 00  Error: UNC at LBA = 0x31ee9d9c = 837721500
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 31 ee 9d 00 40 00     01:29:13.070  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 31 e5 f9 00 40 00     01:29:10.184  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 31 e5 f8 00 40 00     01:29:09.401  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 31 da 03 00 40 00     01:29:04.181  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 31 ca 10 00 40 00     01:28:59.316  READ VERIFY SECTOR(S) EXT
+
+Error 7528 [7] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 30 29 f8 e8 00 00  Error: UNC at LBA = 0x3029f8e8 = 808057064
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 30 29 f8 00 40 00     01:26:18.924  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 30 20 83 00 40 00     01:26:16.077  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 30 10 92 00 40 00     01:26:11.399  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 30 00 9c 00 40 00     01:26:06.265  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 30 00 9b 00 40 00     01:26:06.228  READ VERIFY SECTOR(S) EXT
+
+Error 7527 [6] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 30 00 99 07 00 00  Error: UNC at LBA = 0x30009907 = 805345543
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 30 00 99 00 40 00     01:25:53.293  READ VERIFY SECTOR(S) EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     01:25:53.291  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:25:53.291  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:25:53.289  IDENTIFY DEVICE
+  ef 00 03 00 42 00 00 00 00 00 00 a0 00     01:25:53.289  SET FEATURES [Set transfer mode]
+
+Error 7526 [5] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 2e 8a 49 29 00 00  Error: UNC at LBA = 0x2e8a4929 = 780814633
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 2e 8a 49 00 40 00     01:21:38.737  READ VERIFY SECTOR(S) EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     01:21:38.736  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:21:38.735  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     01:21:38.716  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     01:21:38.716  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 7525 [4] occurred at disk power-on lifetime: 19246 hours (801 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 2e 8a 48 f9 00 00  Error: UNC at LBA = 0x2e8a48f9 = 780814585
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 01 00 00 00 2e 8a 48 00 40 00     01:21:35.770  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 2e 8a 47 00 40 00     01:21:35.678  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 2e 8a 46 00 40 00     01:21:35.628  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 2e 81 30 00 40 00     01:21:32.749  READ VERIFY SECTOR(S) EXT
+  42 00 00 01 00 00 00 2e 71 40 00 40 00     01:21:27.925  READ VERIFY SECTOR(S) EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      00%     18334         -
-# 2  Extended offline    Interrupted (host reset)      00%     18242         -
-# 3  Extended offline    Completed without error       00%     18127         -
-# 4  Extended offline    Completed without error       00%     18026         -
-# 5  Extended offline    Interrupted (host reset)      00%     17925         -
-# 6  Extended offline    Interrupted (host reset)      00%     17809         -
-# 7  Extended offline    Completed without error       00%     17690         -
-# 8  Extended offline    Completed without error       00%     17508         -
-# 9  Extended offline    Interrupted (host reset)      00%     17331         -
-#10  Extended offline    Interrupted (host reset)      00%     17229         -
-#11  Extended offline    Completed without error       00%     16693         -
-#12  Extended offline    Completed without error       00%     16589         -
-#13  Extended offline    Interrupted (host reset)      00%     16022         -
-#14  Extended offline    Interrupted (host reset)      00%     15928         -
-#15  Extended offline    Interrupted (host reset)      00%     15827         -
-#16  Extended offline    Completed without error       00%     15498         -
-#17  Extended offline    Interrupted (host reset)      00%     15378         -
-#18  Extended offline    Interrupted (host reset)      00%     14976         -
-#19  Extended offline    Interrupted (host reset)      00%     14196         -
+# 1  Extended offline    Completed: read failure       90%     19034         1937879330
+# 2  Extended offline    Interrupted (host reset)      00%     18924         -
+# 3  Extended offline    Interrupted (host reset)      00%     18824         -
+# 4  Extended offline    Interrupted (host reset)      00%     18725         -
+# 5  Extended offline    Interrupted (host reset)      00%     18527         -
+# 6  Extended offline    Interrupted (host reset)      00%     18426         -
+# 7  Extended offline    Interrupted (host reset)      00%     18334         -
+# 8  Extended offline    Interrupted (host reset)      00%     18242         -
+# 9  Extended offline    Completed without error       00%     18127         -
+#10  Extended offline    Completed without error       00%     18026         -
+#11  Extended offline    Interrupted (host reset)      00%     17925         -
+#12  Extended offline    Interrupted (host reset)      00%     17809         -
+#13  Extended offline    Completed without error       00%     17690         -
+#14  Extended offline    Completed without error       00%     17508         -
+#15  Extended offline    Interrupted (host reset)      00%     17331         -
+#16  Extended offline    Interrupted (host reset)      00%     17229         -
+#17  Extended offline    Completed without error       00%     16693         -
+#18  Extended offline    Completed without error       00%     16589         -
+#19  Extended offline    Interrupted (host reset)      00%     16022         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -159,8 +309,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    50 Celsius
-Power Cycle Min/Max Temperature:     24/50 Celsius
+Current Temperature:                    57 Celsius
+Power Cycle Min/Max Temperature:     46/57 Celsius
 Lifetime    Min/Max Temperature:     18/60 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -169,7 +319,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:      3/62 Celsius
 Min/Max Temperature Limit:            0/65 Celsius
-Temperature History Size (Index):    128 (121)
+Temperature History Size (Index):    128 (53)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -181,7 +331,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           24  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

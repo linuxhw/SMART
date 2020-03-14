@@ -1,6 +1,3 @@
-smartctl 6.6 2016-05-31 r4324 [x86_64-linux-4.18.0-0.bpo.1-amd64] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
-
 === START OF INFORMATION SECTION ===
 Device Model:     SanDisk SD8SN8U1T001122
 Serial Number:    --
@@ -13,13 +10,14 @@ Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct  7 12:56:25 2018 MST
+Local Time is:    Tue Dec 11 13:56:57 2018 MST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -58,9 +56,9 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    393
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    415
-165 Unknown_Attribute       -O--CK   100   100   ---    -    6160464
+  9 Power_On_Hours          -O--CK   100   100   ---    -    429
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    445
+165 Unknown_Attribute       -O--CK   100   100   ---    -    6422612
 166 Unknown_Attribute       -O--CK   100   100   ---    -    0
 167 Unknown_Attribute       -O--CK   100   100   ---    -    83
 168 Unknown_Attribute       -O--CK   100   100   ---    -    1
@@ -73,14 +71,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   065   063   ---    -    35 (Min/Max 21/63)
+194 Temperature_Celsius     -O---K   058   063   ---    -    42 (Min/Max 21/63)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Unknown_SSD_Attribute   -O--CK   100   100   ---    -    94489280534
+230 Unknown_SSD_Attribute   -O--CK   100   100   ---    -    103079215128
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 Media_Wearout_Indicator -O--CK   100   100   ---    -    826
-234 Unknown_Attribute       -O--CK   100   100   ---    -    1549
-241 Total_LBAs_Written      ----CK   253   253   ---    -    1399
-242 Total_LBAs_Read         ----CK   253   253   ---    -    942
+233 Media_Wearout_Indicator -O--CK   100   100   ---    -    853
+234 Unknown_Attribute       -O--CK   100   100   ---    -    1628
+241 Total_LBAs_Written      ----CK   253   253   ---    -    1463
+242 Total_LBAs_Read         ----CK   253   253   ---    -    978
 244 Unknown_Attribute       -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -99,7 +97,7 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -119,22 +117,24 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             415  ---  Lifetime Power-On Resets
+0x01  0x008  4             445  ---  Lifetime Power-On Resets
 0x01  0x010  4               3  ---  Power-on Hours
-0x01  0x018  6      2934248959  ---  Logical Sectors Written
-0x01  0x020  6        33368953  ---  Number of Write Commands
-0x01  0x028  6      1976088473  ---  Logical Sectors Read
-0x01  0x030  6        54964080  ---  Number of Read Commands
+0x01  0x018  6      3070227542  ---  Logical Sectors Written
+0x01  0x020  6        34238782  ---  Number of Write Commands
+0x01  0x028  6      2052742821  ---  Logical Sectors Read
+0x01  0x030  6        56195692  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           33  Device-to-host register FISes sent due to a COMRESET
 

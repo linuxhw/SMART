@@ -3,11 +3,11 @@ Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250310AS
 Serial Number:    --
 Firmware Version: 4.AAA
-User Capacity:    250 058 268 160 bytes [250 GB]
+User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Sep 11 07:33:51 2017 MSK
+Local Time is:    Mon Apr 16 22:51:17 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,8 +24,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 113)	The previous self-test completed having
-					the read element of the test failed.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -53,17 +54,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   094   094   020    -    6726
-  5 Reallocated_Sector_Ct   PO--CK   092   092   036    -    337
-  7 Seek_Error_Rate         POSR--   088   060   030    -    795302226
-  9 Power_On_Hours          -O--CK   077   077   000    -    20580
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7319
+  5 Reallocated_Sector_Ct   PO--CK   092   092   036    -    349
+  7 Seek_Error_Rate         POSR--   089   060   030    -    884007232
+  9 Power_On_Hours          -O--CK   074   074   000    -    22867
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    6000
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6542
+187 Reported_Uncorrect      -O--CK   046   046   000    -    54
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
 190 Airflow_Temperature_Cel -O---K   074   051   045    -    26 (Min/Max 14/49)
 194 Temperature_Celsius     -O---K   026   049   000    -    26 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   067   061   000    -    9931110
+195 Hardware_ECC_Recovered  -O-RC-   073   056   000    -    48056837
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   164   000    -    4004
@@ -103,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 4015 (device log contains only the most recent 20 errors)
+Device Error Count: 4074 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,147 +120,151 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4015 [14] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4074 [13] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 01 fa 00 9e 40 e0 00     02:24:23.176  READ DMA EXT
-  35 00 00 00 10 00 01 2d 00 42 a0 e0 00     02:24:23.175  WRITE DMA EXT
-  25 00 00 00 10 00 01 fa 00 9e 40 e0 00     02:24:23.175  READ DMA EXT
-  35 00 00 00 20 00 03 81 00 ff c0 e0 00     02:24:23.175  WRITE DMA EXT
-  35 00 00 00 20 00 01 2d 00 42 80 e0 00     02:24:23.175  WRITE DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.376  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:03:47.312  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.302  READ DMA EXT
+  25 00 00 00 01 00 00 08 00 00 02 e0 00     00:04:07.695  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:04:07.695  NOP [Abort queued commands]
 
-Error 4014 [13] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4073 [12] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 02 13 00 19 20 e0 00     02:24:17.742  READ DMA EXT
-  35 00 00 00 20 00 03 80 00 ff a0 e0 00     02:24:17.742  WRITE DMA EXT
-  35 00 00 00 20 00 01 49 00 76 e0 e0 00     02:24:17.742  WRITE DMA EXT
-  25 00 00 00 20 00 02 13 00 19 00 e0 00     02:24:17.742  READ DMA EXT
-  35 00 00 00 20 00 03 80 00 ff a0 e0 00     02:24:17.741  WRITE DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.376  READ DMA EXT
+  25 00 00 00 01 00 00 08 00 00 02 e0 00     00:03:47.312  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:03:47.302  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.302  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:03:47.288  NOP [Abort queued commands]
 
-Error 4013 [12] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4072 [11] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 01 fe 00 d5 00 e0 00     02:24:04.186  READ DMA EXT
-  35 00 00 00 20 00 03 7d 00 ff 60 e0 00     02:24:04.185  WRITE DMA EXT
-  35 00 00 00 20 00 01 9a 00 9e 40 e0 00     02:24:04.185  WRITE DMA EXT
-  25 00 00 00 20 00 01 fd 00 d5 e0 e0 00     02:24:04.185  READ DMA EXT
-  35 00 00 00 20 00 03 7d 00 ff 60 e0 00     02:24:04.185  WRITE DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:04:15.855  READ DMA EXT
+  25 00 00 00 37 00 00 29 00 01 09 e0 00     00:04:11.775  READ DMA EXT
+  25 00 00 00 09 00 00 29 00 01 00 e0 00     00:04:11.775  READ DMA EXT
+  25 00 00 00 27 00 00 29 00 00 19 e0 00     00:04:07.695  READ DMA EXT
+  25 00 00 00 19 00 00 29 00 00 00 e0 00     00:04:07.695  READ DMA EXT
 
-Error 4012 [11] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4071 [10] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 27 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 39 sectors at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 f8 00 00 de 00 2b f8 e0 00     02:24:51.805  READ DMA EXT
-  25 00 00 00 18 00 00 d9 00 2b f8 e0 00     02:24:51.800  READ DMA EXT
-  25 00 00 00 08 00 03 a9 00 b9 e0 e0 00     02:24:51.793  READ DMA EXT
-  25 00 00 00 08 00 00 d9 00 2b f0 e0 00     02:24:51.793  READ DMA EXT
-  25 00 00 00 20 00 00 d7 00 2b 90 e0 00     02:24:51.786  READ DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.376  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:04:11.775  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:04:11.775  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:04:07.695  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:04:07.695  READ DMA EXT
 
-Error 4011 [10] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4070 [9] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 01 fa 00 9e 40 e0 00     02:24:23.176  READ DMA EXT
-  35 00 00 00 10 00 01 2d 00 42 a0 e0 00     02:24:23.175  WRITE DMA EXT
-  25 00 00 00 10 00 01 fa 00 9e 40 e0 00     02:24:23.175  READ DMA EXT
-  35 00 00 00 20 00 03 81 00 ff c0 e0 00     02:24:23.175  WRITE DMA EXT
-  35 00 00 00 20 00 01 2d 00 42 80 e0 00     02:24:23.175  WRITE DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.376  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:03:47.312  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.302  READ DMA EXT
+  25 00 00 00 01 00 00 08 00 00 02 e0 00     00:04:07.695  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:04:07.695  NOP [Abort queued commands]
 
-Error 4010 [9] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4069 [8] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 02 13 00 19 20 e0 00     02:24:17.742  READ DMA EXT
-  35 00 00 00 20 00 03 80 00 ff a0 e0 00     02:24:17.742  WRITE DMA EXT
-  35 00 00 00 20 00 01 49 00 76 e0 e0 00     02:24:17.742  WRITE DMA EXT
-  25 00 00 00 20 00 02 13 00 19 00 e0 00     02:24:17.742  READ DMA EXT
-  35 00 00 00 20 00 03 80 00 ff a0 e0 00     02:24:17.741  WRITE DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.376  READ DMA EXT
+  25 00 00 00 01 00 00 08 00 00 02 e0 00     00:03:47.312  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:03:47.302  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.302  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:03:47.288  NOP [Abort queued commands]
 
-Error 4009 [8] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4068 [7] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 01 fe 00 d5 00 e0 00     02:24:04.186  READ DMA EXT
-  35 00 00 00 20 00 03 7d 00 ff 60 e0 00     02:24:04.185  WRITE DMA EXT
-  35 00 00 00 20 00 01 9a 00 9e 40 e0 00     02:24:04.185  WRITE DMA EXT
-  25 00 00 00 20 00 01 fd 00 d5 e0 e0 00     02:24:04.185  READ DMA EXT
-  35 00 00 00 20 00 03 7d 00 ff 60 e0 00     02:24:04.185  WRITE DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:04:15.855  READ DMA EXT
+  25 00 00 00 37 00 00 29 00 01 09 e0 00     00:04:11.775  READ DMA EXT
+  25 00 00 00 09 00 00 29 00 01 00 e0 00     00:04:11.775  READ DMA EXT
+  25 00 00 00 27 00 00 29 00 00 19 e0 00     00:04:07.695  READ DMA EXT
+  25 00 00 00 19 00 00 29 00 00 00 e0 00     00:04:07.695  READ DMA EXT
 
-Error 4008 [7] occurred at disk power-on lifetime: 18707 hours (779 days + 11 hours)
+Error 4067 [6] occurred at disk power-on lifetime: 20837 hours (868 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 27 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 39 sectors at LBA = 0x00000000 = 0
+  40 -- 51 00 00 00 00 08 00 00 0a e0 00  Error: UNC at LBA = 0x0800000a = 134217738
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 f8 00 00 de 00 2b f8 e0 00     02:24:51.805  READ DMA EXT
-  25 00 00 00 18 00 00 d9 00 2b f8 e0 00     02:24:51.800  READ DMA EXT
-  25 00 00 00 08 00 03 a9 00 b9 e0 e0 00     02:24:51.793  READ DMA EXT
-  25 00 00 00 08 00 00 d9 00 2b f0 e0 00     02:24:51.793  READ DMA EXT
-  25 00 00 00 20 00 00 d7 00 2b 90 e0 00     02:24:51.786  READ DMA EXT
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:03:47.376  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:04:11.775  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:04:11.775  READ DMA EXT
+  00 00 00 00 1f 00 00 08 00 00 00 00 00     00:04:07.695  NOP [Abort queued commands]
+  25 00 00 00 1f 00 00 08 00 00 00 e0 00     00:04:07.695  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       10%     20558         485696052
-# 2  Extended offline    Completed: read failure       10%     19992         485662460
-# 3  Extended offline    Interrupted (host reset)      90%     18798         -
+# 1  Extended offline    Completed without error       00%     22836         -
+# 2  Extended offline    Completed without error       00%     21816         -
+# 3  Extended offline    Completed without error       00%     20844         -
+# 4  Extended offline    Completed: read failure       10%     20558         485696052
+# 5  Extended offline    Completed: read failure       10%     19992         485662460
+# 6  Extended offline    Interrupted (host reset)      90%     18798         -
+2 of 2 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

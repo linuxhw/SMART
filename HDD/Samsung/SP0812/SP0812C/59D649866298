@@ -7,7 +7,7 @@ User Capacity:    80 059 342 336 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Fri Sep 18 14:39:23 2015 IRKT
+Local Time is:    Thu Feb 25 15:14:10 2016 IRKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -21,12 +21,11 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 112)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		( 2880) seconds.
 Offline data collection
@@ -52,16 +51,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   078   057   000    -    4224
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8360
+  3 Spin_Up_Time            POS---   076   057   000    -    4416
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8809
   5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    3
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
-  8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Half_Minutes   -O--CK   098   098   000    -    10261h+33m
+  8 Seek_Time_Performance   --S--K   090   089   000    -    9794
+  9 Power_On_Half_Minutes   -O--CK   098   098   000    -    11009h+13m
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5084
-194 Temperature_Celsius     -O---K   208   070   000    -    10
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    73181166
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5446
+194 Temperature_Celsius     -O---K   133   070   000    -    35
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    86931773
 196 Reallocated_Event_Count -O--C-   093   093   000    -    17
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Total_Offl_Uncorrectabl P---CK   094   094   010    -    14
@@ -86,8 +85,8 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x03) instead
-Device Error Count: 28763 (device log contains only the most recent 8 errors)
+Invalid Error Log index = 0x0000, trying reserved byte (0x05) instead
+Device Error Count: 28773 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -103,146 +102,152 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 28763 [2] occurred at disk power-on lifetime: 10251 hours (427 days + 3 hours)
+Error 28773 [4] occurred at disk power-on lifetime: 10896 hours (454 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 b0 00 00 1f c0 00 b8 e0 00  Error: UNC 176 sectors at LBA = 0x1fc000b8 = 532676792
+  40 -- 51 00 d0 00 00 28 3a 00 70 e0 00  Error: UNC 208 sectors at LBA = 0x283a0070 = 674889840
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 b0 00 00 00 1f c0 b8 e0 00     00:09:55.188  READ DMA
-  c8 00 00 00 00 00 00 00 1f b7 58 e0 00     00:09:55.188  READ DMA
-  c8 00 00 00 a8 00 00 00 1a 03 98 e0 00     00:09:55.188  READ DMA
-  c8 00 00 00 90 00 00 00 23 1b d8 e0 00     00:09:55.188  READ DMA
-  c8 00 00 00 00 00 00 00 23 1a 98 e0 00     00:09:55.188  READ DMA
+  c8 00 00 00 d0 00 00 00 28 3a 70 e0 00     06:21:33.750  READ DMA
+  c8 00 00 00 28 00 00 00 28 3a 40 e0 00     06:21:33.750  READ DMA
+  c8 00 00 00 08 00 00 00 9b 87 88 e2 00     06:21:33.750  READ DMA
+  c8 00 00 00 08 00 00 00 87 aa f0 e2 00     06:21:33.688  READ DMA
+  c8 00 00 00 60 00 00 00 31 5b 70 e0 00     06:21:33.688  READ DMA
 
-Error 28762 [1] occurred at disk power-on lifetime: 10246 hours (426 days + 22 hours)
+Error 28772 [3] occurred at disk power-on lifetime: 10895 hours (453 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f c0 00 0f e0 00  Error: UNC at LBA = 0x1fc0000f = 532676623
+  40 -- 51 00 00 00 00 28 3a 00 40 e0 00  Error: UNC at LBA = 0x283a0040 = 674889792
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 00 00 00 1f c0 0f e0 00     00:21:11.688  READ DMA
-  c8 00 00 00 00 00 00 00 1f bf 0f e0 00     00:21:11.625  READ DMA
-  c8 00 00 00 40 00 00 00 6f c2 21 e0 00     00:21:11.625  READ DMA
-  c8 00 00 00 00 00 00 00 7a 49 ba e5 00     00:21:11.625  READ DMA
-  c8 00 00 00 00 00 00 00 7a 48 ba e5 00     00:21:11.625  READ DMA
+  c8 00 00 00 00 00 00 00 28 3a 40 e0 00     06:13:00.313  READ DMA
+  c8 00 00 00 10 00 00 00 2a 49 28 e0 00     06:13:00.313  READ DMA
+  c8 00 00 00 38 00 00 00 2a 48 e8 e0 00     06:13:00.313  READ DMA
+  c8 00 00 00 20 00 00 00 2a 48 c0 e0 00     06:13:00.313  READ DMA
+  c8 00 00 00 78 00 00 00 2a 48 40 e0 00     06:13:00.313  READ DMA
 
-Error 28761 [0] occurred at disk power-on lifetime: 10246 hours (426 days + 22 hours)
+Error 28771 [2] occurred at disk power-on lifetime: 10895 hours (453 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f 8f 00 3f e0 00  Error: UNC at LBA = 0x1f8f003f = 529465407
+  40 -- 51 00 70 00 00 28 3a 00 d0 e0 00  Error: UNC 112 sectors at LBA = 0x283a00d0 = 674889936
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 00 00 00 1f 8f 3f e0 00     00:21:10.125  READ DMA
-  ca 00 00 00 00 00 00 00 14 3e 4a e5 00     00:21:10.125  WRITE DMA
-  ca 00 00 00 00 00 00 00 14 3d 4a e5 00     00:21:10.125  WRITE DMA
-  ca 00 00 00 00 00 00 00 14 3c 4a e5 00     00:21:10.125  WRITE DMA
-  ca 00 00 00 00 00 00 00 14 3b 4a e5 00     00:21:10.125  WRITE DMA
+  c8 00 00 00 70 00 00 00 28 3a d0 e0 00     06:12:10.125  READ DMA
+  c8 00 00 00 30 00 00 00 15 45 a8 e0 00     06:12:10.125  READ DMA
+  c8 00 00 00 10 00 00 00 15 45 80 e0 00     06:12:10.125  READ DMA
+  c8 00 00 00 18 00 00 00 15 45 50 e0 00     06:12:10.125  READ DMA
+  c8 00 00 00 08 00 00 00 15 45 40 e0 00     06:12:10.125  READ DMA
 
-Error 28760 [7] occurred at disk power-on lifetime: 10246 hours (426 days + 22 hours)
+Error 28770 [1] occurred at disk power-on lifetime: 10895 hours (453 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f 74 00 87 e0 00  Error: UNC at LBA = 0x1f740087 = 527696007
+  40 -- 51 00 00 00 00 28 3a 00 38 e0 00  Error: UNC at LBA = 0x283a0038 = 674889784
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 00 00 00 1f 74 87 e0 00     00:21:09.000  READ DMA
-  c8 00 00 00 00 00 00 00 1f 73 87 e0 00     00:21:09.000  READ DMA
-  c8 00 00 00 00 00 00 00 7a 31 ba e5 00     00:21:09.000  READ DMA
-  c8 00 00 00 00 00 00 00 7a 30 ba e5 00     00:21:09.000  READ DMA
-  c8 00 00 00 00 00 00 00 7a 2f ba e5 00     00:21:09.000  READ DMA
+  c8 00 00 00 00 00 00 00 28 3a 38 e0 00     06:11:50.688  READ DMA
+  c8 00 00 00 28 00 00 00 27 c5 c0 e0 00     06:11:50.688  READ DMA
+  c8 00 00 00 38 00 00 00 27 c5 80 e0 00     06:11:50.688  READ DMA
+  c8 00 00 00 90 00 00 00 27 c4 e8 e0 00     06:11:50.625  READ DMA
+  c8 00 00 00 e0 00 00 00 28 2e 40 e0 00     06:11:50.625  READ DMA
 
-Error 28759 [6] occurred at disk power-on lifetime: 10246 hours (426 days + 22 hours)
+Error 28769 [0] occurred at disk power-on lifetime: 10895 hours (453 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 28 3a 00 1f e0 00  Error: UNC at LBA = 0x283a001f = 674889759
+  40 -- 51 00 98 00 00 28 3a 00 60 e0 00  Error: UNC 152 sectors at LBA = 0x283a0060 = 674889824
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 00 00 00 28 3a 1f e0 00     00:21:07.000  READ DMA
-  c8 00 00 00 00 00 00 00 28 39 1f e0 00     00:21:07.000  READ DMA
-  c8 00 00 00 00 00 00 00 28 38 1f e0 00     00:21:07.000  READ DMA
-  c8 00 00 00 00 00 00 00 79 f9 ba e5 00     00:21:07.000  READ DMA
-  c8 00 00 00 00 00 00 00 79 f8 ba e5 00     00:21:07.000  READ DMA
+  c8 00 00 00 98 00 00 00 28 3a 60 e0 00     06:09:20.688  READ DMA
+  c8 00 00 00 58 00 00 00 28 39 f8 e0 00     06:09:20.688  READ DMA
+  c8 00 00 00 10 00 00 00 28 79 10 e0 00     06:09:20.688  READ DMA
+  c8 00 00 00 08 00 00 00 28 78 c8 e0 00     06:09:20.688  READ DMA
+  c8 00 00 00 18 00 00 00 28 78 f0 e0 00     06:09:20.688  READ DMA
 
-Error 28758 [5] occurred at disk power-on lifetime: 10246 hours (426 days + 22 hours)
+Error 28768 [7] occurred at disk power-on lifetime: 10895 hours (453 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f c0 00 0f e0 00  Error: UNC at LBA = 0x1fc0000f = 532676623
+  40 -- 51 00 00 00 00 28 39 00 d8 e0 00  Error: UNC at LBA = 0x283900d8 = 674824408
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 00 00 00 1f c0 0f e0 00     00:21:03.125  READ DMA
-  c8 00 00 00 00 00 00 00 1f bf 0f e0 00     00:21:03.000  READ DMA
-  ca 00 00 00 00 00 00 00 13 39 4a e5 00     00:21:03.000  WRITE DMA
-  ca 00 00 00 00 00 00 00 13 38 4a e5 00     00:21:03.000  WRITE DMA
-  ca 00 00 00 00 00 00 00 13 37 4a e5 00     00:21:03.000  WRITE DMA
+  c8 00 00 00 00 00 00 00 28 39 d8 e0 00     06:09:12.250  READ DMA
+  c8 00 00 00 30 00 00 00 28 7c b0 e0 00     06:09:12.250  READ DMA
+  c8 00 00 00 10 00 00 00 28 7c 88 e0 00     06:09:12.250  READ DMA
+  c8 00 00 00 20 00 00 00 28 7c 58 e0 00     06:09:12.250  READ DMA
+  c8 00 00 00 70 00 00 00 28 7b e0 e0 00     06:09:12.250  READ DMA
 
-Error 28757 [4] occurred at disk power-on lifetime: 10246 hours (426 days + 22 hours)
+Error 28767 [6] occurred at disk power-on lifetime: 10895 hours (453 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f 8f 00 3f e0 00  Error: UNC at LBA = 0x1f8f003f = 529465407
+  40 -- 51 00 80 00 00 28 3a 00 70 e0 00  Error: UNC 128 sectors at LBA = 0x283a0070 = 674889840
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 00 00 00 1f 8f 3f e0 00     00:21:01.688  READ DMA
-  ca 00 00 00 08 00 00 00 5f fc 8f e0 00     00:21:01.688  WRITE DMA
-  ca 00 00 00 08 00 00 00 5f fc 67 e0 00     00:21:01.688  WRITE DMA
-  ca 00 00 00 08 00 00 00 5f fc 3f e0 00     00:21:01.688  WRITE DMA
-  ca 00 00 00 08 00 00 00 5f fc 27 e0 00     00:21:01.688  WRITE DMA
+  c8 00 00 00 80 00 00 00 28 3a 70 e0 00     06:07:56.875  READ DMA
+  c8 00 00 00 78 00 00 00 28 39 f0 e0 00     06:07:56.875  READ DMA
+  c8 00 00 00 b8 00 00 00 28 66 98 e0 00     06:07:56.875  READ DMA
+  c8 00 00 00 00 00 00 00 28 18 40 e0 00     06:07:56.813  READ DMA
+  c8 00 00 00 78 00 00 00 2b 72 c8 e0 00     06:07:56.813  READ DMA
 
-Error 28756 [3] occurred at disk power-on lifetime: 10246 hours (426 days + 22 hours)
+Error 28766 [5] occurred at disk power-on lifetime: 10895 hours (453 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f 74 00 87 e0 00  Error: UNC at LBA = 0x1f740087 = 527696007
+  40 -- 51 00 00 00 00 28 3a 00 d0 e0 00  Error: UNC at LBA = 0x283a00d0 = 674889936
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 00 00 00 1f 74 87 e0 00     00:21:00.500  READ DMA
-  c8 00 00 00 00 00 00 00 1f 73 87 e0 00     00:21:00.500  READ DMA
-  c8 00 00 00 00 00 00 00 1f 72 87 e0 00     00:21:00.500  READ DMA
-  ca 00 00 00 00 00 00 00 13 21 4a e5 00     00:21:00.500  WRITE DMA
-  ca 00 00 00 00 00 00 00 13 20 4a e5 00     00:21:00.500  WRITE DMA
+  c8 00 00 00 00 00 00 00 28 3a d0 e0 00     06:06:51.250  READ DMA
+  c8 00 00 00 20 00 00 00 84 4a b0 e0 00     06:06:51.250  READ DMA
+  c8 00 00 00 08 00 00 00 84 4a a0 e0 00     06:06:51.250  READ DMA
+  c8 00 00 00 10 00 00 00 84 4a 48 e0 00     06:06:51.250  READ DMA
+  c8 00 00 00 18 00 00 00 84 49 f8 e0 00     06:06:51.250  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: read failure       00%     11002         2061690
+# 2  Extended offline    Completed: read failure       00%     10894         2061690
+# 3  Extended offline    Completed: read failure       00%     10766         2061690
+# 4  Extended offline    Completed: read failure       00%     10646         2061690
+# 5  Extended offline    Completed: read failure       00%     10624         2061690
+# 6  Extended offline    Completed: read failure       00%     10313         2061690
 
 Selective Self-tests/Logging not supported
 

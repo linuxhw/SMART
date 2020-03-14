@@ -4,18 +4,18 @@ Device Model:     WDC WD5000LPCX-24VHAT0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 02.01A02
-User Capacity:    500,107,862,016 bytes [500 GB]
+User Capacity:    500 107 862 016 bytes [500 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Apr  3 19:30:34 2018 MSK
+Local Time is:    Fri Jun  1 23:48:12 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     96 (intermediate level with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -61,17 +61,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   147   145   021    -    1650
-  4 Start_Stop_Count        -O--CK   089   089   000    -    11881
+  3 Spin_Up_Time            POS--K   152   144   021    -    1391
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15817
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    601
+  9 Power_On_Hours          -O--CK   099   099   000    -    852
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1331
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    49
-193 Load_Cycle_Count        -O--CK   192   192   000    -    26570
-194 Temperature_Celsius     -O---K   105   097   000    -    38
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1797
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    70
+193 Load_Cycle_Count        -O--CK   189   189   000    -    35595
+194 Temperature_Celsius     -O---K   106   097   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 20
+Device Error Count: 23
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -123,6 +123,57 @@ Device Error Count: 20
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 23 [22] occurred at disk power-on lifetime: 601 hours (25 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:04:12.436  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:04:12.436  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:04:12.435  SMART WRITE LOG
+  61 00 10 00 40 00 00 00 72 00 18 40 00     00:04:12.332  WRITE FPDMA QUEUED
+  61 00 20 00 38 00 00 00 71 ff e0 40 00     00:04:12.332  WRITE FPDMA QUEUED
+
+Error 22 [21] occurred at disk power-on lifetime: 601 hours (25 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:04:12.436  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:04:12.435  SMART WRITE LOG
+  61 00 10 00 40 00 00 00 72 00 18 40 00     00:04:12.332  WRITE FPDMA QUEUED
+  61 00 20 00 38 00 00 00 71 ff e0 40 00     00:04:12.332  WRITE FPDMA QUEUED
+  61 00 20 00 30 00 00 00 71 ff b8 40 00     00:04:12.331  WRITE FPDMA QUEUED
+
+Error 21 [20] occurred at disk power-on lifetime: 601 hours (25 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:04:12.435  SMART WRITE LOG
+  61 00 10 00 40 00 00 00 72 00 18 40 00     00:04:12.332  WRITE FPDMA QUEUED
+  61 00 20 00 38 00 00 00 71 ff e0 40 00     00:04:12.332  WRITE FPDMA QUEUED
+  61 00 20 00 30 00 00 00 71 ff b8 40 00     00:04:12.331  WRITE FPDMA QUEUED
+  61 00 18 00 28 00 00 00 71 f5 b8 40 00     00:04:12.331  WRITE FPDMA QUEUED
 
 Error 20 [19] occurred at disk power-on lifetime: 588 hours (24 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -209,57 +260,6 @@ Error 16 [15] occurred at disk power-on lifetime: 588 hours (24 days + 12 hours)
   ea 00 00 00 00 00 00 00 00 00 00 e0 00     00:38:04.467  FLUSH CACHE EXT
   61 00 08 00 58 00 00 00 6d 43 b0 40 00     00:38:04.467  WRITE FPDMA QUEUED
 
-Error 15 [14] occurred at disk power-on lifetime: 588 hours (24 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:38:06.299  SMART WRITE LOG
-  61 00 08 00 68 00 00 00 6d 43 a0 40 00     00:38:04.519  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 e0 00     00:38:04.467  FLUSH CACHE EXT
-  61 00 08 00 58 00 00 00 6d 43 b0 40 00     00:38:04.467  WRITE FPDMA QUEUED
-  61 00 78 00 50 00 00 01 1f 03 e0 40 00     00:38:02.630  WRITE FPDMA QUEUED
-
-Error 14 [13] occurred at disk power-on lifetime: 588 hours (24 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:36:59.034  SMART WRITE LOG
-  60 00 08 00 60 00 00 00 72 9a 58 40 00     00:36:59.033  READ FPDMA QUEUED
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:36:59.033  SMART WRITE LOG
-  60 00 08 00 50 00 00 00 72 9a 60 40 00     00:36:59.021  READ FPDMA QUEUED
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:36:59.021  SMART WRITE LOG
-
-Error 13 [12] occurred at disk power-on lifetime: 588 hours (24 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:36:59.033  SMART WRITE LOG
-  60 00 08 00 50 00 00 00 72 9a 60 40 00     00:36:59.021  READ FPDMA QUEUED
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:36:59.021  SMART WRITE LOG
-  60 00 08 00 40 00 00 00 b1 f0 48 40 00     00:36:59.010  READ FPDMA QUEUED
-  60 00 08 00 38 00 00 00 72 9a 70 40 00     00:36:59.010  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -278,8 +278,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     38/38 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     37/39 Celsius
 Lifetime    Min/Max Temperature:     18/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -291,7 +291,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (78)
+Temperature History Size (Index):    128 (123)
 
 SCT Error Recovery Control command not supported
 
@@ -312,7 +312,7 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         1880  Vendor specific
+0x8000  4          335  Vendor specific
 
 
 

@@ -3,18 +3,19 @@ Model Family:     Seagate Barracuda 7200.8
 Device Model:     ST3200826AS
 Serial Number:    --
 Firmware Version: 3.03
-User Capacity:    200 048 565 760 bytes [200 GB]
+User Capacity:    200,048,565,760 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Mar 25 14:48:22 2017 MSK
+Local Time is:    Wed Dec 18 16:26:30 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -51,16 +52,16 @@ recommended polling time: 	 (  67) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   055   048   006    -    24012341
+  1 Raw_Read_Error_Rate     POSR--   054   048   006    -    142988073
   3 Spin_Up_Time            PO----   098   098   000    -    0
-  4 Start_Stop_Count        -O--CK   096   096   020    -    5034
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5309
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   090   060   030    -    978519132
-  9 Power_On_Hours          -O--CK   062   062   000    -    33517
+  7 Seek_Error_Rate         POSR--   089   060   030    -    929057183
+  9 Power_On_Hours          -O--CK   047   047   000    -    46537
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6240
-194 Temperature_Celsius     -O---K   039   053   000    -    39 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   054   048   000    -    24012341
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6524
+194 Temperature_Celsius     -O---K   038   053   000    -    38 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   054   048   000    -    142988073
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   197   000    -    3
@@ -83,7 +84,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -254,16 +255,25 @@ Error 2903 [2] occurred at disk power-on lifetime: 33258 hours (1385 days + 18 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     32489         -
-# 2  Extended offline    Completed without error       00%     32170         -
-# 3  Extended offline    Completed without error       00%     28882         -
-# 4  Extended offline    Completed without error       00%     28810         -
-# 5  Extended offline    Completed without error       00%     28426         -
-# 6  Extended offline    Completed without error       00%     28300         -
-# 7  Extended offline    Completed without error       00%     28183         -
-# 8  Extended offline    Completed without error       00%     28043         -
-# 9  Extended offline    Completed without error       00%     28010         -
-#10  Extended offline    Completed without error       00%     27669         -
+# 1  Extended offline    Completed without error       00%     46452         -
+# 2  Extended offline    Completed without error       00%     46391         -
+# 3  Extended offline    Interrupted (host reset)      30%     46236         -
+# 4  Extended offline    Completed without error       00%     46055         -
+# 5  Extended offline    Aborted by host               20%     45954         -
+# 6  Extended offline    Completed without error       00%     45841         -
+# 7  Extended offline    Completed without error       00%     45535         -
+# 8  Extended offline    Completed without error       00%     45369         -
+# 9  Extended offline    Completed without error       00%     45205         -
+#10  Extended offline    Completed without error       00%     45039         -
+#11  Extended offline    Completed without error       00%     44780         -
+#12  Extended offline    Completed without error       00%     44271         -
+#13  Extended offline    Completed without error       00%     44154         -
+#14  Extended offline    Completed without error       00%     43989         -
+#15  Extended offline    Completed without error       00%     43841         -
+#16  Extended offline    Completed without error       00%     43715         -
+#17  Extended offline    Completed without error       00%     43535         -
+#18  Extended offline    Completed without error       00%     43421         -
+#19  Extended offline    Completed without error       00%     43154         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -280,6 +290,10 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
 Read SATA Phy Event Counters failed
+
+
 

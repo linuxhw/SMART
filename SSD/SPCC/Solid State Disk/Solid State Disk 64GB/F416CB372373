@@ -9,22 +9,22 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Feb  4 04:32:51 2016 MSK
+Local Time is:    Thu Feb 11 02:25:54 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Unavailable
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -57,10 +57,10 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0
+  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    9878146
   5 Reallocated_Sector_Ct   PO--CK   100   100   003    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    2978 (253 194 0)
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    719
+  9 Power_On_Hours          -O--CK   097   097   000    -    3065 (68 142 0)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    732
 171 Unknown_Attribute       -O-R--   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
 174 Unknown_Attribute       ----CK   000   000   000    -    32
@@ -69,16 +69,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
 194 Temperature_Celsius     -O---K   030   030   000    -    30 (Min/Max 30/30)
-195 Hardware_ECC_Recovered  --SRC-   120   120   000    -    0
+195 Hardware_ECC_Recovered  --SRC-   120   120   000    -    9878146
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unknown_SSD_Attribute   --SRC-   120   120   000    -    0
-204 Soft_ECC_Correction     --SRC-   120   120   000    -    0
+201 Unknown_SSD_Attribute   --SRC-   120   120   000    -    9878146
+204 Soft_ECC_Correction     --SRC-   120   120   000    -    9878146
 230 Unknown_SSD_Attribute   PO--C-   100   100   000    -    100
 231 Temperature_Celsius     PO--C-   099   099   010    -    8589934593
-233 Media_Wearout_Indicator -O--CK   000   000   000    -    1177
-234 Unknown_Attribute       -O--CK   000   000   000    -    1213
-241 Total_LBAs_Written      -O--CK   000   000   000    -    1213
-242 Total_LBAs_Read         -O--CK   000   000   000    -    1098
+233 Media_Wearout_Indicator -O--CK   000   000   000    -    1190
+234 Unknown_Attribute       -O--CK   000   000   000    -    1229
+241 Total_LBAs_Written      -O--CK   000   000   000    -    1229
+242 Total_LBAs_Read         -O--CK   000   000   000    -    1117
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,7 +106,8 @@ SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      3006         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -133,17 +134,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    478 (222)
+Temperature History Size (Index):    478 (235)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page Offset Size         Value  Description
   1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4              719  Lifetime Power-On Resets
-  1  0x010  4             2978  Power-on Hours
-  1  0x018  6       2545144756  Logical Sectors Written
-  1  0x028  6       2304491467  Logical Sectors Read
+  1  0x008  4              732  Lifetime Power-On Resets
+  1  0x010  4             3065  Power-on Hours
+  1  0x018  6       2579279642  Logical Sectors Written
+  1  0x028  6       2342727584  Logical Sectors Read
   4  =====  =                =  == General Errors Statistics (rev 1) ==
   4  0x008  4               65  Number of Reported Uncorrectable Errors
   4  0x010  4                0  Resets Between Cmd Acceptance and Completion
@@ -163,7 +164,7 @@ Page Offset Size         Value  Description
   5  0x068  1                0  Specified Minimum Operating Temperature
   6  =====  =                =  == Transport Statistics (rev 1) ==
   6  0x008  4                0  Number of Hardware Resets
-  6  0x010  4             2146  Number of ASR Events
+  6  0x010  4             2371  Number of ASR Events
   6  0x018  4                0  Number of Interface CRC Errors
   7  =====  =                =  == Solid State Device Statistics (rev 1) ==
   7  0x008  1                0  Percentage Used Endurance Indicator
@@ -176,8 +177,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           26  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

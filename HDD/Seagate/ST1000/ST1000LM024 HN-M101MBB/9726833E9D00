@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jun 17 21:20:10 2016 MSK
+Local Time is:    Mon Aug  7 20:17:15 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -58,28 +58,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    2
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   089   085   025    -    3451
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2792
+  3 Spin_Up_Time            PO---K   089   085   025    -    3472
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3766
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    5423
+  9 Power_On_Hours          -O--CK   100   100   000    -    7884
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    72
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2170
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    280
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    121
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3175
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    313
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   062   047   000    -    38 (Min/Max 12/53)
+194 Temperature_Celsius     -O----   064   047   000    -    36 (Min/Max 12/53)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    273
-223 Load_Retry_Count        -O--CK   100   100   000    -    72
-225 Load_Cycle_Count        -O--CK   091   091   000    -    97832
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    492
+223 Load_Retry_Count        -O--CK   100   100   000    -    121
+225 Load_Cycle_Count        -O--CK   087   087   000    -    131403
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 60 (device log contains only the most recent 8 errors)
+Device Error Count: 356 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,8 +122,8 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 60 [3] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 356 [3] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -133,31 +133,14 @@ Error 60 [3] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.563  DATA SET MANAGEMENT
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.563  IDENTIFY DEVICE
-  60 00 00 00 02 00 00 1b 75 60 00 40 00     00:00:00.563  READ FPDMA QUEUED
-  60 00 00 00 01 00 00 1b 15 60 00 40 00     00:00:00.563  READ FPDMA QUEUED
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.563  IDENTIFY DEVICE
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.198  DATA SET MANAGEMENT
+  60 00 01 00 40 00 00 04 08 b2 90 40 00     00:00:01.198  READ FPDMA QUEUED
+  60 00 01 00 40 00 00 00 2d 07 7d 40 00     00:00:01.198  READ FPDMA QUEUED
+  60 00 01 00 08 00 00 02 c3 67 90 40 00     00:00:01.198  READ FPDMA QUEUED
+  60 00 01 00 08 00 00 00 6c bb 20 40 00     00:00:01.198  READ FPDMA QUEUED
 
-Error 59 [2] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 40 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.560  DATA SET MANAGEMENT
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.560  IDENTIFY DEVICE
-  60 00 00 00 02 00 00 1b 75 60 00 40 00     00:00:00.560  READ FPDMA QUEUED
-  60 00 00 00 01 00 00 1b 15 60 00 40 00     00:00:00.560  READ FPDMA QUEUED
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.560  IDENTIFY DEVICE
-
-Error 58 [1] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 355 [2] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -167,31 +150,14 @@ Error 58 [1] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.543  DATA SET MANAGEMENT
-  60 00 01 00 08 00 00 00 66 65 20 40 00     00:00:00.543  READ FPDMA QUEUED
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.543  DATA SET MANAGEMENT
-  60 00 00 00 08 00 00 00 57 8f e8 40 00     00:00:00.543  READ FPDMA QUEUED
-  60 00 00 00 3a 00 00 00 03 5d a0 40 00     00:00:00.543  READ FPDMA QUEUED
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.196  DATA SET MANAGEMENT
+  60 00 00 00 08 00 00 00 25 d2 1a 40 00     00:00:01.196  READ FPDMA QUEUED
+  60 00 00 00 30 00 00 06 9d ba d2 40 00     00:00:01.196  READ FPDMA QUEUED
+  60 00 00 00 20 00 00 00 20 26 8c 40 00     00:00:01.196  READ FPDMA QUEUED
+  60 00 00 00 20 00 00 00 57 23 97 40 00     00:00:01.196  READ FPDMA QUEUED
 
-Error 57 [0] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 40 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.543  DATA SET MANAGEMENT
-  60 00 00 00 08 00 00 00 57 8f e8 40 00     00:00:00.543  READ FPDMA QUEUED
-  60 00 00 00 3a 00 00 00 03 5d a0 40 00     00:00:00.543  READ FPDMA QUEUED
-  60 00 01 00 08 00 00 00 00 09 30 40 00     00:00:00.543  READ FPDMA QUEUED
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.543  DATA SET MANAGEMENT
-
-Error 56 [7] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 354 [1] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -201,31 +167,14 @@ Error 56 [7] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.543  DATA SET MANAGEMENT
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.543  DATA SET MANAGEMENT
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.543  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.543  IDENTIFY DEVICE
-  60 00 00 00 40 00 00 00 03 5b d8 40 00     00:00:00.543  READ FPDMA QUEUED
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.132  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.132  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.132  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
 
-Error 55 [6] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 40 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.543  DATA SET MANAGEMENT
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.543  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.543  IDENTIFY DEVICE
-  60 00 00 00 40 00 00 00 03 5b d8 40 00     00:00:00.543  READ FPDMA QUEUED
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.543  IDENTIFY DEVICE
-
-Error 54 [5] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 353 [0] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -235,14 +184,14 @@ Error 54 [5] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.405  DATA SET MANAGEMENT
-  61 00 00 00 80 00 00 01 65 6e 80 40 00     00:00:00.405  WRITE FPDMA QUEUED
-  61 00 00 00 80 00 00 00 54 e9 b0 40 00     00:00:00.405  WRITE FPDMA QUEUED
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.405  IDENTIFY DEVICE
-  60 00 00 00 70 00 00 00 14 93 ca 40 00     00:00:00.405  READ FPDMA QUEUED
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.132  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.132  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
 
-Error 53 [4] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 352 [7] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -252,15 +201,67 @@ Error 53 [4] occurred at disk power-on lifetime: 2882 hours (120 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.402  DATA SET MANAGEMENT
-  60 00 00 00 28 00 00 00 1b 99 38 40 00     00:00:00.402  READ FPDMA QUEUED
-  60 00 00 00 48 00 00 00 1b 98 08 40 00     00:00:00.402  READ FPDMA QUEUED
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.402  IDENTIFY DEVICE
-  60 00 00 00 20 00 00 00 1b 95 d0 40 00     00:00:00.402  READ FPDMA QUEUED
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:01.132  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:01.132  IDENTIFY DEVICE
+  60 00 00 00 15 00 00 00 71 70 a0 40 00     00:00:01.132  READ FPDMA QUEUED
+
+Error 351 [6] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.804  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.804  IDENTIFY DEVICE
+  60 00 00 00 02 00 00 0d 0d e8 00 40 00     00:00:00.804  READ FPDMA QUEUED
+  60 00 00 00 01 00 00 0c ad e8 00 40 00     00:00:00.804  READ FPDMA QUEUED
+  60 00 00 00 02 00 00 00 6a f8 00 40 00     00:00:00.804  READ FPDMA QUEUED
+
+Error 350 [5] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.802  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.802  IDENTIFY DEVICE
+  60 00 00 00 02 00 00 0d 0d e8 00 40 00     00:00:00.802  READ FPDMA QUEUED
+  60 00 00 00 01 00 00 0c ad e8 00 40 00     00:00:00.802  READ FPDMA QUEUED
+  60 00 00 00 02 00 00 00 6a f8 00 40 00     00:00:00.802  READ FPDMA QUEUED
+
+Error 349 [4] occurred at disk power-on lifetime: 6974 hours (290 days + 14 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.636  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.636  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.636  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.636  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.636  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               20%      3884         -
+# 1  Extended offline    Aborted by host               20%      5787         -
+# 2  Extended offline    Aborted by host               20%      3884         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -278,8 +279,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     26/40 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     26/36 Celsius
 Lifetime    Min/Max Temperature:     14/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -288,7 +289,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (76)
+Temperature History Size (Index):    128 (96)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -306,8 +307,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          163  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -11,13 +11,14 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Mar  5 12:10:49 2018 +05
+Local Time is:    Tue Sep 11 17:07:10 2018 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -58,33 +59,33 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    19653
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    19654
   2 Throughput_Performance  POS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   090   090   025    -    3209
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3852
+  3 Spin_Up_Time            PO---K   090   090   025    -    3201
+  4 Start_Stop_Count        -O--CK   097   097   000    -    4004
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8892
+  9 Power_On_Hours          -O--CK   100   100   000    -    9205
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   094   094   000    -    6089
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3702
+ 11 Calibration_Retry_Count -O--CK   094   094   000    -    6528
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3854
 183 Runtime_Bad_Block       -O--CK   252   252   010    -    0
 184 End-to-End_Error        PO--CK   252   252   048    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    12246
+187 Reported_Uncorrect      -O--CK   100   100   000    -    12247
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   060   046   040    -    40 (Min/Max 7/56)
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    8231
+190 Airflow_Temperature_Cel -O----   058   046   040    -    42 (Min/Max 7/56)
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    8785
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-193 Load_Cycle_Count        -O--CK   086   086   000    -    143636
-194 Temperature_Celsius     -O----   060   046   000    -    40 (Min/Max 7/56)
+193 Load_Cycle_Count        -O--CK   085   085   000    -    152654
+194 Temperature_Celsius     -O----   058   046   000    -    42 (Min/Max 7/56)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   100   000    -    0
 198 Offline_Uncorrectable   ----CK   252   100   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    4
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    12485
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    5
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    12685
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,14 +104,14 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 12246 (device log contains only the most recent 8 errors)
+Device Error Count: 12247 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +126,23 @@ Device Error Count: 12246 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12247 [6] occurred at disk power-on lifetime: 9033 hours (376 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 f6 74 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 63092 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 04 0a f6 72 e0 00     00:00:00.020  READ DMA EXT
+  25 00 00 00 02 00 00 03 b8 d0 86 e0 00     00:00:00.020  READ DMA EXT
+  25 00 00 00 02 00 00 03 b8 d0 84 e0 00     00:00:00.020  READ DMA EXT
+  25 00 00 00 02 00 00 03 b8 d0 82 e0 00     00:00:00.020  READ DMA EXT
+  25 00 00 00 02 00 00 03 b8 d0 80 e0 00     00:00:00.020  READ DMA EXT
 
 Error 12246 [5] occurred at disk power-on lifetime: 7915 hours (329 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -245,23 +263,6 @@ Error 12240 [7] occurred at disk power-on lifetime: 3557 hours (148 days + 5 hou
   60 00 d8 00 20 00 00 00 09 c8 00 40 00     00:00:01.808  READ FPDMA QUEUED
   61 00 d8 00 08 00 00 00 66 5e d0 40 00     00:00:01.808  WRITE FPDMA QUEUED
 
-Error 12239 [6] occurred at disk power-on lifetime: 3557 hours (148 days + 5 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 1d 00 00 00 12 3e c3 40 00  Error: WP at LBA = 0x00123ec3 = 1195715
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 d8 00 08 00 00 00 66 5e 68 40 00     00:00:01.808  WRITE FPDMA QUEUED
-  60 00 d8 00 20 00 00 00 12 3e c0 40 00     00:00:01.802  READ FPDMA QUEUED
-  61 00 d8 00 20 00 00 05 6c 21 60 40 00     00:00:01.806  WRITE FPDMA QUEUED
-  60 00 d8 00 20 00 00 01 9c 03 a0 40 00     00:00:01.806  READ FPDMA QUEUED
-  61 00 d8 00 08 00 00 00 66 5e 20 40 00     00:00:01.806  WRITE FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Aborted by host               90%      7625         -
@@ -287,8 +288,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     20/40 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     36/42 Celsius
 Lifetime    Min/Max Temperature:     14/68 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -297,13 +298,15 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (42)
+Temperature History Size (Index):    128 (32)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
           Write:     85 (8.5 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -315,8 +318,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           19  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           18  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           13  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           13  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

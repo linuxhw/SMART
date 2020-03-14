@@ -7,14 +7,14 @@ User Capacity:    250 058 268 160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Apr  5 09:20:18 2017 +05
+Local Time is:    Mon Dec  4 10:46:26 2017 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -54,18 +54,18 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   099   097   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2450
+  3 Spin_Up_Time            PO----   097   097   000    -    0
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2629
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    4
-  7 Seek_Error_Rate         POSR--   085   060   030    -    381474555
-  9 Power_On_Hours          -O--CK   078   078   000    -    19508
+  7 Seek_Error_Rate         POSR--   085   060   030    -    384473851
+  9 Power_On_Hours          -O--CK   077   077   000    -    20837
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2588
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2781
 187 Reported_Uncorrect      -O--CK   001   001   000    -    33750
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   056   044   045    Past 44 (Min/Max 18/56 #8)
-194 Temperature_Celsius     -O---K   044   056   000    -    44 (0 18 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   073   054   000    -    25777943
+190 Airflow_Temperature_Cel -O---K   059   044   045    Past 41 (Min/Max 18/56 #8)
+194 Temperature_Celsius     -O---K   041   056   000    -    41 (0 18 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   079   054   000    -    140881993
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -259,17 +259,18 @@ Error 33885 [4] occurred at disk power-on lifetime: 13578 hours (565 days + 18 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     19101         -
-# 2  Extended offline    Interrupted (host reset)      80%     18903         -
-# 3  Extended offline    Interrupted (host reset)      80%     18533         -
-# 4  Extended offline    Completed without error       00%     18059         -
-# 5  Extended offline    Completed without error       00%     17950         -
-# 6  Extended offline    Completed without error       00%     17897         -
-# 7  Extended offline    Completed without error       00%     17786         -
-# 8  Extended offline    Completed without error       00%     17566         -
-# 9  Extended offline    Completed without error       00%     17325         -
-#10  Extended offline    Completed without error       00%     15422         -
-#11  Extended offline    Completed without error       00%     15051         -
+# 1  Extended offline    Completed without error       00%     19576         -
+# 2  Extended offline    Completed without error       00%     19101         -
+# 3  Extended offline    Interrupted (host reset)      80%     18903         -
+# 4  Extended offline    Interrupted (host reset)      80%     18533         -
+# 5  Extended offline    Completed without error       00%     18059         -
+# 6  Extended offline    Completed without error       00%     17950         -
+# 7  Extended offline    Completed without error       00%     17897         -
+# 8  Extended offline    Completed without error       00%     17786         -
+# 9  Extended offline    Completed without error       00%     17566         -
+#10  Extended offline    Completed without error       00%     17325         -
+#11  Extended offline    Completed without error       00%     15422         -
+#12  Extended offline    Completed without error       00%     15051         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -286,7 +287,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 44 Celsius
+Current Temperature:                 41 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -298,16 +299,14 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            0  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
-
-
 

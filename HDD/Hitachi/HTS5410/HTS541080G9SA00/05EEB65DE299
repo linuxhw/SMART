@@ -7,10 +7,10 @@ User Capacity:    80 026 361 856 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Wed Sep 23 15:37:37 2015 MSK
+Local Time is:    Mon Apr 11 07:47:47 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     254 (maximum performance), recommended: 128
+AAM level is:     180 (intermediate), recommended: 128
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -21,8 +21,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -52,21 +52,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   105   105   040    -    4566
+  2 Throughput_Performance  P-S---   100   100   040    -    2397
   3 Spin_Up_Time            POS---   243   243   033    -    1
-  4 Start_Stop_Count        -O--C-   098   098   000    -    3520
-  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
+  4 Start_Stop_Count        -O--C-   098   098   000    -    4102
+  5 Reallocated_Sector_Ct   PO--CK   091   091   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   120   120   040    -    40
-  9 Power_On_Hours          -O--C-   081   081   000    -    8515
+  8 Seek_Time_Performance   P-S---   100   100   040    -    0
+  9 Power_On_Hours          -O--C-   077   077   000    -    10079
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    3129
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    3698
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    398
-193 Load_Cycle_Count        -O--C-   086   086   000    -    142962
-194 Temperature_Celsius     -O----   127   127   000    -    43 (Min/Max 1/68)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    14
-197 Current_Pending_Sector  -O---K   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    513
+193 Load_Cycle_Count        -O--C-   080   080   000    -    204513
+194 Temperature_Celsius     -O----   134   134   000    -    41 (Min/Max 1/68)
+196 Reallocated_Event_Count -O--CK   091   091   000    -    681
+197 Current_Pending_Sector  -O---K   100   100   000    -    22
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    0
                             ||||||_ K auto-keep
@@ -89,7 +89,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 40 (device log contains only the most recent 4 errors)
+Device Error Count: 2078 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -105,80 +105,94 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 40 [3] occurred at disk power-on lifetime: 4545 hours (189 days + 9 hours)
+Error 2078 [1] occurred at disk power-on lifetime: 10062 hours (419 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 aa 00 00 01 40 e6 75 e1 00  Error: UNC 170 sectors at LBA = 0x0140e675 = 21030517
+  40 -- 51 00 03 03 81 07 0a 91 a5 e7 00  Error: UNC 3 sectors at LBA = 0x381070a91a5 = 3852703797669
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 40 e6 1e 40 e6 1f e1 00     00:09:01.100  READ DMA
-  c8 00 00 00 00 40 e5 1e 40 e5 1f e1 00     00:09:01.100  READ DMA
-  c8 00 00 00 00 40 e4 1e 40 e4 1f e1 00     00:09:01.100  READ DMA
-  c8 00 00 00 00 40 e3 1e 40 e3 1f e1 00     00:09:01.100  READ DMA
-  c8 00 00 00 00 9b d6 d8 40 e2 1f e1 00     00:09:01.100  READ DMA
+  c8 00 00 00 08 03 81 cf 0a 91 a0 e7 08     09:53:12.600  READ DMA
+  ca 00 00 00 20 3e 69 f7 03 81 b0 e6 08     09:53:12.600  WRITE DMA
+  e7 00 00 00 00 00 00 08 3e 69 f7 a0 08     09:53:12.500  FLUSH CACHE
+  35 00 00 01 40 00 00 08 3e 68 b8 e0 08     09:53:12.500  WRITE DMA EXT
+  35 00 00 03 48 00 00 08 3e 41 50 e0 08     09:53:12.500  WRITE DMA EXT
 
-Error 39 [2] occurred at disk power-on lifetime: 3920 hours (163 days + 8 hours)
+Error 2077 [0] occurred at disk power-on lifetime: 10062 hours (419 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 0f e4 e5 67 ef 00  Error: IDNF at LBA = 0x0fe4e567 = 266659175
+  40 -- 51 00 03 0a 91 07 0a 91 a5 e7 00  Error: UNC 3 sectors at LBA = 0xa91070a91a5 = 11618004668837
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 08 00 00 0f e4 e5 60 e0 00     00:03:03.600  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 60 e0 00     00:02:58.600  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 60 e0 00     00:02:53.500  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:53.500  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:48.400  WRITE DMA EXT
+  c8 00 00 00 08 0a 91 9f 0a 91 a0 e7 08     09:53:07.500  READ DMA
+  c8 00 00 00 08 0a 91 97 0a 91 98 e7 08     09:53:07.500  READ DMA
+  c8 00 00 00 08 03 81 af 0a 91 90 e7 08     09:53:07.500  READ DMA
+  e7 00 00 00 00 00 00 06 03 81 af a0 08     09:53:07.300  FLUSH CACHE
+  ca 00 00 00 08 03 81 a7 03 81 a8 e6 08     09:53:07.300  WRITE DMA
 
-Error 38 [1] occurred at disk power-on lifetime: 3920 hours (163 days + 8 hours)
+Error 2076 [3] occurred at disk power-on lifetime: 10062 hours (419 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 0f e4 e5 67 ef 00  Error: IDNF at LBA = 0x0fe4e567 = 266659175
+  40 -- 51 00 4b 00 00 07 0a 91 a5 e7 00  Error: UNC 75 sectors at LBA = 0x070a91a5 = 118133157
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 08 00 00 0f e4 e5 60 e0 00     00:02:58.600  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 60 e0 00     00:02:53.500  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:53.500  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:48.400  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:43.400  WRITE DMA EXT
+  c8 00 00 00 00 0a 90 ef 0a 90 f0 e7 08     09:53:01.400  READ DMA
+  c8 00 00 00 00 0a 8f ef 0a 8f f0 e7 08     09:53:01.200  READ DMA
+  c8 00 00 00 00 0a 8e ef 0a 8e f0 e7 08     09:53:00.900  READ DMA
+  c8 00 00 00 00 0a 8d ef 0a 8d f0 e7 08     09:53:00.700  READ DMA
+  c8 00 00 00 00 0d b2 df 0a 8c f0 e7 08     09:53:00.500  READ DMA
 
-Error 37 [0] occurred at disk power-on lifetime: 3920 hours (163 days + 8 hours)
+Error 2075 [2] occurred at disk power-on lifetime: 10062 hours (419 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 0f e4 e5 67 ef 00  Error: IDNF at LBA = 0x0fe4e567 = 266659175
+  40 -- 51 00 06 85 be 06 fa 7f 7a e6 00  Error: UNC 6 sectors at LBA = 0x85be06fa7f7a = 147051207360378
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 08 00 00 0f e4 e5 60 e0 00     00:02:53.500  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:53.500  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:48.400  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:43.400  WRITE DMA EXT
-  35 00 00 00 08 00 00 0f e4 e5 58 e0 00     00:02:38.300  WRITE DMA EXT
+  c8 00 00 00 08 85 be 5f fa 7f 78 e6 08     09:50:48.400  READ DMA
+  c8 00 00 00 20 85 be 3f 85 be 40 e2 08     09:50:48.400  READ DMA
+  c8 00 00 00 40 50 f8 af 85 be 00 e2 08     09:50:48.400  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     09:50:48.400  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 45 00 00 00 00 00 00 00 a0 08     09:50:48.400  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      6787         -
-# 2  Short offline       Aborted by host               90%      6787         -
-# 3  Short offline       Aborted by host               90%      6787         -
-# 4  Short offline       Aborted by host               90%      6787         -
+# 1  Short offline       Completed without error       00%     10067         -
+# 2  Extended offline    Completed: read failure       80%     10066         42079534
+# 3  Extended offline    Completed: read failure       70%      9993         42668830
+# 4  Short offline       Completed without error       00%      9987         -
+# 5  Extended offline    Completed: read failure       70%      9898         42668830
+# 6  Short offline       Completed without error       00%      9863         -
+# 7  Short offline       Completed without error       00%      9862         -
+# 8  Short offline       Completed: read failure       80%      9855         117667236
+# 9  Short offline       Completed: read failure       80%      9855         69607157
+#10  Short offline       Completed: read failure       80%      9855         126087440
+#11  Short offline       Completed without error       00%      9855         -
+#12  Short offline       Completed without error       00%      9854         -
+#13  Short offline       Completed: read failure       90%      9853         70983530
+#14  Short offline       Completed without error       00%      9853         -
+#15  Short offline       Completed: read failure       80%      9853         125928990
+#16  Short offline       Completed: read failure       80%      9853         68681132
+#17  Extended offline    Completed: read failure       90%      9853         70395460
+#18  Short offline       Completed: read failure       20%      9853         65564862
 
 Warning! SMART Selective Self-Test Log Structure error: invalid SMART checksum.
 SMART Selective self-test log data structure revision number 1

@@ -7,7 +7,7 @@ User Capacity:    100,030,242,816 bytes [100 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Sun Jan 14 21:41:01 2018 +03
+Local Time is:    Mon Jan 15 11:26:45 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -24,8 +24,9 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 242)	Self-test routine in progress...
-					20% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  591) seconds.
 Offline data collection
@@ -56,26 +57,26 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    174792
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    121892
   2 Throughput_Performance  P-S---   100   100   030    -    27852800
-  3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   098   098   000    -    9339
+  3 Spin_Up_Time            PO----   100   100   025    -    0
+  4 Start_Stop_Count        -O--CK   098   098   000    -    9343
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  7 Seek_Error_Rate         POSR--   100   100   047    -    2746
+  7 Seek_Error_Rate         POSR--   100   100   047    -    3190
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Seconds        -O--CK   073   073   000    -    13501h+15m+46s
+  9 Power_On_Seconds        -O--CK   073   073   000    -    13503h+51m+41s
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    9082
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    9086
 192 Power-Off_Retract_Count -O--CK   086   086   000    -    3595
-193 Load_Cycle_Count        -O--CK   091   091   000    -    190261
-194 Temperature_Celsius     -O---K   100   100   000    -    53 (Min/Max 5/57)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    927
+193 Load_Cycle_Count        -O--CK   091   091   000    -    190282
+194 Temperature_Celsius     -O---K   100   100   000    -    39 (Min/Max 5/57)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    912
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 6842)
 197 Current_Pending_Sector  -O--C-   100   099   000    -    0
 198 Offline_Uncorrectable   ----C-   099   099   000    -    2
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    22286
-203 Run_Out_Cancel          -O----   100   100   000    -    433736509149
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    20661
+203 Run_Out_Cancel          -O----   100   100   000    -    433694566122
 240 Head_Flying_Hours       -OSRCK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -254,11 +255,12 @@ Error 78 [77] occurred at disk power-on lifetime: 4758 hours (198 days + 6 hours
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      9774         -
-# 2  Extended offline    Aborted by host               90%      9774         -
-# 3  Short offline       Completed without error       00%      9659         -
-# 4  Extended offline    Aborted by host               80%      9659         -
+# 1  Extended offline    Completed without error       00%     13501         -
+# 2  Short offline       Completed without error       00%      9774         -
+# 3  Extended offline    Aborted by host               90%      9774         -
+# 4  Short offline       Completed without error       00%      9659         -
 # 5  Extended offline    Aborted by host               80%      9659         -
+# 6  Extended offline    Aborted by host               80%      9659         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -274,9 +276,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
 SCT Support Level:                   1
-Device State:                        DST executing in background (3)
-Current Temperature:                 53 Celsius
-Power Cycle Max Temperature:         54 Celsius
+Device State:                        Active (0)
+Current Temperature:                 39 Celsius
+Power Cycle Max Temperature:         39 Celsius
 Lifetime    Max Temperature:         57 Celsius
 
 SCT Temperature History Version:     2
@@ -284,7 +286,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (90)
+Temperature History Size (Index):    128 (124)
 
 SCT Error Recovery Control:
            Read: Disabled

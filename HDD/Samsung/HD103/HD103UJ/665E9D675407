@@ -8,7 +8,7 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Mon Jan 20 17:12:57 2020 CET
+Local Time is:    Thu Jan 30 00:58:25 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -60,29 +60,29 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   096   051    -    0
-  3 Spin_Up_Time            POS---   082   082   011    -    6400
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9462
+  3 Spin_Up_Time            POS---   074   074   011    -    8510
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9546
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    9721
-  9 Power_On_Hours          -O--CK   094   094   000    -    31188
+  9 Power_On_Hours          -O--CK   094   094   000    -    31250
  10 Spin_Retry_Count        PO--CK   100   100   051    -    2
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7377
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7426
  13 Read_Soft_Error_Rate    -OSR--   100   096   000    -    0
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    176
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    177
 184 End-to-End_Error        PO--CK   001   001   000    -    225
 187 Reported_Uncorrect      -O--CK   100   100   000    -    706
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   066   050   000    -    34 (Min/Max 33/34)
-194 Temperature_Celsius     -O---K   064   049   000    -    36 (Min/Max 33/36)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    702547
-196 Reallocated_Event_Count -O--CK   100   100   000    -    18
-197 Current_Pending_Sector  -O--C-   100   100   000    -    1
+190 Airflow_Temperature_Cel -O---K   070   050   000    -    30 (Min/Max 21/30)
+194 Temperature_Celsius     -O---K   066   049   000    -    34 (Min/Max 21/35)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    12998768
+196 Reallocated_Event_Count -O--CK   100   100   000    -    19
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   100   099   000    -    16994
+199 UDMA_CRC_Error_Count    -OSRCK   100   099   000    -    17103
 200 Multi_Zone_Error_Rate   -O-R--   100   099   000    -    1
-201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 17692 (device log contains only the most recent 8 errors)
+Device Error Count: 17801 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,7 +126,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 17692 [3] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
+Error 17801 [0] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -137,64 +137,13 @@ Error 17692 [3] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 a8 00 00 00 70 6a 28 40 00     00:57:13.880  READ FPDMA QUEUED
-  60 00 00 00 98 00 00 00 70 6b 68 40 00     00:57:13.880  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:57:13.880  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:57:13.880  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:13.870  IDENTIFY DEVICE
+  60 00 00 00 08 00 00 00 00 00 08 40 00     00:06:46.710  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 00 00 00 40 00     00:06:46.680  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 70 6d a8 40 00     00:06:46.680  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:06:46.680  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:06:46.680  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 17691 [2] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 80 00 01 00 00 00 00 00 01 a0 00   at LBA = 0x00000001 = 1
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 98 00 00 00 70 6b 68 40 00     00:57:10.830  READ FPDMA QUEUED
-  60 00 00 00 a8 00 00 00 70 6a 28 40 00     00:57:10.830  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:57:10.830  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:57:10.830  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:10.830  IDENTIFY DEVICE
-
-Error 17690 [1] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 80 00 01 00 00 00 00 00 01 a0 00   at LBA = 0x00000001 = 1
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 a8 00 00 00 70 6a 28 40 00     00:57:07.780  READ FPDMA QUEUED
-  60 00 00 00 98 00 00 00 70 6b 68 40 00     00:57:07.780  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:57:07.780  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:57:07.780  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:07.770  IDENTIFY DEVICE
-
-Error 17689 [0] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 80 00 01 00 00 00 00 00 01 a0 00   at LBA = 0x00000001 = 1
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 98 00 00 00 70 6b 68 40 00     00:57:04.720  READ FPDMA QUEUED
-  60 00 00 00 50 00 00 00 70 6b 10 40 00     00:57:04.720  READ FPDMA QUEUED
-  60 00 00 00 30 00 00 00 70 6a d8 40 00     00:57:04.720  READ FPDMA QUEUED
-  60 00 00 00 a8 00 00 00 70 6a 28 40 00     00:57:04.720  READ FPDMA QUEUED
-  60 00 00 00 20 00 00 00 70 6a 00 40 00     00:57:04.720  READ FPDMA QUEUED
-
-Error 17688 [7] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
+Error 17800 [7] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -205,13 +154,13 @@ Error 17688 [7] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 00 00 01 00 00 00 00 00 01 a0 ff     00:56:56.930  NOP [Abort queued commands]
-  60 00 00 00 08 00 00 00 00 00 38 40 00     00:56:54.240  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 00 00 18 40 00     00:56:54.240  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 00 20 00 40 00     00:56:54.230  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 00 10 00 40 00     00:56:54.220  READ FPDMA QUEUED
+  00 00 00 00 01 00 00 00 00 00 01 a0 ff     00:05:19.530  NOP [Abort queued commands]
+  60 00 00 00 08 00 00 00 fc 58 00 40 00     00:05:16.940  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 00 00 00 40 00     00:05:11.090  READ FPDMA QUEUED
+  e0 00 00 00 00 00 00 00 00 00 00 a0 08     00:05:10.230  STANDBY IMMEDIATE
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     00:05:10.230  FLUSH CACHE EXT
 
-Error 17687 [6] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
+Error 17799 [6] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -222,13 +171,13 @@ Error 17687 [6] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 00 70 6b 60 40 00     00:56:51.110  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 70 6c 20 40 00     00:56:51.110  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 70 6c b0 40 00     00:56:51.110  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 70 6d 70 40 00     00:56:51.110  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 70 6c a8 40 00     00:56:51.110  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 00 00 00 40 00     00:04:38.370  READ FPDMA QUEUED
+  e0 00 00 00 00 00 00 00 00 00 00 a0 08     00:04:37.500  STANDBY IMMEDIATE
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     00:04:37.500  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:04:37.490  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:04:37.490  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 17686 [5] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
+Error 17798 [5] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -239,13 +188,13 @@ Error 17686 [5] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 00 70 6d 00 40 00     00:56:48.000  READ FPDMA QUEUED
-  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:56:48.000  IDENTIFY DEVICE
-  60 00 00 00 08 00 00 00 84 57 08 40 00     00:56:47.970  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:56:47.970  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:56:47.970  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  60 00 00 00 08 00 00 00 fc 58 00 40 00     00:03:54.540  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 00 00 00 40 00     00:03:48.690  READ FPDMA QUEUED
+  e0 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:47.820  STANDBY IMMEDIATE
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:47.820  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:03:47.820  SET FEATURES [Enable SATA feature]
 
-Error 17685 [4] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 hours)
+Error 17797 [4] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -256,11 +205,62 @@ Error 17685 [4] occurred at disk power-on lifetime: 31184 hours (1299 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 00 84 57 08 40 00     00:56:44.900  READ FPDMA QUEUED
-  60 00 00 00 08 00 00 00 00 00 00 40 00     00:56:39.010  READ FPDMA QUEUED
-  e0 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:38.140  STANDBY IMMEDIATE
-  ea 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:38.140  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:56:38.140  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 00 fc 58 00 40 00     00:03:27.820  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 00 00 00 40 00     00:03:27.810  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:03:27.810  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:27.810  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:27.810  IDENTIFY DEVICE
+
+Error 17796 [3] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 80 00 01 00 00 00 00 00 01 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 01 00 00 00 00 00 01 a0 ff     00:03:21.850  NOP [Abort queued commands]
+  60 00 00 00 08 00 00 00 00 00 00 40 00     00:03:13.420  READ FPDMA QUEUED
+  e0 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:12.550  STANDBY IMMEDIATE
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:12.550  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:03:12.550  SET FEATURES [Enable SATA feature]
+
+Error 17795 [2] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 80 00 01 00 00 00 00 00 01 a0 00   at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 00 00 00 00 40 00     00:02:35.250  READ FPDMA QUEUED
+  e0 00 00 00 00 00 00 00 00 00 00 a0 08     00:02:34.380  STANDBY IMMEDIATE
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     00:02:34.380  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:02:34.380  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:34.380  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 17794 [1] occurred at disk power-on lifetime: 31201 hours (1300 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 80 00 01 00 00 00 00 00 01 a0 00   at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 00 70 6d 00 40 00     00:01:56.940  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:01:56.940  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:01:56.940  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:56.930  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:01:56.930  SET FEATURES [Set transfer mode]
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -283,8 +283,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 36 Celsius
-Power Cycle Max Temperature:         36 Celsius
+Current Temperature:                 34 Celsius
+Power Cycle Max Temperature:         35 Celsius
 Lifetime    Max Temperature:         52 Celsius
 
 SCT Temperature History Version:     2
@@ -292,7 +292,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (100)
+Temperature History Size (Index):    128 (122)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -305,7 +305,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
@@ -314,7 +314,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -9,7 +9,7 @@ Form Factor:      mSATA
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov  1 07:24:08 2017 MSK
+Local Time is:    Sat Jan  6 19:06:57 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,14 +23,14 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(    5) seconds.
 Offline data collection
 capabilities: 			 (0x19) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -55,15 +55,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    141
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    85
-100 Unknown_Attribute       -O--CK   100   100   000    -    174233
+  9 Power_On_Hours          -O--CK   099   099   000    -    912
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    401
+100 Unknown_Attribute       -O--CK   100   100   000    -    404335
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   253   000    -    0
-174 Unknown_Attribute       ----CK   100   100   000    -    44
+174 Unknown_Attribute       ----CK   100   100   000    -    221
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   100   100   000    -    4
+177 Wear_Leveling_Count     -O--CK   100   100   000    -    11
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    8
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    30
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    1970
@@ -73,14 +73,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    3
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   034   000   000    -    34 (Min/Max 20/70)
-195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    486074536
+194 Temperature_Celsius     -O----   046   000   000    -    46 (Min/Max 20/70)
+195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    1024502553
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 Temperature_Celsius     PO--CK   253   253   ---    -    0
-234 Unknown_Attribute       -O--CK   100   100   ---    -    454
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    381
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    695
+234 Unknown_Attribute       -O--CK   100   100   ---    -    1319
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    1143
+242 Total_LBAs_Read         -O--CK   100   100   ---    -    1465
 250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    6
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -107,7 +107,13 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       806         -
+# 2  Short offline       Completed without error       00%       264         -
+# 3  Short offline       Aborted by host               60%       250         -
+# 4  Short offline       Completed without error       00%       250         -
+# 5  Short offline       Aborted by host               90%       250         -
+# 6  Short offline       Completed without error       00%       250         -
 
 Selective Self-tests/Logging not supported
 
@@ -127,5 +133,7 @@ Page  Offset Size        Value Flags Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+
+
 

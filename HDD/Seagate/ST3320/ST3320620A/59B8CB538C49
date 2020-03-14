@@ -7,7 +7,7 @@ User Capacity:    320 071 851 520 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Nov 24 11:27:54 2015 YEKT
+Local Time is:    Sun Apr 24 18:39:01 2016 YEKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  25)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +50,19 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   079   006    -    170313833
+  1 Raw_Read_Error_Rate     POSR--   111   079   006    -    79945999
   3 Spin_Up_Time            PO----   096   095   000    -    0
-  4 Start_Stop_Count        -O--CK   094   094   020    -    6224
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6542
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   052   052   030    -    17107573084925
-  9 Power_On_Hours          -O--CK   073   073   000    -    23914
+  7 Seek_Error_Rate         POSR--   052   052   030    -    17257942640797
+  9 Power_On_Hours          -O--CK   071   071   000    -    25721
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2566
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2860
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   048   045    -    33 (Min/Max 20/33)
-194 Temperature_Celsius     -O---K   033   052   000    -    33 (0 9 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   075   054   000    -    103541018
+190 Airflow_Temperature_Cel -O---K   060   048   045    -    40 (Min/Max 27/40)
+194 Temperature_Celsius     -O---K   040   052   000    -    40 (0 9 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   064   054   000    -    33199769
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -104,6 +103,13 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Aborted by host               90%     24915         -
+# 2  Extended offline    Aborted by host               50%     24795         -
+# 3  Extended offline    Aborted by host               50%     24545         -
+# 4  Extended offline    Aborted by host               50%     24343         -
+# 5  Extended offline    Aborted by host               60%     24289         -
+# 6  Extended offline    Interrupted (host reset)      80%     24185         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -118,7 +124,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

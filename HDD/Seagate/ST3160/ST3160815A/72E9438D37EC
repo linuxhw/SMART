@@ -3,18 +3,18 @@ Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3160815A
 Serial Number:    --
 Firmware Version: 3.AAD
-User Capacity:    160 040 803 840 bytes [160 GB]
+User Capacity:    160,040,803,840 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Jul 22 22:50:42 2017 +07
+Local Time is:    Wed Dec 20 14:41:14 2017 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -24,8 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  18)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (  38)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -50,19 +50,19 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   094   006    -    181082850
+  1 Raw_Read_Error_Rate     POSR--   115   094   006    -    200227787
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    6064
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6337
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    685553376
-  9 Power_On_Hours          -O--CK   079   079   000    -    18555
+  7 Seek_Error_Rate         POSR--   088   060   030    -    728858878
+  9 Power_On_Hours          -O--CK   078   078   000    -    19455
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6193
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6465
 187 Reported_Uncorrect      -O--CK   089   089   000    -    11
 189 High_Fly_Writes         -O-RCK   096   096   000    -    4
-190 Airflow_Temperature_Cel -O---K   058   053   045    -    42 (Min/Max 26/42)
-194 Temperature_Celsius     -O---K   042   047   000    -    42 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   072   065   000    -    49174027
+190 Airflow_Temperature_Cel -O---K   058   052   045    -    42 (Min/Max 23/43)
+194 Temperature_Celsius     -O---K   042   048   000    -    42 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   076   065   000    -    106721963
 197 Current_Pending_Sector  -O--C-   100   100   000    -    2
 198 Offline_Uncorrectable   ----C-   100   100   000    -    2
 199 UDMA_CRC_Error_Count    -OSRCK   200   191   000    -    48
@@ -254,13 +254,22 @@ Error 81 [0] occurred at disk power-on lifetime: 14666 hours (611 days + 2 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               20%     17158         -
-# 2  Extended offline    Aborted by host               20%     17055         -
-# 3  Extended offline    Completed without error       00%     16897         -
-# 4  Extended offline    Completed without error       00%     16327         -
-# 5  Extended offline    Completed without error       00%     15757         -
-# 6  Extended offline    Completed without error       00%     15499         -
-# 7  Short offline       Completed without error       00%         0         -
+# 1  Extended offline    Interrupted (host reset)      60%     19352         -
+# 2  Extended offline    Completed without error       00%     19242         -
+# 3  Extended offline    Completed without error       00%     19187         -
+# 4  Extended offline    Completed without error       00%     19135         -
+# 5  Extended offline    Completed without error       00%     18999         -
+# 6  Extended offline    Completed without error       00%     18927         -
+# 7  Extended offline    Completed without error       00%     18777         -
+# 8  Extended offline    Completed without error       00%     18733         -
+# 9  Extended offline    Completed without error       00%     18605         -
+#10  Extended offline    Aborted by host               20%     17158         -
+#11  Extended offline    Aborted by host               20%     17055         -
+#12  Extended offline    Completed without error       00%     16897         -
+#13  Extended offline    Completed without error       00%     16327         -
+#14  Extended offline    Completed without error       00%     15757         -
+#15  Extended offline    Completed without error       00%     15499         -
+#16  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

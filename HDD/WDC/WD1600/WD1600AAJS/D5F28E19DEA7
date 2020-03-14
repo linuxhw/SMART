@@ -8,10 +8,10 @@ Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Oct  5 23:43:15 2017 MSK
+Local Time is:    Wed Feb  7 17:17:48 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
+AAM level is:     254 (maximum performance), recommended: 128
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -22,8 +22,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,21 +59,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   253   051    -    0
-  3 Spin_Up_Time            POS--K   147   145   021    -    3641
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1354
+  3 Spin_Up_Time            POS--K   146   144   021    -    3691
+  4 Start_Stop_Count        -O--CK   100   100   000    -    34
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    1578
- 10 Spin_Retry_Count        -O--CK   100   100   000    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1305
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    936
-193 Load_Cycle_Count        -O--CK   195   195   000    -    15343
-194 Temperature_Celsius     -O---K   119   097   000    -    24
+  9 Power_On_Hours          -O--CK   100   100   000    -    20
+ 10 Spin_Retry_Count        -O--CK   100   253   000    -    0
+ 11 Calibration_Retry_Count -O--CK   100   253   000    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    34
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    22
+193 Load_Cycle_Count        -O--CK   200   200   000    -    474
+194 Temperature_Celsius     -O---K   110   107   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    147
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 6295 (device log contains only the most recent 24 errors)
+Device Error Count: 166 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,7 +119,75 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6295 [6] occurred at disk power-on lifetime: 1578 hours (65 days + 18 hours)
+Error 166 [21] occurred at disk power-on lifetime: 20 hours (0 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 fe 00 00 00 00 00 01 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f5 00 00 00 fe 00 00 00 00 00 01 e0 00     02:18:42.120  SECURITY FREEZE LOCK
+  ef 00 42 00 fe 00 00 00 00 00 01 a0 00     02:18:40.396  SET FEATURES [Enable AAM] [OBS-ACS-2]
+  e3 00 00 00 00 00 00 00 00 00 01 a0 00     02:18:38.824  IDLE
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     02:18:38.803  READ DMA
+  ef 00 03 00 46 00 00 4f 00 c2 01 a0 00     02:18:38.802  SET FEATURES [Set transfer mode]
+
+Error 165 [20] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 fe 00 00 00 00 00 01 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f5 00 00 00 fe 00 00 00 00 00 01 e0 00     00:28:05.306  SECURITY FREEZE LOCK
+  ef 00 42 00 fe 00 00 00 00 00 01 a0 00     00:28:03.582  SET FEATURES [Enable AAM] [OBS-ACS-2]
+  e3 00 00 00 00 00 00 00 00 00 01 a0 00     00:28:02.010  IDLE
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     00:28:01.989  READ DMA
+  ef 00 03 00 46 00 00 4f 00 c2 01 a0 00     00:28:01.988  SET FEATURES [Set transfer mode]
+
+Error 164 [19] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 fe 00 00 00 00 00 01 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f5 00 00 00 fe 00 00 00 00 00 01 e0 00     00:24:58.303  SECURITY FREEZE LOCK
+  ef 00 42 00 fe 00 00 00 00 00 01 a0 00     00:24:56.579  SET FEATURES [Enable AAM] [OBS-ACS-2]
+  e3 00 00 00 00 00 00 00 00 00 01 a0 00     00:24:55.013  IDLE
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     00:24:54.992  READ DMA
+  ef 00 03 00 46 00 00 4f 00 c2 01 a0 00     00:24:54.991  SET FEATURES [Set transfer mode]
+
+Error 163 [18] occurred at disk power-on lifetime: 17 hours (0 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 fe 00 00 00 00 00 01 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f5 00 00 00 fe 00 00 00 00 00 01 e0 00     00:00:31.221  SECURITY FREEZE LOCK
+  ef 00 42 00 fe 00 00 00 00 00 01 a0 00     00:00:29.470  SET FEATURES [Enable AAM] [OBS-ACS-2]
+  e3 00 00 00 00 00 00 00 00 00 01 a0 00     00:00:27.900  IDLE
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     00:00:27.879  READ DMA
+  ef 00 03 00 46 00 00 4f 00 c2 01 a0 00     00:00:27.879  SET FEATURES [Set transfer mode]
+
+Error 162 [17] occurred at disk power-on lifetime: 17 hours (0 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -130,13 +198,30 @@ Error 6295 [6] occurred at disk power-on lifetime: 1578 hours (65 days + 18 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     10:13:52.880  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     10:13:52.879  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 00     10:13:52.879  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     10:13:52.879  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 00 00     10:13:52.879  SET FEATURES [Set transfer mode]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     01:31:12.428  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:31:12.428  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     01:31:12.428  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 00 00     01:31:12.428  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:31:12.427  IDENTIFY DEVICE
 
-Error 6294 [5] occurred at disk power-on lifetime: 1577 hours (65 days + 17 hours)
+Error 161 [16] occurred at disk power-on lifetime: 17 hours (0 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 fe 00 00 00 00 00 01 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f5 00 00 00 fe 00 00 00 00 00 01 e0 00     01:30:50.827  SECURITY FREEZE LOCK
+  ef 00 42 00 fe 00 00 00 00 00 01 a0 00     01:30:49.103  SET FEATURES [Enable AAM] [OBS-ACS-2]
+  e3 00 00 00 00 00 00 00 00 00 01 a0 00     01:30:47.535  IDLE
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     01:30:47.514  READ DMA
+  ef 00 03 00 46 00 00 4f 00 c2 01 a0 00     01:30:47.514  SET FEATURES [Set transfer mode]
+
+Error 160 [15] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -147,113 +232,28 @@ Error 6294 [5] occurred at disk power-on lifetime: 1577 hours (65 days + 17 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     09:16:36.594  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     09:16:36.593  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 00     09:16:36.593  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     09:16:36.593  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 00 00     09:16:36.593  SET FEATURES [Set transfer mode]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:51:13.721  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:51:13.721  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:51:13.720  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 00 00     00:51:13.720  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:51:13.720  IDENTIFY DEVICE
 
-Error 6293 [4] occurred at disk power-on lifetime: 1577 hours (65 days + 17 hours)
+Error 159 [14] occurred at disk power-on lifetime: 16 hours (0 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff 00 00 00 00 00 00 00 00 00
+  04 -- 51 00 fe 00 00 00 00 00 01 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 7b 00 00 47 00 00 00 00     08:58:22.616  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     08:58:22.616  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 00     08:58:22.615  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     08:58:22.615  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 00 00     08:58:22.615  SET FEATURES [Set transfer mode]
-
-Error 6292 [3] occurred at disk power-on lifetime: 1571 hours (65 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 00 00 00 00 00 00 a0 00     02:38:31.128  SECURITY FREEZE LOCK
-  ef 00 66 00 00 00 00 00 00 00 00 a0 00     02:38:31.128  SET FEATURES [Disable revert defaults]
-  c6 00 00 00 10 00 00 00 00 00 00 a0 00     02:38:31.066  SET MULTIPLE MODE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     02:38:31.066  SET FEATURES [Set transfer mode]
-  ef 00 03 00 0c 00 00 00 00 00 00 a0 00     02:38:31.066  SET FEATURES [Set transfer mode]
-
-Error 6291 [2] occurred at disk power-on lifetime: 1571 hours (65 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 7b 00 00 47 00 00 00 00     02:38:23.845  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:38:23.844  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 00     02:38:23.844  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 7b 00 00 47 00 00 00 00     02:38:23.844  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 00 00     02:38:23.844  SET FEATURES [Set transfer mode]
-
-Error 6290 [1] occurred at disk power-on lifetime: 1570 hours (65 days + 10 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 00 00 00 00 00 00 a0 00     01:38:28.936  SECURITY FREEZE LOCK
-  ef 00 66 00 00 00 00 00 00 00 00 a0 00     01:38:28.936  SET FEATURES [Disable revert defaults]
-  c6 00 00 00 10 00 00 00 00 00 00 a0 00     01:38:28.860  SET MULTIPLE MODE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     01:38:28.860  SET FEATURES [Set transfer mode]
-  ef 00 03 00 0c 00 00 00 00 00 00 a0 00     01:38:28.860  SET FEATURES [Set transfer mode]
-
-Error 6289 [0] occurred at disk power-on lifetime: 1570 hours (65 days + 10 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 7b 00 00 47 00 00 00 00     01:38:21.759  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:38:21.757  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 00 00     01:38:21.757  SET FEATURES [Set transfer mode]
-  c6 00 00 00 10 7b 00 00 47 00 00 00 00     01:38:21.757  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 00 00     01:38:21.757  SET FEATURES [Set transfer mode]
-
-Error 6288 [23] occurred at disk power-on lifetime: 1568 hours (65 days + 8 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f5 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:17.947  SECURITY FREEZE LOCK
-  ef 00 66 00 00 00 00 00 00 00 00 a0 00     00:00:17.947  SET FEATURES [Disable revert defaults]
-  c6 00 00 00 10 00 00 00 00 00 00 a0 00     00:00:17.887  SET MULTIPLE MODE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:17.887  SET FEATURES [Set transfer mode]
-  ef 00 03 00 0c 00 00 00 00 00 00 a0 00     00:00:17.887  SET FEATURES [Set transfer mode]
+  f5 00 00 00 fe 00 00 00 00 00 01 e0 00     00:50:42.195  SECURITY FREEZE LOCK
+  ef 00 42 00 fe 00 00 00 00 00 01 a0 00     00:50:40.471  SET FEATURES [Enable AAM] [OBS-ACS-2]
+  e3 00 00 00 00 00 00 00 00 00 01 a0 00     00:50:38.904  IDLE
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     00:50:38.883  READ DMA
+  ef 00 03 00 46 00 00 4f 00 c2 01 a0 00     00:50:38.883  SET FEATURES [Set transfer mode]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -272,10 +272,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     22/26 Celsius
-Lifetime    Min/Max Temperature:     24/46 Celsius
+Device State:                        Active (0)
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     24/33 Celsius
+Lifetime    Min/Max Temperature:     23/35 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -283,7 +283,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (223)
+Temperature History Size (Index):    478 (262)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -300,7 +300,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        37122  Vendor specific
+0x8000  4         9705  Vendor specific
 

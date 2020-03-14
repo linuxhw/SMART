@@ -7,7 +7,7 @@ User Capacity:    160 040 803 840 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Mon Oct 17 21:32:35 2016 YEKT
+Local Time is:    Fri Jun 16 18:26:02 2017 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  20)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,16 +50,16 @@ recommended polling time: 	 (  94) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   058   049   006    -    91627703
+  1 Raw_Read_Error_Rate     POSR--   060   048   006    -    242021682
   3 Spin_Up_Time            PO----   096   096   000    -    0
-  4 Start_Stop_Count        -O--CK   089   089   020    -    11725
+  4 Start_Stop_Count        -O--CK   089   089   020    -    12216
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    673428201
-  9 Power_On_Hours          -O--CK   086   086   000    -    13095
+  7 Seek_Error_Rate         POSR--   088   060   030    -    721506117
+  9 Power_On_Hours          -O--CK   083   083   000    -    15011
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   020    -    9586
-194 Temperature_Celsius     -O---K   033   057   000    -    33 (0 6 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   058   048   000    -    91627703
+ 12 Power_Cycle_Count       -O--CK   091   091   020    -    10059
+194 Temperature_Celsius     -O---K   037   057   000    -    37 (0 6 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   060   048   000    -    242021682
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    3232
@@ -203,7 +202,28 @@ Error 1172 occurred at disk power-on lifetime: 9073 hours (378 days + 1 hours)
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Aborted by host               40%     14963         -
+# 2  Extended offline    Aborted by host               80%     14937         -
+# 3  Extended offline    Aborted by host               20%     14895         -
+# 4  Extended offline    Completed without error       00%     14856         -
+# 5  Extended offline    Completed without error       00%     14800         -
+# 6  Extended offline    Completed without error       00%     14728         -
+# 7  Extended offline    Completed without error       00%     14667         -
+# 8  Extended offline    Completed without error       00%     14616         -
+# 9  Extended offline    Completed without error       00%     14560         -
+#10  Extended offline    Completed without error       00%     14520         -
+#11  Extended offline    Completed without error       00%     14465         -
+#12  Extended offline    Completed without error       00%     14434         -
+#13  Extended offline    Completed without error       00%     14383         -
+#14  Extended offline    Aborted by host               20%     14349         -
+#15  Extended offline    Completed without error       00%     14276         -
+#16  Extended offline    Completed without error       00%     14191         -
+#17  Extended offline    Aborted by host               30%     14119         -
+#18  Extended offline    Completed without error       00%     14051         -
+#19  Extended offline    Completed without error       00%     13997         -
+#20  Extended offline    Completed without error       00%     13932         -
+#21  Extended offline    Completed without error       00%     13868         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -221,6 +241,4 @@ SCT Commands not supported
 Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 

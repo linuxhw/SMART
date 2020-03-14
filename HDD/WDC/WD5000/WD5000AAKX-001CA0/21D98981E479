@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.12-200.fc31.x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
 Device Model:     WDC WD5000AAKX-001CA0
@@ -8,8 +11,8 @@ User Capacity:    500,103,634,432 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Dec 22 13:58:46 2018 EST
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 1.5 Gb/s)
+Local Time is:    Thu Jan 16 16:50:35 2020 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -17,7 +20,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -60,17 +63,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   143   142   021    -    3825
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1334
+  3 Spin_Up_Time            POS--K   145   142   021    -    3750
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1567
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   058   058   000    -    31150
+  9 Power_On_Hours          -O--CK   050   050   000    -    37120
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1330
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    86
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1247
-194 Temperature_Celsius     -O---K   118   105   000    -    25
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1563
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    103
+193 Load_Cycle_Count        -O--CK   200   200   000    -    1463
+194 Temperature_Celsius     -O---K   116   105   000    -    27
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -126,10 +129,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     15/25 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     25/27 Celsius
 Lifetime    Min/Max Temperature:      0/38 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -138,7 +140,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (332)
+Temperature History Size (Index):    478 (176)
 
 SCT Error Recovery Control command not supported
 
@@ -155,9 +157,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         1143  Vendor specific
+0x8000  4          312  Vendor specific
 
 
 

@@ -1,4 +1,4 @@
-smartctl 7.0 2018-12-30 r4883 [x86_64-linux-5.0.0-31-generic] (local build)
+smartctl 7.0 2018-12-30 r4883 [x86_64-linux-5.0.0-32-generic] (local build)
 Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,11 +13,11 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Oct 21 14:05:33 2019 +06
+Local Time is:    Tue Nov  5 10:13:01 2019 +06
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -28,20 +28,20 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
-capabilities: 			 (0x71) SMART execute Offline immediate.
+capabilities: 			 (0x79) SMART execute Offline immediate.
 					No Auto Offline data collection support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -63,29 +63,29 @@ SCT capabilities: 	       (0x3035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   074   064   006    -    26253440
+  1 Raw_Read_Error_Rate     POSR--   084   064   006    -    231900063
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   064   064   020    -    37164
+  4 Start_Stop_Count        -O--CK   064   064   020    -    37232
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    120
-  7 Seek_Error_Rate         POSR--   081   060   045    -    132268888
-  9 Power_On_Hours          -O--CK   096   096   000    -    4137 (6 191 0)
+  7 Seek_Error_Rate         POSR--   081   060   045    -    139455606
+  9 Power_On_Hours          -O--CK   096   096   000    -    4300 (170 131 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1259
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1286
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   010   010   000    -    90
 188 Command_Timeout         -O--CK   100   099   000    -    65538
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   065   053   040    -    35 (Min/Max 19/38)
+190 Airflow_Temperature_Cel -O---K   061   053   040    -    39 (Min/Max 19/39)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    25
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    10
-193 Load_Cycle_Count        -O--CK   063   063   000    -    74434
-194 Temperature_Celsius     -O---K   035   047   000    -    35 (0 14 0 0 0)
+193 Load_Cycle_Count        -O--CK   063   063   000    -    75722
+194 Temperature_Celsius     -O---K   039   047   000    -    39 (0 14 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    3165 (15 162 0)
-241 Total_LBAs_Written      ------   100   253   000    -    10945687931
-242 Total_LBAs_Read         ------   100   253   000    -    13988972890
+240 Head_Flying_Hours       ------   100   253   000    -    3310 (33 48 0)
+241 Total_LBAs_Written      ------   100   253   000    -    12221704130
+242 Total_LBAs_Read         ------   100   253   000    -    17069740403
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -284,7 +284,8 @@ Error 83 [2] occurred at disk power-on lifetime: 486 hours (20 days + 6 hours)
   60 00 00 00 20 00 00 0b d6 ef 60 40 00     03:31:32.103  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Aborted by host               90%      4138         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -300,8 +301,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     19/38 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     19/39 Celsius
 Lifetime    Min/Max Temperature:     13/51 Celsius
 Specified Max Operating Temperature:    34 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -311,24 +312,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (75)
+Temperature History Size (Index):    128 (34)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1259  ---  Lifetime Power-On Resets
-0x01  0x010  4            4137  ---  Power-on Hours
-0x01  0x018  6     10945687931  ---  Logical Sectors Written
-0x01  0x020  6        95786783  ---  Number of Write Commands
-0x01  0x028  6     13988972890  ---  Logical Sectors Read
-0x01  0x030  6       142028241  ---  Number of Read Commands
+0x01  0x008  4            1286  ---  Lifetime Power-On Resets
+0x01  0x010  4            4300  ---  Power-on Hours
+0x01  0x018  6     12221704130  ---  Logical Sectors Written
+0x01  0x020  6       100846590  ---  Number of Write Commands
+0x01  0x028  6     17069740403  ---  Logical Sectors Read
+0x01  0x030  6       162186980  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            3329  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            1951  ---  Head Flying Hours
-0x03  0x018  4           74434  ---  Head Load Events
+0x03  0x008  4            3478  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2001  ---  Head Flying Hours
+0x03  0x018  4           75722  ---  Head Load Events
 0x03  0x020  4             120  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -344,7 +345,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

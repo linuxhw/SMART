@@ -6,13 +6,14 @@ User Capacity:    40,060,403,712 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Wed Mar 14 14:36:06 2018 -03
+Local Time is:    Mon Aug 27 23:34:15 2018 WEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -23,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 247)	Self-test routine in progress...
+					70% of test remaining.
 Total time to complete Offline 
 data collection: 		(  900) seconds.
 Offline data collection
@@ -50,20 +50,20 @@ recommended polling time: 	 (  15) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    4
-  3 Spin_Up_Time            POS---   072   001   000    -    5056
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2386
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    6
+  3 Spin_Up_Time            POS---   073   001   000    -    4928
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2774
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
-  8 Seek_Time_Performance   --S--K   087   087   000    -    11252
-  9 Power_On_Hours          -O--CK   100   100   000    -    571835
+  8 Seek_Time_Performance   --S--K   086   086   000    -    11551
+  9 Power_On_Hours          -O--CK   099   099   000    -    831387
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1265
-194 Temperature_Celsius     -O---K   190   115   000    -    16
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    98981397
-196 Reallocated_Event_Count -O--C-   094   094   000    -    15
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1491
+194 Temperature_Celsius     -O---K   196   115   000    -    14
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    99902808
+196 Reallocated_Event_Count -O--C-   093   093   000    -    16
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
-198 Offline_Uncorrectable   P---CK   094   094   010    -    15
+198 Offline_Uncorrectable   P---CK   093   093   010    -    16
 199 UDMA_CRC_Error_Count    PO-R--   100   100   051    -    0
 200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
 201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    0
@@ -87,9 +87,9 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 58369 inconsistent with error log pointer 5
+Warning: ATA error count 58881 inconsistent with error log pointer 5
 
-ATA Error Count: 58369 (device log contains only the most recent five errors)
+ATA Error Count: 58881 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -104,7 +104,41 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 58369 occurred at disk power-on lifetime: 3260 hours (135 days + 20 hours)
+Error 58881 occurred at disk power-on lifetime: 6745 hours (281 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 f8 08 4b bd e2  Error: UNC 248 sectors at LBA = 0x02bd4b08 = 45959944
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 f8 08 4b bd e2 00      08:53:16.688  READ DMA
+  c8 00 98 10 68 ed e0 00      08:53:16.625  READ DMA
+  c8 00 20 a8 6c e2 e0 00      08:53:16.625  READ DMA
+  c8 00 08 98 6c e2 e0 00      08:53:16.625  READ DMA
+  c8 00 18 78 6c e2 e0 00      08:53:16.625  READ DMA
+
+Error 58880 occurred at disk power-on lifetime: 6665 hours (277 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 f8 08 4b bd e2  Error: UNC 248 sectors at LBA = 0x02bd4b08 = 45959944
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 f8 08 4b bd e2 00      08:01:30.375  READ DMA
+  c8 00 08 10 68 cc e0 00      08:01:30.375  READ DMA
+  c8 00 08 c8 68 cb e0 00      08:01:30.375  READ DMA
+  c8 00 08 00 68 cc e0 00      08:01:30.375  READ DMA
+  c8 00 c8 b0 68 ec e0 00      08:01:30.375  READ DMA
+
+Error 58879 occurred at disk power-on lifetime: 3260 hours (135 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -121,7 +155,7 @@ Error 58369 occurred at disk power-on lifetime: 3260 hours (135 days + 20 hours)
   c8 00 10 f0 b0 70 e3 00      08:55:45.813  READ DMA
   c8 00 88 b0 c4 32 e2 00      08:55:45.813  READ DMA
 
-Error 58368 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
+Error 58878 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -138,7 +172,7 @@ Error 58368 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
   c8 00 08 10 40 08 e3 00      00:01:14.063  READ DMA
   e7 00 00 77 c4 0d a0 00      00:01:14.000  FLUSH CACHE
 
-Error 58367 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
+Error 58877 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -155,63 +189,39 @@ Error 58367 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
   c8 00 30 20 c4 29 e2 00      00:00:47.688  READ DMA
   c8 00 28 08 8b c7 e2 00      00:00:47.625  READ DMA
 
-Error 58366 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 01 c2 4f a0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 c2 4f a0 00      00:00:04.313  SMART DISABLE OPERATIONS
-  ec 20 3f 01 00 00 a0 00      00:00:04.313  IDENTIFY DEVICE
-  10 20 3f 01 00 00 a0 00      00:00:04.313  RECALIBRATE [OBS-4]
-  91 20 3f 01 00 00 af 00      00:00:04.313  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 00 01 00 00 a0 00      00:00:04.313  IDENTIFY DEVICE
-
-Error 58365 occurred at disk power-on lifetime: 3252 hours (135 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 fe 00 00 00 40  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00   1d+10:39:28.313  SET FEATURES [Enable APM]
-  c8 00 20 a0 b2 a8 e3 00   1d+10:39:28.313  READ DMA
-  c8 00 28 d0 b2 a5 e3 00   1d+10:39:28.313  READ DMA
-  c8 00 20 40 b2 57 e3 00   1d+10:39:28.313  READ DMA
-  c8 00 08 f0 b2 0c e3 00   1d+10:39:28.313  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      4419         -
-# 2  Extended offline    Completed without error       00%      4382         -
-# 3  Extended offline    Completed without error       00%      4344         -
-# 4  Extended offline    Completed without error       00%      4330         -
-# 5  Extended offline    Completed without error       00%      4306         -
-# 6  Extended offline    Completed without error       00%      4272         -
-# 7  Extended offline    Completed without error       00%      4223         -
-# 8  Extended offline    Completed without error       00%      4137         -
-# 9  Extended offline    Completed without error       00%      3996         -
-#10  Extended offline    Completed without error       00%      3990         -
-#11  Extended offline    Completed: read failure       00%      3880         10488613
-#12  Extended offline    Completed without error       00%      3349         -
-1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed without error       00%      6787         -
+# 2  Extended offline    Completed without error       00%      6671         -
+# 3  Extended offline    Completed without error       00%      6569         -
+# 4  Extended offline    Completed without error       00%      6568         -
+# 5  Extended offline    Completed without error       00%      6470         -
+# 6  Extended offline    Completed without error       00%      6258         -
+# 7  Extended offline    Completed without error       00%      6173         -
+# 8  Extended offline    Completed without error       00%      5999         -
+# 9  Extended offline    Completed without error       00%      5891         -
+#10  Extended offline    Completed without error       00%      5618         -
+#11  Extended offline    Completed without error       00%      5563         -
+#12  Extended offline    Completed without error       00%      5385         -
+#13  Extended offline    Completed without error       00%      5287         -
+#14  Extended offline    Completed without error       00%      5187         -
+#15  Extended offline    Completed without error       00%      4419         -
+#16  Extended offline    Completed without error       00%      4382         -
+#17  Extended offline    Completed without error       00%      4344         -
+#18  Extended offline    Completed without error       00%      4330         -
+#19  Extended offline    Completed without error       00%      4306         -
+#20  Extended offline    Completed without error       00%      4272         -
+#21  Extended offline    Completed without error       00%      4223         -
 
 Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

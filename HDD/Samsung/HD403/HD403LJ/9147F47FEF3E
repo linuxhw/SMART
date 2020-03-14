@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3b
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Fri Jun  5 02:05:41 2015 VLAT
+Local Time is:    Wed Mar 22 15:22:05 2017 +10
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -26,8 +26,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  23)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		( 7436) seconds.
 Offline data collection
@@ -56,29 +56,29 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
-  3 Spin_Up_Time            POS---   100   100   015    -    7232
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10600
+  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    3
+  3 Spin_Up_Time            POS---   100   100   015    -    6656
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12672
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    35460
+  9 Power_On_Hours          -O--CK   100   100   000    -    42305
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5552
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    87639
-187 Reported_Uncorrect      -O--CK   253   253   000    -    851968
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6637
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    67433
+187 Reported_Uncorrect      -O--CK   253   253   000    -    1114112
 188 Command_Timeout         -O--CK   253   253   000    -    0
 190 Airflow_Temperature_Cel -O---K   060   045   000    -    40
 194 Temperature_Celsius     -O---K   118   073   000    -    40
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    87639
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    67433
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
-197 Total_Pending_Sectors   -O--C-   253   100   000    -    0
+197 Total_Pending_Sectors   -O--C-   100   100   000    -    2
 198 Offline_Uncorrectable   ----CK   253   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   100   000    -    0
-202 Data_Address_Mark_Errs  -O--CK   100   100   000    -    1
+202 Data_Address_Mark_Errs  -O--CK   100   100   000    -    16
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -94,41 +94,158 @@ Address    Access  R/W   Size  Description
 0x02           SL  R/O      2  Comprehensive SMART error log
 0x03       GPL     R/O      2  Ext. Comprehensive SMART error log
 0x06           SL  R/O      1  SMART self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-No Errors Logged
+Invalid Error Log index = 0x0000, trying reserved byte (0x06) instead
+Device Error Count: 6
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6 [5] occurred at disk power-on lifetime: 42093 hours (1753 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 2c 3c 07 1f 40 00  Error: UNC at LBA = 0x2c3c071f = 742131487
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 10 08 00 00 00 00 2c 3c 07 1f 40 00     05:31:18.938  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     05:31:16.063  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     05:31:16.063  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 00 00 00 00 00 00 00 a0 00     05:31:16.063  IDENTIFY DEVICE
+  ef 10 03 00 46 00 00 00 00 00 00 a0 00     05:31:16.063  SET FEATURES [Set transfer mode]
+
+Error 5 [4] occurred at disk power-on lifetime: 42093 hours (1753 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 13 98 00 00 2c 3c 07 1f 40 00  Error: UNC at LBA = 0x2c3c071f = 742131487
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 08 08 13 98 00 00 2c 3c 07 1f 40 00     05:31:15.938  READ FPDMA QUEUED
+  60 08 08 12 90 00 00 2c 3c 08 6f 40 00     05:31:13.125  READ FPDMA QUEUED
+  60 08 08 11 88 00 00 2c 3c 08 67 40 00     05:31:13.125  READ FPDMA QUEUED
+  60 08 08 10 80 00 00 2c 3c 08 5f 40 00     05:31:13.125  READ FPDMA QUEUED
+  60 08 08 0f 78 00 00 2c 3c 08 57 40 00     05:31:13.125  READ FPDMA QUEUED
+
+Error 4 [3] occurred at disk power-on lifetime: 42093 hours (1753 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 1d e8 00 00 2c 3c 07 1f 40 00  Error: UNC at LBA = 0x2c3c071f = 742131487
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 10 08 1d e8 00 00 2c 3c 07 1f 40 00     05:31:12.938  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     05:31:10.125  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     05:31:10.125  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 00 00 00 00 00 00 00 a0 00     05:31:10.125  IDENTIFY DEVICE
+  ef 10 03 00 46 00 00 00 00 00 00 a0 00     05:31:10.125  SET FEATURES [Set transfer mode]
+
+Error 3 [2] occurred at disk power-on lifetime: 42093 hours (1753 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 11 88 00 00 2c 3c 07 1f 40 00  Error: UNC at LBA = 0x2c3c071f = 742131487
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 10 08 11 88 00 00 2c 3c 07 1f 40 00     05:31:10.000  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     05:31:07.125  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     05:31:07.125  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 00 00 00 00 00 00 00 00 a0 00     05:31:07.125  IDENTIFY DEVICE
+  ef 10 03 00 46 00 00 00 00 00 00 a0 00     05:31:07.125  SET FEATURES [Set transfer mode]
+
+Error 2 [1] occurred at disk power-on lifetime: 42093 hours (1753 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 0d 68 00 00 2c 3c 07 1f 40 00  Error: UNC at LBA = 0x2c3c071f = 742131487
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 08 08 0d 68 00 00 2c 3c 07 1f 40 00     05:31:07.000  READ FPDMA QUEUED
+  60 08 08 0c 60 00 00 2c 3c 07 17 40 00     05:31:04.125  READ FPDMA QUEUED
+  60 08 08 0b 58 00 00 2c 3c 07 0f 40 00     05:31:04.125  READ FPDMA QUEUED
+  60 08 08 0a 50 00 00 2c 3c 07 07 40 00     05:31:04.125  READ FPDMA QUEUED
+  60 08 08 09 48 00 00 2c 3c 06 ff 40 00     05:31:04.125  READ FPDMA QUEUED
+
+Error 1 [0] occurred at disk power-on lifetime: 42093 hours (1753 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 0c 60 00 00 2c 3c 06 77 40 00  Error: UNC at LBA = 0x2c3c0677 = 742131319
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 0c 60 00 00 2c 3c 06 77 40 00     05:31:03.625  READ FPDMA QUEUED
+  60 00 00 0b 58 00 00 2c 3c 05 77 40 00     05:31:00.563  READ FPDMA QUEUED
+  60 00 00 0a 50 00 00 2c 3c 04 77 40 00     05:31:00.563  READ FPDMA QUEUED
+  60 00 00 09 48 00 00 2d a8 0e 07 40 00     05:31:00.563  READ FPDMA QUEUED
+  60 00 00 08 40 00 00 2d a8 0d 07 40 00     05:31:00.563  READ FPDMA QUEUED
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     34597         -
-# 2  Extended offline    Completed: read failure       10%     33104         743586642
-# 3  Extended offline    Completed without error       00%     32709         -
-# 4  Extended offline    Completed without error       00%     31946         -
-# 5  Extended offline    Completed without error       00%     31184         -
-# 6  Extended offline    Completed without error       00%     23142         -
-# 7  Extended offline    Completed without error       00%     23057         -
-# 8  Extended offline    Completed without error       00%     22382         -
-# 9  Extended offline    Completed without error       00%     22108         -
-#10  Extended offline    Completed without error       00%     22034         -
-#11  Extended offline    Completed without error       00%     21410         -
-#12  Extended offline    Completed without error       00%     21323         -
-#13  Extended offline    Completed without error       00%     17485         -
-#14  Extended offline    Completed without error       00%     17335         -
-#15  Extended offline    Completed without error       00%     16976         -
-#16  Extended offline    Completed without error       00%     16408         -
-#17  Extended offline    Completed without error       00%     15194         -
-#18  Extended offline    Completed without error       00%     14737         -
-#19  Extended offline    Completed without error       00%     14019         -
-#20  Extended offline    Interrupted (host reset)      70%     13341         -
-#21  Extended offline    Completed: read failure       90%     12879         7484314
-2 of 2 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed: read failure       90%     42263         749703024
+# 2  Extended offline    Completed: read failure       90%     42169         749703024
+# 3  Extended offline    Completed without error       00%     39649         -
+# 4  Extended offline    Completed: read failure       90%     39114         680259892
+# 5  Extended offline    Completed without error       00%     38856         -
+# 6  Extended offline    Completed without error       00%     38375         -
+# 7  Extended offline    Completed without error       00%     34597         -
+# 8  Extended offline    Completed: read failure       10%     33104         743586642
+# 9  Extended offline    Completed without error       00%     32709         -
+#10  Extended offline    Completed without error       00%     31946         -
+#11  Extended offline    Completed without error       00%     31184         -
+#12  Extended offline    Completed without error       00%     23142         -
+#13  Extended offline    Completed without error       00%     23057         -
+#14  Extended offline    Completed without error       00%     22382         -
+#15  Extended offline    Completed without error       00%     22108         -
+#16  Extended offline    Completed without error       00%     22034         -
+#17  Extended offline    Completed without error       00%     21410         -
+#18  Extended offline    Completed without error       00%     21323         -
+#19  Extended offline    Completed without error       00%     17485         -
+#20  Extended offline    Completed without error       00%     17335         -
+#21  Extended offline    Completed without error       00%     16976         -
+2 of 4 failed self-tests are outdated by newer successful extended offline self-test # 3
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -147,7 +264,7 @@ SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     20/40 Celsius
+Power Cycle Min/Max Temperature:     39/40 Celsius
 Lifetime    Min/Max Temperature:     14/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -156,13 +273,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (20)
+Temperature History Size (Index):    128 (97)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -175,7 +292,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

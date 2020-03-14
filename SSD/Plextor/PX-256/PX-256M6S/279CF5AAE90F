@@ -9,15 +9,15 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Aug  5 11:14:29 2015 YEKT
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Fri Nov  6 15:25:31 2015 YEKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -60,16 +60,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    14
- 12 Power_Cycle_Count       PO----   100   100   000    -    48
+  9 Power_On_Hours          -O----   100   100   000    -    55
+ 12 Power_Cycle_Count       PO----   100   100   000    -    192
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       PO----   100   100   000    -    0
 172 Unknown_Attribute       PO----   100   100   000    -    0
-173 Unknown_Attribute       PO----   100   100   000    -    775
-174 Unknown_Attribute       PO----   100   100   000    -    16
+173 Unknown_Attribute       PO----   100   100   000    -    4674
+174 Unknown_Attribute       PO----   100   100   000    -    21
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
-177 Wear_Leveling_Count     PO----   100   100   000    -    775
+177 Wear_Leveling_Count     PO----   100   100   000    -    4674
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    1216
@@ -79,15 +79,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO--CK   100   100   000    -    0
 187 Reported_Uncorrect      PO----   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count PO----   100   100   000    -    16
+192 Power-Off_Retract_Count PO----   100   100   000    -    21
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
 196 Reallocated_Event_Count PO----   100   100   000    -    0
 198 Offline_Uncorrectable   PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    0
-233 Media_Wearout_Indicator PO----   100   100   000    -    96
-241 Total_LBAs_Written      PO----   100   100   000    -    5232
-242 Total_LBAs_Read         PO----   100   100   000    -    4174
+233 Media_Wearout_Indicator PO----   100   100   000    -    584
+241 Total_LBAs_Written      PO----   100   100   000    -    20866
+242 Total_LBAs_Read         PO----   100   100   000    -    22672
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,7 +115,8 @@ SMART Error Log Version: 0
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%        43         -
 
 Selective Self-tests/Logging not supported
 
@@ -152,7 +153,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

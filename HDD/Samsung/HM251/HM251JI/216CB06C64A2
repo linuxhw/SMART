@@ -4,12 +4,12 @@ Device Model:     SAMSUNG HM251JI
 Serial Number:    --
 LU WWN Device Id: 5 0f0000 ...
 Firmware Version: 2SS00_01
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 0
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Wed Oct 18 20:58:57 2017 MSK
+Local Time is:    Sun May  6 19:34:15 2018 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -57,26 +57,26 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    4
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   252   252   025    -    2625
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7782
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8132
   5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    13
   7 Seek_Error_Rate         POSR--   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   089   089   000    -    6519
+  9 Power_On_Hours          -O--CK   086   086   000    -    7184
  10 Spin_Retry_Count        -O--CK   100   100   051    -    6
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4112
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4323
 191 G-Sense_Error_Rate      -O--CK   002   002   000    -    999999
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    745
-194 Temperature_Celsius     -O---K   130   067   000    -    36 (Min/Max 13/57)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    51
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    817
+194 Temperature_Celsius     -O---K   085   067   000    -    51 (Min/Max 13/57)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    6
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--C-   252   100   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    64
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    16
 201 Soft_Read_Error_Rate    -O--CK   252   252   000    -    0
-223 Load_Retry_Count        -O--CK   100   100   000    -    88
+223 Load_Retry_Count        -O--CK   100   100   000    -    89
 225 Load_Cycle_Count        -O--CK   098   098   000    -    22686
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 1137 (device log contains only the most recent 8 errors)
+Device Error Count: 1138 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,6 +117,23 @@ Device Error Count: 1137 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1138 [1] occurred at disk power-on lifetime: 7048 hours (293 days + 16 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 48 00 00 0c fe 23 48 40 00  Error: ICRC, ABRT at LBA = 0x0cfe2348 = 217981768
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 98 08 48 00 00 0c fe 23 48 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 08 07 40 00 00 09 ad 52 90 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 08 06 38 00 00 09 7a 11 78 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 08 05 30 00 00 09 79 f0 30 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 10 05 28 00 00 00 80 2d 20 40 00     00:18:45.375  WRITE FPDMA QUEUED
 
 Error 1137 [0] occurred at disk power-on lifetime: 4602 hours (191 days + 18 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -169,22 +186,22 @@ Error 1135 [6] occurred at disk power-on lifetime: 4602 hours (191 days + 18 hou
   60 00 08 0a 58 00 00 00 26 53 a0 40 00     00:05:30.437  READ FPDMA QUEUED
   60 00 08 09 50 00 00 00 65 54 d0 40 00     00:05:30.437  READ FPDMA QUEUED
 
-Error 1134 [5] occurred at disk power-on lifetime: 4602 hours (191 days + 18 hours)
+Error 1134 [5] occurred at disk power-on lifetime: 7048 hours (293 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 0d 70 00 00 00 65 58 c0 40 00  Error: UNC at LBA = 0x006558c0 = 6641856
+  84 -- 51 08 48 00 00 0c fe 23 48 40 00  Error: ICRC, ABRT at LBA = 0x0cfe2348 = 217981768
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 0d 70 00 00 00 65 58 c0 40 00     00:05:27.875  READ FPDMA QUEUED
-  61 00 e0 0c 68 00 00 01 a4 76 e0 40 00     00:05:27.875  WRITE FPDMA QUEUED
-  60 00 08 0b 60 00 00 00 08 d6 c8 40 00     00:05:27.875  READ FPDMA QUEUED
-  60 00 08 0a 58 00 00 00 26 53 a0 40 00     00:05:27.875  READ FPDMA QUEUED
-  60 00 08 09 50 00 00 00 65 54 d0 40 00     00:05:27.875  READ FPDMA QUEUED
+  61 00 98 08 48 00 00 0c fe 23 48 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 08 07 40 00 00 09 ad 52 90 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 08 06 38 00 00 09 7a 11 78 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 08 05 30 00 00 09 79 f0 30 40 00     00:18:45.375  WRITE FPDMA QUEUED
+  61 00 10 05 28 00 00 00 80 2d 20 40 00     00:18:45.375  WRITE FPDMA QUEUED
 
 Error 1133 [4] occurred at disk power-on lifetime: 4602 hours (191 days + 18 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -237,32 +254,18 @@ Error 1131 [2] occurred at disk power-on lifetime: 4602 hours (191 days + 18 hou
   60 00 08 0a 58 00 00 00 26 53 a0 40 00     00:05:30.437  READ FPDMA QUEUED
   60 00 08 09 50 00 00 00 65 54 d0 40 00     00:05:30.437  READ FPDMA QUEUED
 
-Error 1130 [1] occurred at disk power-on lifetime: 4602 hours (191 days + 18 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 0d 70 00 00 00 65 58 c0 40 00  Error: UNC at LBA = 0x006558c0 = 6641856
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 0d 70 00 00 00 65 58 c0 40 00     00:05:27.875  READ FPDMA QUEUED
-  61 00 e0 0c 68 00 00 01 a4 76 e0 40 00     00:05:27.875  WRITE FPDMA QUEUED
-  60 00 08 0b 60 00 00 00 08 d6 c8 40 00     00:05:27.875  READ FPDMA QUEUED
-  60 00 08 0a 58 00 00 00 26 53 a0 40 00     00:05:27.875  READ FPDMA QUEUED
-  60 00 08 09 50 00 00 00 65 54 d0 40 00     00:05:27.875  READ FPDMA QUEUED
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      7160         -
+# 2  Extended offline    Completed without error       00%      6875         -
+# 3  Extended offline    Completed without error       00%      6738         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Not_testing
+    1        0        0  Completed [00% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -275,8 +278,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     29/35 Celsius
+Current Temperature:                    51 Celsius
+Power Cycle Min/Max Temperature:     25/53 Celsius
 Lifetime    Min/Max Temperature:     14/63 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -285,7 +288,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     15/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (28)
+Temperature History Size (Index):    128 (60)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -296,7 +299,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

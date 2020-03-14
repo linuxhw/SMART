@@ -7,7 +7,7 @@ User Capacity:    80,060,424,192 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sun Sep 18 12:20:32 2016 CEST
+Local Time is:    Wed Sep 28 23:34:28 2016 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -52,17 +52,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   100   100   025    -    4096
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2985
+  3 Spin_Up_Time            POS---   100   100   025    -    4032
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3032
   5 Reallocated_Sector_Ct   PO--CK   100   100   011    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Half_Minutes   -O--CK   099   099   000    -    7147h+02m
+  9 Power_On_Half_Minutes   -O--CK   099   099   000    -    7254h+19m
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1607
-194 Temperature_Celsius     -O---K   109   061   000    -    43
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    540773
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1631
+194 Temperature_Celsius     -O---K   127   061   000    -    37
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    321323
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Total_Offl_Uncorrectabl ----CK   100   100   000    -    0
@@ -76,169 +76,118 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory Version 1
-SMART           Log Directory Version 1 [multi-sector log support]
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
+0x00           SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
 0x02           SL  R/O      2  Comprehensive SMART error log
-0x03       GPL     R/O      2  Ext. Comprehensive SMART error log
 0x06           SL  R/O      2  SMART self-test log
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
 
-SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x08) instead
-Device Error Count: 752 (device log contains only the most recent 8 errors)
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 342 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 752 [7] occurred at disk power-on lifetime: 7143 hours (297 days + 15 hours)
+Error 342 occurred at disk power-on lifetime: 7248 hours (302 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:50.000  SET FEATURES [Enable APM]
-  c8 00 00 00 20 00 00 00 8c 3e e0 e3 00     00:00:50.000  READ DMA
-  c8 00 00 00 28 00 00 00 8b c0 00 e3 00     00:00:50.000  READ DMA
-  c8 00 00 00 90 00 00 00 2e 7a d8 e0 00     00:00:50.000  READ DMA
-  c8 00 00 00 08 00 00 00 07 b3 60 e0 00     00:00:50.000  READ DMA
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:01:47.000  SET FEATURES [Enable APM]
+  c8 00 08 00 18 fd e2 00      00:01:25.813  READ DMA
+  c8 00 68 88 d7 51 e9 00      00:01:25.813  READ DMA
+  c8 00 80 00 d7 51 e9 00      00:01:25.813  READ DMA
+  c8 00 f8 00 d6 51 e9 00      00:01:25.813  READ DMA
 
-Error 751 [6] occurred at disk power-on lifetime: 7138 hours (297 days + 10 hours)
+Error 341 occurred at disk power-on lifetime: 7143 hours (297 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:43.813  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 07 b3 48 e0 00     00:00:43.813  READ DMA
-  c8 00 00 00 08 00 00 00 d1 f3 60 e8 00     00:00:43.813  READ DMA
-  25 00 00 02 00 00 00 06 d1 ff 00 e0 00     00:00:43.750  READ DMA EXT
-  c8 00 00 00 08 00 00 00 48 ba e0 e5 00     00:00:43.750  READ DMA
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:00:50.000  SET FEATURES [Enable APM]
+  c8 00 20 e0 3e 8c e3 00      00:00:50.000  READ DMA
+  c8 00 28 00 c0 8b e3 00      00:00:50.000  READ DMA
+  c8 00 90 d8 7a 2e e0 00      00:00:50.000  READ DMA
+  c8 00 08 60 b3 07 e0 00      00:00:50.000  READ DMA
 
-Error 750 [5] occurred at disk power-on lifetime: 7137 hours (297 days + 9 hours)
+Error 340 occurred at disk power-on lifetime: 7138 hours (297 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:01:25.250  SET FEATURES [Enable APM]
-  c8 00 00 00 28 00 00 00 8b c0 00 e3 00     00:01:25.250  READ DMA
-  c8 00 00 00 e0 00 00 00 57 7f 08 e3 00     00:01:25.250  READ DMA
-  c8 00 00 00 20 00 00 00 57 3e 10 e3 00     00:01:25.188  READ DMA
-  c8 00 00 00 08 00 00 00 07 b3 38 e0 00     00:01:25.188  READ DMA
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:00:43.813  SET FEATURES [Enable APM]
+  c8 00 08 48 b3 07 e0 00      00:00:43.813  READ DMA
+  c8 00 08 60 f3 d1 e8 00      00:00:43.813  READ DMA
+  c8 00 08 e0 ba 48 e5 00      00:00:43.750  READ DMA
+  c8 00 20 60 49 55 e3 00      00:00:43.750  READ DMA
 
-Error 749 [4] occurred at disk power-on lifetime: 7137 hours (297 days + 9 hours)
+Error 339 occurred at disk power-on lifetime: 7137 hours (297 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     02:47:03.313  SET FEATURES [Enable APM]
-  ec 00 00 00 01 00 00 00 00 00 00 00 00     02:47:00.063  IDENTIFY DEVICE
-  c8 00 00 00 08 00 00 00 d2 07 f8 e8 00     02:46:58.813  READ DMA
-  c8 00 00 00 08 00 00 00 00 10 00 e0 00     02:46:57.500  READ DMA
-  c8 00 00 00 08 00 00 00 00 00 20 e0 00     02:46:57.500  READ DMA
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:01:25.250  SET FEATURES [Enable APM]
+  c8 00 28 00 c0 8b e3 00      00:01:25.250  READ DMA
+  c8 00 e0 08 7f 57 e3 00      00:01:25.250  READ DMA
+  c8 00 20 10 3e 57 e3 00      00:01:25.188  READ DMA
+  c8 00 08 38 b3 07 e0 00      00:01:25.188  READ DMA
 
-Error 748 [3] occurred at disk power-on lifetime: 7137 hours (297 days + 9 hours)
+Error 338 occurred at disk power-on lifetime: 7137 hours (297 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     02:25:11.000  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 d2 18 00 e8 00     02:25:10.938  READ DMA
-  c8 00 00 00 08 00 00 00 d2 08 20 e8 00     02:25:10.938  READ DMA
-  c8 00 00 00 08 00 00 00 84 2f b8 e0 00     02:25:10.938  READ DMA
-  c8 00 00 00 08 00 00 00 d2 0a 00 e8 00     02:25:10.875  READ DMA
-
-Error 747 [2] occurred at disk power-on lifetime: 7135 hours (297 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:35.375  SET FEATURES [Enable APM]
-  c8 00 00 00 20 00 00 00 53 8c 00 e0 00     00:00:35.375  READ DMA
-  c8 00 00 00 08 00 00 00 84 2f b8 e0 00     00:00:35.375  READ DMA
-  c8 00 00 00 08 00 00 00 d2 18 00 e8 00     00:00:35.313  READ DMA
-  c8 00 00 00 08 00 00 00 d2 08 20 e8 00     00:00:35.313  READ DMA
-
-Error 746 [1] occurred at disk power-on lifetime: 7125 hours (296 days + 21 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:35.563  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 41 1d c0 e4 00     00:00:35.563  READ DMA
-  c8 00 00 00 08 00 00 00 84 2f b8 e0 00     00:00:35.563  READ DMA
-  c8 00 00 00 08 00 00 00 41 18 c8 e4 00     00:00:35.563  READ DMA
-  c8 00 00 00 08 00 00 00 00 10 00 e0 00     00:00:35.500  READ DMA
-
-Error 745 [0] occurred at disk power-on lifetime: 7113 hours (296 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 05 00 fe 00 00 00 00 00 00 40 00     00:00:35.375  SET FEATURES [Enable APM]
-  c8 00 00 00 08 00 00 00 41 18 c8 e4 00     00:00:35.375  READ DMA
-  c8 00 00 00 08 00 00 00 84 2f b8 e0 00     00:00:35.375  READ DMA
-  c8 00 00 00 08 00 00 00 04 08 00 e0 00     00:00:35.313  READ DMA
-  c8 00 00 00 60 00 00 00 53 8d 00 e0 00     00:00:35.313  READ DMA
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      02:47:03.313  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 00 00      02:47:00.063  IDENTIFY DEVICE
+  c8 00 08 f8 07 d2 e8 00      02:46:58.813  READ DMA
+  c8 00 08 00 10 00 e0 00      02:46:57.500  READ DMA
+  c8 00 08 20 00 00 e0 00      02:46:57.500  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -254,7 +203,7 @@ Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

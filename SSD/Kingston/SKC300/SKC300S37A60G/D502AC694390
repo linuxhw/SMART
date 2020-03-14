@@ -10,7 +10,7 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Jan  6 13:07:03 2016 MSK
+Local Time is:    Wed Jan  6 13:11:05 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,12 +58,12 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO--CK   095   095   050    -    0/8697900
+  1 Raw_Read_Error_Rate     PO--CK   095   095   050    -    0/12089031
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    864h+39m+14.280s
+  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    864h+40m+18.740s
  12 Power_Cycle_Count       -O--CK   099   099   000    -    1425
- 13 Soft_Read_Error_Rate    -O--CK   044   044   000    -    1176506/8697900
-100 Gigabytes_Erased        -O--CK   000   000   000    -    33538
+ 13 Soft_Read_Error_Rate    -O--CK   044   044   000    -    1589293/12089031
+100 Gigabytes_Erased        -O--CK   000   000   000    -    33539
 170 Reserve_Block_Count     POSR-K+  000   000   000    -    976
 171 Program_Fail_Count      -O-R--   000   000   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
@@ -73,21 +73,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 184 IO_Error_Detect_Code_Ct POSR-K+  100   100   090    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   032   054   000    -    32 (Min/Max 12/54)
-194 Temperature_Celsius     -O---K   032   054   000    -    32 (Min/Max 12/54)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/8697900
+189 Airflow_Temperature_Cel ------   031   054   000    -    31 (Min/Max 12/54)
+194 Temperature_Celsius     -O---K   031   054   000    -    31 (Min/Max 12/54)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/12089031
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-198 Uncorrectable_Sector_Ct ----C-   120   120   000    -    0/8697900
+198 Uncorrectable_Sector_Ct ----C-   120   120   000    -    0/12089031
 199 SATA_CRC_Error_Count    P-SR--   200   200   000    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/8697900
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/8697900
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/12089031
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/12089031
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           PO--C-   067   067   010    -    1
 232 Available_Reservd_Space -O--CK   000   000   000    -    3
 233 SandForce_Internal      -O--CK   000   000   000    -    23405
 234 SandForce_Internal      -O--CK   000   000   000    -    12091
 241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    12091
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    8322
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    8324
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -150,7 +150,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
+Current Temperature:                    31 Celsius
 Power Cycle Min/Max Temperature:     12/54 Celsius
 Lifetime    Min/Max Temperature:     12/79 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -168,13 +168,13 @@ Device Statistics (GP Log 0x04)
 Page Offset Size         Value  Description
   1  =====  =                =  == General Statistics (rev 2) ==
   1  0x008  4             1428  Lifetime Power-On Resets
-  1  0x018  6      25364015036  Logical Sectors Written
-  1  0x028  6      17454539845  Logical Sectors Read
+  1  0x018  6      25365008357  Logical Sectors Written
+  1  0x028  6      17457930976  Logical Sectors Read
   4  =====  =                =  == General Errors Statistics (rev 1) ==
   4  0x008  4                0  Number of Reported Uncorrectable Errors
   4  0x010  4             2023  Resets Between Cmd Acceptance and Completion
   5  =====  =                =  == Temperature Statistics (rev 1) ==
-  5  0x008  1               32  Current Temperature
+  5  0x008  1               31  Current Temperature
   5  0x010  1               34  Average Short Term Temperature
   5  0x018  1                -  Average Long Term Temperature
   5  0x020  1               47  Highest Temperature
@@ -202,8 +202,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

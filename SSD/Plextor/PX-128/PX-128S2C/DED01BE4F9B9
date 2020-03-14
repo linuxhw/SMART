@@ -9,7 +9,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Apr 29 21:39:18 2017 MSK
+Local Time is:    Sat May 13 17:34:27 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,12 +59,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    42
- 12 Power_Cycle_Count       PO----   100   100   000    -    33
+  9 Power_On_Hours          -O----   100   100   000    -    113
+ 12 Power_Cycle_Count       PO----   100   100   000    -    51
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       PO----   100   100   000    -    0
 172 Unknown_Attribute       PO----   100   100   000    -    0
-173 Unknown_Attribute       PO----   100   100   000    -    0
+173 Unknown_Attribute       PO----   100   100   000    -    1
 174 Unknown_Attribute       PO----   100   100   000    -    2
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
@@ -73,13 +73,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   005    -    87
 181 Program_Fail_Cnt_Total  PO----   100   100   000    -    0
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    0
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    5
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    100
-233 Media_Wearout_Indicator PO----   100   100   000    -    109
-241 Total_LBAs_Written      PO----   100   100   000    -    1243
-242 Total_LBAs_Read         PO----   100   100   000    -    619
+233 Media_Wearout_Indicator PO----   100   100   000    -    239
+241 Total_LBAs_Written      PO----   100   100   000    -    2667
+242 Total_LBAs_Read         PO----   100   100   000    -    1154
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -127,7 +127,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (37)
+Temperature History Size (Index):    128 (17)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -136,18 +136,18 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              33  ---  Lifetime Power-On Resets
-0x01  0x010  4              42  ---  Power-on Hours
-0x01  0x018  6        81488800  ---  Logical Sectors Written
-0x01  0x020  6          669139  ---  Number of Write Commands
-0x01  0x028  6        40612677  ---  Logical Sectors Read
-0x01  0x030  6          606583  ---  Number of Read Commands
+0x01  0x008  4              51  ---  Lifetime Power-On Resets
+0x01  0x010  4             113  ---  Power-on Hours
+0x01  0x018  6       174825566  ---  Logical Sectors Written
+0x01  0x020  6         1326369  ---  Number of Write Commands
+0x01  0x028  6        75659960  ---  Logical Sectors Read
+0x01  0x030  6         1121227  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             288  ---  Number of Hardware Resets
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4             540  ---  Number of Hardware Resets
+0x06  0x018  4               7  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -165,7 +165,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

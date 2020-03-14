@@ -3,20 +3,21 @@ Device Model:     ACSC2M128S25
 Serial Number:    --
 LU WWN Device Id: 0 000000 ...
 Firmware Version: 20151120
-User Capacity:    126 701 535 232 bytes [126 GB]
+User Capacity:    126,701,535,232 bytes [126 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Sat Oct 28 15:40:32 2017 MSK
+Local Time is:    Sat Oct  6 15:37:03 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -56,25 +57,25 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    0
-  9 Power_On_Hours          ------   100   100   050    -    69
- 12 Power_Cycle_Count       ------   100   100   050    -    760
+  9 Power_On_Hours          ------   100   100   050    -    113
+ 12 Power_Cycle_Count       ------   100   100   050    -    1378
 160 Unknown_Attribute       ------   100   100   050    -    0
 161 Unknown_Attribute       ------   100   100   050    -    54
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    18
-164 Unknown_Attribute       ------   100   100   050    -    11314
-165 Unknown_Attribute       ------   100   100   050    -    15
-166 Unknown_Attribute       ------   100   100   050    -    5
-167 Unknown_Attribute       ------   100   100   050    -    11
+164 Unknown_Attribute       ------   100   100   050    -    15186
+165 Unknown_Attribute       ------   100   100   050    -    18
+166 Unknown_Attribute       ------   100   100   050    -    9
+167 Unknown_Attribute       ------   100   100   050    -    15
 168 Unknown_Attribute       ------   100   100   050    -    3000
-192 Power-Off_Retract_Count ------   100   100   050    -    52
-194 Temperature_Celsius     ------   100   100   050    -    37
-195 Hardware_ECC_Recovered  ------   100   100   050    -    15785
+192 Power-Off_Retract_Count ------   100   100   050    -    62
+194 Temperature_Celsius     ------   100   100   050    -    39
+195 Hardware_ECC_Recovered  ------   100   100   050    -    15801
 196 Reallocated_Event_Count ------   100   100   050    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    5
-241 Total_LBAs_Written      ------   100   100   050    -    33232
-242 Total_LBAs_Read         ------   100   100   050    -    29291
-245 Unknown_Attribute       ------   100   100   050    -    37025
+241 Total_LBAs_Written      ------   100   100   050    -    46145
+242 Total_LBAs_Read         ------   100   100   050    -    46424
+245 Unknown_Attribute       ------   100   100   050    -    51242
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -93,7 +94,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -104,8 +105,10 @@ Invalid Error Log index = 0x0000 (reserved = 0x00)
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       10%        46         -
-# 2  Short offline       Completed without error       00%         0         -
+# 1  Reserved (0x0e)     Completed without error       00%       110         -
+# 2  Offline             Unknown status (0xc)          00%       101         -
+# 3  Extended offline    Completed without error       10%        46         -
+# 4  Short offline       Completed without error       00%         0         -
 
 Selective Self-tests/Logging not supported
 
@@ -114,22 +117,22 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             760  ---  Lifetime Power-On Resets
-0x01  0x010  4              69  ---  Power-on Hours
-0x01  0x018  6      2177901526  ---  Logical Sectors Written
-0x01  0x020  6        24088865  ---  Number of Write Commands
-0x01  0x028  6      1919671737  ---  Logical Sectors Read
-0x01  0x030  6        27330386  ---  Number of Read Commands
+0x01  0x008  4            1378  ---  Lifetime Power-On Resets
+0x01  0x010  4             113  ---  Power-on Hours
+0x01  0x018  6      3024213690  ---  Logical Sectors Written
+0x01  0x020  6        34875906  ---  Number of Write Commands
+0x01  0x028  6      3042496882  ---  Logical Sectors Read
+0x01  0x030  6        45623646  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4           47105  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4           47116  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              37  ---  Current Temperature
-0x05  0x010  1              98  ---  Average Short Term Temperature
-0x05  0x018  1             -76  ---  Average Long Term Temperature
+0x05  0x008  1              39  ---  Current Temperature
+0x05  0x010  1             126  ---  Average Short Term Temperature
+0x05  0x018  1              46  ---  Average Long Term Temperature
 0x05  0x020  1              51  ---  Highest Temperature
-0x05  0x028  1              12  ---  Lowest Temperature
-0x05  0x030  1              98  ---  Highest Average Short Term Temperature
+0x05  0x028  1              10  ---  Lowest Temperature
+0x05  0x030  1             126  ---  Highest Average Short Term Temperature
 0x05  0x038  1               0  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              -1  ---  Highest Average Long Term Temperature
 0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
@@ -138,13 +141,15 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3562  ---  Number of Hardware Resets
+0x06  0x008  4            5974  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

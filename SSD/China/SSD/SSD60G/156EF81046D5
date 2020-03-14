@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Jul  3 21:06:49 2017 MSK
+Local Time is:    Mon Sep  4 10:04:57 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -56,24 +56,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    0
-  9 Power_On_Hours          ------   100   100   050    -    56
- 12 Power_Cycle_Count       ------   100   100   050    -    385
+  9 Power_On_Hours          ------   100   100   050    -    83
+ 12 Power_Cycle_Count       ------   100   100   050    -    702
 160 Unknown_Attribute       ------   100   100   050    -    0
 161 Unknown_Attribute       ------   100   100   050    -    104
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    16
-164 Unknown_Attribute       ------   100   100   050    -    22663
-165 Unknown_Attribute       ------   100   100   050    -    31
-166 Unknown_Attribute       ------   100   100   050    -    4
-167 Unknown_Attribute       ------   100   100   050    -    22
-192 Power-Off_Retract_Count ------   100   100   050    -    49
+164 Unknown_Attribute       ------   100   100   050    -    44563
+165 Unknown_Attribute       ------   100   100   050    -    68
+166 Unknown_Attribute       ------   100   100   050    -    16
+167 Unknown_Attribute       ------   100   100   050    -    44
+192 Power-Off_Retract_Count ------   100   100   050    -    92
 194 Temperature_Celsius     ------   100   100   050    -    40
-195 Hardware_ECC_Recovered  ------   100   100   050    -    1399
+195 Hardware_ECC_Recovered  ------   100   100   050    -    1471
 196 Reallocated_Event_Count ------   100   100   050    -    0
-199 UDMA_CRC_Error_Count    ------   100   100   050    -    215
-241 Total_LBAs_Written      ------   100   100   050    -    20630
-242 Total_LBAs_Read         ------   100   100   050    -    24468
-245 Unknown_Attribute       ------   100   100   050    -    40473
+199 UDMA_CRC_Error_Count    ------   100   100   050    -    216
+241 Total_LBAs_Written      ------   100   100   050    -    27121
+242 Total_LBAs_Read         ------   100   100   050    -    31768
+245 Unknown_Attribute       ------   100   100   050    -    77548
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +99,42 @@ Address    Access  R/W   Size  Description
 
 Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Invalid Error Log index = 0x0000 (reserved = 0x00)
+Device Error Count: 216 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 216 [0] log entry is empty
+Error 215 [3] log entry is empty
+Error 214 [2] log entry is empty
+Error 213 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -113,23 +148,23 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             385  ---  Lifetime Power-On Resets
-0x01  0x010  4              56  ---  Power-on Hours
-0x01  0x018  6      1352067012  ---  Logical Sectors Written
-0x01  0x020  6        14499770  ---  Number of Write Commands
-0x01  0x028  6      1603586457  ---  Logical Sectors Read
-0x01  0x030  6        22242311  ---  Number of Read Commands
+0x01  0x008  4             702  ---  Lifetime Power-On Resets
+0x01  0x010  4              83  ---  Power-on Hours
+0x01  0x018  6      1777408636  ---  Logical Sectors Written
+0x01  0x020  6        21245704  ---  Number of Write Commands
+0x01  0x028  6      2082006746  ---  Logical Sectors Read
+0x01  0x030  6        30908371  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              25  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              40  ---  Current Temperature
-0x05  0x010  1             -59  ---  Average Short Term Temperature
-0x05  0x018  1              94  ---  Average Long Term Temperature
+0x05  0x010  1              92  ---  Average Short Term Temperature
+0x05  0x018  1              -6  ---  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              40  ---  Lowest Temperature
-0x05  0x030  1             -59  ---  Highest Average Short Term Temperature
-0x05  0x038  1               7  ---  Lowest Average Short Term Temperature
+0x05  0x030  1              -1  ---  Highest Average Short Term Temperature
+0x05  0x038  1               0  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              -1  ---  Highest Average Long Term Temperature
 0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
@@ -137,10 +172,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4          251912  ---  Number of Hardware Resets
+0x06  0x008  4          255712  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -156,7 +191,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

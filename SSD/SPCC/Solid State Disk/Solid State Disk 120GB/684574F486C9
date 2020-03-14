@@ -1,7 +1,7 @@
 === START OF INFORMATION SECTION ===
 Device Model:     SPCC Solid State Disk
 Serial Number:    --
-Firmware Version: S8FM08.2
+Firmware Version: S8FM08.3
 User Capacity:    120 034 123 776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
@@ -9,7 +9,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Jan  5 16:21:09 2016 MSK
+Local Time is:    Sun Oct 23 11:38:25 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -54,15 +54,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    1019
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    338
-168 Unknown_Attribute       -O--C-   100   100   000    -    1
+  9 Power_On_Hours          -O--C-   100   100   000    -    2232
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    760
+168 Unknown_Attribute       -O--C-   100   100   000    -    10
 170 Unknown_Attribute       PO----   100   100   010    -    299
-173 Unknown_Attribute       -O--C-   100   100   000    -    2883658
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    31
+173 Unknown_Attribute       -O--C-   100   100   000    -    4522063
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    56
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Temperature_Celsius     PO--C-   100   100   000    -    98
-241 Total_LBAs_Written      -O--C-   100   100   000    -    3581
+231 Temperature_Celsius     PO--C-   100   100   000    -    97
+241 Total_LBAs_Written      -O--C-   100   100   000    -    5030
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -80,8 +80,8 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
@@ -90,17 +90,21 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%        11         -
+# 1  Extended offline    Completed without error       00%         8         -
+# 2  Extended offline    Completed without error       00%         5         -
+# 3  Extended offline    Completed without error       00%        11         -
 
 Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1                0~ Percentage Used Endurance Indicator
-                              |_ ~ normalized value
+Page  Offset Size        Value Flags Description
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -110,8 +114,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            8  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
