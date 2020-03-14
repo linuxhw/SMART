@@ -30,20 +30,21 @@ Rating — avg. rating per sample.
 | Toshiba   | THNSN5256GPUK      | 256 GB | 2       | 157   | 0     | 0.43   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 5       | 145   | 0     | 0.40   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 5       | 111   | 0     | 0.31   |
+| Toshiba   | KXG50ZNV1T02       | 1 TB   | 1       | 90    | 0     | 0.25   |
 | Toshiba   | THNSN5256GPU7      | 256 GB | 1       | 85    | 0     | 0.23   |
 | Toshiba   | KBG30ZMT128G       | 128 GB | 2       | 67    | 0     | 0.18   |
 | Toshiba   | KBG30ZMV256G       | 256 GB | 4       | 35    | 0     | 0.10   |
 | Toshiba   | KXG60ZNV1T02       | 1 TB   | 1       | 27    | 0     | 0.08   |
+| Toshiba   | KBG30ZMT512G       | 512 GB | 2       | 24    | 0     | 0.07   |
 | Toshiba   | KXG60ZNV1T02 NVMe  | 1 TB   | 1       | 21    | 0     | 0.06   |
 | Toshiba   | KBG30ZMS256G NVMe  | 256 GB | 2       | 20    | 0     | 0.06   |
 | Toshiba   | KXG50ZNV256G       | 256 GB | 1       | 16    | 0     | 0.05   |
-| Toshiba   | KXG60ZNV256G NVMe  | 256 GB | 1       | 11    | 0     | 0.03   |
+| Toshiba   | KBG40ZNS256G NVMe  | 256 GB | 2       | 16    | 0     | 0.04   |
+| Toshiba   | KXG60ZNV256G NVMe  | 256 GB | 1       | 15    | 0     | 0.04   |
 | Toshiba   | KBG30ZMT256G       | 256 GB | 1       | 10    | 0     | 0.03   |
 | Toshiba   | KXG6AZNV512G       | 512 GB | 4       | 10    | 0     | 0.03   |
 | Toshiba   | KXG6AZNV256G       | 256 GB | 2       | 9     | 0     | 0.03   |
 | Toshiba   | KXG50ZNV512G       | 512 GB | 2       | 6     | 0     | 0.02   |
-| Toshiba   | KBG40ZNS256G NVMe  | 256 GB | 1       | 6     | 0     | 0.02   |
-| Toshiba   | KBG30ZMT512G       | 512 GB | 2       | 4     | 0     | 0.01   |
 | Toshiba   | KXG50ZNV1T02 NVMe  | 1 TB   | 1       | 2     | 0     | 0.01   |
 | Toshiba   | KXG60ZNV512G       | 512 GB | 1       | 1     | 0     | 0.00   |
 | Toshiba   | KBG30ZMV256G KI... | 256 GB | 1       | 0     | 0     | 0.00   |

@@ -21,5 +21,5 @@ Rating — avg. rating per sample.
 | Faspeed   | H5-60G PLUS        | 64 GB  | 1       | 90    | 0     | 0.25   |
 | Faspeed   | K5-120G            | 120 GB | 1       | 38    | 0     | 0.10   |
 | Faspeed   | M3-360G            | 360 GB | 1       | 11    | 0     | 0.03   |
-| Faspeed   | H5-120G PLUS       | 120 GB | 1       | 3     | 0     | 0.01   |
+| Faspeed   | H5-120G PLUS       | 120 GB | 1       | 9     | 0     | 0.03   |
 | Faspeed   | H5-30G             | 32 GB  | 1       | 0     | 0     | 0.00   |

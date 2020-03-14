@@ -19,5 +19,5 @@ Rating — avg. rating per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Phison    | BPXP               | 960 GB | 2       | 122   | 0     | 0.33   |
 | Phison    | SBX                | 256 GB | 1       | 58    | 0     | 0.16   |
+| Phison    | Sabrent            | 2 TB   | 2       | 33    | 0     | 0.09   |
 | Phison    | Viper M.2 VPN100   | 512 GB | 1       | 22    | 0     | 0.06   |
-| Phison    | Sabrent            | 1 TB   | 1       | 8     | 0     | 0.02   |

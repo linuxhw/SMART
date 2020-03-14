@@ -18,5 +18,5 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | LDLC      | SSD                | 480 GB | 1       | 51    | 0     | 0.14   |
-| LDLC      | SSD                | 120 GB | 1       | 47    | 0     | 0.13   |
-| LDLC      | SSD                | 128 GB | 4       | 20    | 0     | 0.06   |
+| LDLC      | SSD                | 120 GB | 2       | 23    | 0     | 0.06   |
+| LDLC      | SSD                | 128 GB | 4       | 22    | 0     | 0.06   |

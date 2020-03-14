@@ -17,4 +17,4 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| oyunkey   | SSD                | 120 GB | 1       | 46    | 0     | 0.13   |
+| oyunkey   | SSD                | 120 GB | 1       | 68    | 0     | 0.19   |

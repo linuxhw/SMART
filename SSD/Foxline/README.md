@@ -17,6 +17,6 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Foxline   | FLDMMS128G         | 128 GB | 1       | 433   | 0     | 1.19   |
+| Foxline   | FLDMMS128G         | 128 GB | 1       | 443   | 0     | 1.22   |
 | Foxline   | FLSSD480X5SE       | 480 GB | 1       | 22    | 0     | 0.06   |
 | Foxline   | FLSSD60X3          | 64 GB  | 1       | 993   | 1016  | 0.00   |

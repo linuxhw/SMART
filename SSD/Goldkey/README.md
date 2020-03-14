@@ -18,4 +18,4 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Goldkey   | GKH84-64GB         | 64 GB  | 1       | 57    | 0     | 0.16   |
-| Goldkey   | GKH84-256GB        | 256 GB | 1       | 19    | 0     | 0.05   |
+| Goldkey   | GKH84-256GB        | 256 GB | 1       | 20    | 0     | 0.06   |

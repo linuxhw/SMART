@@ -17,4 +17,4 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Chiprex   | S10T3120GB         | 120 GB | 1       | 125   | 0     | 0.34   |
+| Chiprex   | S10T3120GB         | 120 GB | 1       | 126   | 0     | 0.35   |

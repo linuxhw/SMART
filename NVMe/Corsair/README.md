@@ -17,6 +17,6 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Corsair   | Force MP500        | 240 GB | 3       | 79    | 0     | 0.22   |
+| Corsair   | Force MP500        | 240 GB | 3       | 177   | 0     | 0.49   |
 | Corsair   | Force MP510        | 480 GB | 1       | 28    | 0     | 0.08   |
 | Corsair   | Force MP510        | 960 GB | 1       | 26    | 0     | 0.07   |

@@ -25,7 +25,7 @@ Rating — avg. rating per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Seagate   | ST120HM000-1G5142  | 120 GB | 1       | 79    | 0     | 0.22   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | 1       | 60    | 0     | 0.17   |
-| Seagate   | BarraCuda SSD Z... | 1 TB   | 2       | 27    | 0     | 0.08   |
+| Seagate   | BarraCuda SSD Z... | 1 TB   | 2       | 33    | 0     | 0.09   |
 | Seagate   | ST480FP0021        | 480 GB | 1       | 14    | 0     | 0.04   |
 | Seagate   | BarraCuda SSD Z... | 2 TB   | 1       | 2     | 0     | 0.01   |
 | Seagate   | BarraCuda SSD Z... | 500 GB | 1       | 0     | 0     | 0.00   |
@@ -44,5 +44,5 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Seagate   | 600 Series             | 1      | 1       | 79    | 0     | 0.22   |
-| Seagate   | Unknown                | 4      | 5       | 23    | 0     | 0.06   |
+| Seagate   | Unknown                | 4      | 5       | 26    | 0     | 0.07   |
 | Seagate   | 600 Pro Series         | 1      | 1       | 14    | 0     | 0.04   |

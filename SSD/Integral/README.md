@@ -17,4 +17,4 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Integral  | V Series SATA SSD  | 240 GB | 2       | 4     | 0     | 0.01   |
+| Integral  | V Series SATA SSD  | 240 GB | 2       | 8     | 0     | 0.02   |

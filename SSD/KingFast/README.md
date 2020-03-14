@@ -21,6 +21,6 @@ Rating — avg. rating per sample.
 | KingFast  | SSD                | 32 GB  | 1       | 332   | 0     | 0.91   |
 | KingFast  | SSD                | 32 GB  | 1       | 125   | 0     | 0.34   |
 | KingFast  | SSD                | 32 GB  | 1       | 102   | 0     | 0.28   |
-| KingFast  | SSD                | 128 GB | 9       | 80    | 0     | 0.22   |
-| KingFast  | SSD                | 120 GB | 4       | 7     | 0     | 0.02   |
+| KingFast  | SSD                | 128 GB | 9       | 82    | 0     | 0.23   |
+| KingFast  | SSD                | 120 GB | 4       | 9     | 0     | 0.03   |
 | KingFast  | SSD                | 64 GB  | 1       | 0     | 1     | 0.00   |

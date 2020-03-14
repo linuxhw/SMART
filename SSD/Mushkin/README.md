@@ -24,14 +24,14 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Mushkin   | MKNSSDCR240GB      | 240 GB | 1       | 1513  | 0     | 4.15   |
-| Mushkin   | MKNSSDCR120GB      | 120 GB | 1       | 1154  | 0     | 3.16   |
+| Mushkin   | MKNSSDCR120GB      | 120 GB | 1       | 1164  | 0     | 3.19   |
 | Mushkin   | MKNSSDAT60GB-DX    | 64 GB  | 1       | 728   | 0     | 2.00   |
 | Mushkin   | MKNSSDTR128GB-3DL  | 128 GB | 1       | 464   | 0     | 1.27   |
 | Mushkin   | MKNSSDCR240GB-7    | 240 GB | 1       | 326   | 0     | 0.89   |
 | Mushkin   | MKNSSDAT240GB-DX   | 240 GB | 1       | 299   | 0     | 0.82   |
 | Mushkin   | MKNSSDRE1TB        | 1 TB   | 1       | 107   | 0     | 0.30   |
+| Mushkin   | MKNSSDSR250GB      | 250 GB | 1       | 93    | 0     | 0.26   |
 | Mushkin   | MKNSSDEC120GB      | 120 GB | 1       | 86    | 0     | 0.24   |
-| Mushkin   | MKNSSDSR250GB      | 250 GB | 1       | 50    | 0     | 0.14   |
 | Mushkin   | MKNSSDCG480GB      | 480 GB | 2       | 116   | 508   | 0.01   |
 | Mushkin   | MKNSSDCL120GB-DX   | 120 GB | 1       | 348   | 1006  | 0.00   |
 | Mushkin   | MKNSSDCL480GB-DX   | 480 GB | 1       | 347   | 1020  | 0.00   |
@@ -51,6 +51,6 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Mushkin   | SandForce Driven SSDs  | 10     | 10      | 487   | 407   | 1.13   |
-| Mushkin   | Unknown                | 3      | 4       | 187   | 254   | 0.36   |
+| Mushkin   | SandForce Driven SSDs  | 10     | 10      | 488   | 407   | 1.13   |
+| Mushkin   | Unknown                | 3      | 4       | 197   | 254   | 0.39   |
 | Mushkin   | SiliconMotion based... | 1      | 1       | 107   | 0     | 0.30   |

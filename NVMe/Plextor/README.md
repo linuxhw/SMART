@@ -18,7 +18,7 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Plextor   | PX-256M9PeGN       | 256 GB | 2       | 98    | 0     | 0.27   |
-| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 49    | 0     | 0.14   |
+| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 50    | 0     | 0.14   |
 | Plextor   | PX-512M8PeG        | 512 GB | 2       | 98    | 275   | 0.11   |
-| Plextor   | PX-256M8PeY        | 256 GB | 2       | 16    | 0     | 0.04   |
+| Plextor   | PX-256M8PeY        | 256 GB | 2       | 31    | 0     | 0.09   |
 | Plextor   | PX-512M9PeGN       | 512 GB | 1       | 0     | 0     | 0.00   |

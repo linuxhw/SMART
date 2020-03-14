@@ -17,7 +17,7 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| ExcelStor | J9250S             | 250 GB | 4       | 648   | 0     | 1.78   |
+| ExcelStor | J9250S             | 250 GB | 4       | 706   | 0     | 1.94   |
 | ExcelStor | J360               | 64 GB  | 1       | 897   | 1     | 1.23   |
 | ExcelStor | J680               | 82 GB  | 1       | 1687  | 4     | 0.92   |
 | ExcelStor | J8160S             | 160 GB | 5       | 371   | 3     | 0.66   |

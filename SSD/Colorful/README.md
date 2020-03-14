@@ -17,4 +17,4 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Colorful  | SL500              | 480 GB | 1       | 13    | 169   | 0.00   |
+| Colorful  | SL500              | 480 GB | 1       | 22    | 195   | 0.00   |

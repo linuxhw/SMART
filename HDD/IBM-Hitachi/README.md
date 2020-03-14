@@ -30,12 +30,12 @@ Rating — avg. rating per sample.
 | IBM/Hi... | IC35L040AVVN07-0   | 41 GB  | 2       | 576   | 3     | 0.57   |
 | IBM/Hi... | IC25N030ATMR04-0   | 32 GB  | 1       | 544   | 2     | 0.50   |
 | IBM/Hi... | IC35L040AVER07-0   | 41 GB  | 2       | 1050  | 7     | 0.36   |
+| IBM/Hi... | IC35L060AVV207-0   | 40 GB  | 1       | 326   | 3     | 0.22   |
 | IBM/Hi... | IC25N080ATMR04-0   | 80 GB  | 3       | 195   | 19    | 0.16   |
 | IBM/Hi... | IC25N060ATMR04-0   | 64 GB  | 5       | 215   | 10    | 0.11   |
 | IBM/Hi... | IC25N030ATCS04-0   | 32 GB  | 2       | 134   | 3     | 0.11   |
 | IBM/Hi... | IC25N040ATMR04-0   | 40 GB  | 2       | 628   | 181   | 0.05   |
 | IBM/Hi... | IC35L060AVVA07-0   | 64 GB  | 1       | 678   | 42    | 0.04   |
-| IBM/Hi... | IC35L060AVV207-0   | 40 GB  | 1       | 325   | 27    | 0.03   |
 | IBM/Hi... | IC35L060AVER07-0   | 64 GB  | 1       | 997   | 304   | 0.01   |
 | IBM/Hi... | IC35L120AVVA07-0   | 128 GB | 1       | 918   | 552   | 0.00   |
 
@@ -52,7 +52,7 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| IBM/Hi... | Deskstar GXP-180       | 4      | 5       | 603   | 7     | 0.70   |
+| IBM/Hi... | Deskstar GXP-180       | 4      | 5       | 603   | 2     | 0.74   |
 | IBM/Hi... | Deskstar 120GXP        | 4      | 8       | 655   | 117   | 0.50   |
 | IBM/Hi... | Deskstar 60GXP         | 2      | 3       | 1032  | 106   | 0.24   |
 | IBM/Hi... | Hitachi Travelstar ... | 4      | 11      | 314   | 43    | 0.15   |

@@ -19,10 +19,11 @@ Rating — avg. rating per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Kingston  | SKC1000240G        | 240 GB | 1       | 143   | 0     | 0.39   |
 | Kingston  | SKC1000480G        | 480 GB | 2       | 128   | 0     | 0.35   |
+| Kingston  | SA1000M8240G       | 240 GB | 1       | 38    | 0     | 0.10   |
 | Kingston  | RBUSNS8154P3128GJ  | 128 GB | 3       | 20    | 0     | 0.06   |
 | Kingston  | RBUSNS8154P3512GJ  | 512 GB | 1       | 8     | 0     | 0.02   |
 | Kingston  | RBUSNS8154P3256GJ3 | 256 GB | 3       | 2     | 0     | 0.01   |
+| Kingston  | SA2000M8250G       | 250 GB | 2       | 1     | 0     | 0.01   |
 | Kingston  | SA2000M8500G       | 500 GB | 2       | 1     | 0     | 0.00   |
-| Kingston  | SA2000M8250G       | 250 GB | 2       | 1     | 0     | 0.00   |
 | Kingston  | SA2000M81000G      | 1 TB   | 1       | 0     | 0     | 0.00   |
 | Kingston  | RBUSNS8154P3256GJ1 | 256 GB | 2       | 0     | 0     | 0.00   |

@@ -17,5 +17,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Team      | M8FP2              | 480 GB | 1       | 149   | 0     | 0.41   |
+| Team      | M8FP2              | 480 GB | 1       | 172   | 0     | 0.47   |
 | Team      | TM8FP4256G         | 256 GB | 1       | 5     | 0     | 0.02   |

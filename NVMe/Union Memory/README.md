@@ -17,5 +17,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Union ... | RPFTJ128PDD2EWX    | 128 GB | 1       | 1     | 0     | 0.00   |
+| Union ... | RPFTJ128PDD2EWX    | 128 GB | 1       | 1     | 0     | 0.01   |
 | Union ... | RPFTJ256PDD2MWX    | 256 GB | 1       | 1     | 0     | 0.00   |

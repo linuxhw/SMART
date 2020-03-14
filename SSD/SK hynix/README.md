@@ -26,20 +26,20 @@ Rating — avg. rating per sample.
 | SK hynix  | SC300 2.5 7MM      | 256 GB | 1       | 923   | 0     | 2.53   |
 | SK hynix  | HFS512G32MND-3312A | 512 GB | 1       | 686   | 0     | 1.88   |
 | SK hynix  | SC300 SATA         | 512 GB | 1       | 546   | 0     | 1.50   |
-| SK hynix  | SH920 2.5 7MM      | 256 GB | 1       | 271   | 0     | 0.74   |
+| SK hynix  | SH920 2.5 7MM      | 256 GB | 1       | 383   | 0     | 1.05   |
 | SK hynix  | HFS120G32TND-N1A2A | 120 GB | 1       | 264   | 0     | 0.73   |
 | SK hynix  | SC311 SATA         | 256 GB | 9       | 202   | 1     | 0.55   |
 | SK hynix  | HFS256G32TND-N210A | 256 GB | 1       | 172   | 0     | 0.47   |
 | SK hynix  | SC308 SATA         | 128 GB | 3       | 145   | 0     | 0.40   |
 | SK hynix  | HFS128G32MND-3210A | 128 GB | 1       | 135   | 0     | 0.37   |
 | SK hynix  | SC311 SATA         | 512 GB | 4       | 151   | 260   | 0.27   |
-| SK hynix  | SC210 2.5 7MM      | 128 GB | 2       | 466   | 2     | 0.26   |
-| SK hynix  | HFS256G3BTND-N210A | 256 GB | 2       | 73    | 0     | 0.20   |
+| SK hynix  | SC210 2.5 7MM      | 128 GB | 2       | 468   | 2     | 0.26   |
+| SK hynix  | HFS256G3BTND-N210A | 256 GB | 2       | 78    | 0     | 0.21   |
+| SK hynix  | HFS128G39TND-N210A | 128 GB | 14      | 62    | 0     | 0.17   |
+| SK hynix  | SC311 SATA         | 128 GB | 6       | 53    | 0     | 0.15   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 6       | 52    | 0     | 0.14   |
-| SK hynix  | HFS128G39TND-N210A | 128 GB | 14      | 51    | 0     | 0.14   |
-| SK hynix  | SC308 SATA         | 256 GB | 2       | 49    | 0     | 0.14   |
+| SK hynix  | SC308 SATA         | 256 GB | 2       | 50    | 0     | 0.14   |
 | SK hynix  | HFS128G32MND-3212A | 128 GB | 1       | 48    | 0     | 0.13   |
-| SK hynix  | SC311 SATA         | 128 GB | 6       | 44    | 0     | 0.12   |
 | SK hynix  | HFS256G32TNH-73A0A | 256 GB | 1       | 36    | 0     | 0.10   |
 | SK hynix  | HFS128G39MNC-3510A | 128 GB | 1       | 30    | 0     | 0.08   |
 | SK hynix  | HFS512G39TNF-N3A0A | 512 GB | 1       | 25    | 0     | 0.07   |
@@ -73,5 +73,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| SK hynix  | SATA SSDs              | 17     | 57      | 157   | 71    | 0.29   |
-| SK hynix  | Unknown                | 19     | 24      | 167   | 100   | 0.17   |
+| SK hynix  | SATA SSDs              | 17     | 57      | 160   | 71    | 0.30   |
+| SK hynix  | Unknown                | 19     | 24      | 172   | 100   | 0.19   |

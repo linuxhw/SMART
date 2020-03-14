@@ -23,14 +23,14 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Smartbuy  | SSD                | 64 GB  | 6       | 352   | 0     | 0.96   |
+| Smartbuy  | SSD                | 64 GB  | 6       | 365   | 0     | 1.00   |
 | Smartbuy  | m.2 S11-2280S      | 128 GB | 1       | 202   | 0     | 0.56   |
 | Smartbuy  | mSata              | 64 GB  | 1       | 186   | 0     | 0.51   |
-| Smartbuy  | SSD                | 120 GB | 59      | 172   | 1     | 0.44   |
-| Smartbuy  | SSD                | 64 GB  | 20      | 154   | 0     | 0.42   |
+| Smartbuy  | SSD                | 64 GB  | 20      | 175   | 0     | 0.48   |
+| Smartbuy  | SSD                | 120 GB | 59      | 184   | 1     | 0.47   |
 | Smartbuy  | m.2 S10-2280T      | 128 GB | 1       | 147   | 0     | 0.40   |
-| Smartbuy  | SSD                | 240 GB | 15      | 151   | 1     | 0.29   |
-| Smartbuy  | mSata              | 256 GB | 1       | 73    | 0     | 0.20   |
+| Smartbuy  | mSata              | 256 GB | 1       | 102   | 0     | 0.28   |
+| Smartbuy  | SSD                | 240 GB | 16      | 142   | 1     | 0.27   |
 | Smartbuy  | mSata              | 128 GB | 2       | 32    | 0     | 0.09   |
 | Smartbuy  | m.2 S11-2280       | 256 GB | 1       | 13    | 0     | 0.04   |
 | Smartbuy  | SSD                | 240 GB | 1       | 6     | 0     | 0.02   |
@@ -51,5 +51,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Smartbuy  | Unknown                | 12     | 37      | 159   | 0     | 0.44   |
-| Smartbuy  | Phison Driven SSDs     | 2      | 74      | 168   | 1     | 0.41   |
+| Smartbuy  | Unknown                | 12     | 37      | 173   | 0     | 0.48   |
+| Smartbuy  | Phison Driven SSDs     | 2      | 75      | 175   | 1     | 0.43   |

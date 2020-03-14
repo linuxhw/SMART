@@ -32,7 +32,7 @@ Rating — avg. rating per sample.
 | Micron    | 1100 SATA          | 512 GB | 1       | 251   | 0     | 0.69   |
 | Micron    | 1100 SATA          | 256 GB | 2       | 492   | 2     | 0.61   |
 | Micron    | M550_MTFDDAV128MAY | 128 GB | 1       | 204   | 0     | 0.56   |
-| Micron    | MTFDBAK128MAG-1G1  | 128 GB | 2       | 190   | 0     | 0.52   |
+| Micron    | MTFDBAK128MAG-1G1  | 128 GB | 2       | 192   | 0     | 0.53   |
 | Micron    | MTFDDAK512MAM-1K1  | 512 GB | 1       | 113   | 0     | 0.31   |
 | Micron    | 5100_MTFDDAK240TCB | 240 GB | 1       | 98    | 0     | 0.27   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 3       | 88    | 0     | 0.24   |
@@ -40,15 +40,15 @@ Rating — avg. rating per sample.
 | Micron    | M600_MTFDDAK1T0MBF | 1 TB   | 2       | 84    | 0     | 0.23   |
 | Micron    | MTFDDAV512TBN      | 512 GB | 1       | 81    | 0     | 0.22   |
 | Micron    | MTFDDAK512MBF-1... | 512 GB | 1       | 53    | 0     | 0.15   |
+| Micron    | MTFDDAK256MAM-1K12 | 256 GB | 4       | 75    | 758   | 0.14   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 8       | 56    | 1     | 0.13   |
-| Micron    | 1100_MTFDDAK256TBN | 256 GB | 4       | 47    | 0     | 0.13   |
-| Micron    | MTFDDAK256MAM-1K12 | 256 GB | 4       | 63    | 758   | 0.11   |
-| Micron    | 1100_MTFDDAV256TBN | 256 GB | 17      | 45    | 98    | 0.11   |
+| Micron    | 1100_MTFDDAK256TBN | 256 GB | 4       | 48    | 0     | 0.13   |
+| Micron    | 1100_MTFDDAV256TBN | 256 GB | 17      | 46    | 100   | 0.11   |
 | Micron    | MTFDDAK512MAY-1... | 512 GB | 1       | 624   | 16    | 0.10   |
 | Micron    | MTFDDAV512MBF-1... | 512 GB | 1       | 31    | 0     | 0.09   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | 1       | 29    | 0     | 0.08   |
 | Micron    | MTFDDAK256MAY-1... | 256 GB | 1       | 238   | 16    | 0.04   |
-| Micron    | M600_MTFDDAV512MBF | 512 GB | 1       | 10    | 0     | 0.03   |
+| Micron    | M600_MTFDDAV512MBF | 512 GB | 1       | 11    | 0     | 0.03   |
 | Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | 1       | 6     | 0     | 0.02   |
 | Micron    | 1300 SATA          | 256 GB | 1       | 3     | 0     | 0.01   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 2       | 3     | 0     | 0.01   |
@@ -71,7 +71,7 @@ Rating — avg. rating per sample.
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Micron    | MX100/MX200/M5x0/M6... | 1      | 1       | 1083  | 0     | 2.97   |
 | Micron    | MX1/2/300, M5/600, ... | 3      | 3       | 202   | 0     | 0.56   |
-| Micron    | RealSSD m4/C400/P400   | 4      | 8       | 178   | 379   | 0.46   |
+| Micron    | RealSSD m4/C400/P400   | 4      | 8       | 184   | 379   | 0.47   |
 | Micron    | Unknown                | 14     | 19      | 286   | 112   | 0.35   |
 | Micron    | 5100 Pro / 5200 SSDs   | 1      | 1       | 98    | 0     | 0.27   |
-| Micron    | BX/MX1/2/3/500, M5/... | 9      | 37      | 91    | 46    | 0.20   |
+| Micron    | BX/MX1/2/3/500, M5/... | 9      | 37      | 92    | 46    | 0.20   |

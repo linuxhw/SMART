@@ -17,5 +17,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Kingch... | SSD                | 64 GB  | 1       | 2     | 0     | 0.01   |
 | Kingch... | SSD                | 480 GB | 1       | 0     | 0     | 0.00   |
-| Kingch... | SSD                | 64 GB  | 1       | 0     | 0     | 0.00   |

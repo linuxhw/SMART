@@ -23,7 +23,7 @@ Rating — avg. rating per sample.
 | WDC       | PC SN720 SDAPNT... | 512 GB | 2       | 59    | 0     | 0.16   |
 | WDC       | WDS512G1X0C-00ENX0 | 512 GB | 1       | 52    | 0     | 0.14   |
 | WDC       | PC SN520 NVMe      | 256 GB | 2       | 45    | 0     | 0.12   |
-| WDC       | WDS250G2X0C-00L350 | 250 GB | 2       | 39    | 0     | 0.11   |
+| WDC       | WDS250G2X0C-00L350 | 250 GB | 2       | 44    | 0     | 0.12   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 3       | 19    | 0     | 0.05   |
 | WDC       | PC SN720 SDAPNT... | 1 TB   | 1       | 15    | 0     | 0.04   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 1       | 15    | 0     | 0.04   |
@@ -40,18 +40,19 @@ Rating — avg. rating per sample.
 | WDC       | PC SN520 SDAPMU... | 256 GB | 1       | 7     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 5       | 8     | 209   | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1       | 6     | 0     | 0.02   |
+| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 1       | 5     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1       | 4     | 0     | 0.01   |
-| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 1       | 4     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 2       | 3     | 0     | 0.01   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 1       | 3     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 2       | 3     | 0     | 0.01   |
-| WDC       | PC SN730 SDBQNT... | 512 GB | 5       | 2     | 0     | 0.01   |
+| WDC       | PC SN730 SDBQNT... | 512 GB | 5       | 3     | 0     | 0.01   |
 | WDC       | PC SN730 NVMe      | 1 TB   | 1       | 2     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 2     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 1     | 0     | 0.00   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 1       | 1     | 0     | 0.00   |
 | WDC       | PC SN520 SDAPMU... | 128 GB | 1       | 1     | 0     | 0.00   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 2       | 0     | 0     | 0.00   |
+| WDC       | WDS500G3X0C-00SJG0 | 500 GB | 1       | 0     | 0     | 0.00   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 1       | 0     | 0     | 0.00   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 1       | 0     | 0     | 0.00   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | 1       | 0     | 0     | 0.00   |
