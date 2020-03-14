@@ -17,7 +17,7 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| BIWIN     | SSD                | 128 GB | 4       | 71    | 0     | 0.20   |
+| BIWIN     | SSD                | 128 GB | 4       | 72    | 0     | 0.20   |
 | BIWIN     | SSD                | 120 GB | 2       | 58    | 0     | 0.16   |
 | BIWIN     | SSD                | 512 GB | 3       | 9     | 0     | 0.03   |
 | BIWIN     | G2242              | 64 GB  | 1       | 5     | 0     | 0.01   |

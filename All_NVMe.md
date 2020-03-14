@@ -28,10 +28,11 @@ Rating — avg. rating per sample.
 | Samsung   | MZVKW512HMJP-00000 | 512 GB | 902F2340E938 | 702   | 0     | 1.92   |
 | Samsung   | MZVKW512HMJP-00000 | 512 GB | B083D3C38D92 | 694   | 0     | 1.90   |
 | Intel     | MEMPEK1W032GA      | 32 GB  | BC8523684FD6 | 694   | 0     | 1.90   |
-| Samsung   | MZVLV256HCHP-000L2 | 256 GB | EAE0995D3651 | 659   | 0     | 1.81   |
+| Samsung   | MZVLV256HCHP-000L2 | 256 GB | EAE0995D3651 | 660   | 0     | 1.81   |
 | Intel     | SSDPEKKW128G7      | 128 GB | 48649EFBE03F | 632   | 0     | 1.73   |
 | Intel     | SSDPED1K375GA      | 375 GB | 357C3C366FFC | 603   | 0     | 1.65   |
 | Intel     | SSDPEDMD400G4      | 400 GB | 397FCF4460D2 | 595   | 0     | 1.63   |
+| Samsung   | SSD 950 PRO        | 512 GB | 15E2A88A208A | 582   | 0     | 1.60   |
 | Samsung   | MZVPW256HEGL-00000 | 256 GB | 69DC01EC64D1 | 577   | 0     | 1.58   |
 | Toshiba   | THNSN5256GPUK NVMe | 256 GB | 3E6E21ACDAED | 569   | 0     | 1.56   |
 | Toshiba   | THNSN5512GPUK      | 512 GB | A0A9B91E372B | 563   | 0     | 1.54   |
@@ -41,7 +42,6 @@ Rating — avg. rating per sample.
 | Intel     | SSDPE21D480GA      | 480 GB | 92DA1BE1C204 | 493   | 0     | 1.35   |
 | Intel     | SSDPEKKF256G7L     | 256 GB | 2B268DBC0352 | 486   | 0     | 1.33   |
 | Intel     | SSDPE21D480GA      | 480 GB | 407C4DB3178D | 479   | 0     | 1.31   |
-| Samsung   | SSD 950 PRO        | 512 GB | 15E2A88A208A | 478   | 0     | 1.31   |
 | Samsung   | SSD 970 PRO        | 512 GB | 222967B39C96 | 448   | 0     | 1.23   |
 | Samsung   | SSD 960 EVO        | 500 GB | AABD6CA878CB | 448   | 0     | 1.23   |
 | Toshiba   | KXG5AZNV256G       | 256 GB | 68CFD84A9E7A | 421   | 0     | 1.15   |
@@ -69,8 +69,8 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 970 EVO        | 250 GB | 08372658167E | 270   | 0     | 0.74   |
 | Intel     | SSDPEKKF256G7L     | 256 GB | FB6EC117D967 | 263   | 0     | 0.72   |
 | Lenovo    | LENSE20512GMSP3... | 512 GB | 343B01B598FD | 261   | 0     | 0.72   |
+| Samsung   | SSD 960 EVO        | 1 TB   | 07F5C67A0EC7 | 259   | 0     | 0.71   |
 | Toshiba   | THNSF5256GPUK      | 256 GB | 51B6F3D28F2F | 249   | 0     | 0.68   |
-| Samsung   | SSD 960 EVO        | 1 TB   | 07F5C67A0EC7 | 249   | 0     | 0.68   |
 | Mushkin   | MKNSSDPL500GB-D8   | 500 GB | 1130DEFE8EF2 | 248   | 0     | 0.68   |
 | Intel     | MEMPEK1J016GAL     | 16 GB  | 3D525F8377D5 | 241   | 0     | 0.66   |
 | Intel     | SSDPEKKF360G7H     | 360 GB | 54844F65DC5B | 237   | 0     | 0.65   |
@@ -107,20 +107,21 @@ Rating — avg. rating per sample.
 | Samsung   | MZFLV128HCGR-000MV | 128 GB | BACACC350DC5 | 167   | 0     | 0.46   |
 | Samsung   | SSD 960 EVO        | 250 GB | 3F8F019F5B09 | 166   | 0     | 0.46   |
 | HP        | SSD EX920          | 1 TB   | EC0CDB03FBBC | 163   | 0     | 0.45   |
-| Kingston  | SKC1000480G        | 480 GB | 2D06E0591487 | 158   | 0     | 0.43   |
+| Kingston  | SKC1000480G        | 480 GB | 2D06E0591487 | 161   | 0     | 0.44   |
 | Samsung   | MZVLW256HEHP-000L2 | 256 GB | A1E780533BCF | 158   | 0     | 0.43   |
 | HP        | SSD EX950          | 2 TB   | D2F5013DCEB5 | 156   | 0     | 0.43   |
 | Intel     | SSDPEKKW256G8      | 256 GB | BA8ECD5BCA5D | 154   | 0     | 0.42   |
 | Samsung   | SSD 970 EVO        | 250 GB | B67BF857CD7A | 152   | 0     | 0.42   |
 | ADATA     | SX8200PNP          | 256 GB | 7EECC7CF7D65 | 148   | 0     | 0.41   |
+| Kingston  | SKC1000240G        | 240 GB | CD110E881C1D | 146   | 0     | 0.40   |
 | Lite-On   | CX2-8B512-Q11 NVMe | 512 GB | C620F10FE83D | 145   | 0     | 0.40   |
 | Samsung   | PM961 NVMe         | 512 GB | DA5F503EFBAB | 144   | 0     | 0.40   |
 | Intel     | SSDPEKKW512G7      | 512 GB | 5741FED5F0CE | 144   | 0     | 0.40   |
-| Kingston  | SKC1000240G        | 240 GB | CD110E881C1D | 143   | 0     | 0.39   |
 | ADATA     | SX6000PNP          | 512 GB | CC8DE3FE8642 | 141   | 0     | 0.39   |
 | Intel     | SSDPEKKF360G7H     | 360 GB | 58CADD5AD661 | 140   | 0     | 0.38   |
 | SK hynix  | PC300 NVMe         | 1 TB   | 8CA2FB342AD1 | 140   | 0     | 0.38   |
 | Samsung   | MZVLW128HEGR-000H1 | 128 GB | D3A635866982 | 139   | 0     | 0.38   |
+| ADATA     | SX8200PNP          | 256 GB | DBA53947D5BA | 137   | 0     | 0.38   |
 | SK hynix  | PC401 NVMe         | 512 GB | CF78B09FA045 | 135   | 0     | 0.37   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 701174419038 | 133   | 0     | 0.37   |
 | Samsung   | SSD 960 EVO        | 250 GB | 7A0D82892689 | 129   | 0     | 0.35   |
@@ -165,10 +166,11 @@ Rating — avg. rating per sample.
 | ADATA     | SX8200PNP          | 1 TB   | D78ED94B71EF | 90    | 0     | 0.25   |
 | Toshiba   | KXG50ZNV1T02       | 1 TB   | 4518F63BA059 | 90    | 0     | 0.25   |
 | XPG       | GAMMIX S11         | 480 GB | B4B249ACB10B | 89    | 0     | 0.25   |
+| WDC       | WDS500G2X0C-00L350 | 500 GB | C759DEB0D665 | 87    | 0     | 0.24   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 8E3C9532A585 | 87    | 0     | 0.24   |
 | Samsung   | MZVLW1T0HMLH-000L2 | 1 TB   | 94E9BC5C9BF3 | 86    | 0     | 0.24   |
+| Intel     | SSDPEDMW400G4      | 400 GB | EFE9C35B74EC | 86    | 0     | 0.24   |
 | Samsung   | SSD 960 PRO        | 512 GB | A383F55CFE0A | 85    | 0     | 0.24   |
-| Intel     | SSDPEDMW400G4      | 400 GB | EFE9C35B74EC | 85    | 0     | 0.23   |
 | Toshiba   | THNSN5256GPU7      | 256 GB | 26E90D0B6FDA | 85    | 0     | 0.23   |
 | SPCC      | M.2 PCIe SSD       | 512 GB | 491657A5997D | 85    | 0     | 0.23   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 21681977F657 | 85    | 0     | 0.23   |
@@ -192,7 +194,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | 2BF4B96BF99C | 75    | 0     | 0.21   |
 | Lite-On   | CB1-SD512          | 512 GB | B5144B8D8FB6 | 75    | 0     | 0.21   |
 | ADATA     | SX8200NP           | 480 GB | 9BABEF9A8F0A | 75    | 0     | 0.21   |
-| WDC       | WDS500G2X0C-00L350 | 500 GB | C759DEB0D665 | 74    | 0     | 0.20   |
 | XPG       | GAMMIX S11 Pro     | 1 TB   | F2586743B096 | 71    | 0     | 0.20   |
 | Lenovo    | LENSE20256GMSP3... | 256 GB | 325ADED9B7AD | 70    | 0     | 0.19   |
 | Toshiba   | KBG30ZMT128G       | 128 GB | D79637EB7001 | 69    | 0     | 0.19   |
@@ -205,7 +206,6 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEKKW128G8      | 128 GB | 8C7BEA9426AF | 65    | 0     | 0.18   |
 | Toshiba   | KBG30ZMT128G       | 128 GB | 1818C56A0677 | 65    | 0     | 0.18   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | 58B0C0BB8F46 | 65    | 0     | 0.18   |
-| ADATA     | SX8200PNP          | 256 GB | DBA53947D5BA | 64    | 0     | 0.18   |
 | Samsung   | SSD 960 EVO        | 250 GB | 83CB0218281B | 64    | 0     | 0.18   |
 | Samsung   | SSD 960 EVO        | 250 GB | E40B57C48FED | 64    | 0     | 0.18   |
 | Samsung   | SSD 970 EVO        | 1 TB   | EA9965729EB2 | 64    | 0     | 0.18   |
@@ -236,19 +236,21 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEKNW512G8      | 512 GB | BDE52306BF94 | 57    | 0     | 0.16   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | 643A072966DD | 57    | 0     | 0.16   |
 | Samsung   | PM981 NVMe         | 512 GB | 75870A2E519A | 57    | 0     | 0.16   |
+| Plextor   | PX-256M8PeY        | 256 GB | 95E748B1021E | 57    | 0     | 0.16   |
 | WDC       | WDS250G2X0C-00L350 | 250 GB | 9EF64DD58DA4 | 56    | 0     | 0.16   |
+| HP        | SSD EX900          | 250 GB | BB2453590C57 | 56    | 0     | 0.16   |
 | HP        | SSD EX950          | 1 TB   | D5940DF891A0 | 56    | 0     | 0.15   |
+| Toshiba   | KXG50ZNV256G       | 256 GB | 2BEC93E99FC7 | 56    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 9D0F5F524A0C | 56    | 0     | 0.15   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 386B87EAFF80 | 55    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO        | 500 GB | 57C83D340599 | 54    | 0     | 0.15   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 8EB977E9DD9E | 54    | 0     | 0.15   |
+| Samsung   | SSD 950 PRO        | 512 GB | 8D854DB0BAC9 | 54    | 0     | 0.15   |
 | Samsung   | SSD 960 EVO        | 500 GB | AE5456F3CDD9 | 54    | 0     | 0.15   |
 | Samsung   | SSD 960 PRO        | 512 GB | D6B731B3E22D | 54    | 0     | 0.15   |
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | AA99FA52CD84 | 54    | 0     | 0.15   |
-| Samsung   | SSD 950 PRO        | 512 GB | 8D854DB0BAC9 | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO        | 500 GB | AB75E1749134 | 53    | 0     | 0.15   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | E112682465A6 | 52    | 0     | 0.14   |
-| HP        | SSD EX900          | 250 GB | BB2453590C57 | 52    | 0     | 0.14   |
 | WDC       | WDS512G1X0C-00ENX0 | 512 GB | AC3DCFCA55CC | 52    | 0     | 0.14   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 05CDB959A3DA | 51    | 0     | 0.14   |
 | Samsung   | SSD 960 EVO        | 500 GB | 69BA1C91EC6F | 50    | 0     | 0.14   |
@@ -294,16 +296,18 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEKKF512G8L     | 512 GB | B178FD880B90 | 41    | 0     | 0.11   |
 | Samsung   | MZVLW512HMJP-000L7 | 512 GB | 8630E01A5580 | 40    | 0     | 0.11   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 12A4FB038A5D | 40    | 0     | 0.11   |
+| Kingston  | SA1000M8240G       | 240 GB | 541831E00BEA | 39    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 5E5639385BFF | 39    | 0     | 0.11   |
 | Samsung   | SSD 960 EVO        | 250 GB | 6A85C48C0613 | 39    | 0     | 0.11   |
 | ADATA     | SX6000LNP          | 512 GB | F0FA5B42C7DB | 39    | 0     | 0.11   |
 | Samsung   | SSD 960 EVO        | 1 TB   | 89C23501B95F | 39    | 0     | 0.11   |
 | Intel     | SSDPEKKW010T7      | 1 TB   | 65538370B29B | 39    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO        | 500 GB | 166A104A18D9 | 38    | 0     | 0.11   |
-| Kingston  | SA1000M8240G       | 240 GB | 541831E00BEA | 38    | 0     | 0.10   |
 | Samsung   | MZVLW1T0HMLH-000L7 | 1 TB   | 2025AE6A503F | 37    | 0     | 0.10   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 0D3E45D58051 | 37    | 0     | 0.10   |
+| Toshiba   | KBG40ZNS256G NVMe  | 256 GB | 8F5E51F63A44 | 37    | 0     | 0.10   |
 | Samsung   | MZFLV128HCGR-000MV | 128 GB | 89338A092A2C | 37    | 0     | 0.10   |
+| Samsung   | SSD 970 EVO Plus   | 500 GB | A7C3E426EBCA | 37    | 0     | 0.10   |
 | ADATA     | SX8200PNP          | 512 GB | 460AA3104EC0 | 37    | 0     | 0.10   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 54A4BAF06D4F | 36    | 0     | 0.10   |
 | Intel     | SSDPEKNW512G8      | 512 GB | A3EF9A277B3E | 36    | 0     | 0.10   |
@@ -311,6 +315,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | 222D931C6308 | 36    | 0     | 0.10   |
 | Samsung   | SSD 960 EVO        | 250 GB | DCA56E16539B | 36    | 0     | 0.10   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 46E57DEF3371 | 36    | 0     | 0.10   |
+| Crucial   | CT1000P1SSD8       | 1 TB   | 14D8CDDCCB02 | 35    | 0     | 0.10   |
 | HP        | SSD EX900          | 500 GB | 9237D033B566 | 35    | 0     | 0.10   |
 | PNY       | CS3030 500GB SSD   | 500 GB | 7F4FDDD6B269 | 35    | 0     | 0.10   |
 | Samsung   | SSD 960 PRO        | 512 GB | 07C01FFC609C | 35    | 0     | 0.10   |
@@ -328,7 +333,6 @@ Rating — avg. rating per sample.
 | Samsung   | MZVPV256HDGL-00000 | 256 GB | 370D7BFA1C3F | 33    | 0     | 0.09   |
 | WDC       | WDS250G2X0C-00L350 | 250 GB | 11B08C7DD9A3 | 32    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO        | 1 TB   | FAA273845D36 | 32    | 0     | 0.09   |
-| Plextor   | PX-256M8PeY        | 256 GB | 95E748B1021E | 32    | 0     | 0.09   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | E1FD7085F9A7 | 31    | 0     | 0.09   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | EDAD5FC2F1B0 | 31    | 0     | 0.09   |
 | Samsung   | SSD 960 EVO        | 250 GB | 255C06537FA5 | 31    | 0     | 0.09   |
@@ -360,15 +364,14 @@ Rating — avg. rating per sample.
 | Toshiba   | KBG30ZMS256G NVMe  | 256 GB | 7531E597F6AC | 27    | 0     | 0.07   |
 | Intel     | SSDPEKKW128G7      | 128 GB | 77370BCA4573 | 26    | 0     | 0.07   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | ABCC79D15824 | 26    | 0     | 0.07   |
+| Intel     | SSDPEKNW512G8      | 512 GB | 91F30786EEA6 | 26    | 0     | 0.07   |
 | Samsung   | MZVKW1T0HMLH-00000 | 1 TB   | 36825810E790 | 26    | 0     | 0.07   |
 | Samsung   | SSD 960 PRO        | 512 GB | DFDAEBEAAB19 | 26    | 0     | 0.07   |
 | Samsung   | SSD 970 EVO        | 500 GB | 54F59EF82F08 | 26    | 0     | 0.07   |
 | Corsair   | Force MP510        | 960 GB | 124AAC345983 | 26    | 0     | 0.07   |
 | Samsung   | SSD 970 EVO        | 1 TB   | CFEB84DD8085 | 26    | 0     | 0.07   |
-| Toshiba   | KBG40ZNS256G NVMe  | 256 GB | 8F5E51F63A44 | 26    | 0     | 0.07   |
 | SK hynix  | HFS256GD9TNG-62A0A | 256 GB | B645F18CD361 | 26    | 0     | 0.07   |
 | Kingston  | RBUSNS8154P3128GJ  | 128 GB | A05FD4AD2462 | 25    | 0     | 0.07   |
-| Intel     | SSDPEKNW512G8      | 512 GB | 91F30786EEA6 | 25    | 0     | 0.07   |
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | 0BBD4068C5EE | 25    | 0     | 0.07   |
 | Intel     | SSDPEKKW010T8      | 1 TB   | B7D08FECD97A | 25    | 0     | 0.07   |
 | XPG       | GAMMIX S11 Pro     | 512 GB | 04591BAF17BD | 25    | 0     | 0.07   |
@@ -398,6 +401,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | 02468A0C6D2E | 21    | 0     | 0.06   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | 55E8FEFBD07D | 21    | 0     | 0.06   |
 | WDC       | PC SN520 SDAPMU... | 512 GB | E3F82F47B531 | 20    | 0     | 0.06   |
+| WDC       | PC SN520 SDAPNU... | 256 GB | 4E37D08F9926 | 20    | 0     | 0.06   |
 | Intel     | HBRPEKNX0202AH     | 512 GB | B0582EB5761E | 20    | 0     | 0.06   |
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | 67F03592C623 | 20    | 0     | 0.06   |
 | Samsung   | SSD 960 PRO        | 512 GB | 7E8659E2B418 | 20    | 0     | 0.06   |
@@ -405,11 +409,13 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEKKF010T8 NVMe | 1 TB   | F6B45AB5AF50 | 20    | 0     | 0.06   |
 | Samsung   | SSD 960 EVO        | 250 GB | 13B101A4E90F | 19    | 0     | 0.05   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | F84715721D0B | 19    | 0     | 0.05   |
+| ADATA     | SX8200PNP          | 512 GB | 5460A17144F9 | 19    | 0     | 0.05   |
 | Samsung   | PM981 NVMe         | 256 GB | 97A1A5444BD1 | 19    | 0     | 0.05   |
 | Toshiba   | KXG6AZNV512G       | 512 GB | AE12203AE7C2 | 19    | 0     | 0.05   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | 0A095ED07A30 | 19    | 0     | 0.05   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | AB11D8123995 | 19    | 0     | 0.05   |
 | Toshiba   | KBG30ZMV256G       | 256 GB | A4330E5D9EF0 | 19    | 0     | 0.05   |
+| Samsung   | SSD 960 EVO        | 250 GB | AD4EB3DE6949 | 18    | 0     | 0.05   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 2D65945E52AA | 18    | 0     | 0.05   |
 | SK hynix  | PC401 HFS256GD9... | 256 GB | CE21677C8945 | 18    | 0     | 0.05   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | F2F18859A4F4 | 18    | 0     | 0.05   |
@@ -419,21 +425,19 @@ Rating — avg. rating per sample.
 | Toshiba   | KXG6AZNV256G       | 256 GB | AF529A3F3EA0 | 18    | 0     | 0.05   |
 | Samsung   | SSD 970 EVO        | 1 TB   | C40D0FC5F530 | 18    | 0     | 0.05   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 710209982D2B | 18    | 0     | 0.05   |
-| Samsung   | SSD 960 EVO        | 250 GB | AD4EB3DE6949 | 17    | 0     | 0.05   |
 | Samsung   | MZFLV128HCGR-000MV | 128 GB | 5C34DA61BC33 | 17    | 0     | 0.05   |
 | SK hynix  | PC401 NVMe         | 512 GB | 943E25A1AC3C | 17    | 0     | 0.05   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 5256C426FEEF | 17    | 0     | 0.05   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 272A8B0EF733 | 17    | 0     | 0.05   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 4D70089522BB | 68    | 3     | 0.05   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 0EBF8E31CAE8 | 34    | 1     | 0.05   |
-| WDC       | PC SN520 SDAPNU... | 256 GB | 4E37D08F9926 | 16    | 0     | 0.05   |
 | Samsung   | SSD 970 PRO        | 512 GB | 082BA0860A41 | 16    | 0     | 0.05   |
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | BD17C0A14BAA | 16    | 0     | 0.05   |
 | Samsung   | PM981 NVMe         | 512 GB | 0FD5056B482B | 16    | 0     | 0.05   |
+| Intel     | SSDPEKNW020T8      | 2 TB   | C03E39D3D31D | 16    | 0     | 0.05   |
 | Toshiba   | KXG50ZNV256G       | 256 GB | B0C53F7971F8 | 16    | 0     | 0.05   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 401943EC6E05 | 16    | 0     | 0.05   |
 | XPG       | GAMMIX S11 Pro     | 1 TB   | D5C088687253 | 16    | 0     | 0.05   |
-| Intel     | SSDPEKNW020T8      | 2 TB   | C03E39D3D31D | 16    | 0     | 0.04   |
 | Colorful  | CN600S             | 480 GB | 254758D91C77 | 16    | 0     | 0.04   |
 | ADATA     | SX6000PNP          | 1 TB   | A5750F893D27 | 16    | 0     | 0.04   |
 | PNY       | CS3030 250GB SSD   | 250 GB | 2F8A9D6AD9EE | 16    | 0     | 0.04   |
@@ -443,6 +447,7 @@ Rating — avg. rating per sample.
 | WDC       | PC SN720 SDAPNT... | 256 GB | 8E20AC4AD500 | 15    | 0     | 0.04   |
 | SK hynix  | BA HFS512GD9TNG... | 512 GB | 0FBB251215E2 | 15    | 0     | 0.04   |
 | Samsung   | MZVLW256HEHP-000L2 | 256 GB | 1D1D4A8FF44C | 15    | 0     | 0.04   |
+| Samsung   | MZVLB1T0HALR-00000 | 1 TB   | 9CDA4E74CF84 | 15    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 653C9915CDE4 | 15    | 0     | 0.04   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | 4940A2881859 | 15    | 0     | 0.04   |
 | Toshiba   | KXG60ZNV256G NVMe  | 256 GB | 7C3BE6EF250C | 15    | 0     | 0.04   |
@@ -453,13 +458,12 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | E2452CC29867 | 14    | 0     | 0.04   |
 | Samsung   | SSD 970 PRO        | 512 GB | E1978D98BBEE | 14    | 0     | 0.04   |
 | ADATA     | SX8200PNP          | 256 GB | D64D9FE80642 | 14    | 0     | 0.04   |
+| Intel     | SSDPEKNW512G8      | 512 GB | 9DFFB118E75C | 14    | 0     | 0.04   |
+| Samsung   | SSD 970 EVO        | 500 GB | C5FB5EFE8691 | 14    | 0     | 0.04   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | FFA13449F91E | 14    | 0     | 0.04   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 845BDADA80F9 | 14    | 0     | 0.04   |
-| Crucial   | CT1000P1SSD8       | 1 TB   | 14D8CDDCCB02 | 14    | 0     | 0.04   |
-| Intel     | SSDPEKNW512G8      | 512 GB | 9DFFB118E75C | 14    | 0     | 0.04   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 5155144EC1FA | 13    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 8443DDD91A5B | 13    | 0     | 0.04   |
-| Samsung   | SSD 970 EVO        | 500 GB | C5FB5EFE8691 | 13    | 0     | 0.04   |
 | Samsung   | PM961 NVMe         | 256 GB | 91EE496BBA1C | 13    | 0     | 0.04   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 4002BFBC3AC4 | 13    | 0     | 0.04   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 6ACCD81E5ED8 | 13    | 0     | 0.04   |
@@ -470,8 +474,8 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLW512HMJP-000L7 | 512 GB | 6F0379A3959C | 13    | 0     | 0.04   |
 | Samsung   | PM981 NVMe         | 256 GB | B9DD83BF625D | 13    | 0     | 0.04   |
 | Lenovo    | LENSE20512GMSP3... | 512 GB | 7E0A4EE202C1 | 13    | 0     | 0.04   |
-| Samsung   | MZVLW256HEHP-000L2 | 256 GB | 6CDCC5E0EAA2 | 13    | 0     | 0.04   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | C5D5A2382F1B | 13    | 0     | 0.04   |
+| Samsung   | MZVLW256HEHP-000L2 | 256 GB | 6CDCC5E0EAA2 | 13    | 0     | 0.04   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | 5E51DBF06EE0 | 13    | 0     | 0.04   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 2234D470CCBE | 13    | 0     | 0.04   |
 | Samsung   | MZVLB512HAJQ-000H7 | 512 GB | 30DE880F1DF1 | 13    | 0     | 0.04   |
@@ -483,10 +487,10 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEKNW010T8      | 1 TB   | C0897C70AC64 | 12    | 0     | 0.03   |
 | Lite-On   | CA1-8D128-HP       | 128 GB | 695BAD939D52 | 12    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO        | 1 TB   | AF251FFB2627 | 12    | 0     | 0.03   |
-| Intel     | SSDPEKKW512G7      | 512 GB | 610F47538BFD | 12    | 0     | 0.03   |
-| Samsung   | SSD 970 PRO        | 512 GB | 6A0FB5332891 | 12    | 0     | 0.03   |
-| SK hynix  | PC601 NVMe         | 512 GB | 00FA94AE5F2D | 12    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 9B95C912861B | 12    | 0     | 0.03   |
+| Samsung   | SSD 970 PRO        | 512 GB | 6A0FB5332891 | 12    | 0     | 0.03   |
+| Intel     | SSDPEKKW512G7      | 512 GB | 610F47538BFD | 12    | 0     | 0.03   |
+| SK hynix  | PC601 NVMe         | 512 GB | 00FA94AE5F2D | 12    | 0     | 0.03   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 808708442BD9 | 12    | 0     | 0.03   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 07E0E0A7CF44 | 12    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | E48FC4A6B53F | 12    | 0     | 0.03   |
@@ -504,6 +508,7 @@ Rating — avg. rating per sample.
 | XPG       | GAMMIX S11 Pro     | 512 GB | F6A5AEEF80F0 | 11    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO        | 500 GB | 1A8D030C09FA | 10    | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 250 GB | 05E7DA6B9DDA | 10    | 0     | 0.03   |
+| Samsung   | SSD 970 EVO Plus   | 500 GB | A028D2F1C4B4 | 10    | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 500 GB | C4FE3F6F7BDF | 10    | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 500 GB | 1B409D58D8C3 | 74    | 6     | 0.03   |
 | Toshiba   | KBG30ZMT256G       | 256 GB | 023468534E3A | 10    | 0     | 0.03   |
@@ -519,10 +524,10 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | 2CB5404A4FF3 | 9     | 0     | 0.03   |
 | Toshiba   | KXG6AZNV512G       | 512 GB | F9CC099D9EAD | 9     | 0     | 0.03   |
 | WDC       | PC SN520 NVMe      | 512 GB | BA9D6083BAAC | 9     | 0     | 0.03   |
+| Intel     | SSDPEKKF256G8L     | 256 GB | B71E0C212C59 | 9     | 0     | 0.03   |
 | Samsung   | SSD 970 EVO        | 250 GB | 0B928464FA40 | 9     | 0     | 0.03   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | 8549EE60A51E | 9     | 0     | 0.03   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | FF3FCFDE947F | 9     | 0     | 0.03   |
-| Samsung   | SSD 970 EVO Plus   | 500 GB | A028D2F1C4B4 | 9     | 0     | 0.03   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 9F4C0815170B | 9     | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 250 GB | CA1AC026D02B | 9     | 0     | 0.03   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | D18A229BD99B | 9     | 0     | 0.03   |
@@ -531,19 +536,21 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 8B5045C47793 | 8     | 0     | 0.02   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 5EA4F9ECCAFB | 8     | 0     | 0.02   |
 | HP        | SSD EX950          | 1 TB   | 78D4E55FB54B | 8     | 0     | 0.02   |
+| Crucial   | CT1000P1SSD8       | 1 TB   | A90F5F179014 | 8     | 0     | 0.02   |
 | Samsung   | SSD 960 EVO        | 250 GB | D7ABBBA50646 | 8     | 0     | 0.02   |
+| Samsung   | SSD 960 EVO        | 1 TB   | 7EBD3823EF68 | 8     | 0     | 0.02   |
 | Phison    | Sabrent            | 1 TB   | 3132328137C6 | 8     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 23C4ECBC7626 | 8     | 0     | 0.02   |
 | Kingston  | RBUSNS8154P3512GJ  | 512 GB | 42691D3A9D04 | 8     | 0     | 0.02   |
 | SK hynix  | PC401 NVMe         | 512 GB | 1BD97790472D | 7     | 0     | 0.02   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | F87014774E5E | 7     | 0     | 0.02   |
-| Samsung   | SSD 960 EVO        | 1 TB   | 7EBD3823EF68 | 7     | 0     | 0.02   |
 | Intel     | SSDPEMKF512G8 NVMe | 512 GB | 5C28995BDCBA | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 33E9D2834662 | 7     | 0     | 0.02   |
-| Samsung   | MZVLB1T0HALR-00000 | 1 TB   | 9CDA4E74CF84 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | EB4C29AFE38B | 7     | 0     | 0.02   |
 | ADATA     | SX6000NP           | 512 GB | 25AE4219F7FB | 7     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 0DFB2069A4E9 | 7     | 0     | 0.02   |
+| SK hynix  | BC501 HFM256GDJ... | 256 GB | B828DD7B77E5 | 7     | 0     | 0.02   |
+| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 9E0D1D0537CE | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 250 GB | 935BBA3119A4 | 7     | 0     | 0.02   |
 | Intel     | SSDPEKNW512G8      | 512 GB | C190BC19D5C6 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 67D882D345DC | 7     | 0     | 0.02   |
@@ -562,15 +569,13 @@ Rating — avg. rating per sample.
 | Toshiba   | KBG40ZNS256G NVMe  | 256 GB | CC0F7B9CC0B1 | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 1 TB   | DA8CB10912B8 | 6     | 0     | 0.02   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | 551321F86B68 | 6     | 0     | 0.02   |
-| Intel     | SSDPEKKF256G8L     | 256 GB | B71E0C212C59 | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 500 GB | A9F6ED2C02EB | 6     | 0     | 0.02   |
 | SK hynix  | PC300 NVMe         | 1 TB   | F3D7C089E858 | 6     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 3EAD817F54A2 | 6     | 0     | 0.02   |
 | Samsung   | PM981a NVMe SED    | 512 GB | 981C6A9AF607 | 5     | 0     | 0.02   |
-| Crucial   | CT1000P1SSD8       | 1 TB   | A90F5F179014 | 5     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 250 GB | D673B1856293 | 5     | 0     | 0.02   |
 | Team      | TM8FP4256G         | 256 GB | 2BA22191C368 | 5     | 0     | 0.02   |
-| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 9E0D1D0537CE | 5     | 0     | 0.02   |
+| Union ... | RPFTJ128PDD2EWX    | 128 GB | 260BE0071A12 | 5     | 0     | 0.02   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 659CE0B757BD | 5     | 0     | 0.02   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | F2D4BA2FB9A6 | 5     | 0     | 0.02   |
 | Samsung   | SSD 960 EVO        | 500 GB | 16AEB5CBB56C | 10    | 1     | 0.02   |
@@ -578,7 +583,6 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLB256HAHQ-000L2 | 256 GB | AF96A7218423 | 5     | 0     | 0.01   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 16F806FEC08B | 5     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 9EED70526DB1 | 5     | 0     | 0.01   |
-| SK hynix  | BC501 HFM256GDJ... | 256 GB | B828DD7B77E5 | 5     | 0     | 0.01   |
 | ADATA     | SX6000LNP          | 512 GB | B9E87BC886A5 | 5     | 0     | 0.01   |
 | PNY       | CS3030 2000GB SSD  | 2 TB   | ECD0290602A3 | 5     | 0     | 0.01   |
 | SK hynix  | BA HFS256GD9TNG... | 256 GB | DBB5FC04D701 | 5     | 0     | 0.01   |
@@ -624,9 +628,9 @@ Rating — avg. rating per sample.
 | SK hynix  | BC511 NVMe         | 256 GB | 78ACE1BBF0BA | 3     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 4C476002701E | 3     | 0     | 0.01   |
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | AF012FBC90DD | 3     | 0     | 0.01   |
+| SK hynix  | PC401 NVMe         | 1 TB   | B007B859D67A | 3     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HALR-000L2 | 1 TB   | DB2E47CD7B14 | 3     | 0     | 0.01   |
 | Kingston  | SA2000M8500G       | 500 GB | 6FD29E0C0E7E | 3     | 0     | 0.01   |
-| SK hynix  | PC401 NVMe         | 1 TB   | B007B859D67A | 3     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 94B75640007F | 3     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | 3D3260FD3ACD | 3     | 0     | 0.01   |
 | Gigabyte  | GP-GSM2NE8128GNTD  | 128 GB | A78B18B4D411 | 3     | 0     | 0.01   |
@@ -645,6 +649,7 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 3DCF4CEBCB2F | 2     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | BBE63AE5EDA9 | 2     | 0     | 0.01   |
 | Lite-On   | CA3-8D512          | 512 GB | AA2FCA120675 | 2     | 0     | 0.01   |
+| Kingston  | SA2000M8250G       | 250 GB | DB4C847607DE | 2     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 221FA61A04D5 | 2     | 0     | 0.01   |
 | Kingston  | RBUSNS8154P3128GJ  | 128 GB | E179561C024B | 2     | 0     | 0.01   |
 | Lite-On   | CA3-8D128-HP       | 128 GB | 80906C2CCA40 | 2     | 0     | 0.01   |
@@ -657,7 +662,6 @@ Rating — avg. rating per sample.
 | HP        | SSD EX920          | 1 TB   | 6087EB7B65D6 | 2     | 0     | 0.01   |
 | Intel     | SSDPEKKF010T8L     | 1 TB   | 55A12EF86896 | 2     | 0     | 0.01   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 07F661783682 | 2     | 0     | 0.01   |
-| Kingston  | SA2000M8250G       | 250 GB | DB4C847607DE | 2     | 0     | 0.01   |
 | Micron    | MTFDHBA256TCK      | 256 GB | 2C0EBB7DBDA9 | 2     | 0     | 0.01   |
 | Samsung   | MZVLB256HAHQ-000L2 | 256 GB | A28B0504637D | 2     | 0     | 0.01   |
 | FORESEE   | P900F256GB         | 256 GB | AD81069BBB9D | 2     | 0     | 0.01   |
@@ -676,16 +680,17 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEKKA256G7      | 256 GB | CCE4E14E9BB1 | 1     | 0     | 0.01   |
 | Gigabyte  | GP-ASM2NE6200TTTD  | 2 TB   | F02A94E89C15 | 1     | 0     | 0.01   |
 | ADATA     | SX6000LNP          | 1 TB   | AB02DEC0E600 | 1     | 0     | 0.01   |
-| Union ... | RPFTJ128PDD2EWX    | 128 GB | 260BE0071A12 | 1     | 0     | 0.01   |
 | Samsung   | SSD 960 PRO        | 2 TB   | DA410F2D81BE | 85    | 47    | 0.00   |
 | SK hynix  | PC601 NVMe         | 512 GB | CC0BF46AD0F4 | 1     | 0     | 0.00   |
 | Samsung   | MZVLB1T0HALR-000L2 | 1 TB   | 0C33F6F3EE1B | 1     | 0     | 0.00   |
 | Kingston  | RBUSNS8154P3256GJ3 | 256 GB | 7ECFD4551B38 | 1     | 0     | 0.00   |
 | SK hynix  | BC501A NVMe        | 128 GB | DA8E8ED7E8AB | 1     | 0     | 0.00   |
+| Samsung   | SSD 970 EVO Plus   | 1 TB   | E522FC9A7737 | 1     | 0     | 0.00   |
 | Samsung   | PM981a NVMe        | 512 GB | 2CB2E3F6A153 | 1     | 0     | 0.00   |
 | Toshiba   | KXG60ZNV512G       | 512 GB | 1EB4E8F94166 | 1     | 0     | 0.00   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | B2667ED77308 | 1     | 0     | 0.00   |
 | HP        | SSD EX920          | 1 TB   | 459C986B8DBA | 1     | 0     | 0.00   |
+| Samsung   | MZVLB512HBJQ-000L2 | 512 GB | F19FD28DD5E6 | 1     | 0     | 0.00   |
 | XPG       | GAMMIX S5          | 256 GB | EBBB46F392A1 | 1     | 0     | 0.00   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | EF999FD2CFC1 | 1     | 0     | 0.00   |
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | 8B323110172A | 1     | 0     | 0.00   |
@@ -694,11 +699,14 @@ Rating — avg. rating per sample.
 | WDC       | PC SN520 SDAPNU... | 256 GB | 65192FDFD4AD | 1     | 0     | 0.00   |
 | ADATA     | SX6000LNP          | 128 GB | AD6633556414 | 1     | 0     | 0.00   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | AFDE4FACB520 | 1     | 0     | 0.00   |
+| XPG       | SPECTRIX S40G      | 256 GB | 50A0884D4F60 | 1     | 0     | 0.00   |
 | Toshiba   | KBG30ZMV256G       | 256 GB | 8AD0BC18D4E1 | 1     | 0     | 0.00   |
+| Intel     | SSDPEKNW512G8H     | 512 GB | 1CD1DF264CFE | 1     | 0     | 0.00   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | A1484BA38F87 | 1     | 0     | 0.00   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | 6EA8D809B841 | 1     | 0     | 0.00   |
 | Samsung   | MZVLW1T0HMLH-00000 | 1 TB   | E22C3071234C | 1     | 0     | 0.00   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | EA11525D074E | 1     | 0     | 0.00   |
+| Samsung   | SSD 970 EVO Plus   | 1 TB   | 3342A0EEBCCF | 1     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | A4C4F5B75240 | 1     | 0     | 0.00   |
 | Samsung   | SSD 960 EVO        | 250 GB | 340C21663624 | 1     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | F5D7B59A3824 | 1     | 0     | 0.00   |
@@ -716,13 +724,12 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEKKF010T8L     | 1 TB   | B22845A00F5C | 1     | 0     | 0.00   |
 | SK hynix  | BC501 HFM512GDJ... | 512 GB | 7416696BCAA1 | 1     | 0     | 0.00   |
 | Samsung   | SSD 960 EVO        | 500 GB | 713A781DB547 | 1     | 0     | 0.00   |
-| Samsung   | SSD 970 EVO Plus   | 500 GB | A7C3E426EBCA | 1     | 0     | 0.00   |
 | Intel     | SSDPEKKF010T8L     | 1 TB   | F210E9662742 | 1     | 0     | 0.00   |
 | Samsung   | MZVLB1T0HALR-000L2 | 1 TB   | 47AF50EAB383 | 1     | 0     | 0.00   |
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | 82737D176D88 | 1     | 0     | 0.00   |
+| Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 64CECA4F0234 | 1     | 0     | 0.00   |
 | Samsung   | SSD 960 EVO        | 1 TB   | 46CEEF9F2529 | 27    | 28    | 0.00   |
 | Intel     | SSDPEKKF512G8L     | 512 GB | 5488FF79299C | 0     | 0     | 0.00   |
-| Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 64CECA4F0234 | 0     | 0     | 0.00   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | E32AA4B920F5 | 0     | 0     | 0.00   |
 | Toshiba   | KXG6AZNV256G       | 256 GB | 4DC568711235 | 0     | 0     | 0.00   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 97606A65081D | 0     | 0     | 0.00   |
@@ -763,7 +770,6 @@ Rating — avg. rating per sample.
 | SK hynix  | BC501 NVMe         | 512 GB | 4B57FDCBC6E0 | 0     | 0     | 0.00   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 43A41E0B942F | 0     | 0     | 0.00   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | A6CD84B8D61D | 0     | 0     | 0.00   |
-| Samsung   | MZVLB512HBJQ-000L2 | 512 GB | F19FD28DD5E6 | 0     | 0     | 0.00   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | A00F1DE214F7 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 4B3675639D3C | 0     | 0     | 0.00   |
 | Samsung   | MZALQ256HAJD-000L1 | 256 GB | 089F874C6368 | 0     | 0     | 0.00   |
@@ -791,23 +797,19 @@ Rating — avg. rating per sample.
 | Micron    | MTFDHBA256TCK-1... | 256 GB | 6C0357C36483 | 0     | 0     | 0.00   |
 | Samsung   | MZVLB256HAHQ-000L2 | 256 GB | 18AB4FAFE114 | 0     | 0     | 0.00   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | FEF0EA0FDC51 | 0     | 0     | 0.00   |
-| Samsung   | SSD 970 EVO Plus   | 1 TB   | E522FC9A7737 | 0     | 0     | 0.00   |
 | Intel     | SSDPEKKF512G8L     | 512 GB | F4210F0AAFD0 | 0     | 0     | 0.00   |
-| Intel     | SSDPEKNW512G8H     | 512 GB | 1CD1DF264CFE | 0     | 0     | 0.00   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | 3DC17580F737 | 0     | 0     | 0.00   |
 | Samsung   | MZVLW256HEHP-000L2 | 256 GB | 8971C208EFA9 | 0     | 0     | 0.00   |
-| Samsung   | SSD 970 EVO Plus   | 1 TB   | 3342A0EEBCCF | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | DDF04F3A07F4 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 1784D2F907BB | 0     | 0     | 0.00   |
+| Samsung   | SSD 970 EVO Plus   | 500 GB | B5D18AFE32E2 | 0     | 0     | 0.00   |
 | Kingston  | RBUSNS8154P3256GJ3 | 256 GB | 233C4A352935 | 0     | 0     | 0.00   |
 | Lenovo    | LENSE20512GMSP3... | 512 GB | 6FFCA9B3BF00 | 0     | 0     | 0.00   |
 | Lenovo    | LENSE30256GMSP3... | 256 GB | B854CCBDFD8F | 0     | 0     | 0.00   |
 | Plextor   | PX-512M9PeGN       | 512 GB | D8AD029CC694 | 0     | 0     | 0.00   |
 | SK hynix  | Skhynix BC501 NVMe | 512 GB | 8B8A438AEF25 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | C34C29DB0F34 | 0     | 0     | 0.00   |
-| Samsung   | SSD 970 EVO Plus   | 500 GB | B5D18AFE32E2 | 0     | 0     | 0.00   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 5AFF1E65DB5C | 0     | 0     | 0.00   |
-| ADATA     | SX8200PNP          | 512 GB | 5460A17144F9 | 0     | 0     | 0.00   |
 | Intel     | SSDPEKKF512G8L     | 512 GB | 6FFDB9BC5942 | 0     | 0     | 0.00   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 47D23B62FAC3 | 0     | 0     | 0.00   |
 | Samsung   | MZVLW128HEGR-00000 | 128 GB | 09540E8B43A4 | 0     | 0     | 0.00   |

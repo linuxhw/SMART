@@ -29,7 +29,7 @@ Rating — avg. rating per sample.
 | Micron    | C400-MTFDDAK256MAM | 256 GB | 2       | 513   | 0     | 1.41   |
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | 2       | 740   | 12    | 1.05   |
 | Micron    | 1100_MTFDDAK2T0TBN | 2 TB   | 1       | 303   | 0     | 0.83   |
-| Micron    | 1100 SATA          | 512 GB | 1       | 251   | 0     | 0.69   |
+| Micron    | 1100 SATA          | 512 GB | 1       | 253   | 0     | 0.69   |
 | Micron    | 1100 SATA          | 256 GB | 2       | 492   | 2     | 0.61   |
 | Micron    | M550_MTFDDAV128MAY | 128 GB | 1       | 204   | 0     | 0.56   |
 | Micron    | MTFDBAK128MAG-1G1  | 128 GB | 2       | 192   | 0     | 0.53   |
@@ -40,7 +40,7 @@ Rating — avg. rating per sample.
 | Micron    | M600_MTFDDAK1T0MBF | 1 TB   | 2       | 84    | 0     | 0.23   |
 | Micron    | MTFDDAV512TBN      | 512 GB | 1       | 81    | 0     | 0.22   |
 | Micron    | MTFDDAK512MBF-1... | 512 GB | 1       | 53    | 0     | 0.15   |
-| Micron    | MTFDDAK256MAM-1K12 | 256 GB | 4       | 75    | 758   | 0.14   |
+| Micron    | MTFDDAK256MAM-1K12 | 256 GB | 4       | 76    | 758   | 0.14   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 8       | 56    | 1     | 0.13   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | 4       | 48    | 0     | 0.13   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 17      | 46    | 100   | 0.11   |

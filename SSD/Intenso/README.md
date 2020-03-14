@@ -29,7 +29,7 @@ Rating — avg. rating per sample.
 | Intenso   | SSD                | 120 GB | 1       | 97    | 0     | 0.27   |
 | Intenso   | SATA III SSD       | 120 GB | 3       | 47    | 0     | 0.13   |
 | Intenso   | SSD Sata III       | 256 GB | 3       | 43    | 1     | 0.10   |
-| Intenso   | SSD SATAIII        | 240 GB | 1       | 5     | 0     | 0.01   |
+| Intenso   | SSD SATAIII        | 240 GB | 1       | 6     | 0     | 0.02   |
 | Intenso   | SSD Sata III       | 128 GB | 1       | 1     | 0     | 0.00   |
 | Intenso   | SSD Sata III       | 247 GB | 1       | 18    | 32    | 0.00   |
 
@@ -47,4 +47,4 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Intenso   | Phison Driven OEM SSDs | 2      | 5       | 75    | 0     | 0.21   |
-| Intenso   | Unknown                | 7      | 12      | 100   | 4     | 0.19   |
+| Intenso   | Unknown                | 7      | 12      | 101   | 4     | 0.19   |

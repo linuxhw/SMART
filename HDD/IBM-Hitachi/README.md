@@ -52,7 +52,7 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| IBM/Hi... | Deskstar GXP-180       | 4      | 5       | 603   | 2     | 0.74   |
+| IBM/Hi... | Deskstar GXP-180       | 4      | 5       | 604   | 2     | 0.74   |
 | IBM/Hi... | Deskstar 120GXP        | 4      | 8       | 655   | 117   | 0.50   |
 | IBM/Hi... | Deskstar 60GXP         | 2      | 3       | 1032  | 106   | 0.24   |
 | IBM/Hi... | Hitachi Travelstar ... | 4      | 11      | 314   | 43    | 0.15   |

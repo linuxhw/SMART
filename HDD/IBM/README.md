@@ -23,7 +23,7 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| IBM       | DTLA-305020        | 20 GB  | 2       | 1484  | 37    | 0.38   |
+| IBM       | DTLA-305020        | 20 GB  | 2       | 1494  | 37    | 0.39   |
 | IBM       | DTLA-307015        | 16 GB  | 1       | 423   | 5     | 0.19   |
 | IBM       | DTLA-307020        | 20 GB  | 1       | 754   | 16    | 0.12   |
 | IBM       | DARA-206000        | 6 GB   | 1       | 118   | 5     | 0.05   |
@@ -41,5 +41,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| IBM       | Deskstar 40GV & 75G... | 3      | 4       | 1036  | 24    | 0.27   |
+| IBM       | Deskstar 40GV & 75G... | 3      | 4       | 1041  | 24    | 0.27   |
 | IBM       | Travelstar 25GS, 18... | 1      | 1       | 118   | 5     | 0.05   |

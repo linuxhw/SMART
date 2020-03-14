@@ -17,5 +17,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Fordisk   | S860 256G 6Gbps    | 256 GB | 1       | 62    | 0     | 0.17   |
+| Fordisk   | S860 256G 6Gbps    | 256 GB | 1       | 65    | 0     | 0.18   |
 | Fordisk   | SATA SSD           | 120 GB | 1       | 2     | 0     | 0.01   |

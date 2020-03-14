@@ -29,24 +29,24 @@ Rating — avg. rating per sample.
 | Lite-On   | CV5-8Q128          | 128 GB | 1       | 125   | 0     | 0.34   |
 | Lite-On   | IT L8T-128L9G      | 128 GB | 1       | 105   | 0     | 0.29   |
 | Lite-On   | IT LMT-256L9M      | 256 GB | 1       | 97    | 0     | 0.27   |
+| Lite-On   | L8H-256V2G-HP      | 256 GB | 4       | 95    | 0     | 0.26   |
 | Lite-On   | PH2-CJ120          | 120 GB | 1       | 88    | 0     | 0.24   |
 | Lite-On   | LAT-256M2S         | 256 GB | 1       | 239   | 2     | 0.22   |
 | Lite-On   | IT LCS-128L9S-HP   | 128 GB | 2       | 78    | 0     | 0.21   |
 | Lite-On   | CV3-8D256-41 SA... | 256 GB | 1       | 75    | 0     | 0.21   |
 | Lite-On   | LCS-128M6S-HP      | 128 GB | 3       | 75    | 0     | 0.21   |
-| Lite-On   | CV3-8D128-11 SATA  | 128 GB | 2       | 72    | 0     | 0.20   |
+| Lite-On   | CV3-8D128-11 SATA  | 128 GB | 2       | 73    | 0     | 0.20   |
 | Lite-On   | LMT-32L3M-HP       | 32 GB  | 2       | 65    | 0     | 0.18   |
 | Lite-On   | LCH-512V2S-11 2... | 512 GB | 1       | 60    | 0     | 0.17   |
-| Lite-On   | LMT-64M6M-HP       | 64 GB  | 1       | 57    | 0     | 0.16   |
+| Lite-On   | LMT-64M6M-HP       | 64 GB  | 1       | 59    | 0     | 0.16   |
 | Lite-On   | LMT-19nmBGA-128G   | 128 GB | 1       | 51    | 0     | 0.14   |
-| Lite-On   | L8H-256V2G-HP      | 256 GB | 4       | 51    | 0     | 0.14   |
 | Lite-On   | CV3-8D128          | 128 GB | 2       | 50    | 0     | 0.14   |
 | Lite-On   | IT LMT-128L9M      | 128 GB | 2       | 35    | 0     | 0.10   |
 | Lite-On   | L8T-128L6G-HP      | 128 GB | 2       | 32    | 640   | 0.09   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | 4       | 30    | 0     | 0.08   |
 | Lite-On   | LCH-256V2S         | 256 GB | 1       | 25    | 0     | 0.07   |
 | Lite-On   | CV5-8Q256          | 256 GB | 1       | 24    | 0     | 0.07   |
-| Lite-On   | CV3-DE256          | 256 GB | 2       | 21    | 0     | 0.06   |
+| Lite-On   | CV3-DE256          | 256 GB | 2       | 22    | 0     | 0.06   |
 | Lite-On   | LSS-24L6G          | 24 GB  | 1       | 21    | 0     | 0.06   |
 | Lite-On   | CV1-8B128          | 128 GB | 3       | 21    | 0     | 0.06   |
 | Lite-On   | CV8-8E256          | 256 GB | 2       | 18    | 0     | 0.05   |
@@ -82,5 +82,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Lite-On   | Unknown                | 44     | 70      | 78    | 182   | 0.15   |
+| Lite-On   | Unknown                | 44     | 70      | 80    | 182   | 0.16   |
 | Lite-On   | SiliconMotion based... | 1      | 1       | 16    | 0     | 0.04   |

@@ -17,4 +17,4 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| AEGO      | SSD                | 240 GB | 2       | 1     | 0     | 0.00   |
+| AEGO      | SSD                | 240 GB | 2       | 1     | 0     | 0.01   |

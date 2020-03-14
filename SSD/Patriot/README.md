@@ -26,17 +26,17 @@ Rating — avg. rating per sample.
 | Patriot   | Blast              | 480 GB | 1       | 823   | 0     | 2.26   |
 | Patriot   | Flare              | 120 GB | 1       | 753   | 0     | 2.06   |
 | Patriot   | Torch LE           | 240 GB | 1       | 558   | 0     | 1.53   |
-| Patriot   | Blast              | 240 GB | 5       | 278   | 0     | 0.76   |
+| Patriot   | Blast              | 240 GB | 5       | 279   | 0     | 0.76   |
 | Patriot   | Burst              | 960 GB | 1       | 263   | 0     | 0.72   |
 | Patriot   | Blaze              | 240 GB | 2       | 231   | 0     | 0.63   |
+| Patriot   | Blast              | 120 GB | 6       | 157   | 0     | 0.43   |
 | Patriot   | Flare              | 64 GB  | 1       | 157   | 0     | 0.43   |
-| Patriot   | Blast              | 120 GB | 6       | 151   | 0     | 0.41   |
-| Patriot   | Spark              | 128 GB | 6       | 103   | 0     | 0.28   |
+| Patriot   | Spark              | 128 GB | 6       | 142   | 0     | 0.39   |
 | Patriot   | Blaze              | 64 GB  | 4       | 86    | 0     | 0.24   |
-| Patriot   | Burst              | 120 GB | 13      | 78    | 0     | 0.22   |
-| Patriot   | Burst              | 240 GB | 9       | 58    | 0     | 0.16   |
+| Patriot   | Burst              | 240 GB | 9       | 85    | 0     | 0.23   |
+| Patriot   | Burst              | 120 GB | 13      | 79    | 0     | 0.22   |
 | Patriot   | Spark              | 256 GB | 2       | 28    | 0     | 0.08   |
-| Patriot   | Burst              | 480 GB | 9       | 41    | 1     | 0.07   |
+| Patriot   | Burst              | 480 GB | 9       | 45    | 1     | 0.08   |
 | Patriot   | Blaze              | 120 GB | 3       | 9     | 0     | 0.03   |
 | Patriot   | Ignite             | 240 GB | 1       | 6     | 0     | 0.02   |
 | Patriot   | Pyro m3            | 240 GB | 1       | 1378  | 1015  | 0.00   |
@@ -57,5 +57,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Patriot   | Unknown                | 15     | 28      | 201   | 73    | 0.40   |
-| Patriot   | Phison Driven SSDs     | 5      | 42      | 100   | 1     | 0.27   |
+| Patriot   | Unknown                | 15     | 28      | 209   | 73    | 0.42   |
+| Patriot   | Phison Driven SSDs     | 5      | 42      | 108   | 1     | 0.29   |

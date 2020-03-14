@@ -20,3 +20,4 @@ Rating — avg. rating per sample.
 | XPG       | GAMMIX S11         | 480 GB | 1       | 89    | 0     | 0.25   |
 | XPG       | GAMMIX S5          | 256 GB | 2       | 43    | 0     | 0.12   |
 | XPG       | GAMMIX S11 Pro     | 1 TB   | 7       | 22    | 0     | 0.06   |
+| XPG       | SPECTRIX S40G      | 256 GB | 1       | 1     | 0     | 0.00   |

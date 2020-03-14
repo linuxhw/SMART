@@ -25,7 +25,7 @@ Rating — avg. rating per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Team      | TEAML5Lite3D120G   | 120 GB | 3       | 334   | 0     | 0.92   |
 | Team      | L3 SSD             | 120 GB | 3       | 331   | 0     | 0.91   |
-| Team      | L5 LITE SSD        | 120 GB | 3       | 224   | 0     | 0.62   |
+| Team      | L5 LITE SSD        | 120 GB | 3       | 263   | 0     | 0.72   |
 | Team      | L3 EVO SSD         | 120 GB | 4       | 222   | 0     | 0.61   |
 | Team      | T2535T120G         | 120 GB | 1       | 120   | 0     | 0.33   |
 | Team      | T2535T480G         | 480 GB | 1       | 93    | 0     | 0.26   |
@@ -55,4 +55,4 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Team      | SiliconMotion based... | 1      | 3       | 334   | 0     | 0.92   |
-| Team      | Unknown                | 16     | 23      | 136   | 0     | 0.37   |
+| Team      | Unknown                | 16     | 23      | 141   | 0     | 0.39   |
