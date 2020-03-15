@@ -24,7 +24,7 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Goodram   | C40                | 120 GB | 3       | 351   | 0     | 0.96   |
-| Goodram   | C50                | 64 GB  | 2       | 244   | 0     | 0.67   |
+| Goodram   | C50                | 64 GB  | 2       | 247   | 0     | 0.68   |
 | Goodram   | C100               | 120 GB | 1       | 214   | 0     | 0.59   |
 | Goodram   | SSD                | 120 GB | 21      | 175   | 0     | 0.48   |
 | Goodram   | SSD                | 240 GB | 3       | 158   | 0     | 0.44   |
@@ -35,7 +35,7 @@ Rating — avg. rating per sample.
 | Goodram   | SSDPR-CX300-240    | 240 GB | 2       | 66    | 0     | 0.18   |
 | Goodram   | IR-SSDPR-S25A-120  | 120 GB | 2       | 59    | 0     | 0.16   |
 | Goodram   | IR-SSDPR-S25A-240  | 240 GB | 2       | 59    | 0     | 0.16   |
-| Goodram   | SSDPR-CX400-128    | 128 GB | 6       | 47    | 0     | 0.13   |
+| Goodram   | SSDPR-CX400-128    | 128 GB | 6       | 54    | 0     | 0.15   |
 | Goodram   | SSDPR-CL100-480-G2 | 480 GB | 2       | 28    | 0     | 0.08   |
 | Goodram   | SSDPR-CL100-120-G2 | 120 GB | 1       | 11    | 0     | 0.03   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 1       | 8     | 0     | 0.02   |
@@ -57,5 +57,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Goodram   | Phison Driven SSDs     | 3      | 27      | 163   | 0     | 0.45   |
-| Goodram   | Unknown                | 17     | 37      | 106   | 1     | 0.29   |
+| Goodram   | Phison Driven SSDs     | 3      | 27      | 164   | 0     | 0.45   |
+| Goodram   | Unknown                | 17     | 37      | 107   | 1     | 0.29   |

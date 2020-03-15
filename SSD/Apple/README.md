@@ -25,7 +25,7 @@ Rating — avg. rating per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Apple     | SSD SM0256F        | 256 GB | 3       | 774   | 0     | 2.12   |
 | Apple     | SSD SM1024F        | 1 TB   | 1       | 545   | 0     | 1.49   |
-| Apple     | SSD SM0512F        | 500 GB | 2       | 516   | 0     | 1.42   |
+| Apple     | SSD SM0512F        | 500 GB | 2       | 518   | 0     | 1.42   |
 | Apple     | SSD TS128C         | 121 GB | 2       | 323   | 0     | 0.89   |
 | Apple     | SSD SM0512G        | 500 GB | 1       | 323   | 0     | 0.89   |
 | Apple     | SSD SD128E         | 121 GB | 1       | 290   | 0     | 0.80   |

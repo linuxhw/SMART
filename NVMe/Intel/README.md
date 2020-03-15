@@ -22,21 +22,21 @@ Rating — avg. rating per sample.
 | Intel     | SSDPEDMD400G4      | 400 GB | 1       | 595   | 0     | 1.63   |
 | Intel     | SSDPEKKW256G7      | 256 GB | 5       | 621   | 1     | 1.60   |
 | Intel     | SSDPEKKF256G7L     | 256 GB | 3       | 515   | 0     | 1.41   |
-| Intel     | SSDPE21D480GA      | 480 GB | 2       | 486   | 0     | 1.33   |
+| Intel     | SSDPE21D480GA      | 480 GB | 2       | 515   | 0     | 1.41   |
 | Intel     | SSDPEKKW128G7      | 128 GB | 2       | 329   | 0     | 0.90   |
 | Intel     | MEMPEK1J016GAL     | 16 GB  | 4       | 228   | 0     | 0.63   |
 | Intel     | SSDPEKKF256G7H     | 256 GB | 2       | 227   | 0     | 0.62   |
 | Intel     | SSDPED1D480GA      | 480 GB | 2       | 222   | 0     | 0.61   |
 | Intel     | SSDPEKKF360G7H     | 360 GB | 2       | 189   | 0     | 0.52   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 8       | 129   | 0     | 0.36   |
-| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 116   | 0     | 0.32   |
+| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 117   | 0     | 0.32   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 7       | 107   | 0     | 0.30   |
 | Intel     | MEMPEK1J016GA      | 16 GB  | 1       | 102   | 0     | 0.28   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 1       | 99    | 0     | 0.27   |
 | Intel     | SSDPEDMW400G4      | 400 GB | 1       | 86    | 0     | 0.24   |
 | Intel     | SSDPEKKF010T8      | 1 TB   | 2       | 83    | 0     | 0.23   |
 | Intel     | SSDPEKKW512G7      | 512 GB | 2       | 78    | 0     | 0.21   |
-| Intel     | SSDPEKNW512G8      | 512 GB | 11      | 52    | 0     | 0.14   |
+| Intel     | SSDPEKNW512G8      | 512 GB | 11      | 55    | 0     | 0.15   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 15      | 43    | 0     | 0.12   |
 | Intel     | SSDPEKKW010T7      | 1 TB   | 1       | 39    | 0     | 0.11   |
 | Intel     | SSDPEKKW256G8L     | 256 GB | 1       | 31    | 0     | 0.09   |

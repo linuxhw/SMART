@@ -21,6 +21,6 @@ Rating — avg. rating per sample.
 | HP        | SSD EX900          | 250 GB | 1       | 56    | 0     | 0.16   |
 | HP        | SSD EX920          | 1 TB   | 3       | 55    | 0     | 0.15   |
 | HP        | SSD EX920          | 512 GB | 1       | 41    | 0     | 0.11   |
-| HP        | SSD EX900          | 500 GB | 1       | 35    | 0     | 0.10   |
+| HP        | SSD EX900          | 500 GB | 1       | 38    | 0     | 0.10   |
 | HP        | SSD EX950          | 1 TB   | 2       | 32    | 0     | 0.09   |
 | HP        | SSD EX900          | 120 GB | 1       | 3     | 0     | 0.01   |

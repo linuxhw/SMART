@@ -22,7 +22,7 @@ Rating — avg. rating per sample.
 | ADATA     | SX8200NP           | 240 GB | 1       | 69    | 0     | 0.19   |
 | ADATA     | SX8200NP           | 480 GB | 2       | 67    | 0     | 0.18   |
 | ADATA     | SX8200PNP          | 1 TB   | 2       | 54    | 0     | 0.15   |
-| ADATA     | SX8200PNP          | 512 GB | 3       | 32    | 0     | 0.09   |
+| ADATA     | SX8200PNP          | 512 GB | 3       | 38    | 0     | 0.10   |
 | ADATA     | SX6000LNP          | 512 GB | 2       | 22    | 0     | 0.06   |
 | ADATA     | SX6000PNP          | 1 TB   | 2       | 8     | 0     | 0.02   |
 | ADATA     | SX6000LNP          | 256 GB | 1       | 4     | 0     | 0.01   |

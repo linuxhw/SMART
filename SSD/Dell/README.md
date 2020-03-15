@@ -17,6 +17,6 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Dell      | WR202KD128G E70... | 128 GB | 1       | 3     | 0     | 0.01   |
+| Dell      | WR202KD128G E70... | 128 GB | 1       | 4     | 0     | 0.01   |
 | Dell      | WR202KD032G E70... | 32 GB  | 1       | 2     | 0     | 0.01   |
 | Dell      | WR202KD032G E70... | 32 GB  | 1       | 2     | 0     | 0.01   |

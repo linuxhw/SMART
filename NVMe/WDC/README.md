@@ -25,6 +25,7 @@ Rating — avg. rating per sample.
 | WDC       | PC SN520 NVMe      | 256 GB | 2       | 45    | 0     | 0.12   |
 | WDC       | WDS250G2X0C-00L350 | 250 GB | 2       | 44    | 0     | 0.12   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 3       | 19    | 0     | 0.05   |
+| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 1       | 16    | 0     | 0.05   |
 | WDC       | PC SN720 SDAPNT... | 1 TB   | 1       | 15    | 0     | 0.04   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 1       | 15    | 0     | 0.04   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 1       | 14    | 0     | 0.04   |
@@ -39,7 +40,6 @@ Rating — avg. rating per sample.
 | WDC       | PC SN520 NVMe      | 512 GB | 2       | 8     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 5       | 9     | 209   | 0.02   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 1       | 7     | 0     | 0.02   |
-| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 1       | 7     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1       | 6     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1       | 4     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 2       | 3     | 0     | 0.01   |

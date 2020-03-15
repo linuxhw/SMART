@@ -36,7 +36,7 @@ Rating — avg. rating per sample.
 | KingDian  | S280               | 480 GB | 1       | 9     | 0     | 0.02   |
 | KingDian  | N400 60G           | 64 GB  | 1       | 8     | 0     | 0.02   |
 | KingDian  | S200               | 64 GB  | 4       | 6     | 0     | 0.02   |
-| KingDian  | S280-120GB         | 120 GB | 3       | 33    | 641   | 0.00   |
+| KingDian  | S280-120GB         | 120 GB | 3       | 38    | 641   | 0.02   |
 | KingDian  | S180               | 120 GB | 1       | 0     | 0     | 0.00   |
 
 SSD by Family

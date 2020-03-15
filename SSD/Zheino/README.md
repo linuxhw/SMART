@@ -21,7 +21,7 @@ Rating — avg. rating per sample.
 | Zheino    | CHN mSATAM3 128    | 128 GB | 1       | 90    | 0     | 0.25   |
 | Zheino    | CHN 25SATAC3 120   | 120 GB | 1       | 58    | 0     | 0.16   |
 | Zheino    | CHN-25SATAA3-480   | 480 GB | 2       | 53    | 0     | 0.15   |
-| Zheino    | CHN 25SATA01M 060  | 64 GB  | 1       | 6     | 0     | 0.02   |
+| Zheino    | CHN 25SATA01M 060  | 64 GB  | 1       | 7     | 0     | 0.02   |
 | Zheino    | CHN-25SATAA3-360   | 360 GB | 1       | 87    | 21    | 0.01   |
 | Zheino    | CHN25SATAS1 032    | 32 GB  | 2       | 2     | 0     | 0.01   |
 | Zheino    | CHN25SATAS1 064    | 64 GB  | 1       | 0     | 0     | 0.00   |
