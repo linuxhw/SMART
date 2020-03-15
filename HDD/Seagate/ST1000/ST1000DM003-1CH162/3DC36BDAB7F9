@@ -3,15 +3,15 @@ Model Family:     Seagate Barracuda 7200.14 (AF)
 Device Model:     ST1000DM003-1CH162
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
-Firmware Version: CC44
+Firmware Version: CC49
 User Capacity:    1 000 204 886 016 bytes [1,00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
-ATA Version is:   ATA8-ACS T13/1699-D revision 4
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Aug 23 12:33:55 2016 MSK
+ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Wed Mar  8 16:14:42 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,30 +58,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   113   099   006    -    56236056
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    136848360
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2669
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3136
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    245707123
-  9 Power_On_Hours          -O--CK   087   087   000    -    12132
+  7 Seek_Error_Rate         POSR--   084   060   030    -    275804431
+  9 Power_On_Hours          -O--CK   085   085   000    -    13773
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2622
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3075
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 4
-189 High_Fly_Writes         -O-RCK   051   051   000    -    49
-190 Airflow_Temperature_Cel -O---K   066   059   045    -    34 (0 1 34 25 0)
+189 High_Fly_Writes         -O-RCK   044   044   000    -    56
+190 Airflow_Temperature_Cel -O---K   071   059   045    -    29 (0 1 29 24 0)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    215
-193 Load_Cycle_Count        -O--CK   076   076   000    -    48008
-194 Temperature_Celsius     -O---K   034   041   000    -    34 (128 0 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    235
+193 Load_Cycle_Count        -O--CK   072   072   000    -    56019
+194 Temperature_Celsius     -O---K   029   041   000    -    29 (128 0 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    11703h+08m+56.059s
-241 Total_LBAs_Written      ------   100   253   000    -    90668923541
-242 Total_LBAs_Read         ------   100   253   000    -    79953186566
+240 Head_Flying_Hours       ------   100   253   000    -    13279h+25m+53.728s
+241 Total_LBAs_Written      ------   100   253   000    -    105982465554
+242 Total_LBAs_Read         ------   100   253   000    -    87940737812
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +110,6 @@ Address    Access  R/W   Size  Description
 0xa9       GPL,SL  VS       1  Device vendor specific log
 0xab       GPL     VS       1  Device vendor specific log
 0xb0       GPL     VS    5176  Device vendor specific log
-0xbd       GPL     VS     512  Device vendor specific log
 0xbe-0xbf  GPL     VS   65535  Device vendor specific log
 0xc0       GPL,SL  VS       1  Device vendor specific log
 0xc1       GPL,SL  VS      10  Device vendor specific log
@@ -123,7 +122,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      60%      9783         -
+# 1  Extended offline    Aborted by host               90%     12488         -
+# 2  Extended offline    Interrupted (host reset)      60%      9783         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -140,8 +140,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     25/34 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     24/26 Celsius
 Lifetime    Min/Max Temperature:     15/40 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -153,7 +153,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

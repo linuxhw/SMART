@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Oct  2 11:20:24 2019 CEST
+Local Time is:    Sun Oct  6 18:22:44 2019 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,7 +18,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -56,8 +56,8 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    3887
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    228
+  9 Power_On_Hours          -O--CK   100   100   ---    -    3989
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    230
 165 Unknown_Attribute       -O--CK   100   100   ---    -    12905021707
 166 Unknown_Attribute       -O--CK   100   100   ---    -    3
 167 Unknown_Attribute       -O--CK   100   100   ---    -    34
@@ -71,7 +71,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   068   053   ---    -    32 (Min/Max 18/53)
+194 Temperature_Celsius     -O---K   072   053   ---    -    28 (Min/Max 18/53)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
 230 Unknown_SSD_Attribute   -O--CK   100   100   ---    -    227636543541
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
@@ -108,17 +108,18 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      00%      3828         -
-# 2  Extended offline    Completed without error       00%      3705         -
-# 3  Extended offline    Completed without error       00%      3553         -
-# 4  Extended offline    Completed without error       00%      3310         -
-# 5  Extended offline    Completed without error       00%      2900         -
-# 6  Extended offline    Completed without error       00%      1511         -
-# 7  Extended offline    Completed without error       00%      1283         -
-# 8  Extended offline    Completed without error       00%      1169         -
-# 9  Extended offline    Completed without error       00%      1060         -
-#10  Extended offline    Completed without error       00%       948         -
-#11  Extended offline    Completed without error       00%       503         -
+# 1  Extended offline    Completed without error       00%      3951         -
+# 2  Extended offline    Interrupted (host reset)      00%      3828         -
+# 3  Extended offline    Completed without error       00%      3705         -
+# 4  Extended offline    Completed without error       00%      3553         -
+# 5  Extended offline    Completed without error       00%      3310         -
+# 6  Extended offline    Completed without error       00%      2900         -
+# 7  Extended offline    Completed without error       00%      1511         -
+# 8  Extended offline    Completed without error       00%      1283         -
+# 9  Extended offline    Completed without error       00%      1169         -
+#10  Extended offline    Completed without error       00%      1060         -
+#11  Extended offline    Completed without error       00%       948         -
+#12  Extended offline    Completed without error       00%       503         -
 
 Selective Self-tests/Logging not supported
 
@@ -127,12 +128,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             228  ---  Lifetime Power-On Resets
+0x01  0x008  4             230  ---  Lifetime Power-On Resets
 0x01  0x010  4               0  ---  Power-on Hours
-0x01  0x018  6      3090985177  ---  Logical Sectors Written
-0x01  0x020  6        30094725  ---  Number of Write Commands
-0x01  0x028  6      3607680644  ---  Logical Sectors Read
-0x01  0x030  6        88756392  ---  Number of Read Commands
+0x01  0x018  6      3090985425  ---  Logical Sectors Written
+0x01  0x020  6        30094751  ---  Number of Write Commands
+0x01  0x028  6      3607712108  ---  Logical Sectors Read
+0x01  0x030  6        88757390  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -146,5 +147,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

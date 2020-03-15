@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jun 20 09:20:24 2018 MSK
+Local Time is:    Sun Aug 11 03:42:36 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,7 +19,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Write SCT (Get) Feature Control Command failed: scsi error badly formed scsi parameters
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
@@ -31,8 +31,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -62,24 +62,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   050    -    0
   2 Throughput_Performance  POS---   100   100   050    -    0
-  3 Spin_Up_Time            PO----   100   100   002    -    2170
-  4 Start_Stop_Count        -O--CK   100   100   000    -    3427
+  3 Spin_Up_Time            PO----   100   100   002    -    2160
+  4 Start_Stop_Count        -O--CK   100   100   000    -    3855
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    7
   7 Seek_Error_Rate         POSR--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Minutes        -O--CK   085   085   000    -    100h+52m
- 10 Spin_Retry_Count        PO--C-   168   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3191
+  9 Power_On_Minutes        -O--CK   081   081   000    -    130h+21m
+ 10 Spin_Retry_Count        PO--C-   176   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3603
 183 Runtime_Bad_Block       -O---K   100   100   001    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 185 Unknown_Attribute       -O--CK   100   100   001    -    65535
 187 Reported_Uncorrect      -O--CK   020   020   000    -    80
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   001    -    0
-190 Airflow_Temperature_Cel -O---K   057   036   045    Past 43 (Min/Max 26/43)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1290
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    6946922
-193 Load_Cycle_Count        -O--CK   093   093   000    -    78534
+190 Airflow_Temperature_Cel -O---K   063   036   045    Past 37 (Min/Max 25/38)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1305
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    7471218
+193 Load_Cycle_Count        -O--CK   090   090   000    -    108694
 196 Reallocated_Event_Count -O--CK   100   100   000    -    7
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    18
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 84
+Device Error Count: 85
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +122,23 @@ Device Error Count: 84
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 85 [84] occurred at disk power-on lifetime: 6120 hours (255 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 50 00 00 03 18 99 30 e0 00  Error: ABRT 80 sectors at LBA = 0x03189930 = 51943728
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 80 00 00 03 18 99 00 e0 00     00:02:33.018  WRITE DMA EXT
+  35 00 00 00 80 00 00 03 18 98 80 e0 00     00:02:33.017  WRITE DMA EXT
+  35 00 00 00 80 00 00 03 18 98 00 e0 00     00:02:33.015  WRITE DMA EXT
+  35 00 00 00 80 00 00 03 18 97 80 e0 00     00:02:33.014  WRITE DMA EXT
+  35 00 00 00 80 00 00 03 18 97 00 e0 00     00:02:33.013  WRITE DMA EXT
 
 Error 84 [83] occurred at disk power-on lifetime: 5107 hours (212 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -242,43 +259,26 @@ Error 78 [77] occurred at disk power-on lifetime: 5107 hours (212 days + 19 hour
   42 00 00 00 04 00 00 1c e1 a1 0f 40 00     02:43:56.629  READ VERIFY SECTOR(S) EXT
   60 00 01 00 68 00 00 00 00 00 00 40 00     02:43:56.596  READ FPDMA QUEUED
 
-Error 77 [76] occurred at disk power-on lifetime: 5107 hours (212 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1c e1 a1 0f 40 00  Error: UNC at LBA = 0x1ce1a10f = 484548879
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 00 1c e1 a1 0f 40 00     02:43:59.688  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 00 1c e1 a1 0f 40 00     02:43:56.629  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 68 00 00 00 00 00 00 40 00     02:43:56.596  READ FPDMA QUEUED
-  42 00 00 00 04 00 00 1c e1 a1 0f 40 00     02:43:53.537  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 48 00 00 00 00 00 00 40 00     02:43:53.505  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               90%      6051         -
-# 2  Extended offline    Aborted by host               20%      5997         -
-# 3  Extended offline    Completed without error       00%      5953         -
-# 4  Extended offline    Completed without error       00%      5916         -
-# 5  Extended offline    Completed without error       00%      5897         -
-# 6  Extended offline    Interrupted (host reset)      80%      5869         -
-# 7  Extended offline    Completed without error       00%      5851         -
-# 8  Extended offline    Aborted by host               70%      5801         -
-# 9  Extended offline    Aborted by host               90%      5711         -
-#10  Extended offline    Aborted by host               90%      5705         -
-#11  Extended offline    Aborted by host               80%      5701         -
-#12  Extended offline    Aborted by host               90%      5695         -
-#13  Extended offline    Aborted by host               70%      5694         -
-#14  Extended offline    Aborted by host               90%      5688         -
-#15  Extended offline    Aborted by host               70%      5667         -
-#16  Extended offline    Aborted by host               80%      5664         -
-#17  Extended offline    Aborted by host               80%      5662         -
-#18  Extended offline    Aborted by host               90%      5661         -
+# 1  Extended offline    Interrupted (host reset)      90%      6241         -
+# 2  Extended offline    Completed without error       00%      6170         -
+# 3  Extended offline    Interrupted (host reset)      90%      6116         -
+# 4  Extended offline    Aborted by host               90%      6051         -
+# 5  Extended offline    Aborted by host               20%      5997         -
+# 6  Extended offline    Completed without error       00%      5953         -
+# 7  Extended offline    Completed without error       00%      5916         -
+# 8  Extended offline    Completed without error       00%      5897         -
+# 9  Extended offline    Interrupted (host reset)      80%      5869         -
+#10  Extended offline    Completed without error       00%      5851         -
+#11  Extended offline    Aborted by host               70%      5801         -
+#12  Extended offline    Aborted by host               90%      5711         -
+#13  Extended offline    Aborted by host               90%      5705         -
+#14  Extended offline    Aborted by host               80%      5701         -
+#15  Extended offline    Aborted by host               90%      5695         -
+#16  Extended offline    Aborted by host               70%      5694         -
+#17  Extended offline    Aborted by host               90%      5688         -
+#18  Extended offline    Aborted by host               70%      5667         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -295,8 +295,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    43 Celsius
-Power Cycle Min/Max Temperature:     26/43 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     25/38 Celsius
 Lifetime    Min/Max Temperature:      9/64 Celsius
 Under/Over Temperature Limit Count:   0/223
 
@@ -305,7 +305,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (292)
+Temperature History Size (Index):    478 (347)
 
 SCT Error Recovery Control command not supported
 

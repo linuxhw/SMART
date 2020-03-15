@@ -7,7 +7,7 @@ User Capacity:    80 060 424 192 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sun Aug  7 13:13:37 2016 EEST
+Local Time is:    Tue Aug 16 23:22:40 2016 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -52,20 +52,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    1
-  3 Spin_Up_Time            POS---   077   001   000    -    4352
-  4 Start_Stop_Count        -O--CK   085   085   000    -    15909
+  3 Spin_Up_Time            POS---   077   001   000    -    4288
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15963
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Half_Minutes   -O--CK   096   096   000    -    22960h+00m
+  9 Power_On_Half_Minutes   -O--CK   096   096   000    -    22994h+25m
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   000    -    8270
-194 Temperature_Celsius     -O---K   127   088   000    -    37
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    109015749
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8302
+194 Temperature_Celsius     -O---K   133   088   000    -    35
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    119181105
 196 Reallocated_Event_Count -O--C-   098   098   000    -    5
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   098   098   010    -    5
-199 UDMA_CRC_Error_Count    PO-R--   100   065   051    -    239
+199 UDMA_CRC_Error_Count    PO-R--   100   065   051    -    257
 200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
 201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    0
                             ||||||_ K auto-keep
@@ -88,7 +88,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 8004 (device log contains only the most recent five errors)
+ATA Error Count: 8023 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -103,90 +103,81 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 8004 occurred at disk power-on lifetime: 22914 hours (954 days + 18 hours)
+Error 8023 occurred at disk power-on lifetime: 22988 hours (957 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 80 3a b6 a9 e4  Error: UNC 128 sectors at LBA = 0x04a9b63a = 78231098
+  84 51 01 00 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 3a b6 a9 e4 00      00:29:56.625  READ DMA
-  c8 00 09 60 1d 92 e1 00      00:29:56.625  READ DMA
-  c8 00 80 44 37 a7 e4 00      00:29:56.625  READ DMA
-  ca 00 00 78 00 26 e7 00      00:29:56.625  WRITE DMA
-  ca 00 00 78 ff 25 e7 00      00:29:56.625  WRITE DMA
+  c8 00 01 00 00 00 e0 00      00:00:42.750  READ DMA
+  c4 00 01 00 00 00 e0 00      00:00:42.750  READ MULTIPLE
 
-Error 8003 occurred at disk power-on lifetime: 22914 hours (954 days + 18 hours)
+Error 8022 occurred at disk power-on lifetime: 22988 hours (957 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 80 a0 b6 a9 e4  Error: UNC 128 sectors at LBA = 0x04a9b6a0 = 78231200
+  84 51 01 00 00 00 e0  Error: ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 a0 b6 a9 e4 00      00:28:54.438  READ DMA
-  c8 00 05 80 53 55 e2 00      00:28:54.438  READ DMA
-  c8 00 18 40 c3 99 e1 00      00:28:54.375  READ DMA
-  c8 00 80 ea c6 a7 e4 00      00:28:54.375  READ DMA
-  ca 00 18 b0 e1 68 e0 00      00:28:54.375  WRITE DMA
+  c4 00 01 00 00 00 e0 00      00:00:42.688  READ MULTIPLE
 
-Error 8002 occurred at disk power-on lifetime: 22913 hours (954 days + 17 hours)
+Error 8021 occurred at disk power-on lifetime: 22988 hours (957 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 80 3a b6 a9 e4  Error: UNC 128 sectors at LBA = 0x04a9b63a = 78231098
+  84 51 01 00 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 3a b6 a9 e4 00      01:30:59.625  READ DMA
-  c8 00 20 b8 ed e1 e2 00      01:30:59.625  READ DMA
-  c8 00 80 44 37 a7 e4 00      01:30:59.563  READ DMA
-  c8 00 40 78 ed e1 e2 00      01:30:59.563  READ DMA
-  c8 00 80 00 80 02 e0 00      01:30:59.563  READ DMA
+  c8 00 01 00 00 00 e0 00      00:00:42.625  READ DMA
+  c4 00 01 00 00 00 e0 00      00:00:42.625  READ MULTIPLE
+  b0 da 00 00 4f c2 e0 00      00:00:42.625  SMART RETURN STATUS
+  b0 d8 00 00 4f c2 e0 00      00:00:42.625  SMART ENABLE OPERATIONS
+  ec 00 00 00 00 00 a0 00      00:00:42.625  IDENTIFY DEVICE
 
-Error 8001 occurred at disk power-on lifetime: 22913 hours (954 days + 17 hours)
+Error 8020 occurred at disk power-on lifetime: 22988 hours (957 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 80 a0 b6 a9 e4  Error: UNC 128 sectors at LBA = 0x04a9b6a0 = 78231200
+  84 51 01 00 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 a0 b6 a9 e4 00      01:30:31.813  READ DMA
-  c8 00 40 f8 45 e0 e2 00      01:30:31.813  READ DMA
-  c8 00 02 48 ab 9a e1 00      01:30:31.813  READ DMA
-  ca 00 10 98 f5 5b e0 00      01:30:31.813  WRITE DMA
-  e7 00 00 00 00 00 a0 00      01:30:31.750  FLUSH CACHE
+  c8 00 01 00 00 00 e0 00      00:00:42.563  READ DMA
+  ef 02 00 00 00 00 a0 00      00:00:42.563  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 a0 00      00:00:42.563  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 a0 00      00:00:42.563  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 a0 00      00:00:42.563  SECURITY FREEZE LOCK
 
-Error 8000 occurred at disk power-on lifetime: 22911 hours (954 days + 15 hours)
+Error 8019 occurred at disk power-on lifetime: 22988 hours (957 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 80 3a b6 a9 e4  Error: UNC 128 sectors at LBA = 0x04a9b63a = 78231098
+  84 51 01 00 08 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000800 = 2048
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 3a b6 a9 e4 00      00:06:58.250  READ DMA
-  c8 00 80 44 37 a7 e4 00      00:06:58.250  READ DMA
-  c8 00 80 00 80 02 e0 00      00:06:58.250  READ DMA
-  c8 00 80 2a 10 aa e4 00      00:06:58.250  READ DMA
-  c8 00 80 34 82 a7 e4 00      00:06:58.188  READ DMA
+  c8 00 01 00 08 00 e0 00      00:00:42.438  READ DMA
+  ec 00 00 00 00 00 a0 00      00:00:42.375  IDENTIFY DEVICE
+  c4 00 20 00 08 00 e0 00      00:00:42.375  READ MULTIPLE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

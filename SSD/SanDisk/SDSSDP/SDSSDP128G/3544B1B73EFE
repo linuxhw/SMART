@@ -11,7 +11,7 @@ Form Factor:      1.8 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Dec  8 13:49:44 2015 SAMT
+Local Time is:    Tue Mar 29 11:04:34 2016 SAMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 249)	Self-test routine in progress...
-					90% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -55,20 +56,20 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    486
- 12 Power_Cycle_Count       -O----   100   100   000    -    87
-165 Unknown_Attribute       -O----   100   100   000    -    54380
+  9 Power_On_Hours          -O----   100   100   000    -    1090
+ 12 Power_Cycle_Count       -O----   100   100   000    -    158
+165 Unknown_Attribute       -O----   100   100   000    -    94658
 171 Program_Fail_Count      -O----   100   100   000    -    0
 172 Erase_Fail_Count        -O----   100   100   000    -    0
-173 Avg_Write_Erase_Ct      -O----   100   100   000    -    13
-174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    22
+173 Avg_Write_Erase_Ct      -O----   100   100   000    -    24
+174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    23
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-194 Temperature_Celsius     -O---K   061   039   000    -    39 (Min/Max 10/49)
-230 Perc_Write_Erase_Count  -O----   100   100   000    -    43
+194 Temperature_Celsius     -O---K   061   039   000    -    39 (Min/Max 8/49)
+230 Perc_Write_Erase_Count  -O----   100   100   000    -    80
 232 Perc_Avail_Resrvd_Space PO----   100   100   005    -    0
-234 Perc_Write_Erase_Ct_BC  -O----   100   100   000    -    44
-241 Total_LBAs_Written      -O----   100   100   000    -    2466570148
-242 Total_LBAs_Read         -O----   100   100   000    -    2691442345
+234 Perc_Write_Erase_Ct_BC  -O----   100   100   000    -    85
+241 Total_LBAs_Written      -O----   100   100   000    -    4429520355
+242 Total_LBAs_Read         -O----   100   100   000    -    4787954637
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +102,8 @@ No Errors Logged
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       487         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -122,7 +124,7 @@ Page Offset Size         Value  Description
   5  0x008  1               39  Current Temperature
   5  0x010  1                -  Average Short Term Temperature
   5  0x018  1                -  Average Long Term Temperature
-  5  0x020  1               46  Highest Temperature
+  5  0x020  1               47  Highest Temperature
   5  0x028  1               24  Lowest Temperature
   5  0x030  1                -  Highest Average Short Term Temperature
   5  0x038  1                -  Lowest Average Short Term Temperature
@@ -142,8 +144,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           21  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

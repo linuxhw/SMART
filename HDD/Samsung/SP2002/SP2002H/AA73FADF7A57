@@ -6,7 +6,7 @@ User Capacity:    20,060,651,520 bytes [20.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Thu Jan 17 21:17:40 2019 MSK
+Local Time is:    Tue Mar 19 19:39:48 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -51,13 +51,13 @@ recommended polling time: 	 (   8) minutes.
 SMART Attributes Data Structure revision number: 9
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O-R--   100   100   051    -    676
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8453
+  1 Raw_Read_Error_Rate     -O-R--   100   100   051    -    823
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8686
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         -O-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    1977447
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5291
+  9 Power_On_Hours          -O--CK   097   097   000    -    2006784
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5443
 197 Current_Pending_Sector  -O--CK   253   253   010    -    0
 198 Offline_Uncorrectable   ----CK   253   253   010    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
@@ -77,9 +77,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 106 inconsistent with error log pointer 2
+Warning: ATA error count 172 inconsistent with error log pointer 3
 
-ATA Error Count: 106 (device log contains only the most recent five errors)
+ATA Error Count: 172 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -94,7 +94,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 106 occurred at disk power-on lifetime: 16478 hours (686 days + 14 hours)
+Error 172 occurred at disk power-on lifetime: 16723 hours (696 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -105,79 +105,79 @@ Error 106 occurred at disk power-on lifetime: 16478 hours (686 days + 14 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 10 00      03:14:26.000  SMART READ LOG
-  b0 da 00 00 4f c2 10 00      03:14:26.000  SMART RETURN STATUS
-  b0 d1 01 01 4f c2 10 00      03:14:26.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 d0 01 00 4f c2 10 00      03:14:26.000  SMART READ DATA
-  ec 00 01 00 00 00 10 00      03:14:26.000  IDENTIFY DEVICE
+  b0 d5 01 00 4f c2 10 00      02:11:38.000  SMART READ LOG
+  b0 da 00 00 4f c2 10 00      02:11:38.000  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 10 00      02:11:38.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 d0 01 00 4f c2 10 00      02:11:38.000  SMART READ DATA
+  ec 00 01 00 00 00 10 00      02:11:38.000  IDENTIFY DEVICE
 
-Error 105 occurred at disk power-on lifetime: 16444 hours (685 days + 4 hours)
+Error 171 occurred at disk power-on lifetime: 16633 hours (693 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 50
+  04 80 01 25 00 00 b0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 50 00      00:01:56.000  SET FEATURES [Enable APM]
-  ca 00 08 98 63 11 f0 00      00:01:56.000  WRITE DMA
-  e7 00 00 7f 6e 14 b0 00      00:01:56.000  FLUSH CACHE
-  ca 00 08 78 6e 14 f1 00      00:01:56.000  WRITE DMA
-  e7 00 00 df 60 11 b0 00      00:01:56.000  FLUSH CACHE
+  2f 00 01 25 00 00 b0 00      02:05:32.000  READ LOG EXT
+  ef 02 00 00 00 00 b0 00      02:05:32.000  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 b0 00      02:05:32.000  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 b0 00      02:05:32.000  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 b0 00      02:05:32.000  SECURITY FREEZE LOCK
 
-Error 104 occurred at disk power-on lifetime: 16444 hours (685 days + 4 hours)
+Error 170 occurred at disk power-on lifetime: 16625 hours (692 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 50
+  04 80 01 25 00 00 b0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 50 00      00:00:42.000  SET FEATURES [Enable APM]
-  ca 00 08 10 56 d1 f0 00      00:00:42.000  WRITE DMA
-  c8 00 08 e8 ec d6 f1 00      00:00:42.000  READ DMA
-  ca 00 08 b8 28 d0 f0 00      00:00:42.000  WRITE DMA
-  c8 00 b8 00 ba e6 f1 00      00:00:42.000  READ DMA
+  2f 00 01 25 00 00 b0 00      00:00:24.000  READ LOG EXT
+  ef 02 00 00 00 00 b0 00      00:00:24.000  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 b0 00      00:00:24.000  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 b0 00      00:00:24.000  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 b0 00      00:00:24.000  SECURITY FREEZE LOCK
 
-Error 103 occurred at disk power-on lifetime: 16444 hours (685 days + 4 hours)
+Error 169 occurred at disk power-on lifetime: 16615 hours (692 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 50
+  04 80 01 25 00 00 b0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 50 00      01:40:51.000  SET FEATURES [Enable APM]
-  ca 00 08 50 91 1e f0 00      01:40:51.000  WRITE DMA
-  ca 00 18 08 91 1e f0 00      01:40:51.000  WRITE DMA
-  ca 00 08 f0 90 1e f0 00      01:40:51.000  WRITE DMA
-  ca 00 08 c0 90 1e f0 00      01:40:51.000  WRITE DMA
+  2f 00 01 25 00 00 b0 00      02:23:19.000  READ LOG EXT
+  ef 02 00 00 00 00 b0 00      02:23:19.000  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 b0 00      02:23:19.000  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 b0 00      02:23:19.000  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 b0 00      02:23:19.000  SECURITY FREEZE LOCK
 
-Error 102 occurred at disk power-on lifetime: 16444 hours (685 days + 4 hours)
+Error 168 occurred at disk power-on lifetime: 16609 hours (692 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 88 fe 00 00 00 50
+  04 80 01 25 00 00 b0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 01 4f c2 10 00      03:14:26.000  SMART READ LOG
-  ef 05 fe 00 00 00 50 00      01:36:14.000  SET FEATURES [Enable APM]
-  c8 00 a8 a8 35 23 f2 00      01:36:14.000  READ DMA
-  c8 00 00 00 bc e6 f1 00      01:36:14.000  READ DMA
-  ca 00 08 70 37 10 f2 00      01:36:14.000  WRITE DMA
+  b0 d5 01 01 4f c2 10 00      02:11:38.000  SMART READ LOG
+  2f 00 01 25 00 00 b0 00      00:00:15.000  READ LOG EXT
+  ef 02 00 00 00 00 b0 00      00:00:15.000  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 b0 00      00:00:15.000  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 b0 00      00:00:15.000  SET FEATURES [Disable revert defaults]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

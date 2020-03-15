@@ -11,14 +11,14 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Oct 27 01:11:43 2016 IRKT
+Local Time is:    Fri Oct 28 21:48:26 2016 IRKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -58,34 +58,34 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    7574
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    7587
   2 Throughput_Performance  POS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   089   089   025    -    3461
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1411
+  3 Spin_Up_Time            PO---K   089   089   025    -    3452
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1432
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    9586
+  9 Power_On_Hours          -O--CK   100   100   000    -    9607
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    296
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1290
-181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    4153779
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1312
+181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    4156929
 183 Runtime_Bad_Block       -O--CK   252   252   010    -    0
 184 End-to-End_Error        PO--CK   252   252   048    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    7069
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   058   043   040    -    42 (Min/Max 9/58)
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    56
+190 Airflow_Temperature_Cel -O----   059   043   040    -    41 (Min/Max 9/58)
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    57
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-193 Load_Cycle_Count        -O--CK   048   048   000    -    533824
-194 Temperature_Celsius     -O----   058   043   000    -    42 (Min/Max 9/58)
+193 Load_Cycle_Count        -O--CK   048   048   000    -    534123
+194 Temperature_Celsius     -O----   059   043   000    -    41 (Min/Max 9/58)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    6
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    9527
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    9574
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 7071 (device log contains only the most recent 8 errors)
+Device Error Count: 7072 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -127,6 +127,23 @@ Device Error Count: 7071 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 7072 [7] occurred at disk power-on lifetime: 9596 hours (399 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 00 00 40 00  Error: 
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 08     00:00:08.840  NOP [Abort queued commands]
+  60 00 00 00 e0 00 00 57 04 58 40 40 08     00:00:08.842  READ FPDMA QUEUED
+  61 00 00 00 08 00 00 65 22 55 10 40 08     00:00:08.842  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:08.842  FLUSH CACHE EXT
+  61 00 00 00 70 00 00 65 22 54 a0 40 08     00:00:08.842  WRITE FPDMA QUEUED
 
 Error 7071 [6] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -247,23 +264,6 @@ Error 7065 [0] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hou
   ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.607  SET FEATURES [Set transfer mode]
   ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.607  SET FEATURES [Enable SATA feature]
 
-Error 7064 [7] occurred at disk power-on lifetime: 9335 hours (388 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 01 00 00 00 1d 39 49 e1 00  Error: UNC 1 sectors at LBA = 0x011d3949 = 18692425
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 01 00 00 00 1d 39 49 e1 08     00:00:00.605  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.605  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.605  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.605  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:00.605  SET FEATURES [Enable SATA feature]
-
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Aborted by host               90%      7063         -
@@ -304,8 +304,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:      0/44 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     24/43 Celsius
 Lifetime    Min/Max Temperature:      9/59 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -314,7 +314,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (12)
+Temperature History Size (Index):    128 (85)
 
 SCT Error Recovery Control:
            Read:     85 (8,5 seconds)
@@ -332,8 +332,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           21  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           54  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           46  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

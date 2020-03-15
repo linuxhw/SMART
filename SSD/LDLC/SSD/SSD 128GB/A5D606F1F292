@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Apr  7 03:17:54 2019 CEST
+Local Time is:    Wed Oct 30 05:37:57 2019 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,14 +25,13 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x03)	Offline data collection activity
+					is in progress.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 246)	Self-test routine in progress...
+					60% of test remaining.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(  900) seconds.
 Offline data collection
 capabilities: 			 (0x11) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -57,25 +56,25 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    0
-  9 Power_On_Hours          ------   100   100   050    -    167
- 12 Power_Cycle_Count       ------   100   100   050    -    209
+  9 Power_On_Hours          ------   100   100   050    -    275
+ 12 Power_Cycle_Count       ------   100   100   050    -    355
 160 Unknown_Attribute       ------   100   100   050    -    0
 161 Unknown_Attribute       ------   100   100   050    -    68
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    18
-164 Unknown_Attribute       ------   100   100   050    -    3269
-165 Unknown_Attribute       ------   100   100   050    -    6
+164 Unknown_Attribute       ------   100   100   050    -    8858
+165 Unknown_Attribute       ------   100   100   050    -    18
 166 Unknown_Attribute       ------   100   100   050    -    1
-167 Unknown_Attribute       ------   100   100   050    -    3
+167 Unknown_Attribute       ------   100   100   050    -    8
 168 Unknown_Attribute       ------   100   100   050    -    3000
-192 Power-Off_Retract_Count ------   100   100   050    -    47
+192 Power-Off_Retract_Count ------   100   100   050    -    70
 194 Temperature_Celsius     ------   100   100   050    -    40
-195 Hardware_ECC_Recovered  ------   100   100   050    -    236
+195 Hardware_ECC_Recovered  ------   100   100   050    -    345
 196 Reallocated_Event_Count ------   100   100   050    -    0
-199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
-241 Total_LBAs_Written      ------   100   100   050    -    10143
-242 Total_LBAs_Read         ------   100   100   050    -    82790
-245 Unknown_Attribute       ------   100   100   050    -    11446
+199 UDMA_CRC_Error_Count    ------   100   100   050    -    2
+241 Total_LBAs_Written      ------   100   100   050    -    25473
+242 Total_LBAs_Read         ------   100   100   050    -    220029
+245 Unknown_Attribute       ------   100   100   050    -    31090
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,31 +98,48 @@ Address    Access  R/W   Size  Description
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
-SMART Extended Comprehensive Error Log Version: 0 (1 sectors)
-No Errors Logged
+Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
+SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 2 [1] log entry is empty
+Error 1 [0] log entry is empty
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%       160         -
-# 2  Extended offline    Completed without error       00%       149         -
-# 3  Extended offline    Completed without error       00%       146         -
-# 4  Reserved (0x0e)     Completed without error       00%       142         -
-# 5  Vendor (0xc2)       Unknown status (0xe)          70%        14         -
-# 6  Extended offline    Unknown status (0xb)          10%     59330         -
-# 7  Extended offline    Completed without error       00%     45446         -
-# 8  Extended offline    Completed without error       00%       132         -
-# 9  Extended offline    Completed without error       00%       128         -
-#10  Extended offline    Completed without error       00%       115         -
-#11  Extended offline    Completed without error       00%       113         -
-#12  Extended offline    Completed without error       00%       110         -
-#13  Extended offline    Completed without error       00%       109         -
-#14  Extended offline    Completed without error       00%       104         -
-#15  Extended offline    Completed without error       00%       102         -
-#16  Reserved (0x0e)     Completed without error       00%        89         -
-#17  Vendor (0xc2)       Unknown status (0xe)          70%        17         -
-#18  Extended offline    Unknown status (0xb)          10%        16         -
-#19  Extended offline    Completed without error       00%        15         -
+# 1  Vendor (0xc2)       Unknown status (0xe)          70%       174         -
+# 2  Extended offline    Unknown status (0xb)          10%       170         -
+# 3  Extended offline    Completed without error       00%       167         -
+# 4  Extended offline    Completed without error       00%       160         -
+# 5  Extended offline    Completed without error       00%       149         -
+# 6  Extended offline    Completed without error       00%       146         -
+# 7  Reserved (0x0e)     Completed without error       00%       142         -
+# 8  Vendor (0xc2)       Unknown status (0xe)          70%        14         -
+# 9  Extended offline    Unknown status (0xb)          10%     59330         -
+#10  Extended offline    Completed without error       00%     45446         -
+#11  Extended offline    Completed without error       00%       132         -
+#12  Extended offline    Completed without error       00%       128         -
+#13  Extended offline    Completed without error       00%       115         -
+#14  Extended offline    Completed without error       00%       113         -
+#15  Extended offline    Completed without error       00%       110         -
+#16  Extended offline    Completed without error       00%       109         -
+#17  Extended offline    Completed without error       00%       104         -
+#18  Extended offline    Completed without error       00%       102         -
+#19  Reserved (0x0e)     Completed without error       00%        89         -
 
 Selective Self-tests/Logging not supported
 
@@ -132,22 +148,22 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             209  ---  Lifetime Power-On Resets
-0x01  0x010  4             167  ---  Power-on Hours
-0x01  0x018  6       664739376  ---  Logical Sectors Written
-0x01  0x020  6         7569338  ---  Number of Write Commands
-0x01  0x028  6      1130783820  ---  Logical Sectors Read
-0x01  0x030  6        40541942  ---  Number of Read Commands
+0x01  0x008  4             355  ---  Lifetime Power-On Resets
+0x01  0x010  4             275  ---  Power-on Hours
+0x01  0x018  6      1669421324  ---  Logical Sectors Written
+0x01  0x020  6        23904215  ---  Number of Write Commands
+0x01  0x028  6      1534929384  ---  Logical Sectors Read
+0x01  0x030  6       110805392  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              40  ---  Current Temperature
-0x05  0x010  1              62  ---  Average Short Term Temperature
-0x05  0x018  1              20  ---  Average Long Term Temperature
+0x05  0x010  1             101  ---  Average Short Term Temperature
+0x05  0x018  1             -65  ---  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              40  ---  Lowest Temperature
-0x05  0x030  1              62  ---  Highest Average Short Term Temperature
+0x05  0x030  1             101  ---  Highest Average Short Term Temperature
 0x05  0x038  1               1  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              -1  ---  Highest Average Long Term Temperature
 0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
@@ -156,7 +172,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1526  ---  Number of Hardware Resets
+0x06  0x008  4            2570  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -177,7 +193,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           62  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

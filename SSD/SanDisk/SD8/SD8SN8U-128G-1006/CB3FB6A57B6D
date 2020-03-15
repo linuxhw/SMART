@@ -1,7 +1,8 @@
-smartctl 6.6 (build date Jun 14 2018) [x86_64-linux-4.18.0-17-generic] (local build)
-Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.0 2018-12-30 r4883 [x86_64-linux-4.18.0-25-generic] (local build)
+Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Marvell based SanDisk SSDs
 Device Model:     SanDisk SD8SN8U-128G-1006
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -10,14 +11,14 @@ User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 Form Factor:      < 1.8 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Apr  2 21:26:32 2019 MSK
+Local Time is:    Thu Aug  1 22:19:26 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -62,30 +63,30 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    250
+  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    319
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    1399
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    567
-171 Unknown_Attribute       -O--CK   100   100   ---    -    0
-172 Unknown_Attribute       -O--CK   100   100   ---    -    0
-173 Unknown_Attribute       -O--CK   100   100   005    -    3
-174 Unknown_Attribute       -O--CK   100   100   ---    -    27
+  9 Power_On_Hours          -O--CK   100   100   ---    -    2152
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    936
+171 Program_Fail_Count      -O--CK   100   100   ---    -    0
+172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
+173 Avg_Write/Erase_Count   -O--CK   100   100   005    -    4
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    31
 176 Erase_Fail_Count_Chip   -O---K   100   100   ---    -    1088
 181 Program_Fail_Cnt_Total  -O---K   100   100   ---    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   ---    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   040   060   ---    -    40 (Min/Max 11/60)
+188 Command_Timeout         -O--CK   100   100   ---    -    18
+194 Temperature_Celsius     -O---K   036   060   ---    -    36 (Min/Max 11/60)
 198 Offline_Uncorrectable   ----CK   100   100   ---    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-201 Unknown_SSD_Attribute   PO---K   100   100   005    -    3
-230 Unknown_SSD_Attribute   -O--CK   100   100   ---    -    206161575978
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    39003
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    267767
-243 Unknown_Attribute       -O--CK   100   100   ---    -    71708
-244 Unknown_Attribute       -O--CK   000   100   ---    -    0
-249 Unknown_Attribute       -O--CK   100   100   ---    -    433
+199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
+201 Lifetime_Remaining%     PO---K   100   100   005    -    4
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    270587068473
+241 Total_Writes_GiB        -O--CK   100   100   ---    -    50274
+242 Total_Reads_GiB         -O--CK   100   100   ---    -    314220
+243 Unknown_Attribute       -O--CK   100   100   ---    -    91288
+244 Thermal_Throttle        -O--CK   000   100   ---    -    0
+249 TLC_NAND_GB_Writes      -O--CK   100   100   ---    -    541
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,12 +132,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       257 (0x0101)
-SCT Support Level:                   0
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     39/41 Celsius
-Lifetime    Min/Max Temperature:     39/41 Celsius
-Lifetime    Average Temperature:        40 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     30/37 Celsius
+Lifetime    Min/Max Temperature:     30/37 Celsius
+Specified Max Operating Temperature:    36 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -147,7 +147,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -15/90 Celsius
-Temperature History Size (Index):    256 (42)
+Temperature History Size (Index):    256 (241)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -156,15 +156,15 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             567  ---  Lifetime Power-On Resets
-0x01  0x010  4              45  ---  Power-on Hours
+0x01  0x008  4             936  ---  Lifetime Power-On Resets
+0x01  0x010  4              50  ---  Power-on Hours
 0x01  0x018  6               0  ---  Logical Sectors Written
-0x01  0x020  6      1278072783  ---  Number of Write Commands
-0x01  0x028  6      8774193508  ---  Logical Sectors Read
+0x01  0x020  6      1647401076  ---  Number of Write Commands
+0x01  0x028  6     10296378043  ---  Logical Sectors Read
 0x01  0x030  6               0  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              17  ---  Current Temperature
 0x05  0x020  1              65  ---  Highest Temperature
@@ -173,8 +173,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1899  ---  Number of Hardware Resets
-0x06  0x010  4             255  ---  Number of ASR Events
+0x06  0x008  4            3080  ---  Number of Hardware Resets
+0x06  0x010  4             355  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
@@ -189,5 +189,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 

@@ -7,7 +7,7 @@ User Capacity:    250 058 268 160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Apr  3 19:19:47 2016 SAMT
+Local Time is:    Sat Oct 22 01:15:23 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,6 +19,7 @@ Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
@@ -51,21 +52,21 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   095   006    -    164220065
+  1 Raw_Read_Error_Rate     POSR--   114   095   006    -    81187256
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   089   089   020    -    12225
+  4 Start_Stop_Count        -O--CK   087   087   020    -    13679
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   079   060   030    -    99606806
-  9 Power_On_Hours          -O--CK   075   075   000    -    22181
+  7 Seek_Error_Rate         POSR--   081   060   030    -    148448849
+  9 Power_On_Hours          -O--CK   073   073   000    -    23666
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    6071
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6649
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   047   045    -    41 (Min/Max 29/41)
-194 Temperature_Celsius     -O---K   041   053   000    -    41 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   070   054   000    -    47384532
-197 Current_Pending_Sector  -O--C-   100   100   000    -    2
-198 Offline_Uncorrectable   ----C-   100   100   000    -    2
+190 Airflow_Temperature_Cel -O---K   062   038   045    Past 38 (Min/Max 33/38)
+194 Temperature_Celsius     -O---K   038   062   000    -    38 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   082   054   000    -    121627735
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   095   248   000    -    5
@@ -86,8 +87,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -170,22 +171,22 @@ Error 461 [0] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hour
   25 00 d8 00 08 00 1d 51 00 1c 2b e0 00     00:14:37.791  READ DMA EXT
   25 00 d8 00 01 00 1d 51 00 1c 3b e0 00     00:14:37.790  READ DMA EXT
 
-Error 460 [19] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hours)
+Error 460 [19] occurred at disk power-on lifetime: 2590 hours (107 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 08 00 00 00 00 00 00 e0 00  Error: IDNF 8 sectors at LBA = 0x00000000 = 0
+  10 -- 51 01 01 00 00 00 00 00 00 ed 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 d8 00 08 00 1d 51 00 1c 2b e0 00     00:14:36.306  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 3b e0 00     00:14:36.305  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c ab e0 00     00:14:36.293  READ DMA EXT
-  25 00 d8 00 02 00 1d 51 00 1c 2d e0 00     00:14:35.890  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 2b e0 00     00:14:35.726  READ DMA EXT
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     05:27:10.875  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     05:27:10.875  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     05:27:10.709  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     05:27:10.708  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     05:27:10.708  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 459 [18] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -198,11 +199,11 @@ Error 459 [18] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 d8 00 08 00 1d 51 00 1c 2a e0 00     00:14:36.306  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 3a e0 00     00:14:36.305  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c aa e0 00     00:14:36.293  READ DMA EXT
-  25 00 d8 00 02 00 1d 51 00 1c 2c e0 00     00:14:35.890  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 2a e0 00     00:14:35.726  READ DMA EXT
+  25 00 d8 00 08 00 1d 51 00 1c 2d e0 00     00:14:38.528  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c 3d e0 00     00:14:38.361  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c ad e0 00     00:14:38.195  READ DMA EXT
+  25 00 d8 00 02 00 1d 51 00 1c 2f e0 00     00:14:37.791  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c 2d e0 00     00:14:37.790  READ DMA EXT
 
 Error 458 [17] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -215,11 +216,11 @@ Error 458 [17] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 d8 00 08 00 1d 51 00 1c 29 e0 00     00:14:34.814  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 39 e0 00     00:14:34.650  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c a9 e0 00     00:14:34.487  READ DMA EXT
-  25 00 d8 00 02 00 1d 51 00 1c 2b e0 00     00:14:35.890  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 29 e0 00     00:14:35.726  READ DMA EXT
+  25 00 d8 00 08 00 1d 51 00 1c 2c e0 00     00:14:38.528  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c 3c e0 00     00:14:38.361  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c ac e0 00     00:14:38.195  READ DMA EXT
+  25 00 d8 00 02 00 1d 51 00 1c 2e e0 00     00:14:37.791  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c 2c e0 00     00:14:37.790  READ DMA EXT
 
 Error 457 [16] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -227,18 +228,18 @@ Error 457 [16] occurred at disk power-on lifetime: 9350 hours (389 days + 14 hou
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 08 00 00 00 00 00 00 e0 00  Error: IDNF 8 sectors at LBA = 0x00000000 = 0
+  10 -- 51 00 02 00 00 00 00 00 00 e0 00  Error: IDNF 2 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 d8 00 08 00 1d 51 00 1c 28 e0 00     00:14:34.814  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 38 e0 00     00:14:34.650  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c a8 e0 00     00:14:34.487  READ DMA EXT
-  25 00 d8 00 02 00 1d 51 00 1c 2a e0 00     00:14:34.487  READ DMA EXT
-  25 00 d8 00 01 00 1d 51 00 1c 28 e0 00     00:14:34.486  READ DMA EXT
+  25 00 d8 00 02 00 1d 51 00 1c 2e e0 00     00:14:36.306  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c 2c e0 00     00:14:36.305  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c 2c e0 00     00:14:36.293  READ DMA EXT
+  25 00 d8 00 08 00 1d 51 00 1c 2b e0 00     00:14:37.791  READ DMA EXT
+  25 00 d8 00 01 00 1d 51 00 1c 3b e0 00     00:14:37.790  READ DMA EXT
 
-Error 456 [15] occurred at disk power-on lifetime: 2748 hours (114 days + 12 hours)
+Error 456 [15] occurred at disk power-on lifetime: 2590 hours (107 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -249,11 +250,11 @@ Error 456 [15] occurred at disk power-on lifetime: 2748 hours (114 days + 12 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     01:16:09.046  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     01:16:08.922  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     01:16:08.922  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     01:16:06.818  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     01:16:06.818  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     05:27:10.875  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     05:27:10.875  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     05:27:10.709  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     05:27:10.708  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     05:27:10.708  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -272,19 +273,19 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           69  Transition from drive PhyRdy to drive PhyNRdy
-0x8002  2           10  Vendor specific
-0x8003  2           36  Vendor specific
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x8002  2            0  Vendor specific
+0x8003  2            5  Vendor specific
 0x8004  2            0  Vendor specific
 
 

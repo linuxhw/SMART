@@ -8,7 +8,7 @@ User Capacity:    203 927 027 200 bytes [203 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sat Mar 19 00:32:41 2016 KRAT
+Local Time is:    Fri May  6 22:18:34 2016 KRAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -25,7 +25,7 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
+Self-test execution status:      (  19)	The self-test routine was aborted by
 					the host.
 Total time to complete Offline 
 data collection: 		( 4682) seconds.
@@ -53,21 +53,21 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   208   204   063    -    9219
-  4 Start_Stop_Count        -O--CK   252   252   000    -    3602
+  3 Spin_Up_Time            POS--K   208   204   063    -    16305
+  4 Start_Stop_Count        -O--CK   252   252   000    -    3692
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   246   231   187    -    52696
-  9 Power_On_Hours          -O--CK   201   201   000    -    18118
+  8 Seek_Time_Performance   POS--K   248   231   187    -    61061
+  9 Power_On_Hours          -O--CK   200   200   000    -    18583
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   244   244   000    -    3754
+ 12 Power_Cycle_Count       -O--CK   244   244   000    -    3845
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   069   045   000    -    31 (Min/Max 18/31)
+190 Airflow_Temperature_Cel -O---K   069   045   000    -    31 (Min/Max 20/31)
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
 194 Temperature_Celsius     -O--CK   035   253   000    -    31
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1097
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    745
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
@@ -105,175 +105,25 @@ Address    Access  R/W   Size  Description
 0x22       GPL,SL  R/O      1  Read stream error log
 
 SMART Extended Comprehensive Error Log Version: 1 (4 sectors)
-Device Error Count: 51768 (device log contains only the most recent 16 errors)
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
-Powered_Up_Time is measured from power on, and printed as
-DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
-SS=sec, and sss=millisec. It "wraps" after 49.710 days.
-
-Error 51768 [7] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 00 00 00 00 54 38 c7 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 54 38 c7 a0 00     00:02:50.876  SET MULTIPLE MODE
-  34 00 00 00 80 00 00 03 54 38 c7 e0 00     00:02:50.874  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 62 6b b7 a0 00     00:02:50.685  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 16 62 6b b7 e0 00     00:02:50.683  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 5f 78 3f a0 00     00:02:50.356  SET MULTIPLE MODE
-
-Error 51767 [6] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 00 00 00 00 62 6b b7 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 62 6b b7 a0 00     00:02:50.685  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 16 62 6b b7 e0 00     00:02:50.683  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 5f 78 3f a0 00     00:02:50.356  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 00 5f 78 3f e0 00     00:02:50.354  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 54 39 47 a0 00     00:02:50.307  SET MULTIPLE MODE
-
-Error 51766 [5] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 00 00 00 00 5f 78 3f a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 5f 78 3f a0 00     00:02:50.356  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 00 5f 78 3f e0 00     00:02:50.354  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 54 39 47 a0 00     00:02:50.307  SET MULTIPLE MODE
-  34 00 00 00 80 00 00 03 54 39 47 e0 00     00:02:50.304  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 5f 78 37 a0 00     00:02:50.262  SET MULTIPLE MODE
-
-Error 51765 [4] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 00 00 00 00 54 39 47 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 54 39 47 a0 00     00:02:50.307  SET MULTIPLE MODE
-  34 00 00 00 80 00 00 03 54 39 47 e0 00     00:02:50.304  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 5f 78 37 a0 00     00:02:50.262  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 00 5f 78 37 e0 00     00:02:50.259  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 54 38 c7 a0 00     00:02:49.829  SET MULTIPLE MODE
-
-Error 51764 [3] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 5f 78 37 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 5f 78 37 a0 00     00:02:50.262  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 00 5f 78 37 e0 00     00:02:50.259  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 54 38 c7 a0 00     00:02:49.829  SET MULTIPLE MODE
-  34 00 00 00 80 00 00 03 54 38 c7 e0 00     00:02:49.827  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 62 6b b7 a0 00     00:02:49.633  SET MULTIPLE MODE
-
-Error 51763 [2] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 00 00 00 00 54 38 c7 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 54 38 c7 a0 00     00:02:49.829  SET MULTIPLE MODE
-  34 00 00 00 80 00 00 03 54 38 c7 e0 00     00:02:49.827  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 62 6b b7 a0 00     00:02:49.633  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 16 62 6b b7 e0 00     00:02:49.631  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 62 6b af a0 00     00:02:49.587  SET MULTIPLE MODE
-
-Error 51762 [1] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 00 00 00 00 54 38 c7 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 54 38 c7 a0 00     00:02:53.046  SET MULTIPLE MODE
-  34 00 00 00 80 00 00 03 54 38 c7 e0 00     00:02:53.044  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 62 6b b7 a0 00     00:02:52.780  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 16 62 6b b7 e0 00     00:02:52.777  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 54 39 47 a0 00     00:02:52.539  SET MULTIPLE MODE
-
-Error 51761 [0] occurred at disk power-on lifetime: 12731 hours (530 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 62 6b b7 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 00 00 00 00 62 6b b7 a0 00     00:02:52.780  SET MULTIPLE MODE
-  34 00 00 00 08 00 00 16 62 6b b7 e0 00     00:02:52.777  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 54 39 47 a0 00     00:02:52.539  SET MULTIPLE MODE
-  34 00 00 00 80 00 00 03 54 39 47 e0 00     00:02:52.537  WRITE SECTORS(S) EXT
-  c6 00 00 00 00 00 00 00 5f 78 3f a0 00     00:02:52.468  SET MULTIPLE MODE
-
+Invalid Error Log index = 0x0000 (reserved = 0x00)
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               90%     18059         -
-# 2  Extended offline    Aborted by host               80%     17973         -
-# 3  Extended offline    Aborted by host               50%     17833         -
-# 4  Extended offline    Aborted by host               30%     17753         -
-# 5  Extended offline    Aborted by host               70%     17692         -
-# 6  Extended offline    Aborted by host               90%     17559         -
-# 7  Extended offline    Aborted by host               80%     17484         -
-# 8  Extended offline    Aborted by host               80%     17416         -
-# 9  Extended offline    Interrupted (host reset)      80%     16973         -
-#10  Extended offline    Interrupted (host reset)      80%     16972         -
-#11  Extended offline    Completed without error       00%     16513         -
-#12  Extended offline    Completed without error       00%     16404         -
-#13  Extended offline    Aborted by host               50%     16015         -
+# 1  Extended offline    Aborted by host               30%     18296         -
+# 2  Extended offline    Aborted by host               90%     18059         -
+# 3  Extended offline    Aborted by host               80%     17973         -
+# 4  Extended offline    Aborted by host               50%     17833         -
+# 5  Extended offline    Aborted by host               30%     17753         -
+# 6  Extended offline    Aborted by host               70%     17692         -
+# 7  Extended offline    Aborted by host               90%     17559         -
+# 8  Extended offline    Aborted by host               80%     17484         -
+# 9  Extended offline    Aborted by host               80%     17416         -
+#10  Extended offline    Interrupted (host reset)      80%     16973         -
+#11  Extended offline    Interrupted (host reset)      80%     16972         -
+#12  Extended offline    Completed without error       00%     16513         -
+#13  Extended offline    Completed without error       00%     16404         -
+#14  Extended offline    Aborted by host               50%     16015         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

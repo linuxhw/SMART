@@ -7,7 +7,7 @@ User Capacity:    120 034 123 776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Tue Dec 15 09:36:52 2015 MSK
+Local Time is:    Sat Dec 19 12:52:18 2015 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -22,8 +22,8 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,15 +59,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   200   200   051    -    0
-  3 Spin_Up_Time            POS---   161   160   021    -    4491
-  4 Start_Stop_Count        -O--CK   099   099   040    -    1904
+  3 Spin_Up_Time            POS---   161   160   021    -    4450
+  4 Start_Stop_Count        -O--CK   099   099   040    -    1916
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         PO-R--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   009   009   000    -    66672
+  9 Power_On_Hours          -O--CK   009   009   000    -    66730
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1525
-194 Temperature_Celsius     -O---K   112   082   000    -    38
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1535
+194 Temperature_Celsius     -O---K   110   082   000    -    40
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   -O--C-   200   200   000    -    0
@@ -80,9 +80,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-Read SMART Log Directory failed: scsi error aborted command
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
 Read GP Log Directory failed
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
@@ -94,14 +94,16 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short captive       Completed without error       00%       971         -
-# 2  Short captive       Completed without error       00%       953         -
-# 3  Short captive       Completed without error       00%       952         -
-# 4  Short captive       Completed without error       00%       948         -
-# 5  Short captive       Completed without error       00%       920         -
-# 6  Extended offline    Completed: read failure       40%       489         124327769
-# 7  Short captive       Completed without error       00%       372         -
-# 8  Extended offline    Completed without error       00%     28288         -
+# 1  Extended offline    Completed without error       00%      1187         -
+# 2  Short captive       Completed without error       00%       971         -
+# 3  Short captive       Completed without error       00%       953         -
+# 4  Short captive       Completed without error       00%       952         -
+# 5  Short captive       Completed without error       00%       948         -
+# 6  Short captive       Completed without error       00%       920         -
+# 7  Extended offline    Completed: read failure       40%       489         124327769
+# 8  Short captive       Completed without error       00%       372         -
+# 9  Extended offline    Completed without error       00%     28288         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

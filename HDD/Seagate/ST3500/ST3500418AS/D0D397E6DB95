@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Aug 16 21:55:10 2015 MSK
+Local Time is:    Thu Sep 14 19:25:57 2017 MSK
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -64,23 +64,23 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   109   099   006    -    23461703
+  1 Raw_Read_Error_Rate     POSR-K   118   099   006    -    192120010
   3 Spin_Up_Time            PO---K   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5795
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7718
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    9
-  7 Seek_Error_Rate         POSR-K   084   060   030    -    276526293
-  9 Power_On_Hours          -O--CK   079   079   000    -    18615
+  7 Seek_Error_Rate         POSR-K   087   060   030    -    476915600
+  9 Power_On_Hours          -O--CK   069   069   000    -    27987
  10 Spin_Retry_Count        PO--CK   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2860
-180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    65336620
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3816
+180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    1675676055
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   098   000    -    4295032952
+188 Command_Timeout         -O--CK   100   098   000    -    4295033046
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   050   045    -    37 (Min/Max 36/37)
-194 Temperature_Celsius     -O---K   037   050   000    -    37 (0 5 0 0 0)
-195 Hardware_ECC_Recovered  -O-RCK   042   024   000    -    23461703
+190 Airflow_Temperature_Cel -O---K   071   050   045    -    29 (Min/Max 22/29)
+194 Temperature_Celsius     -O---K   029   050   000    -    29 (0 5 0 0 0)
+195 Hardware_ECC_Recovered  -O-RCK   043   024   000    -    192120010
 196 Reallocated_Event_Count -O--CK   100   100   036    -    9
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -102,8 +102,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -122,12 +122,14 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      00%     18524         -
-# 2  Short offline       Completed without error       00%      1069         -
-# 3  Extended offline    Aborted by host               90%      1069         -
-# 4  Extended offline    Interrupted (host reset)      20%      1068         -
-# 5  Short offline       Completed without error       00%      1067         -
-# 6  Extended offline    Interrupted (host reset)      90%         1         -
+# 1  Extended offline    Interrupted (host reset)      90%     27647         -
+# 2  Extended offline    Interrupted (host reset)      00%     24137         -
+# 3  Extended offline    Interrupted (host reset)      00%     18524         -
+# 4  Short offline       Completed without error       00%      1069         -
+# 5  Extended offline    Aborted by host               90%      1069         -
+# 6  Extended offline    Interrupted (host reset)      20%      1068         -
+# 7  Short offline       Completed without error       00%      1067         -
+# 8  Extended offline    Interrupted (host reset)      90%         1         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -144,8 +146,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     36/37 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     22/29 Celsius
 Lifetime    Min/Max Temperature:      5/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -154,17 +156,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (38)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

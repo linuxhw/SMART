@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Aug 28 21:58:08 2019 MSK
+Local Time is:    Wed Oct 16 22:16:03 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,28 +59,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    4231
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    4263
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   091   091   025    -    2863
-  4 Start_Stop_Count        -O--CK   089   089   000    -    11943
+  3 Spin_Up_Time            PO---K   091   091   025    -    2857
+  4 Start_Stop_Count        -O--CK   089   089   000    -    12017
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10021
+  9 Power_On_Hours          -O--CK   100   100   000    -    10302
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   098   098   000    -    2548
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5675
+ 11 Calibration_Retry_Count -O--CK   098   098   000    -    2549
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5750
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    2
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   051   000    -    32 (Min/Max 14/49)
+194 Temperature_Celsius     -O----   064   051   000    -    33 (Min/Max 14/49)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    12
-199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    839
-223 Load_Retry_Count        -O--CK   098   098   000    -    2548
-225 Load_Cycle_Count        -O--CK   054   054   000    -    468126
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    1
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    840
+223 Load_Retry_Count        -O--CK   098   098   000    -    2549
+225 Load_Cycle_Count        -O--CK   051   051   000    -    498396
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 950 (device log contains only the most recent 8 errors)
+Device Error Count: 951 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +122,23 @@ Device Error Count: 950 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 951 [6] occurred at disk power-on lifetime: 10247 hours (426 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 08 00 00 17 cd 39 68 40 00  Error: ICRC, ABRT at LBA = 0x17cd3968 = 399325544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 da 00 08 00 00 17 cd 39 68 40 08     00:00:00.072  READ FPDMA QUEUED
+  60 00 da 00 08 00 00 17 cd 3a 00 40 08     00:00:00.073  READ FPDMA QUEUED
+  60 00 da 00 08 00 00 17 cd 39 f8 40 08     00:00:00.073  READ FPDMA QUEUED
+  60 00 da 00 08 00 00 17 cd 39 f0 40 08     00:00:00.073  READ FPDMA QUEUED
+  60 00 da 00 08 00 00 1b 91 9c c8 40 08     00:00:00.073  READ FPDMA QUEUED
 
 Error 950 [5] occurred at disk power-on lifetime: 7951 hours (331 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -242,23 +259,6 @@ Error 944 [7] occurred at disk power-on lifetime: 7200 hours (300 days + 0 hours
   ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:01.234  SET FEATURES [Enable SATA feature]
   27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:01.234  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 943 [6] occurred at disk power-on lifetime: 7200 hours (300 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 01 00 00 1c 99 5e 83 40 00  Error: UNC at LBA = 0x1c995e83 = 479813251
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 10 00 01 00 00 1c 99 5e 83 40 08     00:00:01.072  READ FPDMA QUEUED
-  60 00 10 00 01 00 00 1c 99 5e 85 40 08     00:00:01.222  READ FPDMA QUEUED
-  60 00 10 00 01 00 00 1c 99 5e 84 40 08     00:00:01.222  READ FPDMA QUEUED
-  60 00 10 00 01 00 00 1c 99 5e 83 40 08     00:00:01.222  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:01.222  SET FEATURES [Enable SATA feature]
-
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Completed: read failure       20%      7634         471543016
@@ -279,8 +279,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     32/33 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     24/33 Celsius
 Lifetime    Min/Max Temperature:     14/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -289,7 +289,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (73)
+Temperature History Size (Index):    128 (69)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -309,8 +309,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            9  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -9,7 +9,7 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Jun 18 20:12:30 2018 MSK
+Local Time is:    Wed Jul  4 06:34:03 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -24,14 +24,14 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(   57) seconds.
 Offline data collection
 capabilities: 			 (0x71) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -58,12 +58,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    51
- 12 Power_Cycle_Count       ------   100   100   000    -    2300
+  9 Power_On_Hours          ------   100   100   000    -    59
+ 12 Power_Cycle_Count       ------   100   100   000    -    2385
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    140
 163 Initial_Bad_Block_Count ------   100   100   000    -    25
-164 Total_Erase_Count       ------   100   100   000    -    8436
+164 Total_Erase_Count       ------   100   100   000    -    10034
 165 Max_Erase_Count         ------   100   100   000    -    21
 166 Min_Erase_Count         ------   100   100   000    -    0
 167 Average_Erase_Count     ------   100   100   000    -    4
@@ -75,17 +75,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Runtime_Invalid_Blk_Cnt ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    20
-194 Temperature_Celsius     ------   100   100   000    -    49
-195 Hardware_ECC_Recovered  ------   100   100   000    -    2138
+192 Power-Off_Retract_Count ------   100   100   000    -    21
+194 Temperature_Celsius     ------   100   100   000    -    39
+195 Hardware_ECC_Recovered  ------   100   100   000    -    2170
 196 Reallocated_Event_Count ------   100   100   016    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    19706
-242 Host_Reads_32MiB        ------   100   100   000    -    38088
-245 TLC_Writes_32MiB        ------   100   100   000    -    33744
+241 Host_Writes_32MiB       ------   100   100   000    -    23627
+242 Host_Reads_32MiB        ------   100   100   000    -    39634
+245 TLC_Writes_32MiB        ------   100   100   000    -    40136
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +112,9 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%        56         -
+# 2  Extended offline    Completed without error       00%        52         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -121,7 +123,7 @@ SMART Selective self-test log data structure revision number 1
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
-    6        0    65535  Read_scanning was never started
+    7        0    65535  Read_scanning was completed without error
 Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
@@ -131,20 +133,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2300  ---  Lifetime Power-On Resets
-0x01  0x010  4              51  ---  Power-on Hours
-0x01  0x018  6      1291499003  ---  Logical Sectors Written
-0x01  0x020  6        10514482  ---  Number of Write Commands
-0x01  0x028  6      2496150087  ---  Logical Sectors Read
-0x01  0x030  6        15538182  ---  Number of Read Commands
+0x01  0x008  4            2385  ---  Lifetime Power-On Resets
+0x01  0x010  4              59  ---  Power-on Hours
+0x01  0x018  6      1548426607  ---  Logical Sectors Written
+0x01  0x020  6        11542627  ---  Number of Write Commands
+0x01  0x028  6      2597463613  ---  Logical Sectors Read
+0x01  0x030  6        16345976  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              21  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              22  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (empty) ==
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6776  ---  Number of Hardware Resets
+0x06  0x008  4            7129  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

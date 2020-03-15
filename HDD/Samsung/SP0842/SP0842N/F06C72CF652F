@@ -7,7 +7,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Wed May 16 07:17:24 2018 MSK
+Local Time is:    Sat Sep  1 13:54:32 2018 +03
 
 ==> WARNING: May need -F samsung2 or -F samsung3 enabled; see manual for details.
 
@@ -17,6 +17,7 @@ AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -59,25 +60,25 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   100   100   025    -    4160
-  4 Start_Stop_Count        -O--CK   079   079   000    -    21240
+  3 Spin_Up_Time            POS---   100   100   025    -    4096
+  4 Start_Stop_Count        -O--CK   079   079   000    -    21798
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    35666
+  9 Power_On_Hours          -O--CK   100   100   000    -    36352
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   089   089   000    -    11799
-187 Reported_Uncorrect      -O--CK   001   001   000    -    143882
-190 Airflow_Temperature_Cel -O---K   109   073   000    -    43
-194 Temperature_Celsius     -O---K   109   073   000    -    43
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    834697
+ 12 Power_Cycle_Count       -O--CK   089   089   000    -    12120
+187 Reported_Uncorrect      -O--CK   001   001   000    -    143883
+190 Airflow_Temperature_Cel -O---K   091   073   000    -    49
+194 Temperature_Celsius     -O---K   091   073   000    -    49
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    241449
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
-197 Current_Pending_Sector  -O--C-   100   100   000    -    3
-198 Offline_Uncorrectable   ----CK   100   100   000    -    3
+197 Current_Pending_Sector  -O--C-   253   100   000    -    0
+198 Offline_Uncorrectable   ----CK   253   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   253   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -96,8 +97,8 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x04) instead
-Device Error Count: 12812 (device log contains only the most recent 8 errors)
+Invalid Error Log index = 0x0000, trying reserved byte (0x05) instead
+Device Error Count: 12813 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -112,6 +113,23 @@ Device Error Count: 12812 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12813 [4] occurred at disk power-on lifetime: 35993 hours (1499 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 51 00 20 00 00 49 78 00 80 e6 00  Error: AMNF 32 sectors at LBA = 0x4f780080 = 1333264512
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 20 00 00 00 49 78 80 e6 00     00:00:33.313  READ DMA
+  c8 00 00 00 08 00 00 00 49 78 78 e6 00     00:00:33.313  READ DMA
+  c8 00 00 00 20 00 00 00 49 78 28 e6 00     00:00:33.313  READ DMA
+  c8 00 00 00 08 00 00 00 49 78 20 e6 00     00:00:33.313  READ DMA
+  c8 00 00 00 20 00 00 00 49 77 a0 e6 00     00:00:33.313  READ DMA
 
 Error 12812 [3] occurred at disk power-on lifetime: 35398 hours (1474 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -232,23 +250,6 @@ Error 12806 [5] occurred at disk power-on lifetime: 33076 hours (1378 days + 4 h
   c8 00 00 00 08 00 00 00 6d d1 28 e0 00     00:01:11.375  READ DMA
   c8 00 00 00 08 00 00 00 6d d1 20 e0 00     00:01:11.375  READ DMA
 
-Error 12805 [4] occurred at disk power-on lifetime: 33076 hours (1378 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 80 00 00 6d d0 00 e8 e0 00  Error: UNC 128 sectors at LBA = 0x6dd000e8 = 1842348264
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 80 00 00 00 6d d0 e8 e0 00     00:01:09.625  READ DMA
-  c8 00 00 00 80 00 00 00 6d d0 68 e0 00     00:01:09.563  READ DMA
-  c8 00 00 00 00 00 00 00 0f a9 00 e0 00     00:01:09.563  READ DMA
-  c8 00 00 00 00 00 00 00 6f 03 00 e0 00     00:01:09.563  READ DMA
-  c8 00 00 00 58 00 00 00 15 d4 28 e0 00     00:01:09.563  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -271,8 +272,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 43 Celsius
-Power Cycle Max Temperature:         44 Celsius
+Current Temperature:                 49 Celsius
+Power Cycle Max Temperature:         49 Celsius
 Lifetime    Max Temperature:         55 Celsius
 
 SCT Temperature History Version:     2
@@ -280,13 +281,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/55 Celsius
 Min/Max Temperature Limit:            5/60 Celsius
-Temperature History Size (Index):    128 (98)
+Temperature History Size (Index):    128 (30)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

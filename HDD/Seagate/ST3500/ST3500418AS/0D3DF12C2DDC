@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Aug 14 10:42:46 2016 BRT
+Local Time is:    Sat Dec 24 15:04:23 2016 BRST
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -66,28 +66,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    139360662
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    125419195
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    8475
+  4 Start_Stop_Count        -O--CK   092   092   020    -    9066
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   072   060   030    -    20549623
-  9 Power_On_Hours          -O--CK   054   054   000    -    40707
+  7 Seek_Error_Rate         POSR--   073   060   030    -    21084440
+  9 Power_On_Hours          -O--CK   051   051   000    -    43165
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    4075
+ 12 Power_Cycle_Count       -O--CK   096   096   020    -    4366
 183 Runtime_Bad_Block       -O--CK   001   001   000    -    14426
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   096   000    -    47
+188 Command_Timeout         -O--CK   100   096   000    -    48
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   049   045    -    40 (Min/Max 19/40)
-194 Temperature_Celsius     -O---K   040   051   000    -    40 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   022   018   000    -    139360662
+190 Airflow_Temperature_Cel -O---K   055   049   045    -    45 (Min/Max 26/46)
+194 Temperature_Celsius     -O---K   045   051   000    -    45 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   025   018   000    -    125419195
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   183   000    -    14686
-240 Head_Flying_Hours       ------   100   253   000    -    51532 (142 70 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1028359092
-242 Total_LBAs_Read         ------   100   253   000    -    2082849550
+240 Head_Flying_Hours       ------   100   253   000    -    54811 (109 76 0)
+241 Total_LBAs_Written      ------   100   253   000    -    1852336831
+242 Total_LBAs_Read         ------   100   253   000    -    1214448257
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -259,7 +259,16 @@ Error 1 [0] occurred at disk power-on lifetime: 22606 hours (941 days + 22 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     14291         -
+# 1  Extended offline    Interrupted (host reset)      00%     42499         -
+# 2  Extended offline    Interrupted (host reset)      00%     42004         -
+# 3  Extended offline    Interrupted (host reset)      00%     41885         -
+# 4  Extended offline    Interrupted (host reset)      00%     41775         -
+# 5  Extended offline    Interrupted (host reset)      00%     41632         -
+# 6  Extended offline    Completed without error       00%     41499         -
+# 7  Extended offline    Interrupted (host reset)      00%     41237         -
+# 8  Extended offline    Interrupted (host reset)      00%     41103         -
+# 9  Extended offline    Interrupted (host reset)      00%     40981         -
+#10  Short offline       Completed without error       00%     14291         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -276,8 +285,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     19/40 Celsius
+Current Temperature:                    45 Celsius
+Power Cycle Min/Max Temperature:     26/46 Celsius
 Lifetime    Min/Max Temperature:     17/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -286,7 +295,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (38)
+Temperature History Size (Index):    128 (60)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -296,7 +305,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2          100  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

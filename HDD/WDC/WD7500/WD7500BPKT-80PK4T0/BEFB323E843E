@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Aug 21 21:28:13 2015 MSK
+Local Time is:    Tue Dec  8 15:21:41 2015 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,8 +24,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,23 +60,23 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   197   195   021    -    1133
-  4 Start_Stop_Count        -O--CK   100   100   000    -    483
+  3 Spin_Up_Time            POS--K   196   194   021    -    1175
+  4 Start_Stop_Count        -O--CK   100   100   000    -    579
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   076   076   000    -    17600
+  9 Power_On_Hours          -O--CK   073   073   000    -    19803
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    483
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    482
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    24
-193 Load_Cycle_Count        -O--CK   195   195   000    -    15197
-194 Temperature_Celsius     -O---K   106   094   000    -    41
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    579
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    159452
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    33
+193 Load_Cycle_Count        -O--CK   161   161   000    -    119283
+194 Temperature_Celsius     -O---K   111   094   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
-198 Offline_Uncorrectable   ----CK   100   253   000    -    0
+198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,7 +109,21 @@ SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     19755         -
+# 2  Extended offline    Completed without error       00%     19595         -
+# 3  Extended offline    Completed without error       00%     19427         -
+# 4  Extended offline    Completed without error       00%     19268         -
+# 5  Extended offline    Completed without error       00%     19039         -
+# 6  Extended offline    Completed without error       00%     18890         -
+# 7  Extended offline    Completed without error       00%     18738         -
+# 8  Extended offline    Completed without error       00%     18570         -
+# 9  Extended offline    Completed without error       00%     18403         -
+#10  Extended offline    Completed without error       00%     18235         -
+#11  Extended offline    Completed without error       00%     18075         -
+#12  Extended offline    Completed without error       00%     17808         -
+#13  Extended offline    Completed without error       00%     17679         -
+#14  Extended offline    Completed without error       00%     17608         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -126,9 +140,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     39/41 Celsius
-Lifetime    Min/Max Temperature:     39/53 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     22/36 Celsius
+Lifetime    Min/Max Temperature:     22/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -136,7 +150,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (84)
+Temperature History Size (Index):    128 (114)
 
 SCT Error Recovery Control command not supported
 
@@ -151,7 +165,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         2768  Vendor specific
+0x8000  4         9526  Vendor specific
 

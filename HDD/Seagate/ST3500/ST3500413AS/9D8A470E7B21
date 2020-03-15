@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 27 19:42:08 2015 MSK
+Local Time is:    Sat Oct  8 17:13:46 2016 SAMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     208 (intermediate), recommended: 208
@@ -60,28 +60,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    198564374
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    120615123
   3 Spin_Up_Time            PO----   100   100   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2712
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3543
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    304309022
-  9 Power_On_Hours          -O--CK   085   085   000    -    13994
+  7 Seek_Error_Rate         POSR--   085   060   030    -    367645156
+  9 Power_On_Hours          -O--CK   079   079   000    -    19062
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2689
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3519
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   097   000    -    4295034554
+188 Command_Timeout         -O--CK   100   097   000    -    4295035036
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   072   051   045    -    28 (Min/Max 19/29)
-194 Temperature_Celsius     -O---K   028   049   000    -    28 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   036   022   000    -    198564374
+190 Airflow_Temperature_Cel -O---K   067   051   045    -    33 (Min/Max 27/33)
+194 Temperature_Celsius     -O---K   033   049   000    -    33 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   038   022   000    -    120615123
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
-240 Head_Flying_Hours       ------   100   253   000    -    21421 (112 148 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1214591631
-242 Total_LBAs_Read         ------   100   253   000    -    3725447644
+240 Head_Flying_Hours       ------   100   253   000    -    28844 (158 173 0)
+241 Total_LBAs_Written      ------   100   253   000    -    1224124206
+242 Total_LBAs_Read         ------   100   253   000    -    306949842
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,8 +99,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -120,12 +120,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      00%     13862         -
-# 2  Extended offline    Interrupted (host reset)      00%     13424         -
-# 3  Extended offline    Completed without error       00%     13257         -
-# 4  Extended offline    Completed without error       00%     13097         -
-# 5  Extended offline    Completed without error       00%     13020         -
-# 6  Extended offline    Completed without error       00%     12908         -
+# 1  Extended offline    Completed without error       00%     18989         -
+# 2  Extended offline    Interrupted (host reset)      60%     18720         -
+# 3  Extended offline    Interrupted (host reset)      00%     18603         -
+# 4  Extended offline    Interrupted (host reset)      70%     18535         -
+# 5  Extended offline    Interrupted (host reset)      00%     18360         -
+# 6  Extended offline    Interrupted (host reset)      00%     18028         -
+# 7  Extended offline    Completed without error       00%     17614         -
+# 8  Extended offline    Completed without error       00%     17260         -
+# 9  Extended offline    Interrupted (host reset)      00%     17152         -
+#10  Extended offline    Completed without error       00%     16492         -
+#11  Extended offline    Completed without error       00%     16402         -
+#12  Extended offline    Completed without error       00%     16214         -
+#13  Extended offline    Completed without error       00%     15940         -
+#14  Extended offline    Completed without error       00%     15859         -
+#15  Extended offline    Completed without error       00%     15755         -
+#16  Extended offline    Interrupted (host reset)      00%     15647         -
+#17  Extended offline    Completed without error       00%     15551         -
+#18  Extended offline    Completed without error       00%     15337         -
+#19  Extended offline    Completed without error       00%     15076         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -142,8 +155,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     19/29 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     27/33 Celsius
 Lifetime    Min/Max Temperature:     16/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -152,13 +165,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (2)
+Temperature History Size (Index):    128 (99)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

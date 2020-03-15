@@ -10,7 +10,7 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Mar 20 21:36:10 2016 YEKT
+Local Time is:    Fri May  6 20:48:24 2016 YEKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,15 +59,15 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    3643h+34m+11.860s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1493
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    181
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    193279
+  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    3890h+27m+09.870s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1612
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    196
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    204015
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   100   100   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    193279
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    404619
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    4911
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    204015
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    428808
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    5173
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -83,8 +83,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xb7       GPL,SL  VS      16  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -129,21 +129,24 @@ Temperature History is empty
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4             1512  Lifetime Power-On Resets
-  1  0x010  4             3683  Power-on Hours
-  1  0x018  6      14382950310  Logical Sectors Written
-  1  0x028  6      28588196412  Logical Sectors Read
-  4  =====  =                =  == General Errors Statistics (rev 1) ==
-  4  0x008  4                0  Number of Reported Uncorrectable Errors
-  4  0x010  4            10608  Resets Between Cmd Acceptance and Completion
-  6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4            10608  Number of Hardware Resets
-  6  0x010  4            10997  Number of ASR Events
-  6  0x018  4                0  Number of Interface CRC Errors
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1              255  Percentage Used Endurance Indicator
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4            1631  ---  Lifetime Power-On Resets
+0x01  0x010  4            3930  ---  Power-on Hours
+0x01  0x018  6     15086548810  ---  Logical Sectors Written
+0x01  0x028  6     30173510792  ---  Logical Sectors Read
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4           11766  ---  Resets Between Cmd Acceptance and Completion
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4           11766  ---  Number of Hardware Resets
+0x06  0x010  4           12325  ---  Number of ASR Events
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

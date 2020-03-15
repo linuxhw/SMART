@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Feb  8 10:39:21 2019 +05
+Local Time is:    Wed May  1 14:39:33 2019 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,27 +62,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1041
-  4 Start_Stop_Count        -O--CK   100   100   000    -    1891
+  3 Spin_Up_Time            POS--K   100   100   001    -    1039
+  4 Start_Stop_Count        -O--CK   100   100   000    -    2176
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   072   072   000    -    11314
- 10 Spin_Retry_Count        PO--CK   137   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1362
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    252
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    192
-193 Load_Cycle_Count        -O--CK   076   076   000    -    249143
-194 Temperature_Celsius     -O---K   100   100   000    -    45 (Min/Max 20/60)
+  9 Power_On_Hours          -O--CK   068   068   000    -    13089
+ 10 Spin_Retry_Count        PO--CK   143   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1501
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    344
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    238
+193 Load_Cycle_Count        -O--CK   075   075   000    -    252768
+194 Temperature_Celsius     -O---K   100   100   000    -    44 (Min/Max 20/60)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   081   081   000    -    7991
+222 Loaded_Hours            -O--CK   077   077   000    -    9466
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    175
+226 Load-in_Time            -OS--K   100   100   000    -    169
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 6
+Device Error Count: 12
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,6 +124,108 @@ Device Error Count: 6
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12 [11] occurred at disk power-on lifetime: 13089 hours (545 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:37.434  SECURITY UNLOCK
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:04.272  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:04.272  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:04.271  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:04.271  SET FEATURES [Set transfer mode]
+
+Error 11 [10] occurred at disk power-on lifetime: 13058 hours (544 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:55.786  SECURITY UNLOCK
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:04.791  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:04.791  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:04.791  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:04.790  SET FEATURES [Set transfer mode]
+
+Error 10 [9] occurred at disk power-on lifetime: 12970 hours (540 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:36.210  SECURITY UNLOCK
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:07.930  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:07.929  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:07.929  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:07.928  SET FEATURES [Set transfer mode]
+
+Error 9 [8] occurred at disk power-on lifetime: 12955 hours (539 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:49.906  SECURITY UNLOCK
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:08.372  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:08.372  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:08.372  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:08.371  SET FEATURES [Set transfer mode]
+
+Error 8 [7] occurred at disk power-on lifetime: 12954 hours (539 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:43.961  SECURITY UNLOCK
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:07.974  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:07.974  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:07.973  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:07.973  SET FEATURES [Set transfer mode]
+
+Error 7 [6] occurred at disk power-on lifetime: 12075 hours (503 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:01:01.286  SECURITY UNLOCK
+  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:05.412  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:05.411  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:05.411  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:05.411  SET FEATURES [Set transfer mode]
 
 Error 6 [5] occurred at disk power-on lifetime: 11041 hours (460 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -159,87 +261,27 @@ Error 5 [4] occurred at disk power-on lifetime: 9640 hours (401 days + 16 hours)
   c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:07.623  SET MULTIPLE MODE
   91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:07.623  INITIALIZE DEVICE PARAMETERS [OBS-6]
 
-Error 4 [3] occurred at disk power-on lifetime: 9636 hours (401 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:01:32.074  SECURITY UNLOCK
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:06.906  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:06.906  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:06.905  SET FEATURES [Set transfer mode]
-  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:06.905  SET FEATURES [Set transfer mode]
-
-Error 3 [2] occurred at disk power-on lifetime: 9303 hours (387 days + 15 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:01:09.743  SECURITY UNLOCK
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:00:08.601  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:00:08.600  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:08.600  SET FEATURES [Set transfer mode]
-  ef 00 03 00 0c 00 00 00 00 00 00 e0 00     00:00:08.600  SET FEATURES [Set transfer mode]
-
-Error 2 [1] occurred at disk power-on lifetime: 9293 hours (387 days + 5 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:02:24.881  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 e0 00     00:01:49.500  IDENTIFY DEVICE
-  c6 00 00 00 10 00 00 00 00 00 00 00 00     00:01:39.183  SET MULTIPLE MODE
-  91 00 00 00 3f 00 00 00 00 00 00 0f 00     00:01:39.183  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:01:39.182  SET FEATURES [Set transfer mode]
-
-Error 1 [0] occurred at disk power-on lifetime: 3059 hours (127 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f6 00 00 00 00 00 00 00 00 00 00 e0 00     00:04:41.639  SECURITY DISABLE PASSWORD
-  25 00 00 00 01 00 00 1d 1f 50 00 e0 00     00:00:11.991  READ DMA EXT
-  25 00 00 00 01 00 00 1d 1f 50 00 e0 00     00:00:11.991  READ DMA EXT
-  25 00 00 00 01 00 00 1d 1f 50 00 e0 00     00:00:11.990  READ DMA EXT
-  25 00 00 00 01 00 00 1d 1c 30 00 e0 00     00:00:11.990  READ DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     11263         -
-# 2  Extended offline    Completed without error       00%     11095         -
-# 3  Extended offline    Completed without error       00%     10971         -
-# 4  Extended offline    Completed without error       00%     10804         -
-# 5  Extended offline    Completed without error       00%     10725         -
-# 6  Extended offline    Completed without error       00%     10648         -
-# 7  Extended offline    Completed without error       00%     10484         -
-# 8  Extended offline    Completed without error       00%     10323         -
-# 9  Extended offline    Completed without error       00%     10155         -
-#10  Extended offline    Completed without error       00%      9990         -
-#11  Extended offline    Completed without error       00%      9822         -
+# 1  Extended offline    Completed without error       00%     13007         -
+# 2  Extended offline    Completed without error       00%     12921         -
+# 3  Extended offline    Completed without error       00%     12753         -
+# 4  Extended offline    Completed without error       00%     12585         -
+# 5  Extended offline    Completed without error       00%     12420         -
+# 6  Extended offline    Completed without error       00%     12135         -
+# 7  Extended offline    Completed without error       00%     11969         -
+# 8  Extended offline    Completed without error       00%     11801         -
+# 9  Extended offline    Completed without error       00%     11634         -
+#10  Extended offline    Completed without error       00%     11501         -
+#11  Extended offline    Completed without error       00%     11333         -
+#12  Extended offline    Completed without error       00%     11263         -
+#13  Extended offline    Completed without error       00%     11095         -
+#14  Extended offline    Completed without error       00%     10971         -
+#15  Extended offline    Completed without error       00%     10804         -
+#16  Extended offline    Completed without error       00%     10725         -
+#17  Extended offline    Completed without error       00%     10648         -
+#18  Extended offline    Completed without error       00%     10484         -
+#19  Extended offline    Completed without error       00%     10323         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -256,17 +298,17 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
-Power Cycle Min/Max Temperature:     45/47 Celsius
+Current Temperature:                    44 Celsius
+Power Cycle Min/Max Temperature:     44/45 Celsius
 Lifetime    Min/Max Temperature:     20/60 Celsius
-Under/Over Temperature Limit Count:   0/430
+Under/Over Temperature Limit Count:   0/755
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (268)
+Temperature History Size (Index):    478 (187)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -275,43 +317,43 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1362  ---  Lifetime Power-On Resets
-0x01  0x010  4           11314  ---  Power-on Hours
-0x01  0x018  6     11665339075  ---  Logical Sectors Written
-0x01  0x020  6       231856180  ---  Number of Write Commands
-0x01  0x028  6     18521378359  ---  Logical Sectors Read
-0x01  0x030  6       344744171  ---  Number of Read Commands
+0x01  0x008  4            1501  ---  Lifetime Power-On Resets
+0x01  0x010  4           13089  ---  Power-on Hours
+0x01  0x018  6     14852930752  ---  Logical Sectors Written
+0x01  0x020  6       310669425  ---  Number of Write Commands
+0x01  0x028  6     22411285713  ---  Logical Sectors Read
+0x01  0x030  6       434215255  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4             252  ---  Overlimit Shock Events
+0x02  0x010  4             344  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           10969  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            7991  ---  Head Flying Hours
-0x03  0x018  4          249143  ---  Head Load Events
+0x03  0x008  4           12744  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            9466  ---  Head Flying Hours
+0x03  0x018  4          252768  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4               0  ---  Read Recovery Attempts
+0x03  0x028  4               1  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             538  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             679  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              45  ---  Current Temperature
-0x05  0x010  1              42  N--  Average Short Term Temperature
-0x05  0x018  1              44  N--  Average Long Term Temperature
+0x05  0x008  1              44  ---  Current Temperature
+0x05  0x010  1              40  N--  Average Short Term Temperature
+0x05  0x018  1              46  N--  Average Long Term Temperature
 0x05  0x020  1              60  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              53  N--  Highest Average Short Term Temperature
 0x05  0x038  1              26  N--  Lowest Average Short Term Temperature
 0x05  0x040  1              47  N--  Highest Average Long Term Temperature
 0x05  0x048  1              33  N--  Lowest Average Long Term Temperature
-0x05  0x050  4            1495  ---  Time in Over-Temperature
+0x05  0x050  4            2214  ---  Time in Over-Temperature
 0x05  0x058  1              55  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           26141  ---  Number of Hardware Resets
+0x06  0x008  4           32059  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              18  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              21  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -328,8 +370,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

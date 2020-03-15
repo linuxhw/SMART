@@ -7,7 +7,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Jan  9 18:58:29 2019 MSK
+Local Time is:    Wed Jan 16 22:40:09 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -52,22 +52,22 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   093   006    -    185252502
+  1 Raw_Read_Error_Rate     POSR--   118   093   006    -    192692860
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3586
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3593
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    154000282
-  9 Power_On_Hours          -O--CK   093   093   000    -    6454
+  7 Seek_Error_Rate         POSR--   081   060   030    -    155095347
+  9 Power_On_Hours          -O--CK   093   093   000    -    6501
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2776
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2783
 187 Reported_Uncorrect      -O--CK   072   072   000    -    28
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   076   052   045    -    24 (Min/Max 20/24)
-194 Temperature_Celsius     -O---K   024   048   000    -    24 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   093   069   000    -    180893289
+190 Airflow_Temperature_Cel -O---K   061   052   045    -    39 (Min/Max 22/39)
+194 Temperature_Celsius     -O---K   039   048   000    -    39 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   087   069   000    -    126193766
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   188   000    -    2755
+199 UDMA_CRC_Error_Count    -OSRCK   200   188   000    -    2834
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23552  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 6149 (device log contains only the most recent 20 errors)
+Device Error Count: 6228 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,7 +118,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6149 [8] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6228 [7] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -129,13 +129,13 @@ Error 6149 [8] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 1f 00 00 70 00 e2 00 e0 00     00:00:29.827  READ DMA EXT
-  25 00 00 00 20 00 00 6f 00 e2 e0 e0 00     00:00:29.826  READ DMA EXT
-  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:29.824  READ DMA EXT
-  25 00 00 00 1f 00 00 6f 00 e2 a1 e0 00     00:00:29.824  READ DMA EXT
-  25 00 00 00 21 00 00 6f 00 e2 80 e0 00     00:00:29.823  READ DMA EXT
+  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:29.347  READ DMA EXT
+  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:29.333  READ DMA EXT
+  25 00 00 00 16 00 00 97 00 43 c0 e0 00     00:00:29.324  READ DMA EXT
+  25 00 00 00 29 00 00 97 00 43 97 e0 00     00:00:29.302  READ DMA EXT
+  25 00 00 00 17 00 00 97 00 43 80 e0 00     00:00:29.301  READ DMA EXT
 
-Error 6148 [7] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6227 [6] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -146,13 +146,13 @@ Error 6148 [7] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 2c 00 00 95 00 17 00 e0 00     00:00:36.813  READ DMA EXT
-  25 00 00 00 2c 00 00 95 00 17 00 e0 00     00:00:37.308  READ DMA EXT
-  25 00 00 00 12 00 00 8c 00 15 ee e0 00     00:00:36.870  READ DMA EXT
-  25 00 00 00 2e 00 00 8c 00 15 c0 e0 00     00:00:36.867  READ DMA EXT
-  25 00 00 00 0b 00 00 e1 00 13 f5 e0 00     00:00:36.857  READ DMA EXT
+  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:29.347  READ DMA EXT
+  25 00 00 00 16 00 00 97 00 43 c0 e0 00     00:00:29.333  READ DMA EXT
+  25 00 00 00 29 00 00 97 00 43 97 e0 00     00:00:29.324  READ DMA EXT
+  25 00 00 00 17 00 00 97 00 43 80 e0 00     00:00:29.302  READ DMA EXT
+  25 00 00 00 11 00 00 2e 00 09 ef e0 00     00:00:29.301  READ DMA EXT
 
-Error 6147 [6] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6226 [5] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -163,13 +163,13 @@ Error 6147 [6] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 2c 00 00 95 00 17 00 e0 00     00:00:36.813  READ DMA EXT
-  25 00 00 00 12 00 00 8c 00 15 ee e0 00     00:00:36.808  READ DMA EXT
-  25 00 00 00 2e 00 00 8c 00 15 c0 e0 00     00:00:36.870  READ DMA EXT
-  25 00 00 00 0b 00 00 e1 00 13 f5 e0 00     00:00:36.867  READ DMA EXT
-  25 00 00 00 35 00 00 e1 00 13 c0 e0 00     00:00:36.857  READ DMA EXT
+  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:27.888  READ DMA EXT
+  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:27.887  READ DMA EXT
+  25 00 00 00 1f 00 00 6f 00 e2 a1 e0 00     00:00:27.886  READ DMA EXT
+  25 00 00 00 21 00 00 6f 00 e2 80 e0 00     00:00:27.885  READ DMA EXT
+  25 00 00 00 1e 00 00 6f 00 e2 62 e0 00     00:00:27.884  READ DMA EXT
 
-Error 6146 [5] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6225 [4] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -180,13 +180,13 @@ Error 6146 [5] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:30.797  READ DMA EXT
-  25 00 00 00 16 00 00 97 00 43 c0 e0 00     00:00:30.791  READ DMA EXT
-  25 00 00 00 29 00 00 97 00 43 97 e0 00     00:00:30.777  READ DMA EXT
-  25 00 00 00 17 00 00 97 00 43 80 e0 00     00:00:30.776  READ DMA EXT
-  25 00 00 00 2b 00 00 68 00 43 d5 e0 00     00:00:30.754  READ DMA EXT
+  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:27.888  READ DMA EXT
+  25 00 00 00 1f 00 00 6f 00 e2 a1 e0 00     00:00:27.887  READ DMA EXT
+  25 00 00 00 21 00 00 6f 00 e2 80 e0 00     00:00:27.886  READ DMA EXT
+  25 00 00 00 1e 00 00 6f 00 e2 62 e0 00     00:00:27.885  READ DMA EXT
+  25 00 00 00 22 00 00 6f 00 e2 40 e0 00     00:00:27.884  READ DMA EXT
 
-Error 6145 [4] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6224 [3] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -197,13 +197,13 @@ Error 6145 [4] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 1f 00 00 70 00 e2 00 e0 00     00:00:29.827  READ DMA EXT
-  25 00 00 00 20 00 00 6f 00 e2 e0 e0 00     00:00:29.826  READ DMA EXT
-  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:29.824  READ DMA EXT
-  25 00 00 00 1f 00 00 6f 00 e2 a1 e0 00     00:00:29.824  READ DMA EXT
-  25 00 00 00 21 00 00 6f 00 e2 80 e0 00     00:00:29.823  READ DMA EXT
+  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:29.347  READ DMA EXT
+  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:29.333  READ DMA EXT
+  25 00 00 00 16 00 00 97 00 43 c0 e0 00     00:00:29.324  READ DMA EXT
+  25 00 00 00 29 00 00 97 00 43 97 e0 00     00:00:29.302  READ DMA EXT
+  25 00 00 00 17 00 00 97 00 43 80 e0 00     00:00:29.301  READ DMA EXT
 
-Error 6144 [3] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6223 [2] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -214,13 +214,13 @@ Error 6144 [3] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 2c 00 00 95 00 17 00 e0 00     00:00:36.813  READ DMA EXT
-  25 00 00 00 2c 00 00 95 00 17 00 e0 00     00:00:37.308  READ DMA EXT
-  25 00 00 00 12 00 00 8c 00 15 ee e0 00     00:00:36.870  READ DMA EXT
-  25 00 00 00 2e 00 00 8c 00 15 c0 e0 00     00:00:36.867  READ DMA EXT
-  25 00 00 00 0b 00 00 e1 00 13 f5 e0 00     00:00:36.857  READ DMA EXT
+  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:29.347  READ DMA EXT
+  25 00 00 00 16 00 00 97 00 43 c0 e0 00     00:00:29.333  READ DMA EXT
+  25 00 00 00 29 00 00 97 00 43 97 e0 00     00:00:29.324  READ DMA EXT
+  25 00 00 00 17 00 00 97 00 43 80 e0 00     00:00:29.302  READ DMA EXT
+  25 00 00 00 11 00 00 2e 00 09 ef e0 00     00:00:29.301  READ DMA EXT
 
-Error 6143 [2] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6222 [1] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -231,13 +231,13 @@ Error 6143 [2] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 2c 00 00 95 00 17 00 e0 00     00:00:36.813  READ DMA EXT
-  25 00 00 00 12 00 00 8c 00 15 ee e0 00     00:00:36.808  READ DMA EXT
-  25 00 00 00 2e 00 00 8c 00 15 c0 e0 00     00:00:36.870  READ DMA EXT
-  25 00 00 00 0b 00 00 e1 00 13 f5 e0 00     00:00:36.867  READ DMA EXT
-  25 00 00 00 35 00 00 e1 00 13 c0 e0 00     00:00:36.857  READ DMA EXT
+  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:27.888  READ DMA EXT
+  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:27.887  READ DMA EXT
+  25 00 00 00 1f 00 00 6f 00 e2 a1 e0 00     00:00:27.886  READ DMA EXT
+  25 00 00 00 21 00 00 6f 00 e2 80 e0 00     00:00:27.885  READ DMA EXT
+  25 00 00 00 1e 00 00 6f 00 e2 62 e0 00     00:00:27.884  READ DMA EXT
 
-Error 6142 [1] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hours)
+Error 6221 [0] occurred at disk power-on lifetime: 6498 hours (270 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -248,11 +248,11 @@ Error 6142 [1] occurred at disk power-on lifetime: 6454 hours (268 days + 22 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 2a 00 00 97 00 43 d6 e0 00     00:00:30.797  READ DMA EXT
-  25 00 00 00 16 00 00 97 00 43 c0 e0 00     00:00:30.791  READ DMA EXT
-  25 00 00 00 29 00 00 97 00 43 97 e0 00     00:00:30.777  READ DMA EXT
-  25 00 00 00 17 00 00 97 00 43 80 e0 00     00:00:30.776  READ DMA EXT
-  25 00 00 00 2b 00 00 68 00 43 d5 e0 00     00:00:30.754  READ DMA EXT
+  25 00 00 00 20 00 00 6f 00 e2 c0 e0 00     00:00:27.888  READ DMA EXT
+  25 00 00 00 1f 00 00 6f 00 e2 a1 e0 00     00:00:27.887  READ DMA EXT
+  25 00 00 00 21 00 00 6f 00 e2 80 e0 00     00:00:27.886  READ DMA EXT
+  25 00 00 00 1e 00 00 6f 00 e2 62 e0 00     00:00:27.885  READ DMA EXT
+  25 00 00 00 22 00 00 6f 00 e2 40 e0 00     00:00:27.884  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error

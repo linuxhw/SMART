@@ -4,21 +4,21 @@ Device Model:     TOSHIBA MK6459GSXP
 Serial Number:    --
 LU WWN Device Id: 5 000039 ...
 Firmware Version: GN003J
-User Capacity:    640 135 028 736 bytes [640 GB]
+User Capacity:    640,135,028,736 bytes [640 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Apr 16 20:55:01 2017 MSK
+Local Time is:    Tue Jan  2 22:35:53 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -28,7 +28,7 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  18)	The self-test routine was aborted by
+Self-test execution status:      (  17)	The self-test routine was aborted by
 					the host.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
@@ -60,27 +60,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    2080
-  4 Start_Stop_Count        -O--CK   100   100   000    -    8025
+  3 Spin_Up_Time            POS--K   100   100   001    -    2098
+  4 Start_Stop_Count        -O--CK   100   100   000    -    8871
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   054   054   000    -    18405
+  9 Power_On_Hours          -O--CK   049   049   000    -    20498
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    5131
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1278
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    245
-193 Load_Cycle_Count        -O--CK   073   073   000    -    276405
-194 Temperature_Celsius     -O---K   100   100   000    -    38 (Min/Max 13/52)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    5896
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1313
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    302
+193 Load_Cycle_Count        -O--CK   069   069   000    -    314079
+194 Temperature_Celsius     -O---K   100   100   000    -    37 (Min/Max 13/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-220 Disk_Shift              -O----   100   100   000    -    8242
-222 Loaded_Hours            -O--CK   061   061   000    -    15710
+220 Disk_Shift              -O----   100   100   000    -    8241
+222 Loaded_Hours            -O--CK   057   057   000    -    17476
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    314
+226 Load-in_Time            -OS--K   100   100   000    -    336
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 4
+Device Error Count: 5
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,6 +121,23 @@ Device Error Count: 4
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 5 [4] occurred at disk power-on lifetime: 18425 hours (767 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 30 00 00 4a 2e 7d 2f 6a 00  Error: ICRC, ABRT at LBA = 0x4a2e7d2f = 1244560687
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 05 40 00 18 00 00 4a 2e c1 78 40 00     02:18:32.155  WRITE FPDMA QUEUED
+  61 05 40 00 98 00 00 4a 2e bc 38 40 00     02:18:32.136  WRITE FPDMA QUEUED
+  61 05 40 00 70 00 00 4a 2e b6 f8 40 00     02:18:32.136  WRITE FPDMA QUEUED
+  61 05 40 00 d8 00 00 4a 2e b1 b8 40 00     02:18:32.118  WRITE FPDMA QUEUED
+  61 05 40 00 68 00 00 4a 2e ac 78 40 00     02:18:32.099  WRITE FPDMA QUEUED
 
 Error 4 [3] occurred at disk power-on lifetime: 16371 hours (682 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -192,7 +209,10 @@ Error 1 [0] occurred at disk power-on lifetime: 629 hours (26 days + 5 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               20%     18194         -
+# 1  Extended offline    Aborted by host               10%     19455         -
+# 2  Extended offline    Interrupted (host reset)      10%     19366         -
+# 3  Extended offline    Aborted by host               90%     19271         -
+# 4  Extended offline    Aborted by host               20%     18194         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -209,8 +229,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     30/39 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     36/37 Celsius
 Lifetime    Min/Max Temperature:     13/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -219,7 +239,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (24)
+Temperature History Size (Index):    478 (94)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -237,8 +257,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4         2237  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

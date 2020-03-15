@@ -4,18 +4,19 @@ Device Model:     WDC WD10EARS-00Y5B1
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 80.00A80
-User Capacity:    1.000.204.886.016 bytes [1,00 TB]
+User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Mar 10 10:34:11 2019 CET
+Local Time is:    Mon Mar 11 14:31:27 2019 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -23,8 +24,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,17 +60,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   199   195   051    -    29672
-  3 Spin_Up_Time            POS--K   133   118   021    -    6325
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8429
+  3 Spin_Up_Time            POS--K   137   118   021    -    6125
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8437
   5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    5
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   070   070   000    -    22131
+  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   070   070   000    -    22135
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6306
-192 Power-Off_Retract_Count -O--CK   198   198   000    -    1714
-193 Load_Cycle_Count        -O--CK   093   093   000    -    322711
-194 Temperature_Celsius     -O---K   124   089   000    -    23
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6314
+192 Power-Off_Retract_Count -O--CK   198   198   000    -    1721
+193 Load_Cycle_Count        -O--CK   093   093   000    -    322765
+194 Temperature_Celsius     -O---K   113   089   000    -    34
 196 Reallocated_Event_Count -O--CK   198   198   000    -    2
 197 Current_Pending_Sector  -O--CK   200   200   000    -    1
 198 Offline_Uncorrectable   ----CK   200   200   000    -    1
@@ -92,7 +93,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -279,9 +280,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     20/23 Celsius
-Lifetime    Min/Max Temperature:     21/58 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     34/34 Celsius
+Lifetime    Min/Max Temperature:      ?/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -289,11 +290,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (135)
+Temperature History Size (Index):    478 (420)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -306,7 +309,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4          445  Vendor specific
+0x8000  4          580  Vendor specific
 
 
 

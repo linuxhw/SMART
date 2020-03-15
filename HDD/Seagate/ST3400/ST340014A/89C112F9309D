@@ -3,11 +3,11 @@ Model Family:     Seagate Barracuda 7200.7 and 7200.7 Plus
 Device Model:     ST340014A
 Serial Number:    --
 Firmware Version: 3.06
-User Capacity:    40 020 664 320 bytes [40,0 GB]
+User Capacity:    40,020,664,320 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Sat Jun  3 08:57:58 2017 MSK
+Local Time is:    Mon Mar 12 16:30:55 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,16 +51,16 @@ recommended polling time: 	 (  31) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   062   057   006    -    84879714
-  3 Spin_Up_Time            PO----   098   098   000    -    0
+  1 Raw_Read_Error_Rate     POSR--   063   057   006    -    17398995
+  3 Spin_Up_Time            PO----   099   098   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    21
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    147163582
-  9 Power_On_Hours          -O--CK   098   098   000    -    2528
+  7 Seek_Error_Rate         POSR--   084   060   030    -    278209962
+  9 Power_On_Hours          -O--CK   095   095   000    -    4586
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    723
-194 Temperature_Celsius     -O---K   034   056   000    -    34
-195 Hardware_ECC_Recovered  -O-RC-   062   057   000    -    84879714
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1454
+194 Temperature_Celsius     -O---K   049   056   000    -    49
+195 Hardware_ECC_Recovered  -O-RC-   063   057   000    -    17398995
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   176   000    -    244
@@ -98,7 +98,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 279 (device log contains only the most recent five errors)
+ATA Error Count: 280 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -112,6 +112,23 @@ ATA Error Count: 279 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 280 occurred at disk power-on lifetime: 3258 hours (135 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 01 00 00 a0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 20 01 01 00 00 a0 00      00:00:06.794  READ DMA
+  ef 03 45 01 10 00 a0 00      00:00:06.784  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 10 00 a0 00      00:00:06.754  SET FEATURES [Set transfer mode]
+  c6 20 10 01 00 00 a0 00      00:00:06.598  SET MULTIPLE MODE
+  ec 20 3f 01 00 00 a0 00      00:00:00.000  IDENTIFY DEVICE
 
 Error 279 occurred at disk power-on lifetime: 1400 hours (58 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -180,23 +197,6 @@ Error 276 occurred at disk power-on lifetime: 1400 hours (58 days + 8 hours)
   4f 00 00 01 00 00 e0 00      00:05:21.050  [RESERVED]
   47 00 00 01 00 00 e3 00      00:05:20.900  READ LOG DMA EXT
   c7 00 00 01 00 00 e3 00      00:05:20.160  READ DMA QUEUED [OBS-ACS-2]
-
-Error 275 occurred at disk power-on lifetime: 1400 hours (58 days + 8 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  10 51 00 01 00 00 e2  Error: IDNF
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  2f 00 00 01 00 00 e2 00      00:05:21.349  READ LOG EXT
-  cf 00 00 01 00 00 e1 00      00:05:21.199  [RESERVED]
-  d7 00 00 01 00 00 e0 00      00:05:21.050  [RESERVED]
-  4f 00 00 01 00 00 e0 00      00:05:20.900  [RESERVED]
-  47 00 00 01 00 00 e3 00      00:05:20.160  READ LOG DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

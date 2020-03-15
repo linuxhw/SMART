@@ -7,7 +7,7 @@ User Capacity:    250 058 268 160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Jan 27 01:14:31 2016 ALMT
+Local Time is:    Sun Oct 23 02:19:23 2016 ALMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   111   095   006    -    35265173
+  1 Raw_Read_Error_Rate     POSR--   110   094   006    -    183271045
   3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    9055
+  4 Start_Stop_Count        -O--CK   091   091   020    -    9797
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    2
-  7 Seek_Error_Rate         POSR--   051   051   030    -    16364405177798
-  9 Power_On_Hours          -O--CK   067   067   000    -    29314
+  7 Seek_Error_Rate         POSR--   052   051   030    -    16364520188647
+  9 Power_On_Hours          -O--CK   064   064   000    -    32191
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   090   090   020    -    10538
+ 12 Power_Cycle_Count       -O--CK   089   089   020    -    11306
 187 Reported_Uncorrect      -O--CK   088   088   000    -    12
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   049   045    -    33 (Min/Max 22/34)
-194 Temperature_Celsius     -O---K   033   051   000    -    33 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   062   051   000    -    7112949
+190 Airflow_Temperature_Cel -O---K   062   049   045    -    38 (Min/Max 25/38)
+194 Temperature_Celsius     -O---K   038   051   000    -    38 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   063   051   000    -    157596717
 197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967295
 198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967295
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    16
@@ -86,8 +86,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -153,7 +153,7 @@ Error 1961 [0] occurred at disk power-on lifetime: 25474 hours (1061 days + 10 h
   60 00 01 00 01 00 19 d7 00 98 fe 00 00     02:01:16.733  READ FPDMA QUEUED
   60 00 40 00 40 00 02 2e 00 80 98 00 00     02:01:16.728  READ FPDMA QUEUED
 
-Error 1960 [19] occurred at disk power-on lifetime: 25474 hours (1061 days + 10 hours)
+Error 1960 [19] occurred at disk power-on lifetime: 24808 hours (1033 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -164,13 +164,13 @@ Error 1960 [19] occurred at disk power-on lifetime: 25474 hours (1061 days + 10 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 02 70 00 84 20 28 00     01:34:56.454  READ LOG EXT
-  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     01:34:56.447  READ FPDMA QUEUED
-  60 00 80 00 80 00 02 70 00 84 20 00 00     01:34:56.441  READ FPDMA QUEUED
-  60 00 d8 00 d8 00 02 6f 00 84 48 00 00     01:34:56.441  READ FPDMA QUEUED
-  60 00 10 00 10 00 02 6f 00 84 28 00 00     01:34:56.440  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 00 28 00     02:03:21.576  READ LOG EXT
+  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     02:03:21.567  READ FPDMA QUEUED
+  60 00 01 00 01 00 00 00 00 00 00 00 00     02:03:21.557  READ FPDMA QUEUED
+  60 00 01 00 01 00 19 d7 00 98 fe 00 00     02:03:21.551  READ FPDMA QUEUED
+  60 00 40 00 40 00 03 5a 00 84 18 00 00     02:03:21.541  READ FPDMA QUEUED
 
-Error 1959 [18] occurred at disk power-on lifetime: 25400 hours (1058 days + 8 hours)
+Error 1959 [18] occurred at disk power-on lifetime: 24807 hours (1033 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -181,13 +181,13 @@ Error 1959 [18] occurred at disk power-on lifetime: 25400 hours (1058 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 f2 00 3d 32 28 00     00:27:27.101  READ LOG EXT
-  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     00:27:27.100  READ FPDMA QUEUED
-  60 00 38 00 38 00 00 3e 00 54 32 00 00     00:27:27.100  READ FPDMA QUEUED
-  60 00 40 00 40 00 00 f2 00 3d 32 00 00     00:27:27.063  READ FPDMA QUEUED
-  61 00 08 00 08 00 00 f0 00 66 40 00 00     00:27:27.063  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 03 aa 00 ac 38 28 00     00:02:51.043  READ LOG EXT
+  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     00:02:51.042  READ FPDMA QUEUED
+  60 00 30 00 30 00 03 aa 00 ac 38 00 00     00:02:51.042  READ FPDMA QUEUED
+  60 00 01 00 01 00 00 00 00 00 00 00 00     00:02:51.042  READ FPDMA QUEUED
+  60 00 eb 00 eb 00 00 3a 00 3a 18 00 00     00:02:51.034  READ FPDMA QUEUED
 
-Error 1958 [17] occurred at disk power-on lifetime: 25400 hours (1058 days + 8 hours)
+Error 1958 [17] occurred at disk power-on lifetime: 25510 hours (1062 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -198,13 +198,13 @@ Error 1958 [17] occurred at disk power-on lifetime: 25400 hours (1058 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 de 00 1b e8 28 00     00:27:06.008  READ LOG EXT
-  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     00:27:05.996  READ FPDMA QUEUED
-  60 00 08 00 08 00 00 de 00 1b e8 00 00     00:27:05.996  READ FPDMA QUEUED
-  60 00 01 00 01 00 00 00 00 00 00 00 00     00:27:05.987  READ FPDMA QUEUED
-  60 00 08 00 08 00 00 4f 00 6b d8 00 00     00:27:06.057  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 dc 00 38 a0 28 00     03:03:25.794  READ LOG EXT
+  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     03:03:25.794  READ FPDMA QUEUED
+  60 00 38 00 38 00 00 dc 00 38 a0 00 00     03:03:25.794  READ FPDMA QUEUED
+  60 00 01 00 01 00 00 00 00 00 00 00 00     03:03:25.824  READ FPDMA QUEUED
+  60 00 01 00 01 00 19 d7 00 98 fe 00 00     03:03:25.816  READ FPDMA QUEUED
 
-Error 1957 [16] occurred at disk power-on lifetime: 25394 hours (1058 days + 2 hours)
+Error 1957 [16] occurred at disk power-on lifetime: 25474 hours (1061 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -215,13 +215,13 @@ Error 1957 [16] occurred at disk power-on lifetime: 25394 hours (1058 days + 2 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 02 5a 00 29 d0 28 00     00:27:20.051  READ LOG EXT
-  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     00:27:20.025  READ FPDMA QUEUED
-  60 00 30 00 30 00 02 5a 00 29 d0 00 00     00:27:20.025  READ FPDMA QUEUED
-  60 00 05 00 05 00 00 49 00 56 d6 00 00     00:27:20.024  READ FPDMA QUEUED
-  60 00 40 00 08 00 00 68 00 3a 82 40 00     00:27:20.023  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 00 28 00     02:01:16.748  READ LOG EXT
+  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     02:01:16.746  READ FPDMA QUEUED
+  60 00 01 00 01 00 00 00 00 00 00 00 00     02:01:16.737  READ FPDMA QUEUED
+  60 00 01 00 01 00 19 d7 00 98 fe 00 00     02:01:16.733  READ FPDMA QUEUED
+  60 00 40 00 40 00 02 2e 00 80 98 00 00     02:01:16.728  READ FPDMA QUEUED
 
-Error 1956 [15] occurred at disk power-on lifetime: 25394 hours (1058 days + 2 hours)
+Error 1956 [15] occurred at disk power-on lifetime: 24808 hours (1033 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -232,13 +232,13 @@ Error 1956 [15] occurred at disk power-on lifetime: 25394 hours (1058 days + 2 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 02 e8 00 84 c0 28 00     00:26:58.917  READ LOG EXT
-  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     00:26:58.917  READ FPDMA QUEUED
-  60 00 20 00 20 00 02 e8 00 84 c0 00 00     00:26:58.916  READ FPDMA QUEUED
-  60 00 c0 00 c0 00 00 35 00 32 c8 00 00     00:26:58.906  READ FPDMA QUEUED
-  60 00 08 00 08 00 00 35 00 32 c0 00 00     00:26:58.884  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 00 28 00     02:03:21.576  READ LOG EXT
+  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     02:03:21.567  READ FPDMA QUEUED
+  60 00 01 00 01 00 00 00 00 00 00 00 00     02:03:21.557  READ FPDMA QUEUED
+  60 00 01 00 01 00 19 d7 00 98 fe 00 00     02:03:21.551  READ FPDMA QUEUED
+  60 00 40 00 40 00 03 5a 00 84 18 00 00     02:03:21.541  READ FPDMA QUEUED
 
-Error 1955 [14] occurred at disk power-on lifetime: 25354 hours (1056 days + 10 hours)
+Error 1955 [14] occurred at disk power-on lifetime: 24807 hours (1033 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -249,33 +249,33 @@ Error 1955 [14] occurred at disk power-on lifetime: 25354 hours (1056 days + 10 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 00 28 00     02:42:34.371  READ LOG EXT
-  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     02:42:34.364  READ FPDMA QUEUED
-  60 00 01 00 01 00 00 00 00 00 00 00 00     02:42:34.359  READ FPDMA QUEUED
-  60 00 01 00 01 00 19 d7 00 98 fe 00 00     02:42:34.351  READ FPDMA QUEUED
-  60 00 40 00 40 00 02 dd 00 68 f8 00 00     02:42:34.340  READ FPDMA QUEUED
+  2f 00 00 00 01 00 03 aa 00 ac 38 28 00     00:02:51.043  READ LOG EXT
+  60 00 01 00 01 00 bd 0e 00 7b 69 00 00     00:02:51.042  READ FPDMA QUEUED
+  60 00 30 00 30 00 03 aa 00 ac 38 00 00     00:02:51.042  READ FPDMA QUEUED
+  60 00 01 00 01 00 00 00 00 00 00 00 00     00:02:51.042  READ FPDMA QUEUED
+  60 00 eb 00 eb 00 00 3a 00 3a 18 00 00     00:02:51.034  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     29118         -
-# 2  Extended offline    Completed without error       00%     28972         -
-# 3  Extended offline    Completed without error       00%     28897         -
-# 4  Extended offline    Completed without error       00%     28809         -
-# 5  Extended offline    Completed without error       00%     28726         -
-# 6  Extended offline    Completed without error       00%     28648         -
-# 7  Extended offline    Aborted by host               60%     28589         -
-# 8  Extended offline    Completed without error       00%     28408         -
-# 9  Extended offline    Interrupted (host reset)      70%     28341         -
-#10  Extended offline    Completed without error       00%     28217         -
-#11  Extended offline    Completed without error       00%     28162         -
-#12  Extended offline    Completed without error       00%     28095         -
-#13  Extended offline    Completed without error       00%     28022         -
-#14  Extended offline    Completed without error       00%     27948         -
-#15  Extended offline    Completed without error       00%     27862         -
-#16  Extended offline    Completed without error       00%     27649         -
-#17  Extended offline    Completed without error       00%     27581         -
-#18  Extended offline    Completed without error       00%     27540         -
-#19  Extended offline    Completed without error       00%     27463         -
+# 1  Extended offline    Completed without error       00%     32179         -
+# 2  Extended offline    Completed without error       00%     32093         -
+# 3  Extended offline    Completed without error       00%     32028         -
+# 4  Extended offline    Completed without error       00%     31958         -
+# 5  Extended offline    Completed without error       00%     31885         -
+# 6  Extended offline    Completed without error       00%     31790         -
+# 7  Extended offline    Completed without error       00%     31699         -
+# 8  Extended offline    Completed without error       00%     31624         -
+# 9  Extended offline    Completed without error       00%     31560         -
+#10  Extended offline    Completed without error       00%     31508         -
+#11  Extended offline    Completed without error       00%     31434         -
+#12  Extended offline    Aborted by host               70%     31374         -
+#13  Extended offline    Completed without error       00%     31315         -
+#14  Extended offline    Completed without error       00%     31238         -
+#15  Extended offline    Completed without error       00%     31142         -
+#16  Extended offline    Completed without error       00%     31042         -
+#17  Extended offline    Completed without error       00%     30946         -
+#18  Extended offline    Completed without error       00%     30770         -
+#19  Extended offline    Completed without error       00%     30688         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -290,7 +290,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

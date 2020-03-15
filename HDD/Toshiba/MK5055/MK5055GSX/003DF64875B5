@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Nov 17 02:35:55 2019 UTC
+Local Time is:    Sat Nov 23 04:25:47 2019 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -17,7 +17,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -27,9 +27,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 247)	Self-test routine in progress...
+					70% of test remaining.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -60,27 +59,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1647
-  4 Start_Stop_Count        -O--CK   100   100   000    -    4010
+  3 Spin_Up_Time            POS--K   100   100   001    -    1638
+  4 Start_Stop_Count        -O--CK   100   100   000    -    4023
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   051   051   000    -    19922
+  9 Power_On_Hours          -O--CK   051   051   000    -    19946
  10 Spin_Retry_Count        PO--CK   180   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3785
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3798
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    22
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    38
-193 Load_Cycle_Count        -O--CK   079   079   000    -    211073
-194 Temperature_Celsius     -O---K   100   100   000    -    32 (Min/Max 17/47)
+193 Load_Cycle_Count        -O--CK   079   079   000    -    211240
+194 Temperature_Celsius     -O---K   100   100   000    -    45 (Min/Max 17/47)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    75
-222 Loaded_Hours            -O--CK   078   078   000    -    9042
+222 Loaded_Hours            -O--CK   078   078   000    -    9044
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    339
+226 Load-in_Time            -OS--K   100   100   000    -    327
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -132,17 +131,18 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     --/32 Celsius
-Lifetime    Min/Max Temperature:     --/47 Celsius
+SCT Support Level:                   1
+Device State:                        DST executing in background (3)
+Current Temperature:                 45 Celsius
+Power Cycle Max Temperature:         45 Celsius
+Lifetime    Max Temperature:         47 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (234)
+Temperature History Size (Index):    478 (190)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -162,14 +162,12 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          815  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  4            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  4            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  4            0  R_ERR response for host-to-device non-data FIS, non-CRC
-
-
 

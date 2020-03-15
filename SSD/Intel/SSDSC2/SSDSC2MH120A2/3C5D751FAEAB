@@ -4,19 +4,20 @@ Device Model:     INTEL SSDSC2MH120A2
 Serial Number:    --
 LU WWN Device Id: 0 1507a5 ...
 Firmware Version: PPG4
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 2d
 SATA Version is:  SATA 3.0, 6.0 Gb/s
-Local Time is:    Mon Sep 18 23:34:02 2017 MSK
+Local Time is:    Mon May  6 16:31:29 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -61,12 +62,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10891
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2359
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    4
-225 Host_Writes_32MiB       ----CK   100   100   000    -    33725
+  9 Power_On_Hours          -O--CK   100   100   000    -    15429
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3168
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    7
+225 Host_Writes_32MiB       ----CK   100   100   000    -    76834
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   090   090   000    -    0
+233 Media_Wearout_Indicator -O--CK   085   085   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -82,7 +83,7 @@ Address    Access  R/W   Size  Description
 0x03       GPL,SL  R/O      1  Ext. Comprehensive SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W      1  Host vendor specific log
 0xa9       GPL,SL  VS       1  Device vendor specific log
@@ -113,10 +114,12 @@ Min/Max Temperature Limit:            ?/ ? Celsius
 Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
-           Read:      2 (0,2 seconds)
-          Write:      2 (0,2 seconds)
+           Read:      2 (0.2 seconds)
+          Write:      2 (0.2 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -129,7 +132,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

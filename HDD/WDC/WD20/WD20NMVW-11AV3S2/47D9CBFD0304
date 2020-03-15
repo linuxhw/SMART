@@ -1,6 +1,3 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.1.15-desktop-1bP] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
-
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Elements / My Passport (USB, AF)
 Device Model:     WDC WD20NMVW-11AV3S2
@@ -13,7 +10,7 @@ Rotation Rate:    5200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Jan 25 16:47:58 2020 CET
+Local Time is:    Mon Mar  2 21:52:15 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,20 +62,20 @@ SCT capabilities: 	       (0x7035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    1
-  3 Spin_Up_Time            POS--K   211   191   021    -    4441
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8938
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    2
+  3 Spin_Up_Time            POS--K   205   191   021    -    4750
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10178
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   089   089   000    -    8666
+  9 Power_On_Hours          -O--CK   088   088   000    -    9112
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1034
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    329
-193 Load_Cycle_Count        -O--CK   177   177   000    -    71746
-194 Temperature_Celsius     -O---K   120   099   000    -    32
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1118
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    367
+193 Load_Cycle_Count        -O--CK   174   174   000    -    78969
+194 Temperature_Celsius     -O---K   121   099   000    -    31
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    1
+197 Current_Pending_Sector  -O--CK   200   200   000    -    5
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
@@ -113,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 1
+Device Error Count: 3
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,6 +125,40 @@ Device Error Count: 1
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 8819 hours (367 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 40 00 00 0f 25 d8 80 40 00  Error: UNC 64 sectors at LBA = 0x0f25d880 = 254138496
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 0f 25 d8 78 40 00     05:13:53.680  READ DMA EXT
+  25 00 00 00 40 00 00 04 47 f0 38 40 00     05:13:53.640  READ DMA EXT
+  25 00 00 00 40 00 00 28 be 64 b8 40 00     05:13:53.625  READ DMA EXT
+  25 00 00 00 40 00 00 11 93 2c b8 40 00     05:13:53.609  READ DMA EXT
+  25 00 00 00 40 00 00 27 f1 28 f8 40 00     05:13:53.596  READ DMA EXT
+
+Error 2 [1] occurred at disk power-on lifetime: 8819 hours (367 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 40 00 00 50 00 18 00 40 00  Error: UNC 64 sectors at LBA = 0x50001800 = 1342183424
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 50 00 18 00 40 00     04:57:25.076  READ DMA EXT
+  25 00 00 00 40 00 00 4f a0 28 00 40 00     04:57:25.065  READ DMA EXT
+  25 00 00 00 40 00 00 4f a0 20 00 40 00     04:57:25.047  READ DMA EXT
+  25 00 00 00 10 00 00 4f a0 1c f0 40 00     04:57:25.046  READ DMA EXT
+  25 00 00 00 f0 00 00 4f a0 1c 00 40 00     04:57:25.043  READ DMA EXT
 
 Error 1 [0] occurred at disk power-on lifetime: 7818 hours (325 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -165,7 +196,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     32/32 Celsius
+Power Cycle Min/Max Temperature:     23/32 Celsius
 Lifetime    Min/Max Temperature:     17/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -177,7 +208,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (92)
+Temperature History Size (Index):    128 (79)
 
 SCT Error Recovery Control command not supported
 
@@ -195,10 +226,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           19  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         1511  Vendor specific
+0x8000  4         2195  Vendor specific
 

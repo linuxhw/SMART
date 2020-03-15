@@ -5,19 +5,20 @@ Serial Number:    --
 LU WWN Device Id: 0 250313 ...
 Add. Product Id:  DC7020B0
 Firmware Version: 1.06
-User Capacity:    128 035 676 160 bytes [128 GB]
+User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov  8 21:07:41 2017 +07
+Local Time is:    Wed Oct 24 21:09:40 2018 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -61,20 +62,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO----   100   100   070    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    9637
- 12 Power_Cycle_Count       -O----   100   100   000    -    1386
-177 Wear_Leveling_Count     PO----   100   100   000    -    33607
+  9 Power_On_Hours          -O----   100   100   000    -    9652
+ 12 Power_Cycle_Count       -O----   100   100   000    -    1798
+177 Wear_Leveling_Count     PO----   100   100   000    -    35594
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 181 Program_Fail_Cnt_Total  PO----   100   100   000    -    0
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    0
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-192 Power-Off_Retract_Count PO----   100   100   000    -    131
+192 Power-Off_Retract_Count PO----   100   100   000    -    134
 196 Reallocated_Event_Count PO----   100   100   000    -    0
 198 Offline_Uncorrectable   PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    0
-241 Host_Writes_32MiB       PO----   100   100   000    -    102680
-242 Host_Reads_32MiB        PO----   100   100   000    -    111153
+241 Host_Writes_32MiB       PO----   100   100   000    -    106509
+242 Host_Reads_32MiB        PO----   100   100   000    -    121592
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,7 +90,7 @@ Address    Access  R/W   Size  Description
 0x01       GPL,SL  R/O      1  Summary SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W      1  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -141,10 +142,12 @@ Min/Max Temperature Limit:            ?/ ? Celsius
 Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
-           Read:      2 (0,2 seconds)
-          Write:      2 (0,2 seconds)
+           Read:      2 (0.2 seconds)
+          Write:      2 (0.2 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -157,7 +160,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

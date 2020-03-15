@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Dec  4 20:26:13 2017 EET
+Local Time is:    Mon Dec  4 22:05:51 2017 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,8 +57,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     -O--CK   100   100   000    -    0
   9 Power_On_Hours_and_Msec -O--CK   000   100   000    -    21h+00m+00.000s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    141
-165 Unknown_Attribute       -O--CK   100   100   000    -    17192910862
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    143
+165 Unknown_Attribute       -O--CK   100   100   000    -    17192910864
 166 Unknown_Attribute       -O--CK   100   100   000    -    0
 167 Unknown_Attribute       -O--CK   100   100   000    -    0
 168 Unknown_Attribute       -O--CK   100   100   000    -    1
@@ -70,14 +70,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    92
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   058   047   000    -    42 (Min/Max 0/53)
+194 Temperature_Celsius     -O---K   060   047   000    -    40 (Min/Max 0/53)
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
-230 Life_Curve_Status       -O--CK   100   100   000    -    17179934724
+230 Life_Curve_Status       -O--CK   100   100   000    -    21474967557
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 SandForce_Internal      -O--CK   100   100   000    -    31
-234 SandForce_Internal      -O--CK   100   100   000    -    111
-241 Lifetime_Writes_GiB     ----CK   253   253   000    -    89
-242 Lifetime_Reads_GiB      ----CK   253   253   000    -    61
+233 SandForce_Internal      -O--CK   100   100   000    -    36
+234 SandForce_Internal      -O--CK   100   100   000    -    123
+241 Lifetime_Writes_GiB     ----CK   253   253   000    -    101
+242 Lifetime_Reads_GiB      ----CK   253   253   000    -    62
 244 Unknown_Attribute       -O--CK   000   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -117,12 +117,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             141  ---  Lifetime Power-On Resets
+0x01  0x008  4             143  ---  Lifetime Power-On Resets
 0x01  0x010  4              21  ---  Power-on Hours
-0x01  0x018  6       187862408  ---  Logical Sectors Written
-0x01  0x020  6          990415  ---  Number of Write Commands
-0x01  0x028  6       128231982  ---  Logical Sectors Read
-0x01  0x030  6         1367221  ---  Number of Read Commands
+0x01  0x018  6       211812444  ---  Logical Sectors Written
+0x01  0x020  6         1021123  ---  Number of Write Commands
+0x01  0x028  6       131823166  ---  Logical Sectors Read
+0x01  0x030  6         1409869  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -134,5 +134,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+
+
 

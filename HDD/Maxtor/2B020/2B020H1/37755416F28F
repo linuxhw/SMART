@@ -7,7 +7,7 @@ User Capacity:    20 490 559 488 bytes [20,4 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Fri Sep 22 21:41:02 2017 MSK
+Local Time is:    Thu Sep 28 21:47:47 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -51,28 +51,28 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   234   233   063    -    5321
-  4 Start_Stop_Count        -O--CK   253   253   000    -    1467
-  5 Reallocated_Sector_Ct   PO--CK   134   134   063    -    301
+  3 Spin_Up_Time            POS--K   233   233   063    -    7127
+  4 Start_Stop_Count        -O--CK   253   253   000    -    1489
+  5 Reallocated_Sector_Ct   PO--CK   132   132   063    -    306
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   248   244   187    -    55374
-  9 Power_On_Minutes        -O--CK   252   252   000    -    379h+23m
+  8 Seek_Time_Performance   POS--K   250   244   187    -    32863
+  9 Power_On_Minutes        -O--CK   252   252   000    -    380h+46m
  10 Spin_Retry_Count        PO-R-K   253   252   223    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   249   249   000    -    1801
-192 Power-Off_Retract_Count -O--CK   252   252   000    -    1001
-193 Load_Cycle_Count        -O--CK   253   253   000    -    1987
+ 12 Power_Cycle_Count       -O--CK   249   249   000    -    1824
+192 Power-Off_Retract_Count -O--CK   252   252   000    -    1009
+193 Load_Cycle_Count        -O--CK   253   253   000    -    2046
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    17
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    12
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
-197 Current_Pending_Sector  ---R--   253   212   000    -    0
+197 Current_Pending_Sector  ---R--   252   212   000    -    1
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   199   198   000    -    1
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    2
+201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    1
 202 Data_Address_Mark_Errs  -O-R--   253   249   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    1
+203 Run_Out_Cancel          PO-R--   253   252   180    -    0
 204 Soft_ECC_Correction     -O-R--   253   251   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
@@ -95,9 +95,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 8087 inconsistent with error log pointer 5
+Warning: ATA error count 8091 inconsistent with error log pointer 5
 
-ATA Error Count: 8087 (device log contains only the most recent five errors)
+ATA Error Count: 8091 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -111,6 +111,74 @@ ATA Error Count: 8087 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 8091 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 0b 4f c2 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 00 4f c2 00 08      00:48:15.760  SMART READ LOG
+  b0 da 00 00 4f c2 00 08      00:48:15.712  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 00 08      00:48:15.696  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 d0 01 00 4f c2 00 08      00:48:15.648  SMART READ DATA
+  ec 00 01 00 00 00 00 08      00:48:15.632  IDENTIFY DEVICE
+
+Error 8090 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 b5 38 13 09 e0  Error: UNC 181 sectors at LBA = 0x00091338 = 594744
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 38 13 09 e0 08      00:14:22.192  READ DMA
+  c8 00 00 20 66 08 e0 08      00:14:22.192  READ DMA
+  c8 00 20 80 05 ca e1 08      00:14:22.160  READ DMA
+  c8 00 00 70 64 08 e0 08      00:14:22.144  READ DMA
+  c8 00 00 78 60 08 e0 08      00:14:22.128  READ DMA
+
+Error 8089 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 b5 38 13 09 e0  Error: UNC 181 sectors at LBA = 0x00091338 = 594744
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 38 13 09 e0 08      00:06:00.816  READ DMA
+  c8 00 00 20 66 08 e0 08      00:06:00.816  READ DMA
+  c8 00 08 08 0d 81 e1 08      00:06:00.800  READ DMA
+  c8 00 20 00 ae a5 e1 08      00:06:00.784  READ DMA
+  c8 00 00 70 64 08 e0 08      00:06:00.752  READ DMA
+
+Error 8088 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 b5 38 13 09 e0  Error: UNC 181 sectors at LBA = 0x00091338 = 594744
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 38 13 09 e0 08      00:31:22.752  READ DMA
+  c8 00 18 10 0c cb e1 08      00:31:22.736  READ DMA
+  c8 00 00 20 66 08 e0 08      00:31:22.736  READ DMA
+  c8 00 00 70 64 08 e0 08      00:31:22.736  READ DMA
+  c8 00 00 78 60 08 e0 08      00:31:22.720  READ DMA
 
 Error 8087 occurred at disk power-on lifetime: 355 hours (14 days + 19 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -128,74 +196,6 @@ Error 8087 occurred at disk power-on lifetime: 355 hours (14 days + 19 hours)
   ca 00 08 20 89 8f e0 08      00:33:37.808  WRITE DMA
   ca 00 08 c8 26 04 e1 08      00:33:37.808  WRITE DMA
   e7 da 00 00 4f c2 a0 08      00:33:37.808  FLUSH CACHE
-
-Error 8086 occurred at disk power-on lifetime: 355 hours (14 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 0b 4f c2 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 08      00:22:19.344  SMART READ LOG
-  c8 00 20 78 cb 50 e1 08      00:22:19.344  READ DMA
-  ca 00 10 28 7a 90 e0 08      00:22:19.328  WRITE DMA
-  c8 00 80 40 60 33 e0 08      00:22:19.328  READ DMA
-  e7 da 00 00 4f c2 a0 08      00:22:19.312  FLUSH CACHE
-
-Error 8085 occurred at disk power-on lifetime: 355 hours (14 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 0b 4f c2 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 08      00:53:23.792  SMART READ LOG
-  e7 00 00 9f f0 50 a0 08      00:53:23.776  FLUSH CACHE
-  ca 00 20 80 f0 50 e0 08      00:53:23.776  WRITE DMA
-  ca 00 08 30 65 04 e1 08      00:53:23.776  WRITE DMA
-  e7 da 00 00 4f c2 a0 08      00:53:23.776  FLUSH CACHE
-
-Error 8084 occurred at disk power-on lifetime: 354 hours (14 days + 18 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 0b 4f c2 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 08      00:10:02.816  SMART READ LOG
-  ca 00 10 98 29 91 e0 08      00:10:02.816  WRITE DMA
-  c8 00 f8 e8 64 51 e1 08      00:10:02.816  READ DMA
-  c8 00 10 b8 53 51 e1 08      00:10:02.800  READ DMA
-  e7 da 00 00 4f c2 a0 08      00:10:02.784  FLUSH CACHE
-
-Error 8083 occurred at disk power-on lifetime: 354 hours (14 days + 18 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 0b 4f c2 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 08      00:57:20.928  SMART READ LOG
-  e7 00 00 bf 2f 91 a0 08      00:57:20.896  FLUSH CACHE
-  ca 00 08 b8 2f 91 e0 08      00:57:20.896  WRITE DMA
-  ca 00 08 f8 e8 04 e1 08      00:57:20.896  WRITE DMA
-  e7 da 00 00 4f c2 a0 08      00:57:20.896  FLUSH CACHE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

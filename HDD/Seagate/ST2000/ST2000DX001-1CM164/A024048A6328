@@ -4,20 +4,21 @@ Device Model:     ST2000DX001-1CM164
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: CC62
-User Capacity:    2 000 398 934 016 bytes [2,00 TB]
+User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Dec  1 22:25:13 2016 +05
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Thu Jul 12 22:07:00 2018 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -58,30 +59,30 @@ SCT capabilities: 	       (0x1081)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    217493320
+  1 Raw_Read_Error_Rate     POSR--   116   099   006    -    103813992
   3 Spin_Up_Time            PO----   096   094   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    818
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1960
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   071   060   030    -    14299585
-  9 Power_On_Hours          -O--CK   094   094   000    -    5878
+  7 Seek_Error_Rate         POSR--   072   060   030    -    17639971
+  9 Power_On_Hours          -O--CK   091   091   000    -    8448
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    746
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1201
 183 Runtime_Bad_Block       -O--CK   099   099   000    -    1
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
+188 Command_Timeout         -O--CK   100   100   000    -    0 0 2
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   050   045    -    37 (Min/Max 26/37)
+190 Airflow_Temperature_Cel -O---K   061   050   045    -    39 (Min/Max 29/39)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    371
-193 Load_Cycle_Count        -O--CK   095   095   000    -    11658
-194 Temperature_Celsius     -O---K   037   050   000    -    37 (0 20 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    598
+193 Load_Cycle_Count        -O--CK   093   093   000    -    14547
+194 Temperature_Celsius     -O---K   039   050   000    -    39 (0 20 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    6725h+54m+15.096s
-241 Total_LBAs_Written      ------   100   253   000    -    8765112730
-242 Total_LBAs_Read         ------   100   253   000    -    7110971710
+240 Head_Flying_Hours       ------   100   253   000    -    9448h+22m+20.379s
+241 Total_LBAs_Written      ------   100   253   000    -    11176363314
+242 Total_LBAs_Read         ------   100   253   000    -    9937003583
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -123,11 +124,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      5446         -
-# 2  Extended offline    Completed without error       00%      4976         -
-# 3  Extended offline    Completed without error       00%      4327         -
-# 4  Extended offline    Interrupted (host reset)      00%      3342         -
-# 5  Extended offline    Completed without error       00%      2443         -
+# 1  Extended offline    Completed without error       00%      6073         -
+# 2  Extended offline    Completed without error       00%      5446         -
+# 3  Extended offline    Completed without error       00%      4976         -
+# 4  Extended offline    Completed without error       00%      4327         -
+# 5  Extended offline    Interrupted (host reset)      00%      3342         -
+# 6  Extended offline    Completed without error       00%      2443         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -144,8 +146,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     25/26 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     25/29 Celsius
 Lifetime    Min/Max Temperature:     21/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -155,6 +157,8 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
@@ -163,6 +167,4 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-
-
 

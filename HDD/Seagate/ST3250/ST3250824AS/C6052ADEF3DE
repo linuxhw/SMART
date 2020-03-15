@@ -3,17 +3,18 @@ Model Family:     Seagate Barracuda 7200.9
 Device Model:     ST3250824AS
 Serial Number:    --
 Firmware Version: 3.AAH
-User Capacity:    250 058 268 160 bytes [250 GB]
+User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Jan 20 17:42:20 2017 +03
+Local Time is:    Wed Jun 19 13:07:30 2019 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -25,9 +26,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  25)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -52,22 +52,22 @@ recommended polling time: 	 ( 100) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   089   006    -    175220235
-  3 Spin_Up_Time            PO----   096   089   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2314
+  1 Raw_Read_Error_Rate     POSR--   117   089   006    -    153200345
+  3 Spin_Up_Time            PO----   094   089   000    -    0
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8418
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    315086301
-  9 Power_On_Hours          -O--CK   082   082   000    -    16503
+  7 Seek_Error_Rate         POSR--   087   060   030    -    610731375
+  9 Power_On_Hours          -O--CK   078   078   000    -    19309
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2758
+ 12 Power_Cycle_Count       -O--CK   091   091   020    -    10214
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   045   045    Past 37 (Min/Max 25/37)
-194 Temperature_Celsius     -O---K   037   055   000    -    37 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   065   046   000    -    214960466
+190 Airflow_Temperature_Cel -O---K   057   045   045    Past 43 (Min/Max 29/43)
+194 Temperature_Celsius     -O---K   043   055   000    -    43 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   060   046   000    -    40997428
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    3
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    78
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -87,7 +87,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -258,9 +258,17 @@ Error 139 [18] occurred at disk power-on lifetime: 15452 hours (643 days + 20 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     16460         -
-# 2  Short offline       Completed without error       00%     16337         -
-# 3  Short offline       Aborted by host               90%     16337         -
+# 1  Extended offline    Aborted by host               90%     19068         -
+# 2  Short offline       Aborted by host               90%     19032         -
+# 3  Short offline       Completed without error       00%     18758         -
+# 4  Short offline       Completed without error       00%     17876         -
+# 5  Short offline       Completed without error       00%     17872         -
+# 6  Extended offline    Aborted by host               90%     17872         -
+# 7  Short offline       Completed without error       00%     17869         -
+# 8  Short offline       Completed without error       00%     16460         -
+# 9  Short offline       Completed without error       00%     16337         -
+#10  Short offline       Aborted by host               90%     16337         -
+#11  Extended offline    Aborted by host               90%     19068         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -277,12 +285,14 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0006  2           12  R_ERR response for device-to-host non-data FIS
+0x0006  2            1  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 

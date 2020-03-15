@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Jun  4 23:42:45 2016 MSK
+Local Time is:    Wed Aug 17 16:28:08 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   181   176   021    -    3941
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5098
+  3 Spin_Up_Time            POS--K   178   176   021    -    4075
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5464
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   039   039   000    -    45009
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   037   037   000    -    46710
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    942
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    399
-193 Load_Cycle_Count        -O--CK   199   199   000    -    4698
-194 Temperature_Celsius     -O---K   098   093   000    -    49
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1039
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    409
+193 Load_Cycle_Count        -O--CK   199   199   000    -    5054
+194 Temperature_Celsius     -O---K   097   093   000    -    50
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 99 (device log contains only the most recent 24 errors)
+Device Error Count: 111 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,7 +121,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 99 [2] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 111 [14] occurred at disk power-on lifetime: 46588 hours (1941 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -132,13 +132,13 @@ Error 99 [2] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00  4d+21:34:25.069  SMART WRITE LOG
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00  4d+21:34:25.066  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 a0 00  4d+21:34:24.995  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+21:34:24.993  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+21:34:24.991  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00  4d+00:26:48.976  SMART WRITE LOG
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00  4d+00:26:48.973  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 a0 00  4d+00:26:48.900  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+00:26:48.899  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+00:26:48.896  IDENTIFY DEVICE
 
-Error 98 [1] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 110 [13] occurred at disk power-on lifetime: 46588 hours (1941 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -149,13 +149,13 @@ Error 98 [1] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:24.988  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:24.988  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:24.987  SMART WRITE LOG
-  61 00 08 00 50 00 00 00 02 ef 78 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
-  61 00 03 00 48 00 00 1e 3e b1 40 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:48.894  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:48.893  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:48.893  SMART WRITE LOG
+  b0 00 d0 00 00 00 00 01 c2 4f 00 a1 00  4d+00:26:16.126  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00  4d+00:26:16.045  SMART RETURN STATUS
 
-Error 97 [0] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 109 [12] occurred at disk power-on lifetime: 46588 hours (1941 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -166,13 +166,13 @@ Error 97 [0] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:24.988  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:24.987  SMART WRITE LOG
-  61 00 08 00 50 00 00 00 02 ef 78 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
-  61 00 03 00 48 00 00 1e 3e b1 40 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
-  61 00 10 00 40 00 00 00 02 a1 28 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:48.893  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:48.893  SMART WRITE LOG
+  b0 00 d0 00 00 00 00 01 c2 4f 00 a1 00  4d+00:26:16.126  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00  4d+00:26:16.045  SMART RETURN STATUS
+  ea 00 00 00 00 00 00 00 00 00 00 e0 00  4d+00:25:26.140  FLUSH CACHE EXT
 
-Error 96 [23] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 108 [11] occurred at disk power-on lifetime: 46588 hours (1941 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -183,13 +183,13 @@ Error 96 [23] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:24.987  SMART WRITE LOG
-  61 00 08 00 50 00 00 00 02 ef 78 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
-  61 00 03 00 48 00 00 1e 3e b1 40 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
-  61 00 10 00 40 00 00 00 02 a1 28 40 00  4d+21:34:24.168  WRITE FPDMA QUEUED
-  61 00 08 00 38 00 00 00 6e 69 f8 40 00  4d+21:34:24.167  WRITE FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:48.893  SMART WRITE LOG
+  b0 00 d0 00 00 00 00 01 c2 4f 00 a1 00  4d+00:26:16.126  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00  4d+00:26:16.045  SMART RETURN STATUS
+  ea 00 00 00 00 00 00 00 00 00 00 e0 00  4d+00:25:26.140  FLUSH CACHE EXT
+  61 00 08 00 28 00 00 00 5b 1f 10 40 00  4d+00:25:21.118  WRITE FPDMA QUEUED
 
-Error 95 [22] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 107 [10] occurred at disk power-on lifetime: 46384 hours (1932 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -200,13 +200,13 @@ Error 95 [22] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00  4d+21:34:08.541  SMART WRITE LOG
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00  4d+21:34:08.539  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 a0 00  4d+21:34:08.466  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+21:34:08.464  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+21:34:08.463  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00     00:55:17.257  SMART WRITE LOG
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:55:17.255  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 a0 00     00:55:17.182  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:55:17.181  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:55:17.178  IDENTIFY DEVICE
 
-Error 94 [21] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 106 [9] occurred at disk power-on lifetime: 46384 hours (1932 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -217,13 +217,13 @@ Error 94 [21] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:08.460  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:08.459  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:08.459  SMART WRITE LOG
-  61 00 05 00 48 00 00 13 e5 a6 b0 40 00  4d+21:34:06.478  WRITE FPDMA QUEUED
-  61 00 08 00 40 00 00 00 5b 1f 10 40 00  4d+21:34:05.696  WRITE FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:17.176  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:17.175  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:17.175  SMART WRITE LOG
+  60 00 08 00 b0 00 00 00 60 49 50 40 00     00:54:36.344  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 00 60 49 58 40 00     00:54:36.344  READ FPDMA QUEUED
 
-Error 93 [20] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 105 [8] occurred at disk power-on lifetime: 46384 hours (1932 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -234,13 +234,13 @@ Error 93 [20] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:08.459  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:08.459  SMART WRITE LOG
-  61 00 05 00 48 00 00 13 e5 a6 b0 40 00  4d+21:34:06.478  WRITE FPDMA QUEUED
-  61 00 08 00 40 00 00 00 5b 1f 10 40 00  4d+21:34:05.696  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 e0 00  4d+21:34:05.688  FLUSH CACHE EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:17.175  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:17.175  SMART WRITE LOG
+  60 00 08 00 b0 00 00 00 60 49 50 40 00     00:54:36.344  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 00 60 49 58 40 00     00:54:36.344  READ FPDMA QUEUED
+  60 00 08 00 a0 00 00 00 04 bb 58 40 00     00:54:36.297  READ FPDMA QUEUED
 
-Error 92 [19] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 hours)
+Error 104 [7] occurred at disk power-on lifetime: 46384 hours (1932 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -251,11 +251,11 @@ Error 92 [19] occurred at disk power-on lifetime: 44925 hours (1871 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+21:34:08.459  SMART WRITE LOG
-  61 00 05 00 48 00 00 13 e5 a6 b0 40 00  4d+21:34:06.478  WRITE FPDMA QUEUED
-  61 00 08 00 40 00 00 00 5b 1f 10 40 00  4d+21:34:05.696  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 e0 00  4d+21:34:05.688  FLUSH CACHE EXT
-  61 00 08 00 30 00 00 00 5b 1f 18 40 00  4d+21:34:05.688  WRITE FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:17.175  SMART WRITE LOG
+  60 00 08 00 b0 00 00 00 60 49 50 40 00     00:54:36.344  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 00 60 49 58 40 00     00:54:36.344  READ FPDMA QUEUED
+  60 00 08 00 a0 00 00 00 04 bb 58 40 00     00:54:36.297  READ FPDMA QUEUED
+  60 00 08 00 98 00 00 00 60 49 60 40 00     00:54:36.297  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -278,8 +278,8 @@ SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    49 Celsius
-Power Cycle Min/Max Temperature:     44/53 Celsius
-Lifetime    Min/Max Temperature:      ?/54 Celsius
+Power Cycle Min/Max Temperature:     26/52 Celsius
+Lifetime    Min/Max Temperature:     49/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -287,7 +287,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (17)
+Temperature History Size (Index):    478 (67)
 
 SCT Error Recovery Control command not supported
 
@@ -302,7 +302,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2          306  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           45  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4       727936  Vendor specific
+0x8000  4       289666  Vendor specific
 

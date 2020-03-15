@@ -2,20 +2,21 @@
 Device Model:     Patriot Blaze
 Serial Number:    --
 Firmware Version: S9FM02.8
-User Capacity:    60 022 480 896 bytes [60,0 GB]
+User Capacity:    60,022,480,896 bytes [60.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Nov 25 11:09:35 2018 +05
+Local Time is:    Sun Jun  2 14:06:17 2019 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -56,16 +57,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    4673
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    2841
+  9 Power_On_Hours          -O--C-   100   100   000    -    5447
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3671
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO--C-   100   100   010    -    22
-173 Unknown_Attribute       ------   100   100   000    -    34603073
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    16
+173 Unknown_Attribute       ------   100   100   000    -    37748812
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    25
 194 Temperature_Celsius     PO---K   070   070   000    -    30
 196 Reallocated_Event_Count ------   100   100   000    -    0
 218 Unknown_Attribute       ------   100   100   000    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    1987657
+241 Total_LBAs_Written      -O--C-   100   100   000    -    2371586
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -84,7 +85,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -94,7 +95,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      1193         -
+# 1  Short offline       Completed without error       00%      5056         -
+# 2  Short offline       Completed without error       00%      5052         -
+# 3  Short offline       Completed without error       00%      5048         -
+# 4  Short offline       Completed without error       00%      5045         -
+# 5  Short offline       Completed without error       00%      5038         -
+# 6  Short offline       Completed without error       00%      5035         -
+# 7  Short offline       Completed without error       00%      5027         -
+# 8  Short offline       Completed without error       00%      5017         -
+# 9  Short offline       Completed without error       00%      5008         -
+#10  Short offline       Completed without error       00%      4998         -
+#11  Short offline       Completed without error       00%      4994         -
+#12  Short offline       Completed without error       00%      4992         -
+#13  Short offline       Completed without error       00%      4990         -
+#14  Short offline       Completed without error       00%      4983         -
+#15  Short offline       Completed without error       00%      4975         -
+#16  Short offline       Completed without error       00%      4970         -
+#17  Short offline       Completed without error       00%      4965         -
+#18  Short offline       Completed without error       00%      4962         -
+#19  Short offline       Completed without error       00%      4960         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -118,6 +137,8 @@ Page  Offset Size        Value Flags Description
                                 ||__ D supports DSN
                                 |___ N normalized value
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
@@ -126,7 +147,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          156  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4          170  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

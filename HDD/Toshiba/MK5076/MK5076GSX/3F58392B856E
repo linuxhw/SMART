@@ -4,14 +4,14 @@ Device Model:     TOSHIBA MK5076GSX
 Serial Number:    --
 LU WWN Device Id: 5 000039 ...
 Firmware Version: GS001A
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Dec 12 08:48:57 2017 +05
+Local Time is:    Tue May 15 14:29:21 2018 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  40)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -61,27 +60,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1472
-  4 Start_Stop_Count        -O--CK   100   100   000    -    3895
+  3 Spin_Up_Time            POS--K   100   100   001    -    1657
+  4 Start_Stop_Count        -O--CK   100   100   000    -    3900
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Minutes        -O--CK   087   087   000    -    88h+25m
+  9 Power_On_Minutes        -O--CK   087   087   000    -    88h+43m
  10 Spin_Retry_Count        PO--CK   177   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3634
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3639
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    3868
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    241
-193 Load_Cycle_Count        -O--CK   098   098   000    -    22893
-194 Temperature_Celsius     -O---K   100   100   000    -    40 (Min/Max 12/80)
+193 Load_Cycle_Count        -O--CK   098   098   000    -    23486
+194 Temperature_Celsius     -O---K   100   100   000    -    44 (Min/Max 12/80)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    8252
-222 Loaded_Hours            -O--CK   090   090   000    -    4151
+222 Loaded_Hours            -O--CK   090   090   000    -    4160
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    325
+226 Load-in_Time            -OS--K   100   100   000    -    284
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -261,14 +260,15 @@ Error 70 [69] occurred at disk power-on lifetime: 5088 hours (212 days + 0 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      5266         -
-# 2  Extended offline    Aborted by host               90%      5216         -
-# 3  Extended offline    Interrupted (host reset)      90%      5171         -
-# 4  Extended offline    Interrupted (host reset)      80%      5138         -
-# 5  Short offline       Completed without error       00%      5084         -
-# 6  Short offline       Completed: read failure       00%      5082         5651901
-# 7  Short offline       Aborted by host               90%      1666         -
-1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Interrupted (host reset)      80%      5318         -
+# 2  Extended offline    Completed without error       00%      5266         -
+# 3  Extended offline    Aborted by host               90%      5216         -
+# 4  Extended offline    Interrupted (host reset)      90%      5171         -
+# 5  Extended offline    Interrupted (host reset)      80%      5138         -
+# 6  Short offline       Completed without error       00%      5084         -
+# 7  Short offline       Completed: read failure       00%      5082         5651901
+# 8  Short offline       Aborted by host               90%      1666         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 2
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -285,8 +285,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     40/41 Celsius
+Current Temperature:                    44 Celsius
+Power Cycle Min/Max Temperature:     41/45 Celsius
 Lifetime    Min/Max Temperature:     12/80 Celsius
 Under/Over Temperature Limit Count:   0/75770
 
@@ -295,7 +295,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (175)
+Temperature History Size (Index):    478 (261)
 
 SCT Error Recovery Control:
            Read: Disabled

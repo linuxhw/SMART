@@ -2,20 +2,21 @@
 Device Model:     SSD Smartbuy 120GB
 Serial Number:    --
 Firmware Version: SAFM01.6
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Apr 22 12:24:36 2018 MSK
+Local Time is:    Sun Sep  9 17:14:15 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -56,16 +57,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    5978
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    3949
+  9 Power_On_Hours          -O--C-   100   100   000    -    7189
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    4545
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   010    -    380
-173 Unknown_Attribute       -O--C-   100   100   000    -    5177489
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    314
+173 Unknown_Attribute       -O--C-   100   100   000    -    6226086
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    357
 194 Temperature_Celsius     PO---K   070   070   030    -    30 (Min/Max 29/30)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Temperature_Celsius     PO--C-   100   100   000    -    98
-241 Total_LBAs_Written      -O--C-   100   100   000    -    6928
+231 Temperature_Celsius     PO--C-   100   100   000    -    97
+241 Total_LBAs_Written      -O--C-   100   100   000    -    8576
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -84,7 +85,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      8  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -96,21 +97,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      5962         -
-# 2  Short offline       Completed without error       00%      5923         -
-# 3  Extended offline    Completed without error       00%      5869         -
-# 4  Short offline       Completed without error       00%      5508         -
-# 5  Short offline       Completed without error       00%      4811         -
-# 6  Short offline       Completed without error       00%      4458         -
-# 7  Short offline       Completed without error       00%      4079         -
-# 8  Short offline       Completed without error       00%      3725         -
-# 9  Short offline       Completed without error       00%      3549         -
-#10  Short offline       Completed without error       00%      3249         -
-#11  Short offline       Completed without error       00%      1395         -
-#12  Short offline       Completed without error       00%      1137         -
-#13  Short offline       Completed without error       00%       912         -
-#14  Short offline       Completed without error       00%       670         -
-#15  Short offline       Completed without error       00%       669         -
+# 1  Extended offline    Completed without error       00%      6983         -
+# 2  Extended offline    Completed without error       00%      6947         -
+# 3  Extended offline    Completed without error       00%      6915         -
+# 4  Extended offline    Completed without error       00%      6380         -
+# 5  Extended offline    Completed without error       00%      6163         -
+# 6  Short offline       Completed without error       00%      5962         -
+# 7  Short offline       Completed without error       00%      5923         -
+# 8  Extended offline    Completed without error       00%      5869         -
+# 9  Short offline       Completed without error       00%      5508         -
+#10  Short offline       Completed without error       00%      4811         -
+#11  Short offline       Completed without error       00%      4458         -
+#12  Short offline       Completed without error       00%      4079         -
+#13  Short offline       Completed without error       00%      3725         -
+#14  Short offline       Completed without error       00%      3549         -
+#15  Short offline       Completed without error       00%      3249         -
+#16  Short offline       Completed without error       00%      1395         -
+#17  Short offline       Completed without error       00%      1137         -
+#18  Short offline       Completed without error       00%       912         -
+#19  Short offline       Completed without error       00%       670         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -128,13 +133,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            3949  ---  Lifetime Power-On Resets
-0x01  0x018  6     14529526706  ---  Logical Sectors Written
-0x01  0x020  6       207775994  ---  Number of Write Commands
-0x01  0x028  6     22102061195  ---  Logical Sectors Read
-0x01  0x030  6       292111820  ---  Number of Read Commands
+0x01  0x008  4            4545  ---  Lifetime Power-On Resets
+0x01  0x018  6     17985682763  ---  Logical Sectors Written
+0x01  0x020  6       248805522  ---  Number of Write Commands
+0x01  0x028  6     28500572052  ---  Logical Sectors Read
+0x01  0x030  6       390985332  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4             296  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4             373  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4            1123  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
@@ -151,13 +156,15 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           10561  ---  Number of Hardware Resets
+0x06  0x008  4           12732  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -167,8 +174,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4    296605869  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4        14286  Device-to-host register FISes sent due to a COMRESET
+0x0009  4    334076164  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4        17030  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

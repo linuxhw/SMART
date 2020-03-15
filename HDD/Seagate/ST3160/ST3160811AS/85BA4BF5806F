@@ -7,7 +7,7 @@ User Capacity:    160 040 803 840 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Jul 19 18:53:27 2016 MSK
+Local Time is:    Sat Jul 23 17:49:14 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -50,19 +50,19 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   077   006    -    208589728
+  1 Raw_Read_Error_Rate     POSR--   103   077   006    -    201405207
   3 Spin_Up_Time            PO----   096   095   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5770
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5774
   5 Reallocated_Sector_Ct   PO--CK   056   056   036    -    1797
-  7 Seek_Error_Rate         POSR--   082   057   030    -    192431487
-  9 Power_On_Hours          -O--CK   070   070   000    -    26471
+  7 Seek_Error_Rate         POSR--   082   057   030    -    192870858
+  9 Power_On_Hours          -O--CK   070   070   000    -    26476
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    6044
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    6048
 187 Reported_Uncorrect      -O--CK   001   001   000    -    65535
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   048   045    -    40 (Min/Max 40/41 #59)
-194 Temperature_Celsius     -O---K   040   052   000    -    40 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   061   045   000    -    127566455
+190 Airflow_Temperature_Cel -O---K   061   048   045    -    39 (0 59 39 31 0)
+194 Temperature_Celsius     -O---K   039   052   000    -    39 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   054   045   000    -    94622181
 197 Current_Pending_Sector  -O--C-   097   097   000    -    72
 198 Offline_Uncorrectable   ----C-   097   097   000    -    72
 199 UDMA_CRC_Error_Count    -OSRCK   200   193   000    -    206
@@ -85,8 +85,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -118,56 +118,56 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4779 [18] occurred at disk power-on lifetime: 25536 hours (1064 days + 0 hours)
+Error 4779 [18] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 83 51 04 51 e0 00  Error: UNC at LBA = 0x83510451 = 2203124817
+  84 -- 51 00 47 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 71 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 13 00 00 83 00 04 48 e0 00     00:00:19.087  READ DMA EXT
-  25 00 20 00 02 00 00 c5 00 63 24 e0 00     00:00:19.084  READ DMA EXT
-  25 00 20 00 02 00 00 28 00 63 00 e0 00     00:00:19.083  READ DMA EXT
-  25 00 20 00 01 00 00 59 00 06 ca e0 00     00:00:19.128  READ DMA EXT
-  25 00 20 00 03 00 00 59 00 06 c7 e0 00     00:00:19.127  READ DMA EXT
+  25 00 00 00 78 00 00 fe 00 0a d8 40 00     00:00:49.180  READ DMA EXT
+  25 00 00 00 58 00 00 68 00 08 78 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 80 00 00 67 00 08 f8 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 28 00 00 67 00 08 d0 40 00     00:00:49.164  READ DMA EXT
+  25 00 00 00 18 00 00 67 00 08 80 40 00     00:00:49.120  READ DMA EXT
 
-Error 4778 [17] occurred at disk power-on lifetime: 25521 hours (1063 days + 9 hours)
+Error 4778 [17] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 83 4e 04 4e e0 00  Error: UNC at LBA = 0x834e044e = 2202928206
+  84 -- 51 00 1f 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 31 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 13 00 00 83 00 04 48 e0 00     00:00:26.151  READ DMA EXT
-  25 00 20 00 13 00 00 83 00 04 48 e0 00     00:00:26.148  READ DMA EXT
-  25 00 20 00 02 00 00 c5 00 63 24 e0 00     00:00:29.260  READ DMA EXT
-  25 00 20 00 02 00 00 28 00 63 00 e0 00     00:00:26.176  READ DMA EXT
-  25 00 20 00 01 00 00 59 00 06 ca e0 00     00:00:26.175  READ DMA EXT
+  25 00 00 00 40 00 04 85 00 22 48 40 00     00:00:47.334  READ DMA EXT
+  25 00 00 00 40 00 04 85 00 22 08 40 00     00:00:47.334  READ DMA EXT
+  25 00 00 00 40 00 04 84 00 22 c8 40 00     00:00:47.333  READ DMA EXT
+  25 00 00 00 40 00 04 84 00 22 88 40 00     00:00:47.333  READ DMA EXT
+  25 00 00 00 40 00 04 84 00 22 48 40 00     00:00:47.332  READ DMA EXT
 
-Error 4777 [16] occurred at disk power-on lifetime: 25521 hours (1063 days + 9 hours)
+Error 4777 [16] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 83 4e 04 4e e0 00  Error: UNC at LBA = 0x834e044e = 2202928206
+  84 -- 51 00 6f 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 111 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 13 00 00 83 00 04 48 e0 00     00:00:26.151  READ DMA EXT
-  25 00 20 00 02 00 00 c5 00 63 24 e0 00     00:00:26.148  READ DMA EXT
-  25 00 20 00 02 00 00 28 00 63 00 e0 00     00:00:26.148  READ DMA EXT
-  25 00 20 00 01 00 00 59 00 06 ca e0 00     00:00:26.176  READ DMA EXT
-  25 00 20 00 03 00 00 59 00 06 c7 e0 00     00:00:26.175  READ DMA EXT
+  25 00 00 00 80 00 00 02 00 0b a0 40 00     00:00:46.166  READ DMA EXT
+  25 00 00 00 50 00 00 02 00 0b 48 40 00     00:00:46.159  READ DMA EXT
+  25 00 00 00 80 00 00 01 00 0b c8 40 00     00:00:46.159  READ DMA EXT
+  25 00 00 00 18 00 00 51 00 0a 40 40 00     00:00:46.159  READ DMA EXT
+  25 00 00 00 80 00 00 50 00 0a c0 40 00     00:00:46.158  READ DMA EXT
 
 Error 4776 [15] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -175,16 +175,16 @@ Error 4776 [15] occurred at disk power-on lifetime: 16675 hours (694 days + 19 h
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 07 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 7 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:00:21.981  READ DMA EXT
-  c6 00 00 00 10 00 0f 00 00 00 01 ef 00     00:00:21.981  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:00:21.981  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:21.498  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     00:00:21.498  NOP [Abort queued commands]
+  25 00 00 00 18 00 00 ff 00 0a 50 40 00     00:00:49.180  READ DMA EXT
+  25 00 00 00 78 00 00 fe 00 0a d8 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 58 00 00 68 00 08 78 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 80 00 00 67 00 08 f8 40 00     00:00:49.164  READ DMA EXT
+  25 00 00 00 28 00 00 67 00 08 d0 40 00     00:00:49.120  READ DMA EXT
 
 Error 4775 [14] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -192,16 +192,16 @@ Error 4775 [14] occurred at disk power-on lifetime: 16675 hours (694 days + 19 h
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 47 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 71 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:00:20.517  READ DMA EXT
-  c6 00 00 00 10 00 0f 00 00 00 01 ef 00     00:00:20.517  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:00:20.517  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:21.498  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     00:00:21.498  NOP [Abort queued commands]
+  25 00 00 00 78 00 00 fe 00 0a d8 40 00     00:00:49.180  READ DMA EXT
+  25 00 00 00 58 00 00 68 00 08 78 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 80 00 00 67 00 08 f8 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 28 00 00 67 00 08 d0 40 00     00:00:49.164  READ DMA EXT
+  25 00 00 00 18 00 00 67 00 08 80 40 00     00:00:49.120  READ DMA EXT
 
 Error 4774 [13] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -209,16 +209,16 @@ Error 4774 [13] occurred at disk power-on lifetime: 16675 hours (694 days + 19 h
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 1f 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 31 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:00:20.517  READ DMA EXT
-  c6 00 00 00 10 00 0f 00 00 00 01 ef 00     00:00:20.517  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:00:20.517  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:13.014  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     00:00:11.754  NOP [Abort queued commands]
+  25 00 00 00 40 00 04 85 00 22 48 40 00     00:00:47.334  READ DMA EXT
+  25 00 00 00 40 00 04 85 00 22 08 40 00     00:00:47.334  READ DMA EXT
+  25 00 00 00 40 00 04 84 00 22 c8 40 00     00:00:47.333  READ DMA EXT
+  25 00 00 00 40 00 04 84 00 22 88 40 00     00:00:47.333  READ DMA EXT
+  25 00 00 00 40 00 04 84 00 22 48 40 00     00:00:47.332  READ DMA EXT
 
 Error 4773 [12] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -226,16 +226,16 @@ Error 4773 [12] occurred at disk power-on lifetime: 16675 hours (694 days + 19 h
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 6f 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 111 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:00:20.517  READ DMA EXT
-  c6 00 00 00 10 00 0f 00 00 00 01 ef 00     00:00:20.517  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:00:20.517  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:13.014  RECALIBRATE [OBS-4]
-  00 00 00 01 00 00 00 00 00 00 01 00 00     00:00:11.754  NOP [Abort queued commands]
+  25 00 00 00 80 00 00 02 00 0b a0 40 00     00:00:46.166  READ DMA EXT
+  25 00 00 00 50 00 00 02 00 0b 48 40 00     00:00:46.159  READ DMA EXT
+  25 00 00 00 80 00 00 01 00 0b c8 40 00     00:00:46.159  READ DMA EXT
+  25 00 00 00 18 00 00 51 00 0a 40 40 00     00:00:46.159  READ DMA EXT
+  25 00 00 00 80 00 00 50 00 0a c0 40 00     00:00:46.158  READ DMA EXT
 
 Error 4772 [11] occurred at disk power-on lifetime: 16675 hours (694 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -243,16 +243,16 @@ Error 4772 [11] occurred at disk power-on lifetime: 16675 hours (694 days + 19 h
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 07 00 00 00 00 00 00 40 00  Error: ICRC, ABRT 7 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 08 00 00 03 e0 00     00:00:22.675  READ DMA EXT
-  25 00 20 00 01 00 00 08 00 00 02 e0 00     00:00:22.674  READ DMA EXT
-  25 00 20 00 01 00 00 08 00 00 01 e0 00     00:00:22.674  READ DMA EXT
-  25 00 20 00 01 00 00 08 00 00 00 e0 00     00:00:15.124  READ DMA EXT
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:00:12.364  READ DMA EXT
+  25 00 00 00 18 00 00 ff 00 0a 50 40 00     00:00:49.180  READ DMA EXT
+  25 00 00 00 78 00 00 fe 00 0a d8 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 58 00 00 68 00 08 78 40 00     00:00:49.165  READ DMA EXT
+  25 00 00 00 80 00 00 67 00 08 f8 40 00     00:00:49.164  READ DMA EXT
+  25 00 00 00 28 00 00 67 00 08 d0 40 00     00:00:49.120  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -271,11 +271,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           38  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

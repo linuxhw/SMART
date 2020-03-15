@@ -1,22 +1,23 @@
 === START OF INFORMATION SECTION ===
+Model Family:     Samsung based SSDs
 Device Model:     Samsung SSD 850 PRO 512GB
 Serial Number:    --
 LU WWN Device Id: 5 002538 ...
-Firmware Version: EXM02B6Q
+Firmware Version: EXM04B6Q
 User Capacity:    512,110,190,592 bytes [512 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Jun 13 20:12:04 2016 EDT
+Local Time is:    Fri Aug 25 22:01:09 2017 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Unavailable
 Unexpected SCT status 0x0001 (action_code=4, function_code=2)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
@@ -59,19 +60,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1816
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    560
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    18
+  9 Power_On_Hours          -O--CK   099   099   000    -    4755
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1458
+177 Wear_Leveling_Count     PO--C-   099   099   000    -    47
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   061   051   000    -    39
-195 Hardware_ECC_Recovered  -O-RC-   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
-235 Unknown_Attribute       -O--C-   099   099   000    -    32
-241 Total_LBAs_Written      -O--CK   099   099   000    -    8831394488
+187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
+190 Airflow_Temperature_Cel -O--CK   067   048   000    -    33
+195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
+199 CRC_Error_Count         -OSRCK   100   100   000    -    0
+235 POR_Recovery_Count      -O--C-   099   099   000    -    70
+241 Total_LBAs_Written      -O--CK   099   099   000    -    24080493858
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,8 +90,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x13       GPL     R/O      1  SATA NCQ Send and Receive log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -123,23 +124,23 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
+Current Temperature:                    33 Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
-Under/Over Temperature Limit Count:   0/10665
+Under/Over Temperature Limit Count:   0/27889
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    128 (2)
+Temperature History Size (Index):    128 (16)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -151,8 +152,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2         1402  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           57  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

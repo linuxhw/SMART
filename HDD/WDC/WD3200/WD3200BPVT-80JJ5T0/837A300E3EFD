@@ -10,13 +10,14 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Dec 29 19:46:58 2017 EET
+Local Time is:    Fri Aug 17 21:20:59 2018 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     96 (intermediate level with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -60,18 +61,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   145   135   021    -    1750
-  4 Start_Stop_Count        -O--CK   001   001   000    -    183584
+  3 Spin_Up_Time            POS--K   141   135   021    -    1916
+  4 Start_Stop_Count        -O--CK   001   001   000    -    204819
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   073   073   000    -    20239
+  9 Power_On_Hours          -O--CK   071   071   000    -    21671
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2828
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    1736
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    277
-193 Load_Cycle_Count        -O--CK   001   001   000    -    2315519
-194 Temperature_Celsius     -O---K   109   094   000    -    34
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3106
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    1837
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    322
+193 Load_Cycle_Count        -O--CK   001   001   000    -    2660663
+194 Temperature_Celsius     -O---K   108   094   000    -    35
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -94,7 +95,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -110,11 +111,14 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     20221         -
-# 2  Extended offline    Completed without error       00%     19586         -
-# 3  Short offline       Completed without error       00%      1295         -
-# 4  Extended offline    Aborted by host               90%      1295         -
-# 5  Short offline       Completed without error       00%      1290         -
+# 1  Extended offline    Completed without error       00%     21602         -
+# 2  Extended offline    Completed without error       00%     21140         -
+# 3  Extended offline    Completed without error       00%     20311         -
+# 4  Extended offline    Completed without error       00%     20221         -
+# 5  Extended offline    Completed without error       00%     19586         -
+# 6  Short offline       Completed without error       00%      1295         -
+# 7  Extended offline    Aborted by host               90%      1295         -
+# 8  Short offline       Completed without error       00%      1290         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -131,8 +135,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     33/36 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     29/35 Celsius
 Lifetime    Min/Max Temperature:      0/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -144,11 +148,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (8)
+Temperature History Size (Index):    128 (82)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -160,10 +166,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           34  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         6584  Vendor specific
+0x8000  4          826  Vendor specific
 

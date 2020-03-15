@@ -3,11 +3,11 @@ Model Family:     SAMSUNG SpinPoint P80 SD
 Device Model:     SAMSUNG HD160JJ
 Serial Number:    --
 Firmware Version: ZM100-33
-User Capacity:    160 041 885 696 bytes [160 GB]
+User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Sun Oct  1 08:03:57 2017 MSK
+Local Time is:    Sat Dec 23 20:01:33 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -21,8 +21,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -55,19 +55,19 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   099   051    -    1
-  3 Spin_Up_Time            POS---   100   100   025    -    6080
-  4 Start_Stop_Count        -O--CK   088   088   000    -    12448
+  1 Raw_Read_Error_Rate     POSR--   100   099   051    -    0
+  3 Spin_Up_Time            POS---   100   100   025    -    6016
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12684
   5 Reallocated_Sector_Ct   PO--CK   085   085   010    -    143
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    17464
+  9 Power_On_Hours          -O--CK   100   100   000    -    17808
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   002   000    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   000    -    10019
-190 Airflow_Temperature_Cel -O---K   118   052   000    -    40
-194 Temperature_Celsius     -O---K   118   052   000    -    40
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1214500
+ 12 Power_Cycle_Count       -O--CK   090   090   000    -    10143
+190 Airflow_Temperature_Cel -O---K   112   052   000    -    42
+194 Temperature_Celsius     -O---K   112   052   000    -    42
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2490499
 196 Reallocated_Event_Count -O--CK   085   085   000    -    143
 197 Current_Pending_Sector  -O--C-   253   100   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -95,8 +95,8 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x07) instead
-Device Error Count: 135 (device log contains only the most recent 8 errors)
+Invalid Error Log index = 0x0000, trying reserved byte (0x08) instead
+Device Error Count: 136 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -111,6 +111,23 @@ Device Error Count: 135 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 136 [7] occurred at disk power-on lifetime: 17555 hours (731 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 08 00 00 00 5d c0 60 40 00  Error: ABRT 8 sectors at LBA = 0x005dc060 = 6144096
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 08 00 00 00 5d c0 60 40 00     01:33:06.188  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 5d c0 48 40 00     01:33:06.188  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 5d c0 00 40 00     01:33:06.188  WRITE DMA EXT
+  35 00 00 00 50 00 00 00 5d bf 38 40 00     01:33:06.188  WRITE DMA EXT
+  35 00 00 00 18 00 00 00 5d bf 08 40 00     01:33:06.188  WRITE DMA EXT
 
 Error 135 [6] occurred at disk power-on lifetime: 14536 hours (605 days + 16 hours)
   When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
@@ -225,20 +242,6 @@ Error 129 [0] occurred at disk power-on lifetime: 8350 hours (347 days + 22 hour
   25 00 00 00 01 00 00 00 00 00 00 e0 00     00:50:35.438  READ DMA EXT
   42 00 00 00 02 00 00 04 57 f2 7d e0 00     00:50:35.438  READ VERIFY SECTOR(S) EXT
 
-Error 128 [7] occurred at disk power-on lifetime: 8350 hours (347 days + 22 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 02 00 00 04 57 f2 7b e0 00  Error: UNC at LBA = 0x0457f27b = 72872571
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 02 00 00 04 57 f2 7b e0 00     00:50:33.563  READ VERIFY SECTOR(S) EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:50:33.563  READ DMA EXT
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -260,8 +263,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 40 Celsius
-Power Cycle Max Temperature:         40 Celsius
+Current Temperature:                 42 Celsius
+Power Cycle Max Temperature:         44 Celsius
 Lifetime    Max Temperature:         62 Celsius
 
 SCT Temperature History Version:     2
@@ -269,7 +272,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/55 Celsius
 Min/Max Temperature Limit:            5/60 Celsius
-Temperature History Size (Index):    128 (121)
+Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
            Read: Disabled

@@ -3,22 +3,24 @@ Device Model:     HITACHI HTS547550A9E384
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: JE3ZD60D
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
-SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Oct  9 22:55:18 2017 MSK
+SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 1.5 Gb/s)
+Local Time is:    Wed Feb 19 20:47:26 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Write SCT (Get) Feature Control Command failed: Read of ATA output registers not implemented [JMicron]
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -60,19 +62,19 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   197   197   040    -    148
-  3 Spin_Up_Time            POS---   174   174   033    -    1
-  4 Start_Stop_Count        -O--C-   095   095   000    -    8663
+  3 Spin_Up_Time            POS---   173   173   033    -    1
+  4 Start_Stop_Count        -O--C-   092   092   000    -    13416
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   117   117   040    -    33
-  9 Power_On_Hours          -O--C-   079   079   000    -    9519
+  9 Power_On_Hours          -O--C-   071   071   000    -    12778
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    8600
-191 G-Sense_Error_Rate      -O-R--   100   100   000    -    1
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1580597406
-193 Load_Cycle_Count        -O--C-   072   072   000    -    283763
-194 Temperature_Celsius     -O----   176   176   000    -    34 (Min/Max 8/62)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    6
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    13321
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1580597499
+193 Load_Cycle_Count        -O--C-   063   063   000    -    379514
+194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 3/67)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    7
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
@@ -84,108 +86,126 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory Version 1
-SMART           Log Directory Version 1 [multi-sector log support]
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
+Read GP Log Directory failed
+
+SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
+0x00           SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
 0x02           SL  R/O      1  Comprehensive SMART error log
-0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
 0x06           SL  R/O      1  SMART self-test log
-0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters log
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
-0xe0       GPL,SL  R/W      1  SCT Command/Status
-0xe1       GPL,SL  R/W      1  SCT Data Transfer
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xe0           SL  R/W      1  SCT Command/Status
+0xe1           SL  R/W      1  SCT Data Transfer
 
-SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 2901 (device log contains only the most recent 4 errors)
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 2901 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2901 [0] occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
+Error 2901 occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 8e 00 00 3a 34 30 b0 0a 00  Error: UNC at LBA = 0x3a3430b0 = 976498864
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 8e b0 30 34 0a  Error: UNC at LBA = 0x0a3430b0 = 171192496
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 10 00 00 3a 34 30 3e 40 00     02:46:28.157  READ FPDMA QUEUED
-  60 01 00 00 08 00 00 3a 34 2f 3e 40 00     02:46:28.157  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     02:46:28.156  SET FEATURES [Enable write cache]
-  60 01 00 00 01 00 00 00 00 00 01 a0 ff     02:46:28.113  READ FPDMA QUEUED
-  60 01 00 00 90 00 00 3a 34 30 ad 4a ff     02:46:28.112  READ FPDMA QUEUED
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 00 10 3e 30 34 40 00      02:46:28.157  READ FPDMA QUEUED
+  60 00 08 3e 2f 34 40 00      02:46:28.157  READ FPDMA QUEUED
+  ef 02 00 00 00 00 00 00      02:46:28.156  SET FEATURES [Enable write cache]
+  60 00 01 01 00 00 a0 ff      02:46:28.113  READ FPDMA QUEUED
+  60 00 90 ad 30 34 4a ff      02:46:28.112  READ FPDMA QUEUED
 
-Error 2900 [3] occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
+Error 2900 occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 8d 00 00 3a 34 30 b0 0a 00  Error: UNC at LBA = 0x3a3430b0 = 976498864
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 8d b0 30 34 0a  Error: UNC at LBA = 0x0a3430b0 = 171192496
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 08 00 00 3a 34 30 3d 40 00     02:46:24.829  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     02:46:24.828  SET FEATURES [Enable write cache]
-  60 01 00 00 01 00 00 00 00 00 01 a0 ff     02:46:24.787  READ FPDMA QUEUED
-  60 01 00 00 90 00 00 3a 34 30 ad 4a ff     02:46:24.786  READ FPDMA QUEUED
-  60 01 00 00 08 00 00 3a 34 30 3d 40 00     02:46:21.501  READ FPDMA QUEUED
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 00 08 3d 30 34 40 00      02:46:24.829  READ FPDMA QUEUED
+  ef 02 00 00 00 00 00 00      02:46:24.828  SET FEATURES [Enable write cache]
+  60 00 01 01 00 00 a0 ff      02:46:24.787  READ FPDMA QUEUED
+  60 00 90 ad 30 34 4a ff      02:46:24.786  READ FPDMA QUEUED
+  60 00 08 3d 30 34 40 00      02:46:21.501  READ FPDMA QUEUED
 
-Error 2899 [2] occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
+Error 2899 occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 8d 00 00 3a 34 30 b0 0a 00  Error: UNC at LBA = 0x3a3430b0 = 976498864
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 8d b0 30 34 0a  Error: UNC at LBA = 0x0a3430b0 = 171192496
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 08 00 00 3a 34 30 3d 40 00     02:46:21.501  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     02:46:21.500  SET FEATURES [Enable write cache]
-  60 01 00 00 01 00 00 00 00 00 01 a0 ff     02:46:21.462  READ FPDMA QUEUED
-  60 01 00 00 90 00 00 3a 34 30 ad 4a ff     02:46:21.461  READ FPDMA QUEUED
-  60 01 00 00 08 00 00 3a 34 30 3d 40 00     02:46:18.172  READ FPDMA QUEUED
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 00 08 3d 30 34 40 00      02:46:21.501  READ FPDMA QUEUED
+  ef 02 00 00 00 00 00 00      02:46:21.500  SET FEATURES [Enable write cache]
+  60 00 01 01 00 00 a0 ff      02:46:21.462  READ FPDMA QUEUED
+  60 00 90 ad 30 34 4a ff      02:46:21.461  READ FPDMA QUEUED
+  60 00 08 3d 30 34 40 00      02:46:18.172  READ FPDMA QUEUED
 
-Error 2898 [1] occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
+Error 2898 occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 8d 00 00 3a 34 30 b0 0a 00  Error: UNC at LBA = 0x3a3430b0 = 976498864
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 8d b0 30 34 0a  Error: UNC at LBA = 0x0a3430b0 = 171192496
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 08 00 00 3a 34 30 3d 40 00     02:46:18.172  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     02:46:18.172  SET FEATURES [Enable write cache]
-  60 01 00 00 01 00 00 00 00 00 01 a0 ff     02:46:18.136  READ FPDMA QUEUED
-  60 01 00 00 90 00 00 3a 34 30 ad 4a ff     02:46:18.136  READ FPDMA QUEUED
-  60 01 00 00 08 00 00 3a 34 30 3d 40 00     02:46:14.844  READ FPDMA QUEUED
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 00 08 3d 30 34 40 00      02:46:18.172  READ FPDMA QUEUED
+  ef 02 00 00 00 00 00 00      02:46:18.172  SET FEATURES [Enable write cache]
+  60 00 01 01 00 00 a0 ff      02:46:18.136  READ FPDMA QUEUED
+  60 00 90 ad 30 34 4a ff      02:46:18.136  READ FPDMA QUEUED
+  60 00 08 3d 30 34 40 00      02:46:14.844  READ FPDMA QUEUED
 
-SMART Extended Self-test Log Version: 1 (1 sectors)
+Error 2897 occurred at disk power-on lifetime: 5365 hours (223 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 8d b0 30 34 0a  Error: UNC at LBA = 0x0a3430b0 = 171192496
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 00 08 3d 30 34 40 00      02:46:14.844  READ FPDMA QUEUED
+  ef 02 00 00 00 00 00 00      02:46:14.844  SET FEATURES [Enable write cache]
+  60 00 01 01 00 00 a0 ff      02:46:14.800  READ FPDMA QUEUED
+  60 00 90 ad 30 34 4a ff      02:46:14.799  READ FPDMA QUEUED
+  60 00 08 3d 30 34 40 00      02:46:11.516  READ FPDMA QUEUED
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
@@ -203,9 +223,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     27/36 Celsius
-Lifetime    Min/Max Temperature:      8/62 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     23/30 Celsius
+Lifetime    Min/Max Temperature:      3/67 Celsius
 Lifetime    Average Temperature:        34 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -214,25 +234,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (55)
+Temperature History Size (Index):    128 (32)
 
-SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
-SATA Phy Event Counters (GP Log 0x11)
-ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
-0x0002  2            0  R_ERR response for data FIS
-0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2            0  R_ERR response for non-data FIS
-0x0006  2            0  R_ERR response for device-to-host non-data FIS
-0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x000b  2            0  CRC errors within host-to-device FIS
-0x000d  2            0  Non-CRC errors within host-to-device FIS
+Pending Defects log (GP Log 0x0c) not supported
+
+ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
+Read SATA Phy Event Counters failed
 

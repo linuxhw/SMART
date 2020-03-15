@@ -7,22 +7,22 @@ User Capacity:    120 060 444 672 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Nov 14 08:21:04 2016 EET
+Local Time is:    Sun Dec 10 22:53:29 2017 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      ( 249)	Self-test routine in progress...
 					90% of test remaining.
@@ -50,24 +50,24 @@ recommended polling time: 	 (  84) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   091   051    -    191
+  1 Raw_Read_Error_Rate     POSR--   099   052   051    -    398
   3 Spin_Up_Time            POS---   100   099   025    -    5760
-  4 Start_Stop_Count        -O--CK   089   089   000    -    11694
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12578
   5 Reallocated_Sector_Ct   PO--CK   099   099   011    -    4
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Half_Minutes   -O--CK   094   094   000    -    32390h+40m
+  9 Power_On_Half_Minutes   -O--CK   094   094   000    -    34465h+46m
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
- 11 Calibration_Retry_Count -O--C-   100   100   000    -    312
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6248
-194 Temperature_Celsius     -O---K   166   079   000    -    24
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    3980353
-196 Reallocated_Event_Count -O--CK   094   094   000    -    15
+ 11 Calibration_Retry_Count -O--C-   100   100   000    -    411
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6780
+194 Temperature_Celsius     -O---K   136   079   000    -    34
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    3248006
+196 Reallocated_Event_Count -O--CK   078   078   000    -    48
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Total_Offl_Uncorrectabl ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   198   000    -    434
+199 UDMA_CRC_Error_Count    -OSRCK   200   198   000    -    54
 200 Multi_Zone_Error_Rate   -O-R--   100   100   051    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   100   051    -    0
+201 Soft_Read_Error_Rate    -O-R--   100   099   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -88,7 +88,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 25410 (device log contains only the most recent five errors)
+ATA Error Count: 25747 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -103,90 +103,88 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 25410 occurred at disk power-on lifetime: 32374 hours (1348 days + 22 hours)
+Error 25747 occurred at disk power-on lifetime: 34464 hours (1436 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 20 c3 42 e9  Error: ICRC, ABRT at LBA = 0x0942c320 = 155370272
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 20 c3 42 e9 00      02:03:05.438  READ DMA
-  c8 00 00 20 c2 42 e9 00      02:03:05.438  READ DMA
-  c8 00 08 20 2c e8 e8 00      02:03:05.375  READ DMA
-  c8 00 10 d8 c3 fe e8 00      02:03:05.313  READ DMA
-  c8 00 88 a0 e9 fd e8 00      02:03:05.313  READ DMA
+  ef 05 fe 00 00 00 40 00      00:35:51.125  SET FEATURES [Enable APM]
+  c8 00 18 a0 b5 c7 e0 00      00:35:51.125  READ DMA
+  c8 00 20 c8 b6 c4 e0 00      00:35:51.125  READ DMA
+  c8 00 20 e8 63 94 e0 00      00:35:51.125  READ DMA
+  c8 00 48 68 c9 84 e0 00      00:35:51.125  READ DMA
 
-Error 25409 occurred at disk power-on lifetime: 32372 hours (1348 days + 20 hours)
+Error 25746 occurred at disk power-on lifetime: 34464 hours (1436 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 80 c0 b6 3a e9  Error: ICRC, ABRT 128 sectors at LBA = 0x093ab6c0 = 154842816
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 c0 b6 3a e9 00      00:08:03.313  READ DMA
-  c8 00 40 80 b6 3a e9 00      00:08:03.313  READ DMA
-  c8 00 20 60 b6 3a e9 00      00:08:03.313  READ DMA
-  c8 00 08 58 b6 3a e9 00      00:08:03.313  READ DMA
-  c8 00 00 48 b5 3a e9 00      00:08:03.313  READ DMA
+  ef 05 fe 00 00 00 40 00      00:35:40.375  SET FEATURES [Enable APM]
+  c8 00 20 60 df 0d e2 00      00:35:39.188  READ DMA
+  c8 00 00 80 df 0d e2 00      00:35:39.125  READ DMA
+  e3 00 f4 00 00 00 40 00      00:35:38.563  IDLE
+  ca 00 08 00 cc 45 e0 00      00:35:38.438  WRITE DMA
 
-Error 25408 occurred at disk power-on lifetime: 32372 hours (1348 days + 20 hours)
+Error 25745 occurred at disk power-on lifetime: 34464 hours (1436 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 a8 54 fd e8  Error: ICRC, ABRT at LBA = 0x08fd54a8 = 150820008
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 a8 54 fd e8 00      00:07:56.375  READ DMA
-  c8 00 d0 f8 0b eb ea 00      00:07:56.313  READ DMA
-  ca 00 08 28 2b 70 ea 00      00:07:56.313  WRITE DMA
-  ca 00 08 a0 2a 6b ea 00      00:07:56.250  WRITE DMA
-  c8 00 08 10 08 67 ea 00      00:07:56.250  READ DMA
+  ef 05 fe 00 00 00 40 00      00:35:38.250  SET FEATURES [Enable APM]
+  e3 00 f4 00 00 00 40 00      00:35:36.625  IDLE
+  ec 00 01 00 00 00 40 00      00:35:36.313  IDENTIFY DEVICE
 
-Error 25407 occurred at disk power-on lifetime: 32372 hours (1348 days + 20 hours)
+Error 25744 occurred at disk power-on lifetime: 34464 hours (1436 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 b8 92 05 e9  Error: ICRC, ABRT at LBA = 0x090592b8 = 151360184
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 b8 92 05 e9 00      00:07:43.875  READ DMA
-  c8 00 00 58 91 05 e9 00      00:07:43.875  READ DMA
-  c8 00 88 70 94 05 e9 00      00:07:43.875  READ DMA
-  c8 00 20 38 91 05 e9 00      00:07:43.875  READ DMA
-  c8 00 18 b0 5e 6c e9 00      00:07:43.813  READ DMA
+  ef 05 fe 00 00 00 40 00      00:35:36.250  SET FEATURES [Enable APM]
+  e7 00 00 ff 08 04 a0 00      00:35:35.375  FLUSH CACHE
+  ca 00 08 f8 08 04 e1 00      00:35:35.375  WRITE DMA
+  e7 00 00 f7 08 04 a0 00      00:35:35.375  FLUSH CACHE
+  ca 00 20 d8 08 04 e1 00      00:35:35.375  WRITE DMA
 
-Error 25406 occurred at disk power-on lifetime: 32372 hours (1348 days + 20 hours)
+Error 25743 occurred at disk power-on lifetime: 34464 hours (1436 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 90 c0 96 4f e9  Error: ICRC, ABRT 144 sectors at LBA = 0x094f96c0 = 156210880
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 90 c0 96 4f e9 00      00:03:33.125  READ DMA
-  c8 00 28 78 93 4f e9 00      00:03:33.125  READ DMA
-  c8 00 88 28 95 4f e9 00      00:03:33.063  READ DMA
-  c8 00 90 e8 9a 4f e9 00      00:03:33.063  READ DMA
-  e7 00 00 4f 98 4f a0 00      00:03:33.063  FLUSH CACHE
+  ef 05 fe 00 00 00 40 00      00:35:34.000  SET FEATURES [Enable APM]
+  c8 00 00 c0 50 9c e0 00      00:35:33.063  READ DMA
+  c8 00 00 b0 52 9c e0 00      00:35:33.063  READ DMA
+  c8 00 98 f0 53 9c e0 00      00:35:33.063  READ DMA
+  c8 00 78 30 56 9c e0 00      00:35:33.063  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
