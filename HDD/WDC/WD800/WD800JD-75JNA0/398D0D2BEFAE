@@ -7,7 +7,7 @@ User Capacity:    80 000 000 000 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Tue Feb 23 08:34:21 2016 IST
+Local Time is:    Mon Mar 21 15:19:55 2016 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,8 +22,8 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -58,16 +58,16 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    77
-  3 Spin_Up_Time            PO----   165   164   021    -    2708
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3619
+  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    78
+  3 Spin_Up_Time            PO----   168   164   021    -    2583
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3681
   5 Reallocated_Sector_Ct   PO--CK   186   186   140    -    109
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   011   011   000    -    65331
+  9 Power_On_Hours          -O--CK   011   011   000    -    65693
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3504
-194 Temperature_Celsius     -O---K   104   076   000    -    39
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3563
+194 Temperature_Celsius     -O---K   102   076   000    -    41
 196 Reallocated_Event_Count -O--CK   192   192   000    -    8
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -80,9 +80,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-Read SMART Log Directory failed: scsi error aborted command
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
 Read GP Log Directory failed
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
@@ -94,8 +94,9 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     65219         -
-# 2  Extended offline    Completed without error       00%     64406         -
+# 1  Extended offline    Completed without error       00%       147         -
+# 2  Extended offline    Completed without error       00%     65219         -
+# 3  Extended offline    Completed without error       00%     64406         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -116,6 +117,4 @@ SCT (Get) Error Recovery Control command failed
 Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 

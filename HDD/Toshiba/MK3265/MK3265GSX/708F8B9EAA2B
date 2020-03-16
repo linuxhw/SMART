@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Aug 27 21:43:24 2015 MSK
+Local Time is:    Sun Nov 13 20:27:06 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,8 +25,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -61,27 +61,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1170
-  4 Start_Stop_Count        -O--CK   100   100   000    -    2254
+  3 Spin_Up_Time            POS--K   100   100   001    -    1145
+  4 Start_Stop_Count        -O--CK   100   100   000    -    3144
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    1
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   081   081   000    -    7971
- 10 Spin_Retry_Count        PO--CK   144   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2222
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    29
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    707395698
-193 Load_Cycle_Count        -O--CK   084   084   000    -    160241
-194 Temperature_Celsius     -O---K   100   100   000    -    41 (Min/Max 13/54)
+  9 Power_On_Hours          -O--CK   067   067   000    -    13460
+ 10 Spin_Retry_Count        PO--CK   162   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3099
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    34
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1154810034
+193 Load_Cycle_Count        -O--CK   056   056   000    -    448198
+194 Temperature_Celsius     -O---K   100   100   000    -    32 (Min/Max 13/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-220 Disk_Shift              -O----   100   100   000    -    55
-222 Loaded_Hours            -O--CK   084   084   000    -    6434
+220 Disk_Shift              -O----   100   100   000    -    54
+222 Loaded_Hours            -O--CK   076   076   000    -    9995
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    350
+226 Load-in_Time            -OS--K   100   100   000    -    302
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -100,14 +100,14 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 1871 (device log contains only the most recent 256 errors)
+Device Error Count: 1873 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +122,40 @@ Device Error Count: 1871 (device log contains only the most recent 256 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1873 [80] occurred at disk power-on lifetime: 12125 hours (505 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 22 00 00 06 2a cf 6e e6 00  Error: UNC 34 sectors at LBA = 0x062acf6e = 103468910
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 06 2a cf 50 e0 00     00:39:00.223  READ DMA EXT
+  25 00 00 00 40 00 00 06 2a cf 10 e0 00     00:39:00.203  READ DMA EXT
+  25 00 00 00 40 00 00 06 2a ce d0 e0 00     00:39:00.182  READ DMA EXT
+  25 00 00 00 40 00 00 06 2a ce 90 e0 00     00:39:00.162  READ DMA EXT
+  25 00 00 00 40 00 00 06 2a ce 50 e0 00     00:39:00.141  READ DMA EXT
+
+Error 1872 [79] occurred at disk power-on lifetime: 11536 hours (480 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 38 00 00 03 fa d7 a8 e3 00  Error: UNC 56 sectors at LBA = 0x03fad7a8 = 66770856
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 80 00 00 03 fa d7 60 e0 00     01:38:44.279  READ DMA EXT
+  35 00 00 00 68 00 00 03 92 56 d8 e0 00     01:38:44.279  WRITE DMA EXT
+  25 00 00 00 68 00 00 03 fb 5d f8 e0 00     01:38:44.269  READ DMA EXT
+  35 00 00 00 98 00 00 03 92 56 40 e0 00     01:38:44.268  WRITE DMA EXT
+  25 00 00 00 98 00 00 03 fa ea 40 e0 00     01:38:44.253  READ DMA EXT
 
 Error 1871 [78] occurred at disk power-on lifetime: 6968 hours (290 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -225,60 +259,27 @@ Error 1866 [73] occurred at disk power-on lifetime: 6968 hours (290 days + 8 hou
   2f 00 00 00 01 00 00 00 00 00 10 40 00     01:05:56.471  READ LOG EXT
   60 01 00 00 a0 00 00 0e 7f 41 f0 40 00     01:05:52.350  READ FPDMA QUEUED
 
-Error 1865 [72] occurred at disk power-on lifetime: 6968 hours (290 days + 8 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 a2 00 00 0e 7f 42 5c 6e 00  Error: UNC at LBA = 0x0e7f425c = 243221084
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 a0 00 00 0e 7f 41 f0 40 00     01:05:52.350  READ FPDMA QUEUED
-  61 00 08 00 98 00 00 06 9a a8 28 40 00     01:05:52.349  WRITE FPDMA QUEUED
-  61 00 30 00 90 00 00 00 8b 21 60 40 00     01:05:52.349  WRITE FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00     01:05:52.348  READ LOG EXT
-  60 01 00 00 80 00 00 0e 7f 41 f0 40 00     01:05:48.183  READ FPDMA QUEUED
-
-Error 1864 [71] occurred at disk power-on lifetime: 6968 hours (290 days + 8 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 82 00 00 0e 7f 42 5c 6e 00  Error: UNC at LBA = 0x0e7f425c = 243221084
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 80 00 00 0e 7f 41 f0 40 00     01:05:48.183  READ FPDMA QUEUED
-  61 00 08 00 78 00 00 00 78 cf c0 40 00     01:05:48.183  WRITE FPDMA QUEUED
-  61 00 08 00 70 00 00 06 9a a7 20 40 00     01:05:48.183  WRITE FPDMA QUEUED
-  61 00 18 00 68 00 00 00 8b 21 48 40 00     01:05:48.182  WRITE FPDMA QUEUED
-  60 00 b0 00 60 00 00 0e 7f 44 f0 40 00     01:05:48.181  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      7917         -
-# 2  Extended offline    Completed without error       00%      7808         -
-# 3  Extended offline    Completed without error       00%      7676         -
-# 4  Extended offline    Completed without error       00%      7513         -
-# 5  Extended offline    Completed without error       00%      7431         -
-# 6  Extended offline    Completed without error       00%      7321         -
-# 7  Extended offline    Completed without error       00%      7259         -
-# 8  Extended offline    Completed without error       00%      7211         -
-# 9  Extended offline    Aborted by host               70%      7173         -
-#10  Extended offline    Completed: read failure       00%      7132         243221084
-#11  Extended offline    Completed: read failure       00%      6920         9422071
-#12  Extended offline    Completed: read failure       00%      6747         9422071
-#13  Extended offline    Completed: read failure       00%      6587         9422071
-#14  Extended offline    Completed: read failure       00%      6432         9422071
-#15  Extended offline    Completed: read failure       00%      6382         9422071
-#16  Extended offline    Completed: read failure       00%      6299         9422071
-#17  Extended offline    Completed: read failure       00%      6212         7696748
-8 of 8 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed without error       00%     10949         -
+# 2  Extended offline    Completed without error       00%     10714         -
+# 3  Extended offline    Completed without error       00%     10577         -
+# 4  Extended offline    Aborted by host               70%     10455         -
+# 5  Extended offline    Completed without error       00%     10253         -
+# 6  Extended offline    Completed without error       00%     10064         -
+# 7  Extended offline    Completed without error       00%      9957         -
+# 8  Extended offline    Completed without error       00%      9867         -
+# 9  Extended offline    Completed without error       00%      9795         -
+#10  Extended offline    Completed without error       00%      9669         -
+#11  Extended offline    Completed without error       00%      9559         -
+#12  Extended offline    Completed without error       00%      9449         -
+#13  Extended offline    Completed without error       00%      9377         -
+#14  Extended offline    Completed without error       00%      9292         -
+#15  Extended offline    Aborted by host               60%      9213         -
+#16  Extended offline    Completed without error       00%      9110         -
+#17  Extended offline    Completed without error       00%      8998         -
+#18  Extended offline    Completed without error       00%      8892         -
+#19  Extended offline    Completed without error       00%      8793         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -295,8 +296,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     30/46 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     30/32 Celsius
 Lifetime    Min/Max Temperature:     13/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -305,13 +306,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (403)
+Temperature History Size (Index):    478 (361)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -323,8 +324,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

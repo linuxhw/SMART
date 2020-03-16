@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Oct 20 09:40:33 2016 MSK
+Local Time is:    Thu Oct 20 09:53:44 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -67,8 +67,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
  12 Power_Cycle_Count       -O--CK   097   097   000    -    3642
-190 Airflow_Temperature_Cel -O---K   061   050   045    -    39
-194 Temperature_Celsius     -O---K   111   100   000    -    39
+190 Airflow_Temperature_Cel -O---K   063   050   045    -    37
+194 Temperature_Celsius     -O---K   113   100   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 5
+Device Error Count: 6
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -115,6 +115,22 @@ Device Error Count: 5
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6 [5] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 00 0d 00 53 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 43 b0 41 49 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 41 43 00 49 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 3c ec 41 49 00 01 00 00 00 00 00 00     01:11:18.589  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 00 00 00 41 2d 00 49 ec 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 5 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -223,7 +239,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (30)
+Temperature History Size (Index):    128 (43)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -235,7 +251,7 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x000a  2           25  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         3489  Vendor specific
+0x8000  4         4278  Vendor specific
 
 
 

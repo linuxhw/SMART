@@ -7,7 +7,7 @@ User Capacity:    250 059 350 016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Jan 18 00:23:31 2017 MSK
+Local Time is:    Wed Feb  1 01:28:13 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  39)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -54,17 +53,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5335
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5369
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   078   060   030    -    74005888
-  9 Power_On_Hours          -O--CK   072   072   000    -    25000
+  7 Seek_Error_Rate         POSR--   079   060   030    -    90754066
+  9 Power_On_Hours          -O--CK   072   072   000    -    25210
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5154
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5188
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   048   045    -    41 (Min/Max 12/52)
-194 Temperature_Celsius     -O---K   041   052   000    -    41 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   068   063   000    -    47545819
+190 Airflow_Temperature_Cel -O---K   058   048   045    -    42 (Min/Max 12/52)
+194 Temperature_Celsius     -O---K   042   052   000    -    42 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   068   063   000    -    234707563
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   168   000    -    1149
@@ -104,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 136 (device log contains only the most recent 20 errors)
+Device Error Count: 195 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,7 +119,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 136 [15] occurred at disk power-on lifetime: 24959 hours (1039 days + 23 hours)
+Error 195 [14] occurred at disk power-on lifetime: 25177 hours (1049 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -131,13 +130,13 @@ Error 136 [15] occurred at disk power-on lifetime: 24959 hours (1039 days + 23 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     01:01:08.474  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     01:01:08.473  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     01:01:08.473  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     01:01:08.471  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     01:01:08.471  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     03:33:45.339  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     03:33:45.339  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     03:33:45.338  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     03:33:45.338  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     03:33:45.337  READ DMA EXT
 
-Error 135 [14] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 hours)
+Error 194 [13] occurred at disk power-on lifetime: 25176 hours (1049 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -148,13 +147,13 @@ Error 135 [14] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:11:02.736  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:11:02.735  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:11:02.735  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:11:02.733  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:11:02.733  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     02:37:51.290  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     02:37:51.290  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     02:37:51.289  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     02:37:51.289  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     02:37:51.288  READ DMA EXT
 
-Error 134 [13] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 hours)
+Error 193 [12] occurred at disk power-on lifetime: 25174 hours (1048 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,13 +164,13 @@ Error 134 [13] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:00:45.846  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:00:45.846  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:00:45.845  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:00:45.845  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:00:45.844  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:09:19.348  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:09:19.348  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:09:19.348  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:09:19.347  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:09:19.347  READ DMA EXT
 
-Error 133 [12] occurred at disk power-on lifetime: 24957 hours (1039 days + 21 hours)
+Error 192 [11] occurred at disk power-on lifetime: 25179 hours (1049 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -182,13 +181,13 @@ Error 133 [12] occurred at disk power-on lifetime: 24957 hours (1039 days + 21 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     08:17:15.989  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     08:17:15.988  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     08:17:15.996  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     08:17:15.996  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     08:17:15.995  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     05:26:26.481  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     05:26:26.479  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     05:26:26.479  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     05:26:26.487  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     05:26:26.486  READ DMA EXT
 
-Error 132 [11] occurred at disk power-on lifetime: 24959 hours (1039 days + 23 hours)
+Error 191 [10] occurred at disk power-on lifetime: 25177 hours (1049 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -199,13 +198,13 @@ Error 132 [11] occurred at disk power-on lifetime: 24959 hours (1039 days + 23 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     01:01:08.474  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     01:01:08.473  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     01:01:08.473  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     01:01:08.471  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     01:01:08.471  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     03:33:45.339  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     03:33:45.339  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     03:33:45.338  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     03:33:45.338  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     03:33:45.337  READ DMA EXT
 
-Error 131 [10] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 hours)
+Error 190 [9] occurred at disk power-on lifetime: 25176 hours (1049 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -216,13 +215,13 @@ Error 131 [10] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:11:02.736  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:11:02.735  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:11:02.735  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:11:02.733  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:11:02.733  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     02:37:51.290  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     02:37:51.290  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     02:37:51.289  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     02:37:51.289  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     02:37:51.288  READ DMA EXT
 
-Error 130 [9] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 hours)
+Error 189 [8] occurred at disk power-on lifetime: 25174 hours (1048 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -233,13 +232,13 @@ Error 130 [9] occurred at disk power-on lifetime: 24958 hours (1039 days + 22 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:00:45.846  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:00:45.846  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:00:45.845  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:00:45.845  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:00:45.844  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     00:09:19.348  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     00:09:19.348  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     00:09:19.348  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     00:09:19.347  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     00:09:19.347  READ DMA EXT
 
-Error 129 [8] occurred at disk power-on lifetime: 24957 hours (1039 days + 21 hours)
+Error 188 [7] occurred at disk power-on lifetime: 25179 hours (1049 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -250,13 +249,16 @@ Error 129 [8] occurred at disk power-on lifetime: 24957 hours (1039 days + 21 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     08:17:15.989  READ DMA EXT
-  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     08:17:15.988  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     08:17:15.996  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     08:17:15.996  READ DMA EXT
-  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     08:17:15.995  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 40 e0 00     05:26:26.481  READ DMA EXT
+  25 00 00 00 40 00 1d 59 00 1c 00 e0 00     05:26:26.479  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c c0 e0 00     05:26:26.479  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 80 e0 00     05:26:26.487  READ DMA EXT
+  25 00 00 00 40 00 1d 58 00 1c 40 e0 00     05:26:26.486  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      70%     25143         -
+# 2  Extended offline    Interrupted (host reset)      80%     25053         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -273,7 +275,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 41 Celsius
+Current Temperature:                 42 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -285,14 +287,14 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            1  Vendor specific
+0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific
 

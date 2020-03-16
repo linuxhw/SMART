@@ -7,7 +7,7 @@ User Capacity:    20 490 559 488 bytes [20,4 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Fri Sep 29 14:26:12 2017 MSK
+Local Time is:    Fri Sep 29 22:23:02 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -51,20 +51,20 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   233   233   063    -    7210
-  4 Start_Stop_Count        -O--CK   253   253   000    -    1490
-  5 Reallocated_Sector_Ct   PO--CK   132   132   063    -    306
+  3 Spin_Up_Time            POS--K   233   233   063    -    7546
+  4 Start_Stop_Count        -O--CK   253   253   000    -    1494
+  5 Reallocated_Sector_Ct   PO--CK   131   131   063    -    307
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   249   244   187    -    37412
-  9 Power_On_Minutes        -O--CK   252   252   000    -    381h+41m
+  8 Seek_Time_Performance   POS--K   249   244   187    -    60627
+  9 Power_On_Minutes        -O--CK   252   252   000    -    382h+28m
  10 Spin_Retry_Count        PO-R-K   253   252   223    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   249   249   000    -    1825
+ 12 Power_Cycle_Count       -O--CK   249   249   000    -    1829
 192 Power-Off_Retract_Count -O--CK   252   252   000    -    1009
-193 Load_Cycle_Count        -O--CK   253   253   000    -    2052
+193 Load_Cycle_Count        -O--CK   253   253   000    -    2064
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    12
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    22
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   252   212   000    -    1
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
@@ -95,9 +95,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 8092 inconsistent with error log pointer 5
+Warning: ATA error count 8094 inconsistent with error log pointer 5
 
-ATA Error Count: 8092 (device log contains only the most recent five errors)
+ATA Error Count: 8094 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -111,6 +111,40 @@ ATA Error Count: 8092 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 8094 occurred at disk power-on lifetime: 358 hours (14 days + 22 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 0b 4f c2 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 00 4f c2 00 08      00:16:20.720  SMART READ LOG
+  e7 00 00 37 36 04 a0 08      00:16:20.704  FLUSH CACHE
+  ca 00 08 30 36 04 e1 08      00:16:20.704  WRITE DMA
+  e7 da 00 00 4f c2 a0 08      00:16:20.704  FLUSH CACHE
+  b0 da 00 00 4f c2 00 08      00:16:20.640  SMART RETURN STATUS
+
+Error 8093 occurred at disk power-on lifetime: 358 hours (14 days + 22 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 b5 38 13 09 e0  Error: UNC 181 sectors at LBA = 0x00091338 = 594744
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 38 13 09 e0 08      09:16:44.224  READ DMA
+  c8 00 00 20 66 08 e0 08      09:16:44.208  READ DMA
+  c8 00 00 70 64 08 e0 08      09:16:44.208  READ DMA
+  c8 00 00 78 60 08 e0 08      09:16:44.192  READ DMA
+  c8 00 00 d8 59 08 e0 08      09:16:44.192  READ DMA
 
 Error 8092 occurred at disk power-on lifetime: 357 hours (14 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -163,40 +197,6 @@ Error 8090 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
   c8 00 00 70 64 08 e0 08      00:14:22.144  READ DMA
   c8 00 00 78 60 08 e0 08      00:14:22.128  READ DMA
 
-Error 8089 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 b5 38 13 09 e0  Error: UNC 181 sectors at LBA = 0x00091338 = 594744
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 38 13 09 e0 08      00:06:00.816  READ DMA
-  c8 00 00 20 66 08 e0 08      00:06:00.816  READ DMA
-  c8 00 08 08 0d 81 e1 08      00:06:00.800  READ DMA
-  c8 00 20 00 ae a5 e1 08      00:06:00.784  READ DMA
-  c8 00 00 70 64 08 e0 08      00:06:00.752  READ DMA
-
-Error 8088 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 b5 38 13 09 e0  Error: UNC 181 sectors at LBA = 0x00091338 = 594744
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 38 13 09 e0 08      00:31:22.752  READ DMA
-  c8 00 18 10 0c cb e1 08      00:31:22.736  READ DMA
-  c8 00 00 20 66 08 e0 08      00:31:22.736  READ DMA
-  c8 00 00 70 64 08 e0 08      00:31:22.736  READ DMA
-  c8 00 00 78 60 08 e0 08      00:31:22.720  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -213,4 +213,6 @@ SCT Commands not supported
 Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
+
+
 

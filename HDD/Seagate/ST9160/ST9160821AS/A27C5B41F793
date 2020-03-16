@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Apr  5 15:23:54 2016 MSK
+Local Time is:    Sun Apr 10 15:02:15 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,9 +25,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -53,21 +52,21 @@ SCT capabilities: 	       (0x0001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   109   099   006    -    23862545
+  1 Raw_Read_Error_Rate     POSR--   116   099   006    -    103095666
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2675
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2687
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    9
-  7 Seek_Error_Rate         POSR--   089   060   030    -    870324528
-  9 Power_On_Hours          -O--CK   091   091   000    -    8755
+  7 Seek_Error_Rate         POSR--   089   060   030    -    871168428
+  9 Power_On_Hours          -O--CK   090   090   000    -    8813
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2444
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2457
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   044   045    Past 37 (0 125 38 35 0)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    869
-193 Load_Cycle_Count        -O--CK   096   096   000    -    9399
-194 Temperature_Celsius     -O---K   037   056   000    -    37 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   066   059   000    -    23774071
+190 Airflow_Temperature_Cel -O---K   066   044   045    Past 34 (0 125 34 31 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    879
+193 Load_Cycle_Count        -O--CK   096   096   000    -    9821
+194 Temperature_Celsius     -O---K   034   056   000    -    34 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   073   059   000    -    37652858
 197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967292
 198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967292
 199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    15
@@ -260,6 +259,8 @@ Error 33 [12] occurred at disk power-on lifetime: 6096 hours (254 days + 0 hours
   42 00 00 00 80 00 12 5f 00 97 80 40 00     04:19:40.316  READ VERIFY SECTOR(S) EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: read failure       90%      8782         28338506128829
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -276,7 +277,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 37 Celsius
+Current Temperature:                 34 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -288,14 +289,14 @@ Device Statistics (GP Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           17  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2           13  Vendor specific
+0x8003  2            2  Vendor specific
 0x8004  2            0  Vendor specific
 

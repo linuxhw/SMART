@@ -4,14 +4,14 @@ Device Model:     Hitachi HTS545050A7E380
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: GG2OA6C0
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri May 19 10:14:44 2017 +04
+Local Time is:    Sat Dec 30 12:09:28 2017 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,21 +59,21 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    65536
-  2 Throughput_Performance  P-S---   198   198   040    -    127
-  3 Spin_Up_Time            POS---   243   243   033    -    1
-  4 Start_Stop_Count        -O--C-   071   071   000    -    46985
+  1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
+  2 Throughput_Performance  P-S---   186   186   040    -    695
+  3 Spin_Up_Time            POS---   217   217   033    -    0
+  4 Start_Stop_Count        -O--C-   065   065   000    -    56569
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   112   112   040    -    35
-  9 Power_On_Hours          -O--C-   078   078   000    -    9827
+  8 Seek_Time_Performance   P-S---   110   110   040    -    36
+  9 Power_On_Hours          -O--C-   076   076   000    -    10890
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    5935
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    6603
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   094   094   000    -    1314
-193 Load_Cycle_Count        -O--C-   083   083   000    -    178636
-194 Temperature_Celsius     -O----   250   250   000    -    24 (Min/Max -2/49)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    103
+192 Power-Off_Retract_Count -O--CK   093   093   000    -    1558
+193 Load_Cycle_Count        -O--C-   078   078   000    -    225221
+194 Temperature_Celsius     -O----   187   187   000    -    32 (Min/Max -2/49)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    131
 197 Current_Pending_Sector  -O---K   100   100   000    -    8
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 148 (device log contains only the most recent 4 errors)
+Device Error Count: 149 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,6 +117,23 @@ Device Error Count: 148 (device log contains only the most recent 4 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 149 [0] occurred at disk power-on lifetime: 10250 hours (427 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 01 40 00 00 27 8f 16 40 07 00  Error: UNC at LBA = 0x278f1640 = 663688768
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 c8 00 00 27 8f 17 80 40 08     00:03:52.894  READ FPDMA QUEUED
+  60 02 00 00 c0 00 00 27 8f 15 80 40 08     00:03:52.883  READ FPDMA QUEUED
+  60 02 00 00 b8 00 00 27 8f 13 80 40 08     00:03:48.854  READ FPDMA QUEUED
+  60 02 00 00 b0 00 00 27 8f 11 80 40 08     00:03:48.686  READ FPDMA QUEUED
+  60 01 00 00 a8 00 00 27 8f 10 80 40 08     00:03:48.684  READ FPDMA QUEUED
 
 Error 148 [3] occurred at disk power-on lifetime: 8079 hours (336 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -169,23 +186,6 @@ Error 146 [1] occurred at disk power-on lifetime: 7519 hours (313 days + 7 hours
   60 00 08 00 30 00 00 27 8f 11 58 40 00     00:38:34.842  READ FPDMA QUEUED
   60 00 08 00 28 00 00 27 8f 11 50 40 00     00:38:34.832  READ FPDMA QUEUED
 
-Error 145 [0] occurred at disk power-on lifetime: 7519 hours (313 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 48 00 00 27 8f 11 58 07 00  Error: UNC at LBA = 0x278f1158 = 663687512
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 80 00 f8 00 00 27 8f 11 20 40 00     00:38:30.444  READ FPDMA QUEUED
-  60 00 40 00 f0 00 00 00 2c 18 22 40 00     00:38:30.408  READ FPDMA QUEUED
-  61 00 08 00 e8 00 00 00 02 da 68 40 00     00:38:30.382  WRITE FPDMA QUEUED
-  61 00 08 00 e0 00 00 00 00 13 18 40 00     00:38:30.382  WRITE FPDMA QUEUED
-  60 00 08 00 d8 00 00 00 01 d5 a0 40 00     00:38:30.382  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Completed: read failure       30%      9488         663686872
@@ -205,8 +205,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     21/24 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     23/35 Celsius
 Lifetime    Min/Max Temperature:     -2/49 Celsius
 Lifetime    Average Temperature:        33 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -216,7 +216,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (76)
+Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
            Read: Disabled

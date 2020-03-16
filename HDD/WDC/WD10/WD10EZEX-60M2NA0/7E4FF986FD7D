@@ -4,20 +4,21 @@ Device Model:     WDC WD10EZEX-60M2NA0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01A01
-User Capacity:    1 000 204 886 016 bytes [1,00 TB]
+User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Jul 29 12:12:26 2017 +07
+Local Time is:    Sat Nov 24 19:22:28 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -25,8 +26,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,21 +61,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   177   166   021    -    2141
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1374
+  3 Spin_Up_Time            POS--K   175   166   021    -    2216
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2405
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   079   079   000    -    15541
+  9 Power_On_Hours          -O--CK   072   072   000    -    20873
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1246
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2277
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    27
-190 Airflow_Temperature_Cel -O---K   061   050   040    -    39 (Min/Max 30/39)
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    214
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1232
+188 Command_Timeout         -O--CK   100   099   000    -    34
+190 Airflow_Temperature_Cel -O---K   063   049   040    -    37 (Min/Max 23/37)
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    287
+193 Load_Cycle_Count        -O--CK   200   200   000    -    2190
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -99,13 +100,13 @@ Address    Access  R/W   Size  Description
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
 0x0d       GPL,SL  R/O      8  LPS Mis-alignment log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
-0x12       GPL     R/O      1  SATA NCQ NON-DATA log
+0x12       GPL     R/O      1  SATA NCQ Non-Data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
-0xb6       GPL     VS    1861  Device vendor specific log
+0xb6       GPL     VS    2528  Device vendor specific log
 0xb6       SL      VS       1  Device vendor specific log
 0xb7       GPL,SL  VS       1  Device vendor specific log
 0xbd       GPL,SL  VS       1  Device vendor specific log
@@ -135,9 +136,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     30/39 Celsius
-Lifetime    Min/Max Temperature:     10/50 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     23/37 Celsius
+Lifetime    Min/Max Temperature:      0/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -148,13 +149,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (84)
+Temperature History Size (Index):    128 (82)
 
 SCT Error Recovery Control:
-           Read:     85 (8,5 seconds)
-          Write:     85 (8,5 seconds)
+           Read:     85 (8.5 seconds)
+          Write:     85 (8.5 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -166,12 +169,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         3370  Vendor specific
+0x8000  4         6887  Vendor specific
 
 
 
