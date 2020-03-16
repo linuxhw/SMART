@@ -68,6 +68,7 @@ Rating — avg. rating per sample.
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 5       | 111   | 0     | 0.31   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 7       | 107   | 0     | 0.30   |
 | SK hynix  | HFS256GD9MNE-6200A | 256 GB | 1       | 107   | 0     | 0.29   |
+| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 102   | 0     | 0.28   |
 | Intel     | MEMPEK1J016GA      | 16 GB  | 1       | 102   | 0     | 0.28   |
 | ADATA     | SX8200PNP          | 256 GB | 3       | 100   | 0     | 0.27   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 1       | 99    | 0     | 0.27   |
@@ -84,7 +85,6 @@ Rating — avg. rating per sample.
 | Samsung   | MZFLV128HCGR-000MV | 128 GB | 4       | 81    | 0     | 0.22   |
 | Samsung   | MZVLV128HCGR-00000 | 128 GB | 1       | 81    | 0     | 0.22   |
 | Samsung   | MZVPV256HDGL-000L2 | 256 GB | 1       | 80    | 0     | 0.22   |
-| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 79    | 0     | 0.22   |
 | Intel     | SSDPEKKW512G7      | 512 GB | 2       | 78    | 0     | 0.21   |
 | Samsung   | MZVLW128HEGR-000H1 | 128 GB | 2       | 76    | 0     | 0.21   |
 | Lite-On   | CB1-SD512          | 512 GB | 1       | 75    | 0     | 0.21   |
@@ -223,9 +223,9 @@ Rating — avg. rating per sample.
 | SK hynix  | BA HFS256GD9TNG... | 256 GB | 1       | 5     | 0     | 0.01   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | 1       | 5     | 0     | 0.01   |
 | SK hynix  | PC601 HFS512GD9... | 512 GB | 1       | 5     | 0     | 0.01   |
+| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 7     | 696   | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 2       | 4     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1       | 4     | 0     | 0.01   |
-| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 6     | 696   | 0.01   |
 | ADATA     | SX6000LNP          | 256 GB | 1       | 4     | 0     | 0.01   |
 | ADATA     | SX6000NP           | 512 GB | 2       | 4     | 0     | 0.01   |
 | Samsung   | MZVLV256HCHP-000H1 | 256 GB | 1       | 4     | 0     | 0.01   |

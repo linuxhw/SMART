@@ -70,7 +70,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDHII240G       | 240 GB | 12      | 221   | 0     | 0.61   |
 | SanDisk   | SDSSDP128G         | 128 GB | 25      | 214   | 1     | 0.59   |
 | SanDisk   | Ultra II           | 240 GB | 8       | 212   | 0     | 0.58   |
-| SanDisk   | SD6SF1M128G1022I   | 128 GB | 1       | 406   | 1     | 0.56   |
+| SanDisk   | SD6SF1M128G1022I   | 128 GB | 1       | 409   | 1     | 0.56   |
 | SanDisk   | SD8SN8U128G1002    | 128 GB | 2       | 202   | 0     | 0.56   |
 | SanDisk   | SD5SF2128G1014E    | 128 GB | 2       | 200   | 0     | 0.55   |
 | SanDisk   | X400 M.2 2280      | 128 GB | 2       | 188   | 0     | 0.52   |
@@ -111,7 +111,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SD6PP4M-256G-1006  | 256 GB | 1       | 56    | 0     | 0.15   |
 | SanDisk   | SD6SB1M128G1022I   | 128 GB | 3       | 54    | 0     | 0.15   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 6       | 202   | 682   | 0.14   |
-| SanDisk   | SD8SN8U-128G-1006  | 128 GB | 14      | 99    | 148   | 0.13   |
+| SanDisk   | SD8SN8U-128G-1006  | 128 GB | 14      | 102   | 148   | 0.13   |
 | SanDisk   | SD5SF2032G1010E    | 32 GB  | 1       | 45    | 0     | 0.13   |
 | SanDisk   | SSD PLUS           | 1 TB   | 4       | 43    | 0     | 0.12   |
 | SanDisk   | SDSSDA960G         | 960 GB | 2       | 42    | 0     | 0.12   |
@@ -187,4 +187,4 @@ Rating — avg. rating per sample.
 | SanDisk   | Marvell based SanDi... | 48     | 217     | 207   | 36    | 0.52   |
 | SanDisk   | SanDisk based SSDs     | 23     | 117     | 204   | 33    | 0.49   |
 | SanDisk   | Unknown                | 70     | 136     | 131   | 166   | 0.31   |
-| SanDisk   | SandForce Driven SSDs  | 6      | 107     | 129   | 13    | 0.30   |
+| SanDisk   | SandForce Driven SSDs  | 6      | 107     | 129   | 13    | 0.31   |

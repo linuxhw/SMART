@@ -31,13 +31,13 @@ Rating — avg. rating per sample.
 | ADATA     | SP900              | 256 GB | 11      | 382   | 2     | 0.79   |
 | ADATA     | SP600NS34          | 256 GB | 1       | 274   | 0     | 0.75   |
 | ADATA     | SP900              | 128 GB | 26      | 343   | 14    | 0.70   |
-| ADATA     | SP600              | 128 GB | 3       | 192   | 0     | 0.53   |
+| ADATA     | SP600              | 128 GB | 3       | 203   | 0     | 0.56   |
 | ADATA     | SX900              | 64 GB  | 4       | 515   | 518   | 0.51   |
 | ADATA     | SP900              | 64 GB  | 14      | 250   | 2     | 0.50   |
 | ADATA     | SX900              | 128 GB | 7       | 705   | 584   | 0.49   |
 | ADATA     | SX930              | 120 GB | 2       | 165   | 0     | 0.45   |
 | ADATA     | SP600              | 32 GB  | 6       | 152   | 0     | 0.42   |
-| ADATA     | SU800              | 256 GB | 5       | 144   | 3     | 0.36   |
+| ADATA     | SU800              | 256 GB | 5       | 145   | 3     | 0.36   |
 | ADATA     | SSD S511           | 64 GB  | 3       | 450   | 679   | 0.33   |
 | ADATA     | SP310              | 128 GB | 1       | 120   | 0     | 0.33   |
 | ADATA     | SSD SX900 512GB... | 512 GB | 1       | 120   | 0     | 0.33   |
@@ -99,7 +99,7 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | ADATA     | SandForce Driven SSDs  | 8      | 61      | 348   | 7     | 0.76   |
-| ADATA     | JMicron based SSDs     | 5      | 20      | 178   | 1     | 0.48   |
+| ADATA     | JMicron based SSDs     | 5      | 20      | 179   | 1     | 0.48   |
 | ADATA     | Unknown                | 41     | 120     | 163   | 174   | 0.19   |
 | ADATA     | Silicon Motion base... | 5      | 35      | 57    | 3     | 0.15   |
 | ADATA     | SiliconMotion based... | 2      | 31      | 31    | 1     | 0.08   |

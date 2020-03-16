@@ -68,10 +68,10 @@ Rating — avg. rating per sample.
 | Toshiba   | MQ04UBF100         | 1 TB   | 3       | 265   | 0     | 0.73   |
 | Toshiba   | MK3263GSX          | 320 GB | 5       | 635   | 20    | 0.72   |
 | Toshiba   | MK5065GSXF         | 500 GB | 9       | 375   | 4     | 0.71   |
-| Toshiba   | DT01ACA050         | 500 GB | 265     | 284   | 25    | 0.68   |
+| Toshiba   | DT01ACA050         | 500 GB | 265     | 285   | 25    | 0.68   |
 | Toshiba   | MG03ACA300         | 3 TB   | 2       | 430   | 5     | 0.68   |
 | Toshiba   | MK6034GAX          | 64 GB  | 2       | 879   | 5     | 0.65   |
-| Toshiba   | MQ01ABD032         | 320 GB | 73      | 334   | 92    | 0.65   |
+| Toshiba   | MQ01ABD032         | 320 GB | 73      | 335   | 92    | 0.65   |
 | Toshiba   | Generic L200 Ha... | 2 TB   | 2       | 229   | 0     | 0.63   |
 | Toshiba   | MK5076GSXN         | 500 GB | 1       | 224   | 0     | 0.62   |
 | Toshiba   | MK1059GSMP         | 1 TB   | 14      | 548   | 281   | 0.60   |
@@ -89,7 +89,7 @@ Rating — avg. rating per sample.
 | Toshiba   | MK8007GAH          | 80 GB  | 2       | 210   | 7     | 0.44   |
 | Toshiba   | MK8037GSX          | 80 GB  | 17      | 458   | 144   | 0.44   |
 | Toshiba   | MK2555GSXF         | 250 GB | 6       | 160   | 0     | 0.44   |
-| Toshiba   | MQ01ABF032         | 320 GB | 20      | 198   | 52    | 0.44   |
+| Toshiba   | MQ01ABF032         | 320 GB | 20      | 199   | 52    | 0.44   |
 | Toshiba   | MQ01ABD050V        | 500 GB | 1       | 157   | 0     | 0.43   |
 | Toshiba   | MK5059GSXP         | 500 GB | 30      | 396   | 380   | 0.43   |
 | Toshiba   | MK3276GSXN         | 320 GB | 1       | 156   | 0     | 0.43   |
@@ -107,11 +107,11 @@ Rating — avg. rating per sample.
 | Toshiba   | MK2555GSX          | 250 GB | 28      | 411   | 81    | 0.38   |
 | Toshiba   | MK8046GSX          | 80 GB  | 3       | 218   | 2     | 0.36   |
 | Toshiba   | MK2565GSX          | 250 GB | 23      | 312   | 197   | 0.35   |
+| Toshiba   | MQ01ABD050         | 500 GB | 101     | 299   | 338   | 0.35   |
 | Toshiba   | MK1034GSX          | 100 GB | 4       | 418   | 464   | 0.35   |
 | Toshiba   | MK7575GSX          | 752 GB | 18      | 520   | 619   | 0.35   |
 | Toshiba   | MQ01ABF050         | 500 GB | 264     | 156   | 85    | 0.35   |
 | Toshiba   | MD04ACA400         | 4 TB   | 2       | 179   | 623   | 0.35   |
-| Toshiba   | MQ01ABD050         | 500 GB | 101     | 297   | 338   | 0.35   |
 | Toshiba   | HDWM110            | 1 TB   | 3       | 126   | 0     | 0.35   |
 | Toshiba   | MK1216GSG          | 120 GB | 3       | 272   | 4     | 0.34   |
 | Toshiba   | DT01ACA200V        | 2 TB   | 1       | 124   | 0     | 0.34   |
@@ -119,7 +119,7 @@ Rating — avg. rating per sample.
 | Toshiba   | MK6475GSX          | 640 GB | 21      | 373   | 401   | 0.32   |
 | Toshiba   | MK1633GSG          | 160 GB | 2       | 116   | 0     | 0.32   |
 | Toshiba   | MK2546GSX          | 250 GB | 12      | 520   | 41    | 0.32   |
-| Toshiba   | MK3259GSXP         | 320 GB | 45      | 324   | 164   | 0.31   |
+| Toshiba   | MK3259GSXP         | 320 GB | 45      | 326   | 164   | 0.31   |
 | Toshiba   | MK8034GSX          | 80 GB  | 8       | 324   | 38    | 0.30   |
 | Toshiba   | MK5055GSX          | 500 GB | 11      | 540   | 160   | 0.30   |
 | Toshiba   | MK3276GSX -63      | 320 GB | 5       | 178   | 1     | 0.29   |
@@ -255,7 +255,7 @@ Rating — avg. rating per sample.
 | Toshiba   | 2.5" HDD MK..59GSM     | 2      | 23      | 481   | 900   | 0.39   |
 | Toshiba   | 2.5" HDD MK..55GSX     | 2      | 3       | 404   | 639   | 0.39   |
 | Toshiba   | 2.5" HDD MK..59GSXP    | 7      | 105     | 376   | 292   | 0.38   |
-| Toshiba   | 2.5" HDD MQ01ABF       | 2      | 25      | 166   | 41    | 0.37   |
+| Toshiba   | 2.5" HDD MQ01ABF       | 2      | 25      | 167   | 41    | 0.37   |
 | Toshiba   | 3.5" HDD DT01ACA       | 2      | 2       | 133   | 0     | 0.37   |
 | Toshiba   | 2.5" HDD MQ01ABF       | 1      | 264     | 156   | 85    | 0.35   |
 | Toshiba   | 1.8" HDD MK..16GSG     | 1      | 3       | 272   | 4     | 0.34   |

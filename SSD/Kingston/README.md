@@ -53,7 +53,7 @@ Rating — avg. rating per sample.
 | Kingston  | SM2280S3G2240G     | 240 GB | 2       | 380   | 0     | 1.04   |
 | Kingston  | SH103S3120G        | 120 GB | 38      | 369   | 0     | 1.01   |
 | Kingston  | RBU-SC100S37128GD  | 128 GB | 2       | 351   | 0     | 0.96   |
-| Kingston  | SV300S37A60G       | 64 GB  | 105     | 325   | 1     | 0.86   |
+| Kingston  | SV300S37A60G       | 64 GB  | 105     | 326   | 1     | 0.86   |
 | Kingston  | SVP200S3240G       | 240 GB | 2       | 307   | 0     | 0.84   |
 | Kingston  | SMS200S360G        | 64 GB  | 10      | 364   | 1     | 0.81   |
 | Kingston  | SNVP325S2256GB     | 256 GB | 1       | 293   | 0     | 0.80   |
@@ -94,7 +94,7 @@ Rating — avg. rating per sample.
 | Kingston  | RBUSNS8280S3128GH2 | 128 GB | 2       | 112   | 0     | 0.31   |
 | Kingston  | SUV300S37A120G     | 120 GB | 20      | 124   | 1     | 0.31   |
 | Kingston  | SUV400S37480G      | 480 GB | 2       | 172   | 1     | 0.31   |
-| Kingston  | SHFS37A120G        | 120 GB | 62      | 186   | 362   | 0.26   |
+| Kingston  | SHFS37A120G        | 120 GB | 62      | 187   | 362   | 0.26   |
 | Kingston  | SV300S37A480G      | 480 GB | 8       | 97    | 126   | 0.25   |
 | Kingston  | RBU-SNS8151S396GG  | 96 GB  | 1       | 88    | 0     | 0.24   |
 | Kingston  | SKC380S3120G       | 120 GB | 1       | 86    | 0     | 0.24   |

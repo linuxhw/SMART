@@ -28,7 +28,7 @@ Rating — avg. rating per sample.
 | SPCC      | SSD B29            | 32 GB  | 1       | 204   | 0     | 0.56   |
 | SPCC      | SSD162             | 120 GB | 7       | 406   | 436   | 0.51   |
 | SPCC      | SSD A20            | 64 GB  | 2       | 177   | 0     | 0.49   |
-| SPCC      | SSD                | 64 GB  | 70      | 188   | 44    | 0.48   |
+| SPCC      | SSD                | 64 GB  | 70      | 189   | 44    | 0.48   |
 | SPCC      | SSD                | 120 GB | 105     | 191   | 108   | 0.42   |
 | SPCC      | M.2 Disk           | 256 GB | 1       | 119   | 0     | 0.33   |
 | SPCC      | SSD170             | 120 GB | 3       | 245   | 341   | 0.26   |

@@ -36,7 +36,7 @@ Rating — avg. rating per sample.
 | Crucial   | CT128M550SSD3      | 128 GB | 4       | 469   | 8     | 1.00   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 7       | 351   | 0     | 0.96   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 3       | 350   | 0     | 0.96   |
-| Crucial   | CT960M500SSD1      | 960 GB | 6       | 515   | 345   | 0.94   |
+| Crucial   | CT960M500SSD1      | 960 GB | 6       | 522   | 345   | 0.94   |
 | Crucial   | C300-CTFDDAC128MAG | 128 GB | 3       | 330   | 0     | 0.91   |
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | 1       | 307   | 0     | 0.84   |
 | Crucial   | CT750MX300SSD1     | 752 GB | 5       | 302   | 0     | 0.83   |
@@ -62,7 +62,7 @@ Rating — avg. rating per sample.
 | Crucial   | C300-CTFDDAC256MAG | 256 GB | 2       | 555   | 504   | 0.29   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 16      | 112   | 1     | 0.27   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 5       | 99    | 0     | 0.27   |
-| Crucial   | CT250MX500SSD1     | 250 GB | 13      | 79    | 0     | 0.22   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 13      | 80    | 0     | 0.22   |
 | Crucial   | CT240BX300SSD1     | 240 GB | 2       | 69    | 0     | 0.19   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 7       | 57    | 0     | 0.16   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 7       | 52    | 0     | 0.14   |
