@@ -48,11 +48,11 @@ Rating — avg. rating per sample.
 | HGST      | HUS724040ALE640    | 4 TB   | 6       | 267   | 0     | 0.73   |
 | HGST      | HCC545050A7E380    | 500 GB | 1       | 523   | 1     | 0.72   |
 | HGST      | HTS545032A7E680    | 320 GB | 16      | 299   | 19    | 0.64   |
-| HGST      | HTS721010A9E630    | 1 TB   | 175     | 258   | 120   | 0.57   |
+| HGST      | HTS721010A9E630    | 1 TB   | 175     | 259   | 120   | 0.57   |
 | HGST      | HTS541010A9E680    | 1 TB   | 140     | 311   | 266   | 0.55   |
 | HGST      | HUS724040ALA640    | 4 TB   | 1       | 180   | 0     | 0.49   |
 | HGST      | HTS725050A7E630    | 500 GB | 105     | 253   | 132   | 0.47   |
-| HGST      | HTS545050A7E380    | 500 GB | 131     | 337   | 234   | 0.42   |
+| HGST      | HTS545050A7E380    | 500 GB | 131     | 340   | 234   | 0.42   |
 | HGST      | HUS726040ALE614    | 4 TB   | 1       | 147   | 0     | 0.40   |
 | HGST      | HTS541010A7E630    | 1 TB   | 17      | 167   | 3     | 0.39   |
 | HGST      | HUH728080ALE600    | 8 TB   | 1       | 130   | 0     | 0.36   |
@@ -104,9 +104,9 @@ Rating — avg. rating per sample.
 | HGST      | CinemaStar Z5K500      | 1      | 1       | 523   | 1     | 0.72   |
 | HGST      | MegaScale 4000         | 2      | 3       | 229   | 0     | 0.63   |
 | HGST      | Travelstar 5K1000      | 5      | 173     | 320   | 286   | 0.60   |
-| HGST      | Travelstar 7K1000      | 3      | 185     | 255   | 113   | 0.57   |
+| HGST      | Travelstar 7K1000      | 3      | 185     | 256   | 113   | 0.57   |
 | HGST      | Travelstar Z7K500      | 4      | 120     | 265   | 141   | 0.52   |
-| HGST      | Travelstar Z5K500      | 5      | 384     | 247   | 288   | 0.31   |
+| HGST      | Travelstar Z5K500      | 5      | 384     | 248   | 288   | 0.31   |
 | HGST      | Travelstar Z5K1000     | 2      | 26      | 134   | 41    | 0.30   |
 | HGST      | Travelstar Z5K1        | 1      | 16      | 74    | 0     | 0.20   |
 | HGST      | Travelstar Z5K500.B    | 1      | 14      | 47    | 0     | 0.13   |

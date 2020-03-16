@@ -34,11 +34,11 @@ Rating — avg. rating per sample.
 | Samsung   | HD040GJ-P          | 40 GB  | 1       | 975   | 0     | 2.67   |
 | Samsung   | HD160JJ-P          | 160 GB | 8       | 1401  | 508   | 2.48   |
 | Samsung   | HD300LJ            | 304 GB | 9       | 1235  | 380   | 2.01   |
-| Samsung   | HD204UI            | 2 TB   | 22      | 972   | 44    | 2.00   |
+| Samsung   | HD204UI            | 2 TB   | 22      | 973   | 44    | 2.00   |
 | Samsung   | HD103SI            | 1 TB   | 27      | 927   | 122   | 1.78   |
 | Samsung   | HD642JJ            | 640 GB | 20      | 1289  | 380   | 1.71   |
+| Samsung   | HD103SJ            | 1 TB   | 86      | 751   | 11    | 1.68   |
 | Samsung   | HD083GJ            | 80 GB  | 2       | 613   | 0     | 1.68   |
-| Samsung   | HD103SJ            | 1 TB   | 86      | 749   | 11    | 1.68   |
 | Samsung   | HD103UJ            | 1 TB   | 46      | 1048  | 189   | 1.63   |
 | Samsung   | SP1644N            | 160 GB | 3       | 683   | 527   | 1.58   |
 | Samsung   | HD253GJ            | 250 GB | 7       | 768   | 17    | 1.53   |

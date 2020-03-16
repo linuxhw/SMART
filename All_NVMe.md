@@ -141,7 +141,7 @@ Rating — avg. rating per sample.
 | Toshiba   | THNSN5256GPU7 NVMe | 256 GB | 6D98BFFA886D | 117   | 0     | 0.32   |
 | Samsung   | MZVLV256HCHP-000L2 | 256 GB | 866945017C6E | 116   | 0     | 0.32   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 1B875CD7F524 | 115   | 0     | 0.32   |
-| Plextor   | PX-256M8PeY        | 256 GB | 95E748B1021E | 112   | 0     | 0.31   |
+| Plextor   | PX-256M8PeY        | 256 GB | 95E748B1021E | 115   | 0     | 0.32   |
 | Toshiba   | THNSN5256GPUK      | 256 GB | 97A688FE68DA | 112   | 0     | 0.31   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 5752B636B90B | 110   | 0     | 0.30   |
 | Samsung   | SSD 970 PRO        | 512 GB | 39B1A42B66C3 | 109   | 0     | 0.30   |

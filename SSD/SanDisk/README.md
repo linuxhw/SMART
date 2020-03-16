@@ -71,7 +71,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDP128G         | 128 GB | 25      | 214   | 1     | 0.59   |
 | SanDisk   | Ultra II           | 240 GB | 8       | 212   | 0     | 0.58   |
 | SanDisk   | SD8SN8U128G1002    | 128 GB | 2       | 208   | 0     | 0.57   |
-| SanDisk   | SD6SF1M128G1022I   | 128 GB | 1       | 409   | 1     | 0.56   |
+| SanDisk   | SD6SF1M128G1022I   | 128 GB | 1       | 411   | 1     | 0.56   |
 | SanDisk   | SD5SF2128G1014E    | 128 GB | 2       | 200   | 0     | 0.55   |
 | SanDisk   | X400 M.2 2280      | 128 GB | 2       | 188   | 0     | 0.52   |
 | SanDisk   | SD8TN8U256G1001    | 256 GB | 2       | 185   | 0     | 0.51   |

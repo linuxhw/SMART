@@ -47,7 +47,7 @@ Rating — avg. rating per sample.
 | OCZ       | VERTEX3            | 64 GB  | 25      | 585   | 2     | 1.41   |
 | OCZ       | D2RSTK251E14-0400  | 400 GB | 1       | 502   | 0     | 1.38   |
 | OCZ       | AGILITY3           | 64 GB  | 27      | 602   | 2     | 1.36   |
-| OCZ       | VERTEX4            | 128 GB | 59      | 493   | 1     | 1.24   |
+| OCZ       | VERTEX4            | 128 GB | 59      | 494   | 1     | 1.24   |
 | OCZ       | VERTEX2            | 80 GB  | 1       | 442   | 0     | 1.21   |
 | OCZ       | VERTEX3            | 120 GB | 47      | 647   | 38    | 1.20   |
 | OCZ       | REVODRIVE X2       | 25 GB  | 4       | 435   | 0     | 1.19   |
@@ -56,8 +56,8 @@ Rating — avg. rating per sample.
 | OCZ       | VERTEX3            | 128 GB | 2       | 402   | 0     | 1.10   |
 | OCZ       | AGILITY3           | 128 GB | 3       | 749   | 1     | 1.07   |
 | OCZ       | VERTEX3 MI         | 120 GB | 15      | 452   | 134   | 1.02   |
+| OCZ       | VERTEX3            | 90 GB  | 11      | 680   | 7     | 0.99   |
 | OCZ       | VERTEX4            | 256 GB | 15      | 493   | 1     | 0.99   |
-| OCZ       | VERTEX3            | 90 GB  | 11      | 678   | 7     | 0.99   |
 | OCZ       | VERTEX3            | 240 GB | 8       | 564   | 160   | 0.94   |
 | OCZ       | VERTEX4            | 64 GB  | 7       | 338   | 1     | 0.92   |
 | OCZ       | VERTEX PLUS R2     | 128 GB | 2       | 331   | 0     | 0.91   |

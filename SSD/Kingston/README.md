@@ -126,7 +126,7 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37 240G      | 240 GB | 1       | 6     | 0     | 0.02   |
 | Kingston  | SKC600256G         | 256 GB | 1       | 5     | 0     | 0.02   |
 | Kingston  | SKC600512G         | 512 GB | 1       | 5     | 0     | 0.02   |
-| Kingston  | SA400S37           | 240 GB | 1       | 3     | 0     | 0.01   |
+| Kingston  | SA400S37           | 240 GB | 1       | 4     | 0     | 0.01   |
 | Kingston  | SKC300S37A240G     | 240 GB | 2       | 1     | 0     | 0.01   |
 | Kingston  | RBUSNS8180DS3256GJ | 256 GB | 1       | 1     | 0     | 0.00   |
 | Kingston  | SHPM2280P2H-240G   | 240 GB | 3       | 218   | 540   | 0.00   |
