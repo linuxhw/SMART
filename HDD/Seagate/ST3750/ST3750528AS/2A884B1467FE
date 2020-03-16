@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Dec 21 06:39:28 2016 +06
+Local Time is:    Tue Feb  7 23:04:10 2017 +06
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -64,23 +64,23 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   115   099   006    -    91954789
-  3 Spin_Up_Time            PO---K   094   092   000    -    0
-  4 Start_Stop_Count        -O--CK   086   086   020    -    15062
+  1 Raw_Read_Error_Rate     POSR-K   113   099   006    -    57075925
+  3 Spin_Up_Time            PO---K   096   092   000    -    0
+  4 Start_Stop_Count        -O--CK   086   086   020    -    15313
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    4
-  7 Seek_Error_Rate         POSR-K   087   060   030    -    4921636399
-  9 Power_On_Hours          -O--CK   077   077   000    -    20526
+  7 Seek_Error_Rate         POSR-K   087   060   030    -    4928407245
+  9 Power_On_Hours          -O--CK   076   076   000    -    21071
  10 Spin_Retry_Count        PO--CK   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6722
-180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    901398261
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6847
+180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    1107780674
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   098   098   000    -    2
-188 Command_Timeout         -O--CK   100   094   000    -    21475164364
+188 Command_Timeout         -O--CK   100   094   000    -    30065230035
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   072   055   045    -    28 (Min/Max 24/28)
-194 Temperature_Celsius     -O---K   028   045   000    -    28 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RCK   054   042   000    -    91954789
+190 Airflow_Temperature_Cel -O---K   064   055   045    -    36 (Min/Max 33/37)
+194 Temperature_Celsius     -O---K   036   045   000    -    36 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RCK   055   042   000    -    57075925
 196 Reallocated_Event_Count -O--CK   100   100   036    -    4
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -118,7 +118,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 2
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -133,6 +133,40 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 20791 hours (866 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 04     01:53:16.770  NOP [Abort queued commands]
+  b0 00 d4 00 01 00 00 00 c2 4f 81 a0 00     01:53:08.768  SMART EXECUTE OFF-LINE IMMEDIATE
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     01:53:08.513  SMART READ DATA
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     01:53:07.400  SMART READ DATA
+  b0 00 d0 00 01 00 00 00 c2 4f 00 a0 00     01:53:05.048  SMART READ DATA
+
+Error 3 [2] occurred at disk power-on lifetime: 20791 hours (866 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 04     01:52:59.104  NOP [Abort queued commands]
+  b0 00 d4 00 00 00 00 00 c2 4f 82 a0 00     01:52:49.838  SMART EXECUTE OFF-LINE IMMEDIATE
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 00     01:52:49.582  SMART READ DATA
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 00     01:52:47.286  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     01:52:36.813  SMART RETURN STATUS
 
 Error 2 [1] occurred at disk power-on lifetime: 2545 hours (106 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -170,11 +204,13 @@ Error 1 [0] occurred at disk power-on lifetime: 2545 hours (106 days + 1 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     19963         -
-# 2  Extended offline    Interrupted (host reset)      00%     19483         -
-# 3  Extended offline    Completed without error       00%     19256         -
-# 4  Short offline       Completed without error       00%     18866         -
-# 5  Extended offline    Interrupted (host reset)      90%         1         -
+# 1  Short captive       Interrupted (host reset)      90%     20791         -
+# 2  Extended captive    Interrupted (host reset)      90%     20791         -
+# 3  Extended offline    Completed without error       00%     19963         -
+# 4  Extended offline    Interrupted (host reset)      00%     19483         -
+# 5  Extended offline    Completed without error       00%     19256         -
+# 6  Short offline       Completed without error       00%     18866         -
+# 7  Extended offline    Interrupted (host reset)      90%         1         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -191,8 +227,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     24/27 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     33/37 Celsius
 Lifetime    Min/Max Temperature:     10/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -201,7 +237,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (67)
 
 SCT Error Recovery Control:
            Read: Disabled

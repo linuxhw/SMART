@@ -7,7 +7,7 @@ User Capacity:    120 030 944 768 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Jan 13 13:35:10 2016 MSK
+Local Time is:    Wed Jan 13 13:41:01 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -68,8 +68,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
  12 Power_Cycle_Count       -O--CK   097   097   000    -    3996
-190 Airflow_Temperature_Cel -O---K   054   034   045    Past 46
-194 Temperature_Celsius     -O---K   101   081   000    -    46
+190 Airflow_Temperature_Cel -O---K   055   034   045    Past 45
+194 Temperature_Celsius     -O---K   102   081   000    -    45
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 12
+Device Error Count: 13
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -116,6 +116,22 @@ Device Error Count: 12
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 13 [12] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 01 01 00 53 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 30 b0 0b c7 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 0b 2f 00 c7 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 26 ec 0b c7 00 01 00 00 00 00 00 00     00:12:51.879  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 60 00 00 c0 0b 0f 02 c7 c8 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 12 [11] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -229,22 +245,6 @@ Error 6 [5] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 27 ca 38 22 00 01 00 e0 d5 00 00 08     01:01:18.759  NOP [Reserved subcommand] [OBS-ACS-2]
   00 00 00 00 00 38 13 00 22 e7 00 00 00     00:00:32.776  NOP [Abort queued commands]
 
-Error 5 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 00 01 01 00 53 00 00 00 01 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 b8 b0 35 90 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 d5 00 e0 35 b7 00 90 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 ae ec 35 90 00 01 00 00 00 00 00 00     00:58:30.446  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 00 35 9a 00 90 ec 00 00 00     00:00:00.001  NOP [Abort queued commands]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -263,7 +263,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 46 Celsius
+Current Temperature:                 45 Celsius
 Power Cycle Max Temperature:         46 Celsius
 Lifetime    Max Temperature:         69 Celsius
 
@@ -272,7 +272,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (68)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -283,8 +283,8 @@ Device Statistics (GP Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          421  Vendor specific
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          771  Vendor specific
 
 
 
