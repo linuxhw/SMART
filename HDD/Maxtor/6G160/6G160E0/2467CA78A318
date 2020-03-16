@@ -8,7 +8,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sat Feb  6 12:36:01 2016 FET
+Local Time is:    Sun Sep  4 12:49:10 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -52,28 +52,28 @@ recommended polling time: 	 (  62) minutes.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   100   100   025    -    12980
-  4 Start_Stop_Count        -O--CK   099   099   000    -    5467
+  3 Spin_Up_Time            POS--K   100   100   025    -    10062
+  4 Start_Stop_Count        -O--CK   099   099   000    -    5552
   5 Reallocated_Sector_Ct   PO--CK   100   100   025    -    0
   7 Seek_Error_Rate         -O-R--   100   054   000    -    0
-  8 Seek_Time_Performance   POS--K   099   097   074    -    52536
-  9 Power_On_Hours          -O--CK   089   089   000    -    10114
+  8 Seek_Time_Performance   POS--K   099   097   074    -    61102
+  9 Power_On_Hours          -O--CK   089   089   000    -    10236
  10 Spin_Retry_Count        PO-R-K   100   100   004    -    0
  11 Calibration_Retry_Count PO-R-K   100   100   070    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6626
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6712
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   001   001   000    -    863
 188 Command_Timeout         -O--CK   001   001   000    -    47245426687
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   054   040    -    36 (Min/Max 22/36)
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    5428
-193 Load_Cycle_Count        -O--CK   100   100   000    -    7888
+190 Airflow_Temperature_Cel -O---K   064   054   040    -    36 (Min/Max 22/37)
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    5513
+193 Load_Cycle_Count        -O--CK   100   100   000    -    7973
 194 Temperature_Celsius     -O--CK   032   253   000    -    36
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    5062
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    4613
 196 Reallocated_Event_Count ---R--   100   100   000    -    0
 197 Current_Pending_Sector  ---R--   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   001   001   000    -    28122
+199 UDMA_CRC_Error_Count    ---R--   001   001   000    -    28165
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
 203 Run_Out_Cancel          PO-R--   100   100   027    -    0
@@ -98,13 +98,13 @@ Address    Access  R/W   Size  Description
 0x03       GPL,SL  R/O      4  Ext. Comprehensive SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
 
 SMART Extended Comprehensive Error Log Version: 1 (4 sectors)
-Device Error Count: 1606 (device log contains only the most recent 16 errors)
+Device Error Count: 1608 (device log contains only the most recent 16 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,39 +120,73 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1606 [5] occurred at disk power-on lifetime: 10015 hours (417 days + 7 hours)
+Error 1608 [7] occurred at disk power-on lifetime: 9908 hours (412 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 41 00 80 00 00 03 84 f7 d8 40 00  Error:  at LBA = 0x0384f7d8 = 59045848
+  00 -- 41 00 01 00 00 00 00 00 10 a0 00  Error: 
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 00 03 84 f7 d8 40 08     00:02:48.225  READ FPDMA QUEUED
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:48.213  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:02:48.211  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:02:48.210  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:48.209  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  2f 00 00 00 01 00 00 00 00 00 10 a0 08     00:01:18.420  READ LOG EXT
+  60 00 08 00 58 00 00 03 e1 69 80 40 08     00:01:18.384  READ FPDMA QUEUED
+  60 00 58 00 48 00 00 03 96 91 70 40 08     00:01:18.384  READ FPDMA QUEUED
+  60 00 00 00 40 00 00 03 96 91 e8 40 08     00:01:18.384  READ FPDMA QUEUED
+  60 00 08 00 38 00 00 04 99 b2 98 40 08     00:01:18.384  READ FPDMA QUEUED
 
-Error 1605 [4] occurred at disk power-on lifetime: 10015 hours (417 days + 7 hours)
+Error 1607 [6] occurred at disk power-on lifetime: 9877 hours (411 days + 13 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 68 00 00 03 84 f7 d8 40 00  Error: ICRC, ABRT at LBA = 0x0384f7d8 = 59045848
+  00 -- 41 00 e8 00 00 03 67 b5 70 40 00  Error:  at LBA = 0x0367b570 = 57128304
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 68 00 00 03 84 f7 d8 40 08     00:02:47.741  READ FPDMA QUEUED
-  60 00 80 00 60 00 00 03 85 07 60 40 08     00:02:47.740  READ FPDMA QUEUED
-  60 00 80 00 60 00 00 03 85 07 60 40 08     00:02:47.730  READ FPDMA QUEUED
-  60 00 00 00 58 00 00 03 53 1a b0 40 08     00:02:47.730  READ FPDMA QUEUED
-  60 00 00 00 58 00 00 03 53 1a b0 40 08     00:02:47.720  READ FPDMA QUEUED
+  60 00 00 00 e8 00 00 03 67 b5 70 40 08     00:00:58.047  READ FPDMA QUEUED
+  60 00 00 00 e0 00 00 03 67 e4 b0 40 08     00:00:58.047  READ FPDMA QUEUED
+  60 00 00 00 d8 00 00 03 67 e5 b0 40 08     00:00:58.047  READ FPDMA QUEUED
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:58.045  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:58.044  IDENTIFY DEVICE
+
+Error 1606 [5] occurred at disk power-on lifetime: 9861 hours (410 days + 21 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 22 00 00 04 58 7e c0 40 00  Error: ICRC, ABRT 34 sectors at LBA = 0x04587ec0 = 72908480
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 22 00 00 04 58 7e c0 40 00     00:00:19.156  READ DMA EXT
+  25 00 00 00 1d 00 00 04 58 7e a3 40 00     00:00:19.150  READ DMA EXT
+  25 00 00 00 23 00 00 04 58 7e 80 40 00     00:00:19.150  READ DMA EXT
+  25 00 00 00 1c 00 00 04 58 7e 64 40 00     00:00:19.150  READ DMA EXT
+  25 00 00 00 24 00 00 04 58 7e 40 40 00     00:00:19.149  READ DMA EXT
+
+Error 1605 [4] occurred at disk power-on lifetime: 9753 hours (406 days + 9 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 41 00 b0 00 00 03 dc f3 10 40 00  Error:  at LBA = 0x03dcf310 = 64811792
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 b0 00 00 03 dc f3 10 40 08     00:00:12.787  READ FPDMA QUEUED
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:12.775  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:12.773  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:12.772  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:12.771  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 1604 [3] occurred at disk power-on lifetime: 9908 hours (412 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -222,40 +256,6 @@ Error 1601 [0] occurred at disk power-on lifetime: 9753 hours (406 days + 9 hour
   ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:12.772  SET FEATURES [Set transfer mode]
   27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:12.771  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 1600 [15] occurred at disk power-on lifetime: 9753 hours (406 days + 9 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 98 00 00 03 dc f3 10 40 00  Error: ICRC, ABRT at LBA = 0x03dcf310 = 64811792
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 98 00 00 03 dc f3 10 40 08     00:00:12.308  READ FPDMA QUEUED
-  60 00 80 00 90 00 00 03 dc f2 90 40 08     00:00:12.307  READ FPDMA QUEUED
-  60 00 80 00 90 00 00 03 dc f2 90 40 08     00:00:12.306  READ FPDMA QUEUED
-  60 00 40 00 88 00 00 03 dc f2 50 40 08     00:00:12.306  READ FPDMA QUEUED
-  60 00 40 00 88 00 00 03 dc f2 50 40 08     00:00:12.305  READ FPDMA QUEUED
-
-Error 1599 [14] occurred at disk power-on lifetime: 9746 hours (406 days + 2 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 40 00 01 00 00 00 00 00 10 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 a0 08     00:08:15.269  READ LOG EXT
-  60 00 38 00 e8 00 00 03 36 d2 78 40 08     00:08:15.239  READ FPDMA QUEUED
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:08:15.227  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:08:15.226  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:08:15.225  SET FEATURES [Set transfer mode]
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -276,7 +276,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

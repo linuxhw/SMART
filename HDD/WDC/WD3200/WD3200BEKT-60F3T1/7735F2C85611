@@ -10,15 +10,15 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Tue Oct  2 08:28:36 2018 MSK
+Local Time is:    Thu Mar 14 00:25:19 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     120 (intermediate level with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -61,23 +61,23 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   199   199   051    -    16923
   3 Spin_Up_Time            POS--K   176   173   021    -    2191
-  4 Start_Stop_Count        -O--CK   086   086   000    -    14808
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15220
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         POSR-K   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   088   088   000    -    9097
+  7 Seek_Error_Rate         POSR-K   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   087   087   000    -    9565
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2867
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3235
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   001   000    -    9551
 188 Command_Timeout         -O--CK   100   091   000    -    81605623835
-190 Airflow_Temperature_Cel -O---K   073   043   040    -    27
-191 G-Sense_Error_Rate      -O--CK   014   014   000    -    86
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    464
-193 Load_Cycle_Count        -O--CK   186   186   000    -    42469
-194 Temperature_Celsius     -O---K   120   090   000    -    27
+190 Airflow_Temperature_Cel -O---K   067   043   040    -    33
+191 G-Sense_Error_Rate      -O--CK   012   012   000    -    88
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    479
+193 Load_Cycle_Count        -O--CK   185   185   000    -    47661
+194 Temperature_Celsius     -O---K   114   090   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   172   000    -    5
+197 Current_Pending_Sector  -O--CK   200   172   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    2
 200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
@@ -263,24 +263,25 @@ Error 314 [1] occurred at disk power-on lifetime: 7875 hours (328 days + 3 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       90%      9072         192331915
-# 2  Extended offline    Completed: read failure       90%      9060         192331915
-# 3  Extended offline    Completed: read failure       90%      9040         192331915
-# 4  Extended offline    Completed: read failure       90%      8978         192331915
-# 5  Extended offline    Completed: read failure       90%      8960         192331915
-# 6  Extended offline    Completed: read failure       90%      8947         192331915
-# 7  Extended offline    Completed: read failure       90%      8912         192331915
-# 8  Extended offline    Completed: read failure       90%      8894         192331915
-# 9  Extended offline    Completed: read failure       90%      8887         192331915
-#10  Extended offline    Completed: read failure       90%      8878         192331915
-#11  Extended offline    Completed: read failure       90%      8865         192331915
-#12  Extended offline    Completed: read failure       90%      8856         192331915
-#13  Extended offline    Completed: read failure       90%      8854         192331915
-#14  Extended offline    Completed: read failure       90%      8831         192331915
-#15  Extended offline    Completed: read failure       90%      8817         192331915
-#16  Extended offline    Completed: read failure       90%      8808         192331915
-#17  Extended offline    Completed: read failure       90%      8788         192331915
-#18  Extended offline    Completed: read failure       90%      8773         192331915
+# 1  Extended offline    Completed: read failure       70%      9534         193938133
+# 2  Extended offline    Completed: read failure       70%      9527         193938089
+# 3  Extended offline    Completed without error       00%      9509         -
+# 4  Extended offline    Completed: read failure       70%      9461         193938133
+# 5  Extended offline    Completed: read failure       70%      9447         193938131
+# 6  Extended offline    Completed: read failure       70%      9431         193938157
+# 7  Extended offline    Completed: read failure       70%      9416         193938133
+# 8  Extended offline    Completed: read failure       70%      9376         193938157
+# 9  Extended offline    Completed: read failure       70%      9348         193938133
+#10  Extended offline    Completed: read failure       70%      9298         193938089
+#11  Extended offline    Completed: read failure       70%      9260         193938157
+#12  Extended offline    Completed: read failure       70%      9192         193938157
+#13  Extended offline    Completed: read failure       70%      9167         193938131
+#14  Extended offline    Completed: read failure       70%      9134         193938087
+#15  Extended offline    Completed: read failure       90%      9072         192331915
+#16  Extended offline    Completed: read failure       90%      9060         192331915
+#17  Extended offline    Completed: read failure       90%      9040         192331915
+#18  Extended offline    Completed: read failure       90%      8978         192331915
+15 of 17 failed self-tests are outdated by newer successful extended offline self-test # 3
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -297,9 +298,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     22/27 Celsius
-Lifetime    Min/Max Temperature:     20/57 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     32/34 Celsius
+Lifetime    Min/Max Temperature:     23/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -310,7 +311,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (120)
+Temperature History Size (Index):    128 (8)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -329,6 +330,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          488  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         3295  Vendor specific
 

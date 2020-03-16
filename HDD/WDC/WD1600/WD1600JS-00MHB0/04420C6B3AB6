@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Oct 24 22:09:57 2016 MSK
+Local Time is:    Wed Nov  2 16:45:31 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,16 +59,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   235   185   021    -    3250
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3785
+  3 Spin_Up_Time            PO----   196   185   021    -    5200
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3817
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    6261
+  9 Power_On_Hours          -O--CK   092   092   000    -    6355
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3655
-190 Airflow_Temperature_Cel -O---K   063   050   045    -    37
-194 Temperature_Celsius     -O---K   113   100   000    -    37
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3687
+190 Airflow_Temperature_Cel -O---K   065   050   045    -    35
+194 Temperature_Celsius     -O---K   115   100   000    -    35
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 9
+Device Error Count: 10
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -115,6 +115,22 @@ Device Error Count: 9
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 10 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 01 01 00 53 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 54 b0 3f 90 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 3f 54 00 90 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 4e ec 3f 90 00 01 00 00 00 00 00 00     01:09:25.710  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 50 00 00 88 3f 43 00 90 c8 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 9 [8] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -228,22 +244,6 @@ Error 3 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   01 52 ec 70 ce 00 e8 00 d8 00 00 00 00     02:03:12.851  [RESERVED]
   00 40 00 00 08 70 51 00 ce c8 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
-Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 00 00 0d 00 53 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 2a b0 0d 2f 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 d5 00 e0 0d 2a 00 2f b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 23 ec 0d 2f 00 01 00 00 00 00 00 00     00:14:24.036  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 50 00 00 f0 0d 19 01 2f c8 00 00 00     00:00:00.001  NOP [Abort queued commands]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -262,8 +262,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 37 Celsius
-Power Cycle Max Temperature:         43 Celsius
+Current Temperature:                 35 Celsius
+Power Cycle Max Temperature:         35 Celsius
 Lifetime    Max Temperature:         56 Celsius
 
 SCT Temperature History Version:     2
@@ -271,7 +271,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (65)
+Temperature History Size (Index):    128 (43)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -282,8 +282,8 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           30  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        26358  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         4165  Vendor specific
 
 
 

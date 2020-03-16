@@ -11,7 +11,7 @@ Form Factor:      < 1.8 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jul  4 13:33:13 2019 MSK
+Local Time is:    Mon Jul  8 16:38:21 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,28 +62,28 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    115
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    2508
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    751
+  9 Power_On_Hours          -O--CK   100   100   ---    -    2541
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    766
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
 173 Avg_Write/Erase_Count   -O--CK   098   098   005    -    16
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    248
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    254
 176 Erase_Fail_Count_Chip   -O---K   100   100   ---    -    1088
 181 Program_Fail_Cnt_Total  -O---K   100   100   ---    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   ---    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   100   ---    -    15041
-194 Temperature_Celsius     -O---K   037   062   ---    -    37 (Min/Max 17/62)
+188 Command_Timeout         -O--CK   100   100   ---    -    15046
+194 Temperature_Celsius     -O---K   038   062   ---    -    38 (Min/Max 17/62)
 198 Offline_Uncorrectable   ----CK   100   100   ---    -    0
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
 201 Lifetime_Remaining%     PO---K   098   098   005    -    8589934608
-230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    2357973025308
-241 Total_Writes_GiB        -O--CK   100   100   ---    -    185065
-242 Total_Reads_GiB         -O--CK   100   100   ---    -    237020
-243 Unknown_Attribute       -O--CK   100   100   ---    -    334548
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    2375153156636
+241 Total_Writes_GiB        -O--CK   100   100   ---    -    187950
+242 Total_Reads_GiB         -O--CK   100   100   ---    -    241460
+243 Unknown_Attribute       -O--CK   100   100   ---    -    339639
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
-249 TLC_NAND_GB_Writes      -O--CK   100   100   ---    -    1957
+249 TLC_NAND_GB_Writes      -O--CK   100   100   ---    -    1989
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -130,9 +130,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       257 (0x0101)
 Device State:                        Active (0)
-Current Temperature:                     ? Celsius
-Power Cycle Min/Max Temperature:      ?/ ? Celsius
-Lifetime    Min/Max Temperature:      ?/ ? Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     38/40 Celsius
+Lifetime    Min/Max Temperature:     38/40 Celsius
+Specified Max Operating Temperature:    40 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -143,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -15/90 Celsius
-Temperature History Size (Index):    256 (222)
+Temperature History Size (Index):    256 (129)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -152,15 +153,15 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             751  ---  Lifetime Power-On Resets
+0x01  0x008  4             766  ---  Lifetime Power-On Resets
 0x01  0x010  4             418  ---  Power-on Hours
 0x01  0x018  6               0  ---  Logical Sectors Written
-0x01  0x020  6      6064222716  ---  Number of Write Commands
-0x01  0x028  6      7766690712  ---  Logical Sectors Read
+0x01  0x020  6      6158762564  ---  Number of Write Commands
+0x01  0x028  6      7912184222  ---  Logical Sectors Read
 0x01  0x030  6               0  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             276  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             277  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              26  ---  Current Temperature
 0x05  0x020  1              67  ---  Highest Temperature
@@ -169,8 +170,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            2290  ---  Number of Hardware Resets
-0x06  0x010  4            1080  ---  Number of ASR Events
+0x06  0x008  4            2425  ---  Number of Hardware Resets
+0x06  0x010  4            1140  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
@@ -185,5 +186,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           15  Device-to-host register FISes sent due to a COMRESET
 

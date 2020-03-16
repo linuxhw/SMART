@@ -7,7 +7,7 @@ User Capacity:    80 026 361 856 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Jul 19 13:29:04 2017 MSK
+Local Time is:    Tue Jul 25 14:10:57 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,21 +55,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            -O----   099   099   000    -    0
-  4 Start_Stop_Count        PO--CK   098   098   020    -    2756
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   079   060   030    -    13195577757
-  9 Power_On_Hours          -O--CK   090   090   000    -    8764
+  4 Start_Stop_Count        PO--CK   098   098   020    -    2784
+  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    3
+  7 Seek_Error_Rate         POSR--   079   060   030    -    13197145142
+  9 Power_On_Hours          -O--CK   090   090   000    -    8832
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       PO--CK   098   098   020    -    2654
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       PO--CK   098   098   020    -    2682
+187 Reported_Uncorrect      -O--CK   001   001   000    -    270
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   053   041   045    Past 47 (Min/Max 27/47 #30)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    736
-193 Load_Cycle_Count        -O--CK   001   001   000    -    244846
-194 Temperature_Celsius     -O---K   047   059   000    -    47 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   076   058   000    -    229920488
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   061   041   045    Past 39 (Min/Max 24/41 #30)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    758
+193 Load_Cycle_Count        -O--CK   001   001   000    -    253115
+194 Temperature_Celsius     -O---K   039   059   000    -    39 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   068   058   000    -    13929602
+197 Current_Pending_Sector  -O--C-   100   100   000    -    1
+198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -109,7 +109,105 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 271 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 271 occurred at disk power-on lifetime: 8805 hours (366 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 85 56 a4 e0  Error: UNC at LBA = 0x00a45685 = 10770053
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 80 5b 56 a4 e0 00      06:52:13.708  READ DMA
+  c8 00 90 cb 55 a4 e0 00      06:52:13.705  READ DMA
+  c8 00 28 a3 55 a4 e0 00      06:52:13.688  READ DMA
+  c8 00 00 a3 54 a4 e0 00      06:52:13.687  READ DMA
+  c8 00 f0 b3 53 a4 e0 00      06:52:13.681  READ DMA
+
+Error 270 occurred at disk power-on lifetime: 8805 hours (366 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 85 56 a4 e0  Error: UNC at LBA = 0x00a45685 = 10770053
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 80 73 56 a4 e0 00      06:36:56.865  READ DMA
+  c8 00 80 f3 55 a4 e0 00      06:36:56.865  READ DMA
+  c8 00 b0 43 55 a4 e0 00      06:36:56.860  READ DMA
+  c8 00 c0 b3 53 a4 e0 00      06:36:56.909  READ DMA
+  c8 00 88 2b 53 a4 e0 00      06:36:56.908  READ DMA
+
+Error 269 occurred at disk power-on lifetime: 8804 hours (366 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 85 56 a4 e0  Error: UNC at LBA = 0x00a45685 = 10770053
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 80 33 56 a4 e0 00      05:24:20.108  READ DMA
+  ca 00 01 a0 46 2c e0 00      05:23:57.874  WRITE DMA
+  ca 00 08 e0 b8 39 e0 00      05:23:57.874  WRITE DMA
+  ca 00 08 c0 b8 39 e0 00      05:23:57.873  WRITE DMA
+  ca 00 08 70 95 6b e0 00      05:23:54.077  WRITE DMA
+
+Error 268 occurred at disk power-on lifetime: 8803 hours (366 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 85 56 a4 e0  Error: UNC at LBA = 0x00a45685 = 10770053
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 80 33 56 a4 e0 00      04:24:31.034  READ DMA
+  ca 00 01 a0 46 2c e0 00      04:23:45.441  WRITE DMA
+  ca 00 08 e0 b8 39 e0 00      04:23:42.123  WRITE DMA
+  ca 00 08 c0 b8 39 e0 00      04:23:41.952  WRITE DMA
+  ca 00 01 a8 13 2c e0 00      04:21:50.271  WRITE DMA
+
+Error 267 occurred at disk power-on lifetime: 8802 hours (366 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 85 56 a4 e0  Error: UNC at LBA = 0x00a45685 = 10770053
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 80 33 56 a4 e0 00      04:12:05.028  READ DMA
+  c8 00 40 cb 32 33 e0 00      04:12:05.028  READ DMA
+  ca 00 08 68 95 6b e0 00      04:11:59.908  WRITE DMA
+  ca 00 08 80 95 6b e0 00      04:09:13.966  WRITE DMA
+  ca 00 08 b0 84 6d e0 00      04:09:06.029  WRITE DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -135,7 +233,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 47 Celsius
+Current Temperature:                 39 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -147,14 +245,14 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            1  Vendor specific
+0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific
 

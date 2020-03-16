@@ -10,7 +10,7 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Feb 27 11:16:08 2016 EET
+Local Time is:    Thu Apr 28 23:42:28 2016 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,10 +58,10 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    0/11287200
+  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    0/12223358
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    43h+01m+23.010s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    42
+  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    50h+23m+37.990s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    48
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    17
@@ -69,19 +69,19 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O-R--   100   100   000    -    0
 182 Erase_Fail_Count        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   030   035   000    -    30 (Min/Max 18/35)
-194 Temperature_Celsius     -O---K   030   035   000    -    30 (Min/Max 18/35)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/11287200
+189 Airflow_Temperature_Cel ------   025   035   000    -    25 (Min/Max 17/35)
+194 Temperature_Celsius     -O---K   025   035   000    -    25 (Min/Max 17/35)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/12223358
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/11287200
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/11287200
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/12223358
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/12223358
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           ------   100   100   011    -    4294967296
-233 SandForce_Internal      -O--CK   000   000   000    -    4294963535
-234 SandForce_Internal      -O--CK   000   000   000    -    231
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    231
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    136
-244 Unknown_Attribute       ------   100   100   010    -    1507346
+233 SandForce_Internal      -O--CK   000   000   000    -    4294963560
+234 SandForce_Internal      -O--CK   000   000   000    -    280
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    280
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    153
+244 Unknown_Attribute       ------   100   100   010    -    1572882
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -97,8 +97,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xb7       GPL,SL  VS      16  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -126,9 +126,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     18/35 Celsius
-Lifetime    Min/Max Temperature:     18/74 Celsius
+Current Temperature:                    25 Celsius
+Power Cycle Min/Max Temperature:     17/35 Celsius
+Lifetime    Min/Max Temperature:     17/74 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -136,40 +136,43 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (471)
+Temperature History Size (Index):    478 (43)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
-Page Offset Size         Value  Description
-  1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4               42  Lifetime Power-On Resets
-  1  0x010  4               43  Power-on Hours
-  1  0x018  6        485541370  Logical Sectors Written
-  1  0x028  6        286785465  Logical Sectors Read
-  4  =====  =                =  == General Errors Statistics (rev 1) ==
-  4  0x008  4                0  Number of Reported Uncorrectable Errors
-  4  0x010  4                0  Resets Between Cmd Acceptance and Completion
-  5  =====  =                =  == Temperature Statistics (rev 1) ==
-  5  0x008  1               30  Current Temperature
-  5  0x010  1               28  Average Short Term Temperature
-  5  0x018  1                -  Average Long Term Temperature
-  5  0x020  1               68  Highest Temperature
-  5  0x028  1               19  Lowest Temperature
-  5  0x030  1               29  Highest Average Short Term Temperature
-  5  0x038  1               25  Lowest Average Short Term Temperature
-  5  0x040  1                -  Highest Average Long Term Temperature
-  5  0x048  1                -  Lowest Average Long Term Temperature
-  5  0x050  4                0  Time in Over-Temperature
-  5  0x058  1               70  Specified Maximum Operating Temperature
-  5  0x060  4                0  Time in Under-Temperature
-  5  0x068  1                0  Specified Minimum Operating Temperature
-  6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4                0  Number of Hardware Resets
-  6  0x010  4              513  Number of ASR Events
-  6  0x018  4                0  Number of Interface CRC Errors
-  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
-  7  0x008  1                0  Percentage Used Endurance Indicator
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4              48  ---  Lifetime Power-On Resets
+0x01  0x010  4              50  ---  Power-on Hours
+0x01  0x018  6       587208363  ---  Logical Sectors Written
+0x01  0x028  6       321628516  ---  Logical Sectors Read
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
+0x05  0x008  1              25  ---  Current Temperature
+0x05  0x010  1              28  ---  Average Short Term Temperature
+0x05  0x018  1               -  ---  Average Long Term Temperature
+0x05  0x020  1              68  ---  Highest Temperature
+0x05  0x028  1              19  ---  Lowest Temperature
+0x05  0x030  1              29  ---  Highest Average Short Term Temperature
+0x05  0x038  1              25  ---  Lowest Average Short Term Temperature
+0x05  0x040  1               -  ---  Highest Average Long Term Temperature
+0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
+0x05  0x050  4               0  ---  Time in Over-Temperature
+0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
+0x05  0x060  4               0  ---  Time in Under-Temperature
+0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4               0  ---  Number of Hardware Resets
+0x06  0x010  4             537  ---  Number of ASR Events
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
