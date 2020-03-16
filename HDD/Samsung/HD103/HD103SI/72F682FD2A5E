@@ -8,11 +8,11 @@ User Capacity:    1 000 203 804 160 bytes [1,00 TB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Fri Aug 28 01:56:07 2015 MSK
+Local Time is:    Wed Mar  8 16:31:04 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
@@ -59,29 +59,29 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   081   081   011    -    6630
-  4 Start_Stop_Count        -O--CK   098   098   000    -    1823
+  3 Spin_Up_Time            POS---   081   081   011    -    6710
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2276
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
-  8 Seek_Time_Performance   P-S--K   100   100   015    -    11302
-  9 Power_On_Hours          -O--CK   095   095   000    -    26302
+  8 Seek_Time_Performance   P-S--K   100   100   015    -    10670
+  9 Power_On_Hours          -O--CK   093   093   000    -    35991
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    1
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1820
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2273
  13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   072   063   000    -    28 (Min/Max 20/28)
-194 Temperature_Celsius     -O---K   072   063   000    -    28 (Min/Max 20/28)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1988449
+190 Airflow_Temperature_Cel -O---K   075   063   000    -    25 (Min/Max 25/27)
+194 Temperature_Celsius     -O---K   074   061   000    -    26 (Min/Max 25/27)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    20348797
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -100,8 +100,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      2  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x20       GPL     R/O      2  Streaming performance log [OBS-8]
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -114,27 +114,27 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     26219         -
-# 2  Extended offline    Completed without error       80%     26063         -
-# 3  Extended offline    Completed without error       00%     25774         -
-# 4  Extended offline    Completed without error       70%     25628         -
-# 5  Extended offline    Completed without error       70%     25488         -
-# 6  Extended offline    Completed without error       00%     25294         -
-# 7  Extended offline    Completed without error       00%     25195         -
-# 8  Extended offline    Completed without error       00%     25041         -
-# 9  Extended offline    Completed without error       00%     24893         -
-#10  Extended offline    Completed without error       00%     24740         -
-#11  Extended offline    Completed without error       80%     24612         -
-#12  Extended offline    Completed without error       00%     24483         -
-#13  Extended offline    Completed without error       00%     24361         -
-#14  Extended offline    Completed without error       00%     24248         -
-#15  Extended offline    Aborted by host               80%     21691         -
-#16  Extended offline    Aborted by host               60%     21520         -
-#17  Extended offline    Aborted by host               30%     21330         -
-#18  Extended offline    Aborted by host               40%     21091         -
-#19  Extended offline    Aborted by host               50%     20923         -
-#20  Extended offline    Completed without error       00%     20839         -
-#21  Extended offline    Completed without error       00%     20747         -
+# 1  Extended offline    Completed without error       00%     35975         -
+# 2  Extended offline    Completed without error       00%     35864         -
+# 3  Extended offline    Completed without error       00%     35733         -
+# 4  Extended offline    Completed without error       00%     35582         -
+# 5  Extended offline    Completed without error       00%     35430         -
+# 6  Extended offline    Completed without error       00%     35310         -
+# 7  Extended offline    Completed without error       00%     35306         -
+# 8  Extended offline    Completed without error       00%     35196         -
+# 9  Extended offline    Completed without error       00%     35028         -
+#10  Extended offline    Completed without error       00%     34855         -
+#11  Extended offline    Completed without error       00%     34729         -
+#12  Extended offline    Completed without error       00%     34609         -
+#13  Extended offline    Completed without error       00%     34466         -
+#14  Extended offline    Completed without error       00%     34208         -
+#15  Extended offline    Completed without error       00%     34059         -
+#16  Extended offline    Completed without error       00%     33850         -
+#17  Extended offline    Completed without error       00%     33713         -
+#18  Extended offline    Completed without error       00%     33578         -
+#19  Extended offline    Completed without error       00%     33418         -
+#20  Extended offline    Completed without error       00%     33288         -
+#21  Extended offline    Completed without error       00%     33002         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -151,8 +151,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 28 Celsius
-Power Cycle Max Temperature:         28 Celsius
+Current Temperature:                 26 Celsius
+Power Cycle Max Temperature:         27 Celsius
 Lifetime    Max Temperature:         41 Celsius
 
 SCT Temperature History Version:     2
@@ -160,14 +160,14 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (30)
+Temperature History Size (Index):    128 (58)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
-ATA_READ_LOG_EXT (addr=0x04:0x00, page=0, n=1) failed: scsi error aborted command
-Read Device Statistics page 0 failed
+ATA_READ_LOG_EXT (addr=0x04:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
+Read Device Statistics page 0x00 failed
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

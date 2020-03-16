@@ -10,10 +10,10 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Sep 24 01:40:13 2016 CEST
+Local Time is:    Sat Jun 10 18:38:13 2017 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
+AAM level is:     254 (maximum performance), recommended: 254
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -61,27 +61,27 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   108   099   006    -    19047640
+  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    209891421
   3 Spin_Up_Time            PO----   100   092   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1667
-  5 Reallocated_Sector_Ct   PO--CK   099   099   036    -    59
-  7 Seek_Error_Rate         POSR--   080   060   030    -    110802599
-  9 Power_On_Hours          -O--CK   095   095   000    -    4719
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2071
+  5 Reallocated_Sector_Ct   PO--CK   099   099   036    -    63
+  7 Seek_Error_Rate         POSR--   081   060   030    -    141029836
+  9 Power_On_Hours          -O--CK   094   094   000    -    5938
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1893
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2289
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   093   000    -    38655363215
-189 High_Fly_Writes         -O-RCK   029   029   000    -    71
-190 Airflow_Temperature_Cel -O---K   059   041   045    Past 41 (Min/Max 20/41 #537)
-194 Temperature_Celsius     -O---K   041   059   000    -    41 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   036   028   000    -    19047640
+188 Command_Timeout         -O--CK   100   093   000    -    38655560307
+189 High_Fly_Writes         -O-RCK   003   003   000    -    97
+190 Airflow_Temperature_Cel -O---K   058   041   045    Past 42 (Min/Max 21/42 #853)
+194 Temperature_Celsius     -O---K   042   059   000    -    42 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   048   028   000    -    209891421
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    172
-240 Head_Flying_Hours       ------   100   253   000    -    4433 (26 217 0)
-241 Total_LBAs_Written      ------   100   253   000    -    3279217935
-242 Total_LBAs_Read         ------   100   253   000    -    1691650300
+240 Head_Flying_Hours       ------   100   253   000    -    5643 (190 165 0)
+241 Total_LBAs_Written      ------   100   253   000    -    3917297944
+242 Total_LBAs_Read         ------   100   253   000    -    104237750
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -118,12 +118,15 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      4504         -
-# 2  Extended offline    Completed without error       00%      3935         -
-# 3  Conveyance offline  Completed without error       00%      3818         -
-# 4  Short offline       Completed without error       00%      3738         -
-# 5  Short offline       Completed without error       00%      3034         -
-# 6  Extended offline    Interrupted (host reset)      00%      2889         -
+# 1  Extended offline    Completed without error       00%      5629         -
+# 2  Extended offline    Aborted by host               90%      5257         -
+# 3  Extended offline    Interrupted (host reset)      00%      5145         -
+# 4  Extended offline    Completed without error       00%      4504         -
+# 5  Extended offline    Completed without error       00%      3935         -
+# 6  Conveyance offline  Completed without error       00%      3818         -
+# 7  Short offline       Completed without error       00%      3738         -
+# 8  Short offline       Completed without error       00%      3034         -
+# 9  Extended offline    Interrupted (host reset)      00%      2889         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -140,8 +143,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     20/41 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     21/42 Celsius
 Lifetime    Min/Max Temperature:     17/59 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -150,7 +153,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (30)
+Temperature History Size (Index):    128 (91)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -160,12 +163,10 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-
-
 

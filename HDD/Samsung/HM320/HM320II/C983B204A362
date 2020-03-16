@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Feb 20 23:16:52 2016 CET
+Local Time is:    Thu Jun 16 16:36:19 2016 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,32 +61,32 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    8602
-  2 Throughput_Performance  POS--K   055   055   000    -    5135
-  3 Spin_Up_Time            PO---K   090   090   025    -    3040
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5757
+  2 Throughput_Performance  POS--K   056   055   000    -    5097
+  3 Spin_Up_Time            PO---K   091   090   025    -    3010
+  4 Start_Stop_Count        -O--CK   095   095   000    -    6034
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    31005
+  9 Power_On_Hours          -O--CK   100   100   000    -    32832
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   099   099   000    -    1269
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5726
+ 11 Calibration_Retry_Count -O--CK   099   099   000    -    1314
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    6004
 183 Runtime_Bad_Block       -O--CK   252   252   010    -    0
 184 End-to-End_Error        PO--CK   252   252   048    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    8472
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   060   037   040    Past 40 (Min/Max 12/63)
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    2518
+190 Airflow_Temperature_Cel -O----   057   037   040    Past 43 (Min/Max 12/63)
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    2585
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-193 Load_Cycle_Count        -O--CK   045   045   000    -    564919
-194 Temperature_Celsius     -O----   060   037   000    -    40 (Min/Max 12/63)
+193 Load_Cycle_Count        -O--CK   028   028   000    -    729570
+194 Temperature_Celsius     -O----   057   037   000    -    43 (Min/Max 12/63)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   100   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    925
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    963
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,8 +104,8 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      2  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xbb       GPL     VS       4  Device vendor specific log
 0xbc       GPL     VS       2  Device vendor specific log
@@ -267,20 +267,27 @@ Error 8465 [0] occurred at disk power-on lifetime: 17726 hours (738 days + 14 ho
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     30990         -
-# 2  Extended offline    Completed without error       00%     30636         -
-# 3  Extended offline    Aborted by host               80%     30402         -
-# 4  Extended offline    Completed without error       00%     30061         -
-# 5  Extended offline    Completed without error       00%     29546         -
-# 6  Extended offline    Completed without error       00%     29292         -
-# 7  Extended offline    Completed without error       00%     29186         -
-# 8  Extended offline    Completed without error       00%     28486         -
-# 9  Extended offline    Completed without error       00%     28263         -
-#10  Extended offline    Completed without error       00%     28143         -
-#11  Extended offline    Completed without error       00%     27883         -
-#12  Extended offline    Completed without error       00%     27602         -
-#13  Extended offline    Completed without error       00%     27328         -
-#14  Extended offline    Aborted by host               50%     27252         -
+# 1  Extended offline    Completed without error       00%     32744         -
+# 2  Extended offline    Completed without error       00%     32632         -
+# 3  Extended offline    Aborted by host               20%     32420         -
+# 4  Extended offline    Completed without error       00%     32007         -
+# 5  Extended offline    Completed without error       00%     31901         -
+# 6  Extended offline    Completed without error       00%     31665         -
+# 7  Extended offline    Completed without error       00%     31442         -
+# 8  Extended offline    Completed without error       00%     31220         -
+# 9  Extended offline    Completed without error       00%     30990         -
+#10  Extended offline    Completed without error       00%     30636         -
+#11  Extended offline    Aborted by host               80%     30402         -
+#12  Extended offline    Completed without error       00%     30061         -
+#13  Extended offline    Completed without error       00%     29546         -
+#14  Extended offline    Completed without error       00%     29292         -
+#15  Extended offline    Completed without error       00%     29186         -
+#16  Extended offline    Completed without error       00%     28486         -
+#17  Extended offline    Completed without error       00%     28263         -
+#18  Extended offline    Completed without error       00%     28143         -
+#19  Extended offline    Completed without error       00%     27883         -
+#20  Extended offline    Completed without error       00%     27602         -
+#21  Extended offline    Completed without error       00%     27328         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -298,8 +305,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     40/40 Celsius
+Current Temperature:                    44 Celsius
+Power Cycle Min/Max Temperature:     44/44 Celsius
 Lifetime    Min/Max Temperature:     18/63 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -308,13 +315,13 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (38)
+Temperature History Size (Index):    128 (81)
 
 SCT Error Recovery Control:
            Read:     85 (8,5 seconds)
           Write:     85 (8,5 seconds)
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

@@ -3,20 +3,21 @@ Model Family:     SandForce Driven SSDs
 Device Model:     KINGSTON SV300S37A120G
 Serial Number:    --
 LU WWN Device Id: 5 0026b7 ...
-Firmware Version: 603ABBF0
-User Capacity:    120 034 123 776 bytes [120 GB]
+Firmware Version: 60AABBF0
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Apr  8 16:07:56 2017 +07
+Local Time is:    Thu May 30 22:56:18 2019 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -58,29 +59,29 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0/0
+  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    0/5148032
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   090   090   000    -    9267h+53m+55.210s
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5823
+  9 Power_On_Hours_and_Msec -O--CK   081   081   000    -    17414h+57m+57.730s
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7995
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    3076
-177 Wear_Range_Delta        ------   000   000   000    -    2
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    4027
+177 Wear_Range_Delta        ------   000   000   000    -    1
 181 Program_Fail_Count      -O-R--   100   100   000    -    0
 182 Erase_Fail_Count        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   028   044   000    -    28 (Min/Max 10/44)
-194 Temperature_Celsius     -O---K   028   044   000    -    28 (Min/Max 10/44)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/0
+189 Airflow_Temperature_Cel ------   026   044   000    -    26 (Min/Max 8/44)
+194 Temperature_Celsius     -O---K   026   044   000    -    26 (Min/Max 8/44)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/5148032
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/0
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/0
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/5148032
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/5148032
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
-231 SSD_Life_Left           PO--C-   098   098   010    -    1
-233 SandForce_Internal      -O--CK   000   000   000    -    11130
-234 SandForce_Internal      -O--CK   000   000   000    -    17931
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    17931
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    15099
+231 SSD_Life_Left           PO--C-   097   097   010    -    0
+233 SandForce_Internal      -O--CK   000   000   000    -    19177
+234 SandForce_Internal      -O--CK   000   000   000    -    30968
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    30968
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    23435
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -92,11 +93,11 @@ General Purpose Log Directory Version 1
 SMART           Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
 0x00       GPL,SL  R/O      1  Log Directory
-0x04       GPL,SL  R/O     16  Device Statistics log
+0x04       GPL,SL  R/O      6  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xb7       GPL,SL  VS      16  Device vendor specific log
@@ -109,10 +110,25 @@ SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      2912         -
-# 2  Short offline       Completed without error       00%      1874         -
-# 3  Short offline       Completed without error       00%      1853         -
-# 4  Short offline       Completed without error       00%      1675         -
+# 1  Extended offline    Completed without error       00%     17350         -
+# 2  Extended offline    Interrupted (host reset)      10%     17341         -
+# 3  Extended offline    Interrupted (host reset)      60%     17339         -
+# 4  Extended offline    Completed without error       00%     17187         -
+# 5  Extended offline    Interrupted (host reset)      10%     17111         -
+# 6  Extended offline    Completed without error       00%     17032         -
+# 7  Extended offline    Completed without error       00%     16943         -
+# 8  Extended offline    Completed without error       00%     16864         -
+# 9  Extended offline    Completed without error       00%     16795         -
+#10  Extended offline    Completed without error       00%     16712         -
+#11  Extended offline    Completed without error       00%     16637         -
+#12  Extended offline    Completed without error       00%     16486         -
+#13  Extended offline    Completed without error       00%     16416         -
+#14  Extended offline    Completed without error       00%     16351         -
+#15  Extended offline    Completed without error       00%     16276         -
+#16  Extended offline    Completed without error       00%     16188         -
+#17  Extended offline    Completed without error       00%     16098         -
+#18  Extended offline    Completed without error       00%     15997         -
+#19  Extended offline    Completed without error       00%     15895         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,9 +145,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     10/44 Celsius
-Lifetime    Min/Max Temperature:     10/87 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:      8/44 Celsius
+Lifetime    Min/Max Temperature:      8/87 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -139,43 +155,45 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (231)
+Temperature History Size (Index):    478 (96)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            5823  ---  Lifetime Power-On Resets
-0x01  0x010  4            9267  ---  Power-on Hours
-0x01  0x018  6     37604978924  ---  Logical Sectors Written
-0x01  0x028  6     31666429345  ---  Logical Sectors Read
+0x01  0x008  4            7995  ---  Lifetime Power-On Resets
+0x01  0x010  4           17414  ---  Power-on Hours
+0x01  0x018  6     64946103979  ---  Logical Sectors Written
+0x01  0x028  6     49146918405  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
-0x05  0x010  1              27  ---  Average Short Term Temperature
-0x05  0x018  1              28  ---  Average Long Term Temperature
+0x05  0x008  1              26  ---  Current Temperature
+0x05  0x010  1              23  ---  Average Short Term Temperature
+0x05  0x018  1              27  ---  Average Long Term Temperature
 0x05  0x020  1              41  ---  Highest Temperature
-0x05  0x028  1              10  ---  Lowest Temperature
+0x05  0x028  1               8  ---  Lowest Temperature
 0x05  0x030  1              34  ---  Highest Average Short Term Temperature
-0x05  0x038  1              24  ---  Lowest Average Short Term Temperature
+0x05  0x038  1              21  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              29  ---  Highest Average Long Term Temperature
-0x05  0x048  1              27  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              26  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4               0  ---  Number of Hardware Resets
-0x06  0x010  4            9405  ---  Number of ASR Events
+0x06  0x010  4           22916  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -185,8 +203,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

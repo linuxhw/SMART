@@ -1,4 +1,8 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-68.5rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
+Model Family:     SandForce Driven SSDs
 Device Model:     KINGSTON SHFS37A120G
 Serial Number:    --
 LU WWN Device Id: 5 0026b7 ...
@@ -6,10 +10,10 @@ Firmware Version: 608ABBF0
 User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Oct 14 01:15:21 2019 MSK
+Local Time is:    Fri Mar 13 21:33:54 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,30 +61,30 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    4634446
-  5 Reallocated_Sector_Ct   PO--CK   100   100   003    -    0
-  9 Power_On_Hours          -O--CK   089   089   000    -    9918 (223 228 0)
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1339
-171 Unknown_Attribute       -O-R--   100   100   000    -    0
-172 Unknown_Attribute       -O--CK   100   100   000    -    0
-174 Unknown_Attribute       ----CK   000   000   000    -    135
-177 Wear_Leveling_Count     ------   000   000   000    -    2
-181 Program_Fail_Cnt_Total  -O-R--   100   100   000    -    0
-182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
+  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    0/4791632
+  5 Retired_Block_Count     PO--CK   100   100   003    -    0
+  9 Power_On_Hours_and_Msec -O--CK   088   088   000    -    11278h+32m+48.700s
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1498
+171 Program_Fail_Count      -O-R--   100   100   000    -    0
+172 Erase_Fail_Count        -O--CK   100   100   000    -    0
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    138
+177 Wear_Range_Delta        ------   000   000   000    -    2
+181 Program_Fail_Count      -O-R--   100   100   000    -    0
+182 Erase_Fail_Count        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Unknown_SSD_Attribute   ------   037   047   000    -    64427589669
-194 Temperature_Celsius     -O---K   037   047   000    -    37 (Min/Max 15/47)
-195 Hardware_ECC_Recovered  --SRC-   120   120   000    -    4634446
+189 Airflow_Temperature_Cel ------   030   047   000    -    30 (Min/Max 15/47)
+194 Temperature_Celsius     -O---K   030   047   000    -    30 (Min/Max 15/47)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/4791632
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unknown_SSD_Attribute   --SRC-   120   120   000    -    4634446
-204 Soft_ECC_Correction     --SRC-   120   120   000    -    4634446
-230 Unknown_SSD_Attribute   PO--C-   100   100   000    -    100
-231 Temperature_Celsius     ------   092   092   011    -    167503724545
-233 Media_Wearout_Indicator -O--CK   000   000   000    -    13238
-234 Unknown_Attribute       -O--CK   000   000   000    -    7582
-241 Total_LBAs_Written      -O--CK   000   000   000    -    7582
-242 Total_LBAs_Read         -O--CK   000   000   000    -    8503
-244 Unknown_Attribute       ------   097   097   010    -    6619226
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/4791632
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/4791632
+230 Life_Curve_Status       PO--C-   100   100   000    -    100
+231 SSD_Life_Left           ------   093   093   011    -    167503724545
+233 SandForce_Internal      -O--CK   000   000   000    -    15874
+234 SandForce_Internal      -O--CK   000   000   000    -    9005
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    9005
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    8883
+244 Unknown_Attribute       ------   097   097   010    -    7864437
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,9 +141,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
+Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:     15/47 Celsius
 Lifetime    Min/Max Temperature:     15/47 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -149,24 +152,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (424)
+Temperature History Size (Index):    478 (124)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1339  ---  Lifetime Power-On Resets
-0x01  0x010  4            9918  ---  Power-on Hours
-0x01  0x018  6     15902178966  ---  Logical Sectors Written
-0x01  0x028  6     17832902006  ---  Logical Sectors Read
+0x01  0x008  4            1498  ---  Lifetime Power-On Resets
+0x01  0x010  4           11278  ---  Power-on Hours
+0x01  0x018  6     18886478334  ---  Logical Sectors Written
+0x01  0x028  6     18629134342  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4             251  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4             256  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              37  ---  Current Temperature
-0x05  0x010  1              36  ---  Average Short Term Temperature
-0x05  0x018  1              34  ---  Average Long Term Temperature
+0x05  0x008  1              30  ---  Current Temperature
+0x05  0x010  1              32  ---  Average Short Term Temperature
+0x05  0x018  1              32  ---  Average Long Term Temperature
 0x05  0x020  1              47  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              40  ---  Highest Average Short Term Temperature
@@ -179,10 +182,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4               0  ---  Number of Hardware Resets
-0x06  0x010  4            2367  ---  Number of ASR Events
+0x06  0x010  4            2689  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

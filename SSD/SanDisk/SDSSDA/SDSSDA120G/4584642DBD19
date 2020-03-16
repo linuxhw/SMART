@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Feb 16 21:20:17 2019 CET
+Local Time is:    Sat Oct 12 12:29:35 2019 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,25 +58,25 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     -O--CK   100   100   000    -    1
-  9 Power_On_Hours_and_Msec -O--CK   249   100   000    -    505h+00m+00.000s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3332
-166 Unknown_Attribute       -O--CK   100   100   000    -    767
+  9 Power_On_Hours_and_Msec -O--CK   072   100   000    -    584h+00m+00.000s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3745
+166 Unknown_Attribute       -O--CK   100   100   000    -    851
 167 Unknown_Attribute       -O--CK   100   100   000    -    1
-168 Unknown_Attribute       -O--CK   100   100   000    -    779
+168 Unknown_Attribute       -O--CK   100   100   000    -    890
 169 Unknown_Attribute       -O--CK   100   100   000    -    22
 170 Reserve_Block_Count     -O--CK   100   100   000    -    1
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Unknown_SandForce_Attr  -O--CK   100   100   ---    -    770
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    947
+173 Unknown_SandForce_Attr  -O--CK   100   100   ---    -    880
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1023
 187 Reported_Uncorrect      -O--CK   100   100   000    -    42
 194 Temperature_Celsius     -O---K   070   100   000    -    30 (Min/Max 0/58)
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    55
-230 Life_Curve_Status       -O--CK   100   100   000    -    25
+230 Life_Curve_Status       -O--CK   100   100   000    -    29
 232 Available_Reservd_Space PO--CK   100   100   004    -    99
-233 SandForce_Internal      -O--CK   100   100   000    -    84581
-241 Lifetime_Writes_GiB     ----CK   253   253   000    -    44991
-242 Lifetime_Reads_GiB      ----CK   253   253   000    -    19396
+233 SandForce_Internal      -O--CK   100   100   000    -    95530
+241 Lifetime_Writes_GiB     ----CK   253   253   000    -    51823
+242 Lifetime_Reads_GiB      ----CK   253   253   000    -    22651
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 123 (device log contains only the most recent 4 errors)
+Device Error Count: 134 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,10 +119,10 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 123 [2] log entry is empty
-Error 122 [1] log entry is empty
-Error 121 [0] log entry is empty
-Error 120 [3] log entry is empty
+Error 134 [1] log entry is empty
+Error 133 [0] log entry is empty
+Error 132 [3] log entry is empty
+Error 131 [2] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%       271         -
@@ -143,21 +143,21 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            3332  ---  Lifetime Power-On Resets
-0x01  0x010  4             505  ---  Power-on Hours
-0x01  0x018  6           44991  ---  Logical Sectors Written
-0x01  0x020  6       915082714  ---  Number of Write Commands
-0x01  0x028  6           19396  ---  Logical Sectors Read
-0x01  0x030  6       567569498  ---  Number of Read Commands
+0x01  0x008  4            3745  ---  Lifetime Power-On Resets
+0x01  0x010  4             584  ---  Power-on Hours
+0x01  0x018  6           51823  ---  Logical Sectors Written
+0x01  0x020  6      1058637901  ---  Number of Write Commands
+0x01  0x028  6           22651  ---  Logical Sectors Read
+0x01  0x030  6       669149941  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4              42  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            1642  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            1750  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1             -25  ---  Average Short Term Temperature
-0x05  0x018  1             -21  ---  Average Long Term Temperature
+0x05  0x010  1               0  ---  Average Short Term Temperature
+0x05  0x018  1            -126  ---  Average Long Term Temperature
 0x05  0x020  1              58  ---  Highest Temperature
 0x05  0x028  1               1  ---  Lowest Temperature
 0x05  0x030  1              -1  ---  Highest Average Short Term Temperature
@@ -169,10 +169,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4         1948453  ---  Number of Hardware Resets
+0x06  0x008  4         2071286  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              25  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              29  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -188,7 +188,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2          125  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           98  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

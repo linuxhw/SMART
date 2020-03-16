@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Fri Jun 10 15:31:08 2016 MSK
+Local Time is:    Thu Dec 22 22:40:05 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -58,20 +58,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   100   100   040    -    107
-  3 Spin_Up_Time            POS---   241   241   033    -    1
-  4 Start_Stop_Count        -O--C-   098   098   000    -    3780
-  5 Reallocated_Sector_Ct   PO--CK   094   094   005    -    0
+  2 Throughput_Performance  P-S---   111   111   040    -    4279
+  3 Spin_Up_Time            POS---   243   243   033    -    1
+  4 Start_Stop_Count        -O--C-   098   098   000    -    4048
+  5 Reallocated_Sector_Ct   PO--CK   093   093   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   001   001   000    -    1282779 (0 0 118)
+  8 Seek_Time_Performance   P-S---   132   132   040    -    34
+  9 Power_On_Hours          -O--C-   001   001   000    -    13566528 (0 0 137)
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    3723
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    3982
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    298
-193 Load_Cycle_Count        -O--C-   077   077   000    -    238489
-194 Temperature_Celsius     -O----   127   127   000    -    43 (Min/Max -9/64)
-196 Reallocated_Event_Count -O--CK   094   094   000    -    743
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    322
+193 Load_Cycle_Count        -O--C-   075   075   000    -    258169
+194 Temperature_Celsius     -O----   117   117   000    -    47 (Min/Max -9/64)
+196 Reallocated_Event_Count -O--CK   093   093   000    -    752
 197 Current_Pending_Sector  -O---K   100   100   000    -    1
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
@@ -98,7 +98,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 1776 (device log contains only the most recent 4 errors)
+Device Error Count: 1810 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -114,41 +114,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1776 [3] occurred at disk power-on lifetime: 51562 hours (2148 days + 10 hours)
+Error 1810 [1] occurred at disk power-on lifetime: 33050 hours (1377 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 f1 c2 4f ff c2 4f ff e0 00  Error: 
+  10 -- 51 00 f8 00 00 00 c2 4f 00 00 00  Error: 
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 d8 d2 00 f1 c2 4f ff c2 4f ff e0 00     00:00:07.600  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  b0 ff d8 10 00 00 ff ff c2 4f ff e0 00     00:00:07.600  SMART ENABLE OPERATIONS
-  c6 03 ff 3f 10 00 00 00 00 ff ff e0 00     00:00:07.600  SET MULTIPLE MODE
-  91 00 03 01 3f 00 00 01 00 00 00 ef 00     00:00:07.600  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec ff 00 00 01 00 00 00 00 00 01 a0 00     00:00:07.200  IDENTIFY DEVICE
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 08     00:00:40.000  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  60 00 08 00 20 00 00 02 04 1e 40 40 08     00:00:39.900  READ FPDMA QUEUED
+  60 00 18 00 18 00 00 00 de 06 d8 40 08     00:00:39.900  READ FPDMA QUEUED
+  60 00 08 00 10 00 00 00 06 e0 d8 40 08     00:00:39.900  READ FPDMA QUEUED
+  b0 00 d1 00 01 00 00 00 c2 4f 01 00 08     00:00:39.900  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
-Error 1775 [2] occurred at disk power-on lifetime: 58547 hours (2439 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 f1 c2 4f ff c2 4f ff e0 00  Error: 
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 d8 d2 00 f1 c2 4f ff c2 4f ff e0 00     00:00:09.300  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  b0 ff d8 10 00 00 ff ff c2 4f ff e0 00     00:00:09.200  SMART ENABLE OPERATIONS
-  c6 03 ff 3f 10 00 00 00 00 ff ff e0 00     00:00:09.200  SET MULTIPLE MODE
-  91 00 03 01 3f 00 00 01 00 00 00 ef 00     00:00:09.200  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec ff 00 00 01 00 00 00 00 00 01 a0 00     00:00:08.900  IDENTIFY DEVICE
-
-Error 1774 [1] occurred at disk power-on lifetime: 29254 hours (1218 days + 22 hours)
+Error 1809 [0] occurred at disk power-on lifetime: 49293 hours (2053 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,22 +148,39 @@ Error 1774 [1] occurred at disk power-on lifetime: 29254 hours (1218 days + 22 h
   ec ff 00 00 01 00 00 00 00 00 01 a0 00     00:00:08.100  IDENTIFY DEVICE
   ef 00 90 00 01 00 00 00 00 00 01 a0 ff     00:00:06.400  SET FEATURES [Disable SATA feature]
 
-Error 1773 [0] occurred at disk power-on lifetime: 10011 hours (417 days + 3 hours)
+Error 1808 [3] occurred at disk power-on lifetime: 57406 hours (2391 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 f1 c2 4f ff c2 4f ff e0 00  Error: 
+  10 -- 51 10 00 00 ff ff c2 4f ff e0 00  Error: 
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 d8 d2 00 f1 c2 4f ff c2 4f ff e0 00     00:00:09.200  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  b0 ff d8 10 00 00 ff ff c2 4f ff e0 00     00:00:09.000  SMART ENABLE OPERATIONS
-  c6 03 ff 3f 10 00 00 00 00 ff ff e0 00     00:00:09.000  SET MULTIPLE MODE
-  91 00 03 01 3f 00 00 01 00 00 00 ef 00     00:00:09.000  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec ff 00 00 01 00 00 00 00 00 01 a0 00     00:00:08.600  IDENTIFY DEVICE
+  b0 ff d8 10 00 00 ff ff c2 4f ff e0 00     00:00:07.700  SMART ENABLE OPERATIONS
+  c6 03 ff 3f 10 00 00 00 00 ff ff e0 00     00:00:07.700  SET MULTIPLE MODE
+  91 00 03 01 3f 00 00 01 00 00 00 ef 00     00:00:07.700  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec ff 00 00 01 00 00 00 00 00 01 a0 00     00:00:07.400  IDENTIFY DEVICE
+  ef 00 90 00 01 00 00 00 00 00 01 a0 ff     00:00:05.700  SET FEATURES [Disable SATA feature]
+
+Error 1807 [2] occurred at disk power-on lifetime: 61460 hours (2560 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 10 00 00 ff ff c2 4f ff e0 00  Error: 
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 ff d8 10 00 00 ff ff c2 4f ff e0 00     00:00:07.600  SMART ENABLE OPERATIONS
+  c6 03 ff 3f 10 00 00 00 00 ff ff e0 00     00:00:07.600  SET MULTIPLE MODE
+  91 00 03 01 3f 00 00 01 00 00 00 ef 00     00:00:07.600  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec ff 00 00 01 00 00 00 00 00 01 a0 00     00:00:07.200  IDENTIFY DEVICE
+  ef 00 90 00 01 00 00 00 00 00 01 a0 ff     00:00:05.500  SET FEATURES [Disable SATA feature]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Invalid Self-test Log index = 0x7902 (reserved = 0x00)
@@ -199,10 +199,10 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    43 Celsius
-Power Cycle Min/Max Temperature:     31/44 Celsius
+Current Temperature:                    47 Celsius
+Power Cycle Min/Max Temperature:     24/51 Celsius
 Lifetime    Min/Max Temperature:     -9/64 Celsius
-Lifetime    Average Temperature:        45 Celsius
+Lifetime    Average Temperature:        44 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 Unexpected SCT status 0x0000 (action_code=5, function_code=0)
@@ -217,8 +217,8 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

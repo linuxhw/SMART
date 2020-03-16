@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Jan 26 15:58:19 2017 +10
+Local Time is:    Sat Jun  3 12:34:25 2017 +10
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,28 +59,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    14
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    15
   2 Throughput_Performance  -OS--K   055   055   000    -    11836
-  3 Spin_Up_Time            PO---K   090   089   025    -    3062
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2680
+  3 Spin_Up_Time            PO---K   090   089   025    -    3065
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2990
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    12321
+  9 Power_On_Hours          -O--CK   100   100   000    -    14709
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    228
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2701
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    1800
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    251
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3053
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    2018
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   063   051   000    -    37 (Min/Max 12/50)
+194 Temperature_Celsius     -O----   064   050   000    -    29 (Min/Max 12/50)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    1
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    8571
-223 Load_Retry_Count        -O--CK   100   100   000    -    228
-225 Load_Cycle_Count        -O--CK   078   078   000    -    228567
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    10702
+223 Load_Retry_Count        -O--CK   100   100   000    -    251
+225 Load_Cycle_Count        -O--CK   073   073   000    -    275180
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 2
+Device Error Count: 3
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +122,23 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 12402 hours (516 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 00 00 40 00  Error: 
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 08     00:00:22.590  NOP [Abort queued commands]
+  61 00 00 00 10 00 00 54 e2 cf a8 40 08     00:00:22.615  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 70 a1 c8 00 40 08     00:00:22.615  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:22.615  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:22.603  FLUSH CACHE EXT
 
 Error 2 [1] occurred at disk power-on lifetime: 11312 hours (471 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -159,27 +176,27 @@ Error 1 [0] occurred at disk power-on lifetime: 11312 hours (471 days + 8 hours)
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0x50)       Completed without error       00%     12095         -
-# 2  Short offline       Completed without error       00%     12095         -
-# 3  Vendor (0x50)       Completed without error       00%     11569         -
-# 4  Short offline       Completed without error       00%     11569         -
-# 5  Extended offline    Completed without error       00%     11303         -
-# 6  Vendor (0x50)       Completed without error       00%     10379         -
-# 7  Short offline       Completed without error       00%     10379         -
-# 8  Vendor (0x50)       Completed without error       00%      9758         -
-# 9  Short offline       Completed without error       00%      9757         -
-#10  Vendor (0x50)       Completed without error       00%      8520         -
-#11  Short offline       Completed without error       00%      8520         -
-#12  Vendor (0x50)       Completed without error       00%      7807         -
-#13  Short offline       Completed without error       00%      7807         -
-#14  Vendor (0x50)       Completed without error       00%      7806         -
-#15  Short offline       Completed without error       00%      7806         -
-#16  Vendor (0x50)       Completed without error       00%      7453         -
-#17  Short offline       Completed without error       00%      7453         -
-#18  Vendor (0x50)       Completed without error       00%      6909         -
-#19  Short offline       Completed without error       00%      6909         -
-#20  Vendor (0x50)       Completed without error       00%      6519         -
-#21  Short offline       Completed without error       00%      6519         -
+# 1  Vendor (0x50)       Completed without error       00%     14392         -
+# 2  Short offline       Completed without error       00%     14392         -
+# 3  Vendor (0x50)       Completed without error       00%     13837         -
+# 4  Short offline       Completed without error       00%     13837         -
+# 5  Vendor (0x50)       Completed without error       00%     13267         -
+# 6  Short offline       Completed without error       00%     13267         -
+# 7  Vendor (0x50)       Completed without error       00%     12095         -
+# 8  Short offline       Completed without error       00%     12095         -
+# 9  Vendor (0x50)       Completed without error       00%     11569         -
+#10  Short offline       Completed without error       00%     11569         -
+#11  Extended offline    Completed without error       00%     11303         -
+#12  Vendor (0x50)       Completed without error       00%     10379         -
+#13  Short offline       Completed without error       00%     10379         -
+#14  Vendor (0x50)       Completed without error       00%      9758         -
+#15  Short offline       Completed without error       00%      9757         -
+#16  Vendor (0x50)       Completed without error       00%      8520         -
+#17  Short offline       Completed without error       00%      8520         -
+#18  Vendor (0x50)       Completed without error       00%      7807         -
+#19  Short offline       Completed without error       00%      7807         -
+#20  Vendor (0x50)       Completed without error       00%      7806         -
+#21  Short offline       Completed without error       00%      7806         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -197,8 +214,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     34/37 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     29/40 Celsius
 Lifetime    Min/Max Temperature:     16/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -207,7 +224,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (95)
+Temperature History Size (Index):    128 (121)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -225,8 +242,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           18  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           15  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

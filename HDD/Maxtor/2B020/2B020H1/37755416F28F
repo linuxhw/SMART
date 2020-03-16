@@ -7,7 +7,7 @@ User Capacity:    20 490 559 488 bytes [20,4 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Thu Sep 28 21:47:47 2017 MSK
+Local Time is:    Fri Sep 29 14:26:12 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -51,18 +51,18 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   233   233   063    -    7127
-  4 Start_Stop_Count        -O--CK   253   253   000    -    1489
+  3 Spin_Up_Time            POS--K   233   233   063    -    7210
+  4 Start_Stop_Count        -O--CK   253   253   000    -    1490
   5 Reallocated_Sector_Ct   PO--CK   132   132   063    -    306
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   250   244   187    -    32863
-  9 Power_On_Minutes        -O--CK   252   252   000    -    380h+46m
+  8 Seek_Time_Performance   POS--K   249   244   187    -    37412
+  9 Power_On_Minutes        -O--CK   252   252   000    -    381h+41m
  10 Spin_Retry_Count        PO-R-K   253   252   223    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   249   249   000    -    1824
+ 12 Power_Cycle_Count       -O--CK   249   249   000    -    1825
 192 Power-Off_Retract_Count -O--CK   252   252   000    -    1009
-193 Load_Cycle_Count        -O--CK   253   253   000    -    2046
+193 Load_Cycle_Count        -O--CK   253   253   000    -    2052
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
 195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    12
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
@@ -95,9 +95,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 8091 inconsistent with error log pointer 5
+Warning: ATA error count 8092 inconsistent with error log pointer 5
 
-ATA Error Count: 8091 (device log contains only the most recent five errors)
+ATA Error Count: 8092 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -111,6 +111,23 @@ ATA Error Count: 8091 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 8092 occurred at disk power-on lifetime: 357 hours (14 days + 21 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 0b 4f c2 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 00 4f c2 00 08      07:28:56.832  SMART READ LOG
+  ca 00 70 38 28 04 e1 08      07:28:56.832  WRITE DMA
+  ca 00 08 98 59 0a e1 08      07:28:56.832  WRITE DMA
+  b0 da 00 00 4f c2 00 08      07:28:56.784  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 00 08      07:28:56.768  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
 Error 8091 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -179,23 +196,6 @@ Error 8088 occurred at disk power-on lifetime: 356 hours (14 days + 20 hours)
   c8 00 00 20 66 08 e0 08      00:31:22.736  READ DMA
   c8 00 00 70 64 08 e0 08      00:31:22.736  READ DMA
   c8 00 00 78 60 08 e0 08      00:31:22.720  READ DMA
-
-Error 8087 occurred at disk power-on lifetime: 355 hours (14 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 0b 4f c2 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 00 08      00:33:37.840  SMART READ LOG
-  e7 00 00 27 89 8f a0 08      00:33:37.808  FLUSH CACHE
-  ca 00 08 20 89 8f e0 08      00:33:37.808  WRITE DMA
-  ca 00 08 c8 26 04 e1 08      00:33:37.808  WRITE DMA
-  e7 da 00 00 4f c2 a0 08      00:33:37.808  FLUSH CACHE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

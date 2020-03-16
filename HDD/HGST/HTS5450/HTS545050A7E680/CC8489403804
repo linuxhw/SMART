@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Aug  3 00:34:27 2019 +03
+Local Time is:    Sun Dec  8 20:54:04 2019 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,23 +62,23 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   085   062    -    0
   2 Throughput_Performance  P-S--K   198   100   040    -    130
-  3 Spin_Up_Time            PO---K   218   100   033    -    1
-  4 Start_Stop_Count        -O--CK   097   097   000    -    6042
-  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    992 (0 122)
+  3 Spin_Up_Time            PO---K   214   100   033    -    1
+  4 Start_Stop_Count        -O--CK   096   096   000    -    6596
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    1008 (0 124)
   7 Seek_Error_Rate         POSR-K   100   100   067    -    0
   8 Seek_Time_Performance   P-S--K   112   100   040    -    35
-  9 Power_On_Hours          -O--CK   061   061   000    -    17459
+  9 Power_On_Hours          -O--CK   058   058   000    -    18688
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    6034
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    6580
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   063   000    -    1220340089454
-188 Command_Timeout         -O--CK   100   098   000    -    24233203073031
-190 Airflow_Temperature_Cel -O---K   055   050   045    -    45 (Min/Max 22/45)
-191 G-Sense_Error_Rate      -O--CK   073   073   000    -    6958
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    24576375
-193 Load_Cycle_Count        -O--CK   018   018   000    -    825419
-196 Reallocated_Event_Count -O--CK   100   100   000    -    122
+187 Reported_Uncorrect      -O--CK   099   063   000    -    1310554194543
+188 Command_Timeout         -O--CK   100   098   000    -    24301929103368
+190 Airflow_Temperature_Cel -O---K   065   050   045    -    35 (Min/Max 20/42)
+191 G-Sense_Error_Rate      -O--CK   072   072   000    -    7302
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    28115373
+193 Load_Cycle_Count        -O--CK   011   011   000    -    893578
+196 Reallocated_Event_Count -O--CK   100   100   000    -    124
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    0
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 622 (device log contains only the most recent 4 errors)
+Device Error Count: 623 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +122,23 @@ Device Error Count: 622 (device log contains only the most recent 4 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 623 [2] occurred at disk power-on lifetime: 18687 hours (778 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 41 02 58 00 00 39 df 08 b8 09 00  Error: IDNF at LBA = 0x39df08b8 = 970918072
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 01 d8 00 98 00 00 21 15 00 50 40 08     01:10:23.516  WRITE FPDMA QUEUED
+  61 00 70 00 90 00 00 38 2d 13 20 40 08     01:10:15.206  WRITE FPDMA QUEUED
+  61 00 08 00 88 00 00 13 43 0a 58 40 08     01:10:15.206  WRITE FPDMA QUEUED
+  61 00 78 00 80 00 00 38 4e 42 80 40 08     01:10:15.206  WRITE FPDMA QUEUED
+  61 00 08 00 78 00 00 36 eb fe 58 40 08     01:10:15.206  WRITE FPDMA QUEUED
 
 Error 622 [1] occurred at disk power-on lifetime: 17443 hours (726 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -174,37 +191,21 @@ Error 620 [3] occurred at disk power-on lifetime: 17443 hours (726 days + 19 hou
   60 00 08 00 38 00 00 00 f5 4f 60 40 08     01:24:27.265  READ FPDMA QUEUED
   60 00 08 00 30 00 00 00 f5 4f 00 40 08     01:24:27.265  READ FPDMA QUEUED
 
-Error 619 [2] occurred at disk power-on lifetime: 17328 hours (722 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 41 00 08 00 00 34 ce b8 d8 04 00  Error: IDNF at LBA = 0x34ceb8d8 = 885962968
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 98 00 00 35 0f 9d f8 40 08     02:06:37.417  READ FPDMA QUEUED
-  60 00 08 00 80 00 00 09 cf ed e0 40 08     02:06:37.417  READ FPDMA QUEUED
-  61 00 38 00 78 00 00 36 4e bd 28 40 08     02:06:37.417  WRITE FPDMA QUEUED
-  61 00 10 00 70 00 00 36 4e bc e8 40 08     02:06:37.417  WRITE FPDMA QUEUED
-  61 00 08 00 68 00 00 36 4e 90 e0 40 08     02:06:37.417  WRITE FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     16545         -
-# 2  Extended offline    Completed without error       00%     14653         -
-# 3  Extended offline    Completed without error       00%      9964         -
-# 4  Short offline       Completed without error       00%      9379         -
-# 5  Extended offline    Completed without error       00%      7959         -
-# 6  Extended offline    Completed without error       00%      7049         -
-# 7  Extended offline    Completed without error       00%      5239         -
-# 8  Extended offline    Completed without error       00%      4818         -
-# 9  Extended offline    Completed without error       00%      1032         -
-#10  Extended offline    Completed without error       00%       560         -
-#11  Extended offline    Completed without error       00%       483         -
-#12  Extended offline    Completed without error       00%       344         -
+# 1  Extended offline    Completed without error       00%     18204         -
+# 2  Extended offline    Completed without error       00%     16545         -
+# 3  Extended offline    Completed without error       00%     14653         -
+# 4  Extended offline    Completed without error       00%      9964         -
+# 5  Short offline       Completed without error       00%      9379         -
+# 6  Extended offline    Completed without error       00%      7959         -
+# 7  Extended offline    Completed without error       00%      7049         -
+# 8  Extended offline    Completed without error       00%      5239         -
+# 9  Extended offline    Completed without error       00%      4818         -
+#10  Extended offline    Completed without error       00%      1032         -
+#11  Extended offline    Completed without error       00%       560         -
+#12  Extended offline    Completed without error       00%       483         -
+#13  Extended offline    Completed without error       00%       344         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -221,8 +222,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
-Power Cycle Min/Max Temperature:     22/45 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     20/42 Celsius
 Lifetime    Min/Max Temperature:      2/50 Celsius
 Lifetime    Average Temperature:        32 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -232,7 +233,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (57)
+Temperature History Size (Index):    128 (26)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)

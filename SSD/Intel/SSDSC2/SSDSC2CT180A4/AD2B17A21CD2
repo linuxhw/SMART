@@ -10,14 +10,14 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Apr 20 17:09:17 2015 IRKT
+Local Time is:    Wed Apr 29 10:16:41 2015 IRKT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -59,15 +59,15 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    5422h+38m+19.710s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2254
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    518
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    136554
+  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    5513h+59m+53.860s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2283
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    522
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    139014
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   100   100   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    136554
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    188074
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    3403
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    139014
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    191507
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    3466
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -96,9 +96,10 @@ SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 0 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      5390         -
-# 2  Extended offline    Completed without error       00%      5242         -
-# 3  Extended offline    Interrupted (host reset)      50%      1196         -
+# 1  Extended offline    Completed without error       00%      5531         -
+# 2  Extended offline    Completed without error       00%      5390         -
+# 3  Extended offline    Completed without error       00%      5242         -
+# 4  Extended offline    Interrupted (host reset)      50%      1196         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -134,16 +135,16 @@ SCT Error Recovery Control command not supported
 Device Statistics (GP Log 0x04)
 Page Offset Size         Value  Description
   1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4             2297  Lifetime Power-On Resets
-  1  0x010  4             5470  Power-on Hours
-  1  0x018  6      14540276585  Logical Sectors Written
-  1  0x028  6      18191718395  Logical Sectors Read
+  1  0x008  4             2326  Lifetime Power-On Resets
+  1  0x010  4             5560  Power-on Hours
+  1  0x018  6      14701512433  Logical Sectors Written
+  1  0x028  6      18416685512  Logical Sectors Read
   4  =====  =                =  == General Errors Statistics (rev 1) ==
   4  0x008  4                0  Number of Reported Uncorrectable Errors
-  4  0x010  4            41692  Resets Between Cmd Acceptance and Completion
+  4  0x010  4            42448  Resets Between Cmd Acceptance and Completion
   6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4            41692  Number of Hardware Resets
-  6  0x010  4            32321  Number of ASR Events
+  6  0x008  4            42448  Number of Hardware Resets
+  6  0x010  4            33044  Number of ASR Events
   6  0x018  4                0  Number of Interface CRC Errors
   7  =====  =                =  == Solid State Device Statistics (rev 1) ==
   7  0x008  1              255  Percentage Used Endurance Indicator
@@ -156,8 +157,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Mon Apr  1 18:41:58 2019 +04
+Local Time is:    Tue Jan 28 22:11:03 2020 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -60,18 +60,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   111   111   040    -    4274
-  3 Spin_Up_Time            POS---   253   253   033    -    0
-  4 Start_Stop_Count        -O--C-   097   097   000    -    4866
+  3 Spin_Up_Time            POS---   253   253   033    -    1
+  4 Start_Stop_Count        -O--C-   097   097   000    -    5832
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   124   124   040    -    38
-  9 Power_On_Hours          -O--C-   063   063   000    -    16619
+  9 Power_On_Hours          -O--C-   060   060   000    -    17632
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    4493
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    5362
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    38469867
-193 Load_Cycle_Count        -O--C-   055   055   000    -    453849
-194 Temperature_Celsius     -O----   196   196   000    -    28 (Min/Max 8/51)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    38469952
+193 Load_Cycle_Count        -O--C-   052   052   000    -    480151
+194 Temperature_Celsius     -O----   161   161   000    -    34 (Min/Max 8/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -184,7 +184,27 @@ Error 195 [2] occurred at disk power-on lifetime: 16612 hours (692 days + 4 hour
   c8 00 00 00 08 7d 09 37 7d 09 38 ec 08     00:09:47.500  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-Invalid Self-test Log index = 0x2502 (reserved = 0x00)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Offline             Completed without error       00%         0         -
+# 2  Reserved (0x25)     Completed: unknown failure    40%         0         0
+# 3  Offline             Completed without error       00%         0         -
+# 4  Offline             Completed without error       00%         0         -
+# 5  Offline             Completed without error       00%         0         -
+# 6  Offline             Completed without error       00%         0         -
+# 7  Offline             Completed without error       00%         0         -
+# 8  Offline             Completed without error       00%         0         -
+# 9  Vendor (0xda)       Completed: unknown failure    30%         0         0
+#10  Extended offline    Interrupted (host reset)      90%     17259         -
+#11  Offline             Completed without error       00%         2         -
+#12  Offline             Completed without error       00%         0         -
+#13  Offline             Completed without error       00%         0         -
+#14  Offline             Completed without error       00%         0         -
+#15  Offline             Completed without error       00%         0         -
+#16  Offline             Completed without error       00%         0         -
+#17  Offline             Completed without error       00%         0         -
+#18  Offline             Completed without error       00%         0         -
+#19  Offline             Completed without error       00%         0         -
+
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
@@ -200,8 +220,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     23/28 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     25/35 Celsius
 Lifetime    Min/Max Temperature:      8/51 Celsius
 Lifetime    Average Temperature:        36 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -220,8 +240,8 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           12  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

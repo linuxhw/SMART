@@ -10,13 +10,14 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Jan 30 17:27:20 2018 MSK
+Local Time is:    Thu Jul 12 22:42:51 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
@@ -61,30 +62,30 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   081   006    -    154791342
+  1 Raw_Read_Error_Rate     POSR--   117   081   006    -    117861868
   3 Spin_Up_Time            PO----   099   099   085    -    0
-  4 Start_Stop_Count        -O--CK   094   094   020    -    6666
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6685
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   086   060   030    -    458800614
-  9 Power_On_Hours          -O--CK   080   080   000    -    17876
+  7 Seek_Error_Rate         POSR--   086   060   030    -    459509990
+  9 Power_On_Hours          -O--CK   080   080   000    -    17923
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6687
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6706
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   001   001   000    -    8352
-188 Command_Timeout         -O--CK   100   097   000    -    42
+188 Command_Timeout         -O--CK   100   097   000    -    44
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   031   045    Past 41 (Min/Max 26/44 #1678)
+190 Airflow_Temperature_Cel -O---K   057   031   045    Past 43 (Min/Max 43/46 #1678)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1200
 192 Power-Off_Retract_Count -O--CK   099   099   000    -    2693
-193 Load_Cycle_Count        -O--CK   011   011   000    -    178512
-194 Temperature_Celsius     -O---K   041   069   000    -    41 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   054   043   000    -    154791342
+193 Load_Cycle_Count        -O--CK   011   011   000    -    179366
+194 Temperature_Celsius     -O---K   043   069   000    -    43 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   047   039   000    -    117861868
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    17060 (0 19 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1229669203
-242 Total_LBAs_Read         ------   100   253   000    -    1949698755
+240 Head_Flying_Hours       ------   100   253   000    -    17105 (157 43 0)
+241 Total_LBAs_Written      ------   100   253   000    -    1608476341
+242 Total_LBAs_Read         ------   100   253   000    -    2369888061
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -272,8 +273,9 @@ Error 8096 [15] occurred at disk power-on lifetime: 17577 hours (732 days + 9 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      2962         -
-# 2  Short offline       Completed without error       00%         0         -
+# 1  Extended offline    Completed without error       00%     17906         -
+# 2  Short offline       Completed without error       00%      2962         -
+# 3  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -290,8 +292,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     26/44 Celsius
+Current Temperature:                    43 Celsius
+Power Cycle Min/Max Temperature:     43/46 Celsius
 Lifetime    Min/Max Temperature:     10/69 Celsius
 Lifetime    Average Temperature:        43 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -301,7 +303,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (43)
+Temperature History Size (Index):    128 (69)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -309,9 +311,11 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

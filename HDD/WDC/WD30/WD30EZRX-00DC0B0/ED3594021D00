@@ -9,7 +9,7 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 17 16:28:08 2016 MSK
+Local Time is:    Wed Jun 27 14:39:42 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,22 +59,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   181   180   021    -    5916
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2923
+  3 Spin_Up_Time            POS--K   187   180   021    -    5616
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8314
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   068   068   000    -    23857
+  9 Power_On_Hours          -O--CK   047   047   000    -    39281
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    524
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    222
-193 Load_Cycle_Count        -O--CK   036   036   000    -    494530
-194 Temperature_Celsius     -O---K   108   103   000    -    42
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    847
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    306
+193 Load_Cycle_Count        -O--CK   001   001   000    -    813140
+194 Temperature_Celsius     -O---K   117   103   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    4
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 113 (device log contains only the most recent 24 errors)
+Device Error Count: 161 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 113 [16] occurred at disk power-on lifetime: 23734 hours (988 days + 22 hours)
+Error 161 [16] occurred at disk power-on lifetime: 32186 hours (1341 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -131,13 +131,13 @@ Error 113 [16] occurred at disk power-on lifetime: 23734 hours (988 days + 22 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00  4d+00:26:46.216  SMART WRITE LOG
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00  4d+00:26:46.216  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 a0 00  4d+00:26:46.136  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+00:26:46.136  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00  4d+00:26:46.136  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00  5d+17:52:51.543  SMART WRITE LOG
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00  5d+17:52:51.543  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 a0 00  5d+17:52:51.398  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00  5d+17:52:51.398  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00  5d+17:52:51.397  IDENTIFY DEVICE
 
-Error 112 [15] occurred at disk power-on lifetime: 23734 hours (988 days + 22 hours)
+Error 160 [15] occurred at disk power-on lifetime: 32186 hours (1341 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -148,13 +148,13 @@ Error 112 [15] occurred at disk power-on lifetime: 23734 hours (988 days + 22 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:46.134  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:46.133  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:46.133  SMART WRITE LOG
-  b0 00 d0 00 00 00 00 01 c2 4f 00 a1 00  4d+00:26:13.287  SMART READ DATA
-  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00  4d+00:26:13.283  SMART RETURN STATUS
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  5d+17:52:51.396  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  5d+17:52:51.396  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  5d+17:52:51.395  SMART WRITE LOG
+  42 00 00 00 01 00 00 00 00 00 00 e0 00  5d+17:52:44.948  READ VERIFY SECTOR(S) EXT
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00  5d+17:52:44.948  SET FEATURES [Disable SATA feature]
 
-Error 111 [14] occurred at disk power-on lifetime: 23734 hours (988 days + 22 hours)
+Error 159 [14] occurred at disk power-on lifetime: 32186 hours (1341 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,13 +165,13 @@ Error 111 [14] occurred at disk power-on lifetime: 23734 hours (988 days + 22 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:46.133  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:46.133  SMART WRITE LOG
-  b0 00 d0 00 00 00 00 01 c2 4f 00 a1 00  4d+00:26:13.287  SMART READ DATA
-  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00  4d+00:26:13.283  SMART RETURN STATUS
-  ea 00 00 00 00 00 00 00 00 00 00 e0 00  4d+00:25:23.384  FLUSH CACHE EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  5d+17:52:51.396  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  5d+17:52:51.395  SMART WRITE LOG
+  42 00 00 00 01 00 00 00 00 00 00 e0 00  5d+17:52:44.948  READ VERIFY SECTOR(S) EXT
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00  5d+17:52:44.948  SET FEATURES [Disable SATA feature]
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00  5d+17:52:44.948  SET FEATURES [Enable write cache]
 
-Error 110 [13] occurred at disk power-on lifetime: 23734 hours (988 days + 22 hours)
+Error 158 [13] occurred at disk power-on lifetime: 32186 hours (1341 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -182,13 +182,13 @@ Error 110 [13] occurred at disk power-on lifetime: 23734 hours (988 days + 22 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  4d+00:26:46.133  SMART WRITE LOG
-  b0 00 d0 00 00 00 00 01 c2 4f 00 a1 00  4d+00:26:13.287  SMART READ DATA
-  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00  4d+00:26:13.283  SMART RETURN STATUS
-  ea 00 00 00 00 00 00 00 00 00 00 e0 00  4d+00:25:23.384  FLUSH CACHE EXT
-  61 00 08 00 60 00 00 00 59 4d 50 40 00  4d+00:25:18.382  WRITE FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00  5d+17:52:51.395  SMART WRITE LOG
+  42 00 00 00 01 00 00 00 00 00 00 e0 00  5d+17:52:44.948  READ VERIFY SECTOR(S) EXT
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00  5d+17:52:44.948  SET FEATURES [Disable SATA feature]
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00  5d+17:52:44.948  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 00 00 00 00 00 a0 00  5d+17:52:44.948  SECURITY FREEZE LOCK
 
-Error 109 [12] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 157 [12] occurred at disk power-on lifetime: 29216 hours (1217 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -199,13 +199,13 @@ Error 109 [12] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00     00:55:09.939  SMART WRITE LOG
-  ec 00 00 00 01 00 00 00 00 00 00 e0 00     00:55:09.939  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 a0 00     00:55:09.859  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:55:09.858  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:55:09.858  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 e0 00 11d+23:36:13.511  SMART WRITE LOG
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00 11d+23:36:13.511  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 a0 00 11d+23:36:13.470  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00 11d+23:36:13.470  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00 11d+23:36:13.469  IDENTIFY DEVICE
 
-Error 108 [11] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 156 [11] occurred at disk power-on lifetime: 29216 hours (1217 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -216,13 +216,13 @@ Error 108 [11] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:09.857  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:09.857  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:09.856  SMART WRITE LOG
-  60 00 08 00 c0 00 00 00 60 53 f0 40 00     00:54:38.587  READ FPDMA QUEUED
-  60 00 08 00 b8 00 00 37 33 66 a0 40 00     00:54:38.574  READ FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00 11d+23:36:13.468  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00 11d+23:36:13.453  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00 11d+23:36:13.452  SMART WRITE LOG
+  ea 00 00 00 00 00 00 00 00 00 00 e0 00 11d+23:35:24.221  FLUSH CACHE EXT
+  61 00 08 00 30 00 00 00 59 4d 48 40 00 11d+23:35:19.191  WRITE FPDMA QUEUED
 
-Error 107 [10] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 155 [10] occurred at disk power-on lifetime: 29216 hours (1217 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -233,14 +233,14 @@ Error 107 [10] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:09.857  SMART WRITE LOG
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:09.856  SMART WRITE LOG
-  60 00 08 00 c0 00 00 00 60 53 f0 40 00     00:54:38.587  READ FPDMA QUEUED
-  60 00 08 00 b8 00 00 37 33 66 a0 40 00     00:54:38.574  READ FPDMA QUEUED
-  60 00 08 00 b0 00 00 16 20 64 b8 40 00     00:54:38.560  READ FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00 11d+23:36:13.453  SMART WRITE LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00 11d+23:36:13.452  SMART WRITE LOG
+  ea 00 00 00 00 00 00 00 00 00 00 e0 00 11d+23:35:24.221  FLUSH CACHE EXT
+  61 00 08 00 30 00 00 00 59 4d 48 40 00 11d+23:35:19.191  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 e0 00 11d+23:35:19.173  FLUSH CACHE EXT
 
-Error 106 [9] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
+Error 154 [9] occurred at disk power-on lifetime: 29216 hours (1217 days + 8 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
@@ -250,11 +250,11 @@ Error 106 [9] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     00:55:09.856  SMART WRITE LOG
-  60 00 08 00 c0 00 00 00 60 53 f0 40 00     00:54:38.587  READ FPDMA QUEUED
-  60 00 08 00 b8 00 00 37 33 66 a0 40 00     00:54:38.574  READ FPDMA QUEUED
-  60 00 08 00 b0 00 00 16 20 64 b8 40 00     00:54:38.560  READ FPDMA QUEUED
-  60 00 08 00 a8 00 00 42 ff 49 00 40 00     00:54:37.141  READ FPDMA QUEUED
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00 11d+23:36:13.452  SMART WRITE LOG
+  ea 00 00 00 00 00 00 00 00 00 00 e0 00 11d+23:35:24.221  FLUSH CACHE EXT
+  61 00 08 00 30 00 00 00 59 4d 48 40 00 11d+23:35:19.191  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 e0 00 11d+23:35:19.173  FLUSH CACHE EXT
+  61 00 08 00 20 00 00 00 59 4d d8 40 00 11d+23:35:19.173  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -274,8 +274,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     25/44 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     33/34 Celsius
 Lifetime    Min/Max Temperature:     15/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -287,7 +287,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (396)
+Temperature History Size (Index):    478 (441)
 
 SCT Error Recovery Control command not supported
 
@@ -303,12 +303,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           49  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           49  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4       289668  Vendor specific
+0x8000  4         1069  Vendor specific
 
 
 

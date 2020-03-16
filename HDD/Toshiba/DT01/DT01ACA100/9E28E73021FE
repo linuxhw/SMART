@@ -11,7 +11,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb 14 16:44:27 2016 MSK
+Local Time is:    Thu Mar 31 13:43:55 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,17 +60,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   142   142   054    -    70
-  3 Spin_Up_Time            POS---   121   121   024    -    190 (Average 189)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    2223
+  2 Throughput_Performance  P-S---   142   142   054    -    69
+  3 Spin_Up_Time            POS---   121   121   024    -    190 (Average 190)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    2461
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   115   115   020    -    34
-  9 Power_On_Hours          -O--C-   100   100   000    -    5395
+  9 Power_On_Hours          -O--C-   100   100   000    -    6046
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    603
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    2249
-193 Load_Cycle_Count        -O--C-   099   099   000    -    2249
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    651
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    2492
+193 Load_Cycle_Count        -O--C-   098   098   000    -    2492
 194 Temperature_Celsius     -O----   193   193   000    -    31 (Min/Max 5/40)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -129,7 +129,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
+Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:     26/31 Celsius
 Lifetime    Min/Max Temperature:      5/40 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -139,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (0)
+Temperature History Size (Index):    128 (35)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -148,16 +148,16 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page Offset Size         Value  Description
   1  =====  =                =  == General Statistics (rev 1) ==
-  1  0x008  4              603  Lifetime Power-On Resets
-  1  0x010  4             5395  Power-on Hours
-  1  0x018  6      10625879365  Logical Sectors Written
-  1  0x020  6         64671686  Number of Write Commands
-  1  0x028  6     413078018096  Logical Sectors Read
-  1  0x030  6         93860514  Number of Read Commands
+  1  0x008  4              651  Lifetime Power-On Resets
+  1  0x010  4             6046  Power-on Hours
+  1  0x018  6      10957692389  Logical Sectors Written
+  1  0x020  6         66082486  Number of Write Commands
+  1  0x028  6     453836642491  Logical Sectors Read
+  1  0x030  6         96628259  Number of Read Commands
   3  =====  =                =  == Rotating Media Statistics (rev 1) ==
-  3  0x008  4             4085  Spindle Motor Power-on Hours
-  3  0x010  4             4085  Head Flying Hours
-  3  0x018  4             2249  Head Load Events
+  3  0x008  4             4489  Spindle Motor Power-on Hours
+  3  0x010  4             4489  Head Flying Hours
+  3  0x018  4             2492  Head Load Events
   3  0x020  4                0  Number of Reallocated Logical Sectors
   3  0x028  4                6  Read Recovery Attempts
   3  0x030  4                2  Number of Mechanical Start Failures
@@ -167,7 +167,7 @@ Page Offset Size         Value  Description
   5  =====  =                =  == Temperature Statistics (rev 1) ==
   5  0x008  1               31  Current Temperature
   5  0x010  1               29~ Average Short Term Temperature
-  5  0x018  1               29~ Average Long Term Temperature
+  5  0x018  1               28~ Average Long Term Temperature
   5  0x020  1               40  Highest Temperature
   5  0x028  1                5  Lowest Temperature
   5  0x030  1               36~ Highest Average Short Term Temperature
@@ -179,8 +179,8 @@ Page Offset Size         Value  Description
   5  0x060  4                0  Time in Under-Temperature
   5  0x068  1                0  Specified Minimum Operating Temperature
   6  =====  =                =  == Transport Statistics (rev 1) ==
-  6  0x008  4             9492  Number of Hardware Resets
-  6  0x010  4             6647  Number of ASR Events
+  6  0x008  4            10834  Number of Hardware Resets
+  6  0x010  4             7730  Number of ASR Events
   6  0x018  4                0  Number of Interface CRC Errors
                               |_ ~ normalized value
 
@@ -193,8 +193,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           28  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           25  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

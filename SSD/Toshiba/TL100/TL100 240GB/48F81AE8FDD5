@@ -10,14 +10,14 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   Unknown(0x0ff8) (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Mar 28 22:18:10 2017 MSK
+Local Time is:    Tue Apr  4 16:57:47 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -40,14 +40,14 @@ Error logging capability:        (0x01)	Error logging supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    213
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    74
+  9 Power_On_Hours          -O--C-   100   100   000    -    241
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    84
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 169 Unknown_Attribute       PO----   100   100   010    -    0
 173 Unknown_Attribute       -O--C-   200   200   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    51
-194 Temperature_Celsius     PO---K   063   055   020    -    37 (Min/Max 21/45)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    60
+194 Temperature_Celsius     PO---K   065   055   020    -    35 (Min/Max 21/45)
 241 Total_LBAs_Written      -O--CK   100   100   000    -    3145
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -85,14 +85,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              74  ---  Lifetime Power-On Resets
-0x01  0x010  4             213  ---  Power-on Hours
-0x01  0x018  6       206120173  ---  Logical Sectors Written
-0x01  0x028  6       159706744  ---  Logical Sectors Read
+0x01  0x008  4              84  ---  Lifetime Power-On Resets
+0x01  0x010  4             241  ---  Power-on Hours
+0x01  0x018  6       206140114  ---  Logical Sectors Written
+0x01  0x028  6       166837702  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              37  ---  Current Temperature
+0x05  0x008  1              35  ---  Current Temperature
 0x05  0x020  1              45  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
@@ -111,8 +111,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           26  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           27  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           38  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           39  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

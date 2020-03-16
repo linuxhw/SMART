@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Mar 19 17:04:08 2016 MSK
+Local Time is:    Sun Mar 20 16:30:04 2016 FET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -59,16 +59,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   199   182   021    -    3050
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7325
+  3 Spin_Up_Time            PO----   213   182   021    -    2325
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7327
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   068   068   000    -    23989
+  9 Power_On_Hours          -O--CK   068   068   000    -    23997
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6259
-190 Airflow_Temperature_Cel -O---K   071   053   045    -    29
-194 Temperature_Celsius     -O---K   118   100   000    -    29
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6261
+190 Airflow_Temperature_Cel -O---K   070   053   045    -    30
+194 Temperature_Celsius     -O---K   117   100   000    -    30
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 5
+Device Error Count: 7
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -115,6 +115,38 @@ Device Error Count: 5
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 7 [6] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 01 01 00 53 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 e2 b0 a8 85 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 a8 e2 00 85 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 d8 ec a8 85 00 01 00 00 00 00 00 00     03:04:04.313  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 00 00 00 a8 bb 00 85 ec 00 00 00     00:00:00.001  NOP [Abort queued commands]
+
+Error 6 [5] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 01 01 00 53 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 0a b0 a8 44 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 a8 09 00 44 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 ec a8 44 00 01 00 00 00 00 00 00     03:03:47.456  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 60 00 00 58 a8 ed 0f 43 c8 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 5 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -216,8 +248,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 28 Celsius
-Power Cycle Max Temperature:         36 Celsius
+Current Temperature:                 30 Celsius
+Power Cycle Max Temperature:         37 Celsius
 Lifetime    Max Temperature:         45 Celsius
 
 SCT Temperature History Version:     2
@@ -225,7 +257,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (70)
+Temperature History Size (Index):    128 (6)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -236,8 +268,8 @@ Device Statistics (GP Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        19138  Vendor specific
+0x000a  2           21  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        11044  Vendor specific
 
 
 

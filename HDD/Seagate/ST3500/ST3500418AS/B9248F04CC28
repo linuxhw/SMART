@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Aug 29 02:15:38 2016 SAMT
+Local Time is:    Sat Nov 12 23:17:15 2016 SAMT
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -66,28 +66,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    147949186
+  1 Raw_Read_Error_Rate     POSR--   108   097   006    -    224429946
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   089   089   020    -    11857
+  4 Start_Stop_Count        -O--CK   089   089   020    -    12199
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   078   060   030    -    34901189156
-  9 Power_On_Hours          -O--CK   076   076   000    -    21688
+  7 Seek_Error_Rate         POSR--   078   060   030    -    34926453577
+  9 Power_On_Hours          -O--CK   075   075   000    -    22431
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5883
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    6054
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   094   000    -    4295040753
+187 Reported_Uncorrect      -O--CK   001   001   000    -    747
+188 Command_Timeout         -O--CK   100   094   000    -    4295041124
 189 High_Fly_Writes         -O-RCK   094   094   000    -    6
-190 Airflow_Temperature_Cel -O---K   062   046   045    -    38 (Min/Max 35/40)
-194 Temperature_Celsius     -O---K   038   054   000    -    38 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   047   029   000    -    147949186
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   067   046   045    -    33 (Min/Max 30/33)
+194 Temperature_Celsius     -O---K   033   054   000    -    33 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   042   029   000    -    224429946
+197 Current_Pending_Sector  -O--C-   100   100   000    -    1
+198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    37542 (5 160 0)
-241 Total_LBAs_Written      ------   100   253   000    -    2802013163
-242 Total_LBAs_Read         ------   100   253   000    -    653242065
+240 Head_Flying_Hours       ------   100   253   000    -    38775 (165 131 0)
+241 Total_LBAs_Written      ------   100   253   000    -    978023170
+242 Total_LBAs_Read         ------   100   253   000    -    187371787
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -122,7 +122,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 213 (device log contains only the most recent 20 errors)
+Device Error Count: 939 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -138,141 +138,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 213 [12] occurred at disk power-on lifetime: 10626 hours (442 days + 18 hours)
+Error 939 [18] occurred at disk power-on lifetime: 22425 hours (934 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00  Device Fault; Error: ABRT
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     03:08:15.455  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     03:08:15.447  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     03:08:15.284  NOP [Abort queued commands]
-  a1 00 00 00 03 00 00 01 00 32 80 a0 00     03:07:23.833  IDENTIFY PACKET DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     03:07:23.306  IDENTIFY DEVICE
+  25 00 00 00 10 00 00 ea 00 02 47 e0 00     00:00:56.189  READ DMA EXT
+  35 00 00 00 04 00 00 ce 00 01 1f e0 00     00:00:56.188  WRITE DMA EXT
+  35 00 00 00 08 00 00 c6 00 01 27 e0 00     00:00:56.188  WRITE DMA EXT
+  25 00 00 00 08 00 00 52 00 01 67 e0 00     00:00:56.187  READ DMA EXT
+  35 00 00 00 07 00 00 17 00 00 6f e0 00     00:00:56.187  WRITE DMA EXT
 
-Error 212 [11] occurred at disk power-on lifetime: 10626 hours (442 days + 18 hours)
+Error 938 [17] occurred at disk power-on lifetime: 22425 hours (934 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     03:08:15.447  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     03:08:15.284  NOP [Abort queued commands]
-  a1 00 00 00 03 00 00 01 00 32 80 a0 00     03:07:23.833  IDENTIFY PACKET DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     03:07:23.306  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     03:07:17.592  NOP [Abort queued commands]
+  25 00 00 00 10 00 00 ea 00 02 47 e0 00     00:00:52.932  READ DMA EXT
+  35 00 00 00 09 00 00 18 00 01 97 e0 00     00:00:52.932  WRITE DMA EXT
+  35 00 00 00 02 00 00 13 00 01 07 e0 00     00:00:52.932  WRITE DMA EXT
+  35 00 00 00 08 00 00 fe 00 00 97 e0 00     00:00:52.931  WRITE DMA EXT
+  35 00 00 00 08 00 05 ee 00 3f 5a e0 00     00:00:52.931  WRITE DMA EXT
 
-Error 211 [10] occurred at disk power-on lifetime: 10626 hours (442 days + 18 hours)
+Error 937 [16] occurred at disk power-on lifetime: 22425 hours (934 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00  Device Fault; Error: ABRT
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 03 00 00 01 00 32 80 a0 00     03:07:23.833  IDENTIFY PACKET DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     03:07:23.306  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     03:07:17.592  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     03:01:01.008  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     03:01:01.000  IDENTIFY DEVICE
+  25 00 00 00 78 00 00 ea 00 02 4f e0 00     00:00:49.578  READ DMA EXT
+  35 00 00 00 08 00 00 c3 00 01 47 e0 00     00:00:49.577  WRITE DMA EXT
+  25 00 00 00 08 00 00 52 00 01 c7 e0 00     00:00:49.577  READ DMA EXT
+  35 00 00 00 06 00 00 ca 00 00 47 e0 00     00:00:49.577  WRITE DMA EXT
+  35 00 00 00 01 00 00 00 00 00 67 e0 00     00:00:49.576  WRITE DMA EXT
 
-Error 210 [9] occurred at disk power-on lifetime: 10626 hours (442 days + 18 hours)
+Error 936 [15] occurred at disk power-on lifetime: 22425 hours (934 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     03:07:23.306  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     03:07:17.592  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     03:01:01.008  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     03:01:01.000  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     03:01:00.837  NOP [Abort queued commands]
+  25 00 00 00 80 00 00 ea 00 02 47 e0 00     00:00:46.302  READ DMA EXT
+  35 00 00 00 08 00 00 c3 00 01 47 e0 00     00:00:46.302  WRITE DMA EXT
+  35 00 00 00 04 00 00 ee 00 00 57 e0 00     00:00:46.302  WRITE DMA EXT
+  35 00 00 00 01 00 00 b2 00 00 87 e0 00     00:00:46.301  WRITE DMA EXT
+  25 00 00 00 08 00 00 99 00 00 f7 e0 00     00:00:46.293  READ DMA EXT
 
-Error 209 [8] occurred at disk power-on lifetime: 10625 hours (442 days + 17 hours)
+Error 935 [14] occurred at disk power-on lifetime: 22425 hours (934 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00  Device Fault; Error: ABRT
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     03:01:01.008  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     03:01:01.000  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     03:01:00.837  NOP [Abort queued commands]
-  a1 00 00 00 03 00 00 01 00 32 80 a0 00     02:59:36.622  IDENTIFY PACKET DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     02:59:36.094  IDENTIFY DEVICE
+  25 00 00 00 80 00 00 ea 00 02 47 e0 00     00:00:43.055  READ DMA EXT
+  25 00 00 00 80 00 00 23 00 00 6f e0 00     00:00:43.045  READ DMA EXT
+  35 00 00 00 02 00 00 a7 00 17 4f e0 00     00:00:43.044  WRITE DMA EXT
+  25 00 00 00 f8 00 00 e5 00 02 47 e0 00     00:00:43.039  READ DMA EXT
+  25 00 00 00 08 00 00 ab 00 60 6f e0 00     00:00:43.028  READ DMA EXT
 
-Error 208 [7] occurred at disk power-on lifetime: 10625 hours (442 days + 17 hours)
+Error 934 [13] occurred at disk power-on lifetime: 22425 hours (934 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     03:01:01.000  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     03:01:00.837  NOP [Abort queued commands]
-  a1 00 00 00 03 00 00 01 00 32 80 a0 00     02:59:36.622  IDENTIFY PACKET DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     02:59:36.094  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     02:59:30.383  NOP [Abort queued commands]
+  25 00 00 00 80 00 00 ea 00 02 47 e0 00     00:00:38.429  READ DMA EXT
+  25 00 00 00 80 00 00 e9 00 02 c7 e0 00     00:00:38.419  READ DMA EXT
+  25 00 00 00 80 00 00 c3 00 02 b7 e0 00     00:00:38.418  READ DMA EXT
+  25 00 00 00 08 00 00 c3 00 02 af e0 00     00:00:38.413  READ DMA EXT
+  25 00 00 00 08 00 00 12 00 01 ff e0 00     00:00:38.405  READ DMA EXT
 
-Error 207 [6] occurred at disk power-on lifetime: 10625 hours (442 days + 17 hours)
+Error 933 [12] occurred at disk power-on lifetime: 22417 hours (934 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00  Device Fault; Error: ABRT
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 03 00 00 01 00 32 80 a0 00     02:59:36.622  IDENTIFY PACKET DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     02:59:36.094  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     02:59:30.383  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     02:53:31.946  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:53:31.938  IDENTIFY DEVICE
+  25 00 00 00 10 00 00 ea 00 02 47 e0 00     00:01:22.680  READ DMA EXT
+  25 00 00 00 08 00 00 92 00 00 6f e0 00     00:01:22.666  READ DMA EXT
+  25 00 00 00 01 00 2f 98 00 19 00 e0 00     00:01:22.666  READ DMA EXT
+  35 00 00 00 08 00 03 08 00 64 67 e0 00     00:01:22.666  WRITE DMA EXT
+  25 00 00 00 40 00 02 10 00 ee 4a e0 00     00:01:22.665  READ DMA EXT
 
-Error 206 [5] occurred at disk power-on lifetime: 10625 hours (442 days + 17 hours)
+Error 932 [11] occurred at disk power-on lifetime: 22417 hours (934 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 03 00 00 01 00 32 80 e0 00
+  40 -- 51 00 00 00 00 ea 00 02 52 00 00  Error: UNC at LBA = 0xea000252 = 3925869138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     02:59:36.094  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     02:59:30.383  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     02:53:31.946  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:53:31.938  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     02:53:31.774  NOP [Abort queued commands]
+  25 00 00 00 10 00 00 ea 00 02 47 e0 00     00:01:19.522  READ DMA EXT
+  25 00 00 00 01 00 2f 98 00 19 00 e0 00     00:01:19.505  READ DMA EXT
+  35 00 00 00 08 00 05 ee 00 3f 62 e0 00     00:01:19.505  WRITE DMA EXT
+  35 00 00 00 80 00 03 a5 00 fb b7 e0 00     00:01:19.504  WRITE DMA EXT
+  35 00 00 00 40 00 03 a7 00 ec 27 e0 00     00:01:19.504  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -292,8 +292,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     35/40 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     30/33 Celsius
 Lifetime    Min/Max Temperature:     12/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -302,7 +302,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (75)
+Temperature History Size (Index):    128 (73)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -312,7 +312,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

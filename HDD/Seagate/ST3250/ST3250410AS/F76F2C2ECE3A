@@ -3,11 +3,11 @@ Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250410AS
 Serial Number:    --
 Firmware Version: 3.AAA
-User Capacity:    250 059 350 016 bytes [250 GB]
+User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed May 18 22:24:54 2016 MSK
+Local Time is:    Sun Apr  8 23:46:16 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,22 +50,22 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    118970636
-  3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2562
+  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    64825600
+  3 Spin_Up_Time            PO----   097   097   000    -    0
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3402
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   082   060   030    -    185768574
-  9 Power_On_Hours          -O--CK   071   071   000    -    25569
+  7 Seek_Error_Rate         POSR--   082   060   030    -    197509494
+  9 Power_On_Hours          -O--CK   071   071   000    -    26019
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2411
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2990
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   050   045    -    37 (Min/Max 36/37)
-194 Temperature_Celsius     -O---K   037   050   000    -    37 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   061   000    -    181751286
+190 Airflow_Temperature_Cel -O---K   060   050   045    -    40 (Min/Max 40/40)
+194 Temperature_Celsius     -O---K   040   050   000    -    40 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   078   061   000    -    109763689
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    5
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -103,9 +102,111 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 5
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 5 [4] occurred at disk power-on lifetime: 25572 hours (1065 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:09:14.499  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:09:14.498  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:09:14.498  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:09:15.095  RECALIBRATE [OBS-4]
+  00 00 00 01 00 00 00 00 00 00 01 00 00     00:09:15.095  NOP [Abort queued commands]
+
+Error 4 [3] occurred at disk power-on lifetime: 25572 hours (1065 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 46 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 70 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 67 00 00 00 00 00 02 e0 00     00:10:16.730  READ DMA EXT
+  25 00 20 00 01 00 00 00 00 00 01 e0 00     00:10:16.730  READ DMA EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:10:16.684  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:10:16.684  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:10:17.299  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 3 [2] occurred at disk power-on lifetime: 25572 hours (1065 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 56 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 86 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 67 00 00 00 00 00 02 e0 00     00:09:33.053  READ DMA EXT
+  25 00 20 00 01 00 00 00 00 00 01 e0 00     00:09:36.851  READ DMA EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:09:36.850  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:09:36.840  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:09:36.840  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 2 [1] occurred at disk power-on lifetime: 25572 hours (1065 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 56 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 86 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 67 00 00 00 00 00 02 e0 00     00:09:15.585  READ DMA EXT
+  25 00 20 00 01 00 00 00 00 00 01 e0 00     00:09:15.585  READ DMA EXT
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:09:15.585  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:09:15.095  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:09:15.095  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 1 [0] occurred at disk power-on lifetime: 25572 hours (1065 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:09:14.499  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:09:14.498  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:09:14.498  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:09:15.095  RECALIBRATE [OBS-4]
+  00 00 00 01 00 00 00 00 00 00 01 00 00     00:09:15.095  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      90%     25942         -
+# 2  Extended offline    Interrupted (host reset)      90%     25931         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -124,14 +225,16 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            1  Vendor specific
+0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific
+
+
 

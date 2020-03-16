@@ -7,7 +7,7 @@ User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Apr 22 06:41:31 2016 CEST
+Local Time is:    Thu May 19 20:19:57 2016 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -52,19 +52,19 @@ SCT capabilities: 	       (0x0001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   089   006    -    241000140
+  1 Raw_Read_Error_Rate     POSR--   112   089   006    -    42903002
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3150
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3173
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    690552477
-  9 Power_On_Hours          -O--CK   085   085   000    -    13776
+  7 Seek_Error_Rate         POSR--   088   060   030    -    692290889
+  9 Power_On_Hours          -O--CK   085   085   000    -    13810
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2247
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2270
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   071   048   045    -    29 (Min/Max 20/29)
-194 Temperature_Celsius     -O---K   029   052   000    -    29 (0 9 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   062   047   000    -    29719281
+190 Airflow_Temperature_Cel -O---K   058   048   045    -    42 (Min/Max 22/42)
+194 Temperature_Celsius     -O---K   042   052   000    -    42 (0 9 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   056   047   000    -    14340100
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,8 +87,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -120,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 519 [18] occurred at disk power-on lifetime: 13556 hours (564 days + 20 hours)
+Error 519 [18] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -131,13 +131,13 @@ Error 519 [18] occurred at disk power-on lifetime: 13556 hours (564 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:52.160  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:02:49.504  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:02:49.471  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:02:49.471  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:49.423  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:42.600  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:01:42.557  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:01:47.870  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:01:47.870  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:47.746  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 518 [17] occurred at disk power-on lifetime: 13556 hours (564 days + 20 hours)
+Error 518 [17] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -148,13 +148,13 @@ Error 518 [17] occurred at disk power-on lifetime: 13556 hours (564 days + 20 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:52.160  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:02:49.504  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:02:49.471  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:02:49.471  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:02:49.423  READ MULTIPLE EXT
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:42.600  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:01:42.557  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:01:42.556  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:42.073  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:42.073  READ MULTIPLE EXT
 
-Error 517 [16] occurred at disk power-on lifetime: 13550 hours (564 days + 14 hours)
+Error 517 [16] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,13 +165,13 @@ Error 517 [16] occurred at disk power-on lifetime: 13550 hours (564 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:04:11.069  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:04:10.922  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:04:10.921  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:04:10.921  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:04:08.271  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:19.718  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:02:19.583  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:02:19.583  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:02:19.583  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:16.860  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 516 [15] occurred at disk power-on lifetime: 13550 hours (564 days + 14 hours)
+Error 516 [15] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -182,13 +182,13 @@ Error 516 [15] occurred at disk power-on lifetime: 13550 hours (564 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:04:11.069  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:04:10.922  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:04:10.921  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:04:10.921  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:04:08.271  READ MULTIPLE EXT
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:21.871  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:01:21.871  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:01:25.429  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:25.429  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:25.305  READ MULTIPLE EXT
 
-Error 515 [14] occurred at disk power-on lifetime: 13550 hours (564 days + 14 hours)
+Error 515 [14] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -199,13 +199,13 @@ Error 515 [14] occurred at disk power-on lifetime: 13550 hours (564 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:52.642  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:02:52.642  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:02:52.517  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:02:52.517  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:52.372  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:42.600  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:01:42.557  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:01:47.870  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:01:47.870  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:47.746  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 514 [13] occurred at disk power-on lifetime: 13550 hours (564 days + 14 hours)
+Error 514 [13] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -216,13 +216,13 @@ Error 514 [13] occurred at disk power-on lifetime: 13550 hours (564 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:52.642  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:02:52.642  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:02:52.517  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:02:52.517  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:02:52.372  READ MULTIPLE EXT
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:42.600  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:01:42.557  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:01:42.556  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:42.073  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:42.073  READ MULTIPLE EXT
 
-Error 513 [12] occurred at disk power-on lifetime: 13550 hours (564 days + 14 hours)
+Error 513 [12] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -233,13 +233,13 @@ Error 513 [12] occurred at disk power-on lifetime: 13550 hours (564 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:08:45.811  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:08:43.704  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:08:43.704  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:08:43.580  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:08:43.580  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:19.718  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:02:19.583  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:02:19.583  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 01 01 00 1d 51 00 1c 2e e0 00     00:02:19.583  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:02:16.860  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 512 [11] occurred at disk power-on lifetime: 13550 hours (564 days + 14 hours)
+Error 512 [11] occurred at disk power-on lifetime: 13541 hours (564 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -250,11 +250,11 @@ Error 512 [11] occurred at disk power-on lifetime: 13550 hours (564 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:08:40.170  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:08:43.704  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:08:43.704  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:08:43.580  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:08:43.580  READ MULTIPLE EXT
+  37 00 00 01 01 00 1d 51 00 1c 2e ed 00     00:01:21.871  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 00 00 1d 51 00 1c 2e e0 00     00:01:21.871  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 00 00 00 1d 51 00 1c 2e ed 00     00:01:25.429  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:25.429  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 00 00 01 00 1d 59 00 1c 6f e0 00     00:01:25.305  READ MULTIPLE EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 
@@ -273,7 +273,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 29 Celsius
+Current Temperature:                 42 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -281,18 +281,18 @@ SCT Data Table command not supported
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            0  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
 

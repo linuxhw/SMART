@@ -9,7 +9,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Jul 20 21:45:04 2017 MSK
+Local Time is:    Sat Sep  9 12:10:40 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -56,16 +56,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    7633
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    556
+  9 Power_On_Hours          -O--C-   100   100   000    -    8839
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    567
 168 Unknown_Attribute       -O--C-   100   100   000    -    41
 170 Unknown_Attribute       PO----   100   100   010    -    297
-173 Unknown_Attribute       -O--C-   100   100   000    -    1245216
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    169
+173 Unknown_Attribute       -O--C-   100   100   000    -    1638449
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    179
 194 Temperature_Celsius     PO---K   070   070   030    -    30 (Min/Max 30/30)
 218 Unknown_Attribute       PO-R--   100   100   050    -    35
-231 Temperature_Celsius     PO--C-   100   100   000    -    81
-241 Total_LBAs_Written      -O--C-   100   100   000    -    4318
+231 Temperature_Celsius     PO--C-   100   100   000    -    75
+241 Total_LBAs_Written      -O--C-   100   100   000    -    5959
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,40 +111,37 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP Log 0x04)
-Page  Offset Size        Value Flags Description
-0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             556  ---  Lifetime Power-On Resets
-0x01  0x010  4            7633  ---  Power-on Hours
-0x01  0x018  6      9056599149  ---  Logical Sectors Written
-0x01  0x020  6        98136925  ---  Number of Write Commands
-0x01  0x028  6      9075681757  ---  Logical Sectors Read
-0x01  0x030  6       104444270  ---  Number of Read Commands
-0x01  0x038  6     27482020139  ---  Date and Time TimeStamp
-0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               5  ---  Resets Between Cmd Acceptance and Completion
-0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              32  ---  Current Temperature
-0x05  0x010  1              32  ---  Average Short Term Temperature
-0x05  0x018  1              32  ---  Average Long Term Temperature
-0x05  0x020  1              50  ---  Highest Temperature
-0x05  0x028  1               5  ---  Lowest Temperature
-0x05  0x030  1              50  ---  Highest Average Short Term Temperature
-0x05  0x038  1              16  ---  Lowest Average Short Term Temperature
-0x05  0x040  1              50  ---  Highest Average Long Term Temperature
-0x05  0x048  1              16  ---  Lowest Average Long Term Temperature
-0x05  0x050  4               0  ---  Time in Over-Temperature
-0x05  0x058  1              50  ---  Specified Maximum Operating Temperature
-0x05  0x060  4               0  ---  Time in Under-Temperature
-0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
-0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            4523  ---  Number of Hardware Resets
-0x06  0x018  4              21  ---  Number of Interface CRC Errors
-0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              32  ---  Percentage Used Endurance Indicator
-                                |||_ C monitored condition met
-                                ||__ D supports DSN
-                                |___ N normalized value
+Page Offset Size         Value  Description
+  1  =====  =                =  == General Statistics (rev 2) ==
+  1  0x008  4              567  Lifetime Power-On Resets
+  1  0x010  4             8839  Power-on Hours
+  1  0x018  6      12497211859  Logical Sectors Written
+  1  0x020  6        132946797  Number of Write Commands
+  1  0x028  6       9745691836  Logical Sectors Read
+  1  0x030  6        114873948  Number of Read Commands
+  1  0x038  6      31821962926  Date and Time TimeStamp
+  4  =====  =                =  == General Errors Statistics (rev 1) ==
+  4  0x008  4                0  Number of Reported Uncorrectable Errors
+  4  0x010  4                5  Resets Between Cmd Acceptance and Completion
+  5  =====  =                =  == Temperature Statistics (rev 1) ==
+  5  0x008  1               32  Current Temperature
+  5  0x010  1               32  Average Short Term Temperature
+  5  0x018  1               32  Average Long Term Temperature
+  5  0x020  1               50  Highest Temperature
+  5  0x028  1                5  Lowest Temperature
+  5  0x030  1               50  Highest Average Short Term Temperature
+  5  0x038  1               16  Lowest Average Short Term Temperature
+  5  0x040  1               50  Highest Average Long Term Temperature
+  5  0x048  1               16  Lowest Average Long Term Temperature
+  5  0x050  4                0  Time in Over-Temperature
+  5  0x058  1               50  Specified Maximum Operating Temperature
+  5  0x060  4                0  Time in Under-Temperature
+  5  0x068  1                5  Specified Minimum Operating Temperature
+  6  =====  =                =  == Transport Statistics (rev 1) ==
+  6  0x008  4             4901  Number of Hardware Resets
+  6  0x018  4               21  Number of Interface CRC Errors
+  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
+  7  0x008  1               49  Percentage Used Endurance Indicator
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -154,8 +151,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2           19  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4     16870900  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4         4937  Device-to-host register FISes sent due to a COMRESET
+0x0009  4     16871278  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4         5321  Device-to-host register FISes sent due to a COMRESET
 0x000f  2           20  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2           14  R_ERR response for host-to-device non-data FIS, CRC

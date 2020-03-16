@@ -7,7 +7,7 @@ User Capacity:    320 072 933 376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Feb 17 22:38:14 2017 MSK
+Local Time is:    Tue Jul  4 21:38:26 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -50,22 +50,22 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   110   097   006    -    29025082
+  1 Raw_Read_Error_Rate     POSR--   114   097   006    -    61430008
   3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5708
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5996
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    19
-  7 Seek_Error_Rate         POSR--   088   060   030    -    773178078
-  9 Power_On_Hours          -O--CK   086   086   000    -    13021
+  7 Seek_Error_Rate         POSR--   089   060   030    -    812403423
+  9 Power_On_Hours          -O--CK   085   085   000    -    13784
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5630
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5918
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   070   054   045    -    30 (Min/Max 24/30)
-194 Temperature_Celsius     -O---K   030   046   000    -    30 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   071   056   000    -    53817136
+190 Airflow_Temperature_Cel -O---K   063   054   045    -    37 (Min/Max 23/38)
+194 Temperature_Celsius     -O---K   037   046   000    -    37 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   064   056   000    -    184258478
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   066   000    -    1457
+199 UDMA_CRC_Error_Count    -OSRCK   200   066   000    -    1461
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 691 (device log contains only the most recent 20 errors)
+Device Error Count: 693 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,6 +117,40 @@ Device Error Count: 691 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 693 [12] occurred at disk power-on lifetime: 12574 hours (523 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 d8 00 08 00 00 77 00 c3 30 e0 00     01:02:45.091  READ DMA EXT
+  25 00 d8 00 08 00 00 77 00 c3 28 e0 00     01:02:45.090  READ DMA EXT
+  25 00 d8 00 08 00 00 77 00 c3 20 e0 00     01:02:45.090  READ DMA EXT
+  25 00 d8 00 08 00 00 77 00 c3 18 e0 00     01:02:45.090  READ DMA EXT
+  25 00 d8 00 08 00 00 77 00 c3 10 e0 00     01:02:45.090  READ DMA EXT
+
+Error 692 [11] occurred at disk power-on lifetime: 12574 hours (523 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 d8 00 08 00 00 7a 00 c3 b0 e0 00     01:02:47.417  READ DMA EXT
+  25 00 d8 00 08 00 00 7a 00 c3 a8 e0 00     01:02:46.988  READ DMA EXT
+  25 00 d8 00 08 00 00 7a 00 c3 a0 e0 00     01:02:46.987  READ DMA EXT
+  25 00 d8 00 08 00 00 7a 00 c3 98 e0 00     01:02:46.987  READ DMA EXT
+  25 00 d8 00 08 00 00 7a 00 c3 90 e0 00     01:02:46.987  READ DMA EXT
 
 Error 691 [10] occurred at disk power-on lifetime: 12574 hours (523 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -220,40 +254,6 @@ Error 686 [5] occurred at disk power-on lifetime: 12574 hours (523 days + 22 hou
   25 00 d8 00 08 00 00 79 00 c3 48 e0 00     01:02:46.042  READ DMA EXT
   25 00 d8 00 08 00 00 79 00 c3 40 e0 00     01:02:46.042  READ DMA EXT
 
-Error 685 [4] occurred at disk power-on lifetime: 12574 hours (523 days + 22 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 d8 00 08 00 00 77 00 c3 30 e0 00     01:02:45.091  READ DMA EXT
-  25 00 d8 00 08 00 00 77 00 c3 28 e0 00     01:02:45.090  READ DMA EXT
-  25 00 d8 00 08 00 00 77 00 c3 20 e0 00     01:02:45.090  READ DMA EXT
-  25 00 d8 00 08 00 00 77 00 c3 18 e0 00     01:02:45.090  READ DMA EXT
-  25 00 d8 00 08 00 00 77 00 c3 10 e0 00     01:02:45.090  READ DMA EXT
-
-Error 684 [3] occurred at disk power-on lifetime: 12574 hours (523 days + 22 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 d8 00 08 00 00 7a 00 c3 b0 e0 00     01:02:47.417  READ DMA EXT
-  25 00 d8 00 08 00 00 7a 00 c3 a8 e0 00     01:02:46.988  READ DMA EXT
-  25 00 d8 00 08 00 00 7a 00 c3 a0 e0 00     01:02:46.987  READ DMA EXT
-  25 00 d8 00 08 00 00 7a 00 c3 98 e0 00     01:02:46.987  READ DMA EXT
-  25 00 d8 00 08 00 00 7a 00 c3 90 e0 00     01:02:46.987  READ DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Aborted by host               60%     12814         -
@@ -276,10 +276,12 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

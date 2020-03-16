@@ -10,7 +10,7 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri May  5 11:26:48 2017 MSK
+Local Time is:    Fri May  5 11:30:51 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 190 (device log contains only the most recent 4 errors)
+Device Error Count: 191 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,23 @@ Device Error Count: 190 (device log contains only the most recent 4 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 191 [2] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 01 48 eb f0 01 00  Error: UNC 8 sectors at LBA = 0x0148ebf0 = 21556208
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 48 eb f0 e1 08     01:39:05.033  READ DMA
+  ea 00 00 00 00 00 00 1e 82 eb 97 a0 08     01:39:01.819  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 1e 82 eb 90 e0 08     01:39:01.818  WRITE DMA EXT
+  ea 00 00 00 00 00 00 1e 82 eb 8f a0 08     01:39:01.802  FLUSH CACHE EXT
+  35 00 00 00 38 00 00 1e 82 eb 58 e0 08     01:39:01.802  WRITE DMA EXT
 
 Error 190 [1] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -170,23 +187,6 @@ Error 188 [3] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
   ea 00 00 00 00 00 00 1e 82 b4 5f a0 08     01:28:56.354  FLUSH CACHE EXT
   35 00 00 00 38 00 00 1e 82 b4 28 e0 08     01:28:56.354  WRITE DMA EXT
 
-Error 187 [2] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 48 eb f0 01 00  Error: UNC 8 sectors at LBA = 0x0148ebf0 = 21556208
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 48 eb f0 e1 08     01:26:11.150  READ DMA
-  ea 00 00 00 00 00 00 1e 82 a7 27 a0 08     01:26:10.471  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 1e 82 a7 20 e0 08     01:26:10.470  WRITE DMA EXT
-  ea 00 00 00 00 00 00 1e 82 a7 1f a0 08     01:26:10.454  FLUSH CACHE EXT
-  35 00 00 00 38 00 00 1e 82 a6 e8 e0 08     01:26:10.454  WRITE DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%         5         -
@@ -216,7 +216,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (15)
+Temperature History Size (Index):    128 (19)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -227,19 +227,19 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               4  ---  Lifetime Power-On Resets
 0x01  0x010  4              12  ---  Power-on Hours
-0x01  0x018  6       174137689  ---  Logical Sectors Written
-0x01  0x020  6          530921  ---  Number of Write Commands
-0x01  0x028  6       141463510  ---  Logical Sectors Read
-0x01  0x030  6          510511  ---  Number of Read Commands
+0x01  0x018  6       174464473  ---  Logical Sectors Written
+0x01  0x020  6          535128  ---  Number of Write Commands
+0x01  0x028  6       141465046  ---  Logical Sectors Read
+0x01  0x030  6          510530  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4              12  ---  Spindle Motor Power-on Hours
 0x03  0x010  4              12  ---  Head Flying Hours
 0x03  0x018  4               4  ---  Head Load Events
 0x03  0x020  4              36  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             189  ---  Read Recovery Attempts
+0x03  0x028  4             190  ---  Read Recovery Attempts
 0x03  0x030  4               2  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4             185  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4             186  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              43  ---  Current Temperature
