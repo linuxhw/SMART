@@ -7,7 +7,7 @@ User Capacity:    80 025 280 000 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Feb 18 17:17:50 2018 MSK
+Local Time is:    Mon Mar  5 08:12:58 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  24)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +50,19 @@ recommended polling time: 	 (  27) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   087   006    -    242649804
+  1 Raw_Read_Error_Rate     POSR--   106   087   006    -    12058256
   3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3416
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3428
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   062   060   030    -    1057022700331
-  9 Power_On_Hours          -O--CK   082   082   000    -    16284
+  7 Seek_Error_Rate         POSR--   062   060   030    -    1057023537154
+  9 Power_On_Hours          -O--CK   082   082   000    -    16305
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4539
+ 12 Power_Cycle_Count       -O--CK   096   096   020    -    4551
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   051   045    -    38 (Min/Max 18/38)
-194 Temperature_Celsius     -O---K   038   049   000    -    38 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   077   054   000    -    143028579
+190 Airflow_Temperature_Cel -O---K   063   051   045    -    37 (Min/Max 35/37)
+194 Temperature_Celsius     -O---K   037   049   000    -    37 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   076   054   000    -    134493997
 197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967295
 198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967295
 199 UDMA_CRC_Error_Count    -OSRCK   200   132   000    -    69
@@ -256,7 +255,8 @@ Error 441 [0] occurred at disk power-on lifetime: 15984 hours (666 days + 0 hour
   25 00 00 00 01 00 00 00 00 00 00 40 00     00:00:04.849  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Aborted by host               80%     16293         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -275,7 +275,7 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

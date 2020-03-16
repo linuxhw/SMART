@@ -8,13 +8,14 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Wed Mar 14 21:30:23 2018 MSK
+Local Time is:    Mon Nov  5 23:48:57 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -53,19 +54,19 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   106   106   040    -    4515
-  3 Spin_Up_Time            POS---   241   241   033    -    1
-  4 Start_Stop_Count        -O--C-   097   097   000    -    5600
+  2 Throughput_Performance  P-S---   106   106   040    -    4512
+  3 Spin_Up_Time            POS---   243   243   033    -    1
+  4 Start_Stop_Count        -O--C-   097   097   000    -    6010
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   124   124   040    -    38
-  9 Power_On_Hours          -O--C-   059   059   000    -    18004
+  9 Power_On_Hours          -O--C-   055   055   000    -    19753
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    5503
-191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    167
-193 Load_Cycle_Count        -O--C-   055   055   000    -    450725
-194 Temperature_Celsius     -O----   157   157   000    -    35 (Min/Max 14/49)
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    5913
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    1
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    218
+193 Load_Cycle_Count        -O--C-   027   027   000    -    735164
+194 Temperature_Celsius     -O----   166   166   000    -    33 (Min/Max 14/49)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    5
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -88,7 +89,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
@@ -179,10 +180,24 @@ Error 2433 [0] occurred at disk power-on lifetime: 17036 hours (709 days + 20 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     17901         -
-# 2  Extended offline    Completed without error       00%     17854         -
-# 3  Extended offline    Completed without error       00%     17788         -
-# 4  Extended offline    Completed without error       00%     17220         -
+# 1  Extended offline    Completed without error       00%     19716         -
+# 2  Extended offline    Completed without error       00%     19626         -
+# 3  Extended offline    Completed without error       00%     19554         -
+# 4  Extended offline    Completed without error       00%     19282         -
+# 5  Extended offline    Completed without error       00%     18958         -
+# 6  Extended offline    Completed without error       00%     18794         -
+# 7  Extended offline    Completed without error       00%     18704         -
+# 8  Extended offline    Completed without error       00%     18535         -
+# 9  Extended offline    Completed: read failure       80%     18357         42010245
+#10  Extended offline    Completed without error       00%     18231         -
+#11  Extended offline    Completed without error       00%     18135         -
+#12  Extended offline    Completed without error       00%     18105         -
+#13  Extended offline    Completed without error       00%     18037         -
+#14  Extended offline    Completed without error       00%     17901         -
+#15  Extended offline    Completed without error       00%     17854         -
+#16  Extended offline    Completed without error       00%     17788         -
+#17  Extended offline    Completed without error       00%     17220         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -198,6 +213,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

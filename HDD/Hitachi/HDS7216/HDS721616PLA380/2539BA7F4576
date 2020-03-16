@@ -4,11 +4,11 @@ Device Model:     Hitachi HDS721616PLA380
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: P22OAB3A
-User Capacity:    164 695 473 664 bytes [164 GB]
+User Capacity:    164,695,473,664 bytes [164 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Sun Jul 16 16:54:49 2017 +05
+Local Time is:    Wed Jan 31 19:42:39 2018 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,8 +22,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -57,18 +57,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   100   100   050    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    43
   3 Spin_Up_Time            POS---   125   125   024    -    160 (Average 160)
-  4 Start_Stop_Count        -O--C-   098   098   000    -    8698
+  4 Start_Stop_Count        -O--C-   098   098   000    -    8858
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    2
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   136   136   020    -    31
-  9 Power_On_Hours          -O--C-   098   098   000    -    16420
+  9 Power_On_Hours          -O--C-   098   098   000    -    16748
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    6485
-192 Power-Off_Retract_Count -O--CK   093   093   000    -    8954
-193 Load_Cycle_Count        -O--C-   093   093   000    -    8954
-194 Temperature_Celsius     -O----   187   187   000    -    32 (Min/Max 2/58)
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    6622
+192 Power-Off_Retract_Count -O--CK   093   093   000    -    9117
+193 Load_Cycle_Count        -O--C-   093   093   000    -    9117
+194 Temperature_Celsius     -O----   157   157   000    -    38 (Min/Max 2/58)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    3
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -184,7 +184,8 @@ Error 146 [1] occurred at disk power-on lifetime: 16074 hours (669 days + 18 hou
   27 00 00 00 00 00 00 00 00 00 00 e0 08     00:27:11.800  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     16555         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -200,9 +201,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 32 Celsius
-Power Cycle Max Temperature:         32 Celsius
+Device State:                        Active (0)
+Current Temperature:                 38 Celsius
+Power Cycle Max Temperature:         38 Celsius
 Lifetime    Max Temperature:         58 Celsius
 
 SCT Temperature History Version:     2
@@ -210,7 +211,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (14)
+Temperature History Size (Index):    128 (17)
 
 SCT Error Recovery Control:
            Read: Disabled

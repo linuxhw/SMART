@@ -7,13 +7,14 @@ User Capacity:    120,033,041,920 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Fri Mar  9 20:16:33 2018 MSK
+Local Time is:    Mon Sep 16 10:46:21 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -51,19 +52,19 @@ recommended polling time: 	 ( 111) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   075   063   006    -    194915043
+  1 Raw_Read_Error_Rate     POSR--   079   063   006    -    59225678
   3 Spin_Up_Time            PO----   097   096   000    -    0
-  4 Start_Stop_Count        -O--CK   094   094   020    -    6297
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6300
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    4823035866
-  9 Power_On_Hours          -O--CK   061   061   000    -    34880
+  7 Seek_Error_Rate         POSR--   088   060   030    -    4997496411
+  9 Power_On_Hours          -O--CK   056   056   000    -    39284
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   020    -    8949
-194 Temperature_Celsius     -O---K   036   058   000    -    36
-195 Hardware_ECC_Recovered  -O-RC-   075   063   000    -    194915043
+ 12 Power_Cycle_Count       -O--CK   091   091   020    -    9567
+194 Temperature_Celsius     -O---K   038   058   000    -    38
+195 Hardware_ECC_Recovered  -O-RC-   079   063   000    -    59225678
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   187   000    -    30
+199 UDMA_CRC_Error_Count    -OSRCK   200   187   000    -    57
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -98,7 +99,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 657 (device log contains only the most recent five errors)
+ATA Error Count: 678 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -113,112 +114,114 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 657 occurred at disk power-on lifetime: 33456 hours (1394 days + 0 hours)
+Error 678 occurred at disk power-on lifetime: 38856 hours (1619 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 08 bc 06 f7  Error: ICRC, ABRT at LBA = 0x0706bc08 = 117881864
+  84 51 00 d8 3c 64 f0  Error: ICRC, ABRT at LBA = 0x00643cd8 = 6569176
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 08 bc 06 f7 00      00:01:43.521  READ DMA
-  c8 00 e0 28 bb 06 f7 00      00:01:43.516  READ DMA
-  c8 00 90 a0 c3 06 f7 00      00:01:43.506  READ DMA
-  c8 00 20 08 bb 06 f7 00      00:01:43.501  READ DMA
-  c8 00 58 48 0d 98 f6 00      00:01:43.494  READ DMA
+  c8 00 00 d8 3c 64 f0 00      12:39:33.361  READ DMA
+  c8 00 00 d8 3b 64 f0 00      12:39:33.306  READ DMA
+  ca 00 c0 e8 97 81 fb 00      12:39:33.305  WRITE DMA
+  35 00 00 e8 93 81 f0 00      12:39:33.287  WRITE DMA EXT
+  35 00 00 e8 8f 81 f0 00      12:39:31.316  WRITE DMA EXT
 
-Error 656 occurred at disk power-on lifetime: 33456 hours (1394 days + 0 hours)
+Error 677 occurred at disk power-on lifetime: 38349 hours (1597 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 00 ac 27 f7  Error: ICRC, ABRT at LBA = 0x0727ac00 = 120040448
+  10 51 01 6e 43 f9 fd
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 00 ac 27 f7 00      00:01:40.173  READ DMA
-  c8 00 e0 c0 23 08 fa 00      00:01:40.161  READ DMA
-  c8 00 20 a0 23 08 fa 00      00:01:40.152  READ DMA
-  c8 00 90 00 a4 27 f7 00      00:01:40.145  READ DMA
-  c8 00 00 68 b1 27 f7 00      00:01:40.137  READ DMA
+  37 00 01 6e 43 f9 fd 00      02:36:03.913  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 6e 43 f9 f0 00      02:36:03.787  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 6e 43 f9 fd 00      02:36:03.786  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 01 6e 43 f9 f0 00      02:36:03.607  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 01 6e 43 f9 fd 00      02:36:03.605  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 655 occurred at disk power-on lifetime: 33456 hours (1394 days + 0 hours)
+Error 676 occurred at disk power-on lifetime: 38349 hours (1597 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 48 0c 98 f6  Error: ICRC, ABRT at LBA = 0x06980c48 = 110627912
+  10 51 01 6e 43 f9 fd
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 48 0c 98 f6 00      00:01:38.430  READ DMA
-  c8 00 00 48 0b 98 f6 00      00:01:38.417  READ DMA
-  c8 00 00 48 61 94 f6 00      00:01:38.403  READ DMA
-  c8 00 00 48 60 94 f6 00      00:01:38.392  READ DMA
-  c8 00 00 48 ae 06 f7 00      00:01:38.385  READ DMA
+  37 00 01 6e 43 f9 fd 00      02:36:03.913  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 6e 43 f9 f0 00      02:36:03.787  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 6e 43 f9 fd 00      02:36:03.786  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 af 4b f9 f0 00      02:36:03.607  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 01 af 4b f9 f0 00      02:36:03.605  READ MULTIPLE EXT
 
-Error 654 occurred at disk power-on lifetime: 33456 hours (1394 days + 0 hours)
+Error 675 occurred at disk power-on lifetime: 38348 hours (1597 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 67 ad 06 f7  Error: ICRC, ABRT 1 sectors at LBA = 0x0706ad67 = 117878119
+  10 51 01 6e 43 f9 fd
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 20 48 ad 06 f7 00      00:01:37.212  READ DMA
-  c8 00 90 d8 6d 05 f7 00      00:01:37.206  READ DMA
-  c8 00 e0 f8 6c 05 f7 00      00:01:37.195  READ DMA
-  c8 00 98 68 6e 05 f7 00      00:01:37.172  READ DMA
-  c8 00 20 d8 6c 05 f7 00      00:01:37.152  READ DMA
+  37 00 01 6e 43 f9 fd 00      02:00:11.722  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 6e 43 f9 f0 00      02:00:11.596  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 6e 43 f9 fd 00      02:00:11.596  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 01 6e 43 f9 f0 00      02:00:11.411  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 01 6e 43 f9 fd 00      02:00:11.409  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 653 occurred at disk power-on lifetime: 33456 hours (1394 days + 0 hours)
+Error 674 occurred at disk power-on lifetime: 38348 hours (1597 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 df 6e 07 f0  Error: ICRC, ABRT at LBA = 0x00076edf = 487135
+  10 51 01 6e 43 f9 fd
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 38 a8 6e 07 f0 00      00:01:21.095  READ DMA EXT
-  c8 00 00 20 6d 07 f7 00      00:01:21.086  READ DMA
-  c8 00 00 d8 6b 07 f7 00      00:01:21.078  READ DMA
-  c8 00 00 28 a3 0d f7 00      00:01:21.077  READ DMA
-  c8 00 00 f8 69 07 f7 00      00:01:21.077  READ DMA
+  37 00 01 6e 43 f9 fd 00      02:00:11.722  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 6e 43 f9 f0 00      02:00:11.596  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 00 6e 43 f9 fd 00      02:00:11.596  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 00 af 4b f9 f0 00      02:00:11.411  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  29 00 01 af 4b f9 f0 00      02:00:11.409  READ MULTIPLE EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     34449         -
-# 2  Extended offline    Completed without error       00%     33992         -
-# 3  Extended offline    Completed without error       00%     33904         -
-# 4  Extended offline    Completed without error       00%     33866         -
-# 5  Extended offline    Completed without error       00%     33629         -
-# 6  Extended offline    Completed without error       00%     33399         -
-# 7  Extended offline    Completed without error       00%     33142         -
-# 8  Extended offline    Completed without error       00%     33071         -
-# 9  Extended offline    Completed without error       00%     32912         -
-#10  Extended offline    Completed without error       00%     32822         -
-#11  Extended offline    Completed without error       00%     30525         -
-#12  Extended offline    Completed without error       00%     12494         -
-#13  Short offline       Completed without error       00%     12492         -
-#14  Extended offline    Aborted by host               30%     12492         -
-#15  Short offline       Completed without error       00%     12491         -
-#16  Short offline       Completed without error       00%     12491         -
-#17  Short offline       Completed without error       00%      7919         -
+# 1  Extended offline    Completed without error       00%     37553         -
+# 2  Extended offline    Completed without error       00%     36657         -
+# 3  Extended offline    Completed without error       00%     34449         -
+# 4  Extended offline    Completed without error       00%     33992         -
+# 5  Extended offline    Completed without error       00%     33904         -
+# 6  Extended offline    Completed without error       00%     33866         -
+# 7  Extended offline    Completed without error       00%     33629         -
+# 8  Extended offline    Completed without error       00%     33399         -
+# 9  Extended offline    Completed without error       00%     33142         -
+#10  Extended offline    Completed without error       00%     33071         -
+#11  Extended offline    Completed without error       00%     32912         -
+#12  Extended offline    Completed without error       00%     32822         -
+#13  Extended offline    Completed without error       00%     30525         -
+#14  Extended offline    Completed without error       00%     12494         -
+#15  Short offline       Completed without error       00%     12492         -
+#16  Extended offline    Aborted by host               30%     12492         -
+#17  Short offline       Completed without error       00%     12491         -
+#18  Short offline       Completed without error       00%     12491         -
+#19  Short offline       Completed without error       00%      7919         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -234,6 +237,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

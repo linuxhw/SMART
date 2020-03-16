@@ -7,7 +7,7 @@ User Capacity:    80 026 361 856 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Fri Jan 29 08:23:45 2016 MSK
+Local Time is:    Fri Apr  8 10:29:58 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -24,8 +24,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  39)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -50,16 +51,16 @@ recommended polling time: 	 (  64) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   067   057   006    -    25846320
+  1 Raw_Read_Error_Rate     POSR--   061   057   006    -    172203838
   3 Spin_Up_Time            PO----   100   100   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    123
+  4 Start_Stop_Count        -O--CK   100   100   020    -    124
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    23
-  7 Seek_Error_Rate         POSR--   081   060   030    -    142191957
-  9 Power_On_Hours          -O--CK   023   023   000    -    67581
+  7 Seek_Error_Rate         POSR--   081   060   030    -    166899148
+  9 Power_On_Hours          -O--CK   022   022   000    -    68644
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1988
-194 Temperature_Celsius     -O---K   026   070   000    -    26
-195 Hardware_ECC_Recovered  -O-RC-   067   057   000    -    25846320
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2175
+194 Temperature_Celsius     -O---K   035   070   000    -    35
+195 Hardware_ECC_Recovered  -O-RC-   061   057   000    -    172203838
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   161   000    -    127
@@ -92,7 +93,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 882 (device log contains only the most recent five errors)
+ATA Error Count: 883 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -106,6 +107,23 @@ ATA Error Count: 882 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 883 occurred at disk power-on lifetime: 2376 hours (99 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 51 2c d3 aa ec a0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  08 d8 2c d3 aa ec a0 02      04:19:24.570  DEVICE RESET
+  ca d8 80 7f 65 ec 40 00      04:04:58.758  WRITE DMA
+  ca d8 80 7f 63 ec 40 00      04:04:58.756  WRITE DMA
+  ca d8 44 1f 63 ec 40 00      04:04:58.742  WRITE DMA
+  ca d8 80 ef 0d 53 40 00      04:04:58.732  WRITE DMA
 
 Error 882 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -175,29 +193,14 @@ Error 879 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
   c8 d8 00 7f 00 60 40 00      00:00:45.619  READ DMA
   ca d8 08 37 00 5e 40 00      00:00:45.619  WRITE DMA
 
-Error 878 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 9f 03 60 40  Error: UNC at LBA = 0x0060039f = 6292383
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 d8 00 17 03 60 40 00      00:00:40.517  READ DMA
-  ca d8 08 2f 00 5e 40 00      00:00:40.517  WRITE DMA
-  c8 d8 00 17 03 60 40 00      00:00:36.438  READ DMA
-  ca d8 08 3f 00 5e 40 00      00:00:36.438  WRITE DMA
-  c8 d8 00 17 03 60 40 00      00:00:32.359  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      70%      1947         -
-# 2  Extended offline    Completed without error       00%     65279         -
+# 1  Extended offline    Completed without error       00%      3017         -
+# 2  Extended offline    Completed without error       00%      2700         -
+# 3  Extended offline    Interrupted (host reset)      70%      1947         -
+# 4  Extended offline    Completed without error       00%     65279         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

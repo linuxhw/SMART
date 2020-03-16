@@ -7,7 +7,7 @@ User Capacity:    160 041 885 696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Jul 24 15:01:23 2016 EEST
+Local Time is:    Sun Sep  2 15:31:32 2018 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -59,20 +59,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   205   182   021    -    2741
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7567
+  3 Spin_Up_Time            PO----   229   182   021    -    1516
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8116
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   067   067   000    -    24753
+  9 Power_On_Hours          -O--CK   064   064   000    -    26463
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6405
-190 Airflow_Temperature_Cel -O---K   079   053   045    -    21
-194 Temperature_Celsius     -O---K   126   100   000    -    21
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6829
+190 Airflow_Temperature_Cel -O---K   072   053   045    -    28
+194 Temperature_Celsius     -O---K   119   100   000    -    28
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    6
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    8
 200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 9
+Device Error Count: 10
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -115,6 +115,22 @@ Device Error Count: 9
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 10 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 00 0d 00 53 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 66 b0 66 a4 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 66 66 00 a4 b0 00 00 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 56 ec 66 a4 00 01 00 00 00 00 00 00     01:52:06.742  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 18 00 00 20 66 42 10 a4 25 00 00 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 9 [8] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -228,22 +244,6 @@ Error 3 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 f6 ec 0a 25 00 01 00 00 00 01 00 00     04:50:42.295  NOP [Reserved subcommand] [OBS-ACS-2]
   00 01 00 00 00 0a dd 00 25 ec 00 01 00     00:00:00.001  NOP [Abort queued commands]
 
-Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 00 00 0d 00 53 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 5d b0 09 eb 00 00 00 00 00 01 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 d5 00 e0 09 5d 00 eb b0 00 01 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 55 ec 09 eb 00 01 00 00 00 01 00 00     04:50:27.286  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 40 00 00 68 09 42 11 eb 25 00 01 00     00:00:00.001  NOP [Abort queued commands]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Completed without error       00%     20870         -
@@ -264,16 +264,16 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 22 Celsius
-Power Cycle Max Temperature:         22 Celsius
-Lifetime    Max Temperature:         45 Celsius
+Current Temperature:                 28 Celsius
+Power Cycle Max Temperature:         38 Celsius
+Lifetime    Max Temperature:         46 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (82)
+Temperature History Size (Index):    128 (99)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -284,8 +284,8 @@ Device Statistics (GP/SMART Log 0x04) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          603  Vendor specific
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         6727  Vendor specific
 
 
 

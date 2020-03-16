@@ -3,17 +3,18 @@ Model Family:     Seagate Barracuda 7200.9
 Device Model:     ST3250824AS
 Serial Number:    --
 Firmware Version: 3.ADH
-User Capacity:    250 000 000 000 bytes [250 GB]
+User Capacity:    250,000,000,000 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Dec 10 17:56:20 2017 EST
+Local Time is:    Fri Sep 14 15:12:53 2018 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -52,19 +53,19 @@ recommended polling time: 	 ( 100) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   114   091   006    -    59190047
+  1 Raw_Read_Error_Rate     POSR--   117   091   006    -    127026224
   3 Spin_Up_Time            PO----   098   098   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7169
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7489
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   086   060   030    -    439592837
-  9 Power_On_Hours          -O--CK   086   086   000    -    12470
+  7 Seek_Error_Rate         POSR--   086   060   030    -    456197992
+  9 Power_On_Hours          -O--CK   086   086   000    -    12936
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    6108
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6319
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   053   043   045    Past 47 (Min/Max 46/47 #34)
-194 Temperature_Celsius     -O---K   047   057   000    -    47 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   066   048   000    -    92277429
+190 Airflow_Temperature_Cel -O---K   055   043   045    Past 45 (Min/Max 23/45 #43)
+194 Temperature_Celsius     -O---K   045   057   000    -    45 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   066   048   000    -    67172006
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,7 +88,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -258,7 +259,8 @@ Error 2 [1] occurred at disk power-on lifetime: 12432 hours (518 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     12911         -
+# 2  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -275,9 +277,11 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

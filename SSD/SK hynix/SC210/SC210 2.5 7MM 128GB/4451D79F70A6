@@ -9,7 +9,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 17 13:34:55 2016 MSK
+Local Time is:    Wed Sep  7 14:22:00 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,12 +55,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    372
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    350
-100 Unknown_Attribute       -O--CK   100   100   000    -    221874
+  9 Power_On_Hours          -O--CK   100   100   000    -    448
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    404
+100 Unknown_Attribute       -O--CK   100   100   000    -    228988
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   253   000    -    0
-174 Unknown_Attribute       ----CK   100   100   000    -    164
+174 Unknown_Attribute       ----CK   100   100   000    -    186
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   000    -    6
@@ -73,14 +73,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   048   000   000    -    48 (Min/Max 19/55)
+194 Temperature_Celsius     -O----   049   000   000    -    49 (Min/Max 19/55)
 195 Hardware_ECC_Recovered  -O--CK   253   253   000    -    0
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 Temperature_Celsius     PO--CK   253   253   ---    -    0
-234 Unknown_Attribute       -O--CK   100   100   ---    -    633
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    570
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    515
+234 Unknown_Attribute       -O--CK   100   100   ---    -    722
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    650
+242 Total_LBAs_Read         -O--CK   100   100   ---    -    562
 250 Read_Error_Retry_Rate   -O--CK   253   253   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 2687 (device log contains only the most recent 20 errors)
+Device Error Count: 2800 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2687 [6] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2800 [19] occurred at disk power-on lifetime: 448 hours (18 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -131,13 +131,13 @@ Error 2687 [6] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:00:12.050  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  60 00 08 00 d8 00 00 01 88 32 20 40 40     00:00:12.050  READ FPDMA QUEUED
-  60 00 08 00 d0 00 00 01 88 32 f8 40 40     00:00:12.050  READ FPDMA QUEUED
-  60 00 08 00 c8 00 00 01 88 32 f0 40 40     00:00:12.050  READ FPDMA QUEUED
-  60 00 08 00 c0 00 00 01 88 32 e8 40 40     00:00:12.050  READ FPDMA QUEUED
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:00:12.120  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  60 01 00 00 08 00 00 01 9b 97 88 40 40     00:00:12.120  READ FPDMA QUEUED
+  60 00 08 00 00 00 00 03 56 0f d0 40 40     00:00:12.120  READ FPDMA QUEUED
+  60 00 20 00 f0 00 00 01 d3 89 a0 40 40     00:00:12.120  READ FPDMA QUEUED
+  60 00 20 00 e8 00 00 01 9a 0d e0 40 40     00:00:12.120  READ FPDMA QUEUED
 
-Error 2686 [5] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2799 [18] occurred at disk power-on lifetime: 448 hours (18 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -148,13 +148,13 @@ Error 2686 [5] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 00 00 66 a6 c0 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 66 a6 80 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 66 a6 40 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 66 a6 00 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 66 a5 c0 40 40     00:00:06.630  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 c0 40 40     00:00:06.330  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 80 40 40     00:00:06.330  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 40 40 40     00:00:06.330  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 00 40 40     00:00:06.330  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 06 c0 40 40     00:00:06.320  READ DMA EXT
 
-Error 2685 [4] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2798 [17] occurred at disk power-on lifetime: 448 hours (18 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -165,13 +165,13 @@ Error 2685 [4] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:00:10.790  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  60 01 00 00 40 00 00 01 88 22 00 40 40     00:00:10.790  READ FPDMA QUEUED
-  60 02 00 00 38 00 00 03 55 a6 60 40 40     00:00:10.790  READ FPDMA QUEUED
-  60 01 00 00 30 00 00 02 52 1c e0 40 40     00:00:10.790  READ FPDMA QUEUED
-  60 00 c0 00 28 00 00 02 8e 55 08 40 40     00:00:10.790  READ FPDMA QUEUED
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     01:32:27.280  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  60 00 08 00 b8 00 00 04 5c c3 e8 40 40     01:32:27.280  READ FPDMA QUEUED
+  60 00 08 00 b0 00 00 03 56 74 b0 40 40     01:32:27.280  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 03 4c 58 c8 40 40     01:32:27.280  READ FPDMA QUEUED
+  60 00 08 00 a0 00 00 03 4c 25 30 40 40     01:32:27.280  READ FPDMA QUEUED
 
-Error 2684 [3] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2797 [16] occurred at disk power-on lifetime: 448 hours (18 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -182,13 +182,13 @@ Error 2684 [3] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 00 00 31 e6 40 40 40     00:00:05.320  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e6 00 40 40     00:00:05.320  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e5 c0 40 40     00:00:05.320  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e5 80 40 40     00:00:05.320  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e5 40 40 40     00:00:05.320  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 c0 40 40     01:32:21.350  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 80 40 40     01:32:21.350  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 40 40 40     01:32:21.350  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 07 00 40 40     01:32:21.350  READ DMA EXT
+  25 00 00 00 40 00 00 03 69 06 c0 40 40     01:32:21.350  READ DMA EXT
 
-Error 2683 [2] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2796 [15] occurred at disk power-on lifetime: 448 hours (18 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -199,13 +199,13 @@ Error 2683 [2] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:02:04.000  SET FEATURES [Disable SATA feature]
-  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     00:02:03.940  FLUSH CACHE
-  60 00 20 00 48 00 00 03 4c 9b 00 40 40     00:02:03.930  READ FPDMA QUEUED
-  60 00 08 00 40 00 00 03 48 15 00 40 40     00:02:03.930  READ FPDMA QUEUED
-  60 00 08 00 30 00 00 03 48 16 00 40 40     00:02:03.930  READ FPDMA QUEUED
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     01:32:15.560  SET FEATURES [Disable SATA feature]
+  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     01:32:15.510  FLUSH CACHE
+  60 00 20 00 c8 00 00 03 4c 9b 00 40 40     01:32:15.470  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 03 48 15 00 40 40     01:32:15.470  READ FPDMA QUEUED
+  60 00 08 00 d0 00 00 03 48 16 00 40 40     01:32:15.470  READ FPDMA QUEUED
 
-Error 2682 [1] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2795 [14] occurred at disk power-on lifetime: 448 hours (18 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -216,13 +216,13 @@ Error 2682 [1] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:02:04.000  SET FEATURES [Disable SATA feature]
-  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     00:02:03.940  FLUSH CACHE
-  60 00 20 00 48 00 00 03 4c 9b 00 40 40     00:02:03.930  READ FPDMA QUEUED
-  60 00 08 00 40 00 00 03 48 15 00 40 40     00:02:03.930  READ FPDMA QUEUED
-  60 00 08 00 30 00 00 03 48 16 00 40 40     00:02:03.930  READ FPDMA QUEUED
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     01:32:15.560  SET FEATURES [Disable SATA feature]
+  e7 00 00 00 00 00 00 00 00 00 00 a0 a0     01:32:15.510  FLUSH CACHE
+  60 00 20 00 c8 00 00 03 4c 9b 00 40 40     01:32:15.470  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 03 48 15 00 40 40     01:32:15.470  READ FPDMA QUEUED
+  60 00 08 00 d0 00 00 03 48 16 00 40 40     01:32:15.470  READ FPDMA QUEUED
 
-Error 2681 [0] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2794 [13] occurred at disk power-on lifetime: 446 hours (18 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -233,13 +233,13 @@ Error 2681 [0] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:00:11.450  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  60 00 d0 00 e0 00 00 01 a1 74 c8 40 40     00:00:11.450  READ FPDMA QUEUED
-  60 00 08 00 d8 00 00 01 89 11 68 40 40     00:00:11.450  READ FPDMA QUEUED
-  60 00 08 00 d0 00 00 03 4c 16 c0 40 40     00:00:11.450  READ FPDMA QUEUED
-  60 00 88 00 c8 00 00 01 d4 47 10 40 40     00:00:11.450  READ FPDMA QUEUED
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:00:11.730  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  60 00 e0 00 20 00 00 01 a1 44 68 40 40     00:00:11.720  READ FPDMA QUEUED
+  60 00 20 00 18 00 00 01 d7 8f 80 40 40     00:00:11.720  READ FPDMA QUEUED
+  60 00 18 00 10 00 00 01 d3 77 c8 40 40     00:00:11.720  READ FPDMA QUEUED
+  60 00 08 00 08 00 00 02 51 54 a8 40 40     00:00:11.720  READ FPDMA QUEUED
 
-Error 2680 [19] occurred at disk power-on lifetime: 372 hours (15 days + 12 hours)
+Error 2793 [12] occurred at disk power-on lifetime: 446 hours (18 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -250,11 +250,11 @@ Error 2680 [19] occurred at disk power-on lifetime: 372 hours (15 days + 12 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 40 00 00 00 31 e6 40 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e6 00 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e5 c0 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e5 80 40 40     00:00:06.630  READ DMA EXT
-  25 00 00 00 40 00 00 00 31 e5 40 40 40     00:00:06.630  READ DMA EXT
+  25 00 00 00 40 00 00 00 66 a6 c0 40 40     00:00:06.310  READ DMA EXT
+  25 00 00 00 40 00 00 00 66 a6 80 40 40     00:00:06.310  READ DMA EXT
+  25 00 00 00 40 00 00 00 66 a6 40 40 40     00:00:06.310  READ DMA EXT
+  25 00 00 00 40 00 00 00 66 a6 00 40 40     00:00:06.310  READ DMA EXT
+  25 00 00 00 40 00 00 00 66 a5 c0 40 40     00:00:06.310  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
