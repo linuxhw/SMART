@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Aug 20 02:49:37 2015 VLAT
+Local Time is:    Tue Jul  5 23:15:09 2016 VLAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -23,8 +23,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   147   140   021    -    9625
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1784
-  5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    2
+  3 Spin_Up_Time            POS--K   144   140   021    -    9766
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1968
+  5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    3
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   055   055   000    -    32894
+  9 Power_On_Hours          -O--CK   047   047   000    -    38848
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1687
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    252
-193 Load_Cycle_Count        -O--CK   060   060   000    -    422369
-194 Temperature_Celsius     -O---K   110   102   000    -    42
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1848
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    274
+193 Load_Cycle_Count        -O--CK   019   019   000    -    543019
+194 Temperature_Celsius     -O---K   114   102   000    -    38
 196 Reallocated_Event_Count -O--CK   199   199   000    -    1
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -107,15 +107,24 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      70%     32705         -
-# 2  Extended offline    Interrupted (host reset)      40%     32574         -
-# 3  Extended offline    Completed without error       00%     32449         -
-# 4  Extended offline    Completed without error       00%     32298         -
-# 5  Extended offline    Completed without error       00%     32102         -
-# 6  Extended offline    Interrupted (host reset)      70%     31890         -
-# 7  Extended offline    Interrupted (host reset)      90%     31887         -
-# 8  Short offline       Completed without error       00%     28952         -
-# 9  Extended offline    Interrupted (host reset)      70%     28951         -
+# 1  Extended offline    Completed without error       00%     38795         -
+# 2  Extended offline    Completed without error       00%     38676         -
+# 3  Extended offline    Completed without error       00%     38542         -
+# 4  Extended offline    Completed without error       00%     38396         -
+# 5  Extended offline    Completed without error       00%     38258         -
+# 6  Extended offline    Completed without error       00%     38099         -
+# 7  Extended offline    Completed without error       00%     37951         -
+# 8  Extended offline    Completed without error       00%     37812         -
+# 9  Extended offline    Completed without error       00%     37648         -
+#10  Extended offline    Completed without error       00%     37497         -
+#11  Extended offline    Completed without error       00%     37374         -
+#12  Extended offline    Completed without error       00%     37214         -
+#13  Extended offline    Completed without error       00%     37047         -
+#14  Extended offline    Completed without error       00%     36883         -
+#15  Extended offline    Interrupted (host reset)      50%     36710         -
+#16  Extended offline    Completed without error       00%     36556         -
+#17  Extended offline    Completed without error       00%     36390         -
+#18  Extended offline    Completed without error       00%     36267         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -132,9 +141,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     41/43 Celsius
-Lifetime    Min/Max Temperature:     27/50 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     23/40 Celsius
+Lifetime    Min/Max Temperature:     38/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -142,7 +151,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (194)
+Temperature History Size (Index):    478 (103)
 
 SCT Error Recovery Control command not supported
 
@@ -157,7 +166,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         4046  Vendor specific
+0x8000  4        48333  Vendor specific
 

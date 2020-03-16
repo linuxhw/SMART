@@ -7,7 +7,7 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Apr  2 14:42:17 2019 MSK
+Local Time is:    Fri Jul 19 09:36:56 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -26,8 +26,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 121)	The previous self-test completed having
-					the read element of the test failed.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -53,22 +54,22 @@ SCT capabilities: 	       (0x0001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   089   006    -    130137149
+  1 Raw_Read_Error_Rate     POSR--   113   089   006    -    53779942
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    9123
+  4 Start_Stop_Count        -O--CK   091   091   020    -    9397
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    3
-  7 Seek_Error_Rate         POSR--   089   060   030    -    904482553
-  9 Power_On_Hours          -O--CK   075   075   000    -    22261
+  7 Seek_Error_Rate         POSR--   090   060   030    -    944368799
+  9 Power_On_Hours          -O--CK   074   074   000    -    23202
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7559
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7828
 187 Reported_Uncorrect      -O--CK   001   001   000    -    7969
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   058   042   045    Past 42 (Min/Max 38/43)
-194 Temperature_Celsius     -O---K   042   058   000    -    42 (0 18 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   067   053   000    -    126953492
+190 Airflow_Temperature_Cel -O---K   068   042   045    Past 32 (Min/Max 25/32)
+194 Temperature_Celsius     -O---K   032   058   000    -    32 (0 18 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   095   053   000    -    123224082
 197 Current_Pending_Sector  -O--C-   100   098   000    -    0
 198 Offline_Uncorrectable   ----C-   100   098   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    49
+199 UDMA_CRC_Error_Count    -OSRCK   200   111   000    -    6690
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   098   251   000    -    2
                             ||||||_ K auto-keep
@@ -105,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 8179 (device log contains only the most recent 20 errors)
+Device Error Count: 14279 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,146 +122,152 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 8179 [18] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14279 [18] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:27.530  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.530  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:16:27.528  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:16:27.525  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.525  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 80 00 0e a4 00 fc 00 e0 00     00:25:42.798  READ DMA EXT
+  25 00 00 00 20 00 10 c6 00 3e 60 e0 00     00:25:42.791  READ DMA EXT
+  35 00 00 00 20 00 10 8e 00 b7 40 e0 00     00:25:42.791  WRITE DMA EXT
+  25 00 00 00 80 00 0f c1 00 17 e0 e0 00     00:25:42.791  READ DMA EXT
+  25 00 00 00 08 00 01 48 00 2a e0 e0 00     00:25:42.779  READ DMA EXT
 
-Error 8178 [17] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14278 [17] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:27.530  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.530  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:16:27.528  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:16:27.525  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.525  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 80 00 07 25 00 00 18 e0 00     00:25:42.075  READ DMA EXT
+  35 00 00 00 20 00 10 8d 00 b7 c0 e0 00     00:25:42.074  WRITE DMA EXT
+  25 00 00 00 40 00 07 e0 00 11 72 e0 00     00:25:42.074  READ DMA EXT
+  25 00 00 00 20 00 10 c5 00 3e c0 e0 00     00:25:42.073  READ DMA EXT
+  25 00 00 00 30 00 07 d5 00 11 02 e0 00     00:25:42.072  READ DMA EXT
 
-Error 8177 [16] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14277 [16] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:23.401  READ DMA
-  c8 00 00 00 08 00 00 78 00 00 08 e0 00     00:16:23.399  READ DMA
-  c8 00 00 00 08 00 00 78 00 00 00 e0 00     00:16:23.398  READ DMA
-  c8 00 00 00 08 00 00 77 00 00 f8 e0 00     00:16:23.396  READ DMA
-  c8 00 00 00 08 00 00 77 00 00 f0 e0 00     00:16:23.395  READ DMA
+  25 00 00 00 20 00 10 c5 00 3e a0 e0 00     00:25:41.479  READ DMA EXT
+  35 00 00 00 20 00 10 8d 00 b7 80 e0 00     00:25:41.479  WRITE DMA EXT
+  25 00 00 00 80 00 0c d1 00 d3 40 e0 00     00:25:41.463  READ DMA EXT
+  25 00 00 00 20 00 10 c5 00 3e 80 e0 00     00:25:41.443  READ DMA EXT
+  25 00 00 00 07 00 04 a4 00 92 70 e0 00     00:25:41.443  READ DMA EXT
 
-Error 8176 [15] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14276 [15] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:27.530  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.530  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:16:27.528  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:16:35.700  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:35.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 20 00 10 c8 00 3e e0 e0 00     00:25:43.507  READ DMA EXT
+  35 00 00 00 20 00 10 90 00 b7 c0 e0 00     00:25:43.506  WRITE DMA EXT
+  25 00 00 00 20 00 10 c8 00 3e c0 e0 00     00:25:43.506  READ DMA EXT
+  35 00 00 00 20 00 10 90 00 b7 a0 e0 00     00:25:43.508  WRITE DMA EXT
+  25 00 00 00 20 00 10 c8 00 3e a0 e0 00     00:25:43.508  READ DMA EXT
 
-Error 8175 [14] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14275 [14] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:27.530  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.530  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:16:27.528  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:16:27.525  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.525  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 80 00 0e a4 00 fc 00 e0 00     00:25:42.798  READ DMA EXT
+  25 00 00 00 20 00 10 c6 00 3e 60 e0 00     00:25:42.791  READ DMA EXT
+  35 00 00 00 20 00 10 8e 00 b7 40 e0 00     00:25:42.791  WRITE DMA EXT
+  25 00 00 00 80 00 0f c1 00 17 e0 e0 00     00:25:42.791  READ DMA EXT
+  25 00 00 00 08 00 01 48 00 2a e0 e0 00     00:25:42.779  READ DMA EXT
 
-Error 8174 [13] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14274 [13] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 0f 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 15 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:27.530  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.530  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:16:27.528  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:16:27.525  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.525  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 80 00 07 25 00 00 18 e0 00     00:25:42.075  READ DMA EXT
+  35 00 00 00 20 00 10 8d 00 b7 c0 e0 00     00:25:42.074  WRITE DMA EXT
+  25 00 00 00 40 00 07 e0 00 11 72 e0 00     00:25:42.074  READ DMA EXT
+  25 00 00 00 20 00 10 c5 00 3e c0 e0 00     00:25:42.073  READ DMA EXT
+  25 00 00 00 30 00 07 d5 00 11 02 e0 00     00:25:42.072  READ DMA EXT
 
-Error 8173 [12] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14273 [12] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:23.401  READ DMA
-  c8 00 00 00 08 00 00 78 00 00 08 e0 00     00:16:23.399  READ DMA
-  c8 00 00 00 08 00 00 78 00 00 00 e0 00     00:16:23.398  READ DMA
-  c8 00 00 00 08 00 00 77 00 00 f8 e0 00     00:16:23.396  READ DMA
-  c8 00 00 00 08 00 00 77 00 00 f0 e0 00     00:16:23.395  READ DMA
+  25 00 00 00 20 00 10 c5 00 3e a0 e0 00     00:25:41.479  READ DMA EXT
+  35 00 00 00 20 00 10 8d 00 b7 80 e0 00     00:25:41.479  WRITE DMA EXT
+  25 00 00 00 80 00 0c d1 00 d3 40 e0 00     00:25:41.463  READ DMA EXT
+  25 00 00 00 20 00 10 c5 00 3e 80 e0 00     00:25:41.443  READ DMA EXT
+  25 00 00 00 07 00 04 a4 00 92 70 e0 00     00:25:41.443  READ DMA EXT
 
-Error 8172 [11] occurred at disk power-on lifetime: 22155 hours (923 days + 3 hours)
+Error 14272 [11] occurred at disk power-on lifetime: 22885 hours (953 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 78 00 00 16 e0 00  Error: UNC at LBA = 0x78000016 = 2013265942
+  84 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 78 00 00 10 e0 00     00:16:27.530  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:27.530  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 01 00 00 ff ff 00 ff ff a0 00     00:16:27.528  IDENTIFY DEVICE
-  ef 00 03 00 46 00 ff ff 00 ff ff a0 00     00:16:35.700  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:16:35.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 20 00 10 c8 00 3e e0 e0 00     00:25:43.507  READ DMA EXT
+  35 00 00 00 20 00 10 90 00 b7 c0 e0 00     00:25:43.506  WRITE DMA EXT
+  25 00 00 00 20 00 10 c8 00 3e c0 e0 00     00:25:43.506  READ DMA EXT
+  35 00 00 00 20 00 10 90 00 b7 a0 e0 00     00:25:43.508  WRITE DMA EXT
+  25 00 00 00 20 00 10 c8 00 3e a0 e0 00     00:25:43.508  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       90%     22174         15345960093843
-# 2  Extended offline    Completed without error       00%     22066         -
+# 1  Extended offline    Completed without error       00%     23149         -
+# 2  Extended offline    Completed without error       00%     22397         -
+# 3  Extended offline    Completed without error       00%     22388         -
+# 4  Extended offline    Completed without error       00%     22377         -
+# 5  Short offline       Completed without error       00%     22315         -
+# 6  Extended offline    Completed: read failure       90%     22174         15345960093843
+# 7  Extended offline    Completed without error       00%     22066         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -277,7 +284,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 42 Celsius
+Current Temperature:                 32 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -291,14 +298,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            3  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
 
