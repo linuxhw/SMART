@@ -27,8 +27,8 @@ Rating — avg. rating per sample.
 | KingDian  | S400               | 120 GB | 6       | 120   | 0     | 0.33   |
 | KingDian  | S400               | 480 GB | 1       | 73    | 0     | 0.20   |
 | KingDian  | S400               | 240 GB | 1       | 59    | 0     | 0.16   |
+| KingDian  | S180               | 64 GB  | 11      | 55    | 103   | 0.14   |
 | KingDian  | S200               | 120 GB | 2       | 49    | 0     | 0.13   |
-| KingDian  | S180               | 64 GB  | 11      | 52    | 103   | 0.13   |
 | KingDian  | S280               | 1 TB   | 2       | 45    | 0     | 0.13   |
 | KingDian  | S280-240GB         | 240 GB | 7       | 43    | 0     | 0.12   |
 | KingDian  | S280               | 240 GB | 9       | 39    | 0     | 0.11   |
@@ -53,4 +53,4 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | KingDian  | Silicon Motion base... | 6      | 25      | 59    | 0     | 0.16   |
-| KingDian  | Unknown                | 9      | 32      | 43    | 96    | 0.11   |
+| KingDian  | Unknown                | 9      | 32      | 44    | 96    | 0.11   |

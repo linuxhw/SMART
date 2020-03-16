@@ -44,8 +44,8 @@ Rating — avg. rating per sample.
 | HGST      | HTS725032A7E630    | 320 GB | 12      | 408   | 256   | 1.05   |
 | HGST      | HUH728080ALE604    | 8 TB   | 8       | 307   | 0     | 0.84   |
 | HGST      | HTS541075A9E680    | 752 GB | 27      | 362   | 417   | 0.78   |
+| HGST      | HTS721075A9E630    | 752 GB | 7       | 268   | 0     | 0.74   |
 | HGST      | HUS724040ALE640    | 4 TB   | 6       | 267   | 0     | 0.73   |
-| HGST      | HTS721075A9E630    | 752 GB | 7       | 267   | 0     | 0.73   |
 | HGST      | HCC545050A7E380    | 500 GB | 1       | 523   | 1     | 0.72   |
 | HGST      | HTS545032A7E680    | 320 GB | 16      | 299   | 19    | 0.64   |
 | HGST      | HTS721010A9E630    | 1 TB   | 175     | 257   | 120   | 0.57   |
@@ -60,7 +60,7 @@ Rating — avg. rating per sample.
 | HGST      | HTS545032A7E380    | 320 GB | 27      | 190   | 380   | 0.26   |
 | HGST      | HTS545050A7E660    | 500 GB | 11      | 232   | 6     | 0.25   |
 | HGST      | HUS726T4TALN6L4    | 4 TB   | 1       | 83    | 0     | 0.23   |
-| HGST      | HTS545050A7E680    | 500 GB | 199     | 189   | 349   | 0.22   |
+| HGST      | HTS545050A7E680    | 500 GB | 199     | 190   | 349   | 0.22   |
 | HGST      | HTS541010B7E610    | 1 TB   | 16      | 74    | 0     | 0.20   |
 | HGST      | HTE725050A7E630    | 500 GB | 2       | 68    | 0     | 0.19   |
 | HGST      | HTS545025A7E330    | 250 GB | 1       | 60    | 0     | 0.17   |
@@ -105,7 +105,7 @@ Rating — avg. rating per sample.
 | HGST      | MegaScale 4000         | 2      | 3       | 229   | 0     | 0.63   |
 | HGST      | Travelstar 5K1000      | 5      | 173     | 319   | 286   | 0.60   |
 | HGST      | Travelstar 7K1000      | 3      | 185     | 254   | 113   | 0.57   |
-| HGST      | Travelstar Z7K500      | 4      | 120     | 263   | 141   | 0.52   |
+| HGST      | Travelstar Z7K500      | 4      | 120     | 264   | 141   | 0.52   |
 | HGST      | Travelstar Z5K500      | 5      | 384     | 244   | 288   | 0.31   |
 | HGST      | Travelstar Z5K1000     | 2      | 26      | 134   | 41    | 0.30   |
 | HGST      | Travelstar Z5K1        | 1      | 16      | 74    | 0     | 0.20   |

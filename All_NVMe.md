@@ -142,12 +142,12 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLV256HCHP-000L2 | 256 GB | 866945017C6E | 116   | 0     | 0.32   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 1B875CD7F524 | 115   | 0     | 0.32   |
 | Toshiba   | THNSN5256GPUK      | 256 GB | 97A688FE68DA | 112   | 0     | 0.31   |
+| Plextor   | PX-256M8PeY        | 256 GB | 95E748B1021E | 111   | 0     | 0.31   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 5752B636B90B | 110   | 0     | 0.30   |
 | Samsung   | SSD 970 PRO        | 512 GB | 39B1A42B66C3 | 109   | 0     | 0.30   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | CEA8FF15A1B2 | 108   | 0     | 0.30   |
 | SK hynix  | HFS256GD9MNE-6200A | 256 GB | F99FF11221EC | 107   | 0     | 0.29   |
 | Samsung   | SSD 960 EVO        | 250 GB | 8FFF7D5F1D3B | 107   | 0     | 0.29   |
-| Plextor   | PX-256M8PeY        | 256 GB | 95E748B1021E | 105   | 0     | 0.29   |
 | Samsung   | SSD 970 EVO        | 250 GB | CED9B81ACF83 | 103   | 0     | 0.28   |
 | Samsung   | MZFLV128HCGR-000MV | 128 GB | 0F33E6D900D6 | 103   | 0     | 0.28   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | 6749AE0350CB | 102   | 0     | 0.28   |
@@ -191,8 +191,8 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 0BAA78778FDB | 80    | 0     | 0.22   |
 | Plextor   | PX-512M8PeG        | 512 GB | 4AAC4D6543D3 | 80    | 0     | 0.22   |
 | Samsung   | MZVPV256HDGL-000L2 | 256 GB | 82DFA69460E5 | 80    | 0     | 0.22   |
+| Plextor   | PX-128M8PeGN       | 128 GB | A2E2FE7C6F67 | 79    | 0     | 0.22   |
 | Toshiba   | KXG5AZNV256G       | 256 GB | 940B2D286E25 | 78    | 0     | 0.21   |
-| Plextor   | PX-128M8PeGN       | 128 GB | A2E2FE7C6F67 | 77    | 0     | 0.21   |
 | Crucial   | CT500P1SSD8        | 500 GB | AC6D8ECF840E | 77    | 0     | 0.21   |
 | Samsung   | SSD 970 EVO        | 500 GB | 2BF4B96BF99C | 75    | 0     | 0.21   |
 | Lite-On   | CB1-SD512          | 512 GB | B5144B8D8FB6 | 75    | 0     | 0.21   |
@@ -469,6 +469,7 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 5155144EC1FA | 13    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 8443DDD91A5B | 13    | 0     | 0.04   |
 | Samsung   | PM961 NVMe         | 256 GB | 91EE496BBA1C | 13    | 0     | 0.04   |
+| SK hynix  | BC501 HFM256GDJ... | 256 GB | B828DD7B77E5 | 13    | 0     | 0.04   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 4002BFBC3AC4 | 13    | 0     | 0.04   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 6ACCD81E5ED8 | 13    | 0     | 0.04   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 68557EAD3925 | 13    | 0     | 0.04   |
@@ -511,7 +512,6 @@ Rating — avg. rating per sample.
 | XPG       | GAMMIX S11 Pro     | 512 GB | F6A5AEEF80F0 | 11    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO        | 500 GB | 1A8D030C09FA | 10    | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 250 GB | 05E7DA6B9DDA | 10    | 0     | 0.03   |
-| SK hynix  | BC501 HFM256GDJ... | 256 GB | B828DD7B77E5 | 10    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | A028D2F1C4B4 | 10    | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 500 GB | C4FE3F6F7BDF | 10    | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 500 GB | 1B409D58D8C3 | 74    | 6     | 0.03   |
@@ -667,6 +667,7 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLB256HAHQ-000L2 | 256 GB | A28B0504637D | 2     | 0     | 0.01   |
 | FORESEE   | P900F256GB         | 256 GB | AD81069BBB9D | 2     | 0     | 0.01   |
 | Micron    | 2200S NVMe         | 512 GB | 6281ED473DA2 | 2     | 0     | 0.01   |
+| Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 64CECA4F0234 | 2     | 0     | 0.01   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 9C97CB4C7941 | 2     | 0     | 0.01   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 0991E2D8A8DD | 2     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 8AE804463558 | 2     | 0     | 0.01   |
@@ -697,7 +698,6 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | 8B323110172A | 1     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO        | 500 GB | 5AE81FB616DE | 1     | 0     | 0.00   |
 | Kingston  | SA2000M8250G       | 250 GB | 0A382B428DB3 | 1     | 0     | 0.00   |
-| Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 64CECA4F0234 | 1     | 0     | 0.00   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 65192FDFD4AD | 1     | 0     | 0.00   |
 | ADATA     | SX6000LNP          | 128 GB | AD6633556414 | 1     | 0     | 0.00   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | AFDE4FACB520 | 1     | 0     | 0.00   |

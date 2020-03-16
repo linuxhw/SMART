@@ -26,7 +26,7 @@ Rating — avg. rating per sample.
 | Corsair   | Force 3 SSD        | 180 GB | 4       | 1926  | 1     | 4.19   |
 | Corsair   | Force GT           | 180 GB | 3       | 1205  | 0     | 3.30   |
 | Corsair   | Force GS           | 180 GB | 3       | 1087  | 0     | 2.98   |
-| Corsair   | Force 3 SSD        | 240 GB | 3       | 1044  | 0     | 2.86   |
+| Corsair   | Force 3 SSD        | 240 GB | 3       | 1045  | 0     | 2.86   |
 | Corsair   | Neutron SSD        | 256 GB | 1       | 879   | 0     | 2.41   |
 | Corsair   | Force GS           | 90 GB  | 1       | 776   | 0     | 2.13   |
 | Corsair   | Force 3 SSD        | 64 GB  | 10      | 721   | 1     | 1.85   |
