@@ -8,7 +8,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jan 13 10:31:08 2017 MSK
+Local Time is:    Thu Mar  9 08:56:59 2017 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -56,15 +56,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    132
- 12 Power_Cycle_Count       ------   100   100   000    -    246
+  9 Power_On_Hours          ------   100   100   000    -    152
+ 12 Power_Cycle_Count       ------   100   100   000    -    267
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       ------   100   100   000    -    34
 163 Unknown_Attribute       ------   100   100   000    -    35
-164 Unknown_Attribute       ------   100   100   000    -    3852
-165 Unknown_Attribute       ------   100   100   000    -    15
+164 Unknown_Attribute       ------   100   100   000    -    4565
+165 Unknown_Attribute       ------   100   100   000    -    18
 166 Unknown_Attribute       ------   100   100   000    -    0
-167 Unknown_Attribute       ------   100   100   000    -    3
+167 Unknown_Attribute       ------   100   100   000    -    4
 168 Unknown_Attribute       ------   100   100   000    -    3000
 169 Unknown_Attribute       ------   100   100   000    -    100
 175 Program_Fail_Count_Chip ------   100   100   000    -    0
@@ -73,17 +73,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Used_Rsvd_Blk_Cnt_Chip  ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    17
+192 Power-Off_Retract_Count ------   100   100   000    -    18
 194 Temperature_Celsius     ------   100   100   000    -    32
-195 Hardware_ECC_Recovered  ------   100   100   000    -    52
+195 Hardware_ECC_Recovered  ------   100   100   000    -    59
 196 Reallocated_Event_Count ------   100   100   016    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Total_LBAs_Written      ------   100   100   000    -    5877
-242 Total_LBAs_Read         ------   100   100   000    -    8202
-245 Unknown_Attribute       ------   100   100   000    -    15408
+241 Total_LBAs_Written      ------   100   100   000    -    6351
+242 Total_LBAs_Read         ------   100   100   000    -    9603
+245 Unknown_Attribute       ------   100   100   000    -    18260
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,28 +126,25 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP Log 0x04)
-Page  Offset Size        Value Flags Description
-0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             246  ---  Lifetime Power-On Resets
-0x01  0x010  4             132  ---  Power-on Hours
-0x01  0x018  6       385175776  ---  Logical Sectors Written
-0x01  0x020  6        14519887  ---  Number of Write Commands
-0x01  0x028  6       537566497  ---  Logical Sectors Read
-0x01  0x030  6         9173740  ---  Number of Read Commands
-0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
-0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
-0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              17  ---  Resets Between Cmd Acceptance and Completion
-0x05  =====  =               =  ===  == Temperature Statistics (empty) ==
-0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             788  ---  Number of Hardware Resets
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
-0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
-                                |||_ C monitored condition met
-                                ||__ D supports DSN
-                                |___ N normalized value
+Page Offset Size         Value  Description
+  1  =====  =                =  == General Statistics (rev 2) ==
+  1  0x008  4              267  Lifetime Power-On Resets
+  1  0x010  4              152  Power-on Hours
+  1  0x018  6        416236704  Logical Sectors Written
+  1  0x020  6         15909721  Number of Write Commands
+  1  0x028  6        629392855  Logical Sectors Read
+  1  0x030  6         10473487  Number of Read Commands
+  2  =====  =                =  == Free-Fall Statistics (empty) ==
+  3  =====  =                =  == Rotating Media Statistics (empty) ==
+  4  =====  =                =  == General Errors Statistics (rev 1) ==
+  4  0x008  4                0  Number of Reported Uncorrectable Errors
+  4  0x010  4               18  Resets Between Cmd Acceptance and Completion
+  5  =====  =                =  == Temperature Statistics (empty) ==
+  6  =====  =                =  == Transport Statistics (rev 1) ==
+  6  0x008  4              859  Number of Hardware Resets
+  6  0x018  4                0  Number of Interface CRC Errors
+  7  =====  =                =  == Solid State Device Statistics (rev 1) ==
+  7  0x008  1                0  Percentage Used Endurance Indicator
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

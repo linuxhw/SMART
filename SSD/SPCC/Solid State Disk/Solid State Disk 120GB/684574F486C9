@@ -2,20 +2,21 @@
 Device Model:     SPCC Solid State Disk
 Serial Number:    --
 Firmware Version: S8FM08.3
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Apr 25 11:05:53 2017 MSK
+Local Time is:    Tue Feb  4 09:35:44 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -54,15 +55,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    3213
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1040
-168 Unknown_Attribute       -O--C-   100   100   000    -    3
+  9 Power_On_Hours          -O--C-   100   100   000    -    8874
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2874
+168 Unknown_Attribute       -O--C-   100   100   000    -    7
 170 Unknown_Attribute       PO----   100   100   010    -    299
-173 Unknown_Attribute       -O--C-   100   100   000    -    5963876
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    85
-218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Temperature_Celsius     PO--C-   100   100   000    -    96
-241 Total_LBAs_Written      -O--C-   100   100   000    -    6159
+173 Unknown_Attribute       -O--C-   100   100   000    -    13959390
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    163
+218 Unknown_Attribute       PO-R--   100   100   050    -    2
+231 Temperature_Celsius     PO--C-   100   100   000    -    92
+241 Total_LBAs_Written      -O--C-   100   100   000    -    12550
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -80,7 +81,7 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -90,11 +91,15 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%         0         -
-# 2  Extended offline    Completed without error       00%         4         -
-# 3  Extended offline    Completed without error       00%         8         -
+# 1  Extended offline    Completed without error       00%        12         -
+# 2  Extended offline    Completed without error       00%         3         -
+# 3  Extended offline    Completed without error       00%        11         -
 # 4  Extended offline    Completed without error       00%         5         -
-# 5  Extended offline    Completed without error       00%        11         -
+# 5  Extended offline    Completed without error       00%         0         -
+# 6  Extended offline    Completed without error       00%         4         -
+# 7  Extended offline    Completed without error       00%         8         -
+# 8  Extended offline    Completed without error       00%         5         -
+# 9  Extended offline    Completed without error       00%        11         -
 
 Selective Self-tests/Logging not supported
 
@@ -108,6 +113,8 @@ Page  Offset Size        Value Flags Description
                                 ||__ D supports DSN
                                 |___ N normalized value
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
@@ -116,8 +123,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4          135  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

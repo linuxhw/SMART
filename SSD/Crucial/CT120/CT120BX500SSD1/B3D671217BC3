@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu May 16 23:38:14 2019 +03
+Local Time is:    Mon May 20 10:11:52 2019 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,16 +59,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   010    -    0
   9 Power_On_Hours          -O--CK   100   100   050    -    5
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    75
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    93
 171 Unknown_Attribute       -O--CK   100   100   050    -    0
 172 Unknown_Attribute       -O--CK   100   100   050    -    0
 173 Unknown_Attribute       -O--CK   100   100   050    -    2
-174 Unknown_Attribute       -O--CK   100   100   050    -    24
+174 Unknown_Attribute       -O--CK   100   100   050    -    30
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   050    -    100
 183 Runtime_Bad_Block       -O--CK   100   100   050    -    0
 184 End-to-End_Error        -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   054   049   050    Past 46 (Min/Max 25/51)
+194 Temperature_Celsius     -O---K   061   049   050    Past 39 (Min/Max 25/51)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
@@ -76,8 +76,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Unknown_SSD_Attribute   ----CK   100   100   001    -    100
 206 Unknown_SSD_Attribute   -OSR-K   100   100   050    -    0
 210 Unknown_Attribute       -O--CK   100   100   050    -    0
-246 Unknown_Attribute       -O--CK   100   100   050    -    185671232
-247 Unknown_Attribute       -O--CK   100   100   050    -    5802226
+246 Unknown_Attribute       -O--CK   100   100   050    -    242341825
+247 Unknown_Attribute       -O--CK   100   100   050    -    7573182
 248 Unknown_Attribute       -O--CK   100   100   050    -    36864
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -116,12 +116,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              75  ---  Lifetime Power-On Resets
+0x01  0x008  4              93  ---  Lifetime Power-On Resets
 0x01  0x010  4               5  ---  Power-on Hours
-0x01  0x018  6       185671232  ---  Logical Sectors Written
-0x01  0x020  6          744898  ---  Number of Write Commands
-0x01  0x028  6       121633700  ---  Logical Sectors Read
-0x01  0x030  6         1463827  ---  Number of Read Commands
+0x01  0x018  6       242341825  ---  Logical Sectors Written
+0x01  0x020  6          866431  ---  Number of Write Commands
+0x01  0x028  6       154260622  ---  Logical Sectors Read
+0x01  0x030  6         1731746  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -134,6 +134,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            2  R_ERR response for non-data FIS
-0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            0  R_ERR response for non-data FIS
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

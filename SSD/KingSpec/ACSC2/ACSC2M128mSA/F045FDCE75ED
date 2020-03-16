@@ -10,7 +10,7 @@ Form Factor:      1.8 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Mar 22 21:10:36 2019 +05
+Local Time is:    Sat Mar 30 22:58:23 2019 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -26,14 +26,13 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x05)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  25)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(  120) seconds.
 Offline data collection
 capabilities: 			 (0x11) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -62,24 +61,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    0
-  9 Power_On_Hours          ------   100   100   050    -    153
- 12 Power_Cycle_Count       ------   100   100   050    -    1968
+  9 Power_On_Hours          ------   100   100   050    -    157
+ 12 Power_Cycle_Count       ------   100   100   050    -    2018
 160 Unknown_Attribute       ------   100   100   050    -    0
 161 Unknown_Attribute       ------   100   100   050    -    70
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    2
-164 Unknown_Attribute       ------   100   100   050    -    199810
-165 Unknown_Attribute       ------   100   100   050    -    213
-166 Unknown_Attribute       ------   100   100   050    -    162
-167 Unknown_Attribute       ------   100   100   050    -    195
-192 Power-Off_Retract_Count ------   100   100   050    -    19
-194 Temperature_Celsius     ------   100   100   050    -    33
-195 Hardware_ECC_Recovered  ------   100   100   050    -    13241
+164 Unknown_Attribute       ------   100   100   050    -    203045
+165 Unknown_Attribute       ------   100   100   050    -    216
+166 Unknown_Attribute       ------   100   100   050    -    164
+167 Unknown_Attribute       ------   100   100   050    -    198
+192 Power-Off_Retract_Count ------   100   100   050    -    30
+194 Temperature_Celsius     ------   100   100   050    -    37
+195 Hardware_ECC_Recovered  ------   100   100   050    -    13362
 196 Reallocated_Event_Count ------   100   100   050    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    1176
-241 Total_LBAs_Written      ------   100   100   050    -    174738
-242 Total_LBAs_Read         ------   100   100   050    -    245233
-245 Unknown_Attribute       ------   100   100   050    -    533033
+241 Total_LBAs_Written      ------   100   100   050    -    176733
+242 Total_LBAs_Read         ------   100   100   050    -    251873
+245 Unknown_Attribute       ------   100   100   050    -    540933
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -144,9 +143,10 @@ Error 1173 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Offline             Unknown status (0xc)          00%       137         -
-# 2  Extended offline    Completed without error       10%       132         -
-# 3  Extended offline    Completed without error       00%       113         -
+# 1  Reserved (0x0e)     Aborted by host               90%       155         -
+# 2  Offline             Unknown status (0xc)          00%       137         -
+# 3  Extended offline    Completed without error       10%       132         -
+# 4  Extended offline    Completed without error       00%       113         -
 
 Selective Self-tests/Logging not supported
 
@@ -158,19 +158,19 @@ SCT (Get) Error Recovery Control command failed
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1968  ---  Lifetime Power-On Resets
-0x01  0x010  4             153  ---  Power-on Hours
-0x01  0x018  6      2861750038  ---  Logical Sectors Written
-0x01  0x020  6       169203847  ---  Number of Write Commands
-0x01  0x028  6      3186734934  ---  Logical Sectors Read
-0x01  0x030  6       232881506  ---  Number of Read Commands
+0x01  0x008  4            2018  ---  Lifetime Power-On Resets
+0x01  0x010  4             157  ---  Power-on Hours
+0x01  0x018  6      2992457636  ---  Logical Sectors Written
+0x01  0x020  6       171864213  ---  Number of Write Commands
+0x01  0x028  6      3621871606  ---  Logical Sectors Read
+0x01  0x030  6       239738592  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4          467062  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4          470437  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              33  ---  Current Temperature
-0x05  0x010  1            -122  ---  Average Short Term Temperature
-0x05  0x018  1             105  ---  Average Long Term Temperature
+0x05  0x008  1              37  ---  Current Temperature
+0x05  0x010  1            -102  ---  Average Short Term Temperature
+0x05  0x018  1             -56  ---  Average Long Term Temperature
 0x05  0x020  1              56  ---  Highest Temperature
 0x05  0x028  1               7  ---  Lowest Temperature
 0x05  0x030  1              -1  ---  Highest Average Short Term Temperature
@@ -182,7 +182,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            7163  ---  Number of Hardware Resets
+0x06  0x008  4            7445  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
@@ -203,7 +203,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -6,7 +6,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Aug 25 01:24:24 2019 MSK
+Local Time is:    Thu Jan 23 09:27:05 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -53,20 +53,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   085   085   020    -    15893
+  4 Start_Stop_Count        -O--CK   085   085   020    -    16186
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    744187548
-  9 Power_On_Hours          -O--CK   065   065   000    -    31258
+  7 Seek_Error_Rate         POSR--   089   060   030    -    853899413
+  9 Power_On_Hours          -O--CK   063   063   000    -    32929
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   085   085   020    -    16004
+ 12 Power_Cycle_Count       -O--CK   085   085   020    -    16291
 187 Reported_Uncorrect      -O--CK   001   001   000    -    4572
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   049   045    -    38 (Min/Max 30/38)
-194 Temperature_Celsius     -O---K   038   051   000    -    38 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   074   054   000    -    56865452
+190 Airflow_Temperature_Cel -O---K   068   049   045    -    32 (Min/Max 19/32)
+194 Temperature_Celsius     -O---K   032   051   000    -    32 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   077   054   000    -    202507608
 197 Current_Pending_Sector  -O--C-   100   100   000    -    8
 198 Offline_Uncorrectable   ----C-   100   100   000    -    8
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 4592 (device log contains only the most recent 20 errors)
+Device Error Count: 4593 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,23 @@ Device Error Count: 4592 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4593 [12] occurred at disk power-on lifetime: 23442 hours (976 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 05 33 00 cf aa e0 00  Error: UNC at LBA = 0x53300cfaa = 22330527658
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 05 33 00 cf aa e0 00     00:09:39.999  READ DMA EXT
+  25 00 00 00 08 00 05 33 00 cf a2 e0 00     00:09:43.376  READ DMA EXT
+  25 00 00 00 08 00 05 33 00 cf 9a e0 00     00:09:43.376  READ DMA EXT
+  25 00 00 00 08 00 05 33 00 cf 92 e0 00     00:09:43.376  READ DMA EXT
+  25 00 00 00 08 00 05 33 00 cf 8a e0 00     00:09:43.376  READ DMA EXT
 
 Error 4592 [11] occurred at disk power-on lifetime: 23442 hours (976 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -238,27 +255,12 @@ Error 4586 [5] occurred at disk power-on lifetime: 23442 hours (976 days + 18 ho
   25 00 00 00 08 00 05 35 00 cf 72 e0 00     00:09:46.736  READ DMA EXT
   25 00 00 00 08 00 05 35 00 cf 6a e0 00     00:09:46.736  READ DMA EXT
 
-Error 4585 [4] occurred at disk power-on lifetime: 23442 hours (976 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 05 33 00 cf aa e0 00  Error: UNC at LBA = 0x53300cfaa = 22330527658
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 05 33 00 cf aa e0 00     00:09:39.999  READ DMA EXT
-  25 00 00 00 08 00 05 33 00 cf a2 e0 00     00:09:43.376  READ DMA EXT
-  25 00 00 00 08 00 05 33 00 cf 9a e0 00     00:09:43.376  READ DMA EXT
-  25 00 00 00 08 00 05 33 00 cf 92 e0 00     00:09:43.376  READ DMA EXT
-  25 00 00 00 08 00 05 33 00 cf 8a e0 00     00:09:43.376  READ DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     30630         -
-# 2  Short offline       Completed without error       00%     25351         -
+# 1  Short offline       Completed without error       00%     32233         -
+# 2  Short offline       Completed without error       00%     32233         -
+# 3  Extended offline    Completed without error       00%     30630         -
+# 4  Short offline       Completed without error       00%     25351         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -279,7 +281,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           16  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

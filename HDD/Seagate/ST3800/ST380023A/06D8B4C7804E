@@ -7,7 +7,7 @@ User Capacity:    80 026 361 856 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Thu Dec 31 14:34:25 2015 MSK
+Local Time is:    Fri Jan 29 08:23:45 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  39)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -51,16 +50,16 @@ recommended polling time: 	 (  64) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   063   057   006    -    71234843
+  1 Raw_Read_Error_Rate     POSR--   067   057   006    -    25846320
   3 Spin_Up_Time            PO----   100   100   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    123
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    23
-  7 Seek_Error_Rate         POSR--   081   060   030    -    133551222
-  9 Power_On_Hours          -O--CK   024   024   000    -    67174
+  7 Seek_Error_Rate         POSR--   081   060   030    -    142191957
+  9 Power_On_Hours          -O--CK   023   023   000    -    67581
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1903
-194 Temperature_Celsius     -O---K   036   070   000    -    36
-195 Hardware_ECC_Recovered  -O-RC-   063   057   000    -    71234843
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1988
+194 Temperature_Celsius     -O---K   026   070   000    -    26
+195 Hardware_ECC_Recovered  -O-RC-   067   057   000    -    25846320
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   161   000    -    127
@@ -93,7 +92,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 873 (device log contains only the most recent five errors)
+ATA Error Count: 882 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -108,96 +107,97 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 873 occurred at disk power-on lifetime: 65498 hours (2729 days + 2 hours)
+Error 882 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 f8 db 73 41  Error: UNC at LBA = 0x0173dbf8 = 24370168
+  40 51 00 9f 03 60 40  Error: UNC at LBA = 0x0060039f = 6292383
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 d8 40 cf db 73 41 00      00:58:10.142  READ DMA
-  c8 d8 40 9f 47 73 41 00      00:58:10.124  READ DMA
-  ca d8 08 37 e6 6d 41 00      00:58:10.124  WRITE DMA
-  ca d8 10 97 f0 fe 40 00      00:58:10.124  WRITE DMA
-  ca d8 08 07 f5 60 40 00      00:58:10.124  WRITE DMA
+  c8 03 00 7f 03 60 40 00      00:00:57.852  READ DMA
+  ef 03 44 00 00 00 a0 02      00:00:57.385  SET FEATURES [Set transfer mode]
+  c8 d8 00 7f 03 60 40 00      00:00:53.773  READ DMA
+  c8 d8 00 7f 03 60 40 00      00:00:49.712  READ DMA
+  c8 d8 10 7f 05 60 40 00      00:00:49.712  READ DMA
 
-Error 872 occurred at disk power-on lifetime: 65498 hours (2729 days + 2 hours)
+Error 881 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 f8 db 73 41  Error: UNC at LBA = 0x0173dbf8 = 24370168
+  40 51 00 9f 03 60 40  Error: UNC at LBA = 0x0060039f = 6292383
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 d8 40 cf db 73 41 00      00:58:06.056  READ DMA
-  c8 d8 40 5f 47 73 41 00      00:58:06.043  READ DMA
-  ca d8 18 8f e0 6d 41 00      00:58:06.043  WRITE DMA
-  ca d8 10 47 f4 60 40 00      00:58:06.043  WRITE DMA
-  ca d8 08 37 00 5e 40 00      00:58:06.043  WRITE DMA
+  c8 d8 00 7f 03 60 40 00      00:00:53.773  READ DMA
+  c8 d8 00 7f 03 60 40 00      00:00:49.712  READ DMA
+  c8 d8 10 7f 05 60 40 00      00:00:49.712  READ DMA
+  c8 d8 00 7f 04 60 40 00      00:00:49.695  READ DMA
+  c8 d8 00 7f 03 60 40 00      00:00:45.638  READ DMA
 
-Error 871 occurred at disk power-on lifetime: 65498 hours (2729 days + 2 hours)
+Error 880 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 f8 db 73 41  Error: UNC at LBA = 0x0173dbf8 = 24370168
+  40 51 00 9f 03 60 40  Error: UNC at LBA = 0x0060039f = 6292383
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 d8 40 cf db 73 41 00      00:58:02.004  READ DMA
-  c8 d8 40 1f 47 73 41 00      00:58:01.966  READ DMA
-  ca d8 80 c7 cd 9f 40 00      00:58:01.965  WRITE DMA
-  ca d8 80 47 cd 9f 40 00      00:58:01.964  WRITE DMA
-  ca d8 80 c7 cc 9f 40 00      00:58:01.963  WRITE DMA
+  c8 d8 00 7f 03 60 40 00      00:00:49.712  READ DMA
+  c8 d8 10 7f 05 60 40 00      00:00:49.712  READ DMA
+  c8 d8 00 7f 04 60 40 00      00:00:49.695  READ DMA
+  c8 d8 00 7f 03 60 40 00      00:00:45.638  READ DMA
+  c8 d8 00 7f 02 60 40 00      00:00:45.633  READ DMA
 
-Error 870 occurred at disk power-on lifetime: 65498 hours (2729 days + 2 hours)
+Error 879 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 f8 db 73 41  Error: UNC at LBA = 0x0173dbf8 = 24370168
+  40 51 00 9f 03 60 40  Error: UNC at LBA = 0x0060039f = 6292383
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 d8 40 cf db 73 41 00      00:57:57.917  READ DMA
-  c8 d8 40 df 46 73 41 00      00:57:57.885  READ DMA
-  ca d8 80 c7 ca 9f 40 00      00:57:57.884  WRITE DMA
-  ca d8 80 47 ca 9f 40 00      00:57:57.883  WRITE DMA
-  ca d8 80 c7 c9 9f 40 00      00:57:57.882  WRITE DMA
+  c8 d8 00 7f 03 60 40 00      00:00:45.638  READ DMA
+  c8 d8 00 7f 02 60 40 00      00:00:45.633  READ DMA
+  c8 d8 00 7f 01 60 40 00      00:00:45.631  READ DMA
+  c8 d8 00 7f 00 60 40 00      00:00:45.619  READ DMA
+  ca d8 08 37 00 5e 40 00      00:00:45.619  WRITE DMA
 
-Error 869 occurred at disk power-on lifetime: 65498 hours (2729 days + 2 hours)
+Error 878 occurred at disk power-on lifetime: 1903 hours (79 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 f8 db 73 41  Error: UNC at LBA = 0x0173dbf8 = 24370168
+  40 51 00 9f 03 60 40  Error: UNC at LBA = 0x0060039f = 6292383
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 d8 40 cf db 73 41 00      00:57:53.731  READ DMA
-  c8 d8 40 8f db 73 41 00      00:57:53.724  READ DMA
-  ca d8 08 47 00 5e 40 00      00:57:53.637  WRITE DMA
-  ca d8 08 37 ef 13 40 00      00:57:53.637  WRITE DMA
-  ca d8 08 3f 00 5e 40 00      00:57:53.636  WRITE DMA
+  c8 d8 00 17 03 60 40 00      00:00:40.517  READ DMA
+  ca d8 08 2f 00 5e 40 00      00:00:40.517  WRITE DMA
+  c8 d8 00 17 03 60 40 00      00:00:36.438  READ DMA
+  ca d8 08 3f 00 5e 40 00      00:00:36.438  WRITE DMA
+  c8 d8 00 17 03 60 40 00      00:00:32.359  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     65279         -
+# 1  Extended offline    Interrupted (host reset)      70%      1947         -
+# 2  Extended offline    Completed without error       00%     65279         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

@@ -7,7 +7,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Apr  1 18:42:00 2019 +04
+Local Time is:    Tue Jan 28 22:11:04 2020 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -22,8 +22,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,15 +59,15 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   185   178   021    -    3733
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9108
+  3 Spin_Up_Time            PO----   187   178   021    -    3608
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9985
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   066   066   000    -    24922
+  9 Power_On_Hours          -O--CK   065   065   000    -    26263
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   000    -    9059
-194 Temperature_Celsius     -O---K   121   087   000    -    26
+ 12 Power_Cycle_Count       -O--CK   091   091   000    -    9935
+194 Temperature_Celsius     -O---K   108   087   000    -    39
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -105,24 +105,24 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      70%     24789         -
-# 2  Extended offline    Completed without error       00%     24735         -
-# 3  Extended offline    Completed without error       00%     24636         -
-# 4  Extended offline    Completed without error       00%     24633         -
-# 5  Extended offline    Completed without error       00%     24464         -
-# 6  Extended offline    Interrupted (host reset)      70%     24437         -
-# 7  Extended offline    Completed without error       00%     24393         -
-# 8  Extended offline    Completed without error       00%     24328         -
-# 9  Extended offline    Completed without error       00%     24257         -
-#10  Extended offline    Completed without error       00%     24249         -
-#11  Extended offline    Completed without error       00%     24239         -
-#12  Extended offline    Completed without error       00%     24207         -
-#13  Extended offline    Interrupted (host reset)      40%     24205         -
-#14  Extended offline    Completed without error       00%     24203         -
-#15  Extended offline    Completed without error       00%     24198         -
-#16  Extended offline    Interrupted (host reset)      70%     24186         -
-#17  Extended offline    Completed without error       00%     24185         -
-#18  Extended offline    Completed without error       00%     24171         -
+# 1  Extended offline    Completed without error       00%     26157         -
+# 2  Extended offline    Completed without error       00%     26154         -
+# 3  Extended offline    Completed without error       00%     26147         -
+# 4  Extended offline    Completed without error       00%     26077         -
+# 5  Extended offline    Completed without error       00%     26032         -
+# 6  Extended offline    Completed without error       00%     26023         -
+# 7  Extended offline    Completed without error       00%     26010         -
+# 8  Extended offline    Completed without error       00%     25996         -
+# 9  Extended offline    Completed without error       00%     25977         -
+#10  Extended offline    Completed without error       00%     25974         -
+#11  Extended offline    Completed without error       00%     25972         -
+#12  Extended offline    Completed without error       00%     25965         -
+#13  Extended offline    Interrupted (host reset)      70%     25959         -
+#14  Extended offline    Completed without error       00%     25951         -
+#15  Extended offline    Completed without error       00%     25913         -
+#16  Extended offline    Completed without error       00%     25908         -
+#17  Extended offline    Interrupted (host reset)      90%     25774         -
+#18  Extended offline    Completed without error       00%     25631         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -138,9 +138,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                 22 Celsius
-Power Cycle Max Temperature:         26 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                 26 Celsius
+Power Cycle Max Temperature:         42 Celsius
 Lifetime    Max Temperature:         67 Celsius
 
 SCT Temperature History Version:     2
@@ -148,7 +148,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        255 minutes
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (29)
+Temperature History Size (Index):    128 (88)
 
 SCT Error Recovery Control:
            Read: Disabled

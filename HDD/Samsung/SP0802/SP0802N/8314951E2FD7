@@ -7,7 +7,7 @@ User Capacity:    80 060 424 192 bytes [80,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Tue Sep  6 22:19:58 2016 EEST
+Local Time is:    Sun Oct 23 22:12:44 2016 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -24,9 +24,8 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 244)	Self-test routine in progress...
+					40% of test remaining.
 Total time to complete Offline 
 data collection: 		( 2880) seconds.
 Offline data collection
@@ -52,20 +51,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    1
-  3 Spin_Up_Time            POS---   077   001   000    -    4288
-  4 Start_Stop_Count        -O--CK   085   085   000    -    16057
+  3 Spin_Up_Time            POS---   077   001   000    -    4352
+  4 Start_Stop_Count        -O--CK   084   084   000    -    16272
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Half_Minutes   -O--CK   096   096   000    -    23069h+17m
+  9 Power_On_Half_Minutes   -O--CK   096   096   000    -    23231h+24m
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   000    -    8355
-194 Temperature_Celsius     -O---K   133   088   000    -    35
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    160417072
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8468
+194 Temperature_Celsius     -O---K   139   088   000    -    33
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    182249626
 196 Reallocated_Event_Count -O--C-   098   098   000    -    5
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   098   098   010    -    5
-199 UDMA_CRC_Error_Count    PO-R--   100   065   051    -    257
+199 UDMA_CRC_Error_Count    PO-R--   100   065   051    -    128
 200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
 201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    0
                             ||||||_ K auto-keep
@@ -88,7 +87,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 8027 (device log contains only the most recent five errors)
+ATA Error Count: 8049 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -103,7 +102,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 8027 occurred at disk power-on lifetime: 23060 hours (960 days + 20 hours)
+Error 8049 occurred at disk power-on lifetime: 23204 hours (966 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -114,13 +113,13 @@ Error 8027 occurred at disk power-on lifetime: 23060 hours (960 days + 20 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:25:59.875  SET FEATURES [Enable APM]
-  c8 00 08 00 00 fd e2 00      00:25:09.000  READ DMA
-  c8 00 08 00 00 80 e2 00      00:25:09.000  READ DMA
-  c8 00 20 00 00 00 e0 00      00:25:09.000  READ DMA
-  c8 00 08 00 00 fd e2 00      00:25:09.000  READ DMA
+  ef 05 fe 00 00 00 40 00      03:21:39.813  SET FEATURES [Enable APM]
+  c8 00 08 00 08 fd e2 00      03:21:39.750  READ DMA
+  c8 00 08 08 08 fd e2 00      03:21:39.750  READ DMA
+  c8 00 08 00 08 fd e2 00      03:21:39.750  READ DMA
+  c8 00 08 f0 ef 51 e9 00      03:21:39.750  READ DMA
 
-Error 8026 occurred at disk power-on lifetime: 23058 hours (960 days + 18 hours)
+Error 8048 occurred at disk power-on lifetime: 23200 hours (966 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -131,13 +130,13 @@ Error 8026 occurred at disk power-on lifetime: 23058 hours (960 days + 18 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      00:21:44.500  SET FEATURES [Enable APM]
-  ec 00 01 00 00 00 00 00      00:21:43.188  IDENTIFY DEVICE
-  c8 00 08 00 08 fd e2 00      00:21:42.563  READ DMA
-  c8 00 08 08 08 fd e2 00      00:21:42.563  READ DMA
-  c8 00 08 00 08 fd e2 00      00:21:42.563  READ DMA
+  ef 05 fe 00 00 00 40 00      00:07:30.188  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 00 00      00:07:28.375  IDENTIFY DEVICE
+  c8 00 08 00 00 fd e2 00      00:07:27.125  READ DMA
+  c8 00 08 00 00 80 e2 00      00:07:27.125  READ DMA
+  c8 00 08 00 10 00 e0 00      00:07:21.563  READ DMA
 
-Error 8025 occurred at disk power-on lifetime: 23051 hours (960 days + 11 hours)
+Error 8047 occurred at disk power-on lifetime: 23200 hours (966 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -148,13 +147,13 @@ Error 8025 occurred at disk power-on lifetime: 23051 hours (960 days + 11 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      06:17:01.438  SET FEATURES [Enable APM]
-  b0 da 00 00 4f c2 00 00      06:07:46.438  SMART RETURN STATUS
-  b0 d0 01 00 4f c2 00 00      06:07:46.438  SMART READ DATA
-  b0 d1 01 00 4f c2 00 00      06:07:46.375  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  e5 00 00 00 00 00 00 00      06:07:46.375  CHECK POWER MODE
+  ef 05 fe 00 00 00 40 00      00:02:12.750  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 00 00      00:02:08.875  IDENTIFY DEVICE
+  c8 00 08 00 00 fd e2 00      00:02:08.188  READ DMA
+  c8 00 08 00 00 80 e2 00      00:02:08.188  READ DMA
+  c8 00 08 00 10 00 e0 00      00:02:06.125  READ DMA
 
-Error 8024 occurred at disk power-on lifetime: 23050 hours (960 days + 10 hours)
+Error 8046 occurred at disk power-on lifetime: 23199 hours (966 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,32 +164,38 @@ Error 8024 occurred at disk power-on lifetime: 23050 hours (960 days + 10 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      05:37:06.250  SET FEATURES [Enable APM]
-  b0 d5 01 01 4f c2 00 00      05:37:05.000  SMART READ LOG
-  b0 d5 01 06 4f c2 00 00      05:37:05.000  SMART READ LOG
-  b0 d0 01 00 4f c2 00 00      05:37:04.938  SMART READ DATA
-  b0 da 00 00 4f c2 00 00      05:37:04.938  SMART RETURN STATUS
+  ef 05 fe 00 00 00 40 00      00:56:48.188  SET FEATURES [Enable APM]
+  c8 00 08 00 18 fd e2 00      00:56:48.188  READ DMA
+  ec 00 01 00 00 00 40 00      00:56:48.188  IDENTIFY DEVICE
+  c8 00 68 88 ef 51 e9 00      00:56:48.188  READ DMA
+  c8 00 80 00 ef 51 e9 00      00:56:48.188  READ DMA
 
-Error 8023 occurred at disk power-on lifetime: 22988 hours (957 days + 20 hours)
+Error 8045 occurred at disk power-on lifetime: 23199 hours (966 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 00 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
+  04 51 fe 00 00 00 40  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 01 00 00 00 e0 00      00:00:42.750  READ DMA
-  c4 00 01 00 00 00 e0 00      00:00:42.750  READ MULTIPLE
+  ef 05 fe 00 00 00 40 00      00:56:48.063  SET FEATURES [Enable APM]
+  c8 00 08 00 18 00 e0 00      00:56:48.063  READ DMA
+  c8 00 68 88 ff 7f e2 00      00:56:48.000  READ DMA
+  c8 00 80 00 ff 7f e2 00      00:56:48.000  READ DMA
+  c8 00 f8 00 fe 7f e2 00      00:56:48.000  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     23062         -
-# 2  Short offline       Completed without error       00%     21073         -
+# 1  Extended offline    Completed without error       00%     23111         -
+# 2  Extended offline    Completed without error       00%     23108         -
+# 3  Extended offline    Completed without error       00%     23073         -
+# 4  Extended offline    Completed without error       00%     23062         -
+# 5  Short offline       Completed without error       00%     21073         -
 
 Selective Self-tests/Logging not supported
 
