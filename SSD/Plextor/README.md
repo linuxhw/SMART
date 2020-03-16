@@ -33,7 +33,7 @@ Rating — avg. rating per sample.
 | Plextor   | PX-128M6G-2242     | 128 GB | 1       | 271   | 0     | 0.74   |
 | Plextor   | PX-256M5M          | 256 GB | 2       | 242   | 0     | 0.66   |
 | Plextor   | PX-512M5P          | 512 GB | 1       | 238   | 0     | 0.65   |
-| Plextor   | PX-128M7VC         | 128 GB | 5       | 233   | 0     | 0.64   |
+| Plextor   | PX-128M7VC         | 128 GB | 5       | 238   | 0     | 0.65   |
 | Plextor   | PX-128M7VG         | 128 GB | 2       | 202   | 0     | 0.56   |
 | Plextor   | PX-128S3G          | 128 GB | 1       | 194   | 0     | 0.53   |
 | Plextor   | PH6-CE120-G        | 120 GB | 1       | 189   | 0     | 0.52   |
@@ -51,7 +51,7 @@ Rating — avg. rating per sample.
 | Plextor   | PX-128M6S          | 128 GB | 24      | 70    | 47    | 0.18   |
 | Plextor   | PX-512M6Pro        | 512 GB | 1       | 58    | 0     | 0.16   |
 | Plextor   | PX-128S3C          | 128 GB | 10      | 58    | 0     | 0.16   |
-| Plextor   | PX-256M6S          | 256 GB | 9       | 56    | 238   | 0.13   |
+| Plextor   | PX-256M6S          | 256 GB | 9       | 57    | 238   | 0.13   |
 | Plextor   | PX-256M8VG         | 256 GB | 1       | 46    | 0     | 0.13   |
 | Plextor   | PX-512M3           | 512 GB | 1       | 1402  | 31    | 0.12   |
 | Plextor   | PX-256S3C          | 256 GB | 1       | 34    | 0     | 0.10   |

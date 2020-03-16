@@ -58,4 +58,4 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Patriot   | Unknown                | 15     | 28      | 219   | 73    | 0.45   |
-| Patriot   | Phison Driven SSDs     | 5      | 42      | 115   | 1     | 0.31   |
+| Patriot   | Phison Driven SSDs     | 5      | 42      | 116   | 1     | 0.31   |

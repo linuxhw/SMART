@@ -17,4 +17,4 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Drevo     | X1 SSD             | 120 GB | 2       | 396   | 34    | 0.02   |
+| Drevo     | X1 SSD             | 120 GB | 2       | 397   | 34    | 0.02   |

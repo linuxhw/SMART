@@ -43,8 +43,8 @@ Rating — avg. rating per sample.
 | Lite-On   | T10 240            | 240 GB | 1       | 227   | 0     | 0.62   |
 | Intel     | SSDPED1D480GA      | 480 GB | 2       | 222   | 0     | 0.61   |
 | Toshiba   | KXG50PNV2T04       | 2 TB   | 1       | 193   | 0     | 0.53   |
+| WDC       | WDS500G2X0C-00L350 | 500 GB | 4       | 191   | 0     | 0.52   |
 | Intel     | SSDPEKKF360G7H     | 360 GB | 2       | 189   | 0     | 0.52   |
-| WDC       | WDS500G2X0C-00L350 | 500 GB | 4       | 186   | 0     | 0.51   |
 | Corsair   | Force MP500        | 240 GB | 3       | 177   | 0     | 0.49   |
 | Toshiba   | THNSN5256GPU7 NVMe | 256 GB | 2       | 176   | 0     | 0.48   |
 | Team      | M8FP2              | 480 GB | 1       | 172   | 0     | 0.47   |
@@ -57,13 +57,13 @@ Rating — avg. rating per sample.
 | Samsung   | PM961 NVMe         | 512 GB | 1       | 144   | 0     | 0.40   |
 | ADATA     | SX6000PNP          | 512 GB | 1       | 141   | 0     | 0.39   |
 | Kingston  | SKC1000480G        | 480 GB | 2       | 131   | 0     | 0.36   |
+| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 130   | 0     | 0.36   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 8       | 129   | 0     | 0.36   |
 | Samsung   | MZVPW256HEGL-00000 | 256 GB | 5       | 125   | 0     | 0.34   |
 | Samsung   | SSD 960 PRO        | 2 TB   | 3       | 151   | 16    | 0.34   |
 | Samsung   | MZVPV512HDGL-000H1 | 512 GB | 1       | 122   | 0     | 0.34   |
 | Phison    | BPXP               | 960 GB | 2       | 122   | 0     | 0.33   |
 | Samsung   | MZVKV512HAJH-000L1 | 512 GB | 1       | 122   | 0     | 0.33   |
-| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 121   | 0     | 0.33   |
 | Samsung   | SSD 960 EVO        | 500 GB | 19      | 125   | 1     | 0.33   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 5       | 111   | 0     | 0.31   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 7       | 107   | 0     | 0.30   |
@@ -85,12 +85,12 @@ Rating — avg. rating per sample.
 | Samsung   | MZVLV128HCGR-00000 | 128 GB | 1       | 81    | 0     | 0.22   |
 | Samsung   | MZVPV256HDGL-000L2 | 256 GB | 1       | 80    | 0     | 0.22   |
 | Intel     | SSDPEKKW512G7      | 512 GB | 2       | 78    | 0     | 0.21   |
+| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 77    | 0     | 0.21   |
 | Samsung   | MZVLW128HEGR-000H1 | 128 GB | 2       | 76    | 0     | 0.21   |
 | Lite-On   | CB1-SD512          | 512 GB | 1       | 75    | 0     | 0.21   |
 | SK hynix  | PC401 NVMe         | 512 GB | 7       | 73    | 0     | 0.20   |
 | SK hynix  | PC300 NVMe         | 1 TB   | 2       | 73    | 0     | 0.20   |
 | Lenovo    | LENSE20256GMSP3... | 256 GB | 1       | 70    | 0     | 0.19   |
-| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 69    | 0     | 0.19   |
 | ADATA     | SX8200NP           | 240 GB | 1       | 69    | 0     | 0.19   |
 | Plextor   | PX-256M8PeY        | 256 GB | 2       | 68    | 0     | 0.19   |
 | Samsung   | SSD 960 PRO        | 512 GB | 13      | 105   | 1     | 0.19   |
@@ -235,11 +235,11 @@ Rating — avg. rating per sample.
 | Lite-On   | CA3-8D256          | 256 GB | 2       | 3     | 0     | 0.01   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 1       | 3     | 0     | 0.01   |
 | HP        | SSD EX900          | 120 GB | 1       | 3     | 0     | 0.01   |
+| SK hynix  | PC401 NVMe         | 1 TB   | 1       | 3     | 0     | 0.01   |
+| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 5     | 696   | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 2       | 3     | 0     | 0.01   |
 | Intel     | HBRPEKNX0203AH     | 1 TB   | 1       | 3     | 0     | 0.01   |
 | SK hynix  | BC511 NVMe         | 256 GB | 1       | 3     | 0     | 0.01   |
-| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 5     | 696   | 0.01   |
-| SK hynix  | PC401 NVMe         | 1 TB   | 1       | 3     | 0     | 0.01   |
 | Gigabyte  | GP-GSM2NE8128GNTD  | 128 GB | 1       | 3     | 0     | 0.01   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 5       | 3     | 0     | 0.01   |
 | WDC       | PC SN730 NVMe      | 1 TB   | 1       | 2     | 0     | 0.01   |

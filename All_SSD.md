@@ -32,12 +32,12 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 1 TB   | 8D0AF44AC431 | 2205  | 0     | 6.04   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 04BA5A6833DF | 2168  | 0     | 5.94   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 6A4DFAA3AFFE | 2119  | 0     | 5.81   |
+| Corsair   | Force 3 SSD        | 240 GB | C25F3ED4AC43 | 2096  | 0     | 5.74   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 040217EDAD15 | 2093  | 0     | 5.73   |
 | Samsung   | SSD 840 Series     | 500 GB | 5698D8055855 | 2090  | 0     | 5.73   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 24C15BC29D65 | 2087  | 0     | 5.72   |
-| Corsair   | Force 3 SSD        | 240 GB | C25F3ED4AC43 | 2087  | 0     | 5.72   |
 | Intel     | SSDSC2CW180A3      | 180 GB | 8499204C8F4E | 2082  | 0     | 5.71   |
-| OCZ       | AGILITY3           | 120 GB | 531A2B671C06 | 2074  | 0     | 5.68   |
+| OCZ       | AGILITY3           | 120 GB | 531A2B671C06 | 2075  | 0     | 5.68   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | FEA108805DB7 | 2040  | 0     | 5.59   |
 | Corsair   | Force GT           | 120 GB | A7486A168775 | 2011  | 0     | 5.51   |
 | OCZ       | AGILITY4           | 128 GB | 888B1F6EB8E3 | 2003  | 0     | 5.49   |
@@ -207,6 +207,7 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | B28AAB6CFC38 | 1138  | 0     | 3.12   |
 | Samsung   | SSD 840 Series     | 120 GB | 56BB64B3CA68 | 1138  | 0     | 3.12   |
 | Samsung   | SSD 840 EVO        | 250 GB | 1D3B999F97E8 | 1136  | 0     | 3.11   |
+| OCZ       | VERTEX3            | 90 GB  | BE4975FB1492 | 1135  | 0     | 3.11   |
 | SanDisk   | SDSSDHII480G       | 480 GB | C19922B1F011 | 1134  | 0     | 3.11   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 85A4F1E260F6 | 1134  | 0     | 3.11   |
 | Intel     | SSDSCMMW180A3L     | 180 GB | 069CD74AE4CD | 1131  | 0     | 3.10   |
@@ -225,7 +226,9 @@ Rating — avg. rating per sample.
 | Samsung   | MZ7TE512HMHP-000L2 | 512 GB | A6060BEA0289 | 1093  | 0     | 3.00   |
 | Samsung   | MZ7PD480HAGM-000DA | 480 GB | 74EF751FDCD8 | 1092  | 0     | 2.99   |
 | Kingston  | SV300S37A120G      | 120 GB | 630D56BB65D3 | 1091  | 0     | 2.99   |
+| Samsung   | SSD 850 PRO        | 128 GB | 041CFA3EC16F | 1091  | 0     | 2.99   |
 | Samsung   | MZ7TE128HMGR-00004 | 128 GB | 31016BB6EF56 | 1087  | 0     | 2.98   |
+| Samsung   | SSD 850 PRO        | 128 GB | B57F6AF001D8 | 1086  | 0     | 2.98   |
 | Micron    | M500_MTFDDAK480MAV | 480 GB | 08AC9033FE58 | 1083  | 0     | 2.97   |
 | OCZ       | AGILITY3           | 120 GB | DF8AF220BDFF | 1083  | 0     | 2.97   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 00D75A36933F | 1079  | 0     | 2.96   |
@@ -236,7 +239,6 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | B5B0FE43C12D | 1066  | 0     | 2.92   |
 | Crucial   | CT240M500SSD3      | 240 GB | 64E1F0133397 | 1063  | 0     | 2.91   |
 | Intel     | SSDSA2CW120G3      | 120 GB | EE8B34AD31F2 | 1060  | 0     | 2.91   |
-| Samsung   | SSD 850 PRO        | 128 GB | 041CFA3EC16F | 1060  | 0     | 2.91   |
 | Kingston  | SV300S37A60G       | 64 GB  | C845ED64DB25 | 1055  | 0     | 2.89   |
 | Samsung   | SSD 840 EVO        | 120 GB | 7C9F071A7344 | 1046  | 0     | 2.87   |
 | Samsung   | SSD 850 EVO        | 250 GB | BAA15A040E25 | 1046  | 0     | 2.87   |
@@ -245,7 +247,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | A9E70236B09A | 1040  | 0     | 2.85   |
 | OCZ       | VERTEX2 3.5        | 120 GB | 194718AC253F | 1040  | 0     | 2.85   |
 | Samsung   | SSD 850 EVO        | 250 GB | 54C758402C0C | 1038  | 0     | 2.85   |
-| Samsung   | SSD 850 PRO        | 128 GB | B57F6AF001D8 | 1036  | 0     | 2.84   |
 | KingFast  | SSD                | 256 GB | C4BE341B3BC3 | 1036  | 0     | 2.84   |
 | Corsair   | Force 3 SSD        | 120 GB | 55DD8201515C | 1032  | 0     | 2.83   |
 | Samsung   | SSD 850 EVO        | 120 GB | 2DB57EAC49A6 | 1030  | 0     | 2.82   |
@@ -257,8 +258,8 @@ Rating — avg. rating per sample.
 | SanDisk   | SD7UB2Q512G1122    | 512 GB | 6E13B0D84434 | 1017  | 0     | 2.79   |
 | Samsung   | SSD 850 PRO        | 512 GB | 4B0098E1B9A3 | 1015  | 0     | 2.78   |
 | Corsair   | Force 3 SSD        | 64 GB  | CAF53F69D8EC | 1013  | 0     | 2.78   |
+| OCZ       | VERTEX4            | 128 GB | 505965939CE5 | 1013  | 0     | 2.78   |
 | Samsung   | SSD 840 EVO        | 120 GB | FB8147E6D4A1 | 1013  | 0     | 2.78   |
-| OCZ       | VERTEX4            | 128 GB | 505965939CE5 | 1012  | 0     | 2.77   |
 | OCZ       | VERTEX3 MI         | 120 GB | D79AF6F23E87 | 1011  | 0     | 2.77   |
 | SanDisk   | SSD U110           | 32 GB  | 1D7EE1018001 | 1009  | 0     | 2.76   |
 | OCZ       | VERTEX4            | 128 GB | 17441FFAC1D6 | 1008  | 0     | 2.76   |
@@ -310,7 +311,6 @@ Rating — avg. rating per sample.
 | Plextor   | PX-64M3            | 64 GB  | 5F9AA42A2954 | 936   | 0     | 2.57   |
 | Toshiba   | THNSNH256GMCT      | 256 GB | A00C9861F700 | 935   | 0     | 2.56   |
 | Corsair   | Force 3 SSD        | 64 GB  | EF4FB37D521C | 934   | 0     | 2.56   |
-| OCZ       | VERTEX3            | 90 GB  | BE4975FB1492 | 928   | 0     | 2.54   |
 | Plextor   | PX-256M5S          | 256 GB | 2845846464D9 | 928   | 0     | 2.54   |
 | Samsung   | SSD 840 EVO        | 250 GB | B5AB631D5ABC | 926   | 0     | 2.54   |
 | Samsung   | SSD 850 EVO        | 500 GB | 19ACEC748099 | 925   | 0     | 2.54   |
@@ -333,6 +333,7 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 35D7223F8807 | 903   | 0     | 2.48   |
 | OCZ       | VERTEX4            | 128 GB | F47FCE7F1646 | 900   | 0     | 2.47   |
 | SPCC      | SSD                | 64 GB  | 8A1CFC46905E | 899   | 0     | 2.46   |
+| Intel     | SSDSC2CT060A3      | 64 GB  | 5472CCE05334 | 896   | 0     | 2.46   |
 | OCZ       | VERTEX3            | 64 GB  | 3C4238F59C2D | 895   | 0     | 2.45   |
 | Kingston  | SV300S37A60G       | 64 GB  | 7497DE772C35 | 894   | 0     | 2.45   |
 | SanDisk   | SD8SBBU240G1122    | 240 GB | 38DD4092FA4C | 888   | 0     | 2.43   |
@@ -361,7 +362,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 830 Series     | 128 GB | B0DE008F8B76 | 858   | 0     | 2.35   |
 | Apple     | SSD SM0256F        | 256 GB | 31FDF41740DC | 858   | 0     | 2.35   |
 | Intel     | SSDSC2BA200G4      | 200 GB | 90BC69D84FA2 | 857   | 0     | 2.35   |
-| Intel     | SSDSC2CT060A3      | 64 GB  | 5472CCE05334 | 856   | 0     | 2.35   |
 | Kingston  | SE50S3480G         | 480 GB | 0A3666F98F07 | 855   | 0     | 2.34   |
 | Samsung   | SSD 850 EVO        | 250 GB | 9A3B24B3BFB8 | 855   | 0     | 2.34   |
 | Samsung   | SSD 840 PRO Series | 128 GB | D37872C26109 | 854   | 0     | 2.34   |
@@ -411,6 +411,8 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDHII120G       | 120 GB | 96C2D12BA317 | 811   | 0     | 2.22   |
 | SanDisk   | SSD U110           | 128 GB | 00AD45B9C657 | 807   | 0     | 2.21   |
 | Plextor   | PX-256M5Pro        | 256 GB | F66146133175 | 806   | 0     | 2.21   |
+| OCZ       | VERTEX3            | 120 GB | 8F8B81513CEA | 805   | 0     | 2.21   |
+| SPCC      | SSD                | 64 GB  | F416CB372373 | 805   | 0     | 2.21   |
 | SanDisk   | SDSSDA240G         | 240 GB | E2DCB27EE4A5 | 803   | 0     | 2.20   |
 | OCZ       | DENRSTE251M45-0... | 100 GB | B24F73F5A789 | 801   | 0     | 2.20   |
 | Apple     | SSD SM0256F        | 256 GB | FAB59CF4A294 | 801   | 0     | 2.19   |
@@ -440,8 +442,8 @@ Rating — avg. rating per sample.
 | Crucial   | CT256MX100SSD1     | 256 GB | AEB03418406A | 775   | 0     | 2.12   |
 | Samsung   | MZYTY256HDHP-000L2 | 256 GB | 3002F4FDDFEE | 774   | 0     | 2.12   |
 | Kingston  | SV300S37A120G      | 120 GB | 13527EDE2820 | 774   | 0     | 2.12   |
+| ADATA     | SSD S510           | 120 GB | 6C0B381D664C | 774   | 0     | 2.12   |
 | OCZ       | AGILITY3           | 120 GB | 1CA9AD411BD7 | 773   | 0     | 2.12   |
-| ADATA     | SSD S510           | 120 GB | 6C0B381D664C | 773   | 0     | 2.12   |
 | Samsung   | SSD SM871 2.5 7mm  | 512 GB | 3687A82AFE0C | 773   | 0     | 2.12   |
 | Samsung   | SSD 840 EVO        | 250 GB | 9F95771AC322 | 772   | 0     | 2.12   |
 | Kingston  | SMS100S264G        | 64 GB  | 53952431DC7F | 771   | 0     | 2.11   |
@@ -490,7 +492,6 @@ Rating — avg. rating per sample.
 | Mushkin   | MKNSSDAT60GB-DX    | 64 GB  | 7B72DC087AD3 | 728   | 0     | 2.00   |
 | OCZ       | AGILITY3           | 64 GB  | EA10B9D458A8 | 728   | 0     | 1.99   |
 | SanDisk   | SDSSDHP128G        | 128 GB | 5147B69A20EE | 726   | 0     | 1.99   |
-| OCZ       | VERTEX3            | 120 GB | 8F8B81513CEA | 726   | 0     | 1.99   |
 | Kingston  | SV300S37A120G      | 120 GB | 0FAB01EC8EE5 | 726   | 0     | 1.99   |
 | Kingston  | SV300S37A120G      | 120 GB | 3D77D596C3F6 | 725   | 0     | 1.99   |
 | SanDisk   | SDSSDP128G         | 128 GB | E1874881924D | 724   | 0     | 1.98   |
@@ -625,8 +626,8 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 1 TB   | F831F5532CB9 | 630   | 0     | 1.73   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 74616A26396B | 630   | 0     | 1.73   |
 | SPCC      | SSD                | 120 GB | D347683F0E4C | 629   | 0     | 1.72   |
+| Kingston  | SV300S37A120G      | 120 GB | 302FCA32E93F | 629   | 0     | 1.72   |
 | Crucial   | CT240M500SSD1      | 240 GB | 49B9CA583432 | 628   | 0     | 1.72   |
-| Kingston  | SV300S37A120G      | 120 GB | 302FCA32E93F | 628   | 0     | 1.72   |
 | Samsung   | SSD 750 EVO        | 500 GB | 96A64F18164C | 627   | 0     | 1.72   |
 | OCZ       | VERTEX3            | 240 GB | 9ED434A36270 | 627   | 0     | 1.72   |
 | Kingston  | SV300S37A120G      | 120 GB | 0E8381253A53 | 626   | 0     | 1.72   |
@@ -681,8 +682,8 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 830 Series     | 512 GB | 29DB28F787B5 | 599   | 0     | 1.64   |
 | Kingston  | SMS200S3120G       | 120 GB | 32542886EC29 | 598   | 0     | 1.64   |
 | Samsung   | SSD 850 PRO        | 256 GB | 9804AB492CB4 | 598   | 0     | 1.64   |
-| Corsair   | Force 3 SSD        | 480 GB | A96400D3B2E4 | 598   | 0     | 1.64   |
 | Kingston  | SV300S37A60G       | 64 GB  | BB9BEDA3B8CE | 598   | 0     | 1.64   |
+| Corsair   | Force 3 SSD        | 480 GB | A96400D3B2E4 | 598   | 0     | 1.64   |
 | Samsung   | SSD 750 EVO        | 250 GB | 17C73330687E | 598   | 0     | 1.64   |
 | OCZ       | VERTEX4            | 128 GB | 619023F9327F | 597   | 0     | 1.64   |
 | Intel     | SSDSC2CT060A3      | 64 GB  | C5392A406F68 | 596   | 0     | 1.64   |
@@ -702,7 +703,8 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO M.2    | 500 GB | 82FA3D3C34DC | 587   | 0     | 1.61   |
 | Intel     | SSDSC2BW120A4      | 120 GB | F3554C7DF227 | 586   | 0     | 1.61   |
 | OCZ       | DENCSTE351M16-0... | 240 GB | 9C3DCFF07ED6 | 585   | 0     | 1.60   |
-| Kingston  | SV300S37A240G      | 240 GB | 785F0D112C56 | 584   | 0     | 1.60   |
+| Kingston  | SV300S37A240G      | 240 GB | 785F0D112C56 | 585   | 0     | 1.60   |
+| OCZ       | D2RSTK251E19-0200  | 200 GB | F2AC6C4F2BF2 | 584   | 0     | 1.60   |
 | Samsung   | SSD 830 Series     | 256 GB | DE6D85832FDB | 582   | 0     | 1.60   |
 | Kingston  | SH103S3120G        | 120 GB | CE1CE6D537A1 | 582   | 0     | 1.60   |
 | OCZ       | VERTEX2            | 115 GB | C7DF9DEE0C93 | 581   | 0     | 1.59   |
@@ -718,13 +720,14 @@ Rating — avg. rating per sample.
 | Plextor   | PX-512M7VC         | 512 GB | 69844E4D154E | 575   | 0     | 1.58   |
 | Corsair   | Force LS SSD       | 120 GB | 8054AFD3C3F5 | 575   | 0     | 1.58   |
 | Samsung   | SSD PM830 2.5" 7mm | 512 GB | DAFB05AE8F42 | 574   | 0     | 1.57   |
-| Kingston  | SUV400S37240G      | 240 GB | E6763A22BDDE | 572   | 0     | 1.57   |
 | ADATA     | SU800              | 256 GB | 3AF9A85E8D3A | 572   | 0     | 1.57   |
+| Kingston  | SUV400S37240G      | 240 GB | E6763A22BDDE | 572   | 0     | 1.57   |
 | OCZ       | VERTEX3 MI         | 120 GB | 0C0094EA18AE | 571   | 0     | 1.57   |
 | Kingston  | SA400S37120G       | 120 GB | 7A13E85A252D | 571   | 0     | 1.56   |
 | Samsung   | SSD 840 EVO        | 250 GB | ABC2964A780C | 570   | 0     | 1.56   |
 | SanDisk   | SD8SB8U512G1122    | 512 GB | 0F710BF2B729 | 569   | 0     | 1.56   |
 | Samsung   | SSD 750 EVO        | 250 GB | 7DF0F21FFAF0 | 569   | 0     | 1.56   |
+| ADATA     | SP900              | 128 GB | 3B1CB311E87D | 569   | 0     | 1.56   |
 | Kingston  | SV300S37A240G      | 240 GB | B212614E1E9D | 569   | 0     | 1.56   |
 | Kingston  | SHFS37A120G        | 120 GB | 03DCFC682B73 | 569   | 0     | 1.56   |
 | Crucial   | CT256MX100SSD1     | 256 GB | BF5B7BD185AD | 568   | 0     | 1.56   |
@@ -746,9 +749,8 @@ Rating — avg. rating per sample.
 | Samsung   | MZMPC128HBFU-000L1 | 128 GB | 3F4BCFABF27D | 559   | 0     | 1.53   |
 | SanDisk   | SDSSDP128G         | 128 GB | 37B40C8DE018 | 559   | 0     | 1.53   |
 | Patriot   | Torch LE           | 240 GB | AF587577D19E | 558   | 0     | 1.53   |
-| Kingston  | SV300S37A120G      | 120 GB | 2AE7F99F9EA5 | 554   | 0     | 1.52   |
+| Kingston  | SV300S37A120G      | 120 GB | 2AE7F99F9EA5 | 555   | 0     | 1.52   |
 | Kingston  | SV300S37A60G       | 64 GB  | C9BBBFC752E0 | 554   | 0     | 1.52   |
-| OCZ       | D2RSTK251E19-0200  | 200 GB | F2AC6C4F2BF2 | 554   | 0     | 1.52   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3810B93B98D6 | 553   | 0     | 1.52   |
 | Intel     | SSDSC2MH120A2      | 120 GB | 9C38D1F38485 | 553   | 0     | 1.52   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | D79BD64E4B28 | 552   | 0     | 1.51   |
@@ -766,7 +768,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 840 EVO        | 500 GB | 29F902297121 | 547   | 0     | 1.50   |
 | Samsung   | SSD 850 EVO        | 250 GB | 97A5FFE5CE03 | 547   | 0     | 1.50   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 015740974546 | 546   | 0     | 1.50   |
-| ADATA     | SP900              | 128 GB | 3B1CB311E87D | 546   | 0     | 1.50   |
 | SK hynix  | SC300 SATA         | 512 GB | 850F022ED6FE | 546   | 0     | 1.50   |
 | OCZ       | VECTOR150          | 120 GB | 91FF84297FCD | 546   | 0     | 1.50   |
 | Kingston  | SVP200S37A120G     | 120 GB | 34B18C767BE8 | 545   | 0     | 1.50   |
@@ -804,6 +805,7 @@ Rating — avg. rating per sample.
 | Goodram   | SSD                | 120 GB | 5049C3B42E30 | 535   | 0     | 1.47   |
 | OCZ       | VERTEX3            | 120 GB | A36698943F12 | 535   | 0     | 1.47   |
 | Phison    | SM280128GPTC15T... | 128 GB | 2C64EBFB7C07 | 535   | 0     | 1.47   |
+| Crucial   | M4-CT128M4SSD2     | 128 GB | 358EBC132AFB | 533   | 0     | 1.46   |
 | OCZ       | TRION100           | 240 GB | 42DA67EB8E63 | 532   | 0     | 1.46   |
 | OCZ       | VERTEX3            | 120 GB | 15E9E567E590 | 532   | 0     | 1.46   |
 | Samsung   | SSD 840 EVO        | 120 GB | 80F4271B6539 | 532   | 0     | 1.46   |
@@ -813,7 +815,6 @@ Rating — avg. rating per sample.
 | Toshiba   | TR150              | 120 GB | 2E10E5AACC49 | 531   | 0     | 1.46   |
 | Samsung   | SSD 850 EVO        | 250 GB | A7ACDEE301A3 | 531   | 0     | 1.46   |
 | Smartbuy  | SSD                | 64 GB  | 301EC36C1F48 | 531   | 0     | 1.46   |
-| Crucial   | M4-CT128M4SSD2     | 128 GB | 358EBC132AFB | 530   | 0     | 1.45   |
 | SPCC      | SSD                | 240 GB | 910DC23190C3 | 530   | 0     | 1.45   |
 | Kingston  | SHFS37A120G        | 120 GB | A8FD4FF59527 | 528   | 0     | 1.45   |
 | Kingston  | SVP200S37A60G      | 64 GB  | ADFEEE7ED21F | 528   | 0     | 1.45   |
@@ -822,6 +823,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDP256G         | 256 GB | 8FE5F0A07AF3 | 528   | 0     | 1.45   |
 | OCZ       | AGILITY3           | 64 GB  | 40FAB90FBF1C | 528   | 0     | 1.45   |
 | SPCC      | SSD                | 120 GB | 4CEB085FD4FB | 527   | 0     | 1.45   |
+| Samsung   | SSD 850 EVO        | 250 GB | B16F3A6947D1 | 527   | 0     | 1.44   |
 | Samsung   | SSD 840 EVO        | 120 GB | C1B00D304E7C | 526   | 0     | 1.44   |
 | ADATA     | SP600              | 128 GB | AD9367DEF404 | 525   | 0     | 1.44   |
 | Samsung   | SSD 850 PRO        | 512 GB | F518BF12E919 | 525   | 0     | 1.44   |
@@ -893,7 +895,6 @@ Rating — avg. rating per sample.
 | Intel     | SSDSC2BW120H6      | 120 GB | 82DFB236F789 | 492   | 0     | 1.35   |
 | Corsair   | Force 3 SSD        | 120 GB | 395D49E70455 | 491   | 0     | 1.35   |
 | Samsung   | MZMPC032HBCD-00000 | 32 GB  | 44E33A3CC57F | 491   | 0     | 1.35   |
-| Samsung   | SSD 850 EVO        | 250 GB | B16F3A6947D1 | 491   | 0     | 1.35   |
 | SanDisk   | SDSSDHII120G       | 120 GB | 7FDB39AD475D | 490   | 0     | 1.34   |
 | OCZ       | VERTEX3            | 120 GB | 689D7F6E554E | 1471  | 2     | 1.34   |
 | SanDisk   | SD6SB2M-512G-1006  | 512 GB | 0FE8F548DA79 | 490   | 0     | 1.34   |
@@ -931,6 +932,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 0746D43CFBD3 | 474   | 0     | 1.30   |
 | SanDisk   | SDSSDHII480G       | 480 GB | 7F6259357D69 | 474   | 0     | 1.30   |
 | SPCC      | SSD                | 64 GB  | ECA98EFF47FD | 474   | 0     | 1.30   |
+| Smartbuy  | SSD                | 120 GB | 4E3FAA5074A9 | 473   | 0     | 1.30   |
 | Kingston  | SV300S37A240G      | 240 GB | EF620976A751 | 473   | 0     | 1.30   |
 | Samsung   | MZMTD512HAGL-000MV | 512 GB | 57383A868CC1 | 473   | 0     | 1.30   |
 | Plextor   | PX-128M5S          | 128 GB | 3451198AFAA3 | 473   | 0     | 1.30   |
@@ -978,7 +980,6 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDA120G         | 120 GB | C5FE4B7017D4 | 455   | 0     | 1.25   |
 | Kingston  | SA400S37480G       | 480 GB | 88A12C5D2C79 | 454   | 0     | 1.25   |
 | OCZ       | VERTEX PLUS R2     | 128 GB | 712A9D374E1C | 454   | 0     | 1.24   |
-| Smartbuy  | SSD                | 120 GB | 4E3FAA5074A9 | 453   | 0     | 1.24   |
 | Samsung   | MZMTD128HAFV-000L1 | 128 GB | 1A6F46BAB69A | 453   | 0     | 1.24   |
 | OCZ       | TRION100           | 240 GB | DEB3B8D8C65B | 453   | 0     | 1.24   |
 | OCZ       | VERTEX4            | 256 GB | F6A30A3E7A30 | 453   | 0     | 1.24   |
@@ -1011,6 +1012,7 @@ Rating — avg. rating per sample.
 | ADATA     | SP900              | 64 GB  | 06BA7126CE39 | 445   | 0     | 1.22   |
 | OCZ       | AGILITY3           | 64 GB  | B8B515709CAE | 445   | 0     | 1.22   |
 | Samsung   | SSD 850 EVO        | 500 GB | 9398A1145F49 | 445   | 0     | 1.22   |
+| Plextor   | PX-128M7VC         | 128 GB | 1B17F432BD44 | 444   | 0     | 1.22   |
 | Toshiba   | A100               | 240 GB | F75F88CA5C27 | 444   | 0     | 1.22   |
 | Samsung   | MZNLF128HCHP-00000 | 128 GB | 6DD4C4255276 | 444   | 0     | 1.22   |
 | Samsung   | SSD 830 Series     | 128 GB | 69EBB0A2E2C7 | 443   | 0     | 1.22   |
@@ -1090,7 +1092,6 @@ Rating — avg. rating per sample.
 | Smartbuy  | SSD                | 240 GB | 64CB9C611505 | 420   | 0     | 1.15   |
 | Kingston  | SKC380S360G        | 64 GB  | 6435662A8490 | 420   | 0     | 1.15   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 6101DA1C8654 | 419   | 0     | 1.15   |
-| Plextor   | PX-128M7VC         | 128 GB | 1B17F432BD44 | 419   | 0     | 1.15   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 54D80BEC29AD | 419   | 0     | 1.15   |
 | OCZ       | AGILITY3           | 120 GB | 180B79301750 | 419   | 0     | 1.15   |
 | Kingston  | SMS200S3240G       | 240 GB | CAE2B64DA764 | 419   | 0     | 1.15   |
@@ -1119,6 +1120,7 @@ Rating — avg. rating per sample.
 | Samsung   | MZ7TE256HMHP-000L7 | 256 GB | 07AEE88A90FC | 415   | 0     | 1.14   |
 | SanDisk   | SDSSDA240G         | 240 GB | BBE626AE765A | 414   | 0     | 1.14   |
 | ADATA     | SSD S599           | 64 GB  | B64239A73CB4 | 414   | 0     | 1.14   |
+| Kingston  | SV300S37A240G      | 240 GB | 35354FB20A18 | 414   | 0     | 1.14   |
 | SPCC      | SSD                | 128 GB | E0539C730F97 | 413   | 0     | 1.13   |
 | Kingston  | SUV400S37120G      | 120 GB | 72B75677AD6E | 413   | 0     | 1.13   |
 | OCZ       | AGILITY4           | 128 GB | D2823CC9A819 | 413   | 0     | 1.13   |
@@ -1197,7 +1199,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 840 Series     | 120 GB | F20BF17A2DA6 | 395   | 0     | 1.08   |
 | OCZ       | VERTEX4            | 256 GB | 4D77E269F641 | 395   | 0     | 1.08   |
 | OCZ       | VERTEX2            | 120 GB | 94109FA34D80 | 393   | 0     | 1.08   |
-| Kingston  | SV300S37A240G      | 240 GB | 35354FB20A18 | 393   | 0     | 1.08   |
 | Samsung   | SSD 850 EVO        | 250 GB | 51984CB88E6C | 393   | 0     | 1.08   |
 | Samsung   | SSD 850 EVO        | 250 GB | FC3D24F53AAE | 393   | 0     | 1.08   |
 | Samsung   | SSD 850 PRO        | 128 GB | CF4996817286 | 392   | 0     | 1.08   |
@@ -1215,6 +1216,7 @@ Rating — avg. rating per sample.
 | Ramaxel   | RDM-II XM020C024G  | 24 GB  | CBB131C180B8 | 390   | 0     | 1.07   |
 | China     | SATA SSD           | 20 GB  | 2B7FA2AA2077 | 390   | 0     | 1.07   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 1519DCCDE24D | 390   | 0     | 1.07   |
+| Samsung   | SSD 750 EVO        | 250 GB | 2A88930BF2A4 | 390   | 0     | 1.07   |
 | Smartbuy  | SSD                | 64 GB  | 072BB85F4961 | 390   | 0     | 1.07   |
 | OCZ       | VERTEX2            | 120 GB | 20819BB599A0 | 390   | 0     | 1.07   |
 | ADATA     | SP600              | 64 GB  | C9E72EAD536C | 389   | 0     | 1.07   |
@@ -1408,7 +1410,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 840 EVO        | 500 GB | EBF92726060B | 343   | 0     | 0.94   |
 | Kingston  | SV300S37A120G      | 120 GB | 328D2E6C30F1 | 343   | 0     | 0.94   |
 | Intel     | SSDSC2BW240A4      | 240 GB | 641E3C981998 | 343   | 0     | 0.94   |
-| Samsung   | SSD 750 EVO        | 250 GB | 2A88930BF2A4 | 343   | 0     | 0.94   |
+| Intel     | SSDSC2BW120A4      | 120 GB | 8F93DF2A2EDA | 342   | 0     | 0.94   |
 | Kingston  | SV300S37A60G       | 64 GB  | D9937C118AE1 | 342   | 0     | 0.94   |
 | Kingston  | SV200S3256G        | 256 GB | 79655F6F3E06 | 341   | 0     | 0.94   |
 | OCZ       | VERTEX4            | 128 GB | F2D289F17B3C | 341   | 0     | 0.94   |
@@ -1453,6 +1455,7 @@ Rating — avg. rating per sample.
 | Kingston  | SUV300S37A240G     | 240 GB | FECC88AC04AB | 333   | 0     | 0.91   |
 | Samsung   | MZNLN256HMHQ-00000 | 256 GB | 9C5D5AA03108 | 333   | 0     | 0.91   |
 | SPCC      | SSD110             | 64 GB  | FDCE748E02FA | 333   | 0     | 0.91   |
+| Intel     | SSDSC2CT120A3      | 120 GB | D1E35E406467 | 2329  | 6     | 0.91   |
 | Kingston  | SV300S37A120G      | 120 GB | 5D008B6CA1ED | 332   | 0     | 0.91   |
 | Kingston  | SV300S37A120G      | 120 GB | 24009AF473E0 | 332   | 0     | 0.91   |
 | KingFast  | SSD                | 32 GB  | 99FDA69397DB | 332   | 0     | 0.91   |
@@ -1460,7 +1463,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 750 EVO        | 250 GB | A82B12D95AB4 | 331   | 0     | 0.91   |
 | Goodram   | CX100              | 120 GB | B5E6AC4579CF | 331   | 0     | 0.91   |
 | Patriot   | Burst              | 240 GB | 3DE510CF21B0 | 331   | 0     | 0.91   |
-| Intel     | SSDSC2CT120A3      | 120 GB | D1E35E406467 | 2317  | 6     | 0.91   |
 | SanDisk   | SDSSDA120G         | 120 GB | EBF1BB96D7BB | 330   | 0     | 0.91   |
 | Team      | L3 EVO SSD         | 120 GB | 913B42E0BD74 | 330   | 0     | 0.91   |
 | Smartbuy  | SSD                | 120 GB | EB6FD8A40E6E | 330   | 0     | 0.91   |
@@ -1498,7 +1500,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | 762ECE429F3B | 321   | 0     | 0.88   |
 | Kingston  | SV300S37A60G       | 64 GB  | 08EE21181890 | 321   | 0     | 0.88   |
 | OCZ       | VERTEX3 LP         | 64 GB  | 6E0FE56A8CDB | 320   | 0     | 0.88   |
-| SPCC      | SSD                | 64 GB  | F416CB372373 | 320   | 0     | 0.88   |
 | Samsung   | SSD 850 EVO        | 120 GB | CAA975C3B4B2 | 319   | 0     | 0.88   |
 | Samsung   | SSD 860 EVO        | 1 TB   | C689B101C809 | 319   | 0     | 0.88   |
 | Samsung   | SSD 840 EVO        | 250 GB | DD9038223B44 | 319   | 0     | 0.87   |
@@ -1526,7 +1527,6 @@ Rating — avg. rating per sample.
 | OCZ       | AGILITY3           | 90 GB  | C5186A2BF4CC | 313   | 0     | 0.86   |
 | Samsung   | SSD 830 Series     | 64 GB  | DBE196530C8C | 313   | 0     | 0.86   |
 | Samsung   | SSD 850 PRO        | 256 GB | 583B21A6B3BB | 313   | 0     | 0.86   |
-| Intel     | SSDSC2BW120A4      | 120 GB | 8F93DF2A2EDA | 313   | 0     | 0.86   |
 | SanDisk   | SD5SG2256G1052E    | 256 GB | D88B3B7442F2 | 313   | 0     | 0.86   |
 | Goodram   | C50                | 64 GB  | 5A23991EB05C | 313   | 0     | 0.86   |
 | Kingston  | SV300S37A60G       | 64 GB  | F93A1A1CAE4D | 313   | 0     | 0.86   |
@@ -1542,6 +1542,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 19527FCE9924 | 311   | 0     | 0.85   |
 | Samsung   | SSD 850 EVO        | 500 GB | 503DF11EB5AD | 311   | 0     | 0.85   |
 | Samsung   | SSD 850 EVO        | 500 GB | 8B0ED07F41B5 | 311   | 0     | 0.85   |
+| Samsung   | SSD 840 EVO        | 120 GB | FE3C6D41A3B9 | 311   | 0     | 0.85   |
 | China     | SATA SSD           | 20 GB  | 1FFCAE876A42 | 310   | 0     | 0.85   |
 | Kingston  | SV300S37A120G      | 120 GB | E23FAD128483 | 1553  | 4     | 0.85   |
 | Kingston  | SKC300S37A60G      | 64 GB  | B3CB5A078499 | 310   | 0     | 0.85   |
@@ -1588,6 +1589,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 732024DE69CF | 301   | 0     | 0.83   |
 | Samsung   | SSD 850 EVO        | 500 GB | 8EA79F4521BC | 301   | 0     | 0.83   |
 | Samsung   | SSD 850 EVO        | 500 GB | E54DC124140E | 301   | 0     | 0.83   |
+| Samsung   | SSD 850 PRO        | 128 GB | 19A862BE0980 | 301   | 0     | 0.83   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | 1E01BED86D2E | 301   | 0     | 0.83   |
 | Goodram   | SSD                | 240 GB | DF289194FCA9 | 301   | 0     | 0.82   |
 | Samsung   | MZ7TD128HAFV-00000 | 128 GB | 85CD68A944C0 | 300   | 0     | 0.82   |
@@ -1610,7 +1612,6 @@ Rating — avg. rating per sample.
 | OCZ       | AGILITY3           | 120 GB | 3E051E564550 | 297   | 0     | 0.81   |
 | SanDisk   | X300 2.5 7MM       | 256 GB | 6C3CB68672BA | 297   | 0     | 0.81   |
 | Samsung   | SSD 840 EVO        | 120 GB | 253A338833D8 | 297   | 0     | 0.81   |
-| Samsung   | SSD 840 EVO        | 120 GB | FE3C6D41A3B9 | 296   | 0     | 0.81   |
 | Samsung   | SSD 840 EVO        | 120 GB | CDC3504ACE78 | 296   | 0     | 0.81   |
 | Samsung   | SSD 860 EVO        | 500 GB | AD22F9D47A6F | 296   | 0     | 0.81   |
 | Kingston  | SV300S37A60G       | 64 GB  | 5FBC2077D9C4 | 296   | 0     | 0.81   |
@@ -1644,12 +1645,12 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 120 GB | 14EF982D64F3 | 286   | 0     | 0.79   |
 | OCZ       | CACHE-SYNAPSE      | 32 GB  | 78F39A76FB6F | 286   | 0     | 0.79   |
 | Samsung   | SSD 750 EVO        | 120 GB | F414A7C737E0 | 286   | 0     | 0.78   |
+| BIWIN     | SSD                | 128 GB | 93EC38CE301D | 286   | 0     | 0.78   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | DFE963C12775 | 286   | 0     | 0.78   |
 | Apple     | SSD SM0512F        | 500 GB | 7944ECA216C5 | 285   | 0     | 0.78   |
 | SPCC      | SSD                | 120 GB | 629657DFB433 | 285   | 0     | 0.78   |
 | Intel     | SSDSC2BA200G4      | 200 GB | F0B2E09F2543 | 857   | 2     | 0.78   |
 | Kingston  | SM2280S3G2120G     | 120 GB | 271E7ECE8B2E | 285   | 0     | 0.78   |
-| BIWIN     | SSD                | 128 GB | 93EC38CE301D | 285   | 0     | 0.78   |
 | SanDisk   | SSD U100           | 128 GB | 416A204681B0 | 571   | 1     | 0.78   |
 | Kingston  | SV300S37A120G      | 120 GB | AEDB65B0A63F | 285   | 0     | 0.78   |
 | Toshiba   | THNSNJ128GCSU      | 128 GB | 13A729A44398 | 284   | 0     | 0.78   |
@@ -1666,6 +1667,7 @@ Rating — avg. rating per sample.
 | OCZ       | VERTEX4            | 128 GB | 191793EDDB6E | 283   | 0     | 0.78   |
 | Corsair   | CMFSSD-32D1        | 32 GB  | A9AE1BB81E59 | 566   | 1     | 0.78   |
 | SPCC      | SSD                | 64 GB  | E198EB86C717 | 283   | 0     | 0.78   |
+| China     | 128GB SSD          | 128 GB | 0F521CCBA72D | 283   | 0     | 0.78   |
 | Samsung   | MZMPA024HMCD-000L1 | 24 GB  | A509351C7BED | 283   | 0     | 0.78   |
 | OCZ       | AGILITY3           | 90 GB  | 21289F2E0777 | 849   | 2     | 0.78   |
 | Kingston  | SA400S37120G       | 120 GB | BDDC247DC607 | 283   | 0     | 0.78   |
@@ -1676,7 +1678,6 @@ Rating — avg. rating per sample.
 | Kingston  | SM2280S3G2120G     | 120 GB | F131D4D9E2EF | 281   | 0     | 0.77   |
 | Samsung   | SSD 840 EVO        | 250 GB | 011542E637FF | 281   | 0     | 0.77   |
 | Team      | L3 EVO SSD         | 120 GB | 0064659DC50B | 281   | 0     | 0.77   |
-| Samsung   | SSD 850 PRO        | 128 GB | 19A862BE0980 | 281   | 0     | 0.77   |
 | Kingston  | SV300S37A120G      | 120 GB | 6D138D524D25 | 280   | 0     | 0.77   |
 | OCZ       | VERTEX3            | 240 GB | E1651AFE21F6 | 280   | 0     | 0.77   |
 | Intenso   | SSD                | 128 GB | 8CB0C5C24E69 | 561   | 1     | 0.77   |
@@ -1894,9 +1895,8 @@ Rating — avg. rating per sample.
 | Intel     | SSDSA2M080G2HP     | 80 GB  | F391606DFC5F | 245   | 0     | 0.67   |
 | OCZ       | VERTEX4            | 256 GB | F1E378579F07 | 245   | 0     | 0.67   |
 | Kingston  | SV300S37A60G       | 64 GB  | BECE766FA8F2 | 245   | 0     | 0.67   |
-| China     | 128GB SSD          | 128 GB | 0F521CCBA72D | 244   | 0     | 0.67   |
-| Intel     | SSDSA1MH080G1GN    | 80 GB  | C2780508CBA5 | 244   | 0     | 0.67   |
 | Samsung   | SSD 850 EVO        | 500 GB | CE83DDEF7FAA | 244   | 0     | 0.67   |
+| Intel     | SSDSA1MH080G1GN    | 80 GB  | C2780508CBA5 | 244   | 0     | 0.67   |
 | Samsung   | SSD 830 Series     | 256 GB | 57C337466D0C | 243   | 0     | 0.67   |
 | Hypertec  | SSD2S240SF1200SA2  | 240 GB | D1A2D45C03E1 | 243   | 0     | 0.67   |
 | Corsair   | CSSD-V64GB2        | 64 GB  | 911C750C055C | 243   | 0     | 0.67   |
@@ -1910,6 +1910,7 @@ Rating — avg. rating per sample.
 | Plextor   | PX-64M2S           | 64 GB  | B47202A37D4C | 240   | 0     | 0.66   |
 | Samsung   | SSD 850 EVO        | 120 GB | 0630424B45A1 | 240   | 0     | 0.66   |
 | Kingston  | SA400S37240G       | 240 GB | 8BC6F8B4A2FA | 240   | 0     | 0.66   |
+| SanDisk   | SDSSDHP128G        | 128 GB | 00E15037B28F | 240   | 0     | 0.66   |
 | China     | SATA SSD           | 64 GB  | 059AC055BF16 | 240   | 0     | 0.66   |
 | SanDisk   | SDSSDP256G         | 256 GB | D6E9BF3DEAAE | 240   | 0     | 0.66   |
 | Kingston  | SV300S37A120G      | 120 GB | 1E2144CDA06C | 240   | 0     | 0.66   |
@@ -1976,11 +1977,12 @@ Rating — avg. rating per sample.
 | Apple     | SSD TS128C         | 121 GB | D6CC177F68EB | 231   | 0     | 0.64   |
 | Goodram   | SSD                | 120 GB | 0B2BF616B104 | 231   | 0     | 0.64   |
 | SPCC      | SSD                | 120 GB | A4E2AC49147A | 231   | 0     | 0.63   |
+| Samsung   | MZMTD128HAFV-000L1 | 128 GB | B365AB4E1FBC | 231   | 0     | 0.63   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 46574687E94E | 230   | 0     | 0.63   |
+| Intel     | SSDSC2CT180A4      | 180 GB | AD2B17A21CD2 | 230   | 0     | 0.63   |
 | Patriot   | Blast              | 120 GB | DD9FABBE6A45 | 230   | 0     | 0.63   |
 | Kingston  | SV300S37A120G      | 120 GB | DE13B3418F75 | 230   | 0     | 0.63   |
 | SanDisk   | SDSSDH3250G        | 250 GB | D11B63C418DC | 230   | 0     | 0.63   |
-| Intel     | SSDSC2CT180A4      | 180 GB | AD2B17A21CD2 | 230   | 0     | 0.63   |
 | SPCC      | SSD170             | 120 GB | A6434813F42D | 230   | 0     | 0.63   |
 | SanDisk   | Z400s M.2 2280     | 256 GB | CA7CCB9C57D5 | 229   | 0     | 0.63   |
 | Kingston  | SV300S37A120G      | 120 GB | 5A057E68A4ED | 229   | 0     | 0.63   |
@@ -1997,7 +1999,9 @@ Rating — avg. rating per sample.
 | Corsair   | Force 3 SSD        | 64 GB  | D4CF64E0A500 | 683   | 2     | 0.62   |
 | Smartbuy  | SSD                | 120 GB | 9DE5F24530BD | 227   | 0     | 0.62   |
 | SanDisk   | SDSSDH3512G        | 512 GB | 3CDE7E1C1488 | 227   | 0     | 0.62   |
+| SanDisk   | SDSSDA240G         | 240 GB | 94CA13E202FD | 227   | 0     | 0.62   |
 | Team      | L3 SSD             | 120 GB | 01E60A4E1819 | 227   | 0     | 0.62   |
+| Crucial   | CT240M500SSD1      | 240 GB | D63D23321EA4 | 227   | 0     | 0.62   |
 | Kingston  | SUV400S37120G      | 120 GB | 033271BA1748 | 227   | 0     | 0.62   |
 | Patriot   | Blaze              | 64 GB  | 43D365738B90 | 226   | 0     | 0.62   |
 | SanDisk   | SSD PLUS           | 120 GB | 23A20CDE54B5 | 226   | 0     | 0.62   |
@@ -2057,8 +2061,8 @@ Rating — avg. rating per sample.
 | SanDisk   | SSD U110           | 16 GB  | 7A84E9B7F4F7 | 217   | 0     | 0.60   |
 | Kingston  | SVP200S37A90G      | 90 GB  | B1355175F9CE | 217   | 0     | 0.60   |
 | Kingston  | SV300S37A120G      | 120 GB | 8C4C33DD9675 | 217   | 0     | 0.60   |
+| Samsung   | SSD 750 EVO        | 250 GB | 2A2C48B32683 | 217   | 0     | 0.60   |
 | China     | SATA SSD           | 20 GB  | 548BDF8BACC9 | 217   | 0     | 0.59   |
-| Samsung   | SSD 750 EVO        | 250 GB | 2A2C48B32683 | 217   | 0     | 0.59   |
 | Kingston  | SV300S37A120G      | 120 GB | 99B73C9A8603 | 217   | 0     | 0.59   |
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | 895CAC19FBBD | 217   | 0     | 0.59   |
 | Toshiba   | THNSNJ128GCSU      | 128 GB | F54B8A35D33C | 217   | 0     | 0.59   |
@@ -2068,7 +2072,6 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 547442AE57A2 | 216   | 0     | 0.59   |
 | Kingston  | SV300S37A120G      | 120 GB | 1090255F9E58 | 215   | 0     | 0.59   |
 | OCZ       | AGILITY3           | 240 GB | 5910AAEDD5A1 | 215   | 0     | 0.59   |
-| SanDisk   | SDSSDHP128G        | 128 GB | 00E15037B28F | 215   | 0     | 0.59   |
 | Apacer    | AST680S            | 128 GB | 82F50F1D2CA2 | 215   | 0     | 0.59   |
 | Kingston  | SV300S37A120G      | 120 GB | F07B257C6BC6 | 215   | 0     | 0.59   |
 | Kingston  | SV300S37A120G      | 120 GB | BC314F70E010 | 214   | 0     | 0.59   |
@@ -2083,7 +2086,6 @@ Rating — avg. rating per sample.
 | SPCC      | SSD                | 64 GB  | A44102B037F2 | 213   | 0     | 0.59   |
 | Crucial   | C300-CTFDDAC256MAG | 256 GB | 885A02DCCFF8 | 213   | 0     | 0.58   |
 | Kingston  | SV300S37A60G       | 64 GB  | 8729F667EC69 | 213   | 0     | 0.58   |
-| Samsung   | MZMTD128HAFV-000L1 | 128 GB | B365AB4E1FBC | 213   | 0     | 0.58   |
 | Kingston  | SA400S37240G       | 240 GB | 5FFA1E7440BD | 213   | 0     | 0.58   |
 | Kingston  | SH103S3240G        | 240 GB | 523D2D331398 | 212   | 0     | 0.58   |
 | Samsung   | SSD 840 EVO        | 120 GB | 8B2115D968A3 | 212   | 0     | 0.58   |
@@ -2173,9 +2175,11 @@ Rating — avg. rating per sample.
 | Plextor   | PX-256M7VC         | 256 GB | ED5D36D27008 | 202   | 0     | 0.56   |
 | Samsung   | SSD 850 EVO        | 500 GB | 14C36CD03F52 | 202   | 0     | 0.56   |
 | Samsung   | SSD 850 EVO        | 500 GB | 3979A596743C | 202   | 0     | 0.56   |
+| SanDisk   | SD6SF1M128G1022I   | 128 GB | 7286396D9220 | 405   | 1     | 0.56   |
 | OCZ       | D2CSTK181M11-0180  | 180 GB | FEBD18FF74AF | 202   | 0     | 0.55   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 3D69A490C72A | 202   | 0     | 0.55   |
 | Plextor   | PX-128M6S          | 128 GB | CF50A609CA9F | 202   | 0     | 0.55   |
+| ADATA     | SP900              | 128 GB | C1BB7F212FC2 | 202   | 0     | 0.55   |
 | Goodram   | SSD                | 120 GB | 117580438001 | 202   | 0     | 0.55   |
 | Toshiba   | THNSNJ128GCST      | 128 GB | 857D81C717A6 | 201   | 0     | 0.55   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 63383BC7F7AC | 201   | 0     | 0.55   |
@@ -2195,7 +2199,6 @@ Rating — avg. rating per sample.
 | ADATA     | SP600              | 256 GB | B7617863979E | 199   | 0     | 0.55   |
 | OCZ       | VERTEX PLUS R2     | 64 GB  | 02AF33437BED | 199   | 0     | 0.55   |
 | SanDisk   | X400 M.2 2280      | 256 GB | F2E302C59874 | 199   | 0     | 0.55   |
-| ADATA     | SP900              | 128 GB | C1BB7F212FC2 | 199   | 0     | 0.55   |
 | SPCC      | SSD                | 120 GB | F7880AC24563 | 199   | 0     | 0.55   |
 | Samsung   | SSD 850 EVO        | 500 GB | D49DB7C27B24 | 199   | 0     | 0.55   |
 | Kingston  | SV300S37A60G       | 64 GB  | B32159520E2B | 199   | 0     | 0.55   |
@@ -2211,17 +2214,16 @@ Rating — avg. rating per sample.
 | Samsung   | MZNLN256HCHP-000L2 | 256 GB | 2CBD05555CDD | 198   | 0     | 0.54   |
 | SPCC      | SSD                | 64 GB  | B287B1620C27 | 198   | 0     | 0.54   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | F240509548EB | 198   | 0     | 0.54   |
-| SanDisk   | SD6SF1M128G1022I   | 128 GB | 7286396D9220 | 396   | 1     | 0.54   |
 | Samsung   | SSD 840 EVO        | 500 GB | 1E6EC91CE3EC | 197   | 0     | 0.54   |
 | Samsung   | SSD 850 EVO        | 250 GB | DA544B63C559 | 197   | 0     | 0.54   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | D6DAAE56797E | 197   | 0     | 0.54   |
+| SanDisk   | SD8SN8U128G1002    | 128 GB | A930CA17E019 | 197   | 0     | 0.54   |
 | Kingston  | SV300S37A120G      | 120 GB | 1134AD34DA71 | 591   | 2     | 0.54   |
 | Samsung   | SSD 850 EVO        | 250 GB | C9A557537AD8 | 196   | 0     | 0.54   |
 | Kingston  | SV300S37A60G       | 64 GB  | 1F0533A733C6 | 196   | 0     | 0.54   |
 | Samsung   | SSD 860 PRO        | 512 GB | 4BEA40A0D7B6 | 196   | 0     | 0.54   |
 | Samsung   | SSD 840 EVO        | 120 GB | 2273EDA39884 | 196   | 0     | 0.54   |
 | Samsung   | SSD 850 PRO        | 512 GB | 8B303DADDA3B | 196   | 0     | 0.54   |
-| SanDisk   | SDSSDA240G         | 240 GB | 94CA13E202FD | 196   | 0     | 0.54   |
 | SPCC      | SSD                | 64 GB  | 3AFC8AF1B3F7 | 196   | 0     | 0.54   |
 | Kingston  | SVP200S3120G       | 120 GB | DC785CDD26B3 | 196   | 0     | 0.54   |
 | Samsung   | MZNTD256HAGL-00000 | 256 GB | 39156884D76A | 196   | 0     | 0.54   |
@@ -2240,6 +2242,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDHP128G        | 128 GB | 7296CF710513 | 194   | 0     | 0.53   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | B0D630DF8496 | 194   | 0     | 0.53   |
 | OCZ       | VERTEX4            | 64 GB  | ED74B1FABFA9 | 193   | 0     | 0.53   |
+| OCZ       | VERTEX PLUS        | 64 GB  | 721142275D37 | 387   | 1     | 0.53   |
 | ADATA     | SP580              | 120 GB | 10498B1DFB81 | 193   | 0     | 0.53   |
 | ADATA     | SP580              | 120 GB | 9C12EDFC6CE8 | 193   | 0     | 0.53   |
 | Samsung   | MZMTD128HAFV-000L1 | 128 GB | 3F301F765E42 | 193   | 0     | 0.53   |
@@ -2251,11 +2254,8 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | D7925FFF1F84 | 192   | 0     | 0.53   |
 | ADATA     | SX930              | 120 GB | FAA2C75B4673 | 192   | 0     | 0.53   |
 | SanDisk   | SDSSDA240G         | 240 GB | 6B7053A8F9A6 | 192   | 0     | 0.53   |
-| OCZ       | VERTEX PLUS        | 64 GB  | 721142275D37 | 385   | 1     | 0.53   |
 | Samsung   | SSD 840 EVO        | 250 GB | EA6E817445B6 | 192   | 0     | 0.53   |
 | Kingston  | SV300S37A120G      | 120 GB | 4FF2D9801523 | 192   | 0     | 0.53   |
-| Crucial   | CT240M500SSD1      | 240 GB | D63D23321EA4 | 192   | 0     | 0.53   |
-| SanDisk   | SD8SN8U128G1002    | 128 GB | A930CA17E019 | 192   | 0     | 0.53   |
 | SPCC      | SSD110             | 120 GB | 3A62DDBE0173 | 191   | 0     | 0.53   |
 | Crucial   | M4-CT064M4SSD2     | 64 GB  | 87F6EF175BEE | 191   | 0     | 0.53   |
 | Kingston  | SUV300S37A240G     | 240 GB | 3039E42C2D29 | 191   | 0     | 0.53   |
@@ -2325,11 +2325,11 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 840 EVO 250... | 250 GB | D9C7F7248CC4 | 184   | 0     | 0.51   |
 | Samsung   | MZNTY256HDHP-000L7 | 256 GB | DEA51BB51A59 | 184   | 0     | 0.50   |
 | SanDisk   | SDSSDHP128G        | 128 GB | F757A4AC8E1A | 184   | 0     | 0.50   |
+| Crucial   | CT500MX500SSD1     | 500 GB | C2FCEEE21826 | 184   | 0     | 0.50   |
 | OCZ       | VERTEX3            | 120 GB | 028E37A19159 | 552   | 2     | 0.50   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 151F9CE830F5 | 183   | 0     | 0.50   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | F25E465EFB36 | 183   | 0     | 0.50   |
 | Crucial   | CT500MX500SSD1     | 500 GB | EFB5D64F4AA8 | 183   | 0     | 0.50   |
-| Crucial   | CT500MX500SSD1     | 500 GB | C2FCEEE21826 | 183   | 0     | 0.50   |
 | Samsung   | SSD 850 EVO        | 500 GB | 67A49514A595 | 183   | 0     | 0.50   |
 | Kingston  | SA400S37120G       | 120 GB | 6466F8C5CFB6 | 183   | 0     | 0.50   |
 | Apacer    | AS350              | 256 GB | 9F6AA52B3159 | 183   | 0     | 0.50   |
@@ -2348,6 +2348,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 840 PRO Series | 256 GB | 3DC9D245F334 | 180   | 0     | 0.50   |
 | Samsung   | SSD 840 Series     | 250 GB | 94A8ED2B3F63 | 180   | 0     | 0.50   |
 | Transcend | TS128GMSA740       | 128 GB | 1B34CB373453 | 180   | 0     | 0.50   |
+| Kingston  | SMS200S360G        | 64 GB  | 7C2C677C1D1A | 180   | 0     | 0.49   |
 | Kingston  | SV300S37A120G      | 120 GB | 6A299F13A4AB | 180   | 0     | 0.49   |
 | SanDisk   | X400 M.2 2280      | 256 GB | 3066232D0BB3 | 180   | 0     | 0.49   |
 | Corsair   | Force GS           | 128 GB | FFF21D518C49 | 180   | 0     | 0.49   |
@@ -2368,6 +2369,7 @@ Rating — avg. rating per sample.
 | Intel     | SSDSC2BW240A4      | 240 GB | 5C3B78886819 | 178   | 0     | 0.49   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | AAEF816E07F4 | 178   | 0     | 0.49   |
 | OCZ       | ARC100             | 240 GB | B8520EB1EEFF | 178   | 0     | 0.49   |
+| Intel     | SSDSC2CT240A4      | 240 GB | 9C20DC528D88 | 178   | 0     | 0.49   |
 | SPCC      | SSD                | 120 GB | 2EA099E77122 | 178   | 0     | 0.49   |
 | Team      | L3 EVO SSD         | 120 GB | 474AE572E57E | 178   | 0     | 0.49   |
 | ADATA     | SSD S599           | 64 GB  | D9A1E9101CD9 | 178   | 0     | 0.49   |
@@ -2451,7 +2453,6 @@ Rating — avg. rating per sample.
 | Toshiba   | TR150              | 120 GB | 9BE63C4F9B64 | 168   | 0     | 0.46   |
 | Toshiba   | Q300               | 120 GB | AAD0C96D8FF4 | 168   | 0     | 0.46   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | A952DA0C03D7 | 167   | 0     | 0.46   |
-| Intel     | SSDSC2CT240A4      | 240 GB | 9C20DC528D88 | 167   | 0     | 0.46   |
 | Samsung   | SSD 840 EVO        | 120 GB | 96C250EEFF67 | 167   | 0     | 0.46   |
 | Samsung   | SSD 840 EVO        | 120 GB | E834D52BDF38 | 167   | 0     | 0.46   |
 | Samsung   | SSD 840 EVO        | 500 GB | 50E3B440D063 | 167   | 0     | 0.46   |
@@ -2497,9 +2498,9 @@ Rating — avg. rating per sample.
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 8F1A74035DCA | 162   | 0     | 0.44   |
 | SanDisk   | SDSSDP128G         | 128 GB | 188596CD435A | 162   | 0     | 0.44   |
 | Intel     | SSDSC2CT180A4      | 180 GB | 0F77C389412A | 161   | 0     | 0.44   |
+| Apacer    | 256GB SATA Flas... | 256 GB | C2FBA5B95E36 | 161   | 0     | 0.44   |
 | Crucial   | M4-CT512M4SSD1     | 512 GB | 79036EC8DA1B | 161   | 0     | 0.44   |
 | Plextor   | PX-256M7VC         | 256 GB | 0FFF882A31C6 | 161   | 0     | 0.44   |
-| Apacer    | 256GB SATA Flas... | 256 GB | C2FBA5B95E36 | 161   | 0     | 0.44   |
 | Kingston  | SV300S37A120G      | 120 GB | E3FF842DEE6B | 161   | 0     | 0.44   |
 | Samsung   | MZ7LF192HCGS-000L1 | 192 GB | D4B2E795F6ED | 161   | 0     | 0.44   |
 | SK hynix  | SC311 SATA         | 128 GB | 9BBF50740022 | 161   | 0     | 0.44   |
@@ -2559,6 +2560,7 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37480G       | 480 GB | 2A1F908AE102 | 154   | 0     | 0.42   |
 | Kingston  | SUV400S37240G      | 240 GB | D15B9CCDD6CD | 154   | 0     | 0.42   |
 | Samsung   | SSD 860 EVO        | 250 GB | 231DE38C3B43 | 154   | 0     | 0.42   |
+| Toshiba   | TR200              | 480 GB | F321DBAA1E7E | 154   | 0     | 0.42   |
 | Kingston  | SHFS37A120G        | 120 GB | EAACC5D78AB4 | 153   | 0     | 0.42   |
 | Samsung   | MZNTD128HAGM-00000 | 128 GB | 5D216EE68176 | 153   | 0     | 0.42   |
 | Kingston  | SA400S37240G       | 240 GB | 8BD822D947F9 | 153   | 0     | 0.42   |
@@ -2578,7 +2580,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 840 EVO 500... | 500 GB | D1AF85074BE6 | 152   | 0     | 0.42   |
 | Intenso   | SSD                | 256 GB | AC238FC79E23 | 152   | 0     | 0.42   |
 | Samsung   | SSD 850 EVO        | 500 GB | 24A603801241 | 152   | 0     | 0.42   |
-| Kingston  | SMS200S360G        | 64 GB  | 7C2C677C1D1A | 151   | 0     | 0.41   |
 | Crucial   | FCCT512MX100SSD1   | 512 GB | 9050D6C31467 | 151   | 0     | 0.41   |
 | Kingston  | SHFS37A120G        | 120 GB | 5026983A96DD | 151   | 0     | 0.41   |
 | Kingston  | SA400S37120G       | 120 GB | 4F555F1AFCA5 | 151   | 0     | 0.41   |
@@ -2636,6 +2637,7 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37120G       | 120 GB | 80706C4037A2 | 145   | 0     | 0.40   |
 | Kingston  | SH103S3240G        | 240 GB | BAF49F017C95 | 145   | 0     | 0.40   |
 | Corsair   | Force GS           | 128 GB | 2A378FA79F11 | 144   | 0     | 0.40   |
+| Kingston  | SV300S37A120G      | 120 GB | BA08CA53606E | 144   | 0     | 0.40   |
 | Kingston  | SUV400S37120G      | 120 GB | DB13D70A114D | 144   | 0     | 0.40   |
 | Kingston  | SV300S37A120G      | 120 GB | 7CC4AC20B69F | 144   | 0     | 0.40   |
 | ADATA     | SU800              | 128 GB | 053E2776DF9A | 144   | 0     | 0.40   |
@@ -2679,6 +2681,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | C9DF90A542FD | 141   | 0     | 0.39   |
 | Kingston  | SUV400S37240G      | 240 GB | C5ABA8560605 | 140   | 0     | 0.39   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1C687B276EEA | 140   | 0     | 0.39   |
+| Samsung   | SSD 750 EVO        | 500 GB | 489CAEDE3D35 | 140   | 0     | 0.39   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | DA31D05E614C | 140   | 0     | 0.39   |
 | Kingston  | SA400S37240G       | 240 GB | F4F5F263D7BA | 140   | 0     | 0.38   |
 | SPCC      | SSD                | 240 GB | 79D22944935E | 140   | 0     | 0.38   |
@@ -2692,6 +2695,7 @@ Rating — avg. rating per sample.
 | China     | 120GB SSD          | 120 GB | 3ECA0946FE81 | 139   | 0     | 0.38   |
 | Kingston  | SHFS37A240G        | 240 GB | 827272E340E6 | 139   | 0     | 0.38   |
 | OCZ       | D2CSTK181M11-0180  | 180 GB | 807DA658AABF | 139   | 0     | 0.38   |
+| SanDisk   | SDSSDA240G         | 240 GB | 38F6608824EB | 139   | 0     | 0.38   |
 | Kingston  | SA400S37120G       | 120 GB | A38F69F4F6B9 | 139   | 0     | 0.38   |
 | SanDisk   | SSD U110           | 16 GB  | 9195008AF024 | 139   | 0     | 0.38   |
 | Goodram   | CX100              | 120 GB | BD48B4CB839B | 139   | 0     | 0.38   |
@@ -2708,6 +2712,7 @@ Rating — avg. rating per sample.
 | Crucial   | CT500BX100SSD1     | 500 GB | 82CAEA192719 | 137   | 0     | 0.38   |
 | Crucial   | CT500MX500SSD1     | 500 GB | C2B2E4E73518 | 137   | 0     | 0.38   |
 | OCZ       | ARC100             | 120 GB | 94DCA16CDCE2 | 137   | 0     | 0.38   |
+| SPCC      | SSD                | 120 GB | 3AEA4390DBBB | 137   | 0     | 0.38   |
 | Samsung   | SSD 850            | 120 GB | 30260B2A1320 | 137   | 0     | 0.38   |
 | Samsung   | SSD 850 EVO        | 250 GB | 46363BE7FBF2 | 137   | 0     | 0.38   |
 | China     | 64GB SSD           | 64 GB  | 6136041D5FBE | 137   | 0     | 0.38   |
@@ -2716,8 +2721,8 @@ Rating — avg. rating per sample.
 | SanDisk   | SSD PLUS 120 GB    | 120 GB | 4682F5F5F7E8 | 137   | 0     | 0.38   |
 | SanDisk   | Ultra II           | 250 GB | 7DB702ACBE45 | 137   | 0     | 0.38   |
 | ADATA     | SP600              | 32 GB  | 7F0744EDDF31 | 137   | 0     | 0.38   |
-| Samsung   | SSD 840 EVO        | 250 GB | 81D506D4BD1F | 137   | 0     | 0.38   |
 | Kingston  | RBUSNS8180DS3128GH | 128 GB | 7BBA0F5E206D | 137   | 0     | 0.38   |
+| Samsung   | SSD 840 EVO        | 250 GB | 81D506D4BD1F | 137   | 0     | 0.38   |
 | Samsung   | SSD 860 EVO        | 1 TB   | E81FB085DAAF | 137   | 0     | 0.38   |
 | Samsung   | SSD 850 PRO        | 256 GB | 90C66A7A86EA | 137   | 0     | 0.38   |
 | Transcend | TS1TSSD230S        | 1 TB   | 85BD1C9F0A90 | 137   | 0     | 0.38   |
@@ -2808,6 +2813,7 @@ Rating — avg. rating per sample.
 | Corsair   | Force LS SSD       | 64 GB  | 873B6017797B | 127   | 0     | 0.35   |
 | Goodram   | C40                | 120 GB | B8AC519ECDB4 | 127   | 0     | 0.35   |
 | Samsung   | SSD 840 EVO        | 250 GB | 188C3C94C684 | 255   | 1     | 0.35   |
+| ADATA     | SU900              | 256 GB | 796C22865F51 | 127   | 0     | 0.35   |
 | Samsung   | MZNLF128HCHP-00004 | 128 GB | D82B30FE054D | 127   | 0     | 0.35   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 7A4662540426 | 127   | 0     | 0.35   |
 | Goodram   | SSD                | 120 GB | CF664124626B | 127   | 0     | 0.35   |
@@ -2815,7 +2821,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | AF501909F035 | 127   | 0     | 0.35   |
 | SanDisk   | SSD PLUS           | 1 TB   | 5510D3D9776F | 127   | 0     | 0.35   |
 | Kingston  | SUV300S37A120G     | 120 GB | 53AADE93C651 | 127   | 0     | 0.35   |
-| Toshiba   | TR200              | 480 GB | F321DBAA1E7E | 127   | 0     | 0.35   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | B508B845AB36 | 126   | 0     | 0.35   |
 | Kingston  | SV300S37A60G       | 64 GB  | 26C6CF2B0A5A | 126   | 0     | 0.35   |
 | Smartbuy  | SSD                | 120 GB | 2933C6762CCB | 126   | 0     | 0.35   |
@@ -2823,6 +2828,7 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A240G      | 240 GB | 618B0D43501C | 126   | 0     | 0.35   |
 | Intel     | SSDSC2CT240A4      | 240 GB | E96AAF56B3C5 | 126   | 0     | 0.35   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 4A0A3F59E454 | 126   | 0     | 0.35   |
+| Samsung   | SSD 850 EVO        | 250 GB | 4C93A2AA7243 | 126   | 0     | 0.35   |
 | Crucial   | CT256MX100SSD1     | 256 GB | B4DC3E54AADA | 126   | 0     | 0.35   |
 | ADATA     | SU650              | 120 GB | 2B81E35D7129 | 125   | 0     | 0.34   |
 | SanDisk   | SD5SB2-128G-1006E  | 128 GB | DE3B3BE404D3 | 125   | 0     | 0.34   |
@@ -2837,7 +2843,6 @@ Rating — avg. rating per sample.
 | OCZ       | VERTEX4            | 256 GB | 94BDC8AE5CA5 | 248   | 1     | 0.34   |
 | SanDisk   | SDSSDP128G         | 128 GB | 7D1DE6B4C2C6 | 124   | 0     | 0.34   |
 | Crucial   | CT275MX300SSD1     | 275 GB | E2E2DEED4485 | 124   | 0     | 0.34   |
-| Kingston  | SV300S37A120G      | 120 GB | BA08CA53606E | 124   | 0     | 0.34   |
 | SanDisk   | SSD U100           | 24 GB  | 0136F06BEFD8 | 124   | 0     | 0.34   |
 | Kingston  | SHFS37A120G        | 120 GB | 4D84DF25D844 | 123   | 0     | 0.34   |
 | Samsung   | SSD 850 PRO        | 256 GB | 633ECA643C96 | 123   | 0     | 0.34   |
@@ -2940,7 +2945,6 @@ Rating — avg. rating per sample.
 | Crucial   | CT128M550SSD1      | 128 GB | 523BEFE89EF4 | 115   | 0     | 0.32   |
 | OCZ       | TRION100           | 240 GB | 064F04E47BC7 | 115   | 0     | 0.32   |
 | Kingston  | SHSS37A120G        | 120 GB | 1F74EF3D5A0E | 115   | 0     | 0.32   |
-| SanDisk   | SDSSDA240G         | 240 GB | 38F6608824EB | 115   | 0     | 0.32   |
 | OCZ       | AGILITY3           | 64 GB  | 02D7065F5042 | 115   | 0     | 0.32   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 04BECD322C7D | 115   | 0     | 0.32   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 6A0EB6F4B519 | 114   | 0     | 0.31   |
@@ -2953,11 +2957,11 @@ Rating — avg. rating per sample.
 | ADATA     | SU650              | 240 GB | 9CB3DC916A6D | 114   | 0     | 0.31   |
 | Transcend | TS128GSSD230S      | 128 GB | 2547FEEBE6BD | 114   | 0     | 0.31   |
 | Samsung   | SSD 850 EVO        | 250 GB | F7DD9FBBEB26 | 114   | 0     | 0.31   |
+| Kingston  | SUV400S37240G      | 240 GB | 711988C13DFC | 114   | 0     | 0.31   |
 | China     | SATA SSD           | 120 GB | 1FD5EC050539 | 114   | 0     | 0.31   |
 | KingSpec  | P4-480             | 480 GB | F5F6D679CDD8 | 114   | 0     | 0.31   |
 | OCZ       | VECTOR             | 128 GB | A191506A68EB | 114   | 0     | 0.31   |
 | Kingston  | SV300S37A120G      | 120 GB | DE9656A20A35 | 114   | 0     | 0.31   |
-| Samsung   | SSD 750 EVO        | 500 GB | 489CAEDE3D35 | 113   | 0     | 0.31   |
 | Kingston  | SV300S37A240G      | 240 GB | 73B9CD427A22 | 113   | 0     | 0.31   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 886313C9F95E | 113   | 0     | 0.31   |
 | KingSpec  | P3-512             | 512 GB | E6DF761CE437 | 113   | 0     | 0.31   |
@@ -2999,6 +3003,7 @@ Rating — avg. rating per sample.
 | Samsung   | MZ7LF128HCHP-00004 | 128 GB | CA9A390F3DEA | 110   | 0     | 0.30   |
 | Samsung   | MZNTD128HAGM-00000 | 128 GB | B76A5409AE4E | 110   | 0     | 0.30   |
 | Toshiba   | TR150              | 240 GB | B4E425DC1510 | 110   | 0     | 0.30   |
+| OCZ       | VERTEX4            | 128 GB | C079262D0C32 | 110   | 0     | 0.30   |
 | Kingston  | SA400S37120G       | 120 GB | 4BD1173CAF2D | 109   | 0     | 0.30   |
 | Samsung   | SSD 830 Series     | 128 GB | D0A3CF302610 | 109   | 0     | 0.30   |
 | Kingston  | SUV300S37A120G     | 120 GB | 861576D36618 | 109   | 0     | 0.30   |
@@ -3007,7 +3012,6 @@ Rating — avg. rating per sample.
 | China     | SATA SSD           | 120 GB | 50A6BF30974D | 109   | 0     | 0.30   |
 | Kingston  | SA400S37240G       | 240 GB | 8B2AD01C4763 | 109   | 0     | 0.30   |
 | SPCC      | SSD                | 64 GB  | 9E70BE0A2401 | 436   | 3     | 0.30   |
-| SPCC      | SSD                | 120 GB | 3AEA4390DBBB | 109   | 0     | 0.30   |
 | Faspeed   | H7-240G            | 240 GB | 630347959F7E | 109   | 0     | 0.30   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 15AD2892B066 | 109   | 0     | 0.30   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 9C5E0F195F32 | 109   | 0     | 0.30   |
@@ -3030,6 +3034,7 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 4D1047E38658 | 107   | 0     | 0.29   |
 | SPCC      | SSD                | 64 GB  | 06C05B427A21 | 107   | 0     | 0.29   |
 | ADATA     | SU900              | 256 GB | 29DE31B9367F | 107   | 0     | 0.29   |
+| Toshiba   | VX500              | 256 GB | EFA9DD5C9409 | 107   | 0     | 0.29   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 26AAC03D4B09 | 107   | 0     | 0.29   |
 | KingDian  | S280               | 120 GB | 41A00ED2A750 | 107   | 0     | 0.29   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 705ABE167165 | 107   | 0     | 0.29   |
@@ -3045,13 +3050,12 @@ Rating — avg. rating per sample.
 | PNY       | SSD2SC240G5LC72... | 240 GB | EE2812E76ED4 | 106   | 0     | 0.29   |
 | Samsung   | MZYTE128HMGR-000L2 | 128 GB | DC222865A7CA | 106   | 0     | 0.29   |
 | Kingston  | SA400S37240G       | 240 GB | FBC68F2B90A4 | 106   | 0     | 0.29   |
-| OCZ       | VERTEX4            | 128 GB | C079262D0C32 | 106   | 0     | 0.29   |
+| Samsung   | SSD 850 EVO        | 500 GB | 249F80C6745A | 106   | 0     | 0.29   |
 | Plextor   | PX-128M5Pro        | 128 GB | 89728A66415F | 106   | 0     | 0.29   |
 | Crucial   | CT256MX100SSD1     | 256 GB | F8118E113824 | 106   | 0     | 0.29   |
 | Lite-On   | IT L8T-128L9G      | 128 GB | 963B8A98F707 | 105   | 0     | 0.29   |
 | Kingston  | SV300S37A120G      | 120 GB | D517A7AC6F7A | 105   | 0     | 0.29   |
 | Kingston  | SV300S37A120G      | 120 GB | D5556B254848 | 317   | 2     | 0.29   |
-| Samsung   | SSD 850 EVO        | 500 GB | 249F80C6745A | 105   | 0     | 0.29   |
 | Samsung   | SSD 860 EVO        | 250 GB | 409982AE6FB8 | 105   | 0     | 0.29   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 92E1E65923BC | 317   | 2     | 0.29   |
 | Samsung   | SSD 850 EVO        | 500 GB | C79E59ABC79E | 105   | 0     | 0.29   |
@@ -3074,16 +3078,16 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37120G       | 120 GB | BFA0C20B9C17 | 104   | 0     | 0.29   |
 | Kingston  | SHSS37A240G        | 240 GB | 6E6475D72725 | 104   | 0     | 0.29   |
 | Samsung   | SSD 850 EVO        | 250 GB | DC72754A5E1D | 104   | 0     | 0.29   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 99F7539FC4D2 | 103   | 0     | 0.28   |
 | Kingston  | SUV500120G         | 120 GB | F4CC8E7031AA | 103   | 0     | 0.28   |
 | BIWIN     | SSD                | 120 GB | 2EB065056100 | 103   | 0     | 0.28   |
-| Crucial   | CT250MX500SSD1     | 250 GB | 99F7539FC4D2 | 103   | 0     | 0.28   |
 | Kingston  | SVP200S3240G       | 240 GB | 3A88364B6698 | 103   | 0     | 0.28   |
 | Kingston  | SV300S37A120G      | 120 GB | 9A2CC27B9332 | 103   | 0     | 0.28   |
 | OCZ       | VERTEX4            | 128 GB | 11558ED91D0D | 103   | 0     | 0.28   |
 | Kingston  | SV300S37A120G      | 120 GB | FC929CE41DF4 | 310   | 2     | 0.28   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | B44F24EDCE0C | 103   | 0     | 0.28   |
-| ADATA     | SP550              | 240 GB | 84FAEB8B076E | 103   | 0     | 0.28   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | E0796159AFF9 | 103   | 0     | 0.28   |
+| ADATA     | SP550              | 240 GB | 84FAEB8B076E | 103   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO        | 500 GB | A6EB105CD6BF | 103   | 0     | 0.28   |
 | Goodram   | SSD                | 120 GB | D445D4A73766 | 103   | 0     | 0.28   |
 | Transcend | TS120GSSD25D-M     | 128 GB | 6855742EF586 | 309   | 2     | 0.28   |
@@ -3093,13 +3097,15 @@ Rating — avg. rating per sample.
 | KingSpec  | P3-128             | 128 GB | C20DE8A46D7E | 102   | 0     | 0.28   |
 | Kingston  | SA400S37480G       | 480 GB | CD007B543DB9 | 102   | 0     | 0.28   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 8E023DA1DF35 | 102   | 0     | 0.28   |
+| Patriot   | Burst              | 480 GB | 83AAC681586C | 102   | 0     | 0.28   |
 | Intel     | SSDSC2KW256G8      | 256 GB | F02A9C0D3D63 | 102   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 1622F4436C4C | 102   | 0     | 0.28   |
 | Kingston  | SA400S37240G       | 240 GB | 61B9CA8704FA | 102   | 0     | 0.28   |
 | Toshiba   | THNSNH256GBST      | 256 GB | E319A8389492 | 102   | 0     | 0.28   |
-| Patriot   | Burst              | 480 GB | 83AAC681586C | 102   | 0     | 0.28   |
+| ADATA     | SP900              | 512 GB | E54AB897BFB9 | 102   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO        | 250 GB | 854E8F33DDEC | 102   | 0     | 0.28   |
 | Smartbuy  | mSata              | 256 GB | 9A5894BDED61 | 102   | 0     | 0.28   |
+| SPCC      | SSD                | 120 GB | 6698D7BD1205 | 102   | 0     | 0.28   |
 | KingFast  | SSD                | 32 GB  | DFBAB1EA0E67 | 102   | 0     | 0.28   |
 | SPCC      | SSD                | 128 GB | F85CC5A343D1 | 102   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO        | 500 GB | 4F0AF741A8B3 | 102   | 0     | 0.28   |
@@ -3109,19 +3115,19 @@ Rating — avg. rating per sample.
 | Smartbuy  | SSD                | 120 GB | E3452C0DDF7B | 101   | 0     | 0.28   |
 | Kingston  | SA400S37120G       | 120 GB | 04828ADADF3E | 101   | 0     | 0.28   |
 | SPCC      | SSD                | 120 GB | AE199011AAAB | 101   | 0     | 0.28   |
-| ADATA     | SU900              | 256 GB | 796C22865F51 | 101   | 0     | 0.28   |
 | ADATA     | SP920SS            | 256 GB | CB282A4720A3 | 101   | 0     | 0.28   |
 | Intenso   | SSD Sata III       | 256 GB | 821A4015FC26 | 101   | 0     | 0.28   |
 | Team      | L3 EVO SSD         | 120 GB | 9D44EED2F197 | 101   | 0     | 0.28   |
 | Kingston  | SH103S3240G        | 240 GB | 1C72EE861E99 | 101   | 0     | 0.28   |
 | Kingston  | SV300S37A120G      | 120 GB | 0C3818E4669C | 101   | 0     | 0.28   |
 | China     | SSD                | 64 GB  | 970E527E2385 | 303   | 2     | 0.28   |
-| Kingston  | SUV400S37120G      | 120 GB | 5F71F8688009 | 100   | 0     | 0.28   |
+| Kingston  | SUV400S37120G      | 120 GB | 5F71F8688009 | 101   | 0     | 0.28   |
 | Smartbuy  | SSD                | 64 GB  | FED5A92A5767 | 100   | 0     | 0.28   |
 | SanDisk   | SDSSDA240G         | 240 GB | 6AB7E345AA9A | 100   | 0     | 0.28   |
 | OCZ       | VERTEX460A         | 120 GB | 8692AF17705B | 302   | 2     | 0.28   |
 | AMD       | R3SL120G           | 120 GB | 9289C3D4C094 | 100   | 0     | 0.28   |
 | ADATA     | SP600              | 32 GB  | 146EA387AF42 | 100   | 0     | 0.28   |
+| Samsung   | SSD 850 EVO        | 250 GB | A79CEC698DDF | 100   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | B1C1D307BE12 | 100   | 0     | 0.27   |
 | Samsung   | SSD 850 EVO        | 250 GB | 4336E21FDCEB | 100   | 0     | 0.27   |
 | Kingston  | SA400S37240G       | 240 GB | 62326DBB6703 | 100   | 0     | 0.27   |
@@ -3189,16 +3195,13 @@ Rating — avg. rating per sample.
 | Kingston  | SH103S3120G        | 120 GB | 3FEC1366AE2F | 96    | 0     | 0.26   |
 | Samsung   | SSD 850 PRO        | 256 GB | F5B050633B0B | 96    | 0     | 0.26   |
 | OCZ       | TRION100           | 240 GB | 7CF32FEAC61C | 96    | 0     | 0.26   |
-| SPCC      | SSD                | 120 GB | 6698D7BD1205 | 95    | 0     | 0.26   |
 | PHISON    | 256GB PS3110-S10C  | 256 GB | 249ADB69FA14 | 95    | 0     | 0.26   |
 | SanDisk   | SDSSDA120G         | 120 GB | 7518CBCC44F8 | 95    | 0     | 0.26   |
 | Kingston  | SV300S37A480G      | 480 GB | B583A4C08276 | 95    | 0     | 0.26   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | DBB790BC17B2 | 95    | 0     | 0.26   |
 | OCZ       | VERTEX3            | 90 GB  | 8A761C132887 | 1625  | 16    | 0.26   |
-| ADATA     | SP900              | 512 GB | E54AB897BFB9 | 95    | 0     | 0.26   |
-| Toshiba   | VX500              | 256 GB | EFA9DD5C9409 | 95    | 0     | 0.26   |
+| Samsung   | SSD 650            | 120 GB | E53359F638A1 | 95    | 0     | 0.26   |
 | Kingston  | SH103S3240G        | 240 GB | 85EFDF35DD19 | 95    | 0     | 0.26   |
-| Samsung   | SSD 850 EVO        | 250 GB | A79CEC698DDF | 95    | 0     | 0.26   |
 | Samsung   | SSD 850 PRO        | 256 GB | C791609ECFE6 | 94    | 0     | 0.26   |
 | SanDisk   | SSD P4             | 32 GB  | 3CEF7AAD2B85 | 189   | 1     | 0.26   |
 | KingDian  | S180               | 64 GB  | AC500A18516A | 94    | 0     | 0.26   |
@@ -3249,7 +3252,6 @@ Rating — avg. rating per sample.
 | SanDisk   | SSD i100           | 16 GB  | 1DCE4CB02400 | 92    | 0     | 0.25   |
 | SPCC      | SSD                | 64 GB  | 319421EB1601 | 92    | 0     | 0.25   |
 | OCZ       | AGILITY3           | 240 GB | 124E8357CC89 | 92    | 0     | 0.25   |
-| Samsung   | SSD 650            | 120 GB | E53359F638A1 | 91    | 0     | 0.25   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | B3B4B133A477 | 91    | 0     | 0.25   |
 | Toshiba   | TR150              | 120 GB | 1A9A0FCD4E16 | 91    | 0     | 0.25   |
 | SanDisk   | SD7TB6S256G1001    | 256 GB | 9EE3C4F69197 | 91    | 0     | 0.25   |
@@ -3350,7 +3352,6 @@ Rating — avg. rating per sample.
 | Toshiba   | TR200              | 240 GB | 2F2B2C2EF338 | 85    | 0     | 0.23   |
 | Kingston  | SV300S37A120G      | 120 GB | A99C20A79811 | 85    | 0     | 0.23   |
 | Plextor   | PX-128M6Pro        | 128 GB | AE952447B3A3 | 85    | 0     | 0.23   |
-| Samsung   | SSD 850 EVO        | 250 GB | 4C93A2AA7243 | 85    | 0     | 0.23   |
 | Patriot   | Blaze              | 240 GB | AF6E146C455A | 85    | 0     | 0.23   |
 | SPCC      | SSD                | 120 GB | 2B95C7C3662F | 85    | 0     | 0.23   |
 | Samsung   | SSD 750 EVO        | 250 GB | 9707A71C4B5C | 85    | 0     | 0.23   |
@@ -3441,11 +3442,12 @@ Rating — avg. rating per sample.
 | Intel     | SSDSC2CT180A3      | 180 GB | FFC91298C02F | 79    | 0     | 0.22   |
 | Patriot   | Burst              | 480 GB | A7B04D8F57DE | 79    | 0     | 0.22   |
 | Kingston  | SHFS37A120G        | 120 GB | 4A8F59806E85 | 79    | 0     | 0.22   |
+| Plextor   | PX-256M6S          | 256 GB | 279CF5AAE90F | 79    | 0     | 0.22   |
 | KingDian  | S400               | 120 GB | 698EB3E3F8EC | 79    | 0     | 0.22   |
 | Plextor   | PX-128M5S          | 128 GB | 757253B98117 | 79    | 0     | 0.22   |
 | Toshiba   | TR200              | 240 GB | EE0817648BE1 | 79    | 0     | 0.22   |
 | Kingston  | SV300S37A120G      | 120 GB | 9D76CE170C11 | 79    | 0     | 0.22   |
-| Kingston  | SUV400S37240G      | 240 GB | 711988C13DFC | 79    | 0     | 0.22   |
+| Fordisk   | S860 256G 6Gbps    | 256 GB | 1DD0ACCD1FE8 | 79    | 0     | 0.22   |
 | Seagate   | ST120HM000-1G5142  | 120 GB | ABF1A27F6BED | 79    | 0     | 0.22   |
 | Toshiba   | Q300 Pro           | 128 GB | FD9AF6C32EBA | 79    | 0     | 0.22   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 1EE61368D67A | 78    | 0     | 0.22   |
@@ -3455,6 +3457,7 @@ Rating — avg. rating per sample.
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | F3D96EFFF8C2 | 78    | 0     | 0.22   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 52F90893D3A8 | 78    | 0     | 0.22   |
 | Kingston  | SV300S37A120G      | 120 GB | E942CE9EDFCD | 78    | 0     | 0.22   |
+| OCZ       | ARC100             | 120 GB | CD36DC8C41A3 | 78    | 0     | 0.22   |
 | Apacer    | AS330              | 120 GB | 1C4B804868A2 | 78    | 0     | 0.21   |
 | Kingston  | SA400S37120G       | 120 GB | 2F356ABEF188 | 78    | 0     | 0.21   |
 | SK hynix  | SC311 SATA         | 128 GB | 18973B1C039B | 78    | 0     | 0.21   |
@@ -3486,8 +3489,8 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDA240G         | 240 GB | B95C13EC7D15 | 76    | 0     | 0.21   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 9FC1FFF4AB63 | 76    | 0     | 0.21   |
 | Kingston  | SV300S37A120G      | 120 GB | DE79C4A3133C | 76    | 0     | 0.21   |
-| Samsung   | SSD 860 EVO        | 250 GB | 03E5A4693890 | 76    | 0     | 0.21   |
 | Transcend | TS128GSSD370S      | 128 GB | 7975CD4CEDA8 | 76    | 0     | 0.21   |
+| Samsung   | SSD 860 EVO        | 250 GB | 03E5A4693890 | 76    | 0     | 0.21   |
 | OCZ       | VERTEX4            | 256 GB | 01A48DB86417 | 152   | 1     | 0.21   |
 | Plextor   | PX-128M5S          | 128 GB | 3FC35D39D913 | 76    | 0     | 0.21   |
 | Plextor   | PX-128M5Pro        | 128 GB | B47E0DCA9E81 | 76    | 0     | 0.21   |
@@ -3495,7 +3498,6 @@ Rating — avg. rating per sample.
 | ADATA     | SP550              | 120 GB | 6C966E09BB66 | 76    | 0     | 0.21   |
 | China     | SATA SSD           | 120 GB | AD9BBE7F7C98 | 76    | 0     | 0.21   |
 | Samsung   | SSD 850 EVO        | 250 GB | C35B162E6E5E | 76    | 0     | 0.21   |
-| Fordisk   | S860 256G 6Gbps    | 256 GB | 1DD0ACCD1FE8 | 76    | 0     | 0.21   |
 | Kingston  | SUV400S37120G      | 120 GB | 9473901A19EC | 75    | 0     | 0.21   |
 | Lite-On   | CV3-8D256-41 SA... | 256 GB | 1DA886DF0A4F | 75    | 0     | 0.21   |
 | ADATA     | SP550              | 240 GB | DA30A2CB2F94 | 75    | 0     | 0.21   |
@@ -3507,7 +3509,6 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 3750F6548F5D | 75    | 0     | 0.21   |
 | Samsung   | SSD 750 EVO        | 250 GB | 4B89E632A6F3 | 75    | 0     | 0.21   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 5C1D76460F82 | 75    | 0     | 0.21   |
-| OCZ       | ARC100             | 120 GB | CD36DC8C41A3 | 75    | 0     | 0.21   |
 | SanDisk   | SDSSDA240G         | 240 GB | 3BD51C236FE5 | 75    | 0     | 0.21   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 7E902D148339 | 75    | 0     | 0.21   |
 | KingSpec  | Q-180              | 180 GB | E17BAAFB6DEE | 75    | 0     | 0.21   |
@@ -3539,7 +3540,9 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | E7B04EA29685 | 73    | 0     | 0.20   |
 | SanDisk   | SSD i100           | 8 GB   | 4ABBAC366AE5 | 73    | 0     | 0.20   |
 | China     | SATA SSD           | 480 GB | 3B1811B74876 | 73    | 0     | 0.20   |
+| Samsung   | MZMTD128HAFV-000   | 128 GB | 7E8312356DA3 | 73    | 0     | 0.20   |
 | WDC       | WDS250G1B0B-00AS40 | 250 GB | 9A773A219802 | 73    | 0     | 0.20   |
+| ADATA     | SP900              | 64 GB  | 1FC3930CA259 | 73    | 0     | 0.20   |
 | Kingston  | SUV400S37240G      | 240 GB | 735D6A7DB309 | 219   | 2     | 0.20   |
 | KingDian  | S400               | 480 GB | 41989F7F8BFE | 73    | 0     | 0.20   |
 | OCZ       | AGILITY4           | 256 GB | A61D80CB6890 | 73    | 0     | 0.20   |
@@ -3554,7 +3557,6 @@ Rating — avg. rating per sample.
 | Patriot   | Blast              | 240 GB | 35221ED69513 | 72    | 0     | 0.20   |
 | SPCC      | SSD162             | 120 GB | A16F4D4A7A4C | 363   | 4     | 0.20   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 0A5296FF4C28 | 72    | 0     | 0.20   |
-| Plextor   | PX-256M6S          | 256 GB | 279CF5AAE90F | 72    | 0     | 0.20   |
 | Crucial   | CT128M550SSD1      | 128 GB | 5F178D8DF107 | 72    | 0     | 0.20   |
 | Kingston  | SA400S37120G       | 120 GB | 950A8CD57503 | 72    | 0     | 0.20   |
 | Samsung   | SSD 750 EVO        | 120 GB | 79639027C76C | 72    | 0     | 0.20   |
@@ -3564,7 +3566,6 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 742F5687307A | 72    | 0     | 0.20   |
 | Patriot   | Blaze              | 64 GB  | CDEFF9EED7F7 | 72    | 0     | 0.20   |
 | ADATA     | SU800              | 128 GB | 6F4728453C4E | 72    | 0     | 0.20   |
-| Samsung   | MZMTD128HAFV-000   | 128 GB | 7E8312356DA3 | 72    | 0     | 0.20   |
 | Kingston  | SUV500120G         | 120 GB | 6B630A404855 | 72    | 0     | 0.20   |
 | Kingston  | SV300S37A120G      | 120 GB | 3CE2EEB57A9E | 71    | 0     | 0.20   |
 | Plextor   | PX-256M5S          | 256 GB | 81E5DFE48A4F | 71    | 0     | 0.20   |
@@ -3658,13 +3659,13 @@ Rating — avg. rating per sample.
 | OCZ       | ARC100             | 240 GB | 281BFD7AEA01 | 65    | 0     | 0.18   |
 | SanDisk   | SDSSDP128G         | 128 GB | E2DD3FF1E652 | 65    | 0     | 0.18   |
 | KingSpec  | P3-128             | 128 GB | 7C0750140DD4 | 65    | 0     | 0.18   |
+| Samsung   | SSD 850 EVO        | 500 GB | 0AC0F4AA9007 | 65    | 0     | 0.18   |
 | Samsung   | SSD 850 PRO        | 256 GB | 298CF7718C85 | 65    | 0     | 0.18   |
 | Transcend | TS256GMTS430S      | 256 GB | 6C9166400F64 | 65    | 0     | 0.18   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | F8E70B60E5B6 | 65    | 0     | 0.18   |
 | SanDisk   | SSD i100           | 24 GB  | 1D7E31782207 | 65    | 0     | 0.18   |
 | Kingmax   | SSD                | 64 GB  | 601F9F311145 | 326   | 4     | 0.18   |
 | Samsung   | SSD 850 EVO        | 120 GB | 440B7CA7B50E | 65    | 0     | 0.18   |
-| Samsung   | SSD 850 EVO        | 500 GB | 0AC0F4AA9007 | 65    | 0     | 0.18   |
 | Intel     | SSDSC2BW480A4      | 480 GB | 26EAC3E78DF5 | 65    | 0     | 0.18   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 58A732AD4741 | 65    | 0     | 0.18   |
 | Kingston  | SHFS37A120G        | 120 GB | BD98D77A911B | 65    | 0     | 0.18   |
@@ -3779,6 +3780,7 @@ Rating — avg. rating per sample.
 | Plextor   | PX-128M5S          | 128 GB | C3C0E245F5DF | 59    | 0     | 0.16   |
 | Crucial   | CT256M550SSD1      | 256 GB | 8984745216C0 | 59    | 0     | 0.16   |
 | Intel     | SSDSC2KB960G8      | 960 GB | 6BA395A1F82E | 59    | 0     | 0.16   |
+| Kingston  | SMS200S3120G       | 120 GB | 3D99B1CFC064 | 59    | 0     | 0.16   |
 | Kingston  | SV300S37A240G      | 240 GB | AB5F0CDBF536 | 59    | 0     | 0.16   |
 | Intel     | SSDSC2BW120H6      | 120 GB | D2525D287021 | 59    | 0     | 0.16   |
 | KingDian  | S400               | 240 GB | DEC60736FE00 | 59    | 0     | 0.16   |
@@ -3886,7 +3888,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 3A7F1465ADC0 | 54    | 0     | 0.15   |
 | Kingston  | SV300S37A60G       | 64 GB  | CF10F25E7A5C | 54    | 0     | 0.15   |
 | Samsung   | MZ7TY128HDHP-000L1 | 128 GB | 12ED2DF9250D | 54    | 0     | 0.15   |
-| Kingston  | SMS200S3120G       | 120 GB | 3D99B1CFC064 | 54    | 0     | 0.15   |
 | Kingston  | SV300S37A120G      | 120 GB | C4CD4D92B601 | 54    | 0     | 0.15   |
 | Samsung   | SSD 850 EVO        | 250 GB | 6EB3A23CA74C | 54    | 0     | 0.15   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 42E3180705A5 | 542   | 9     | 0.15   |
@@ -3938,6 +3939,7 @@ Rating — avg. rating per sample.
 | Team      | L7 EVO SSD         | 64 GB  | 5770B5791A8D | 51    | 0     | 0.14   |
 | AMD       | R3SL120G           | 120 GB | 2BBA459AD998 | 51    | 0     | 0.14   |
 | Kingston  | SA400S37120G       | 120 GB | DD08F23840B0 | 51    | 0     | 0.14   |
+| Kingston  | SHFS37A240G        | 240 GB | 264DC5C1D882 | 51    | 0     | 0.14   |
 | Samsung   | SSD 860 EVO        | 500 GB | A5EC43285F61 | 51    | 0     | 0.14   |
 | OCZ       | VERTEX3            | 120 GB | A5D4558AA504 | 155   | 2     | 0.14   |
 | China     | 80GB SSD           | 80 GB  | FD207315846E | 51    | 0     | 0.14   |
@@ -3961,11 +3963,11 @@ Rating — avg. rating per sample.
 | Transcend | TS128GSSD370       | 128 GB | 3268B29409FA | 50    | 0     | 0.14   |
 | Smartbuy  | SSD                | 64 GB  | 83EE3F0ECAAC | 50    | 0     | 0.14   |
 | China     | 120GB SSD          | 120 GB | 0C8EC933FA33 | 50    | 0     | 0.14   |
+| WDC       | WDS250G1B0B-00AS40 | 250 GB | 8DCC560DFB66 | 50    | 0     | 0.14   |
 | Kingston  | SA400S37120G       | 120 GB | 0321EF606DFC | 50    | 0     | 0.14   |
 | Samsung   | SSD PM871b M.2 ... | 256 GB | 9C90C052D076 | 50    | 0     | 0.14   |
 | Kingston  | SV100S264G         | 64 GB  | C6DB2C7C68B2 | 453   | 8     | 0.14   |
 | Samsung   | SSD 850 EVO        | 500 GB | 7C82DF81D6D2 | 50    | 0     | 0.14   |
-| WDC       | WDS250G1B0B-00AS40 | 250 GB | 8DCC560DFB66 | 50    | 0     | 0.14   |
 | Samsung   | SSD PB22-CS3 FD... | 256 GB | 7C8FA3F1B2B0 | 50    | 0     | 0.14   |
 | Kingston  | SUV400S37120G      | 120 GB | 5196DCF9A0EC | 50    | 0     | 0.14   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 58248554F1FC | 50    | 0     | 0.14   |
@@ -4131,11 +4133,11 @@ Rating — avg. rating per sample.
 | Zheino    | CHN-25SATAA3-480   | 480 GB | 75744B4799AA | 43    | 0     | 0.12   |
 | Kingston  | SHSS37A480G        | 480 GB | E43FE5DBF8EB | 43    | 0     | 0.12   |
 | SPCC      | SSD                | 120 GB | 565C676A532A | 43    | 0     | 0.12   |
+| ADATA     | SP600              | 128 GB | 50AC5BCE50A3 | 43    | 0     | 0.12   |
 | Plextor   | PX-256M6S          | 256 GB | 0A3DF8777551 | 42    | 0     | 0.12   |
 | OCZ       | VERTEX4            | 256 GB | 5E1F17C12648 | 42    | 0     | 0.12   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | EA1C2E8E3404 | 42    | 0     | 0.12   |
 | KingFast  | SSD                | 128 GB | 415BB218FD4B | 42    | 0     | 0.12   |
-| Kingston  | SHFS37A240G        | 240 GB | 264DC5C1D882 | 42    | 0     | 0.12   |
 | Plextor   | PX-128M5S          | 128 GB | CB921E401173 | 42    | 0     | 0.12   |
 | SanDisk   | SDSSDA120G         | 120 GB | AC76C89BD436 | 42    | 0     | 0.12   |
 | China     | SATA SSD           | 120 GB | E3800E8C3480 | 42    | 0     | 0.12   |
@@ -4213,7 +4215,6 @@ Rating — avg. rating per sample.
 | Lite-On   | IT LCS-128L9S-HP   | 128 GB | AE35D3F1E94C | 40    | 0     | 0.11   |
 | WDC       | WDBNCE2500PNC      | 250 GB | 2D8FBCDC886D | 40    | 0     | 0.11   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | E7BC307025AA | 40    | 0     | 0.11   |
-| ADATA     | SP600              | 128 GB | 50AC5BCE50A3 | 40    | 0     | 0.11   |
 | Kingston  | SV300S37A120G      | 120 GB | 9CD44C4598F4 | 40    | 0     | 0.11   |
 | SanDisk   | SDSSDHII120G       | 120 GB | B3E2B31AFD25 | 40    | 0     | 0.11   |
 | Crucial   | CT250BX100SSD1     | 250 GB | B6EC1F1E1A27 | 40    | 0     | 0.11   |
@@ -4233,6 +4234,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 750 EVO        | 500 GB | 496438DC0664 | 39    | 0     | 0.11   |
 | Smartbuy  | SSD                | 120 GB | 7FAA26E9C1E2 | 39    | 0     | 0.11   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 0348572B063D | 39    | 0     | 0.11   |
+| Plextor   | PX-128M5Pro        | 128 GB | 6350307A00B5 | 39    | 0     | 0.11   |
 | ADATA     | SP610              | 128 GB | 8EAD344131A7 | 39    | 0     | 0.11   |
 | ADATA     | SU635              | 240 GB | C29AE892C5B9 | 39    | 0     | 0.11   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | D4F7D2E55617 | 39    | 0     | 0.11   |
@@ -4252,7 +4254,6 @@ Rating — avg. rating per sample.
 | ADATA     | SU800              | 128 GB | 6FEACF94853D | 38    | 0     | 0.11   |
 | Londisk   | SSD                | 120 GB | 44586D63E384 | 38    | 0     | 0.11   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 9F86C0A7C420 | 38    | 0     | 0.11   |
-| ADATA     | SP900              | 64 GB  | 1FC3930CA259 | 38    | 0     | 0.11   |
 | Corsair   | Force GT           | 64 GB  | 3E5829968935 | 1280  | 32    | 0.11   |
 | Samsung   | SSD 850 EVO        | 120 GB | 0CA424AF55AB | 38    | 0     | 0.11   |
 | Smartbuy  | SSD                | 64 GB  | 8639312752A3 | 38    | 0     | 0.11   |
@@ -4263,8 +4264,8 @@ Rating — avg. rating per sample.
 | KingSpec  | Q-180              | 180 GB | 7099F90EC0B6 | 38    | 0     | 0.11   |
 | Samsung   | SSD 850 EVO        | 250 GB | ECE9B9E3205A | 38    | 0     | 0.11   |
 | Kingston  | SV300S37A120G      | 120 GB | 8368E1703857 | 38    | 0     | 0.11   |
-| Plextor   | PX-128M5Pro        | 128 GB | 6350307A00B5 | 38    | 0     | 0.11   |
 | Crucial   | CT500MX500SSD4     | 500 GB | E65B05D7DBCC | 38    | 0     | 0.11   |
+| Kingston  | SV300S37A120G      | 120 GB | AC2FA24634BC | 38    | 0     | 0.11   |
 | ADATA     | SU800              | 1 TB   | 3B8D0FB80648 | 38    | 0     | 0.10   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 1F07BC4847EE | 38    | 0     | 0.10   |
 | Kingston  | SA400S37480G       | 480 GB | DBE3F671B043 | 38    | 0     | 0.10   |
@@ -4299,7 +4300,6 @@ Rating — avg. rating per sample.
 | Plextor   | PX-128M5S          | 128 GB | EEC953E8DF4B | 36    | 0     | 0.10   |
 | Samsung   | SSD 850 EVO        | 250 GB | 39D04CA9FA67 | 36    | 0     | 0.10   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 59B31C8C6771 | 36    | 0     | 0.10   |
-| Kingston  | SV300S37A120G      | 120 GB | AC2FA24634BC | 36    | 0     | 0.10   |
 | OCZ       | SOLID3             | 64 GB  | 7C65005384B3 | 553   | 14    | 0.10   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 3EB4B129D6EE | 36    | 0     | 0.10   |
 | SanDisk   | SDSSDHP128G        | 128 GB | 67250CE436C4 | 36    | 0     | 0.10   |
@@ -4342,6 +4342,7 @@ Rating — avg. rating per sample.
 | Kingston  | SUV400S37120G      | 120 GB | 130D24C4C7A0 | 35    | 0     | 0.10   |
 | Apacer    | AS350              | 128 GB | 8155473E93B5 | 35    | 0     | 0.10   |
 | Netac     | SSD                | 480 GB | F9F659844248 | 35    | 0     | 0.10   |
+| Apacer    | AS350              | 240 GB | AD8FB5820051 | 35    | 0     | 0.10   |
 | Samsung   | MZNLN128HAHQ-00000 | 128 GB | 26CBE44953C3 | 35    | 0     | 0.10   |
 | Lite-On   | IT LMT-128L9M      | 128 GB | E11449256A84 | 35    | 0     | 0.10   |
 | Samsung   | SSD 650            | 120 GB | E77676B04215 | 35    | 0     | 0.10   |
@@ -4387,8 +4388,10 @@ Rating — avg. rating per sample.
 | Intel     | SSDSA1MH080G1HP    | 80 GB  | 1F32FFA5D00D | 33    | 0     | 0.09   |
 | Kingston  | SA400S37120G       | 120 GB | 9D688119F752 | 33    | 0     | 0.09   |
 | Samsung   | SSD 750 EVO        | 120 GB | 74FE1C8135C6 | 33    | 0     | 0.09   |
+| Samsung   | SSD 860 PRO        | 512 GB | 365F964FE0C1 | 33    | 0     | 0.09   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | BDCC415A2C8D | 33    | 0     | 0.09   |
 | SanDisk   | SSD U100           | 24 GB  | 1FEAE4AD832D | 33    | 0     | 0.09   |
+| KingDian  | S400               | 120 GB | F40247E735D4 | 33    | 0     | 0.09   |
 | SanDisk   | SD6SB1M-032G-1006  | 32 GB  | AE544F11D8EF | 33    | 0     | 0.09   |
 | Crucial   | CT256M550SSD1      | 256 GB | 4C8F4D386F56 | 564   | 16    | 0.09   |
 | Kingston  | SV300S37A60G       | 64 GB  | 4B5C3B64BE62 | 99    | 2     | 0.09   |
@@ -4396,7 +4399,6 @@ Rating — avg. rating per sample.
 | Samsung   | MZ7LN256HAJQ-000L2 | 256 GB | CFB30FBF1613 | 33    | 0     | 0.09   |
 | Kingston  | SA400S37240G       | 240 GB | C0939245144C | 33    | 0     | 0.09   |
 | Crucial   | CT128MX100SSD1     | 128 GB | BF9C509F8E24 | 559   | 16    | 0.09   |
-| KingDian  | S400               | 120 GB | F40247E735D4 | 32    | 0     | 0.09   |
 | Kingston  | SA400S37240G       | 240 GB | A8DCF0512702 | 32    | 0     | 0.09   |
 | Kingston  | SV300S37A240G      | 240 GB | 57DBC1C44710 | 32    | 0     | 0.09   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 0CB5B90F072C | 32    | 0     | 0.09   |
@@ -4405,7 +4407,6 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDH3500G        | 500 GB | 47D3FE94B3E7 | 32    | 0     | 0.09   |
 | OCZ       | VERTEX3            | 90 GB  | AE4A24E4F9A4 | 392   | 11    | 0.09   |
 | Smartbuy  | SSD                | 64 GB  | 295C711E8F88 | 32    | 0     | 0.09   |
-| Apacer    | AS350              | 240 GB | AD8FB5820051 | 32    | 0     | 0.09   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 1E86EFBE74C1 | 65    | 1     | 0.09   |
 | SanDisk   | SDSSDA240G         | 240 GB | 277E8C07CA4C | 32    | 0     | 0.09   |
 | Intel     | SSDSC2BW120A4      | 120 GB | ACF5BF47C6A5 | 32    | 0     | 0.09   |
@@ -4416,6 +4417,7 @@ Rating — avg. rating per sample.
 | KingSpec  | ACSC4M512mSA       | 506 GB | 59B62C2C5A1A | 32    | 0     | 0.09   |
 | SPCC      | SSD                | 240 GB | 1BF42A8A1338 | 32    | 0     | 0.09   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 68EE19E599EC | 32    | 0     | 0.09   |
+| Kingston  | SV300S37A120G      | 120 GB | F4A9F8B0954C | 32    | 0     | 0.09   |
 | OCZ       | VERTEX4            | 80 GB  | 236E4A032E58 | 129   | 3     | 0.09   |
 | Intenso   | SATA III SSD       | 120 GB | 95EB048719E1 | 32    | 0     | 0.09   |
 | Kingrich  | 64GB K9 SATA3 SSD  | 64 GB  | 0240912B6062 | 32    | 0     | 0.09   |
@@ -4423,13 +4425,15 @@ Rating — avg. rating per sample.
 | Plextor   | PX-128M6S          | 128 GB | 9EC46ECD1B05 | 32    | 0     | 0.09   |
 | Plextor   | PX-128M5S          | 128 GB | 6916B162B978 | 32    | 0     | 0.09   |
 | Plextor   | PX-128M5Pro        | 128 GB | B38A0D2AC4DE | 32    | 0     | 0.09   |
+| Samsung   | SSD 850 EVO        | 250 GB | 81986A9827FA | 32    | 0     | 0.09   |
 | SanDisk   | SDSSDA240G         | 240 GB | 9CE9D9FDE180 | 32    | 0     | 0.09   |
 | Transcend | TS256GSSD370S      | 256 GB | 04F915506989 | 32    | 0     | 0.09   |
 | Kingston  | SA400S37120G       | 120 GB | A35405B1CF5F | 32    | 0     | 0.09   |
-| Micron    | C400-MTFDDAK256MAM | 256 GB | 942C87810832 | 32    | 0     | 0.09   |
 | Plextor   | PX-128M6S          | 128 GB | A49DFC0D2379 | 32    | 0     | 0.09   |
+| Micron    | C400-MTFDDAK256MAM | 256 GB | 942C87810832 | 32    | 0     | 0.09   |
 | Toshiba   | THNSNB062GMCJ      | 64 GB  | C6F802602371 | 32    | 0     | 0.09   |
 | Patriot   | Spark              | 256 GB | 253482DC5FA1 | 31    | 0     | 0.09   |
+| Samsung   | SSD 750 EVO        | 250 GB | 2B5318695C81 | 31    | 0     | 0.09   |
 | SanDisk   | SSD U110           | 16 GB  | A24016F49786 | 31    | 0     | 0.09   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 5991F26FCD3B | 31    | 0     | 0.09   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 94705A469620 | 31    | 0     | 0.09   |
@@ -4445,7 +4449,6 @@ Rating — avg. rating per sample.
 | OCZ       | VERTEX3            | 64 GB  | DA983B371490 | 31    | 0     | 0.09   |
 | China     | 120GB SSD          | 120 GB | 2B17BD7BB57B | 31    | 0     | 0.09   |
 | Samsung   | SSD 850 PRO        | 256 GB | F23F7441A4D4 | 31    | 0     | 0.09   |
-| Samsung   | SSD 860 PRO        | 512 GB | 365F964FE0C1 | 31    | 0     | 0.09   |
 | SanDisk   | SSD U100           | 24 GB  | 0735B53CE9FD | 62    | 1     | 0.09   |
 | Smartbuy  | SSD                | 120 GB | 63F06D88C61A | 31    | 0     | 0.09   |
 | SPCC      | SSD                | 64 GB  | D3DAAAA3967C | 125   | 3     | 0.09   |
@@ -4464,7 +4467,6 @@ Rating — avg. rating per sample.
 | ADATA     | SP900              | 512 GB | 2623CC7DAAB2 | 31    | 0     | 0.09   |
 | OCZ       | TRION150           | 480 GB | 02564FA12F10 | 31    | 0     | 0.09   |
 | SanDisk   | SDSSDA120G         | 120 GB | 468457E03F17 | 31    | 0     | 0.09   |
-| Samsung   | SSD 750 EVO        | 250 GB | 2B5318695C81 | 31    | 0     | 0.08   |
 | SanDisk   | SDSSDA240G         | 240 GB | 0175C1D06E22 | 31    | 0     | 0.08   |
 | Kingston  | SUV400S37240G      | 240 GB | 495A1EFA4D57 | 30    | 0     | 0.08   |
 | OCZ       | VERTEX460          | 120 GB | 24CE5BDCA9D3 | 557   | 17    | 0.08   |
@@ -4499,7 +4501,6 @@ Rating — avg. rating per sample.
 | SK hynix  | HFS128G39MNC-3510A | 128 GB | 92073295990D | 30    | 0     | 0.08   |
 | SPCC      | SSD                | 64 GB  | 949E76EC6C41 | 30    | 0     | 0.08   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 15A9738BE14D | 30    | 0     | 0.08   |
-| Kingston  | SV300S37A120G      | 120 GB | F4A9F8B0954C | 30    | 0     | 0.08   |
 | OCZ       | VERTEX460A         | 240 GB | 3C4618716F69 | 30    | 0     | 0.08   |
 | Kingston  | SV300S37A60G       | 64 GB  | 002E94B6643F | 149   | 4     | 0.08   |
 | ADATA     | SP550              | 120 GB | 835727BF1945 | 29    | 0     | 0.08   |
@@ -4509,6 +4510,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SSD U100           | 24 GB  | B838B3DEA9A9 | 29    | 0     | 0.08   |
 | China     | 120GB SSD          | 120 GB | D669E482AEC7 | 29    | 0     | 0.08   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | 4784D612A2AC | 29    | 0     | 0.08   |
+| Intel     | SSDSC2KW256G8      | 256 GB | B99A6BB7363F | 29    | 0     | 0.08   |
 | SanDisk   | SDSA5DK-016G-1006  | 16 GB  | 67F3ADEFE392 | 29    | 0     | 0.08   |
 | KingPower | 1108 SSD           | 64 GB  | B7C0B42F007F | 29    | 0     | 0.08   |
 | SPCC      | SSD                | 120 GB | 75BB7B12DFF3 | 148   | 4     | 0.08   |
@@ -4557,13 +4559,12 @@ Rating — avg. rating per sample.
 | KingDian  | S280-240GB         | 240 GB | 2A0DE61655F8 | 28    | 0     | 0.08   |
 | Kingston  | SA400S37240G       | 240 GB | 92EACDE0F669 | 28    | 0     | 0.08   |
 | Samsung   | SSD 850            | 120 GB | 4323B59E7E90 | 28    | 0     | 0.08   |
+| China     | SH00R480GB         | 480 GB | 23AA00ECD230 | 28    | 0     | 0.08   |
 | Kingston  | SUV400S37240G      | 240 GB | 002D4E5B7EB2 | 28    | 0     | 0.08   |
 | ADATA     | SP550              | 120 GB | 840C32BD05B9 | 28    | 0     | 0.08   |
 | Transcend | TS128GSSD370S      | 128 GB | 751F7AC90EA9 | 28    | 0     | 0.08   |
-| China     | SH00R480GB         | 480 GB | 23AA00ECD230 | 27    | 0     | 0.08   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 1BE4E7615B74 | 27    | 0     | 0.08   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 56352E081C11 | 55    | 1     | 0.08   |
-| Samsung   | SSD 850 EVO        | 250 GB | 81986A9827FA | 27    | 0     | 0.08   |
 | Transcend | TS256GSSD230S      | 256 GB | A46494AAEDC1 | 27    | 0     | 0.08   |
 | KingDian  | S180               | 64 GB  | 20785617439E | 27    | 0     | 0.08   |
 | TAISU     | SSD 240G           | 240 GB | BFAE556590A9 | 27    | 0     | 0.08   |
@@ -4597,6 +4598,8 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37240G       | 240 GB | E426424BD6D1 | 26    | 0     | 0.07   |
 | SPCC      | SSD                | 120 GB | E79C7C37F557 | 26    | 0     | 0.07   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | 1B47216AC8CA | 26    | 0     | 0.07   |
+| Plextor   | PX-AG128M6e        | 128 GB | 0B8F3A93A1E6 | 26    | 0     | 0.07   |
+| Samsung   | SSD 850 EVO        | 500 GB | 6F20146EB049 | 26    | 0     | 0.07   |
 | Kingston  | SHFS37A240G        | 240 GB | 9443E25CA4AA | 26    | 0     | 0.07   |
 | Toshiba   | TR200              | 240 GB | B8ACC559557C | 26    | 0     | 0.07   |
 | ADATA     | SU630              | 480 GB | DD60473E6277 | 26    | 0     | 0.07   |
@@ -4615,9 +4618,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDA120G         | 120 GB | 0410795AEA50 | 26    | 0     | 0.07   |
 | ADATA     | SU650              | 240 GB | 843494E0443C | 26    | 0     | 0.07   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | 1858802256F1 | 26    | 0     | 0.07   |
-| Samsung   | SSD 850 EVO        | 500 GB | 6F20146EB049 | 26    | 0     | 0.07   |
 | Kingston  | SA400S37120G       | 120 GB | 74E30B842B38 | 158   | 5     | 0.07   |
-| Plextor   | PX-AG128M6e        | 128 GB | 0B8F3A93A1E6 | 26    | 0     | 0.07   |
 | Kingston  | SMS200S360G        | 64 GB  | CE9012D67D67 | 79    | 2     | 0.07   |
 | Patriot   | Burst              | 120 GB | 81643A925257 | 26    | 0     | 0.07   |
 | Transcend | TS128GSSD370S      | 128 GB | 0DD422145021 | 26    | 0     | 0.07   |
@@ -4695,6 +4696,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 0F9FC4361592 | 24    | 0     | 0.07   |
 | Plextor   | PX-256M5S          | 256 GB | 89210CBAAA2A | 24    | 0     | 0.07   |
 | Samsung   | SSD 850 EVO        | 250 GB | E0923B438278 | 24    | 0     | 0.07   |
+| ADATA     | SU800              | 512 GB | A33ADC5608B2 | 24    | 0     | 0.07   |
 | Kingston  | SV300S37A120G      | 120 GB | 379404EDC41C | 24    | 0     | 0.07   |
 | Plextor   | PX-128M5S          | 128 GB | C1147825B2E6 | 24    | 0     | 0.07   |
 | SPCC      | SSD                | 240 GB | 429A619C2246 | 24    | 0     | 0.07   |
@@ -4705,7 +4707,6 @@ Rating — avg. rating per sample.
 | WDC       | WDS250G2B0A        | 250 GB | 8B0FEA659BE4 | 24    | 0     | 0.07   |
 | Plextor   | PX-128M6S          | 128 GB | 5C44B3BCD38E | 24    | 0     | 0.07   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 6ABFDDEED339 | 24    | 0     | 0.07   |
-| ADATA     | SU800              | 512 GB | A33ADC5608B2 | 24    | 0     | 0.07   |
 | Goodram   | SSDPR-CX400-256    | 256 GB | 429302623B64 | 24    | 0     | 0.07   |
 | Kingston  | SV300S37A120G      | 120 GB | B345A5A11462 | 24    | 0     | 0.07   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | C564DEFB09DC | 24    | 0     | 0.07   |
@@ -4819,8 +4820,8 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37240G       | 240 GB | 4F1D747D8C49 | 21    | 0     | 0.06   |
 | Kingston  | SA400S37240G       | 240 GB | E6C194FB122B | 21    | 0     | 0.06   |
 | Lite-On   | LSS-24L6G          | 24 GB  | 1C667D4AB5F3 | 21    | 0     | 0.06   |
-| Transcend | TS128GSSD230S      | 128 GB | DE0CE76870CC | 21    | 0     | 0.06   |
 | Plextor   | PX-128M6Pro        | 128 GB | D6D37B047BC2 | 21    | 0     | 0.06   |
+| Transcend | TS128GSSD230S      | 128 GB | DE0CE76870CC | 21    | 0     | 0.06   |
 | Smartbuy  | SSD                | 120 GB | 2DC08427DDD5 | 21    | 0     | 0.06   |
 | AMD       | R3SL240G           | 240 GB | FEDAD7D16755 | 21    | 0     | 0.06   |
 | China     | SSD                | 1 TB   | D9F4AF4B324C | 21    | 0     | 0.06   |
@@ -4842,7 +4843,6 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 50D152BB0BBD | 20    | 0     | 0.06   |
 | Kingston  | SV300S37A60G       | 64 GB  | CEEAC50C634F | 20    | 0     | 0.06   |
 | Transcend | TS240GSSD220S      | 240 GB | 574C2BBEF27C | 20    | 0     | 0.06   |
-| Intel     | SSDSC2KW256G8      | 256 GB | B99A6BB7363F | 20    | 0     | 0.06   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 351623D141C5 | 20    | 0     | 0.06   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 8630E1C1E661 | 20    | 0     | 0.06   |
 | Samsung   | SSD 860 EVO        | 500 GB | 618C5E095E2F | 20    | 0     | 0.06   |
@@ -4867,6 +4867,7 @@ Rating — avg. rating per sample.
 | Intel     | SSDSC2CW120A3      | 120 GB | 5E0B8D1D95B8 | 19    | 0     | 0.05   |
 | Kingston  | SUV400S37120G      | 120 GB | C9550DD0B96A | 19    | 0     | 0.05   |
 | OCZ       | VERTEX4            | 64 GB  | 401261AD3DC3 | 19    | 0     | 0.05   |
+| SanDisk   | SDSSDA120G         | 120 GB | DD1337B3C136 | 19    | 0     | 0.05   |
 | SanDisk   | SSD PLUS           | 240 GB | 3999C9032D53 | 19    | 0     | 0.05   |
 | Intel     | SSDSCKGF256A5 SATA | 256 GB | 3AD68FEA2C18 | 19    | 0     | 0.05   |
 | Transcend | TS32GSSD370S       | 32 GB  | 566C2E53904A | 19    | 0     | 0.05   |
@@ -4891,6 +4892,7 @@ Rating — avg. rating per sample.
 | Kingston  | RBU-SNS8152S325... | 256 GB | EEE7EC30F505 | 18    | 0     | 0.05   |
 | SK hynix  | SC308 SATA         | 256 GB | 68F15F472877 | 18    | 0     | 0.05   |
 | Kingmax   | SSD                | 120 GB | 0535045A0AB1 | 18    | 0     | 0.05   |
+| SK hynix  | SC210 2.5 7MM      | 128 GB | 4451D79F70A6 | 18    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 500 GB | AFBA2C01C638 | 18    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 64C13944C148 | 18    | 0     | 0.05   |
 | Seagate   | BarraCuda SSD Z... | 1 TB   | 19210B506C77 | 18    | 0     | 0.05   |
@@ -4939,7 +4941,6 @@ Rating — avg. rating per sample.
 | China     | RTMMB256VBV4KFY    | 256 GB | 86333CAC8DF6 | 17    | 0     | 0.05   |
 | Kingston  | SA400S37120G       | 120 GB | D45CB2A7E9DB | 17    | 0     | 0.05   |
 | SPCC      | SSD                | 120 GB | C99B40BCD297 | 17    | 0     | 0.05   |
-| SanDisk   | SDSSDA120G         | 120 GB | DD1337B3C136 | 17    | 0     | 0.05   |
 | China     | SSD                | 120 GB | 06D9F9EDAEE5 | 17    | 0     | 0.05   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 919F780CEAB3 | 17    | 0     | 0.05   |
 | SanDisk   | SSD PLUS           | 240 GB | 10AD9EC482DE | 17    | 0     | 0.05   |
@@ -5013,7 +5014,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 PRO        | 512 GB | CB65014BFCC4 | 15    | 0     | 0.04   |
 | China     | 128GB SSD          | 128 GB | 25653BF9DE24 | 15    | 0     | 0.04   |
 | Kingston  | SV300S37A120G      | 120 GB | EB46443574D2 | 15    | 0     | 0.04   |
-| SK hynix  | SC210 2.5 7MM      | 128 GB | 4451D79F70A6 | 15    | 0     | 0.04   |
 | Samsung   | SSD 860 QVO        | 1 TB   | AD6BDB9CDEA9 | 15    | 0     | 0.04   |
 | Crucial   | CT240M500SSD1      | 240 GB | 7B6DD0971CFA | 263   | 16    | 0.04   |
 | Goodram   | SSD                | 120 GB | 59F730252E5B | 15    | 0     | 0.04   |
@@ -5025,6 +5025,7 @@ Rating — avg. rating per sample.
 | AMD       | R3SL120G           | 120 GB | C3274F4C9C9D | 15    | 0     | 0.04   |
 | China     | SSD                | 128 GB | 95A4315F7386 | 15    | 0     | 0.04   |
 | SanDisk   | SD8SNAT256G1002    | 256 GB | ABBA5B11FF3B | 15    | 0     | 0.04   |
+| Transcend | TS128GSSD230S      | 128 GB | 7B98142A21DD | 15    | 0     | 0.04   |
 | China     | SSD                | 120 GB | 9EFB723F8DE7 | 15    | 0     | 0.04   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 5E332C1C489D | 15    | 0     | 0.04   |
 | Plextor   | PX-128M6S          | 128 GB | 49B8CF1426F6 | 15    | 0     | 0.04   |
@@ -5037,7 +5038,6 @@ Rating — avg. rating per sample.
 | SPCC      | SSD                | 480 GB | 8049F75EE47B | 15    | 0     | 0.04   |
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | 194676265A2A | 15    | 0     | 0.04   |
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | D7E73963023C | 15    | 0     | 0.04   |
-| Transcend | TS128GSSD230S      | 128 GB | 7B98142A21DD | 15    | 0     | 0.04   |
 | KingSpec  | P3-512             | 512 GB | 0FAD18DA3E93 | 15    | 0     | 0.04   |
 | Kingston  | SV300S37A60G       | 64 GB  | 89B43CA5DD62 | 15    | 0     | 0.04   |
 | Patriot   | Burst              | 480 GB | 885FE39BC378 | 14    | 0     | 0.04   |
@@ -5053,6 +5053,7 @@ Rating — avg. rating per sample.
 | KingDian  | S280               | 240 GB | 1A0BAAAB7638 | 14    | 0     | 0.04   |
 | Lenovo    | SSD SL700 M.2 128G | 128 GB | B13638DF3900 | 14    | 0     | 0.04   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 8F3A25BA0BD8 | 14    | 0     | 0.04   |
+| XUNZHE    | XUNZHE800S 120G    | 120 GB | 4DD10FA8D89C | 14    | 0     | 0.04   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 08D8BBB70973 | 14    | 0     | 0.04   |
 | Kingmax   | SSD                | 120 GB | 8B84EBBEBF86 | 14    | 0     | 0.04   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 462F512826EF | 14    | 0     | 0.04   |
@@ -5138,6 +5139,7 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 29490E6561DA | 13    | 0     | 0.04   |
 | Transcend | TS120GMTS420S      | 120 GB | 0237C38CB336 | 39    | 2     | 0.04   |
 | China     | SATA SSD           | 64 GB  | F0DADC0E12A1 | 13    | 0     | 0.04   |
+| SanDisk   | SD8SN8U-128G-1006  | 128 GB | 46B74519220F | 26    | 1     | 0.04   |
 | TCSUNBOW  | X3                 | 120 GB | 71DE2AD85019 | 13    | 0     | 0.04   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 19EABBDAF11A | 13    | 0     | 0.04   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 84E7A93AB15C | 771   | 58    | 0.04   |
@@ -5179,6 +5181,7 @@ Rating — avg. rating per sample.
 | Crucial   | CT240BX200SSD1     | 240 GB | B7351B2252BD | 12    | 0     | 0.03   |
 | KingSpec  | T-60               | 64 GB  | 2E9972128027 | 12    | 0     | 0.03   |
 | Kingston  | SV300S37A120G      | 120 GB | FD5C6F262023 | 12    | 0     | 0.03   |
+| Transcend | TS128GSSD370S      | 128 GB | EFCB37FAD2C8 | 12    | 0     | 0.03   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | F21182F07362 | 12    | 0     | 0.03   |
 | Kingston  | SA400S37120G       | 120 GB | 8D5074CEFDBC | 24    | 1     | 0.03   |
 | Lite-On   | CV1-8B256          | 256 GB | 8BA558DA48B7 | 12    | 0     | 0.03   |
@@ -5233,7 +5236,7 @@ Rating — avg. rating per sample.
 | Goodram   | SSDPR-CL100-120-G2 | 120 GB | D48555420CDA | 11    | 0     | 0.03   |
 | Kingmax   | SSD                | 64 GB  | 661F11E6E9C8 | 11    | 0     | 0.03   |
 | SPCC      | SSD                | 120 GB | C380F3231F57 | 11    | 0     | 0.03   |
-| Drevo     | X1 SSD             | 120 GB | CA7655B39FB7 | 792   | 68    | 0.03   |
+| Drevo     | X1 SSD             | 120 GB | CA7655B39FB7 | 793   | 68    | 0.03   |
 | China     | SATA SSD           | 64 GB  | 105677111280 | 11    | 0     | 0.03   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 0D14C12B57BF | 11    | 0     | 0.03   |
 | LDLC      | SSD                | 128 GB | A5D606F1F292 | 11    | 0     | 0.03   |
@@ -5269,6 +5272,8 @@ Rating — avg. rating per sample.
 | Integral  | V Series SATA SSD  | 240 GB | CDD723C00E98 | 10    | 0     | 0.03   |
 | KingFast  | SSD                | 128 GB | 44867E710233 | 10    | 0     | 0.03   |
 | Apacer    | AS350              | 128 GB | 4506D34C1311 | 10    | 0     | 0.03   |
+| Golden... | GDSA25-120MS       | 120 GB | C08BC8E1CD4A | 10    | 0     | 0.03   |
+| SPCC      | SSD                | 64 GB  | EDDD9298DFE2 | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 250 GB | 81E3A8A88592 | 10    | 0     | 0.03   |
 | SanDisk   | SDSSDP128G         | 128 GB | C9AC01BE248D | 10    | 0     | 0.03   |
 | Kingston  | SUV500240G         | 240 GB | 9B0A3EFB6CB4 | 10    | 0     | 0.03   |
@@ -5284,7 +5289,6 @@ Rating — avg. rating per sample.
 | Transcend | TS512GSSD370       | 512 GB | ADBF4493A317 | 10    | 0     | 0.03   |
 | SPCC      | SPCCSolidStateDisk | 512 GB | 065FE9810743 | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 1 TB   | B240AC32B760 | 10    | 0     | 0.03   |
-| XUNZHE    | XUNZHE800S 120G    | 120 GB | 4DD10FA8D89C | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 500 GB | 6692101EA991 | 10    | 0     | 0.03   |
 | Samsung   | SSD 850 EVO        | 250 GB | 391CB72BD23F | 10    | 0     | 0.03   |
 | Transcend | TS256GSSD370S      | 256 GB | CD81F39025CB | 10    | 0     | 0.03   |
@@ -5315,11 +5319,11 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 860 QVO        | 2 TB   | 0A007285F3C2 | 10    | 0     | 0.03   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | C3D68FFF534F | 10    | 0     | 0.03   |
 | Crucial   | CT240M500SSD1      | 240 GB | 30CC9838F389 | 210   | 20    | 0.03   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 396C771BEDB3 | 10    | 0     | 0.03   |
 | Kingston  | SUV400S37120G      | 120 GB | BF2FCF94835B | 10    | 0     | 0.03   |
 | PNY       | CS900 120GB SSD    | 120 GB | 3D246ABA938E | 10    | 0     | 0.03   |
 | Crucial   | CT512M550SSD1      | 512 GB | 5DF5BD0E8090 | 279   | 27    | 0.03   |
 | Kingston  | SHSS37A240G        | 240 GB | F2855A07746C | 9     | 0     | 0.03   |
-| Crucial   | CT500MX500SSD1     | 500 GB | 396C771BEDB3 | 9     | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | 0CA63A8B1786 | 9     | 0     | 0.03   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 11090C902F55 | 39    | 3     | 0.03   |
 | Crucial   | CT480M500SSD1      | 480 GB | D790F42FC195 | 166   | 16    | 0.03   |
@@ -5338,7 +5342,6 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37240G       | 240 GB | 7A5E8451F06C | 9     | 0     | 0.03   |
 | Kingston  | SUV500240G         | 240 GB | 99BED9077019 | 9     | 0     | 0.03   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 536EADA06281 | 9     | 0     | 0.03   |
-| SanDisk   | SD8SN8U-128G-1006  | 128 GB | 46B74519220F | 19    | 1     | 0.03   |
 | Mushkin   | MKNSSDCG480GB      | 480 GB | B7D869D8738A | 9     | 0     | 0.03   |
 | SK hynix  | HFS256G39TNF-N3A0A | 256 GB | AF3D1C09E1C0 | 9     | 0     | 0.03   |
 | SK hynix  | SC210 mSATA        | 256 GB | 7F78C8B32345 | 308   | 31    | 0.03   |
@@ -5466,6 +5469,7 @@ Rating — avg. rating per sample.
 | ADATA     | SP550              | 120 GB | 9A2896A23094 | 7     | 0     | 0.02   |
 | China     | SATA SSD           | 120 GB | 7E7F3C1701B1 | 7     | 0     | 0.02   |
 | Corsair   | Force LS SSD       | 64 GB  | 1675837490F9 | 7     | 0     | 0.02   |
+| KingSpec  | ACSC2M128mSA       | 128 GB | F045FDCE75ED | 7     | 0     | 0.02   |
 | Transcend | TS1TSSD230S        | 1 TB   | 1977BB70D0C0 | 7     | 0     | 0.02   |
 | AMD       | R3SL120G           | 120 GB | C475E5D6BE35 | 7     | 0     | 0.02   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 51769E3215D9 | 7     | 0     | 0.02   |
@@ -5533,7 +5537,6 @@ Rating — avg. rating per sample.
 | SanDisk   | SD9SB8W512G1101    | 512 GB | BF22460A4AA7 | 6     | 0     | 0.02   |
 | AMD       | R3S60GBSM          | 64 GB  | ABDD1CB0F84C | 6     | 0     | 0.02   |
 | Integral  | V Series SATA SSD  | 240 GB | 3552437D9C33 | 6     | 0     | 0.02   |
-| KingSpec  | ACSC2M128mSA       | 128 GB | F045FDCE75ED | 6     | 0     | 0.02   |
 | KingSpec  | MSH-256            | 256 GB | 1C7545DD22DA | 6     | 0     | 0.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 13552E44BB38 | 6     | 0     | 0.02   |
 | Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | 75658E11F3EB | 6     | 0     | 0.02   |
@@ -5541,7 +5544,6 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A120G      | 120 GB | B516D83BFE05 | 32    | 4     | 0.02   |
 | Goodram   | CX100              | 120 GB | 1E5979DE56E4 | 52    | 7     | 0.02   |
 | OCZ       | VECTOR150          | 120 GB | A4D13EFD0DE8 | 6     | 0     | 0.02   |
-| SPCC      | SSD                | 64 GB  | EDDD9298DFE2 | 6     | 0     | 0.02   |
 | Kingston  | SV300S37A60G       | 64 GB  | 9BA108E6580D | 19    | 2     | 0.02   |
 | Intenso   | SSD Sata III       | 256 GB | 1BD380253A77 | 25    | 3     | 0.02   |
 | Kingston  | SA400S37960G       | 960 GB | 2A20DE9AA4F9 | 6     | 0     | 0.02   |
@@ -5550,10 +5552,10 @@ Rating — avg. rating per sample.
 | Kingston  | SV300S37A240G      | 240 GB | 02A49F7F8FA2 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | C6B8BB313160 | 6     | 0     | 0.02   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | DD96FB2FDDCF | 6     | 0     | 0.02   |
+| ADATA     | SP550              | 120 GB | 0F7FA0895057 | 6     | 0     | 0.02   |
 | Goodram   | SSDPR_CX300_120    | 120 GB | 1464D4526B19 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37480G       | 480 GB | 52AA36E8FBFA | 6     | 0     | 0.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 22A2E536F42C | 6     | 0     | 0.02   |
-| Transcend | TS128GSSD370S      | 128 GB | EFCB37FAD2C8 | 6     | 0     | 0.02   |
 | ADATA     | SU800              | 256 GB | A11439C5D98A | 6     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 62105BECF4A3 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37120G       | 120 GB | 81B547849852 | 6     | 0     | 0.02   |
@@ -5587,8 +5589,8 @@ Rating — avg. rating per sample.
 | SanDisk   | SSD PLUS           | 240 GB | F2F0251BD901 | 5     | 0     | 0.02   |
 | Londisk   | SSD                | 120 GB | 45D61D58B5B3 | 5     | 0     | 0.02   |
 | Plextor   | PX-128M5S          | 128 GB | B98E7CC7BB5C | 5     | 0     | 0.02   |
-| Plextor   | PX-G256M6e         | 256 GB | 59F37D001A53 | 5     | 0     | 0.02   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 795A1EAC29D2 | 5     | 0     | 0.02   |
+| Plextor   | PX-G256M6e         | 256 GB | 59F37D001A53 | 5     | 0     | 0.02   |
 | SanDisk   | SSD PLUS 240 GB    | 240 GB | 91C9BDF35C01 | 5     | 0     | 0.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 1140EB6A663F | 5     | 0     | 0.02   |
 | Patriot   | Burst              | 240 GB | 9FAB4BC6D10B | 5     | 0     | 0.02   |
@@ -5601,7 +5603,6 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37240G       | 240 GB | 93FFAEC6962B | 5     | 0     | 0.02   |
 | Kingston  | SUV400S37240G      | 240 GB | 0D3472FD6FF4 | 5     | 0     | 0.02   |
 | SK hynix  | SH920 mSATA        | 128 GB | F9FFBB7BBF48 | 193   | 33    | 0.02   |
-| ADATA     | SP550              | 120 GB | 0F7FA0895057 | 5     | 0     | 0.02   |
 | ADATA     | SU650NS38          | 240 GB | 5DBE45D1A0C3 | 5     | 0     | 0.02   |
 | BIWIN     | SSD                | 128 GB | 77C225A97615 | 5     | 0     | 0.02   |
 | Kingston  | SUV400S37240G      | 240 GB | 27E5308306C9 | 5     | 0     | 0.02   |
@@ -5650,6 +5651,7 @@ Rating — avg. rating per sample.
 | SanDisk   | SDSSDA240G         | 240 GB | DF625BFC2692 | 5     | 0     | 0.01   |
 | Smartbuy  | SSD                | 120 GB | D3128DE4F72B | 5     | 0     | 0.01   |
 | ADATA     | SU655              | 120 GB | 3BFD1A347A4A | 5     | 0     | 0.01   |
+| China     | 120GB SSD          | 120 GB | 18B98D4CEB84 | 5     | 0     | 0.01   |
 | Patriot   | Burst              | 240 GB | CFF3F6F503D9 | 5     | 0     | 0.01   |
 | Kingston  | SA400S37120G       | 120 GB | 7626151DABAF | 5     | 0     | 0.01   |
 | SanDisk   | SDSSDA120G         | 120 GB | 6C7F91A01F5A | 5     | 0     | 0.01   |
@@ -5726,7 +5728,6 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37120G       | 120 GB | B547116F8C3A | 4     | 0     | 0.01   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | DCFC6429218D | 4     | 0     | 0.01   |
 | Apacer    | AS340              | 480 GB | FFC87F707D02 | 4     | 0     | 0.01   |
-| China     | 120GB SSD          | 120 GB | 18B98D4CEB84 | 4     | 0     | 0.01   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 39493470B26E | 4     | 0     | 0.01   |
 | SanDisk   | SSD P4             | 32 GB  | D5D0B5E7519A | 222   | 54    | 0.01   |
 | Corsair   | Neutron GTX SSD    | 128 GB | 1899C870B950 | 1173  | 291   | 0.01   |
@@ -6010,7 +6011,6 @@ Rating — avg. rating per sample.
 | Kingston  | SKC300S37A60G      | 64 GB  | 58E844EAFAE7 | 9     | 4     | 0.01   |
 | China     | SSD 120G           | 120 GB | 56A70E64FD6B | 1     | 0     | 0.01   |
 | Corsair   | Force LE200 SSD    | 120 GB | 6329237D6BDB | 1     | 0     | 0.01   |
-| Golden... | GDSA25-120MS       | 120 GB | C08BC8E1CD4A | 1     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 250 GB | 033956588DD6 | 1     | 0     | 0.01   |
 | ADATA     | SU700              | 120 GB | 36611E5396AD | 16    | 8     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 243425EF8215 | 1     | 0     | 0.01   |
@@ -6160,6 +6160,7 @@ Rating — avg. rating per sample.
 | Kingston  | SUV500240G         | 240 GB | A5AFF2D78CCE | 1     | 0     | 0.00   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | DC1239FD526C | 1     | 0     | 0.00   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | 3A3296929B3F | 1     | 0     | 0.00   |
+| Samsung   | SSD 860 PRO        | 512 GB | 0197D218DC8E | 1     | 0     | 0.00   |
 | SanDisk   | SDSSDHII120G       | 120 GB | FE1E647FD97B | 1     | 0     | 0.00   |
 | SanDisk   | SSD U100           | 32 GB  | 5B6987F5D106 | 1     | 0     | 0.00   |
 | Team      | M8PS5 SSD          | 128 GB | A4FBFD28D26D | 1     | 0     | 0.00   |
@@ -6263,10 +6264,10 @@ Rating — avg. rating per sample.
 | SK hynix  | HFS128G38MNB-2200A | 128 GB | AC9D0F2B1BF1 | 41    | 50    | 0.00   |
 | SK hynix  | HFS060G32MNM-1010U | 64 GB  | EDA8B60FF9EF | 822   | 1016  | 0.00   |
 | Eluktro   | TRO-SSD7-500GB-PRO | 500 GB | B24C845FF4C9 | 806   | 1016  | 0.00   |
+| Kingston  | SA400S37           | 240 GB | 7FBB81F5B48C | 0     | 0     | 0.00   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 96CEA48456AF | 0     | 0     | 0.00   |
 | Plextor   | PX-128M6MV         | 128 GB | A5EE2AE3ECFE | 0     | 0     | 0.00   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | A47D74E57DA6 | 0     | 0     | 0.00   |
-| Samsung   | SSD 860 PRO        | 512 GB | 0197D218DC8E | 0     | 0     | 0.00   |
 | Corsair   | CSSD-F60GB2        | 64 GB  | C3E1F506409B | 124   | 160   | 0.00   |
 | Samsung   | SSD 850 PRO        | 512 GB | CA1E336D589D | 793   | 1035  | 0.00   |
 | Crucial   | CT480M500SSD3      | 480 GB | 6CB5F332F722 | 1534  | 2007  | 0.00   |
@@ -6274,7 +6275,6 @@ Rating — avg. rating per sample.
 | ADATA     | SP550              | 120 GB | 247869F56C3E | 0     | 0     | 0.00   |
 | ADATA     | SU900              | 256 GB | 80F9317F07E1 | 2     | 2     | 0.00   |
 | FORESEE   | 128GB SSD          | 128 GB | C6212B462004 | 0     | 0     | 0.00   |
-| Kingston  | SA400S37           | 240 GB | 7FBB81F5B48C | 0     | 0     | 0.00   |
 | Patriot   | Blaze              | 64 GB  | 74CA9A7BC3B9 | 0     | 0     | 0.00   |
 | Patriot   | Burst              | 120 GB | 44986A8AFBF8 | 0     | 0     | 0.00   |
 | Plextor   | PX-128M6Pro        | 128 GB | 746E243A33D3 | 0     | 0     | 0.00   |
@@ -6480,8 +6480,8 @@ Rating — avg. rating per sample.
 | Mushkin   | MKNSSDCL480GB-DX   | 480 GB | 72B6F3CB98C8 | 347   | 1020  | 0.00   |
 | Corsair   | Force LS SSD       | 120 GB | 30E168506F0B | 341   | 1006  | 0.00   |
 | Corsair   | Force LS SSD       | 64 GB  | 2B2910C9D526 | 212   | 631   | 0.00   |
-| SanDisk   | SDSSDXPS960G       | 960 GB | DA59A6C3F52E | 13    | 39    | 0.00   |
 | Crucial   | CT960M500SSD1      | 960 GB | 0CC635CC0564 | 690   | 2058  | 0.00   |
+| SanDisk   | SDSSDXPS960G       | 960 GB | DA59A6C3F52E | 13    | 39    | 0.00   |
 | ADATA     | SU650              | 120 GB | FA3F7B2CCE22 | 0     | 0     | 0.00   |
 | Apacer    | AS510S             | 64 GB  | ECD09AC605FE | 0     | 0     | 0.00   |
 | China     | SSD                | 240 GB | AF799702C208 | 0     | 0     | 0.00   |
@@ -6552,6 +6552,7 @@ Rating — avg. rating per sample.
 | China     | SATA SSD           | 64 GB  | 9459A98338D8 | 0     | 0     | 0.00   |
 | China     | SSD60G             | 64 GB  | 5C3942C7E35C | 0     | 0     | 0.00   |
 | China     | T60                | 64 GB  | F52E610083BA | 0     | 0     | 0.00   |
+| Crucial   | CT120BX500SSD1     | 120 GB | B3D671217BC3 | 0     | 0     | 0.00   |
 | GLOWAY    | VAL64GM3-mSATA     | 64 GB  | 3A5AC21D2A50 | 0     | 0     | 0.00   |
 | Intel     | SSDSA2CW300G3      | 304 GB | 4BF88F792597 | 0     | 0     | 0.00   |
 | KingDian  | S280               | 240 GB | BA678184950D | 0     | 0     | 0.00   |
@@ -6591,7 +6592,6 @@ Rating — avg. rating per sample.
 | ADATA     | SU650              | 240 GB | 988CB7F8A1ED | 0     | 0     | 0.00   |
 | China     | 120GB SSD          | 120 GB | E5FB159568BF | 0     | 0     | 0.00   |
 | China     | 120GB SSD          | 120 GB | F75A76DB98CE | 0     | 0     | 0.00   |
-| Crucial   | CT120BX500SSD1     | 120 GB | B3D671217BC3 | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 0BBC1844D2D7 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | F8BCC31F0B00 | 0     | 0     | 0.00   |
 | Goldenfir | T650-120G          | 128 GB | A3C0E126A158 | 0     | 0     | 0.00   |
