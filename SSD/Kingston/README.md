@@ -102,9 +102,9 @@ Rating — avg. rating per sample.
 | Kingston  | SA400S37240G       | 240 GB | 80      | 70    | 2     | 0.18   |
 | Kingston  | SA400S37960G       | 960 GB | 4       | 63    | 0     | 0.17   |
 | Kingston  | SA400S37120G       | 120 GB | 154     | 62    | 1     | 0.16   |
+| Kingston  | SHFS37A240G        | 240 GB | 16      | 126   | 445   | 0.15   |
 | Kingston  | SUV500240G         | 240 GB | 10      | 68    | 116   | 0.14   |
 | Kingston  | SA400S37480G       | 480 GB | 26      | 54    | 4     | 0.14   |
-| Kingston  | SHFS37A240G        | 240 GB | 16      | 123   | 445   | 0.14   |
 | Kingston  | SUV500MS120G       | 120 GB | 4       | 48    | 0     | 0.13   |
 | Kingston  | RBU-SC152S37128GG2 | 128 GB | 1       | 45    | 0     | 0.12   |
 | Kingston  | RBUSNS8180S3128GI1 | 128 GB | 2       | 43    | 0     | 0.12   |

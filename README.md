@@ -158,8 +158,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | HP        | GB1000EAMYC        | 1 TB   | 1       | 1490  | 0     | 4.08   |
 | WDC       | WD2000JD-00GBB0    | 200 GB | 1       | 1482  | 0     | 4.06   |
 | WDC       | WD3200AAKX-753CA0  | 320 GB | 1       | 1471  | 0     | 4.03   |
+| WDC       | WD1200JS-55NCB1    | 120 GB | 1       | 1469  | 0     | 4.03   |
 | Toshiba   | MK1002TSKB         | 1 TB   | 1       | 1446  | 0     | 3.96   |
-| WDC       | WD1200JS-55NCB1    | 120 GB | 1       | 1440  | 0     | 3.95   |
 | WDC       | WD800JD-75MSA2     | 80 GB  | 1       | 1432  | 0     | 3.92   |
 | WDC       | WD5000AAKS-00TMA0  | 500 GB | 6       | 1551  | 2     | 3.92   |
 | WDC       | WD20NMVW-11EDZS2   | 2 TB   | 1       | 1422  | 0     | 3.90   |
@@ -211,6 +211,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Toshiba   | MK8017GSG          | 80 GB  | 1       | 1162  | 0     | 3.18   |
 | WDC       | WD4000AAKS-00YGA0  | 400 GB | 5       | 1249  | 1     | 3.18   |
 | WDC       | WD20EARS-07MVWB0   | 2 TB   | 3       | 1844  | 1     | 3.18   |
+| WDC       | WD2500AAKS-22VSA0  | 250 GB | 1       | 1161  | 0     | 3.18   |
 | WDC       | WD2503ABYX-01WERA0 | 256 GB | 1       | 1155  | 0     | 3.16   |
 | WDC       | WD1001FALS-00J7B0  | 1 TB   | 11      | 1153  | 0     | 3.16   |
 | WDC       | WD20EARX-22PASB0   | 2 TB   | 2       | 1153  | 0     | 3.16   |
@@ -232,7 +233,6 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD7500AACS-00D6B0  | 752 GB | 1       | 1107  | 0     | 3.03   |
 | Hitachi   | HDS7250SASUN500... | 500 GB | 1       | 1103  | 0     | 3.02   |
 | Hitachi   | HDS722020ALA330    | 2 TB   | 17      | 1551  | 5     | 3.00   |
-| WDC       | WD2500AAKS-22VSA0  | 250 GB | 1       | 1095  | 0     | 3.00   |
 | WDC       | WD2002FAEX-00MJRA0 | 2 TB   | 1       | 1094  | 0     | 3.00   |
 | WDC       | WD1200JS-00SGB0    | 120 GB | 2       | 1091  | 0     | 2.99   |
 | WDC       | WD3200KS-75PFB0    | 320 GB | 2       | 1359  | 39    | 2.98   |
@@ -285,7 +285,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5000AAKS-07YGA0  | 500 GB | 3       | 971   | 0     | 2.66   |
 | WDC       | WD2002FAEX-007BA0  | 2 TB   | 18      | 1213  | 3     | 2.66   |
 | WDC       | WD10EALX-079BA1    | 1 TB   | 1       | 968   | 0     | 2.65   |
-| WDC       | WD5000BMVV-11GNWS0 | 500 GB | 2       | 966   | 0     | 2.65   |
+| WDC       | WD5000BMVV-11GNWS0 | 500 GB | 2       | 967   | 0     | 2.65   |
 | WDC       | WD10EADS-00P8B0    | 1 TB   | 5       | 1231  | 3     | 2.64   |
 | WDC       | WD2000JS-00MVB1    | 200 GB | 1       | 957   | 0     | 2.62   |
 | WDC       | WD7502AAEX-00Z3A0  | 752 GB | 1       | 956   | 0     | 2.62   |
@@ -355,10 +355,10 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD10EALX-089BA0    | 1 TB   | 2       | 836   | 0     | 2.29   |
 | WDC       | WD7501AALS-00J7B1  | 752 GB | 8       | 1052  | 1     | 2.28   |
 | WDC       | WD1600JS-60MHB1    | 160 GB | 7       | 974   | 4     | 2.28   |
+| WDC       | WD20NPVX-00EA4T0   | 2 TB   | 2       | 828   | 0     | 2.27   |
 | Seagate   | ST3750840AS        | 752 GB | 1       | 828   | 0     | 2.27   |
 | WDC       | WD1600BEVS-08VAT2  | 160 GB | 6       | 901   | 1     | 2.26   |
 | WDC       | WD400BB-00DEA0     | 40 GB  | 1       | 825   | 0     | 2.26   |
-| WDC       | WD20NPVX-00EA4T0   | 2 TB   | 2       | 825   | 0     | 2.26   |
 | WDC       | WD5000BMVW-11S5XS0 | 500 GB | 4       | 824   | 0     | 2.26   |
 | WDC       | WD800BD-88JMC0     | 80 GB  | 2       | 824   | 0     | 2.26   |
 | WDC       | WD1003FZEX-00RLFA0 | 1 TB   | 2       | 823   | 0     | 2.26   |
@@ -380,7 +380,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Hitachi   | HTS723232L9SA62    | 320 GB | 1       | 804   | 0     | 2.20   |
 | WDC       | WD1502FAEX-007BA0  | 1.5 TB | 7       | 872   | 25    | 2.19   |
 | WDC       | WD3200AAKS-75SBA0  | 320 GB | 1       | 798   | 0     | 2.19   |
-| WDC       | WD3200AAKS-22B3A0  | 320 GB | 2       | 796   | 0     | 2.18   |
+| WDC       | WD3200AAKS-22B3A0  | 320 GB | 2       | 797   | 0     | 2.18   |
 | WDC       | WD1600JS-75NCB3    | 160 GB | 3       | 794   | 0     | 2.18   |
 | WDC       | WD3003FZEX-00Z4SA0 | 3 TB   | 1       | 793   | 0     | 2.17   |
 | WDC       | WD10EADS-00L5B1    | 1 TB   | 30      | 1228  | 4     | 2.17   |
@@ -397,9 +397,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD6001FFWX-68Z39N0 | 6 TB   | 1       | 782   | 0     | 2.14   |
 | WDC       | WD5000AADS-56S9B0  | 500 GB | 1       | 782   | 0     | 2.14   |
 | Seagate   | ST91603110CS       | 160 GB | 1       | 781   | 0     | 2.14   |
+| WDC       | WD5000AAKS-65YGA0  | 500 GB | 7       | 780   | 0     | 2.14   |
 | WDC       | WD800JD-00HKA0     | 80 GB  | 3       | 849   | 2     | 2.14   |
 | WDC       | WD1600AAJS-60PSA0  | 160 GB | 4       | 950   | 257   | 2.13   |
-| WDC       | WD5000AAKS-65YGA0  | 500 GB | 7       | 777   | 0     | 2.13   |
 | WDC       | WD10EARX-32N0YB0   | 1 TB   | 3       | 799   | 5     | 2.13   |
 | Hitachi   | HDT725025VLA380    | 250 GB | 12      | 1003  | 42    | 2.12   |
 | WDC       | WD2500BB-00GUA0    | 250 GB | 1       | 773   | 0     | 2.12   |
@@ -407,8 +407,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD2500JS-00NCB1    | 250 GB | 10      | 1117  | 34    | 2.12   |
 | Hitachi   | HTS723225L9A362    | 250 GB | 1       | 770   | 0     | 2.11   |
 | WDC       | WD2500AAKX-753CA1  | 250 GB | 6       | 775   | 2     | 2.10   |
+| WDC       | WD6400AAKS-22A7B0  | 640 GB | 10      | 1118  | 3     | 2.10   |
 | WDC       | WD1600AAJS-07PSA0  | 160 GB | 3       | 1618  | 9     | 2.10   |
-| WDC       | WD6400AAKS-22A7B0  | 640 GB | 10      | 1115  | 3     | 2.10   |
 | WDC       | WD10EALS-002BA0    | 1 TB   | 3       | 766   | 0     | 2.10   |
 | WDC       | WD30EZRX-00MMMB0   | 3 TB   | 11      | 980   | 3     | 2.09   |
 | Hitachi   | HTS723232L9A362    | 320 GB | 1       | 763   | 0     | 2.09   |
@@ -450,6 +450,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD800AAJS-00PSA0   | 80 GB  | 17      | 822   | 43    | 1.96   |
 | Hitachi   | HUA722020ALA331    | 2 TB   | 3       | 801   | 2     | 1.95   |
 | WDC       | WD1600JS-58NCB1    | 160 GB | 1       | 712   | 0     | 1.95   |
+| Hitachi   | HTS545032B9SA00    | 320 GB | 5       | 944   | 462   | 1.95   |
 | WDC       | WD800JD-00LSA0     | 80 GB  | 22      | 972   | 10    | 1.95   |
 | Seagate   | ST1000VM002-9ZL162 | 1 TB   | 1       | 709   | 0     | 1.95   |
 | Seagate   | ST2000DM001-1E6164 | 2 TB   | 2       | 709   | 0     | 1.94   |
@@ -473,7 +474,6 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD1003FBYX-01Y7B0  | 1 TB   | 5       | 1314  | 3     | 1.89   |
 | WDC       | WD6400AAKS-65A7B0  | 640 GB | 5       | 787   | 3     | 1.89   |
 | WDC       | WD2500BEKT-75PVMT1 | 250 GB | 1       | 689   | 0     | 1.89   |
-| Hitachi   | HTS545032B9SA00    | 320 GB | 5       | 920   | 462   | 1.89   |
 | WDC       | WD1001FALS-00Y6A0  | 1 TB   | 4       | 936   | 28    | 1.88   |
 | Seagate   | ST340215AS         | 40 GB  | 1       | 686   | 0     | 1.88   |
 | WDC       | WD10EARS-22Y5B1    | 1 TB   | 12      | 962   | 22    | 1.88   |
@@ -529,6 +529,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Samsung   | HD103SI            | 1 TB   | 27      | 927   | 122   | 1.78   |
 | WDC       | WD3200KS-00PFB0    | 320 GB | 2       | 1317  | 46    | 1.78   |
 | Seagate   | ST980812AS         | 80 GB  | 1       | 647   | 0     | 1.77   |
+| WDC       | WD5001AALS-00E3A0  | 500 GB | 11      | 858   | 106   | 1.77   |
 | WDC       | WD5000AAKS-07TMA0  | 500 GB | 1       | 646   | 0     | 1.77   |
 | Seagate   | ST32000641AS       | 2 TB   | 9       | 821   | 179   | 1.77   |
 | HGST      | HUS722T2TALA604    | 2 TB   | 2       | 644   | 0     | 1.77   |
@@ -537,9 +538,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD2500AAJS-08L7A0  | 250 GB | 3       | 642   | 0     | 1.76   |
 | WDC       | WD3200AAKS-00VYA0  | 320 GB | 6       | 734   | 59    | 1.76   |
 | WDC       | WD1001FALS-19J7B0  | 1 TB   | 1       | 641   | 0     | 1.76   |
-| WDC       | WD5001AALS-00E3A0  | 500 GB | 11      | 852   | 106   | 1.76   |
-| Toshiba   | DT01ABA200V        | 2 TB   | 1       | 639   | 0     | 1.75   |
 | Seagate   | ST3200820AS        | 200 GB | 25      | 913   | 425   | 1.75   |
+| Toshiba   | DT01ABA200V        | 2 TB   | 1       | 639   | 0     | 1.75   |
 | WDC       | WD800JB-00ETA0     | 80 GB  | 5       | 1354  | 273   | 1.75   |
 | WDC       | WD1600JS-98MHB0    | 160 GB | 1       | 638   | 0     | 1.75   |
 | WDC       | WD2003FZEX-00SRLA0 | 2 TB   | 20      | 659   | 1     | 1.75   |
@@ -581,12 +581,12 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD1200JS-00MHB0    | 120 GB | 14      | 649   | 1     | 1.68   |
 | Samsung   | HD083GJ            | 80 GB  | 2       | 613   | 0     | 1.68   |
 | WDC       | WD5000AAKS-00V0A0  | 500 GB | 4       | 675   | 2     | 1.68   |
+| Samsung   | HD103SJ            | 1 TB   | 86      | 749   | 11    | 1.68   |
 | WDC       | WD1003FBYX-18Y7B0  | 1 TB   | 2       | 955   | 2     | 1.68   |
-| Samsung   | HD103SJ            | 1 TB   | 86      | 748   | 11    | 1.67   |
 | WDC       | WD800JD-00LUA0     | 80 GB  | 1       | 610   | 0     | 1.67   |
 | Hitachi   | HDS721075CLA332    | 752 GB | 2       | 610   | 0     | 1.67   |
 | WDC       | WD2500BEKT-75PVMT0 | 250 GB | 3       | 609   | 0     | 1.67   |
-| WDC       | WD10EARX-00N0YB0   | 1 TB   | 48      | 750   | 4     | 1.67   |
+| WDC       | WD10EARX-00N0YB0   | 1 TB   | 48      | 751   | 4     | 1.67   |
 | Seagate   | ST31000526SV       | 1 TB   | 3       | 769   | 343   | 1.67   |
 | WDC       | WD800JD-75MSA1     | 80 GB  | 1       | 607   | 0     | 1.66   |
 | WDC       | WD3200BEVT-75ZCT2  | 320 GB | 6       | 711   | 126   | 1.66   |
@@ -739,9 +739,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5003ABYX-01WERA0 | 500 GB | 8       | 832   | 3     | 1.37   |
 | Seagate   | ST3160023A         | 160 GB | 16      | 827   | 320   | 1.37   |
 | Seagate   | ST320014A          | 20 GB  | 6       | 787   | 13    | 1.37   |
+| WDC       | WD5000AZRX-00A8LB0 | 500 GB | 67      | 516   | 1     | 1.37   |
 | Seagate   | ST380012ACE        | 80 GB  | 4       | 498   | 0     | 1.37   |
 | WDC       | WD2500AAJS-22VTA0  | 250 GB | 8       | 617   | 1     | 1.37   |
-| WDC       | WD5000AZRX-00A8LB0 | 500 GB | 67      | 515   | 1     | 1.37   |
 | Samsung   | HD105SI            | 1 TB   | 11      | 707   | 355   | 1.36   |
 | WDC       | WD400BB-00JHA0     | 40 GB  | 3       | 1145  | 4     | 1.36   |
 | WDC       | WD800JD-55MSA1     | 80 GB  | 2       | 497   | 0     | 1.36   |
@@ -784,11 +784,11 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5000BPKX-80HPJT0 | 500 GB | 1       | 480   | 0     | 1.32   |
 | Hitachi   | HDS728040PLA320    | 40 GB  | 2       | 1225  | 8     | 1.32   |
 | WDC       | WD7502AAEX-00Y9A0  | 752 GB | 5       | 478   | 0     | 1.31   |
+| WDC       | WD7500BPKX-75HPJT0 | 752 GB | 2       | 478   | 0     | 1.31   |
 | Hitachi   | HDS721050CLA660    | 500 GB | 17      | 545   | 6     | 1.31   |
 | WDC       | WD20EZRX-00DC0B0   | 2 TB   | 21      | 563   | 2     | 1.31   |
 | Seagate   | ST3160812A         | 160 GB | 27      | 737   | 385   | 1.31   |
 | Hitachi   | HUA722050CLA330    | 500 GB | 2       | 476   | 0     | 1.31   |
-| WDC       | WD7500BPKX-75HPJT0 | 752 GB | 2       | 476   | 0     | 1.30   |
 | WDC       | WD7500AACS-00D6B1  | 752 GB | 3       | 921   | 4     | 1.30   |
 | Seagate   | ST9120821A         | 120 GB | 4       | 719   | 19    | 1.30   |
 | WDC       | WD5000AUDX-63WNHY0 | 500 GB | 3       | 475   | 0     | 1.30   |
@@ -816,6 +816,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD10S21X-24R1BT... | 1 TB   | 7       | 460   | 0     | 1.26   |
 | WDC       | WD1600AAJS-00V4A0  | 160 GB | 6       | 463   | 13    | 1.26   |
 | Seagate   | ST2000VM003-1CT164 | 2 TB   | 6       | 745   | 720   | 1.26   |
+| WDC       | WD1600AAJS-00B4A0  | 160 GB | 19      | 709   | 73    | 1.26   |
 | WDC       | WD2500JS-22MHB0    | 250 GB | 4       | 580   | 70    | 1.26   |
 | Hitachi   | HTS725050A9A362    | 500 GB | 2       | 457   | 0     | 1.25   |
 | Seagate   | ST3250620A         | 250 GB | 15      | 687   | 42    | 1.25   |
@@ -844,15 +845,14 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5000BEKT-00KA9T0 | 500 GB | 2       | 1084  | 7     | 1.23   |
 | Maxtor    | 6V080E0            | 82 GB  | 9       | 780   | 5     | 1.23   |
 | ExcelStor | J360               | 64 GB  | 1       | 897   | 1     | 1.23   |
+| WDC       | WD1003FZEX-00MK2A0 | 1 TB   | 46      | 484   | 1     | 1.23   |
 | Toshiba   | MK1234GAX          | 120 GB | 2       | 448   | 0     | 1.23   |
 | Hitachi   | HDS721616PLA380    | 160 GB | 80      | 863   | 83    | 1.23   |
-| WDC       | WD1003FZEX-00MK2A0 | 1 TB   | 46      | 483   | 1     | 1.23   |
 | Hitachi   | HTS541064A9E680    | 640 GB | 3       | 447   | 0     | 1.23   |
 | Hitachi   | HDS721025CLA382    | 250 GB | 19      | 722   | 221   | 1.23   |
 | WDC       | WD1000CHTZ-04JCPV0 | 1 TB   | 1       | 447   | 0     | 1.23   |
 | WDC       | WD10JMVW-11AJGS1   | 1 TB   | 2       | 447   | 0     | 1.22   |
 | WDC       | WD15EARX-00ZUDB0   | 1.5 TB | 2       | 776   | 3     | 1.22   |
-| WDC       | WD1600AAJS-00B4A0  | 160 GB | 19      | 707   | 74    | 1.22   |
 | WDC       | WD3200YS-01PGB0    | 320 GB | 1       | 446   | 0     | 1.22   |
 | Seagate   | ST3200820A         | 200 GB | 5       | 491   | 61    | 1.22   |
 | Seagate   | ST3250624AS        | 250 GB | 14      | 942   | 101   | 1.22   |
@@ -935,7 +935,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD10JPVT-08A1YT1   | 1 TB   | 2       | 408   | 0     | 1.12   |
 | Seagate   | ST380819AS         | 80 GB  | 3       | 781   | 682   | 1.12   |
 | WDC       | WD800EB-11DJF0     | 80 GB  | 1       | 407   | 0     | 1.12   |
-| Seagate   | ST3500418AS        | 500 GB | 313     | 741   | 185   | 1.12   |
+| Seagate   | ST3500418AS        | 500 GB | 313     | 742   | 185   | 1.12   |
 | WDC       | WD2000JB-00KFA0    | 200 GB | 1       | 1220  | 2     | 1.11   |
 | WDC       | WD2500JD-00HBB0    | 250 GB | 1       | 406   | 0     | 1.11   |
 | Samsung   | HM251HI            | 250 GB | 4       | 532   | 3     | 1.11   |
@@ -974,9 +974,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Fujitsu   | MJA2250BH FFS G1   | 250 GB | 3       | 397   | 0     | 1.09   |
 | WDC       | WD2500AAKS-00YGA0  | 250 GB | 1       | 397   | 0     | 1.09   |
 | WDC       | WD1600BB-22RDA0    | 160 GB | 1       | 396   | 0     | 1.09   |
+| WDC       | WD2500AAKX-001CA0  | 250 GB | 28      | 520   | 104   | 1.09   |
 | WDC       | WD3200AAJS-00B4A0  | 320 GB | 17      | 905   | 131   | 1.09   |
 | WDC       | WD10EFRX-68PJCN0   | 1 TB   | 24      | 462   | 1     | 1.09   |
-| WDC       | WD2500AAKX-001CA0  | 250 GB | 28      | 519   | 104   | 1.09   |
 | WDC       | WD3200AAKS-00L6A0  | 320 GB | 3       | 579   | 4     | 1.09   |
 | WDC       | WD3200AVVS-56L2B0  | 320 GB | 9       | 572   | 62    | 1.09   |
 | WDC       | WD10JPVX-08JC3T2   | 1 TB   | 6       | 409   | 1     | 1.08   |
@@ -989,6 +989,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD1200BEVS-22UST0  | 120 GB | 23      | 504   | 71    | 1.08   |
 | WDC       | WD15EARS-00S8B1    | 1.5 TB | 2       | 1078  | 4     | 1.08   |
 | WDC       | WD5000AAKS-75V0A0  | 500 GB | 7       | 824   | 3     | 1.07   |
+| WDC       | WD10EZRX-00L4HB0   | 1 TB   | 39      | 411   | 4     | 1.07   |
 | WDC       | WD10EZEX-22BN5A0   | 1 TB   | 14      | 455   | 2     | 1.07   |
 | WDC       | WD2500AAJB-00J3A0  | 250 GB | 10      | 741   | 8     | 1.07   |
 | WDC       | WD15EARS-00MVWB0   | 1.5 TB | 32      | 850   | 406   | 1.07   |
@@ -997,7 +998,6 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Hitachi   | HTS723216A7A364    | 160 GB | 1       | 389   | 0     | 1.07   |
 | WDC       | WD20NMVW-11AV3S0   | 2 TB   | 1       | 778   | 1     | 1.07   |
 | WDC       | WD10EARS-00MVWB0   | 1 TB   | 30      | 900   | 36    | 1.07   |
-| WDC       | WD10EZRX-00L4HB0   | 1 TB   | 39      | 409   | 4     | 1.07   |
 | WDC       | WD3200AAKS-00SBA0  | 320 GB | 10      | 710   | 24    | 1.06   |
 | Samsung   | HD322HJ            | 320 GB | 31      | 776   | 92    | 1.06   |
 | Hitachi   | HDS721680PLAT80    | 80 GB  | 5       | 866   | 4     | 1.06   |
@@ -1007,12 +1007,12 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Seagate   | ST3250824AS        | 250 GB | 19      | 775   | 849   | 1.05   |
 | Seagate   | ST3250820ACE       | 250 GB | 3       | 520   | 698   | 1.05   |
 | WDC       | WD5000BEVT-00A03T0 | 500 GB | 3       | 384   | 0     | 1.05   |
+| Seagate   | ST1000DM003-1ER162 | 1 TB   | 150     | 388   | 9     | 1.05   |
 | WDC       | WD5000AADS-00S9B0  | 500 GB | 91      | 700   | 27    | 1.05   |
 | Samsung   | HD753LJ            | 752 GB | 25      | 917   | 271   | 1.05   |
 | WDC       | WD800JD-22JNA0     | 80 GB  | 1       | 383   | 0     | 1.05   |
+| Toshiba   | DT01ACA200         | 2 TB   | 84      | 426   | 52    | 1.05   |
 | WDC       | WD1600JS-08NCB1    | 160 GB | 5       | 565   | 27    | 1.05   |
-| Seagate   | ST1000DM003-1ER162 | 1 TB   | 150     | 387   | 9     | 1.05   |
-| Toshiba   | DT01ACA200         | 2 TB   | 84      | 425   | 52    | 1.05   |
 | WDC       | WD800BB-75JHC0     | 80 GB  | 2       | 382   | 0     | 1.05   |
 | HGST      | HTS725032A7E630    | 320 GB | 12      | 408   | 256   | 1.05   |
 | Toshiba   | MK2559GSXP         | 250 GB | 4       | 450   | 7     | 1.05   |
@@ -1105,16 +1105,17 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD6400AACS-00M3B0  | 640 GB | 1       | 352   | 0     | 0.97   |
 | WDC       | WD5000LPVT-22G33T0 | 500 GB | 20      | 454   | 66    | 0.96   |
 | WDC       | WD10JPVT-60A1YT0   | 1 TB   | 2       | 455   | 505   | 0.96   |
+| WDC       | WD5000LPVT-75G33T0 | 500 GB | 4       | 407   | 2     | 0.96   |
+| WDC       | WD5000AAKX-00ERMA0 | 500 GB | 89      | 484   | 5     | 0.96   |
+| Seagate   | ST1000DM003-1CH162 | 1 TB   | 255     | 451   | 35    | 0.96   |
 | WDC       | WD5000AAKS-22V1A0  | 500 GB | 10      | 647   | 155   | 0.96   |
 | Fujitsu   | MHV2120AH          | 120 GB | 2       | 482   | 3     | 0.96   |
 | WDC       | WD25EZRX-00MMMB0   | 2.5 TB | 1       | 1049  | 2     | 0.96   |
-| Seagate   | ST1000DM003-1CH162 | 1 TB   | 255     | 450   | 35    | 0.96   |
 | WDC       | WD3000BLFS-08YBU0  | 304 GB | 1       | 349   | 0     | 0.96   |
 | WDC       | WD6000BLHX-01V7BV0 | 600 GB | 1       | 349   | 0     | 0.96   |
 | WDC       | WD10EZRX-00DC0B0   | 1 TB   | 4       | 348   | 0     | 0.96   |
 | WDC       | WD5000LPVX-08V0TT6 | 500 GB | 1       | 348   | 0     | 0.95   |
 | Fujitsu   | MHY2200BH          | 200 GB | 14      | 584   | 42    | 0.95   |
-| WDC       | WD5000AAKX-00ERMA0 | 500 GB | 89      | 481   | 5     | 0.95   |
 | WDC       | WD10EZEX-60M2NA0   | 1 TB   | 12      | 437   | 132   | 0.95   |
 | WDC       | WD40EZRZ-22GXCB0   | 4 TB   | 4       | 346   | 0     | 0.95   |
 | Toshiba   | MK6465GSXN         | 640 GB | 6       | 529   | 197   | 0.95   |
@@ -1125,11 +1126,10 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5000BUCT-63LS5Y1 | 500 GB | 1       | 345   | 0     | 0.95   |
 | WDC       | WD6400AARS-00Y5B1  | 640 GB | 15      | 767   | 11    | 0.95   |
 | WDC       | WD5000AAKX-07U6AA0 | 500 GB | 3       | 456   | 3     | 0.94   |
-| WDC       | WD5000LPVT-75G33T0 | 500 GB | 4       | 400   | 2     | 0.94   |
 | WDC       | WD7500BPKT-00PK4T0 | 752 GB | 2       | 343   | 0     | 0.94   |
 | Hitachi   | HTS545050B9A300    | 500 GB | 91      | 583   | 157   | 0.94   |
 | WDC       | WD3200BPVT-55JJ5T0 | 320 GB | 5       | 396   | 195   | 0.94   |
-| Seagate   | ST31000524AS       | 1 TB   | 159     | 597   | 218   | 0.94   |
+| Seagate   | ST31000524AS       | 1 TB   | 159     | 598   | 218   | 0.94   |
 | Samsung   | HD251HJ            | 250 GB | 7       | 753   | 62    | 0.94   |
 | WDC       | WD3200BVVT-63A26Y0 | 320 GB | 3       | 348   | 1     | 0.94   |
 | Seagate   | ST380811AS         | 80 GB  | 59      | 583   | 492   | 0.94   |
@@ -1143,10 +1143,10 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD7500BPVT-24HXZT3 | 752 GB | 11      | 378   | 24    | 0.93   |
 | Seagate   | ST3160021A         | 160 GB | 12      | 712   | 509   | 0.93   |
 | WDC       | WD1600AAJB-00PVA0  | 160 GB | 10      | 616   | 181   | 0.93   |
-| Seagate   | ST3160811AS        | 160 GB | 80      | 783   | 438   | 0.93   |
+| Samsung   | HM120JC            | 120 GB | 2       | 638   | 51    | 0.93   |
+| Seagate   | ST3160811AS        | 160 GB | 80      | 784   | 438   | 0.93   |
 | WDC       | WD6400BPVT-22HXZT3 | 640 GB | 7       | 388   | 1     | 0.93   |
 | WDC       | WD10EZEX-60ZF5A0   | 1 TB   | 42      | 481   | 67    | 0.92   |
-| Samsung   | HM120JC            | 120 GB | 2       | 637   | 51    | 0.92   |
 | ExcelStor | J680               | 82 GB  | 1       | 1687  | 4     | 0.92   |
 | IBM/Hi... | IC35L090AVV207-0   | 80 GB  | 2       | 735   | 2     | 0.92   |
 | Hitachi   | HDS721616PLA320    | 160 GB | 2       | 1077  | 7     | 0.92   |
@@ -1161,7 +1161,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5000LPVT-08G33T1 | 500 GB | 11      | 344   | 1     | 0.92   |
 | WDC       | WD6002FRYZ-01WD5B0 | 6 TB   | 1       | 332   | 0     | 0.91   |
 | Seagate   | ST3320311CS        | 320 GB | 8       | 374   | 126   | 0.91   |
-| Samsung   | HD503HI            | 500 GB | 15      | 567   | 19    | 0.91   |
+| Samsung   | HD503HI            | 500 GB | 15      | 567   | 17    | 0.91   |
 | WDC       | WD5000AZLX-00CL5A0 | 500 GB | 3       | 332   | 0     | 0.91   |
 | WDC       | WD5003AZEX-00MK2A0 | 500 GB | 10      | 390   | 2     | 0.91   |
 | WDC       | WD1001FALS-00U9B0  | 1 TB   | 1       | 995   | 2     | 0.91   |
@@ -1229,8 +1229,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Seagate   | ST3000DM001-1CH166 | 3 TB   | 22      | 433   | 196   | 0.85   |
 | WDC       | WD800BB-56JKC0     | 80 GB  | 5       | 767   | 7     | 0.85   |
 | IBM/Hi... | IC35L120AVV207-0   | 128 GB | 1       | 933   | 2     | 0.85   |
-| Samsung   | HM500JI            | 500 GB | 21      | 486   | 3     | 0.85   |
 | Seagate   | ST2000VX002-1AH166 | 2 TB   | 1       | 311   | 0     | 0.85   |
+| Samsung   | HM500JI            | 500 GB | 21      | 486   | 3     | 0.85   |
 | WDC       | WD10EALX-559BA0    | 1 TB   | 5       | 517   | 6     | 0.85   |
 | WDC       | WD1200JB-00DUA3    | 120 GB | 1       | 1235  | 3     | 0.85   |
 | WDC       | WD1600JS-40TGB0    | 160 GB | 1       | 308   | 0     | 0.85   |
@@ -1250,7 +1250,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Toshiba   | MQ01UBD100         | 1 TB   | 6       | 337   | 10    | 0.83   |
 | Samsung   | HD103UI            | 1 TB   | 2       | 483   | 9     | 0.83   |
 | Seagate   | ST1000DX001-1NS162 | 1 TB   | 5       | 498   | 4     | 0.83   |
-| WDC       | WD3200BPVT-22ZEST0 | 320 GB | 51      | 442   | 40    | 0.82   |
+| WDC       | WD3200BPVT-22ZEST0 | 320 GB | 51      | 442   | 40    | 0.83   |
 | WDC       | WD400BD-55MTA1     | 40 GB  | 1       | 300   | 0     | 0.82   |
 | Seagate   | ST320011A          | 20 GB  | 6       | 555   | 5     | 0.82   |
 | WDC       | WD600BEAS-22KZT0   | 64 GB  | 1       | 300   | 0     | 0.82   |
@@ -1260,6 +1260,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Hitachi   | HDT722516DLA380    | 164 GB | 9       | 809   | 64    | 0.82   |
 | Seagate   | ST3500830AS        | 500 GB | 6       | 771   | 517   | 0.82   |
 | WDC       | WD5000BPKT-00PK4T0 | 500 GB | 4       | 317   | 1     | 0.81   |
+| Seagate   | ST320DM000-1BD14C  | 320 GB | 32      | 433   | 74    | 0.81   |
 | Fujitsu   | MHX2300BT          | 304 GB | 3       | 759   | 47    | 0.81   |
 | WDC       | WD1600JS-00MHB0    | 160 GB | 7       | 691   | 166   | 0.81   |
 | Seagate   | ST940210AS         | 40 GB  | 1       | 591   | 1     | 0.81   |
@@ -1290,7 +1291,6 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Samsung   | HD321KJ            | 320 GB | 54      | 766   | 313   | 0.79   |
 | Fujitsu   | MHY2120BH          | 120 GB | 24      | 517   | 234   | 0.79   |
 | Seagate   | ST3120813AS        | 120 GB | 20      | 913   | 594   | 0.79   |
-| Seagate   | ST320DM000-1BD14C  | 320 GB | 32      | 425   | 74    | 0.79   |
 | IBM/Hi... | IC35L120AVV207-1   | 128 GB | 1       | 288   | 0     | 0.79   |
 | Fujitsu   | MHV2080BH          | 80 GB  | 3       | 405   | 3     | 0.79   |
 | WDC       | WD2500AAKS-00B3A0  | 250 GB | 4       | 713   | 8     | 0.79   |
@@ -1305,6 +1305,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Hitachi   | HTS545032B9A300    | 320 GB | 85      | 481   | 120   | 0.78   |
 | WDC       | WD1200BEVS-75RST0  | 120 GB | 3       | 286   | 0     | 0.78   |
 | Toshiba   | MK4025GAS          | 40 GB  | 1       | 571   | 1     | 0.78   |
+| WDC       | WD1600JD-22HBB0    | 160 GB | 1       | 1710  | 5     | 0.78   |
 | Toshiba   | HDWA130            | 3 TB   | 1       | 285   | 0     | 0.78   |
 | WDC       | WD20EURX-63T0FY0   | 2 TB   | 8       | 461   | 258   | 0.78   |
 | Seagate   | ST500LM000-1EJ1... | 500 GB | 7       | 332   | 54    | 0.78   |
@@ -1329,7 +1330,6 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD20EURS-63S48Y0   | 2 TB   | 4       | 870   | 510   | 0.76   |
 | WDC       | WD40EZRX-11SPEB0   | 4 TB   | 1       | 277   | 0     | 0.76   |
 | Samsung   | HD401LJ            | 400 GB | 4       | 702   | 14    | 0.76   |
-| WDC       | WD1600JD-22HBB0    | 160 GB | 1       | 1659  | 5     | 0.76   |
 | WDC       | WD1200JS-00NCB1    | 120 GB | 2       | 591   | 27    | 0.75   |
 | WDC       | WD2000JD-00HBB0    | 200 GB | 4       | 718   | 4     | 0.75   |
 | Seagate   | STM3320418AS       | 320 GB | 10      | 644   | 140   | 0.75   |
@@ -1343,22 +1343,22 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Hitachi   | HUA721010KLA330    | 1 TB   | 2       | 272   | 0     | 0.75   |
 | WDC       | WD7500BPVT-60HXZT3 | 752 GB | 7       | 558   | 153   | 0.75   |
 | WDC       | WD2500AAKX-00ERMA0 | 250 GB | 22      | 453   | 63    | 0.75   |
-| Seagate   | ST500DM002-1BD142  | 500 GB | 446     | 449   | 108   | 0.74   |
+| Seagate   | ST500DM002-1BD142  | 500 GB | 446     | 449   | 108   | 0.75   |
 | HGST      | HTS721075A9E630    | 752 GB | 7       | 271   | 0     | 0.74   |
 | Seagate   | ST340016A          | 40 GB  | 28      | 560   | 31    | 0.74   |
 | WDC       | WD10JPVX-22JC3T0   | 1 TB   | 111     | 293   | 14    | 0.74   |
 | WDC       | WD3000FYYZ-01UL1B3 | 3 TB   | 1       | 271   | 0     | 0.74   |
 | WDC       | WD2500BEKT-60PVMT0 | 250 GB | 10      | 370   | 102   | 0.74   |
-| Seagate   | ST3160023AS        | 160 GB | 12      | 1003  | 41    | 0.74   |
 | Hitachi   | HTS547575A9E384    | 640 GB | 93      | 464   | 404   | 0.74   |
+| Seagate   | ST3160023AS        | 160 GB | 12      | 1003  | 41    | 0.74   |
 | WDC       | WD5000BPKT-75PK4T0 | 500 GB | 9       | 491   | 4     | 0.74   |
 | Hitachi   | HUS724030ALE641    | 3 TB   | 4       | 373   | 313   | 0.74   |
 | WDC       | WD3200BEVT-00A0RT0 | 320 GB | 18      | 319   | 12    | 0.74   |
 | WDC       | WD3200BPVT-22JJ5T0 | 320 GB | 104     | 339   | 54    | 0.74   |
+| Toshiba   | HDWD130            | 3 TB   | 11      | 269   | 0     | 0.74   |
 | WDC       | WD1200BEVS-07RST0  | 120 GB | 2       | 268   | 0     | 0.74   |
 | WDC       | WD5000BPVT-00HXZT3 | 500 GB | 8       | 372   | 61    | 0.74   |
 | Toshiba   | MK1031GAS          | 100 GB | 3       | 433   | 3     | 0.74   |
-| Toshiba   | HDWD130            | 3 TB   | 11      | 268   | 0     | 0.74   |
 | WDC       | WD5000M22K-24Z1... | 500 GB | 1       | 267   | 0     | 0.73   |
 | WDC       | WD5000AAKX-08ERMA0 | 500 GB | 17      | 468   | 141   | 0.73   |
 | HGST      | HUS724040ALE640    | 4 TB   | 6       | 267   | 0     | 0.73   |
@@ -1371,9 +1371,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Fujitsu   | MHW2160BH          | 160 GB | 3       | 493   | 30    | 0.73   |
 | WDC       | WD3200BEKX-75B7WT0 | 320 GB | 1       | 266   | 0     | 0.73   |
 | Seagate   | ST9640320AS        | 640 GB | 9       | 486   | 328   | 0.73   |
+| WDC       | WD6000HLHX-01JJPV0 | 600 GB | 6       | 482   | 5     | 0.73   |
 | WDC       | WD5000AZRZ-00HTKB0 | 500 GB | 8       | 265   | 0     | 0.73   |
 | Seagate   | ST9160411ASG       | 160 GB | 2       | 676   | 4     | 0.73   |
-| WDC       | WD6000HLHX-01JJPV0 | 600 GB | 6       | 482   | 5     | 0.73   |
 | Toshiba   | MQ04UBF100         | 1 TB   | 3       | 265   | 0     | 0.73   |
 | WDC       | WD5000AAKS-65A7B2  | 500 GB | 1       | 265   | 0     | 0.73   |
 | WDC       | WD2500AAKS-61L9A0  | 250 GB | 1       | 265   | 0     | 0.73   |
@@ -1415,6 +1415,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Hitachi   | HTS545032B9SA02    | 320 GB | 2       | 840   | 30    | 0.70   |
 | Maxtor    | STM3320620AS       | 320 GB | 2       | 254   | 0     | 0.70   |
 | WDC       | WD5000AAKS-00V1A0  | 500 GB | 47      | 745   | 286   | 0.70   |
+| Hitachi   | HTS545032A7E380    | 320 GB | 21      | 359   | 102   | 0.70   |
 | WDC       | WD3200BEKT-00F3T0  | 320 GB | 2       | 253   | 0     | 0.69   |
 | WDC       | WD5000AAKS-22YGA0  | 500 GB | 3       | 748   | 153   | 0.69   |
 | WDC       | WD40PURX-64GVNY0   | 4 TB   | 1       | 253   | 0     | 0.69   |
@@ -1438,8 +1439,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD1600BEVT-88ZCT0  | 160 GB | 1       | 247   | 0     | 0.68   |
 | WDC       | WD2500BEVT-60ZCT1  | 250 GB | 6       | 394   | 10    | 0.68   |
 | Fujitsu   | MHV2060BH          | 64 GB  | 6       | 441   | 10    | 0.68   |
-| Hitachi   | HTS545032A7E380    | 320 GB | 21      | 352   | 102   | 0.68   |
-| WDC       | WD10JPVX-60JC3T0   | 1 TB   | 20      | 314   | 80    | 0.68   |
+| WDC       | WD10JPVX-60JC3T0   | 1 TB   | 20      | 315   | 80    | 0.68   |
 | Toshiba   | MG03ACA300         | 3 TB   | 2       | 430   | 5     | 0.68   |
 | WDC       | WD2000JS-00MHB1    | 200 GB | 1       | 246   | 0     | 0.68   |
 | Samsung   | HD250HJ            | 250 GB | 33      | 752   | 621   | 0.68   |
@@ -1473,7 +1473,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD10SPZX-75Z10T1   | 1 TB   | 4       | 240   | 0     | 0.66   |
 | Seagate   | ST4000VM000-2AF166 | 4 TB   | 1       | 240   | 0     | 0.66   |
 | WDC       | WD5000AARS-003BB1  | 500 GB | 4       | 626   | 5     | 0.66   |
-| Hitachi   | HDS721010DLE630    | 1 TB   | 37      | 756   | 594   | 0.65   |
+| Hitachi   | HDS721010DLE630    | 1 TB   | 37      | 756   | 594   | 0.66   |
 | Toshiba   | MK6034GAX          | 64 GB  | 2       | 879   | 5     | 0.65   |
 | WDC       | WD800AAJS-00B4A0   | 80 GB  | 3       | 370   | 4     | 0.65   |
 | WDC       | WD10JPVX-80JC3T0   | 1 TB   | 8       | 237   | 0     | 0.65   |
@@ -1483,10 +1483,10 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Toshiba   | MQ01ABD032         | 320 GB | 73      | 335   | 92    | 0.65   |
 | Seagate   | ST250LT003-9YG14C  | 250 GB | 3       | 235   | 0     | 0.65   |
 | Seagate   | ST500LM014 HN-M... | 500 GB | 2       | 480   | 1     | 0.65   |
+| Hitachi   | HTS545016B9A300    | 160 GB | 41      | 338   | 57    | 0.64   |
 | Seagate   | ST500LM011 HM501II | 500 GB | 2       | 277   | 1     | 0.64   |
 | WDC       | WD3200BEVS-26VAT0  | 320 GB | 1       | 235   | 0     | 0.64   |
 | HGST      | HTS545032A7E680    | 320 GB | 16      | 299   | 19    | 0.64   |
-| Hitachi   | HTS545016B9A300    | 160 GB | 41      | 337   | 57    | 0.64   |
 | WDC       | WD3200BEKT-75KA9T0 | 320 GB | 1       | 234   | 0     | 0.64   |
 | WDC       | WD1600JS-60NCB1    | 160 GB | 5       | 603   | 64    | 0.64   |
 | WDC       | WD5003ABYX-23 0... | 500 GB | 1       | 234   | 0     | 0.64   |
@@ -1521,6 +1521,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5000AAKX-75U6AA0 | 500 GB | 7       | 362   | 3     | 0.62   |
 | WDC       | WD2000JD-22HBC0    | 200 GB | 1       | 1350  | 5     | 0.62   |
 | WDC       | WD6400BPVT-22HXZT1 | 640 GB | 3       | 338   | 3     | 0.62   |
+| WDC       | WD7500BPKX-00HPJT0 | 752 GB | 5       | 224   | 0     | 0.62   |
 | Seagate   | ST6000VN0041-2E... | 6 TB   | 1       | 224   | 0     | 0.62   |
 | Toshiba   | MK5076GSXN         | 500 GB | 1       | 224   | 0     | 0.62   |
 | Seagate   | ST500LM012 HN-M... | 500 GB | 152     | 322   | 45    | 0.61   |
@@ -1529,9 +1530,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Seagate   | ST3120211AS        | 120 GB | 5       | 517   | 12    | 0.61   |
 | Samsung   | HM250HI            | 250 GB | 71      | 329   | 14    | 0.61   |
 | WDC       | WD2500AAJS-65M0A0  | 250 GB | 3       | 665   | 13    | 0.61   |
-| WDC       | WD7500BPKX-00HPJT0 | 752 GB | 5       | 223   | 0     | 0.61   |
 | WDC       | WD3200BEVT-75A23T0 | 320 GB | 3       | 283   | 47    | 0.61   |
 | Seagate   | ST4000DM005-2DP166 | 4 TB   | 6       | 222   | 0     | 0.61   |
+| Seagate   | ST2000LX001-1RG174 | 2 TB   | 13      | 302   | 92    | 0.61   |
 | WDC       | WD3200BEVT-26A23T0 | 320 GB | 2       | 397   | 109   | 0.61   |
 | Seagate   | ST3000VX000-1ES166 | 3 TB   | 1       | 222   | 0     | 0.61   |
 | Seagate   | ST9320328CS        | 320 GB | 7       | 502   | 249   | 0.61   |
@@ -1539,18 +1540,17 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Fujitsu   | MHW2120BJ FFS G2   | 120 GB | 1       | 221   | 0     | 0.61   |
 | Seagate   | ST9320423AS        | 320 GB | 37      | 418   | 309   | 0.61   |
 | WDC       | WD2500AAKS-60VYA0  | 250 GB | 1       | 221   | 0     | 0.61   |
-| Seagate   | ST2000LX001-1RG174 | 2 TB   | 13      | 300   | 92    | 0.60   |
+| WDC       | WD5000LPVX-22V0TT0 | 500 GB | 157     | 263   | 12    | 0.60   |
 | WDC       | WD2500BEVT-22A23T0 | 250 GB | 44      | 396   | 54    | 0.60   |
 | Seagate   | ST33000651AS       | 3 TB   | 4       | 219   | 0     | 0.60   |
 | WDC       | WD15EARS-00Z5B1    | 1.5 TB | 22      | 983   | 595   | 0.60   |
 | Seagate   | ST1000LM024 HN-... | 1 TB   | 411     | 313   | 53    | 0.60   |
-| WDC       | WD5000LPVX-22V0TT0 | 500 GB | 157     | 261   | 12    | 0.60   |
 | WDC       | WD3000HLFS-75G6U1  | 304 GB | 1       | 218   | 0     | 0.60   |
 | Maxtor    | 6G160P0            | 160 GB | 2       | 217   | 0     | 0.60   |
 | Samsung   | HD322GJ            | 320 GB | 22      | 435   | 149   | 0.60   |
 | WDC       | WD20NPVT-00Z2TT0   | 2 TB   | 3       | 336   | 12    | 0.60   |
-| WDC       | WD2500JS-75NCB3    | 250 GB | 2       | 808   | 49    | 0.60   |
 | Toshiba   | MK1059GSMP         | 1 TB   | 14      | 548   | 281   | 0.60   |
+| WDC       | WD2500JS-75NCB3    | 250 GB | 2       | 808   | 49    | 0.60   |
 | WDC       | WD1600JB-00GVC0    | 160 GB | 2       | 777   | 3     | 0.59   |
 | WDC       | WD5002AALX-32Z3A0  | 500 GB | 2       | 647   | 1     | 0.59   |
 | Seagate   | ST2000VX008-2E3164 | 2 TB   | 3       | 216   | 0     | 0.59   |
@@ -1576,8 +1576,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD10JPVT-75A1YT0   | 1 TB   | 6       | 404   | 3     | 0.58   |
 | Hitachi   | HTS727575A9E364    | 752 GB | 15      | 530   | 157   | 0.57   |
 | WDC       | WD10EALX-229BA0    | 1 TB   | 5       | 793   | 11    | 0.57   |
-| Hitachi   | HTS727550A9E364    | 500 GB | 9       | 455   | 457   | 0.57   |
 | HGST      | HTS721010A9E630    | 1 TB   | 175     | 258   | 120   | 0.57   |
+| Hitachi   | HTS727550A9E364    | 500 GB | 9       | 455   | 457   | 0.57   |
 | WDC       | WD5000BEKT-80KA9T0 | 500 GB | 3       | 317   | 1     | 0.57   |
 | Seagate   | ST2000DM009-2G4100 | 2 TB   | 4       | 208   | 0     | 0.57   |
 | WDC       | WD800BEVS-00RST0   | 80 GB  | 3       | 277   | 1     | 0.57   |
@@ -1602,20 +1602,20 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD20PURX-64P6ZY0   | 2 TB   | 7       | 253   | 21    | 0.56   |
 | Toshiba   | MQ03UBB300         | 3 TB   | 4       | 252   | 3     | 0.56   |
 | WDC       | WD5000BMVW-11AMCS2 | 500 GB | 1       | 202   | 0     | 0.56   |
+| Seagate   | ST250DM000-1BC141  | 250 GB | 12      | 260   | 9     | 0.55   |
 | WDC       | WD5000AZDX-00SC2B0 | 500 GB | 4       | 371   | 12    | 0.55   |
 | WDC       | WD800JD-00JNC0     | 80 GB  | 4       | 451   | 16    | 0.55   |
+| HGST      | HTS541010A9E680    | 1 TB   | 140     | 311   | 266   | 0.55   |
 | Seagate   | ST9500423AS        | 500 GB | 22      | 386   | 54    | 0.55   |
 | Fujitsu   | MHZ2080BH G1       | 80 GB  | 2       | 201   | 0     | 0.55   |
-| HGST      | HTS541010A9E680    | 1 TB   | 140     | 311   | 266   | 0.55   |
 | Seagate   | ST4000VN000-2AH166 | 4 TB   | 1       | 200   | 0     | 0.55   |
 | Seagate   | ST980813ASG        | 80 GB  | 2       | 436   | 6     | 0.55   |
 | WDC       | WD1600BEVT-24A23T0 | 160 GB | 11      | 227   | 2     | 0.54   |
 | WDC       | WD5000LPCX-22VHAT1 | 500 GB | 3       | 198   | 0     | 0.54   |
 | WDC       | WD6400BPVT-00HXZT1 | 640 GB | 3       | 198   | 0     | 0.54   |
 | WDC       | WD10EADS-11M2B2    | 1 TB   | 1       | 1778  | 8     | 0.54   |
-| Seagate   | ST3750528AS        | 752 GB | 39      | 683   | 345   | 0.54   |
+| Seagate   | ST3750528AS        | 752 GB | 39      | 684   | 345   | 0.54   |
 | WDC       | WD2500BEKT-60A25T1 | 250 GB | 8       | 448   | 129   | 0.54   |
-| Seagate   | ST250DM000-1BC141  | 250 GB | 12      | 255   | 9     | 0.54   |
 | Samsung   | HM250JI            | 250 GB | 6       | 459   | 88    | 0.54   |
 | WDC       | WD10JPVT-22A1YT0   | 1 TB   | 8       | 324   | 3     | 0.54   |
 | Samsung   | SP0802N            | 80 GB  | 25      | 681   | 50    | 0.54   |
@@ -1668,10 +1668,10 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Samsung   | MP0402H            | 40 GB  | 4       | 269   | 6     | 0.50   |
 | WDC       | WD3200BPVT-16JJ5T0 | 320 GB | 4       | 253   | 1     | 0.50   |
 | Quantum   | FIREBALLlct15 15   | 16 GB  | 1       | 183   | 0     | 0.50   |
+| Toshiba   | MQ01ABD100         | 1 TB   | 196     | 234   | 61    | 0.50   |
 | Seagate   | ST31000523AS       | 1 TB   | 2       | 2094  | 11    | 0.50   |
 | WDC       | WD5000BEVT-00A0RT0 | 500 GB | 11      | 376   | 103   | 0.50   |
 | Samsung   | HD161HJ            | 160 GB | 41      | 884   | 536   | 0.50   |
-| Toshiba   | MQ01ABD100         | 1 TB   | 196     | 233   | 61    | 0.50   |
 | Hitachi   | HDT722525DLAT80    | 250 GB | 2       | 733   | 3     | 0.50   |
 | Samsung   | HM321HX            | 320 GB | 2       | 263   | 4     | 0.50   |
 | Seagate   | ST12000VN0007-2... | 12 TB  | 1       | 181   | 0     | 0.50   |
@@ -1751,8 +1751,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD10SPCX-80HWST0   | 1 TB   | 1       | 160   | 0     | 0.44   |
 | Seagate   | ST9320325AS        | 320 GB | 203     | 456   | 450   | 0.44   |
 | Toshiba   | MK8037GSX          | 80 GB  | 17      | 458   | 144   | 0.44   |
+| Hitachi   | HDS722512VLAT20    | 128 GB | 1       | 802   | 4     | 0.44   |
 | Toshiba   | MK2555GSXF         | 250 GB | 6       | 160   | 0     | 0.44   |
-| Hitachi   | HDS722512VLAT20    | 128 GB | 1       | 801   | 4     | 0.44   |
 | WDC       | WD6400BEVT-22A0RT0 | 640 GB | 9       | 535   | 10    | 0.44   |
 | Seagate   | ST380211AS         | 80 GB  | 7       | 618   | 634   | 0.44   |
 | Toshiba   | MQ01ABF032         | 320 GB | 20      | 199   | 52    | 0.44   |
@@ -1783,9 +1783,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Toshiba   | HDWJ110            | 1 TB   | 4       | 225   | 283   | 0.43   |
 | Hitachi   | HDP725032GLA380    | 320 GB | 5       | 880   | 41    | 0.43   |
 | WDC       | WD40EFRX-68N32N0   | 4 TB   | 23      | 173   | 1     | 0.43   |
+| HGST      | HTS545050A7E380    | 500 GB | 131     | 337   | 234   | 0.42   |
 | WDC       | WD2500BEVT-08A23T1 | 250 GB | 13      | 270   | 133   | 0.42   |
 | WDC       | WD10JPLX-00MBPT0   | 1 TB   | 24      | 171   | 7     | 0.42   |
-| HGST      | HTS545050A7E380    | 500 GB | 131     | 335   | 234   | 0.42   |
 | Samsung   | SV0412H            | 40 GB  | 6       | 1055  | 104   | 0.42   |
 | Seagate   | ST3000DM007-1WY10G | 3 TB   | 1       | 152   | 0     | 0.42   |
 | WDC       | WD5000AAKS-08V0A0  | 500 GB | 7       | 506   | 39    | 0.42   |
@@ -1858,11 +1858,11 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Seagate   | ST320LT022-1AE142  | 320 GB | 1       | 138   | 0     | 0.38   |
 | WDC       | WD5000LPLX-08ZNTT0 | 500 GB | 10      | 225   | 1     | 0.38   |
 | Toshiba   | MK2555GSX          | 250 GB | 28      | 411   | 81    | 0.38   |
+| WDC       | WD10EZEX-08WN4A0   | 1 TB   | 114     | 151   | 10    | 0.37   |
 | WDC       | WD80EZAZ-11TDBA0   | 8 TB   | 7       | 136   | 0     | 0.37   |
 | WDC       | WD2500AAKX-603CA0  | 250 GB | 3       | 138   | 401   | 0.37   |
 | Hitachi   | HCT721050SLA380    | 500 GB | 1       | 136   | 0     | 0.37   |
 | WDC       | WD1600AAJS-60Z0A0  | 160 GB | 3       | 233   | 12    | 0.37   |
-| WDC       | WD10EZEX-08WN4A0   | 1 TB   | 114     | 150   | 10    | 0.37   |
 | Hitachi   | HTS541040G9AT00    | 40 GB  | 4       | 263   | 4     | 0.37   |
 | WDC       | WD1600BEVT-80A23T0 | 160 GB | 21      | 217   | 20    | 0.37   |
 | WDC       | WD800JD-00JNA0     | 80 GB  | 2       | 809   | 5     | 0.37   |
@@ -1893,18 +1893,18 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Seagate   | ST1000LM010-9YH146 | 1 TB   | 8       | 207   | 894   | 0.35   |
 | Seagate   | ST4000DM004-2CV104 | 4 TB   | 32      | 145   | 1     | 0.35   |
 | Hitachi   | HTS542525K9SA00    | 250 GB | 30      | 528   | 77    | 0.35   |
+| Toshiba   | MQ01ABD050         | 500 GB | 101     | 299   | 338   | 0.35   |
 | Seagate   | ST4000DX001-1CE168 | 4 TB   | 5       | 145   | 5     | 0.35   |
 | WDC       | WD3200AAJS-65M0A0  | 320 GB | 1       | 1152  | 8     | 0.35   |
-| Samsung   | HM500JJ            | 500 GB | 2       | 331   | 5     | 0.35   |
 | Seagate   | ST500LT012-1DG142  | 500 GB | 332     | 187   | 69    | 0.35   |
-| Toshiba   | MQ01ABD050         | 500 GB | 101     | 299   | 338   | 0.35   |
+| Samsung   | HM500JJ            | 500 GB | 2       | 331   | 5     | 0.35   |
 | Toshiba   | MK1034GSX          | 100 GB | 4       | 418   | 464   | 0.35   |
 | Toshiba   | MK7575GSX          | 752 GB | 18      | 520   | 619   | 0.35   |
 | Hitachi   | HTS541010A9E680    | 1 TB   | 11      | 401   | 862   | 0.35   |
 | Seagate   | ST500DM002-9YN14C  | 500 GB | 3       | 464   | 339   | 0.35   |
+| Toshiba   | MQ01ABF050         | 500 GB | 264     | 156   | 85    | 0.35   |
 | WDC       | WD1600AAJS-56M0A0  | 160 GB | 2       | 469   | 4     | 0.35   |
 | Seagate   | ST1000VX000-1ES162 | 1 TB   | 16      | 126   | 0     | 0.35   |
-| Toshiba   | MQ01ABF050         | 500 GB | 264     | 156   | 85    | 0.35   |
 | Toshiba   | MD04ACA400         | 4 TB   | 2       | 179   | 623   | 0.35   |
 | Seagate   | ST3500830SCE       | 500 GB | 1       | 126   | 0     | 0.35   |
 | Seagate   | ST9120821AS        | 120 GB | 5       | 274   | 1101  | 0.35   |
@@ -1912,9 +1912,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Hitachi   | HTS541680J9SA00    | 80 GB  | 46      | 469   | 84    | 0.35   |
 | WDC       | WD400BB-60DGA0     | 40 GB  | 1       | 504   | 3     | 0.35   |
 | WDC       | WD3200BEVT-26ZCT0  | 320 GB | 4       | 160   | 1     | 0.35   |
+| WDC       | WD10EZEX-22MFCA0   | 1 TB   | 32      | 144   | 7     | 0.34   |
 | Seagate   | ST250LM004 HN-M... | 250 GB | 6       | 239   | 6     | 0.34   |
 | Seagate   | ST3250312CS        | 250 GB | 11      | 317   | 230   | 0.34   |
-| WDC       | WD10EZEX-22MFCA0   | 1 TB   | 32      | 144   | 7     | 0.34   |
 | Toshiba   | MK1216GSG          | 120 GB | 3       | 272   | 4     | 0.34   |
 | Seagate   | ST500LT015-1DJ142  | 500 GB | 1       | 124   | 0     | 0.34   |
 | WDC       | WD3200AAKS-00C9A0  | 320 GB | 3       | 1080  | 8     | 0.34   |
@@ -1938,8 +1938,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD2500BPVT-75JJ5T0 | 250 GB | 3       | 118   | 0     | 0.33   |
 | WDC       | WD5000BEVT-60ZAT1  | 500 GB | 5       | 316   | 29    | 0.32   |
 | WDC       | WD1003FZEX-00K3CA0 | 1 TB   | 15      | 140   | 1     | 0.32   |
-| WDC       | WD5000BEVT-22ZAT0  | 500 GB | 6       | 542   | 20    | 0.32   |
 | Toshiba   | MK6475GSX          | 640 GB | 21      | 373   | 401   | 0.32   |
+| WDC       | WD5000BEVT-22ZAT0  | 500 GB | 6       | 542   | 20    | 0.32   |
 | Seagate   | ST320LT007-9ZV142  | 320 GB | 24      | 435   | 734   | 0.32   |
 | WDC       | WD20EZRZ-00Z5HB0   | 2 TB   | 26      | 133   | 1     | 0.32   |
 | WDC       | WD5000LPLX-00ZNTT0 | 500 GB | 38      | 117   | 0     | 0.32   |
@@ -1968,8 +1968,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD1200BEVS-60UST0  | 120 GB | 9       | 460   | 401   | 0.30   |
 | Toshiba   | MK5055GSX          | 500 GB | 11      | 540   | 160   | 0.30   |
 | WDC       | WD2500BEVT-75A23T0 | 250 GB | 5       | 581   | 13    | 0.30   |
-| WDC       | WD400JB-00FMA0     | 40 GB  | 2       | 656   | 8     | 0.30   |
 | WDC       | WD2500BEVT-00ZCT0  | 250 GB | 6       | 110   | 0     | 0.30   |
+| WDC       | WD400JB-00FMA0     | 40 GB  | 2       | 656   | 8     | 0.30   |
 | Hitachi   | HTS541080G9AT00    | 80 GB  | 12      | 520   | 93    | 0.30   |
 | WDC       | WD7500BPVT-00HXZT3 | 752 GB | 8       | 512   | 11    | 0.30   |
 | Fujitsu   | MHW2020BH          | 20 GB  | 2       | 109   | 0     | 0.30   |
@@ -2010,9 +2010,9 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD5000LPVX-00V0TT0 | 500 GB | 15      | 151   | 51    | 0.28   |
 | WDC       | WD5000HHTZ-04N21V1 | 500 GB | 1       | 100   | 0     | 0.27   |
 | WDC       | WD10SPCX-75HWST0   | 1 TB   | 1       | 100   | 0     | 0.27   |
+| WDC       | WD5000LPCX-21VHAT0 | 500 GB | 45      | 100   | 1     | 0.27   |
 | Seagate   | ST3500412AS        | 500 GB | 18      | 829   | 558   | 0.27   |
 | Seagate   | ST3160812AS 41N... | 160 GB | 2       | 1038  | 42    | 0.27   |
-| WDC       | WD5000LPCX-21VHAT0 | 500 GB | 45      | 100   | 1     | 0.27   |
 | Toshiba   | MK1637GSX          | 160 GB | 29      | 563   | 74    | 0.27   |
 | WDC       | WD7500AARS-003BB1  | 752 GB | 1       | 894   | 8     | 0.27   |
 | HGST      | HTE725032A7E630    | 320 GB | 1       | 99    | 0     | 0.27   |
@@ -2048,8 +2048,8 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | HGST      | HTS545050A7E660    | 500 GB | 11      | 232   | 6     | 0.25   |
 | Toshiba   | MK1237GSX          | 120 GB | 13      | 446   | 94    | 0.25   |
 | Hitachi   | HTS541612J9SA00    | 120 GB | 57      | 548   | 74    | 0.25   |
+| Seagate   | ST3320613AS        | 320 GB | 86      | 814   | 245   | 0.25   |
 | WDC       | WD3200AAJS-56M0A0  | 320 GB | 9       | 292   | 3     | 0.25   |
-| Seagate   | ST3320613AS        | 320 GB | 86      | 813   | 245   | 0.25   |
 | WDC       | WD1600AAJS-61M0A0  | 160 GB | 1       | 90    | 0     | 0.25   |
 | HP        | GB0250EAFJF        | 250 GB | 1       | 634   | 6     | 0.25   |
 | Toshiba   | HDWK105            | 500 GB | 5       | 90    | 0     | 0.25   |
@@ -2265,7 +2265,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | WDC       | WD3200BEKT-22KA9T0 | 320 GB | 1       | 46    | 0     | 0.13   |
 | Hitachi   | HTS541660J9AT00    | 64 GB  | 1       | 184   | 3     | 0.13   |
 | WDC       | WD101KFBX-68R56N0  | 10 TB  | 1       | 45    | 0     | 0.13   |
-| WDC       | WD1600BB-00GUC0    | 160 GB | 3       | 768   | 81    | 0.13   |
+| WDC       | WD1600BB-00GUC0    | 160 GB | 3       | 769   | 81    | 0.13   |
 | Samsung   | SV4012H            | 40 GB  | 2       | 1504  | 236   | 0.12   |
 | WDC       | WD3200AAJS-00V4A0  | 320 GB | 3       | 396   | 9     | 0.12   |
 | Toshiba   | MK3265GSX H        | 320 GB | 1       | 45    | 0     | 0.12   |
@@ -2407,11 +2407,11 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Maxtor    | STM3500320AS       | 500 GB | 14      | 772   | 344   | 0.06   |
 | Toshiba   | MK6032GAX          | 64 GB  | 1       | 23    | 0     | 0.06   |
 | Seagate   | ST4000VX000-2AG166 | 4 TB   | 1       | 23    | 0     | 0.06   |
+| WDC       | WD2500BEVT-60A23T0 | 250 GB | 3       | 258   | 27    | 0.06   |
 | Toshiba   | MK6465GSXW         | 640 GB | 1       | 552   | 23    | 0.06   |
 | Toshiba   | MK2529GSG          | 250 GB | 2       | 313   | 1127  | 0.06   |
 | WDC       | WD3200AUDX-56WNHY0 | 320 GB | 1       | 22    | 0     | 0.06   |
 | WDC       | WD2000JS-60NCB1    | 200 GB | 2       | 192   | 6     | 0.06   |
-| WDC       | WD2500BEVT-60A23T0 | 250 GB | 3       | 255   | 27    | 0.06   |
 | Samsung   | HM251JI            | 250 GB | 6       | 334   | 527   | 0.06   |
 | Toshiba   | MK1032GAX          | 100 GB | 2       | 108   | 4     | 0.06   |
 | WDC       | WD10TPVT-00HT5T1   | 1 TB   | 1       | 219   | 9     | 0.06   |
@@ -2469,7 +2469,7 @@ See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD
 | Maxtor    | STM3160813AS       | 160 GB | 4       | 793   | 543   | 0.04   |
 | WDC       | WD4000ABYS-01TNA0  | 400 GB | 1       | 688   | 44    | 0.04   |
 | Samsung   | SP1253N            | 120 GB | 1       | 286   | 18    | 0.04   |
-| Hitachi   | HTS543232L9SA02    | 320 GB | 1       | 1244  | 84    | 0.04   |
+| Hitachi   | HTS543232L9SA02    | 320 GB | 1       | 1255  | 84    | 0.04   |
 | Hitachi   | HTS723225L9A360    | 250 GB | 3       | 322   | 1301  | 0.04   |
 | Seagate   | ST4000VN008-2DR166 | 4 TB   | 8       | 14    | 0     | 0.04   |
 | Seagate   | OOS500G            | 500 GB | 1       | 14    | 0     | 0.04   |
@@ -2773,7 +2773,7 @@ Rating — avg. rating per sample.
 | Seagate   | NAS HDD                | 7      | 24      | 778   | 84    | 1.97   |
 | Hitachi   | Deskstar 7K1000        | 2      | 14      | 1019  | 17    | 1.97   |
 | Hitachi   | Deskstar 5K3000        | 4      | 18      | 998   | 36    | 1.96   |
-| WDC       | Caviar Black           | 41     | 335     | 925   | 40    | 1.95   |
+| WDC       | Caviar Black           | 41     | 335     | 926   | 40    | 1.95   |
 | Samsung   | SpinPoint F1 RE        | 2      | 3       | 824   | 34    | 1.90   |
 | WDC       | RE                     | 19     | 38      | 880   | 52    | 1.89   |
 | Seagate   | Barracuda 7200.8       | 8      | 38      | 1145  | 103   | 1.89   |
@@ -2800,10 +2800,10 @@ Rating — avg. rating per sample.
 | Fujitsu   | MPA..MPG               | 5      | 6       | 711   | 42    | 1.53   |
 | WDC       | Red                    | 19     | 272     | 680   | 16    | 1.53   |
 | Seagate   | Constellation ES (S... | 3      | 14      | 1173  | 174   | 1.52   |
-| Samsung   | SpinPoint F3           | 4      | 181     | 729   | 43    | 1.51   |
+| Samsung   | SpinPoint F3           | 4      | 181     | 730   | 43    | 1.51   |
 | Seagate   | DB35.3                 | 6      | 12      | 654   | 193   | 1.48   |
 | Seagate   | Barracuda XT           | 2      | 13      | 636   | 124   | 1.41   |
-| WDC       | Caviar Green           | 130    | 1144    | 800   | 69    | 1.40   |
+| WDC       | Caviar Green           | 130    | 1144    | 801   | 69    | 1.40   |
 | Seagate   | Barracuda 7200.10      | 32     | 1075    | 856   | 269   | 1.40   |
 | WDC       | Red Pro                | 4      | 4       | 511   | 0     | 1.40   |
 | Hitachi   | Deskstar T7K250        | 5      | 29      | 1011  | 44    | 1.39   |
@@ -2833,8 +2833,8 @@ Rating — avg. rating per sample.
 | WDC       | AV                     | 15     | 31      | 679   | 56    | 1.14   |
 | Fujitsu   | MHW BH                 | 9      | 41      | 562   | 42    | 1.14   |
 | Hitachi   | Deskstar P7K500        | 9      | 137     | 905   | 64    | 1.11   |
-| WDC       | Caviar Blue            | 291    | 2523    | 616   | 46    | 1.11   |
-| Samsung   | SpinPoint F3 EG        | 3      | 27      | 620   | 155   | 1.11   |
+| WDC       | Caviar Blue            | 291    | 2523    | 617   | 46    | 1.11   |
+| Samsung   | SpinPoint F3 EG        | 3      | 27      | 620   | 154   | 1.11   |
 | WDC       | Elements / My Passport | 33     | 70      | 495   | 66    | 1.11   |
 | Hitachi   | Deskstar 7K160         | 7      | 140     | 858   | 109   | 1.10   |
 | Seagate   | Barracuda 7200.12      | 14     | 1090    | 716   | 174   | 1.10   |
@@ -2873,7 +2873,7 @@ Rating — avg. rating per sample.
 | MediaMax  | WL5000                 | 1      | 1       | 308   | 0     | 0.85   |
 | Toshiba   | X300                   | 3      | 13      | 307   | 0     | 0.84   |
 | Samsung   | SpinPoint F1 EG        | 1      | 2       | 483   | 9     | 0.83   |
-| Samsung   | SpinPoint T166         | 7      | 141     | 823   | 408   | 0.82   |
+| Samsung   | SpinPoint T166         | 7      | 141     | 823   | 408   | 0.83   |
 | WDC       | Scorpio                | 1      | 1       | 300   | 0     | 0.82   |
 | Seagate   | Barracuda ATA V        | 3      | 4       | 1503  | 35    | 0.82   |
 | Seagate   | Barracuda LP           | 4      | 61      | 843   | 400   | 0.82   |
@@ -2884,12 +2884,12 @@ Rating — avg. rating per sample.
 | Seagate   | Momentus 7200.3        | 7      | 13      | 624   | 23    | 0.79   |
 | HGST      | Ultrastar He8          | 2      | 9       | 287   | 0     | 0.79   |
 | Toshiba   | 3.5" HDD DT01ACA       | 4      | 615     | 322   | 25    | 0.79   |
-| Hitachi   | Travelstar 5K500.B     | 12     | 345     | 500   | 143   | 0.78   |
+| Hitachi   | Travelstar 5K500.B     | 12     | 345     | 501   | 143   | 0.78   |
 | HP        | Ultrastar 7K4000       | 1      | 1       | 1419  | 4     | 0.78   |
 | Toshiba   | 2.5" HDD MK..58GSX     | 1      | 3       | 452   | 3     | 0.78   |
 | HGST      | Ultrastar DC HC520 ... | 2      | 2       | 280   | 0     | 0.77   |
-| Fujitsu   | MHX BT                 | 2      | 5       | 619   | 30    | 0.77   |
 | WDC       | Scorpio Blue           | 199    | 1695    | 419   | 60    | 0.77   |
+| Fujitsu   | MHX BT                 | 2      | 5       | 619   | 30    | 0.77   |
 | Toshiba   | 3.5" MG03ACAxxx(Y) ... | 4      | 13      | 322   | 1     | 0.77   |
 | Seagate   | Video 2.5              | 3      | 6       | 278   | 0     | 0.76   |
 | Seagate   | Barracuda Compute      | 4      | 12      | 294   | 121   | 0.76   |
@@ -2929,9 +2929,9 @@ Rating — avg. rating per sample.
 | Hitachi   | Travelstar 7K200       | 7      | 15      | 567   | 92    | 0.60   |
 | Hitachi   | CinemaStar 7K1000.B    | 2      | 4       | 218   | 0     | 0.60   |
 | HGST      | Travelstar 5K1000      | 5      | 173     | 320   | 286   | 0.60   |
+| Hitachi   | Deskstar 7K1000.D      | 2      | 73      | 625   | 517   | 0.60   |
 | Samsung   | SpinPoint F4           | 1      | 22      | 435   | 149   | 0.60   |
 | WDC       | Green Mobile           | 1      | 3       | 336   | 12    | 0.60   |
-| Hitachi   | Deskstar 7K1000.D      | 2      | 73      | 625   | 517   | 0.60   |
 | Toshiba   | 2.5" HDD MK..59GSM     | 1      | 14      | 548   | 281   | 0.60   |
 | Toshiba   | 3.5" HDD E300          | 2      | 5       | 213   | 0     | 0.58   |
 | Hitachi   | Deskstar 7K500         | 1      | 3       | 1946  | 19    | 0.58   |
@@ -2940,17 +2940,17 @@ Rating — avg. rating per sample.
 | Seagate   | Barracuda Pro          | 1      | 4       | 208   | 0     | 0.57   |
 | Samsung   | SpinPoint P80          | 18     | 102     | 569   | 138   | 0.56   |
 | WDC       | Blue Mobile            | 74     | 961     | 227   | 15    | 0.55   |
+| Hitachi   | Travelstar Z5K500      | 3      | 119     | 348   | 143   | 0.54   |
 | Maxtor    | DiamondMax D540X-4K    | 3      | 3       | 582   | 16    | 0.54   |
 | Samsung   | SpinPoint S250         | 2      | 48      | 777   | 664   | 0.54   |
 | Toshiba   | 2.5" HDD MQ01ABD       | 7      | 449     | 286   | 119   | 0.54   |
-| Hitachi   | Travelstar Z5K500      | 3      | 119     | 347   | 143   | 0.54   |
 | Seagate   | Momentus 5400 PSD      | 2      | 3       | 352   | 338   | 0.53   |
 | Samsung   | SpinPoint M8 (AF)      | 5      | 52      | 399   | 121   | 0.53   |
 | Seagate   | Barracuda ATA III      | 1      | 1       | 194   | 0     | 0.53   |
 | Seagate   | FireCuda 3.5           | 2      | 24      | 194   | 1     | 0.53   |
 | WDC       | Protege                | 6      | 9       | 652   | 14    | 0.52   |
 | Samsung   | SpinPoint MP5          | 3      | 7       | 371   | 187   | 0.52   |
-| HGST      | Travelstar Z7K500      | 4      | 120     | 264   | 141   | 0.52   |
+| HGST      | Travelstar Z7K500      | 4      | 120     | 265   | 141   | 0.52   |
 | Hitachi   | Travelstar 5K1000      | 3      | 18      | 391   | 696   | 0.51   |
 | Fujitsu   | MJA BH                 | 7      | 33      | 369   | 168   | 0.51   |
 | Magnet... | Unknown                | 2      | 2       | 185   | 0     | 0.51   |
@@ -2966,7 +2966,7 @@ Rating — avg. rating per sample.
 | WDC       | Black Mobile           | 26     | 151     | 195   | 11    | 0.47   |
 | Hitachi   | CinemaStar 5K1000.B    | 1      | 1       | 169   | 0     | 0.47   |
 | Toshiba   | N300                   | 2      | 7       | 169   | 0     | 0.46   |
-| Toshiba   | 2.5" HDD MK..75GSX     | 4      | 65      | 416   | 408   | 0.46   |
+| Toshiba   | 2.5" HDD MK..75GSX     | 4      | 65      | 417   | 408   | 0.46   |
 | WDC       | Blue UltraSlim         | 1      | 1       | 166   | 0     | 0.46   |
 | Fujitsu   | MHW AT                 | 2      | 2       | 165   | 0     | 0.45   |
 | Hitachi   | Travelstar Z7K320      | 3      | 28      | 395   | 520   | 0.45   |
@@ -2984,16 +2984,16 @@ Rating — avg. rating per sample.
 | Toshiba   | 2.5" HDD MK..63GSX     | 2      | 12      | 629   | 24    | 0.42   |
 | Toshiba   | 2.5" HDD MQ02ABD..H    | 1      | 7       | 191   | 1     | 0.41   |
 | Toshiba   | P300                   | 4      | 183     | 154   | 14    | 0.41   |
+| Seagate   | FireCuda 2.5           | 4      | 39      | 184   | 70    | 0.41   |
 | Hitachi   | Travelstar 5K500       | 1      | 5       | 469   | 5     | 0.41   |
 | HP        | 250GB SATA disk VB0... | 1      | 5       | 799   | 8     | 0.41   |
 | Seagate   | IronWolf Pro           | 2      | 6       | 148   | 0     | 0.41   |
-| Seagate   | FireCuda 2.5           | 4      | 39      | 183   | 70    | 0.41   |
 | Toshiba   | Enterprise Surveill... | 1      | 1       | 1037  | 6     | 0.41   |
 | Toshiba   | 2.5" HDD MQ01ACF       | 2      | 18      | 227   | 132   | 0.41   |
 | MediaMax  | WL320                  | 1      | 1       | 146   | 0     | 0.40   |
 | Toshiba   | 2.5" HDD MK..59GSM     | 2      | 23      | 481   | 900   | 0.39   |
 | Toshiba   | 2.5" HDD MK..55GSX     | 2      | 3       | 404   | 639   | 0.39   |
-| Toshiba   | 2.5" HDD MK..59GSXP    | 7      | 105     | 376   | 292   | 0.38   |
+| Toshiba   | 2.5" HDD MK..59GSXP    | 7      | 105     | 377   | 292   | 0.38   |
 | Seagate   | Barracuda 3.5          | 8      | 230     | 146   | 11    | 0.38   |
 | Hitachi   | Deskstar E7K1000       | 2      | 3       | 1464  | 64    | 0.37   |
 | Toshiba   | 2.5" HDD MQ01ABF       | 2      | 25      | 167   | 41    | 0.37   |
@@ -3019,7 +3019,7 @@ Rating — avg. rating per sample.
 | Seagate   | Momentus Thin          | 6      | 151     | 357   | 590   | 0.32   |
 | Toshiba   | 3.5" MD04ACA Enterp... | 2      | 4       | 142   | 312   | 0.32   |
 | Seagate   | FreePlay               | 2      | 9       | 187   | 795   | 0.31   |
-| HGST      | Travelstar Z5K500      | 5      | 384     | 246   | 288   | 0.31   |
+| HGST      | Travelstar Z5K500      | 5      | 384     | 247   | 288   | 0.31   |
 | Toshiba   | 2.5" HDD MK..65GSX     | 13     | 170     | 453   | 323   | 0.31   |
 | Toshiba   | 2.5" HDD MK..76GSX     | 6      | 13      | 151   | 139   | 0.31   |
 | Seagate   | LD25 Series            | 2      | 2       | 111   | 0     | 0.30   |
@@ -3293,7 +3293,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | OCZ       | D2RSTK251E19-0200  | 200 GB | 1       | 584   | 0     | 1.60   |
 | Intel     | SSDSC2CT060A3      | 64 GB  | 4       | 581   | 0     | 1.59   |
 | OCZ       | VERTEX2            | 115 GB | 1       | 581   | 0     | 1.59   |
-| OCZ       | AGILITY3           | 120 GB | 27      | 666   | 103   | 1.59   |
+| OCZ       | AGILITY3           | 120 GB | 27      | 667   | 103   | 1.59   |
 | Corsair   | Force 3 SSD        | 120 GB | 10      | 757   | 98    | 1.58   |
 | Toshiba   | THNSFJ256GCSU      | 256 GB | 1       | 575   | 0     | 1.58   |
 | Kingston  | SVP200S360G        | 64 GB  | 4       | 572   | 0     | 1.57   |
@@ -3354,7 +3354,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Plextor   | PX-64M2S           | 64 GB  | 2       | 467   | 0     | 1.28   |
 | Intel     | SSDSA2CW120G3      | 120 GB | 6       | 466   | 0     | 1.28   |
 | Mushkin   | MKNSSDTR128GB-3DL  | 128 GB | 1       | 464   | 0     | 1.27   |
-| Samsung   | SSD 850 PRO        | 128 GB | 18      | 462   | 0     | 1.27   |
+| Samsung   | SSD 850 PRO        | 128 GB | 18      | 463   | 0     | 1.27   |
 | ADATA     | SSD S396           | 32 GB  | 1       | 462   | 0     | 1.27   |
 | Plextor   | PX-128M3           | 128 GB | 3       | 462   | 0     | 1.27   |
 | Samsung   | SSD 840 EVO        | 120 GB | 55      | 453   | 0     | 1.24   |
@@ -3445,7 +3445,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Toshiba   | THNSNX024GMNT      | 24 GB  | 2       | 346   | 0     | 0.95   |
 | Samsung   | SSD 850 EVO        | 250 GB | 164     | 345   | 0     | 0.95   |
 | Advantech | SQF-S25M4-32G-S9E  | 32 GB  | 1       | 345   | 0     | 0.95   |
-| Crucial   | CT960M500SSD1      | 960 GB | 6       | 522   | 345   | 0.94   |
+| Crucial   | CT960M500SSD1      | 960 GB | 6       | 536   | 345   | 0.94   |
 | OCZ       | VERTEX3            | 240 GB | 8       | 564   | 160   | 0.94   |
 | SanDisk   | SDSSDHP128G        | 128 GB | 19      | 355   | 1     | 0.94   |
 | Intel     | SSDSCKJW120H6      | 120 GB | 1       | 339   | 0     | 0.93   |
@@ -3468,11 +3468,11 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | OCZ       | VERTEX             | 64 GB  | 2       | 324   | 0     | 0.89   |
 | Apple     | SSD TS128C         | 121 GB | 2       | 323   | 0     | 0.89   |
 | Apple     | SSD SM0512G        | 500 GB | 1       | 323   | 0     | 0.89   |
+| Intel     | SSDSC2CT240A4      | 240 GB | 5       | 321   | 0     | 0.88   |
 | Patriot   | Blast              | 240 GB | 5       | 321   | 0     | 0.88   |
 | OCZ       | VERTEX3 LP         | 64 GB  | 1       | 320   | 0     | 0.88   |
 | Intel     | SSDSA2BW160G3L     | 160 GB | 3       | 320   | 0     | 0.88   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 8       | 319   | 0     | 0.88   |
-| Intel     | SSDSC2CT240A4      | 240 GB | 5       | 318   | 0     | 0.87   |
 | SanDisk   | SDSSDHP064G        | 64 GB  | 8       | 318   | 0     | 0.87   |
 | PNY       | SSD2SC240G1CS17... | 240 GB | 1       | 317   | 0     | 0.87   |
 | Samsung   | SSD 850 EVO        | 500 GB | 110     | 316   | 0     | 0.87   |
@@ -3525,8 +3525,8 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | SanDisk   | SD8SN8U512G1002    | 512 GB | 3       | 268   | 0     | 0.74   |
 | Samsung   | MZYTY128HDHP-000L2 | 128 GB | 1       | 268   | 0     | 0.74   |
 | SanDisk   | iSSD P4            | 8 GB   | 3       | 350   | 1     | 0.73   |
-| SanDisk   | Ultra II           | 960 GB | 4       | 407   | 1     | 0.73   |
 | Samsung   | SSD 750 EVO        | 250 GB | 21      | 265   | 0     | 0.73   |
+| SanDisk   | Ultra II           | 960 GB | 4       | 407   | 1     | 0.73   |
 | SK hynix  | HFS120G32TND-N1A2A | 120 GB | 1       | 264   | 0     | 0.73   |
 | Kingston  | SKC400S37128G      | 128 GB | 2       | 264   | 0     | 0.72   |
 | Toshiba   | TR150              | 120 GB | 3       | 263   | 0     | 0.72   |
@@ -3564,10 +3564,10 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Crucial   | CT120M500SSD1      | 120 GB | 10      | 431   | 8     | 0.68   |
 | Kingston  | SV300S37A120G      | 120 GB | 298     | 286   | 20    | 0.67   |
 | Intel     | SSDSA2M080G2HP     | 80 GB  | 1       | 245   | 0     | 0.67   |
+| Plextor   | PX-128M7VC         | 128 GB | 5       | 245   | 0     | 0.67   |
 | Intel     | SSDSA1MH080G1GN    | 80 GB  | 1       | 244   | 0     | 0.67   |
 | Hypertec  | SSD2S240SF1200SA2  | 240 GB | 1       | 243   | 0     | 0.67   |
 | Corsair   | CSSD-V64GB2        | 64 GB  | 1       | 243   | 0     | 0.67   |
-| Plextor   | PX-128M7VC         | 128 GB | 5       | 243   | 0     | 0.67   |
 | Kingston  | SA400S37 120G      | 120 GB | 1       | 242   | 0     | 0.66   |
 | Plextor   | PX-256M5M          | 256 GB | 2       | 242   | 0     | 0.66   |
 | Palit     | PSP120 SSD         | 120 GB | 1       | 242   | 0     | 0.66   |
@@ -3614,6 +3614,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | DOGFISH   | SSD 256G           | 256 GB | 1       | 212   | 0     | 0.58   |
 | Kingston  | SV300S37A240G      | 240 GB | 65      | 215   | 1     | 0.58   |
 | Toshiba   | THNSNJ128GCST      | 128 GB | 3       | 208   | 0     | 0.57   |
+| SanDisk   | SD8SN8U128G1002    | 128 GB | 2       | 208   | 0     | 0.57   |
 | OCZ       | VERTEX2            | 50 GB  | 2       | 309   | 320   | 0.57   |
 | Samsung   | MZ7PD256HCGM-000H7 | 256 GB | 3       | 269   | 815   | 0.57   |
 | Palit     | PH120 SSD          | 120 GB | 1       | 207   | 0     | 0.57   |
@@ -3627,7 +3628,6 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | ADATA     | SP600              | 128 GB | 3       | 203   | 0     | 0.56   |
 | Smartbuy  | m.2 S11-2280S      | 128 GB | 1       | 202   | 0     | 0.56   |
 | Toshiba   | THNSNJ128GCSU      | 128 GB | 3       | 202   | 0     | 0.56   |
-| SanDisk   | SD8SN8U128G1002    | 128 GB | 2       | 202   | 0     | 0.56   |
 | Plextor   | PX-128M7VG         | 128 GB | 2       | 202   | 0     | 0.56   |
 | Samsung   | MZRPA128HMCD-000SO | 64 GB  | 10      | 202   | 0     | 0.56   |
 | SanDisk   | SD5SF2128G1014E    | 128 GB | 2       | 200   | 0     | 0.55   |
@@ -3636,8 +3636,8 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | SK hynix  | SC311 SATA         | 256 GB | 9       | 202   | 1     | 0.55   |
 | Samsung   | MZ7LN512HMJP-000L7 | 512 GB | 1       | 198   | 0     | 0.54   |
 | Samsung   | MZNLN256HCHP-000L2 | 256 GB | 1       | 198   | 0     | 0.54   |
+| OCZ       | VERTEX PLUS        | 64 GB  | 1       | 396   | 1     | 0.54   |
 | Toshiba   | A100               | 240 GB | 4       | 198   | 0     | 0.54   |
-| OCZ       | VERTEX PLUS        | 64 GB  | 1       | 392   | 1     | 0.54   |
 | Samsung   | MZNTD256HAGL-00000 | 256 GB | 1       | 196   | 0     | 0.54   |
 | Samsung   | MZNTY256HDHP-000L2 | 256 GB | 1       | 195   | 0     | 0.54   |
 | Samsung   | MZMPC032HBCD-000L1 | 32 GB  | 1       | 195   | 0     | 0.53   |
@@ -3775,6 +3775,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Samsung   | MZNLN512HAJQ-00000 | 512 GB | 1       | 122   | 0     | 0.33   |
 | OCZ       | VERTEX450          | 128 GB | 1       | 121   | 0     | 0.33   |
 | Kingston  | SUV300S37A240G     | 240 GB | 7       | 121   | 0     | 0.33   |
+| Toshiba   | VX500              | 256 GB | 1       | 120   | 0     | 0.33   |
 | Team      | T2535T120G         | 120 GB | 1       | 120   | 0     | 0.33   |
 | ADATA     | SSD S511           | 64 GB  | 3       | 450   | 679   | 0.33   |
 | ADATA     | SP310              | 128 GB | 1       | 120   | 0     | 0.33   |
@@ -3786,7 +3787,6 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Intenso   | SSD                | 256 GB | 2       | 119   | 0     | 0.33   |
 | Plextor   | PX-AG128M6e        | 128 GB | 4       | 229   | 2     | 0.33   |
 | Samsung   | SSD 850 EVO mSATA  | 250 GB | 4       | 119   | 0     | 0.33   |
-| Toshiba   | VX500              | 256 GB | 1       | 118   | 0     | 0.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | 65      | 118   | 0     | 0.33   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 5       | 117   | 0     | 0.32   |
 | OCZ       | TRION100           | 120 GB | 5       | 139   | 2     | 0.32   |
@@ -3865,12 +3865,12 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | ADATA     | SU655              | 120 GB | 4       | 95    | 0     | 0.26   |
 | Intel     | SSDSC2KB960G8      | 960 GB | 4       | 94    | 0     | 0.26   |
 | WDC       | WDS250G1B0B-00AS40 | 250 GB | 3       | 94    | 0     | 0.26   |
+| Samsung   | SSD 860 PRO        | 512 GB | 12      | 94    | 0     | 0.26   |
 | SanDisk   | SSD U100           | 256 GB | 1       | 94    | 0     | 0.26   |
 | Patriot   | Blaze              | 64 GB  | 4       | 94    | 0     | 0.26   |
 | OCZ       | VERTEX460A         | 120 GB | 5       | 134   | 1     | 0.26   |
 | SanDisk   | SD8SN8U256G1002    | 256 GB | 1       | 93    | 0     | 0.26   |
 | Team      | T2535T480G         | 480 GB | 1       | 93    | 0     | 0.26   |
-| Samsung   | SSD 860 PRO        | 512 GB | 12      | 93    | 0     | 0.26   |
 | Mushkin   | MKNSSDSR250GB      | 250 GB | 1       | 93    | 0     | 0.26   |
 | Samsung   | SSD 860 EVO        | 250 GB | 53      | 92    | 0     | 0.25   |
 | Transcend | TS120GSSD220S      | 120 GB | 9       | 92    | 0     | 0.25   |
@@ -3926,6 +3926,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 5       | 77    | 0     | 0.21   |
 | Kingmax   | SSD                | 120 GB | 20      | 207   | 359   | 0.21   |
 | Corsair   | Neutron XTI SSD    | 240 GB | 1       | 77    | 0     | 0.21   |
+| China     | SH00R480GB         | 480 GB | 1       | 77    | 0     | 0.21   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 8       | 81    | 1     | 0.21   |
 | Transcend | TS256GSSD340       | 256 GB | 2       | 76    | 0     | 0.21   |
 | Transcend | TS1TSSD230S        | 1 TB   | 3       | 76    | 0     | 0.21   |
@@ -3969,7 +3970,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Samsung   | MZ7LF120HCHP-000L1 | 120 GB | 2       | 66    | 0     | 0.18   |
 | Goodram   | SSDPR-CX300-240    | 240 GB | 2       | 66    | 0     | 0.18   |
 | Corsair   | CSSD-F120GB3-BK    | 120 GB | 1       | 65    | 0     | 0.18   |
-| Plextor   | PX-128M6S          | 128 GB | 24      | 70    | 47    | 0.18   |
+| Plextor   | PX-128M6S          | 128 GB | 24      | 71    | 47    | 0.18   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 13      | 65    | 0     | 0.18   |
 | Lite-On   | LMT-32L3M-HP       | 32 GB  | 2       | 65    | 0     | 0.18   |
 | Transcend | TS64GMSA370        | 64 GB  | 2       | 65    | 0     | 0.18   |
@@ -3994,6 +3995,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | KingSpec  | P4-480             | 480 GB | 2       | 62    | 0     | 0.17   |
 | Kingrich  | SSD 120G           | 120 GB | 1       | 62    | 0     | 0.17   |
 | OCZ       | VERTEX460          | 240 GB | 2       | 61    | 0     | 0.17   |
+| China     | 128GB SSD          | 128 GB | 9       | 61    | 0     | 0.17   |
 | Transcend | TS128GSSD370       | 128 GB | 7       | 61    | 0     | 0.17   |
 | Toshiba   | Q200 EX            | 240 GB | 1       | 61    | 0     | 0.17   |
 | WDC       | WDS500G2B0B        | 500 GB | 1       | 61    | 0     | 0.17   |
@@ -4002,8 +4004,6 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | PHISON    | 128GB PS3109-S9    | 128 GB | 1       | 121   | 1     | 0.17   |
 | Samsung   | MZ7LN128HAHQ-000L1 | 128 GB | 2       | 60    | 0     | 0.17   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | 1       | 60    | 0     | 0.17   |
-| China     | 128GB SSD          | 128 GB | 9       | 60    | 0     | 0.17   |
-| China     | SH00R480GB         | 480 GB | 1       | 60    | 0     | 0.17   |
 | Goodram   | IR-SSDPR-S25A-120  | 120 GB | 2       | 59    | 0     | 0.16   |
 | KingDian  | S400               | 240 GB | 1       | 59    | 0     | 0.16   |
 | Goodram   | IR-SSDPR-S25A-240  | 240 GB | 2       | 59    | 0     | 0.16   |
@@ -4040,9 +4040,11 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | ADATA     | SP920SS            | 256 GB | 5       | 130   | 7     | 0.15   |
 | Samsung   | MZMTD128HAFV-000H1 | 128 GB | 1       | 53    | 0     | 0.15   |
 | Zheino    | CHN-25SATAA3-480   | 480 GB | 2       | 53    | 0     | 0.15   |
+| Kingston  | SHFS37A240G        | 240 GB | 16      | 126   | 445   | 0.15   |
 | SK hynix  | SC311 SATA         | 128 GB | 6       | 53    | 0     | 0.15   |
-| Samsung   | SSD 850            | 120 GB | 20      | 52    | 0     | 0.14   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 6       | 52    | 0     | 0.14   |
+| Samsung   | SSD 850            | 120 GB | 20      | 52    | 0     | 0.14   |
+| Plextor   | PX-256M6S          | 256 GB | 9       | 61    | 238   | 0.14   |
 | Micron    | MTFDDAK256MAM-1K12 | 256 GB | 4       | 83    | 758   | 0.14   |
 | Apple     | SSD SM128E         | 121 GB | 1       | 52    | 0     | 0.14   |
 | Team      | L5 LITE SSD        | 64 GB  | 1       | 52    | 0     | 0.14   |
@@ -4060,19 +4062,17 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Samsung   | MZMTD128HAFV-000   | 128 GB | 3       | 50    | 0     | 0.14   |
 | KingSpec  | Q-180              | 180 GB | 4       | 58    | 235   | 0.14   |
 | Samsung   | SSD PM871b M.2 ... | 256 GB | 1       | 50    | 0     | 0.14   |
-| Kingston  | SHFS37A240G        | 240 GB | 16      | 123   | 445   | 0.14   |
 | Samsung   | SSD PB22-CS3 FD... | 256 GB | 1       | 50    | 0     | 0.14   |
 | KingDian  | S180               | 64 GB  | 11      | 55    | 103   | 0.14   |
 | OCZ       | INTREPID 3800      | 400 GB | 1       | 50    | 0     | 0.14   |
 | Corsair   | Neutron GTX SSD    | 480 GB | 1       | 49    | 0     | 0.14   |
 | ADATA     | SU900              | 256 GB | 5       | 50    | 1     | 0.14   |
-| Plextor   | PX-256M6S          | 256 GB | 9       | 58    | 238   | 0.14   |
+| Intel     | SSDSC2KW256G8      | 256 GB | 14      | 49    | 0     | 0.14   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 5       | 49    | 0     | 0.13   |
 | KingDian  | S200               | 120 GB | 2       | 49    | 0     | 0.13   |
 | Samsung   | MZNTY128HDHP-00000 | 128 GB | 2       | 48    | 0     | 0.13   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 8       | 56    | 1     | 0.13   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 17      | 48    | 0     | 0.13   |
-| Intel     | SSDSC2KW256G8      | 256 GB | 14      | 48    | 0     | 0.13   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 38      | 49    | 1     | 0.13   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | 4       | 48    | 0     | 0.13   |
 | Kingston  | SUV500MS120G       | 120 GB | 4       | 48    | 0     | 0.13   |
@@ -4099,6 +4099,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 6       | 44    | 0     | 0.12   |
 | PRETEC    | G2000 SSD          | 32 GB  | 1       | 44    | 0     | 0.12   |
 | ADATA     | SU900              | 1 TB   | 2       | 44    | 0     | 0.12   |
+| Apacer    | AS350              | 240 GB | 7       | 44    | 0     | 0.12   |
 | Plextor   | PX-512M3           | 512 GB | 1       | 1402  | 31    | 0.12   |
 | SanDisk   | SSD PLUS           | 1 TB   | 4       | 43    | 0     | 0.12   |
 | Team      | T253LE240G         | 240 GB | 1       | 43    | 0     | 0.12   |
@@ -4108,7 +4109,6 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Intel     | SSDSC2BW480A4      | 480 GB | 2       | 516   | 22    | 0.12   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 46      | 42    | 0     | 0.12   |
 | Samsung   | MZ7LN256HAJQ-000L2 | 256 GB | 4       | 42    | 0     | 0.12   |
-| Apacer    | AS350              | 240 GB | 7       | 42    | 0     | 0.12   |
 | China     | SSD128G            | 128 GB | 1       | 42    | 0     | 0.12   |
 | Kingston  | RBUSNS8180DS3128GH | 128 GB | 4       | 42    | 0     | 0.12   |
 | Intel     | SSDSC2KG480G8      | 480 GB | 1       | 42    | 0     | 0.12   |
@@ -4141,10 +4141,10 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | AMD       | R3SL60G            | 64 GB  | 2       | 35    | 0     | 0.10   |
 | Gigabyte  | GP-GSTFS30512GTTD  | 512 GB | 2       | 35    | 0     | 0.10   |
 | Lite-On   | IT LMT-128L9M      | 128 GB | 2       | 35    | 0     | 0.10   |
+| Transcend | TS128GSSD370S      | 128 GB | 16      | 35    | 0     | 0.10   |
 | Transcend | TS128GMTS400       | 128 GB | 2       | 35    | 0     | 0.10   |
 | Netac     | SSD                | 480 GB | 1       | 35    | 0     | 0.10   |
 | Samsung   | MZNLN128HAHQ-00000 | 128 GB | 1       | 35    | 0     | 0.10   |
-| Transcend | TS128GSSD370S      | 128 GB | 16      | 35    | 0     | 0.10   |
 | Plextor   | PX-256S3C          | 256 GB | 1       | 34    | 0     | 0.10   |
 | Plextor   | PX-64M5M           | 64 GB  | 1       | 34    | 0     | 0.10   |
 | Patriot   | Burst              | 480 GB | 9       | 51    | 1     | 0.09   |
@@ -4268,11 +4268,12 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Lenovo    | SSD SL700 480G     | 480 GB | 1       | 20    | 0     | 0.06   |
 | Plextor   | PX-256M8VC         | 256 GB | 2       | 20    | 0     | 0.06   |
 | AMD       | R3SL240G           | 240 GB | 4       | 44    | 1     | 0.06   |
+| XUNZHE    | XUNZHE800S 120G    | 120 GB | 1       | 20    | 0     | 0.05   |
 | Netac     | SSD 120G           | 120 GB | 1       | 19    | 0     | 0.05   |
 | Transcend | TS128GSSD230S      | 128 GB | 9       | 19    | 0     | 0.05   |
+| Transcend | TS128GMTS800       | 128 GB | 3       | 19    | 0     | 0.05   |
 | Intel     | SSDSA1M160G2HP     | 160 GB | 5       | 121   | 15    | 0.05   |
 | Intel     | SSDSCKGF256A5 SATA | 256 GB | 1       | 19    | 0     | 0.05   |
-| Transcend | TS128GMTS800       | 128 GB | 3       | 19    | 0     | 0.05   |
 | China     | SSD                | 480 GB | 3       | 19    | 0     | 0.05   |
 | Kingston  | RBU-SNS8152S325... | 256 GB | 1       | 18    | 0     | 0.05   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 17      | 18    | 0     | 0.05   |
@@ -4294,7 +4295,6 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | China     | 60GB SSD           | 64 GB  | 1       | 17    | 0     | 0.05   |
 | China     | RTMMB256VBV4KFY    | 256 GB | 1       | 17    | 0     | 0.05   |
 | Samsung   | MZNLN256HAJQ-000L2 | 256 GB | 1       | 17    | 0     | 0.05   |
-| XUNZHE    | XUNZHE800S 120G    | 120 GB | 1       | 17    | 0     | 0.05   |
 | Kingrich  | 64GB K9 SATA3 SSD  | 64 GB  | 2       | 17    | 0     | 0.05   |
 | AMD       | R3S60GBSM          | 64 GB  | 2       | 17    | 0     | 0.05   |
 | LDNDISK   | SSD                | 240 GB | 1       | 16    | 0     | 0.05   |
@@ -4742,7 +4742,7 @@ Rating — avg. rating per sample.
 | Transcend | SandForce Driven SSDs  | 5      | 7       | 155   | 0     | 0.43   |
 | Plextor   | Unknown                | 28     | 65      | 156   | 1     | 0.41   |
 | Corsair   | Unknown                | 15     | 25      | 374   | 35    | 0.41   |
-| Crucial   | BX/MX1/2/3/500, M5/... | 26     | 209     | 171   | 25    | 0.41   |
+| Crucial   | BX/MX1/2/3/500, M5/... | 26     | 209     | 172   | 25    | 0.41   |
 | Intel     | 525 Series SSDs        | 1      | 2       | 148   | 0     | 0.41   |
 | SPCC      | Phison Driven OEM SSDs | 2      | 117     | 178   | 98    | 0.39   |
 | SPCC      | Unknown                | 20     | 156     | 210   | 168   | 0.39   |
@@ -4765,7 +4765,7 @@ Rating — avg. rating per sample.
 | Transcend | JMicron based SSDs     | 7      | 13      | 143   | 156   | 0.33   |
 | Hoodisk   | Unknown                | 2      | 2       | 118   | 0     | 0.32   |
 | OCZ       | OCZ/Toshiba Trion SSDs | 1      | 5       | 139   | 2     | 0.32   |
-| Plextor   | M3/M5/M6 Series SSDs   | 14     | 158     | 125   | 21    | 0.31   |
+| Plextor   | M3/M5/M6 Series SSDs   | 14     | 158     | 125   | 21    | 0.32   |
 | SanDisk   | Unknown                | 70     | 136     | 131   | 166   | 0.31   |
 | Patriot   | Phison Driven SSDs     | 5      | 42      | 116   | 1     | 0.31   |
 | SK hynix  | SATA SSDs              | 17     | 57      | 162   | 71    | 0.31   |
@@ -4786,7 +4786,7 @@ Rating — avg. rating per sample.
 | Seagate   | 600 Series             | 1      | 1       | 79    | 0     | 0.22   |
 | PHISON    | Unknown                | 2      | 2       | 108   | 1     | 0.21   |
 | Intenso   | Phison Driven OEM SSDs | 2      | 5       | 75    | 0     | 0.21   |
-| China     | Unknown                | 30     | 178     | 79    | 1     | 0.21   |
+| China     | Unknown                | 30     | 178     | 80    | 1     | 0.21   |
 | Crucial   | SiliconMotion based... | 3      | 15      | 71    | 0     | 0.20   |
 | ADATA     | Unknown                | 41     | 120     | 163   | 174   | 0.19   |
 | Intenso   | Unknown                | 7      | 12      | 101   | 4     | 0.19   |
@@ -4834,8 +4834,8 @@ Rating — avg. rating per sample.
 | Transcend | Silicon Motion base... | 8      | 17      | 25    | 0     | 0.07   |
 | e2e4      | Unknown                | 1      | 2       | 22    | 0     | 0.06   |
 | Londisk   | Unknown                | 3      | 7       | 21    | 0     | 0.06   |
+| XUNZHE    | Unknown                | 1      | 1       | 20    | 0     | 0.05   |
 | Hyperdisk | Unknown                | 1      | 1       | 18    | 0     | 0.05   |
-| XUNZHE    | Unknown                | 1      | 1       | 17    | 0     | 0.05   |
 | LDNDISK   | Unknown                | 1      | 1       | 16    | 0     | 0.05   |
 | Platinet  | Unknown                | 1      | 1       | 16    | 0     | 0.04   |
 | Lite-On   | SiliconMotion based... | 1      | 1       | 16    | 0     | 0.04   |
@@ -4902,11 +4902,11 @@ Rating — avg. rating per sample.
 | Advantech   | 1      | 1       | 345   | 0     | 0.95   |
 | Intel       | 95     | 326     | 449   | 70    | 0.94   |
 | Mushkin     | 14     | 15      | 385   | 339   | 0.88   |
-| Samsung     | 183    | 1281    | 322   | 12    | 0.86   |
+| Samsung     | 183    | 1281    | 323   | 12    | 0.86   |
 | Ramaxel     | 1      | 2       | 295   | 0     | 0.81   |
 | Apple       | 15     | 24      | 293   | 1     | 0.79   |
 | Toshiba     | 58     | 122     | 283   | 5     | 0.75   |
-| Crucial     | 59     | 367     | 295   | 40    | 0.69   |
+| Crucial     | 59     | 367     | 296   | 40    | 0.69   |
 | Hypertec    | 1      | 1       | 243   | 0     | 0.67   |
 | Phison      | 4      | 6       | 203   | 0     | 0.56   |
 | Kingston    | 113    | 1275    | 229   | 45    | 0.55   |
@@ -4923,8 +4923,8 @@ Rating — avg. rating per sample.
 | ZOTAC       | 2      | 3       | 132   | 0     | 0.36   |
 | Goodram     | 20     | 64      | 133   | 1     | 0.36   |
 | Micron      | 32     | 69      | 184   | 100   | 0.35   |
-| KLEVV       | 1      | 1       | 127   | 0     | 0.35   |
 | Plextor     | 47     | 238     | 141   | 19    | 0.35   |
+| KLEVV       | 1      | 1       | 127   | 0     | 0.35   |
 | Chiprex     | 1      | 1       | 126   | 0     | 0.35   |
 | KingFast    | 7      | 20      | 121   | 1     | 0.33   |
 | ADATA       | 61     | 267     | 177   | 80    | 0.33   |
@@ -4934,7 +4934,7 @@ Rating — avg. rating per sample.
 | Anobit      | 1      | 1       | 96    | 0     | 0.27   |
 | WDC         | 29     | 223     | 81    | 1     | 0.22   |
 | PHISON      | 2      | 2       | 108   | 1     | 0.21   |
-| China       | 30     | 178     | 79    | 1     | 0.21   |
+| China       | 30     | 178     | 80    | 1     | 0.21   |
 | Intenso     | 9      | 17      | 93    | 3     | 0.20   |
 | oyunkey     | 1      | 1       | 68    | 0     | 0.19   |
 | Apacer      | 14     | 35      | 62    | 2     | 0.17   |
@@ -4966,8 +4966,8 @@ Rating — avg. rating per sample.
 | HECTRON     | 1      | 1       | 26    | 0     | 0.07   |
 | e2e4        | 1      | 2       | 22    | 0     | 0.06   |
 | Londisk     | 3      | 7       | 21    | 0     | 0.06   |
+| XUNZHE      | 1      | 1       | 20    | 0     | 0.05   |
 | Hyperdisk   | 1      | 1       | 18    | 0     | 0.05   |
-| XUNZHE      | 1      | 1       | 17    | 0     | 0.05   |
 | LDNDISK     | 1      | 1       | 16    | 0     | 0.05   |
 | Platinet    | 1      | 1       | 16    | 0     | 0.04   |
 | TCSUNBOW    | 1      | 1       | 13    | 0     | 0.04   |
@@ -5075,7 +5075,7 @@ See complete list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_N
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 5       | 111   | 0     | 0.31   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 7       | 107   | 0     | 0.30   |
 | SK hynix  | HFS256GD9MNE-6200A | 256 GB | 1       | 107   | 0     | 0.29   |
-| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 102   | 0     | 0.28   |
+| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 106   | 0     | 0.29   |
 | Intel     | MEMPEK1J016GA      | 16 GB  | 1       | 102   | 0     | 0.28   |
 | ADATA     | SX8200PNP          | 256 GB | 3       | 100   | 0     | 0.27   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 1       | 99    | 0     | 0.27   |
@@ -5224,13 +5224,13 @@ See complete list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_N
 | Team      | TM8FP4256G         | 256 GB | 1       | 5     | 0     | 0.02   |
 | Union ... | RPFTJ128PDD2EWX    | 128 GB | 1       | 5     | 0     | 0.02   |
 | Intel     | SSDPEMKF512G8 NVMe | 512 GB | 2       | 5     | 0     | 0.02   |
+| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 8     | 696   | 0.02   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | 3       | 5     | 0     | 0.02   |
 | SK hynix  | PC601 NVMe         | 512 GB | 4       | 5     | 0     | 0.01   |
 | PNY       | CS3030 2000GB SSD  | 2 TB   | 1       | 5     | 0     | 0.01   |
 | SK hynix  | BA HFS256GD9TNG... | 256 GB | 1       | 5     | 0     | 0.01   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | 1       | 5     | 0     | 0.01   |
 | SK hynix  | PC601 HFS512GD9... | 512 GB | 1       | 5     | 0     | 0.01   |
-| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 7     | 696   | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 2       | 4     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1       | 4     | 0     | 0.01   |
 | ADATA     | SX6000LNP          | 256 GB | 1       | 4     | 0     | 0.01   |
@@ -5327,7 +5327,7 @@ Rating — avg. rating per sample.
 | Team        | 2      | 2       | 89    | 0     | 0.24   |
 | Lenovo      | 3      | 5       | 69    | 0     | 0.19   |
 | Samsung     | 74     | 429     | 70    | 1     | 0.19   |
-| Plextor     | 5      | 8       | 79    | 69    | 0.18   |
+| Plextor     | 5      | 8       | 80    | 69    | 0.18   |
 | Phison      | 4      | 6       | 65    | 0     | 0.18   |
 | Kingchuxing | 1      | 1       | 60    | 0     | 0.16   |
 | HP          | 7      | 10      | 52    | 0     | 0.14   |

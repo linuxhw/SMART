@@ -46,8 +46,8 @@ Rating — avg. rating per sample.
 | Intel     | SSDSC2CW480A3      | 480 GB | 2       | 351   | 0     | 0.96   |
 | Intel     | SSDSC2CT240A3      | 240 GB | 3       | 622   | 1     | 0.95   |
 | Intel     | SSDSCKJW120H6      | 120 GB | 1       | 339   | 0     | 0.93   |
+| Intel     | SSDSC2CT240A4      | 240 GB | 5       | 321   | 0     | 0.88   |
 | Intel     | SSDSA2BW160G3L     | 160 GB | 3       | 320   | 0     | 0.88   |
-| Intel     | SSDSC2CT240A4      | 240 GB | 5       | 318   | 0     | 0.87   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 7       | 725   | 5     | 0.72   |
 | Intel     | SSDSC2BW180A4      | 180 GB | 8       | 389   | 3     | 0.71   |
 | Intel     | SSDSCMMW240A3L     | 240 GB | 1       | 256   | 0     | 0.70   |
@@ -77,7 +77,7 @@ Rating — avg. rating per sample.
 | Intel     | SSDSA2M160G2GC     | 160 GB | 1       | 578   | 8     | 0.18   |
 | Intel     | SSDSC2BW080A4      | 80 GB  | 1       | 63    | 0     | 0.17   |
 | Intel     | SSDSA2M160G2LE     | 160 GB | 2       | 1075  | 16    | 0.15   |
-| Intel     | SSDSC2KW256G8      | 256 GB | 14      | 48    | 0     | 0.13   |
+| Intel     | SSDSC2KW256G8      | 256 GB | 14      | 49    | 0     | 0.14   |
 | Intel     | SSDSC2KW128G8      | 128 GB | 4       | 45    | 0     | 0.12   |
 | Intel     | SSDSC2BW480A4      | 480 GB | 2       | 516   | 22    | 0.12   |
 | Intel     | SSDSC2KG480G8      | 480 GB | 1       | 42    | 0     | 0.12   |

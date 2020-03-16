@@ -36,7 +36,7 @@ Rating — avg. rating per sample.
 | Crucial   | CT128M550SSD3      | 128 GB | 4       | 469   | 8     | 1.00   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 7       | 351   | 0     | 0.96   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 3       | 350   | 0     | 0.96   |
-| Crucial   | CT960M500SSD1      | 960 GB | 6       | 522   | 345   | 0.94   |
+| Crucial   | CT960M500SSD1      | 960 GB | 6       | 536   | 345   | 0.94   |
 | Crucial   | C300-CTFDDAC128MAG | 128 GB | 3       | 330   | 0     | 0.91   |
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | 1       | 307   | 0     | 0.84   |
 | Crucial   | CT750MX300SSD1     | 752 GB | 5       | 302   | 0     | 0.83   |
@@ -102,7 +102,7 @@ Rating — avg. rating per sample.
 | Crucial   | RealSSD C300/M500      | 6      | 36      | 498   | 121   | 0.79   |
 | Crucial   | MX100/M500/M510/M55... | 1      | 6       | 252   | 0     | 0.69   |
 | Crucial   | MX100/MX200/M5x0/M6... | 3      | 7       | 403   | 5     | 0.61   |
-| Crucial   | BX/MX1/2/3/500, M5/... | 26     | 209     | 171   | 25    | 0.41   |
+| Crucial   | BX/MX1/2/3/500, M5/... | 26     | 209     | 172   | 25    | 0.41   |
 | Crucial   | Silicon Motion base... | 1      | 2       | 125   | 0     | 0.34   |
 | Crucial   | RealSSD C300/P300      | 1      | 2       | 555   | 504   | 0.29   |
 | Crucial   | SiliconMotion based... | 3      | 15      | 71    | 0     | 0.20   |

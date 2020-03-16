@@ -68,7 +68,7 @@ Rating — avg. rating per sample.
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 5       | 111   | 0     | 0.31   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 7       | 107   | 0     | 0.30   |
 | SK hynix  | HFS256GD9MNE-6200A | 256 GB | 1       | 107   | 0     | 0.29   |
-| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 102   | 0     | 0.28   |
+| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 106   | 0     | 0.29   |
 | Intel     | MEMPEK1J016GA      | 16 GB  | 1       | 102   | 0     | 0.28   |
 | ADATA     | SX8200PNP          | 256 GB | 3       | 100   | 0     | 0.27   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 1       | 99    | 0     | 0.27   |
@@ -217,13 +217,13 @@ Rating — avg. rating per sample.
 | Team      | TM8FP4256G         | 256 GB | 1       | 5     | 0     | 0.02   |
 | Union ... | RPFTJ128PDD2EWX    | 128 GB | 1       | 5     | 0     | 0.02   |
 | Intel     | SSDPEMKF512G8 NVMe | 512 GB | 2       | 5     | 0     | 0.02   |
+| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 8     | 696   | 0.02   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | 3       | 5     | 0     | 0.02   |
 | SK hynix  | PC601 NVMe         | 512 GB | 4       | 5     | 0     | 0.01   |
 | PNY       | CS3030 2000GB SSD  | 2 TB   | 1       | 5     | 0     | 0.01   |
 | SK hynix  | BA HFS256GD9TNG... | 256 GB | 1       | 5     | 0     | 0.01   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | 1       | 5     | 0     | 0.01   |
 | SK hynix  | PC601 HFS512GD9... | 512 GB | 1       | 5     | 0     | 0.01   |
-| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 7     | 696   | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 2       | 4     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1       | 4     | 0     | 0.01   |
 | ADATA     | SX6000LNP          | 256 GB | 1       | 4     | 0     | 0.01   |
