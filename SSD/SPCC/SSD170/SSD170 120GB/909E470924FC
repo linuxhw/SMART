@@ -9,7 +9,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Nov  6 13:36:07 2015 MSK
+Local Time is:    Fri Nov 13 12:45:41 2015 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,28 +57,28 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO--CK   095   095   050    -    2946186
+  1 Raw_Read_Error_Rate     PO--CK   120   120   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   003    -    3
-  9 Power_On_Hours          -O--CK   090   090   000    -    9367 (137 14 0)
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2315
+  9 Power_On_Hours          -O--CK   090   090   000    -    9438 (79 232 0)
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2345
 171 Unknown_Attribute       -O-R--   000   000   000    -    1
 172 Unknown_Attribute       -O--CK   000   000   000    -    0
-174 Unknown_Attribute       ----CK   000   000   000    -    834
+174 Unknown_Attribute       ----CK   000   000   000    -    844
 177 Wear_Leveling_Count     ------   000   000   000    -    2
 181 Program_Fail_Cnt_Total  -O-R--   000   000   000    -    1
 182 Erase_Fail_Count_Total  -O--CK   000   000   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
 194 Temperature_Celsius     -O---K   030   030   000    -    30 (Min/Max 30/30)
-195 Hardware_ECC_Recovered  --SRC-   120   120   000    -    2946186
+195 Hardware_ECC_Recovered  --SRC-   120   120   000    -    0
 196 Reallocated_Event_Count PO--CK   100   100   003    -    3
-201 Unknown_SSD_Attribute   --SRC-   120   120   000    -    2946186
-204 Soft_ECC_Correction     --SRC-   120   120   000    -    2946186
+201 Unknown_SSD_Attribute   --SRC-   120   120   000    -    0
+204 Soft_ECC_Correction     --SRC-   120   120   000    -    0
 230 Unknown_SSD_Attribute   PO--C-   100   100   000    -    100
 231 Temperature_Celsius     PO--C-   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   000   000   000    -    6994
-234 Unknown_Attribute       -O--CK   000   000   000    -    7383
-241 Total_LBAs_Written      -O--CK   000   000   000    -    7383
-242 Total_LBAs_Read         -O--CK   000   000   000    -    6001
+233 Media_Wearout_Indicator -O--CK   000   000   000    -    7047
+234 Unknown_Attribute       -O--CK   000   000   000    -    7470
+241 Total_LBAs_Written      -O--CK   000   000   000    -    7470
+242 Total_LBAs_Read         -O--CK   000   000   000    -    6039
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,8 +106,9 @@ SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      9034         -
-# 2  Extended offline    Completed without error       00%      7381         -
+# 1  Extended offline    Completed without error       00%      9382         -
+# 2  Extended offline    Completed without error       00%      9034         -
+# 3  Extended offline    Completed without error       00%      7381         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -134,16 +135,16 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    478 (321)
+Temperature History Size (Index):    478 (345)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page Offset Size         Value  Description
   1  =====  =                =  == General Statistics (rev 2) ==
-  1  0x008  4             2319  Lifetime Power-On Resets
-  1  0x018  6      15490260379  Logical Sectors Written
-  1  0x028  6      12594082043  Logical Sectors Read
+  1  0x008  4             2349  Lifetime Power-On Resets
+  1  0x018  6      15673177679  Logical Sectors Written
+  1  0x028  6      12673743794  Logical Sectors Read
   4  =====  =                =  == General Errors Statistics (rev 1) ==
   4  0x008  4                0  Number of Reported Uncorrectable Errors
   4  0x010  4                8  Resets Between Cmd Acceptance and Completion
@@ -163,7 +164,7 @@ Page Offset Size         Value  Description
   5  0x068  1                0  Specified Minimum Operating Temperature
   6  =====  =                =  == Transport Statistics (rev 1) ==
   6  0x008  4                0  Number of Hardware Resets
-  6  0x010  4             7207  Number of ASR Events
+  6  0x010  4             7393  Number of ASR Events
   6  0x018  4                0  Number of Interface CRC Errors
   7  =====  =                =  == Solid State Device Statistics (rev 1) ==
   7  0x008  1                1  Percentage Used Endurance Indicator
@@ -186,4 +187,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

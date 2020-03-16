@@ -11,7 +11,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Mar  7 19:22:42 2016 MSK
+Local Time is:    Thu Jan 26 23:35:44 2017 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		( 4740) seconds.
 Offline data collection
@@ -59,33 +58,33 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    13
-  2 Throughput_Performance  POS--K   056   056   000    -    4309
-  3 Spin_Up_Time            PO---K   083   082   025    -    5429
-  4 Start_Stop_Count        -O--CK   096   096   000    -    4622
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    20
+  2 Throughput_Performance  POS--K   055   055   000    -    4339
+  3 Spin_Up_Time            PO---K   091   082   025    -    2745
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5587
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10119
+  9 Power_On_Hours          -O--CK   100   100   000    -    11934
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4639
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5666
 183 Runtime_Bad_Block       -O--CK   252   252   010    -    0
 184 End-to-End_Error        PO--CK   252   252   097    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
-187 Reported_Uncorrect      -O--CK   252   252   000    -    0
+187 Reported_Uncorrect      -O--CK   100   100   000    -    22
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   059   048   040    -    41 (Min/Max 13/52)
-191 G-Sense_Error_Rate      -O---K   252   252   000    -    0
+190 Airflow_Temperature_Cel -O----   062   047   040    -    38 (Min/Max 13/53)
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    1
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-193 Load_Cycle_Count        -O--CK   100   100   000    -    4650
-194 Temperature_Celsius     -O----   059   048   000    -    41 (Min/Max 13/52)
+193 Load_Cycle_Count        -O--CK   100   100   000    -    5677
+194 Temperature_Celsius     -O----   062   047   000    -    38 (Min/Max 13/53)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    58
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    62
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,35 +103,193 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-No Errors Logged
+Device Error Count: 29 (device log contains only the most recent 8 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 29 [4] occurred at disk power-on lifetime: 10562 hours (440 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.610  READ DMA EXT
+  35 00 00 00 60 00 00 1d 44 3d 00 e0 00     00:00:00.610  WRITE DMA EXT
+  35 00 00 00 20 00 00 1d 44 19 40 e0 00     00:00:00.610  WRITE DMA EXT
+  25 00 00 00 40 00 00 05 d0 81 28 e0 00     00:00:00.610  READ DMA EXT
+  35 00 00 00 20 00 00 1d 44 3c e0 e0 00     00:00:00.610  WRITE DMA EXT
+
+Error 28 [3] occurred at disk power-on lifetime: 10562 hours (440 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.022  WRITE DMA EXT
+  25 00 00 00 20 00 00 00 13 b1 40 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 20 00 00 00 13 b1 20 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 20 00 00 00 13 b1 00 e0 00     00:00:00.022  READ DMA EXT
+  35 00 00 00 20 00 00 00 13 b0 e0 e0 00     00:00:00.022  WRITE DMA EXT
+
+Error 27 [2] occurred at disk power-on lifetime: 10562 hours (440 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 02 00 00 3a 38 8b 00 e0 00  Error: IDNF 2 sectors at LBA = 0x3a388b00 = 976784128
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 02 00 00 3a 38 8b 00 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.022  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:00.022  IDENTIFY DEVICE
+  35 00 00 00 10 00 00 00 0f a8 00 e0 00     00:00:00.022  WRITE DMA EXT
+  35 00 00 00 10 00 00 00 0f a8 00 e0 00     00:00:00.022  WRITE DMA EXT
+
+Error 26 [1] occurred at disk power-on lifetime: 10562 hours (440 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.022  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:00.022  IDENTIFY DEVICE
+  35 00 00 00 10 00 00 00 0f a8 00 e0 00     00:00:00.022  WRITE DMA EXT
+  35 00 00 00 10 00 00 00 0f a8 00 e0 00     00:00:00.022  WRITE DMA EXT
+  25 00 00 00 60 00 00 1d 24 37 a0 e0 00     00:00:00.022  READ DMA EXT
+
+Error 25 [0] occurred at disk power-on lifetime: 10560 hours (440 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:04.293  READ DMA EXT
+  35 00 00 00 20 00 00 1d 24 38 60 e0 00     00:00:04.293  WRITE DMA EXT
+  35 00 00 00 20 00 00 1d 24 38 60 e0 00     00:00:04.293  WRITE DMA EXT
+  25 00 00 00 01 00 00 00 0f a8 00 e0 00     00:00:04.293  READ DMA EXT
+  25 00 00 00 20 00 00 01 3e 72 e0 e0 00     00:00:04.293  READ DMA EXT
+
+Error 24 [7] occurred at disk power-on lifetime: 10556 hours (439 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.022  WRITE DMA EXT
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 80 00 00 00 63 c2 38 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 80 00 00 00 63 c1 b8 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 30 00 00 00 6d 33 90 e0 00     00:00:00.022  READ DMA EXT
+
+Error 23 [6] occurred at disk power-on lifetime: 10556 hours (439 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 80 00 00 00 63 c2 38 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 80 00 00 00 63 c1 b8 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 30 00 00 00 6d 33 90 e0 00     00:00:00.022  READ DMA EXT
+  25 00 00 00 20 00 00 00 6b 33 98 e0 00     00:00:00.022  READ DMA EXT
+
+Error 22 [5] occurred at disk power-on lifetime: 10553 hours (439 days + 17 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 3a 38 8b 01 e0 00  Error: IDNF 1 sectors at LBA = 0x3a388b01 = 976784129
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 01 00 00 3a 38 8b 01 e0 00     00:00:00.023  WRITE DMA EXT
+  25 00 00 00 20 00 00 00 17 9a e0 e0 00     00:00:00.023  READ DMA EXT
+  25 00 00 00 20 00 00 00 17 9a c0 e0 00     00:00:00.023  READ DMA EXT
+  25 00 00 00 20 00 00 00 17 9a a0 e0 00     00:00:00.023  READ DMA EXT
+  35 00 00 00 20 00 00 00 17 9a 80 e0 00     00:00:00.023  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      9935         -
-# 2  Short offline       Completed without error       00%      8634         -
-# 3  Short offline       Completed without error       00%      8606         -
-# 4  Offline             Interrupted (host reset)      90%      7191         -
-# 5  Short captive       Self-test routine in progress 90%      7191         -
-# 6  Offline             Interrupted (host reset)      70%      7191         -
-# 7  Short captive       Self-test routine in progress 70%      7191         -
-# 8  Offline             Interrupted (host reset)      60%      7191         -
-# 9  Short captive       Self-test routine in progress 60%      7191         -
-#10  Offline             Interrupted (host reset)      90%      5815         -
-#11  Short captive       Self-test routine in progress 90%      5815         -
-#12  Extended offline    Interrupted (host reset)      90%         5         -
-#13  Extended offline    Interrupted (host reset)      90%         1         -
+# 1  Offline             Interrupted (host reset)      90%     11930         -
+# 2  Extended captive    Self-test routine in progress 90%     11930         -
+# 3  Extended offline    Completed without error       00%     11873         -
+# 4  Short offline       Completed without error       00%     10491         -
+# 5  Short offline       Completed without error       00%     10434         -
+# 6  Short offline       Completed without error       00%     10421         -
+# 7  Short offline       Completed without error       00%     10408         -
+# 8  Short offline       Completed without error       00%     10334         -
+# 9  Short offline       Completed without error       00%     10321         -
+#10  Short offline       Completed without error       00%     10267         -
+#11  Short offline       Completed without error       00%     10233         -
+#12  Short offline       Completed without error       00%     10183         -
+#13  Short offline       Completed without error       00%     10173         -
+#14  Short offline       Completed without error       00%     10165         -
+#15  Short offline       Completed without error       00%     10144         -
+#16  Extended offline    Completed without error       00%      9935         -
+#17  Short offline       Completed without error       00%      8634         -
+#18  Short offline       Completed without error       00%      8606         -
+#19  Offline             Interrupted (host reset)      90%      7191         -
+#20  Short captive       Self-test routine in progress 90%      7191         -
+#21  Offline             Interrupted (host reset)      70%      7191         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Completed [00% left] (0-65535)
+    1        0        0  Interrupted [90% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -145,8 +302,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     26/41 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     38/38 Celsius
 Lifetime    Min/Max Temperature:     16/64 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -155,13 +312,13 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (47)
+Temperature History Size (Index):    128 (37)
 
 SCT Error Recovery Control:
            Read:     75 (7,5 seconds)
           Write:     75 (7,5 seconds)
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

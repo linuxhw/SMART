@@ -6,7 +6,7 @@ User Capacity:    40 060 403 712 bytes [40,0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Thu Jan 21 19:17:35 2016 MSK
+Local Time is:    Wed Feb 22 14:37:15 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -23,9 +23,8 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  39)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  900) seconds.
 Offline data collection
@@ -52,15 +51,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    0
   3 Spin_Up_Time            POS---   078   001   000    -    4224
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3129
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3156
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    336167
+  9 Power_On_Hours          -O--CK   100   100   000    -    338736
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1601
-194 Temperature_Celsius     -O---K   172   118   000    -    22
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    32961488
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1617
+194 Temperature_Celsius     -O---K   190   118   000    -    16
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    21526343
 196 Reallocated_Event_Count -O--C-   253   253   000    -    0
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   253   253   010    -    0
@@ -74,29 +73,132 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory Version 1
-SMART           Log Directory Version 1 [multi-sector log support]
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
+0x00           SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
 0x02           SL  R/O      2  Comprehensive SMART error log
-0x03       GPL     R/O      2  Ext. Comprehensive SMART error log
 0x06           SL  R/O      2  SMART self-test log
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
 
-SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0600 (reserved = 0x00)
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+Warning: ATA error count 3847 inconsistent with error log pointer 5
+
+ATA Error Count: 3847 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3847 occurred at disk power-on lifetime: 2807 hours (116 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 46 01 c2 10 a0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 03 46 01 c2 10 a0 00      00:00:15.063  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 c2 10 a0 00      00:00:15.063  SET FEATURES [Set transfer mode]
+  c6 da 10 01 c2 4f a0 00      00:00:15.063  SET MULTIPLE MODE
+  b0 da 00 01 c2 4f a0 00      00:00:15.063  SMART RETURN STATUS
+  b0 d2 f1 01 c2 4f a0 00      00:00:15.000  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+
+Error 3846 occurred at disk power-on lifetime: 2805 hours (116 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:51:18.188  SET FEATURES [Enable APM]
+  c8 00 58 20 84 1e e1 00      00:51:18.188  READ DMA
+  c8 00 88 78 84 1e e1 00      00:51:18.188  READ DMA
+  c8 00 20 00 84 1e e1 00      00:51:18.188  READ DMA
+  c8 00 60 48 1a 35 e2 00      00:51:18.188  READ DMA
+
+Error 3845 occurred at disk power-on lifetime: 2805 hours (116 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:34:26.938  SET FEATURES [Enable APM]
+  c8 00 b0 68 20 be e2 00      00:34:26.938  READ DMA
+  c8 00 30 68 08 35 e2 00      00:34:26.875  READ DMA
+  c8 00 08 e0 c4 25 e1 00      00:34:26.875  READ DMA
+  c8 00 58 20 84 1e e1 00      00:34:26.875  READ DMA
+
+Error 3844 occurred at disk power-on lifetime: 2805 hours (116 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:33:02.875  SET FEATURES [Enable APM]
+  c8 00 08 f8 4b 62 e1 00      00:33:02.875  READ DMA
+  c8 00 80 58 4b 62 e1 00      00:33:02.875  READ DMA
+  c8 00 18 c8 72 90 e2 00      00:33:02.875  READ DMA
+  c8 00 08 d8 71 f5 e2 00      00:33:02.875  READ DMA
+
+Error 3843 occurred at disk power-on lifetime: 2804 hours (116 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:02:38.750  SET FEATURES [Enable APM]
+  c8 00 08 28 81 45 e0 00      00:02:38.750  READ DMA
+  c8 00 00 30 20 c1 e2 00      00:02:38.750  READ DMA
+  c8 00 00 50 20 b9 e2 00      00:02:38.688  READ DMA
+  c8 00 90 40 16 9f e2 00      00:02:38.688  READ DMA
+
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
-Warning! SMART Self-Test Log Structure error: invalid SMART checksum.
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      70%      2810         -
 
 Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 
