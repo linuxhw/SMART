@@ -30,7 +30,7 @@ Rating — avg. rating per sample.
 | Lite-On   | IT L8T-128L9G      | 128 GB | 1       | 105   | 0     | 0.29   |
 | Lite-On   | IT LMT-256L9M      | 256 GB | 1       | 97    | 0     | 0.27   |
 | Lite-On   | L8H-256V2G-HP      | 256 GB | 4       | 95    | 0     | 0.26   |
-| Lite-On   | PH2-CJ120          | 120 GB | 1       | 90    | 0     | 0.25   |
+| Lite-On   | PH2-CJ120          | 120 GB | 1       | 92    | 0     | 0.25   |
 | Lite-On   | LAT-256M2S         | 256 GB | 1       | 239   | 2     | 0.22   |
 | Lite-On   | IT LCS-128L9S-HP   | 128 GB | 2       | 78    | 0     | 0.21   |
 | Lite-On   | CV3-8D256-41 SA... | 256 GB | 1       | 75    | 0     | 0.21   |

@@ -18,7 +18,7 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | WDC       | WDS256G1X0C-00ENX0 | 256 GB | 2       | 359   | 0     | 0.99   |
-| WDC       | WDS500G2X0C-00L350 | 500 GB | 3       | 132   | 0     | 0.36   |
+| WDC       | WDS500G2X0C-00L350 | 500 GB | 3       | 184   | 0     | 0.51   |
 | WDC       | PC SN520 SDAPMU... | 512 GB | 1       | 66    | 0     | 0.18   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 2       | 59    | 0     | 0.16   |
 | WDC       | WDS512G1X0C-00ENX0 | 512 GB | 1       | 52    | 0     | 0.14   |

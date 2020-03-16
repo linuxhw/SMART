@@ -35,7 +35,7 @@ Rating — avg. rating per sample.
 | HGST      | HUS722T2TALA604    | 2 TB   | 2       | 644   | 0     | 1.77   |
 | HGST      | HDS724040ALE640    | 4 TB   | 1       | 598   | 0     | 1.64   |
 | HGST      | HMS5C4040ALE640    | 4 TB   | 1       | 573   | 0     | 1.57   |
-| HGST      | HDN724030ALE640    | 3 TB   | 3       | 554   | 0     | 1.52   |
+| HGST      | HDN724030ALE640    | 3 TB   | 3       | 557   | 0     | 1.53   |
 | HGST      | HUH721212ALN600    | 12 TB  | 1       | 534   | 0     | 1.46   |
 | HGST      | HUS726040ALA614    | 4 TB   | 2       | 516   | 0     | 1.42   |
 | HGST      | HDN726060ALE614    | 6 TB   | 2       | 490   | 0     | 1.34   |
@@ -47,12 +47,12 @@ Rating — avg. rating per sample.
 | HGST      | HUS724040ALE640    | 4 TB   | 6       | 267   | 0     | 0.73   |
 | HGST      | HCC545050A7E380    | 500 GB | 1       | 523   | 1     | 0.72   |
 | HGST      | HTS545032A7E680    | 320 GB | 16      | 299   | 19    | 0.64   |
-| HGST      | HTS721010A9E630    | 1 TB   | 175     | 253   | 120   | 0.56   |
-| HGST      | HTS541010A9E680    | 1 TB   | 140     | 307   | 266   | 0.54   |
-| HGST      | HTS721075A9E630    | 752 GB | 7       | 193   | 0     | 0.53   |
+| HGST      | HTS721010A9E630    | 1 TB   | 175     | 255   | 120   | 0.56   |
+| HGST      | HTS721075A9E630    | 752 GB | 7       | 203   | 0     | 0.56   |
+| HGST      | HTS541010A9E680    | 1 TB   | 140     | 309   | 266   | 0.55   |
 | HGST      | HUS724040ALA640    | 4 TB   | 1       | 180   | 0     | 0.49   |
-| HGST      | HTS725050A7E630    | 500 GB | 105     | 249   | 132   | 0.45   |
-| HGST      | HTS545050A7E380    | 500 GB | 131     | 323   | 234   | 0.41   |
+| HGST      | HTS725050A7E630    | 500 GB | 105     | 251   | 132   | 0.46   |
+| HGST      | HTS545050A7E380    | 500 GB | 131     | 326   | 234   | 0.41   |
 | HGST      | HUS726040ALE614    | 4 TB   | 1       | 147   | 0     | 0.40   |
 | HGST      | HTS541010A7E630    | 1 TB   | 17      | 167   | 3     | 0.39   |
 | HGST      | HUH728080ALE600    | 8 TB   | 1       | 130   | 0     | 0.36   |
@@ -60,13 +60,13 @@ Rating — avg. rating per sample.
 | HGST      | HTS545032A7E380    | 320 GB | 27      | 190   | 380   | 0.25   |
 | HGST      | HTS545050A7E660    | 500 GB | 11      | 232   | 6     | 0.25   |
 | HGST      | HUS726T4TALN6L4    | 4 TB   | 1       | 83    | 0     | 0.23   |
-| HGST      | HTS545050A7E680    | 500 GB | 199     | 186   | 349   | 0.22   |
+| HGST      | HTS545050A7E680    | 500 GB | 199     | 187   | 349   | 0.22   |
 | HGST      | HTS541010B7E610    | 1 TB   | 16      | 72    | 0     | 0.20   |
 | HGST      | HTE725050A7E630    | 500 GB | 2       | 68    | 0     | 0.19   |
 | HGST      | HTS545025A7E330    | 250 GB | 1       | 60    | 0     | 0.17   |
 | HGST      | HMS5C4040BLE640    | 4 TB   | 2       | 57    | 0     | 0.16   |
 | HGST      | HTE721010A9E630    | 1 TB   | 3       | 50    | 0     | 0.14   |
-| HGST      | HTS541075A7E630    | 752 GB | 9       | 62    | 113   | 0.14   |
+| HGST      | HTS541075A7E630    | 752 GB | 9       | 71    | 113   | 0.14   |
 | HGST      | HTS545050B7E660    | 500 GB | 14      | 47    | 0     | 0.13   |
 | HGST      | HUS726T6TALE6L4    | 6 TB   | 1       | 40    | 0     | 0.11   |
 | HGST      | HTS541515A9E630    | 1.5 TB | 2       | 541   | 14    | 0.10   |
@@ -93,7 +93,7 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | HGST      | Ultrastar 7K4000       | 5      | 43      | 1004  | 1     | 2.66   |
-| HGST      | Deskstar NAS           | 4      | 15      | 772   | 0     | 2.12   |
+| HGST      | Deskstar NAS           | 4      | 15      | 773   | 0     | 2.12   |
 | HGST      | Deskstar 7K4000        | 1      | 1       | 598   | 0     | 1.64   |
 | HGST      | Travelstar 5K1500      | 2      | 3       | 928   | 10    | 1.62   |
 | HGST      | Ultrastar 7K6000       | 8      | 10      | 436   | 0     | 1.20   |
@@ -103,11 +103,11 @@ Rating — avg. rating per sample.
 | HGST      | Ultrastar 7K2          | 2      | 5       | 267   | 0     | 0.73   |
 | HGST      | CinemaStar Z5K500      | 1      | 1       | 523   | 1     | 0.72   |
 | HGST      | MegaScale 4000         | 2      | 3       | 229   | 0     | 0.63   |
-| HGST      | Travelstar 5K1000      | 5      | 173     | 317   | 286   | 0.59   |
-| HGST      | Travelstar 7K1000      | 3      | 185     | 247   | 113   | 0.55   |
-| HGST      | Travelstar Z7K500      | 4      | 120     | 261   | 141   | 0.51   |
-| HGST      | Travelstar Z5K500      | 5      | 384     | 239   | 288   | 0.30   |
-| HGST      | Travelstar Z5K1000     | 2      | 26      | 130   | 41    | 0.30   |
+| HGST      | Travelstar 5K1000      | 5      | 173     | 318   | 286   | 0.59   |
+| HGST      | Travelstar 7K1000      | 3      | 185     | 249   | 113   | 0.56   |
+| HGST      | Travelstar Z7K500      | 4      | 120     | 262   | 141   | 0.51   |
+| HGST      | Travelstar Z5K500      | 5      | 384     | 240   | 288   | 0.31   |
+| HGST      | Travelstar Z5K1000     | 2      | 26      | 134   | 41    | 0.30   |
 | HGST      | Travelstar Z5K1        | 1      | 16      | 72    | 0     | 0.20   |
 | HGST      | Travelstar Z5K500.B    | 1      | 14      | 47    | 0     | 0.13   |
 | HGST      | Travelstar Z7K500.B    | 1      | 2       | 33    | 0     | 0.09   |

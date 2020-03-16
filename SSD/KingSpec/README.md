@@ -41,6 +41,7 @@ Rating — avg. rating per sample.
 | KingSpec  | P4-240             | 240 GB | 2       | 18    | 3     | 0.02   |
 | KingSpec  | P3-1TB             | 1 TB   | 1       | 6     | 0     | 0.02   |
 | KingSpec  | MSH-256            | 256 GB | 1       | 6     | 0     | 0.02   |
+| KingSpec  | ACSC2M128mSA       | 128 GB | 1       | 6     | 0     | 0.02   |
 | KingSpec  | ACSC2M128S25       | 128 GB | 1       | 4     | 0     | 0.01   |
 | KingSpec  | NT-1TB             | 1 TB   | 1       | 3     | 0     | 0.01   |
 | KingSpec  | ACJC2M032mSH       | 32 GB  | 1       | 3     | 0     | 0.01   |
@@ -51,4 +52,3 @@ Rating — avg. rating per sample.
 | KingSpec  | ACJC2M128S25       | 128 GB | 1       | 1     | 0     | 0.00   |
 | KingSpec  | MT-64              | 64 GB  | 1       | 0     | 0     | 0.00   |
 | KingSpec  | ACSC2M064S25       | 64 GB  | 1       | 0     | 0     | 0.00   |
-| KingSpec  | ACSC2M128mSA       | 128 GB | 1       | 0     | 0     | 0.00   |

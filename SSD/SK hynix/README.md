@@ -32,8 +32,8 @@ Rating — avg. rating per sample.
 | SK hynix  | HFS256G32TND-N210A | 256 GB | 1       | 172   | 0     | 0.47   |
 | SK hynix  | SC308 SATA         | 128 GB | 3       | 145   | 0     | 0.40   |
 | SK hynix  | HFS128G32MND-3210A | 128 GB | 1       | 135   | 0     | 0.37   |
+| SK hynix  | SC210 2.5 7MM      | 128 GB | 2       | 475   | 2     | 0.27   |
 | SK hynix  | SC311 SATA         | 512 GB | 4       | 151   | 260   | 0.27   |
-| SK hynix  | SC210 2.5 7MM      | 128 GB | 2       | 473   | 2     | 0.27   |
 | SK hynix  | HFS256G3BTND-N210A | 256 GB | 2       | 81    | 0     | 0.22   |
 | SK hynix  | SC308 SATA         | 256 GB | 2       | 67    | 0     | 0.19   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 14      | 62    | 0     | 0.17   |

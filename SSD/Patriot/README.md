@@ -26,10 +26,10 @@ Rating — avg. rating per sample.
 | Patriot   | Blast              | 480 GB | 1       | 823   | 0     | 2.26   |
 | Patriot   | Flare              | 120 GB | 1       | 753   | 0     | 2.06   |
 | Patriot   | Torch LE           | 240 GB | 1       | 558   | 0     | 1.53   |
-| Patriot   | Blast              | 240 GB | 5       | 280   | 0     | 0.77   |
+| Patriot   | Blast              | 240 GB | 5       | 321   | 0     | 0.88   |
 | Patriot   | Burst              | 960 GB | 1       | 263   | 0     | 0.72   |
 | Patriot   | Blaze              | 240 GB | 2       | 231   | 0     | 0.63   |
-| Patriot   | Spark              | 128 GB | 6       | 180   | 0     | 0.49   |
+| Patriot   | Spark              | 128 GB | 6       | 181   | 0     | 0.50   |
 | Patriot   | Blast              | 120 GB | 6       | 157   | 0     | 0.43   |
 | Patriot   | Flare              | 64 GB  | 1       | 157   | 0     | 0.43   |
 | Patriot   | Blaze              | 64 GB  | 4       | 94    | 0     | 0.26   |
@@ -58,4 +58,4 @@ Rating — avg. rating per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Patriot   | Unknown                | 15     | 28      | 219   | 73    | 0.45   |
-| Patriot   | Phison Driven SSDs     | 5      | 42      | 110   | 1     | 0.29   |
+| Patriot   | Phison Driven SSDs     | 5      | 42      | 115   | 1     | 0.31   |

@@ -50,14 +50,14 @@ Rating — avg. rating per sample.
 | Fujitsu   | MHW2080BH          | 80 GB  | 3       | 565   | 6     | 0.90   |
 | Fujitsu   | MHZ2250BH G1       | 250 GB | 4       | 363   | 8     | 0.87   |
 | Fujitsu   | MHV2100AT          | 100 GB | 1       | 316   | 0     | 0.87   |
-| Fujitsu   | MJA2160BH G2       | 160 GB | 5       | 471   | 250   | 0.85   |
+| Fujitsu   | MJA2160BH G2       | 160 GB | 5       | 473   | 250   | 0.85   |
 | Fujitsu   | MHX2300BT          | 304 GB | 3       | 759   | 47    | 0.81   |
 | Fujitsu   | MHY2120BH          | 120 GB | 24      | 517   | 234   | 0.79   |
 | Fujitsu   | MHV2080BH          | 80 GB  | 3       | 405   | 3     | 0.79   |
 | Fujitsu   | MHW2100BH          | 100 GB | 1       | 279   | 0     | 0.76   |
 | Fujitsu   | MHW2160BH          | 160 GB | 3       | 493   | 30    | 0.73   |
 | Fujitsu   | MHV2080AH          | 80 GB  | 4       | 649   | 4     | 0.72   |
-| Fujitsu   | MHZ2250BH G2       | 250 GB | 12      | 597   | 519   | 0.72   |
+| Fujitsu   | MHZ2250BH G2       | 250 GB | 12      | 598   | 519   | 0.72   |
 | Fujitsu   | MHX2250BT          | 250 GB | 2       | 409   | 5     | 0.70   |
 | Fujitsu   | MHV2060BH          | 64 GB  | 6       | 441   | 10    | 0.68   |
 | Fujitsu   | MJA2500BH FFS G1   | 500 GB | 1       | 246   | 0     | 0.67   |
@@ -113,7 +113,7 @@ Rating — avg. rating per sample.
 | Fujitsu   | MHW BJ                 | 2      | 2       | 289   | 0     | 0.79   |
 | Fujitsu   | MHX BT                 | 2      | 5       | 619   | 30    | 0.77   |
 | Fujitsu   | MHV                    | 22     | 67      | 425   | 14    | 0.66   |
-| Fujitsu   | MJA BH                 | 7      | 33      | 368   | 168   | 0.51   |
+| Fujitsu   | MJA BH                 | 7      | 33      | 369   | 168   | 0.51   |
 | Fujitsu   | MHW AT                 | 2      | 2       | 165   | 0     | 0.45   |
 | Fujitsu   | MHT                    | 4      | 4       | 340   | 6     | 0.43   |
 | Fujitsu   | MHZ BT                 | 1      | 1       | 155   | 0     | 0.43   |

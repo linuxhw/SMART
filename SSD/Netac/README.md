@@ -20,4 +20,4 @@ Rating — avg. rating per sample.
 | Netac     | SSD                | 480 GB | 1       | 35    | 0     | 0.10   |
 | Netac     | SSD 120G           | 120 GB | 1       | 19    | 0     | 0.05   |
 | Netac     | SSD                | 720 GB | 1       | 2     | 0     | 0.01   |
-| Netac     | SSD                | 128 GB | 3       | 1     | 0     | 0.00   |
+| Netac     | SSD                | 128 GB | 3       | 2     | 0     | 0.01   |

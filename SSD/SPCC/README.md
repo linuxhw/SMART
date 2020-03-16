@@ -24,12 +24,12 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | SPCC      | SSD110             | 120 GB | 4       | 459   | 254   | 0.96   |
-| SPCC      | SSD110             | 64 GB  | 4       | 453   | 255   | 0.70   |
+| SPCC      | SSD110             | 64 GB  | 4       | 464   | 254   | 0.70   |
 | SPCC      | SSD B29            | 32 GB  | 1       | 204   | 0     | 0.56   |
 | SPCC      | SSD162             | 120 GB | 7       | 406   | 436   | 0.51   |
 | SPCC      | SSD A20            | 64 GB  | 2       | 177   | 0     | 0.49   |
-| SPCC      | SSD                | 64 GB  | 70      | 177   | 44    | 0.45   |
-| SPCC      | SSD                | 120 GB | 105     | 184   | 108   | 0.41   |
+| SPCC      | SSD                | 64 GB  | 70      | 179   | 44    | 0.46   |
+| SPCC      | SSD                | 120 GB | 105     | 187   | 108   | 0.41   |
 | SPCC      | M.2 Disk           | 256 GB | 1       | 119   | 0     | 0.33   |
 | SPCC      | SSD170             | 120 GB | 3       | 239   | 341   | 0.26   |
 | SPCC      | SSD                | 128 GB | 11      | 89    | 0     | 0.25   |
@@ -59,5 +59,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| SPCC      | Phison Driven OEM SSDs | 2      | 117     | 172   | 98    | 0.38   |
-| SPCC      | Unknown                | 20     | 156     | 204   | 175   | 0.36   |
+| SPCC      | Phison Driven OEM SSDs | 2      | 117     | 174   | 98    | 0.38   |
+| SPCC      | Unknown                | 20     | 156     | 205   | 175   | 0.36   |

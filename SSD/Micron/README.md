@@ -25,11 +25,11 @@ Rating — avg. rating per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Micron    | M500_MTFDDAK480MAV | 480 GB | 1       | 1083  | 0     | 2.97   |
 | Micron    | MTFDDAT128MAM-1J2  | 128 GB | 1       | 783   | 0     | 2.15   |
+| Micron    | 1100 SATA          | 512 GB | 1       | 680   | 0     | 1.87   |
 | Micron    | M600_MTFDDAV256MBF | 256 GB | 1       | 590   | 0     | 1.62   |
 | Micron    | C400-MTFDDAK256MAM | 256 GB | 2       | 513   | 0     | 1.41   |
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | 2       | 740   | 12    | 1.05   |
 | Micron    | 1100_MTFDDAK2T0TBN | 2 TB   | 1       | 303   | 0     | 0.83   |
-| Micron    | 1100 SATA          | 512 GB | 1       | 253   | 0     | 0.69   |
 | Micron    | 1100 SATA          | 256 GB | 2       | 492   | 2     | 0.61   |
 | Micron    | M550_MTFDDAV128MAY | 128 GB | 1       | 204   | 0     | 0.56   |
 | Micron    | MTFDBAK128MAG-1G1  | 128 GB | 2       | 192   | 0     | 0.53   |
@@ -43,7 +43,7 @@ Rating — avg. rating per sample.
 | Micron    | MTFDDAK256MAM-1K12 | 256 GB | 4       | 80    | 758   | 0.14   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 8       | 56    | 1     | 0.13   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | 4       | 48    | 0     | 0.13   |
-| Micron    | 1100_MTFDDAV256TBN | 256 GB | 17      | 47    | 100   | 0.11   |
+| Micron    | 1100_MTFDDAV256TBN | 256 GB | 17      | 53    | 100   | 0.13   |
 | Micron    | MTFDDAK512MAY-1... | 512 GB | 1       | 624   | 16    | 0.10   |
 | Micron    | MTFDDAV512MBF-1... | 512 GB | 1       | 31    | 0     | 0.09   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | 1       | 29    | 0     | 0.08   |
@@ -74,4 +74,4 @@ Rating — avg. rating per sample.
 | Micron    | RealSSD m4/C400/P400   | 4      | 8       | 186   | 379   | 0.47   |
 | Micron    | Unknown                | 14     | 19      | 286   | 112   | 0.35   |
 | Micron    | 5100 Pro / 5200 SSDs   | 1      | 1       | 98    | 0     | 0.27   |
-| Micron    | BX/MX1/2/3/500, M5/... | 9      | 37      | 93    | 46    | 0.20   |
+| Micron    | BX/MX1/2/3/500, M5/... | 9      | 37      | 107   | 46    | 0.24   |
