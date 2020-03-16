@@ -29,7 +29,7 @@ Rating — avg. rating per sample.
 | Goodram   | SSD                | 120 GB | 21      | 176   | 0     | 0.48   |
 | Goodram   | SSD                | 240 GB | 3       | 159   | 0     | 0.44   |
 | Goodram   | SSDPR-CX300-120    | 120 GB | 3       | 153   | 0     | 0.42   |
-| Goodram   | CX100              | 120 GB | 6       | 151   | 2     | 0.39   |
+| Goodram   | CX100              | 120 GB | 6       | 152   | 2     | 0.40   |
 | Goodram   | SSDPR-CX400-256    | 256 GB | 3       | 85    | 0     | 0.23   |
 | Goodram   | SSDPR-CL100-240    | 240 GB | 2       | 73    | 0     | 0.20   |
 | Goodram   | SSDPR-CX300-240    | 240 GB | 2       | 66    | 0     | 0.18   |

@@ -27,8 +27,8 @@ Rating — avg. rating per sample.
 | SK hynix  | BA HFS256GD9TNG... | 256 GB | 1       | 5     | 0     | 0.01   |
 | SK hynix  | PC601 HFS512GD9... | 512 GB | 1       | 5     | 0     | 0.01   |
 | SK hynix  | BC511 NVMe         | 256 GB | 1       | 3     | 0     | 0.01   |
-| SK hynix  | PC401 NVMe         | 1 TB   | 1       | 3     | 0     | 0.01   |
 | SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 5     | 696   | 0.01   |
+| SK hynix  | PC401 NVMe         | 1 TB   | 1       | 3     | 0     | 0.01   |
 | SK hynix  | SKHynix_HFS256G... | 256 GB | 1       | 1     | 0     | 0.01   |
 | SK hynix  | BC501A NVMe        | 128 GB | 1       | 1     | 0     | 0.00   |
 | SK hynix  | BC501 NVMe         | 512 GB | 1       | 0     | 0     | 0.00   |

@@ -44,7 +44,7 @@ Rating — avg. rating per sample.
 | Intel     | SSDPED1D480GA      | 480 GB | 2       | 222   | 0     | 0.61   |
 | Toshiba   | KXG50PNV2T04       | 2 TB   | 1       | 193   | 0     | 0.53   |
 | Intel     | SSDPEKKF360G7H     | 360 GB | 2       | 189   | 0     | 0.52   |
-| WDC       | WDS500G2X0C-00L350 | 500 GB | 3       | 184   | 0     | 0.51   |
+| WDC       | WDS500G2X0C-00L350 | 500 GB | 4       | 186   | 0     | 0.51   |
 | Corsair   | Force MP500        | 240 GB | 3       | 177   | 0     | 0.49   |
 | Toshiba   | THNSN5256GPU7 NVMe | 256 GB | 2       | 176   | 0     | 0.48   |
 | Team      | M8FP2              | 480 GB | 1       | 172   | 0     | 0.47   |
@@ -63,8 +63,8 @@ Rating — avg. rating per sample.
 | Samsung   | MZVPV512HDGL-000H1 | 512 GB | 1       | 122   | 0     | 0.34   |
 | Phison    | BPXP               | 960 GB | 2       | 122   | 0     | 0.33   |
 | Samsung   | MZVKV512HAJH-000L1 | 512 GB | 1       | 122   | 0     | 0.33   |
+| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 121   | 0     | 0.33   |
 | Samsung   | SSD 960 EVO        | 500 GB | 19      | 125   | 1     | 0.33   |
-| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 117   | 0     | 0.32   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 5       | 111   | 0     | 0.31   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 7       | 107   | 0     | 0.30   |
 | SK hynix  | HFS256GD9MNE-6200A | 256 GB | 1       | 107   | 0     | 0.29   |
@@ -92,12 +92,12 @@ Rating — avg. rating per sample.
 | Lenovo    | LENSE20256GMSP3... | 256 GB | 1       | 70    | 0     | 0.19   |
 | Plextor   | PX-128M8PeGN       | 128 GB | 1       | 69    | 0     | 0.19   |
 | ADATA     | SX8200NP           | 240 GB | 1       | 69    | 0     | 0.19   |
+| Plextor   | PX-256M8PeY        | 256 GB | 2       | 68    | 0     | 0.19   |
 | Samsung   | SSD 960 PRO        | 512 GB | 13      | 105   | 1     | 0.19   |
 | Toshiba   | KBG30ZMT128G       | 128 GB | 2       | 67    | 0     | 0.18   |
 | ADATA     | SX8200NP           | 480 GB | 2       | 67    | 0     | 0.18   |
 | WDC       | PC SN520 SDAPMU... | 512 GB | 1       | 66    | 0     | 0.18   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 7       | 63    | 0     | 0.17   |
-| Plextor   | PX-256M8PeY        | 256 GB | 2       | 62    | 0     | 0.17   |
 | Samsung   | SSD 960 EVO        | 1 TB   | 12      | 63    | 3     | 0.17   |
 | Kingch... | 256GB              | 256 GB | 1       | 60    | 0     | 0.16   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 2       | 59    | 0     | 0.16   |
@@ -141,6 +141,7 @@ Rating — avg. rating per sample.
 | Corsair   | Force MP510        | 480 GB | 1       | 28    | 0     | 0.08   |
 | Toshiba   | KXG60ZNV1T02       | 1 TB   | 1       | 27    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 21      | 27    | 0     | 0.08   |
+| Crucial   | CT1000P1SSD8       | 1 TB   | 6       | 75    | 9     | 0.07   |
 | Samsung   | MZVLW512HMJP-000L7 | 512 GB | 2       | 27    | 0     | 0.07   |
 | Samsung   | MZVKW1T0HMLH-00000 | 1 TB   | 1       | 26    | 0     | 0.07   |
 | Corsair   | Force MP510        | 960 GB | 1       | 26    | 0     | 0.07   |
@@ -148,7 +149,6 @@ Rating — avg. rating per sample.
 | Crucial   | CT500P1SSD8        | 500 GB | 5       | 27    | 6     | 0.07   |
 | Toshiba   | KBG30ZMT512G       | 512 GB | 2       | 24    | 0     | 0.07   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 2       | 24    | 0     | 0.07   |
-| Crucial   | CT1000P1SSD8       | 1 TB   | 6       | 71    | 9     | 0.06   |
 | XPG       | GAMMIX S11 Pro     | 1 TB   | 7       | 22    | 0     | 0.06   |
 | Phison    | Viper M.2 VPN100   | 512 GB | 1       | 22    | 0     | 0.06   |
 | ADATA     | SX6000LNP          | 512 GB | 2       | 22    | 0     | 0.06   |
@@ -168,8 +168,8 @@ Rating — avg. rating per sample.
 | SK hynix  | PC401 HFS256GD9... | 256 GB | 1       | 18    | 0     | 0.05   |
 | Intel     | SSDPEKKW512G8      | 512 GB | 4       | 18    | 0     | 0.05   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 12      | 18    | 1     | 0.05   |
-| Intel     | SSDPEKNW512G8H     | 512 GB | 8       | 16    | 8     | 0.05   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 1       | 16    | 0     | 0.05   |
+| Intel     | SSDPEKNW512G8H     | 512 GB | 8       | 16    | 8     | 0.05   |
 | Samsung   | MZVLB1T0HALR-000L2 | 1 TB   | 5       | 16    | 0     | 0.05   |
 | Samsung   | PM981 NVMe         | 256 GB | 2       | 16    | 0     | 0.04   |
 | Colorful  | CN600S             | 480 GB | 1       | 16    | 0     | 0.04   |
@@ -238,8 +238,8 @@ Rating — avg. rating per sample.
 | WDC       | PC SN520 SDAPNU... | 256 GB | 2       | 3     | 0     | 0.01   |
 | Intel     | HBRPEKNX0203AH     | 1 TB   | 1       | 3     | 0     | 0.01   |
 | SK hynix  | BC511 NVMe         | 256 GB | 1       | 3     | 0     | 0.01   |
-| SK hynix  | PC401 NVMe         | 1 TB   | 1       | 3     | 0     | 0.01   |
 | SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 5     | 696   | 0.01   |
+| SK hynix  | PC401 NVMe         | 1 TB   | 1       | 3     | 0     | 0.01   |
 | Gigabyte  | GP-GSM2NE8128GNTD  | 128 GB | 1       | 3     | 0     | 0.01   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 5       | 3     | 0     | 0.01   |
 | WDC       | PC SN730 NVMe      | 1 TB   | 1       | 2     | 0     | 0.01   |
@@ -277,8 +277,8 @@ Rating — avg. rating per sample.
 | Kingston  | SA2000M81000G      | 1 TB   | 1       | 0     | 0     | 0.00   |
 | SK hynix  | BC501 NVMe         | 512 GB | 1       | 0     | 0     | 0.00   |
 | SK hynix  | HFM512GDJTNG-8310A | 512 GB | 4       | 0     | 0     | 0.00   |
-| Samsung   | MZALQ256HAJD-000L1 | 256 GB | 1       | 0     | 0     | 0.00   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 4       | 0     | 0     | 0.00   |
+| Samsung   | MZALQ256HAJD-000L1 | 256 GB | 1       | 0     | 0     | 0.00   |
 | Lite-On   | CA1-8D256-HP       | 256 GB | 1       | 0     | 0     | 0.00   |
 | SK hynix  | BC501 HFM512GDJ... | 512 GB | 2       | 0     | 0     | 0.00   |
 | SK hynix  | HFM256GDJTNG-8310A | 256 GB | 2       | 0     | 0     | 0.00   |

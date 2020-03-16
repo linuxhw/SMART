@@ -17,5 +17,5 @@ Rating — avg. rating per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Crucial   | CT1000P1SSD8       | 1 TB   | 6       | 75    | 9     | 0.07   |
 | Crucial   | CT500P1SSD8        | 500 GB | 5       | 27    | 6     | 0.07   |
-| Crucial   | CT1000P1SSD8       | 1 TB   | 6       | 71    | 9     | 0.06   |

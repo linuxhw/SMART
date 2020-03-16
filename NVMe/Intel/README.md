@@ -29,7 +29,7 @@ Rating — avg. rating per sample.
 | Intel     | SSDPED1D480GA      | 480 GB | 2       | 222   | 0     | 0.61   |
 | Intel     | SSDPEKKF360G7H     | 360 GB | 2       | 189   | 0     | 0.52   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 8       | 129   | 0     | 0.36   |
-| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 117   | 0     | 0.32   |
+| Intel     | SSDPEKNW020T8      | 2 TB   | 2       | 121   | 0     | 0.33   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 7       | 107   | 0     | 0.30   |
 | Intel     | MEMPEK1J016GA      | 16 GB  | 1       | 102   | 0     | 0.28   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 1       | 99    | 0     | 0.27   |
