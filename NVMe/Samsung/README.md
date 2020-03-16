@@ -84,10 +84,10 @@ Rating — avg. rating per sample.
 | Samsung   | PM981a NVMe        | 512 GB | 1       | 1     | 0     | 0.00   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 6       | 1     | 0     | 0.00   |
 | Samsung   | MZVLW1T0HMLH-00000 | 1 TB   | 1       | 1     | 0     | 0.00   |
+| Samsung   | MZVLW128HEGR-00000 | 128 GB | 1       | 1     | 0     | 0.00   |
 | Samsung   | MZALQ256HAJD-000L1 | 256 GB | 1       | 0     | 0     | 0.00   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 4       | 0     | 0     | 0.00   |
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | 3       | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 1       | 0     | 0     | 0.00   |
-| Samsung   | MZVLW128HEGR-00000 | 128 GB | 1       | 0     | 0     | 0.00   |
 | Samsung   | MZALQ512HALU-000L1 | 512 GB | 1       | 0     | 0     | 0.00   |
 | Samsung   | MZALQ256HAJD-000L2 | 256 GB | 1       | 0     | 0     | 0.00   |

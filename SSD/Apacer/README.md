@@ -29,7 +29,7 @@ Rating — avg. rating per sample.
 | Apacer    | AS340              | 120 GB | 2       | 176   | 0     | 0.48   |
 | Apacer    | 256GB SATA Flas... | 256 GB | 1       | 161   | 0     | 0.44   |
 | Apacer    | AS330              | 120 GB | 2       | 39    | 0     | 0.11   |
-| Apacer    | AS350              | 240 GB | 7       | 35    | 0     | 0.10   |
+| Apacer    | AS350              | 240 GB | 7       | 36    | 0     | 0.10   |
 | Apacer    | AS350              | 120 GB | 5       | 32    | 0     | 0.09   |
 | Apacer    | AS350              | 128 GB | 5       | 17    | 0     | 0.05   |
 | Apacer    | AS510S             | 64 GB  | 3       | 10    | 0     | 0.03   |

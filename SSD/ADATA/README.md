@@ -30,11 +30,11 @@ Rating — avg. rating per sample.
 | ADATA     | SSD S599           | 64 GB  | 2       | 296   | 0     | 0.81   |
 | ADATA     | SP900              | 256 GB | 11      | 382   | 2     | 0.79   |
 | ADATA     | SP600NS34          | 256 GB | 1       | 274   | 0     | 0.75   |
-| ADATA     | SP900              | 128 GB | 26      | 328   | 14    | 0.68   |
-| ADATA     | SP600              | 128 GB | 3       | 189   | 0     | 0.52   |
+| ADATA     | SP900              | 128 GB | 26      | 331   | 14    | 0.69   |
+| ADATA     | SP600              | 128 GB | 3       | 191   | 0     | 0.53   |
 | ADATA     | SX900              | 64 GB  | 4       | 515   | 518   | 0.51   |
 | ADATA     | SP900              | 64 GB  | 14      | 248   | 2     | 0.50   |
-| ADATA     | SX900              | 128 GB | 7       | 698   | 584   | 0.47   |
+| ADATA     | SX900              | 128 GB | 7       | 705   | 584   | 0.49   |
 | ADATA     | SX930              | 120 GB | 2       | 165   | 0     | 0.45   |
 | ADATA     | SP600              | 32 GB  | 6       | 152   | 0     | 0.42   |
 | ADATA     | SU800              | 256 GB | 5       | 144   | 3     | 0.36   |
@@ -49,22 +49,22 @@ Rating — avg. rating per sample.
 | ADATA     | SU655              | 120 GB | 4       | 95    | 0     | 0.26   |
 | ADATA     | S596               | 128 GB | 1       | 68    | 0     | 0.19   |
 | ADATA     | SU655              | 480 GB | 1       | 63    | 0     | 0.17   |
+| ADATA     | SU800              | 512 GB | 3       | 62    | 0     | 0.17   |
 | ADATA     | SP610              | 128 GB | 2       | 57    | 0     | 0.16   |
-| ADATA     | SU800              | 512 GB | 3       | 57    | 0     | 0.16   |
 | ADATA     | SP900NS38          | 128 GB | 3       | 124   | 339   | 0.16   |
 | ADATA     | SP920SS            | 256 GB | 5       | 130   | 7     | 0.15   |
 | ADATA     | SP550              | 240 GB | 8       | 46    | 0     | 0.13   |
+| ADATA     | SU900              | 256 GB | 5       | 44    | 1     | 0.12   |
 | ADATA     | SU900              | 1 TB   | 2       | 44    | 0     | 0.12   |
 | ADATA     | SU800              | 128 GB | 23      | 43    | 4     | 0.11   |
 | ADATA     | SU650              | 120 GB | 16      | 44    | 1     | 0.11   |
-| ADATA     | SU900              | 256 GB | 5       | 38    | 1     | 0.10   |
 | ADATA     | SX950              | 240 GB | 1       | 34    | 0     | 0.09   |
 | ADATA     | SU650              | 480 GB | 5       | 89    | 626   | 0.09   |
+| ADATA     | SP900              | 512 GB | 2       | 33    | 0     | 0.09   |
 | ADATA     | SP900NS34          | 128 GB | 1       | 30    | 0     | 0.08   |
 | ADATA     | SU635              | 240 GB | 3       | 28    | 0     | 0.08   |
 | ADATA     | SU630              | 480 GB | 1       | 26    | 0     | 0.07   |
 | ADATA     | SU650              | 240 GB | 11      | 26    | 0     | 0.07   |
-| ADATA     | SP900              | 512 GB | 2       | 26    | 0     | 0.07   |
 | ADATA     | SU800              | 1 TB   | 3       | 25    | 0     | 0.07   |
 | ADATA     | SP550              | 120 GB | 23      | 25    | 1     | 0.07   |
 | ADATA     | SX900              | 256 GB | 4       | 347   | 811   | 0.07   |
@@ -98,8 +98,8 @@ Rating — avg. rating per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| ADATA     | SandForce Driven SSDs  | 8      | 61      | 340   | 7     | 0.75   |
+| ADATA     | SandForce Driven SSDs  | 8      | 61      | 341   | 7     | 0.75   |
 | ADATA     | JMicron based SSDs     | 5      | 20      | 177   | 1     | 0.48   |
-| ADATA     | Unknown                | 41     | 120     | 162   | 174   | 0.19   |
-| ADATA     | Silicon Motion base... | 5      | 35      | 56    | 3     | 0.15   |
+| ADATA     | Unknown                | 41     | 120     | 163   | 174   | 0.19   |
+| ADATA     | Silicon Motion base... | 5      | 35      | 57    | 3     | 0.15   |
 | ADATA     | SiliconMotion based... | 2      | 31      | 31    | 1     | 0.08   |

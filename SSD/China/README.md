@@ -18,21 +18,21 @@ Rating — avg. rating per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | China     | SATA SSD           | 20 GB  | 7       | 383   | 1     | 0.93   |
-| China     | SSD                | 64 GB  | 5       | 253   | 1     | 0.52   |
+| China     | SSD                | 64 GB  | 5       | 254   | 1     | 0.53   |
 | China     | SATA SSD           | 240 GB | 11      | 100   | 0     | 0.28   |
 | China     | SATA SSD           | 128 GB | 6       | 99    | 0     | 0.27   |
 | China     | 120GB SSD          | 120 GB | 36      | 95    | 0     | 0.26   |
 | China     | SATA SSD           | 64 GB  | 14      | 85    | 0     | 0.23   |
+| China     | 64GB SSD           | 64 GB  | 11      | 74    | 0     | 0.20   |
 | China     | SATA SSD           | 480 GB | 1       | 73    | 0     | 0.20   |
-| China     | 64GB SSD           | 64 GB  | 11      | 65    | 0     | 0.18   |
 | China     | SSD 120G           | 120 GB | 2       | 54    | 0     | 0.15   |
 | China     | 80GB SSD           | 80 GB  | 2       | 47    | 0     | 0.13   |
 | China     | SATA SSD           | 120 GB | 24      | 46    | 0     | 0.13   |
+| China     | 128GB SSD          | 128 GB | 9       | 44    | 0     | 0.12   |
 | China     | SSD128G            | 128 GB | 1       | 42    | 0     | 0.12   |
-| China     | 128GB SSD          | 128 GB | 9       | 39    | 0     | 0.11   |
 | China     | SSD                | 128 GB | 10      | 28    | 0     | 0.08   |
+| China     | SH00R480GB         | 480 GB | 1       | 27    | 0     | 0.08   |
 | China     | SSD                | 240 GB | 9       | 38    | 1     | 0.07   |
-| China     | SH00R480GB         | 480 GB | 1       | 21    | 0     | 0.06   |
 | China     | SSD                | 1 TB   | 1       | 21    | 0     | 0.06   |
 | China     | SSD                | 120 GB | 7       | 21    | 0     | 0.06   |
 | China     | 240GB SSD          | 240 GB | 2       | 20    | 0     | 0.06   |

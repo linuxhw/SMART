@@ -33,7 +33,7 @@ Rating — avg. rating per sample.
 | KingSpec  | MT-128             | 128 GB | 4       | 29    | 0     | 0.08   |
 | KingSpec  | CHA-M2B7-M256      | 256 GB | 2       | 27    | 0     | 0.07   |
 | KingSpec  | T-120              | 120 GB | 1       | 25    | 0     | 0.07   |
-| KingSpec  | Q-360              | 360 GB | 3       | 13    | 0     | 0.04   |
+| KingSpec  | Q-360              | 360 GB | 3       | 23    | 0     | 0.07   |
 | KingSpec  | P3-256             | 256 GB | 2       | 13    | 0     | 0.04   |
 | KingSpec  | ACSC2M064mSA       | 64 GB  | 1       | 9     | 0     | 0.03   |
 | KingSpec  | T-60               | 64 GB  | 3       | 7     | 0     | 0.02   |

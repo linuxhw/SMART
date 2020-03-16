@@ -36,15 +36,15 @@ Rating — avg. rating per sample.
 | Crucial   | CT128M550SSD3      | 128 GB | 4       | 469   | 8     | 1.00   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 7       | 351   | 0     | 0.96   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 3       | 350   | 0     | 0.96   |
-| Crucial   | CT960M500SSD1      | 960 GB | 6       | 513   | 345   | 0.94   |
+| Crucial   | CT960M500SSD1      | 960 GB | 6       | 514   | 345   | 0.94   |
 | Crucial   | C300-CTFDDAC128MAG | 128 GB | 3       | 330   | 0     | 0.91   |
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | 1       | 307   | 0     | 0.84   |
 | Crucial   | CT750MX300SSD1     | 752 GB | 5       | 302   | 0     | 0.83   |
 | Crucial   | CT240M500SSD1      | 240 GB | 17      | 501   | 132   | 0.75   |
+| Crucial   | CT250MX200SSD1     | 250 GB | 6       | 260   | 0     | 0.71   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 16      | 350   | 156   | 0.71   |
 | Crucial   | CT500MX200SSD4     | 500 GB | 2       | 255   | 0     | 0.70   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 6       | 252   | 0     | 0.69   |
-| Crucial   | CT250MX200SSD1     | 250 GB | 6       | 251   | 0     | 0.69   |
 | Crucial   | CT120M500SSD1      | 120 GB | 10      | 431   | 8     | 0.68   |
 | Crucial   | M4-CT128M4SSD3     | 128 GB | 1       | 238   | 0     | 0.65   |
 | Crucial   | CT480M500SSD1      | 480 GB | 2       | 311   | 8     | 0.64   |
@@ -56,7 +56,7 @@ Rating — avg. rating per sample.
 | Crucial   | CT256M550SSD1      | 256 GB | 5       | 378   | 7     | 0.34   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 5       | 117   | 0     | 0.32   |
 | Crucial   | CT1024MX200SSD1    | 1 TB   | 1       | 116   | 0     | 0.32   |
-| Crucial   | CT500MX500SSD1     | 500 GB | 23      | 109   | 0     | 0.30   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 23      | 112   | 0     | 0.31   |
 | Crucial   | CT512M550SSD3      | 512 GB | 2       | 111   | 336   | 0.30   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 6       | 107   | 0     | 0.29   |
 | Crucial   | C300-CTFDDAC256MAG | 256 GB | 2       | 555   | 504   | 0.29   |
@@ -102,7 +102,7 @@ Rating — avg. rating per sample.
 | Crucial   | RealSSD C300/M500      | 6      | 36      | 493   | 121   | 0.78   |
 | Crucial   | MX100/M500/M510/M55... | 1      | 6       | 252   | 0     | 0.69   |
 | Crucial   | MX100/MX200/M5x0/M6... | 3      | 7       | 403   | 5     | 0.61   |
-| Crucial   | BX/MX1/2/3/500, M5/... | 26     | 209     | 170   | 25    | 0.40   |
+| Crucial   | BX/MX1/2/3/500, M5/... | 26     | 209     | 171   | 25    | 0.41   |
 | Crucial   | Silicon Motion base... | 1      | 2       | 125   | 0     | 0.34   |
 | Crucial   | RealSSD C300/P300      | 1      | 2       | 555   | 504   | 0.29   |
 | Crucial   | SiliconMotion based... | 3      | 15      | 71    | 0     | 0.20   |

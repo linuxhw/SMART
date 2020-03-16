@@ -48,11 +48,11 @@ Rating — avg. rating per sample.
 | Maxtor    | 6L040J2            | 40 GB  | 1       | 1576  | 5     | 0.72   |
 | Maxtor    | STM3320620AS       | 320 GB | 2       | 254   | 0     | 0.70   |
 | Maxtor    | 6L020J1            | 20 GB  | 2       | 463   | 3     | 0.69   |
-| Maxtor    | STM3250310AS       | 250 GB | 58      | 696   | 369   | 0.68   |
+| Maxtor    | STM3250310AS       | 250 GB | 58      | 697   | 369   | 0.68   |
 | Maxtor    | 6G160P0            | 160 GB | 2       | 217   | 0     | 0.60   |
 | Maxtor    | STM3250820AS       | 250 GB | 9       | 761   | 214   | 0.59   |
 | Maxtor    | 6V250F0            | 250 GB | 2       | 196   | 0     | 0.54   |
-| Maxtor    | 6G160E0            | 160 GB | 7       | 327   | 129   | 0.45   |
+| Maxtor    | 6G160E0            | 160 GB | 7       | 328   | 129   | 0.45   |
 | Maxtor    | STM380211AS        | 80 GB  | 4       | 271   | 874   | 0.21   |
 | Maxtor    | STM3160811AS       | 160 GB | 6       | 687   | 266   | 0.18   |
 | Maxtor    | 4K060H3            | 64 GB  | 1       | 927   | 14    | 0.17   |
@@ -132,11 +132,11 @@ Rating — avg. rating per sample.
 | Maxtor    | MaXLine III (SATA/300) | 2      | 3       | 963   | 1     | 2.30   |
 | Maxtor    | MaXLine Pro 500        | 1      | 1       | 726   | 0     | 1.99   |
 | Maxtor    | DiamondMax 10 (SATA... | 6      | 26      | 657   | 37    | 1.29   |
-| Maxtor    | DiamondMax 21          | 16     | 176     | 670   | 359   | 0.89   |
+| Maxtor    | DiamondMax 21          | 16     | 176     | 671   | 359   | 0.89   |
 | Maxtor    | DiamondMax Plus D740X  | 2      | 3       | 834   | 4     | 0.70   |
 | Maxtor    | DiamondMax D540X-4K    | 3      | 3       | 582   | 16    | 0.54   |
 | Maxtor    | DiamondMax 20          | 5      | 19      | 564   | 324   | 0.50   |
-| Maxtor    | DiamondMax 17          | 2      | 9       | 303   | 101   | 0.48   |
+| Maxtor    | DiamondMax 17          | 2      | 9       | 304   | 101   | 0.48   |
 | Maxtor    | DiamondMax 22          | 4      | 30      | 895   | 433   | 0.08   |
 | Maxtor    | Fireball 3             | 6      | 9       | 47    | 3     | 0.05   |
 | Maxtor    | DiamondMax 10 (ATA/... | 18     | 38      | 24    | 110   | 0.04   |

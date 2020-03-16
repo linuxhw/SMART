@@ -35,7 +35,7 @@ Rating — avg. rating per sample.
 | Patriot   | Blaze              | 64 GB  | 4       | 94    | 0     | 0.26   |
 | Patriot   | Burst              | 240 GB | 9       | 90    | 0     | 0.25   |
 | Patriot   | Burst              | 120 GB | 13      | 79    | 0     | 0.22   |
-| Patriot   | Burst              | 480 GB | 9       | 49    | 1     | 0.09   |
+| Patriot   | Burst              | 480 GB | 9       | 51    | 1     | 0.09   |
 | Patriot   | Spark              | 256 GB | 2       | 28    | 0     | 0.08   |
 | Patriot   | Blaze              | 120 GB | 3       | 9     | 0     | 0.03   |
 | Patriot   | Ignite             | 240 GB | 1       | 6     | 0     | 0.02   |

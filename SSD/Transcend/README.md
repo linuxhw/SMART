@@ -53,6 +53,7 @@ Rating — avg. rating per sample.
 | Transcend | TS256GMTS430S      | 256 GB | 4       | 21    | 0     | 0.06   |
 | Transcend | TS128GSSD230S      | 128 GB | 9       | 19    | 0     | 0.05   |
 | Transcend | TS512GMTS430S      | 512 GB | 3       | 18    | 0     | 0.05   |
+| Transcend | TS128GMTS800       | 128 GB | 3       | 16    | 0     | 0.05   |
 | Transcend | TS64GSSD25S-M      | 64 GB  | 2       | 15    | 0     | 0.04   |
 | Transcend | TS128GSSD360S      | 128 GB | 7       | 14    | 0     | 0.04   |
 | Transcend | TS128GMTS600       | 128 GB | 1       | 13    | 0     | 0.04   |
@@ -60,10 +61,9 @@ Rating — avg. rating per sample.
 | Transcend | TS32GSSD370S       | 32 GB  | 5       | 12    | 0     | 0.03   |
 | Transcend | TS32GSSD25S-M      | 32 GB  | 1       | 10    | 0     | 0.03   |
 | Transcend | TS512GSSD370       | 512 GB | 1       | 10    | 0     | 0.03   |
-| Transcend | TS128GMTS800       | 128 GB | 3       | 9     | 0     | 0.03   |
 | Transcend | TS240GMTS820S      | 240 GB | 2       | 7     | 0     | 0.02   |
 | Transcend | TS120GMTS420S      | 120 GB | 2       | 20    | 1     | 0.02   |
-| Transcend | TS64GSSD370        | 64 GB  | 2       | 2     | 0     | 0.01   |
+| Transcend | TS64GSSD370        | 64 GB  | 2       | 4     | 0     | 0.01   |
 | Transcend | TS64GMTS800        | 64 GB  | 1       | 2     | 0     | 0.01   |
 | Transcend | TS32GMSA370        | 32 GB  | 1       | 1     | 0     | 0.01   |
 | Transcend | TS120GMTS820S      | 120 GB | 1       | 0     | 0     | 0.00   |
@@ -87,4 +87,4 @@ Rating — avg. rating per sample.
 | Transcend | Indilinx Barefoot b... | 1      | 1       | 309   | 2     | 0.28   |
 | Transcend | SiliconMotion based... | 16     | 77      | 50    | 0     | 0.14   |
 | Transcend | Unknown                | 8      | 18      | 32    | 1     | 0.09   |
-| Transcend | Silicon Motion base... | 8      | 17      | 24    | 0     | 0.07   |
+| Transcend | Silicon Motion base... | 8      | 17      | 25    | 0     | 0.07   |

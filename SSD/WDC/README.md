@@ -42,7 +42,7 @@ Rating — avg. rating per sample.
 | WDC       | WDS120G1G0B-00RC30 | 120 GB | 2       | 56    | 0     | 0.15   |
 | WDC       | WDS500G2B0A        | 500 GB | 7       | 50    | 0     | 0.14   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 5       | 49    | 0     | 0.13   |
-| WDC       | WDS240G2G0A-00JH30 | 240 GB | 38      | 47    | 1     | 0.13   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 38      | 48    | 1     | 0.13   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 46      | 42    | 0     | 0.12   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 1       | 38    | 0     | 0.10   |
 | WDC       | WDS100T2B0B        | 1 TB   | 1       | 36    | 0     | 0.10   |
@@ -68,4 +68,4 @@ Rating — avg. rating per sample.
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | WDC       | Unknown                | 3      | 4       | 283   | 0     | 0.78   |
 | WDC       | Blue PC SSD            | 3      | 16      | 202   | 0     | 0.55   |
-| WDC       | Blue and Green SSDs    | 23     | 203     | 67    | 1     | 0.19   |
+| WDC       | Blue and Green SSDs    | 23     | 203     | 68    | 1     | 0.19   |

@@ -90,15 +90,16 @@ Rating — avg. rating per sample.
 | SK hynix  | PC401 NVMe         | 512 GB | 7       | 73    | 0     | 0.20   |
 | SK hynix  | PC300 NVMe         | 1 TB   | 2       | 73    | 0     | 0.20   |
 | Lenovo    | LENSE20256GMSP3... | 256 GB | 1       | 70    | 0     | 0.19   |
+| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 69    | 0     | 0.19   |
 | ADATA     | SX8200NP           | 240 GB | 1       | 69    | 0     | 0.19   |
 | Samsung   | SSD 960 PRO        | 512 GB | 13      | 105   | 1     | 0.19   |
 | Toshiba   | KBG30ZMT128G       | 128 GB | 2       | 67    | 0     | 0.18   |
 | ADATA     | SX8200NP           | 480 GB | 2       | 67    | 0     | 0.18   |
 | WDC       | PC SN520 SDAPMU... | 512 GB | 1       | 66    | 0     | 0.18   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 7       | 63    | 0     | 0.17   |
+| Plextor   | PX-256M8PeY        | 256 GB | 2       | 62    | 0     | 0.17   |
 | Samsung   | SSD 960 EVO        | 1 TB   | 12      | 63    | 3     | 0.17   |
 | Kingch... | 256GB              | 256 GB | 1       | 60    | 0     | 0.16   |
-| Plextor   | PX-128M8PeGN       | 128 GB | 1       | 59    | 0     | 0.16   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 2       | 59    | 0     | 0.16   |
 | Phison    | SBX                | 256 GB | 1       | 58    | 0     | 0.16   |
 | HP        | SSD EX900          | 250 GB | 1       | 56    | 0     | 0.16   |
@@ -107,7 +108,6 @@ Rating — avg. rating per sample.
 | Samsung   | SSD 970 EVO        | 250 GB | 17      | 55    | 0     | 0.15   |
 | ADATA     | SX8200PNP          | 1 TB   | 2       | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO        | 500 GB | 28      | 53    | 0     | 0.15   |
-| Plextor   | PX-256M8PeY        | 256 GB | 2       | 53    | 0     | 0.15   |
 | WDC       | WDS512G1X0C-00ENX0 | 512 GB | 1       | 52    | 0     | 0.14   |
 | ADATA     | SX8200PNP          | 512 GB | 3       | 49    | 0     | 0.14   |
 | WDC       | PC SN520 NVMe      | 256 GB | 2       | 45    | 0     | 0.12   |
@@ -239,9 +239,9 @@ Rating — avg. rating per sample.
 | Intel     | HBRPEKNX0203AH     | 1 TB   | 1       | 3     | 0     | 0.01   |
 | SK hynix  | BC511 NVMe         | 256 GB | 1       | 3     | 0     | 0.01   |
 | SK hynix  | PC401 NVMe         | 1 TB   | 1       | 3     | 0     | 0.01   |
+| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 5     | 696   | 0.01   |
 | Gigabyte  | GP-GSM2NE8128GNTD  | 128 GB | 1       | 3     | 0     | 0.01   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 5       | 3     | 0     | 0.01   |
-| SK hynix  | BC501 HFM256GDJ... | 256 GB | 3       | 5     | 696   | 0.01   |
 | WDC       | PC SN730 NVMe      | 1 TB   | 1       | 2     | 0     | 0.01   |
 | Intel     | HBRPEKNX0202AL     | 512 GB | 1       | 2     | 0     | 0.01   |
 | Lite-On   | CA3-8D512          | 512 GB | 1       | 2     | 0     | 0.01   |
@@ -271,6 +271,7 @@ Rating — avg. rating per sample.
 | Union ... | RPFTJ256PDD2MWX    | 256 GB | 1       | 1     | 0     | 0.00   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 1       | 1     | 0     | 0.00   |
 | WDC       | PC SN520 SDAPMU... | 128 GB | 1       | 1     | 0     | 0.00   |
+| Samsung   | MZVLW128HEGR-00000 | 128 GB | 1       | 1     | 0     | 0.00   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 2       | 0     | 0     | 0.00   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | 1       | 0     | 0     | 0.00   |
 | Kingston  | SA2000M81000G      | 1 TB   | 1       | 0     | 0     | 0.00   |
@@ -292,7 +293,6 @@ Rating — avg. rating per sample.
 | Lenovo    | LENSE30256GMSP3... | 256 GB | 1       | 0     | 0     | 0.00   |
 | Plextor   | PX-512M9PeGN       | 512 GB | 1       | 0     | 0     | 0.00   |
 | SK hynix  | Skhynix BC501 NVMe | 512 GB | 1       | 0     | 0     | 0.00   |
-| Samsung   | MZVLW128HEGR-00000 | 128 GB | 1       | 0     | 0     | 0.00   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 1       | 0     | 0     | 0.00   |
 | SK hynix  | BC501 NVMe         | 256 GB | 1       | 0     | 0     | 0.00   |
 | SK hynix  | HFM128GDHTNG-8310A | 128 GB | 1       | 0     | 0     | 0.00   |
