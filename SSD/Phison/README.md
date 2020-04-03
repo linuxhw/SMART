@@ -1,7 +1,7 @@
 Phison Solid State Drives
 =========================
 
-This is a list of all tested Phison solid state drive models and their ratings. See
+This is a list of all tested Phison solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Phison    | SM280128GPTC15T... | 128 GB | 1       | 535   | 0     | 1.47   |
 | Phison    | SSDS30256XQC800... | 240 GB | 1       | 433   | 0     | 1.19   |
@@ -32,14 +32,14 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Phison    | Unknown                | 2      | 2       | 484   | 0     | 1.33   |
 | Phison    | Driven OEM SSDs        | 2      | 4       | 62    | 0     | 0.17   |

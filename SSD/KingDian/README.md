@@ -1,7 +1,7 @@
 KingDian Solid State Drives
 ===========================
 
-This is a list of all tested KingDian solid state drive models and their ratings. See
+This is a list of all tested KingDian solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | KingDian  | S400 XT            | 240 GB | 1       | 177   | 0     | 0.49   |
 | KingDian  | S400               | 120 GB | 6       | 120   | 0     | 0.33   |
@@ -43,14 +43,14 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| KingDian  | Silicon Motion base... | 6      | 25      | 59    | 0     | 0.16   |
-| KingDian  | Unknown                | 9      | 32      | 44    | 96    | 0.11   |
+| KingDian  | Silicon Motion base... | 9      | 33      | 51    | 0     | 0.14   |
+| KingDian  | Unknown                | 6      | 24      | 50    | 128   | 0.12   |

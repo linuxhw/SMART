@@ -1,7 +1,7 @@
 Toshiba Solid State Drives
 ==========================
 
-This is a list of all tested Toshiba solid state drive models and their ratings. See
+This is a list of all tested Toshiba solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Toshiba   | THNSNJ120PCSZ      | 120 GB | 2       | 1255  | 0     | 3.44   |
 | Toshiba   | THNSNJ128GMCU      | 128 GB | 1       | 1245  | 0     | 3.41   |
@@ -86,14 +86,14 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Toshiba   | HG2 Series             | 2      | 4       | 792   | 0     | 2.17   |
 | Toshiba   | HG5 Series             | 1      | 2       | 471   | 0     | 1.29   |

@@ -1,7 +1,7 @@
 Intel Solid State Drives
 ========================
 
-This is a list of all tested Intel solid state drive models and their ratings. See
+This is a list of all tested Intel solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Intel     | SSDSC2BA100G3      | 100 GB | 19      | 1566  | 1     | 4.05   |
 | Intel     | SSDSC2BX200G4      | 200 GB | 1       | 1454  | 0     | 3.98   |
@@ -123,14 +123,14 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Intel     | 730 and DC S35x0/36... | 11     | 41      | 1126  | 101   | 2.44   |
 | Intel     | X25-E SSDs             | 1      | 1       | 795   | 0     | 2.18   |

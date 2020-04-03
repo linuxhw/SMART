@@ -1,7 +1,7 @@
 Apple Hard Drives
 =================
 
-This is a list of all tested Apple hard drive models and their ratings. See more
+This is a list of all tested Apple hard drive models and their MTBFs. See more
 info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ HDD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Apple     | HDD ST1000DM003    | 1 TB   | 5       | 634   | 0     | 1.74   |
 | Apple     | HDD ST750LM022     | 752 GB | 1       | 589   | 0     | 1.61   |
@@ -35,14 +35,14 @@ HDD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Apple     | Seagate Barracuda      | 1      | 5       | 634   | 0     | 1.74   |
 | Apple     | Seagate SpinPoint      | 1      | 1       | 589   | 0     | 1.61   |

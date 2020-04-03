@@ -1,19 +1,19 @@
 Appendix 5: All NVMe Samples
 ============================
 
-This is a list of all tested NVMe samples and their ratings. See more info on
-reliability test in the README. See HDD samples rating in the Appendix 1 (All_HDD.md)
-and SSD samples rating in the Appendix 2 (All_SSD.md).
+This is a list of all tested NVMe samples and their MTBFs. See more info on
+reliability test in the README. See HDD samples MTBFs in the Appendix 1 (All_HDD.md)
+and SSD samples MTBFs in the Appendix 2 (All_SSD.md).
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Drive ID     | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Drive ID     | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|--------------|-------|-------|--------|
 | Intel     | SSDPEKKW256G7      | 256 GB | 55B8C4FF6EE2 | 2433  | 0     | 6.67   |
 | Samsung   | SSD 950 PRO        | 256 GB | 80E28FCA00ED | 1381  | 0     | 3.78   |

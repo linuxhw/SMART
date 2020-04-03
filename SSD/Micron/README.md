@@ -1,7 +1,7 @@
 Micron Solid State Drives
 =========================
 
-This is a list of all tested Micron solid state drive models and their ratings. See
+This is a list of all tested Micron solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Micron    | M500_MTFDDAK480MAV | 480 GB | 1       | 1083  | 0     | 2.97   |
 | Micron    | MTFDDAT128MAM-1J2  | 128 GB | 1       | 783   | 0     | 2.15   |
@@ -60,18 +60,18 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Micron    | MX100/MX200/M5x0/M6... | 1      | 1       | 1083  | 0     | 2.97   |
 | Micron    | MX1/2/300, M5/600, ... | 3      | 3       | 202   | 0     | 0.56   |
 | Micron    | RealSSD m4/C400/P400   | 4      | 8       | 188   | 379   | 0.47   |
-| Micron    | Unknown                | 14     | 19      | 286   | 112   | 0.35   |
+| Micron    | Unknown                | 12     | 17      | 315   | 125   | 0.38   |
 | Micron    | 5100 Pro / 5200 SSDs   | 1      | 1       | 98    | 0     | 0.27   |
-| Micron    | BX/MX1/2/3/500, M5/... | 9      | 37      | 107   | 46    | 0.24   |
+| Micron    | BX/MX1/2/3/500, M5/... | 11     | 39      | 104   | 44    | 0.24   |

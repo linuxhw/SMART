@@ -3,8 +3,8 @@ HDD/SSD Desktop-Class Reliability Test
 
 This is a project to estimate reliability of desktop-class HDD/SSD drives by
 the analysis of SMART data collected by Linux users at https://linux-hardware.org. The
-primary aim of the project is to find drives with longest "power on hours" and minimal
-number of errors.
+primary aim of the project is to find drives with longest power-on hours (POH) and
+minimal number of errors, i.e. maximal MTBF (mean time between failures).
 
 Everyone can contribute to this report by uploading probes of their computers by
 the [hw-probe](https://github.com/linuxhw/hw-probe) tool:
@@ -38,9 +38,9 @@ The structure of the reports directory is the following:
 Based on SMART data we determine most reliable drive models and vendors by the
 following formula:
 
-    Rating = MAX( Power_On_Hours / ( 1 + Number_Of_Important_Errors ) ) / ( 365*24 )
+    MTBF = MAX( Power_On_Hours / ( 1 + Number_Of_Important_Errors ) ) / ( 365*24 )
 
-    ( i.e. Rating = "Years before/between errors" )
+    ( i.e. MTBF = "Years before/between errors" )
 
 Number_Of_Important_Errors — number of important errors that can indicate a drive failure:
 
@@ -56,11 +56,16 @@ Number_Of_Important_Errors — number of important errors that can indicate a dr
 * Total_Pending_Sectors
 * Unc_Soft_Read_Err_Rate
 
+One can estimate reliability of a hard drive (i.e. probability that the unit will work
+for some time T without failure) by:
+
+    Reliability(T) = exp(-T/MTBF)
+
 The list of important SMART attributes is taken from recent studies of Google [1],
 Backblaze [2] and Acronis [3]. If an attribute exceeds the value of 1000 then it's
 counted as '1000 + log10(X - 999)'.
 
-The list of tracked attributes and rating calculation method can be discussed. Please
+The list of tracked attributes and MTBF calculation method can be discussed. Please
 suggest your ideas in "issues".
 
 You can perform your own analysis of collected reports if needed.
@@ -73,16 +78,16 @@ HDD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
 See complete list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)).
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Samsung   | SV1021H            | 10 GB  | 1       | 5713  | 0     | 15.65  |
 | WDC       | WD2500SD-01KCB0    | 250 GB | 1       | 4068  | 0     | 11.15  |
@@ -2721,14 +2726,14 @@ HDD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Samsung   | SpinPoint V20400       | 1      | 1       | 5713  | 0     | 15.65  |
 | Hitachi   | Sun Original           | 1      | 1       | 3495  | 0     | 9.58   |
@@ -2802,8 +2807,8 @@ Rating — avg. rating per sample.
 | Seagate   | Constellation ES (S... | 3      | 14      | 1173  | 174   | 1.52   |
 | Samsung   | SpinPoint F3           | 4      | 181     | 730   | 43    | 1.51   |
 | Seagate   | DB35.3                 | 6      | 12      | 654   | 193   | 1.48   |
+| WDC       | Caviar Green           | 127    | 1058    | 828   | 75    | 1.42   |
 | Seagate   | Barracuda XT           | 2      | 13      | 636   | 124   | 1.41   |
-| WDC       | Caviar Green           | 130    | 1144    | 801   | 69    | 1.40   |
 | Seagate   | Barracuda 7200.10      | 32     | 1075    | 856   | 269   | 1.40   |
 | WDC       | Red Pro                | 4      | 4       | 511   | 0     | 1.40   |
 | Hitachi   | Deskstar T7K250        | 5      | 29      | 1011  | 44    | 1.39   |
@@ -2826,6 +2831,7 @@ Rating — avg. rating per sample.
 | Hitachi   | Deskstar 7K1000.C      | 14     | 408     | 688   | 58    | 1.25   |
 | Samsung   | SpinPoint F2 EG        | 3      | 75      | 789   | 198   | 1.25   |
 | WDC       | Caviar                 | 62     | 141     | 732   | 40    | 1.23   |
+| WDC       | Green                  | 6      | 89      | 467   | 1     | 1.22   |
 | HGST      | Ultrastar 7K6000       | 8      | 10      | 436   | 0     | 1.20   |
 | Hitachi   | Deskstar 7K1000.B      | 11     | 86      | 880   | 52    | 1.18   |
 | Seagate   | Barracuda SpinPoint F3 | 2      | 47      | 514   | 8     | 1.17   |
@@ -2835,7 +2841,6 @@ Rating — avg. rating per sample.
 | Hitachi   | Deskstar P7K500        | 9      | 137     | 906   | 64    | 1.11   |
 | WDC       | Caviar Blue            | 291    | 2523    | 617   | 46    | 1.11   |
 | Samsung   | SpinPoint F3 EG        | 3      | 27      | 620   | 154   | 1.11   |
-| WDC       | Elements / My Passport | 33     | 70      | 495   | 66    | 1.11   |
 | Hitachi   | Deskstar 7K160         | 7      | 140     | 858   | 109   | 1.10   |
 | Seagate   | Barracuda 7200.12      | 14     | 1090    | 716   | 174   | 1.10   |
 | HGST      | Ultrastar He10         | 1      | 1       | 399   | 0     | 1.09   |
@@ -2853,6 +2858,7 @@ Rating — avg. rating per sample.
 | Seagate   | Pipeline HD 5900.2     | 7      | 51      | 574   | 189   | 1.02   |
 | Seagate   | SpinPoint M9T          | 2      | 25      | 429   | 7     | 1.02   |
 | WDC       | Caviar Blue EIDE       | 16     | 93      | 633   | 67    | 1.01   |
+| WDC       | Elements / My Passport | 35     | 79      | 448   | 59    | 1.01   |
 | WDC       | RE4                    | 15     | 69      | 672   | 3     | 1.00   |
 | Seagate   | IronWolf               | 7      | 33      | 390   | 1     | 1.00   |
 | Seagate   | SV35                   | 12     | 82      | 449   | 153   | 0.99   |
@@ -2862,7 +2868,6 @@ Rating — avg. rating per sample.
 | Hitachi   | CinemaStar P7K500      | 1      | 2       | 1010  | 2     | 0.97   |
 | Fujitsu   | MHY BH                 | 5      | 53      | 540   | 160   | 0.92   |
 | Seagate   | Barracuda 7200.14 (AF) | 24     | 1520    | 461   | 111   | 0.90   |
-| WDC       | Green                  | 3      | 3       | 560   | 1     | 0.90   |
 | Samsung   | SpinPoint P80 SD       | 7      | 195     | 827   | 382   | 0.89   |
 | Seagate   | Barracuda              | 2      | 8       | 325   | 0     | 0.89   |
 | Maxtor    | DiamondMax 21          | 16     | 176     | 672   | 359   | 0.89   |
@@ -2939,7 +2944,7 @@ Rating — avg. rating per sample.
 | Hitachi   | Travelstar 7K750       | 2      | 24      | 502   | 269   | 0.57   |
 | Seagate   | Barracuda Pro          | 1      | 4       | 208   | 0     | 0.57   |
 | Samsung   | SpinPoint P80          | 18     | 102     | 569   | 138   | 0.56   |
-| WDC       | Blue Mobile            | 74     | 961     | 227   | 15    | 0.55   |
+| WDC       | Blue Mobile            | 77     | 965     | 227   | 15    | 0.55   |
 | Hitachi   | Travelstar Z5K500      | 3      | 119     | 348   | 143   | 0.54   |
 | Maxtor    | DiamondMax D540X-4K    | 3      | 3       | 582   | 16    | 0.54   |
 | Toshiba   | 2.5" HDD MQ01ABD       | 7      | 449     | 287   | 119   | 0.54   |
@@ -2967,10 +2972,10 @@ Rating — avg. rating per sample.
 | Hitachi   | CinemaStar 5K1000.B    | 1      | 1       | 169   | 0     | 0.47   |
 | Toshiba   | N300                   | 2      | 7       | 169   | 0     | 0.46   |
 | Toshiba   | 2.5" HDD MK..75GSX     | 4      | 65      | 417   | 408   | 0.46   |
+| WDC       | Blue                   | 47     | 289     | 169   | 1     | 0.46   |
 | WDC       | Blue UltraSlim         | 1      | 1       | 166   | 0     | 0.46   |
 | Fujitsu   | MHW AT                 | 2      | 2       | 165   | 0     | 0.45   |
 | Hitachi   | Travelstar Z7K320      | 3      | 28      | 395   | 520   | 0.45   |
-| WDC       | Blue                   | 53     | 303     | 165   | 1     | 0.45   |
 | Toshiba   | 2.5" HDD MK..55GSX     | 6      | 59      | 414   | 75    | 0.44   |
 | Toshiba   | 2.5" HDD MK..37GSX     | 1      | 17      | 458   | 144   | 0.44   |
 | Fujitsu   | MHT                    | 4      | 4       | 340   | 6     | 0.43   |
@@ -3036,6 +3041,7 @@ Rating — avg. rating per sample.
 | Toshiba   | 2.5" HDD MK..37GSX     | 2      | 42      | 526   | 80    | 0.27   |
 | Toshiba   | 2.5" HDD MK..46GSX     | 4      | 35      | 457   | 46    | 0.26   |
 | Seagate   | Laptop Thin SSHD       | 1      | 1       | 94    | 0     | 0.26   |
+| WDC       | Ultrastar He10/12      | 1      | 1       | 93    | 0     | 0.26   |
 | Toshiba   | 2.5" HDD L200 Slim     | 1      | 5       | 90    | 0     | 0.25   |
 | Seagate   | Momentus 4200.2        | 5      | 5       | 485   | 419   | 0.25   |
 | IBM/Hi... | Deskstar 60GXP         | 2      | 3       | 1032  | 106   | 0.24   |
@@ -3130,14 +3136,14 @@ HDD by Vendor
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG         | Models | Samples | Days  | Err   | Rating |
+| MFG         | Models | Samples | Days  | Err   | MTBF   |
 |-------------|--------|---------|-------|-------|--------|
 | HP          | 10     | 16      | 1307  | 26    | 2.01   |
 | Quantum     | 5      | 5       | 474   | 2     | 1.14   |
@@ -3165,16 +3171,16 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
 See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)).
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | OCZ       | AGILITY2           | 50 GB  | 1       | 2769  | 0     | 7.59   |
 | Kingston  | SH100S3120G        | 120 GB | 2       | 1711  | 0     | 4.69   |
@@ -4664,14 +4670,14 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Micron    | MX100/MX200/M5x0/M6... | 1      | 1       | 1083  | 0     | 2.97   |
 | Intel     | 730 and DC S35x0/36... | 11     | 41      | 1126  | 101   | 2.44   |
@@ -4734,12 +4740,13 @@ Rating — avg. rating per sample.
 | Smartbuy  | Phison Driven SSDs     | 2      | 75      | 183   | 1     | 0.45   |
 | Goodram   | Phison Driven SSDs     | 3      | 27      | 164   | 0     | 0.45   |
 | Patriot   | Unknown                | 15     | 28      | 219   | 73    | 0.45   |
-| Kingston  | SSDNow UV400           | 4      | 112     | 178   | 27    | 0.44   |
 | Intel     | 530 Series SSDs        | 3      | 36      | 223   | 2     | 0.44   |
+| Kingston  | SSDNow UV400           | 3      | 111     | 176   | 28    | 0.44   |
 | Palit     | Unknown                | 3      | 3       | 158   | 0     | 0.43   |
 | Intel     | Unknown                | 20     | 27      | 210   | 128   | 0.43   |
 | Foxline   | Unknown                | 3      | 3       | 486   | 339   | 0.43   |
 | Transcend | SandForce Driven SSDs  | 5      | 7       | 155   | 0     | 0.43   |
+| Kingston  | Unknown                | 45     | 79      | 175   | 87    | 0.42   |
 | Plextor   | Unknown                | 28     | 65      | 156   | 1     | 0.41   |
 | Corsair   | Unknown                | 15     | 25      | 374   | 35    | 0.41   |
 | Crucial   | BX/MX1/2/3/500, M5/... | 26     | 209     | 172   | 25    | 0.41   |
@@ -4750,14 +4757,13 @@ Rating — avg. rating per sample.
 | Mushkin   | Unknown                | 3      | 4       | 197   | 254   | 0.39   |
 | Toshiba   | OCZ/Toshiba Trion SSDs | 3      | 15      | 174   | 1     | 0.38   |
 | Intel     | X18-M/X25-M G1 SSDs    | 2      | 2       | 139   | 0     | 0.38   |
+| Micron    | Unknown                | 12     | 17      | 315   | 125   | 0.38   |
 | HP        | Unknown                | 7      | 8       | 136   | 0     | 0.37   |
 | OCZ       | Unknown                | 7      | 10      | 361   | 102   | 0.37   |
 | Samsung   | Unknown                | 18     | 46      | 144   | 1     | 0.37   |
 | ZOTAC     | Unknown                | 2      | 3       | 132   | 0     | 0.36   |
 | Intel     | 53x and Pro 2500 Se... | 9      | 29      | 151   | 1     | 0.36   |
-| Kingston  | Unknown                | 51     | 104     | 146   | 77    | 0.35   |
 | Apple     | SD/SM/TS E/F SSDs      | 4      | 5       | 128   | 0     | 0.35   |
-| Micron    | Unknown                | 14     | 19      | 286   | 112   | 0.35   |
 | KLEVV     | Unknown                | 1      | 1       | 127   | 0     | 0.35   |
 | Chiprex   | Unknown                | 1      | 1       | 126   | 0     | 0.35   |
 | Crucial   | Silicon Motion base... | 1      | 2       | 125   | 0     | 0.34   |
@@ -4781,7 +4787,7 @@ Rating — avg. rating per sample.
 | Anobit    | Unknown                | 1      | 1       | 96    | 0     | 0.27   |
 | Intel     | S4510/S4610/S4500/S... | 3      | 6       | 94    | 0     | 0.26   |
 | Apacer    | AS340 SSDs             | 2      | 4       | 90    | 0     | 0.25   |
-| Micron    | BX/MX1/2/3/500, M5/... | 9      | 37      | 107   | 46    | 0.24   |
+| Micron    | BX/MX1/2/3/500, M5/... | 11     | 39      | 104   | 44    | 0.24   |
 | Kingston  | Phison Driven SSDs     | 13     | 327     | 83    | 1     | 0.22   |
 | Seagate   | 600 Series             | 1      | 1       | 79    | 0     | 0.22   |
 | PHISON    | Unknown                | 2      | 2       | 108   | 1     | 0.21   |
@@ -4791,12 +4797,12 @@ Rating — avg. rating per sample.
 | ADATA     | Unknown                | 41     | 120     | 163   | 174   | 0.19   |
 | Intenso   | Unknown                | 7      | 12      | 101   | 4     | 0.19   |
 | oyunkey   | Unknown                | 1      | 1       | 68    | 0     | 0.19   |
+| Kingston  | SSDNow UV400/500       | 5      | 24      | 75    | 48    | 0.19   |
 | Crucial   | Unknown                | 3      | 3       | 68    | 0     | 0.19   |
 | WDC       | Blue and Green SSDs    | 23     | 203     | 68    | 1     | 0.19   |
 | SK hynix  | Unknown                | 19     | 24      | 173   | 100   | 0.19   |
 | Phison    | Driven OEM SSDs        | 2      | 4       | 62    | 0     | 0.17   |
 | Apacer    | Unknown                | 11     | 29      | 61    | 0     | 0.17   |
-| KingDian  | Silicon Motion base... | 6      | 25      | 59    | 0     | 0.16   |
 | TEKET     | Unknown                | 1      | 2       | 59    | 0     | 0.16   |
 | Lite-On   | Unknown                | 44     | 70      | 80    | 182   | 0.16   |
 | Gigabyte  | Unknown                | 4      | 14      | 56    | 0     | 0.15   |
@@ -4804,6 +4810,7 @@ Rating — avg. rating per sample.
 | ADATA     | Silicon Motion base... | 5      | 35      | 57    | 3     | 0.15   |
 | Intel     | 545s Series SSDs       | 5      | 25      | 53    | 1     | 0.15   |
 | Kingmax   | Unknown                | 4      | 41      | 199   | 405   | 0.14   |
+| KingDian  | Silicon Motion base... | 9      | 33      | 51    | 0     | 0.14   |
 | Transcend | SiliconMotion based... | 16     | 77      | 50    | 0     | 0.14   |
 | AMD       | SiliconMotion based... | 1      | 24      | 47    | 1     | 0.13   |
 | Crucial   | MX500 SSDs             | 2      | 24      | 47    | 0     | 0.13   |
@@ -4812,16 +4819,16 @@ Rating — avg. rating per sample.
 | BIWIN     | Unknown                | 4      | 10      | 45    | 0     | 0.12   |
 | AMD       | Unknown                | 7      | 23      | 55    | 45    | 0.12   |
 | PRETEC    | Unknown                | 1      | 1       | 44    | 0     | 0.12   |
+| KingDian  | Unknown                | 6      | 24      | 50    | 128   | 0.12   |
 | Faspeed   | Unknown                | 6      | 6       | 43    | 0     | 0.12   |
 | Fordisk   | Unknown                | 2      | 2       | 41    | 0     | 0.11   |
-| KingDian  | Unknown                | 9      | 32      | 44    | 96    | 0.11   |
 | KingSpec  | Unknown                | 35     | 69      | 50    | 43    | 0.11   |
 | Goldkey   | Unknown                | 2      | 2       | 39    | 0     | 0.11   |
 | OCZ       | Intrepid 3000 SSDs     | 2      | 2       | 35    | 0     | 0.10   |
 | QUMO      | Unknown                | 3      | 5       | 275   | 407   | 0.09   |
 | Kingrich  | Unknown                | 2      | 3       | 32    | 0     | 0.09   |
 | Toshiba   | SG2 Series             | 1      | 1       | 32    | 0     | 0.09   |
-| Transcend | Unknown                | 8      | 18      | 32    | 1     | 0.09   |
+| Transcend | Silicon Motion base... | 13     | 31      | 32    | 1     | 0.09   |
 | ADATA     | SiliconMotion based... | 2      | 31      | 31    | 1     | 0.08   |
 | KingPower | Unknown                | 1      | 1       | 29    | 0     | 0.08   |
 | Super ... | Unknown                | 1      | 1       | 29    | 0     | 0.08   |
@@ -4831,7 +4838,6 @@ Rating — avg. rating per sample.
 | SenDisk   | Unknown                | 1      | 1       | 27    | 0     | 0.08   |
 | HECTRON   | Unknown                | 1      | 1       | 26    | 0     | 0.07   |
 | Seagate   | Unknown                | 4      | 5       | 26    | 0     | 0.07   |
-| Transcend | Silicon Motion base... | 8      | 17      | 25    | 0     | 0.07   |
 | e2e4      | Unknown                | 1      | 2       | 22    | 0     | 0.06   |
 | Londisk   | Unknown                | 3      | 7       | 21    | 0     | 0.06   |
 | XUNZHE    | Unknown                | 1      | 1       | 20    | 0     | 0.05   |
@@ -4850,7 +4856,9 @@ Rating — avg. rating per sample.
 | Integral  | Unknown                | 1      | 2       | 8     | 0     | 0.02   |
 | FORESEE   | Unknown                | 3      | 7       | 8     | 0     | 0.02   |
 | FASTDISK  | Unknown                | 6      | 6       | 7     | 0     | 0.02   |
+| Transcend | Unknown                | 3      | 4       | 7     | 0     | 0.02   |
 | Drevo     | Silicon Motion base... | 1      | 2       | 397   | 34    | 0.02   |
+| Kingston  | Silicon Motion base... | 2      | 2       | 5     | 0     | 0.02   |
 | Vaseky    | Unknown                | 1      | 1       | 5     | 0     | 0.01   |
 | Intel     | 540 Series SSDs        | 5      | 8       | 11    | 194   | 0.01   |
 | Teclast   | Unknown                | 2      | 2       | 4     | 0     | 0.01   |
@@ -4883,14 +4891,14 @@ SSD by Vendor
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG         | Models | Samples | Days  | Err   | Rating |
+| MFG         | Models | Samples | Days  | Err   | MTBF   |
 |-------------|--------|---------|-------|-------|--------|
 | Micro Ce... | 1      | 1       | 722   | 0     | 1.98   |
 | MyDigita... | 2      | 2       | 716   | 0     | 1.96   |
@@ -5009,16 +5017,16 @@ NVME by Model
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
 See complete list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_NVMe.md)).
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Samsung   | SSD 950 PRO        | 512 GB | 6       | 936   | 0     | 2.57   |
 | Samsung   | SSD 950 PRO        | 256 GB | 2       | 834   | 0     | 2.29   |
@@ -5311,14 +5319,14 @@ NVME by Vendor
 --------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG         | Models | Samples | Days  | Err   | Rating |
+| MFG         | Models | Samples | Days  | Err   | MTBF   |
 |-------------|--------|---------|-------|-------|--------|
 | Mushkin     | 1      | 1       | 248   | 0     | 0.68   |
 | Toshiba     | 31     | 60      | 120   | 0     | 0.33   |

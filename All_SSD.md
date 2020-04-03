@@ -1,18 +1,18 @@
 Appendix 2: All SSD Samples
 ===========================
 
-This is a list of all tested SSD samples and their ratings. See more info on
-reliability test in the README. See HDD samples rating in the Appendix 1 (All_HDD.md).
+This is a list of all tested SSD samples and their MTBFs. See more info on
+reliability test in the README. See HDD samples MTBFs in the Appendix 1 (All_HDD.md).
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Drive ID     | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Drive ID     | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|--------------|-------|-------|--------|
 | Corsair   | Force 3 SSD        | 180 GB | FCA5338DE357 | 4549  | 0     | 12.46  |
 | OCZ       | SOLID3             | 64 GB  | BE3707A03374 | 2919  | 0     | 8.00   |

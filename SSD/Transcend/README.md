@@ -1,7 +1,7 @@
 Transcend Solid State Drives
 ============================
 
-This is a list of all tested Transcend solid state drive models and their ratings. See
+This is a list of all tested Transcend solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Transcend | TS128GSSD320       | 128 GB | 1       | 493   | 0     | 1.35   |
 | Transcend | TS128GSSD340       | 128 GB | 4       | 283   | 0     | 0.78   |
@@ -73,18 +73,18 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Transcend | SandForce Driven SSDs  | 5      | 7       | 155   | 0     | 0.43   |
 | Transcend | JMicron based SSDs     | 7      | 13      | 143   | 156   | 0.33   |
 | Transcend | Indilinx Barefoot b... | 1      | 1       | 309   | 2     | 0.28   |
 | Transcend | SiliconMotion based... | 16     | 77      | 50    | 0     | 0.14   |
-| Transcend | Unknown                | 8      | 18      | 32    | 1     | 0.09   |
-| Transcend | Silicon Motion base... | 8      | 17      | 25    | 0     | 0.07   |
+| Transcend | Silicon Motion base... | 13     | 31      | 32    | 1     | 0.09   |
+| Transcend | Unknown                | 3      | 4       | 7     | 0     | 0.02   |

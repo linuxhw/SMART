@@ -1,18 +1,18 @@
 Appendix 1: All HDD Samples
 ===========================
 
-This is a list of all tested HDD samples and their ratings. See more info on
-reliability test in the README. See SSD samples rating in the Appendix 2 (All_SSD.md).
+This is a list of all tested HDD samples and their MTBFs. See more info on
+reliability test in the README. See SSD samples MTBFs in the Appendix 2 (All_SSD.md).
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Drive ID     | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Drive ID     | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|--------------|-------|-------|--------|
 | Samsung   | SV1021H            | 10 GB  | 2130C07E38C9 | 5713  | 0     | 15.65  |
 | WDC       | WD400JB-00ENA0     | 40 GB  | B5E9CC265CDA | 4845  | 0     | 13.28  |

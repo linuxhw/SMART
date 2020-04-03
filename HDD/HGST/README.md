@@ -1,7 +1,7 @@
 HGST Hard Drives
 ================
 
-This is a list of all tested HGST hard drive models and their ratings. See more
+This is a list of all tested HGST hard drive models and their MTBFs. See more
 info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ HDD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | HGST      | HUS724020ALE640    | 2 TB   | 8       | 1770  | 0     | 4.85   |
 | HGST      | HTE541515A9E630    | 1.5 TB | 1       | 1702  | 0     | 4.66   |
@@ -83,14 +83,14 @@ HDD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | HGST      | Ultrastar 7K4000       | 5      | 43      | 1004  | 1     | 2.66   |
 | HGST      | Deskstar NAS           | 4      | 15      | 773   | 0     | 2.12   |

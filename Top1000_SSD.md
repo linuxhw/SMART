@@ -4,14 +4,14 @@ Appendix 4: Top 1000 SSD Models
 See more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | OCZ       | AGILITY2           | 50 GB  | 1       | 2769  | 0     | 7.59   |
 | Kingston  | SH100S3120G        | 120 GB | 2       | 1711  | 0     | 4.69   |

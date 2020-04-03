@@ -1,7 +1,7 @@
 WDC Hard Drives
 ===============
 
-This is a list of all tested WDC hard drive models and their ratings. See more
+This is a list of all tested WDC hard drive models and their MTBFs. See more
 info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ HDD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | WDC       | WD2500SD-01KCB0    | 250 GB | 1       | 4068  | 0     | 11.15  |
 | WDC       | WD1600JD-00HBC0    | 160 GB | 1       | 3315  | 0     | 9.08   |
@@ -1383,14 +1383,14 @@ HDD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | WDC       | RE4-GP                 | 5      | 10      | 1639  | 53    | 4.03   |
 | WDC       | Raptor X               | 1      | 1       | 1164  | 0     | 3.19   |
@@ -1406,20 +1406,20 @@ Rating — avg. rating per sample.
 | WDC       | Caviar SE              | 142    | 451     | 897   | 25    | 1.71   |
 | WDC       | VelociRaptor           | 23     | 43      | 684   | 2     | 1.68   |
 | WDC       | Red                    | 19     | 272     | 680   | 16    | 1.53   |
-| WDC       | Caviar Green           | 130    | 1144    | 801   | 69    | 1.40   |
+| WDC       | Caviar Green           | 127    | 1058    | 828   | 75    | 1.42   |
 | WDC       | Red Pro                | 4      | 4       | 511   | 0     | 1.40   |
 | WDC       | Black                  | 15     | 110     | 499   | 1     | 1.26   |
 | WDC       | Black SSHD             | 1      | 7       | 460   | 0     | 1.26   |
 | WDC       | Caviar                 | 62     | 141     | 732   | 40    | 1.23   |
+| WDC       | Green                  | 6      | 89      | 467   | 1     | 1.22   |
 | WDC       | Scorpio Blue EIDE      | 6      | 10      | 421   | 0     | 1.16   |
 | WDC       | AV                     | 15     | 31      | 679   | 56    | 1.14   |
 | WDC       | Caviar Blue            | 291    | 2523    | 617   | 46    | 1.11   |
-| WDC       | Elements / My Passport | 33     | 70      | 495   | 66    | 1.11   |
 | WDC       | Gold                   | 6      | 11      | 379   | 0     | 1.04   |
 | WDC       | Caviar Blue EIDE       | 16     | 93      | 633   | 67    | 1.01   |
+| WDC       | Elements / My Passport | 35     | 79      | 448   | 59    | 1.01   |
 | WDC       | RE4                    | 15     | 69      | 672   | 3     | 1.00   |
 | WDC       | AV-GP                  | 29     | 74      | 575   | 71    | 0.98   |
-| WDC       | Green                  | 3      | 3       | 560   | 1     | 0.90   |
 | WDC       | Scorpio                | 1      | 1       | 300   | 0     | 0.82   |
 | WDC       | Scorpio Blue           | 199    | 1695    | 419   | 60    | 0.77   |
 | WDC       | Scorpio Black          | 43     | 146     | 409   | 93    | 0.74   |
@@ -1427,12 +1427,13 @@ Rating — avg. rating per sample.
 | WDC       | Purple                 | 12     | 37      | 295   | 5     | 0.71   |
 | WDC       | Blue SSHD              | 2      | 2       | 230   | 0     | 0.63   |
 | WDC       | Green Mobile           | 1      | 3       | 336   | 12    | 0.60   |
-| WDC       | Blue Mobile            | 74     | 961     | 227   | 15    | 0.55   |
+| WDC       | Blue Mobile            | 77     | 965     | 227   | 15    | 0.55   |
 | WDC       | Protege                | 6      | 9       | 652   | 14    | 0.52   |
 | WDC       | Black Mobile           | 26     | 151     | 195   | 11    | 0.47   |
+| WDC       | Blue                   | 47     | 289     | 169   | 1     | 0.46   |
 | WDC       | Blue UltraSlim         | 1      | 1       | 166   | 0     | 0.46   |
-| WDC       | Blue                   | 53     | 303     | 165   | 1     | 0.45   |
 | WDC       | HGST Ultrastar He10    | 4      | 19      | 157   | 0     | 0.43   |
+| WDC       | Ultrastar He10/12      | 1      | 1       | 93    | 0     | 0.26   |
 | WDC       | Unknown                | 3      | 3       | 359   | 3     | 0.13   |
 | WDC       | Scorpio EIDE           | 6      | 6       | 235   | 69    | 0.11   |
 | WDC       | Shrek LT 2.5           | 1      | 1       | 41    | 0     | 0.11   |

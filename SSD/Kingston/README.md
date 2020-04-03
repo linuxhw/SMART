@@ -1,7 +1,7 @@
 Kingston Solid State Drives
 ===========================
 
-This is a list of all tested Kingston solid state drive models and their ratings. See
+This is a list of all tested Kingston solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 Contents
@@ -14,14 +14,14 @@ SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Kingston  | SH100S3120G        | 120 GB | 2       | 1711  | 0     | 4.69   |
 | Kingston  | SKC300S37A480G     | 480 GB | 1       | 1231  | 0     | 3.37   |
@@ -141,17 +141,19 @@ SSD by Family
 -------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | Rating |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Kingston  | JMicron based SSDs     | 12     | 26      | 498   | 2     | 1.08   |
 | Kingston  | SandForce Driven SSDs  | 33     | 706     | 306   | 65    | 0.73   |
-| Kingston  | SSDNow UV400           | 4      | 112     | 178   | 27    | 0.44   |
-| Kingston  | Unknown                | 51     | 104     | 146   | 77    | 0.35   |
+| Kingston  | SSDNow UV400           | 3      | 111     | 176   | 28    | 0.44   |
+| Kingston  | Unknown                | 45     | 79      | 175   | 87    | 0.42   |
 | Kingston  | Phison Driven SSDs     | 13     | 327     | 83    | 1     | 0.22   |
+| Kingston  | SSDNow UV400/500       | 5      | 24      | 75    | 48    | 0.19   |
+| Kingston  | Silicon Motion base... | 2      | 2       | 5     | 0     | 0.02   |

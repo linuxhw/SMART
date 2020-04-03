@@ -1,21 +1,21 @@
 ExcelStor Hard Drives
 =====================
 
-This is a list of all tested ExcelStor hard drive models and their ratings. See more
+This is a list of all tested ExcelStor hard drive models and their MTBFs. See more
 info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 HDD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both rating
+number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
 Days   — avg. days per sample,
 Err    — avg. errors per sample,
-Rating — avg. rating per sample.
+MTBF   — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | Rating |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | ExcelStor | J9250S             | 250 GB | 4       | 735   | 0     | 2.01   |
 | ExcelStor | J360               | 64 GB  | 1       | 897   | 1     | 1.23   |
