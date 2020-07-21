@@ -1,0 +1,288 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.5.13-slack] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     ST480HM000-1G5162
+Serial Number:    --
+LU WWN Device Id: 5 000c50 ...
+Firmware Version: C675
+User Capacity:    506,109,026,304 bytes [506 GB]
+Sector Sizes:     512 bytes logical, 4096 bytes physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA8-ACS T13/1699-D revision 4
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Thu Apr  2 14:45:59 2020 WEST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
+
+General SMART Values:
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 1315) seconds.
+Offline data collection
+capabilities: 			 (0x19) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0002)	Does not save SMART data before
+					entering power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  80) minutes.
+
+SMART Attributes Data Structure revision number: 0
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     -OSR--   001   001   006    NOW  160101
+  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
+  9 Power_On_Hours          -O--CK   088   088   000    -    10859
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    1670
+171 Unknown_Attribute       -O--CK   100   100   000    -    0
+172 Unknown_Attribute       -O--CK   100   100   000    -    1
+181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
+182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    1
+194 Temperature_Celsius     -O---K   036   000   000    -    36 (Min/Max 13/59)
+201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
+204 Soft_ECC_Correction     -O--CK   100   056   000    -    477
+231 Temperature_Celsius     PO--C-   078   078   010    -    23
+234 Unknown_Attribute       -O--CK   100   100   000    -    622619
+241 Total_LBAs_Written      -O--CK   100   100   000    -    32505
+242 Total_LBAs_Read         -O--CK   100   100   000    -    13758
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    197652
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x03       GPL,SL  R/O      5  Ext. Comprehensive SMART error log
+0x04       GPL,SL  R/O      8  Device Statistics log
+0x07       GPL,SL  R/O      2  Extended self-test log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xa8       GPL     VS    2082  Device vendor specific log
+0xa8       SL      VS     255  Device vendor specific log
+0xb7       GPL,SL  VS       4  Device vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
+Device Error Count: 1192 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1192 [11] occurred at disk power-on lifetime: 10858 hours (452 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:00:00.070  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.070  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.060  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.060  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:00:00.060  SET FEATURES [Set transfer mode]
+
+Error 1191 [10] occurred at disk power-on lifetime: 10838 hours (451 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     17:21:11.970  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     17:21:11.960  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     17:21:11.960  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     17:21:11.960  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     17:21:11.960  SET FEATURES [Set transfer mode]
+
+Error 1190 [9] occurred at disk power-on lifetime: 10792 hours (449 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:03:36.590  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:03:36.590  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:03:36.590  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:03:36.590  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:03:36.590  SET FEATURES [Set transfer mode]
+
+Error 1189 [8] occurred at disk power-on lifetime: 10789 hours (449 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     04:33:01.410  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     04:33:01.410  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     04:33:01.410  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     04:33:01.410  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     04:33:01.410  SET FEATURES [Set transfer mode]
+
+Error 1188 [7] occurred at disk power-on lifetime: 10634 hours (443 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00  1d+13:01:03.660  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  1d+13:01:03.650  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00  1d+13:01:03.650  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  1d+13:01:03.650  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00  1d+13:01:03.650  SET FEATURES [Set transfer mode]
+
+Error 1187 [6] occurred at disk power-on lifetime: 10559 hours (439 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:00:00.010  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.010  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.010  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.010  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:00:00.010  SET FEATURES [Set transfer mode]
+
+Error 1186 [5] occurred at disk power-on lifetime: 10559 hours (439 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     05:49:11.810  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     05:49:11.810  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     05:49:11.810  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     05:49:11.810  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     05:49:11.810  SET FEATURES [Set transfer mode]
+
+Error 1185 [4] occurred at disk power-on lifetime: 10546 hours (439 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     04:56:28.620  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     04:56:28.620  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     04:56:28.620  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     04:56:28.620  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     04:56:28.620  SET FEATURES [Set transfer mode]
+
+SMART Extended Self-test Log Version: 1 (2 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     10574         -
+# 2  Extended offline    Completed without error       00%      3525         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04)
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4            1670  ---  Lifetime Power-On Resets
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
+

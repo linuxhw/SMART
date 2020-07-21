@@ -1,0 +1,203 @@
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-26-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Western Digital Caviar SE
+Device Model:     WDC WD1200JB-00CRA1
+Serial Number:    --
+Firmware Version: 17.07W17
+User Capacity:    120,034,123,776 bytes [120 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 (minor revision not indicated)
+Local Time is:    Thu May 14 02:08:22 2020 CEST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
+
+General SMART Values:
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
+Total time to complete Offline 
+data collection: 		( 4680) seconds.
+Offline data collection
+capabilities: 			 (0x3b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  87) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   5) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   200   164   051    -    0
+  3 Spin_Up_Time            POS---   151   090   021    -    3241
+  4 Start_Stop_Count        -O--CK   098   098   040    -    2563
+  5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    6
+  7 Seek_Error_Rate         PO-R--   100   253   051    -    0
+  9 Power_On_Hours          -O--CK   072   072   000    -    20925
+ 10 Spin_Retry_Count        PO--C-   100   100   051    -    1
+ 11 Calibration_Retry_Count PO--C-   100   100   051    -    0
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1800
+196 Reallocated_Event_Count -O--CK   194   194   000    -    6
+197 Current_Pending_Sector  -O--C-   200   200   000    -    13
+198 Offline_Uncorrectable   -O--C-   200   200   000    -    3
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    31
+200 Multi_Zone_Error_Rate   P--R--   200   001   051    Past 0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+General Purpose Log Directory not supported
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 33 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 33 occurred at disk power-on lifetime: 169 hours (7 days + 1 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 d0 d9 e8 f8 f6  Error: UNC 208 sectors at LBA = 0x06f8e8d9 = 116975833
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 d0 d4 e8 f8 f6 00  11d+00:53:12.108  READ DMA
+  c8 00 d0 a4 e7 f8 f6 00  11d+00:53:12.108  READ DMA
+  c8 00 00 a4 e6 f8 f6 00  11d+00:53:12.108  READ DMA
+  c8 00 00 a4 e5 f8 f6 00  11d+00:53:12.108  READ DMA
+  c8 00 00 a4 e4 f8 f6 00  11d+00:53:12.108  READ DMA
+
+Error 32 occurred at disk power-on lifetime: 330 hours (13 days + 18 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 50 d8 e8 f8 f6  Error: UNC 80 sectors at LBA = 0x06f8e8d8 = 116975832
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 50 d4 e8 f8 f6 00   5d+15:16:00.800  READ DMA
+  c8 00 50 24 e8 f8 f6 00   5d+15:16:00.750  READ DMA
+  c8 00 80 a4 e7 f8 f6 00   5d+15:16:00.750  READ DMA
+  c8 00 80 24 e7 f8 f6 00   5d+15:16:00.750  READ DMA
+  c8 00 00 24 e6 f8 f6 00   5d+15:16:00.750  READ DMA
+
+Error 31 occurred at disk power-on lifetime: 292 hours (12 days + 4 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 40 d9 e8 f8 f6  Error: UNC 64 sectors at LBA = 0x06f8e8d9 = 116975833
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 d4 e8 f8 f6 00   4d+01:13:21.150  READ DMA
+  c8 00 00 37 b8 31 fd 00   4d+01:13:21.150  READ DMA
+  c8 00 40 94 e8 f8 f6 00   4d+01:13:21.150  READ DMA
+  c8 00 20 74 e8 f8 f6 00   4d+01:13:21.150  READ DMA
+  c8 00 00 37 b7 31 fd 00   4d+01:13:21.100  READ DMA
+
+Error 30 occurred at disk power-on lifetime: 238 hours (9 days + 22 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 40 d8 e8 f8 f6  Error: UNC 64 sectors at LBA = 0x06f8e8d8 = 116975832
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 b4 e8 f8 f6 00   1d+18:23:25.000  READ DMA
+  c8 00 40 74 e8 f8 f6 00   1d+18:23:25.000  READ DMA
+  c8 00 a0 e4 e6 bd f8 00   1d+18:23:25.000  READ DMA
+  c8 00 40 84 14 fe f6 00   1d+18:23:24.950  READ DMA
+  c8 00 40 44 14 fe f6 00   1d+18:23:24.950  READ DMA
+
+Error 29 occurred at disk power-on lifetime: 233 hours (9 days + 17 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 dc e8 f8 f6  Error: UNC 8 sectors at LBA = 0x06f8e8dc = 116975836
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 dc e8 f8 f6 00   1d+13:24:05.950  READ DMA
+  f8 00 00 00 00 00 f0 08   1d+13:24:05.950  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 b0 0a   1d+13:24:05.900  IDENTIFY DEVICE
+  ef 03 42 00 00 00 b0 0a   1d+13:24:05.900  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 f0 08   1d+13:24:05.900  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: read failure       90%       875         116975834
+# 2  Conveyance offline  Completed: read failure       90%       875         116975834
+# 3  Short offline       Completed: read failure       90%       875         116975834
+# 4  Short offline       Completed: read failure       90%       875         116975834
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
