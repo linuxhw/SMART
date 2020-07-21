@@ -18,4 +18,6 @@ MTBF   — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Teclast   | 128GB MS550        | 128 GB | 1       | 8     | 0     | 0.02   |
+| Teclast   | 256GB NS550-2242   | 256 GB | 2       | 6     | 0     | 0.02   |
+| Teclast   | 512GB A850         | 512 GB | 1       | 5     | 0     | 0.01   |
 | Teclast   | 240GB A800         | 240 GB | 1       | 1     | 0     | 0.00   |

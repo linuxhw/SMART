@@ -17,4 +17,4 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Vaseky    | V800-128G          | 128 GB | 1       | 5     | 0     | 0.01   |
+| Vaseky    | V800-128G          | 128 GB | 2       | 48    | 0     | 0.13   |

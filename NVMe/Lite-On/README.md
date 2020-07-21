@@ -25,5 +25,6 @@ MTBF   — avg. MTBF in years per sample.
 | Lite-On   | CL1-3D128-Q11 NVMe | 128 GB | 1       | 4     | 0     | 0.01   |
 | Lite-On   | CA3-8D256          | 256 GB | 2       | 3     | 0     | 0.01   |
 | Lite-On   | CA3-8D512          | 512 GB | 1       | 2     | 0     | 0.01   |
+| Lite-On   | CL1-3D256-Q11 NVMe | 256 GB | 2       | 2     | 0     | 0.01   |
 | Lite-On   | CA3-8D128-HP       | 128 GB | 2       | 1     | 0     | 0.00   |
 | Lite-On   | CA1-8D256-HP       | 256 GB | 1       | 0     | 0     | 0.00   |

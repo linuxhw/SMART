@@ -17,4 +17,5 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Leven     | JAJS600M512C       | 512 GB | 1       | 97    | 0     | 0.27   |
 | Leven     | JAJS300M120C       | 120 GB | 1       | 0     | 0     | 0.00   |

@@ -18,3 +18,4 @@ MTBF   — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Verbatim  | SATA-III SSD       | 128 GB | 1       | 470   | 0     | 1.29   |
+| Verbatim  | Vi500 S3 240GB SSD | 240 GB | 1       | 23    | 0     | 0.06   |

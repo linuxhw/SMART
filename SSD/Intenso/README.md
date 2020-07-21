@@ -23,14 +23,15 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Intenso   | SSD Sata III       | 240 GB | 2       | 149   | 0     | 0.41   |
+| Intenso   | SSD                | 128 GB | 6       | 313   | 1     | 0.71   |
+| Intenso   | SATA III SSD       | 120 GB | 5       | 214   | 0     | 0.59   |
+| Intenso   | SSD Sata III       | 240 GB | 3       | 166   | 0     | 0.46   |
 | Intenso   | SSD                | 256 GB | 2       | 119   | 0     | 0.33   |
-| Intenso   | SSD                | 128 GB | 3       | 219   | 1     | 0.30   |
+| Intenso   | SSD Sata III       | 120 GB | 2       | 106   | 0     | 0.29   |
 | Intenso   | SSD                | 120 GB | 1       | 97    | 0     | 0.27   |
-| Intenso   | SATA III SSD       | 120 GB | 3       | 47    | 0     | 0.13   |
 | Intenso   | SSD Sata III       | 256 GB | 3       | 43    | 1     | 0.10   |
-| Intenso   | SSD SATAIII        | 240 GB | 1       | 6     | 0     | 0.02   |
-| Intenso   | SSD Sata III       | 128 GB | 1       | 1     | 0     | 0.00   |
+| Intenso   | SSD SATAIII        | 240 GB | 2       | 3     | 0     | 0.01   |
+| Intenso   | SSD Sata III       | 128 GB | 2       | 0     | 0     | 0.00   |
 | Intenso   | SSD Sata III       | 247 GB | 1       | 18    | 32    | 0.00   |
 
 SSD by Family
@@ -46,5 +47,5 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Intenso   | Phison Driven OEM SSDs | 2      | 5       | 75    | 0     | 0.21   |
-| Intenso   | Unknown                | 7      | 12      | 101   | 4     | 0.19   |
+| Intenso   | Phison Driven OEM SSDs | 3      | 13      | 245   | 1     | 0.60   |
+| Intenso   | Unknown                | 7      | 14      | 69    | 3     | 0.18   |

@@ -23,13 +23,16 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Apple     | HDD ST1000DM003    | 1 TB   | 5       | 634   | 0     | 1.74   |
+| Apple     | HDD HTS727575A9... | 752 GB | 1       | 1579  | 0     | 4.33   |
 | Apple     | HDD ST750LM022     | 752 GB | 1       | 589   | 0     | 1.61   |
 | Apple     | HDD TOSHIBA MK5... | 500 GB | 1       | 560   | 0     | 1.54   |
-| Apple     | HDD HTS545050A7... | 500 GB | 11      | 497   | 2     | 1.29   |
-| Apple     | HDD HTS541010A9... | 1 TB   | 12      | 387   | 169   | 0.98   |
+| Apple     | HDD HTS545050A7... | 500 GB | 14      | 496   | 2     | 1.30   |
+| Apple     | HDD ST1000DM003    | 1 TB   | 9       | 448   | 0     | 1.23   |
+| Apple     | HDD HTS541010A9... | 1 TB   | 2       | 386   | 0     | 1.06   |
+| Apple     | HDD HTS541010A9... | 1 TB   | 13      | 379   | 156   | 0.96   |
 | Apple     | HDD HTS547550A9... | 500 GB | 3       | 170   | 27    | 0.04   |
 | Apple     | HDD HTS547575A9... | 752 GB | 1       | 506   | 153   | 0.01   |
+| Apple     | HDD HUA722010CL... | 1 TB   | 1       | 83    | 113   | 0.00   |
 
 HDD by Family
 -------------
@@ -44,9 +47,11 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Apple     | Seagate Barracuda      | 1      | 5       | 634   | 0     | 1.74   |
-| Apple     | Seagate SpinPoint      | 1      | 1       | 589   | 0     | 1.61   |
-| Apple     | TOSHIBA MK..65GSXF     | 1      | 1       | 560   | 0     | 1.54   |
-| Apple     | HGST Travelstar Z5K500 | 1      | 11      | 497   | 2     | 1.29   |
-| Apple     | Hitachi-HGST Travel... | 1      | 12      | 387   | 169   | 0.98   |
+| Apple     | Travelstar 7K750       | 1      | 1       | 1579  | 0     | 4.33   |
+| Apple     | SpinPoint              | 1      | 1       | 589   | 0     | 1.61   |
+| Apple     | MK..65GSXF             | 1      | 1       | 560   | 0     | 1.54   |
+| Apple     | HGST Travelstar Z5K500 | 1      | 14      | 496   | 2     | 1.30   |
+| Apple     | Barracuda              | 1      | 9       | 448   | 0     | 1.23   |
+| Apple     | Travelstar 5K1000      | 2      | 15      | 380   | 135   | 0.98   |
 | Apple     | HGST Travelstar 5K750  | 2      | 4       | 254   | 59    | 0.03   |
+| Apple     | Ultrastar A7K2000      | 1      | 1       | 83    | 113   | 0.00   |

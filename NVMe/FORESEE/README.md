@@ -17,4 +17,6 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| FORESEE   | 256GB SSD          | 256 GB | 2       | 15    | 0     | 0.04   |
 | FORESEE   | P900F256GB         | 256 GB | 1       | 2     | 0     | 0.01   |
+| FORESEE   | 512GB SSD          | 512 GB | 1       | 0     | 0     | 0.00   |

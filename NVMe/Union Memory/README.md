@@ -17,5 +17,5 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Union ... | RPFTJ128PDD2EWX    | 128 GB | 1       | 5     | 0     | 0.02   |
+| Union ... | RPFTJ128PDD2EWX    | 128 GB | 8       | 21    | 0     | 0.06   |
 | Union ... | RPFTJ256PDD2MWX    | 256 GB | 1       | 1     | 0     | 0.00   |
