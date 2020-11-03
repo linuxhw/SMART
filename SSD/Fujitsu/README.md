@@ -17,6 +17,7 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Fujitsu   | F500s 480G         | 480 GB | 1       | 119   | 0     | 0.33   |
 | Fujitsu   | F300               | 480 GB | 1       | 103   | 0     | 0.28   |
 | Fujitsu   | F500S              | 1 TB   | 1       | 3     | 0     | 0.01   |
 | Fujitsu   | F500S 128G         | 128 GB | 1       | 1     | 0     | 0.01   |

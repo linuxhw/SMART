@@ -1,7 +1,7 @@
-DOGFISH Solid State Drives
+Dogfish Solid State Drives
 ==========================
 
-This is a list of all tested DOGFISH solid state drive models and their MTBFs. See
+This is a list of all tested Dogfish solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 SSD by Model
@@ -17,7 +17,6 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| DOGFISH   | SSD 256G           | 256 GB | 1       | 212   | 0     | 0.58   |
-| DOGFISH   | SSD                | 256 GB | 1       | 38    | 0     | 0.11   |
-| DOGFISH   | SSD                | 512 GB | 1       | 0     | 0     | 0.00   |
-| DOGFISH   | SSD                | 128 GB | 1       | 0     | 0     | 0.00   |
+| Dogfish   | SSD                | 1 TB   | 1       | 83    | 0     | 0.23   |
+| Dogfish   | SSD                | 500 GB | 1       | 24    | 0     | 0.07   |
+| Dogfish   | SSD                | 512 GB | 1       | 0     | 0     | 0.00   |

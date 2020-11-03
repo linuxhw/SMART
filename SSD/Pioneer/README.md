@@ -17,4 +17,5 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Pioneer   | APS-SL3N-240       | 240 GB | 1       | 10    | 0     | 0.03   |
+| Pioneer   | APS-SL3N-512       | 512 GB | 3       | 261   | 0     | 0.72   |
+| Pioneer   | APS-SL3N-240       | 240 GB | 2       | 93    | 0     | 0.26   |

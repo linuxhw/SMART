@@ -17,5 +17,7 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| SanDisk   | A400 NVMe          | 512 GB | 1       | 554   | 0     | 1.52   |
+| SanDisk   | A400 NVMe          | 512 GB | 2       | 382   | 0     | 1.05   |
+| SanDisk   | Extreme Pro        | 1 TB   | 1       | 234   | 0     | 0.64   |
+| SanDisk   | Ultra 3D NVMe      | 500 GB | 1       | 3     | 0     | 0.01   |
 | SanDisk   | Extreme Pro        | 500 GB | 1       | 2     | 0     | 0.01   |

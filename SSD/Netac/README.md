@@ -17,9 +17,10 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Netac     | SSD                | 720 GB | 3       | 171   | 0     | 0.47   |
+| Netac     | SSD                | 240 GB | 1       | 294   | 0     | 0.81   |
+| Netac     | SSD                | 720 GB | 4       | 145   | 0     | 0.40   |
 | Netac     | SSD                | 1 TB   | 1       | 53    | 0     | 0.15   |
 | Netac     | SSD                | 480 GB | 1       | 35    | 0     | 0.10   |
 | Netac     | SSD 120G           | 120 GB | 1       | 19    | 0     | 0.05   |
-| Netac     | SSD                | 256 GB | 3       | 5     | 0     | 0.01   |
+| Netac     | SSD                | 256 GB | 4       | 10    | 0     | 0.03   |
 | Netac     | SSD                | 128 GB | 3       | 2     | 0     | 0.01   |

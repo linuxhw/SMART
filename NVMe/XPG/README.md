@@ -17,7 +17,8 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| XPG       | GAMMIX S11         | 480 GB | 4       | 358   | 0     | 0.98   |
-| XPG       | GAMMIX S5          | 256 GB | 2       | 43    | 0     | 0.12   |
-| XPG       | GAMMIX S11 Pro     | 1 TB   | 11      | 39    | 0     | 0.11   |
-| XPG       | SPECTRIX S40G      | 256 GB | 1       | 1     | 0     | 0.00   |
+| XPG       | GAMMIX S11         | 480 GB | 5       | 309   | 0     | 0.85   |
+| XPG       | GAMMIX S50         | 1 TB   | 1       | 96    | 0     | 0.27   |
+| XPG       | GAMMIX S11 Pro     | 1 TB   | 24      | 62    | 0     | 0.17   |
+| XPG       | GAMMIX S5          | 1 TB   | 5       | 38    | 0     | 0.11   |
+| XPG       | SPECTRIX S40G      | 2 TB   | 3       | 15    | 0     | 0.04   |

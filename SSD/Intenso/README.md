@@ -23,14 +23,16 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Intenso   | SSD                | 128 GB | 6       | 313   | 1     | 0.71   |
-| Intenso   | SATA III SSD       | 120 GB | 5       | 214   | 0     | 0.59   |
+| Intenso   | SATA III SSD       | 120 GB | 8       | 314   | 0     | 0.86   |
+| Intenso   | SSD Sata III       | 250 GB | 1       | 295   | 0     | 0.81   |
+| Intenso   | SSD                | 128 GB | 11      | 283   | 1     | 0.70   |
 | Intenso   | SSD Sata III       | 240 GB | 3       | 166   | 0     | 0.46   |
-| Intenso   | SSD                | 256 GB | 2       | 119   | 0     | 0.33   |
+| Intenso   | SSD                | 256 GB | 5       | 109   | 0     | 0.30   |
 | Intenso   | SSD Sata III       | 120 GB | 2       | 106   | 0     | 0.29   |
 | Intenso   | SSD                | 120 GB | 1       | 97    | 0     | 0.27   |
-| Intenso   | SSD Sata III       | 256 GB | 3       | 43    | 1     | 0.10   |
-| Intenso   | SSD SATAIII        | 240 GB | 2       | 3     | 0     | 0.01   |
+| Intenso   | SSD Sata III       | 256 GB | 5       | 46    | 1     | 0.12   |
+| Intenso   | SSD SATAIII        | 480 GB | 3       | 40    | 0     | 0.11   |
+| Intenso   | SSD Sata III       | 1 TB   | 1       | 29    | 0     | 0.08   |
 | Intenso   | SSD Sata III       | 128 GB | 2       | 0     | 0     | 0.00   |
 | Intenso   | SSD Sata III       | 247 GB | 1       | 18    | 32    | 0.00   |
 
@@ -47,5 +49,5 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Intenso   | Phison Driven OEM SSDs | 3      | 13      | 245   | 1     | 0.60   |
-| Intenso   | Unknown                | 7      | 14      | 69    | 3     | 0.18   |
+| Intenso   | Phison Driven OEM SSDs | 3      | 24      | 257   | 1     | 0.67   |
+| Intenso   | Unknown                | 9      | 19      | 79    | 2     | 0.21   |

@@ -17,12 +17,14 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Micron    | 2200S NVMe         | 256 GB | 1       | 58    | 0     | 0.16   |
-| Micron    | 2200S NVMe         | 1 TB   | 2       | 19    | 0     | 0.05   |
+| Micron    | 2200S NVMe         | 256 GB | 3       | 55    | 0     | 0.15   |
+| Micron    | 2200 NVMe          | 512 GB | 1       | 38    | 0     | 0.11   |
+| Micron    | 2200V_MTFDHBA51... | 512 GB | 3       | 25    | 0     | 0.07   |
 | Micron    | MTFDHBA512TCK      | 512 GB | 1       | 15    | 0     | 0.04   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 1       | 11    | 0     | 0.03   |
+| Micron    | 2200S NVMe         | 1 TB   | 4       | 10    | 0     | 0.03   |
+| Micron    | MTFDHBA1T0TCK      | 1 TB   | 3       | 8     | 0     | 0.02   |
+| Micron    | 2200S NVMe         | 512 GB | 8       | 7     | 0     | 0.02   |
 | Micron    | 2200_MTFDHBA256TCK | 256 GB | 2       | 6     | 0     | 0.02   |
-| Micron    | 2200S NVMe         | 512 GB | 3       | 5     | 0     | 0.01   |
-| Micron    | MTFDHBA256TCK      | 256 GB | 1       | 2     | 0     | 0.01   |
-| Micron    | MTFDHBA256TCK-1... | 256 GB | 6       | 4     | 1     | 0.00   |
-| Micron    | 2200V_MTFDHBA51... | 512 GB | 1       | 0     | 0     | 0.00   |
+| Micron    | MTFDHBA256TCK      | 256 GB | 2       | 1     | 0     | 0.00   |
+| Micron    | MTFDHBA256TCK-1... | 256 GB | 8       | 3     | 1     | 0.00   |

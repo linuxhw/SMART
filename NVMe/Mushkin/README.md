@@ -19,4 +19,5 @@ MTBF   — avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Mushkin   | MKNSSDPL500GB-D8   | 500 GB | 1       | 248   | 0     | 0.68   |
 | Mushkin   | MKNSSDPL1TB-D8     | 1 TB   | 1       | 121   | 0     | 0.33   |
+| Mushkin   | MKNSSDHL1TB-D8     | 1 TB   | 2       | 79    | 37    | 0.02   |
 | Mushkin   | MKNSSDPE1TB-D8     | 1 TB   | 1       | 0     | 0     | 0.00   |

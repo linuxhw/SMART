@@ -1,7 +1,7 @@
-LENOVO Hard Drives
+Lenovo Hard Drives
 ==================
 
-This is a list of all tested LENOVO hard drive models and their MTBFs. See more
+This is a list of all tested Lenovo hard drive models and their MTBFs. See more
 info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 HDD by Model
@@ -17,4 +17,4 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| LENOVO    | WD1004FBYZ-23YC... | 1 TB   | 2       | 7     | 0     | 0.02   |
+| Lenovo    | ST1000NM0055 91... | 1 TB   | 1       | 165   | 0     | 0.45   |

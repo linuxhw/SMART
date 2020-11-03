@@ -18,3 +18,4 @@ MTBF   — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | MARSHAL   | MAL2500SA-T54      | 500 GB | 2       | 323   | 27    | 0.05   |
+| MARSHAL   | MAL2020SA 80       | 20 GB  | 1       | 4     | 1     | 0.01   |

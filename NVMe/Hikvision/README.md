@@ -17,5 +17,7 @@ MTBF   — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Hikvision | HS-SSD-C2000       | 1 TB   | 1       | 116   | 0     | 0.32   |
 | Hikvision | HS-SSD-C2000Pro    | 1 TB   | 1       | 58    | 0     | 0.16   |
+| Hikvision | HS-SSD-E2000       | 512 GB | 1       | 45    | 0     | 0.12   |
 | Hikvision | HS-SSD-C2000Pro... | 1 TB   | 1       | 8     | 0     | 0.02   |
