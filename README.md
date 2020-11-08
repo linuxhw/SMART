@@ -5430,7 +5430,7 @@ See complete list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD
 | Samsung   | SSD PM800 mSATA    | 64 GB  | 1       | 4     | 0     | 0.01   |
 | PHINOCOM  | SSD                | 120 GB | 1       | 4     | 0     | 0.01   |
 | Hikvision | HS-SSD-C100 480G   | 480 GB | 1       | 4     | 0     | 0.01   |
-| INNOVA... | INNOVATION¡¤IT     | 1 TB   | 2       | 4     | 0     | 0.01   |
+| INNOVA... | SSD                | 1 TB   | 2       | 4     | 0     | 0.01   |
 | KODAK     | SSD X100           | 120 GB | 1       | 4     | 0     | 0.01   |
 | Intel     | SSDMAEMC080G2H     | 80 GB  | 1       | 4     | 0     | 0.01   |
 | Corsair   | Neutron GTX SSD    | 128 GB | 1       | 1173  | 291   | 0.01   |
@@ -6140,7 +6140,7 @@ MTBF   â€” avg. MTBF in years per sample.
 | Dell        | 3      | 5       | 5     | 0     | 0.01   |
 | SMI         | 3      | 3       | 4     | 653   | 0.01   |
 | PHINOCOM    | 1      | 1       | 4     | 0     | 0.01   |
-| INNOVATION  | 1      | 2       | 4     | 0     | 0.01   |
+| INNOVATI... | 1      | 2       | 4     | 0     | 0.01   |
 | KODAK       | 1      | 1       | 4     | 0     | 0.01   |
 | Union Me... | 1      | 2       | 3     | 0     | 0.01   |
 | ShineDisk   | 1      | 1       | 3     | 0     | 0.01   |

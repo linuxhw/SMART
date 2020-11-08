@@ -1,7 +1,7 @@
-INNOVATION Solid State Drives
-=============================
+INNOVATION IT Solid State Drives
+================================
 
-This is a list of all tested INNOVATION solid state drive models and their MTBFs. See
+This is a list of all tested INNOVATION IT solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 SSD by Model
@@ -17,4 +17,4 @@ MTBF   â€” avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| INNOVA... | INNOVATION¡¤IT     | 1 TB   | 2       | 4     | 0     | 0.01   |
+| INNOVA... | SSD                | 1 TB   | 2       | 4     | 0     | 0.01   |

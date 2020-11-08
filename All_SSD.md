@@ -10118,7 +10118,7 @@ MTBF   â€” avg. MTBF in years per sample.
 | Samsung   | SSD 860 QVO        | 1 TB   | 54EE931B3A06 | 8     | 0     | 0.02   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 183004C8F90A | 8     | 0     | 0.02   |
 | Intel     | SSDSCKJF240A5L     | 240 GB | 8B135B3C8274 | 79    | 9     | 0.02   |
-| INNOVA... | INNOVATION¡¤IT     | 1 TB   | DC3A65874789 | 7     | 0     | 0.02   |
+| INNOVA... | SSD                | 1 TB   | DC3A65874789 | 7     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 96F5021820AE | 7     | 0     | 0.02   |
 | Kingston  | SHFS37A120G        | 120 GB | 5297C43B7556 | 7     | 0     | 0.02   |
 | Toshiba   | TR200              | 240 GB | F9367DB6469F | 7     | 0     | 0.02   |
@@ -11944,7 +11944,7 @@ MTBF   â€” avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | 0BBC1844D2D7 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | F8BCC31F0B00 | 0     | 0     | 0.00   |
 | Goldenfir | T650-120G          | 128 GB | A3C0E126A158 | 0     | 0     | 0.00   |
-| INNOVA... | INNOVATION¡¤IT     | 512 GB | 25EEAC650BDD | 0     | 0     | 0.00   |
+| INNOVA... | SSD                | 512 GB | 25EEAC650BDD | 0     | 0     | 0.00   |
 | Intel     | SSDSC2BW120H6      | 120 GB | 6DEBE760B2C0 | 0     | 0     | 0.00   |
 | KingSpec  | KSD-SA25.7-016MJ   | 16 GB  | 5429480DFB43 | 0     | 0     | 0.00   |
 | KingSpec  | MT-256             | 256 GB | 12264DB25835 | 0     | 0     | 0.00   |
