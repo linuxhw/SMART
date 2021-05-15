@@ -1,0 +1,211 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     SAMSUNG SpinPoint P80
+Device Model:     SAMSUNG SP0802N
+Serial Number:    --
+Firmware Version: TK100-24
+User Capacity:    80,060,424,192 bytes [80.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
+Local Time is:    Sat Nov 28 00:02:45 2020 +03
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 2880) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  48) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    0
+  3 Spin_Up_Time            POS---   078   041   000    -    4160
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12889
+  5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
+  7 Seek_Error_Rate         PO-R--   253   253   051    -    0
+  8 Seek_Time_Performance   --S--K   253   253   000    -    0
+  9 Power_On_Half_Minutes   -O--CK   098   098   000    -    12879h+07m
+ 10 Spin_Retry_Count        PO--C-   253   253   049    -    0
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    8017
+194 Temperature_Celsius     -O---K   109   097   000    -    43
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    123635698
+196 Reallocated_Event_Count -O--C-   253   253   000    -    0
+197 Current_Pending_Sector  PO--CK   253   253   010    -    0
+198 Offline_Uncorrectable   P---CK   253   253   010    -    0
+199 UDMA_CRC_Error_Count    PO-R--   100   100   051    -    0
+200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
+201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      2  Comprehensive SMART error log
+0x06           SL  R/O      2  SMART self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 350 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 350 occurred at disk power-on lifetime: 12875 hours (536 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 50  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 50 00      00:49:59.000  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 50 00      00:49:58.938  IDENTIFY DEVICE
+  b0 da 00 00 4f c2 10 00      00:48:44.500  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 10 00      00:48:44.438  SMART READ DATA
+  b0 d1 01 00 4f c2 10 00      00:48:44.438  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+
+Error 349 occurred at disk power-on lifetime: 12875 hours (536 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 50  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 50 00      00:37:18.375  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 50 00      00:37:18.375  IDENTIFY DEVICE
+  b0 d5 01 01 4f c2 10 00      00:37:13.125  SMART READ LOG
+  b0 d5 01 06 4f c2 10 00      00:37:13.063  SMART READ LOG
+  b0 d0 01 00 4f c2 10 00      00:37:13.063  SMART READ DATA
+
+Error 348 occurred at disk power-on lifetime: 12874 hours (536 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 50  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 50 00      00:07:19.938  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 50 00      00:07:19.938  IDENTIFY DEVICE
+  c8 00 08 00 08 84 f4 00      00:07:09.438  READ DMA
+  c8 00 08 08 29 00 f0 00      00:07:09.438  READ DMA
+  c8 00 80 60 08 00 f0 00      00:07:09.438  READ DMA
+
+Error 347 occurred at disk power-on lifetime: 12874 hours (536 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 50  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 50 00      00:03:37.125  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 50 00      00:03:37.125  IDENTIFY DEVICE
+  b0 d5 01 01 4f c2 10 00      00:03:33.000  SMART READ LOG
+  b0 d5 01 06 4f c2 10 00      00:03:33.000  SMART READ LOG
+  b0 d0 01 00 4f c2 10 00      00:03:32.938  SMART READ DATA
+
+Error 346 occurred at disk power-on lifetime: 12874 hours (536 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 50  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 50 00      02:03:44.063  SET FEATURES [Enable APM]
+  ec 00 01 00 00 00 50 00      02:03:44.063  IDENTIFY DEVICE
+  b0 da 00 00 4f c2 10 00      02:01:42.188  SMART RETURN STATUS
+  b0 d0 01 00 4f c2 10 00      02:01:42.125  SMART READ DATA
+  b0 d1 01 00 4f c2 10 00      02:01:42.125  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

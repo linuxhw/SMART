@@ -1,0 +1,230 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-58-generic] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     Corsair Neutron SSD
+Serial Number:    --
+Firmware Version: M310
+User Capacity:    64,023,257,088 bytes [64.0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.5, 6.0 Gb/s
+Local Time is:    Tue Dec 22 15:58:21 2020 EET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(    0) seconds.
+Offline data collection
+capabilities: 			 (0x19) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0002)	Does not save SMART data before
+					entering power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (   5) minutes.
+
+SMART Attributes Data Structure revision number: 0
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   166   066   006    -    99
+  5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
+  9 Power_On_Hours          -O--CK   096   096   000    -    3906
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    390
+171 Unknown_Attribute       -O--CK   100   100   000    -    1
+172 Unknown_Attribute       -O--CK   253   253   000    -    0
+181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    1
+182 Erase_Fail_Count_Total  -O--CK   253   253   000    -    0
+194 Temperature_Celsius     -O----   038   000   000    -    38 (Min/Max 15/51)
+201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
+204 Soft_ECC_Correction     -OSR--   100   098   000    -    6
+231 Temperature_Celsius     PO--CK   253   253   010    -    0
+234 Unknown_Attribute       -O--CK   100   100   000    -    2594
+241 Total_LBAs_Written      -O--CK   100   100   000    -    858
+242 Total_LBAs_Read         -O--CK   100   100   000    -    767
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    77056
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      4  Comprehensive SMART error log
+0x03           SL  R/O      5  Ext. Comprehensive SMART error log
+0x04           SL  R/O      8  Device Statistics log
+0x06           SL  R/O      1  SMART self-test log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 2700 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2700 occurred at disk power-on lifetime: 3905 hours (162 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  01 50 01 01 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  00 00 00 00 00 00 a0 a0   9d+22:03:35.450  NOP [Abort queued commands]
+  00 00 00 00 00 00 a0 a0   9d+22:03:35.460  NOP [Abort queued commands]
+  c8 00 32 4e c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 0e 40 c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 31 0f c0 fe 44 44   9d+22:03:26.490  READ DMA
+
+Error 2699 occurred at disk power-on lifetime: 3905 hours (162 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 32 4e c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 0e 40 c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 31 0f c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 0f 00 c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 30 d0 bf fe 44 44   9d+22:03:26.490  READ DMA
+
+Error 2698 occurred at disk power-on lifetime: 3905 hours (162 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 32 4e c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 0e 40 c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 31 0f c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 0f 00 c0 fe 44 44   9d+22:03:26.490  READ DMA
+  c8 00 30 d0 bf fe 44 44   9d+22:03:26.490  READ DMA
+
+Error 2697 occurred at disk power-on lifetime: 3905 hours (162 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c6 ff 08 00 00 00 e0 e0   9d+22:03:20.900  SET MULTIPLE MODE
+  10 ff 01 4b c4 1d e0 e0   9d+22:03:20.900  RECALIBRATE [OBS-4]
+  91 ff 3f 18 79 00 af af   9d+22:03:20.900  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  b0 d2 08 00 00 00 e0 e0   9d+22:03:20.870  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 d2 08 00 00 00 e0 e0   9d+22:03:20.880  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+
+Error 2696 occurred at disk power-on lifetime: 3905 hours (162 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 50 08 00 00 00 e0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d2 08 00 00 00 e0 e0   9d+22:03:20.870  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 d2 08 00 00 00 e0 e0   9d+22:03:20.880  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 d2 f1 00 4f c2 e0 e0   9d+22:03:20.870  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 d8 00 00 4f c2 e0 e0   9d+22:03:20.870  SMART ENABLE OPERATIONS
+  c6 ff 08 00 00 00 e0 e0   9d+22:03:20.870  SET MULTIPLE MODE
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (SMART Log 0x04)
+Page  Offset Size        Value Flags Description
+ATA_SMART_READ_LOG failed: scsi error badly formed scsi parameters
+Read Device Statistics pages 0x00-0x80 failed
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           21  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+

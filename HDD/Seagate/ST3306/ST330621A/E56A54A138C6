@@ -1,0 +1,224 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Seagate U5
+Device Model:     ST330621A
+Serial Number:    --
+Firmware Version: 3.39
+User Capacity:    30,019,190,272 bytes [30.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-4 (minor revision not indicated)
+Local Time is:    Sun Mar 28 15:27:41 2021 UTC
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM level is:     128 (quiet), recommended: 128
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  422) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  44) minutes.
+
+SMART Attributes Data Structure revision number: 10
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     -OSR--   056   047   025    -    231774964
+  3 Spin_Up_Time            -O----   070   070   000    -    0
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1527
+  5 Reallocated_Sector_Ct   -O--CK   100   100   036    -    5
+  7 Seek_Error_Rate         -OSR--   081   060   030    -    136036659
+  9 Power_On_Hours          -O--CK   092   092   000    -    7660
+ 10 Spin_Retry_Count        -O--C-   100   098   097    -    0
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5154
+194 Temperature_Celsius     -O---K   027   054   000    -    27
+195 Hardware_ECC_Recovered  -O-RC-   057   050   000    -    238939941
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   188   000    -    18
+200 Multi_Zone_Error_Rate   ------   100   100   000    -    0
+202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      5  Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa0           SL  VS       1  Device vendor specific log
+0xa1           SL  VS      20  Device vendor specific log
+0xa2           SL  VS     101  Device vendor specific log
+0xa8           SL  VS      20  Device vendor specific log
+0xa9           SL  VS       1  Device vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 11160 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 11160 occurred at disk power-on lifetime: 7602 hours (316 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 f5 10 60 e0  Error: UNC at LBA = 0x006010f5 = 6295797
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 ef 10 60 e0 00      00:02:57.469  READ DMA
+  c8 00 08 ef 10 60 e0 00      00:02:52.517  READ DMA
+  c8 00 08 e7 04 60 e0 00      00:02:52.512  READ DMA
+  c8 00 08 3f 04 60 e0 00      00:02:52.505  READ DMA
+  c8 00 08 9f c8 61 e0 00      00:02:52.504  READ DMA
+
+Error 11159 occurred at disk power-on lifetime: 7602 hours (316 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 f5 10 60 e0  Error: UNC at LBA = 0x006010f5 = 6295797
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 ef 10 60 e0 00      00:02:52.517  READ DMA
+  c8 00 08 e7 04 60 e0 00      00:02:52.512  READ DMA
+  c8 00 08 3f 04 60 e0 00      00:02:52.505  READ DMA
+  c8 00 08 9f c8 61 e0 00      00:02:52.504  READ DMA
+  c8 00 68 0f c8 61 e0 00      00:02:52.503  READ DMA
+
+Error 11158 occurred at disk power-on lifetime: 7602 hours (316 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 f5 10 60 e0  Error: UNC at LBA = 0x006010f5 = 6295797
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 ef 10 60 e0 00      00:01:38.097  READ DMA
+  c8 00 08 ef 10 60 e0 00      00:01:32.122  READ DMA
+  c8 00 08 57 52 5d e0 00      00:01:32.122  READ DMA
+  c8 00 08 7f 52 5d e0 00      00:01:32.114  READ DMA
+  c8 00 80 2f f9 5f e0 00      00:01:32.106  READ DMA
+
+Error 11157 occurred at disk power-on lifetime: 7602 hours (316 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 f5 10 60 e0  Error: UNC at LBA = 0x006010f5 = 6295797
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 ef 10 60 e0 00      00:01:32.122  READ DMA
+  c8 00 08 57 52 5d e0 00      00:01:32.122  READ DMA
+  c8 00 08 7f 52 5d e0 00      00:01:32.114  READ DMA
+  c8 00 80 2f f9 5f e0 00      00:01:32.106  READ DMA
+  c8 00 40 a7 f9 5d e0 00      00:01:32.105  READ DMA
+
+Error 11156 occurred at disk power-on lifetime: 7597 hours (316 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 8b 79 84 e1  Error: UNC at LBA = 0x0184798b = 25459083
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 88 79 84 e1 00      00:07:14.260  READ DMA
+  f8 00 00 00 00 00 e0 00      00:07:14.260  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 02      00:07:13.939  IDENTIFY DEVICE
+  ef 03 45 00 00 00 a0 02      00:07:13.936  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 e0 00      00:07:13.936  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      7618         -
+# 2  Short offline       Completed without error       00%      7618         -
+# 3  Short offline       Completed: read failure       90%      7603         25459082
+# 4  Extended offline    Completed: read failure       90%      7572         202356
+# 5  Short offline       Completed: read failure       90%      7572         25434099
+# 6  Extended offline    Completed: read failure       90%      7545         1052700
+# 7  Short offline       Completed: read failure       90%      7545         1052700
+# 8  Short offline       Completed: read failure       90%      3675         110730
+# 9  Short offline       Completed: read failure       90%      1678         110730
+7 of 7 failed self-tests are outdated by newer successful extended offline self-test # 1
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

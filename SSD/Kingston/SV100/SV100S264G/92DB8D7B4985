@@ -1,0 +1,263 @@
+=== START OF INFORMATION SECTION ===
+Model Family:     JMicron based SSDs
+Device Model:     KINGSTON SV100S264G
+Serial Number:    --
+Firmware Version: D110225a
+User Capacity:    64,023,257,088 bytes [64.0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.6, 3.0 Gb/s
+Local Time is:    Sun Jan  3 16:38:15 2021 UTC
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      ( 163)	Reserved.
+Total time to complete Offline 
+data collection: 		(   30) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (   1) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Unknown_JMF_Attribute   POS---   100   100   050    -    0
+  5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
+  7 Unknown_JMF_Attribute   PO-R--   100   100   050    -    0
+  8 Unknown_JMF_Attribute   P-S---   100   100   050    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    21011
+ 10 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3796
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+175 Bad_Cluster_Table_Count PO----   100   100   010    -    5
+192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    0
+194 Temperature_Celsius     -O---K   033   100   020    -    33 (Min/Max 33/40)
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+240 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
+170 Bad_Block_Count         PO----   100   100   010    -    0 310 0
+173 Erase_Count             -O--C-   100   100   000    -    6 29407 27685
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 690 (device log contains only the most recent 256 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 690 [177] occurred at disk power-on lifetime: 20647 hours (860 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 4c 11 68 95 08 20 e3 00  Error: UNC at LBA = 0x4c116b950820 = 83637703084064
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 02 08 00 00 02 95 08 20 e3 08     00:00:47.700  READ DMA
+  c8 00 00 01 98 00 00 05 4c 11 68 e3 08     00:00:47.700  READ DMA
+  c8 00 00 02 18 00 00 05 dd ba f8 e3 08     00:00:47.700  READ DMA
+  c8 00 00 02 20 00 00 02 dd ba d8 e3 08     00:00:47.700  READ DMA
+  c8 00 00 01 48 00 00 02 33 1b 10 e2 08     00:00:47.600  READ DMA
+
+Error 689 [176] occurred at disk power-on lifetime: 20647 hours (860 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 70 e7 08 95 08 20 e3 00  Error: UNC at LBA = 0x70e70b950820 = 124137634072608
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 01 08 00 00 06 95 08 20 e3 08     00:00:39.800  READ DMA
+  25 00 00 01 e0 00 00 06 70 e7 08 e0 08     00:00:39.800  READ DMA EXT
+  c8 00 00 02 18 00 00 05 9d 88 00 e0 08     00:00:39.800  READ DMA
+  c8 00 00 02 98 00 00 04 9c 34 00 e4 08     00:00:39.800  READ DMA
+  ca 00 00 0a 08 00 00 06 5c 56 38 e0 08     00:00:39.800  WRITE DMA
+
+Error 688 [175] occurred at disk power-on lifetime: 20653 hours (860 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 c0 c2 a0 95 08 20 e3 00  Error: UNC at LBA = 0xc0c2a3950820 = 211942200641568
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 0a 08 00 00 05 95 08 20 e3 08     00:00:39.800  READ DMA
+  c8 00 00 05 68 00 00 04 c0 c2 a0 e2 08     00:00:39.800  READ DMA
+  c8 00 00 05 08 00 00 06 8d 3f 20 e3 08     00:00:39.800  READ DMA
+  ca 00 00 01 10 00 00 05 5c 57 50 e0 08     00:00:39.800  WRITE DMA
+  25 00 00 0a 00 00 00 06 38 91 80 e0 08     00:00:39.800  READ DMA EXT
+
+Error 687 [174] occurred at disk power-on lifetime: 20647 hours (860 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 74 0a af 95 08 20 e3 00  Error: UNC at LBA = 0x740aaf950820 = 127589244274720
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 01 08 00 00 02 95 08 20 e3 08     00:00:47.700  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:47.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 00 05 00 00 00 a0 08     00:00:47.700  IDENTIFY DEVICE
+  ef 00 03 02 45 00 00 05 00 00 00 a0 08     00:00:47.700  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:47.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 686 [173] occurred at disk power-on lifetime: 20647 hours (860 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 4c 11 68 95 08 20 e3 00  Error: UNC at LBA = 0x4c116b950820 = 83637703084064
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 02 08 00 00 02 95 08 20 e3 08     00:00:47.700  READ DMA
+  c8 00 00 01 98 00 00 05 4c 11 68 e3 08     00:00:47.700  READ DMA
+  c8 00 00 02 18 00 00 05 dd ba f8 e3 08     00:00:47.700  READ DMA
+  c8 00 00 02 20 00 00 02 dd ba d8 e3 08     00:00:47.700  READ DMA
+  c8 00 00 01 48 00 00 02 33 1b 10 e2 08     00:00:47.600  READ DMA
+
+Error 685 [172] occurred at disk power-on lifetime: 20647 hours (860 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 70 e7 08 95 08 20 e3 00  Error: UNC at LBA = 0x70e70b950820 = 124137634072608
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 01 08 00 00 06 95 08 20 e3 08     00:00:39.800  READ DMA
+  25 00 00 01 e0 00 00 06 70 e7 08 e0 08     00:00:39.800  READ DMA EXT
+  c8 00 00 02 18 00 00 05 9d 88 00 e0 08     00:00:39.800  READ DMA
+  c8 00 00 02 98 00 00 04 9c 34 00 e4 08     00:00:39.800  READ DMA
+  ca 00 00 0a 08 00 00 06 5c 56 38 e0 08     00:00:39.800  WRITE DMA
+
+Error 684 [171] occurred at disk power-on lifetime: 20653 hours (860 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 c0 c2 a0 95 08 20 e3 00  Error: UNC at LBA = 0xc0c2a3950820 = 211942200641568
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 0a 08 00 00 05 95 08 20 e3 08     00:00:39.800  READ DMA
+  c8 00 00 05 68 00 00 04 c0 c2 a0 e2 08     00:00:39.800  READ DMA
+  c8 00 00 05 08 00 00 06 8d 3f 20 e3 08     00:00:39.800  READ DMA
+  ca 00 00 01 10 00 00 05 5c 57 50 e0 08     00:00:39.800  WRITE DMA
+  25 00 00 0a 00 00 00 06 38 91 80 e0 08     00:00:39.800  READ DMA EXT
+
+Error 683 [170] occurred at disk power-on lifetime: 20647 hours (860 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 74 0a af 95 08 20 e3 00  Error: UNC at LBA = 0x740aaf950820 = 127589244274720
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 01 08 00 00 02 95 08 20 e3 08     00:00:47.700  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:47.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 01 00 00 00 05 00 00 00 a0 08     00:00:47.700  IDENTIFY DEVICE
+  ef 00 03 02 45 00 00 05 00 00 00 a0 08     00:00:47.700  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:47.700  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+
+
+
