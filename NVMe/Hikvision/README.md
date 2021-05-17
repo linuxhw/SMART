@@ -11,13 +11,14 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Hikvision | HS-SSD-C2000       | 1 TB   | 1       | 116   | 0     | 0.32   |
+| Hikvision | HS-SSD-E2000       | 256 GB | 1       | 69    | 0     | 0.19   |
 | Hikvision | HS-SSD-C2000Pro    | 1 TB   | 1       | 58    | 0     | 0.16   |
 | Hikvision | HS-SSD-E2000       | 512 GB | 1       | 45    | 0     | 0.12   |
-| Hikvision | HS-SSD-C2000Pro... | 1 TB   | 1       | 8     | 0     | 0.02   |
+| Hikvision | HS-SSD-C2000Pro... | 1 TB   | 2       | 8     | 0     | 0.02   |

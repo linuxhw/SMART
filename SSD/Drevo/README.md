@@ -17,14 +17,15 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Drevo     | X1                 | 120 GB | 1       | 49    | 2     | 0.04   |
-| Drevo     | X1 SSD             | 120 GB | 3       | 274   | 23    | 0.04   |
+| Drevo     | X1-60G             | 64 GB  | 1       | 37    | 0     | 0.10   |
+| Drevo     | X1 SSD             | 120 GB | 4       | 214   | 17    | 0.05   |
+| Drevo     | X1                 | 120 GB | 2       | 144   | 1016  | 0.02   |
 | Drevo     | X1 pro             | 1 TB   | 1       | 33    | 18    | 0.00   |
 
 SSD by Family
@@ -34,11 +35,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Drevo     | Silicon Motion base... | 1      | 3       | 274   | 23    | 0.04   |
-| Drevo     | Unknown                | 2      | 2       | 41    | 10    | 0.02   |
+| Drevo     | Silicon Motion base... | 1      | 4       | 214   | 17    | 0.05   |
+| Drevo     | Unknown                | 3      | 4       | 89    | 513   | 0.04   |

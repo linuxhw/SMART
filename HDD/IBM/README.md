@@ -17,12 +17,13 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| IBM       | DARA-212000        | 12 GB  | 1       | 193   | 0     | 0.53   |
 | IBM       | DTLA-305020        | 20 GB  | 2       | 1494  | 37    | 0.39   |
 | IBM       | DTLA-307015        | 16 GB  | 1       | 423   | 5     | 0.19   |
 | IBM       | DTLA-307020        | 20 GB  | 1       | 754   | 16    | 0.12   |
@@ -35,11 +36,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
+| IBM       | Travelstar 25GS, 18... | 2      | 2       | 156   | 3     | 0.29   |
 | IBM       | Deskstar 40GV & 75G... | 3      | 4       | 1041  | 24    | 0.27   |
-| IBM       | Travelstar 25GS, 18... | 1      | 1       | 118   | 5     | 0.05   |

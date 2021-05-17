@@ -11,13 +11,13 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | MyDigi... | SB M2 SSD          | 240 GB | 1       | 1161  | 0     | 3.18   |
-| MyDigi... | BP5                | 240 GB | 1       | 877   | 0     | 2.41   |
+| MyDigi... | BP5                | 240 GB | 2       | 967   | 0     | 2.65   |
 | MyDigi... | SC2 M2 SSD         | 120 GB | 1       | 271   | 0     | 0.74   |
 | MyDigi... | SB2                | 240 GB | 2       | 132   | 0     | 0.36   |

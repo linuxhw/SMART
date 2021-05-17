@@ -11,10 +11,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| KIOXIA... | SATA SSD           | 240 GB | 1       | 2     | 0     | 0.01   |
+| KIOXIA... | SATA SSD           | 480 GB | 1       | 98    | 0     | 0.27   |
+| KIOXIA... | SATA SSD           | 240 GB | 4       | 12    | 0     | 0.03   |

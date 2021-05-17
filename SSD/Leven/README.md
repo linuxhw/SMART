@@ -17,15 +17,18 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Leven     | JAJS600M512C       | 512 GB | 2       | 71    | 0     | 0.20   |
+| Leven     | JAJS300M120C       | 120 GB | 2       | 71    | 0     | 0.20   |
+| Leven     | JAJS600M256C       | 256 GB | 2       | 71    | 0     | 0.20   |
+| Leven     | JAJS600M512C       | 512 GB | 4       | 60    | 0     | 0.16   |
 | Leven     | JAJS500M120C-1     | 120 GB | 1       | 15    | 0     | 0.04   |
-| Leven     | JAJS300M120C       | 120 GB | 1       | 0     | 0     | 0.00   |
+| Leven     | JS500120C          | 120 GB | 1       | 4     | 0     | 0.01   |
+| Leven     | JAJS300M240C       | 240 GB | 1       | 3     | 0     | 0.01   |
 
 SSD by Family
 -------------
@@ -34,11 +37,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Leven     | Unknown                | 2      | 3       | 47    | 0     | 0.13   |
+| Leven     | Unknown                | 5      | 10      | 53    | 0     | 0.15   |
 | Leven     | Silicon Motion base... | 1      | 1       | 15    | 0     | 0.04   |

@@ -11,12 +11,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| FORESEE   | 256GB SSD          | 256 GB | 2       | 15    | 0     | 0.04   |
+| FORESEE   | P900F128GBH        | 128 GB | 1       | 66    | 0     | 0.18   |
 | FORESEE   | 512GB SSD          | 512 GB | 2       | 6     | 0     | 0.02   |
 | FORESEE   | P900F256GB         | 256 GB | 1       | 2     | 0     | 0.01   |

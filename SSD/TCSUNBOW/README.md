@@ -17,13 +17,16 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| TCSUNBOW  | X3                 | 64 GB  | 1       | 99    | 0     | 0.27   |
+| TCSUNBOW  | X3                 | 1 TB   | 1       | 250   | 0     | 0.69   |
+| TCSUNBOW  | X3                 | 480 GB | 2       | 139   | 0     | 0.38   |
+| TCSUNBOW  | X3                 | 64 GB  | 2       | 56    | 0     | 0.16   |
+| TCSUNBOW  | X3                 | 240 GB | 3       | 33    | 0     | 0.09   |
 | TCSUNBOW  | N4                 | 240 GB | 1       | 22    | 0     | 0.06   |
 | TCSUNBOW  | X3                 | 120 GB | 1       | 13    | 0     | 0.04   |
 | TCSUNBOW  | X1                 | 16 GB  | 1       | 1     | 0     | 0.00   |
@@ -35,11 +38,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days   — avg. days per sample,
-Err    — avg. errors per sample,
-MTBF   — avg. MTBF in years per sample.
+Days — avg. days per sample,
+Err  — avg. errors per sample,
+MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| TCSUNBOW  | Silicon Motion base... | 2      | 2       | 56    | 0     | 0.15   |
-| TCSUNBOW  | Unknown                | 2      | 2       | 12    | 0     | 0.03   |
+| TCSUNBOW  | Unknown                | 4      | 5       | 110   | 0     | 0.30   |
+| TCSUNBOW  | Silicon Motion base... | 3      | 6       | 37    | 0     | 0.10   |
