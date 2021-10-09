@@ -23,14 +23,14 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| AMD       | R5SL480G           | 480 GB | 1       | 305   | 0     | 0.84   |
+| AMD       | R5SL480G           | 480 GB | 2       | 189   | 0     | 0.52   |
+| AMD       | R3SL240G           | 240 GB | 6       | 264   | 44    | 0.32   |
+| AMD       | R5SL240G           | 240 GB | 13      | 114   | 1     | 0.28   |
 | AMD       | R3SL480G           | 480 GB | 1       | 98    | 0     | 0.27   |
-| AMD       | R5SL240G           | 240 GB | 12      | 97    | 1     | 0.23   |
-| AMD       | R3SL120G           | 120 GB | 28      | 58    | 1     | 0.16   |
-| AMD       | R5SL120G           | 120 GB | 14      | 55    | 1     | 0.13   |
-| AMD       | R3SL60G            | 64 GB  | 3       | 46    | 0     | 0.13   |
+| AMD       | R3SL120G           | 120 GB | 30      | 78    | 1     | 0.21   |
+| AMD       | R3SL60G            | 64 GB  | 4       | 121   | 1     | 0.14   |
+| AMD       | R5SL120G           | 120 GB | 16      | 49    | 1     | 0.11   |
 | AMD       | R5S240GBSF         | 240 GB | 1       | 33    | 0     | 0.09   |
-| AMD       | R3SL240G           | 240 GB | 4       | 44    | 1     | 0.06   |
 | AMD       | R3S60GBSM          | 64 GB  | 2       | 17    | 0     | 0.05   |
 | AMD       | R5S120GBSF         | 120 GB | 1       | 15    | 1016  | 0.00   |
 
@@ -47,6 +47,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| AMD       | Silicon Motion base... | 1      | 1       | 98    | 0     | 0.27   |
-| AMD       | Unknown                | 8      | 38      | 69    | 28    | 0.16   |
-| AMD       | SiliconMotion based... | 1      | 28      | 58    | 1     | 0.16   |
+| AMD       | Silicon Motion base... | 3      | 37      | 108   | 8     | 0.23   |
+| AMD       | Unknown                | 7      | 39      | 82    | 27    | 0.19   |

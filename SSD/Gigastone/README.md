@@ -17,4 +17,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Gigastone | Prime Series       | 256 GB | 1       | 22    | 0     | 0.06   |
 | Gigastone | SS6200-256GB       | 256 GB | 1       | 2     | 0     | 0.01   |

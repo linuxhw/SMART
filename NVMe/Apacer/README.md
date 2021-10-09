@@ -21,4 +21,4 @@ MTBF — avg. MTBF in years per sample.
 | Apacer    | AS2280P4           | 480 GB | 1       | 163   | 0     | 0.45   |
 | Apacer    | Z280 120G          | 120 GB | 2       | 99    | 0     | 0.27   |
 | Apacer    | AS2280P4           | 512 GB | 1       | 43    | 0     | 0.12   |
-| Apacer    | AS2280P4           | 256 GB | 1       | 19    | 0     | 0.05   |
+| Apacer    | AS2280P4           | 256 GB | 3       | 24    | 0     | 0.07   |

@@ -24,6 +24,7 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Quantum   | FIREBALLlct10 05   | 5 GB   | 1       | 1486  | 0     | 4.07   |
+| Quantum   | FIREBALLP KX13.6   | 16 GB  | 1       | 975   | 0     | 2.67   |
 | Quantum   | FIREBALLP AS20.5   | 20 GB  | 1       | 946   | 0     | 2.59   |
 | Quantum   | FIREBALLP AS40.0   | 40 GB  | 1       | 744   | 0     | 2.04   |
 | Quantum   | FIREBALLlct20 40   | 40 GB  | 1       | 400   | 0     | 1.10   |
@@ -46,5 +47,6 @@ MTBF — avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Quantum   | Unknown                | 1      | 1       | 1486  | 0     | 4.07   |
 | Quantum   | Fireball Plus AS       | 2      | 2       | 845   | 0     | 2.32   |
+| Quantum   | Fireball               | 2      | 2       | 579   | 0     | 1.59   |
 | Quantum   | Fireball lct20         | 1      | 1       | 400   | 0     | 1.10   |
-| Quantum   | Fireball lct15         | 3      | 3       | 226   | 2     | 0.36   |
+| Quantum   | Fireball lct15         | 2      | 2       | 248   | 3     | 0.29   |

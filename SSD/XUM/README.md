@@ -17,4 +17,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| XUM       | HX256GSSDSATA3     | 240 GB | 2       | 113   | 0     | 0.31   |
 | XUM       | HX240GSSDSATA3     | 240 GB | 1       | 16    | 0     | 0.04   |

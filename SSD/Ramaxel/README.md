@@ -17,5 +17,6 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Ramaxel   | RDM-II XM020C      | 24 GB  | 1       | 298   | 0     | 0.82   |
 | Ramaxel   | RDM-II XM020C024G  | 24 GB  | 2       | 295   | 0     | 0.81   |
 | Ramaxel   | RTITF128PCA1MADL   | 128 GB | 1       | 22    | 0     | 0.06   |

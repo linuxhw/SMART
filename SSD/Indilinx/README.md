@@ -18,5 +18,7 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Indilinx  | IND-S3MP-128G      | 128 GB | 1       | 465   | 0     | 1.27   |
+| Indilinx  | IND-S325S-256G     | 256 GB | 1       | 27    | 0     | 0.08   |
+| Indilinx  | IND-S3N80S-256G    | 256 GB | 2       | 1     | 0     | 0.00   |
 | Indilinx  | InM2246S3-128G     | 128 GB | 2       | 0     | 0     | 0.00   |
 | Indilinx  | IND-S325S120G      | 120 GB | 1       | 3     | 8     | 0.00   |

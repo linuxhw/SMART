@@ -17,5 +17,6 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Goodram   | 120GB              | 120 GB | 1       | 271   | 0     | 0.74   |
 | Goodram   | SSDPR-PX400-256-80 | 256 GB | 1       | 97    | 0     | 0.27   |
-| Goodram   | SSDPR-PX500-512-80 | 512 GB | 2       | 0     | 0     | 0.00   |
+| Goodram   | SSDPR-PX500-512-80 | 512 GB | 4       | 13    | 0     | 0.04   |

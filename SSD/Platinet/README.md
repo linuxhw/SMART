@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Platinet  | SSD                | 120 GB | 2       | 91    | 0     | 0.25   |
+| Platinet  | SSD                | 120 GB | 3       | 61    | 30    | 0.17   |

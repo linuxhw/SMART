@@ -37,6 +37,7 @@ MTBF — avg. MTBF in years per sample.
 | MediaMax  | WL1500GSA6454G     | 1.5 TB | 2       | 96    | 4     | 0.08   |
 | MediaMax  | WL120GBSATA        | 120 GB | 1       | 139   | 4     | 0.08   |
 | MediaMax  | WL640GSA6472B      | 647 GB | 1       | 20    | 0     | 0.05   |
+| MediaMax  | WL160GSA872B       | 160 GB | 1       | 517   | 25    | 0.05   |
 | MediaMax  | WL250GSA872        | 250 GB | 1       | 15    | 0     | 0.04   |
 | MediaMax  | WL2000GSA6454G     | 2 TB   | 1       | 33    | 2     | 0.03   |
 | MediaMax  | WL250GLSA6410000   | 250 GB | 2       | 36    | 4     | 0.02   |
@@ -66,6 +67,7 @@ MTBF — avg. MTBF in years per sample.
 | MediaMax  | WL120                  | 1      | 1       | 139   | 4     | 0.08   |
 | MediaMax  | WL1500                 | 2      | 3       | 800   | 133   | 0.06   |
 | MediaMax  | WL640                  | 1      | 1       | 20    | 0     | 0.05   |
+| MediaMax  | WL160                  | 1      | 1       | 517   | 25    | 0.05   |
 | MediaMax  | WL2000                 | 1      | 1       | 33    | 2     | 0.03   |
 | MediaMax  | WL400                  | 1      | 1       | 0     | 0     | 0.00   |
 | MediaMax  | WL6000                 | 1      | 1       | 637   | 1372  | 0.00   |

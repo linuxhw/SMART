@@ -20,3 +20,4 @@ MTBF — avg. MTBF in years per sample.
 | China     | OOS250G            | 250 GB | 1       | 126   | 0     | 0.35   |
 | China     | TP00250GB          | 250 GB | 1       | 106   | 0     | 0.29   |
 | China     | Generic S050 Ha... | 500 GB | 1       | 245   | 1377  | 0.00   |
+| China     | TPH00800640GB 0    | 640 GB | 1       | 82    | 1007  | 0.00   |

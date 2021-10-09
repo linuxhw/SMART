@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| UNIC2     | S100-480           | 480 GB | 1       | 139   | 0     | 0.38   |
+| UNIC2     | S100-480           | 480 GB | 2       | 95    | 0     | 0.26   |

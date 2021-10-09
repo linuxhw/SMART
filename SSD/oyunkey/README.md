@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| oyunkey   | SSD                | 120 GB | 1       | 68    | 0     | 0.19   |
+| oyunkey   | SSD                | 120 GB | 2       | 215   | 66    | 0.10   |

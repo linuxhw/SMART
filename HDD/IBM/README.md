@@ -27,6 +27,7 @@ MTBF — avg. MTBF in years per sample.
 | IBM       | DTLA-305020        | 20 GB  | 2       | 1494  | 37    | 0.39   |
 | IBM       | DTLA-307015        | 16 GB  | 1       | 423   | 5     | 0.19   |
 | IBM       | DTLA-307020        | 20 GB  | 1       | 754   | 16    | 0.12   |
+| IBM       | DJSA-220           | 12 GB  | 1       | 138   | 5     | 0.06   |
 | IBM       | DARA-206000        | 6 GB   | 1       | 118   | 5     | 0.05   |
 
 HDD by Family
@@ -44,3 +45,4 @@ MTBF — avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | IBM       | Travelstar 25GS, 18... | 2      | 2       | 156   | 3     | 0.29   |
 | IBM       | Deskstar 40GV & 75G... | 3      | 4       | 1041  | 24    | 0.27   |
+| IBM       | Travelstar 32GH, 30... | 1      | 1       | 138   | 5     | 0.06   |

@@ -17,5 +17,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| XrayDisk  | 256GB              | 256 GB | 3       | 52    | 0     | 0.14   |
 | XrayDisk  | 512GB              | 512 GB | 1       | 7     | 0     | 0.02   |
-| XrayDisk  | 256GB              | 256 GB | 1       | 0     | 0     | 0.00   |

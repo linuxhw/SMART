@@ -23,8 +23,8 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| TCSUNBOW  | X3                 | 1 TB   | 1       | 250   | 0     | 0.69   |
-| TCSUNBOW  | X3                 | 480 GB | 2       | 139   | 0     | 0.38   |
+| TCSUNBOW  | X3                 | 1 TB   | 2       | 304   | 0     | 0.83   |
+| TCSUNBOW  | X3                 | 480 GB | 4       | 108   | 0     | 0.30   |
 | TCSUNBOW  | X3                 | 64 GB  | 2       | 56    | 0     | 0.16   |
 | TCSUNBOW  | X3                 | 240 GB | 3       | 33    | 0     | 0.09   |
 | TCSUNBOW  | N4                 | 240 GB | 1       | 22    | 0     | 0.06   |
@@ -44,5 +44,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| TCSUNBOW  | Unknown                | 4      | 5       | 110   | 0     | 0.30   |
+| TCSUNBOW  | Unknown                | 4      | 8       | 133   | 0     | 0.37   |
 | TCSUNBOW  | Silicon Motion base... | 3      | 6       | 37    | 0     | 0.10   |

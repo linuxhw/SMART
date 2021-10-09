@@ -18,3 +18,5 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Hyundai   | 120GB SSD          | 120 GB | 1       | 997   | 0     | 2.73   |
+| Hyundai   | SSD 240G           | 240 GB | 1       | 613   | 0     | 1.68   |
+| Hyundai   | C2S3T-240G         | 240 GB | 1       | 11    | 0     | 0.03   |

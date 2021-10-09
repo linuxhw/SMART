@@ -18,10 +18,12 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Transcend | TS128GMTE850       | 128 GB | 1       | 745   | 0     | 2.04   |
-| Transcend | TS128GMTE110S      | 128 GB | 4       | 200   | 0     | 0.55   |
-| Transcend | TS1TMTE220S        | 1 TB   | 6       | 181   | 0     | 0.50   |
-| Transcend | TS256GMTE220S      | 256 GB | 4       | 177   | 0     | 0.49   |
-| Transcend | TS512GMTE220S      | 512 GB | 1       | 70    | 0     | 0.19   |
-| Transcend | TS512GMTE110S      | 512 GB | 5       | 24    | 0     | 0.07   |
+| Transcend | TS512GMTE220S      | 512 GB | 8       | 377   | 0     | 1.04   |
+| Transcend | TS256GMTE820       | 256 GB | 1       | 308   | 0     | 0.84   |
+| Transcend | TS128GMTE110S      | 128 GB | 6       | 176   | 0     | 0.48   |
+| Transcend | TS1TMTE220S        | 1 TB   | 7       | 173   | 0     | 0.48   |
+| Transcend | TS2TMTE220S        | 2 TB   | 1       | 160   | 0     | 0.44   |
+| Transcend | TS256GMTE220S      | 256 GB | 5       | 156   | 0     | 0.43   |
+| Transcend | TS512GMTE110S      | 512 GB | 7       | 56    | 0     | 0.16   |
 | Transcend | TS256GMTE110S      | 256 GB | 3       | 1     | 0     | 0.00   |
 | Transcend | TS512GMTE510T      | 512 GB | 1       | 0     | 0     | 0.00   |

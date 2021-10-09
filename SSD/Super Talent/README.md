@@ -18,4 +18,5 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Super ... | FTM50N325H         | 500 GB | 2       | 56    | 0     | 0.15   |
+| Super ... | FTM56N325H         | 256 GB | 1       | 35    | 0     | 0.10   |
 | Super ... | FTM28N325H         | 128 GB | 1       | 12    | 0     | 0.03   |
