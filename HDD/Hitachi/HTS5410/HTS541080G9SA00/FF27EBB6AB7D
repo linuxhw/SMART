@@ -1,0 +1,228 @@
+smartctl 7.1 2019-12-30 r5022 [i686-linux-5.4.83-generic-2rosa-i586] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Hitachi Travelstar 5K100
+Device Model:     HTS541080G9SA00
+Serial Number:    --
+Firmware Version: MB4OC60P
+User Capacity:    80,026,361,856 bytes [80.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
+Local Time is:    Tue Oct  5 22:20:31 2021 
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM level is:     128 (minimum power consumption without standby)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  645) seconds.
+Offline data collection
+capabilities: 			 (0x5b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  55) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   098   062    -    0
+  2 Throughput_Performance  P-S---   100   100   040    -    4891
+  3 Spin_Up_Time            POS---   252   100   033    -    1
+  4 Start_Stop_Count        -O--C-   094   094   000    -    9946
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    295 (0 247)
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   118   100   040    -    41
+  9 Power_On_Hours          -O--C-   046   046   000    -    23950
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    7376
+191 G-Sense_Error_Rate      -O-R--   100   094   000    -    0
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    232
+193 Load_Cycle_Count        -O--C-   043   043   000    -    576578
+194 Temperature_Celsius     -O----   148   096   000    -    37 (Min/Max 14/57)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    269
+197 Current_Pending_Sector  -O---K   100   100   000    -    63
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
+Read GP Log Directory failed
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 3239 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3239 occurred at disk power-on lifetime: 23933 hours (997 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 52 96 91 a1 e0  Error: UNC 82 sectors at LBA = 0x00a19196 = 10588566
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 68 80 91 a1 e0 00      00:00:27.400  READ DMA EXT
+  ef 03 45 00 00 00 a0 00      00:00:27.400  SET FEATURES [Set transfer mode]
+  25 00 1e 62 91 a1 e0 04      00:00:27.300  READ DMA EXT
+  25 00 80 00 91 a1 e0 00      00:00:18.600  READ DMA EXT
+  25 00 80 80 90 a1 e0 00      00:00:14.900  READ DMA EXT
+
+Error 3238 occurred at disk power-on lifetime: 23933 hours (997 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 1e 62 91 a1 e0  Error: UNC 30 sectors at LBA = 0x00a19162 = 10588514
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 80 00 91 a1 e0 00      00:00:18.600  READ DMA EXT
+  25 00 80 80 90 a1 e0 00      00:00:14.900  READ DMA EXT
+  25 00 80 00 90 a1 e0 00      00:00:14.000  READ DMA EXT
+  25 00 80 80 8f a1 e0 00      00:00:14.000  READ DMA EXT
+  25 00 80 00 8f a1 e0 00      00:00:14.000  READ DMA EXT
+
+Error 3237 occurred at disk power-on lifetime: 23933 hours (997 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 6a 96 91 a1 e0  Error: UNC 106 sectors at LBA = 0x00a19196 = 10588566
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 80 80 91 a1 e0 00      00:02:36.500  READ DMA EXT
+  ef 03 45 00 00 00 a0 00      00:02:36.500  SET FEATURES [Set transfer mode]
+  25 00 1e 62 91 a1 e0 04      00:02:36.400  READ DMA EXT
+  25 00 80 00 91 a1 e0 00      00:02:28.400  READ DMA EXT
+  25 00 80 80 90 a1 e0 00      00:02:25.600  READ DMA EXT
+
+Error 3236 occurred at disk power-on lifetime: 23933 hours (997 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 1e 62 91 a1 e0  Error: UNC 30 sectors at LBA = 0x00a19162 = 10588514
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 80 00 91 a1 e0 00      00:02:28.400  READ DMA EXT
+  25 00 80 80 90 a1 e0 00      00:02:25.600  READ DMA EXT
+  35 00 08 38 28 63 e0 00      00:02:25.600  WRITE DMA EXT
+  35 00 08 b8 46 5f e0 00      00:02:25.600  WRITE DMA EXT
+  ef 03 45 00 00 00 a0 00      00:02:25.600  SET FEATURES [Set transfer mode]
+
+Error 3235 occurred at disk power-on lifetime: 23933 hours (997 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 3b 82 9a a1 e0  Error: UNC 59 sectors at LBA = 0x00a19a82 = 10590850
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 3d 80 9a a1 e0 00      00:02:20.700  READ DMA EXT
+  ef 03 45 00 00 00 a0 00      00:02:20.700  SET FEATURES [Set transfer mode]
+  25 00 80 00 9a a1 e0 04      00:02:20.600  READ DMA EXT
+  25 00 80 00 9a a1 e0 00      00:02:15.800  READ DMA EXT
+  ef 03 45 00 00 00 a0 00      00:02:15.800  SET FEATURES [Set transfer mode]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%         4         -
+# 2  Short offline       Completed without error       00%         3         -
+# 3  Short offline       Completed without error       00%         3         -
+# 4  Short offline       Completed without error       00%         2         -
+# 5  Short offline       Completed without error       00%         1         -
+# 6  Short offline       Completed without error       00%         1         -
+# 7  Short offline       Completed without error       00%         0         -
+
+Warning! SMART Selective Self-Test Log Structure error: invalid SMART checksum.
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+

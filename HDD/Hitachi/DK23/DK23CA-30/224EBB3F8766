@@ -1,0 +1,214 @@
+smartctl 6.6 2017-11-05 r4594 [i686-linux-4.19.0-16-686-pae] (local build)
+Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     HITACHI Travelstar DK23XX/DK23XXB
+Device Model:     DK23CA-30
+Serial Number:    --
+Firmware Version: 00H0A0G3
+User Capacity:    30,005,821,440 bytes [30.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 3
+Local Time is:    Fri Jun  4 18:00:00 2021 IST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM level is:     192 (intermediate), recommended: 192
+APM level is:     254 (maximum performance)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 1820) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  31) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     P-SR--   100   100   050    -    8589934602
+  2 Throughput_Performance  P-S---   100   100   050    -    3974
+  3 Spin_Up_Time            POS---   100   100   050    -    0
+  4 Start_Stop_Count        -O--CK   095   095   050    -    5762
+  5 Reallocated_Sector_Ct   PO--CK   081   081   010    -    452
+  7 Seek_Error_Rate         POSR--   100   065   050    -    662
+  8 Seek_Time_Performance   P-S---   095   088   050    -    2021
+  9 Power_On_Minutes        -O--CK   075   075   060    -    12785h+19m
+ 10 Spin_Retry_Count        PO--C-   100   100   050    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   050    -    3574
+191 G-Sense_Error_Rate      -O-R--   100   100   050    -    0
+192 Power-Off_Retract_Count -O--CK   099   099   050    -    530
+193 Load_Cycle_Count        -O--CK   057   057   050    -    261396/261927
+194 Temperature_Celsius     -O---K   046   028   000    -    67 (Min/Max 7/76)
+195 Hardware_ECC_Recovered  -O-RC-   100   001   050    Past 577
+196 Reallocated_Event_Count -O--CK   055   055   001    -    452
+197 Current_Pending_Sector  -O--CK   090   001   001    Past 10
+198 Offline_Uncorrectable   ----C-   100   100   001    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    14
+223 Load_Retry_Count        -O--C-   100   100   050    -    0
+230 Head_Amplitude          -O--CK   084   084   060    -    485168
+250 Read_Error_Retry_Rate   -O-R--   100   001   050    Past 757
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+General Purpose Log Directory not supported
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 2336 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2336 occurred at disk power-on lifetime: 12450 hours (518 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 01 75 4f 59 e0  Error: UNC at LBA = 0x00594f75 = 5853045
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  40 00 01 75 4f 59 e0 00      00:09:17.830  READ VERIFY SECTOR(S)
+  c8 00 01 00 00 00 e0 00      00:09:17.830  READ DMA
+  40 00 01 74 4f 59 e0 00      00:09:17.820  READ VERIFY SECTOR(S)
+  c8 00 01 00 00 00 e0 00      00:09:17.820  READ DMA
+  40 00 02 76 4f 59 e0 00      00:09:17.780  READ VERIFY SECTOR(S)
+
+Error 2335 occurred at disk power-on lifetime: 12450 hours (518 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 01 75 4f 59 e0  Error: UNC at LBA = 0x00594f75 = 5853045
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  40 00 02 74 4f 59 e0 00      00:09:15.400  READ VERIFY SECTOR(S)
+  c8 00 01 00 08 bf e1 00      00:09:15.400  READ DMA
+  40 00 04 74 4f 59 e0 00      00:09:13.050  READ VERIFY SECTOR(S)
+  c8 00 01 fe 3f 77 e0 00      00:09:13.050  READ DMA
+  40 00 04 70 4f 59 e0 00      00:09:13.030  READ VERIFY SECTOR(S)
+
+Error 2334 occurred at disk power-on lifetime: 12450 hours (518 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 03 75 4f 59 e0  Error: UNC at LBA = 0x00594f75 = 5853045
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  40 00 04 74 4f 59 e0 00      00:09:13.050  READ VERIFY SECTOR(S)
+  c8 00 01 fe 3f 77 e0 00      00:09:13.050  READ DMA
+  40 00 04 70 4f 59 e0 00      00:09:13.030  READ VERIFY SECTOR(S)
+  c8 00 01 00 00 00 e0 00      00:09:13.030  READ DMA
+  40 00 08 78 4f 59 e0 00      00:09:13.000  READ VERIFY SECTOR(S)
+
+Error 2333 occurred at disk power-on lifetime: 12450 hours (518 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 03 75 4f 59 e0  Error: UNC at LBA = 0x00594f75 = 5853045
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  40 00 08 70 4f 59 e0 00      00:09:10.610  READ VERIFY SECTOR(S)
+  c8 00 01 00 00 00 e0 00      00:09:10.610  READ DMA
+  40 00 10 70 4f 59 e0 00      00:09:08.260  READ VERIFY SECTOR(S)
+  c8 00 01 00 00 00 e0 00      00:09:08.260  READ DMA
+  40 00 10 60 4f 59 e0 00      00:09:08.210  READ VERIFY SECTOR(S)
+
+Error 2332 occurred at disk power-on lifetime: 12450 hours (518 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 0b 75 4f 59 e0  Error: UNC at LBA = 0x00594f75 = 5853045
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  40 00 10 70 4f 59 e0 00      00:09:08.260  READ VERIFY SECTOR(S)
+  c8 00 01 00 00 00 e0 00      00:09:08.260  READ DMA
+  40 00 10 60 4f 59 e0 00      00:09:08.210  READ VERIFY SECTOR(S)
+  40 00 20 60 4f 59 e0 00      00:09:05.830  READ VERIFY SECTOR(S)
+  c8 00 01 00 08 bf e1 00      00:09:05.800  READ DMA
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short captive       Completed without error       00%      9005         -
+# 2  Short captive       Completed without error       00%      8798         -
+# 3  Extended offline    Completed without error       00%         0         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

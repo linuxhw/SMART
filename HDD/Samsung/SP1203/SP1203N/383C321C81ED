@@ -1,0 +1,210 @@
+smartctl 7.2 2020-12-30 r5155 [i686-linux-5.10.27-gentoo] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     SAMSUNG SpinPoint P80
+Device Model:     SAMSUNG SP1203N
+Serial Number:    --
+Firmware Version: TL100-24
+User Capacity:    120,060,444,672 bytes [120 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
+Local Time is:    Sat Aug 28 08:26:14 2021 CEST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      ( 247)	Self-test routine in progress...
+					70% of test remaining.
+Total time to complete Offline 
+data collection: 		( 4320) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  72) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    30
+  3 Spin_Up_Time            POS---   043   041   000    -    9088
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7840
+  5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
+  7 Seek_Error_Rate         PO-R--   253   253   051    -    0
+  8 Seek_Time_Performance   --S--K   253   253   000    -    0
+  9 Power_On_Half_Minutes   -O--CK   094   094   000    -    32964h+13m
+ 10 Spin_Retry_Count        PO--C-   253   253   049    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3968
+194 Temperature_Celsius     -O---K   202   100   000    -    12
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    872819768
+196 Reallocated_Event_Count -O--C-   253   253   000    -    0
+197 Current_Pending_Sector  PO--CK   253   253   010    -    0
+198 Offline_Uncorrectable   P---CK   253   253   010    -    0
+199 UDMA_CRC_Error_Count    PO-R--   100   100   051    -    0
+200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
+201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      2  Comprehensive SMART error log
+0x06           SL  R/O      2  SMART self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 818 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 818 occurred at disk power-on lifetime: 16178 hours (674 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 b0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 b0 00      00:09:12.625  SET FEATURES [Enable APM]
+  ef 02 00 00 00 00 b0 00      00:07:59.500  SET FEATURES [Enable write cache]
+  c6 00 10 00 00 00 b0 00      00:07:59.500  SET MULTIPLE MODE
+  10 00 3f 00 00 00 b0 00      00:07:59.500  RECALIBRATE [OBS-4]
+  91 00 3f 3f ff 3f bf 00      00:07:59.500  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 817 occurred at disk power-on lifetime: 16178 hours (674 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 40 ae 7d b0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 40 ae 7d b0 00      00:06:12.563  SET FEATURES [Enable APM]
+  e7 00 00 00 00 00 b0 00      00:05:31.813  FLUSH CACHE
+  e7 00 00 00 00 00 b0 00      00:05:23.188  FLUSH CACHE
+  ef 02 00 00 00 00 b0 00      00:04:52.750  SET FEATURES [Enable write cache]
+  c6 00 10 00 00 00 b0 00      00:04:52.688  SET MULTIPLE MODE
+
+Error 816 occurred at disk power-on lifetime: 16178 hours (674 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 b0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 b0 00      00:03:15.125  SET FEATURES [Enable APM]
+  ef 02 00 00 00 00 b0 00      00:02:03.938  SET FEATURES [Enable write cache]
+  c6 00 10 00 00 00 b0 00      00:02:03.938  SET MULTIPLE MODE
+  10 00 3f 00 00 00 b0 00      00:02:03.938  RECALIBRATE [OBS-4]
+  91 00 3f 3f ff 3f bf 00      00:02:03.938  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 815 occurred at disk power-on lifetime: 16178 hours (674 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 78 b7 b7 b0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 78 b7 b7 b0 00      00:08:23.063  SET FEATURES [Enable APM]
+  ef 02 00 00 00 00 b0 00      00:07:10.563  SET FEATURES [Enable write cache]
+  c6 00 10 00 00 00 b0 00      00:07:10.563  SET MULTIPLE MODE
+  10 00 3f 00 00 00 b0 00      00:07:10.563  RECALIBRATE [OBS-4]
+  91 00 3f 3f ff 3f bf 00      00:07:10.563  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 814 occurred at disk power-on lifetime: 16177 hours (674 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 38 b3 d4 b0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 38 b3 d4 b0 00      00:02:09.688  SET FEATURES [Enable APM]
+  ef 02 00 00 00 00 b0 00      00:00:55.313  SET FEATURES [Enable write cache]
+  c6 00 10 00 00 00 b0 00      00:00:55.313  SET MULTIPLE MODE
+  10 00 3f 00 00 00 b0 00      00:00:55.313  RECALIBRATE [OBS-4]
+  91 00 3f 3f ff 3f bf 00      00:00:55.313  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

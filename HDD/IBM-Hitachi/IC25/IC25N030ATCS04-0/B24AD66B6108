@@ -1,0 +1,204 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     IBM/Hitachi Travelstar 60GH and 40GN
+Device Model:     IC25N030ATCS04-0
+Serial Number:    --
+Firmware Version: CA3OA71A
+User Capacity:    30,005,821,440 bytes [30.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 3
+Local Time is:    Wed Sep 15 10:44:54 2021 UTC
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM level is:     128 (minimum power consumption without standby)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  645) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  37) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
+  2 Throughput_Performance  P-S---   100   100   040    -    2411
+  3 Spin_Up_Time            POS---   111   111   033    -    1
+  4 Start_Stop_Count        -O--C-   098   098   000    -    4555
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   100   100   040    -    0
+  9 Power_On_Hours          -O--C-   083   083   000    -    7829
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    4192
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    372
+193 Load_Cycle_Count        -O--C-   089   089   000    -    112300
+194 Temperature_Celsius     -O----   134   134   000    -    41 (Min/Max -1/78)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    2
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+General Purpose Log Directory not supported
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 856 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 856 occurred at disk power-on lifetime: 7363 hours (306 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 1d 45 40 60 e0  Error: UNC 29 sectors at LBA = 0x00604045 = 6307909
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 23 3f 40 60 e0 00      00:00:14.300  READ DMA
+  c6 00 10 01 00 00 ef 00      00:00:14.300  SET MULTIPLE MODE
+  91 00 3f 01 00 00 ef 00      00:00:14.300  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 01 00 00 e1 00      00:00:14.300  RECALIBRATE [OBS-4]
+  c8 00 1d 45 40 60 e0 04      00:00:14.300  READ DMA
+
+Error 855 occurred at disk power-on lifetime: 7363 hours (306 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 1d 45 40 60 e0  Error: UNC 29 sectors at LBA = 0x00604045 = 6307909
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 23 3f 40 60 e0 00      00:00:10.100  READ DMA
+  c8 00 0f b0 9b 11 e3 00      00:00:10.100  READ DMA
+  c8 00 31 7f 9b 11 e3 00      00:00:10.000  READ DMA
+  c8 00 18 67 e6 10 e3 00      00:00:10.000  READ DMA
+  c8 00 20 1f 02 60 e0 00      00:00:10.000  READ DMA
+
+Error 854 occurred at disk power-on lifetime: 7361 hours (306 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 1d 45 40 60 e0  Error: UNC 29 sectors at LBA = 0x00604045 = 6307909
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 23 3f 40 60 e0 00      00:00:15.500  READ DMA
+  c6 00 10 01 00 00 ef 00      00:00:15.500  SET MULTIPLE MODE
+  91 00 3f 01 00 00 ef 00      00:00:15.500  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 01 00 00 e1 00      00:00:15.500  RECALIBRATE [OBS-4]
+  c8 00 1d 45 40 60 e0 04      00:00:15.500  READ DMA
+
+Error 853 occurred at disk power-on lifetime: 7361 hours (306 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 1d 45 40 60 e0  Error: UNC 29 sectors at LBA = 0x00604045 = 6307909
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 23 3f 40 60 e0 00      00:00:11.200  READ DMA
+  c8 00 0f b0 9b 11 e3 00      00:00:11.200  READ DMA
+  c8 00 31 7f 9b 11 e3 00      00:00:11.200  READ DMA
+  c8 00 18 67 e6 10 e3 00      00:00:11.200  READ DMA
+  c8 00 20 1f 02 60 e0 00      00:00:11.200  READ DMA
+
+Error 852 occurred at disk power-on lifetime: 7360 hours (306 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 1d 45 40 60 e0  Error: UNC 29 sectors at LBA = 0x00604045 = 6307909
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 23 3f 40 60 e0 00      00:00:14.100  READ DMA
+  c6 00 10 01 00 00 ef 00      00:00:14.100  SET MULTIPLE MODE
+  91 00 3f 01 00 00 ef 00      00:00:14.100  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 01 00 00 e1 00      00:00:14.100  RECALIBRATE [OBS-4]
+  c8 00 1d 45 40 60 e0 04      00:00:14.000  READ DMA
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
