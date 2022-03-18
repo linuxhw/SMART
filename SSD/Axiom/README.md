@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Axiom     | Signature III SSD  | 240 GB | 1       | 866   | 0     | 2.37   |
 | Axiom     | Signature III S... | 64 GB  | 1       | 422   | 0     | 1.16   |

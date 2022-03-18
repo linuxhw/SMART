@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | TEXTORM   | BM5                | 480 GB | 1       | 109   | 0     | 0.30   |
 | TEXTORM   | B5                 | 120 GB | 1       | 11    | 0     | 0.03   |

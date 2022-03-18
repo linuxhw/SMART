@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Golden... | SSD 128            | 128 GB | 1       | 190   | 0     | 0.52   |
 | Golden... | 60Gb               | 64 GB  | 1       | 2     | 0     | 0.01   |
 | Golden... | SSD                | 32 GB  | 1       | 0     | 0     | 0.00   |

@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Kingrich  | K9 128GB SATA3 SSD | 128 GB | 1       | 657   | 8     | 0.20   |
 | Kingrich  | K9 120GB SATA3     | 128 GB | 1       | 69    | 0     | 0.19   |
 | Kingrich  | SSD 120G           | 120 GB | 1       | 62    | 0     | 0.17   |

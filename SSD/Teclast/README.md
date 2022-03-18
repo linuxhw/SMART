@@ -15,15 +15,19 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Teclast   | 256GB NA850-2280   | 256 GB | 2       | 148   | 0     | 0.41   |
 | Teclast   | 128GB S550         | 128 GB | 1       | 146   | 0     | 0.40   |
 | Teclast   | 120GB S500         | 120 GB | 1       | 47    | 0     | 0.13   |
 | Teclast   | 480GB A900         | 480 GB | 1       | 42    | 0     | 0.12   |
-| Teclast   | 256GB NS550-2242   | 256 GB | 8       | 14    | 0     | 0.04   |
+| Teclast   | 256GB NS550-2242   | 256 GB | 11      | 15    | 0     | 0.04   |
+| Teclast   | 256GB A850         | 256 GB | 1       | 10    | 0     | 0.03   |
 | Teclast   | 128GB MS550        | 128 GB | 1       | 8     | 0     | 0.02   |
+| Teclast   | BD256GB SHCA-2280  | 256 GB | 2       | 6     | 0     | 0.02   |
 | Teclast   | 512GB A850         | 512 GB | 1       | 5     | 0     | 0.01   |
+| Teclast   | BD256GB SLCB-2280  | 256 GB | 2       | 1     | 0     | 0.01   |
 | Teclast   | 128GB A850         | 128 GB | 1       | 1     | 0     | 0.00   |
 | Teclast   | 240GB A800         | 240 GB | 1       | 1     | 0     | 0.00   |
+| Teclast   | BD256GB SHCB-2280  | 256 GB | 2       | 0     | 0     | 0.00   |
 | Teclast   | 128GB NS550-2242   | 128 GB | 1       | 0     | 0     | 0.00   |

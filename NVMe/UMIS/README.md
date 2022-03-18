@@ -15,15 +15,16 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| UMIS      | RPJTJ256MED1OWX    | 256 GB | 2       | 123   | 0     | 0.34   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| UMIS      | RPJTJ256MED1OWX    | 256 GB | 4       | 106   | 0     | 0.29   |
+| UMIS      | RPJTJ512MEE1OWX    | 512 GB | 17      | 57    | 0     | 0.16   |
 | UMIS      | RPJTJ128MED1MWX    | 128 GB | 3       | 66    | 31    | 0.14   |
-| UMIS      | RPJTJ512MEE1OWX    | 512 GB | 10      | 51    | 0     | 0.14   |
-| UMIS      | RPJTJ128MEE1MWX    | 128 GB | 3       | 51    | 0     | 0.14   |
-| UMIS      | LENSE40256GMSP3... | 256 GB | 1       | 38    | 0     | 0.11   |
-| UMIS      | RPFTJ256PDD2MWX    | 256 GB | 4       | 30    | 0     | 0.08   |
-| UMIS      | RPFTJ128PDD2EWX    | 128 GB | 3       | 28    | 0     | 0.08   |
-| UMIS      | RPITJ512VME2OWD    | 512 GB | 2       | 24    | 0     | 0.07   |
-| UMIS      | RPJTJ256MEE1OWX    | 256 GB | 15      | 18    | 0     | 0.05   |
+| UMIS      | RPJTJ128MEE1MWX    | 128 GB | 4       | 51    | 0     | 0.14   |
+| UMIS      | RPFTJ128PDD2EWX    | 128 GB | 8       | 42    | 0     | 0.12   |
+| UMIS      | RPJTJ256MEE1OWX    | 256 GB | 24      | 34    | 0     | 0.09   |
+| UMIS      | LENSE40256GMSP3... | 256 GB | 2       | 31    | 0     | 0.09   |
+| UMIS      | RPFTJ256PDD2MWX    | 256 GB | 7       | 27    | 0     | 0.07   |
+| UMIS      | RPITJ512VME2OWD    | 512 GB | 3       | 18    | 0     | 0.05   |
+| UMIS      | RPITJ1TBVME2HWD    | 1 TB   | 2       | 3     | 0     | 0.01   |
 | UMIS      | RPIRJ256VME2MWD    | 256 GB | 1       | 0     | 0     | 0.00   |

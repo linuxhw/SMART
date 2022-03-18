@@ -15,10 +15,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Apacer    | AS2280P4           | 240 GB | 1       | 165   | 0     | 0.45   |
 | Apacer    | AS2280P4           | 480 GB | 1       | 163   | 0     | 0.45   |
 | Apacer    | Z280 120G          | 120 GB | 2       | 99    | 0     | 0.27   |
-| Apacer    | AS2280P4           | 512 GB | 1       | 43    | 0     | 0.12   |
-| Apacer    | AS2280P4           | 256 GB | 3       | 24    | 0     | 0.07   |
+| Apacer    | AS2280P4           | 256 GB | 6       | 59    | 0     | 0.16   |
+| Apacer    | AS2280P4           | 512 GB | 3       | 46    | 0     | 0.13   |

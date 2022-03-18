@@ -15,6 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| LDLC      | 120GB              | 120 GB | 1       | 226   | 0     | 0.62   |
 | LDLC      | 240GB              | 240 GB | 1       | 194   | 0     | 0.53   |
+| LDLC      | F8+M.2 480         | 480 GB | 1       | 3     | 0     | 0.01   |

@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Yeyian    | VALK 1500          | 240 GB | 2       | 17    | 0     | 0.05   |
 | Yeyian    | VALK 1000          | 120 GB | 2       | 9     | 0     | 0.02   |

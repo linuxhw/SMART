@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Varro     | bulldozer-240GB    | 240 GB | 1       | 140   | 0     | 0.38   |
 | Varro     | BULLDOZER-120GB    | 120 GB | 1       | 12    | 0     | 0.03   |

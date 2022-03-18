@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | MaxDig... | MD4000GBDS         | 4 TB   | 2       | 1197  | 0     | 3.28   |
 | MaxDig... | MD1TBLSSHD         | 1 TB   | 2       | 255   | 4     | 0.35   |
 | MaxDig... | MDT MD5000AAKS-... | 500 GB | 1       | 116   | 0     | 0.32   |

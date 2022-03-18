@@ -15,9 +15,9 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | e2e4      | SSD                | 240 GB | 2       | 183   | 0     | 0.50   |
-| e2e4      | SSD                | 480 GB | 1       | 79    | 0     | 0.22   |
+| e2e4      | SSD                | 480 GB | 2       | 83    | 0     | 0.23   |
 | e2e4      | SSD                | 120 GB | 3       | 15    | 0     | 0.04   |
 | e2e4      | SSD                | 64 GB  | 1       | 13    | 0     | 0.04   |

@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | ACPI      | M2SCF-6M           | 64 GB  | 1       | 2     | 0     | 0.01   |
 | ACPI      | MSS4FV-MP mSATA... | 128 GB | 1       | 1     | 0     | 0.00   |

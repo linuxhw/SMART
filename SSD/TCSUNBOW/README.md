@@ -21,14 +21,15 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| TCSUNBOW  | X3                 | 1 TB   | 2       | 304   | 0     | 0.83   |
-| TCSUNBOW  | X3                 | 480 GB | 4       | 108   | 0     | 0.30   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| TCSUNBOW  | N4                 | 120 GB | 1       | 216   | 0     | 0.59   |
+| TCSUNBOW  | X3                 | 1 TB   | 3       | 212   | 0     | 0.58   |
+| TCSUNBOW  | X3                 | 480 GB | 5       | 123   | 0     | 0.34   |
 | TCSUNBOW  | X3                 | 64 GB  | 2       | 56    | 0     | 0.16   |
+| TCSUNBOW  | X3                 | 120 GB | 3       | 45    | 0     | 0.12   |
 | TCSUNBOW  | X3                 | 240 GB | 3       | 33    | 0     | 0.09   |
 | TCSUNBOW  | N4                 | 240 GB | 1       | 22    | 0     | 0.06   |
-| TCSUNBOW  | X3                 | 120 GB | 1       | 13    | 0     | 0.04   |
 | TCSUNBOW  | X1                 | 16 GB  | 1       | 1     | 0     | 0.00   |
 
 SSD by Family
@@ -42,7 +43,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| TCSUNBOW  | Unknown                | 4      | 8       | 133   | 0     | 0.37   |
-| TCSUNBOW  | Silicon Motion base... | 3      | 6       | 37    | 0     | 0.10   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| TCSUNBOW  | Unknown                | 5      | 11      | 136   | 0     | 0.37   |
+| TCSUNBOW  | Silicon Motion base... | 3      | 8       | 43    | 0     | 0.12   |

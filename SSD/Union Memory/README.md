@@ -15,6 +15,6 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Union ... | RTOTJ128VGD2EYX    | 128 GB | 7       | 129   | 0     | 0.36   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Union ... | RTOTJ128VGD2EYX    | 128 GB | 8       | 120   | 0     | 0.33   |

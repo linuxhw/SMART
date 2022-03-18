@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Dahua     | C800A SSD          | 240 GB | 1       | 0     | 0     | 0.00   |
 | Dahua     | C800A SSD          | 120 GB | 1       | 0     | 0     | 0.00   |

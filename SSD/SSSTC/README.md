@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| SSSTC     | CVB-8D128-HP       | 128 GB | 2       | 10    | 1008  | 0.00   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| SSSTC     | CVB-8D128-HP       | 128 GB | 3       | 7     | 1008  | 0.00   |
+| SSSTC     | CVZ-83128-HP       | 128 GB | 1       | 0     | 1008  | 0.00   |

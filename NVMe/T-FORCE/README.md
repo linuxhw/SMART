@@ -15,6 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| T-FORCE   | TM8FP7001T         | 1 TB   | 1       | 100   | 0     | 0.28   |
+| T-FORCE   | TM8FP8001T         | 1 TB   | 1       | 0     | 0     | 0.00   |
 | T-FORCE   | TM8FP7002T         | 2 TB   | 1       | 0     | 0     | 0.00   |

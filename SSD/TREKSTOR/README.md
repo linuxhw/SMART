@@ -15,7 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | TREKSTOR  | TREKSTORSSD256GB   | 250 GB | 1       | 260   | 0     | 0.71   |
-| TREKSTOR  | TREKSTORSSD128GB   | 128 GB | 1       | 117   | 155   | 0.00   |
+| TREKSTOR  | TREKSTORSSD128GB   | 128 GB | 2       | 122   | 78    | 0.17   |
+| TREKSTOR  | TREKSTORSSD512GB   | 500 GB | 1       | 5     | 0     | 0.01   |

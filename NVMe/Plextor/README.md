@@ -15,21 +15,24 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Plextor   | PX-512M8PeGN       | 512 GB | 1       | 362   | 0     | 0.99   |
+| Plextor   | PX-1TM9PG +        | 1 TB   | 1       | 326   | 0     | 0.89   |
 | Plextor   | PX-512M9PeG        | 512 GB | 3       | 305   | 0     | 0.84   |
 | Plextor   | PX-256M9PeG        | 256 GB | 3       | 221   | 0     | 0.61   |
+| Plextor   | PX-512M8PeG        | 512 GB | 6       | 165   | 92    | 0.40   |
+| Plextor   | PX-512M9PeY        | 512 GB | 5       | 143   | 0     | 0.39   |
 | Plextor   | PX-1TM8PeY         | 1 TB   | 2       | 129   | 0     | 0.35   |
-| Plextor   | PX-512M8PeG        | 512 GB | 4       | 145   | 138   | 0.32   |
-| Plextor   | PX-256M9PeY        | 256 GB | 1       | 106   | 0     | 0.29   |
 | Plextor   | PX-128M8PeGN       | 128 GB | 1       | 106   | 0     | 0.29   |
 | Plextor   | PX-512M9PGN +      | 512 GB | 2       | 101   | 0     | 0.28   |
 | Plextor   | PX-1TM8SeG         | 1 TB   | 2       | 380   | 54    | 0.27   |
+| Plextor   | PX-1TM8PeG         | 1 TB   | 1       | 93    | 0     | 0.26   |
+| Plextor   | PX-256M9PeY        | 256 GB | 2       | 79    | 0     | 0.22   |
 | Plextor   | PX-256M8PeY        | 256 GB | 2       | 73    | 0     | 0.20   |
-| Plextor   | PX-512M9PeY        | 512 GB | 4       | 68    | 0     | 0.19   |
 | Plextor   | PX-256M9PeGN       | 256 GB | 3       | 65    | 0     | 0.18   |
-| Plextor   | PX-256M8PeG        | 256 GB | 1       | 51    | 0     | 0.14   |
+| Plextor   | PX-1TM10PG         | 1 TB   | 1       | 32    | 0     | 0.09   |
+| Plextor   | PX-256M8PeG        | 256 GB | 2       | 140   | 503   | 0.07   |
 | Plextor   | PX-256M8PeGN       | 256 GB | 2       | 25    | 0     | 0.07   |
 | Plextor   | PX-256M8SeY        | 256 GB | 1       | 0     | 0     | 0.00   |
 | Plextor   | PX-512M9PeGN       | 512 GB | 1       | 0     | 0     | 0.00   |

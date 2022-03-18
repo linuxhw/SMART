@@ -21,17 +21,18 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Dogfish   | SSD                | 2 TB   | 1       | 182   | 0     | 0.50   |
 | Dogfish   | SSD                | 250 GB | 1       | 96    | 0     | 0.26   |
 | Dogfish   | SSD                | 500 GB | 3       | 78    | 0     | 0.22   |
-| Dogfish   | SSD                | 128 GB | 2       | 62    | 0     | 0.17   |
+| Dogfish   | SSD                | 240 GB | 2       | 76    | 0     | 0.21   |
 | Dogfish   | SSD                | 256 GB | 5       | 55    | 0     | 0.15   |
-| Dogfish   | SSD                | 1 TB   | 2       | 49    | 0     | 0.14   |
+| Dogfish   | SSD                | 128 GB | 3       | 43    | 0     | 0.12   |
 | Dogfish   | SSD                | 120 GB | 2       | 41    | 0     | 0.11   |
-| Dogfish   | SSD                | 512 GB | 5       | 15    | 0     | 0.04   |
-| Dogfish   | SSD                | 240 GB | 1       | 13    | 0     | 0.04   |
-| Dogfish   | SSD                | 64 GB  | 2       | 1     | 0     | 0.00   |
+| Dogfish   | SSD                | 1 TB   | 3       | 36    | 0     | 0.10   |
+| Dogfish   | SSD                | 512 GB | 7       | 34    | 0     | 0.09   |
+| Dogfish   | SSD                | 64 GB  | 3       | 1     | 0     | 0.00   |
 
 SSD by Family
 -------------
@@ -44,7 +45,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| Dogfish   | Unknown                | 6      | 11      | 48    | 0     | 0.13   |
-| Dogfish   | Silicon Motion base... | 3      | 12      | 39    | 0     | 0.11   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| Dogfish   | Unknown                | 7      | 15      | 57    | 0     | 0.16   |
+| Dogfish   | Silicon Motion base... | 3      | 15      | 43    | 0     | 0.12   |

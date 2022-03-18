@@ -15,10 +15,13 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Kingch... | SSD                | 360 GB | 1       | 27    | 0     | 0.07   |
 | Kingch... | SSD                | 1 TB   | 1       | 23    | 0     | 0.06   |
 | Kingch... | SSD                | 32 GB  | 1       | 23    | 0     | 0.06   |
+| Kingch... | SSD                | 120 GB | 1       | 5     | 0     | 0.02   |
+| Kingch... | SSD                | 256 GB | 1       | 4     | 0     | 0.01   |
 | Kingch... | SSD                | 64 GB  | 1       | 2     | 0     | 0.01   |
 | Kingch... | SSD                | 480 GB | 1       | 0     | 0     | 0.00   |
+| Kingch... | SSD                | 128 GB | 1       | 0     | 0     | 0.00   |

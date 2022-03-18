@@ -15,8 +15,9 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Londisk   | SSD                | 120 GB | 8       | 96    | 0     | 0.26   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Londisk   | SSD                | 960 GB | 1       | 192   | 0     | 0.53   |
+| Londisk   | SSD                | 120 GB | 10      | 145   | 0     | 0.40   |
 | Londisk   | SSD                | 240 GB | 3       | 42    | 0     | 0.12   |
 | Londisk   | SSD                | 480 GB | 1       | 8     | 0     | 0.02   |

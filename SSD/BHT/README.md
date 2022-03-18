@@ -15,12 +15,14 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| BHT       | WR202HH032G E70... | 32 GB  | 5       | 221   | 0     | 0.61   |
 | BHT       | WR202I0064G E70... | 64 GB  | 2       | 139   | 0     | 0.38   |
-| BHT       | WR202HH032G E70... | 32 GB  | 4       | 92    | 0     | 0.25   |
 | BHT       | WR202H0032G E70... | 32 GB  | 1       | 64    | 0     | 0.18   |
 | BHT       | WR202H0032G E70... | 32 GB  | 1       | 45    | 0     | 0.12   |
-| BHT       | WR202I0064G E70... | 64 GB  | 4       | 6     | 0     | 0.02   |
+| BHT       | WR202HH032G E70... | 32 GB  | 2       | 26    | 0     | 0.07   |
+| BHT       | WR202I0064G E70... | 64 GB  | 6       | 13    | 0     | 0.04   |
+| BHT       | WR202HH032G E70... | 32 GB  | 1       | 4     | 0     | 0.01   |
 | BHT       | WR202I0032G E70... | 32 GB  | 1       | 1     | 0     | 0.01   |
 | BHT       | WR202I0032G E70... | 32 GB  | 1       | 1     | 0     | 0.00   |

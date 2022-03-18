@@ -15,10 +15,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| EMTEC     | X250               | 512 GB | 1       | 65    | 0     | 0.18   |
-| EMTEC     | X150               | 240 GB | 6       | 60    | 0     | 0.17   |
-| EMTEC     | X150               | 480 GB | 3       | 45    | 0     | 0.12   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| EMTEC     | X150               | 480 GB | 4       | 60    | 0     | 0.17   |
+| EMTEC     | X250               | 512 GB | 2       | 46    | 0     | 0.13   |
+| EMTEC     | X150               | 240 GB | 8       | 46    | 0     | 0.13   |
+| EMTEC     | X150               | 120 GB | 3       | 30    | 0     | 0.08   |
 | EMTEC     | X150               | 960 GB | 1       | 23    | 0     | 0.06   |
-| EMTEC     | X150               | 120 GB | 1       | 5     | 0     | 0.01   |

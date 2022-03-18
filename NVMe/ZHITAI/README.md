@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| ZHITAI    | PC005 Active       | 1 TB   | 1       | 195   | 0     | 0.53   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| ZHITAI    | PC005 Active       | 1 TB   | 3       | 166   | 0     | 0.46   |
+| ZHITAI    | TiPro7000          | 1 TB   | 1       | 0     | 0     | 0.00   |

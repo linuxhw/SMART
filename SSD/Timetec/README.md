@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Timetec   | 35TTM8SSATA-512G   | 512 GB | 1       | 3     | 0     | 0.01   |
+| Timetec   | 30TT253X2-1TB      | 1 TB   | 1       | 2     | 0     | 0.01   |

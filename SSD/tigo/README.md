@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | tigo      | SSD                | 120 GB | 1       | 57    | 0     | 0.16   |
 | tigo      | SSD                | 128 GB | 1       | 6     | 0     | 0.02   |
 | tigo      | SSD                | 64 GB  | 1       | 3     | 0     | 0.01   |

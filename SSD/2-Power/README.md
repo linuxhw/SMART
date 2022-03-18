@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | 2-Power   | SSD2041A           | 120 GB | 1       | 4     | 0     | 0.01   |
+| 2-Power   | SSD2042A           | 240 GB | 1       | 1     | 0     | 0.01   |

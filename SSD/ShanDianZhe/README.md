@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | ShanDi... | SSD                | 512 GB | 4       | 42    | 0     | 0.12   |
 | ShanDi... | SSD                | 256 GB | 2       | 12    | 0     | 0.03   |
 | ShanDi... | SSD                | 128 GB | 2       | 12    | 0     | 0.03   |

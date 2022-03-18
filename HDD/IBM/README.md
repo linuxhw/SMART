@@ -21,8 +21,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | IBM       | DARA-212000        | 12 GB  | 1       | 193   | 0     | 0.53   |
 | IBM       | DTLA-305020        | 20 GB  | 2       | 1494  | 37    | 0.39   |
 | IBM       | DTLA-307015        | 16 GB  | 1       | 423   | 5     | 0.19   |
@@ -41,8 +41,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
 | IBM       | Travelstar 25GS, 18... | 2      | 2       | 156   | 3     | 0.29   |
 | IBM       | Deskstar 40GV & 75G... | 3      | 4       | 1041  | 24    | 0.27   |
 | IBM       | Travelstar 32GH, 30... | 1      | 1       | 138   | 5     | 0.06   |

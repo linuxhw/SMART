@@ -15,8 +15,11 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Super ... | FTM1TN325H         | 1 TB   | 1       | 236   | 0     | 0.65   |
+| Super ... | FNX256MORM         | 256 GB | 1       | 60    | 0     | 0.17   |
 | Super ... | FTM50N325H         | 500 GB | 2       | 56    | 0     | 0.15   |
-| Super ... | FTM56N325H         | 256 GB | 1       | 35    | 0     | 0.10   |
+| Super ... | FTM56N325H         | 256 GB | 2       | 33    | 0     | 0.09   |
 | Super ... | FTM28N325H         | 128 GB | 1       | 12    | 0     | 0.03   |
+| Super ... | FTM51N325H         | 512 GB | 2       | 8     | 0     | 0.02   |

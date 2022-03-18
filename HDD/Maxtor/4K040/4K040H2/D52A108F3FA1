@@ -1,0 +1,206 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-166-generic] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Maxtor DiamondMax D540X-4K
+Device Model:     MAXTOR 4K040H2
+Serial Number:    --
+Firmware Version: A08.1500
+User Capacity:    40,037,760,000 bytes [40.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
+Local Time is:    Wed Mar  9 19:48:44 2022 CET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM level is:     128 (quiet), recommended: 128
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(   44) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  26) minutes.
+
+SMART Attributes Data Structure revision number: 11
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     P--R-K   100   253   020    -    0
+  3 Spin_Up_Time            POS--K   087   086   020    -    1748
+  4 Start_Stop_Count        -O--CK   097   097   008    -    2388
+  5 Reallocated_Sector_Ct   PO--CK   100   100   020    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   023    -    0
+  9 Power_On_Hours          -O--C-   093   093   001    -    4814
+ 10 Spin_Retry_Count        -OS--K   100   100   000    -    0
+ 11 Calibration_Retry_Count PO--C-   100   100   020    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   008    -    2362
+ 13 Read_Soft_Error_Rate    PO-R--   100   100   023    -    0
+194 Temperature_Celsius     -O---K   092   085   042    -    22
+195 Hardware_ECC_Recovered  -O-RC-   062   013   000    -    3550458
+196 Reallocated_Event_Count ----C-   100   100   020    -    0
+197 Current_Pending_Sector  -O--CK   100   100   020    -    0
+198 Offline_Uncorrectable   ----C-   100   253   000    -    0
+199 UDMA_CRC_Error_Count    -O-RC-   195   195   000    -    5
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+General Purpose Log Directory not supported
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 3614 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3614 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 01 2f 3e 05 f0  Error: UNC at LBA = 0x00053e2f = 343599
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 2f 3e 05 f0 05      00:05:37.631  READ SECTOR(S)
+  91 00 3f 01 00 00 fe e5      00:05:37.531  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 01 00 00 b0 05      00:05:37.527  RECALIBRATE [OBS-4]
+  ff ff ff ff ff ff ff ff      00:05:37.329  [VENDOR SPECIFIC]
+  20 00 01 2f 3e 05 f0 00      00:05:34.399  READ SECTOR(S)
+
+Error 3613 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 01 2f 3e 05 f0  Error: UNC at LBA = 0x00053e2f = 343599
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 2f 3e 05 f0 05      00:05:29.689  READ SECTOR(S)
+  20 00 10 1f 55 07 f0 07      00:05:29.688  READ SECTOR(S)
+  20 00 10 2f 55 07 f0 07      00:05:29.675  READ SECTOR(S)
+  20 00 40 6f 18 c6 f0 c6      00:05:29.652  READ SECTOR(S)
+  20 00 40 af 15 1a f0 1a      00:05:29.643  READ SECTOR(S)
+
+Error 3612 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 01 2f 3e 05 f0  Error: UNC at LBA = 0x00053e2f = 343599
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 2f 3e 05 f0 05      00:05:20.813  READ SECTOR(S)
+  20 00 08 af 04 00 f0 00      00:05:20.807  READ SECTOR(S)
+  91 00 3f 01 00 00 fe e5      00:05:20.708  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 01 ff ff b0 05      00:05:20.704  RECALIBRATE [OBS-4]
+  ff ff ff ff ff ff ff ff      00:05:20.505  [VENDOR SPECIFIC]
+
+Error 3611 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 01 2f 3e 05 f0  Error: UNC at LBA = 0x00053e2f = 343599
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 2f 3e 05 f0 05      00:05:12.615  READ SECTOR(S)
+  20 00 08 ef d2 a7 f0 a7      00:05:12.603  READ SECTOR(S)
+  20 00 01 36 3e 05 f0 00      00:05:12.602  READ SECTOR(S)
+  20 00 08 9f 3b 03 f0 03      00:05:12.592  READ SECTOR(S)
+  20 00 01 35 3e 05 f0 05      00:05:12.591  READ SECTOR(S)
+
+Error 3610 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 01 2f 3e 05 f0  Error: UNC at LBA = 0x00053e2f = 343599
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 2f 3e 05 f0 05      00:05:04.372  READ SECTOR(S)
+  20 00 08 5f 3b 03 f0 03      00:05:04.360  READ SECTOR(S)
+  91 00 3f 01 00 00 fe e5      00:05:04.261  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 01 01 ff ff b0 05      00:05:04.257  RECALIBRATE [OBS-4]
+  ff ff ff ff ff ff ff ff      00:05:04.058  [VENDOR SPECIFIC]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 0
+Warning: ATA Specification requires self-test log structure revision number = 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       989         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

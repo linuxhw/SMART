@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | imation   | M.2 SATA3 256GB... | 256 GB | 1       | 264   | 0     | 0.73   |
+| imation   | 2.5" SATA3 240G... | 240 GB | 1       | 30    | 0     | 0.08   |

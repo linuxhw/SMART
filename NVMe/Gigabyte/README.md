@@ -15,20 +15,21 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Gigabyte  | GP-ASACNE2100TTTDR | 1 TB   | 1       | 367   | 0     | 1.01   |
-| Gigabyte  | GP-ASM2NE6100TTTD  | 1 TB   | 9       | 254   | 0     | 0.70   |
-| Gigabyte  | GP-ASM2NE2256GTTDR | 256 GB | 1       | 165   | 0     | 0.45   |
-| Gigabyte  | GP-GSM2NE3128GNTD  | 128 GB | 1       | 136   | 0     | 0.37   |
+| Gigabyte  | GP-ASM2NE6100TTTD  | 1 TB   | 11      | 249   | 0     | 0.68   |
+| Gigabyte  | GP-GSM2NE3128GNTD  | 128 GB | 3       | 193   | 0     | 0.53   |
+| Gigabyte  | GP-ASM2NE2256GTTDR | 256 GB | 2       | 114   | 0     | 0.31   |
+| Gigabyte  | GP-GSM2NE8256GNTD  | 256 GB | 2       | 80    | 0     | 0.22   |
 | Gigabyte  | GP-AG4500G         | 500 GB | 6       | 61    | 0     | 0.17   |
-| Gigabyte  | GP-GSM2NE8256GNTD  | 256 GB | 1       | 57    | 0     | 0.16   |
-| Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 9       | 53    | 0     | 0.15   |
-| Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 8       | 47    | 0     | 0.13   |
+| Gigabyte  | GP-AG42TB          | 2 TB   | 4       | 60    | 0     | 0.16   |
+| Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 13      | 55    | 0     | 0.15   |
+| Gigabyte  | GP-ASM2NE6500GTTD  | 500 GB | 5       | 45    | 0     | 0.12   |
 | Gigabyte  | GP-ASM2NE6200TTTD  | 2 TB   | 6       | 43    | 0     | 0.12   |
-| Gigabyte  | GP-AG42TB          | 2 TB   | 3       | 38    | 0     | 0.11   |
-| Gigabyte  | GP-ASM2NE6500GTTD  | 500 GB | 3       | 37    | 0     | 0.10   |
-| Gigabyte  | GP-GSM2NE3512GNTD  | 512 GB | 5       | 27    | 0     | 0.08   |
-| Gigabyte  | GP-AG41TB          | 1 TB   | 7       | 18    | 0     | 0.05   |
+| Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 13      | 41    | 0     | 0.11   |
+| Gigabyte  | GP-AG41TB          | 1 TB   | 9       | 36    | 0     | 0.10   |
+| Gigabyte  | GP-GSM2NE3512GNTD  | 512 GB | 6       | 32    | 0     | 0.09   |
 | Gigabyte  | GP-GSM2NE8128GNTD  | 128 GB | 1       | 3     | 0     | 0.01   |
+| Gigabyte  | GP-GM301TB-G       | 1 TB   | 1       | 2     | 0     | 0.01   |
 | Gigabyte  | GP-ASM2NE2512GTTDR | 512 GB | 1       | 0     | 0     | 0.00   |

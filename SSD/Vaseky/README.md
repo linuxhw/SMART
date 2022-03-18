@@ -15,13 +15,15 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Vaseky    | V800-60G           | 64 GB  | 1       | 381   | 0     | 1.05   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Vaseky    | v800-128G          | 128 GB | 1       | 344   | 0     | 0.94   |
+| Vaseky    | V800-240G          | 240 GB | 3       | 225   | 0     | 0.62   |
+| Vaseky    | V800-60G           | 64 GB  | 2       | 247   | 14    | 0.53   |
 | Vaseky    | V800-64G           | 64 GB  | 1       | 175   | 0     | 0.48   |
+| Vaseky    | V800-120GB         | 120 GB | 1       | 173   | 0     | 0.47   |
+| Vaseky    | V800-1TB           | 1 TB   | 1       | 138   | 0     | 0.38   |
 | Vaseky    | V800-120G          | 120 GB | 1       | 127   | 0     | 0.35   |
-| Vaseky    | V800-240G          | 240 GB | 2       | 119   | 0     | 0.33   |
 | Vaseky    | V800-350G          | 360 GB | 1       | 84    | 0     | 0.23   |
 | Vaseky    | V900-128G          | 128 GB | 2       | 84    | 0     | 0.23   |
 | Vaseky    | V800-32G           | 32 GB  | 1       | 73    | 0     | 0.20   |

@@ -21,8 +21,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | CLOVER    | CN-M500MBB         | 500 GB | 2       | 29    | 0     | 0.08   |
 | CLOVER    | CN-M750MBB         | 752 GB | 1       | 22    | 0     | 0.06   |
 | CLOVER    | CD155UI            | 1.5 TB | 1       | 1     | 0     | 0.00   |
@@ -38,7 +38,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
 | CLOVER    | Unknown                | 1      | 1       | 22    | 0     | 0.06   |
 | CLOVER    | Hightech Utania        | 2      | 3       | 19    | 0     | 0.05   |

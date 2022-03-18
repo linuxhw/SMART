@@ -15,9 +15,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| BAITITON  | BT58SSD09S         | 240 GB | 2       | 237   | 1     | 0.34   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| BAITITON  | BT58SSD07S         | 120 GB | 1       | 273   | 0     | 0.75   |
+| BAITITON  | BT58SSD09S         | 240 GB | 3       | 248   | 1     | 0.47   |
 | BAITITON  | BT58SSD12S         | 512 GB | 1       | 71    | 0     | 0.20   |
 | BAITITON  | BT58SSD15S         | 2 TB   | 1       | 37    | 0     | 0.10   |
 | BAITITON  | BT58SSD11S         | 480 GB | 1       | 0     | 0     | 0.00   |

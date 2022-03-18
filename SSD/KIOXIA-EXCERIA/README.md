@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| KIOXIA... | SATA SSD           | 480 GB | 3       | 121   | 0     | 0.33   |
-| KIOXIA... | SATA SSD           | 240 GB | 6       | 14    | 0     | 0.04   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| KIOXIA... | SATA SSD           | 480 GB | 7       | 64    | 0     | 0.18   |
+| KIOXIA... | SATA SSD           | 240 GB | 10      | 11    | 0     | 0.03   |

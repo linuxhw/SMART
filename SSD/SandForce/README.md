@@ -21,8 +21,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | SandForce | FM-25S2S-120GBP2   | 120 GB | 1       | 2101  | 0     | 5.76   |
 | SandForce | FM-25S2S-60GBP2    | 64 GB  | 1       | 317   | 416   | 0.00   |
 | SandForce | 906190             | 64 GB  | 1       | 65    | 1018  | 0.00   |
@@ -38,7 +38,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
 | SandForce | SandForce Driven SSDs  | 2      | 2       | 1209  | 208   | 2.88   |
 | SandForce | Unknown                | 1      | 1       | 65    | 1018  | 0.00   |

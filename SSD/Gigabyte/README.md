@@ -21,15 +21,15 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 25      | 104   | 0     | 0.29   |
-| Gigabyte  | GP-GSTFS30512GTTD  | 512 GB | 3       | 91    | 0     | 0.25   |
-| Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 27      | 90    | 0     | 0.25   |
-| Gigabyte  | GP-GSTFS30256GTTD  | 256 GB | 1       | 76    | 0     | 0.21   |
-| Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 3       | 71    | 0     | 0.20   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Gigabyte  | GP-GSTFS30512GTTD  | 512 GB | 4       | 269   | 0     | 0.74   |
+| Gigabyte  | GP-GSTFS30256GTTD  | 256 GB | 2       | 237   | 0     | 0.65   |
+| Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 4       | 104   | 0     | 0.29   |
+| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 36      | 100   | 0     | 0.28   |
+| Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 36      | 96    | 0     | 0.26   |
 | Gigabyte  | GP-GSTFS31100TNTD  | 1 TB   | 1       | 61    | 0     | 0.17   |
-| Gigabyte  | GP-GSTFS31256GTND  | 256 GB | 1       | 56    | 0     | 0.15   |
+| Gigabyte  | GP-GSTFS31256GTND  | 256 GB | 3       | 19    | 0     | 0.05   |
 
 SSD by Family
 -------------
@@ -42,7 +42,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| Gigabyte  | Phison Driven SSDs     | 4      | 56      | 95    | 0     | 0.26   |
-| Gigabyte  | Unknown                | 3      | 5       | 81    | 0     | 0.22   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| Gigabyte  | Unknown                | 3      | 9       | 179   | 0     | 0.49   |
+| Gigabyte  | Phison Driven SSDs     | 4      | 77      | 98    | 0     | 0.27   |

@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | FASTDISK  | FASTDISK120G       | 120 GB | 1       | 15    | 0     | 0.04   |
 | FASTDISK  | SSD 60G            | 64 GB  | 1       | 14    | 0     | 0.04   |
 | FASTDISK  | SSD 120G           | 120 GB | 1       | 7     | 0     | 0.02   |

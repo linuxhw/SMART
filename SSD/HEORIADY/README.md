@@ -15,6 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| HEORIADY  | HX-001 E           | 1 TB   | 1       | 113   | 0     | 0.31   |
 | HEORIADY  | HX-001 F 512G      | 512 GB | 2       | 32    | 0     | 0.09   |
+| HEORIADY  | HX-001 E           | 128 GB | 1       | 20    | 0     | 0.05   |

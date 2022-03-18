@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Neo Forza | NFS011SA328-600... | 128 GB | 1       | 190   | 0     | 0.52   |
 | Neo Forza | NFS011SA396-600... | 960 GB | 1       | 341   | 8     | 0.10   |
 | Neo Forza | NFS011SA351-600... | 512 GB | 1       | 0     | 0     | 0.00   |

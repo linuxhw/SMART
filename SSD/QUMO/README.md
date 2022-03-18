@@ -15,9 +15,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | QUMO      | SSD                | 64 GB  | 1       | 143   | 0     | 0.39   |
+| QUMO      | SSD                | 256 GB | 1       | 60    | 0     | 0.17   |
 | QUMO      | SSD                | 120 GB | 4       | 175   | 255   | 0.08   |
 | QUMO      | SSD                | 240 GB | 3       | 27    | 0     | 0.08   |
 | QUMO      | SSD                | 480 GB | 1       | 625   | 1015  | 0.00   |

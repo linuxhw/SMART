@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | ZHITAI    | SC001 Active 1T... | 1 TB   | 1       | 0     | 0     | 0.00   |
+| ZHITAI    | SC001 Active 25... | 256 GB | 1       | 0     | 0     | 0.00   |

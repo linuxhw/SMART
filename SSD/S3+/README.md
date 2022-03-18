@@ -15,7 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | S3+       | S3SSDC240XEU       | 240 GB | 1       | 415   | 46    | 0.02   |
+| S3+       | S3SSDC128          | 128 GB | 1       | 4     | 0     | 0.01   |
 | S3+       | S3SSDC480XEU       | 480 GB | 1       | 1     | 0     | 0.00   |

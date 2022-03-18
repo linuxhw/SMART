@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Huawei    | HWE52P432T0L005N   | 2 TB   | 6       | 110   | 0     | 0.30   |
 | Huawei    | HWE52P433T2M005N   | 3.2 TB | 4       | 31    | 0     | 0.09   |

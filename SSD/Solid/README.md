@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Solid     | SSD0240S00         | 240 GB | 2       | 105   | 0     | 0.29   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Solid     | SSD0240S00         | 240 GB | 3       | 71    | 0     | 0.20   |
+| Solid     | SSD0256S00         | 256 GB | 2       | 13    | 2     | 0.02   |

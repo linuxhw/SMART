@@ -15,7 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Netac     | NVMe SSD           | 512 GB | 1       | 20    | 0     | 0.06   |
-| Netac     | NVMe SSD           | 1 TB   | 2       | 16    | 0     | 0.04   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Netac     | NVMe SSD           | 1 TB   | 5       | 45    | 0     | 0.12   |
+| Netac     | NVMe SSD           | 512 GB | 2       | 18    | 0     | 0.05   |
+| Netac     | NVMe SSD           | 128 GB | 1       | 2     | 0     | 0.01   |

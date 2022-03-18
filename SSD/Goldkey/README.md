@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Goldkey   | GKH84-64GB         | 64 GB  | 1       | 57    | 0     | 0.16   |
 | Goldkey   | GKH84-256GB        | 256 GB | 1       | 20    | 0     | 0.06   |

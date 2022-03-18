@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Dell      | WR202KD032G E70... | 32 GB  | 3       | 17    | 0     | 0.05   |
 | Dell      | WR202KD032G E70... | 32 GB  | 2       | 6     | 0     | 0.02   |
 | Dell      | WR202KD128G E70... | 128 GB | 1       | 5     | 0     | 0.02   |

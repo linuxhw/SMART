@@ -15,9 +15,9 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| BIWIN     | SSD                | 1 TB   | 2       | 5     | 0     | 0.02   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| BIWIN     | SSD                | 1 TB   | 4       | 7     | 0     | 0.02   |
 | BIWIN     | NE-128             | 128 GB | 1       | 1     | 0     | 0.00   |
 | BIWIN     | NI201_256GB        | 256 GB | 1       | 0     | 0     | 0.00   |
 | BIWIN     | NE-512             | 512 GB | 1       | 0     | 0     | 0.00   |

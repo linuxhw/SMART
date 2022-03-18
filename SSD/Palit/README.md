@@ -15,10 +15,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Palit     | UVS                | 240 GB | 2       | 417   | 0     | 1.14   |
 | Palit     | PSP120 SSD         | 120 GB | 3       | 379   | 0     | 1.04   |
-| Palit     | UVS                | 240 GB | 1       | 255   | 0     | 0.70   |
 | Palit     | PH120 SSD          | 120 GB | 1       | 207   | 0     | 0.57   |
-| Palit     | UVS                | 120 GB | 2       | 76    | 0     | 0.21   |
+| Palit     | UVS                | 120 GB | 3       | 112   | 0     | 0.31   |
 | Palit     | UVSE               | 240 GB | 1       | 0     | 0     | 0.00   |

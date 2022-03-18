@@ -15,13 +15,16 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Team      | TM8FP2240G         | 240 GB | 1       | 219   | 0     | 0.60   |
+| Team      | TM8FP4512G         | 512 GB | 1       | 198   | 0     | 0.54   |
 | Team      | M8FP2              | 480 GB | 1       | 172   | 0     | 0.47   |
-| Team      | TM8FP6512G         | 512 GB | 2       | 108   | 0     | 0.30   |
+| Team      | TM8FP6512G         | 512 GB | 3       | 110   | 0     | 0.30   |
 | Team      | TM8FP4256G         | 256 GB | 3       | 72    | 0     | 0.20   |
 | Team      | TM8FP4001T         | 1 TB   | 3       | 70    | 0     | 0.19   |
-| Team      | TM8FP6001T         | 1 TB   | 5       | 26    | 0     | 0.07   |
+| Team      | TM8FP6001T         | 1 TB   | 7       | 47    | 0     | 0.13   |
 | Team      | TM8FP6256G         | 256 GB | 2       | 10    | 0     | 0.03   |
+| Team      | TM8FP6002T         | 2 TB   | 1       | 2     | 0     | 0.01   |
+| Team      | TM8FPD512G         | 512 GB | 1       | 0     | 0     | 0.00   |
 | Team      | TM8FPD001T         | 1 TB   | 1       | 0     | 0     | 0.00   |

@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | HPE       | MK0100GCTYU        | 100 GB | 1       | 2360  | 0     | 6.47   |
 | HPE       | MK0800GEYKE        | 800 GB | 1       | 130   | 0     | 0.36   |
 | HPE       | MK000960GWJPP      | 960 GB | 1       | 3     | 0     | 0.01   |

@@ -21,8 +21,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Quantum   | FIREBALLlct10 05   | 5 GB   | 1       | 1486  | 0     | 4.07   |
 | Quantum   | FIREBALLP KX13.6   | 16 GB  | 1       | 975   | 0     | 2.67   |
 | Quantum   | FIREBALLP AS20.5   | 20 GB  | 1       | 946   | 0     | 2.59   |
@@ -30,6 +30,7 @@ MTBF — avg. MTBF in years per sample.
 | Quantum   | FIREBALLlct20 40   | 40 GB  | 1       | 400   | 0     | 1.10   |
 | Quantum   | FIREBALLlct15 30   | 32 GB  | 1       | 391   | 1     | 0.54   |
 | Quantum   | FIREBALLlct15 15   | 16 GB  | 1       | 183   | 0     | 0.50   |
+| Quantum   | FIREBALLlct20 10   | 10 GB  | 1       | 42    | 0     | 0.12   |
 | Quantum   | FIREBALLlct15 10   | 10 GB  | 1       | 105   | 5     | 0.05   |
 
 HDD by Family
@@ -43,10 +44,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
 | Quantum   | Unknown                | 1      | 1       | 1486  | 0     | 4.07   |
 | Quantum   | Fireball Plus AS       | 2      | 2       | 845   | 0     | 2.32   |
 | Quantum   | Fireball               | 2      | 2       | 579   | 0     | 1.59   |
-| Quantum   | Fireball lct20         | 1      | 1       | 400   | 0     | 1.10   |
+| Quantum   | Fireball lct20         | 2      | 2       | 221   | 0     | 0.61   |
 | Quantum   | Fireball lct15         | 2      | 2       | 248   | 3     | 0.29   |

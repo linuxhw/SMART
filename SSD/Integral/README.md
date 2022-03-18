@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Integral  | V Series SATA SSD  | 120 GB | 1       | 263   | 0     | 0.72   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Integral  | V Series SATA SSD  | 120 GB | 2       | 184   | 0     | 0.50   |
 | Integral  | V Series SATA SSD  | 480 GB | 1       | 93    | 0     | 0.26   |
-| Integral  | V Series SATA SSD  | 240 GB | 10      | 76    | 0     | 0.21   |
+| Integral  | V Series SATA SSD  | 240 GB | 11      | 70    | 0     | 0.19   |

@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Kross ... | KE-SSDIS96G        | 960 GB | 1       | 6     | 0     | 0.02   |
 | Kross ... | KE-SSDIS12G        | 120 GB | 1       | 0     | 0     | 0.00   |
