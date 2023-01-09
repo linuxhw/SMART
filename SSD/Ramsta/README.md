@@ -17,9 +17,9 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
@@ -27,6 +27,8 @@ MTBF — avg. MTBF in years per sample.
 | Ramsta    | SSD S600           | 480 GB | 1       | 158   | 0     | 0.43   |
 | Ramsta    | SSD S800           | 480 GB | 1       | 43    | 0     | 0.12   |
 | Ramsta    | SSD R800           | 120 GB | 1       | 9     | 0     | 0.03   |
+| Ramsta    | SSD S800           | 128 GB | 1       | 1     | 0     | 0.00   |
+| Ramsta    | SSD S800           | 240 GB | 1       | 43    | 1012  | 0.00   |
 
 SSD by Family
 -------------
@@ -35,11 +37,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Ramsta    | Silicon Motion base... | 2      | 2       | 171   | 0     | 0.47   |
-| Ramsta    | Unknown                | 2      | 2       | 83    | 0     | 0.23   |
+| Ramsta    | Silicon Motion base... | 3      | 3       | 128   | 338   | 0.31   |
+| Ramsta    | Unknown                | 3      | 3       | 56    | 0     | 0.15   |

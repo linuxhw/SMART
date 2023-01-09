@@ -11,15 +11,16 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| Super ... | FTM25N325H         | 250 GB | 1       | 742   | 0     | 2.03   |
 | Super ... | FTM1TN325H         | 1 TB   | 1       | 236   | 0     | 0.65   |
-| Super ... | FNX256MORM         | 256 GB | 1       | 60    | 0     | 0.17   |
+| Super ... | FTM56N325H         | 256 GB | 4       | 222   | 1     | 0.39   |
 | Super ... | FTM50N325H         | 500 GB | 2       | 56    | 0     | 0.15   |
-| Super ... | FTM56N325H         | 256 GB | 2       | 33    | 0     | 0.09   |
+| Super ... | FNX256MORM         | 256 GB | 2       | 32    | 0     | 0.09   |
 | Super ... | FTM28N325H         | 128 GB | 1       | 12    | 0     | 0.03   |
 | Super ... | FTM51N325H         | 512 GB | 2       | 8     | 0     | 0.02   |

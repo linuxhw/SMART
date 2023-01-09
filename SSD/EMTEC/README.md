@@ -11,14 +11,15 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EMTEC     | X150               | 480 GB | 4       | 60    | 0     | 0.17   |
+| EMTEC     | X150               | 480 GB | 6       | 64    | 0     | 0.18   |
+| EMTEC     | X150               | 240 GB | 15      | 47    | 0     | 0.13   |
 | EMTEC     | X250               | 512 GB | 2       | 46    | 0     | 0.13   |
-| EMTEC     | X150               | 240 GB | 8       | 46    | 0     | 0.13   |
-| EMTEC     | X150               | 120 GB | 3       | 30    | 0     | 0.08   |
-| EMTEC     | X150               | 960 GB | 1       | 23    | 0     | 0.06   |
+| EMTEC     | X150               | 120 GB | 4       | 23    | 0     | 0.06   |
+| EMTEC     | X150               | 960 GB | 2       | 20    | 0     | 0.05   |
+| EMTEC     | X250               | 256 GB | 1       | 9     | 0     | 0.03   |

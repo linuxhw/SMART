@@ -11,12 +11,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | LDLC      | 120GB              | 120 GB | 1       | 226   | 0     | 0.62   |
 | LDLC      | 240GB              | 240 GB | 1       | 194   | 0     | 0.53   |
-| LDLC      | F8+M.2 480         | 480 GB | 1       | 3     | 0     | 0.01   |
+| LDLC      | F8+M.2 480         | 480 GB | 2       | 185   | 0     | 0.51   |

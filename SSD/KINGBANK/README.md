@@ -11,11 +11,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KINGBANK  | KP320              | 128 GB | 1       | 20    | 0     | 0.06   |
-| KINGBANK  | KP330              | 120 GB | 3       | 12    | 0     | 0.03   |
+| KINGBANK  | KP330              | 120 GB | 5       | 38    | 0     | 0.11   |
+| KINGBANK  | KP320              | 128 GB | 2       | 30    | 0     | 0.08   |

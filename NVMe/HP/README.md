@@ -11,19 +11,21 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| HP        | SSD EX920          | 512 GB | 12      | 353   | 0     | 0.97   |
-| HP        | SSD EX900          | 250 GB | 10      | 176   | 1     | 0.39   |
-| HP        | SSD EX920          | 256 GB | 1       | 325   | 2     | 0.30   |
-| HP        | SSD EX920          | 1 TB   | 9       | 96    | 0     | 0.26   |
-| HP        | SSD EX900          | 500 GB | 9       | 106   | 9     | 0.17   |
-| HP        | SSD EX950          | 1 TB   | 8       | 58    | 0     | 0.16   |
-| HP        | SSD EX900          | 1 TB   | 7       | 202   | 6     | 0.16   |
-| HP        | SSD EX950          | 512 GB | 4       | 49    | 0     | 0.14   |
-| HP        | SSD EX950          | 2 TB   | 7       | 49    | 0     | 0.14   |
+| HP        | SSD EX920          | 512 GB | 15      | 345   | 0     | 0.95   |
+| HP        | SSD EX900          | 250 GB | 17      | 235   | 60    | 0.57   |
+| HP        | SSD EX900 Pro      | 256 GB | 1       | 193   | 0     | 0.53   |
+| HP        | SSD EX920          | 1 TB   | 12      | 158   | 0     | 0.43   |
+| HP        | SSD EX900          | 500 GB | 15      | 197   | 6     | 0.40   |
+| HP        | SSD EX950          | 512 GB | 9       | 133   | 0     | 0.37   |
+| HP        | SSD EX920          | 256 GB | 2       | 230   | 1     | 0.33   |
+| HP        | SSD EX950          | 1 TB   | 12      | 120   | 0     | 0.33   |
+| HP        | SSD EX950          | 2 TB   | 12      | 98    | 0     | 0.27   |
+| HP        | SSD EX900          | 1 TB   | 9       | 186   | 5     | 0.20   |
 | HP        | SSD EX900          | 120 GB | 3       | 18    | 0     | 0.05   |
+| HP        | SSD FX900 Pro      | 2 TB   | 1       | 0     | 0     | 0.00   |

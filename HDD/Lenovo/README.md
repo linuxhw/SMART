@@ -17,14 +17,14 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Lenovo    | WD1004FBYZ-23YC... | 1 TB   | 2       | 145   | 0     | 0.40   |
 | Lenovo    | ST1000NM0055 91... | 1 TB   | 2       | 120   | 0     | 0.33   |
+| Lenovo    | WD1004FBYZ-23YC... | 1 TB   | 4       | 76    | 0     | 0.21   |
 
 HDD by Family
 -------------
@@ -33,11 +33,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Lenovo    | RE                     | 1      | 2       | 145   | 0     | 0.40   |
 | Lenovo    | Seagate Enterprise     | 1      | 2       | 120   | 0     | 0.33   |
+| Lenovo    | RE                     | 1      | 4       | 76    | 0     | 0.21   |

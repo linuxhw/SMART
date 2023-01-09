@@ -11,12 +11,13 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| Fujitsu   | F500S-480GB        | 480 GB | 1       | 321   | 0     | 0.88   |
 | Fujitsu   | F500s 480G         | 480 GB | 1       | 119   | 0     | 0.33   |
 | Fujitsu   | F300               | 480 GB | 1       | 103   | 0     | 0.28   |
 | Fujitsu   | F500S              | 1 TB   | 1       | 3     | 0     | 0.01   |

@@ -11,12 +11,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Integral  | V Series SATA SSD  | 120 GB | 2       | 184   | 0     | 0.50   |
+| Integral  | V Series SATA SSD  | 120 GB | 3       | 189   | 0     | 0.52   |
 | Integral  | V Series SATA SSD  | 480 GB | 1       | 93    | 0     | 0.26   |
-| Integral  | V Series SATA SSD  | 240 GB | 11      | 70    | 0     | 0.19   |
+| Integral  | V Series SATA SSD  | 240 GB | 12      | 65    | 0     | 0.18   |

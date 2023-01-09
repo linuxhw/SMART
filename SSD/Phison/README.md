@@ -17,9 +17,9 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
@@ -30,25 +30,31 @@ MTBF — avg. MTBF in years per sample.
 | Phison    | SM280128GPTC15T... | 128 GB | 1       | 535   | 0     | 1.47   |
 | Phison    | SSDS30256XQC800... | 240 GB | 1       | 433   | 0     | 1.19   |
 | Phison    | S10C-512G-PHISO... | 512 GB | 1       | 406   | 0     | 1.11   |
-| Phison    | 256GB PS3110-S10C  | 256 GB | 2       | 312   | 0     | 0.86   |
 | Phison    | 128GB PS3110-S10C  | 128 GB | 2       | 308   | 0     | 0.84   |
+| Phison    | 256GB PS3110-S10C  | 256 GB | 3       | 283   | 0     | 0.78   |
 | Phison    | SATA SSD           | 64 GB  | 4       | 241   | 0     | 0.66   |
 | Phison    | SATA SSD           | 128 GB | 8       | 237   | 0     | 0.65   |
 | Phison    | SATA SSD           | 240 GB | 18      | 226   | 0     | 0.62   |
 | Phison    | S11-64G-PHISON-... | 64 GB  | 1       | 221   | 0     | 0.61   |
+| Phison    | SSM28128GPTCB3B... | 128 GB | 1       | 182   | 0     | 0.50   |
 | Phison    | SATA SSD           | 480 GB | 11      | 179   | 0     | 0.49   |
 | Phison    | SATA SSD           | 32 GB  | 1       | 165   | 0     | 0.45   |
 | Phison    | SATA SSD           | 120 GB | 43      | 157   | 0     | 0.43   |
 | Phison    | SATA SSD           | 1 TB   | 7       | 102   | 0     | 0.28   |
 | Phison    | SSM28512GPTCB3B... | 512 GB | 1       | 101   | 0     | 0.28   |
+| Phison    | 128GB PS3109-S9    | 128 GB | 4       | 115   | 1     | 0.27   |
 | Phison    | SATA SSD           | 256 GB | 8       | 90    | 0     | 0.25   |
+| Phison    | SSE064GPTC0-S81    | 64 GB  | 1       | 55    | 0     | 0.15   |
 | Phison    | SATA SSD           | 960 GB | 3       | 52    | 0     | 0.14   |
-| Phison    | 128GB PS3109-S9    | 128 GB | 2       | 77    | 1     | 0.13   |
-| Phison    | S11-256G-PHISON... | 256 GB | 1       | 12    | 0     | 0.04   |
+| Phison    | S11-512G-PHISON... | 512 GB | 5       | 45    | 0     | 0.12   |
+| Phison    | SSEP128GTMC0-S10C  | 128 GB | 1       | 41    | 0     | 0.11   |
+| Phison    | S11-256G-PHISON... | 256 GB | 3       | 40    | 0     | 0.11   |
+| Phison    | SSEP064GTMC0-S91   | 64 GB  | 1       | 32    | 0     | 0.09   |
+| Phison    | S11-128G-PHISON... | 128 GB | 5       | 14    | 0     | 0.04   |
 | Phison    | SSO256GTLC9-SBC-2  | 256 GB | 1       | 12    | 0     | 0.03   |
-| Phison    | S11-128G-PHISON... | 128 GB | 3       | 7     | 0     | 0.02   |
-| Phison    | S11-512G-PHISON... | 512 GB | 2       | 7     | 0     | 0.02   |
+| Phison    | 128GB SSD          | 128 GB | 1       | 8     | 0     | 0.02   |
 | Phison    | SSBP064GTB3C0-S11  | 64 GB  | 1       | 6     | 0     | 0.02   |
+| Phison    | M.2 128GB SSO12... | 128 GB | 1       | 4     | 0     | 0.01   |
 | Phison    | S11-256G-PHISON... | 256 GB | 1       | 0     | 0     | 0.00   |
 
 SSD by Family
@@ -58,12 +64,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Phison    | Phison Driven SSDs     | 3      | 4       | 390   | 0     | 1.07   |
-| Phison    | Unknown                | 14     | 19      | 203   | 1     | 0.55   |
+| Phison    | Phison Driven SSDs     | 4      | 6       | 328   | 0     | 0.90   |
 | Phison    | Driven OEM SSDs        | 10     | 105     | 182   | 0     | 0.50   |
+| Phison    | Unknown                | 19     | 33      | 142   | 1     | 0.38   |

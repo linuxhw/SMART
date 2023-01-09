@@ -17,9 +17,9 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
@@ -29,6 +29,8 @@ MTBF — avg. MTBF in years per sample.
 | IBM       | DTLA-307020        | 20 GB  | 1       | 754   | 16    | 0.12   |
 | IBM       | DJSA-220           | 12 GB  | 1       | 138   | 5     | 0.06   |
 | IBM       | DARA-206000        | 6 GB   | 1       | 118   | 5     | 0.05   |
+| IBM       | DTLA-307045        | 48 GB  | 1       | 346   | 21    | 0.04   |
+| IBM       | ST3500641NS 39M... | 500 GB | 1       | 1423  | 124   | 0.03   |
 
 HDD by Family
 -------------
@@ -37,12 +39,14 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | IBM       | Travelstar 25GS, 18... | 2      | 2       | 156   | 3     | 0.29   |
 | IBM       | Deskstar 40GV & 75G... | 3      | 4       | 1041  | 24    | 0.27   |
 | IBM       | Travelstar 32GH, 30... | 1      | 1       | 138   | 5     | 0.06   |
+| IBM       | Deskstar 40GV & 75G... | 1      | 1       | 346   | 21    | 0.04   |
+| IBM       | Unknown                | 1      | 1       | 1423  | 124   | 0.03   |

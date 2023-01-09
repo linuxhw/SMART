@@ -11,12 +11,10 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| TREKSTOR  | TREKSTORSSD256GB   | 250 GB | 1       | 260   | 0     | 0.71   |
-| TREKSTOR  | TREKSTORSSD128GB   | 128 GB | 2       | 122   | 78    | 0.17   |
-| TREKSTOR  | TREKSTORSSD512GB   | 500 GB | 1       | 5     | 0     | 0.01   |
+| TREKSTOR  | TREKSTORSSD128GB   | 128 GB | 1       | 105   | 0     | 0.29   |
