@@ -1,0 +1,278 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.16.0-kali7-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     TOSHIBA THNS064GG2BNAA
+Serial Number:    --
+Firmware Version: AGSA0203
+User Capacity:    64,023,257,088 bytes [64.0 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      1.8 inches
+TRIM Command:     Unavailable
+Device is:        Not in smartctl database 7.3/5319
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.6, 3.0 Gb/s
+Local Time is:    Tue Aug  2 08:03:57 2022 EDT
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM level is:     254 (maximum performance)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  272) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (   5) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Spin_Up_Time            POS---   100   100   050    -    0
+  5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
+  7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
+  8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    3891
+ 10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    4083
+167 Unknown_Attribute       -O---K   100   100   000    -    0
+168 Unknown_Attribute       -O--C-   100   100   000    -    75
+169 Unknown_Attribute       PO----   100   100   010    -    420952277192
+170 Unknown_Attribute       PO----   100   100   010    -    90203422818
+173 Unknown_Attribute       -O--C-   100   100   000    -    25789202551
+175 Program_Fail_Count_Chip PO----   100   100   010    -    0
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    113
+194 Temperature_Celsius     -O---K   060   043   030    -    40 (Min/Max 6/57)
+240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 403 (device log contains only the most recent 256 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 403 [146] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 23 00 00 d0 15 53 00 40 00  Error: ICRC, ABRT 2083 sectors at LBA = 0xd0155300 = 3491058432
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 08 23 09 44 d0 15 53 00 40 00     01:42:49.896  READ DMA
+  c8 00 00 00 08 00 00 00 09 44 d0 40 00     01:42:49.896  READ DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:49.896  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:49.896  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:49.896  SET MULTIPLE MODE
+
+Error 402 [145] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 a0 38 00 00 60 fb d1 00 44 00  Error: ICRC, ABRT 41016 sectors at LBA = 0x64fbd100 = 1694224640
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 a0 38 b6 d0 60 fb d1 00 44 00     01:42:49.881  READ DMA
+  ca 00 00 00 a0 00 00 00 b6 d0 60 44 00     01:42:49.881  WRITE DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:49.881  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:49.881  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:49.881  SET MULTIPLE MODE
+
+Error 401 [144] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 40 00 00 00 a3 27 b8 44 00  Error: ICRC, ABRT 2112 sectors at LBA = 0x04a327b8 = 77801400
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 08 40 4f 21 00 a3 27 b8 44 00     01:42:49.870  READ DMA
+  c8 00 00 00 08 00 00 00 4f 21 00 43 00     01:42:49.870  READ DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:49.870  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:49.870  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:49.870  SET MULTIPLE MODE
+
+Error 400 [143] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 60 00 00 00 ca c2 00 42 00  Error: ICRC, ABRT 96 sectors at LBA = 0x02cac200 = 46842368
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 02 00 00 60 00 00 00 ca c2 00 42 00     01:42:01.601  READ DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:01.601  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:01.601  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:01.601  SET MULTIPLE MODE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     01:42:01.590  [VENDOR SPECIFIC]
+
+Error 399 [142] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 38 00 00 00 fb d1 00 44 00  Error: ICRC, ABRT 56 sectors at LBA = 0x04fbd100 = 83611904
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 02 00 00 38 00 00 00 fb d1 00 44 00     01:42:01.590  READ DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:01.590  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:01.590  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:01.590  SET MULTIPLE MODE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     01:42:01.576  [VENDOR SPECIFIC]
+
+Error 398 [141] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 a0 38 00 00 60 fb d1 00 44 00  Error: ICRC, ABRT 41016 sectors at LBA = 0x64fbd100 = 1694224640
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 a0 38 b6 d0 60 fb d1 00 44 00     01:42:01.562  READ DMA
+  ca 00 00 00 a0 00 00 00 b6 d0 60 44 00     01:42:01.562  WRITE DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:01.561  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:01.561  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:01.561  SET MULTIPLE MODE
+
+Error 397 [140] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 60 00 00 00 ca c2 00 42 00  Error: ICRC, ABRT 96 sectors at LBA = 0x02cac200 = 46842368
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 02 00 00 60 00 00 00 ca c2 00 42 00     01:42:00.576  READ DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:00.576  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:00.576  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:00.576  SET MULTIPLE MODE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     01:42:00.562  [VENDOR SPECIFIC]
+
+Error 396 [139] occurred at disk power-on lifetime: 3223 hours (134 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 a0 38 00 00 60 fb d1 00 44 00  Error: ICRC, ABRT 41016 sectors at LBA = 0x64fbd100 = 1694224640
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 a0 38 b6 d0 60 fb d1 00 44 00     01:42:00.561  READ DMA
+  ca 00 00 00 a0 00 00 00 b6 d0 60 44 00     01:42:00.561  WRITE DMA
+  ef 00 02 00 00 00 00 00 00 00 00 40 00     01:42:00.561  SET FEATURES [Enable write cache]
+  ef 00 03 00 45 00 00 00 00 00 00 40 00     01:42:00.561  SET FEATURES [Set transfer mode]
+  c6 00 00 00 10 00 00 00 00 00 00 40 00     01:42:00.561  SET MULTIPLE MODE
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
+

@@ -1,0 +1,265 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Hitachi Deskstar 7K1000.C
+Device Model:     HDS721050CLA362
+Serial Number:    --
+LU WWN Device Id: 5 000cca ...
+Firmware Version: JP2OA3MA
+User Capacity:    500,107,862,016 bytes [500 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    7200 rpm
+Form Factor:      3.5 inches
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA8-ACS T13/1699-D revision 4
+SATA Version is:  SATA 2.6, 3.0 Gb/s
+Local Time is:    Thu Jul 28 10:46:45 2022 BST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Write SCT (Get) Feature Control Command failed: Read of ATA output registers not implemented [JMicron]
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 5008) seconds.
+Offline data collection
+capabilities: 			 (0x5b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  84) minutes.
+SCT capabilities: 	       (0x003d)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   092   092   016    -    48
+  2 Throughput_Performance  P-S---   136   136   054    -    94
+  3 Spin_Up_Time            POS---   117   117   024    -    195 (Average 195)
+  4 Start_Stop_Count        -O--C-   097   097   000    -    14937
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    15
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   122   122   020    -    39
+  9 Power_On_Hours          -O--C-   095   095   000    -    38239
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    14671
+192 Power-Off_Retract_Count -O--CK   087   087   000    -    15646
+193 Load_Cycle_Count        -O--C-   087   087   000    -    15646
+194 Temperature_Celsius     -O----   166   166   000    -    36 (Min/Max 14/46)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    15
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    46
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
+Read GP Log Directory failed
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xe0           SL  R/W      1  SCT Command/Status
+0xe1           SL  R/W      1  SCT Data Transfer
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 8 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 8 occurred at disk power-on lifetime: 24665 hours (1027 days + 17 hours)
+  When the command that caused the error occurred, the device was in standby mode.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  02 51 00 00 00 00 00  Error: TK0NF
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  10 20 00 00 00 00 a0 ff   9d+07:13:35.157  RECALIBRATE [OBS-4]
+  10 20 00 00 00 00 a0 00   9d+07:13:15.780  RECALIBRATE [OBS-4]
+  91 20 3f 01 00 00 af 00   9d+07:13:15.779  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 01 01 00 00 a0 00   9d+07:13:15.768  IDENTIFY DEVICE
+  ec 00 01 01 00 00 a0 00   9d+07:13:15.577  IDENTIFY DEVICE
+
+Error 7 occurred at disk power-on lifetime: 9706 hours (404 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 00 a8 36 09  Error: UNC 8 sectors at LBA = 0x0936a800 = 154576896
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 00 a8 36 e0 00  32d+16:17:44.787  READ DMA EXT
+  25 00 08 00 a8 36 e0 00  32d+16:17:26.435  READ DMA EXT
+  25 00 08 f8 a7 36 e9 00  32d+16:17:26.434  READ DMA EXT
+  25 00 08 f0 a7 36 e9 00  32d+16:17:26.434  READ DMA EXT
+  25 00 08 e8 a7 36 e9 00  32d+16:17:26.433  READ DMA EXT
+
+Error 6 occurred at disk power-on lifetime: 9706 hours (404 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 00 a8 36 09  Error: UNC 8 sectors at LBA = 0x0936a800 = 154576896
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 00 a8 36 e0 00  32d+16:17:26.435  READ DMA EXT
+  25 00 08 f8 a7 36 e9 00  32d+16:17:26.434  READ DMA EXT
+  25 00 08 f0 a7 36 e9 00  32d+16:17:26.434  READ DMA EXT
+  25 00 08 e8 a7 36 e9 00  32d+16:17:26.433  READ DMA EXT
+  25 00 08 e0 a7 36 e9 00  32d+16:17:26.432  READ DMA EXT
+
+Error 5 occurred at disk power-on lifetime: 1410 hours (58 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 86 f2 a1 5f 00  Error: UNC 134 sectors at LBA = 0x005fa1f2 = 6267378
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 00 78 a1 5f e0 00  10d+16:06:27.915  READ DMA EXT
+  25 00 00 78 a0 5f e0 00  10d+16:06:27.911  READ DMA EXT
+  25 00 00 78 9f 5f e0 00  10d+16:06:27.907  READ DMA EXT
+  25 00 00 78 9e 5f e0 00  10d+16:06:27.903  READ DMA EXT
+  25 00 00 78 9d 5f e0 00  10d+16:06:27.837  READ DMA EXT
+
+Error 4 occurred at disk power-on lifetime: 1410 hours (58 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 06 f2 a1 5f 00  Error: UNC 6 sectors at LBA = 0x005fa1f2 = 6267378
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 f0 a1 5f e0 00  10d+16:05:47.353  READ DMA EXT
+  25 00 08 f0 a1 5f e0 00  10d+16:05:28.789  READ DMA EXT
+  25 00 08 f0 a1 5f e0 00  10d+16:05:10.224  READ DMA EXT
+  25 00 08 f0 a1 5f e0 00  10d+16:04:51.744  READ DMA EXT
+  25 00 08 40 a3 5f e0 00  10d+16:04:51.714  READ DMA EXT
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     32843         -
+# 2  Short offline       Completed without error       00%     32535         -
+# 3  Short offline       Completed without error       00%     32382         -
+# 4  Short offline       Completed without error       00%     24541         -
+# 5  Short offline       Completed without error       00%     24534         -
+# 6  Short offline       Completed without error       00%     22548         -
+# 7  Short offline       Completed without error       00%     22428         -
+# 8  Short offline       Completed without error       00%     21619         -
+# 9  Short offline       Completed without error       00%     21617         -
+#10  Short offline       Completed without error       00%     21615         -
+#11  Short offline       Completed without error       00%     21352         -
+#12  Short offline       Completed without error       00%     20471         -
+#13  Short offline       Completed without error       00%     19891         -
+#14  Short offline       Completed without error       00%     19856         -
+#15  Short offline       Completed without error       00%     19829         -
+#16  Short offline       Completed without error       00%     19289         -
+#17  Short offline       Completed without error       00%      8277         -
+#18  Extended offline    Interrupted (host reset)      90%      8050         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Status Version:                  3
+SCT Version (vendor specific):       256 (0x0100)
+Device State:                        Active (0)
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     23/37 Celsius
+Lifetime    Min/Max Temperature:     14/46 Celsius
+Under/Over Temperature Limit Count:   0/0
+
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        1 minute
+Min/Max recommended Temperature:      0/60 Celsius
+Min/Max Temperature Limit:           -40/70 Celsius
+Temperature History Size (Index):    128 (23)
+
+Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
+SCT (Get) Error Recovery Control command failed
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
+Read SATA Phy Event Counters failed
+

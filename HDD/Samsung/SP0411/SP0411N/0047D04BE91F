@@ -1,0 +1,211 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.71-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     SAMSUNG SP0411N
+Serial Number:    --
+Firmware Version: TW100-11
+User Capacity:    40,057,224,704 bytes [40.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
+Local Time is:    Thu Apr  7 00:24:20 2022 +07
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  900) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  15) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    0
+  3 Spin_Up_Time            POS---   073   062   000    -    4864
+  4 Start_Stop_Count        -O--CK   097   097   000    -    4011
+  5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
+  7 Seek_Error_Rate         PO-R--   253   253   051    -    0
+  8 Seek_Time_Performance   --S--K   253   253   000    -    0
+  9 Power_On_Hours          -O--CK   098   098   000    -    1545523
+ 10 Spin_Retry_Count        PO--C-   253   253   049    -    0
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2214
+194 Temperature_Celsius     -O---K   166   124   000    -    24
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    181580740
+196 Reallocated_Event_Count -O--C-   085   085   000    -    33
+197 Current_Pending_Sector  PO--CK   253   253   010    -    0
+198 Offline_Uncorrectable   P---CK   085   085   010    -    33
+199 UDMA_CRC_Error_Count    PO-R--   100   100   051    -    838
+200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
+201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      2  Comprehensive SMART error log
+0x06           SL  R/O      2  SMART self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 65535 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 65535 occurred at disk power-on lifetime: 12878 hours (536 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 e0 c3 42 f0  Error: ICRC, ABRT at LBA = 0x0042c3e0 = 4375520
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 e0 c3 42 f0 00      03:59:11.938  READ DMA
+  c8 00 00 e0 c3 41 f0 00      03:59:11.938  READ DMA
+  c8 00 00 e0 c3 40 f0 00      03:59:11.938  READ DMA
+  c8 00 00 e0 c3 3f f0 00      03:59:11.938  READ DMA
+  c8 00 00 e0 c3 3e f0 00      03:59:11.938  READ DMA
+
+Error 65534 occurred at disk power-on lifetime: 12872 hours (536 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 e0 90 1f b7 f0  Error: ICRC, ABRT 224 sectors at LBA = 0x00b71f90 = 12001168
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 e0 90 1f b7 f0 00      01:48:02.313  READ DMA
+  c8 00 00 38 1f b5 f0 00      01:48:02.313  READ DMA
+  c8 00 00 38 1f b4 f0 00      01:48:02.313  READ DMA
+  c8 00 00 d0 1f d9 f0 00      01:48:02.313  READ DMA
+  c8 00 90 00 1f aa f0 00      01:48:02.313  READ DMA
+
+Error 65533 occurred at disk power-on lifetime: 12867 hours (536 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 01 00 00 b0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 20 01 01 00 00 b0 00      00:00:13.813  READ DMA
+  ef 03 45 01 c2 10 b0 00      00:00:13.813  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 c2 10 b0 00      00:00:13.813  SET FEATURES [Set transfer mode]
+  c6 da 10 01 c2 4f b0 00      00:00:13.813  SET MULTIPLE MODE
+  b0 da 00 01 c2 4f b0 00      00:00:13.750  SMART RETURN STATUS
+
+Error 65532 occurred at disk power-on lifetime: 12867 hours (536 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 01 00 00 b0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 20 01 01 00 00 b0 00      00:01:53.250  READ DMA
+  ef 03 45 01 c2 10 b0 00      00:01:53.250  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 c2 10 b0 00      00:01:53.250  SET FEATURES [Set transfer mode]
+  c6 da 10 01 c2 4f b0 00      00:01:53.250  SET MULTIPLE MODE
+  b0 da 00 01 c2 4f b0 00      00:01:53.250  SMART RETURN STATUS
+
+Error 65531 occurred at disk power-on lifetime: 12867 hours (536 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 01 00 00 b0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 20 01 01 00 00 b0 00      00:01:05.250  READ DMA
+  ef 03 45 01 c2 10 b0 00      00:01:05.250  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 c2 10 b0 00      00:01:05.250  SET FEATURES [Set transfer mode]
+  c6 da 10 01 c2 4f b0 00      00:01:05.250  SET MULTIPLE MODE
+  b0 da 00 01 c2 4f b0 00      00:01:05.250  SMART RETURN STATUS
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+Warning! SMART Self-Test Log Structure error: invalid SMART checksum.
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

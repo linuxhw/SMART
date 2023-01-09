@@ -1,0 +1,202 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Seagate U10
+Device Model:     ST310212A
+Serial Number:    --
+Firmware Version: 3.02
+User Capacity:    10,242,892,800 bytes [10.2 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 (minor revision not indicated)
+Local Time is:    Sun May 29 19:24:02 2022 BST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM level is:     254 (maximum performance)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Unavailable
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 2400) seconds.
+Offline data collection
+capabilities: 			 (0x1d) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Abort Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  14) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     ---R--   083   073   000    -    47832255
+  3 Spin_Up_Time            -OS---   098   098   000    -    0
+  4 Start_Stop_Count        PO--C-   100   100   020    -    945
+  5 Reallocated_Sector_Ct   PO--C-   099   099   036    -    51
+  7 Seek_Error_Rate         P--R--   061   060   030    -    81627211585
+  9 Power_On_Hours          -O--C-   098   098   000    -    2190
+ 10 Spin_Retry_Count        PO--C-   100   100   090    -    0
+ 12 Power_Cycle_Count       PO--C-   099   099   000    -    1485
+197 Current_Pending_Sector  ----CK   100   100   000    -    0
+198 Offline_Uncorrectable   ----CK   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 0
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 195 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 195 occurred at disk power-on lifetime: 1486 hours (61 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 0f 21 84 39 ac  Error: UNC at LBA = 0x0c398421 = 205095969
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 ff 10 20 84 39 ac 00      00:33:59.478  READ MULTIPLE
+  ef 03 10 10 41 00 e0 00      00:33:58.727  SET FEATURES [Set transfer mode]
+  ef 03 10 10 41 00 e0 00      00:33:58.726  SET FEATURES [Set transfer mode]
+  c6 ff 10 10 41 00 a0 00      00:33:58.726  SET MULTIPLE MODE
+  10 ff 10 30 df 2f af 00      00:33:58.726  RECALIBRATE [OBS-4]
+
+Error 194 occurred at disk power-on lifetime: 1486 hours (61 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 0f 21 84 39 ac  Error: UNC at LBA = 0x0c398421 = 205095969
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 ff 10 20 84 39 ac 00      00:33:55.072  READ MULTIPLE
+  ef 03 10 10 41 00 e0 00      00:33:54.321  SET FEATURES [Set transfer mode]
+  ef 03 10 10 41 00 e0 00      00:33:54.320  SET FEATURES [Set transfer mode]
+  c6 ff 10 10 41 00 a0 00      00:33:54.320  SET MULTIPLE MODE
+  10 ff 10 30 df 2f af 00      00:33:54.320  RECALIBRATE [OBS-4]
+
+Error 193 occurred at disk power-on lifetime: 1486 hours (61 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 0f 21 84 39 ac  Error: UNC at LBA = 0x0c398421 = 205095969
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 ff 10 20 84 39 ac 00      00:33:50.653  READ MULTIPLE
+  ef 03 10 10 41 00 e0 00      00:33:49.903  SET FEATURES [Set transfer mode]
+  ef 03 10 10 41 00 e0 00      00:33:49.902  SET FEATURES [Set transfer mode]
+  c6 ff 10 10 41 00 a0 00      00:33:49.902  SET MULTIPLE MODE
+  10 ff 10 30 df 2f af 00      00:33:49.901  RECALIBRATE [OBS-4]
+
+Error 192 occurred at disk power-on lifetime: 1486 hours (61 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 0f 21 84 39 ac  Error: UNC at LBA = 0x0c398421 = 205095969
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 ff 10 20 84 39 ac 00      00:33:46.243  READ MULTIPLE
+  ef 03 10 10 41 00 e0 00      00:33:45.492  SET FEATURES [Set transfer mode]
+  ef 03 10 10 41 00 e0 00      00:33:45.492  SET FEATURES [Set transfer mode]
+  c6 ff 10 10 41 00 a0 00      00:33:45.492  SET MULTIPLE MODE
+  10 ff 10 30 df 2f af 00      00:33:45.491  RECALIBRATE [OBS-4]
+
+Error 191 occurred at disk power-on lifetime: 1486 hours (61 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 0f 21 84 39 ac  Error: UNC at LBA = 0x0c398421 = 205095969
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c4 ff 0f 01 84 39 ac 00      00:33:41.846  READ MULTIPLE
+  ef 03 3f 10 41 00 e0 00      00:33:41.094  SET FEATURES [Set transfer mode]
+  ef 03 3f 10 41 00 e0 00      00:33:41.094  SET FEATURES [Set transfer mode]
+  c6 ff 3f 10 41 00 a0 00      00:33:41.094  SET MULTIPLE MODE
+  10 ff 3f 30 df 2f af 00      00:33:41.093  RECALIBRATE [OBS-4]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      2085         -
+# 2  Short offline       Completed without error       00%      2076         -
+# 3  Short offline       Completed without error       00%      1977         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
