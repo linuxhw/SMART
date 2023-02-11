@@ -20,3 +20,4 @@ MTBF - avg. MTBF in years per sample.
 | V-GeN     | V-GEN10SM19EG25... | 256 GB | 1       | 196   | 0     | 0.54   |
 | V-GeN     | V-GEN11SM20AR51... | 512 GB | 1       | 14    | 0     | 0.04   |
 | V-GeN     | V-GEN08SM22SCY5... | 512 GB | 1       | 7     | 0     | 0.02   |
+| V-GeN     | V-GEN08MA22SCY1... | 128 GB | 1       | 1     | 0     | 0.00   |

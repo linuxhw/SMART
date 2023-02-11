@@ -23,7 +23,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Mushkin   | MKNSSDCR120GB      | 120 GB | 7       | 1409  | 2     | 3.31   |
+| Mushkin   | MKNSSDCR120GB      | 120 GB | 8       | 1306  | 4     | 2.91   |
 | Mushkin   | MKNSSDCR60GB-7     | 64 GB  | 3       | 865   | 2     | 2.27   |
 | Mushkin   | MKNSSDAT60GB-DX    | 64 GB  | 1       | 728   | 0     | 2.00   |
 | Mushkin   | MKNSSDCR240GB      | 240 GB | 4       | 1034  | 522   | 1.34   |
@@ -33,6 +33,7 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDCR120GB-7    | 120 GB | 3       | 711   | 343   | 0.92   |
 | Mushkin   | MKNSSDCR240GB-7    | 240 GB | 1       | 326   | 0     | 0.89   |
 | Mushkin   | MKNSSDSR1TB        | 1 TB   | 1       | 324   | 0     | 0.89   |
+| Mushkin   | MKNSSDSR250GB      | 250 GB | 3       | 322   | 0     | 0.88   |
 | Mushkin   | MKNSSDAT240GB-DX   | 240 GB | 1       | 299   | 0     | 0.82   |
 | Mushkin   | MKNSSDS2120GB      | 120 GB | 1       | 282   | 0     | 0.77   |
 | Mushkin   | MKNSSDSR500GB      | 500 GB | 2       | 266   | 0     | 0.73   |
@@ -46,7 +47,6 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDRW500GB      | 480 GB | 1       | 140   | 0     | 0.38   |
 | Mushkin   | MKNSSDE3240GB      | 240 GB | 2       | 134   | 0     | 0.37   |
 | Mushkin   | MKNSSDAT60GB-V     | 64 GB  | 1       | 106   | 0     | 0.29   |
-| Mushkin   | MKNSSDSR250GB      | 250 GB | 2       | 99    | 0     | 0.27   |
 | Mushkin   | MKNSSDEC120GB      | 120 GB | 1       | 86    | 0     | 0.24   |
 | Mushkin   | MKNSSDCR480GB      | 480 GB | 1       | 55    | 0     | 0.15   |
 | Mushkin   | MKNSSDRE2TB        | 2 TB   | 2       | 45    | 0     | 0.13   |
@@ -81,6 +81,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Mushkin   | SandForce Driven SSDs  | 16     | 34      | 683   | 182   | 1.42   |
+| Mushkin   | SandForce Driven SSDs  | 16     | 35      | 681   | 177   | 1.38   |
 | Mushkin   | Silicon Motion base... | 6      | 13      | 120   | 0     | 0.33   |
-| Mushkin   | Unknown                | 22     | 40      | 148   | 109   | 0.25   |
+| Mushkin   | Unknown                | 22     | 41      | 163   | 107   | 0.29   |

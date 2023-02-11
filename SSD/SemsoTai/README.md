@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| SemsoTai  | L150 SSD           | 240 GB | 1       | 67    | 0     | 0.18   |
 | SemsoTai  | S200 2280          | 256 GB | 1       | 8     | 10    | 0.00   |

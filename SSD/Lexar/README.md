@@ -26,14 +26,15 @@ MTBF - avg. MTBF in years per sample.
 | Lexar     | 480GB SSD          | 480 GB | 2       | 201   | 0     | 0.55   |
 | Lexar     | SSD                | 120 GB | 2       | 182   | 0     | 0.50   |
 | Lexar     | 120GB SSD          | 120 GB | 2       | 180   | 0     | 0.49   |
-| Lexar     | SSD                | 128 GB | 10      | 160   | 0     | 0.44   |
-| Lexar     | 256GB SSD          | 256 GB | 29      | 97    | 0     | 0.27   |
-| Lexar     | 1TB SSD            | 1 TB   | 9       | 86    | 1     | 0.23   |
+| Lexar     | SSD                | 128 GB | 11      | 170   | 0     | 0.47   |
+| Lexar     | 1TB SSD            | 1 TB   | 11      | 98    | 1     | 0.26   |
+| Lexar     | 256GB SSD          | 256 GB | 32      | 88    | 0     | 0.24   |
+| Lexar     | 240GB SSD          | 240 GB | 8       | 78    | 0     | 0.21   |
 | Lexar     | SSD                | 480 GB | 3       | 77    | 0     | 0.21   |
-| Lexar     | 512GB SSD          | 512 GB | 8       | 69    | 0     | 0.19   |
-| Lexar     | 128GB SSD          | 128 GB | 28      | 56    | 0     | 0.16   |
-| Lexar     | SSD                | 240 GB | 3       | 48    | 0     | 0.13   |
-| Lexar     | 240GB SSD          | 240 GB | 7       | 46    | 0     | 0.13   |
+| Lexar     | 128GB SSD          | 128 GB | 30      | 65    | 0     | 0.18   |
+| Lexar     | 512GB SSD          | 512 GB | 10      | 56    | 0     | 0.15   |
+| Lexar     | SSD                | 240 GB | 4       | 39    | 0     | 0.11   |
+| Lexar     | 960GB SSD          | 960 GB | 1       | 38    | 0     | 0.10   |
 
 SSD by Family
 -------------
@@ -48,5 +49,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Lexar     | Unknown                | 10     | 75      | 101   | 1     | 0.28   |
-| Lexar     | 128GB SSD              | 1      | 28      | 56    | 0     | 0.16   |
+| Lexar     | Unknown                | 11     | 86      | 99    | 1     | 0.27   |
+| Lexar     | 128GB SSD              | 1      | 30      | 65    | 0     | 0.18   |

@@ -44,11 +44,11 @@ MTBF - avg. MTBF in years per sample.
 | HP        | MM0500EANCR        | 500 GB | 15      | 1721  | 83    | 1.00   |
 | HP        | Secure Hard Disk   | 500 GB | 2       | 360   | 0     | 0.99   |
 | HP        | GB0160CAABV        | 160 GB | 1       | 299   | 0     | 0.82   |
-| HP        | VB0160EAVEQ        | 160 GB | 1       | 429   | 2     | 0.39   |
 | HP        | MB2000GCWLT        | 2 TB   | 2       | 1500  | 505   | 0.39   |
 | HP        | GB0750C8047        | 752 GB | 1       | 138   | 0     | 0.38   |
 | HP        | MB1000CBZQE        | 1 TB   | 1       | 1450  | 10    | 0.36   |
 | HP        | MB1000GCWCV        | 1 TB   | 2       | 133   | 40    | 0.33   |
+| HP        | VB0160EAVEQ        | 160 GB | 2       | 216   | 513   | 0.20   |
 | HP        | MB1000EAMZE        | 1 TB   | 2       | 1797  | 1037  | 0.10   |
 | HP        | GB1000EAFJL        | 1 TB   | 1       | 2402  | 3024  | 0.00   |
 
@@ -68,7 +68,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | Seagate Barracuda 7... | 1      | 2       | 3447  | 0     | 9.44   |
 | HP        | Seagate Constellati... | 1      | 1       | 1272  | 0     | 3.49   |
 | HP        | Constellation ES.3     | 1      | 5       | 1678  | 2     | 3.42   |
-| HP        | Proliant HardDrive     | 13     | 27      | 1591  | 96    | 3.09   |
+| HP        | Proliant HardDrive     | 13     | 28      | 1534  | 129   | 2.98   |
 | HP        | 250GB SATA disk VB0... | 1      | 20      | 1175  | 3     | 2.29   |
 | HP        | RE3                    | 1      | 2       | 814   | 0     | 2.23   |
 | HP        | Unknown                | 5      | 6       | 755   | 2     | 1.47   |

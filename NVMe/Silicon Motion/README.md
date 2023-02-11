@@ -28,20 +28,22 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | BW-NV1             | 128 GB | 1       | 153   | 0     | 0.42   |
 | Silico... | M.2 (P80) 3TG3-P   | 1 TB   | 1       | 145   | 0     | 0.40   |
 | Silico... | NE-1TB             | 1 TB   | 11      | 118   | 0     | 0.33   |
-| Silico... | NVME SSD           | 256 GB | 6       | 111   | 0     | 0.31   |
+| Silico... | NE-256             | 256 GB | 26      | 111   | 0     | 0.31   |
 | Silico... | ASint AS806        | 128 GB | 1       | 106   | 0     | 0.29   |
 | Silico... | NE-512             | 512 GB | 18      | 106   | 0     | 0.29   |
 | Silico... | Reletech P400 M... | 1 TB   | 1       | 100   | 0     | 0.28   |
-| Silico... | NE-256             | 256 GB | 24      | 95    | 0     | 0.26   |
+| Silico... | C2000              | 256 GB | 1       | 95    | 0     | 0.26   |
 | Silico... | Viper VPN100       | 1 TB   | 1       | 93    | 0     | 0.25   |
+| Silico... | NVME SSD           | 256 GB | 8       | 91    | 0     | 0.25   |
 | Silico... | R5MP480G8          | 480 GB | 2       | 90    | 0     | 0.25   |
 | Silico... | R5MP120G8          | 120 GB | 3       | 83    | 0     | 0.23   |
+| Silico... | 256GB PCS PCIe ... | 256 GB | 7       | 76    | 0     | 0.21   |
 | Silico... | AITC M.2 FZ300     | 128 GB | 1       | 73    | 0     | 0.20   |
 | Silico... | WT PCIE-256GB      | 256 GB | 1       | 71    | 0     | 0.20   |
 | Silico... | NVME 512GB SSD     | 512 GB | 1       | 70    | 0     | 0.19   |
 | Silico... | NP830              | 512 GB | 1       | 66    | 0     | 0.18   |
-| Silico... | 256GB PCS PCIe ... | 256 GB | 6       | 63    | 0     | 0.17   |
 | Silico... | Asgard AN1TNVMe... | 1 TB   | 1       | 63    | 0     | 0.17   |
+| Silico... | SSD_M.2_PCIe3_5... | 512 GB | 1       | 60    | 0     | 0.17   |
 | Silico... | NE-128             | 128 GB | 16      | 59    | 5     | 0.16   |
 | Silico... | 1TB PCS PCIe M.... | 1 TB   | 4       | 54    | 0     | 0.15   |
 | Silico... | S2000              | 2 TB   | 4       | 53    | 0     | 0.15   |
@@ -62,23 +64,23 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | PCIe-8 SSD         | 512 GB | 21      | 25    | 0     | 0.07   |
 | Silico... | 512GB PCS PCIe ... | 512 GB | 3       | 25    | 0     | 0.07   |
 | Silico... | ShiJi 512GB M.2... | 512 GB | 1       | 24    | 0     | 0.07   |
+| Silico... | Maxsun 256GB NM... | 256 GB | 2       | 22    | 0     | 0.06   |
 | Silico... | IM2P33F8BR1-512GB  | 512 GB | 2       | 21    | 0     | 0.06   |
 | Silico... | R5MP240G8          | 240 GB | 2       | 21    | 0     | 0.06   |
 | Silico... | OSC PCIE           | 512 GB | 1       | 19    | 0     | 0.05   |
 | Silico... | NVMe SSD 256G      | 256 GB | 1       | 18    | 0     | 0.05   |
 | Silico... | ASint AS806        | 512 GB | 1       | 18    | 0     | 0.05   |
 | Silico... | SSD_M.2_PCI_NVM... | 1 TB   | 3       | 18    | 0     | 0.05   |
-| Silico... | 512GB              | 512 GB | 6       | 17    | 0     | 0.05   |
 | Silico... | KingSSD-N201000    | 1 TB   | 1       | 16    | 0     | 0.04   |
-| Silico... | Maxsun 256GB NM... | 256 GB | 1       | 13    | 0     | 0.04   |
+| Silico... | 512GB              | 512 GB | 7       | 14    | 0     | 0.04   |
+| Silico... | PCIe-4 SSD         | 512 GB | 3       | 13    | 0     | 0.04   |
 | Silico... | Longline SSD       | 512 GB | 1       | 13    | 0     | 0.04   |
+| Silico... | 256GB              | 256 GB | 10      | 12    | 0     | 0.03   |
 | Silico... | Qunion P20A 512... | 512 GB | 1       | 10    | 0     | 0.03   |
-| Silico... | 256GB              | 256 GB | 9       | 9     | 0     | 0.03   |
 | Silico... | YSSDM-128GN2000    | 128 GB | 1       | 9     | 0     | 0.02   |
 | Silico... | SPT256L2-2IAS7G2   | 256 GB | 4       | 7     | 0     | 0.02   |
 | Silico... | Inland NVMe SSD    | 256 GB | 2       | 6     | 0     | 0.02   |
 | Silico... | SK                 | 128 GB | 1       | 6     | 0     | 0.02   |
-| Silico... | PCIe-4 SSD         | 512 GB | 2       | 5     | 0     | 0.01   |
 | Silico... | SK                 | 2 TB   | 1       | 3     | 0     | 0.01   |
 | Silico... | AAR512GN122321030  | 512 GB | 1       | 2     | 0     | 0.01   |
 | Silico... | NVMe               | 256 GB | 1       | 2     | 0     | 0.01   |

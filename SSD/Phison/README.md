@@ -46,11 +46,11 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SATA SSD           | 256 GB | 8       | 90    | 0     | 0.25   |
 | Phison    | SSE064GPTC0-S81    | 64 GB  | 1       | 55    | 0     | 0.15   |
 | Phison    | SATA SSD           | 960 GB | 3       | 52    | 0     | 0.14   |
-| Phison    | S11-512G-PHISON... | 512 GB | 5       | 45    | 0     | 0.12   |
 | Phison    | SSEP128GTMC0-S10C  | 128 GB | 1       | 41    | 0     | 0.11   |
+| Phison    | S11-512G-PHISON... | 512 GB | 6       | 40    | 0     | 0.11   |
 | Phison    | S11-256G-PHISON... | 256 GB | 3       | 40    | 0     | 0.11   |
 | Phison    | SSEP064GTMC0-S91   | 64 GB  | 1       | 32    | 0     | 0.09   |
-| Phison    | S11-128G-PHISON... | 128 GB | 5       | 14    | 0     | 0.04   |
+| Phison    | S11-128G-PHISON... | 128 GB | 6       | 22    | 0     | 0.06   |
 | Phison    | SSO256GTLC9-SBC-2  | 256 GB | 1       | 12    | 0     | 0.03   |
 | Phison    | 128GB SSD          | 128 GB | 1       | 8     | 0     | 0.02   |
 | Phison    | SSBP064GTB3C0-S11  | 64 GB  | 1       | 6     | 0     | 0.02   |
@@ -72,4 +72,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Phison    | Phison Driven SSDs     | 4      | 6       | 328   | 0     | 0.90   |
 | Phison    | Driven OEM SSDs        | 10     | 105     | 182   | 0     | 0.50   |
-| Phison    | Unknown                | 19     | 33      | 142   | 1     | 0.38   |
+| Phison    | Unknown                | 19     | 35      | 136   | 1     | 0.37   |

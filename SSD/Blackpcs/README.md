@@ -18,3 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Blackpcs  | AS201 SSD          | 128 GB | 1       | 96    | 0     | 0.26   |
+| Blackpcs  | AS201 SSD          | 120 GB | 1       | 83    | 0     | 0.23   |
+| Blackpcs  | SSDPro             | 240 GB | 1       | 0     | 0     | 0.00   |

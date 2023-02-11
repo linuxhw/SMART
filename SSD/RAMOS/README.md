@@ -18,3 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | RAMOS     | SSD                | 256 GB | 1       | 24    | 0     | 0.07   |
+| RAMOS     | 2.5 inch SATA 2... | 256 GB | 1       | 1     | 0     | 0.00   |

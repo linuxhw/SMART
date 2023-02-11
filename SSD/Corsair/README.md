@@ -39,7 +39,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force GS           | 180 GB | 3       | 1087  | 0     | 2.98   |
 | Corsair   | CMFSSD-128GBG2D    | 128 GB | 1       | 954   | 0     | 2.62   |
 | Corsair   | Force GT           | 120 GB | 21      | 1080  | 2     | 2.40   |
-| Corsair   | Force 3 SSD        | 120 GB | 42      | 947   | 65    | 2.29   |
+| Corsair   | Force 3 SSD        | 120 GB | 43      | 934   | 63    | 2.26   |
 | Corsair   | Neutron SSD        | 256 GB | 2       | 801   | 0     | 2.20   |
 | Corsair   | Force 3 SSD        | 64 GB  | 20      | 831   | 1     | 2.20   |
 | Corsair   | Force GT           | 64 GB  | 8       | 948   | 4     | 2.17   |
@@ -47,9 +47,9 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force GS           | 90 GB  | 1       | 776   | 0     | 2.13   |
 | Corsair   | CSSD-F60GB2        | 64 GB  | 7       | 1329  | 286   | 1.96   |
 | Corsair   | Force LE SSD       | 240 GB | 4       | 709   | 0     | 1.94   |
+| Corsair   | Force GS           | 128 GB | 24      | 621   | 0     | 1.70   |
 | Corsair   | Force 3 SSD        | 480 GB | 1       | 598   | 0     | 1.64   |
 | Corsair   | CSSD-V64GB2        | 64 GB  | 2       | 597   | 0     | 1.64   |
-| Corsair   | Force GS           | 128 GB | 23      | 524   | 0     | 1.44   |
 | Corsair   | Force GT           | 90 GB  | 4       | 610   | 1     | 1.36   |
 | Corsair   | Force GS           | 240 GB | 7       | 1221  | 18    | 1.35   |
 | Corsair   | Force 3 SSD        | 90 GB  | 7       | 473   | 0     | 1.30   |
@@ -99,7 +99,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Corsair   | SandForce Driven SSDs  | 31     | 239     | 848   | 97    | 1.86   |
+| Corsair   | SandForce Driven SSDs  | 31     | 241     | 854   | 96    | 1.88   |
 | Corsair   | Unknown                | 25     | 60      | 659   | 92    | 0.90   |
 | Corsair   | Indilinx Barefoot b... | 4      | 5       | 372   | 1     | 0.83   |
 | Corsair   | Phison Driven SSDs     | 2      | 18      | 315   | 4     | 0.75   |

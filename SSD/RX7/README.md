@@ -18,4 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | RX7       | MSATA              | 512 GB | 1       | 65    | 0     | 0.18   |
+| RX7       | SSD                | 256 GB | 1       | 38    | 0     | 0.11   |
 | RX7       | 2.5                | 240 GB | 1       | 6     | 12    | 0.00   |

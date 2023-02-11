@@ -17,4 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Fanxiang  | S500PRO            | 1 TB   | 1       | 2     | 0     | 0.01   |
+| Fanxiang  | S500               | 1 TB   | 1       | 36    | 0     | 0.10   |
+| Fanxiang  | S500PRO            | 1 TB   | 3       | 15    | 0     | 0.04   |
+| Fanxiang  | S500PRO            | 2 TB   | 1       | 2     | 0     | 0.01   |

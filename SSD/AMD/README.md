@@ -27,10 +27,10 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R3SL240G           | 240 GB | 11      | 313   | 24    | 0.64   |
 | AMD       | R5S120GBSF         | 120 GB | 2       | 158   | 508   | 0.41   |
 | AMD       | R5M120G8           | 120 GB | 4       | 126   | 0     | 0.35   |
-| AMD       | R5SL240G           | 240 GB | 24      | 110   | 1     | 0.29   |
+| AMD       | R5SL240G           | 240 GB | 26      | 111   | 1     | 0.27   |
 | AMD       | R3SL480G           | 480 GB | 1       | 98    | 0     | 0.27   |
+| AMD       | R3SL120G           | 120 GB | 35      | 94    | 1     | 0.26   |
 | AMD       | R5SL480G           | 480 GB | 5       | 165   | 29    | 0.24   |
-| AMD       | R3SL120G           | 120 GB | 34      | 85    | 1     | 0.24   |
 | AMD       | R5SL120G           | 120 GB | 36      | 66    | 1     | 0.17   |
 | AMD       | R3SL60G            | 64 GB  | 5       | 156   | 87    | 0.11   |
 | AMD       | R5S240GBSF         | 240 GB | 1       | 33    | 0     | 0.09   |
@@ -53,5 +53,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| AMD       | Silicon Motion base... | 3      | 46      | 140   | 6     | 0.33   |
-| AMD       | Unknown                | 13     | 94      | 87    | 18    | 0.20   |
+| AMD       | Silicon Motion base... | 3      | 47      | 146   | 6     | 0.35   |
+| AMD       | Unknown                | 13     | 96      | 87    | 18    | 0.20   |

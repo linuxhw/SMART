@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KLLISRE   | 512GB              | 512 GB | 1       | 136   | 0     | 0.37   |
+| KLLISRE   | 512GB              | 512 GB | 3       | 89    | 0     | 0.24   |
 | KLLISRE   | 256GB              | 256 GB | 3       | 39    | 0     | 0.11   |

@@ -34,3 +34,4 @@ MTBF - avg. MTBF in years per sample.
 | Teclast   | BD256GB SHCB-2280  | 256 GB | 8       | 1     | 0     | 0.00   |
 | Teclast   | 240GB A800         | 240 GB | 1       | 1     | 0     | 0.00   |
 | Teclast   | 128GB NS550-2242   | 128 GB | 1       | 0     | 0     | 0.00   |
+| Teclast   | 240GB SSD          | 240 GB | 1       | 1     | 1012  | 0.00   |

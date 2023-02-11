@@ -18,10 +18,10 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Lenovo    | X800 NVMe M.2 2... | 512 GB | 1       | 637   | 0     | 1.75   |
-| Lenovo    | LENSE20256GMSP3... | 256 GB | 25      | 202   | 8     | 0.51   |
+| Lenovo    | LENSE20256GMSP3... | 256 GB | 26      | 226   | 8     | 0.58   |
 | Lenovo    | LENSE20512GMSP3... | 512 GB | 12      | 170   | 1     | 0.45   |
-| Lenovo    | LENSE30512GMSP3... | 512 GB | 18      | 80    | 1     | 0.22   |
-| Lenovo    | LENSE30256GMSP3... | 256 GB | 12      | 46    | 0     | 0.13   |
+| Lenovo    | LENSE30512GMSP3... | 512 GB | 19      | 78    | 1     | 0.22   |
+| Lenovo    | LENSE30256GMSP3... | 256 GB | 13      | 60    | 1     | 0.12   |
 | Lenovo    | LENSN20256GMSP3... | 256 GB | 2       | 32    | 0     | 0.09   |
 | Lenovo    | RPITJ256VFD2MWX    | 256 GB | 1       | 17    | 0     | 0.05   |
 | Lenovo    | SL700 PCI-E M.2    | 1 TB   | 1       | 0     | 0     | 0.00   |

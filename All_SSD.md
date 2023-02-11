@@ -104,6 +104,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 23D5BD928431 | 2964  | 0     | 8.12   |
 | Samsung   | SSD 840 EVO        | 250 GB | ACA50D8D6709 | 2957  | 0     | 8.10   |
 | Samsung   | SSD 840 PRO Series | 256 GB | EAAC950683C5 | 2954  | 0     | 8.10   |
+| Samsung   | SSD PM830 2.5" 7mm | 128 GB | 845E75409852 | 2947  | 0     | 8.08   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 6BAC47536AC5 | 2944  | 0     | 8.07   |
 | Samsung   | SSD 840 EVO        | 250 GB | 42D1C8877F78 | 2939  | 0     | 8.05   |
 | Samsung   | SSD 840 EVO        | 1 TB   | B2282F7319D0 | 2939  | 0     | 8.05   |
@@ -120,6 +121,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 1 TB   | B6DF801B0448 | 2863  | 0     | 7.84   |
 | Samsung   | SSD 850 PRO        | 256 GB | 81C4488F803B | 2861  | 0     | 7.84   |
 | Intel     | SSDSC2CW240A3      | 240 GB | E1259F542C09 | 2856  | 0     | 7.83   |
+| Corsair   | Force GS           | 128 GB | 0162A53965BA | 2852  | 0     | 7.81   |
 | OCZ       | VERTEX3            | 120 GB | 2FB2B1480538 | 2851  | 0     | 7.81   |
 | Corsair   | Force 3 SSD        | 240 GB | 15542E72E914 | 2849  | 0     | 7.81   |
 | OCZ       | VERTEX2            | 64 GB  | 248B9123A857 | 2833  | 0     | 7.76   |
@@ -165,6 +167,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7WD240HCFV-00003 | 240 GB | 578FC7231477 | 2673  | 0     | 7.33   |
 | Crucial   | M4-CT512M4SSD2     | 512 GB | 501AAE5C52F1 | 2673  | 0     | 7.33   |
 | Samsung   | SSD 850 PRO        | 256 GB | 3A4CF9697583 | 2671  | 0     | 7.32   |
+| Intel     | SSDSC2BW120A4      | 120 GB | A64C721F4589 | 2668  | 0     | 7.31   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 89FE1B017312 | 2665  | 0     | 7.30   |
 | Samsung   | SSD 830 Series     | 128 GB | 31D80AFF26E6 | 2661  | 0     | 7.29   |
 | OCZ       | VERTEX2            | 64 GB  | 5E15BE03492E | 2659  | 0     | 7.29   |
@@ -185,6 +188,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDX240GG25      | 240 GB | 392A170B6316 | 2596  | 0     | 7.11   |
 | Intel     | SSDSA2CW080G3      | 80 GB  | DF6EEF04F13B | 2594  | 0     | 7.11   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 65653738CAAC | 2593  | 0     | 7.11   |
+| OCZ       | VECTOR150          | 120 GB | 8A30CBB9BB95 | 2590  | 0     | 7.10   |
 | Intenso   | SSD                | 64 GB  | 44E1562D78CF | 2587  | 0     | 7.09   |
 | Samsung   | SSD 840 EVO        | 250 GB | 2CF5845B1AAA | 2574  | 0     | 7.05   |
 | Samsung   | SSD 840 Series     | 225 GB | 8989332E1A5E | 2573  | 0     | 7.05   |
@@ -193,11 +197,14 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2CW240A3      | 240 GB | 3C5D12DFECDA | 2561  | 0     | 7.02   |
 | Kingston  | SVP200S37A120G     | 120 GB | 5052CFAFEF3F | 2558  | 0     | 7.01   |
 | Toshiba   | THNSNC512GBSJ      | 512 GB | BDF7217B2675 | 2557  | 0     | 7.01   |
+| Intel     | SSDSC2BB600G4      | 600 GB | 897CBFD07F8B | 2549  | 0     | 6.99   |
 | Intel     | SSDMCEAC120B3A     | 120 GB | 64AD1CBE4FD6 | 2548  | 0     | 6.98   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 5C831ED5EC01 | 2543  | 0     | 6.97   |
 | Samsung   | MCCOE64G5MPP-0VA   | 64 GB  | E9B0AAD80086 | 2540  | 0     | 6.96   |
 | SanDisk   | SDSSDRC032G        | 32 GB  | 6DBCE60DA8FA | 2537  | 0     | 6.95   |
 | Samsung   | SSD 850 PRO        | 512 GB | D165DD189BDD | 2535  | 0     | 6.95   |
+| Samsung   | SSD 830 Series     | 256 GB | EBD7314983A7 | 2529  | 0     | 6.93   |
+| Samsung   | SSD 830 Series     | 256 GB | 94A0F52BF53B | 2525  | 0     | 6.92   |
 | Samsung   | SSD 850 PRO        | 512 GB | 4523F65CA79A | 2517  | 0     | 6.90   |
 | Samsung   | SSD 840 EVO        | 1 TB   | 1D76F33D5243 | 2516  | 0     | 6.89   |
 | HPE       | MK0800GCTZB        | 800 GB | 89A9F8E1DDD1 | 2515  | 0     | 6.89   |
@@ -220,6 +227,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT256M4SSD1     | 256 GB | 4199C87C5506 | 2445  | 0     | 6.70   |
 | Kingston  | SV300S37A60G       | 64 GB  | D626261B4D31 | 2444  | 0     | 6.70   |
 | Samsung   | SSD 830 Series     | 128 GB | 16AD7028B735 | 2440  | 0     | 6.69   |
+| Kingston  | SV300S37A120G      | 120 GB | DC0F7799143A | 2437  | 0     | 6.68   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 3B8F22490701 | 2436  | 0     | 6.67   |
 | Mushkin   | MKNSSDCR60GB-7     | 64 GB  | 4F7F7F49E875 | 2431  | 0     | 6.66   |
 | Corsair   | Force GT           | 180 GB | 54F22CDB22E1 | 2428  | 0     | 6.65   |
@@ -274,6 +282,8 @@ MTBF - avg. MTBF in years per sample.
 | OWC       | Mercury Electra... | 240 GB | 2BCF7AA4A3FC | 2306  | 0     | 6.32   |
 | Crucial   | M4-CT128M4SSD1     | 128 GB | 236490ADD0FD | 2305  | 0     | 6.32   |
 | Intel     | SSDSC2CW180A3      | 180 GB | B9C4F2848C7E | 2301  | 0     | 6.31   |
+| Samsung   | SSD 850 EVO        | 250 GB | 2DF6485FD447 | 2300  | 0     | 6.30   |
+| Samsung   | SSD 850 EVO        | 250 GB | B07506D1705A | 2300  | 0     | 6.30   |
 | Kingston  | SV300S37A120G      | 120 GB | 6994C7247F01 | 2298  | 0     | 6.30   |
 | Samsung   | SSD 830 Series     | 64 GB  | 67230D979488 | 2295  | 0     | 6.29   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 504F7E2EDCB7 | 2288  | 0     | 6.27   |
@@ -303,6 +313,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | BB49375244AF | 2230  | 0     | 6.11   |
 | Samsung   | SSD 850 EVO        | 500 GB | FABCE5AFC46D | 2227  | 0     | 6.10   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | ABBA40A70D6B | 2225  | 0     | 6.10   |
+| Samsung   | SSD 840 EVO        | 250 GB | 9CF0461AC9F3 | 2225  | 0     | 6.10   |
 | Micron    | C400-MTFDDAC128MAM | 128 GB | CD7221CCD1A0 | 2224  | 0     | 6.09   |
 | SanDisk   | SDSSDHP256G        | 256 GB | 7A22542C4C3E | 2219  | 0     | 6.08   |
 | Samsung   | SSD 840 PRO Series | 256 GB | F1AE564DD5FE | 2217  | 0     | 6.07   |
@@ -320,6 +331,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 8DAC0AF4BC1C | 2185  | 0     | 5.99   |
 | OCZ       | VECTOR             | 256 GB | DA159827A11D | 2185  | 0     | 5.99   |
 | Crucial   | CT240M500SSD1      | 240 GB | 9E8B02A0DB47 | 2184  | 0     | 5.99   |
+| Samsung   | SSD 850 EVO        | 500 GB | 753CD27E66D7 | 2184  | 0     | 5.98   |
 | Intel     | SSDSC2BB240G6      | 240 GB | 217FB6FFB582 | 2183  | 0     | 5.98   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 443B3B2A0022 | 2181  | 0     | 5.98   |
 | Micron    | M600_MTFDDAK1T0MBF | 1 TB   | BA8AF898AE54 | 2180  | 0     | 5.97   |
@@ -383,6 +395,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force 3 SSD        | 120 GB | 0DD155C0021D | 2083  | 0     | 5.71   |
 | Kingston  | SH103S3120G        | 120 GB | 9E215BA328F8 | 2083  | 0     | 5.71   |
 | Intel     | SSDSC2CW180A3      | 180 GB | 8499204C8F4E | 2082  | 0     | 5.71   |
+| Samsung   | SSD 850 EVO        | 250 GB | 0239235365A0 | 2080  | 0     | 5.70   |
 | SanDisk   | Ultra II           | 240 GB | 5A6BDAE0BAEA | 2080  | 0     | 5.70   |
 | Samsung   | SSD 850 EVO        | 250 GB | 4EEB1C4DA907 | 2077  | 0     | 5.69   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 707595286147 | 2076  | 0     | 5.69   |
@@ -397,6 +410,8 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2CW240A3      | 240 GB | 0572DE292FBD | 2067  | 0     | 5.66   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 5BCBE1E1C26E | 2067  | 0     | 5.66   |
 | Corsair   | Force 3 SSD        | 120 GB | 15C79709CDA8 | 2062  | 0     | 5.65   |
+| Espada    | C3000.6-M064       | 64 GB  | D90E9D8B2A5F | 2060  | 0     | 5.65   |
+| Samsung   | SSD 850 EVO        | 1 TB   | A193E69C926E | 2059  | 0     | 5.64   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 339A558FF80A | 2057  | 0     | 5.64   |
 | Intel     | SSDSC2BB800G4      | 800 GB | B1F626907857 | 2052  | 0     | 5.62   |
 | Intel     | SSDSC2BB120G4      | 120 GB | A3C301FC62D2 | 2051  | 0     | 5.62   |
@@ -407,6 +422,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 830 Series     | 128 GB | 0EBEBE5642C6 | 2043  | 0     | 5.60   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | FEA108805DB7 | 2040  | 0     | 5.59   |
 | Samsung   | SSD 830 Series     | 128 GB | A35A30EF23BB | 2039  | 0     | 5.59   |
+| Samsung   | SSD 850 EVO        | 120 GB | A2CD062A6543 | 2037  | 0     | 5.58   |
 | Kingston  | SV300S37A60G       | 64 GB  | A901263416A8 | 2037  | 0     | 5.58   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 25894CC4F39F | 2036  | 0     | 5.58   |
 | Kingston  | SV300S37A120G      | 120 GB | 70E912B17543 | 2035  | 0     | 5.58   |
@@ -414,6 +430,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 512 GB | 3A1C675E747E | 2031  | 0     | 5.57   |
 | Micron    | C400-MTFDDAK128MAM | 128 GB | C640C579E6DE | 2031  | 0     | 5.57   |
 | OCZ       | VERTEX2            | 120 GB | 819B931E9204 | 2030  | 0     | 5.56   |
+| Micron    | MTFDDAK256MAM-1K1  | 256 GB | 05DFE8A59842 | 2029  | 0     | 5.56   |
 | Samsung   | SSD 850 EVO        | 250 GB | 988CD7283B41 | 2027  | 0     | 5.56   |
 | Kingston  | SUV400S37240G      | 240 GB | 8214C8191AAD | 2027  | 0     | 5.55   |
 | Intel     | SSDSC2BB160G4      | 160 GB | 59B719857865 | 2027  | 0     | 5.55   |
@@ -466,6 +483,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | ED83C5A0D3EA | 1973  | 0     | 5.41   |
 | Samsung   | SSD 850 PRO        | 128 GB | 150C7CA3EECC | 1971  | 0     | 5.40   |
 | Intel     | SSDSC2BB480G4      | 480 GB | 64B1E7052C19 | 1969  | 0     | 5.40   |
+| Samsung   | MZ7PC128HAFU-000H1 | 128 GB | 2AE0D3854024 | 1968  | 0     | 5.39   |
 | Samsung   | SSD 840 Series     | 250 GB | 16DC7410E347 | 1966  | 0     | 5.39   |
 | Intel     | SSDSC2BA200G3      | 200 GB | 7C48258CE0D5 | 1965  | 0     | 5.38   |
 | Kingston  | SHFS37A240G        | 240 GB | BB0FB4746CF7 | 1965  | 0     | 5.38   |
@@ -484,10 +502,12 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS1311 240GB SSD   | 240 GB | 70B92A20381E | 1950  | 0     | 5.34   |
 | Kingston  | SV300S37A240G      | 240 GB | 7F6E7A3947B3 | 1946  | 0     | 5.33   |
 | Samsung   | SSD 840 EVO        | 250 GB | 96410AC2A273 | 1946  | 0     | 5.33   |
+| Toshiba   | TR150              | 120 GB | EEAA9C24E8A4 | 1945  | 0     | 5.33   |
 | Kingston  | SH103S3120G        | 120 GB | CF1662F58AFD | 1943  | 0     | 5.33   |
 | OCZ       | VERTEX3            | 120 GB | A52617D64A1F | 1942  | 0     | 5.32   |
 | Samsung   | SSD 850 EVO        | 250 GB | 02227B465636 | 1940  | 0     | 5.32   |
 | Samsung   | SSD 850 PRO        | 256 GB | 474F2931B27A | 1939  | 0     | 5.31   |
+| Crucial   | CT525MX300SSD1     | 528 GB | D968D0724B0B | 1935  | 0     | 5.30   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 1282A2A060CB | 1933  | 0     | 5.30   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 8060A101B6EA | 1933  | 0     | 5.30   |
 | Samsung   | SSD PM830 2.5" 7mm | 256 GB | 33A583A30570 | 1933  | 0     | 5.30   |
@@ -498,8 +518,11 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD SM1024F        | 1 TB   | 5D0CBBA39674 | 1927  | 0     | 5.28   |
 | Micron    | MTFDDAK256MAM-1K1  | 256 GB | 4D7BF9F1E396 | 1927  | 0     | 5.28   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | C0F5DDBA5CEA | 1926  | 0     | 5.28   |
+| Samsung   | SSD 840 EVO        | 250 GB | F877856FB603 | 1923  | 0     | 5.27   |
 | Apple     | SSD SM0128G        | 121 GB | 7C09A4B69F40 | 1923  | 0     | 5.27   |
+| ADATA     | SP600              | 256 GB | EE4473800794 | 1922  | 0     | 5.27   |
 | Intel     | SSDSC2BB160G4      | 160 GB | A4786207AA40 | 1919  | 0     | 5.26   |
+| Intel     | SSDMCEAW240A4      | 240 GB | 269D74D38ABC | 1918  | 0     | 5.26   |
 | Intel     | SSDSC2CT060A3      | 64 GB  | 476B0DBEF228 | 1918  | 0     | 5.26   |
 | Samsung   | SSD 850 PRO        | 256 GB | 644C4CD72883 | 1918  | 0     | 5.26   |
 | Samsung   | SSD 840 PRO Series | 128 GB | E34AD30A44C9 | 1916  | 0     | 5.25   |
@@ -546,6 +569,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 06E8F4232340 | 1871  | 0     | 5.13   |
 | Samsung   | SSD 850 EVO        | 250 GB | ECA1A40D0FF5 | 1871  | 0     | 5.13   |
 | Seagate   | ST240HM000-1G5152  | 240 GB | 124E5E7509FD | 1871  | 0     | 5.13   |
+| Crucial   | CT525MX300SSD1     | 528 GB | AB0C46D5C657 | 1870  | 0     | 5.13   |
 | Intel     | SSDSC2BB240G4C     | 240 GB | EFABEA5F8BD2 | 1870  | 0     | 5.12   |
 | Samsung   | SSD 850 EVO        | 250 GB | D123861C2A46 | 1868  | 0     | 5.12   |
 | Micron    | 1100 SATA          | 512 GB | 48402D636BB3 | 1868  | 0     | 5.12   |
@@ -553,6 +577,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 3D2CB40FB2B5 | 1866  | 0     | 5.11   |
 | Samsung   | SSD 850 PRO        | 512 GB | 620EFB1B8FF9 | 1866  | 0     | 5.11   |
 | Samsung   | MZ7PC128HAFU-000L5 | 128 GB | 2EA27F54965A | 1862  | 0     | 5.10   |
+| Samsung   | SSD 750 EVO        | 500 GB | 2E5A29C57D4B | 1862  | 0     | 5.10   |
 | Samsung   | MZ7PC128HAFU-000L1 | 128 GB | 7207737614DC | 1860  | 0     | 5.10   |
 | Corsair   | Force 3 SSD        | 120 GB | DDAFB7AF3122 | 1858  | 0     | 5.09   |
 | Samsung   | MZ7KM960HAHP-00005 | 960 GB | 45E14E356153 | 1856  | 0     | 5.09   |
@@ -591,6 +616,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 120 GB | 074B8E0E072F | 1825  | 0     | 5.00   |
 | Samsung   | SSD 840 Series     | 250 GB | 7FE4C120E1C8 | 1825  | 0     | 5.00   |
 | Samsung   | MZHPV512HDGL-00000 | 512 GB | A0CAF2BCD1E8 | 1821  | 0     | 4.99   |
+| SanDisk   | SDSSDA120G         | 120 GB | 7AC93AC68F6F | 1821  | 0     | 4.99   |
 | OWC       | Mercury Electra... | 240 GB | 6AD69B178014 | 1821  | 0     | 4.99   |
 | Toshiba   | THNSNJ128GCSU      | 128 GB | 71E28C2BE338 | 1820  | 0     | 4.99   |
 | KingSpec  | ACSC2M064S25       | 64 GB  | 629092531EEB | 1820  | 0     | 4.99   |
@@ -599,15 +625,18 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 9F90806775A6 | 1819  | 0     | 4.99   |
 | Intel     | SSDSC2BB080G4      | 80 GB  | 215362D7A085 | 1815  | 0     | 4.97   |
 | Kingston  | SVP200S37A120G     | 120 GB | 62F6B31A0B45 | 1812  | 0     | 4.96   |
+| Apple     | SSD SM1024F        | 1 TB   | 57413B70F40B | 1808  | 0     | 4.96   |
 | Samsung   | SSD 840 EVO        | 120 GB | B37BF3DDE982 | 1807  | 0     | 4.95   |
 | Kingston  | SUV400S37120G      | 120 GB | 29925A0A99C7 | 1805  | 0     | 4.95   |
 | Samsung   | SSD 830 Series     | 512 GB | E9AE8C9D0F12 | 1801  | 0     | 4.94   |
 | Kingston  | SHSS37A120G        | 120 GB | FA34FC87CA84 | 1801  | 0     | 4.94   |
 | Samsung   | SSD 850 EVO        | 250 GB | 11AFE777517C | 1801  | 0     | 4.93   |
 | Samsung   | SSD 850 EVO        | 500 GB | D621DC4EB40D | 1800  | 0     | 4.93   |
+| Samsung   | SSD 850 EVO        | 500 GB | A29D1E9F6877 | 1799  | 0     | 4.93   |
 | OCZ       | VERTEX2 3.5        | 240 GB | 53EDA0F59996 | 1798  | 0     | 4.93   |
 | Samsung   | SSD 850 PRO        | 256 GB | A21E0A2AB872 | 1798  | 0     | 4.93   |
 | OCZ       | VERTEX2            | 120 GB | 7B8501C1A087 | 1798  | 0     | 4.93   |
+| Samsung   | SSD 840 PRO Series | 256 GB | 4B1CC3B024B7 | 1796  | 0     | 4.92   |
 | Samsung   | SSD 830 Series     | 128 GB | 77F73979DC14 | 1796  | 0     | 4.92   |
 | OCZ       | VERTEX3 MI         | 120 GB | 521FBC8FEE40 | 1796  | 0     | 4.92   |
 | Kingston  | SVP100S2512G       | 512 GB | A86C5F45D13B | 1795  | 0     | 4.92   |
@@ -644,12 +673,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 1 TB   | 35FC7D644A3C | 1762  | 0     | 4.83   |
 | SanDisk   | SDSSDA240G         | 240 GB | AE168D1C6F97 | 1761  | 0     | 4.83   |
 | Kingston  | SH103S3120G        | 120 GB | 8B17D40030C0 | 1758  | 0     | 4.82   |
+| Samsung   | SSD 850 PRO        | 512 GB | 19FCB998BE75 | 1758  | 0     | 4.82   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 194C90F95F6B | 1756  | 0     | 4.81   |
 | Apple     | SSD SM128E         | 121 GB | 134F6A277EAE | 1755  | 0     | 4.81   |
 | Samsung   | SSD 850 EVO        | 500 GB | CAE2DD986200 | 1754  | 0     | 4.81   |
 | OCZ       | VERTEX4            | 128 GB | 63403AC30726 | 1752  | 0     | 4.80   |
 | Samsung   | SSD 850 EVO        | 250 GB | FF842EEC1A6F | 1752  | 0     | 4.80   |
 | Samsung   | SSD 850 EVO        | 500 GB | 7E6A958CED35 | 1751  | 0     | 4.80   |
+| Samsung   | MZ7TE128HMGR-000L1 | 128 GB | 889C5B2D3C4B | 1749  | 0     | 4.79   |
 | Samsung   | SSD 840 Series     | 250 GB | 30840F6BAE0E | 1747  | 0     | 4.79   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | B68406A64F09 | 1746  | 0     | 4.79   |
 | Samsung   | SSD 840 EVO        | 250 GB | B178EBDDD1EE | 1746  | 0     | 4.79   |
@@ -665,6 +696,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | 700628F79D38 | 1732  | 0     | 4.75   |
 | Samsung   | SSD 850 EVO        | 500 GB | 466077D84445 | 1731  | 0     | 4.74   |
 | Samsung   | SSD 850 EVO        | 500 GB | 88CEF290C29A | 1729  | 0     | 4.74   |
+| Samsung   | SSD 840 EVO        | 120 GB | 757B6163AB4F | 1729  | 0     | 4.74   |
 | Intel     | SSDSC2CT180A3      | 180 GB | 7C0E74AB2D17 | 1728  | 0     | 4.74   |
 | Samsung   | SSD 850 EVO        | 500 GB | 637F25060EB2 | 1728  | 0     | 4.74   |
 | Samsung   | SSD 850 EVO        | 500 GB | FBF20A12CF0A | 1728  | 0     | 4.74   |
@@ -677,6 +709,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 750 EVO        | 500 GB | C439D27FF431 | 1724  | 0     | 4.72   |
 | SanDisk   | SDSSDXPS240G       | 240 GB | B17893972B1A | 1723  | 0     | 4.72   |
 | SanDisk   | SDSSDA480G         | 480 GB | 983BE648DC39 | 1723  | 0     | 4.72   |
+| Toshiba   | TL100              | 120 GB | A08F43BAD49D | 1722  | 0     | 4.72   |
 | Kingston  | SV300S37A240G      | 240 GB | 8E1E80BC79B0 | 1722  | 0     | 4.72   |
 | Samsung   | MZHPV256HDGL-000H1 | 256 GB | E37215AE3546 | 1721  | 0     | 4.72   |
 | Intel     | SSDSC2BW240H6      | 240 GB | 46943404F63C | 1721  | 0     | 4.72   |
@@ -694,6 +727,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBU-SC400S37256G   | 256 GB | D342CE80F2D6 | 1714  | 0     | 4.70   |
 | WDC       | WD1001X06X-00SJVT0 | 1.1 TB | F3AAF4822FFC | 1714  | 0     | 4.70   |
 | Samsung   | SSD 850 EVO        | 500 GB | 3A08D49993E8 | 1711  | 0     | 4.69   |
+| Samsung   | SSD 840 EVO        | 250 GB | 98F07034995B | 1709  | 0     | 4.68   |
 | Samsung   | SSD 840 EVO        | 250 GB | 3C7908033615 | 1709  | 0     | 4.68   |
 | Intel     | SSDSC2BA200G4      | 200 GB | 7C9A830A690C | 1708  | 0     | 4.68   |
 | PNY       | CS900 240GB SSD    | 240 GB | 1B312197B8BD | 1707  | 0     | 4.68   |
@@ -701,9 +735,12 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDP128G         | 128 GB | F99657C58745 | 1707  | 0     | 4.68   |
 | Samsung   | SSD 840 EVO        | 120 GB | F85308903538 | 1707  | 0     | 4.68   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | FCAF3B432578 | 1706  | 0     | 4.68   |
+| Samsung   | SSD 840 EVO        | 1 TB   | FA8D55C10E14 | 1705  | 0     | 4.67   |
 | Samsung   | SSD 850 EVO        | 120 GB | CE5E96EC23C3 | 1703  | 0     | 4.67   |
 | Corsair   | Force GS           | 128 GB | C365CFB434F9 | 1703  | 0     | 4.67   |
 | ADATA     | SP800              | 32 GB  | EA4829D35561 | 1703  | 0     | 4.67   |
+| Samsung   | SSD 850 PRO        | 256 GB | B2AA5ED60690 | 1702  | 0     | 4.67   |
+| Samsung   | SSD 850 PRO        | 256 GB | C7341B072813 | 1702  | 0     | 4.67   |
 | Intel     | SSDSC2BB120G6      | 120 GB | 23DDFE1312D0 | 1702  | 0     | 4.66   |
 | Kingston  | SV300S37A120G      | 120 GB | A802DE4C3A73 | 1702  | 0     | 4.66   |
 | Intel     | SSDSC2BB240G4      | 240 GB | 8446EDAAECAF | 1702  | 0     | 4.66   |
@@ -712,7 +749,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 1 TB   | 1CA6B4E129CF | 1700  | 0     | 4.66   |
 | Toshiba   | THNSNJ256GCSY      | 256 GB | 9D88D9598C80 | 1700  | 0     | 4.66   |
 | Samsung   | SSD 850 EVO        | 500 GB | B8A9FCECE9DA | 1699  | 0     | 4.66   |
+| Samsung   | SSD 850 EVO        | 500 GB | A85FD439FC1A | 1699  | 0     | 4.66   |
 | Samsung   | SSD 850 EVO mSATA  | 500 GB | A88D2E48EBEB | 1698  | 0     | 4.65   |
+| Samsung   | SSD 860 EVO        | 500 GB | 4C30D65D7D3D | 1697  | 0     | 4.65   |
 | Samsung   | SSD 830 Series     | 256 GB | C6C21A575F79 | 1697  | 0     | 4.65   |
 | Toshiba   | THNSNJ256G8NU      | 256 GB | 44F46966F49A | 1696  | 0     | 4.65   |
 | Samsung   | SSD 850 EVO        | 500 GB | 9CA25A0060F8 | 1696  | 0     | 4.65   |
@@ -786,6 +825,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | AGILITY3           | 64 GB  | D9F219466018 | 1662  | 0     | 4.56   |
 | Kingston  | SHFS37A120G        | 120 GB | F11AF2C258D7 | 1662  | 0     | 4.55   |
 | SanDisk   | Ultra II           | 480 GB | F3B146C5BC7C | 1661  | 0     | 4.55   |
+| Samsung   | SSD 850 EVO        | 500 GB | E0BE0601681D | 1660  | 0     | 4.55   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 30A22BC01579 | 1660  | 0     | 4.55   |
 | Kingston  | SV300S37A120G      | 120 GB | 685404D808A6 | 1659  | 0     | 4.55   |
 | OCZ       | VERTEX3            | 120 GB | 14B00C4CE124 | 1657  | 0     | 4.54   |
@@ -794,6 +834,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT256MX100SSD1     | 256 GB | E672AB6C1254 | 1655  | 0     | 4.54   |
 | Samsung   | SSD PM871b 2.5 7mm | 256 GB | 9E81E0837A0B | 1654  | 0     | 4.53   |
 | Samsung   | SSD 750 EVO        | 500 GB | 7778EACD699C | 1653  | 0     | 4.53   |
+| HPE       | MK0200GEYKC        | 200 GB | 46B5AECA6B28 | 1653  | 0     | 4.53   |
 | WDC       | WDBNCE2500PNC-WRSN | 250 GB | 25CFB5A3F114 | 1651  | 0     | 4.52   |
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | CAE84ACE51DB | 1650  | 0     | 4.52   |
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | 55A03F992A1A | 1649  | 0     | 4.52   |
@@ -813,6 +854,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | AA2DB4337B4A | 1643  | 0     | 4.50   |
 | Samsung   | SSD 850 EVO        | 250 GB | 94400753003F | 1642  | 0     | 4.50   |
 | Samsung   | SSD 830 Series     | 512 GB | 2D11875358FB | 1642  | 0     | 4.50   |
+| Samsung   | SSD 830 Series     | 128 GB | 116D41514830 | 1642  | 0     | 4.50   |
 | ADATA     | SX930              | 480 GB | 049E60225856 | 1640  | 0     | 4.50   |
 | Samsung   | SSD 850 PRO        | 128 GB | CD73A397E92E | 1640  | 0     | 4.50   |
 | Samsung   | SSD 750 EVO        | 500 GB | F91925AA3E35 | 1640  | 0     | 4.49   |
@@ -865,6 +907,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | C6BA72A7C715 | 1607  | 0     | 4.41   |
 | Samsung   | SSD 850 EVO        | 250 GB | CFC88459B7C2 | 1605  | 0     | 4.40   |
 | Samsung   | SSD 850 EVO        | 500 GB | 9A1F30E51BD7 | 1605  | 0     | 4.40   |
+| Samsung   | Portable SSD T5    | 500 GB | B7F8285A9B91 | 1605  | 0     | 4.40   |
 | Samsung   | SSD 850 EVO        | 250 GB | F3615FEB402E | 1605  | 0     | 4.40   |
 | Samsung   | SSD 850 EVO        | 500 GB | 5D5944B3888F | 1604  | 0     | 4.40   |
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | C9F0F49F3700 | 1604  | 0     | 4.39   |
@@ -873,6 +916,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 120 GB | 457BAB3D2068 | 1602  | 0     | 4.39   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 9177CF63697C | 1601  | 0     | 4.39   |
 | Samsung   | SSD 850 EVO        | 250 GB | DE4BA6AED706 | 1599  | 0     | 4.38   |
+| Toshiba   | THNSNH128GCST      | 128 GB | CA806AA11D45 | 1598  | 0     | 4.38   |
 | Samsung   | SSD 850 EVO        | 250 GB | EBFC255167E7 | 1598  | 0     | 4.38   |
 | SanDisk   | Ultra II           | 480 GB | CD17591C2301 | 1597  | 0     | 4.38   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | F8AC8FC4DF2F | 1597  | 0     | 4.38   |
@@ -884,6 +928,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT512MX100SSD1     | 512 GB | 32B3A24898CF | 1593  | 0     | 4.37   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | D1177503F141 | 1593  | 0     | 4.37   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 4A2A949483AF | 1593  | 0     | 4.37   |
+| OCZ       | TRION100           | 240 GB | F6F9A911341D | 1593  | 0     | 4.37   |
 | Samsung   | SSD 850 EVO        | 500 GB | C166FBDE8534 | 1592  | 0     | 4.36   |
 | SanDisk   | SD6SB2M256G1022I   | 256 GB | FA5ED28763FD | 1592  | 0     | 4.36   |
 | Samsung   | MZHPV512HDGL-00000 | 512 GB | 504538CC1F17 | 1592  | 0     | 4.36   |
@@ -912,6 +957,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | D4D6BE44976B | 1577  | 0     | 4.32   |
 | Samsung   | SSD 840 PRO Series | 256 GB | F7AAACB619A5 | 1576  | 0     | 4.32   |
 | SanDisk   | SDSSDA120G         | 120 GB | D4CDF33A147B | 1574  | 0     | 4.31   |
+| Samsung   | SSD 850 EVO        | 250 GB | 200058217955 | 1574  | 0     | 4.31   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 2128FC837851 | 1572  | 0     | 4.31   |
 | Radeon    | R7                 | 120 GB | 4B4B38112AD1 | 1570  | 0     | 4.30   |
 | SanDisk   | SD6SB2M-512G-1006  | 512 GB | 44DDAFB593E1 | 1569  | 0     | 4.30   |
@@ -925,6 +971,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 9FC694A8FC81 | 1565  | 0     | 4.29   |
 | Kingston  | SH103S3120G        | 120 GB | 02DCE9806D73 | 1564  | 0     | 4.29   |
 | Samsung   | SSD 850 EVO        | 500 GB | 9B804ABC0641 | 1563  | 0     | 4.28   |
+| Samsung   | MZ7KM480HMHQ-00005 | 480 GB | BA2D4D22768B | 1561  | 0     | 4.28   |
+| Samsung   | MZ7KM480HMHQ-00005 | 480 GB | 63EAB25B59F9 | 1561  | 0     | 4.28   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 47B96829DD55 | 1560  | 0     | 4.28   |
 | Corsair   | Force 3 SSD        | 120 GB | 3DD0BE0DEB4A | 1560  | 0     | 4.28   |
 | Samsung   | SSD 850 EVO        | 500 GB | 83319E925181 | 1560  | 0     | 4.27   |
@@ -957,10 +1005,12 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT064M4SSD2     | 64 GB  | 0FAB862E85A7 | 1545  | 0     | 4.23   |
 | Samsung   | SSD 840 EVO        | 500 GB | 247E31897254 | 3085  | 1     | 4.23   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 4EF58844C909 | 1542  | 0     | 4.22   |
+| Samsung   | SSD 850 EVO        | 500 GB | 343C643D2A47 | 1541  | 0     | 4.22   |
 | Corsair   | Force 3 SSD        | 120 GB | 7A65BA929E08 | 1540  | 0     | 4.22   |
 | Samsung   | SSD 850 EVO        | 250 GB | C7BCEFC6AFBA | 1539  | 0     | 4.22   |
 | SanDisk   | SDSSDP128G         | 128 GB | 8797354F3DE1 | 1538  | 0     | 4.21   |
 | Kingston  | SUV400S37120G      | 120 GB | FCAB91F155C9 | 1538  | 0     | 4.21   |
+| Samsung   | SSD 840 PRO Series | 256 GB | BD9A7AA66AE3 | 1537  | 0     | 4.21   |
 | Samsung   | SSD 840 EVO        | 120 GB | 437384E29F18 | 1537  | 0     | 4.21   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 5CB5E5C305B5 | 1536  | 0     | 4.21   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 2E764D3F673A | 1534  | 0     | 4.20   |
@@ -983,6 +1033,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 5C9E5F839E62 | 1526  | 0     | 4.18   |
 | Toshiba   | THNSFC064GBSJ      | 64 GB  | AB8B73AC7074 | 1526  | 0     | 4.18   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 2CB5A39FA834 | 1526  | 0     | 4.18   |
+| Samsung   | SSD 850 EVO        | 1 TB   | 30FE88837640 | 1526  | 0     | 4.18   |
 | Samsung   | SSD 840 EVO        | 250 GB | 973D81373F22 | 1525  | 0     | 4.18   |
 | Samsung   | SSD 850 EVO        | 500 GB | D8FF237AC81B | 1525  | 0     | 4.18   |
 | Samsung   | SSD 850 EVO        | 500 GB | 5A0579634800 | 1524  | 0     | 4.18   |
@@ -999,6 +1050,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | B42A1807A307 | 1514  | 0     | 4.15   |
 | Samsung   | SSD 850 EVO        | 500 GB | 5458A59EA3B1 | 1514  | 0     | 4.15   |
 | Kingston  | SUV400S37240G      | 240 GB | C0B388EB6AE6 | 1514  | 0     | 4.15   |
+| Crucial   | CT256MX100SSD1     | 256 GB | 174B1431DA15 | 1513  | 0     | 4.15   |
 | Mushkin   | MKNSSDCR240GB      | 240 GB | 2C630356CFFA | 1513  | 0     | 4.15   |
 | Samsung   | SSD 830 Series     | 256 GB | 21321EE15316 | 1512  | 0     | 4.14   |
 | Kingston  | SH103S3120G        | 120 GB | 1CEFCCD0F92C | 1511  | 0     | 4.14   |
@@ -1037,10 +1089,12 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 7A2CED5B52A7 | 1494  | 0     | 4.09   |
 | PNY       | CS1311 120GB SSD   | 120 GB | D9CFFD4AAC24 | 1492  | 0     | 4.09   |
 | China     | SATA SSD           | 120 GB | BCB13F932CFC | 1492  | 0     | 4.09   |
+| SanDisk   | SDSSDP128G         | 128 GB | C76F882C9A3E | 1492  | 0     | 4.09   |
 | Samsung   | MZ7TY128HDHP-000L1 | 128 GB | 549787FC6E52 | 1492  | 0     | 4.09   |
 | Samsung   | MZNLN512HCJH-00000 | 512 GB | DA707BEDBB1F | 1491  | 0     | 4.09   |
 | Samsung   | MZ7TY128HDHP-000L1 | 128 GB | 92CA656F5B8D | 1490  | 0     | 4.08   |
 | Samsung   | MZ7LN256HMJP-000H1 | 256 GB | C5CA574F2581 | 1490  | 0     | 4.08   |
+| Kingston  | SA400S37480G       | 480 GB | 2A754CFBFE36 | 1489  | 0     | 4.08   |
 | Samsung   | SSD 840 EVO        | 250 GB | 98A8A90C9EAA | 1488  | 0     | 4.08   |
 | SanDisk   | SD7SN6S512G1122    | 512 GB | CC34E228ABC8 | 1488  | 0     | 4.08   |
 | Samsung   | SSD CM871 2.5 7mm  | 128 GB | 103E1EC5557C | 1487  | 0     | 4.07   |
@@ -1110,6 +1164,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDMCEAW120A4      | 120 GB | 7342196FB1CE | 1458  | 0     | 4.00   |
 | OCZ       | AGILITY3           | 64 GB  | 6552F902859D | 1457  | 0     | 3.99   |
 | Kingston  | SA400S37480G       | 480 GB | 1901D50F522C | 1457  | 0     | 3.99   |
+| Samsung   | SSD 850 EVO        | 500 GB | 124196381155 | 1457  | 0     | 3.99   |
 | OCZ       | VERTEX4            | 128 GB | C6E60DF36071 | 1455  | 0     | 3.99   |
 | Kingston  | SV300S37A120G      | 120 GB | 0673FD178F62 | 1454  | 0     | 3.99   |
 | Intel     | SSDSC2BX200G4      | 200 GB | C657080FA8C2 | 1454  | 0     | 3.98   |
@@ -1124,12 +1179,14 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHSS37A240G        | 240 GB | 8C76913CDEDE | 1451  | 0     | 3.98   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 78C682814B94 | 1449  | 0     | 3.97   |
 | Samsung   | SSD 850 EVO        | 250 GB | 14A6C1A3D9B6 | 1449  | 0     | 3.97   |
+| Samsung   | SSD 840 EVO        | 250 GB | 884A0343F4E5 | 1449  | 0     | 3.97   |
 | Samsung   | SSD 840 EVO        | 250 GB | A91EFA0B0D0E | 1449  | 0     | 3.97   |
 | SanDisk   | SDSSDA240G         | 240 GB | E7AF9631219C | 1449  | 0     | 3.97   |
 | Samsung   | SSD 860 PRO        | 256 GB | 1103D6665DA3 | 1449  | 0     | 3.97   |
 | Kingston  | SA400S37480G       | 480 GB | 336CC68AE8C9 | 1449  | 0     | 3.97   |
 | Samsung   | MZ7PA256HMDR-010H1 | 256 GB | 2E01F37FE25B | 1447  | 0     | 3.97   |
 | Kingston  | SV300S37A120G      | 120 GB | AE900A47AAD1 | 1447  | 0     | 3.97   |
+| Kingston  | SA400S37240G       | 240 GB | 40E3D176B184 | 1447  | 0     | 3.97   |
 | Intel     | SSDSC2BA100G3      | 100 GB | 2CB9177AE688 | 1447  | 0     | 3.97   |
 | Intel     | SSDSC2BA100G3      | 100 GB | 2462A907FC71 | 1446  | 0     | 3.96   |
 | Samsung   | SSD 840 EVO        | 1 TB   | 68459D122822 | 1446  | 0     | 3.96   |
@@ -1144,6 +1201,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BA100G3      | 100 GB | 314BCEB10389 | 1445  | 0     | 3.96   |
 | Intel     | SSDSC2BA100G3      | 100 GB | ED77715341C0 | 1445  | 0     | 3.96   |
 | Intel     | SSDSC2BA100G3      | 100 GB | DAD619A300A8 | 1445  | 0     | 3.96   |
+| SPCC      | SSD                | 128 GB | 25069503C444 | 1445  | 0     | 3.96   |
 | Samsung   | SSD 840 EVO        | 250 GB | 2C63BFCDE098 | 1445  | 0     | 3.96   |
 | OCZ       | VERTEX3            | 120 GB | B032CD215E69 | 1444  | 0     | 3.96   |
 | Apple     | SSD SM128E         | 121 GB | 427AEBCCDCA1 | 1443  | 0     | 3.95   |
@@ -1155,6 +1213,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | B9FB19D87F45 | 1441  | 0     | 3.95   |
 | Kingston  | SH100S3120G        | 120 GB | 31781CDABD5D | 1439  | 0     | 3.94   |
 | Samsung   | SSD 840 Series     | 250 GB | 56DD90663FA2 | 1439  | 0     | 3.94   |
+| Intel     | SSDSC1BG200G4      | 200 GB | 856BD20C92B3 | 1438  | 0     | 3.94   |
 | Crucial   | M4-CT064M4SSD3     | 64 GB  | DF4EE6002A82 | 1438  | 0     | 3.94   |
 | Micron    | C400-MTFDDAK128MAM | 128 GB | 00BF71101125 | 1438  | 0     | 3.94   |
 | OCZ       | AGILITY3           | 240 GB | 4E245F353CDD | 1438  | 0     | 3.94   |
@@ -1162,6 +1221,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A240G        | 240 GB | 045E617EBB58 | 1437  | 0     | 3.94   |
 | Samsung   | SSD 850 EVO        | 250 GB | C0464EAF2FE5 | 1436  | 0     | 3.94   |
 | Samsung   | SSD 830 Series     | 256 GB | 8835219C9D6D | 1436  | 0     | 3.93   |
+| Crucial   | CT500MX500SSD4     | 500 GB | 8C774A17F385 | 1435  | 0     | 3.93   |
 | SanDisk   | SDSSDH31024G       | 1 TB   | E4CC0220171B | 1435  | 0     | 3.93   |
 | Kingston  | SHSS37A240G        | 240 GB | 16A5A7304500 | 1435  | 0     | 3.93   |
 | Samsung   | SSD 850 EVO        | 120 GB | 1E314DA4DD0E | 1434  | 0     | 3.93   |
@@ -1190,6 +1250,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA120G         | 120 GB | 5CF28879B520 | 1428  | 0     | 3.91   |
 | Crucial   | CT960M500SSD1      | 960 GB | 92C4810662B9 | 1427  | 0     | 3.91   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1167FE1973F6 | 1427  | 0     | 3.91   |
+| Samsung   | SSD 840 EVO        | 1 TB   | 63A7E8DF16C5 | 1426  | 0     | 3.91   |
 | Intel     | SSDSA2BW160G3H     | 160 GB | ACB541BABE06 | 1425  | 0     | 3.91   |
 | Samsung   | SSD 850 EVO        | 500 GB | 32EED6FB2A6A | 1425  | 0     | 3.91   |
 | Samsung   | SSD 850 EVO        | 500 GB | 89ACCA4E42E8 | 1425  | 0     | 3.91   |
@@ -1221,6 +1282,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7SB7S512G1122    | 512 GB | A922BB8B4CEF | 1411  | 0     | 3.87   |
 | Corsair   | Force GT           | 90 GB  | 56B6F2374B31 | 1411  | 0     | 3.87   |
 | Samsung   | SSD 850 EVO        | 500 GB | 80729B444910 | 1409  | 0     | 3.86   |
+| Samsung   | SSD 850 EVO        | 120 GB | 355952A06ECC | 1409  | 0     | 3.86   |
 | SK hynix  | SC311 SATA         | 128 GB | 788F6E25B0B0 | 1409  | 0     | 3.86   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 0F0035019B2E | 1408  | 0     | 3.86   |
 | Samsung   | SSD 840 EVO        | 120 GB | 2D67E8D80E2A | 1408  | 0     | 3.86   |
@@ -1228,6 +1290,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 830 Series     | 64 GB  | 3BDDBEEFA4FA | 1407  | 0     | 3.86   |
 | Toshiba   | Q300               | 480 GB | 3D0B9B47927E | 1405  | 0     | 3.85   |
 | OCZ       | VERTEX PLUS R2     | 64 GB  | F7057828AADA | 1405  | 0     | 3.85   |
+| Samsung   | SSD 850 EVO        | 1 TB   | 9A26FEC247A2 | 1404  | 0     | 3.85   |
 | SuperM... | SSD                | 16 GB  | 1C3E7AC85B25 | 1404  | 0     | 3.85   |
 | ADATA     | SP600              | 128 GB | C5DDE139009E | 1404  | 0     | 3.85   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 91D74CB75C98 | 1402  | 0     | 3.84   |
@@ -1243,13 +1306,17 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | E7553668B55D | 1396  | 0     | 3.83   |
 | Samsung   | SSD 850 EVO        | 500 GB | C1780E6875CF | 1396  | 0     | 3.83   |
 | Samsung   | SSD 830 Series     | 128 GB | B1ACABD2EFEC | 1396  | 0     | 3.83   |
+| Samsung   | SSD 850 EVO        | 250 GB | 64A3BFAF545F | 1396  | 0     | 3.83   |
 | SanDisk   | SDSSDA120G         | 120 GB | 1F90C2815F9E | 1395  | 0     | 3.82   |
 | Corsair   | Force GS           | 180 GB | 254F51C38EFC | 1395  | 0     | 3.82   |
 | Samsung   | MZ7LN256HCHP-000L7 | 256 GB | E92AE11427DF | 1395  | 0     | 3.82   |
+| Kingston  | SA400S37480G       | 480 GB | 1F0C6156A109 | 1394  | 0     | 3.82   |
 | Samsung   | SSD 840 PRO Series | 256 GB | DEB148C58A16 | 1394  | 0     | 3.82   |
+| Samsung   | SSD 860 EVO M.2    | 500 GB | 3EACCCDFD0ED | 1393  | 0     | 3.82   |
 | SanDisk   | SDSA6DM-016G-1006  | 16 GB  | 80D50659CB23 | 1392  | 0     | 3.82   |
 | China     | SATA SSD           | 240 GB | 2B604F573E0F | 1392  | 0     | 3.81   |
 | Samsung   | SSD 840 EVO        | 250 GB | 4FE4F004AD15 | 1392  | 0     | 3.81   |
+| SanDisk   | SD8TB8U256G1001    | 256 GB | EDEC65566DCD | 1391  | 0     | 3.81   |
 | Samsung   | SSD 850 PRO        | 512 GB | FE0E8E4AC62F | 1391  | 0     | 3.81   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1F76DA3FB03A | 1390  | 0     | 3.81   |
 | Samsung   | Portable SSD T5    | 250 GB | BE70748578A7 | 1390  | 0     | 3.81   |
@@ -1340,6 +1407,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37240G      | 240 GB | 1DFC2BF32D0D | 1345  | 0     | 3.69   |
 | ADATA     | SU650              | 960 GB | 77F26BB021F6 | 1344  | 0     | 3.68   |
 | Intel     | SSDSA2CW160G3      | 160 GB | 098628A7C3FD | 1343  | 0     | 3.68   |
+| Samsung   | SSD 840 Series     | 120 GB | 824D3DACC8C0 | 1343  | 0     | 3.68   |
 | OCZ       | AGILITY3           | 64 GB  | 648DE9D4172F | 1342  | 0     | 3.68   |
 | Samsung   | SSD PM830 2.5" 7mm | 256 GB | AC0EC58AEDE9 | 1342  | 0     | 3.68   |
 | OCZ       | VERTEX2            | 64 GB  | 1F69FA7F8C2C | 1342  | 0     | 3.68   |
@@ -1350,6 +1418,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT275MX300SSD1     | 275 GB | DAC879A50C83 | 1341  | 0     | 3.68   |
 | Samsung   | SSD 850 PRO        | 1 TB   | 9D2255A4B143 | 1341  | 0     | 3.68   |
 | Kingston  | SV300S37A120G      | 120 GB | A63680313508 | 1341  | 0     | 3.68   |
+| Kingston  | SV300S37A60G       | 64 GB  | 8BBDDA5D8F99 | 1341  | 0     | 3.67   |
 | OCZ       | VERTEX460A         | 240 GB | 3831DD9135FD | 1341  | 0     | 3.67   |
 | Samsung   | SSD 850 PRO        | 128 GB | B9373BF39A68 | 1341  | 0     | 3.67   |
 | Samsung   | SSD 850 EVO mSATA  | 250 GB | 95990B5D8795 | 1341  | 0     | 3.67   |
@@ -1380,6 +1449,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 1C01A65E35B6 | 1332  | 0     | 3.65   |
 | China     | 240GB SSD          | 240 GB | A0A591573F86 | 1331  | 0     | 3.65   |
 | Samsung   | SSD 850 EVO        | 1 TB   | C1F7691C4017 | 1331  | 0     | 3.65   |
+| Toshiba   | THNSNJ256G8NY      | 256 GB | 8BC6E854C3EC | 1331  | 0     | 3.65   |
 | OCZ       | VERTEX3            | 64 GB  | DEE0F297D3B2 | 1331  | 0     | 3.65   |
 | Goodram   | SSD                | 240 GB | 53213E668540 | 1330  | 0     | 3.65   |
 | Samsung   | SSD 850 EVO        | 500 GB | C89F09942C08 | 1330  | 0     | 3.65   |
@@ -1387,6 +1457,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 Series     | 250 GB | B58C8D21603C | 1329  | 0     | 3.64   |
 | Toshiba   | THNSNJ128G8NY      | 128 GB | 065BA95CFC69 | 1329  | 0     | 3.64   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 5CAA03D016F4 | 1328  | 0     | 3.64   |
+| Crucial   | CT240BX500SSD1     | 240 GB | CC01456611FE | 1327  | 0     | 3.64   |
 | Samsung   | SSD 860 EVO        | 500 GB | 5D337A83DD58 | 1327  | 0     | 3.64   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3C9AFA96F077 | 1327  | 0     | 3.64   |
 | Samsung   | MZ7WD960HMHP-00003 | 960 GB | DD8FA2F7243F | 1325  | 0     | 3.63   |
@@ -1408,11 +1479,14 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD4     | 500 GB | 39ECFEE6D46F | 1319  | 0     | 3.62   |
 | Samsung   | SSD 850 EVO M.2    | 1 TB   | 11C17EE4F9E8 | 1319  | 0     | 3.61   |
 | Samsung   | SSD 830 Series     | 256 GB | 71C7AE17802C | 1319  | 0     | 3.61   |
+| Samsung   | SSD 860 EVO        | 500 GB | 2C42D161C361 | 1318  | 0     | 3.61   |
 | SanDisk   | Ultra II           | 960 GB | C7AF7A3C1EBD | 1317  | 0     | 3.61   |
 | Samsung   | SSD 850 EVO        | 250 GB | FF57CA6B8E26 | 1317  | 0     | 3.61   |
 | Samsung   | SSD 840 EVO        | 120 GB | B560487D4070 | 1316  | 0     | 3.61   |
+| Intel     | SSDSC2BP240G4      | 240 GB | 37B4B8FD302B | 1316  | 0     | 3.61   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1E59813F78E7 | 1316  | 0     | 3.61   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 3117575356AC | 1315  | 0     | 3.60   |
+| Samsung   | SSD 850 EVO        | 250 GB | A3C908F8B954 | 1315  | 0     | 3.60   |
 | Toshiba   | TR150              | 960 GB | FFD1F4DF1A1D | 1315  | 0     | 3.60   |
 | Samsung   | SSD 850 EVO        | 500 GB | FDC01E8B9004 | 1314  | 0     | 3.60   |
 | SanDisk   | Ultra II           | 960 GB | 049D303D5EF1 | 1314  | 0     | 3.60   |
@@ -1479,6 +1553,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | A5198A9A58F2 | 1298  | 0     | 3.56   |
 | Samsung   | SSD 850 EVO        | 250 GB | C9911837CA6C | 1298  | 0     | 3.56   |
 | Samsung   | SSD 840 EVO        | 250 GB | A4D885292E75 | 1298  | 0     | 3.56   |
+| Intel     | SSDSC2BA400G4      | 400 GB | D2EA82B8082A | 1297  | 0     | 3.56   |
 | Apple     | SSD SM1024F        | 1 TB   | 83D70B146196 | 1297  | 0     | 3.55   |
 | OCZ       | AGILITY4           | 128 GB | AD901BA60E75 | 1297  | 0     | 3.55   |
 | Samsung   | SSD 850 PRO        | 1 TB   | 54D00D9F8CE6 | 1296  | 0     | 3.55   |
@@ -1523,6 +1598,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSFJ256GDNU A    | 256 GB | A757D9A86F93 | 1279  | 0     | 3.51   |
 | Samsung   | SSD 860 EVO        | 500 GB | 9A1964F1F4EE | 1279  | 0     | 3.51   |
 | Plextor   | PX-128M2S          | 128 GB | 82CE75CCC975 | 1279  | 0     | 3.50   |
+| Samsung   | SSD 860 EVO        | 500 GB | 02F5D046CD59 | 1278  | 0     | 3.50   |
 | Samsung   | SSD 850 PRO        | 1 TB   | 1C8B7A736BE2 | 1278  | 0     | 3.50   |
 | Samsung   | SSD 850 PRO        | 1 TB   | A51DC0EA0AD3 | 1277  | 0     | 3.50   |
 | Samsung   | SSD 850 EVO        | 250 GB | 9B58ED22EAC4 | 1277  | 0     | 3.50   |
@@ -1542,10 +1618,12 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BB120G7R     | 120 GB | 0534171ABE26 | 1272  | 0     | 3.49   |
 | Kingston  | SH103S3120G        | 120 GB | D0BFAD5A1725 | 1272  | 0     | 3.49   |
 | Samsung   | SSD PM830 2.5" 7mm | 256 GB | 1383D916DD26 | 1271  | 0     | 3.48   |
+| SanDisk   | SSD U110           | 16 GB  | 50F9BC9E1C51 | 1271  | 0     | 3.48   |
 | Samsung   | MZNLF128HCHP-00000 | 128 GB | 5C3C0027FAE8 | 1271  | 0     | 3.48   |
 | SanDisk   | SD5SB2-128G-1006E  | 128 GB | C5ABE6150678 | 1271  | 0     | 3.48   |
 | Corsair   | Force SSD          | 120 GB | 1B812BA7E758 | 1271  | 0     | 3.48   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 35B819014327 | 1271  | 0     | 3.48   |
+| Micron    | 1100_MTFDDAK256TBN | 256 GB | 7FFAF8F88E43 | 1270  | 0     | 3.48   |
 | Samsung   | SSD 850 EVO        | 500 GB | 94B76BBD6922 | 1270  | 0     | 3.48   |
 | SanDisk   | SDSSDP128G         | 128 GB | DC8D0CF3BE4D | 1269  | 0     | 3.48   |
 | OCZ       | VERTEX4            | 128 GB | 744B8B38B819 | 1269  | 0     | 3.48   |
@@ -1554,7 +1632,9 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | E52FD5E4C210 | 1268  | 0     | 3.48   |
 | SanDisk   | SDSSDP128G         | 128 GB | 1393303457D8 | 2536  | 1     | 3.48   |
 | Samsung   | SSD 850 PRO        | 512 GB | 88838BE7CF86 | 1268  | 0     | 3.47   |
+| Samsung   | SSD 860 EVO        | 1 TB   | E2A72C3121C8 | 1268  | 0     | 3.47   |
 | Transcend | TS120GSSD220S      | 120 GB | 3F595E6FE44B | 1267  | 0     | 3.47   |
+| Samsung   | MZ7TE256HMHP-00000 | 256 GB | D1BDE38A1117 | 1267  | 0     | 3.47   |
 | Crucial   | CT275MX300SSD4     | 275 GB | C301C5577A8F | 1267  | 0     | 3.47   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 3E21C4173495 | 1266  | 0     | 3.47   |
 | Micron    | M600_MTFDDAK1T0MBF | 1 TB   | FC6759E0A8CA | 1265  | 0     | 3.47   |
@@ -1588,6 +1668,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ120PCSZ      | 120 GB | A47ABADD23BB | 1255  | 0     | 3.44   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 0969F2918DF2 | 1255  | 0     | 3.44   |
 | Samsung   | SSD 850 EVO        | 250 GB | 06CC8C08D3F4 | 1254  | 0     | 3.44   |
+| Samsung   | SSD 840 EVO        | 120 GB | 544FF4C1BF17 | 1254  | 0     | 3.44   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | CF4D8DE083AC | 1254  | 0     | 3.44   |
 | SanDisk   | SSD U100           | 32 GB  | E4F1BF037C21 | 1253  | 0     | 3.44   |
 | Corsair   | Force GS           | 360 GB | 303FD20958C5 | 1253  | 0     | 3.43   |
@@ -1595,6 +1676,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 5836742A401C | 1252  | 0     | 3.43   |
 | Kingston  | SMS200S3240G       | 240 GB | 6453DD48AA73 | 1252  | 0     | 3.43   |
 | SanDisk   | SDSSDHII480G       | 480 GB | 4D3B538E71E9 | 1252  | 0     | 3.43   |
+| Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | 2B4B2C564E05 | 1252  | 0     | 3.43   |
 | Kingston  | SV300S37A240G      | 240 GB | 1A4431149EE5 | 1251  | 0     | 3.43   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 440D08A4AA34 | 1251  | 0     | 3.43   |
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | D870E1AFD3BC | 1251  | 0     | 3.43   |
@@ -1665,6 +1747,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LN512HCHP-000L1 | 512 GB | E553CFBC1863 | 1233  | 0     | 3.38   |
 | Samsung   | SSD 750 EVO        | 500 GB | 69E88186F41A | 1233  | 0     | 3.38   |
 | SanDisk   | SDSSDH3250G        | 250 GB | 048D46A4CD12 | 1233  | 0     | 3.38   |
+| Samsung   | SSD 850 EVO        | 250 GB | C44C9EF1DDC2 | 1233  | 0     | 3.38   |
+| Samsung   | SSD 850 EVO        | 250 GB | D85C7C403C2F | 1233  | 0     | 3.38   |
+| Crucial   | CT240BX500SSD1     | 240 GB | CB0555E78C75 | 1233  | 0     | 3.38   |
 | Samsung   | MZ7LM960HMJP-00005 | 960 GB | 70324BC03F46 | 1232  | 0     | 3.38   |
 | Samsung   | SSD 860 EVO        | 500 GB | CCD60B2E0096 | 1232  | 0     | 3.38   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 8B3023C122E5 | 1231  | 0     | 3.38   |
@@ -1741,6 +1826,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | B239F18BC17E | 1209  | 0     | 3.31   |
 | Samsung   | SSD 850 EVO        | 500 GB | D6BCAF474A1B | 1209  | 0     | 3.31   |
 | Samsung   | SSD 850 EVO        | 500 GB | 70056280FC66 | 1208  | 0     | 3.31   |
+| Intel     | SSDSC2CW480A3      | 480 GB | 1A2B9BEB6E67 | 1208  | 0     | 3.31   |
 | Samsung   | TK0120GECQL        | 120 GB | CB74893A331E | 1208  | 0     | 3.31   |
 | Apple     | SSD SM0256F        | 256 GB | 908530F5C436 | 1207  | 0     | 3.31   |
 | Kingston  | SUV400S37240G      | 240 GB | 6EF73DF78FA8 | 1207  | 0     | 3.31   |
@@ -1767,6 +1853,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT256MX100SSD1     | 256 GB | 352F6E757A18 | 1198  | 0     | 3.28   |
 | Samsung   | MZ7LN128HCHP-000H1 | 128 GB | 9CACEA083F80 | 1197  | 0     | 3.28   |
 | OCZ       | VECTOR             | 128 GB | BA158B74D369 | 1197  | 0     | 3.28   |
+| SPCC      | SSD                | 64 GB  | CA7874993578 | 1197  | 0     | 3.28   |
 | SanDisk   | SDSSDHII960G       | 960 GB | 7F94BA47D1F1 | 1196  | 0     | 3.28   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 84013598D9EE | 1196  | 0     | 3.28   |
 | OCZ       | VERTEX4            | 256 GB | 0761A04778A9 | 1195  | 0     | 3.28   |
@@ -1795,8 +1882,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | 39219AC14B85 | 1187  | 0     | 3.25   |
 | SanDisk   | PLUS               | 480 GB | 806AC722C37A | 1187  | 0     | 3.25   |
 | Kingston  | SH103S3240G        | 240 GB | 7128F773AD6C | 1187  | 0     | 3.25   |
+| Kingston  | SH103S390G         | 90 GB  | EC6A10B227B2 | 1187  | 0     | 3.25   |
 | SPCC      | SSD                | 256 GB | A71494AF2539 | 1187  | 0     | 3.25   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 13077F7348B8 | 1186  | 0     | 3.25   |
+| Samsung   | SSD 860 EVO        | 250 GB | 9A87CB734FD6 | 1186  | 0     | 3.25   |
 | Corsair   | Force GT           | 64 GB  | 191B505738FB | 1186  | 0     | 3.25   |
 | Samsung   | SSD 850 EVO        | 250 GB | 52EA695162B9 | 1186  | 0     | 3.25   |
 | Samsung   | SSD 750 EVO        | 120 GB | A86CA2B0CDC1 | 1186  | 0     | 3.25   |
@@ -1844,13 +1933,17 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD5SB2-128G-1006E  | 128 GB | 9EC3201987EE | 1175  | 0     | 3.22   |
 | Crucial   | CT240M500SSD1      | 240 GB | BA9F0C9DE94F | 1174  | 0     | 3.22   |
 | Samsung   | SSD 860 EVO        | 250 GB | B2B386C7CCD6 | 1174  | 0     | 3.22   |
+| SK hynix  | SC311 SATA         | 256 GB | 6C5C8A0C75B1 | 1174  | 0     | 3.22   |
 | SanDisk   | X400 2.5 7MM       | 256 GB | 42A6EBA6EA23 | 1174  | 0     | 3.22   |
 | Intel     | SSDSC2BA800G4      | 800 GB | E6AB189474BB | 1173  | 0     | 3.22   |
 | Intel     | SSDSC2KB960G8      | 960 GB | A6939F382EC9 | 1173  | 0     | 3.21   |
 | Crucial   | CT500MX500SSD1     | 500 GB | C60AC14B4461 | 1173  | 0     | 3.21   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 0C29BB8E7BE7 | 1173  | 0     | 3.21   |
 | Samsung   | SSD 860 EVO        | 500 GB | 9E2BE2620FC3 | 1171  | 0     | 3.21   |
+| Samsung   | SSD 850 EVO        | 250 GB | 4CB6B2CD71CE | 1170  | 0     | 3.21   |
+| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 210BD411CC41 | 1170  | 0     | 3.21   |
 | Samsung   | SSD 850 PRO        | 1 TB   | A508833A4717 | 1169  | 0     | 3.21   |
+| Samsung   | SSD 850 EVO        | 500 GB | 6DEA211C1753 | 1168  | 0     | 3.20   |
 | Kingston  | SUV400S37240G      | 240 GB | A32CF5B38E35 | 1168  | 0     | 3.20   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 7066A7E0951C | 1168  | 0     | 3.20   |
 | Samsung   | SSD 850 EVO        | 1 TB   | F5C994D1BB16 | 1168  | 0     | 3.20   |
@@ -1871,6 +1964,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 2 TB   | 7B50C2BB3EE0 | 1163  | 0     | 3.19   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | 7D4147AF7706 | 1163  | 0     | 3.19   |
 | Samsung   | SSD 850            | 120 GB | 2C22FAEF57B4 | 1163  | 0     | 3.19   |
+| OCZ       | TRION150           | 960 GB | CF0AC41020B1 | 1163  | 0     | 3.19   |
 | Kingston  | SV300S37A60G       | 64 GB  | E761A4B408C2 | 1162  | 0     | 3.19   |
 | SanDisk   | SDSSDA240G         | 240 GB | 7E65550E97C0 | 1162  | 0     | 3.19   |
 | Toshiba   | TR150              | 240 GB | 8E35217264E3 | 1162  | 0     | 3.19   |
@@ -1878,6 +1972,7 @@ MTBF - avg. MTBF in years per sample.
 | MyDigi... | SB M2 SSD          | 240 GB | 7A93094BA177 | 1161  | 0     | 3.18   |
 | Plextor   | PX-256M7VC         | 256 GB | 23B8909A218E | 1160  | 0     | 3.18   |
 | Micron    | MTFDDAK256MBF-1... | 256 GB | DE2E50856084 | 1160  | 0     | 3.18   |
+| Intel     | SSDSC2CT060A3      | 64 GB  | FB708028A385 | 3481  | 2     | 3.18   |
 | Crucial   | M4-CT064M4SSD2     | 64 GB  | 3EC1CF4BADE0 | 1160  | 0     | 3.18   |
 | Samsung   | SSD 840 EVO        | 250 GB | C3DFB7AC5E6F | 1160  | 0     | 3.18   |
 | Kingston  | SHSS37A240G        | 240 GB | C3B0ADC2560A | 1159  | 0     | 3.18   |
@@ -1947,6 +2042,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 500 GB | 14C8F34A9B3A | 1143  | 0     | 3.13   |
 | SK hynix  | SC311 SATA         | 512 GB | 5584782213A5 | 1143  | 0     | 3.13   |
 | Samsung   | SSD 850 EVO        | 250 GB | 7EE1C25EB87E | 1143  | 0     | 3.13   |
+| Samsung   | SSD 850 EVO        | 250 GB | 0FC4163237CC | 1143  | 0     | 3.13   |
+| Samsung   | SSD 850 EVO        | 250 GB | D99628A40F5B | 1143  | 0     | 3.13   |
+| Samsung   | SSD 840 EVO        | 500 GB | B9CC9B849C62 | 1142  | 0     | 3.13   |
 | Samsung   | SSD 840 EVO        | 250 GB | F78B1DC724A3 | 1142  | 0     | 3.13   |
 | Kingston  | SM2280S3G2240G     | 240 GB | 35BE72572DEC | 1142  | 0     | 3.13   |
 | Kingston  | SV300S37A240G      | 240 GB | 0BD3A20EFF4F | 1142  | 0     | 3.13   |
@@ -1991,6 +2089,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 1 TB   | F83462416DC6 | 1130  | 0     | 3.10   |
 | Samsung   | SSD 850 EVO        | 120 GB | 6CBBAEBA49C0 | 1130  | 0     | 3.10   |
 | OCZ       | VERTEX2 3.5        | 115 GB | 4F44EE95F322 | 1129  | 0     | 3.10   |
+| WDC       | WDBNCE5000PNC      | 500 GB | E47647E40870 | 1129  | 0     | 3.09   |
 | Samsung   | MZ7TE128HMGR-000L1 | 128 GB | B354D36D72E3 | 1128  | 0     | 3.09   |
 | Samsung   | MZYTY256HDHP-000L2 | 256 GB | A21210133C1D | 1128  | 0     | 3.09   |
 | SanDisk   | Ultra II           | 480 GB | B0BCB16AA812 | 1128  | 0     | 3.09   |
@@ -2022,6 +2121,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT256MX100SSD1     | 256 GB | 91750EA8EB40 | 1122  | 0     | 3.07   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 77C723795E88 | 1121  | 0     | 3.07   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | A0BA98E26A21 | 1121  | 0     | 3.07   |
+| Kingston  | SV300S37A120G      | 120 GB | 942ABB8771AB | 1121  | 0     | 3.07   |
 | SanDisk   | SD5SG2128G1052E    | 128 GB | 86E0F11B97DF | 1121  | 0     | 3.07   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 1320B638B5A1 | 1120  | 0     | 3.07   |
 | Kingston  | SA400S37240G       | 240 GB | 751ADFF1ECC0 | 1120  | 0     | 3.07   |
@@ -2034,6 +2134,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 062DE53531DC | 1119  | 0     | 3.07   |
 | OCZ       | VERTEX2            | 64 GB  | 9FB862D6DC3A | 1119  | 0     | 3.07   |
 | Kingston  | SH100S3120G        | 120 GB | 7C277D2E1F43 | 1118  | 0     | 3.07   |
+| Kingston  | SA400S37480G       | 480 GB | 866B2A91CF42 | 1118  | 0     | 3.06   |
 | Samsung   | MZ7LN256HAJQ-000H1 | 256 GB | CBB0129E50B9 | 1118  | 0     | 3.06   |
 | Samsung   | SSD 860 EVO        | 250 GB | 2D0653A0403D | 1117  | 0     | 3.06   |
 | Samsung   | SSD 860 EVO        | 500 GB | 76C7B0853E34 | 1117  | 0     | 3.06   |
@@ -2041,6 +2142,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAK128MBF-1... | 128 GB | 196DB6DA24DE | 1117  | 0     | 3.06   |
 | Corsair   | Force 3 SSD        | 180 GB | A4371B51F9FD | 1117  | 0     | 3.06   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 73022CF6DDBE | 1117  | 0     | 3.06   |
+| SanDisk   | X300 2.5 7MM       | 256 GB | 12840526D481 | 1117  | 0     | 3.06   |
 | Samsung   | MZ7LN512HMJP-000L7 | 512 GB | 73A3E8A554C2 | 1117  | 0     | 3.06   |
 | Crucial   | CT240M500SSD1      | 240 GB | CC34DEA8A041 | 1116  | 0     | 3.06   |
 | Samsung   | SSD PM800 2.5"     | 128 GB | CE62359F261E | 1115  | 0     | 3.06   |
@@ -2066,6 +2168,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 0B3E6120EE25 | 1111  | 0     | 3.04   |
 | Samsung   | SSD 840 EVO        | 250 GB | 4907E6AA2C98 | 1111  | 0     | 3.04   |
 | Samsung   | SSD 850 EVO        | 500 GB | 6B9537AEDB9E | 1110  | 0     | 3.04   |
+| Samsung   | MZNLN256HMHQ-000H1 | 256 GB | E6C228FDE269 | 1110  | 0     | 3.04   |
 | OCZ       | AGILITY4           | 128 GB | 9B55305C6D57 | 1110  | 0     | 3.04   |
 | SanDisk   | SD7TB6S256G1001    | 256 GB | BD4289B5557D | 1110  | 0     | 3.04   |
 | Samsung   | MZ7TD128HAFV-000L1 | 128 GB | EC6F96782B1C | 1109  | 0     | 3.04   |
@@ -2097,6 +2200,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO M.2    | 120 GB | 7002C789E8B4 | 1103  | 0     | 3.02   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | 54F1E8174090 | 1103  | 0     | 3.02   |
 | Kingston  | SUV400S37480G      | 480 GB | 79C9D97E35C8 | 1102  | 0     | 3.02   |
+| PNY       | CS2211 240GB SSD   | 240 GB | 7D58115666EB | 1102  | 0     | 3.02   |
 | Samsung   | SSD 850 PRO        | 512 GB | 21C229D9793E | 1102  | 0     | 3.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 3D35F3E3B170 | 1102  | 0     | 3.02   |
 | PNY       | CS1311 240GB SSD   | 240 GB | D2B77071F748 | 1102  | 0     | 3.02   |
@@ -2118,6 +2222,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | DCE94995C82D | 1097  | 0     | 3.01   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 4588D1A29001 | 1097  | 0     | 3.01   |
 | OCZ       | VERTEX3 MI         | 120 GB | 6C4CD0D6DD03 | 1096  | 0     | 3.00   |
+| WDC       | WDS250G1B0B-00AS40 | 250 GB | B60E0B6171C2 | 1096  | 0     | 3.00   |
 | Crucial   | CT275MX300SSD1     | 275 GB | E176B023EFBD | 1095  | 0     | 3.00   |
 | OCZ       | AGILITY4           | 128 GB | 06A9F8ABDE7B | 1095  | 0     | 3.00   |
 | Samsung   | SSD 840 EVO        | 1 TB   | 26FBD55526CE | 1095  | 0     | 3.00   |
@@ -2178,8 +2283,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 3F5AC26846EB | 1079  | 0     | 2.96   |
 | China     | SATA SSD           | 480 GB | C08E094F0293 | 1079  | 0     | 2.96   |
 | Toshiba   | THNSNH256GMCT      | 256 GB | DE84AC083E68 | 1079  | 0     | 2.96   |
+| Samsung   | SSD SM871 2.5 7mm  | 256 GB | 539AD6FE3E83 | 1079  | 0     | 2.96   |
 | Kingston  | SA400S37120G       | 120 GB | 559907062133 | 1079  | 0     | 2.96   |
 | OCZ       | AGILITY3           | 64 GB  | E78DF77966A7 | 1078  | 0     | 2.96   |
+| Patriot   | Burst              | 480 GB | 0F06608CF5BD | 1078  | 0     | 2.95   |
 | Samsung   | SSD 840 EVO        | 250 GB | 7B932E499B56 | 1078  | 0     | 2.95   |
 | Samsung   | SSD 830 Series     | 128 GB | 7B4676A4D665 | 1078  | 0     | 2.95   |
 | OCZ       | AGILITY3           | 240 GB | 852C90BF1476 | 1077  | 0     | 2.95   |
@@ -2218,6 +2325,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 500 GB | 3E0F4378ACE0 | 1070  | 0     | 2.93   |
 | SanDisk   | SD6SB1M128G1022I   | 128 GB | FABE19370398 | 1070  | 0     | 2.93   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 5BF4198C5AD2 | 1069  | 0     | 2.93   |
+| Kingston  | SV300S37A120G      | 120 GB | C927F6E1F57B | 1068  | 0     | 2.93   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | 2B64F7A0F04C | 1068  | 0     | 2.93   |
 | Samsung   | SSD PM871b 2.5 7mm | 256 GB | 1C5D0C705122 | 1068  | 0     | 2.93   |
 | Toshiba   | THNS128GG4BBAA     | 128 GB | FC774B760E53 | 1068  | 0     | 2.93   |
@@ -2230,6 +2338,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | B5B0FE43C12D | 1066  | 0     | 2.92   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | F8A0866DAD10 | 1066  | 0     | 2.92   |
 | Samsung   | SSD 860 EVO        | 4 TB   | B8C71A9403AA | 1066  | 0     | 2.92   |
+| OCZ       | VERTEX2            | 120 GB | B73A0CDAF701 | 1065  | 0     | 2.92   |
 | OCZ       | VERTEX3            | 64 GB  | FBBAB8863FAB | 1065  | 0     | 2.92   |
 | Samsung   | SSD 850 EVO        | 500 GB | 82C346DDC779 | 1065  | 0     | 2.92   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 52A9013AE92B | 1065  | 0     | 2.92   |
@@ -2278,6 +2387,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7SB3Q-128G-1006  | 128 GB | E2338735F050 | 1057  | 0     | 2.90   |
 | PNY       | CS1311 240GB SSD   | 240 GB | F93EC921730F | 1056  | 0     | 2.89   |
 | MyDigi... | BP5                | 240 GB | 1F7224CDA95A | 1056  | 0     | 2.89   |
+| Samsung   | SSD 860 EVO        | 250 GB | AF5438869F44 | 1055  | 0     | 2.89   |
 | Kingston  | SV300S37A60G       | 64 GB  | C845ED64DB25 | 1055  | 0     | 2.89   |
 | Patriot   | Blast              | 240 GB | 0B81247485C8 | 1055  | 0     | 2.89   |
 | SK hynix  | HFS512G39MND-3510A | 512 GB | 3D522973AFDA | 1054  | 0     | 2.89   |
@@ -2333,6 +2443,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | AGILITY4           | 256 GB | D43BC57DDA57 | 1041  | 0     | 2.85   |
 | Samsung   | SSD 850 EVO        | 250 GB | C05E9BC2AF0F | 1041  | 0     | 2.85   |
 | OCZ       | AGILITY3           | 240 GB | 9229A35AEEDB | 1041  | 0     | 2.85   |
+| SanDisk   | SDSSDHII120G       | 120 GB | 7D6BE2A8B9AE | 1041  | 0     | 2.85   |
 | Apple     | SSD SM1024F        | 1 TB   | 9F5787C3F05C | 1040  | 0     | 2.85   |
 | SanDisk   | SD7SB3Q-256G-1006  | 256 GB | 428F065D8C65 | 1040  | 0     | 2.85   |
 | Samsung   | SSD 850 EVO        | 250 GB | A9E70236B09A | 1040  | 0     | 2.85   |
@@ -2354,6 +2465,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 PRO Series | 256 GB | DDEF1751CCDE | 1036  | 0     | 2.84   |
 | Samsung   | MZNTY128HDHP-000L2 | 128 GB | CB90F69D7A90 | 1036  | 0     | 2.84   |
 | Kingston  | SUV400S37120G      | 120 GB | 4ACBBB31358B | 1036  | 0     | 2.84   |
+| Kingston  | SMS200S3120G       | 120 GB | BA3800DD932C | 1036  | 0     | 2.84   |
 | SPCC      | SSD                | 128 GB | 55EE9BDCFAF1 | 1036  | 0     | 2.84   |
 | Samsung   | SSD 850 EVO        | 250 GB | 66D0794E3282 | 1036  | 0     | 2.84   |
 | Kingston  | SH103S3120G        | 120 GB | E36DF87B727D | 1036  | 0     | 2.84   |
@@ -2364,12 +2476,16 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 0F552ED086EC | 1035  | 0     | 2.84   |
 | Kingston  | SHSS37A240G        | 240 GB | C3F569966BD6 | 1035  | 0     | 2.84   |
 | OCZ       | TRION150           | 240 GB | 7F49CCE6200B | 1035  | 0     | 2.84   |
+| Kingston  | SUV400S37120G      | 120 GB | 2743CA4A5269 | 1034  | 0     | 2.83   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 2219BFC600A4 | 1034  | 0     | 2.83   |
 | Kingston  | SV300S37A120G      | 120 GB | 72F960669C79 | 1034  | 0     | 2.83   |
 | Samsung   | SSD 840 EVO        | 250 GB | 555D4F0C66B8 | 1034  | 0     | 2.83   |
+| Kingston  | SA400S37240G       | 240 GB | 9FE67F9E2381 | 1033  | 0     | 2.83   |
 | Samsung   | SSD 850 EVO        | 4 TB   | B4BD2E47E298 | 1033  | 0     | 2.83   |
 | Intel     | SSDSC2BB480G7      | 480 GB | AFBDFC1DA6EA | 1033  | 0     | 2.83   |
+| Samsung   | MZ7TE256HMHP-000L7 | 256 GB | 8AB6A286ECE8 | 1033  | 0     | 2.83   |
 | Toshiba   | THNSFJ256GCSU      | 256 GB | 3109DC6D549D | 1033  | 0     | 2.83   |
+| SPCC      | SSD                | 1 TB   | 1BA9ED8FCDBD | 1033  | 0     | 2.83   |
 | Samsung   | SSD 750 EVO        | 500 GB | D1E095AF3CB1 | 1032  | 0     | 2.83   |
 | SanDisk   | SD5SB2-128G-1006E  | 128 GB | 0831319A60AF | 1032  | 0     | 2.83   |
 | Corsair   | Force 3 SSD        | 120 GB | 55DD8201515C | 1032  | 0     | 2.83   |
@@ -2380,6 +2496,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX2            | 64 GB  | D4E991B0F494 | 1031  | 0     | 2.83   |
 | Kingston  | SHFS37A480G        | 480 GB | 10AB3C32DE81 | 1031  | 0     | 2.82   |
 | SanDisk   | SDSSDP128G         | 128 GB | 0EC850B5E0D9 | 1031  | 0     | 2.82   |
+| Samsung   | SSD 860 EVO        | 500 GB | C94E5C822518 | 1031  | 0     | 2.82   |
 | Samsung   | SSD 850 EVO mSATA  | 120 GB | BA55EFD9DCD9 | 1030  | 0     | 2.82   |
 | Intel     | SSDSA2CW120G3      | 120 GB | 989F8100CF1E | 3091  | 2     | 2.82   |
 | Samsung   | SSD 850 EVO        | 120 GB | 2DB57EAC49A6 | 1030  | 0     | 2.82   |
@@ -2395,13 +2512,16 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Blaze              | 64 GB  | A60A271FE415 | 1027  | 0     | 2.82   |
 | Apacer    | AS340              | 120 GB | EF8B1B9AEE92 | 1027  | 0     | 2.81   |
 | Samsung   | SSD 850 EVO        | 500 GB | 29CF6FD9A83D | 1027  | 0     | 2.81   |
+| Samsung   | SSD 850 EVO        | 500 GB | ACD61EA4720B | 1027  | 0     | 2.81   |
 | Samsung   | MZ7TE512HMHP-000L1 | 512 GB | C407D96EB804 | 1026  | 0     | 2.81   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | EE604F2EA806 | 1026  | 0     | 2.81   |
 | Samsung   | SSD 850 EVO        | 500 GB | 30A095777A09 | 1026  | 0     | 2.81   |
 | Kingston  | SV200S364G         | 64 GB  | 0016F1EE9AD2 | 1026  | 0     | 2.81   |
 | Kingston  | SV300S37A120G      | 120 GB | B1A7250E3CC8 | 1026  | 0     | 2.81   |
 | PNY       | CS900 480GB SSD    | 480 GB | 24E5528D182F | 1025  | 0     | 2.81   |
 | SK hynix  | SC300 2.5 7MM      | 256 GB | 3A49D079805C | 1025  | 0     | 2.81   |
 | Samsung   | SSD 850 EVO        | 500 GB | BCBCAE509DD4 | 1025  | 0     | 2.81   |
+| China     | R580               | 120 GB | 47E411050639 | 1024  | 0     | 2.81   |
 | OCZ       | ARC100             | 240 GB | 259795DB495E | 1024  | 0     | 2.81   |
 | SanDisk   | SDSSDXPS480G       | 480 GB | 8C8F2A487DF4 | 1024  | 0     | 2.81   |
 | Samsung   | SSD 850 EVO        | 500 GB | 96AF837C1281 | 1024  | 0     | 2.81   |
@@ -2445,7 +2565,9 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | P3-1TB             | 1 TB   | C79FFADAA64A | 1017  | 0     | 2.79   |
 | Kingston  | SUV500120G         | 120 GB | 1C8806E130A0 | 1017  | 0     | 2.79   |
 | SanDisk   | SD7UB2Q512G1122    | 512 GB | 6E13B0D84434 | 1017  | 0     | 2.79   |
+| Samsung   | SSD 860 QVO        | 2 TB   | 9162BFF4FA55 | 1016  | 0     | 2.79   |
 | Samsung   | SSD 860 EVO        | 250 GB | CF3C7DDD148C | 1016  | 0     | 2.79   |
+| SanDisk   | SDSSDH3 1T02       | 1 TB   | 7B16E348DD1C | 1016  | 0     | 2.79   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | A954DC509AE8 | 1016  | 0     | 2.78   |
 | Samsung   | SSD PM871b 2.5 7mm | 512 GB | D084D0D94A95 | 1016  | 0     | 2.78   |
 | Samsung   | SSD 840 EVO        | 120 GB | A3AF6DF50A9E | 1016  | 0     | 2.78   |
@@ -2463,10 +2585,13 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | F85B9CC0083D | 1012  | 0     | 2.77   |
 | Kingston  | SHFS37A240G        | 240 GB | 1BAE57DE483A | 1012  | 0     | 2.77   |
 | OCZ       | VERTEX3 MI         | 120 GB | D79AF6F23E87 | 1011  | 0     | 2.77   |
+| Samsung   | MZ7LN512HCHP-000H1 | 512 GB | 9AB15E5424A8 | 1011  | 0     | 2.77   |
 | SanDisk   | SDSSDXPS240G       | 240 GB | FC1DEE86C90A | 1011  | 0     | 2.77   |
 | Kingston  | SA400S37960G       | 960 GB | 4BC5B699AC2B | 1011  | 0     | 2.77   |
 | Samsung   | SSD 850 EVO        | 250 GB | CEBC3D5CE6AC | 1010  | 0     | 2.77   |
 | Samsung   | SSD RBX Series ... | 64 GB  | D76FAAEF73A3 | 1010  | 0     | 2.77   |
+| Kingston  | SUV400S37240G      | 240 GB | 09A1AC8A2AD3 | 1010  | 0     | 2.77   |
+| Samsung   | SSD 860 QVO        | 1 TB   | C03C96446974 | 1010  | 0     | 2.77   |
 | Toshiba   | Q300               | 240 GB | 3D110EB88010 | 1010  | 0     | 2.77   |
 | Apple     | SSD SM0512F        | 500 GB | E6FF8E615D38 | 1009  | 0     | 2.77   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 63CBFC7AAB7F | 1009  | 0     | 2.77   |
@@ -2503,6 +2628,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BB480G4      | 480 GB | D39DB7064602 | 1002  | 0     | 2.75   |
 | Samsung   | MZNLF128HCHP-00004 | 128 GB | 9EBC0E7CB6C4 | 1002  | 0     | 2.75   |
 | ADATA     | SSD S510           | 64 GB  | 10DCF1320814 | 1002  | 0     | 2.75   |
+| Samsung   | SSD 840 Series     | 250 GB | 44275B1C6038 | 1001  | 0     | 2.74   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 8645C78A2492 | 1001  | 0     | 2.74   |
 | OCZ       | VERTEX2            | 115 GB | 7B2B0C63D5CB | 1001  | 0     | 2.74   |
 | Samsung   | SSD 860 EVO        | 500 GB | 53622D37990B | 1001  | 0     | 2.74   |
@@ -2582,6 +2708,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 2 TB   | D11A637B3F4E | 985   | 0     | 2.70   |
 | Kingston  | SV300S37A120G      | 120 GB | 26F91F9D94BF | 985   | 0     | 2.70   |
 | Samsung   | SSD 850 EVO        | 250 GB | 0D9FAA10F32C | 985   | 0     | 2.70   |
+| China     | 120GB SSD          | 120 GB | C1F91DFD410D | 985   | 0     | 2.70   |
 | OCZ       | VERTEX3 MI         | 240 GB | A9D83B8B4252 | 985   | 0     | 2.70   |
 | Samsung   | SSD 840 Series     | 120 GB | 792A627C955E | 984   | 0     | 2.70   |
 | Kingston  | SA400S37240G       | 240 GB | FC34C4402A73 | 983   | 0     | 2.69   |
@@ -2592,6 +2719,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT256M4SSD1     | 256 GB | 8C584456A552 | 982   | 0     | 2.69   |
 | SanDisk   | SDSSDP064G         | 64 GB  | AD5DBAFA08F4 | 981   | 0     | 2.69   |
 | Apple     | SSD SM0512G        | 500 GB | ABF1ABF470B9 | 981   | 0     | 2.69   |
+| Intel     | SSDSC2KG240G8      | 240 GB | AE41D6B4DDA4 | 981   | 0     | 2.69   |
 | Crucial   | CT120M500SSD1      | 120 GB | 9928A25B36FF | 981   | 0     | 2.69   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 4CCAA1B5F62B | 981   | 0     | 2.69   |
 | SanDisk   | SDSSDHII960G       | 960 GB | 561374B9BE0B | 981   | 0     | 2.69   |
@@ -2614,6 +2742,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Blast              | 240 GB | F6D640ABC03A | 978   | 0     | 2.68   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 704F5894E611 | 977   | 0     | 2.68   |
 | Samsung   | MZHPU256HCGL-000H1 | 256 GB | 3FA07457F900 | 977   | 0     | 2.68   |
+| Samsung   | SSD 860 EVO        | 1 TB   | BE0F008081A4 | 977   | 0     | 2.68   |
 | Samsung   | SSD 840 Series     | 250 GB | 0BA250DC1A8B | 977   | 0     | 2.68   |
 | Samsung   | SSD 860 EVO        | 250 GB | C5F83B2FFA45 | 977   | 0     | 2.68   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 1B1BABC74ACB | 977   | 0     | 2.68   |
@@ -2642,6 +2771,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | A94BEBCC3C6E | 971   | 0     | 2.66   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 88BEDAEBBD19 | 971   | 0     | 2.66   |
 | Samsung   | SSD 840 EVO        | 250 GB | 0384C5DCE19A | 971   | 0     | 2.66   |
+| Samsung   | SSD 850 EVO        | 500 GB | 1D4E83C17582 | 970   | 0     | 2.66   |
 | Samsung   | MZNLF128HCHP-00004 | 128 GB | F85208148C86 | 970   | 0     | 2.66   |
 | PNY       | CS900 120GB SSD    | 120 GB | 1FE045A53BDB | 970   | 0     | 2.66   |
 | Samsung   | MZ7LN256HCHP-000H1 | 256 GB | 836EC351EE52 | 970   | 0     | 2.66   |
@@ -2692,6 +2822,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ128G8NU      | 128 GB | 250BBF1356CF | 963   | 0     | 2.64   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 744CE5640B06 | 963   | 0     | 2.64   |
 | China     | SSD                | 120 GB | 722D8471625C | 963   | 0     | 2.64   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 4448030633EC | 962   | 0     | 2.64   |
 | Kingston  | SV300S37A120G      | 120 GB | 18D41614C57D | 962   | 0     | 2.64   |
 | Kingston  | SV300S37A120G      | 120 GB | 9268088C4E07 | 962   | 0     | 2.64   |
 | Crucial   | CT750MX300SSD1     | 752 GB | C8355E84C4B7 | 962   | 0     | 2.64   |
@@ -2726,6 +2857,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 8713E4FA49D9 | 957   | 0     | 2.62   |
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 1FAE59A04FAF | 957   | 0     | 2.62   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 5B8B8FA5E8F2 | 956   | 0     | 2.62   |
+| Crucial   | CT250MX500SSD1     | 250 GB | BEE232D5A6A7 | 956   | 0     | 2.62   |
 | Samsung   | SSD 850 EVO        | 500 GB | 04A2C23F95BF | 956   | 0     | 2.62   |
 | Apple     | SSD SM0128G        | 121 GB | 1A0F99231BF7 | 956   | 0     | 2.62   |
 | SanDisk   | SDSSDXP240G        | 240 GB | 2E1FE6DB06A7 | 956   | 0     | 2.62   |
@@ -2778,6 +2910,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO 250... | 250 GB | 7B92C636AFD0 | 945   | 0     | 2.59   |
 | SanDisk   | SDSSDRC032G        | 32 GB  | CD97F5C1F366 | 945   | 0     | 2.59   |
 | Crucial   | CT275MX300SSD1     | 275 GB | F6701AE8BFC3 | 945   | 0     | 2.59   |
+| Samsung   | SSD 860 QVO        | 4 TB   | DBA5BBA85BEC | 945   | 0     | 2.59   |
 | China     | SH00R480GB         | 480 GB | 53975CF510F9 | 944   | 0     | 2.59   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 0363F1464169 | 944   | 0     | 2.59   |
 | Samsung   | SSD 860 QVO        | 1 TB   | E8F53B17EB05 | 944   | 0     | 2.59   |
@@ -2824,6 +2957,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 750 EVO        | 250 GB | 80FEA5D6C2C4 | 936   | 0     | 2.57   |
 | Toshiba   | THNSNH256GMCT      | 256 GB | A00C9861F700 | 935   | 0     | 2.56   |
 | SanDisk   | SD7SB3Q-128G-1006  | 128 GB | F739261C33BE | 935   | 0     | 2.56   |
+| SanDisk   | SD8TB8U256G1001    | 256 GB | 8E2DA3F74AF7 | 935   | 0     | 2.56   |
 | Samsung   | SSD 850 EVO        | 250 GB | A801060172DE | 935   | 0     | 2.56   |
 | Corsair   | Force 3 SSD        | 64 GB  | EF4FB37D521C | 934   | 0     | 2.56   |
 | Samsung   | SSD 850 EVO        | 500 GB | 5E2B7467B72D | 934   | 0     | 2.56   |
@@ -2844,6 +2978,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | FC8A6F97E0E9 | 931   | 0     | 2.55   |
 | SanDisk   | Ultra II           | 960 GB | F50E8220FDB8 | 931   | 0     | 2.55   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 43BC79E5C3D6 | 931   | 0     | 2.55   |
+| SanDisk   | SD8SB8U-256G-1006  | 256 GB | 62F9023E652A | 931   | 0     | 2.55   |
 | Smartbuy  | SSD                | 120 GB | 4DF4C9F0E590 | 930   | 0     | 2.55   |
 | Samsung   | SSD 850 PRO        | 256 GB | 8779FE8FBD2A | 930   | 0     | 2.55   |
 | SanDisk   | SDSSDHII240G       | 240 GB | 92EEB972C799 | 930   | 0     | 2.55   |
@@ -2862,6 +2997,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDP128G         | 128 GB | 6D0180942BE2 | 928   | 0     | 2.54   |
 | Samsung   | SSD 850 PRO        | 512 GB | 738324F3B71E | 927   | 0     | 2.54   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 97BD7A038885 | 927   | 0     | 2.54   |
+| Kingston  | SVP200S3120G       | 120 GB | F7C781D9B3C6 | 927   | 0     | 2.54   |
 | Samsung   | SSD PM800 Serie... | 256 GB | C21CBD8C5D8A | 927   | 0     | 2.54   |
 | Kingston  | SV300S37A480G      | 480 GB | C91705104F4F | 927   | 0     | 2.54   |
 | Samsung   | SSD 830 Series     | 128 GB | B88D4AD73736 | 927   | 0     | 2.54   |
@@ -2888,6 +3024,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX3            | 120 GB | E2A9A53C3A3B | 924   | 0     | 2.53   |
 | Samsung   | SSD 850 EVO        | 250 GB | 409828C7754E | 923   | 0     | 2.53   |
 | Samsung   | SSD 840 Series     | 120 GB | 010D1BED0014 | 923   | 0     | 2.53   |
+| Goodram   | SSD                | 120 GB | CAA7FA9AE0B3 | 923   | 0     | 2.53   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | D165E3F84A35 | 923   | 0     | 2.53   |
 | Micron    | M600_MTFDDAK256MBF | 256 GB | DAC625C984B1 | 923   | 0     | 2.53   |
 | WDC       | WDBNCE2500PNC      | 250 GB | 61DEF6473909 | 923   | 0     | 2.53   |
@@ -2900,12 +3037,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 0496B4FCF2CB | 922   | 0     | 2.53   |
 | Toshiba   | THNSFC128GBSJ      | 128 GB | 7FDE4E0162AD | 922   | 0     | 2.53   |
 | Kingston  | SUV300S37A240G     | 240 GB | 571A05D3CE03 | 921   | 0     | 2.53   |
+| Samsung   | SSD 860 EVO        | 2 TB   | E9C942BE79FB | 921   | 0     | 2.53   |
 | Samsung   | SSD 850 EVO        | 250 GB | EAC0DABC928C | 921   | 0     | 2.53   |
 | SanDisk   | SDSSDH31000G       | 1 TB   | 3563763DE870 | 921   | 0     | 2.52   |
 | Kingston  | SMS200S3120G       | 120 GB | A9F469FF3918 | 921   | 0     | 2.52   |
 | Samsung   | SSD 850 EVO        | 500 GB | 603886251DD7 | 921   | 0     | 2.52   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | 62A796A11757 | 921   | 0     | 2.52   |
 | Samsung   | SSD 860 EVO        | 500 GB | BE0B734E826C | 921   | 0     | 2.52   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 42DF2AB9E278 | 921   | 0     | 2.52   |
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | 3A56DA115A0C | 920   | 0     | 2.52   |
 | SanDisk   | SDSSDHII960G       | 960 GB | 6D41315FA57C | 920   | 0     | 2.52   |
 | Apple     | SSD TS256C         | 256 GB | 36B1F6C0F810 | 920   | 0     | 2.52   |
@@ -2926,9 +3065,11 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD SM0256F        | 256 GB | 7C0235B48830 | 918   | 0     | 2.52   |
 | Samsung   | MZNLF128HCHP-00000 | 128 GB | 5A2E0D1B44BE | 918   | 0     | 2.52   |
 | Crucial   | M4-CT128M4SSD1     | 128 GB | 9CA90CA1591B | 918   | 0     | 2.52   |
+| Samsung   | SSD 850 EVO        | 500 GB | F5EA555852AC | 918   | 0     | 2.52   |
 | Kingston  | SVP100S296G        | 96 GB  | E3F57D1DB70E | 918   | 0     | 2.52   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 4957603C229F | 918   | 0     | 2.52   |
 | Samsung   | SSD 860 EVO        | 250 GB | E287BFDE51F0 | 918   | 0     | 2.52   |
+| China     | 120GB SSD          | 120 GB | E0F7A5438A49 | 918   | 0     | 2.52   |
 | WDC       | WDS500G2B0B        | 500 GB | 6833D45DC205 | 918   | 0     | 2.52   |
 | ExeGate   | EX280461RUS        | 128 GB | 3A162CC044D2 | 917   | 0     | 2.51   |
 | Samsung   | SSD 840 Series     | 120 GB | EABAD6868E33 | 917   | 0     | 2.51   |
@@ -2959,6 +3100,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 99E5C769716F | 913   | 0     | 2.50   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 2C7B35DDFC82 | 913   | 0     | 2.50   |
 | Samsung   | SSD 860 EVO        | 500 GB | 5B3DC835B965 | 913   | 0     | 2.50   |
+| Samsung   | SSD 830 Series     | 256 GB | 856FA1E5D252 | 913   | 0     | 2.50   |
 | OCZ       | VERTEX3            | 240 GB | 5B2854A04AEE | 913   | 0     | 2.50   |
 | Goodram   | SSD                | 120 GB | 45621CC9EDCC | 912   | 0     | 2.50   |
 | Kingston  | SHFS37A120G        | 120 GB | 81984BB58EF7 | 912   | 0     | 2.50   |
@@ -3054,12 +3196,14 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 7497DE772C35 | 894   | 0     | 2.45   |
 | Crucial   | CT1050MX300SSD4    | 1 TB   | C4B45383B176 | 894   | 0     | 2.45   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 4ACDF2667325 | 894   | 0     | 2.45   |
+| Micron    | 5200_MTFDDAK1T9TDD | 1.9 TB | DA1F83158FE0 | 893   | 0     | 2.45   |
 | China     | SSD                | 120 GB | 213F065BEB28 | 893   | 0     | 2.45   |
 | Transcend | TS128GSSD320       | 128 GB | 72013DC8A048 | 893   | 0     | 2.45   |
 | SK hynix  | HFS512G39TND-N210A | 512 GB | 0CC31885106D | 893   | 0     | 2.45   |
 | Samsung   | SSD 850 PRO        | 256 GB | 70C14F4F71A4 | 892   | 0     | 2.45   |
 | Kingston  | SA400S37120G       | 120 GB | CFE7C4B7548A | 892   | 0     | 2.45   |
 | Samsung   | Portable SSD T3    | 250 GB | E4430A7F2D64 | 892   | 0     | 2.45   |
+| China     | SSD                | 64 GB  | B3AB1D9FD4BB | 892   | 0     | 2.44   |
 | WDC       | WDS500G2B0A        | 500 GB | 068FE952633F | 892   | 0     | 2.44   |
 | SanDisk   | SD7TB3Q-256G-1006  | 256 GB | 20CDED35B06B | 892   | 0     | 2.44   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 3819F42DAF9A | 891   | 0     | 2.44   |
@@ -3087,6 +3231,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 1E8482C8EE84 | 887   | 0     | 2.43   |
 | Samsung   | MZ7WD480HAGM-000D2 | 480 GB | FA3E766EE57C | 886   | 0     | 2.43   |
 | Samsung   | SSD 850 EVO        | 250 GB | 46803ECBFBA8 | 886   | 0     | 2.43   |
+| Crucial   | CT275MX300SSD1     | 275 GB | 4C11BDD4D732 | 886   | 0     | 2.43   |
 | Kingston  | SUV400S37240G      | 240 GB | 999055A50FA7 | 886   | 0     | 2.43   |
 | Samsung   | SSD 860 PRO        | 1 TB   | 1FB8F8E943DF | 886   | 0     | 2.43   |
 | PNY       | CS1311 960GB SSD   | 960 GB | D4BB3C9A99A4 | 886   | 0     | 2.43   |
@@ -3114,6 +3259,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 404AF0CD9E6E | 883   | 0     | 2.42   |
 | Samsung   | SSD 840 EVO        | 1 TB   | F4D79FA22766 | 882   | 0     | 2.42   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | A0E48B5401EC | 882   | 0     | 2.42   |
+| Samsung   | MZ7LF192HCGS-000L1 | 192 GB | 70F9C70BB4AA | 882   | 0     | 2.42   |
 | Kingston  | SA400S37120G       | 120 GB | FE389741AC34 | 881   | 0     | 2.41   |
 | Kingston  | SV300S37A120G      | 120 GB | 4B038B70A758 | 880   | 0     | 2.41   |
 | Apple     | SSD SM0128G        | 121 GB | B4AA5D849650 | 880   | 0     | 2.41   |
@@ -3161,6 +3307,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV300S37A120G     | 120 GB | CD242395548C | 873   | 0     | 2.39   |
 | addlink   | SATA SSD           | 256 GB | 66CF275BE095 | 873   | 0     | 2.39   |
 | Samsung   | SSD 860 EVO        | 250 GB | 3AE69F1D9501 | 873   | 0     | 2.39   |
+| Samsung   | SSD 850 EVO        | 250 GB | 014B5A881157 | 873   | 0     | 2.39   |
 | Kingston  | SA400S37240G       | 240 GB | 7DE5F529113E | 872   | 0     | 2.39   |
 | Kingston  | SHFS37A240G        | 240 GB | C938C8CD38BC | 872   | 0     | 2.39   |
 | Samsung   | SSD 750 EVO        | 120 GB | 98A3E1E545B5 | 872   | 0     | 2.39   |
@@ -3168,6 +3315,7 @@ MTBF - avg. MTBF in years per sample.
 | Smartbuy  | mSata              | 128 GB | CDA214467419 | 872   | 0     | 2.39   |
 | Samsung   | SSD 850 PRO        | 256 GB | A15159A9CC64 | 872   | 0     | 2.39   |
 | Samsung   | SSD PM800 2.5"     | 256 GB | 6C0602BAF55A | 871   | 0     | 2.39   |
+| Samsung   | SSD PM810 2.5" 7mm | 128 GB | 1DC46E3961D3 | 871   | 0     | 2.39   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 409717320FEB | 871   | 0     | 2.39   |
 | Samsung   | SSD 840 Series     | 120 GB | 1BC191C21D9F | 871   | 0     | 2.39   |
 | Toshiba   | Q300               | 480 GB | F65737E9D198 | 871   | 0     | 2.39   |
@@ -3175,11 +3323,14 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | DADD972DDCF8 | 870   | 0     | 2.39   |
 | Intel     | SSDMCEAC240B3      | 240 GB | 010E47D59502 | 870   | 0     | 2.39   |
 | Drevo     | X1 pro             | 1 TB   | 22E730DDF8AB | 870   | 0     | 2.38   |
+| Samsung   | SSD 840 EVO 250... | 250 GB | 27B94F0DAD70 | 869   | 0     | 2.38   |
 | Crucial   | M4-CT512M4SSD2     | 512 GB | ED949835050B | 869   | 0     | 2.38   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 3004E67BEC8D | 869   | 0     | 2.38   |
 | Samsung   | SSD 850 EVO        | 2 TB   | 062773BCEFB5 | 869   | 0     | 2.38   |
 | Transcend | TS64GSSD340        | 64 GB  | 565D94FC4C0B | 869   | 0     | 2.38   |
 | Samsung   | SSD 850 PRO        | 256 GB | 8717895A02A2 | 869   | 0     | 2.38   |
 | Samsung   | SSD 850 EVO        | 120 GB | 5C8350CB4930 | 868   | 0     | 2.38   |
+| SanDisk   | SD8SB8U-128G-1016  | 128 GB | 8EC083FB5202 | 868   | 0     | 2.38   |
 | SanDisk   | SD7SN3Q256G1002    | 256 GB | B609F603DD7B | 868   | 0     | 2.38   |
 | SanDisk   | SD7SB6S-128G-1006  | 128 GB | 7CCCDD541398 | 868   | 0     | 2.38   |
 | Kingston  | SV300S37A240G      | 240 GB | 3467ABACB517 | 868   | 0     | 2.38   |
@@ -3255,6 +3406,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 68729A5EB196 | 859   | 0     | 2.35   |
 | SanDisk   | SD9TB8W1T001001    | 1 TB   | 8DB055422BC6 | 859   | 0     | 2.35   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 099514046F4C | 859   | 0     | 2.35   |
+| Samsung   | SSD 850 EVO        | 500 GB | C362E1B1ACAB | 859   | 0     | 2.35   |
 | Corsair   | Force GS           | 480 GB | B3C94C38DFC7 | 858   | 0     | 2.35   |
 | SanDisk   | SDSSDHP128G        | 128 GB | 46382893DC34 | 858   | 0     | 2.35   |
 | Kingston  | SV300S37A120G      | 120 GB | F2250BAEF38B | 858   | 0     | 2.35   |
@@ -3298,6 +3450,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 266930B82190 | 853   | 0     | 2.34   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3EA3EDFBEE52 | 853   | 0     | 2.34   |
 | Samsung   | SSD 850 EVO        | 500 GB | 94072119D6B2 | 853   | 0     | 2.34   |
+| Kingston  | SA400S37480G       | 480 GB | 3F0AF040ACF2 | 853   | 0     | 2.34   |
 | SanDisk   | X400 M.2 2280      | 256 GB | F435E13705F4 | 853   | 0     | 2.34   |
 | Kingston  | SH103S3240G        | 240 GB | CC2466928305 | 853   | 0     | 2.34   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 2D1B2CE89DA7 | 853   | 0     | 2.34   |
@@ -3350,10 +3503,13 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV200S3128G        | 128 GB | B54F801237FF | 844   | 0     | 2.31   |
 | Samsung   | MZ7PD256HCGM-000H7 | 256 GB | 85B814451AFA | 844   | 0     | 2.31   |
 | Samsung   | SSD PM871b M.2 ... | 256 GB | B9F8154115F7 | 844   | 0     | 2.31   |
+| SanDisk   | Ultra II           | 480 GB | 037357847C3C | 844   | 0     | 2.31   |
+| Samsung   | SSD 860 EVO        | 1 TB   | 248F8BAAC1F4 | 844   | 0     | 2.31   |
 | Samsung   | SSD 850 EVO        | 2 TB   | 622349B45CF4 | 844   | 0     | 2.31   |
 | Samsung   | SSD 840 Series     | 120 GB | 6071FDEC21D4 | 843   | 0     | 2.31   |
 | Samsung   | SSD 860 EVO        | 500 GB | 7BEDB7E36C71 | 843   | 0     | 2.31   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 5A7029E3EEC7 | 843   | 0     | 2.31   |
+| Samsung   | SSD 850 EVO        | 500 GB | 26B94A9EB361 | 843   | 0     | 2.31   |
 | Kingston  | SV300S37A240G      | 240 GB | E93E2885F65F | 842   | 0     | 2.31   |
 | OCZ       | AGILITY3           | 64 GB  | DF8772961388 | 842   | 0     | 2.31   |
 | Kingston  | SV300S37A120G      | 120 GB | 8DEE8BA888F0 | 842   | 0     | 2.31   |
@@ -3397,6 +3553,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BB480G7      | 480 GB | 1E3073704664 | 837   | 0     | 2.29   |
 | Samsung   | SSD 850 EVO        | 500 GB | E1695B5FB6DC | 836   | 0     | 2.29   |
 | OCZ       | AGILITY3           | 120 GB | CEE3E94CAE71 | 836   | 0     | 2.29   |
+| SanDisk   | Ultra II           | 480 GB | 6FC2B876FE15 | 836   | 0     | 2.29   |
 | Kingston  | SUV400S37120G      | 120 GB | C9E95EFB50FC | 835   | 0     | 2.29   |
 | ADATA     | SSD DP900 512GB... | 512 GB | 49ED5E5266A7 | 835   | 0     | 2.29   |
 | Samsung   | SSD 850 EVO        | 500 GB | D31869AB1FD3 | 835   | 0     | 2.29   |
@@ -3408,6 +3565,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX3            | 64 GB  | BBE7A799A6FC | 835   | 0     | 2.29   |
 | OCZ       | VERTEX3            | 64 GB  | EE090924BF15 | 835   | 0     | 2.29   |
 | Goodram   | SSD                | 240 GB | EA0B0F214BE3 | 835   | 0     | 2.29   |
+| SanDisk   | SDSSDA240G         | 240 GB | F77B4F44C6E5 | 834   | 0     | 2.29   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 145AB2D395EB | 834   | 0     | 2.29   |
 | OCZ       | ARC100             | 240 GB | 4966752CCFCD | 834   | 0     | 2.29   |
 | Kingston  | SV300S37A120G      | 120 GB | B1ADAFDBABA2 | 2503  | 2     | 2.29   |
@@ -3435,6 +3593,8 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBU-SNS8100S3256GD | 256 GB | 67736A3BC75F | 833   | 0     | 2.28   |
 | Kingston  | SM2280S3120G       | 120 GB | 73775A563D22 | 833   | 0     | 2.28   |
 | Kingston  | SMS100S264G        | 64 GB  | CD48C88CD486 | 833   | 0     | 2.28   |
+| Kingston  | SMSR150S3256G      | 128 GB | D2D374E6342E | 833   | 0     | 2.28   |
+| Kingston  | SMSR150S3256G      | 128 GB | FEE79CE8411A | 833   | 0     | 2.28   |
 | Patriot   | Blaze              | 240 GB | 622958093910 | 833   | 0     | 2.28   |
 | Patriot   | Blaze              | 240 GB | 73DEE8F32089 | 833   | 0     | 2.28   |
 | Patriot   | Blaze              | 240 GB | 806F50E8A0F1 | 833   | 0     | 2.28   |
@@ -3467,6 +3627,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD TS256C         | 256 GB | 35C3B41734AF | 832   | 0     | 2.28   |
 | Kingston  | SUV500120G         | 120 GB | 31C3688873CD | 832   | 0     | 2.28   |
 | Kingston  | SUV400S37480G      | 480 GB | 63D59D529096 | 832   | 0     | 2.28   |
+| Goodram   | SSD                | 120 GB | 472D496FCEBA | 832   | 0     | 2.28   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 51E3241818F6 | 832   | 0     | 2.28   |
 | Samsung   | SSD 850 EVO        | 500 GB | E1573B81E0B3 | 832   | 0     | 2.28   |
 | Samsung   | SSD 850 EVO        | 500 GB | 09AC71FC2535 | 831   | 0     | 2.28   |
@@ -3489,6 +3650,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 826FE77E8C7D | 829   | 0     | 2.27   |
 | Kingston  | SUV400S37480G      | 480 GB | AC8BB08FE0F6 | 829   | 0     | 2.27   |
 | Samsung   | SSD 850 EVO        | 1 TB   | AC7573C31A40 | 829   | 0     | 2.27   |
+| Samsung   | SSD 860 EVO        | 500 GB | 05EBB0A82A03 | 829   | 0     | 2.27   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 04E56113385A | 828   | 0     | 2.27   |
 | Samsung   | SSD 850 EVO        | 1 TB   | B0D0136A737F | 828   | 0     | 2.27   |
 | SanDisk   | SDSSDHII120G       | 120 GB | 3311522338CE | 828   | 0     | 2.27   |
@@ -3526,11 +3688,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPC128HBFU-000H1 | 128 GB | 3BF8FD99A950 | 825   | 0     | 2.26   |
 | Crucial   | M4-CT128M4SSD1     | 128 GB | 1C0F639995F9 | 825   | 0     | 2.26   |
 | Samsung   | SSD 850 PRO        | 512 GB | 18B43402E2C3 | 825   | 0     | 2.26   |
+| Crucial   | CT512MX100SSD1     | 512 GB | B867FF840C77 | 824   | 0     | 2.26   |
 | Crucial   | CT120BX500SSD1     | 120 GB | CD1DF1299554 | 824   | 0     | 2.26   |
 | SanDisk   | Ultra II           | 240 GB | BFA64B40FD15 | 824   | 0     | 2.26   |
 | Samsung   | SSD 850 EVO        | 250 GB | C22402F3755E | 824   | 0     | 2.26   |
 | Samsung   | SSD 850 EVO        | 250 GB | 1879B3A6D03B | 824   | 0     | 2.26   |
+| SK hynix  | HFS128G39MNC-3310A | 128 GB | 26174205A394 | 824   | 0     | 2.26   |
 | Kingston  | SV300S37A60G       | 64 GB  | 85C0DD987AFB | 824   | 0     | 2.26   |
+| China     | SATA SSD           | 128 GB | 1290468AAE3A | 824   | 0     | 2.26   |
 | Samsung   | MZ7TY128HDHP-000L1 | 128 GB | 8C2D29D5FE34 | 824   | 0     | 2.26   |
 | SanDisk   | SDSSDHP128G        | 128 GB | 655C6669933C | 824   | 0     | 2.26   |
 | Intel     | SSDSC2BB960G7      | 960 GB | ED30819DE9BE | 1648  | 1     | 2.26   |
@@ -3620,6 +3785,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 512 GB | B4ACE8388F2F | 813   | 0     | 2.23   |
 | Samsung   | SSD 850 PRO        | 512 GB | FD2A223EF769 | 812   | 0     | 2.23   |
 | SanDisk   | SDSSDA120G         | 120 GB | 3FB2B96D5379 | 812   | 0     | 2.23   |
+| Intel     | SSDSC2BB016T7      | 1.6 TB | 68DB869B3D07 | 1625  | 1     | 2.23   |
 | Samsung   | SSD 850 EVO        | 500 GB | 72A2AE17A877 | 812   | 0     | 2.23   |
 | Crucial   | CT128M550SSD3      | 128 GB | EE15DA894BD8 | 812   | 0     | 2.23   |
 | Samsung   | SSD 850 EVO        | 500 GB | A7FDE56C9CCF | 812   | 0     | 2.23   |
@@ -3634,14 +3800,17 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDHII120G       | 120 GB | 96C2D12BA317 | 811   | 0     | 2.22   |
 | PNY       | CS900 120GB SSD    | 120 GB | E64A639C3E79 | 810   | 0     | 2.22   |
 | Samsung   | MZ7PD256HCGM-000H7 | 256 GB | 076100A2F649 | 810   | 0     | 2.22   |
+| Samsung   | SSD 840 PRO Series | 256 GB | 0E7F4A42B000 | 810   | 0     | 2.22   |
 | Samsung   | SSD 850 PRO        | 256 GB | 51A7B319231C | 810   | 0     | 2.22   |
 | Samsung   | SSD 850 EVO mSATA  | 250 GB | 34CF7B167B43 | 810   | 0     | 2.22   |
 | Samsung   | SSD PM871b 2.5 7mm | 256 GB | AAECE09D448A | 810   | 0     | 2.22   |
+| Samsung   | SSD 860 EVO        | 250 GB | 9C012542917B | 810   | 0     | 2.22   |
 | Samsung   | SSD 750 EVO        | 250 GB | DC05D1D04C35 | 809   | 0     | 2.22   |
 | Samsung   | SSD 850 EVO        | 250 GB | FEE3672CA504 | 809   | 0     | 2.22   |
 | Samsung   | SSD 840 EVO        | 120 GB | B7BE4D1C2B59 | 809   | 0     | 2.22   |
 | Samsung   | SSD 860 EVO        | 500 GB | 08A1DA7597D9 | 809   | 0     | 2.22   |
 | Kingston  | SV300S37A120G      | 120 GB | C615B1EE87CA | 809   | 0     | 2.22   |
+| Kingston  | SA400S37480G       | 480 GB | AB44AE62C0E7 | 809   | 0     | 2.22   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 41DCA87DFB3C | 809   | 0     | 2.22   |
 | Samsung   | SSD 850 EVO        | 250 GB | B3248F015754 | 808   | 0     | 2.22   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | B0B214259849 | 808   | 0     | 2.21   |
@@ -3697,15 +3866,18 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 830 Series     | 128 GB | 53526962CC31 | 803   | 0     | 2.20   |
 | Micron    | C400-MTFDDAT128MAM | 128 GB | B04D941D6EC7 | 803   | 0     | 2.20   |
 | Kingston  | SA400S37480G       | 480 GB | E9646B43C614 | 802   | 0     | 2.20   |
+| SanDisk   | SD7SB6S-256G-1006  | 256 GB | 9C7025CC880C | 802   | 0     | 2.20   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 403E614379F6 | 802   | 0     | 2.20   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 8CC43654F5C3 | 802   | 0     | 2.20   |
 | Samsung   | SSD 850 EVO        | 2 TB   | 04FB55260EDC | 801   | 0     | 2.20   |
+| China     | SH00R480GB         | 480 GB | B57DAE1AF32F | 801   | 0     | 2.20   |
 | BIOSTAR   | S100-240GB         | 240 GB | 6BD1FA5253C5 | 801   | 0     | 2.20   |
 | ADATA     | SX900              | 128 GB | E99D40C28A12 | 801   | 0     | 2.20   |
 | OCZ       | DENRSTE251M45-0... | 100 GB | B24F73F5A789 | 801   | 0     | 2.20   |
 | Patriot   | Burst              | 240 GB | B01E75C93010 | 801   | 0     | 2.20   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1D90FA475F63 | 801   | 0     | 2.20   |
 | ADATA     | SSD S599           | 55 GB  | C16E5197EEEF | 801   | 0     | 2.20   |
+| Crucial   | CT525MX300SSD1     | 528 GB | 19E9A406F4C6 | 801   | 0     | 2.20   |
 | Samsung   | MZ7LN256HMJP-000H1 | 256 GB | 3DC19DC0B963 | 801   | 0     | 2.20   |
 | Samsung   | SSD 850 EVO        | 250 GB | F770D7DF3892 | 801   | 0     | 2.20   |
 | Samsung   | SSD 850 EVO        | 120 GB | 0C08D3A4F194 | 801   | 0     | 2.19   |
@@ -3730,6 +3902,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 1 TB   | 3AA9C55B3014 | 799   | 0     | 2.19   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | CED791ADA56D | 798   | 0     | 2.19   |
 | Kingston  | SV300S37A120G      | 120 GB | 35D1F708F3FF | 798   | 0     | 2.19   |
+| Crucial   | CT240BX500SSD1     | 240 GB | CC8B6C157221 | 798   | 0     | 2.19   |
 | Samsung   | SSD 850 EVO        | 250 GB | C95E05655C48 | 798   | 0     | 2.19   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 1C58B3303EEE | 798   | 0     | 2.19   |
 | Samsung   | SSD 850 EVO        | 250 GB | D83F5F3B561C | 798   | 0     | 2.19   |
@@ -3764,6 +3937,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 214762DEEED6 | 794   | 0     | 2.18   |
 | Samsung   | SSD 850 EVO        | 500 GB | 657E5086163A | 794   | 0     | 2.18   |
 | Apple     | SSD TS064C         | 64 GB  | 53B6B1D18F62 | 794   | 0     | 2.18   |
+| Samsung   | SSD 840 Series     | 120 GB | D87B7FAA57EC | 793   | 0     | 2.17   |
 | SK hynix  | SC311 SATA         | 128 GB | E9505A9121E3 | 793   | 0     | 2.17   |
 | Samsung   | MZMPC032HBCD-00000 | 32 GB  | F0FBA042A698 | 793   | 0     | 2.17   |
 | Intenso   | SSD                | 128 GB | 445E471978BB | 793   | 0     | 2.17   |
@@ -3784,7 +3958,9 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSD                | 120 GB | 9730465579C7 | 791   | 0     | 2.17   |
 | Samsung   | MZ7LN128HCHP-000L1 | 128 GB | E008E561DF41 | 791   | 0     | 2.17   |
 | Kingston  | SUV400S37240G      | 240 GB | B49387036A2C | 791   | 0     | 2.17   |
+| Samsung   | SSD 840 EVO        | 120 GB | 0B83132C8CCE | 791   | 0     | 2.17   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 0D82CE6146ED | 791   | 0     | 2.17   |
+| Samsung   | SSD 850 EVO        | 120 GB | 0E59AC6FCCEC | 791   | 0     | 2.17   |
 | Samsung   | SSD 860 EVO        | 500 GB | 8E86F3B505B5 | 791   | 0     | 2.17   |
 | Samsung   | SSD 850 EVO        | 500 GB | A5F1926848DE | 790   | 0     | 2.17   |
 | Corsair   | Force 3 SSD        | 120 GB | E56C0F608801 | 790   | 0     | 2.17   |
@@ -3812,6 +3988,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNH060GMCT      | 64 GB  | A5552E3666C3 | 787   | 0     | 2.16   |
 | Crucial   | CT1024MX200SSD1    | 1 TB   | B3AFA45FC97E | 787   | 0     | 2.16   |
 | Samsung   | SSD 850 EVO        | 250 GB | 5E212870E941 | 787   | 0     | 2.16   |
+| Crucial   | CT500MX500SSD1     | 500 GB | A954BF3321A1 | 787   | 0     | 2.16   |
 | Samsung   | SSD 860 EVO        | 500 GB | 3447CAB8A633 | 786   | 0     | 2.16   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 8AC14762EE37 | 786   | 0     | 2.15   |
 | Intel     | SSDSA2CW120G3      | 120 GB | 3C9124834424 | 786   | 0     | 2.15   |
@@ -3826,6 +4003,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | B015320F6DF0 | 785   | 0     | 2.15   |
 | Samsung   | SSD 860 EVO        | 500 GB | BF57EA29D1D6 | 784   | 0     | 2.15   |
 | Samsung   | SSD 850 EVO        | 250 GB | D2F6214F5E91 | 784   | 0     | 2.15   |
+| WDC       | WDS250G2B0B-00YS70 | 250 GB | 2417F94CB8D0 | 784   | 0     | 2.15   |
 | Samsung   | SSD 850 EVO        | 250 GB | 83EB6AD1A510 | 784   | 0     | 2.15   |
 | SanDisk   | SSD U110           | 128 GB | 38E05482FB28 | 784   | 0     | 2.15   |
 | Kingston  | SUV400S37240G      | 240 GB | 98A30A1241CC | 784   | 0     | 2.15   |
@@ -3862,6 +4040,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 830 Series     | 128 GB | E656F3AD91D3 | 781   | 0     | 2.14   |
 | Samsung   | SSD 860 EVO        | 500 GB | ECA8099DA54C | 781   | 0     | 2.14   |
 | Samsung   | SSD 850 EVO        | 500 GB | B8DC71F5A6A9 | 781   | 0     | 2.14   |
+| SanDisk   | SD8SB8U1T001122    | 1 TB   | 1C55A7C949A5 | 781   | 0     | 2.14   |
+| Kingston  | SUV400S37240G      | 240 GB | 127B727D8F9B | 781   | 0     | 2.14   |
 | Apple     | SSD SM0512F        | 500 GB | D91455CE8CE3 | 781   | 0     | 2.14   |
 | Corsair   | CSSD-F115GB2-A     | 115 GB | DCFD449F40A6 | 781   | 0     | 2.14   |
 | Intenso   | SSD                | 128 GB | CE9E501E04A5 | 780   | 0     | 2.14   |
@@ -3880,6 +4060,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | E60168DB8B01 | 779   | 0     | 2.14   |
 | Samsung   | SSD 850 EVO        | 250 GB | 0B2D5E05D29C | 779   | 0     | 2.13   |
 | Samsung   | SSD 860 PRO        | 256 GB | 94549D7A87F9 | 779   | 0     | 2.13   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 908ECED304DD | 779   | 0     | 2.13   |
 | Samsung   | SSD 850 EVO        | 250 GB | 4B9A0E601991 | 778   | 0     | 2.13   |
 | Samsung   | SSD 850 EVO        | 500 GB | B8213B9078F0 | 778   | 0     | 2.13   |
 | Kingston  | SMS200S360G        | 64 GB  | CA3E45EB78AF | 778   | 0     | 2.13   |
@@ -3891,6 +4072,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 500 GB | 44CC77529D6F | 778   | 0     | 2.13   |
 | Kingston  | SKC400S37512G      | 512 GB | D11893B793A3 | 778   | 0     | 2.13   |
 | ADATA     | SP600              | 256 GB | 76F3B66FFADE | 778   | 0     | 2.13   |
+| SanDisk   | SD7SB6S128G1001    | 128 GB | 7A4D2D3F9F86 | 778   | 0     | 2.13   |
+| Intel     | SSDSC2KB240G8      | 240 GB | E3F5F1324A8E | 777   | 0     | 2.13   |
 | Toshiba   | THNSNJ256G8NU      | 256 GB | 9B3E50424BFA | 777   | 0     | 2.13   |
 | OCZ       | ARC100             | 240 GB | 85B0207E2A3E | 777   | 0     | 2.13   |
 | Smartbuy  | SSD                | 64 GB  | FB6F25F3C2CB | 777   | 0     | 2.13   |
@@ -3920,12 +4103,15 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 830 Series     | 256 GB | 26649169A497 | 775   | 0     | 2.12   |
 | Kingston  | SV300S37A120G      | 120 GB | 68B94D3EB039 | 774   | 0     | 2.12   |
 | Samsung   | MZYTY256HDHP-000L2 | 256 GB | 3002F4FDDFEE | 774   | 0     | 2.12   |
+| Samsung   | SSD 830 Series     | 128 GB | ECCC6E33233E | 774   | 0     | 2.12   |
 | Intel     | SSDSC2BW180A3L     | 180 GB | F46DC1D9DF57 | 774   | 0     | 2.12   |
 | Kingston  | SV300S37A120G      | 120 GB | 9C8497261AA6 | 774   | 0     | 2.12   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 4B77669FCBA8 | 774   | 0     | 2.12   |
+| Kingston  | SA400S37960G       | 960 GB | 07E4745B0A55 | 774   | 0     | 2.12   |
 | ADATA     | SU800              | 256 GB | 962DC75BD4FC | 774   | 0     | 2.12   |
 | Kingston  | SV300S37A120G      | 120 GB | 13527EDE2820 | 774   | 0     | 2.12   |
 | Samsung   | SSD 840 PRO Series | 256 GB | AA18267FFAAD | 774   | 0     | 2.12   |
+| Micron    | MTFDDAK256TBN-1... | 256 GB | 9792941FEDA5 | 774   | 0     | 2.12   |
 | Samsung   | SSD 860 EVO        | 250 GB | 86B316DAB787 | 774   | 0     | 2.12   |
 | ADATA     | SSD S510           | 120 GB | 6C0B381D664C | 774   | 0     | 2.12   |
 | ADATA     | SU650              | 240 GB | E0C58F8B72FD | 774   | 0     | 2.12   |
@@ -3963,6 +4149,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | 66B3D83A8061 | 770   | 0     | 2.11   |
 | WDC       | WDS500G2B0A        | 500 GB | 77264DD46246 | 769   | 0     | 2.11   |
 | Samsung   | SSD 850 EVO        | 500 GB | 34024D3CED0D | 769   | 0     | 2.11   |
+| Mushkin   | MKNSSDSR250GB      | 250 GB | 9E6BBA7AC92B | 769   | 0     | 2.11   |
 | Kingston  | SKC400S37512G      | 512 GB | 6CFFA16355D8 | 769   | 0     | 2.11   |
 | Kingston  | SKC400S37512G      | 512 GB | B5F1AB782BFD | 769   | 0     | 2.11   |
 | Hoodisk   | SSD                | 128 GB | E800C8D15FE1 | 769   | 0     | 2.11   |
@@ -3972,6 +4159,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 9181C1D980FB | 768   | 0     | 2.11   |
 | SanDisk   | SD8SN8U1T001122    | 1 TB   | 2F4F6C078D9E | 768   | 0     | 2.11   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 98FB53C16A13 | 768   | 0     | 2.11   |
+| WDC       | WDS250G1B0A-00H9H0 | 250 GB | 90CA2401125B | 768   | 0     | 2.11   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 33E92BE1E6A7 | 768   | 0     | 2.11   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 4E29CD6EC047 | 768   | 0     | 2.11   |
 | OCZ       | VERTEX3            | 64 GB  | F6BD8EEA71D7 | 768   | 0     | 2.10   |
@@ -3979,6 +4167,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SH103S3120G        | 120 GB | 2C1F951BE184 | 768   | 0     | 2.10   |
 | TCSUNB0W  | X3                 | 64 GB  | DA4E2BBA3E0C | 767   | 0     | 2.10   |
 | Samsung   | SSD 850 EVO        | 250 GB | CFFC6CCFB561 | 767   | 0     | 2.10   |
+| Samsung   | SSD 850            | 120 GB | 8FB69A169077 | 767   | 0     | 2.10   |
 | Samsung   | SSD 850 EVO        | 250 GB | 37AC664C7594 | 767   | 0     | 2.10   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 303C6403A8DD | 767   | 0     | 2.10   |
 | Samsung   | SSD 850 PRO        | 256 GB | DF849B02D17E | 767   | 0     | 2.10   |
@@ -3988,6 +4177,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | EC6D802AA821 | 766   | 0     | 2.10   |
 | Toshiba   | THNSNJ256GCSU      | 256 GB | AF04A28D9D70 | 766   | 0     | 2.10   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 7373A1488F23 | 766   | 0     | 2.10   |
+| Samsung   | SSD 840 EVO        | 250 GB | C8DF03E75F5A | 766   | 0     | 2.10   |
 | Lite-On   | ECE-240NAS         | 240 GB | 2E92DA92EA48 | 766   | 0     | 2.10   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 1E8FC35AF2EC | 766   | 0     | 2.10   |
 | SanDisk   | SDSSDA240G         | 240 GB | E90D3DD2E3BF | 766   | 0     | 2.10   |
@@ -4005,6 +4195,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 6D8E53820D28 | 764   | 0     | 2.10   |
 | Crucial   | CT480M500SSD1      | 480 GB | E17E4DBD2B57 | 764   | 0     | 2.10   |
 | Samsung   | SSD 850 EVO        | 250 GB | 7812A6EF75EA | 764   | 0     | 2.10   |
+| Kingston  | SV300S37A480G      | 480 GB | D18F67C992A2 | 764   | 0     | 2.10   |
 | SanDisk   | SDSSDXPS240G       | 240 GB | 8323B2D4ECCE | 764   | 0     | 2.09   |
 | SanDisk   | SDSSDXPS960G       | 960 GB | 884135969D1F | 764   | 0     | 2.09   |
 | Samsung   | SSD 840 EVO        | 250 GB | E5017A53D047 | 764   | 0     | 2.09   |
@@ -4036,7 +4227,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | FBD536B23FA9 | 761   | 0     | 2.09   |
 | Kingston  | SA400S37240G       | 240 GB | 2210E567BAC4 | 761   | 0     | 2.09   |
 | Samsung   | SSD 850 EVO        | 250 GB | 214506E9C645 | 761   | 0     | 2.09   |
+| Samsung   | SSD 850 EVO        | 250 GB | 1E7190AE348A | 761   | 0     | 2.09   |
 | Samsung   | SSD 850 EVO        | 500 GB | C477A3894255 | 761   | 0     | 2.09   |
+| Samsung   | SSD 860 EVO        | 500 GB | 2BE11E0F3D9B | 761   | 0     | 2.09   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 52050A460C48 | 761   | 0     | 2.09   |
 | Apple     | SSD TS256C         | 256 GB | A8AB32C8BD3A | 760   | 0     | 2.08   |
 | Kingston  | SV300S37A120G      | 120 GB | 0EDBF4E98DBD | 760   | 0     | 2.08   |
@@ -4056,6 +4249,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH120GG25      | 120 GB | 263AC56F4C1C | 758   | 0     | 2.08   |
 | Kingston  | SEDC400S37480G     | 480 GB | D3C735D1AC1F | 758   | 0     | 2.08   |
 | Samsung   | SSD 850 EVO        | 250 GB | 621BDC501E4F | 758   | 0     | 2.08   |
+| Samsung   | SSD 850 EVO        | 250 GB | 5D7F99262EA8 | 758   | 0     | 2.08   |
 | Micron    | C400-MTFDDAK512MAM | 512 GB | AC8FC194D5E3 | 757   | 0     | 2.08   |
 | Samsung   | SSD 850 PRO        | 256 GB | A066174C9B2E | 757   | 0     | 2.08   |
 | Crucial   | CT250MX500SSD1     | 250 GB | F8AE17461997 | 757   | 0     | 2.08   |
@@ -4066,6 +4260,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSA2CW120G3      | 120 GB | A22FCF89101B | 756   | 0     | 2.07   |
 | Samsung   | SSD 850 EVO        | 500 GB | 9C4F0D27FD3F | 756   | 0     | 2.07   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 2B99C746E133 | 756   | 0     | 2.07   |
+| Samsung   | SSD 840 PRO Series | 128 GB | 40F2F354BDC2 | 756   | 0     | 2.07   |
 | Transcend | TS128GSSD340       | 128 GB | B9B7188E2211 | 756   | 0     | 2.07   |
 | ADATA     | SP600              | 256 GB | B0F1378FF73C | 756   | 0     | 2.07   |
 | Kingston  | SV300S37A60G       | 64 GB  | 57BD96E8A78E | 755   | 0     | 2.07   |
@@ -4093,6 +4288,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD i100           | 24 GB  | 00B474B2D7F0 | 753   | 0     | 2.06   |
 | Intel     | SSDSCMMW180A3L     | 180 GB | 7F59B132851A | 753   | 0     | 2.06   |
 | Samsung   | SSD 860 EVO        | 500 GB | E41DC6578A9E | 753   | 0     | 2.06   |
+| SanDisk   | SSD G5 BICS4       | 500 GB | 02BAF4F26EA8 | 753   | 0     | 2.06   |
 | Samsung   | SSD 850 EVO        | 500 GB | 70ADDAD680FB | 752   | 0     | 2.06   |
 | Crucial   | C300-CTFDDAC128MAG | 128 GB | 7D62C88E3F1E | 752   | 0     | 2.06   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 119FA1681010 | 752   | 0     | 2.06   |
@@ -4100,6 +4296,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 1 TB   | CF27E9B1A10A | 752   | 0     | 2.06   |
 | Samsung   | SSD 850 PRO        | 256 GB | 4F698DA3BA9F | 751   | 0     | 2.06   |
 | Kingston  | SUV400S37240G      | 240 GB | 44575DA5A0A8 | 751   | 0     | 2.06   |
+| SanDisk   | SD7SB6S-256G-1006  | 256 GB | 3858854936FE | 751   | 0     | 2.06   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 77F48FF28774 | 751   | 0     | 2.06   |
 | Kingston  | RBUSMS180DS3128GH  | 128 GB | 65D4BBC46488 | 751   | 0     | 2.06   |
 | Seagate   | BarraCuda 120 S... | 500 GB | B157BD3B2E42 | 751   | 0     | 2.06   |
@@ -4116,6 +4313,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | AFAC34BB86B9 | 750   | 0     | 2.06   |
 | Samsung   | SSD 860 EVO        | 250 GB | 8E94B6082B5A | 750   | 0     | 2.06   |
 | SanDisk   | SDSSDA120G         | 120 GB | E00D0D545902 | 750   | 0     | 2.06   |
+| Kingston  | SH103S3120G        | 120 GB | 38CC2C73A352 | 749   | 0     | 2.05   |
 | Kingston  | SHFS37A240G        | 240 GB | 94E0E41D2BCF | 749   | 0     | 2.05   |
 | Samsung   | SSD 850 EVO        | 500 GB | D9A435D4C309 | 749   | 0     | 2.05   |
 | Kingston  | SV300S37A120G      | 120 GB | 4936655B1128 | 749   | 0     | 2.05   |
@@ -4123,6 +4321,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 Series     | 120 GB | E6FBBC1EFF5E | 749   | 0     | 2.05   |
 | Samsung   | SSD 850 EVO        | 250 GB | 53A4643DCF73 | 748   | 0     | 2.05   |
 | Kingston  | SUV400S37120G      | 120 GB | CC2274D2E259 | 748   | 0     | 2.05   |
+| Crucial   | CT750MX300SSD1     | 752 GB | FCAEA59608AD | 748   | 0     | 2.05   |
 | SanDisk   | SD8SN8U256G1122    | 256 GB | 7C929E7C0B66 | 748   | 0     | 2.05   |
 | Kingston  | SKC400S37256G      | 256 GB | 02B49B2ABA0E | 748   | 0     | 2.05   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 63A38FA86096 | 2244  | 2     | 2.05   |
@@ -4130,6 +4329,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | DFDCFD09E3E9 | 747   | 0     | 2.05   |
 | Kingston  | SV300S37A120G      | 120 GB | A2DA3C44D1E0 | 747   | 0     | 2.05   |
 | Kingston  | SV300S37A120G      | 120 GB | E8F038195BF8 | 747   | 0     | 2.05   |
+| Crucial   | CT275MX300SSD4     | 275 GB | 80BEC9B463DF | 747   | 0     | 2.05   |
 | Patriot   | Burst              | 120 GB | 5D4A77C0A911 | 747   | 0     | 2.05   |
 | Kingston  | SVP200S3120G       | 120 GB | E18EB9BA7172 | 747   | 0     | 2.05   |
 | Samsung   | SSD 850            | 120 GB | 6A11CB7F1DA0 | 747   | 0     | 2.05   |
@@ -4137,11 +4337,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS 120 GB    | 120 GB | FAF6B7486FDF | 747   | 0     | 2.05   |
 | Kingston  | SV300S37A120G      | 120 GB | 184F3BD9764A | 747   | 0     | 2.05   |
 | Samsung   | SSD 850 EVO        | 250 GB | A02B8A04E396 | 747   | 0     | 2.05   |
+| PNY       | EU SSD CS1311      | 240 GB | D38551CB87CB | 746   | 0     | 2.05   |
 | Kingston  | SV300S37A120G      | 120 GB | CD01F953176E | 746   | 0     | 2.05   |
 | Kingston  | SEDC400S37480G     | 480 GB | 657AA50D9F9C | 746   | 0     | 2.04   |
 | Samsung   | SSD 860 EVO        | 500 GB | 4A51FA71361C | 746   | 0     | 2.04   |
 | OCZ       | VERTEX4            | 256 GB | 68626B5CF16E | 745   | 0     | 2.04   |
 | Samsung   | SSD 850 EVO        | 500 GB | 99195E34D1E5 | 745   | 0     | 2.04   |
+| SK hynix  | HFS512G39MND-3310A | 512 GB | 1D2D5FC335F4 | 745   | 0     | 2.04   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 52B332FDA9A2 | 745   | 0     | 2.04   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 2AA41C5025CA | 745   | 0     | 2.04   |
 | Kingston  | SV300S37A240G      | 240 GB | 95B98D40135B | 745   | 0     | 2.04   |
@@ -4156,6 +4358,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | B3BEC2595C7A | 744   | 0     | 2.04   |
 | SK hynix  | SC311 SATA         | 256 GB | 074747E8B5E2 | 744   | 0     | 2.04   |
 | Kingston  | SUV400S37120G      | 120 GB | 37FFBF062BB1 | 744   | 0     | 2.04   |
+| Samsung   | SSD 850 EVO        | 2 TB   | 8619ED747095 | 744   | 0     | 2.04   |
 | Kingston  | SA400S371920G      | 1.9 TB | 92FF3B4ECCF4 | 744   | 0     | 2.04   |
 | Corsair   | Force 3 SSD        | 120 GB | AE3E6ABBF88B | 743   | 0     | 2.04   |
 | Samsung   | SSD 840 EVO        | 250 GB | 2F719DF20FC5 | 743   | 0     | 2.04   |
@@ -4163,7 +4366,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 8611BE762EE6 | 743   | 0     | 2.04   |
 | Samsung   | SSD 840 EVO        | 120 GB | C05B5DFDD6DC | 743   | 0     | 2.04   |
 | Samsung   | MZ7TE128HMGR-00000 | 128 GB | 51165FBA7CD1 | 743   | 0     | 2.04   |
+| SanDisk   | Ultra II           | 240 GB | 0FC63D545F06 | 743   | 0     | 2.04   |
 | Kingston  | RBUSNS8180S3128GI1 | 128 GB | 522F08607709 | 743   | 0     | 2.04   |
+| Patriot   | Burst              | 240 GB | FF6CCA6B9235 | 743   | 0     | 2.04   |
 | OCZ       | AGILITY3           | 120 GB | 8D5FA772DAF0 | 742   | 0     | 2.04   |
 | Super ... | FTM25N325H         | 250 GB | F6935CBBDE67 | 742   | 0     | 2.03   |
 | Kingston  | SV300S37A240G      | 240 GB | F79F7D031738 | 742   | 0     | 2.03   |
@@ -4192,6 +4397,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | ECCEED61C7D7 | 740   | 0     | 2.03   |
 | Goodram   | SSDPR-CL100-480-G2 | 480 GB | F3698310AD08 | 740   | 0     | 2.03   |
 | SanDisk   | SDSSDA240G         | 240 GB | 6769DF378055 | 740   | 0     | 2.03   |
+| SK hynix  | SHGS31-500GS-2     | 500 GB | 428A774F273C | 740   | 0     | 2.03   |
 | Samsung   | SSD PM851a 2.5 7mm | 1 TB   | 6CEF54058C9E | 740   | 0     | 2.03   |
 | Team      | T253X2512G         | 512 GB | F81FCBA2EF61 | 740   | 0     | 2.03   |
 | Samsung   | SSD 850 PRO        | 512 GB | B5E9DC323C55 | 739   | 0     | 2.03   |
@@ -4213,18 +4419,22 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDHII240G       | 240 GB | 126692418E63 | 738   | 0     | 2.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | DA12B128D864 | 737   | 0     | 2.02   |
 | BHT       | WR202HH032G E70... | 32 GB  | 816C82D27062 | 737   | 0     | 2.02   |
+| SPCC      | SSD                | 1 TB   | 1D6422E51A43 | 737   | 0     | 2.02   |
 | Samsung   | MZ7PC128HAFU-000L1 | 128 GB | 5C3D8E1CAA97 | 737   | 0     | 2.02   |
 | SanDisk   | SDSSDH3512G        | 512 GB | A47ED94CE886 | 737   | 0     | 2.02   |
 | Samsung   | SSD 850 EVO        | 500 GB | 137857BE9A9B | 737   | 0     | 2.02   |
 | Corsair   | Force LE SSD       | 120 GB | 7B6147738D31 | 737   | 0     | 2.02   |
 | Samsung   | SSD 860 EVO        | 1 TB   | E93607BABEB8 | 737   | 0     | 2.02   |
 | Kingston  | SV300S37A60G       | 64 GB  | 2946FB3D9EE0 | 737   | 0     | 2.02   |
+| Samsung   | SSD 850 EVO        | 120 GB | 8C28EEB2A84C | 737   | 0     | 2.02   |
 | Samsung   | SSD 850 PRO        | 512 GB | 745A228E3958 | 737   | 0     | 2.02   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | FB6DDBF631D0 | 737   | 0     | 2.02   |
 | Samsung   | SSD 840 EVO        | 1 TB   | D75793BFECFB | 736   | 0     | 2.02   |
 | Samsung   | SSD 860 EVO        | 1 TB   | D71F7322554C | 736   | 0     | 2.02   |
+| Kingston  | SA400S37120G       | 120 GB | E82D5D9941D3 | 736   | 0     | 2.02   |
 | SPCC      | SSD                | 64 GB  | 79F25AEA7E5F | 736   | 0     | 2.02   |
 | Kingston  | SA400S37480G       | 480 GB | 90C922D1351A | 736   | 0     | 2.02   |
+| OCZ       | VERTEX4            | 128 GB | 8F79FCB5A814 | 736   | 0     | 2.02   |
 | Samsung   | SSD 840 EVO        | 120 GB | D9D218049FDD | 736   | 0     | 2.02   |
 | Crucial   | CT1050MX300SSD4    | 1 TB   | 0813CB999F94 | 736   | 0     | 2.02   |
 | Samsung   | SSD 850 EVO        | 2 TB   | A89BF3C366FC | 736   | 0     | 2.02   |
@@ -4263,6 +4473,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 120 GB | 051B76D1CB1A | 733   | 0     | 2.01   |
 | ADATA     | SP900              | 64 GB  | B17FD1D57D24 | 733   | 0     | 2.01   |
 | Corsair   | Force GT           | 120 GB | 2214633D596F | 733   | 0     | 2.01   |
+| Kingston  | SA400S37480G       | 480 GB | 9281C56BA4A0 | 733   | 0     | 2.01   |
 | Samsung   | SSD 850 EVO        | 250 GB | 92951040088A | 733   | 0     | 2.01   |
 | Samsung   | SSD 850 PRO        | 512 GB | DBC6D37C4347 | 732   | 0     | 2.01   |
 | Samsung   | SSD 850 EVO        | 500 GB | 07DED6CEF7F8 | 732   | 0     | 2.01   |
@@ -4326,8 +4537,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SH103S3120G        | 120 GB | 12AA8F7B0507 | 725   | 0     | 1.99   |
 | Kingston  | SV300S37A120G      | 120 GB | 3D77D596C3F6 | 725   | 0     | 1.99   |
 | Samsung   | SSD 750 EVO        | 250 GB | 5C13498A76F9 | 725   | 0     | 1.99   |
+| SanDisk   | SSD PLUS 120 GB    | 120 GB | 1A6A9F121967 | 725   | 0     | 1.99   |
 | Samsung   | SSD 850 EVO        | 2 TB   | 6CFC98605ACD | 725   | 0     | 1.99   |
 | Samsung   | SSD 850 EVO        | 2 TB   | 8034EF09B979 | 725   | 0     | 1.99   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 232904F0C414 | 725   | 0     | 1.99   |
 | Kingston  | SA400S37240G       | 240 GB | F514405835EE | 725   | 0     | 1.99   |
 | Samsung   | MZNTY128HDHP-00000 | 128 GB | F5706CFCB042 | 724   | 0     | 1.99   |
 | Samsung   | SSD 840 Series     | 120 GB | 63E1160078C1 | 724   | 0     | 1.99   |
@@ -4335,6 +4548,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDP128G         | 128 GB | E1874881924D | 724   | 0     | 1.98   |
 | Corsair   | Neutron SSD        | 256 GB | 7EB0935F440C | 724   | 0     | 1.98   |
 | Samsung   | SSD 840 EVO        | 250 GB | 6181BC8D8A85 | 724   | 0     | 1.98   |
+| Crucial   | CT1050MX300SSD1    | 1 TB   | E5F19D8EE09C | 724   | 0     | 1.98   |
 | Samsung   | SSD 850 EVO        | 500 GB | 69251239E91A | 724   | 0     | 1.98   |
 | Intenso   | SSD Sata III       | 960 GB | 206780527564 | 724   | 0     | 1.98   |
 | Kingston  | SA400S37120G       | 120 GB | D1B293F47179 | 723   | 0     | 1.98   |
@@ -4357,7 +4571,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 4 TB   | 2771FC480C1C | 721   | 0     | 1.98   |
 | Kingston  | SA400S37240G       | 240 GB | CEECD24F1DFF | 721   | 0     | 1.98   |
 | Apple     | SSD SM0128G        | 121 GB | 4A130F3125EB | 721   | 0     | 1.98   |
+| Kingston  | SA400S37240G       | 240 GB | CEE76CC620A2 | 721   | 0     | 1.98   |
 | Samsung   | SSD 860 EVO        | 500 GB | FD3B1F54387D | 721   | 0     | 1.98   |
+| Samsung   | SSD 860 PRO        | 256 GB | 9EABCC31A325 | 721   | 0     | 1.98   |
 | SanDisk   | SDSSDA120G         | 120 GB | 48A4631E7B92 | 721   | 0     | 1.98   |
 | OCZ       | ARC100             | 120 GB | 193691091FEF | 721   | 0     | 1.98   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 440B50879890 | 721   | 0     | 1.98   |
@@ -4388,8 +4604,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMSM150S324G2      | 24 GB  | 408019338FE4 | 717   | 0     | 1.97   |
 | Samsung   | SSD 840 PRO Series | 256 GB | EACFAA65AC9A | 717   | 0     | 1.97   |
 | Samsung   | MZ7TE256HMHP-000L7 | 256 GB | 19509E21AD08 | 717   | 0     | 1.97   |
+| ADATA     | SX930              | 120 GB | 461D05AE8EEF | 717   | 0     | 1.97   |
 | Kingston  | SA400S37240G       | 240 GB | 34EB820EC690 | 717   | 0     | 1.97   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 66C7C6C54D36 | 717   | 0     | 1.96   |
+| HP        | SSD S700           | 500 GB | 29079CAF7E45 | 717   | 0     | 1.96   |
 | Samsung   | SSD 860 EVO        | 500 GB | 160686961702 | 717   | 0     | 1.96   |
 | Samsung   | SSD 860 EVO        | 500 GB | 9F9CE404EBFC | 717   | 0     | 1.96   |
 | SanDisk   | SD8TB8U256G1001    | 256 GB | ECA00FBD5D02 | 717   | 0     | 1.96   |
@@ -4434,6 +4652,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A        | 500 GB | C233568D41CC | 713   | 0     | 1.95   |
 | SanDisk   | SD8SB8U512G1001    | 512 GB | C41EEC861431 | 713   | 0     | 1.95   |
 | ADATA     | SU650              | 120 GB | BD49F38E30FF | 713   | 0     | 1.95   |
+| Samsung   | SSD 830 Series     | 128 GB | 48E0699006C2 | 713   | 0     | 1.95   |
 | Samsung   | SSD 860 EVO        | 500 GB | EDFAB13D8F6F | 712   | 0     | 1.95   |
 | SPCC      | SSD                | 64 GB  | 53309B07EC41 | 712   | 0     | 1.95   |
 | Samsung   | SSD 860 EVO        | 1 TB   | E2FE43B302E9 | 712   | 0     | 1.95   |
@@ -4468,6 +4687,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNTY256HDHP-000L7 | 256 GB | 73AF49C74751 | 709   | 0     | 1.94   |
 | Samsung   | MZ7LN512HMJP-000L7 | 512 GB | 69EA4F023107 | 709   | 0     | 1.94   |
 | WDC       | WDS500G1B0B-00AS40 | 500 GB | 5B5453D5B948 | 709   | 0     | 1.94   |
+| Samsung   | SSD 840 EVO        | 250 GB | 5131595E9DD9 | 709   | 0     | 1.94   |
 | PNY       | CS1311 240GB SSD   | 240 GB | 81000C00721D | 709   | 0     | 1.94   |
 | Samsung   | SSD 860 EVO        | 500 GB | B6DEB78A2069 | 709   | 0     | 1.94   |
 | Samsung   | SSD 840 EVO        | 120 GB | 29E037A701F4 | 708   | 0     | 1.94   |
@@ -4570,6 +4790,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | BA79B785A7F9 | 700   | 0     | 1.92   |
 | ADATA     | SU900              | 1 TB   | E6979998AB98 | 699   | 0     | 1.92   |
 | SanDisk   | SSD U110           | 64 GB  | D23093575D79 | 699   | 0     | 1.92   |
+| Toshiba   | THNSNJ128GMCU      | 128 GB | 5D340B8DA809 | 699   | 0     | 1.92   |
 | Kston     | SSD                | 64 GB  | A2A3F52363C8 | 699   | 0     | 1.92   |
 | Samsung   | SSD 850 EVO        | 250 GB | B25DB08CC98F | 699   | 0     | 1.92   |
 | Apple     | SSD SM256E         | 256 GB | 512538A63F7F | 699   | 0     | 1.92   |
@@ -4594,6 +4815,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KG240G8      | 240 GB | 42C226120A61 | 698   | 0     | 1.91   |
 | OCZ       | VERTEX4            | 128 GB | 1C8D729D5676 | 698   | 0     | 1.91   |
 | Kingston  | SVP100S2128G       | 128 GB | A193F015753C | 698   | 0     | 1.91   |
+| SK hynix  | SC311 SATA         | 256 GB | B10FC8E96E94 | 698   | 0     | 1.91   |
 | Samsung   | SSD 840 EVO        | 500 GB | BE580A4F3CDE | 698   | 0     | 1.91   |
 | Samsung   | SSD 850 PRO        | 256 GB | A879A741005E | 698   | 0     | 1.91   |
 | SK hynix  | SC311 SATA         | 256 GB | 7BA55E39AE20 | 697   | 0     | 1.91   |
@@ -4607,6 +4829,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LN512HMJP-000L7 | 512 GB | 4B56968D6345 | 697   | 0     | 1.91   |
 | Samsung   | MZ7LN256HCHP-000L7 | 256 GB | 9930F30678C8 | 696   | 0     | 1.91   |
 | Corsair   | Force GS           | 128 GB | 992E8A3BC87B | 696   | 0     | 1.91   |
+| SanDisk   | SD8SN8U512G1002    | 512 GB | 04E60C591922 | 696   | 0     | 1.91   |
 | Intel     | SSDSA2CW160G3      | 160 GB | 3D35837A8C3F | 696   | 0     | 1.91   |
 | Samsung   | SSD 850 PRO        | 512 GB | F3CBF1D91146 | 696   | 0     | 1.91   |
 | Kingston  | SV300S37A120G      | 120 GB | 3FF50F72EA0D | 695   | 0     | 1.91   |
@@ -4640,9 +4863,11 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 256 GB | E80B2D4F573A | 693   | 0     | 1.90   |
 | Intel     | SSDSC2BB080G4      | 80 GB  | D64642385BA8 | 692   | 0     | 1.90   |
 | Kingston  | SA400M8240G        | 240 GB | ABEF89D4720C | 692   | 0     | 1.90   |
+| Samsung   | Portable SSD T5    | 500 GB | FBD675E0CA37 | 692   | 0     | 1.90   |
 | Samsung   | MZ7PD128HAFV-000H7 | 128 GB | 8B2300135B78 | 692   | 0     | 1.90   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 7D4F9A218B14 | 692   | 0     | 1.90   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | 00423F813DD1 | 692   | 0     | 1.90   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | BD6D5D51524A | 692   | 0     | 1.90   |
 | SanDisk   | SDSA6MM-016G-1006  | 16 GB  | 9583EB930CCD | 692   | 0     | 1.90   |
 | Micron    | 5200_MTFDDAK1T9TDC | 1.9 TB | 40F44F751B6D | 692   | 0     | 1.90   |
 | Samsung   | SSD 840 EVO        | 120 GB | 7DAA14CED192 | 692   | 0     | 1.90   |
@@ -4659,6 +4884,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBUSC180DS37128GH  | 128 GB | B97E79E90F43 | 691   | 0     | 1.89   |
 | Samsung   | SSD 850 EVO        | 250 GB | 8C78E06CE4B5 | 691   | 0     | 1.89   |
 | Samsung   | SSD 860 EVO        | 250 GB | D843D5E11732 | 691   | 0     | 1.89   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 5EA10B5B1F25 | 691   | 0     | 1.89   |
 | SanDisk   | SD6SF1M064G1022    | 64 GB  | 5DC3B1BED0AA | 691   | 0     | 1.89   |
 | Intel     | SSDSC2BW080A4      | 80 GB  | C88C7126704B | 691   | 0     | 1.89   |
 | Samsung   | SSD 850 PRO        | 256 GB | 2A810AECB83C | 691   | 0     | 1.89   |
@@ -4701,6 +4927,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 1E8EAC8BFDCE | 687   | 0     | 1.88   |
 | SanDisk   | SDSSDA120G         | 120 GB | 6BC05FDCAA25 | 687   | 0     | 1.88   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 6AFE3967D27A | 687   | 0     | 1.88   |
+| Crucial   | CT512MX100SSD1     | 512 GB | 89DDE4335E30 | 687   | 0     | 1.88   |
 | OCZ       | VERTEX2            | 64 GB  | 17AE923DE070 | 687   | 0     | 1.88   |
 | Samsung   | MZNLN256HCHP-00000 | 256 GB | 7CDBD6075879 | 687   | 0     | 1.88   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3ED74C0C9E5E | 687   | 0     | 1.88   |
@@ -4711,6 +4938,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KG240G8      | 240 GB | 724B6DED2B24 | 686   | 0     | 1.88   |
 | Kingston  | SVP200S390G        | 90 GB  | F8E6DA2EDAE1 | 686   | 0     | 1.88   |
 | Kingston  | SA400S37480G       | 480 GB | 7DE0957A5C7C | 686   | 0     | 1.88   |
+| Samsung   | SSD 860 EVO        | 250 GB | 58BE7687DA83 | 686   | 0     | 1.88   |
 | SK hynix  | HFS512G32MND-3312A | 512 GB | E3F836E12427 | 686   | 0     | 1.88   |
 | SK hynix  | SC311 SATA         | 256 GB | FB9EEB665E5F | 686   | 0     | 1.88   |
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | F96B3C8F06E2 | 686   | 0     | 1.88   |
@@ -4762,11 +4990,13 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 8F10225D52C0 | 682   | 0     | 1.87   |
 | SanDisk   | SDSSDA-1T00        | 1 TB   | D72BEAE2D462 | 682   | 0     | 1.87   |
 | SPCC      | SSD                | 256 GB | A7A2BBE4C053 | 682   | 0     | 1.87   |
+| Samsung   | SSD 850 EVO        | 250 GB | A5E1FA48104D | 682   | 0     | 1.87   |
 | Intel     | SSDSC2KB960G8      | 960 GB | 497A8EA0D22F | 682   | 0     | 1.87   |
 | China     | SATA SSD           | 480 GB | 727F50495E2E | 682   | 0     | 1.87   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 07DB5D524E29 | 682   | 0     | 1.87   |
 | ADATA     | SU800NS38          | 128 GB | 943EA324E19E | 682   | 0     | 1.87   |
 | Samsung   | SSD 860 EVO        | 500 GB | 97076386CD56 | 682   | 0     | 1.87   |
+| Samsung   | SSD 850 PRO        | 1 TB   | 75898FAE7055 | 682   | 0     | 1.87   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 981CEE7B991A | 682   | 0     | 1.87   |
 | Intel     | SSDSC2KG240G8      | 240 GB | 9121771AAEC1 | 682   | 0     | 1.87   |
 | OCZ       | VERTEX4            | 128 GB | 1082ABEEF752 | 682   | 0     | 1.87   |
@@ -4783,6 +5013,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | B8735BC499FE | 681   | 0     | 1.87   |
 | Intel     | SSDSC2KB960G8      | 960 GB | 7C38DC739488 | 681   | 0     | 1.87   |
 | Intel     | SSDSC2KB960G8      | 960 GB | F53B1C01B9A0 | 681   | 0     | 1.87   |
+| Samsung   | SSD 860 PRO        | 256 GB | 5F5CC6D67095 | 681   | 0     | 1.87   |
 | Crucial   | CT120M500SSD1      | 120 GB | 880CE9647DAC | 681   | 0     | 1.87   |
 | SPCC      | SSD                | 256 GB | 39E5B9F0A98A | 681   | 0     | 1.87   |
 | Samsung   | SSD 850 EVO        | 250 GB | E2127571C348 | 681   | 0     | 1.87   |
@@ -4812,6 +5043,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDXPS240G       | 240 GB | 5FCC6300AAAB | 679   | 0     | 1.86   |
 | SanDisk   | SDSSDA120G         | 120 GB | FC0A5104D838 | 678   | 0     | 1.86   |
 | Kingston  | SV300S37A240G      | 240 GB | 4F22DEDDAE62 | 678   | 0     | 1.86   |
+| Toshiba   | Q300               | 480 GB | 8FB510510AD3 | 678   | 0     | 1.86   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 0F856728EA06 | 678   | 0     | 1.86   |
 | SanDisk   | SSD PLUS 480 GB    | 480 GB | C8B39FCD36AA | 678   | 0     | 1.86   |
 | Samsung   | MZ7LN128HCHP-000L1 | 128 GB | 6BDD854F9758 | 678   | 0     | 1.86   |
@@ -4838,6 +5070,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KG240G8      | 240 GB | 3A70CF2358CD | 676   | 0     | 1.85   |
 | Kingston  | SV300S37A240G      | 240 GB | BB600941362F | 676   | 0     | 1.85   |
 | Kingston  | SV300S37A120G      | 120 GB | 8D1D820CC033 | 676   | 0     | 1.85   |
+| ADATA     | IM2S3138E-128GM-B  | 128 GB | AB9558E4A79D | 676   | 0     | 1.85   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | EB7194D365D5 | 676   | 0     | 1.85   |
 | Kingston  | SH103S3120G        | 120 GB | 61B58793388C | 676   | 0     | 1.85   |
 | Kingston  | SVP200S3120G       | 120 GB | 4A708D7C04A4 | 676   | 0     | 1.85   |
@@ -4848,6 +5081,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | C1A2CE515A13 | 675   | 0     | 1.85   |
 | Kingston  | SH103S3120G        | 120 GB | EDA3AD514D33 | 675   | 0     | 1.85   |
 | Kingston  | SV300S37A120G      | 120 GB | C8B3DBFCEDEB | 675   | 0     | 1.85   |
+| OCZ       | AGILITY3           | 240 GB | D9D10D494E58 | 675   | 0     | 1.85   |
 | Crucial   | CT960M500SSD1      | 960 GB | FF3D4CDFCE7E | 675   | 0     | 1.85   |
 | ADATA     | SX950              | 240 GB | 95851041C69E | 675   | 0     | 1.85   |
 | Crucial   | CT960M500SSD1      | 960 GB | 5CEB85560E2B | 675   | 0     | 1.85   |
@@ -4857,6 +5091,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 1 TB   | 1BDDF34E2329 | 675   | 0     | 1.85   |
 | SanDisk   | SSD PLUS           | 240 GB | E714A15D8B95 | 674   | 0     | 1.85   |
 | Micron    | M600_MTFDDAY512MBF | 512 GB | F0FAAB5B33E4 | 674   | 0     | 1.85   |
+| OCZ       | VERTEX3            | 120 GB | F855B3CFF2B0 | 674   | 0     | 1.85   |
 | Samsung   | MZNTY128HDHP-000L1 | 128 GB | 1CAE09BB80DB | 674   | 0     | 1.85   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 4A443C9FC979 | 674   | 0     | 1.85   |
 | Kingston  | SNVP325S2128GB     | 128 GB | 19CA546A4DC1 | 674   | 0     | 1.85   |
@@ -4916,6 +5151,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 4F4F21106031 | 668   | 0     | 1.83   |
 | Kingston  | SUV400S37240G      | 240 GB | B1384FD0C7E3 | 668   | 0     | 1.83   |
 | Crucial   | CT240BX500SSD1     | 240 GB | EDC98BCBE864 | 667   | 0     | 1.83   |
+| Kingston  | SV300S37A-60G      | 64 GB  | DDB2BDAA2895 | 667   | 0     | 1.83   |
 | Kingston  | SV300S37A240G      | 240 GB | 25F3A12FC2CE | 667   | 0     | 1.83   |
 | Kingston  | SV300S37A240G      | 240 GB | 4DC34D6B7945 | 667   | 0     | 1.83   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 98EBB581A7C4 | 667   | 0     | 1.83   |
@@ -4926,6 +5162,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 240 GB | 937D6F2FD3A0 | 667   | 0     | 1.83   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | F1C4666B5A4A | 667   | 0     | 1.83   |
 | Apple     | SSD SM1024G        | 1 TB   | 3EE51616FF86 | 667   | 0     | 1.83   |
+| Samsung   | MZ7TE256HMHP-000L7 | 256 GB | 32FC3C5F04A7 | 667   | 0     | 1.83   |
 | OCZ       | VERTEX3            | 64 GB  | 0318C09954F5 | 667   | 0     | 1.83   |
 | Samsung   | SSD 850 PRO        | 128 GB | 933614D933AD | 666   | 0     | 1.83   |
 | Samsung   | SSD PM830 mSATA    | 32 GB  | 1D294B52722A | 666   | 0     | 1.83   |
@@ -4936,6 +5173,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | 0222A1B52C7D | 666   | 0     | 1.83   |
 | ADATA     | SU630              | 240 GB | 6ECF9ABB0859 | 666   | 0     | 1.83   |
 | Samsung   | SSD 840 EVO        | 250 GB | 97B207909E66 | 666   | 0     | 1.83   |
+| Apple     | SSD SD256E         | 256 GB | 87B69B68037E | 666   | 0     | 1.83   |
 | Samsung   | SSD 850 EVO        | 250 GB | 24BB3F1923C7 | 666   | 0     | 1.83   |
 | Intel     | SSDSC2CT120A3      | 120 GB | DBDA060E6651 | 1998  | 2     | 1.83   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 96D9E4777101 | 666   | 0     | 1.83   |
@@ -4945,9 +5183,11 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BF180A4L     | 180 GB | 6A97B4503173 | 665   | 0     | 1.82   |
 | Kingston  | SV300S37A120G      | 120 GB | F5950508618C | 665   | 0     | 1.82   |
 | Intel     | SSDSC2CW240A3      | 240 GB | B1BC3348460F | 665   | 0     | 1.82   |
+| KingDian  | S180               | 64 GB  | E08E67D98575 | 665   | 0     | 1.82   |
 | Kingston  | RBU-SNS8152S3128GF | 128 GB | 10ED6B971FD8 | 665   | 0     | 1.82   |
 | SPCC      | SSD                | 64 GB  | 83D6BDD7CEFE | 665   | 0     | 1.82   |
 | Samsung   | SSD 850 EVO        | 120 GB | C99168E240BD | 665   | 0     | 1.82   |
+| Kingston  | SA400S37240G       | 240 GB | F3DB67CDDBA3 | 665   | 0     | 1.82   |
 | Samsung   | MZMTE128HMGR-000MV | 128 GB | A40D288B6D18 | 665   | 0     | 1.82   |
 | ADATA     | SSD DP900 128GB... | 128 GB | 8EEC6305E877 | 665   | 0     | 1.82   |
 | Samsung   | SSD 850 EVO        | 250 GB | 85F38B961B91 | 665   | 0     | 1.82   |
@@ -4957,6 +5197,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | B1D640A88F8F | 664   | 0     | 1.82   |
 | Samsung   | SSD 850 EVO        | 250 GB | 9645D985955C | 664   | 0     | 1.82   |
 | OCZ       | VERTEX4            | 64 GB  | B6667E10C1C2 | 664   | 0     | 1.82   |
+| Samsung   | SSD 860 EVO        | 1 TB   | DF363587CA40 | 664   | 0     | 1.82   |
 | Samsung   | SSD 840 EVO        | 250 GB | C65B1EF187C7 | 664   | 0     | 1.82   |
 | Samsung   | SSD 860 EVO        | 250 GB | 4413948A194C | 664   | 0     | 1.82   |
 | Kingston  | SH103S3120G        | 120 GB | F67531752256 | 664   | 0     | 1.82   |
@@ -4991,9 +5232,11 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD6SB1M128G1022I   | 128 GB | E58EFD73D17D | 661   | 0     | 1.81   |
 | Kingston  | SHSS37A240G        | 240 GB | ECEAE864AC3D | 661   | 0     | 1.81   |
 | OCZ       | AGILITY3           | 120 GB | EB04BBEC37B4 | 661   | 0     | 1.81   |
+| ADATA     | SX930              | 240 GB | F2B65CAC7C30 | 661   | 0     | 1.81   |
 | Kingston  | SUV400S37120G      | 120 GB | D432C9C3D76C | 661   | 0     | 1.81   |
 | Kingston  | SA400S37240G       | 240 GB | 2C3212F561FE | 661   | 0     | 1.81   |
 | Kingston  | SVP200S37A60G      | 64 GB  | 6E045A6A8DBD | 661   | 0     | 1.81   |
+| Samsung   | SSD 860 EVO        | 500 GB | 5FC411FA87A7 | 661   | 0     | 1.81   |
 | Samsung   | SSD 860 EVO        | 250 GB | 99CE4486741E | 661   | 0     | 1.81   |
 | Samsung   | SSD 840 EVO 120... | 120 GB | 5417CA20C9AC | 661   | 0     | 1.81   |
 | Samsung   | SSD 860 EVO        | 500 GB | F0CF5CF5B697 | 661   | 0     | 1.81   |
@@ -5002,11 +5245,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA240G         | 240 GB | BF517EE8EA30 | 661   | 0     | 1.81   |
 | Intel     | SSDSC2BW240A4      | 240 GB | 1A9A020B872E | 660   | 0     | 1.81   |
 | Intel     | SSDSCMMW180A3L     | 180 GB | C8E3319373FE | 660   | 0     | 1.81   |
+| Samsung   | SSD 860 EVO        | 2 TB   | 62484859A3E3 | 660   | 0     | 1.81   |
 | Intel     | SSDSC2CW180A3      | 180 GB | DB1F5BEB0D36 | 660   | 0     | 1.81   |
 | SanDisk   | SDSSDP128G         | 128 GB | 1D3DBB8B9DDA | 660   | 0     | 1.81   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 98C4F4690A4E | 660   | 0     | 1.81   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | 4395AB7A65DA | 660   | 0     | 1.81   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 9BCF63124770 | 660   | 0     | 1.81   |
+| SanDisk   | SD9SN8W256G1102    | 256 GB | B86F367957F5 | 659   | 0     | 1.81   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 06BBFCF9D7D5 | 659   | 0     | 1.81   |
 | SPCC      | SSD                | 480 GB | 2ECF75256084 | 659   | 0     | 1.81   |
 | SanDisk   | Ultra II           | 500 GB | 91C5B68F2035 | 659   | 0     | 1.81   |
@@ -5058,6 +5303,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 830 Series     | 128 GB | 35A1481E8AAD | 655   | 0     | 1.79   |
 | Kingston  | SV200S3256G        | 256 GB | BE34BC177623 | 655   | 0     | 1.79   |
 | Apple     | SSD SM0256F        | 256 GB | 87ECEB68F4B7 | 654   | 0     | 1.79   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 42F5315DCF70 | 654   | 0     | 1.79   |
 | Patriot   | Burst              | 120 GB | 287B48DD4966 | 654   | 0     | 1.79   |
 | SanDisk   | SDSSDH3500G        | 500 GB | 8EA1902F5647 | 654   | 0     | 1.79   |
 | Samsung   | SSD 850 EVO        | 250 GB | F5C64323A453 | 654   | 0     | 1.79   |
@@ -5073,6 +5319,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 3495DE3F482E | 653   | 0     | 1.79   |
 | Samsung   | SSD 860 EVO        | 500 GB | AD9D2EAD7456 | 653   | 0     | 1.79   |
 | China     | SATA SSD           | 64 GB  | B5FB5D682CCA | 653   | 0     | 1.79   |
+| Samsung   | SSD 850 EVO        | 250 GB | 6CC7214C952B | 653   | 0     | 1.79   |
 | Samsung   | SSD 850 EVO        | 250 GB | A937AAABAF83 | 653   | 0     | 1.79   |
 | ADATA     | SP550              | 240 GB | E748EC958A6A | 653   | 0     | 1.79   |
 | Apacer    | AST680S            | 128 GB | AA0C46510B6A | 653   | 0     | 1.79   |
@@ -5097,6 +5344,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD9TB8W512G1001    | 512 GB | 273C9538D34B | 651   | 0     | 1.78   |
 | Intel     | SSDSC2CW180A3      | 180 GB | D32BCAA64354 | 651   | 0     | 1.78   |
 | Samsung   | MZNLN512HMJP-000L7 | 512 GB | 114CB7EC4AAB | 651   | 0     | 1.78   |
+| Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | AA0FABC66760 | 651   | 0     | 1.78   |
 | OCZ       | ARC100             | 120 GB | E209BD7368D4 | 651   | 0     | 1.78   |
 | Samsung   | SSD 850 EVO        | 500 GB | 23B1991CCF01 | 651   | 0     | 1.78   |
 | SanDisk   | SD9TB8W1T001001    | 1 TB   | 96BF946BA8CA | 651   | 0     | 1.78   |
@@ -5120,6 +5368,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | A2E6C748B2E2 | 648   | 0     | 1.78   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | BC59A133B1FC | 648   | 0     | 1.78   |
 | Intel     | SSDSC2CW240A3      | 240 GB | E7A824376F8D | 648   | 0     | 1.78   |
+| Apple     | SSD SM0256G        | 256 GB | CD6CF7911711 | 648   | 0     | 1.78   |
 | Samsung   | SSD 840 PRO Series | 128 GB | A60FE133A109 | 648   | 0     | 1.78   |
 | Samsung   | SSD 860 EVO        | 250 GB | A2FC241CB2AE | 648   | 0     | 1.78   |
 | China     | SATA SSD           | 120 GB | AD60191E54CA | 648   | 0     | 1.78   |
@@ -5132,6 +5381,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 5E4C023D3EE1 | 647   | 0     | 1.77   |
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | 7F98D79776FA | 647   | 0     | 1.77   |
 | OCZ       | VERTEX3            | 64 GB  | 357F4FD2A9C3 | 647   | 0     | 1.77   |
+| Samsung   | SSD 860 EVO        | 250 GB | 74252AD46AF7 | 647   | 0     | 1.77   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3B2B2401C5B6 | 647   | 0     | 1.77   |
 | Samsung   | SSD 860 EVO        | 500 GB | 3013465823EC | 647   | 0     | 1.77   |
 | Samsung   | SSD 860 EVO        | 500 GB | 5111525B99C2 | 647   | 0     | 1.77   |
@@ -5156,10 +5406,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | FEE633F64C60 | 645   | 0     | 1.77   |
 | Samsung   | SSD 860 EVO        | 250 GB | FECE3C5C175F | 645   | 0     | 1.77   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | 9D25396EB424 | 645   | 0     | 1.77   |
+| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 711B522EF266 | 644   | 0     | 1.77   |
 | OCZ       | VERTEX3            | 64 GB  | AFE09429383D | 644   | 0     | 1.77   |
 | Kingston  | SUV500120G         | 120 GB | 8947A0F9BB9D | 644   | 0     | 1.77   |
 | Samsung   | MZ7LN512HMJP-000L7 | 512 GB | 635614E69448 | 644   | 0     | 1.77   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 4BDC16606A17 | 644   | 0     | 1.77   |
+| Patriot   | Burst              | 120 GB | 6F5C6040EF07 | 644   | 0     | 1.77   |
 | Samsung   | SSD 850 EVO        | 250 GB | FE7182D8A7D9 | 644   | 0     | 1.76   |
 | Kingston  | SA400S37240G       | 240 GB | 2713B6495B77 | 644   | 0     | 1.76   |
 | Samsung   | MZMPC032HBCD-000H1 | 32 GB  | D2D7620DD76B | 644   | 0     | 1.76   |
@@ -5167,6 +5419,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7PC128HAFU-000H1 | 128 GB | 572CCCB42E5F | 643   | 0     | 1.76   |
 | WDC       | WDS500G2B0A        | 500 GB | 32C6DA24EE7B | 643   | 0     | 1.76   |
 | Intel     | SSDSC2BW240A4      | 240 GB | C203E2A45C7F | 643   | 0     | 1.76   |
+| Samsung   | SSD 860 EVO        | 500 GB | 207CA3026EB7 | 643   | 0     | 1.76   |
 | SanDisk   | SD6SB2M128G1022I   | 128 GB | 0F95F11533EE | 643   | 0     | 1.76   |
 | Goodram   | C40                | 120 GB | AFBD126C15CD | 643   | 0     | 1.76   |
 | Samsung   | SSD 840 EVO        | 250 GB | CC000DBB3AA6 | 643   | 0     | 1.76   |
@@ -5233,11 +5486,13 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 539C4EFB696F | 1915  | 2     | 1.75   |
 | Samsung   | SSD 850 PRO        | 256 GB | 68A5E846E3D7 | 638   | 0     | 1.75   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3E2562BC5847 | 638   | 0     | 1.75   |
+| Samsung   | SSD 850 EVO        | 250 GB | F0E1744BE093 | 638   | 0     | 1.75   |
 | Samsung   | SSD 750 EVO        | 250 GB | 434AD8837B3D | 638   | 0     | 1.75   |
 | Samsung   | SSD 850 EVO        | 500 GB | 51E9E5BC8442 | 638   | 0     | 1.75   |
 | Lexar     | SSD                | 128 GB | 8CE9D64E7AAC | 638   | 0     | 1.75   |
 | Lexar     | SSD                | 128 GB | A575DCD49207 | 638   | 0     | 1.75   |
 | Samsung   | SSD 860 QVO        | 1 TB   | FE708ECAAF68 | 637   | 0     | 1.75   |
+| Kingston  | SA400S37480G       | 480 GB | DFF9E06830E8 | 637   | 0     | 1.75   |
 | Samsung   | MZ7LF192HCGS-000L1 | 192 GB | 9E469A40ED63 | 637   | 0     | 1.75   |
 | Samsung   | SSD 850 EVO        | 250 GB | C858461DA5EF | 637   | 0     | 1.75   |
 | Kingston  | RBUSNS8180S3128GI1 | 128 GB | 31575B3C8A09 | 637   | 0     | 1.75   |
@@ -5246,6 +5501,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 69AED2D0FF0B | 637   | 0     | 1.75   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | C9EC8CE07808 | 637   | 0     | 1.75   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 5396B723FF2D | 637   | 0     | 1.75   |
+| Apple     | SSD SM0256G        | 256 GB | C863E941324E | 637   | 0     | 1.75   |
 | Samsung   | SSD 850 EVO        | 250 GB | 8DD8083D243C | 637   | 0     | 1.75   |
 | Kingston  | SKC400S37256G      | 256 GB | B96631D91402 | 637   | 0     | 1.75   |
 | Samsung   | SSD 850 EVO        | 500 GB | 92376EEEC31B | 636   | 0     | 1.74   |
@@ -5303,6 +5559,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 256 GB | 436BA9E991E2 | 1265  | 1     | 1.73   |
 | Samsung   | SSD 850 PRO        | 512 GB | 0CF709D04A5B | 632   | 0     | 1.73   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 33CC93BD537A | 632   | 0     | 1.73   |
+| Kingston  | SUV400S37480G      | 480 GB | 2F695C089862 | 632   | 0     | 1.73   |
 | Patriot   | Burst              | 120 GB | A801792BB850 | 632   | 0     | 1.73   |
 | Corsair   | Force LS SSD       | 64 GB  | A5549665280E | 632   | 0     | 1.73   |
 | SanDisk   | Ultra II           | 480 GB | 02AC8363B0DE | 632   | 0     | 1.73   |
@@ -5338,6 +5595,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 1 TB   | F831F5532CB9 | 630   | 0     | 1.73   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 74616A26396B | 630   | 0     | 1.73   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 4659610A92A4 | 630   | 0     | 1.73   |
+| ADATA     | SU800              | 1 TB   | 1ACCDC214A3C | 630   | 0     | 1.73   |
 | Samsung   | SSD 850 EVO        | 250 GB | 93D012D49BD2 | 630   | 0     | 1.73   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 069D1BA60554 | 630   | 0     | 1.73   |
 | Samsung   | SSD 850 EVO        | 500 GB | A82C62EB9CF9 | 630   | 0     | 1.73   |
@@ -5411,6 +5669,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SH103S3120G        | 120 GB | 98250DDD33C7 | 624   | 0     | 1.71   |
 | OCZ       | VERTEX2            | 120 GB | FA07E1F76E84 | 623   | 0     | 1.71   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | F509AE8A0558 | 623   | 0     | 1.71   |
+| Kingston  | SA400S37480G       | 480 GB | 3BFCF0EA3350 | 623   | 0     | 1.71   |
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 97B44DB3F3E9 | 623   | 0     | 1.71   |
 | Samsung   | SSD 840 Series     | 250 GB | 276553AFAC20 | 1247  | 1     | 1.71   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 9D8DA1699178 | 623   | 0     | 1.71   |
@@ -5571,11 +5830,14 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | 5EA4EA5D264A | 612   | 0     | 1.68   |
 | Samsung   | Portable SSD T5    | 1 TB   | 9505D56250E9 | 612   | 0     | 1.68   |
 | SanDisk   | X400 M.2 2280      | 256 GB | AE6EDB406630 | 612   | 0     | 1.68   |
+| Kingston  | SA400S37120G       | 120 GB | 8FB5AA477A30 | 611   | 0     | 1.68   |
 | Kingston  | SA400S37240G       | 240 GB | 7E95930AB1FC | 611   | 0     | 1.68   |
 | PNY       | CS900 480GB SSD    | 480 GB | 5AD5FAB8F899 | 611   | 0     | 1.68   |
 | Toshiba   | A100               | 120 GB | 0B6801051C6D | 611   | 0     | 1.68   |
 | OCZ       | VERTEX2            | 64 GB  | 09C8BBF5E1D0 | 611   | 0     | 1.68   |
+| Crucial   | CT250MX500SSD1     | 250 GB | CB52674B22C6 | 611   | 0     | 1.67   |
 | Samsung   | SSD 840 EVO        | 120 GB | C96D2F9465C6 | 611   | 0     | 1.67   |
+| China     | SATA SSD           | 128 GB | 555DBE5E4358 | 611   | 0     | 1.67   |
 | SanDisk   | SD6SB1M-128G-1006  | 128 GB | 38AC7A5B904A | 611   | 0     | 1.67   |
 | SK hynix  | SHGS31-1000GS-2    | 1 TB   | A14D066BD02A | 611   | 0     | 1.67   |
 | SPCC      | SSD                | 120 GB | 5A28D329ACCB | 611   | 0     | 1.67   |
@@ -5636,6 +5898,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPC032HBCD-000H1 | 32 GB  | BA81018746B8 | 606   | 0     | 1.66   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3F3E4AF6A2D4 | 605   | 0     | 1.66   |
 | Kingston  | SA400S37240G       | 240 GB | 6532D5236268 | 605   | 0     | 1.66   |
+| Team      | T253X2001T         | 1 TB   | EE88A488F19F | 605   | 0     | 1.66   |
 | SanDisk   | SD8SB8U512G1122    | 512 GB | BA78170F23FE | 605   | 0     | 1.66   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1AADC291F015 | 605   | 0     | 1.66   |
 | Samsung   | SSD 830 Series     | 256 GB | 953A1BC530BD | 605   | 0     | 1.66   |
@@ -5661,8 +5924,11 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD Sata III       | 240 GB | F702959E9AC2 | 603   | 0     | 1.65   |
 | Samsung   | SSD 850 EVO        | 250 GB | EBF3278F92C5 | 603   | 0     | 1.65   |
 | Toshiba   | THNSNJ512GCSU      | 512 GB | 4C30D962D8AB | 603   | 0     | 1.65   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 544396789D1E | 603   | 0     | 1.65   |
 | Samsung   | SSD 850 EVO        | 120 GB | 7914398CE74A | 602   | 0     | 1.65   |
 | Transcend | TS64S37CA00IM3     | 64 GB  | E4C8598AD3C1 | 602   | 0     | 1.65   |
+| Samsung   | SSD PM830 2.5" 7mm | 512 GB | 40084C92E7AF | 602   | 0     | 1.65   |
+| ADATA     | SU800              | 1 TB   | 0E63A441B45A | 602   | 0     | 1.65   |
 | Samsung   | MZHPV256HDGL-000L1 | 256 GB | 18EABC54FF1D | 602   | 0     | 1.65   |
 | Samsung   | SSD 840 PRO Series | 128 GB | D89EF16D5B5A | 602   | 0     | 1.65   |
 | SanDisk   | SDSSDHII240G       | 240 GB | C0AB98CE3C94 | 602   | 0     | 1.65   |
@@ -5688,6 +5954,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | B22BCCFFEEDD | 600   | 0     | 1.65   |
 | Samsung   | SSD 860 EVO        | 500 GB | DBE5CA5DF1C4 | 600   | 0     | 1.64   |
 | PNY       | CS900 480GB SSD    | 480 GB | 4BF59C3C892A | 599   | 0     | 1.64   |
+| Samsung   | SSD 850 EVO        | 250 GB | 85124CDE03C6 | 599   | 0     | 1.64   |
 | Samsung   | SSD 840 EVO        | 500 GB | FB3FBBF71D1B | 599   | 0     | 1.64   |
 | Samsung   | SSD 860 EVO        | 250 GB | 901B123CE26E | 599   | 0     | 1.64   |
 | Samsung   | SSD 830 Series     | 512 GB | 29DB28F787B5 | 599   | 0     | 1.64   |
@@ -5732,8 +5999,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | C08D6F1BCB57 | 596   | 0     | 1.64   |
 | Samsung   | SSD 860 QVO        | 1 TB   | E78DC7E507C1 | 596   | 0     | 1.64   |
 | Samsung   | SSD 750 EVO        | 500 GB | 094750F78DED | 596   | 0     | 1.63   |
+| Samsung   | SSD 860 EVO        | 500 GB | DB3671122AEF | 596   | 0     | 1.63   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 8A11C9B5C083 | 596   | 0     | 1.63   |
 | Samsung   | SSD 850 PRO        | 128 GB | 4129E9F703F1 | 596   | 0     | 1.63   |
+| Apacer    | AS220              | 64 GB  | CFD6DAEDDCCD | 596   | 0     | 1.63   |
 | Samsung   | MZNLN512HCJH-000H1 | 512 GB | 3E9FE399055A | 596   | 0     | 1.63   |
 | WDC       | WDS250G1B0B-00AS40 | 250 GB | CD4EF52370A0 | 596   | 0     | 1.63   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 70DF5E16BE0F | 596   | 0     | 1.63   |
@@ -5749,6 +6018,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 1 TB   | 939A76D97D3C | 595   | 0     | 1.63   |
 | Samsung   | SSD 840 EVO        | 120 GB | 48A65F2DAB21 | 595   | 0     | 1.63   |
 | Samsung   | SSD 840 Series     | 120 GB | 2DAAB7DAD8B9 | 595   | 0     | 1.63   |
+| Kingston  | SA400S37120G       | 120 GB | F7347791FDB9 | 595   | 0     | 1.63   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 98902A0438FE | 595   | 0     | 1.63   |
 | Kingston  | SH103S3120G        | 120 GB | 3CBD64C72EDD | 595   | 0     | 1.63   |
 | Samsung   | MZ7PA128HMCD-010L1 | 128 GB | DB6CA10E8F2D | 595   | 0     | 1.63   |
@@ -5771,6 +6041,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 240GB SSD    | 240 GB | 323C6BCFBB5B | 593   | 0     | 1.63   |
 | Samsung   | SSD 850 EVO        | 1 TB   | F2964E36A329 | 593   | 0     | 1.63   |
 | Samsung   | MZMTD128HAFV-000   | 128 GB | E8B52B0815E4 | 593   | 0     | 1.63   |
+| Intel     | SSDSC2BW120A4      | 120 GB | 26E0E2470329 | 593   | 0     | 1.63   |
 | KingSpec  | Q-360              | 360 GB | C31AEBCE702B | 593   | 0     | 1.63   |
 | Kingston  | SA400S37240G       | 240 GB | 220D547C2667 | 593   | 0     | 1.63   |
 | Samsung   | SSD 850 EVO        | 250 GB | 62F70266ABA2 | 593   | 0     | 1.63   |
@@ -5812,6 +6083,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BW180A4      | 180 GB | EF2DC55CC57F | 590   | 0     | 1.62   |
 | PNY       | CS900 120GB SSD    | 120 GB | AB0D25262F0D | 590   | 0     | 1.62   |
 | Samsung   | SG9MSM6D024GPM00   | 22 GB  | 4E32C89EAD4B | 590   | 0     | 1.62   |
+| Kingston  | SV300S37A120G      | 120 GB | D8E4A1926CCD | 589   | 0     | 1.62   |
 | Plextor   | PX-128S3G          | 128 GB | 6E9CB57B09B0 | 589   | 0     | 1.62   |
 | Kingston  | SUV400S37120G      | 120 GB | 5B23E504A2E7 | 589   | 0     | 1.62   |
 | Samsung   | SSD 840 EVO        | 500 GB | F82FE382A22E | 589   | 0     | 1.62   |
@@ -5831,6 +6103,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC308 SATA         | 256 GB | BE14CD4CE9D1 | 588   | 0     | 1.61   |
 | OCZ       | VERTEX4            | 128 GB | DEF751C0FF5C | 588   | 0     | 1.61   |
 | Samsung   | SSD 850 EVO        | 500 GB | BAF7ED8975DA | 588   | 0     | 1.61   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 1DE13EDE64E5 | 588   | 0     | 1.61   |
 | Union ... | RTOTJ128VGD2EYX    | 128 GB | 5B114D4491A1 | 588   | 0     | 1.61   |
 | Samsung   | SSD 860 EVO        | 500 GB | F35B46350AD2 | 588   | 0     | 1.61   |
 | KingFast  | SSD                | 120 GB | D5C6750C8838 | 588   | 0     | 1.61   |
@@ -5890,6 +6163,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD6SN1M128G        | 128 GB | 44AB7C40569E | 584   | 0     | 1.60   |
 | Kingston  | SUV400S37120G      | 120 GB | 2F600C870B7C | 584   | 0     | 1.60   |
 | Samsung   | SSD 850 EVO        | 500 GB | 3C62E4245E01 | 584   | 0     | 1.60   |
+| SanDisk   | SSD U100           | 16 GB  | C986CF7080D7 | 584   | 0     | 1.60   |
 | Kingston  | SA400M8240G        | 240 GB | 79B13F329C76 | 584   | 0     | 1.60   |
 | SK hynix  | SC311 SATA         | 256 GB | 8F3F034904B7 | 584   | 0     | 1.60   |
 | Samsung   | SSD 840 EVO        | 120 GB | 77A69E5E84A6 | 583   | 0     | 1.60   |
@@ -5903,7 +6177,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 4D23232421B8 | 583   | 0     | 1.60   |
 | Samsung   | SSD 860 EVO        | 250 GB | 0A4F42D2F3FC | 583   | 0     | 1.60   |
 | Intel     | SSDSC2BB800G7R     | 800 GB | 3778FE7A9DB4 | 1166  | 1     | 1.60   |
+| Kingston  | SA400S37480G       | 480 GB | 93E826DD95DB | 582   | 0     | 1.60   |
 | Micron    | MTFDDAK256MAM-1K12 | 256 GB | BEB8147B0781 | 582   | 0     | 1.60   |
+| SPCC      | SSD                | 1 TB   | 37A6F28CA1D4 | 582   | 0     | 1.60   |
 | Samsung   | SSD 860 EVO        | 500 GB | B1B6D49C6D85 | 582   | 0     | 1.60   |
 | Samsung   | SSD 830 Series     | 256 GB | DE6D85832FDB | 582   | 0     | 1.60   |
 | Kingston  | SH103S3120G        | 120 GB | CE1CE6D537A1 | 582   | 0     | 1.60   |
@@ -5916,9 +6192,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN256HAJQ-00000 | 256 GB | BC867E41CA9E | 581   | 0     | 1.59   |
 | Kingston  | SV300S37A120G      | 120 GB | 3066E39AC9FA | 581   | 0     | 1.59   |
 | Kingston  | SV300S37A120G      | 120 GB | D81852F8411D | 581   | 0     | 1.59   |
+| Crucial   | CT256MX100SSD1     | 256 GB | 48859251B63C | 581   | 0     | 1.59   |
 | Samsung   | SSD 850 EVO        | 500 GB | BCE080FD5B21 | 581   | 0     | 1.59   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 7FDDD6353459 | 581   | 0     | 1.59   |
 | OCZ       | VERTEX2            | 115 GB | C7DF9DEE0C93 | 581   | 0     | 1.59   |
+| Samsung   | SSD 860 EVO        | 500 GB | 529F9B6139C0 | 581   | 0     | 1.59   |
 | Corsair   | Force GT           | 120 GB | 6FEAD713E0DE | 581   | 0     | 1.59   |
 | Samsung   | SSD 850 EVO        | 250 GB | A261CC27A50B | 581   | 0     | 1.59   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 44DD6BAE073F | 581   | 0     | 1.59   |
@@ -5938,6 +6216,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3250G        | 250 GB | 9D08FE40D597 | 580   | 0     | 1.59   |
 | Toshiba   | THNS128GG4BAAA-... | 128 GB | 7F5A38615D71 | 580   | 0     | 1.59   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 4C8ABD21C0D6 | 580   | 0     | 1.59   |
+| Kingston  | SUV500120G         | 120 GB | 1D5AD42EF1E0 | 579   | 0     | 1.59   |
 | SPCC      | SSD                | 64 GB  | 644CC2E32810 | 579   | 0     | 1.59   |
 | Kingston  | SA400S371920G      | 1.9 TB | 64ED2BB735FC | 579   | 0     | 1.59   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 23996175798F | 579   | 0     | 1.59   |
@@ -5955,6 +6234,7 @@ MTBF - avg. MTBF in years per sample.
 | Palit     | UVS                | 240 GB | 39E0AA898D6B | 579   | 0     | 1.59   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 16096D65E045 | 579   | 0     | 1.59   |
 | Apple     | SSD SM0512G        | 500 GB | D2DD0B2939AB | 579   | 0     | 1.59   |
+| Intel     | SSDSC2BA100G3      | 100 GB | 5965BF974D75 | 579   | 0     | 1.59   |
 | Samsung   | SSD 850 EVO        | 250 GB | C72FCF106193 | 579   | 0     | 1.59   |
 | Kingston  | RBUSNS8280S3128GH2 | 128 GB | 48AF1821DD9E | 578   | 0     | 1.59   |
 | Kingston  | SUV500M8480G       | 480 GB | E27E432D8872 | 578   | 0     | 1.59   |
@@ -5971,6 +6251,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SM2280S3G2120G     | 120 GB | 6047A88E1D7C | 578   | 0     | 1.58   |
 | Samsung   | SSD 850 EVO        | 500 GB | 6DE58BF1C854 | 577   | 0     | 1.58   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 02EB34C8B239 | 577   | 0     | 1.58   |
+| Palit     | UVSE               | 240 GB | 797755CCB457 | 577   | 0     | 1.58   |
 | Crucial   | CT240BX200SSD1     | 240 GB | FA523727B032 | 577   | 0     | 1.58   |
 | SK hynix  | SC311 SATA         | 128 GB | 77AF8A9BA28B | 577   | 0     | 1.58   |
 | Kingston  | SMS200S360G        | 64 GB  | 0B9C342515A5 | 577   | 0     | 1.58   |
@@ -5981,6 +6262,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 1 TB   | A678A3774D5E | 577   | 0     | 1.58   |
 | Samsung   | SSD 830 Series     | 128 GB | 396978C43174 | 577   | 0     | 1.58   |
 | Kingston  | SUV400S37120G      | 120 GB | E9B0A032FD2B | 577   | 0     | 1.58   |
+| Kingston  | SV300S37A-60G      | 64 GB  | 6A200C8EC340 | 577   | 0     | 1.58   |
 | Samsung   | SSD 840 Series     | 250 GB | 90817FD4E09A | 576   | 0     | 1.58   |
 | Kingston  | SHFS37A240G        | 240 GB | 63363091D5A5 | 576   | 0     | 1.58   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3789DE63F587 | 576   | 0     | 1.58   |
@@ -6034,6 +6316,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO mSATA  | 250 GB | F21955A456ED | 573   | 0     | 1.57   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 4856B733A5B2 | 573   | 0     | 1.57   |
 | Samsung   | SSD 850 EVO        | 500 GB | 4935C1534F63 | 573   | 0     | 1.57   |
+| Samsung   | SSD 870 EVO        | 2 TB   | 071F6B4347FB | 573   | 0     | 1.57   |
 | SanDisk   | SDSSDA240G         | 240 GB | 456AA7381691 | 573   | 0     | 1.57   |
 | Kingston  | SHFS37A120G        | 120 GB | 9430FDF32E0D | 572   | 0     | 1.57   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 1C061A2816F9 | 572   | 0     | 1.57   |
@@ -6064,6 +6347,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT256M4SSD2     | 256 GB | B90B70317AC6 | 571   | 0     | 1.56   |
 | ADATA     | SP580              | 240 GB | 68D406CAE555 | 571   | 0     | 1.56   |
 | Kingston  | SA400S37120G       | 120 GB | 7A13E85A252D | 571   | 0     | 1.56   |
+| Kingston  | SA400S37120G       | 120 GB | C688C11E9408 | 570   | 0     | 1.56   |
 | Samsung   | SSD 860 EVO        | 500 GB | EED0E4AFEF80 | 570   | 0     | 1.56   |
 | Samsung   | Portable SSD T5    | 1 TB   | 271E05B5B7AD | 570   | 0     | 1.56   |
 | Samsung   | SSD 840 EVO        | 250 GB | ABC2964A780C | 570   | 0     | 1.56   |
@@ -6079,6 +6363,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 2F9264727ABB | 570   | 0     | 1.56   |
 | Samsung   | SSD 850 EVO        | 250 GB | 5DB2A8EB17FA | 570   | 0     | 1.56   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5966F8CA9FCF | 569   | 0     | 1.56   |
+| Intel     | SSDSC2BF180A5H SED | 180 GB | 67F68D3CCED6 | 569   | 0     | 1.56   |
 | Mushkin   | MKNSSDRE1TB        | 1 TB   | 7D93CF52C3C4 | 569   | 0     | 1.56   |
 | Samsung   | SSD 860 EVO        | 250 GB | F566B3B7A158 | 569   | 0     | 1.56   |
 | SanDisk   | SD8SB8U512G1122    | 512 GB | 0F710BF2B729 | 569   | 0     | 1.56   |
@@ -6103,6 +6388,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO mSATA  | 1 TB   | FBB3AA0B4FF8 | 568   | 0     | 1.56   |
 | Samsung   | SSD 860 EVO        | 250 GB | BEB566190D55 | 568   | 0     | 1.56   |
 | SanDisk   | SD8SN8U512G1002    | 512 GB | E7A3FC2C79D2 | 567   | 0     | 1.56   |
+| Intenso   | SATA3 512GB SSD    | 512 GB | C8A5A73464F8 | 567   | 0     | 1.56   |
 | OCZ       | AGILITY4           | 64 GB  | B21E3ABED7FE | 567   | 0     | 1.56   |
 | Kingston  | SUV400S37240G      | 240 GB | FEB595CFB4A4 | 567   | 0     | 1.56   |
 | SK hynix  | SC311 SATA         | 256 GB | 42A6ACBB1A80 | 567   | 0     | 1.56   |
@@ -6206,9 +6492,11 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDCR120GB      | 120 GB | 596C1DE282B1 | 560   | 0     | 1.53   |
 | Team      | TM8PS7256G         | 256 GB | DE8489C0E39D | 560   | 0     | 1.53   |
 | Toshiba   | THNSNJ128GCSU      | 128 GB | AA242C1FA044 | 560   | 0     | 1.53   |
+| Samsung   | MZMPC032HBCD-000L1 | 32 GB  | 4F6A09A494C0 | 559   | 0     | 1.53   |
 | Samsung   | MZ7LN256HCHP-00000 | 256 GB | 429B45B78A36 | 559   | 0     | 1.53   |
 | SPCC      | SSD                | 240 GB | 7B3CDA8B3B74 | 559   | 0     | 1.53   |
 | SanDisk   | SSD G5 BICS3       | 250 GB | 58ACF74646C7 | 559   | 0     | 1.53   |
+| SanDisk   | SSD PLUS           | 120 GB | AD3B197A66FE | 559   | 0     | 1.53   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 6CF3C02001CD | 559   | 0     | 1.53   |
 | WDC       | WDS250G1B0B-00AS40 | 250 GB | 62D1778D6FC5 | 559   | 0     | 1.53   |
 | Kingston  | SA400S37240G       | 240 GB | 062DBBD61D68 | 559   | 0     | 1.53   |
@@ -6220,6 +6508,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | DF599CB1EEFF | 558   | 0     | 1.53   |
 | SanDisk   | X400 M.2 2280      | 512 GB | CA4D68757DDA | 558   | 0     | 1.53   |
 | PNY       | CS900 240GB SSD    | 240 GB | 5E62E4A9B710 | 558   | 0     | 1.53   |
+| SanDisk   | SSD PLUS           | 240 GB | A569BB69E229 | 558   | 0     | 1.53   |
 | Samsung   | SSD 750 EVO        | 250 GB | 2A88930BF2A4 | 558   | 0     | 1.53   |
 | Samsung   | SSD 860 QVO        | 1 TB   | CE3FAE264E5F | 558   | 0     | 1.53   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 1FAD5EBDBAA3 | 558   | 0     | 1.53   |
@@ -6250,6 +6539,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT525MX300SSD1     | 528 GB | B661D495ED69 | 556   | 0     | 1.53   |
 | SanDisk   | SDSSDHII240G       | 240 GB | D6933E09F933 | 556   | 0     | 1.53   |
 | Toshiba   | TR150              | 480 GB | CE02390B59E4 | 556   | 0     | 1.53   |
+| PNY       | CS1311 240GB SSD   | 240 GB | 4848494A77C2 | 556   | 0     | 1.53   |
 | Kingston  | SH103S3120G        | 120 GB | 7CFB55C0C491 | 556   | 0     | 1.52   |
 | Kingston  | SA400S37240G       | 240 GB | A4819E80D703 | 556   | 0     | 1.52   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 550A28C55C48 | 556   | 0     | 1.52   |
@@ -6266,6 +6556,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 98B38E08D5B2 | 555   | 0     | 1.52   |
 | SanDisk   | Ultra II           | 240 GB | 663E17333F56 | 555   | 0     | 1.52   |
 | Intel     | SSDSC2CW240A3      | 240 GB | AE7FCE66F760 | 555   | 0     | 1.52   |
+| Samsung   | SSD 850 EVO        | 500 GB | B7A1CC63BB65 | 555   | 0     | 1.52   |
 | Samsung   | SSD 850 EVO        | 250 GB | FD41B0660C25 | 555   | 0     | 1.52   |
 | SanDisk   | SSD PLUS           | 240 GB | 2992B40CEEE2 | 555   | 0     | 1.52   |
 | SanDisk   | SSD PLUS           | 240 GB | 370F7E29B126 | 555   | 0     | 1.52   |
@@ -6308,7 +6599,9 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS 240 GB    | 240 GB | F31D0408B106 | 552   | 0     | 1.51   |
 | Kingston  | SA400S37120G       | 120 GB | BFDFE737142C | 552   | 0     | 1.51   |
 | Crucial   | M4-CT512M4SSD1     | 512 GB | 4AF58F9F52B7 | 551   | 0     | 1.51   |
+| Samsung   | SSD 850 EVO        | 250 GB | 57C746CE4391 | 551   | 0     | 1.51   |
 | Kingston  | SNV425S2128GB      | 128 GB | 2C8288A074E1 | 551   | 0     | 1.51   |
+| WDC       | WDS480G2G0B-00EPW0 | 480 GB | B6BACE2273D6 | 551   | 0     | 1.51   |
 | Samsung   | SSD 850 EVO        | 250 GB | EEFEE98C1318 | 551   | 0     | 1.51   |
 | Seagate   | SSD                | 250 GB | C51D3E7915E2 | 551   | 0     | 1.51   |
 | Samsung   | SSD 850 EVO        | 500 GB | 95DB164838F2 | 551   | 0     | 1.51   |
@@ -6366,6 +6659,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 1B4F45CBB289 | 547   | 0     | 1.50   |
 | Toshiba   | THNSNC064GMMJ      | 64 GB  | CFBEA8799CBA | 547   | 0     | 1.50   |
 | Intel     | SSDSA2CW300G3      | 304 GB | 1BC37DD6DF88 | 547   | 0     | 1.50   |
+| WDC       | WDS100T2G0A-00JH30 | 1 TB   | 57BF7CF79E06 | 547   | 0     | 1.50   |
 | Crucial   | CT500MX500SSD1     | 500 GB | B2B9F6FA3F16 | 547   | 0     | 1.50   |
 | Samsung   | SSD 850 EVO        | 250 GB | 97A5FFE5CE03 | 547   | 0     | 1.50   |
 | Toshiba   | THNSNC064GMMJ      | 64 GB  | F2C6E565425E | 547   | 0     | 1.50   |
@@ -6467,7 +6761,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 PRO        | 1 TB   | D4E711A60165 | 540   | 0     | 1.48   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 87A040549A71 | 540   | 0     | 1.48   |
 | Kingston  | SA400S37120G       | 120 GB | B25E29EC54AF | 540   | 0     | 1.48   |
+| Crucial   | CT240BX500SSD1     | 240 GB | CA22A1E63A5C | 540   | 0     | 1.48   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | C7242F574C50 | 540   | 0     | 1.48   |
+| Patriot   | Burst              | 480 GB | 7E23DBE04C4C | 539   | 0     | 1.48   |
 | Patriot   | Blaze              | 64 GB  | A066B3D3F839 | 539   | 0     | 1.48   |
 | SanDisk   | SD7TB3Q-256G-1006  | 256 GB | A340D97903DC | 539   | 0     | 1.48   |
 | Samsung   | SSD 850 EVO        | 500 GB | E07774A770E4 | 539   | 0     | 1.48   |
@@ -6486,11 +6782,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 997AA07FF3CE | 539   | 0     | 1.48   |
 | Toshiba   | THNSFC256GAMJ      | 256 GB | 88A0243A5B5D | 539   | 0     | 1.48   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 71CD137761A0 | 539   | 0     | 1.48   |
+| Samsung   | SSD 860 QVO        | 1 TB   | 86196A48ED76 | 539   | 0     | 1.48   |
 | Seagate   | BarraCuda 120 S... | 250 GB | 7E86690067AC | 538   | 0     | 1.48   |
 | Samsung   | SSD 860 QVO        | 2 TB   | BEE34E9F9AC8 | 538   | 0     | 1.48   |
 | addlink   | SATA SSD           | 256 GB | EA1495C638AA | 538   | 0     | 1.48   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 365C62071FD5 | 538   | 0     | 1.48   |
 | SanDisk   | SD8TB8U256G1001    | 256 GB | A7EADCABBB06 | 538   | 0     | 1.48   |
+| Samsung   | SSD 840 Series     | 120 GB | 282EB46D93FC | 538   | 0     | 1.48   |
 | Samsung   | SSD 850 EVO        | 500 GB | E0F5E13506B5 | 538   | 0     | 1.48   |
 | Samsung   | MZ7TD256HAFV-000L7 | 256 GB | 946267F9A3E1 | 538   | 0     | 1.48   |
 | SanDisk   | SSD PLUS           | 120 GB | E3264B18B0E8 | 538   | 0     | 1.47   |
@@ -6502,6 +6800,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 5F500AA5C694 | 538   | 0     | 1.47   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 60F3EC6FC1CE | 537   | 0     | 1.47   |
 | SanDisk   | SD8TB8U512G1001    | 512 GB | 66FC126568B6 | 537   | 0     | 1.47   |
+| Crucial   | CT480BX500SSD1     | 480 GB | DA5F213CBD9B | 537   | 0     | 1.47   |
 | Kingston  | SV300S37A120G      | 120 GB | 84418B6FA72B | 537   | 0     | 1.47   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | EDC44E2525E1 | 537   | 0     | 1.47   |
 | Samsung   | MZ7LN512HMJP-000L7 | 512 GB | 2601E3008D27 | 537   | 0     | 1.47   |
@@ -6515,6 +6814,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | FCA978BD9AF8 | 537   | 0     | 1.47   |
 | OWC       | Mercury Electra... | 960 GB | 5FF4FFA78EFC | 537   | 0     | 1.47   |
 | Samsung   | MZHPV512HDGL-00000 | 512 GB | 80A6EEADDA5B | 536   | 0     | 1.47   |
+| Samsung   | SSD 840 Series     | 120 GB | EB628C25B83D | 536   | 0     | 1.47   |
 | SK hynix  | SHGS31-500GS-2     | 500 GB | 65FCE965CF24 | 536   | 0     | 1.47   |
 | Smartbuy  | SSD                | 64 GB  | 273FDA04FF51 | 536   | 0     | 1.47   |
 | SK hynix  | SHGS31-500GS-2     | 500 GB | F2EDD6481423 | 536   | 0     | 1.47   |
@@ -6537,6 +6837,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD162             | 120 GB | 06CBDE68D13D | 536   | 0     | 1.47   |
 | SPCC      | SSD                | 256 GB | 6AC0373A0FF2 | 536   | 0     | 1.47   |
 | Lexar     | SSD                | 256 GB | 3B7D78A6860F | 536   | 0     | 1.47   |
+| WDC       | WDS200T2B0B-00YS70 | 2 TB   | A4CDC561B9FE | 536   | 0     | 1.47   |
 | Kingston  | SUV400S37120G      | 120 GB | F14323D2B217 | 536   | 0     | 1.47   |
 | Samsung   | SSD 860 EVO        | 500 GB | 71D60BC2E8CC | 536   | 0     | 1.47   |
 | OCZ       | VERTEX3            | 64 GB  | 0C6D6E67DE96 | 536   | 0     | 1.47   |
@@ -6580,6 +6881,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7TB3Q-256G-1006  | 256 GB | 5AEEB80A72F4 | 533   | 0     | 1.46   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 46723001E21C | 533   | 0     | 1.46   |
 | Samsung   | SSD 850 EVO        | 120 GB | E87908E64633 | 533   | 0     | 1.46   |
+| Kingston  | SA400S37240G       | 240 GB | 0FE017B35270 | 533   | 0     | 1.46   |
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | C44D292E9258 | 533   | 0     | 1.46   |
 | SanDisk   | SD6SB1M256G1022I   | 256 GB | CECF3F652B90 | 533   | 0     | 1.46   |
 | Samsung   | SSD 850 EVO        | 250 GB | BD9FCFD8E7C8 | 533   | 0     | 1.46   |
@@ -6603,6 +6905,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 91451BCBE363 | 532   | 0     | 1.46   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 47F74A8D79DD | 531   | 0     | 1.46   |
 | Samsung   | SSD 860 EVO        | 1 TB   | BFD51A72F532 | 531   | 0     | 1.46   |
+| Kingston  | SV300S37A240G      | 240 GB | 119B383B853C | 531   | 0     | 1.46   |
 | Crucial   | CT960M500SSD1      | 960 GB | 1355F2F51AE2 | 531   | 0     | 1.46   |
 | Toshiba   | TR150              | 120 GB | 2E10E5AACC49 | 531   | 0     | 1.46   |
 | Samsung   | SSD 850 EVO        | 250 GB | A7ACDEE301A3 | 531   | 0     | 1.46   |
@@ -6617,6 +6920,7 @@ MTBF - avg. MTBF in years per sample.
 | Smartbuy  | SSD                | 64 GB  | 301EC36C1F48 | 531   | 0     | 1.46   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | 05A70EEF25E4 | 531   | 0     | 1.46   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | 167808957BC5 | 531   | 0     | 1.46   |
+| Kingston  | USNS8180S3512GJ    | 512 GB | 94D8F8B30AB8 | 531   | 0     | 1.45   |
 | Kingston  | SV300S37A60G       | 64 GB  | DF93E11C5C0D | 531   | 0     | 1.45   |
 | China     | SATA SSD           | 20 GB  | 3EA53773BD8A | 530   | 0     | 1.45   |
 | Toshiba   | THNSNX032GMCT      | 32 GB  | 7F55EEE66B55 | 530   | 0     | 1.45   |
@@ -6633,16 +6937,20 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDBNCE5000PNC      | 500 GB | 1AD0F52E1A4B | 529   | 0     | 1.45   |
 | Samsung   | MZMTD256HAGM-00004 | 256 GB | D15856E04CF2 | 529   | 0     | 1.45   |
 | PNY       | CS900 120GB SSD    | 120 GB | 326D4533FF82 | 529   | 0     | 1.45   |
+| Kingston  | SA400S37240G       | 240 GB | 526DEF30BF15 | 529   | 0     | 1.45   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 1E5403906C59 | 529   | 0     | 1.45   |
 | Kingston  | SA400S37960G       | 960 GB | 92885139CB66 | 529   | 0     | 1.45   |
 | HP        | VK000240GWJPD      | 240 GB | A74363E88A00 | 529   | 0     | 1.45   |
 | Kingston  | SV300S37A120G      | 120 GB | 2154481DE2EC | 529   | 0     | 1.45   |
 | Samsung   | SSD 850 EVO        | 250 GB | C5E4A58BC8E3 | 529   | 0     | 1.45   |
 | ADATA     | SU630              | 240 GB | 083D41B6FE54 | 529   | 0     | 1.45   |
+| SanDisk   | SSD G5 BICS4       | 1 TB   | AD7A2244BEAB | 529   | 0     | 1.45   |
 | Patriot   | Burst              | 240 GB | 44A73EA0B776 | 529   | 0     | 1.45   |
 | Phison    | 256GB PS3110-S10C  | 256 GB | 6338BEC89582 | 529   | 0     | 1.45   |
+| ADATA     | SU630              | 960 GB | 0F237B0E9178 | 529   | 0     | 1.45   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 255170E7DD48 | 529   | 0     | 1.45   |
 | Toshiba   | TR150              | 240 GB | 19F396CA5AFF | 529   | 0     | 1.45   |
+| Samsung   | SSD 830 Series     | 256 GB | A5F824949999 | 529   | 0     | 1.45   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 98CA1EBAABA4 | 528   | 0     | 1.45   |
 | Intel     | SSDSC2CT180A3      | 180 GB | 529BD7BEEAD9 | 528   | 0     | 1.45   |
 | Kingston  | SHFS37A120G        | 120 GB | A8FD4FF59527 | 528   | 0     | 1.45   |
@@ -6664,6 +6972,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | AGILITY3           | 64 GB  | 40FAB90FBF1C | 528   | 0     | 1.45   |
 | Samsung   | SSD 840 EVO        | 500 GB | E10167B54F20 | 528   | 0     | 1.45   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | B4316E51631D | 527   | 0     | 1.45   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 84565B25BBD7 | 527   | 0     | 1.45   |
 | HP        | SSD S700           | 500 GB | 3EEDD41B025C | 527   | 0     | 1.45   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | C38EE858757D | 527   | 0     | 1.45   |
 | SanDisk   | SDSSDXPS480G       | 480 GB | 4082E067A379 | 527   | 0     | 1.45   |
@@ -6671,10 +6980,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | B16F3A6947D1 | 527   | 0     | 1.44   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 7613497F360C | 527   | 0     | 1.44   |
 | Samsung   | SSD 840 EVO        | 500 GB | 65DCC544A6D9 | 527   | 0     | 1.44   |
+| Samsung   | SSD 830 Series     | 128 GB | B3141E14A923 | 527   | 0     | 1.44   |
 | Intel     | SSDSC2BF240A5L     | 240 GB | 7E5C48810C83 | 527   | 0     | 1.44   |
 | Samsung   | SSD 850 EVO        | 500 GB | 11102BA47922 | 527   | 0     | 1.44   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3B9E3C75D106 | 527   | 0     | 1.44   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 6E490E39854E | 527   | 0     | 1.44   |
+| Samsung   | SSD 860 EVO        | 250 GB | D1E91B7D5164 | 527   | 0     | 1.44   |
 | SanDisk   | Ultra II           | 240 GB | 5719307E0EAF | 527   | 0     | 1.44   |
 | Samsung   | SSD 850 EVO        | 2 TB   | AF30B89854A1 | 527   | 0     | 1.44   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 4CAF9CF317CD | 527   | 0     | 1.44   |
@@ -6687,6 +6998,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 84AF8E9EA4C5 | 526   | 0     | 1.44   |
 | ADATA     | SU800              | 256 GB | 21EF7699B9FD | 526   | 0     | 1.44   |
 | SanDisk   | X400 M.2 2280      | 512 GB | 3728299611BF | 526   | 0     | 1.44   |
+| Micron    | C400-MTFDDAK128MAM | 128 GB | CEB36F170E48 | 526   | 0     | 1.44   |
 | Samsung   | MZNLN256HMHQ-00000 | 256 GB | F463EE1CC179 | 526   | 0     | 1.44   |
 | Kingston  | SA400S37120G       | 120 GB | 354148E87498 | 526   | 0     | 1.44   |
 | Samsung   | SSD 840 EVO        | 120 GB | C1B00D304E7C | 526   | 0     | 1.44   |
@@ -6721,10 +7033,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 PRO        | 512 GB | F5B5F615EAC6 | 524   | 0     | 1.44   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | E207E5AE9D08 | 524   | 0     | 1.44   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 168A1A48B683 | 524   | 0     | 1.44   |
+| Kingston  | SM2280S3G2240G     | 240 GB | 3CD56CDBEBA4 | 524   | 0     | 1.44   |
 | Toshiba   | A100               | 240 GB | 7694734118F5 | 524   | 0     | 1.44   |
 | SanDisk   | SDSSDA240G         | 240 GB | 398A68A63E1C | 524   | 0     | 1.44   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 80BBDEC9B9E9 | 524   | 0     | 1.44   |
 | Goodram   | SSD                | 120 GB | 35A12C128375 | 524   | 0     | 1.44   |
+| Kingston  | SA400S37240G       | 240 GB | 73BC46166A47 | 524   | 0     | 1.44   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 7C6291B89E93 | 524   | 0     | 1.44   |
 | Samsung   | MZ7TE128HMGR-000H1 | 128 GB | B02E94103B8B | 524   | 0     | 1.44   |
 | SanDisk   | SD7SB3Q-256G-1006  | 256 GB | 64D0F025521B | 524   | 0     | 1.44   |
@@ -6733,7 +7047,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 00F71BA510E4 | 523   | 0     | 1.44   |
 | Samsung   | SSD 850 EVO        | 1 TB   | A7FB4DEC5598 | 523   | 0     | 1.43   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | FA7D4EC698FF | 523   | 0     | 1.43   |
+| Apple     | SSD SM0128G        | 121 GB | 6D2847E7EF5A | 523   | 0     | 1.43   |
 | Crucial   | CT500MX200SSD1     | 500 GB | BF482AA1BC72 | 523   | 0     | 1.43   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 862BC2DC9BF4 | 523   | 0     | 1.43   |
 | LDLC      | SSD                | 120 GB | E2226B87860D | 523   | 0     | 1.43   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 2F922BAC9199 | 523   | 0     | 1.43   |
 | Kingston  | SM2280S3G2240G     | 240 GB | EBEEB9C306D5 | 523   | 0     | 1.43   |
@@ -6767,6 +7083,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | A860B3EB2C3C | 521   | 0     | 1.43   |
 | OCZ       | VERTEX4            | 128 GB | 33FF7DF8A9D9 | 521   | 0     | 1.43   |
 | Samsung   | SSD 840 EVO        | 250 GB | 53EFD5A6EFA0 | 521   | 0     | 1.43   |
+| Intel     | SSDSA2CT040G3      | 40 GB  | D5F741DB59D9 | 520   | 0     | 1.43   |
 | Samsung   | MZRPA256HMDR-000SO | 128 GB | B417E48A86BA | 520   | 0     | 1.43   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | EE4583FEEF03 | 520   | 0     | 1.43   |
 | Samsung   | MZRPA256HMDR-000SO | 128 GB | 6896C355AEBA | 520   | 0     | 1.43   |
@@ -6778,6 +7095,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BF240A4L     | 240 GB | D7F001606F00 | 520   | 0     | 1.43   |
 | OCZ       | AGILITY3           | 64 GB  | 3EEBEA018117 | 520   | 0     | 1.43   |
 | Transcend | TS128GMTS430S      | 128 GB | BFD63C8DE4F1 | 520   | 0     | 1.43   |
+| Kingston  | SUV400S37120G      | 120 GB | 44373FB9BF5A | 520   | 0     | 1.43   |
 | Samsung   | SSD 840 EVO        | 250 GB | 6BD53CE80CB4 | 520   | 0     | 1.43   |
 | Samsung   | MZNLN128HCGR-000L2 | 128 GB | 91E8A2DE8334 | 520   | 0     | 1.43   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 982E2B1D706C | 520   | 0     | 1.43   |
@@ -6787,6 +7105,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 500 GB | 1B8BE7EB8C1E | 520   | 0     | 1.42   |
 | Kingston  | SV300S37A120G      | 120 GB | 4EF2F56A42D4 | 520   | 0     | 1.42   |
 | Samsung   | SSD 850 EVO mSATA  | 500 GB | F46380FA652F | 520   | 0     | 1.42   |
+| Samsung   | SSD 860 EVO M.2    | 1 TB   | D59B6E00BEB4 | 520   | 0     | 1.42   |
 | Kingston  | SKC400S37128G      | 128 GB | A1FDFC0CC404 | 520   | 0     | 1.42   |
 | ADATA     | SP600              | 128 GB | 1A9A5F77934C | 519   | 0     | 1.42   |
 | Samsung   | SSD 860 EVO        | 500 GB | 2CE5E38A8BF3 | 519   | 0     | 1.42   |
@@ -6806,6 +7125,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 Series     | 250 GB | F7A00C4D5D20 | 519   | 0     | 1.42   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 645676F1AB0E | 519   | 0     | 1.42   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | D7FA5677954D | 519   | 0     | 1.42   |
+| Goodram   | SSDPR-CX300-480    | 480 GB | F706A7F69A0A | 518   | 0     | 1.42   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 00E9F227E121 | 518   | 0     | 1.42   |
 | Samsung   | SSD 850 EVO        | 250 GB | DB64123B06A1 | 518   | 0     | 1.42   |
 | Samsung   | SSD 860 EVO        | 500 GB | 9CFF23DE8A1F | 518   | 0     | 1.42   |
@@ -6857,8 +7177,11 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 278E24CD96A8 | 515   | 0     | 1.41   |
 | Toshiba   | THNSNJ256GMCY      | 256 GB | 17D67965341E | 515   | 0     | 1.41   |
 | SPCC      | SSD                | 1 TB   | 40FD406E3CBB | 515   | 0     | 1.41   |
+| Samsung   | SSD 860 EVO M.2    | 250 GB | 8C9399F49A6A | 515   | 0     | 1.41   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 0B783AC160D6 | 515   | 0     | 1.41   |
+| Micron    | M500DC_MTFDDAK2... | 240 GB | 2B1A40471089 | 515   | 0     | 1.41   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 95D5F9ED887F | 515   | 0     | 1.41   |
+| Samsung   | SSD 850 EVO        | 250 GB | 46819DBE3C2B | 515   | 0     | 1.41   |
 | T-FORCE   | SSD                | 512 GB | 231B431694D5 | 515   | 0     | 1.41   |
 | Samsung   | SSD 860 EVO        | 250 GB | 2C7C7287D26A | 515   | 0     | 1.41   |
 | SanDisk   | SD8SN8U512G1002    | 512 GB | 010B8597112D | 515   | 0     | 1.41   |
@@ -6882,6 +7205,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLF128HCHP-00004 | 128 GB | 697A38D418D6 | 513   | 0     | 1.41   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 1A40652B455B | 513   | 0     | 1.41   |
 | Kingston  | SEDC400S37960G     | 960 GB | 45A572EDE1DC | 513   | 0     | 1.41   |
+| Samsung   | SSD PM830 mSATA    | 32 GB  | 92285821C9BF | 513   | 0     | 1.41   |
 | SanDisk   | SD8SN8U128G1002    | 128 GB | 813D77FE63E3 | 513   | 0     | 1.41   |
 | SanDisk   | Ultra II           | 960 GB | 586BA653A361 | 513   | 0     | 1.41   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 77065D777FAF | 513   | 0     | 1.41   |
@@ -6911,6 +7235,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | C100               | 120 GB | 81F8C302322E | 512   | 0     | 1.40   |
 | HP        | SSD S700           | 250 GB | 1A5A356C98B0 | 512   | 0     | 1.40   |
 | OCZ       | AGILITY3           | 64 GB  | 100725B2D9E5 | 512   | 0     | 1.40   |
+| SanDisk   | SDSSDH3512G        | 512 GB | 44713D1C3D0F | 512   | 0     | 1.40   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 429D1F501200 | 512   | 0     | 1.40   |
 | Samsung   | SSD 860 EVO        | 500 GB | 24E05C7F74D2 | 512   | 0     | 1.40   |
 | Kingston  | SUV500480G         | 480 GB | DE81C179E52F | 512   | 0     | 1.40   |
@@ -6975,6 +7300,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 24B21869B382 | 508   | 0     | 1.39   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 5BA6B28AB9B2 | 508   | 0     | 1.39   |
 | Samsung   | MZMTE128HMGR-000MV | 128 GB | 81FB99202E70 | 508   | 0     | 1.39   |
+| WDC       | WDS120G2G0A-00JH30 | 120 GB | 620DECBBFB44 | 508   | 0     | 1.39   |
 | Samsung   | SSD PM830 mSATA    | 32 GB  | 18B71733A369 | 508   | 0     | 1.39   |
 | PNY       | CS900 240GB SSD    | 240 GB | 333D789AFF14 | 508   | 0     | 1.39   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | D8DE118B6D79 | 508   | 0     | 1.39   |
@@ -7004,6 +7330,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD Sata III       | 120 GB | A38A5AAECB84 | 506   | 0     | 1.39   |
 | Samsung   | SSD 860 EVO        | 250 GB | 9E27C72A752C | 506   | 0     | 1.39   |
 | Samsung   | Portable SSD T5    | 1 TB   | 5E27E0B77C4C | 506   | 0     | 1.39   |
+| Micron    | MTFDDAK512MAM-1K1  | 512 GB | A8AD88D0E6F5 | 506   | 0     | 1.39   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 05F9CA499FAD | 506   | 0     | 1.39   |
 | Intel     | SSDSC2BX480G4      | 480 GB | A733E635F832 | 506   | 0     | 1.39   |
 | SanDisk   | X600 M.2 2280 SATA | 128 GB | 05883EBABE40 | 506   | 0     | 1.39   |
@@ -7026,6 +7353,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | DBD249944D67 | 504   | 0     | 1.38   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 14349BE75236 | 504   | 0     | 1.38   |
 | Samsung   | SSD 860 PRO        | 256 GB | C93019319DBE | 504   | 0     | 1.38   |
+| SanDisk   | SD8SB8U128G1001    | 128 GB | 2230592167EB | 504   | 0     | 1.38   |
 | Samsung   | MZ7PA128HMCD-010L1 | 128 GB | 6F0CAE276EC7 | 504   | 0     | 1.38   |
 | Kingston  | SA400S37480G       | 480 GB | 616D73900B1B | 504   | 0     | 1.38   |
 | Samsung   | SSD 850 EVO        | 1 TB   | B3881FFC8A2C | 504   | 0     | 1.38   |
@@ -7035,6 +7363,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 120 GB | 534EB41A5C1B | 504   | 0     | 1.38   |
 | Samsung   | SSD 840 EVO        | 250 GB | 28C86E2B5B90 | 503   | 0     | 1.38   |
 | Samsung   | SSD 860 QVO        | 4 TB   | 9E9F0D8F6356 | 503   | 0     | 1.38   |
+| Samsung   | SSD 860 EVO        | 250 GB | F46C8480E91C | 503   | 0     | 1.38   |
 | SanDisk   | Ultra II           | 240 GB | D764A5690762 | 503   | 0     | 1.38   |
 | SK hynix  | SC311 SATA         | 512 GB | F5755701C944 | 503   | 0     | 1.38   |
 | Samsung   | MZNLN512HCJH-000H1 | 512 GB | 88003FD1E281 | 503   | 0     | 1.38   |
@@ -7042,23 +7371,28 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 1EA61365CD2E | 503   | 0     | 1.38   |
 | SanDisk   | SD7SN6S-256G-1006  | 256 GB | 39CDDB5717FB | 503   | 0     | 1.38   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 7069FAA94B2D | 503   | 0     | 1.38   |
+| Samsung   | SSD 840 EVO        | 250 GB | 181DA9636DDF | 503   | 0     | 1.38   |
 | Samsung   | SSD 850 EVO        | 500 GB | EDA485DFACAD | 503   | 0     | 1.38   |
 | Verbatim  | SATA-III SSD       | 256 GB | F39185AD2ADA | 503   | 0     | 1.38   |
 | Samsung   | SSD 850 EVO        | 500 GB | 78CED2F732E7 | 503   | 0     | 1.38   |
 | ADATA     | IM2S3138E-128GM-B  | 128 GB | C28612C9E7D1 | 502   | 0     | 1.38   |
 | Samsung   | SSD 850 EVO        | 250 GB | B6289929B0B8 | 502   | 0     | 1.38   |
 | OCZ       | VERTEX4            | 128 GB | 10B724E36D46 | 502   | 0     | 1.38   |
+| Samsung   | SSD 860 EVO        | 500 GB | 99A69108EDD4 | 502   | 0     | 1.38   |
 | Samsung   | SSD 860 EVO        | 250 GB | 42281C6071C2 | 502   | 0     | 1.38   |
 | Samsung   | SSD 750 EVO        | 250 GB | 4068B17ABFBD | 502   | 0     | 1.38   |
 | SPCC      | SSD                | 240 GB | 347C85800342 | 502   | 0     | 1.38   |
 | Kingston  | SHSS37A480G        | 480 GB | 2CAE8A8ED762 | 502   | 0     | 1.38   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | A8044F58017F | 502   | 0     | 1.38   |
 | SK hynix  | HFS256G32TND-N210A | 256 GB | D4CB6C9CEDFE | 502   | 0     | 1.38   |
 | Samsung   | SSD 840 EVO        | 250 GB | 1072F3238F7E | 502   | 0     | 1.38   |
 | Samsung   | SSD 860 EVO        | 1 TB   | EDBBCF1D2DDB | 502   | 0     | 1.38   |
 | Samsung   | SSD 840 EVO        | 250 GB | 4248F84E26EA | 502   | 0     | 1.38   |
 | SanDisk   | SD7TB6S256G1001    | 256 GB | 35810EFC9374 | 502   | 0     | 1.38   |
 | OCZ       | D2RSTK251E14-0400  | 400 GB | 61DD1F41E57C | 502   | 0     | 1.38   |
+| Kingston  | SVP200S37A120G     | 120 GB | EF1F4262F3BF | 501   | 0     | 1.37   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 35C59D9AB054 | 501   | 0     | 1.37   |
+| Samsung   | SSD 860 EVO        | 1 TB   | 7D202179D07B | 501   | 0     | 1.37   |
 | SanDisk   | SSD PLUS 120 GB    | 120 GB | 765B38FC8C79 | 1504  | 2     | 1.37   |
 | Samsung   | SSD 850 EVO        | 500 GB | FEB84BF150A6 | 501   | 0     | 1.37   |
 | Kingston  | SA400S37120G       | 120 GB | AA973E17C4AE | 501   | 0     | 1.37   |
@@ -7099,7 +7433,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZHPV256HDGL-00000 | 256 GB | A181CA842C55 | 499   | 0     | 1.37   |
 | Samsung   | SSD 860 QVO        | 2 TB   | D62BC1A406F0 | 499   | 0     | 1.37   |
 | Samsung   | SSD 860 EVO        | 250 GB | 08DD72C3FE6D | 499   | 0     | 1.37   |
+| Samsung   | SSD 860 PRO        | 512 GB | 46A23359DDFB | 498   | 0     | 1.37   |
 | Samsung   | SSD 850 EVO        | 1 TB   | E8FC8F8E4ED0 | 498   | 0     | 1.37   |
+| SanDisk   | SSD PLUS           | 1 TB   | 44E3D32FBB0E | 498   | 0     | 1.37   |
 | Samsung   | SSD 840 EVO        | 500 GB | C74B2CA47BF2 | 498   | 0     | 1.37   |
 | Samsung   | SSD 860 EVO        | 500 GB | F3F833BD07FD | 498   | 0     | 1.37   |
 | China     | SATA SSD           | 120 GB | 7CBFAE39A124 | 498   | 0     | 1.37   |
@@ -7118,6 +7454,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 4 TB   | 8CB4B26207BE | 497   | 0     | 1.36   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | BBC63A1F88F6 | 497   | 0     | 1.36   |
 | Samsung   | SSD 850 EVO        | 500 GB | 95E4A928ACD3 | 497   | 0     | 1.36   |
+| SanDisk   | SD8TB8U256G1001    | 256 GB | E9581B685E36 | 497   | 0     | 1.36   |
 | Toshiba   | THNSNJ256GCST      | 256 GB | F8C5ECE0CDA0 | 497   | 0     | 1.36   |
 | Samsung   | MZ7PD256HAFV-000H7 | 256 GB | DA41E315FBDD | 497   | 0     | 1.36   |
 | Samsung   | SSD 860 EVO        | 250 GB | E5AE00ADDAD0 | 497   | 0     | 1.36   |
@@ -7138,6 +7475,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7PC128HAFU-000H1 | 128 GB | 395F2F3A7393 | 496   | 0     | 1.36   |
 | Corsair   | Force GT           | 120 GB | 5834038616F5 | 496   | 0     | 1.36   |
 | Kingston  | SH103S3120G        | 120 GB | 57BD0CC07841 | 496   | 0     | 1.36   |
+| Samsung   | MZNLF128HCHP-000H1 | 128 GB | B84B28B0D89C | 496   | 0     | 1.36   |
 | Goodram   | SSD                | 120 GB | 5F52DDF78CA8 | 495   | 0     | 1.36   |
 | OCZ       | VERTEX3            | 120 GB | BA96ADC2BBC8 | 495   | 0     | 1.36   |
 | OCZ       | TRION100           | 240 GB | 10823BB7E60C | 495   | 0     | 1.36   |
@@ -7207,15 +7545,18 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 755458BD8905 | 491   | 0     | 1.35   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 82F8B31DB1EF | 491   | 0     | 1.35   |
 | Kingston  | SA400S37240G       | 240 GB | 4D77D33101B0 | 491   | 0     | 1.35   |
+| SanDisk   | SDSSDA240G         | 240 GB | 2F0A073B1575 | 491   | 0     | 1.35   |
 | China     | SATA SSD           | 64 GB  | BA6992EC872E | 491   | 0     | 1.35   |
 | Samsung   | SSD 860 EVO        | 250 GB | 46B8A09ED8EF | 491   | 0     | 1.35   |
 | SanDisk   | SD8SB8U512G1122    | 512 GB | 96478E057714 | 491   | 0     | 1.35   |
 | OCZ       | VERTEX3            | 120 GB | 689D7F6E554E | 1472  | 2     | 1.35   |
 | Kingston  | SVP200S3120G       | 120 GB | BE9683982B6C | 490   | 0     | 1.34   |
+| SanDisk   | SD8TB8U256G1001    | 256 GB | 4FE8BB805018 | 490   | 0     | 1.34   |
 | Crucial   | CT250MX500SSD1     | 250 GB | AB6229CB8EA9 | 490   | 0     | 1.34   |
 | SanDisk   | SDSSDHII120G       | 120 GB | 7FDB39AD475D | 490   | 0     | 1.34   |
 | SanDisk   | SDSSDA480G         | 480 GB | D488CE041ED1 | 490   | 0     | 1.34   |
 | SanDisk   | SD7TB3Q-128G-1006  | 128 GB | CCBE2C740786 | 490   | 0     | 1.34   |
+| Crucial   | CT250MX500SSD1     | 250 GB | B763B2648FD0 | 490   | 0     | 1.34   |
 | SanDisk   | SD6SB2M-512G-1006  | 512 GB | 0FE8F548DA79 | 490   | 0     | 1.34   |
 | China     | 120GB SSD          | 120 GB | 2496AFB9F032 | 490   | 0     | 1.34   |
 | Samsung   | SSD 850 EVO        | 250 GB | 76F420C80FE0 | 490   | 0     | 1.34   |
@@ -7271,12 +7612,15 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | F572B2FC9164 | 486   | 0     | 1.33   |
 | Kingston  | SMS200S360G        | 64 GB  | 95650F8BFD0C | 486   | 0     | 1.33   |
 | SanDisk   | SD6SB2M-512G-1006  | 512 GB | 6B2DB1502AFD | 486   | 0     | 1.33   |
+| Kingston  | SUV500M8240G       | 240 GB | 34F9D4334F46 | 486   | 0     | 1.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | 6100BFFDB672 | 486   | 0     | 1.33   |
+| SanDisk   | SDSA6MM-016G-1006  | 16 GB  | 585A0AF8141A | 486   | 0     | 1.33   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | C8CD7C5C7104 | 486   | 0     | 1.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | A5DC5B15F7DA | 486   | 0     | 1.33   |
 | Kingston  | SA400S37240G       | 240 GB | A99E054D2BE1 | 486   | 0     | 1.33   |
 | SanDisk   | SD9TB8W256G1001    | 256 GB | 6446F91662AB | 486   | 0     | 1.33   |
 | Kingston  | SA400S37120G       | 120 GB | F6497A1BEFC4 | 486   | 0     | 1.33   |
+| Crucial   | M4-CT256M4SSD2     | 256 GB | 6A4CF0F008EB | 486   | 0     | 1.33   |
 | Plextor   | PX-128M7VG         | 128 GB | EF56F9BA97A1 | 486   | 0     | 1.33   |
 | Intel     | SSDSC2BW240A4      | 240 GB | 177040CE774C | 1457  | 2     | 1.33   |
 | Samsung   | SSD 860 PRO        | 4 TB   | C66CB6DED65C | 485   | 0     | 1.33   |
@@ -7285,6 +7629,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPC128HBFU-000H1 | 128 GB | 58BAABCADB5F | 485   | 0     | 1.33   |
 | Crucial   | CT525MX300SSD4     | 528 GB | 365B30939E71 | 485   | 0     | 1.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | 235EEE909743 | 485   | 0     | 1.33   |
+| SanDisk   | SDSSDA120G         | 120 GB | 3A6B1735DF61 | 485   | 0     | 1.33   |
+| SanDisk   | SD8SN8U-128G-1006  | 128 GB | 9615AA673B74 | 485   | 0     | 1.33   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 29F9A1054D1C | 970   | 1     | 1.33   |
 | Kingston  | SUV400S37120G      | 120 GB | 2873BB28CDA4 | 485   | 0     | 1.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | 0EC76434B5AD | 485   | 0     | 1.33   |
@@ -7343,16 +7689,20 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | P3-2TB             | 2 TB   | 98C45C9780CA | 482   | 0     | 1.32   |
 | LDLC      | SSD                | 120 GB | 42E668FB3547 | 482   | 0     | 1.32   |
 | Netac     | SSD                | 120 GB | 0179F6992BEE | 482   | 0     | 1.32   |
+| Toshiba   | TR150              | 240 GB | DAD138C45BE5 | 482   | 0     | 1.32   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 654FA2BC3F5E | 482   | 0     | 1.32   |
 | SanDisk   | SDSSDHII240G       | 240 GB | E5A5D5634145 | 482   | 0     | 1.32   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | BFFA69D5549A | 482   | 0     | 1.32   |
 | SPCC      | SSD                | 120 GB | CAF296D217D9 | 482   | 0     | 1.32   |
+| Toshiba   | TR150              | 480 GB | D4E639F6E5E9 | 482   | 0     | 1.32   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | BC152BBE5FBC | 482   | 0     | 1.32   |
+| Samsung   | SSD 860 QVO        | 2 TB   | 3F536390456E | 482   | 0     | 1.32   |
 | Crucial   | CT120M500SSD1      | 120 GB | D8CE4D48C6D6 | 482   | 0     | 1.32   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 359D6DF5E956 | 482   | 0     | 1.32   |
 | Corsair   | Force LS SSD       | 240 GB | B29B66F1DDB0 | 481   | 0     | 1.32   |
 | SanDisk   | SD6SF1M128G1022I   | 128 GB | 4DCE5ABD8225 | 481   | 0     | 1.32   |
 | minisf... | SSD                | 256 GB | B4429BAD11B9 | 481   | 0     | 1.32   |
+| Crucial   | CT275MX300SSD1     | 275 GB | 4354BBF97767 | 481   | 0     | 1.32   |
 | Samsung   | SSD 840 EVO        | 500 GB | 729E03F63EC1 | 481   | 0     | 1.32   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 989EAA6EF831 | 481   | 0     | 1.32   |
 | Samsung   | SSD 850 EVO        | 500 GB | EA45E2C1FA6A | 481   | 0     | 1.32   |
@@ -7389,6 +7739,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 120 GB | 2DBE69D985E4 | 479   | 0     | 1.31   |
 | Crucial   | CT250MX200SSD1     | 250 GB | A2A573F48565 | 479   | 0     | 1.31   |
 | Kingston  | SV300S37A60G       | 64 GB  | BA34DAEB8574 | 479   | 0     | 1.31   |
+| Samsung   | MZ7TE256HMHP-000L7 | 256 GB | 3000CD3D5261 | 479   | 0     | 1.31   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | F46CE97E4DA3 | 479   | 0     | 1.31   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 6EC0A4FB69DE | 479   | 0     | 1.31   |
 | Samsung   | SSD 850 PRO        | 256 GB | 8E5539DD82AF | 958   | 1     | 1.31   |
@@ -7405,6 +7756,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 6CB52497357B | 479   | 0     | 1.31   |
 | Samsung   | SSD 840 EVO        | 250 GB | A98C5729E5FC | 479   | 0     | 1.31   |
 | Samsung   | SSD 840 EVO        | 120 GB | CC1240972F7A | 479   | 0     | 1.31   |
+| China     | SATA SSD           | 240 GB | 1B2E0C4C8D9A | 479   | 0     | 1.31   |
 | Kingston  | SUV400S37120G      | 120 GB | 0560E50EA4C0 | 479   | 0     | 1.31   |
 | ADATA     | SU650              | 120 GB | 1D9EE294AC66 | 478   | 0     | 1.31   |
 | Samsung   | MZNTY256HDHP-00000 | 256 GB | D2FAD4E51422 | 478   | 0     | 1.31   |
@@ -7450,11 +7802,14 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV200S364G         | 64 GB  | B9733AF0D341 | 476   | 0     | 1.31   |
 | Samsung   | SSD 860 EVO        | 500 GB | BAB2A16B2D37 | 476   | 0     | 1.31   |
 | Kingston  | SHSS37A480G        | 480 GB | 9D1DB4E6D5BC | 476   | 0     | 1.31   |
+| Pioneer   | APS-SL3N-1T        | 1 TB   | 8B3FEA1E11B7 | 476   | 0     | 1.31   |
+| SanDisk   | SDSSDP128G         | 128 GB | 748D75CDC945 | 476   | 0     | 1.31   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 0487B7ED0668 | 476   | 0     | 1.31   |
 | OCZ       | AGILITY3           | 240 GB | 2799A989AD78 | 476   | 0     | 1.31   |
 | OCZ       | VECTOR150          | 120 GB | DE7E0B22F370 | 476   | 0     | 1.31   |
 | Corsair   | Force LS SSD       | 120 GB | D0F6A1CDEAF5 | 476   | 0     | 1.31   |
 | SPCC      | SSD                | 512 GB | 73FE8F853BC2 | 476   | 0     | 1.31   |
+| Kingston  | SV300S37A120G      | 120 GB | 5F3822124978 | 476   | 0     | 1.30   |
 | Crucial   | CT256MX100SSD1     | 256 GB | B27D5B833F2F | 476   | 0     | 1.30   |
 | Kingston  | SA400S37240G       | 240 GB | 5C580F25A8FE | 476   | 0     | 1.30   |
 | Kingston  | SA400S37240G       | 240 GB | 9CB169C37677 | 476   | 0     | 1.30   |
@@ -7473,10 +7828,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 2ECFA58CAD9A | 474   | 0     | 1.30   |
 | OCZ       | VERTEX3 MI         | 120 GB | 182C6D28BA8E | 474   | 0     | 1.30   |
 | Crucial   | CT120M500SSD1      | 120 GB | 122D196983A8 | 474   | 0     | 1.30   |
+| Intenso   | SSD                | 128 GB | 8B7BC16DA65D | 474   | 0     | 1.30   |
 | SPCC      | SSD110             | 120 GB | F4A0B67BB8E5 | 474   | 0     | 1.30   |
 | Smartbuy  | SSD                | 120 GB | 6570453334EE | 474   | 0     | 1.30   |
 | Samsung   | MZMPC128HBFU-00000 | 128 GB | A0A3697B51D2 | 474   | 0     | 1.30   |
 | SanDisk   | SDSSDP128G         | 128 GB | 56643E89B8DB | 474   | 0     | 1.30   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 079388C4D873 | 474   | 0     | 1.30   |
 | Apple     | SSD SM0256G        | 256 GB | 236D7F5A9F3C | 474   | 0     | 1.30   |
 | Samsung   | SSD 840 EVO        | 250 GB | 0746D43CFBD3 | 474   | 0     | 1.30   |
 | SanDisk   | SDSSDHII480G       | 480 GB | 7F6259357D69 | 474   | 0     | 1.30   |
@@ -7530,6 +7887,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | A2E0B15AD281 | 472   | 0     | 1.29   |
 | Patriot   | Burst              | 480 GB | 08FF3743A561 | 472   | 0     | 1.29   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 13A640BABA4C | 472   | 0     | 1.29   |
+| Kingston  | RBUSC180DS37128GH  | 128 GB | 485504FCB7A3 | 472   | 0     | 1.29   |
 | Yunhai... | Y6-120G            | 120 GB | 53DB59C1A0CA | 472   | 0     | 1.29   |
 | Samsung   | SSD 850 EVO        | 250 GB | 5F0093BEB396 | 471   | 0     | 1.29   |
 | SanDisk   | SD6SB2M-512G-1006  | 512 GB | E5626EBC5094 | 471   | 0     | 1.29   |
@@ -7639,6 +7997,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | EF764F2A73EA | 466   | 0     | 1.28   |
 | Samsung   | SSD 860 EVO        | 500 GB | 07281531B894 | 466   | 0     | 1.28   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 1B9CDD16EE5E | 466   | 0     | 1.28   |
+| Samsung   | SSD 850 PRO        | 256 GB | 3CF97C00E6FB | 466   | 0     | 1.28   |
 | Seagate   | SSD                | 250 GB | BFC6697F1DA7 | 466   | 0     | 1.28   |
 | Toshiba   | TR200              | 240 GB | 756D6F78CC72 | 466   | 0     | 1.28   |
 | SK hynix  | SC311 SATA         | 256 GB | 91645A017543 | 466   | 0     | 1.28   |
@@ -7651,17 +8010,21 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | 40EEB5E87AF1 | 465   | 0     | 1.28   |
 | KingFast  | SSD                | 240 GB | 5772AB959D03 | 465   | 0     | 1.28   |
 | Samsung   | SSD 840 EVO        | 250 GB | 4CC038909E87 | 465   | 0     | 1.28   |
+| SanDisk   | Ultra II           | 960 GB | 04EB727D55BF | 465   | 0     | 1.28   |
 | Corsair   | Force LS SSD       | 64 GB  | E9765CA57088 | 465   | 0     | 1.28   |
 | Kingston  | SV300S37A120G      | 120 GB | C12D2C897CDB | 465   | 0     | 1.28   |
+| WDC       | WDS120G1G0A-00SS50 | 120 GB | 41BB5692CED3 | 465   | 0     | 1.28   |
 | Kingston  | SV300S37A120G      | 120 GB | 33885A17F4D4 | 465   | 0     | 1.28   |
 | Samsung   | SSD 860 EVO        | 1 TB   | E56B757A4682 | 465   | 0     | 1.28   |
 | ADATA     | SP900              | 128 GB | 2AE0F2E2AA06 | 465   | 0     | 1.28   |
 | Samsung   | SSD 860 EVO        | 250 GB | F1435756E79F | 465   | 0     | 1.28   |
 | Samsung   | SSD 850 PRO        | 1 TB   | 65A37E56F3A2 | 465   | 0     | 1.28   |
 | Indilinx  | IND-S3MP-128G      | 128 GB | 24C103B1E05B | 465   | 0     | 1.27   |
+| WDC       | WDS500G2B0A        | 500 GB | C9E91B392A5D | 465   | 0     | 1.27   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 5838629DCD2E | 465   | 0     | 1.27   |
 | Kingston  | SA400M8120G        | 120 GB | 7C48BC964ED1 | 465   | 0     | 1.27   |
 | Samsung   | SSD 850 PRO        | 512 GB | 203DD2C81704 | 465   | 0     | 1.27   |
+| Samsung   | MZNLN128HAHQ-000H1 | 128 GB | A0B42B390CED | 465   | 0     | 1.27   |
 | Kingston  | SUV400S37120G      | 120 GB | 0A45CDEB38A0 | 464   | 0     | 1.27   |
 | Patriot   | Burst              | 240 GB | 00B7BC8018DC | 464   | 0     | 1.27   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 10DF99BE3704 | 464   | 0     | 1.27   |
@@ -7669,6 +8032,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-128    | 128 GB | E477BE6FBA8C | 464   | 0     | 1.27   |
 | Samsung   | SSD 850 EVO        | 500 GB | 8BDC94D948B5 | 464   | 0     | 1.27   |
 | ADATA     | SU700              | 120 GB | FF0CEE6D8A53 | 464   | 0     | 1.27   |
+| Intel     | SSDSC2CT240A4      | 240 GB | 5D4C3C1618AE | 464   | 0     | 1.27   |
 | SanDisk   | SD8TB8U256G1001    | 256 GB | 1276FA786A89 | 464   | 0     | 1.27   |
 | Apacer    | AS350              | 128 GB | 339031239785 | 464   | 0     | 1.27   |
 | Crucial   | CT256MX100SSD1     | 256 GB | DF901D69293A | 464   | 0     | 1.27   |
@@ -7700,6 +8064,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPC128HBFU-000L1 | 128 GB | 0DB6C4EF8788 | 463   | 0     | 1.27   |
 | SanDisk   | SD7SN6S-256G-1006  | 256 GB | 8D5F28E85A2B | 463   | 0     | 1.27   |
 | Apple     | SSD SM0256G        | 256 GB | 2205501A85B0 | 463   | 0     | 1.27   |
+| SanDisk   | Ultra II           | 480 GB | F3AD7B3B6396 | 463   | 0     | 1.27   |
 | OCZ       | ARC100             | 240 GB | DFCFB4C3F672 | 463   | 0     | 1.27   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 4454A8E8DB4C | 463   | 0     | 1.27   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 1C270F8F8803 | 463   | 0     | 1.27   |
@@ -7741,6 +8106,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 QVO        | 2 TB   | 8310A456C94D | 461   | 0     | 1.26   |
 | Seagate   | SSD                | 250 GB | DBC77833081B | 461   | 0     | 1.26   |
 | Corsair   | Force GS           | 128 GB | 23525E3C83A3 | 461   | 0     | 1.26   |
+| Crucial   | CT256MX100SSD1     | 256 GB | 8CD695B5C801 | 461   | 0     | 1.26   |
 | OCZ       | AGILITY3           | 120 GB | EDEF0271C650 | 461   | 0     | 1.26   |
 | Kingston  | SVP200S37A120G     | 120 GB | FD45A15B7272 | 461   | 0     | 1.26   |
 | SPCC      | SSD                | 1 TB   | A19FA9356C8D | 461   | 0     | 1.26   |
@@ -7755,6 +8121,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SATA III SSD       | 120 GB | 2231847175B9 | 460   | 0     | 1.26   |
 | Kingston  | SHSS37A240G        | 240 GB | 1A63E9AC7A27 | 460   | 0     | 1.26   |
 | Kingston  | SUV500120G         | 120 GB | CEB3C1D0AB5A | 460   | 0     | 1.26   |
+| Samsung   | SSD 840 EVO        | 250 GB | 43046EAC4817 | 460   | 0     | 1.26   |
 | Kingston  | SV300S37A480G      | 480 GB | CA58F032ADFD | 460   | 0     | 1.26   |
 | SanDisk   | SSD U110           | 16 GB  | 03C1A0EEE43F | 460   | 0     | 1.26   |
 | Samsung   | SSD 850 PRO        | 256 GB | AABEFAF91611 | 460   | 0     | 1.26   |
@@ -7768,6 +8135,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 64D1FA3049E3 | 460   | 0     | 1.26   |
 | Samsung   | SSD 850 PRO        | 128 GB | 60388D927F34 | 459   | 0     | 1.26   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 7CE7BB826297 | 459   | 0     | 1.26   |
+| Toshiba   | Q300               | 480 GB | EC6D0F49CC3B | 459   | 0     | 1.26   |
 | Samsung   | SSD 840 Series     | 120 GB | 838DCDD8C5EE | 919   | 1     | 1.26   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 0448F482940A | 459   | 0     | 1.26   |
 | Crucial   | CT250MX200SSD1     | 250 GB | 29C7498E4C9C | 459   | 0     | 1.26   |
@@ -7798,6 +8166,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37240G      | 240 GB | 9B1DC8C4C68F | 458   | 0     | 1.26   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 01E99A3002CE | 458   | 0     | 1.26   |
 | Samsung   | SSD 840 EVO        | 500 GB | 3067B92379FA | 458   | 0     | 1.26   |
+| Kingston  | SA400S37240G       | 240 GB | E47358FB57A1 | 458   | 0     | 1.26   |
 | Kingston  | SH100S3120G        | 120 GB | 2186EC75FD06 | 458   | 0     | 1.26   |
 | Plextor   | PX-128S2G          | 128 GB | CDF9AF8C7B74 | 458   | 0     | 1.26   |
 | Samsung   | SSD 860 EVO        | 500 GB | 32D9DB692FA0 | 458   | 0     | 1.26   |
@@ -7817,6 +8186,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 6FCFF5EB8297 | 457   | 0     | 1.25   |
 | Samsung   | SSD 860 EVO        | 1 TB   | FB89027D5DA5 | 457   | 0     | 1.25   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | E5BACF68A432 | 457   | 0     | 1.25   |
+| Samsung   | SSD 840 EVO        | 250 GB | 9DCC90269D5D | 457   | 0     | 1.25   |
 | Samsung   | SSD 860 EVO        | 500 GB | 0A3347D4B1AD | 457   | 0     | 1.25   |
 | Toshiba   | TR150              | 120 GB | A98998A4F49D | 457   | 0     | 1.25   |
 | Team      | T253X2001T         | 1 TB   | 71A16B4E6E5E | 457   | 0     | 1.25   |
@@ -7855,10 +8225,12 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU635              | 240 GB | 9115784C4FAB | 455   | 0     | 1.25   |
 | Crucial   | CT256MX100SSD1     | 256 GB | B95B9BAD34EA | 455   | 0     | 1.25   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 53A93FAFB1E1 | 455   | 0     | 1.25   |
+| Kingston  | SHSS37A240G        | 240 GB | 8846D2B4DCE9 | 455   | 0     | 1.25   |
 | Samsung   | SSD 840 EVO        | 120 GB | 831F1F4BD9D5 | 455   | 0     | 1.25   |
 | Samsung   | MZHPV256HDGL-00000 | 256 GB | 4A78F09D30FD | 455   | 0     | 1.25   |
 | Samsung   | SSD 850 EVO        | 500 GB | DC0122A5E96D | 455   | 0     | 1.25   |
 | SanDisk   | SDSSDA120G         | 120 GB | C5FE4B7017D4 | 455   | 0     | 1.25   |
+| SanDisk   | SSD i100           | 24 GB  | BD10FE36DCE7 | 455   | 0     | 1.25   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | 3EBC6B751355 | 454   | 0     | 1.25   |
 | Kingston  | SA400S37480G       | 480 GB | 88A12C5D2C79 | 454   | 0     | 1.25   |
 | Toshiba   | TR150              | 120 GB | B0C989B01ACC | 454   | 0     | 1.25   |
@@ -7870,6 +8242,8 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7SB2Q-512G-1006  | 512 GB | BC86EDB42BE5 | 454   | 0     | 1.25   |
 | OCZ       | AGILITY3           | 90 GB  | EA334B440C5E | 454   | 0     | 1.25   |
 | Kingston  | SHSS37A240G        | 240 GB | BD0FD55027FD | 454   | 0     | 1.25   |
+| Samsung   | MZ7TE256HMHP-000H1 | 256 GB | AE8C7BD24DF7 | 454   | 0     | 1.25   |
+| SanDisk   | SDSSDA120G         | 120 GB | 366D62D5679B | 454   | 0     | 1.25   |
 | Samsung   | MZNLN256HCHP-00000 | 256 GB | B675B0CB1A57 | 454   | 0     | 1.25   |
 | Kingston  | SA400S37480G       | 480 GB | 4B8BB84E893F | 454   | 0     | 1.25   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | F4BA022C8E93 | 454   | 0     | 1.24   |
@@ -7898,11 +8272,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 1 TB   | 7CFF6593E951 | 453   | 0     | 1.24   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 2A128822646E | 453   | 0     | 1.24   |
 | SanDisk   | SDSSDHII240G       | 240 GB | BEA6EE03CFBC | 453   | 0     | 1.24   |
+| Patriot   | Burst              | 120 GB | 949DA587ECCE | 453   | 0     | 1.24   |
 | Samsung   | MZ7LN256HMJP-000H1 | 256 GB | D764A3153E36 | 1359  | 2     | 1.24   |
+| Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 67EF1A51E3BB | 453   | 0     | 1.24   |
 | Crucial   | CT1050MX300SSD4    | 1 TB   | C08A4C0C4C1C | 1359  | 2     | 1.24   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 019469F07A3A | 453   | 0     | 1.24   |
 | Intenso   | SATA III SSD       | 120 GB | E8EC9D1B4AEF | 453   | 0     | 1.24   |
 | OCZ       | VERTEX460A         | 120 GB | BC6891653C4D | 453   | 0     | 1.24   |
+| Samsung   | MZ7TD128HAFV-00000 | 128 GB | E96BE6A4A120 | 453   | 0     | 1.24   |
 | Kingston  | SA400S37240G       | 240 GB | 3E3498D21F78 | 453   | 0     | 1.24   |
 | Kingston  | SH103S3240G        | 240 GB | 00B31ECDEB1B | 453   | 0     | 1.24   |
 | Kingston  | SVP200S37A60G      | 64 GB  | 31FEE483CFFB | 453   | 0     | 1.24   |
@@ -7939,13 +8316,16 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 155F69422020 | 451   | 0     | 1.24   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | 004D759F1F79 | 451   | 0     | 1.24   |
 | Micron    | 5210_MTFDDAK7T6QDE | 7.6 TB | 9464E17C7DDE | 451   | 0     | 1.24   |
+| Crucial   | CT500MX500SSD4     | 500 GB | 65811B9A7620 | 451   | 0     | 1.24   |
 | Intel     | SSDSC2CT180A4      | 180 GB | 55DCC36E366E | 1354  | 2     | 1.24   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 47BC653C5565 | 451   | 0     | 1.24   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | 434B3830290B | 451   | 0     | 1.24   |
 | Intel     | SSDSA2BW120G3H     | 120 GB | D135F3E89EAB | 451   | 0     | 1.24   |
 | OCZ       | VERTEX3            | 120 GB | 8051E305B32B | 1353  | 2     | 1.24   |
 | SanDisk   | SDSSDXP240G        | 240 GB | 5D88F45B4B6A | 451   | 0     | 1.24   |
 | Kingston  | SHFS37A120G        | 120 GB | 397EE4803EB6 | 451   | 0     | 1.24   |
 | SanDisk   | SD8SN8U256G1027    | 256 GB | 0AAF29CF297A | 451   | 0     | 1.24   |
+| Reeinno   | ST240GB S4S3       | 240 GB | 7F6BC6F6A50E | 450   | 0     | 1.24   |
 | Samsung   | SSD 860 EVO        | 500 GB | 494A085D979D | 450   | 0     | 1.24   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | 8767E14D2671 | 450   | 0     | 1.24   |
 | Intel     | SSDSC2CT120A3      | 120 GB | 6F2DCF2FEB91 | 450   | 0     | 1.24   |
@@ -7973,6 +8353,8 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX3            | 120 GB | FE50B42EF235 | 449   | 0     | 1.23   |
 | SK hynix  | SC311 SATA         | 256 GB | BA8E590E98CA | 449   | 0     | 1.23   |
 | Intel     | SSDSC2CW180A3      | 180 GB | FCA47FFDD573 | 449   | 0     | 1.23   |
+| SanDisk   | SD8SN8U-256G-1006  | 256 GB | 7936881773E9 | 449   | 0     | 1.23   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 1AEA2CA1F4D4 | 449   | 0     | 1.23   |
 | SanDisk   | SDSSDA240G         | 240 GB | 8A3A7A5513FF | 449   | 0     | 1.23   |
 | SanDisk   | SDSSDH31000G       | 1 TB   | 453EC2011B07 | 449   | 0     | 1.23   |
 | OCZ       | VERTEX450          | 128 GB | F085B02F3609 | 898   | 1     | 1.23   |
@@ -7987,12 +8369,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 PRO Series | 512 GB | 57C8228523EE | 448   | 0     | 1.23   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 9643302349B0 | 448   | 0     | 1.23   |
 | Toshiba   | THNSNC128GCSJ      | 128 GB | 843B22C3EE5B | 448   | 0     | 1.23   |
+| Goodram   | SSDPR-CX400-256-G2 | 256 GB | 489FF64CB7FF | 448   | 0     | 1.23   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 43E7D59650F8 | 448   | 0     | 1.23   |
 | Samsung   | SSD 850 EVO        | 120 GB | D3F1EA241169 | 448   | 0     | 1.23   |
 | Apple     | SSD SM0128G        | 121 GB | 14D54677121B | 448   | 0     | 1.23   |
 | Samsung   | SSD 830 Series     | 256 GB | 6DBEED2AC726 | 448   | 0     | 1.23   |
 | Samsung   | SSD 840 EVO        | 250 GB | 3E510AA3957A | 448   | 0     | 1.23   |
 | Samsung   | SSD 850 EVO        | 500 GB | D41D09A4389B | 448   | 0     | 1.23   |
+| Crucial   | CT480BX500SSD1     | 480 GB | 4645F2888D28 | 448   | 0     | 1.23   |
 | Intel     | SSDSA2BW160G3L     | 160 GB | F35E167C3706 | 448   | 0     | 1.23   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | D7B360D7E186 | 448   | 0     | 1.23   |
 | Patriot   | Blaze              | 120 GB | 70CDDF99375E | 448   | 0     | 1.23   |
@@ -8043,6 +8427,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 72BB38839EB3 | 446   | 0     | 1.22   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 30A75A72B6E7 | 446   | 0     | 1.22   |
 | Toshiba   | Q300 Pro           | 512 GB | 7AAEB63F138C | 446   | 0     | 1.22   |
+| WDC       | WDS100T2B0B-00YS70 | 1 TB   | 2FCDC17705EF | 446   | 0     | 1.22   |
 | ADATA     | IM2S3138E-128GM-B  | 128 GB | 62B626099BD3 | 446   | 0     | 1.22   |
 | OCZ       | VERTEX4            | 128 GB | BE831C6A2D6D | 1338  | 2     | 1.22   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 72A2EDA94819 | 446   | 0     | 1.22   |
@@ -8064,6 +8449,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 9398A1145F49 | 445   | 0     | 1.22   |
 | Micron    | M600_MTFDDAK128... | 128 GB | F7D7772B5514 | 445   | 0     | 1.22   |
 | Intel     | SSDSC2BW080A4      | 80 GB  | 9205326B0E65 | 444   | 0     | 1.22   |
+| Kingston  | SA400M8240G        | 240 GB | 4E7F79E60261 | 444   | 0     | 1.22   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 3E739A14381C | 444   | 0     | 1.22   |
 | Samsung   | SSD 860 EVO        | 500 GB | A4D0986D78D2 | 444   | 0     | 1.22   |
 | SanDisk   | SSD PLUS           | 240 GB | EDB0AEAA8902 | 444   | 0     | 1.22   |
@@ -8089,11 +8475,14 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDHII240G       | 240 GB | 332189E3EF09 | 443   | 0     | 1.22   |
 | Foxline   | FLDMMS128G         | 128 GB | E8AD3A536FD6 | 443   | 0     | 1.22   |
 | Corsair   | Force 3 SSD        | 240 GB | 6543B7DD70B6 | 443   | 0     | 1.22   |
+| Samsung   | SSD 860 EVO        | 500 GB | 5AB56ECCB48D | 443   | 0     | 1.22   |
 | Kingston  | SA400S37120G       | 120 GB | FFBEC125A2B4 | 443   | 0     | 1.21   |
 | Crucial   | CT275MX300SSD1     | 275 GB | A8EC9E801DE6 | 443   | 0     | 1.21   |
+| Kingston  | SHFS37A120G        | 120 GB | 0C7D22532728 | 443   | 0     | 1.21   |
 | Kingston  | SV300S37A120G      | 120 GB | 6B533C991455 | 443   | 0     | 1.21   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 6ABFD92C331D | 443   | 0     | 1.21   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 8D809E3246F8 | 443   | 0     | 1.21   |
+| SPCC      | SSD                | 128 GB | F1E7C43BD403 | 443   | 0     | 1.21   |
 | Samsung   | SSD 860 EVO        | 1 TB   | F1A860BE281A | 443   | 0     | 1.21   |
 | Crucial   | M4-CT064M4SSD2     | 64 GB  | 55ECBD246C84 | 443   | 0     | 1.21   |
 | Samsung   | SSD 860 EVO        | 500 GB | 150AB76D1BC4 | 443   | 0     | 1.21   |
@@ -8106,6 +8495,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SSD                | 32 GB  | 075F565B2D04 | 442   | 0     | 1.21   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 0571DA61CDF3 | 442   | 0     | 1.21   |
 | OCZ       | VERTEX2            | 80 GB  | 555CCF1DBAA7 | 442   | 0     | 1.21   |
+| Samsung   | SSD 850 PRO        | 128 GB | 56614D4A4A76 | 442   | 0     | 1.21   |
 | SPCC      | SSD                | 240 GB | 36A29AD5D001 | 442   | 0     | 1.21   |
 | SanDisk   | SD9SN8W256G1002    | 256 GB | FFF2A0F86785 | 442   | 0     | 1.21   |
 | Crucial   | CT500MX500SSD4     | 500 GB | E68FB1946901 | 442   | 0     | 1.21   |
@@ -8177,6 +8567,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | 26B4B84E8130 | 438   | 0     | 1.20   |
 | Crucial   | CT500MX500SSD4     | 500 GB | 47DF33A47B2D | 438   | 0     | 1.20   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 98530CB54E25 | 438   | 0     | 1.20   |
+| Kingston  | SA400S37120G       | 120 GB | 9C25E912A04C | 438   | 0     | 1.20   |
 | Samsung   | SSD 860 PRO        | 1 TB   | 1A9DB0783973 | 438   | 0     | 1.20   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 402F2402193F | 438   | 0     | 1.20   |
 | SanDisk   | SDSSDP128G         | 128 GB | DAD28054BD59 | 438   | 0     | 1.20   |
@@ -8215,6 +8606,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | D52A06E013BF | 437   | 0     | 1.20   |
 | Samsung   | SSD 850 EVO        | 500 GB | 5DD98B18DE5A | 437   | 0     | 1.20   |
 | Samsung   | SSD 850 EVO        | 500 GB | DF30E46842EF | 437   | 0     | 1.20   |
+| Kingston  | SV300S37A120G      | 120 GB | C81399DE863B | 2185  | 4     | 1.20   |
 | Samsung   | MZ7TY128HDHP-000L1 | 128 GB | 55444D4483AA | 437   | 0     | 1.20   |
 | SanDisk   | iSSD P4            | 8 GB   | 5B35A5533EE1 | 437   | 0     | 1.20   |
 | Kingston  | SV300S37A120G      | 120 GB | 34A73ADCBFDB | 436   | 0     | 1.20   |
@@ -8235,6 +8627,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 7FA82781D549 | 436   | 0     | 1.20   |
 | SanDisk   | SDSSDH3512G        | 512 GB | 8FD93ADA4241 | 436   | 0     | 1.20   |
 | Samsung   | MZNTE128HMGR-000SO | 128 GB | 30FEE98E2C49 | 436   | 0     | 1.20   |
+| SanDisk   | SD7SB6S-128G-1006  | 128 GB | 0D0834D4BB65 | 436   | 0     | 1.20   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | B25FFE4F5D3B | 436   | 0     | 1.20   |
 | SanDisk   | SD7SN6S-256G-1006  | 256 GB | 23204DBFFF22 | 436   | 0     | 1.19   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 3795B1439B93 | 436   | 0     | 1.19   |
@@ -8249,6 +8642,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | REVODRIVE X2       | 25 GB  | 790AAB93F41E | 435   | 0     | 1.19   |
 | OCZ       | REVODRIVE X2       | 25 GB  | 4E3E27DB39C0 | 435   | 0     | 1.19   |
 | OCZ       | REVODRIVE X2       | 25 GB  | 5DD4448E63A1 | 435   | 0     | 1.19   |
+| Samsung   | SSD 750 EVO        | 250 GB | 3147A934B113 | 435   | 0     | 1.19   |
 | Micron    | 5200_MTFDDAK1T9TDC | 1.9 TB | 744EDC039DD8 | 435   | 0     | 1.19   |
 | Samsung   | SSD 840 EVO        | 250 GB | 6C01A3EBD05A | 435   | 0     | 1.19   |
 | Kingston  | RBU-SC152S37256GG2 | 256 GB | C8E1362FC5E5 | 435   | 0     | 1.19   |
@@ -8293,6 +8687,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | Portable SSD T5    | 2 TB   | D2BE3282BAF7 | 433   | 0     | 1.19   |
 | Smartbuy  | SSD                | 120 GB | 4C4658A8CEC2 | 433   | 0     | 1.19   |
 | Intenso   | SATA III SSD       | 480 GB | 9589A557E695 | 433   | 0     | 1.19   |
+| Crucial   | CT240BX500SSD1     | 240 GB | A60275DF1622 | 433   | 0     | 1.19   |
 | Samsung   | SSD 860 EVO        | 500 GB | F40B07A87D8E | 433   | 0     | 1.19   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | D82325364C85 | 433   | 0     | 1.19   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 83E7BCB07334 | 433   | 0     | 1.19   |
@@ -8386,6 +8781,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 0FC7FA8E6E97 | 430   | 0     | 1.18   |
 | Samsung   | SSD 850 EVO        | 250 GB | 877EB6CCE2D3 | 430   | 0     | 1.18   |
 | Samsung   | SSD 850 EVO        | 500 GB | AB7A55D697EA | 430   | 0     | 1.18   |
+| SK hynix  | HFS128G39MNC-3510A | 128 GB | 418A47122AA6 | 430   | 0     | 1.18   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 75EE09D0A386 | 430   | 0     | 1.18   |
 | Kingston  | SV300S37A60G       | 64 GB  | E4C1CF7D7329 | 430   | 0     | 1.18   |
 | Crucial   | CT275MX300SSD1     | 275 GB | E505AE2FC45C | 430   | 0     | 1.18   |
@@ -8398,6 +8794,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 3058871DC3FF | 429   | 0     | 1.18   |
 | Kingston  | SA400S37240G       | 240 GB | 1612792A90F6 | 429   | 0     | 1.18   |
 | Intel     | SSDSC2CT120A3      | 120 GB | C494F05C1EE8 | 429   | 0     | 1.18   |
+| Kingston  | SM2280S3G2480G     | 480 GB | A9CB45F383C4 | 429   | 0     | 1.18   |
 | Samsung   | SSD 840 EVO        | 250 GB | 5CD2FAB9951B | 429   | 0     | 1.18   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 5D815DA9B22E | 429   | 0     | 1.18   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | C82028E0C392 | 429   | 0     | 1.18   |
@@ -8439,6 +8836,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | D3F049F6B7A6 | 427   | 0     | 1.17   |
 | Samsung   | MZ7TE256HMHP-00000 | 256 GB | F1EF04361A15 | 427   | 0     | 1.17   |
 | Samsung   | MZ7PD256HCGM-000H7 | 256 GB | 3B19C22A12A3 | 427   | 0     | 1.17   |
+| Kingston  | SV300S37A120G      | 120 GB | 0EA309FC08A1 | 427   | 0     | 1.17   |
 | SK hynix  | SC300 M.2 2280     | 256 GB | 284B02C2C4F2 | 427   | 0     | 1.17   |
 | Samsung   | MZ7LM480HCHP-00... | 480 GB | A191BEFBFBAE | 427   | 0     | 1.17   |
 | Samsung   | MZ7LM480HCHP-00... | 480 GB | CB047250578F | 427   | 0     | 1.17   |
@@ -8466,6 +8864,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX200SSD3     | 500 GB | B5139420C337 | 425   | 0     | 1.17   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | EBC25839DB97 | 425   | 0     | 1.17   |
 | Samsung   | SSD 840 EVO        | 500 GB | 7A462BA32FFA | 425   | 0     | 1.17   |
+| Crucial   | CT960BX500SSD1     | 960 GB | 535C8D166C8E | 425   | 0     | 1.17   |
 | Toshiba   | THNSNC128GMMJ      | 128 GB | 733F862B6226 | 425   | 0     | 1.17   |
 | Samsung   | SSD 850 EVO        | 500 GB | F675C273559F | 425   | 0     | 1.17   |
 | SK hynix  | SC311 SATA         | 256 GB | B48BA169B32C | 425   | 0     | 1.17   |
@@ -8502,6 +8901,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A480G      | 480 GB | 83C5F094AAAB | 423   | 0     | 1.16   |
 | Kingston  | SV300S37A240G      | 240 GB | 4A816D7DF581 | 423   | 0     | 1.16   |
 | OCZ       | VERTEX4            | 128 GB | 00EEAD184814 | 423   | 0     | 1.16   |
+| SanDisk   | SD7TB6S256G1001    | 256 GB | F4D1A07168C7 | 423   | 0     | 1.16   |
 | SanDisk   | SDSSDHP128G        | 128 GB | 09C7470D16A4 | 423   | 0     | 1.16   |
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | A2EE40ED85A4 | 423   | 0     | 1.16   |
 | SanDisk   | SDSSDHII120G       | 120 GB | 5996A8ADB3B6 | 423   | 0     | 1.16   |
@@ -8514,6 +8914,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37120G      | 120 GB | 2E169D6E2E8F | 423   | 0     | 1.16   |
 | SK hynix  | SHGS31-500GS-2     | 500 GB | 598EA5F511ED | 423   | 0     | 1.16   |
 | SanDisk   | SDSSDA480G         | 480 GB | 7D4BBB411CB0 | 422   | 0     | 1.16   |
+| SK hynix  | HFS256G39TND-N210A | 256 GB | 72EE9D7AA822 | 422   | 0     | 1.16   |
 | Axiom     | Signature III S... | 64 GB  | 989425054C44 | 422   | 0     | 1.16   |
 | Kingston  | SM2280S3240G       | 240 GB | 6F43AA55AC92 | 422   | 0     | 1.16   |
 | SanDisk   | SD7SB7S512G1001    | 512 GB | 6B6441905A05 | 422   | 0     | 1.16   |
@@ -8548,6 +8949,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LM480HCHP-00... | 480 GB | CB047250578F | 421   | 0     | 1.15   |
 | Samsung   | SSD 850 EVO        | 120 GB | 545DC023F737 | 421   | 0     | 1.15   |
 | SanDisk   | SSD PLUS           | 480 GB | 98FBC34EA2F6 | 421   | 0     | 1.15   |
+| Kingston  | SA400S37120G       | 120 GB | D63A12BD5628 | 421   | 0     | 1.15   |
 | SanDisk   | SD7SN6S-512G-1006  | 512 GB | 548DA0767D47 | 421   | 0     | 1.15   |
 | Kingston  | SA400S37240G       | 240 GB | 85C7FFD0B8B6 | 842   | 1     | 1.15   |
 | Kingston  | SHFS37A120G        | 120 GB | 516C875709DB | 421   | 0     | 1.15   |
@@ -8616,6 +9018,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 655F4E27BD1C | 418   | 0     | 1.15   |
 | Intel     | SSDSC2BA200G4      | 200 GB | 0F4810C9ADE8 | 418   | 0     | 1.15   |
 | Maxtor    | Z1 SSD             | 480 GB | 83AF1CB0B376 | 418   | 0     | 1.15   |
+| Kingston  | SA400S37480G       | 480 GB | 01D7CCCAE96D | 418   | 0     | 1.15   |
 | Samsung   | SSD 850 EVO        | 500 GB | 2429FD524032 | 418   | 0     | 1.15   |
 | Samsung   | SSD 850 EVO        | 500 GB | 9452B224832A | 418   | 0     | 1.15   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | D78C5ADCD22C | 418   | 0     | 1.15   |
@@ -8696,6 +9099,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN256HCHP-00000 | 256 GB | C22995F72695 | 414   | 0     | 1.14   |
 | China     | 120GB SSD          | 120 GB | B40EB6CA4A4A | 414   | 0     | 1.14   |
 | Kingston  | SV300S37A240G      | 240 GB | 35354FB20A18 | 414   | 0     | 1.14   |
+| Samsung   | SSD 860 EVO        | 500 GB | 546489772ED1 | 414   | 0     | 1.14   |
 | Kingston  | SVP200S37A60G      | 64 GB  | 161E03BBAC73 | 414   | 0     | 1.14   |
 | Kingston  | SV300S37A240G      | 240 GB | 45DC54DDBD89 | 414   | 0     | 1.14   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 51105F875FC6 | 414   | 0     | 1.14   |
@@ -8720,6 +9124,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37120G      | 120 GB | 72B75677AD6E | 413   | 0     | 1.13   |
 | Samsung   | MZHPV128HDGM-00000 | 128 GB | E9F39B77AAC1 | 413   | 0     | 1.13   |
 | OCZ       | VERTEX2            | 180 GB | 2ADEE97118F3 | 413   | 0     | 1.13   |
+| WDC       | WDBNCE0010PNC      | 1 TB   | 0FBE46765880 | 413   | 0     | 1.13   |
 | SanDisk   | SD9SN8W256G1102    | 256 GB | 972CC2170D9F | 413   | 0     | 1.13   |
 | OCZ       | AGILITY4           | 128 GB | D2823CC9A819 | 413   | 0     | 1.13   |
 | China     | SSD                | 1 TB   | 809AE9BAA742 | 413   | 0     | 1.13   |
@@ -8727,6 +9132,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | 8A5F50E170BD | 413   | 0     | 1.13   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 974E6B41A994 | 413   | 0     | 1.13   |
 | Samsung   | MZ7TE128HMGR-000L1 | 128 GB | 4F34AEB08418 | 412   | 0     | 1.13   |
+| Samsung   | SSD 860 EVO        | 1 TB   | E719E26F7387 | 412   | 0     | 1.13   |
 | Kingston  | SA400S37120G       | 120 GB | F1AEFF1FF148 | 412   | 0     | 1.13   |
 | SanDisk   | SD6SB2M128G1022I   | 128 GB | F1DF3EEDC1A0 | 412   | 0     | 1.13   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 471BBB6CBFC8 | 412   | 0     | 1.13   |
@@ -8787,6 +9193,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 120 GB | 10ABA39FC5A6 | 410   | 0     | 1.12   |
 | Samsung   | SSD 850 EVO        | 250 GB | EAD4E0F1676A | 410   | 0     | 1.12   |
 | China     | SATA SSD           | 256 GB | 66BEB9C86C67 | 410   | 0     | 1.12   |
+| Kingston  | SV300S37A120G      | 120 GB | 11D37A533B66 | 410   | 0     | 1.12   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 297D7E18627F | 410   | 0     | 1.12   |
 | Toshiba   | TR150              | 240 GB | 1FE303A31922 | 410   | 0     | 1.12   |
 | Samsung   | MZYTN512HDJH-000L2 | 512 GB | 35D7D8F23BB2 | 410   | 0     | 1.12   |
@@ -8846,6 +9253,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8TB8U256G1001    | 256 GB | 8573183057ED | 407   | 0     | 1.12   |
 | SPCC      | SSD                | 512 GB | 98E1980DB2BA | 407   | 0     | 1.12   |
 | OCZ       | AGILITY3           | 120 GB | 4D005CFCE523 | 1222  | 2     | 1.12   |
+| SK hynix  | SC401 SATA         | 256 GB | 250D5A82D64F | 407   | 0     | 1.12   |
 | Samsung   | SSD 850 EVO        | 500 GB | 25AED5BB9890 | 407   | 0     | 1.12   |
 | Samsung   | SSD 850 EVO        | 500 GB | ABAF4957390A | 407   | 0     | 1.12   |
 | Kingston  | SUV500120G         | 120 GB | 27AE8FB59C0C | 407   | 0     | 1.12   |
@@ -8929,6 +9337,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 79BF49D6FB77 | 1213  | 2     | 1.11   |
 | Crucial   | CT750MX300SSD1     | 752 GB | 7CAF6B5E83ED | 404   | 0     | 1.11   |
 | Apple     | SSD SM0256G        | 256 GB | 611AFEFBF4D2 | 404   | 0     | 1.11   |
+| Samsung   | SSD 870 EVO        | 500 GB | CB7F14612748 | 404   | 0     | 1.11   |
 | Samsung   | SSD 860 QVO        | 1 TB   | C2B9B48749A3 | 404   | 0     | 1.11   |
 | Samsung   | MZNLF128HCHP-00004 | 128 GB | 3D93A91AFD60 | 404   | 0     | 1.11   |
 | Kingston  | SA400S37120G       | 120 GB | 4BAEFD5977B2 | 404   | 0     | 1.11   |
@@ -8946,6 +9355,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 500 GB | FFED31516684 | 403   | 0     | 1.11   |
 | Samsung   | SSD 860 EVO        | 250 GB | 89FAF119E2C2 | 403   | 0     | 1.11   |
 | China     | SATA SSD           | 480 GB | 48BF47CD23FE | 403   | 0     | 1.11   |
+| SanDisk   | SD8TN8U512G1001    | 512 GB | 76FC190097EA | 403   | 0     | 1.11   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 4495D6F4A3D5 | 403   | 0     | 1.11   |
 | Kingston  | SUV400S37240G      | 240 GB | 0A96BC0AA049 | 403   | 0     | 1.11   |
 | Samsung   | SSD 860 EVO        | 250 GB | E4BEBD7715DD | 403   | 0     | 1.11   |
@@ -8956,6 +9366,7 @@ MTBF - avg. MTBF in years per sample.
 | LDLC      | SSD F7 PLUS 3D ... | 240 GB | 2D5087FFC916 | 403   | 0     | 1.10   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 883BFB25DFA1 | 403   | 0     | 1.10   |
 | Kingston  | SV300S37A120G      | 120 GB | 2B537150E080 | 403   | 0     | 1.10   |
+| Kingston  | SA400S37120G       | 120 GB | E0ECA4A81E4B | 402   | 0     | 1.10   |
 | OCZ       | TRION150           | 240 GB | DD31BF6FD8CA | 402   | 0     | 1.10   |
 | OCZ       | AGILITY4           | 256 GB | F54F8EB649DE | 805   | 1     | 1.10   |
 | Intel     | SSDSC2CT120A3      | 120 GB | 6542D6B9523C | 402   | 0     | 1.10   |
@@ -8974,6 +9385,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KW256G8      | 256 GB | 005ABD16EAA9 | 402   | 0     | 1.10   |
 | Kingston  | SV300S37A120G      | 120 GB | 28C8ABB8B485 | 402   | 0     | 1.10   |
 | Plextor   | PX-128M5Pro        | 128 GB | 006B1B463A8D | 402   | 0     | 1.10   |
+| Crucial   | CT120BX500SSD1     | 120 GB | 12F762F78502 | 402   | 0     | 1.10   |
 | SPCC      | 2.5" SSD           | 1 TB   | C45775A6CD3E | 402   | 0     | 1.10   |
 | Crucial   | CT240BX500SSD1     | 240 GB | E7BBC030A695 | 402   | 0     | 1.10   |
 | Intel     | SSDSA2BW160G3L     | 160 GB | 95204E659CB4 | 402   | 0     | 1.10   |
@@ -8988,6 +9400,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 480 GB | FFEC80F2C54E | 401   | 0     | 1.10   |
 | ADATA     | SU650              | 480 GB | F4CCD0D14449 | 401   | 0     | 1.10   |
 | Samsung   | SSD 850 PRO        | 256 GB | 6B04C173F80B | 401   | 0     | 1.10   |
+| AMD       | R3SL120G           | 120 GB | C5BCCE4F30DB | 401   | 0     | 1.10   |
 | Kingston  | SV300S37A120G      | 120 GB | 4F046ED9C3AE | 401   | 0     | 1.10   |
 | Samsung   | SSD 850 EVO        | 120 GB | A2232D4FA56E | 401   | 0     | 1.10   |
 | Team      | T2535T240G         | 240 GB | C4C38D6CE42B | 401   | 0     | 1.10   |
@@ -9026,7 +9439,9 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BA100G3      | 100 GB | CD28B6184982 | 399   | 0     | 1.10   |
 | Samsung   | SSD 850 EVO        | 500 GB | 86EA3AFA30F6 | 399   | 0     | 1.10   |
 | Toshiba   | THNS064GE4BBDC     | 64 GB  | C04FE17DF97B | 399   | 0     | 1.10   |
+| OCZ       | VERTEX2            | 80 GB  | 5624A8ED9D17 | 399   | 0     | 1.10   |
 | Kingston  | SV300S37A60G       | 64 GB  | 693BB05A05C8 | 399   | 0     | 1.10   |
+| Samsung   | SSD 840 PRO Series | 256 GB | 1A816B5220FB | 399   | 0     | 1.10   |
 | Intel     | SSDSC2BF180A5L     | 180 GB | 876C58CC4738 | 399   | 0     | 1.10   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 014C3817F971 | 399   | 0     | 1.09   |
 | OCZ       | VERTEX4            | 128 GB | 018D353D615C | 399   | 0     | 1.09   |
@@ -9058,14 +9473,18 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 750 EVO        | 500 GB | 1C39133589F2 | 398   | 0     | 1.09   |
 | Kingston  | SM2280S3240G       | 240 GB | 9A61D70EFAAE | 398   | 0     | 1.09   |
 | Samsung   | SSD 860 EVO        | 250 GB | 54842E3E1496 | 398   | 0     | 1.09   |
+| Kingston  | SA400S37240G       | 240 GB | ACF1C2AA2A23 | 398   | 0     | 1.09   |
 | Micron    | MTFDDAK256MAM-1K12 | 256 GB | CE2D0DBE1BF5 | 398   | 0     | 1.09   |
 | Samsung   | SSD 840 PRO Series | 256 GB | B0375749918F | 398   | 0     | 1.09   |
+| Kingston  | RBU-SMS151S3128GG  | 128 GB | 66C75B3E621C | 398   | 0     | 1.09   |
 | Kingston  | SA400S37120G       | 120 GB | E840F5201178 | 398   | 0     | 1.09   |
 | Samsung   | SSD 860 EVO        | 500 GB | 1FF0C1CA8632 | 398   | 0     | 1.09   |
+| Kingston  | SUV500480G         | 480 GB | F3F9ADF3B4B3 | 398   | 0     | 1.09   |
 | Kingston  | SA400M8240G        | 240 GB | BCB8CAB22E21 | 398   | 0     | 1.09   |
 | Samsung   | SSD 860 EVO        | 2 TB   | E44517B26C5A | 398   | 0     | 1.09   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | FF8623BF45F4 | 398   | 0     | 1.09   |
 | Kingston  | SV300S37A120G      | 120 GB | 65F83D19E289 | 397   | 0     | 1.09   |
+| Samsung   | SSD 860 EVO mSATA  | 500 GB | 06C314CBD1BD | 397   | 0     | 1.09   |
 | Kingston  | SA400S37480G       | 480 GB | 3610CB68D90C | 397   | 0     | 1.09   |
 | Samsung   | SSD 860 EVO        | 1 TB   | DA50994B8142 | 397   | 0     | 1.09   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 9457199342EB | 397   | 0     | 1.09   |
@@ -9101,6 +9520,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 0293AFFF4A96 | 396   | 0     | 1.09   |
 | Kingston  | SV300S37A120G      | 120 GB | 8A4F799247F1 | 396   | 0     | 1.09   |
 | Kingston  | SA400S37240G       | 240 GB | C925B10336E4 | 396   | 0     | 1.09   |
+| Crucial   | CT240BX500SSD1     | 240 GB | D66293F7D004 | 396   | 0     | 1.09   |
 | SK hynix  | HFS256G39TNF-N3A0A | 256 GB | 4575BBDFE161 | 396   | 0     | 1.09   |
 | Samsung   | SSD 750 EVO        | 500 GB | A738B500652A | 396   | 0     | 1.09   |
 | SK hynix  | SC311 SATA         | 256 GB | 41F9C23BDD68 | 396   | 0     | 1.09   |
@@ -9146,12 +9566,15 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA120G         | 120 GB | 4E1434D6B34A | 394   | 0     | 1.08   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 26483F22BAAE | 394   | 0     | 1.08   |
 | Samsung   | SSD 860 EVO        | 500 GB | D4A8FA5205C9 | 394   | 0     | 1.08   |
+| Kingston  | SV300S37A60G       | 64 GB  | F9C50CB07C36 | 394   | 0     | 1.08   |
+| Samsung   | Portable SSD T5    | 1 TB   | 7C539FEACC19 | 394   | 0     | 1.08   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 13C2853E194F | 394   | 0     | 1.08   |
 | SK hynix  | SC311 SATA         | 128 GB | 47A2B5C4C371 | 394   | 0     | 1.08   |
 | Samsung   | SSD 840 Series     | 250 GB | 0158B83C6649 | 394   | 0     | 1.08   |
 | Samsung   | SSD 860 QVO        | 1 TB   | ACC45CE928D0 | 394   | 0     | 1.08   |
 | Goodram   | SSD                | 120 GB | 5BA1F81EE9A0 | 393   | 0     | 1.08   |
 | Samsung   | SSD 750 EVO        | 250 GB | 2F454F08CD96 | 393   | 0     | 1.08   |
+| Intenso   | SSD                | 240 GB | 48BC9094B420 | 393   | 0     | 1.08   |
 | Samsung   | MZHPV256HDGL-000L1 | 256 GB | AA7BFECB7FFD | 393   | 0     | 1.08   |
 | SPCC      | SSD                | 120 GB | 87AB25E5D1D2 | 393   | 0     | 1.08   |
 | Samsung   | SSD 750 EVO        | 120 GB | 7041F5312EFF | 393   | 0     | 1.08   |
@@ -9163,6 +9586,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | 37C70E36A61B | 393   | 0     | 1.08   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | A85DF7CF917C | 393   | 0     | 1.08   |
 | Apple     | SSD SM0256G        | 256 GB | DC2E13AD434E | 393   | 0     | 1.08   |
+| Samsung   | SSD 840 EVO        | 500 GB | 0FE585A66E02 | 393   | 0     | 1.08   |
 | ADATA     | SP900              | 256 GB | 2C15F1B81E6D | 1966  | 4     | 1.08   |
 | Kingston  | SV300S37A120G      | 120 GB | B7F17C8DE7B3 | 393   | 0     | 1.08   |
 | Samsung   | SSD 860 EVO        | 500 GB | 2A1117CED16F | 393   | 0     | 1.08   |
@@ -9176,7 +9600,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 55A87B371912 | 392   | 0     | 1.08   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 5EEEE45827AE | 392   | 0     | 1.08   |
 | Patriot   | Burst              | 960 GB | A1585BEAE511 | 392   | 0     | 1.08   |
+| Samsung   | SSD 870 EVO        | 250 GB | DDA967CE5921 | 392   | 0     | 1.08   |
 | Samsung   | SSD 850 PRO        | 128 GB | CF4996817286 | 392   | 0     | 1.08   |
+| SanDisk   | SDSSDHP256G        | 256 GB | 355134B9ACB9 | 392   | 0     | 1.08   |
 | Samsung   | SSD 840 Series     | 120 GB | B70DF79EA96A | 392   | 0     | 1.08   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | DF2764C9CE87 | 392   | 0     | 1.08   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 5E5F75ED93C2 | 392   | 0     | 1.08   |
@@ -9237,6 +9663,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G39TND-N210A | 128 GB | A541C6E20FA6 | 390   | 0     | 1.07   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 1519DCCDE24D | 390   | 0     | 1.07   |
 | Intenso   | SSD                | 128 GB | 650C09756FA2 | 390   | 0     | 1.07   |
+| ADATA     | SU800              | 256 GB | 8E995E309655 | 390   | 0     | 1.07   |
 | Samsung   | SSD 870 QVO        | 2 TB   | D8DE41223EF7 | 390   | 0     | 1.07   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | FB43774DA9DB | 390   | 0     | 1.07   |
 | Kingston  | SA400S37120G       | 120 GB | 78B7B9094B8E | 390   | 0     | 1.07   |
@@ -9260,6 +9687,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 256 GB | 392B3240C930 | 389   | 0     | 1.07   |
 | WDC       | WDS100T1B0B-00AS40 | 1 TB   | 4D2288133EA7 | 389   | 0     | 1.07   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 2277DCD03F92 | 1558  | 3     | 1.07   |
+| SK hynix  | SC311 SATA         | 256 GB | 87F408977B4E | 389   | 0     | 1.07   |
 | Samsung   | SSD 860 EVO        | 500 GB | CFBEE8888B1B | 389   | 0     | 1.07   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 7A491624CBB2 | 389   | 0     | 1.07   |
 | China     | 128GB SSD          | 128 GB | 1EB04E6622A4 | 389   | 0     | 1.07   |
@@ -9289,6 +9717,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 1FA76B9785BD | 388   | 0     | 1.06   |
 | Samsung   | SSD 860 EVO        | 500 GB | 2E38ECD92544 | 388   | 0     | 1.06   |
 | China     | 120GB SSD          | 120 GB | 1182221BD0AA | 388   | 0     | 1.06   |
+| Samsung   | MZMPC032HBCD-00000 | 32 GB  | 15864FBA3687 | 388   | 0     | 1.06   |
 | Corsair   | Force LE200 SSD    | 240 GB | 23C378D9C60A | 388   | 0     | 1.06   |
 | OCZ       | ARC100             | 480 GB | FF67838BB4C9 | 388   | 0     | 1.06   |
 | Kingston  | SV300S37A60G       | 64 GB  | DCE60AF1D315 | 388   | 0     | 1.06   |
@@ -9305,6 +9734,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 932D0C020D88 | 387   | 0     | 1.06   |
 | Toshiba   | VX500              | 128 GB | 82CD38857529 | 387   | 0     | 1.06   |
 | Apacer    | AS350              | 256 GB | 964523C96D21 | 387   | 0     | 1.06   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 10C240F9B7F3 | 387   | 0     | 1.06   |
 | PNY       | CS900 240GB SSD    | 240 GB | 5CFE2EA0A8BB | 387   | 0     | 1.06   |
 | Samsung   | SSD 850 PRO        | 256 GB | D29D3D805CA4 | 387   | 0     | 1.06   |
 | Samsung   | SSD 860 EVO        | 500 GB | 2A8881AA31B2 | 387   | 0     | 1.06   |
@@ -9375,6 +9805,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 54EB77372042 | 384   | 0     | 1.05   |
 | Toshiba   | THNSNX024GMNT      | 24 GB  | 114A47480C55 | 384   | 0     | 1.05   |
 | SanDisk   | SD7SB6S-256G-1006  | 256 GB | 3B64120B669F | 384   | 0     | 1.05   |
+| SanDisk   | SDSSDHP256G        | 256 GB | 72BB223956A7 | 384   | 0     | 1.05   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 42DD4857ED6B | 384   | 0     | 1.05   |
 | Lite-On   | LAT-128M2S         | 128 GB | 4159C953B1BD | 384   | 0     | 1.05   |
 | Kingston  | SHFS37A120G        | 120 GB | AAEA81331378 | 384   | 0     | 1.05   |
@@ -9383,6 +9814,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | BB5547E471C8 | 384   | 0     | 1.05   |
 | Phison    | SATA SSD           | 240 GB | 2E5B4D13CEB3 | 384   | 0     | 1.05   |
 | Transcend | TS256GSSD230S      | 256 GB | 1626CB722F5D | 384   | 0     | 1.05   |
+| Kingston  | SKC400S37256G      | 256 GB | 9216AF720FAF | 384   | 0     | 1.05   |
 | Samsung   | SSD 850 EVO        | 250 GB | 15055CC0D1F2 | 384   | 0     | 1.05   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 3A47F162AD5D | 384   | 0     | 1.05   |
 | Intel     | SSDSC2BW120A4      | 120 GB | A13B7FBBD6F6 | 384   | 0     | 1.05   |
@@ -9397,7 +9829,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 8F09C8F84856 | 383   | 0     | 1.05   |
 | China     | SATA SSD           | 1 TB   | 0827F0A03FA2 | 383   | 0     | 1.05   |
 | Samsung   | SSD 840 EVO        | 250 GB | E250698B1B6B | 383   | 0     | 1.05   |
+| Crucial   | CT512MX100SSD1     | 512 GB | 2A8B80736F71 | 383   | 0     | 1.05   |
 | Plextor   | PH6-CE120          | 120 GB | D9456CC9365E | 383   | 0     | 1.05   |
+| Kingston  | SA400S37240G       | 240 GB | CAA9DCA0DA81 | 383   | 0     | 1.05   |
+| WDC       | WDS100T2B0B-00YS70 | 1 TB   | 755D806C5619 | 383   | 0     | 1.05   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 1354438CA7F5 | 383   | 0     | 1.05   |
 | PNY       | CS900 240GB SSD    | 240 GB | 11E1D1E17278 | 383   | 0     | 1.05   |
 | Samsung   | MZYTY256HDHP-000L2 | 256 GB | 447C0B1C9456 | 383   | 0     | 1.05   |
@@ -9440,6 +9875,7 @@ MTBF - avg. MTBF in years per sample.
 | Vaseky    | V800-60G           | 64 GB  | 54FB42A86230 | 381   | 0     | 1.05   |
 | Apple     | SSD SM128C         | 121 GB | 767A9939DD9F | 381   | 0     | 1.05   |
 | Crucial   | CT256MX100SSD1     | 256 GB | B824FAA4A0BE | 2671  | 6     | 1.05   |
+| Kingston  | SA400S37480G       | 480 GB | 1F8A06D90C6D | 381   | 0     | 1.05   |
 | Kingston  | SV300S37A120G      | 120 GB | CF50AF825D0D | 381   | 0     | 1.05   |
 | Patriot   | Burst              | 240 GB | BC914AA782B9 | 381   | 0     | 1.05   |
 | Kingston  | SV300S37A60G       | 64 GB  | 525A4E431EA0 | 381   | 0     | 1.05   |
@@ -9450,6 +9886,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | EED7EA390A60 | 381   | 0     | 1.04   |
 | Kingston  | SV300S37A120G      | 120 GB | D39021173881 | 381   | 0     | 1.04   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 0981FFA018CD | 381   | 0     | 1.04   |
+| Crucial   | CT480BX500SSD1     | 480 GB | B3A699F1A4EE | 381   | 0     | 1.04   |
 | Intel     | SSDSC2BB480G6      | 480 GB | 7685952302EE | 381   | 0     | 1.04   |
 | PNY       | CS900 120GB SSD    | 120 GB | 0220A9AB1BFA | 381   | 0     | 1.04   |
 | Samsung   | SSD 860 EVO        | 1 TB   | BE22DA6E730F | 380   | 0     | 1.04   |
@@ -9475,6 +9912,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 480 GB | 3FA1688ACE35 | 380   | 0     | 1.04   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | 92C85D87F3CD | 379   | 0     | 1.04   |
 | Transcend | TS240GSSD220S      | 240 GB | 3B0EE7B09C63 | 379   | 0     | 1.04   |
+| Intel     | SSDSC2CW240A3      | 240 GB | F7E7CA73EE51 | 379   | 0     | 1.04   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 75E15320F320 | 379   | 0     | 1.04   |
 | Transcend | TSA                | 1 TB   | D17C2B2D4437 | 379   | 0     | 1.04   |
 | SanDisk   | SSD PLUS           | 240 GB | 4A9489A959DF | 759   | 1     | 1.04   |
@@ -9500,7 +9938,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 6F7C97165CD8 | 379   | 0     | 1.04   |
 | Samsung   | SSD 850 EVO        | 250 GB | 6D0CB80B98B7 | 379   | 0     | 1.04   |
 | OCZ       | VERTEX2            | 180 GB | 20D4A7B88054 | 378   | 0     | 1.04   |
+| Samsung   | SSD 840 PRO Series | 256 GB | 291D0A936094 | 378   | 0     | 1.04   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 2952D264B5D3 | 1136  | 2     | 1.04   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 76F5839E4549 | 378   | 0     | 1.04   |
 | Kingston  | SV300S37A60G       | 64 GB  | AF9977F3B61A | 378   | 0     | 1.04   |
 | Samsung   | SSD 830 Series     | 128 GB | F0BF6C45193D | 378   | 0     | 1.04   |
 | SanDisk   | SDSSDH2128G        | 128 GB | 33F7F847ED4B | 378   | 0     | 1.04   |
@@ -9528,6 +9968,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-128M2S          | 128 GB | 36A991E6FCAB | 755   | 1     | 1.03   |
 | Kingston  | SA400S37120G       | 120 GB | 77871A9A80CB | 377   | 0     | 1.03   |
 | Samsung   | SSD 860 EVO        | 500 GB | A1BBEA3B078F | 377   | 0     | 1.03   |
+| SK hynix  | SC308 SATA         | 256 GB | ACAB8E3612E2 | 377   | 0     | 1.03   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 6F7F2CA49E7B | 377   | 0     | 1.03   |
 | Toshiba   | THNSNJ128GMCU      | 128 GB | 27A60C992082 | 377   | 0     | 1.03   |
 | Kingston  | SV300S37A120G      | 120 GB | 938BB9A61A22 | 377   | 0     | 1.03   |
@@ -9551,6 +9992,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SM2280S3120G       | 120 GB | B6FD4D07A011 | 376   | 0     | 1.03   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | A8BCBB14D7C9 | 376   | 0     | 1.03   |
 | Samsung   | SSD 860 EVO        | 250 GB | 98C6BD05BD1D | 376   | 0     | 1.03   |
+| Micron    | 1100_MTFDDAV256TBN | 256 GB | 664C211A6A11 | 376   | 0     | 1.03   |
 | Samsung   | SSD 850 EVO        | 250 GB | B17157920935 | 376   | 0     | 1.03   |
 | SanDisk   | SSD PLUS           | 120 GB | 808191B6F856 | 376   | 0     | 1.03   |
 | Kingston  | SV300S37A60G       | 64 GB  | A6BF909F2442 | 376   | 0     | 1.03   |
@@ -9568,6 +10010,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDHII480G       | 480 GB | 2FEB84A74958 | 376   | 0     | 1.03   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 5487FAD3E82A | 376   | 0     | 1.03   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 9980D8730A93 | 376   | 0     | 1.03   |
+| SanDisk   | SD8TB8U256G1001    | 256 GB | AB2743F18D8A | 376   | 0     | 1.03   |
 | Intel     | SSDSC2KW128G8      | 128 GB | FFA3716765C1 | 376   | 0     | 1.03   |
 | Kingston  | SHSS37A240G        | 240 GB | 010A38CA0AF0 | 376   | 0     | 1.03   |
 | Samsung   | SSD 850 EVO        | 120 GB | E37555388871 | 376   | 0     | 1.03   |
@@ -9596,6 +10039,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 81A00DB0A3B1 | 375   | 0     | 1.03   |
 | Team      | T253X5480G         | 480 GB | AED81BD0524C | 375   | 0     | 1.03   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 917E9E84CF1F | 375   | 0     | 1.03   |
+| Kingston  | SA400S37960G       | 960 GB | 9DD1249FC01E | 375   | 0     | 1.03   |
 | Samsung   | SSD 850 EVO        | 250 GB | 25330DDDC052 | 375   | 0     | 1.03   |
 | Kingston  | SV300S37A240G      | 240 GB | 6699A7E12DB7 | 374   | 0     | 1.03   |
 | SPCC      | SSD                | 256 GB | 5B9544ECE730 | 374   | 0     | 1.03   |
@@ -9617,11 +10061,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 8FA258DB3B2E | 374   | 0     | 1.03   |
 | Samsung   | SSD 850 PRO        | 256 GB | 3383AE92365C | 374   | 0     | 1.03   |
 | Samsung   | SSD 850 PRO        | 256 GB | 861454C87EB5 | 374   | 0     | 1.03   |
+| Team      | T253X5480G         | 480 GB | 4F606F9FFCC5 | 374   | 0     | 1.03   |
 | Samsung   | SSD 860 EVO        | 500 GB | 5231E195AB66 | 374   | 0     | 1.03   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5E34EFB3FECD | 374   | 0     | 1.03   |
 | Crucial   | CT250MX500SSD1N    | 250 GB | 7BA947D1F997 | 374   | 0     | 1.03   |
+| Samsung   | SSD 860 EVO        | 500 GB | 7A700E9CC817 | 374   | 0     | 1.03   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 27755B6F8401 | 374   | 0     | 1.03   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 1BA80898BDB3 | 374   | 0     | 1.03   |
+| SanDisk   | SDSSDXPS480G       | 480 GB | 4B2CCD1A73B2 | 374   | 0     | 1.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 0B0EE87C23C3 | 374   | 0     | 1.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | 34235E03D0E6 | 374   | 0     | 1.02   |
 | Samsung   | SSD 840 EVO        | 120 GB | 6E343D6508D0 | 374   | 0     | 1.02   |
@@ -9646,6 +10093,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 5A7458CDCB44 | 373   | 0     | 1.02   |
 | Crucial   | CT240M500SSD1      | 240 GB | D63D23321EA4 | 373   | 0     | 1.02   |
 | Intel     | SSDSC2CW180A3      | 180 GB | A4D8CA6EB344 | 373   | 0     | 1.02   |
+| SanDisk   | SD9TB8W256G1001    | 256 GB | 0158D4121B36 | 373   | 0     | 1.02   |
 | SanDisk   | SSD U100           | 24 GB  | E0BB54568539 | 373   | 0     | 1.02   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 6B1D49CEAA00 | 373   | 0     | 1.02   |
 | Crucial   | CT120M500SSD1      | 120 GB | B88CA05FF7F4 | 373   | 0     | 1.02   |
@@ -9661,11 +10109,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 128 GB | E9553A7308D7 | 372   | 0     | 1.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | 2C909F6A53F3 | 372   | 0     | 1.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | 62540B23A2E4 | 372   | 0     | 1.02   |
+| Kingston  | SA400S37240G       | 240 GB | 55E65AC100C3 | 372   | 0     | 1.02   |
 | Samsung   | SSD 850 EVO        | 250 GB | A195B1EEA9C3 | 372   | 0     | 1.02   |
 | Kingston  | SUV400S37120G      | 120 GB | 270E35F3D775 | 372   | 0     | 1.02   |
 | Samsung   | SSD 860 EVO        | 1 TB   | EA3FB3EBE26C | 372   | 0     | 1.02   |
 | LDLC      | F7+480GB           | 480 GB | D76BA990C03E | 372   | 0     | 1.02   |
 | Crucial   | CT500MX500SSD1     | 500 GB | F2FD088E292B | 372   | 0     | 1.02   |
+| Crucial   | M4-CT128M4SSD2     | 128 GB | C5159C53250F | 372   | 0     | 1.02   |
 | Crucial   | CT120M500SSD1      | 120 GB | 9F8569D1075D | 372   | 0     | 1.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | 6CA40FEEF3F5 | 372   | 0     | 1.02   |
 | SanDisk   | SD8TN8U256G1001    | 256 GB | 5091DADED374 | 372   | 0     | 1.02   |
@@ -9684,11 +10134,13 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 120 GB | D8F6B4E520AC | 371   | 0     | 1.02   |
 | Kingston  | SMS200S3120G       | 120 GB | 2D87DC9E8408 | 371   | 0     | 1.02   |
 | Intenso   | SATA3 240GB SSD    | 240 GB | 971721FD9983 | 371   | 0     | 1.02   |
+| Kingston  | SA400S37120G       | 120 GB | 0E0761CB1C99 | 371   | 0     | 1.02   |
 | SanDisk   | SDSSDP128G         | 128 GB | 276900549D3A | 371   | 0     | 1.02   |
 | OCZ       | VERTEX3            | 120 GB | 54889D69CF1C | 371   | 0     | 1.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | 83684A0734A6 | 371   | 0     | 1.02   |
 | Samsung   | SSD 850 PRO        | 256 GB | 522AC560982C | 371   | 0     | 1.02   |
 | Samsung   | SSD 850 EVO        | 250 GB | 266EC4066739 | 371   | 0     | 1.02   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | BD818D360CE1 | 371   | 0     | 1.02   |
 | Corsair   | Force LS SSD       | 120 GB | 245DCA19D689 | 371   | 0     | 1.02   |
 | Kingston  | SA400S37120G       | 120 GB | FE3C492308A4 | 371   | 0     | 1.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 72FB1AB3125B | 371   | 0     | 1.02   |
@@ -9702,10 +10154,12 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 264A6DE7AF6F | 371   | 0     | 1.02   |
 | Corsair   | Force GS           | 128 GB | A882D45DD5EC | 371   | 0     | 1.02   |
 | Kingston  | SA400S37120G       | 120 GB | 9E21CEC5C297 | 371   | 0     | 1.02   |
+| Kingmax   | SSD                | 480 GB | 15306D8A68A8 | 371   | 0     | 1.02   |
 | Crucial   | CT120BX500SSD1     | 120 GB | F20895E2186A | 370   | 0     | 1.02   |
 | PNY       | CS900 960GB SSD    | 960 GB | FF3D75372758 | 370   | 0     | 1.02   |
 | SanDisk   | SD9SB8W256G1122    | 256 GB | E9CA0288FD20 | 370   | 0     | 1.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 3641AC264F43 | 370   | 0     | 1.02   |
+| Leven     | JAJS600M256C       | 256 GB | DD64A9BA8C54 | 370   | 0     | 1.02   |
 | Kingston  | SKC300S37A60G      | 64 GB  | E62D3EACF106 | 370   | 0     | 1.02   |
 | Samsung   | MZ7LN256HCHP-00000 | 256 GB | F152785672A4 | 370   | 0     | 1.02   |
 | Kingston  | SMS200S3120G       | 120 GB | 148ECE763E06 | 370   | 0     | 1.01   |
@@ -9714,16 +10168,19 @@ MTBF - avg. MTBF in years per sample.
 | China     | 120GB SSD          | 120 GB | 839A06865E97 | 370   | 0     | 1.01   |
 | Smartbuy  | SSD                | 120 GB | 225A1D1DF178 | 370   | 0     | 1.01   |
 | Corsair   | Force 3 SSD        | 120 GB | 3CECB3345665 | 370   | 0     | 1.01   |
+| WDC       | WDS240G1G0A-00SS50 | 240 GB | 9917AFC1CF4D | 370   | 0     | 1.01   |
 | Samsung   | SSD 850 EVO        | 120 GB | 72EA8D63BECD | 370   | 0     | 1.01   |
 | WDC       | WDBNCE2500PNC      | 250 GB | C6233CAC6D61 | 370   | 0     | 1.01   |
 | Kingston  | SA400S37120G       | 120 GB | AE95D127AA76 | 370   | 0     | 1.01   |
 | OCZ       | AGILITY3           | 120 GB | CFAE1CC718AF | 369   | 0     | 1.01   |
 | Kingston  | SUV300S37A120G     | 120 GB | 9FF0A06E68CF | 369   | 0     | 1.01   |
+| Kingston  | SA400S37120G       | 120 GB | 293C4D5B980A | 369   | 0     | 1.01   |
 | Kingston  | SHFS37A120G        | 120 GB | AEC0AF2588C9 | 369   | 0     | 1.01   |
 | SPCC      | SSD                | 120 GB | 684574F486C9 | 369   | 0     | 1.01   |
 | Samsung   | MZ7PD256HAFV-000H7 | 256 GB | 2BECAD0DCE37 | 369   | 0     | 1.01   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 2C77A6225A2D | 369   | 0     | 1.01   |
 | SanDisk   | X300 M.2 2280      | 128 GB | 0F8AF767353F | 369   | 0     | 1.01   |
+| Samsung   | SSD 860 EVO        | 500 GB | 4C1AA7FB6662 | 369   | 0     | 1.01   |
 | OCZ       | REVODRIVE3         | 64 GB  | 144DA7FA2044 | 369   | 0     | 1.01   |
 | Samsung   | SSD 860 EVO        | 250 GB | 5D5B60D58675 | 369   | 0     | 1.01   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 08B001498D94 | 369   | 0     | 1.01   |
@@ -9738,7 +10195,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 90F672F7EDEB | 369   | 0     | 1.01   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 4AB59EB4B40F | 369   | 0     | 1.01   |
 | Intel     | SSDSC2BW240A3H     | 240 GB | 7A8AE7849CED | 369   | 0     | 1.01   |
+| OCZ       | VERTEX3            | 120 GB | 6B3AD8F48422 | 1846  | 4     | 1.01   |
 | Samsung   | SSD 850 EVO        | 250 GB | C6F4CA578311 | 369   | 0     | 1.01   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | 8C32A7FDB477 | 369   | 0     | 1.01   |
 | Samsung   | SSD 850 EVO        | 500 GB | AE24451A496A | 368   | 0     | 1.01   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | 95EDA7399944 | 368   | 0     | 1.01   |
 | Kingston  | SUV400S37480G      | 480 GB | 6C64F531A44F | 368   | 0     | 1.01   |
@@ -9746,6 +10205,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 120 GB | CC3E1FE6840E | 368   | 0     | 1.01   |
 | China     | 120GB SSD          | 120 GB | 5403BC111166 | 368   | 0     | 1.01   |
 | Intenso   | SSD Sata III       | 256 GB | ADDCD822835D | 368   | 0     | 1.01   |
+| Samsung   | SSD 860 EVO        | 500 GB | E4D43E2E0CEC | 368   | 0     | 1.01   |
 | ADATA     | SU810NS38 SATA ... | 128 GB | 5EEF956CE7E2 | 368   | 0     | 1.01   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | F7E22834612D | 368   | 0     | 1.01   |
 | Kingston  | SA400S37240G       | 240 GB | 70E13BDDC275 | 368   | 0     | 1.01   |
@@ -9760,10 +10220,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 95CADEACDC96 | 367   | 0     | 1.01   |
 | Kingston  | SA400S37240G       | 240 GB | 1CD9FC78BE01 | 367   | 0     | 1.01   |
 | Kingston  | SA400S37240G       | 240 GB | 4757E2A60A1F | 367   | 0     | 1.01   |
+| Samsung   | MZ7TD256HAFV-000L7 | 256 GB | 84CE811D0FEB | 367   | 0     | 1.01   |
 | Samsung   | SSD 850 EVO        | 250 GB | 9DE64CCB966A | 367   | 0     | 1.01   |
 | Toshiba   | THNSNC128GCSJ      | 128 GB | 0EC14DD9D19D | 367   | 0     | 1.01   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 1B576B1FB641 | 367   | 0     | 1.01   |
 | AMD       | R3SL240G           | 240 GB | 9A1B47DFEE05 | 367   | 0     | 1.01   |
+| Samsung   | SSD 850 EVO        | 1 TB   | 1EB4B30F4C63 | 367   | 0     | 1.01   |
 | SanDisk   | SD9SN8W128G1102    | 128 GB | 7B8517FA3C83 | 367   | 0     | 1.01   |
 | Phison    | SATA SSD           | 64 GB  | CF296D2F4B13 | 367   | 0     | 1.01   |
 | Samsung   | SSD 860 EVO        | 500 GB | 078F09722657 | 367   | 0     | 1.01   |
@@ -9795,6 +10257,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 1 TB   | 7D6A62E55D1A | 366   | 0     | 1.01   |
 | WDC       | WDS200T2B0B        | 2 TB   | C62C72DA0870 | 366   | 0     | 1.01   |
 | WDC       | WDS200T2B0B-00YS70 | 2 TB   | CA8C25FB8F12 | 366   | 0     | 1.01   |
+| Crucial   | CT480BX200SSD1     | 480 GB | A71168C02DFC | 366   | 0     | 1.01   |
 | Kingston  | SUV400S37120G      | 120 GB | 1ACDC6C9236D | 366   | 0     | 1.01   |
 | SanDisk   | SDSSDH31000G       | 1 TB   | B4892E406172 | 366   | 0     | 1.01   |
 | SanDisk   | SDSSDP128G         | 128 GB | 4E999CECA782 | 366   | 0     | 1.00   |
@@ -9826,6 +10289,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 4F2BA003F652 | 365   | 0     | 1.00   |
 | SanDisk   | X400 M.2 2280      | 256 GB | C3137AFE6E37 | 365   | 0     | 1.00   |
 | Kingston  | SA400S37480G       | 480 GB | FD3934520CC3 | 365   | 0     | 1.00   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | 15EA3E8EC9ED | 365   | 0     | 1.00   |
 | SanDisk   | SDSSDA120G         | 120 GB | 6477484EFC6C | 365   | 0     | 1.00   |
 | Corsair   | Force GS           | 240 GB | 89F52C9B2F08 | 365   | 0     | 1.00   |
 | Samsung   | SSD 850 EVO        | 250 GB | 8F7999859707 | 365   | 0     | 1.00   |
@@ -9843,11 +10307,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 01EBAA2F7E73 | 365   | 0     | 1.00   |
 | Intel     | SSDSC2CT120A3      | 120 GB | 1193389A8E86 | 365   | 0     | 1.00   |
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 13E1BA2F6ECA | 365   | 0     | 1.00   |
+| SanDisk   | SD8SN8U512G1002    | 512 GB | 3B48DA0C50BB | 365   | 0     | 1.00   |
 | Samsung   | SSD 850 EVO        | 250 GB | FAD83A6FCCAD | 365   | 0     | 1.00   |
 | Samsung   | SSD 860 EVO        | 1 TB   | BEEB0A959FE4 | 365   | 0     | 1.00   |
 | T-FORCE   | SSD                | 1 TB   | C2BE7CE2698B | 364   | 0     | 1.00   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 31307F2409E4 | 364   | 0     | 1.00   |
 | Samsung   | SSD 850 EVO        | 500 GB | 54424D5EE5F3 | 364   | 0     | 1.00   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 95F824E21337 | 364   | 0     | 1.00   |
 | Intel     | SSDSC2CW240A3      | 240 GB | BBEA7CF635C3 | 364   | 0     | 1.00   |
 | Kingston  | SMS200S360G        | 64 GB  | F532D7DD9F98 | 364   | 0     | 1.00   |
 | Samsung   | SSD 850 EVO        | 500 GB | F7A2D50EBB80 | 364   | 0     | 1.00   |
@@ -9859,6 +10325,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | D1F9F53B01B8 | 364   | 0     | 1.00   |
 | Corsair   | Force LE200 SSD    | 120 GB | C3E311CF8FE6 | 364   | 0     | 1.00   |
 | Kingston  | SA400S37240G       | 240 GB | 8F5E0888C65B | 364   | 0     | 1.00   |
+| Corsair   | Force 3 SSD        | 120 GB | FA2D8FB8BCA5 | 364   | 0     | 1.00   |
 | Intel     | SSDSC2BF180A4H     | 180 GB | 6F09341CD4D6 | 364   | 0     | 1.00   |
 | Kingston  | SV300S37A120G      | 120 GB | 0D2A3E7622F2 | 364   | 0     | 1.00   |
 | Samsung   | MZ7LN512HMJP-00000 | 512 GB | A0A3877EE8B0 | 364   | 0     | 1.00   |
@@ -9906,6 +10373,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5200_MTFDDAK240TDN | 240 GB | E1DBDAB67091 | 362   | 0     | 0.99   |
 | Micron    | 5200_MTFDDAK240TDN | 240 GB | E9BB4BF566FC | 362   | 0     | 0.99   |
 | Kingston  | SA400S37120G       | 120 GB | A2510B0C3972 | 362   | 0     | 0.99   |
+| Samsung   | SSD 860 PRO        | 2 TB   | 38F0A81C2045 | 362   | 0     | 0.99   |
 | Micron    | 5200_MTFDDAK240TDN | 240 GB | 539A23421975 | 362   | 0     | 0.99   |
 | Micron    | 5200_MTFDDAK240TDN | 240 GB | A12DA7D83911 | 362   | 0     | 0.99   |
 | SuperM... | SSD                | 32 GB  | 6155C12DCFBB | 362   | 0     | 0.99   |
@@ -9941,6 +10409,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5200_MTFDDAK240TDN | 240 GB | 775F17A8D68C | 361   | 0     | 0.99   |
 | SanDisk   | SSD PLUS           | 120 GB | 6A868814DBC9 | 361   | 0     | 0.99   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 07D85F422534 | 361   | 0     | 0.99   |
+| Micron    | 1300 SATA          | 1 TB   | 8852512FAF55 | 361   | 0     | 0.99   |
 | Micron    | 5200_MTFDDAK240TDN | 240 GB | BD956232989E | 361   | 0     | 0.99   |
 | SanDisk   | SDSSDA240G         | 240 GB | 5BBF43A67596 | 361   | 0     | 0.99   |
 | SanDisk   | SSD PLUS           | 240 GB | D40A0EE339FB | 361   | 0     | 0.99   |
@@ -9956,8 +10425,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MMCRE28GQDXP-MVB   | 64 GB  | 2DEC245D9BF5 | 361   | 0     | 0.99   |
 | Samsung   | MMCRE28GQDXP-MVB   | 64 GB  | D2ADB012FD46 | 361   | 0     | 0.99   |
 | SanDisk   | SDSA6PM-064G-1006  | 64 GB  | 5507C8DC9961 | 361   | 0     | 0.99   |
+| KingFast  | SSD                | 512 GB | 98DDC384903C | 360   | 0     | 0.99   |
 | Samsung   | SSD 850 EVO        | 500 GB | 664BF03A9086 | 360   | 0     | 0.99   |
 | Samsung   | SSD 840 EVO        | 250 GB | BA4274DFB578 | 360   | 0     | 0.99   |
+| Samsung   | SSD 860 EVO        | 1 TB   | C66894FA1582 | 360   | 0     | 0.99   |
 | SanDisk   | SDSSDA240G         | 240 GB | F06527083C8E | 360   | 0     | 0.99   |
 | Crucial   | CT525MX300SSD4     | 528 GB | A68839ED555D | 360   | 0     | 0.99   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | BBF8AF784E6B | 360   | 0     | 0.99   |
@@ -9992,6 +10463,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U110           | 128 GB | C8091E5BBE2B | 359   | 0     | 0.98   |
 | Toshiba   | TR150              | 240 GB | 1358AB19B3FF | 359   | 0     | 0.98   |
 | Kingston  | SA400S37240G       | 240 GB | D0EC5D5E63CE | 359   | 0     | 0.98   |
+| Samsung   | SSD 840 PRO Series | 256 GB | 409ABB2780A6 | 359   | 0     | 0.98   |
 | Samsung   | SSD 860 EVO        | 500 GB | FEC0B345A197 | 359   | 0     | 0.98   |
 | Kingston  | SUV400S37120G      | 120 GB | EB19B81AFB69 | 359   | 0     | 0.98   |
 | Kingston  | SMS200S360G        | 64 GB  | 4534F6ABFF63 | 359   | 0     | 0.98   |
@@ -10017,6 +10489,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | AGILITY3           | 64 GB  | C1751C9D8825 | 358   | 0     | 0.98   |
 | Patriot   | Burst              | 120 GB | 9AB02171BBA1 | 358   | 0     | 0.98   |
 | Samsung   | SSD 850 EVO        | 500 GB | 0CEC5204355F | 358   | 0     | 0.98   |
+| SanDisk   | SD7SN6S-128G-1006  | 128 GB | F67EA47A6E38 | 358   | 0     | 0.98   |
 | SanDisk   | Ultra II           | 480 GB | 29A1790C279E | 716   | 1     | 0.98   |
 | ADATA     | SP580              | 120 GB | E41A00458015 | 358   | 0     | 0.98   |
 | Apple     | SSD SM0128G        | 121 GB | 64BDC1B9D5CD | 358   | 0     | 0.98   |
@@ -10088,6 +10561,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-256M6S+         | 256 GB | 388AE2779D83 | 355   | 0     | 0.97   |
 | Samsung   | SSD 850 PRO        | 256 GB | 65C0B020B0FB | 355   | 0     | 0.97   |
 | Samsung   | SSD 750 EVO        | 250 GB | 59FBCD25997E | 355   | 0     | 0.97   |
+| ADATA     | SU800              | 1 TB   | F9E361C62CED | 355   | 0     | 0.97   |
 | Kingston  | SUV400S37120G      | 120 GB | 2C7727DCAB84 | 355   | 0     | 0.97   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 66A464623ACC | 355   | 0     | 0.97   |
 | Crucial   | CT525MX300SSD4     | 528 GB | B39DE919D4E8 | 355   | 0     | 0.97   |
@@ -10122,6 +10596,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT250MX200SSD1     | 250 GB | B57B8B3E7BA2 | 354   | 0     | 0.97   |
 | OCZ       | VERTEX3            | 120 GB | DCEE8FF97C7A | 354   | 0     | 0.97   |
 | SPCC      | SSD                | 512 GB | 4FAC0273AE24 | 354   | 0     | 0.97   |
+| WDC       | WDS200T2G0A-00JH30 | 2 TB   | 3DEEC8D892B7 | 708   | 1     | 0.97   |
 | Kingston  | SA400S37240G       | 240 GB | 3716FCDADF40 | 354   | 0     | 0.97   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 180B21C2AA41 | 354   | 0     | 0.97   |
 | Kingston  | SA400S37120G       | 120 GB | 3C6AD02DA9FB | 354   | 0     | 0.97   |
@@ -10130,6 +10605,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO M.2    | 120 GB | 24CBC3473BB4 | 354   | 0     | 0.97   |
 | CFD       | CSSD-MG4VT         | 1 TB   | 3F817A430485 | 354   | 0     | 0.97   |
 | Crucial   | CT240BX300SSD1     | 240 GB | EF0C83D6069B | 354   | 0     | 0.97   |
+| SK hynix  | HFS128G32TNF-N3A0A | 128 GB | 9166802249F7 | 354   | 0     | 0.97   |
 | SanDisk   | SDSSDH3500G        | 500 GB | 91F24A1DCA95 | 354   | 0     | 0.97   |
 | Toshiba   | THNSNK128GVN8      | 128 GB | DB3F0D339C59 | 354   | 0     | 0.97   |
 | Samsung   | SSD 850 EVO        | 250 GB | CB358E7FC829 | 354   | 0     | 0.97   |
@@ -10181,6 +10657,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 120 GB | 3039AF550C55 | 352   | 0     | 0.97   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 238EDFAC0771 | 352   | 0     | 0.97   |
 | Intel     | SSDSA2CW080G3      | 80 GB  | A489EEBEA50C | 352   | 0     | 0.97   |
+| China     | SSD                | 120 GB | 224EC67CDFE0 | 352   | 0     | 0.96   |
 | Samsung   | SSD 840 EVO        | 500 GB | D8F590A7A688 | 352   | 0     | 0.96   |
 | Samsung   | SSD 860 EVO        | 500 GB | 7BEC842CE6F2 | 352   | 0     | 0.96   |
 | China     | 256GB SSD          | 256 GB | 7CBAD2A0CF76 | 352   | 0     | 0.96   |
@@ -10205,12 +10682,14 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 480 GB | E14E006B3AF1 | 351   | 0     | 0.96   |
 | Toshiba   | THNSNH128GMCT      | 128 GB | 2CBEF916F235 | 351   | 0     | 0.96   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | DB95337FAA7D | 351   | 0     | 0.96   |
+| Kingston  | SA400S37120G       | 120 GB | 86836ACDA6EA | 351   | 0     | 0.96   |
 | Samsung   | SSD 850 PRO        | 512 GB | 2D3E0E1E42F3 | 351   | 0     | 0.96   |
 | Kingston  | SUV400S37120G      | 120 GB | DFA5D3D4377B | 351   | 0     | 0.96   |
 | Samsung   | MZ7TE128HMGR-00004 | 128 GB | 47B92635C38C | 351   | 0     | 0.96   |
 | SanDisk   | SSD PLUS           | 240 GB | 80DD56335CF9 | 351   | 0     | 0.96   |
 | BHT       | WR202HH032G E70... | 32 GB  | 600E4AD478BC | 351   | 0     | 0.96   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 3277D64B31A6 | 351   | 0     | 0.96   |
+| Samsung   | SSD 860 EVO        | 500 GB | 50D02B098E7D | 351   | 0     | 0.96   |
 | Samsung   | SSD 850 PRO        | 256 GB | 5581B999AAEB | 351   | 0     | 0.96   |
 | Samsung   | SSD 860 PRO        | 1 TB   | 9BC865A01B1D | 351   | 0     | 0.96   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | B53E076411B4 | 351   | 0     | 0.96   |
@@ -10250,10 +10729,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 3FC39E69A09E | 350   | 0     | 0.96   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | C0EDEF6EE7AE | 350   | 0     | 0.96   |
 | Kingston  | SHFS37A120G        | 120 GB | E1D4CBA2B3D4 | 349   | 0     | 0.96   |
+| Kingston  | SUV400S37240G      | 240 GB | 5C24695A5F0B | 349   | 0     | 0.96   |
 | Kingston  | SV300S37A120G      | 120 GB | E12BE2FD38CD | 349   | 0     | 0.96   |
 | Samsung   | MZMTE256HMHP-00000 | 256 GB | 02BA3897A59D | 349   | 0     | 0.96   |
 | Samsung   | SSD 840 EVO        | 250 GB | 997A900E5783 | 349   | 0     | 0.96   |
 | SK hynix  | SC308 SATA         | 256 GB | 6EB3D7082EDA | 349   | 0     | 0.96   |
+| SanDisk   | SDSSDHP256G        | 256 GB | 2ED6C0219F87 | 349   | 0     | 0.96   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 3F39984EB83D | 349   | 0     | 0.96   |
 | Intel     | SSDSC2CT240A4      | 240 GB | EBD23161A8F0 | 349   | 0     | 0.96   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 05AD12D945CD | 349   | 0     | 0.96   |
@@ -10272,6 +10753,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSD                | 120 GB | A5D8CC0B2698 | 349   | 0     | 0.96   |
 | Samsung   | SSD 840 EVO        | 250 GB | 5E9E00555DD2 | 349   | 0     | 0.96   |
 | Kingmax   | SSD                | 512 GB | EEEC2262D67C | 349   | 0     | 0.96   |
+| Kingston  | SA400M8480G        | 480 GB | 4AC95F591B6A | 349   | 0     | 0.96   |
 | Kingston  | SUV400S37240G      | 240 GB | 3734729BF214 | 349   | 0     | 0.96   |
 | Samsung   | MZ7LN128HCHP-000L1 | 128 GB | 5B3F87041384 | 349   | 0     | 0.96   |
 | Crucial   | CT120BX300SSD1     | 120 GB | D14D85032F78 | 349   | 0     | 0.96   |
@@ -10326,6 +10808,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 81F0A6348C31 | 347   | 0     | 0.95   |
 | SanDisk   | SD7SB7S512G1001    | 512 GB | 9F1FC15110FC | 347   | 0     | 0.95   |
 | GALAX     | TA1D0120A          | 120 GB | 519A0DD7C6C3 | 347   | 0     | 0.95   |
+| China     | SATA SSD           | 120 GB | DB0BF0EC789A | 347   | 0     | 0.95   |
 | Intel     | SSDMCEAW120A4      | 120 GB | E398EB4E0F3F | 347   | 0     | 0.95   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 0F910F31AB7A | 347   | 0     | 0.95   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 887F1DF064A6 | 347   | 0     | 0.95   |
@@ -10404,6 +10887,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7TE128HMGR-000L1 | 128 GB | 6B7F55C9EB01 | 345   | 0     | 0.95   |
 | Kingston  | SA400S37480G       | 480 GB | C0C02FFF3BEB | 344   | 0     | 0.94   |
 | Vaseky    | v800-128G          | 128 GB | 104F2E332D23 | 344   | 0     | 0.94   |
+| Intel     | SSDSC2KB240G8      | 240 GB | E7B4C3341622 | 344   | 0     | 0.94   |
 | Kingston  | RBUSNS8180S3128GI1 | 128 GB | 1D52DC99275A | 344   | 0     | 0.94   |
 | Netac     | SSD                | 512 GB | 15F16BDF9925 | 344   | 0     | 0.94   |
 | Toshiba   | THNSFJ256GCSU      | 256 GB | 2DE496C10B5A | 344   | 0     | 0.94   |
@@ -10446,12 +10930,16 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1050MX300SSD1    | 1 TB   | EB7DDE391C9B | 343   | 0     | 0.94   |
 | Samsung   | MZ7PC128HAFU-000H1 | 128 GB | B01A7698830B | 343   | 0     | 0.94   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | 16A96BDDE8C6 | 343   | 0     | 0.94   |
+| Crucial   | CT120BX500SSD1     | 120 GB | 85E6FB90397F | 343   | 0     | 0.94   |
 | Kingston  | SV300S37A120G      | 120 GB | 328D2E6C30F1 | 343   | 0     | 0.94   |
 | Intel     | SSDSC2BW240A4      | 240 GB | 641E3C981998 | 343   | 0     | 0.94   |
 | Samsung   | MZNLN256HAJQ-00000 | 256 GB | 636E4EF4799F | 343   | 0     | 0.94   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 361C3698D3A3 | 1029  | 2     | 0.94   |
 | Foxline   | FLSSD480X3         | 480 GB | 151953832AAE | 343   | 0     | 0.94   |
+| Crucial   | CT480BX500SSD1     | 480 GB | C7E193383399 | 343   | 0     | 0.94   |
 | Kingston  | SA400S37480G       | 480 GB | 9863FDDA55A7 | 343   | 0     | 0.94   |
 | Corsair   | Force LE SSD       | 480 GB | BA0E5E126E10 | 343   | 0     | 0.94   |
+| Kingston  | SA400S37120G       | 120 GB | 0E5E282297E6 | 343   | 0     | 0.94   |
 | Kingston  | SA400S37480G       | 480 GB | DB785911CC19 | 343   | 0     | 0.94   |
 | Samsung   | MZNTY128HDHP-00000 | 128 GB | 07AB3386E648 | 343   | 0     | 0.94   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 414BB5B16AA7 | 343   | 0     | 0.94   |
@@ -10462,6 +10950,7 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R5M256G8           | 256 GB | FD948DEBD8B0 | 342   | 0     | 0.94   |
 | Kingston  | SA400S37120G       | 120 GB | 5184D3FB2BD9 | 342   | 0     | 0.94   |
 | Goodram   | SSD                | 120 GB | B186E2FAABCA | 342   | 0     | 0.94   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | C911C8FF804F | 342   | 0     | 0.94   |
 | Samsung   | SSD 860 EVO        | 500 GB | F3F45F17F2E7 | 342   | 0     | 0.94   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 8F93DF2A2EDA | 342   | 0     | 0.94   |
 | Samsung   | MZ7TE256HMHP-000L7 | 256 GB | 148F21EB7D2C | 342   | 0     | 0.94   |
@@ -10497,6 +10986,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP550              | 480 GB | 56E2FCE1DD9A | 341   | 0     | 0.94   |
 | Samsung   | SSD 860 EVO        | 1 TB   | A399701339B7 | 341   | 0     | 0.94   |
 | SanDisk   | SSD i100           | 24 GB  | DDC5345D585E | 341   | 0     | 0.94   |
+| WDC       | WDS200T2B0A-00SM50 | 2 TB   | 2106D1E1DDCC | 341   | 0     | 0.94   |
 | Intel     | SSDSC2BW180H6      | 180 GB | 62D8F1E2C656 | 341   | 0     | 0.94   |
 | Samsung   | SSD 860 EVO        | 250 GB | 04F8298FDD5F | 341   | 0     | 0.94   |
 | Samsung   | SSD 860 EVO        | 250 GB | 836B887966BF | 341   | 0     | 0.94   |
@@ -10521,11 +11011,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7TD128HAFV-000L1 | 128 GB | 4EBF904BE25D | 340   | 0     | 0.93   |
 | Kingston  | SV300S37A120G      | 120 GB | 94526E73BCF3 | 340   | 0     | 0.93   |
 | Kingston  | SVP200S37A120G     | 120 GB | D45267063C47 | 340   | 0     | 0.93   |
+| Samsung   | SSD 850 EVO        | 1 TB   | 48A2FF5526F4 | 340   | 0     | 0.93   |
 | Apple     | SSD SM0512G        | 500 GB | 22BE64C34A85 | 340   | 0     | 0.93   |
 | Samsung   | MZ7TD128HAFV-000L1 | 128 GB | 9236ED403E56 | 340   | 0     | 0.93   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 0DA75824EA73 | 340   | 0     | 0.93   |
 | Samsung   | SSD 860 EVO        | 250 GB | 3613FDA7A107 | 340   | 0     | 0.93   |
 | SanDisk   | SD7SN6S-256G-1006  | 256 GB | 419AAD4AEEFC | 340   | 0     | 0.93   |
+| Kingston  | SA400S37120G       | 120 GB | 6775984819D2 | 340   | 0     | 0.93   |
 | SanDisk   | X400 M.2 2280      | 256 GB | 5C768D125D4D | 340   | 0     | 0.93   |
 | Kingston  | SA400S37120G       | 120 GB | BEAEAD489A94 | 340   | 0     | 0.93   |
 | Samsung   | SSD 860 EVO        | 500 GB | 1C245554CC80 | 340   | 0     | 0.93   |
@@ -10574,6 +11066,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 5235F2938812 | 339   | 0     | 0.93   |
 | SK hynix  | SC311 SATA         | 256 GB | 19254DB9EFC3 | 339   | 0     | 0.93   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 12F167299829 | 339   | 0     | 0.93   |
+| Samsung   | SSD 860 EVO M.2    | 500 GB | CA3478F9A230 | 338   | 0     | 0.93   |
 | ADATA     | SU650              | 240 GB | CED32A95425F | 338   | 0     | 0.93   |
 | Samsung   | SSD 860 EVO        | 250 GB | C1E885269DC3 | 338   | 0     | 0.93   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | B6AD035CB3BF | 338   | 0     | 0.93   |
@@ -10605,6 +11098,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SH103S3120G        | 120 GB | 23FA4A67EFB8 | 337   | 0     | 0.93   |
 | Samsung   | SSD 840 Series     | 250 GB | B262F3C92527 | 337   | 0     | 0.93   |
 | China     | SSD                | 1 TB   | 6E04855D9557 | 337   | 0     | 0.92   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 630F1ECBC32F | 337   | 0     | 0.92   |
 | Kingston  | SV300S37A120G      | 120 GB | E4B64AF9CCBB | 337   | 0     | 0.92   |
 | SanDisk   | X400 M.2 2280      | 128 GB | 028EC1CDE918 | 337   | 0     | 0.92   |
 | Samsung   | SSD 850 PRO        | 512 GB | 2C0B4528EBD4 | 337   | 0     | 0.92   |
@@ -10615,6 +11109,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | C15B4339856B | 337   | 0     | 0.92   |
 | OCZ       | VERTEX4            | 128 GB | 9F1B9F0B8BD7 | 337   | 0     | 0.92   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | 1EA65DAAFF5D | 337   | 0     | 0.92   |
+| Apple     | SSD SM0512G        | 500 GB | C4B470741DE4 | 337   | 0     | 0.92   |
 | Kingston  | SUV400S37120G      | 120 GB | 501E0AE7BA4A | 337   | 0     | 0.92   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 882BA0DFD0CA | 337   | 0     | 0.92   |
 | Intel     | SSDSC2BW240A4      | 240 GB | CE74CFE15204 | 337   | 0     | 0.92   |
@@ -10661,6 +11156,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 1328025C1433 | 335   | 0     | 0.92   |
 | Samsung   | MZHPV256HDGL-00000 | 256 GB | 374F587C94BC | 335   | 0     | 0.92   |
 | Intel     | SSDSC2CT120A3      | 120 GB | D1E35E406467 | 2348  | 6     | 0.92   |
+| Kingston  | SA400S37240G       | 240 GB | 5AB231A5B90F | 335   | 0     | 0.92   |
 | Lexar     | SSD                | 256 GB | 8C0292F93573 | 335   | 0     | 0.92   |
 | Samsung   | SSD 850 EVO        | 250 GB | 6FDEFAA22237 | 335   | 0     | 0.92   |
 | Samsung   | SSD 840 EVO        | 120 GB | B66ABD5784D2 | 335   | 0     | 0.92   |
@@ -10671,6 +11167,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | D3EBD33C3230 | 335   | 0     | 0.92   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 0CDA59D7A22F | 335   | 0     | 0.92   |
 | Samsung   | SSD 840 EVO        | 1 TB   | F4250E3E2324 | 335   | 0     | 0.92   |
+| Samsung   | SSD 840 EVO        | 500 GB | FD629AB8DEC5 | 335   | 0     | 0.92   |
 | Phison    | SATA SSD           | 120 GB | 5B9070ADAB2A | 335   | 0     | 0.92   |
 | Toshiba   | TR150              | 240 GB | DA9E78862BCD | 335   | 0     | 0.92   |
 | Toshiba   | A100               | 240 GB | C949264F5E5D | 334   | 0     | 0.92   |
@@ -10689,6 +11186,7 @@ MTBF - avg. MTBF in years per sample.
 | GeIL      | ZENITH 120G R3     | 120 GB | B5FC32CC9658 | 334   | 0     | 0.92   |
 | Kingston  | SA400S37120G       | 120 GB | EF56156BC22C | 334   | 0     | 0.92   |
 | Crucial   | M4-CT064M4SSD2     | 64 GB  | 7CF31E67C6F3 | 334   | 0     | 0.92   |
+| Kingston  | SUV400S37120G      | 120 GB | 346C44B2E366 | 334   | 0     | 0.92   |
 | Kingston  | SV300S37A240G      | 240 GB | 04859B513B4D | 334   | 0     | 0.92   |
 | China     | SATA SSD           | 1 TB   | E7D677AABD37 | 334   | 0     | 0.92   |
 | Samsung   | SSD 850 EVO        | 250 GB | BB3EC471FC64 | 334   | 0     | 0.92   |
@@ -10709,6 +11207,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120M500SSD1      | 120 GB | 44480C256AA7 | 333   | 0     | 0.91   |
 | Kingston  | SA400S37120G       | 120 GB | E55EF58B5789 | 333   | 0     | 0.91   |
 | Samsung   | Portable SSD T5    | 2 TB   | 17BBC456F510 | 333   | 0     | 0.91   |
+| Seagate   | BarraCuda Q1 SS... | 480 GB | 8DD6897EEBCD | 333   | 0     | 0.91   |
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | CD343561EDB3 | 1000  | 2     | 0.91   |
 | SK hynix  | HFS256G32TND-N210A | 256 GB | BBF01419D13A | 333   | 0     | 0.91   |
 | Samsung   | SSD 840 EVO        | 120 GB | 95C3687AB135 | 333   | 0     | 0.91   |
@@ -10731,6 +11230,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAK256MAM-1K1  | 256 GB | AB666979BBF4 | 332   | 0     | 0.91   |
 | Samsung   | SSD 830 Series     | 64 GB  | CE98D012277D | 332   | 0     | 0.91   |
 | Intel     | SSDSC2BW240A4      | 240 GB | 91E41B141B4D | 332   | 0     | 0.91   |
+| China     | SATA SSD           | 480 GB | EC788FB797B5 | 332   | 0     | 0.91   |
 | Union ... | RTOTJ128VGD2EYX    | 128 GB | BEFB6E9D86DF | 332   | 0     | 0.91   |
 | Kingston  | SV300S37A120G      | 120 GB | 5D008B6CA1ED | 332   | 0     | 0.91   |
 | Samsung   | SSD 840 EVO        | 250 GB | EBE1F68308F3 | 332   | 0     | 0.91   |
@@ -10762,6 +11262,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | DEF5F8D5A38E | 331   | 0     | 0.91   |
 | Crucial   | CT2000BX500SSD1    | 2 TB   | D140CA2610BC | 331   | 0     | 0.91   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 55815A788563 | 331   | 0     | 0.91   |
+| Goodram   | IRP-SSDPR-S25C-256 | 256 GB | 5FDA554F41A4 | 331   | 0     | 0.91   |
 | SPCC      | SSD                | 120 GB | 06DD5F7D934A | 331   | 0     | 0.91   |
 | Samsung   | SSD 850 PRO        | 256 GB | 169C295552F4 | 331   | 0     | 0.91   |
 | Crucial   | CT250MX500SSD4     | 250 GB | D1D5F8D73386 | 331   | 0     | 0.91   |
@@ -10803,11 +11304,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 120 GB | EB2624C7AEDE | 330   | 0     | 0.90   |
 | China     | SATA3 2TB SSD      | 2 TB   | 1CD2A686CF7D | 330   | 0     | 0.90   |
 | Kingston  | RBUSNS4180S364GJ   | 64 GB  | 4E9EB7418F0F | 330   | 0     | 0.90   |
+| Kingston  | SHSS37A240G        | 240 GB | E5B52CE02ED1 | 330   | 0     | 0.90   |
 | SanDisk   | SD8SN8U128G1002    | 128 GB | D411BBD63209 | 330   | 0     | 0.90   |
 | Team      | TEAML5Lite3D120G   | 120 GB | 4A477B1AE344 | 330   | 0     | 0.90   |
 | OCZ       | AGILITY3           | 120 GB | 4F7A63903C99 | 330   | 0     | 0.90   |
 | Samsung   | SSD 860 EVO        | 4 TB   | 6A3872275FEE | 329   | 0     | 0.90   |
 | SanDisk   | SDSSDA480G         | 480 GB | 56D2CCAD8896 | 329   | 0     | 0.90   |
+| Intel     | SSDSC2KB240G8      | 240 GB | 1DCFDA782EEC | 329   | 0     | 0.90   |
 | Samsung   | SSD 850 EVO        | 250 GB | 073F4EBFE416 | 329   | 0     | 0.90   |
 | Intel     | SSDSC2CT180A3      | 180 GB | A10724E485F2 | 1318  | 3     | 0.90   |
 | SPCC      | SSD                | 512 GB | 983E5BC77D10 | 329   | 0     | 0.90   |
@@ -10825,12 +11328,14 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | ABF840A0B0A5 | 329   | 0     | 0.90   |
 | Apple     | SSD SM0128G        | 121 GB | 0FCEE4CE445C | 329   | 0     | 0.90   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 336DAB231A68 | 329   | 0     | 0.90   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 65CADB68C472 | 329   | 0     | 0.90   |
 | OCZ       | VERTEX3 MI         | 120 GB | 6BCD7D2BD56C | 1646  | 4     | 0.90   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 488F1529B347 | 329   | 0     | 0.90   |
 | Transcend | TS128GSSD720       | 128 GB | BCB066CEB6A2 | 329   | 0     | 0.90   |
 | Samsung   | SSD 850 EVO        | 250 GB | 6F27D7D8F785 | 329   | 0     | 0.90   |
 | Samsung   | SSD 860 EVO        | 250 GB | 878113E94465 | 329   | 0     | 0.90   |
 | SK hynix  | SC311 SATA         | 512 GB | C1C8F1C8346E | 329   | 0     | 0.90   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 94985AA178EC | 328   | 0     | 0.90   |
 | Kingston  | SA400S37120G       | 120 GB | E8CC8D2256A1 | 328   | 0     | 0.90   |
 | Samsung   | SSD 840 EVO        | 120 GB | 70D45A3157AE | 328   | 0     | 0.90   |
 | Samsung   | SSD PM800 TM       | 128 GB | C995402D8E1F | 328   | 0     | 0.90   |
@@ -10841,6 +11346,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | BFE25766BBA2 | 328   | 0     | 0.90   |
 | China     | SSD                | 120 GB | D1C5D5E891BD | 986   | 2     | 0.90   |
 | Goodram   | SSDPR-CL100-480-G2 | 480 GB | 883462CB73EB | 328   | 0     | 0.90   |
+| Samsung   | SSD 860 EVO        | 500 GB | 3ACF25C525D9 | 328   | 0     | 0.90   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 25635BC3245A | 328   | 0     | 0.90   |
 | Kingston  | SVP200S360G        | 64 GB  | 0601F28F5188 | 328   | 0     | 0.90   |
 | Kingston  | SV300S37A120G      | 120 GB | 9B2D37F8CFAF | 328   | 0     | 0.90   |
@@ -10856,6 +11362,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSA2BW300G3H     | 304 GB | 3FBF54C7B8D1 | 327   | 0     | 0.90   |
 | Kingston  | SV300S37A120G      | 120 GB | E9E3C81CC777 | 327   | 0     | 0.90   |
 | SanDisk   | SD6SB1M-128G-1006  | 128 GB | F3CEA31A3091 | 327   | 0     | 0.90   |
+| Samsung   | MZNLN128HAHQ-000H1 | 128 GB | DE9B29A696BC | 327   | 0     | 0.90   |
 | Samsung   | SSD 860 EVO        | 250 GB | 2F2827C4DB4B | 327   | 0     | 0.90   |
 | Kingston  | SUV300S37A120G     | 120 GB | 403B744DEF3A | 327   | 0     | 0.90   |
 | Intel     | SSDSA2BW300G3H     | 304 GB | F66212938D55 | 327   | 0     | 0.90   |
@@ -10867,14 +11374,17 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | F1854868186F | 327   | 0     | 0.90   |
 | Samsung   | SSD 850 EVO        | 500 GB | 387F4B21B19B | 327   | 0     | 0.90   |
 | Apple     | SSD SM0128G        | 121 GB | 40AAD5F9178B | 327   | 0     | 0.90   |
+| Samsung   | MZ7TE128HMGR-00004 | 128 GB | 320CFC02AFC0 | 327   | 0     | 0.90   |
 | Kingston  | SV200S364G         | 64 GB  | C103F58BEDB3 | 327   | 0     | 0.90   |
 | Toshiba   | THNSNH128GBST      | 128 GB | E1F188DA01C1 | 327   | 0     | 0.90   |
 | Samsung   | SSD 840 EVO        | 250 GB | 3AB38E900666 | 327   | 0     | 0.90   |
+| OCZ       | AGILITY3           | 240 GB | C93B14F2E94C | 981   | 2     | 0.90   |
 | Samsung   | SSD 860 EVO        | 500 GB | BD25C7FA5CCF | 327   | 0     | 0.90   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | E8F0D15D02CE | 327   | 0     | 0.90   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 03099C446919 | 327   | 0     | 0.90   |
 | OCZ       | AGILITY3           | 120 GB | 6EBA79E7BD49 | 327   | 0     | 0.90   |
 | SanDisk   | SDSSDHII120G       | 120 GB | F4FED137FF75 | 327   | 0     | 0.90   |
+| Samsung   | MZ7LN512HCHP-000L1 | 512 GB | 64225F70D296 | 327   | 0     | 0.90   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 97B4A09062BC | 327   | 0     | 0.90   |
 | Team      | L5 LITE SSD        | 120 GB | E48C81D78B00 | 326   | 0     | 0.90   |
 | Kingston  | SA400S37480G       | 480 GB | 592A4FD2A063 | 326   | 0     | 0.90   |
@@ -10905,6 +11415,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT250MX500SSD1     | 250 GB | 8E079E6E400F | 326   | 0     | 0.89   |
 | Crucial   | CT750MX300SSD1     | 752 GB | 5578C0EF5948 | 326   | 0     | 0.89   |
 | Samsung   | SSD 840 PRO Series | 128 GB | F6C096DE08C4 | 326   | 0     | 0.89   |
+| Crucial   | CT120BX500SSD1     | 120 GB | 6E6312A4B363 | 325   | 0     | 0.89   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 1C2C0DD3CAA1 | 325   | 0     | 0.89   |
 | ADATA     | SU650              | 480 GB | 914E88F344E1 | 325   | 0     | 0.89   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 507941D56FAD | 325   | 0     | 0.89   |
@@ -10931,6 +11442,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 841C11B1B845 | 325   | 0     | 0.89   |
 | Kingston  | SV300S37A120G      | 120 GB | E12CA17A861B | 1624  | 4     | 0.89   |
 | Samsung   | SSD 840 EVO        | 250 GB | E688E558FB9C | 324   | 0     | 0.89   |
+| Lexar     | 128GB SSD          | 128 GB | 809C07273964 | 324   | 0     | 0.89   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 0FDEA64E6392 | 324   | 0     | 0.89   |
 | Samsung   | SSD 860 PRO        | 256 GB | 65760C9FDCBA | 324   | 0     | 0.89   |
 | Samsung   | MZ7PD128HAFV-000H7 | 128 GB | 7D7DAB9D2B49 | 324   | 0     | 0.89   |
@@ -10962,6 +11474,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | F4B52EC6756E | 647   | 1     | 0.89   |
 | Kingston  | SA400S37480G       | 480 GB | 3B28DAFFF6A1 | 323   | 0     | 0.89   |
 | Samsung   | MMCQE28G8MUP-0VA   | 128 GB | 07A2160D2C80 | 323   | 0     | 0.89   |
+| Kingston  | SVP200S37A120G     | 120 GB | 5C2DB49D0F23 | 323   | 0     | 0.89   |
 | SanDisk   | SD6SB1M256G1002    | 256 GB | B991C60DBDA0 | 323   | 0     | 0.89   |
 | Toshiba   | SSD0256XQC82X20... | 256 GB | 3B2E3D04FCA9 | 323   | 0     | 0.89   |
 | Apple     | SSD SM0512G        | 500 GB | 493729BA8F54 | 323   | 0     | 0.89   |
@@ -10983,6 +11496,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 0561B4ECFB88 | 322   | 0     | 0.88   |
 | Samsung   | SSD 840 Series     | 250 GB | 585961893389 | 645   | 1     | 0.88   |
 | Samsung   | SSD 860 EVO        | 250 GB | 5E9689BE315F | 322   | 0     | 0.88   |
+| Kingston  | SA400S37120G       | 120 GB | A14A3EAA3DB8 | 322   | 0     | 0.88   |
 | Patriot   | Burst              | 120 GB | 5D0E68A8EDFE | 322   | 0     | 0.88   |
 | SanDisk   | SDSSDH3 512G       | 512 GB | 97573E19056F | 322   | 0     | 0.88   |
 | Samsung   | SSD 850 EVO        | 500 GB | E11BD7162B0D | 322   | 0     | 0.88   |
@@ -10995,6 +11509,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH31024G       | 1 TB   | 8DBAB2EE491C | 322   | 0     | 0.88   |
 | Samsung   | SSD 860 EVO        | 1 TB   | F1AD158558DC | 322   | 0     | 0.88   |
 | SanDisk   | SDSSDA240G         | 240 GB | 1924D9C0DC8B | 322   | 0     | 0.88   |
+| AFOX      | SSD                | 120 GB | 97EDA67C4EBC | 322   | 0     | 0.88   |
 | Kingston  | SV300S37A120G      | 120 GB | F65749FA821D | 322   | 0     | 0.88   |
 | Samsung   | SSD PM871b M.2 ... | 512 GB | 026D35054441 | 322   | 0     | 0.88   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | C677D03F392A | 322   | 0     | 0.88   |
@@ -11022,9 +11537,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | DAE6063CD840 | 321   | 0     | 0.88   |
 | Samsung   | SSD 860 EVO        | 250 GB | FEDB75E21322 | 321   | 0     | 0.88   |
 | Crucial   | CT2000BX500SSD1    | 2 TB   | 2F188AE24D20 | 321   | 0     | 0.88   |
+| Kingston  | SA400S37480G       | 480 GB | E75A7DC97F8B | 321   | 0     | 0.88   |
 | Samsung   | SSD 850 EVO        | 250 GB | E2B37E554C1D | 321   | 0     | 0.88   |
 | SanDisk   | PLUS               | 480 GB | 76AEBE4D9288 | 321   | 0     | 0.88   |
 | Samsung   | SSD 860 EVO        | 500 GB | F60840D85609 | 321   | 0     | 0.88   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 687629E1326A | 321   | 0     | 0.88   |
 | OCZ       | VERTEX4            | 128 GB | A11D21A83437 | 321   | 0     | 0.88   |
 | Samsung   | SSD 840 EVO        | 250 GB | E6D1FEEDF2C9 | 321   | 0     | 0.88   |
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | 762ECE429F3B | 321   | 0     | 0.88   |
@@ -11042,8 +11559,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 5EF28D7814F0 | 320   | 0     | 0.88   |
 | OCZ       | VERTEX3 LP         | 64 GB  | 6E0FE56A8CDB | 320   | 0     | 0.88   |
 | SPCC      | SSD                | 128 GB | 568EA31BCA07 | 320   | 0     | 0.88   |
+| Crucial   | CT500MX500SSD4     | 500 GB | BD49B64904FD | 320   | 0     | 0.88   |
 | Samsung   | SSD 840 EVO        | 250 GB | 1E2737A0E052 | 320   | 0     | 0.88   |
 | Team      | TIM3F49256GMBA04MA | 256 GB | 0AE3CA1BA501 | 320   | 0     | 0.88   |
+| Crucial   | CT240BX500SSD1     | 240 GB | EA4BFBD70D95 | 320   | 0     | 0.88   |
 | Samsung   | SSD 850 EVO        | 250 GB | 69356D048E93 | 320   | 0     | 0.88   |
 | Samsung   | SSD 840 EVO 250... | 250 GB | 8D87AD880A77 | 320   | 0     | 0.88   |
 | SanDisk   | SSD U110           | 16 GB  | 51E2C24396FD | 320   | 0     | 0.88   |
@@ -11111,6 +11630,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37120G      | 120 GB | 0B452FF5641A | 318   | 0     | 0.87   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 6421CAD23CB1 | 318   | 0     | 0.87   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 0C49D01AEA78 | 954   | 2     | 0.87   |
+| Samsung   | SSD 860 EVO        | 1 TB   | 2DF2E1DE8752 | 318   | 0     | 0.87   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 3AAC6A7B2830 | 317   | 0     | 0.87   |
 | Samsung   | SSD 850 EVO        | 500 GB | AA6750E90CCC | 317   | 0     | 0.87   |
 | Intel     | SSDSC2BB012T7O     | 1.2 TB | 93EE29235FD4 | 317   | 0     | 0.87   |
@@ -11141,6 +11661,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | DF27EDE89E84 | 316   | 0     | 0.87   |
 | ADATA     | XM13               | 32 GB  | 30873CD94A2F | 316   | 0     | 0.87   |
 | Kingston  | SV300S37A60G       | 64 GB  | 079545E8A7DA | 316   | 0     | 0.87   |
+| SK hynix  | SHGS31-500GS-2     | 500 GB | B1BC1938CC06 | 316   | 0     | 0.87   |
 | Zheino    | CHN 25SATAA3 360   | 360 GB | BD02DDE1DDD1 | 316   | 0     | 0.87   |
 | SanDisk   | SDSSDA120G         | 120 GB | DFC14ABDB116 | 316   | 0     | 0.87   |
 | Samsung   | MZ7LN256HCHP-000L7 | 256 GB | 56BD6A1B7C1B | 316   | 0     | 0.87   |
@@ -11150,6 +11671,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA120G         | 120 GB | 763DF005419B | 316   | 0     | 0.87   |
 | Crucial   | CT275MX300SSD4     | 275 GB | 2CC1DE76C742 | 316   | 0     | 0.87   |
 | Plextor   | PX-256M5Pro        | 256 GB | D04FD110FEB8 | 316   | 0     | 0.87   |
+| SanDisk   | SSD PLUS           | 480 GB | CCE472D6CA40 | 316   | 0     | 0.87   |
 | Kingston  | SA400S37480G       | 480 GB | 23FA5B8EB0AD | 1580  | 4     | 0.87   |
 | Crucial   | CT750MX300SSD1     | 752 GB | 4D74E72BBD9C | 316   | 0     | 0.87   |
 | WDC       | WDBNCE2500PNC      | 250 GB | A6E518EAEC25 | 315   | 0     | 0.87   |
@@ -11202,6 +11724,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD TS064C         | 64 GB  | 0F7BF6CE8530 | 314   | 0     | 0.86   |
 | BIWIN     | SSD                | 120 GB | 33BADF4C3E24 | 314   | 0     | 0.86   |
 | KingDian  | S400               | 120 GB | A57408905ED2 | 314   | 0     | 0.86   |
+| Kingston  | SA400S37120G       | 120 GB | 5FEDCD0114F2 | 314   | 0     | 0.86   |
 | Kingston  | SUV400S37120G      | 120 GB | 80B20CFE3ECD | 314   | 0     | 0.86   |
 | Samsung   | SSD 850 EVO        | 250 GB | CCFBF5788D8B | 314   | 0     | 0.86   |
 | OCZ       | AGILITY3           | 120 GB | F2A8528A274A | 2830  | 8     | 0.86   |
@@ -11227,6 +11750,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | AGILITY3           | 90 GB  | C5186A2BF4CC | 313   | 0     | 0.86   |
 | Samsung   | SSD 830 Series     | 64 GB  | DBE196530C8C | 313   | 0     | 0.86   |
 | Samsung   | SSD 850 EVO        | 500 GB | CE83DDEF7FAA | 313   | 0     | 0.86   |
+| Samsung   | SSD 650            | 120 GB | 3D92E20AC45A | 313   | 0     | 0.86   |
 | Samsung   | SSD 850 PRO        | 256 GB | 583B21A6B3BB | 313   | 0     | 0.86   |
 | Kingston  | SA400S37480G       | 480 GB | 8011A03462AD | 313   | 0     | 0.86   |
 | Toshiba   | THNSNJ256G8NY      | 256 GB | 55C9DB046DDA | 313   | 0     | 0.86   |
@@ -11335,6 +11859,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SBBU480G1122    | 480 GB | 480A3DE50537 | 310   | 0     | 0.85   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 7198A1062B5B | 310   | 0     | 0.85   |
 | Kingston  | SA400S37120G       | 120 GB | C3F7219BD3FD | 310   | 0     | 0.85   |
+| Kingston  | SA400S37240G       | 240 GB | B79E05A6A5B6 | 310   | 0     | 0.85   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | 0CCE394C6CC9 | 620   | 1     | 0.85   |
 | SPCC      | SSD                | 128 GB | DB071F89C041 | 310   | 0     | 0.85   |
 | Samsung   | SSD 860 EVO        | 500 GB | F3A72F3A39D7 | 310   | 0     | 0.85   |
@@ -11367,6 +11892,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SATA SSD           | 120 GB | 6290C0A10FC3 | 309   | 0     | 0.85   |
 | Kingston  | SA400S37120G       | 120 GB | C1287B1DE8B8 | 309   | 0     | 0.85   |
 | Kingston  | SV300S37A120G      | 120 GB | 478E8B0C70F4 | 927   | 2     | 0.85   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 0D659F39EE85 | 309   | 0     | 0.85   |
 | Samsung   | SSD 860 EVO        | 1 TB   | D743AA0917EF | 309   | 0     | 0.85   |
 | OCZ       | AGILITY3           | 120 GB | 83399D102AF9 | 926   | 2     | 0.85   |
 | Samsung   | SSD 860 EVO        | 250 GB | 2D2A720BE66C | 308   | 0     | 0.85   |
@@ -11378,6 +11904,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | A3DB056D8A4A | 308   | 0     | 0.85   |
 | Crucial   | CT500MX500SSD1     | 500 GB | F5905A987127 | 308   | 0     | 0.85   |
 | Samsung   | SSD 850 EVO        | 250 GB | E59D8CE41770 | 308   | 0     | 0.85   |
+| Apple     | SSD SM0128G        | 121 GB | C0FF4C36B236 | 308   | 0     | 0.85   |
 | Kingston  | SA400S37480G       | 480 GB | D18F9D33172A | 308   | 0     | 0.85   |
 | OCZ       | VERTEX3            | 64 GB  | 66337F811515 | 308   | 0     | 0.85   |
 | Samsung   | SSD 860 EVO        | 250 GB | A2E37B9FCB2C | 308   | 0     | 0.85   |
@@ -11391,6 +11918,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD6SB2M-512G-1006  | 512 GB | 7E77821B8EA2 | 308   | 0     | 0.84   |
 | WDC       | WDS480G2G0B-00EPW0 | 480 GB | 082CB3010266 | 308   | 0     | 0.84   |
 | Kingston  | SA400S37480G       | 480 GB | 0B8BCB2D2B49 | 308   | 0     | 0.84   |
+| WDC       | WDS250G2B0B-00YS70 | 250 GB | 1D74FACAE365 | 308   | 0     | 0.84   |
 | Kingston  | SA400S37120G       | 120 GB | 8F12DD7B74E3 | 308   | 0     | 0.84   |
 | SanDisk   | SDSSDA120G         | 120 GB | 723494240597 | 308   | 0     | 0.84   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | 401B331C6037 | 308   | 0     | 0.84   |
@@ -11399,6 +11927,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 1 TB   | 94BB7A8A83E4 | 308   | 0     | 0.84   |
 | Samsung   | SSD 850 EVO        | 250 GB | 024524A13308 | 308   | 0     | 0.84   |
 | Samsung   | SSD 850 EVO        | 500 GB | B3CC824E4123 | 308   | 0     | 0.84   |
+| Crucial   | CT275MX300SSD1     | 275 GB | BAFFAEC60FB1 | 308   | 0     | 0.84   |
+| Goodram   | SSD                | 120 GB | 872BFE59BB77 | 307   | 0     | 0.84   |
 | Goodram   | SSD                | 120 GB | D58859BAFDE3 | 307   | 0     | 0.84   |
 | OCZ       | VECTOR150          | 240 GB | 1DEBA4041060 | 307   | 0     | 0.84   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 882FCBEC878E | 307   | 0     | 0.84   |
@@ -11452,10 +11982,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 04FFBC154C46 | 306   | 0     | 0.84   |
 | Kingston  | SUV300S37A120G     | 120 GB | 0DF79338D43B | 306   | 0     | 0.84   |
 | Samsung   | SSD 850 EVO        | 250 GB | AD885AA66002 | 306   | 0     | 0.84   |
+| Apacer    | AS350              | 128 GB | BF66E7D16BD7 | 306   | 0     | 0.84   |
 | Samsung   | MZMTE256HMHP-00000 | 256 GB | B587CFEDB6C5 | 306   | 0     | 0.84   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 9C337116AC36 | 306   | 0     | 0.84   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | AE4B48ED8398 | 306   | 0     | 0.84   |
 | Intel     | SSDSC2BA400G4      | 400 GB | D84A08CDE0ED | 306   | 0     | 0.84   |
+| Samsung   | MZ7PD256HAFV-000H7 | 256 GB | FC57DAA31F78 | 306   | 0     | 0.84   |
 | SanDisk   | SSD PLUS 240 GB    | 240 GB | 0230FBA52382 | 306   | 0     | 0.84   |
 | Kingston  | SA400S37480G       | 480 GB | EA25B4C558A5 | 306   | 0     | 0.84   |
 | Samsung   | MZRPC128HACD-000SO | 64 GB  | 2733EEA9ECE8 | 306   | 0     | 0.84   |
@@ -11465,6 +11997,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ128GMCT      | 128 GB | 7A6CEDC11DD5 | 306   | 0     | 0.84   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 28CD77990C0C | 305   | 0     | 0.84   |
 | Samsung   | SSD PM871b M.2 ... | 128 GB | 56A2D8C298AB | 305   | 0     | 0.84   |
+| Samsung   | SSD 860 EVO        | 1 TB   | 681930CF3BBE | 305   | 0     | 0.84   |
 | Micron    | 1300 SATA          | 1 TB   | 0DEE82657568 | 305   | 0     | 0.84   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 73F558526059 | 305   | 0     | 0.84   |
 | Kingston  | SH103S3120G        | 120 GB | 2160DA831F7B | 1528  | 4     | 0.84   |
@@ -11472,7 +12005,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A480G      | 480 GB | F29EF78670FC | 305   | 0     | 0.84   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 02EF3D169B01 | 305   | 0     | 0.84   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 2C83C7BCD988 | 305   | 0     | 0.84   |
+| Kingston  | SV300S37A120G      | 120 GB | E8D69F5F66BB | 305   | 0     | 0.84   |
 | Apple     | SSD SM0512F        | 500 GB | 535A6C8027A8 | 305   | 0     | 0.84   |
+| Samsung   | SSD 860 EVO        | 1 TB   | AE010036FA21 | 305   | 0     | 0.84   |
 | Apacer    | AS350              | 512 GB | A2A2232B3FB8 | 305   | 0     | 0.84   |
 | Intel     | SSDSC2KB960G8      | 960 GB | B05DB539CE37 | 305   | 0     | 0.84   |
 | Smartbuy  | SSD                | 240 GB | E5B9725CE73F | 305   | 0     | 0.84   |
@@ -11516,11 +12051,13 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT250MX500SSD1     | 250 GB | 70DBB2397DAF | 304   | 0     | 0.83   |
 | ADATA     | SP600              | 128 GB | DCF8C0E79021 | 304   | 0     | 0.83   |
 | China     | SATA SSD           | 120 GB | AF592646ACFB | 304   | 0     | 0.83   |
+| Samsung   | SSD 860 EVO M.2    | 250 GB | 6FCFF21B5FD6 | 304   | 0     | 0.83   |
 | Samsung   | SSD 850 EVO        | 500 GB | 41116A350135 | 304   | 0     | 0.83   |
 | Samsung   | SSD CM871 M.2 2280 | 128 GB | 487213536D4D | 304   | 0     | 0.83   |
 | Transcend | TS1TSSD230S        | 1 TB   | EE7AA67DD470 | 304   | 0     | 0.83   |
 | Crucial   | C300-CTFDDAC128MAG | 128 GB | 41B1257E1A69 | 303   | 0     | 0.83   |
 | Lite-On   | L8H-128V2G-HP      | 128 GB | 8C2B27D35DAD | 303   | 0     | 0.83   |
+| EMTEC     | X150               | 480 GB | C09FB7B41DBD | 303   | 0     | 0.83   |
 | Kingston  | SA400S37120G       | 120 GB | E6E71C57C2DD | 303   | 0     | 0.83   |
 | Samsung   | SSD 860 EVO        | 250 GB | EE8E1BB317D8 | 303   | 0     | 0.83   |
 | Samsung   | SSD 860 EVO mSATA  | 1 TB   | 719893420B45 | 303   | 0     | 0.83   |
@@ -11538,6 +12075,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 960GB SSD    | 960 GB | 0ECC38E7EBA0 | 303   | 0     | 0.83   |
 | Micron    | 1100_MTFDDAK2T0TBN | 2 TB   | 95A2559E4CE4 | 303   | 0     | 0.83   |
 | Kingston  | SV300S37A60G       | 64 GB  | F6AE1CC557DB | 303   | 0     | 0.83   |
+| SanDisk   | SSD U100           | 24 GB  | 5066D2490C0F | 303   | 0     | 0.83   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | 1AF0D4A738E8 | 303   | 0     | 0.83   |
 | Toshiba   | THNSNC128GBSJ      | 128 GB | 42EFA060FFDB | 303   | 0     | 0.83   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 384B14F20A79 | 303   | 0     | 0.83   |
@@ -11556,11 +12094,13 @@ MTBF - avg. MTBF in years per sample.
 | Pioneer   | APS-SL3N-512       | 512 GB | 64ADCA85A536 | 303   | 0     | 0.83   |
 | Corsair   | Force 3 SSD        | 120 GB | FD3F1AA52CBF | 303   | 0     | 0.83   |
 | Kingston  | SMS100S264G        | 64 GB  | A38746818CA2 | 303   | 0     | 0.83   |
+| Lexar     | 240GB SSD          | 240 GB | 0A5DE8B830E9 | 303   | 0     | 0.83   |
 | Kingston  | SH100S3240G        | 240 GB | AFA1AD72E5B7 | 908   | 2     | 0.83   |
 | Toshiba   | THNSNJ256GVNU      | 256 GB | 849CD0A74984 | 302   | 0     | 0.83   |
 | Kingston  | SA400S37120G       | 120 GB | 82BEE862B258 | 302   | 0     | 0.83   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | F7520DB38E6A | 302   | 0     | 0.83   |
 | Samsung   | SSD 840 EVO        | 250 GB | D76BDFE02738 | 302   | 0     | 0.83   |
+| SanDisk   | SSD U110           | 16 GB  | A5AE82276B24 | 302   | 0     | 0.83   |
 | Lite-On   | CV3-8D256-11 SATA  | 256 GB | B605EF4521C3 | 302   | 0     | 0.83   |
 | Samsung   | SSD 860 EVO        | 500 GB | 4EA57AF493A8 | 302   | 0     | 0.83   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | DE7C68C91A58 | 302   | 0     | 0.83   |
@@ -11575,6 +12115,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SKC300S37A120G     | 120 GB | 2D3DFFE09903 | 302   | 0     | 0.83   |
 | Kingston  | SV100S232G         | 32 GB  | C14DFF8E7431 | 302   | 0     | 0.83   |
 | Maxtor    | Z1 SSD             | 240 GB | 7611B6B8DF23 | 302   | 0     | 0.83   |
+| PNY       | CS900 240GB SSD    | 240 GB | 3E19B47169F0 | 302   | 0     | 0.83   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | BCE68F66CDD3 | 302   | 0     | 0.83   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 11F86E29A871 | 302   | 0     | 0.83   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 0C6DB6ACE86A | 302   | 0     | 0.83   |
@@ -11582,6 +12123,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX200SSD1     | 240 GB | DFA91EE9BBF0 | 302   | 0     | 0.83   |
 | Micron    | 5300_MTFDDAK960TDT | 960 GB | E4464407D51F | 302   | 0     | 0.83   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | F6C55F42D9F4 | 302   | 0     | 0.83   |
+| WDC       | WDS500G2B0B-00YS70 | 500 GB | 624C31DBE139 | 302   | 0     | 0.83   |
 | SanDisk   | SSD PLUS           | 120 GB | 4C405435AFFA | 302   | 0     | 0.83   |
 | Micron    | C400-MTFDDAC064MAM | 64 GB  | 89EB29E114CC | 302   | 0     | 0.83   |
 | Samsung   | MZ7TY128HDHP-000L1 | 128 GB | A16CE9A71844 | 302   | 0     | 0.83   |
@@ -11620,6 +12162,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LN256HCHP-000L7 | 256 GB | 884F937BEA23 | 301   | 0     | 0.83   |
 | Samsung   | SSD 850 EVO        | 250 GB | 7105C3B22FFA | 301   | 0     | 0.83   |
 | ADATA     | SU650              | 120 GB | 350313ED190F | 301   | 0     | 0.83   |
+| Kingston  | SUV400S37240G      | 240 GB | 0BBB20CD9BBE | 903   | 2     | 0.83   |
 | Samsung   | SSD 850 EVO        | 250 GB | A3BEBB467847 | 301   | 0     | 0.82   |
 | Goodram   | SSD                | 240 GB | DF289194FCA9 | 301   | 0     | 0.82   |
 | Samsung   | SSD 860 EVO        | 1 TB   | F27350555543 | 301   | 0     | 0.82   |
@@ -11681,6 +12224,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD SM0128G        | 121 GB | 78B5F05AF4D1 | 299   | 0     | 0.82   |
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | 22DF9E3CC44C | 299   | 0     | 0.82   |
 | ADATA     | SP800              | 32 GB  | 24B132C7A548 | 299   | 0     | 0.82   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | D8442AD82191 | 299   | 0     | 0.82   |
 | Samsung   | SSD 850 EVO        | 250 GB | 781FDE018D88 | 299   | 0     | 0.82   |
 | Ramsta    | SSD S800           | 120 GB | 871CAA69B52C | 299   | 0     | 0.82   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | A86A056A64C6 | 299   | 0     | 0.82   |
@@ -11703,11 +12247,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 240 GB | 116B27B28302 | 597   | 1     | 0.82   |
 | Kingston  | SA400S37120G       | 120 GB | 44E3422F884C | 298   | 0     | 0.82   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | A80E504DF33C | 298   | 0     | 0.82   |
+| SanDisk   | SD7SN6S-128G-1006  | 128 GB | F968FFDC732F | 298   | 0     | 0.82   |
 | SanDisk   | SD8TB8U256G1001    | 256 GB | FD2153DF3B5F | 298   | 0     | 0.82   |
 | Toshiba   | TR150              | 960 GB | BAC9B69E45A1 | 298   | 0     | 0.82   |
 | Apple     | SSD SM0128G        | 121 GB | 98BB9BE07D53 | 298   | 0     | 0.82   |
 | Samsung   | MZMPC128HBFU-00000 | 128 GB | 4F59DD56576D | 298   | 0     | 0.82   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 9C49D51F7C1B | 298   | 0     | 0.82   |
+| Kingston  | SV300S37A120G      | 120 GB | 658751B3C9BC | 298   | 0     | 0.82   |
 | Samsung   | MZ7LM480HMHQ-000MV | 480 GB | 5A7BCBEE9372 | 298   | 0     | 0.82   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 3A87E58C0F2B | 298   | 0     | 0.82   |
 | Kingston  | SUV500120G         | 120 GB | 16550D435220 | 298   | 0     | 0.82   |
@@ -11759,6 +12305,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7TY128HDHP-00000 | 128 GB | DE296554ED6F | 296   | 0     | 0.81   |
 | SanDisk   | SSD G5 BICS4       | 500 GB | 2472168CFA88 | 296   | 0     | 0.81   |
 | Apple     | SSD SM0256G        | 256 GB | 70F133B817CC | 296   | 0     | 0.81   |
+| Samsung   | MZ7LN256HCHP-000L7 | 256 GB | C96DCB0BAA50 | 296   | 0     | 0.81   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | C57ED84735A8 | 296   | 0     | 0.81   |
 | Samsung   | SSD 850 EVO        | 500 GB | C2581488E8C7 | 296   | 0     | 0.81   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 979CD0475418 | 296   | 0     | 0.81   |
@@ -11768,13 +12315,16 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 53843B0B3577 | 296   | 0     | 0.81   |
 | SanDisk   | SDSSDH31000G       | 1 TB   | 405FAD2B26A4 | 296   | 0     | 0.81   |
 | Kingston  | SV300S37A60G       | 64 GB  | 5FBC2077D9C4 | 296   | 0     | 0.81   |
+| Samsung   | SSD 850 EVO M.2    | 250 GB | C902BE44AD15 | 296   | 0     | 0.81   |
 | Kingston  | SA400S37120G       | 120 GB | 725C23624097 | 296   | 0     | 0.81   |
+| Kingston  | SA400S37240G       | 240 GB | 2F46D0D94FC6 | 296   | 0     | 0.81   |
 | Intel     | SSDSC2BF180A5      | 180 GB | 0C2F2A869CD9 | 2369  | 7     | 0.81   |
 | Crucial   | CT240BX500SSD1     | 240 GB | AE094C40B0E8 | 296   | 0     | 0.81   |
 | SanDisk   | SD7SB2Q-512G-1006  | 512 GB | A7D67DCF0F14 | 296   | 0     | 0.81   |
 | Londisk   | SSD                | 120 GB | 8A94202FF61C | 296   | 0     | 0.81   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 0E70C764A76F | 296   | 0     | 0.81   |
 | China     | SATA SSD           | 128 GB | 2AED31489D96 | 296   | 0     | 0.81   |
+| Micron    | 1100 SATA          | 256 GB | 36B9F4113B17 | 296   | 0     | 0.81   |
 | SPCC      | SSD                | 128 GB | E306A43B8324 | 296   | 0     | 0.81   |
 | SPCC      | SSD                | 240 GB | 2727D9FBDD3C | 296   | 0     | 0.81   |
 | SanDisk   | X400 M.2 2280      | 256 GB | 995E73556539 | 296   | 0     | 0.81   |
@@ -11797,6 +12347,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2CW120A3      | 120 GB | 5628D34C047E | 295   | 0     | 0.81   |
 | Patriot   | Burst              | 480 GB | 737177754EF0 | 295   | 0     | 0.81   |
 | Plextor   | PX-128M5S          | 128 GB | C96E53D91875 | 295   | 0     | 0.81   |
+| WDC       | WDBNCE5000PNC      | 500 GB | D17E8AAABB6E | 295   | 0     | 0.81   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 63B7275BE972 | 295   | 0     | 0.81   |
 | Samsung   | SSD 840 PRO Series | 256 GB | F822AFC66FDF | 1477  | 4     | 0.81   |
 | Kingston  | RBUSC180S37256GJ   | 256 GB | FE96E58B1C42 | 295   | 0     | 0.81   |
@@ -11813,6 +12364,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ256G8NY      | 256 GB | 8D63E6B8529E | 295   | 0     | 0.81   |
 | Samsung   | SSD 850 EVO        | 250 GB | B5CAE4044C21 | 294   | 0     | 0.81   |
 | Kingston  | SV300S37A120G      | 120 GB | 5277A6A81E44 | 294   | 0     | 0.81   |
+| Samsung   | SSD 860 EVO        | 250 GB | A9B89E69E564 | 294   | 0     | 0.81   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 5F04128AF587 | 294   | 0     | 0.81   |
 | SanDisk   | SDSSDHII240G       | 240 GB | 425C90FB4201 | 294   | 0     | 0.81   |
 | Samsung   | MZ7KM960HMJP-00005 | 960 GB | 009086AEA2DD | 294   | 0     | 0.81   |
@@ -11823,6 +12375,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZAPF032HCFV-000H1 | 32 GB  | D28073C9DEF1 | 294   | 0     | 0.81   |
 | Samsung   | SSD 840 EVO        | 120 GB | D67ECD96DD36 | 294   | 0     | 0.81   |
 | Samsung   | SSD 850 EVO        | 250 GB | 4E7C4CF8AE14 | 294   | 0     | 0.81   |
+| Toshiba   | TR200              | 240 GB | 152854AE262E | 294   | 0     | 0.81   |
 | Samsung   | Portable SSD T5    | 250 GB | AED7C53441A6 | 294   | 0     | 0.81   |
 | Samsung   | SSD 840 EVO        | 120 GB | BCB011BE6B81 | 294   | 0     | 0.81   |
 | Samsung   | SSD 860 EVO        | 500 GB | 3C1B304074D8 | 294   | 0     | 0.81   |
@@ -11845,10 +12398,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNTY256HDHP-000L7 | 256 GB | E975996A49A8 | 293   | 0     | 0.80   |
 | Samsung   | SSD 850 EVO        | 1 TB   | AC64B213CFFB | 293   | 0     | 0.80   |
 | Palit     | UVSE               | 120 GB | 081FB45F1F73 | 293   | 0     | 0.80   |
+| Samsung   | SSD 840 Series     | 250 GB | 5CEFA1A3BA58 | 293   | 0     | 0.80   |
 | Samsung   | SSD 860 EVO        | 500 GB | 28DAB00DC39B | 293   | 0     | 0.80   |
 | SanDisk   | SDSSDHII120G       | 120 GB | 8B6244304CA6 | 293   | 0     | 0.80   |
 | SPCC      | SSD                | 120 GB | FA5A469D5F1B | 293   | 0     | 0.80   |
 | Samsung   | SSD 850 EVO        | 250 GB | 80266C8915E2 | 293   | 0     | 0.80   |
+| Samsung   | MZNLN256HCHP-000L7 | 256 GB | 00A8CAC5C8C6 | 293   | 0     | 0.80   |
 | Kingston  | SNVP325S2256GB     | 256 GB | 2EE9FB223553 | 293   | 0     | 0.80   |
 | Kingston  | SUV500240G         | 240 GB | 4BCD73D22E1D | 293   | 0     | 0.80   |
 | Kingston  | SA400S37480G       | 480 GB | 5C640EDA2288 | 293   | 0     | 0.80   |
@@ -11925,6 +12480,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 628FCD71EABB | 290   | 0     | 0.80   |
 | SanDisk   | SDSSDA120G         | 120 GB | 311A547E497D | 290   | 0     | 0.80   |
 | SanDisk   | SSD PLUS           | 480 GB | 37DE1586529B | 581   | 1     | 0.80   |
+| Intel     | SSDSC2CT180A3      | 180 GB | 16E9549E9093 | 290   | 0     | 0.80   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 2AABBE94ECAF | 290   | 0     | 0.80   |
 | LDLC      | SSD                | 120 GB | B80B97D0FFCB | 290   | 0     | 0.80   |
 | Samsung   | MZMTE256HMHP-00000 | 256 GB | 52084031DB05 | 290   | 0     | 0.80   |
@@ -11940,14 +12496,17 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | 6D648E02D567 | 290   | 0     | 0.80   |
 | Kingston  | SA400S37120G       | 120 GB | C2AEF2C695EE | 290   | 0     | 0.80   |
 | Seagate   | SSD                | 1 TB   | 86AE6F163751 | 290   | 0     | 0.80   |
+| Samsung   | SSD PM800 2.5"     | 128 GB | 2F2B70CCC0D2 | 290   | 0     | 0.80   |
 | SanDisk   | SD8TN8U256G1001    | 256 GB | 6D82BA2F8862 | 290   | 0     | 0.80   |
 | AMD       | R5M120G8           | 120 GB | 253AD6529F9B | 290   | 0     | 0.80   |
 | Samsung   | SSD 850 PRO        | 256 GB | 04899321A4B1 | 290   | 0     | 0.80   |
 | Samsung   | SSD 860 EVO        | 250 GB | 59CE04583473 | 290   | 0     | 0.80   |
 | Kingston  | SV300S37A240G      | 240 GB | 06D25607354F | 290   | 0     | 0.80   |
 | Kingston  | SA400M8240G        | 240 GB | 3601B56CB89B | 290   | 0     | 0.80   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 805E574D22B1 | 290   | 0     | 0.80   |
 | ADATA     | SU650              | 120 GB | 775D12FDE649 | 290   | 0     | 0.80   |
 | Samsung   | SSD 860 EVO        | 250 GB | 6B2F87A08D4C | 290   | 0     | 0.80   |
+| Apple     | SSD SM0256G        | 256 GB | 754361F22DBC | 290   | 0     | 0.80   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 38C695C95F45 | 290   | 0     | 0.80   |
 | Apple     | SSD SD128E         | 121 GB | 7C6567FFF634 | 290   | 0     | 0.80   |
 | SK hynix  | SC311 SATA         | 128 GB | 042C783EE1A4 | 290   | 0     | 0.80   |
@@ -11971,6 +12530,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | C4C46A57CF39 | 289   | 0     | 0.79   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | 1B274B364526 | 289   | 0     | 0.79   |
 | China     | SATA3 240GB SSD    | 240 GB | B96A725D3921 | 289   | 0     | 0.79   |
+| SK hynix  | HFS512G39MND-3510A | 512 GB | 3B4CE4EF4FE4 | 289   | 0     | 0.79   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | ADB75896FEDF | 289   | 0     | 0.79   |
 | Toshiba   | THNSNF128GCSS      | 128 GB | A3DC7D286AE7 | 289   | 0     | 0.79   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | BA58A147AE64 | 289   | 0     | 0.79   |
@@ -11992,6 +12552,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD6SB1M256G1002    | 256 GB | 1D10C426F3F7 | 288   | 0     | 0.79   |
 | ADATA     | SU655              | 240 GB | 0163B68C5427 | 288   | 0     | 0.79   |
 | Kingston  | SUV400S37120G      | 120 GB | 926D41B1A485 | 288   | 0     | 0.79   |
+| Samsung   | SSD 860 EVO        | 500 GB | 22728888B66C | 288   | 0     | 0.79   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 8C0C5D4D9AEE | 288   | 0     | 0.79   |
 | Samsung   | SSD 850 EVO        | 250 GB | 777529563310 | 288   | 0     | 0.79   |
 | SanDisk   | SDSSDH3500G        | 500 GB | 2558DEDE2907 | 288   | 0     | 0.79   |
@@ -12040,11 +12601,13 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | 2CA7AE28BB4D | 287   | 0     | 0.79   |
 | Toshiba   | TR200              | 240 GB | 982323D25643 | 287   | 0     | 0.79   |
 | Samsung   | SSD 860 EVO        | 250 GB | 4E1951684342 | 287   | 0     | 0.79   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 9A1CE8F6D577 | 287   | 0     | 0.79   |
 | Kingston  | SV300S37A120G      | 120 GB | 2C388454B79D | 287   | 0     | 0.79   |
 | China     | SSD                | 64 GB  | 7574AA74E7CD | 286   | 0     | 0.79   |
 | Crucial   | CT480BX500SSD1     | 480 GB | F7E28EA67138 | 286   | 0     | 0.79   |
 | Samsung   | SSD 850 EVO        | 120 GB | 14EF982D64F3 | 286   | 0     | 0.79   |
 | SanDisk   | SSD i100           | 24 GB  | ED20987530DA | 286   | 0     | 0.79   |
+| Kingston  | SA400S37480G       | 480 GB | 4A9D5314F52C | 286   | 0     | 0.79   |
 | ADATA     | SU800NS38          | 128 GB | DE2F7C2B3CDA | 286   | 0     | 0.79   |
 | Crucial   | CT525MX300SSD1     | 528 GB | D813E385B22D | 286   | 0     | 0.79   |
 | Samsung   | SSD 850 EVO        | 250 GB | 9A6BEE2164B7 | 286   | 0     | 0.79   |
@@ -12107,7 +12670,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 9FA45CCCB528 | 285   | 0     | 0.78   |
 | Kingston  | SA400S37120G       | 120 GB | 1B5F1B0EECD3 | 285   | 0     | 0.78   |
 | Kingston  | SV300S37A120G      | 120 GB | 96DB893412F1 | 285   | 0     | 0.78   |
+| ADATA     | SU800              | 256 GB | 6545DA1E2A1E | 285   | 0     | 0.78   |
 | KingSpec  | NT-1TB             | 1 TB   | 5743C5FB5713 | 285   | 0     | 0.78   |
+| Samsung   | SSD 860 EVO        | 500 GB | AE3FC8A507FE | 285   | 0     | 0.78   |
 | Kingston  | SV300S37A120G      | 120 GB | AEDB65B0A63F | 285   | 0     | 0.78   |
 | Lenovo    | Thinklife ST600... | 256 GB | 8F34E39AAC29 | 285   | 0     | 0.78   |
 | SanDisk   | SDSSDH31024G       | 1 TB   | 95EB241F285E | 285   | 0     | 0.78   |
@@ -12197,6 +12762,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 016416C7481E | 282   | 0     | 0.77   |
 | Kingston  | SA400S37480G       | 480 GB | D8E560C3014E | 282   | 0     | 0.77   |
 | Samsung   | SSD 860 EVO        | 250 GB | 98AD0EAC03C5 | 282   | 0     | 0.77   |
+| Samsung   | SSD 860 EVO        | 250 GB | 130BB46F5427 | 282   | 0     | 0.77   |
 | Samsung   | SSD 860 EVO        | 250 GB | 20CEAC531043 | 282   | 0     | 0.77   |
 | Patriot   | Burst              | 480 GB | 3D713A1E7FE8 | 282   | 0     | 0.77   |
 | SanDisk   | SDSSDHII120G       | 120 GB | DAD2719921FE | 282   | 0     | 0.77   |
@@ -12226,6 +12792,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 25EABA094067 | 281   | 0     | 0.77   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | F08E66FAA334 | 281   | 0     | 0.77   |
 | Samsung   | Portable SSD T5    | 500 GB | 3BF3B8DA6F2A | 281   | 0     | 0.77   |
+| Toshiba   | KSG60ZMV256G M.... | 256 GB | A43E75BEBF2A | 281   | 0     | 0.77   |
 | Kingston  | SA400S37480G       | 480 GB | EEFCE1680FA9 | 281   | 0     | 0.77   |
 | Samsung   | SSD 870 EVO        | 250 GB | 60338B7F5B00 | 281   | 0     | 0.77   |
 | SanDisk   | SDSSDA-1T00        | 1 TB   | 556CB1436220 | 281   | 0     | 0.77   |
@@ -12254,8 +12821,11 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC311 SATA         | 256 GB | 755ED09A4464 | 280   | 0     | 0.77   |
 | Samsung   | SSD 860 EVO        | 500 GB | 14BEF09EA2BF | 280   | 0     | 0.77   |
 | Lite-On   | CV1-8B256          | 256 GB | AEFC302C5811 | 280   | 0     | 0.77   |
+| PNY       | CS900 1TB SSD      | 1 TB   | 6657DBAB14D0 | 280   | 0     | 0.77   |
+| Netac     | SSD                | 1 TB   | 9DE99A61137C | 280   | 0     | 0.77   |
 | Apacer    | AST680S            | 128 GB | 9392543C8CC1 | 280   | 0     | 0.77   |
 | OCZ       | VERTEX             | 64 GB  | F1DD9DEA921E | 280   | 0     | 0.77   |
+| WDC       | WDS120G2G0A-00JH30 | 120 GB | 4C3AE9389DD1 | 561   | 1     | 0.77   |
 | Samsung   | MZ7TE128HMGR-000L1 | 128 GB | 4C7B3A481D98 | 280   | 0     | 0.77   |
 | China     | SSD                | 64 GB  | 02C9B6A5A18F | 280   | 0     | 0.77   |
 | Samsung   | SSD 860 QVO        | 1 TB   | A307C94CF40B | 280   | 0     | 0.77   |
@@ -12264,6 +12834,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 128 GB | 01705F5738AC | 280   | 0     | 0.77   |
 | SanDisk   | SSD PLUS           | 480 GB | 71351D0BEB98 | 280   | 0     | 0.77   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 6C36DF43736C | 280   | 0     | 0.77   |
+| Apple     | SSD SM0256G        | 256 GB | CB688D8E30EB | 280   | 0     | 0.77   |
 | Samsung   | MZ7TY128HDHP-000L1 | 128 GB | A676C90CFEC5 | 280   | 0     | 0.77   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1EA76EB99874 | 280   | 0     | 0.77   |
 | Samsung   | SSD PM830 mSATA    | 32 GB  | DCF52EE21DFF | 280   | 0     | 0.77   |
@@ -12275,6 +12846,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDHII120G       | 120 GB | F715ECF3AE78 | 280   | 0     | 0.77   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 6BFD460AE7E9 | 280   | 0     | 0.77   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | B90DD0A68B25 | 280   | 0     | 0.77   |
+| Kingston  | SA400S37120G       | 120 GB | D7D2F70D1A82 | 280   | 0     | 0.77   |
 | Samsung   | MZ7TE128HMGR-000H1 | 128 GB | 633DF86FDD60 | 279   | 0     | 0.77   |
 | Samsung   | SSD 860 EVO        | 500 GB | CE99404B21B8 | 279   | 0     | 0.77   |
 | SanDisk   | SSD PLUS           | 1 TB   | 8B2FECDB8DB6 | 279   | 0     | 0.77   |
@@ -12289,6 +12861,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC311 SATA         | 256 GB | 2D1E4340363B | 279   | 0     | 0.77   |
 | Samsung   | SSD 850 EVO        | 250 GB | C082DFE0C4E6 | 279   | 0     | 0.77   |
 | Samsung   | SSD 860 EVO        | 250 GB | 35A3FB38B252 | 279   | 0     | 0.77   |
+| Crucial   | CT256MX100SSD1     | 256 GB | C4E0DBBACCC6 | 279   | 0     | 0.77   |
 | Kingston  | SA400S37120G       | 120 GB | C518A8D910F3 | 279   | 0     | 0.77   |
 | Samsung   | SSD 840 Series     | 250 GB | EFD3A92CA43A | 279   | 0     | 0.77   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 39642144653A | 279   | 0     | 0.77   |
@@ -12299,6 +12872,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV3-8D256-11 SATA  | 256 GB | E97870F37B29 | 279   | 0     | 0.77   |
 | Kingston  | SV100S232G         | 32 GB  | C7734F090125 | 279   | 0     | 0.77   |
 | Patriot   | Burst              | 240 GB | B8FFED38B0CF | 279   | 0     | 0.77   |
+| Samsung   | SSD 850 EVO        | 500 GB | 46BA5667D036 | 279   | 0     | 0.77   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 17A87A6929DE | 279   | 0     | 0.77   |
 | Apple     | SSD SM0128G        | 121 GB | 4D056EEF6E03 | 279   | 0     | 0.77   |
 | Samsung   | SSD 850 PRO        | 1 TB   | 4356ABB9B53E | 279   | 0     | 0.77   |
@@ -12328,6 +12902,8 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 42467D975C9F | 278   | 0     | 0.76   |
 | Samsung   | SSD 860 EVO        | 500 GB | 80C91B703E69 | 278   | 0     | 0.76   |
 | Kingston  | SA400S37240G       | 240 GB | 9A714898D5DD | 278   | 0     | 0.76   |
+| Kingston  | SA400S37480G       | 480 GB | A4C0C9215F8D | 278   | 0     | 0.76   |
+| Samsung   | SSD CM871 2.5 7mm  | 128 GB | 9B6B533B1D63 | 278   | 0     | 0.76   |
 | Intel     | SSDSC2BW240A3L     | 240 GB | 3E5F2E0F2A83 | 278   | 0     | 0.76   |
 | SanDisk   | SDSSDA240G         | 240 GB | 4814EE343C36 | 278   | 0     | 0.76   |
 | SanDisk   | SSD PLUS           | 480 GB | 53E7DFEB0839 | 278   | 0     | 0.76   |
@@ -12384,10 +12960,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | F4E1BDFE6853 | 276   | 0     | 0.76   |
 | SanDisk   | SDSSDP128G         | 128 GB | 8A0C4C48237E | 276   | 0     | 0.76   |
 | ASENNO    | AS25               | 240 GB | 8FB74B52B27B | 276   | 0     | 0.76   |
+| HP        | SSD S700           | 120 GB | 18B3B6B79678 | 276   | 0     | 0.76   |
 | Samsung   | MZMTD256HAGM-000L1 | 256 GB | C554E4AF62D4 | 276   | 0     | 0.76   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 1405B5191AB1 | 276   | 0     | 0.76   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 02C1E44F6FB7 | 276   | 0     | 0.76   |
 | SanDisk   | SDSSDA-1T00        | 1 TB   | 98FB14E2D3C0 | 276   | 0     | 0.76   |
 | Samsung   | SSD 860 EVO        | 2 TB   | E8145EF4422B | 276   | 0     | 0.76   |
+| Crucial   | CT512MX100SSD1     | 512 GB | 3B66BB059AE8 | 276   | 0     | 0.76   |
 | Crucial   | M4-CT128M4SSD1     | 128 GB | 7394CCEC6918 | 276   | 0     | 0.76   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1A771B895674 | 276   | 0     | 0.76   |
 | Samsung   | SSD 860 EVO        | 250 GB | F73F81112CEB | 276   | 0     | 0.76   |
@@ -12397,6 +12976,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC308 SATA         | 128 GB | 2D53E98B6AB5 | 276   | 0     | 0.76   |
 | Samsung   | SSD 840 PRO Series | 128 GB | 34E6A536C175 | 276   | 0     | 0.76   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 5A7FA58B39B4 | 276   | 0     | 0.76   |
+| PNY       | CS900 500GB SSD    | 500 GB | 9DA7F959D16E | 275   | 0     | 0.76   |
 | Team      | T253X2128G         | 128 GB | FEB5BE1F630C | 275   | 0     | 0.76   |
 | Crucial   | CT500MX500SSD4     | 500 GB | A572814F2851 | 275   | 0     | 0.76   |
 | OCZ       | VERTEX4            | 128 GB | 161965C0541F | 275   | 0     | 0.76   |
@@ -12410,6 +12990,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | X400 2.5 7MM       | 256 GB | A56145DB209D | 275   | 0     | 0.76   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | 867431BA4A3D | 275   | 0     | 0.76   |
 | Kingston  | SV300S37A120G      | 120 GB | 843BB1ACC63B | 275   | 0     | 0.75   |
+| OCZ       | AGILITY3           | 240 GB | 098710877046 | 275   | 0     | 0.75   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 84C9DF87FC25 | 275   | 0     | 0.75   |
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | E4F21F65683D | 826   | 2     | 0.75   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 94AE419F5A0C | 275   | 0     | 0.75   |
@@ -12454,6 +13035,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | 16101740E75B | 274   | 0     | 0.75   |
 | Kingston  | SA400S37480G       | 480 GB | 7C8A424F943B | 274   | 0     | 0.75   |
 | Crucial   | CT240M500SSD1      | 240 GB | 90339A96DDC8 | 274   | 0     | 0.75   |
+| Kingston  | SA400S37120G       | 120 GB | 458CE64E9727 | 274   | 0     | 0.75   |
 | Kingmax   | SSD                | 120 GB | 4D968795EC63 | 274   | 0     | 0.75   |
 | Kingston  | SH103S3120G        | 120 GB | 36AD8D55C90D | 1370  | 4     | 0.75   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 3349891F0F91 | 274   | 0     | 0.75   |
@@ -12502,6 +13084,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 1 TB   | DFDBC76F3054 | 273   | 0     | 0.75   |
 | Crucial   | CT525MX300SSD1     | 528 GB | C7A97B11C3C0 | 273   | 0     | 0.75   |
 | Samsung   | SSD 860 EVO        | 250 GB | FF58956AA1A5 | 273   | 0     | 0.75   |
+| Apple     | SSD SM0256F        | 256 GB | 802DBD74F7E8 | 273   | 0     | 0.75   |
 | Kingston  | SHSS37A120G        | 120 GB | 05A4FA7F62B3 | 273   | 0     | 0.75   |
 | Samsung   | SSD 850 EVO        | 1 TB   | CCA6984746A5 | 273   | 0     | 0.75   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 8BCC6471D8A4 | 273   | 0     | 0.75   |
@@ -12511,6 +13094,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | ACCD8A4AA6DC | 272   | 0     | 0.75   |
 | Apple     | SSD SM0256F        | 256 GB | A95552415EF3 | 272   | 0     | 0.75   |
 | SanDisk   | X300 MSATA         | 256 GB | 3CFDDC45A863 | 272   | 0     | 0.75   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 532E8750C86F | 272   | 0     | 0.75   |
 | Kingston  | SA400S37120G       | 120 GB | 0545D7D21013 | 272   | 0     | 0.75   |
 | China     | SATA3 1TB SSD      | 1 TB   | E493248B9912 | 272   | 0     | 0.75   |
 | Samsung   | SSD 840 EVO        | 250 GB | 9765EAFC5121 | 272   | 0     | 0.75   |
@@ -12531,6 +13115,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS256G39MND-3310A | 256 GB | 93B6291CF3AD | 272   | 0     | 0.75   |
 | Kingston  | SUV500240G         | 240 GB | 6687E9C6ED5B | 272   | 0     | 0.75   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | F6ABDCE041F8 | 272   | 0     | 0.75   |
+| Lexar     | SSD                | 128 GB | 6EBD3ED5A5B3 | 272   | 0     | 0.75   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 6B58EE1A78B6 | 272   | 0     | 0.75   |
 | Samsung   | SSD 850 EVO        | 250 GB | E4C7E744227F | 272   | 0     | 0.75   |
 | Plextor   | PX-128S3C          | 128 GB | 0CFBD1585A07 | 272   | 0     | 0.75   |
@@ -12559,10 +13144,12 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | IT LCS-128L9S-HP   | 128 GB | BDB7041814D4 | 271   | 0     | 0.74   |
 | Samsung   | MZNLN512HAJQ-00007 | 512 GB | 0B93E0EF4FAE | 271   | 0     | 0.74   |
 | Kingston  | SV300S37A120G      | 120 GB | 5C1466A5E7D5 | 814   | 2     | 0.74   |
+| SanDisk   | SD9SN8W-128G-1006  | 128 GB | 0A2C209C87D3 | 271   | 0     | 0.74   |
 | MyDigi... | SC2 M2 SSD         | 120 GB | DAA87A9C296E | 271   | 0     | 0.74   |
 | PNY       | CS900 500GB SSD    | 500 GB | 24E4FFA3EA61 | 271   | 0     | 0.74   |
 | ADATA     | SU800              | 128 GB | 7EFD03A05F5A | 271   | 0     | 0.74   |
 | Kingston  | SHFR200480G        | 480 GB | DE93C2DF51BC | 271   | 0     | 0.74   |
+| SanDisk   | SDSSDH3 500G       | 500 GB | 7AE42F16DA06 | 271   | 0     | 0.74   |
 | Samsung   | SSD 750 EVO        | 250 GB | 02E2F06D2E6D | 271   | 0     | 0.74   |
 | Samsung   | SSD 850 EVO        | 1 TB   | A456AE814416 | 271   | 0     | 0.74   |
 | Samsung   | SSD 850 EVO        | 500 GB | E9DF4D4A0865 | 271   | 0     | 0.74   |
@@ -12585,6 +13172,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD SD0128F        | 121 GB | 9B33F3B3A12C | 270   | 0     | 0.74   |
 | Kingston  | SA400S37120G       | 120 GB | 6EF41B8C0392 | 270   | 0     | 0.74   |
 | Samsung   | SSD 860 EVO        | 250 GB | EC8CB76AE2F4 | 270   | 0     | 0.74   |
+| Apacer    | AS350              | 120 GB | B0267A1B4E5A | 270   | 0     | 0.74   |
 | China     | SATA SSD           | 120 GB | 058069D38FF0 | 270   | 0     | 0.74   |
 | Samsung   | MZMPC256HBGJ-00000 | 256 GB | 3C05810452DE | 270   | 0     | 0.74   |
 | Samsung   | MZ7LN512HCHP-000L1 | 512 GB | A8BBD3198081 | 270   | 0     | 0.74   |
@@ -12621,6 +13209,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD SM0512G        | 500 GB | 410B35BC4ED3 | 269   | 0     | 0.74   |
 | Kingston  | SA400S37240G       | 240 GB | 7DF15C64A9BC | 269   | 0     | 0.74   |
 | Kingston  | SUV400S37240G      | 240 GB | CB4655246282 | 269   | 0     | 0.74   |
+| WDC       | WDS120G2G0B-00EPW0 | 120 GB | 7EBDB115E82D | 269   | 0     | 0.74   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 7E7B35C204CE | 269   | 0     | 0.74   |
 | SK hynix  | HFS128G39TNF-N3A0A | 128 GB | 3E162BB87820 | 269   | 0     | 0.74   |
 | Samsung   | SSD PM830 2.5" 7mm | 128 GB | E90B8633875A | 269   | 0     | 0.74   |
@@ -12639,6 +13228,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 3CF8F42CADC0 | 269   | 0     | 0.74   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 2F12CD811282 | 268   | 0     | 0.74   |
 | PNY       | CS900 1TB SSD      | 1 TB   | 25E370E37BF4 | 268   | 0     | 0.74   |
+| Samsung   | SSD 840 PRO Series | 128 GB | 2F62005CD781 | 268   | 0     | 0.74   |
 | SanDisk   | Ultra II           | 480 GB | 52E79EF2C799 | 268   | 0     | 0.74   |
 | Kingston  | SUV300S37A120G     | 120 GB | 63CD36459E2B | 268   | 0     | 0.74   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 3E92E08EBF17 | 268   | 0     | 0.74   |
@@ -12661,6 +13251,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | DECAABCB16AA | 268   | 0     | 0.74   |
 | Crucial   | CT120BX500SSD1     | 120 GB | C613FE020BAB | 268   | 0     | 0.74   |
 | Samsung   | MZ7TE256HMHP-000L7 | 256 GB | E6ABEFD76282 | 268   | 0     | 0.74   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 0B417753D64F | 268   | 0     | 0.74   |
 | SanDisk   | SSD PLUS           | 240 GB | 1DF52A9D47CB | 268   | 0     | 0.74   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 67CB77F82A4D | 268   | 0     | 0.74   |
 | Apple     | SSD SD512E         | 500 GB | 73A2FE06566F | 268   | 0     | 0.73   |
@@ -12686,6 +13277,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX200SSD1     | 500 GB | 4EE570165F7E | 267   | 0     | 0.73   |
 | Kingston  | SA400S37120G       | 120 GB | 7F6B4EBA043E | 267   | 0     | 0.73   |
 | Kingston  | SA400S37480G       | 480 GB | B7B6A43BB9F8 | 267   | 0     | 0.73   |
+| Kingston  | SA400S37480G       | 480 GB | BCB8AD72CA77 | 267   | 0     | 0.73   |
 | Kingston  | SUV400S37240G      | 240 GB | 37F62440D196 | 267   | 0     | 0.73   |
 | PNY       | CS1311 240GB SSD   | 240 GB | A2187F699A82 | 267   | 0     | 0.73   |
 | ADATA     | SU650NS38          | 480 GB | 1D9520C30439 | 267   | 0     | 0.73   |
@@ -12720,7 +13312,10 @@ MTBF - avg. MTBF in years per sample.
 | FORESEE   | 128GB SSD          | 128 GB | 09907AF10B22 | 266   | 0     | 0.73   |
 | Samsung   | SSD 850 EVO        | 250 GB | 7D7DD6FA2725 | 266   | 0     | 0.73   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 502E350384D9 | 266   | 0     | 0.73   |
+| Kingston  | SV300S37A120G      | 120 GB | 3FFAEF43A7AB | 266   | 0     | 0.73   |
+| Kingston  | SA400S37120G       | 120 GB | C4029995A9BE | 266   | 0     | 0.73   |
 | Kingston  | SUV300S37A240G     | 240 GB | 9D6296B97276 | 266   | 0     | 0.73   |
+| SanDisk   | SDSSDA240G         | 240 GB | 6BA4E1034001 | 266   | 0     | 0.73   |
 | OCZ       | VERTEX v1.10       | 64 GB  | B35A365C2B66 | 800   | 2     | 0.73   |
 | China     | 64GB SSD           | 64 GB  | 7BA9BF2D1F2A | 266   | 0     | 0.73   |
 | SanDisk   | SD8SN8U128G1001    | 128 GB | 6D823A8D0998 | 266   | 0     | 0.73   |
@@ -12784,6 +13379,8 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 4928A1F507CF | 265   | 0     | 0.73   |
 | Samsung   | SSD 850 EVO        | 250 GB | AA2C1C6628B1 | 795   | 2     | 0.73   |
 | Lexar     | 128GB SSD          | 128 GB | 39F862F723E8 | 265   | 0     | 0.73   |
+| Samsung   | SSD 870 QVO        | 1 TB   | B4E6EBDD9971 | 265   | 0     | 0.73   |
+| SanDisk   | SDSSDA240G         | 240 GB | 1820BA2611AD | 265   | 0     | 0.73   |
 | Intel     | SSDPAMM0008G1      | 8 GB   | 61C2614776ED | 265   | 0     | 0.73   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 01BA1D57FCB6 | 265   | 0     | 0.73   |
 | Samsung   | SSD 830 Series     | 256 GB | 2A96C50CB2C5 | 265   | 0     | 0.73   |
@@ -12796,6 +13393,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT250MX500SSD4     | 250 GB | F645F422D12D | 264   | 0     | 0.73   |
 | SPCC      | SSD                | 120 GB | C3242292E591 | 264   | 0     | 0.73   |
 | Samsung   | MZNTY256HDHP-000H1 | 256 GB | 9C7D5C794440 | 264   | 0     | 0.73   |
+| Kingston  | SA400S37240G       | 240 GB | EB4A6987D5B1 | 264   | 0     | 0.73   |
 | Kingston  | SUV300S37A240G     | 240 GB | 2518BF97BCD3 | 264   | 0     | 0.73   |
 | SK hynix  | HFS120G32TND-N1A2A | 120 GB | DE5428736C29 | 264   | 0     | 0.73   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 854CA0A54F82 | 264   | 0     | 0.73   |
@@ -12855,6 +13453,7 @@ MTBF - avg. MTBF in years per sample.
 | Integral  | V Series SATA SSD  | 120 GB | 34296847D1DC | 263   | 0     | 0.72   |
 | Patriot   | Burst              | 480 GB | E30295A0044C | 263   | 0     | 0.72   |
 | Patriot   | Burst              | 960 GB | CA1E6271BB99 | 263   | 0     | 0.72   |
+| Intel     | SSDSC2BW180A3H     | 180 GB | EAFD12DE83A1 | 263   | 0     | 0.72   |
 | Kingston  | SA400S37960G       | 960 GB | 5CCFF59E72F0 | 263   | 0     | 0.72   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 9FA2C84BF45C | 263   | 0     | 0.72   |
 | SanDisk   | SD7SN6S-512G-1006  | 512 GB | 1C9499E89B60 | 263   | 0     | 0.72   |
@@ -12874,6 +13473,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSCKJF180A5H REF | 180 GB | AB274E503AA3 | 263   | 0     | 0.72   |
 | Samsung   | SSD 850 EVO        | 250 GB | B2BEF4644D4E | 263   | 0     | 0.72   |
 | Samsung   | SSD 850 EVO        | 500 GB | AD6F2650438C | 263   | 0     | 0.72   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 57349A705603 | 263   | 0     | 0.72   |
 | Samsung   | SSD 750 EVO        | 120 GB | BD9EABE081D0 | 263   | 0     | 0.72   |
 | SanDisk   | SDSSDA480G         | 480 GB | 8983A5C42202 | 263   | 0     | 0.72   |
 | SanDisk   | SSD PLUS           | 1 TB   | F587E45B85F5 | 263   | 0     | 0.72   |
@@ -12883,6 +13483,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 2 TB   | 12DCD4EF2ECE | 263   | 0     | 0.72   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 67668E1580FD | 263   | 0     | 0.72   |
 | Samsung   | SSD 830 Series     | 256 GB | 4675BAC8A3FB | 263   | 0     | 0.72   |
+| Kingston  | SA400S37240G       | 240 GB | 3D704D0608B1 | 263   | 0     | 0.72   |
 | Kingston  | SEDC500R7680G      | 7.6 TB | BDD6D823E50A | 525   | 1     | 0.72   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | 8630F3D9F321 | 262   | 0     | 0.72   |
 | Micron    | MTFDDAK256MBF-1... | 256 GB | B77D1CA5B835 | 262   | 0     | 0.72   |
@@ -12898,10 +13499,12 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 29E09EC7EBAC | 262   | 0     | 0.72   |
 | Samsung   | SSD 860 EVO        | 250 GB | EC0ADD8A91F8 | 262   | 0     | 0.72   |
 | SanDisk   | SDSSDP128G         | 128 GB | F27349900685 | 262   | 0     | 0.72   |
+| Samsung   | MZ7TD128HAFV-000L1 | 128 GB | EC3DF92E4091 | 262   | 0     | 0.72   |
 | SanDisk   | X400 M.2 2280      | 256 GB | F8D3DBF4E13B | 262   | 0     | 0.72   |
 | Apacer    | A7202              | 64 GB  | 57C39D46C294 | 262   | 0     | 0.72   |
 | ADATA     | SU800              | 512 GB | F208EE47F28D | 262   | 0     | 0.72   |
 | PNY       | CS1311 480GB SSD   | 480 GB | 5147A69694B8 | 262   | 0     | 0.72   |
+| SK hynix  | SC311 SATA         | 256 GB | 799525119EC3 | 262   | 0     | 0.72   |
 | Samsung   | SSD 860 EVO        | 1 TB   | C89D5188B64B | 262   | 0     | 0.72   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 9EF5DA9CAC42 | 262   | 0     | 0.72   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 90C19F9D35FA | 262   | 0     | 0.72   |
@@ -12921,6 +13524,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | E29A476900D0 | 261   | 0     | 0.72   |
 | Kingston  | SV300S37A120G      | 120 GB | 756CDC11C5FD | 1308  | 4     | 0.72   |
 | OCZ       | VERTEX3            | 64 GB  | 89A0B9F9AA31 | 261   | 0     | 0.72   |
+| Samsung   | SSD 860 EVO M.2    | 500 GB | CE30A9841CB6 | 261   | 0     | 0.72   |
 | Crucial   | CT480BX500SSD1     | 480 GB | EE8CC38C67E0 | 261   | 0     | 0.72   |
 | Crucial   | CT500MX500SSD1     | 500 GB | BDE08839E648 | 261   | 0     | 0.72   |
 | Intel     | SSDSC2BW180A3H     | 180 GB | C2BEDCCEEDC3 | 261   | 0     | 0.72   |
@@ -12931,6 +13535,7 @@ MTBF - avg. MTBF in years per sample.
 | Union ... | RTOTJ128VGD2EYX    | 128 GB | A013676AFC1E | 261   | 0     | 0.72   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 25C20B60DE66 | 261   | 0     | 0.72   |
 | Kingston  | SUV400S37120G      | 120 GB | 7F0ABD694C0C | 261   | 0     | 0.72   |
+| SanDisk   | SD5SG2128G1052E    | 128 GB | 6FE7A495B14D | 261   | 0     | 0.72   |
 | China     | SSD                | 240 GB | BC97EBCC588B | 261   | 0     | 0.72   |
 | Samsung   | SSD 850 EVO        | 250 GB | 8CBE025C97B1 | 261   | 0     | 0.72   |
 | Apacer    | AS350              | 128 GB | 2251A14C89D5 | 261   | 0     | 0.72   |
@@ -12954,13 +13559,16 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM8PS7512G         | 512 GB | 505F3C6E81B6 | 260   | 0     | 0.71   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | A924B67FEA0C | 260   | 0     | 0.71   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 78D495F55CB5 | 260   | 0     | 0.71   |
+| Crucial   | CT256MX100SSD1     | 256 GB | 20F2449DF409 | 260   | 0     | 0.71   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | BF85788DAB1F | 260   | 0     | 0.71   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | E37C091AF2A0 | 260   | 0     | 0.71   |
 | TrekStor  | TREKSTORSSD256GB   | 250 GB | 3A70F402B8C4 | 260   | 0     | 0.71   |
 | ADATA     | SSD S510           | 64 GB  | 8C56893ED38A | 260   | 0     | 0.71   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | F25086F728BE | 260   | 0     | 0.71   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | D6A29B424BD3 | 260   | 0     | 0.71   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 57DF7DABC2D0 | 260   | 0     | 0.71   |
 | Samsung   | SSD 840 EVO        | 120 GB | 49DC834F7C28 | 260   | 0     | 0.71   |
+| Crucial   | CT256MX100SSD1     | 256 GB | 940E4377BB03 | 260   | 0     | 0.71   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 2B9FADE383E1 | 260   | 0     | 0.71   |
 | OCZ       | VERTEX4            | 128 GB | A5E284DE39C1 | 260   | 0     | 0.71   |
 | SanDisk   | SDSSDA240G         | 240 GB | 64F9D3C7566E | 260   | 0     | 0.71   |
@@ -12987,6 +13595,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 4 TB   | 6613DADB7DF9 | 259   | 0     | 0.71   |
 | EAGET     | S500 SSD           | 128 GB | C4EDE6E643E4 | 259   | 0     | 0.71   |
 | Netac     | SSD                | 512 GB | B17BF9AC9791 | 259   | 0     | 0.71   |
+| Plextor   | PX-128M6V          | 128 GB | 63779F970496 | 259   | 0     | 0.71   |
+| PNY       | CS900 240GB SSD    | 240 GB | 80CA2A529766 | 259   | 0     | 0.71   |
 | Samsung   | SSD 840 EVO        | 250 GB | EF47E756BC44 | 259   | 0     | 0.71   |
 | Kingston  | SHFS37A120G        | 120 GB | F41B1CA5731A | 259   | 0     | 0.71   |
 | Kingston  | SV300S37A120G      | 120 GB | DEF0B14CDA84 | 259   | 0     | 0.71   |
@@ -13008,6 +13618,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 7137C3C4D079 | 258   | 0     | 0.71   |
 | PNY       | CS900 960GB SSD    | 960 GB | 1944116D74D3 | 258   | 0     | 0.71   |
 | Samsung   | SSD 750 EVO        | 250 GB | CA413C3F2722 | 258   | 0     | 0.71   |
+| SanDisk   | SSD G5 BICS4       | 500 GB | 510C83DE18AC | 258   | 0     | 0.71   |
 | PNY       | CS900 240GB SSD    | 240 GB | 895A05895896 | 258   | 0     | 0.71   |
 | Samsung   | SSD 860 EVO        | 250 GB | 3B33AC017A07 | 258   | 0     | 0.71   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 2F592C40198D | 258   | 0     | 0.71   |
@@ -13028,12 +13639,14 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 554DE304DE2E | 258   | 0     | 0.71   |
 | OCZ       | VERTEX4            | 128 GB | 5319C68CE4BB | 258   | 0     | 0.71   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 04C588597279 | 258   | 0     | 0.71   |
+| WDC       | WDS120G2G0B-00EPW0 | 120 GB | 2E36644062D4 | 258   | 0     | 0.71   |
 | SPCC      | SSD                | 1 TB   | D8DDF9BE71D4 | 258   | 0     | 0.71   |
 | Samsung   | SSD 860 PRO        | 1 TB   | 7C18AB204F01 | 258   | 0     | 0.71   |
 | Apple     | SSD SM0128G        | 121 GB | CDC2C442E837 | 257   | 0     | 0.71   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | E027580CD480 | 257   | 0     | 0.71   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | EF7C380E10EF | 257   | 0     | 0.71   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 0755CEDD8A14 | 257   | 0     | 0.71   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 9AC76046973E | 257   | 0     | 0.71   |
 | Patriot   | Burst              | 120 GB | E283EBE842EC | 257   | 0     | 0.71   |
 | Samsung   | SSD 860 EVO        | 500 GB | 8FE31887C793 | 257   | 0     | 0.71   |
 | ADATA     | SX900              | 64 GB  | 91921A90CF1E | 257   | 0     | 0.71   |
@@ -13099,6 +13712,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 1 TB   | 8B026A9F3092 | 256   | 0     | 0.70   |
 | WDC       | WDS120G1G0B-00RC30 | 120 GB | 35B65B8039F7 | 256   | 0     | 0.70   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 4B182A8AB538 | 256   | 0     | 0.70   |
+| Kingston  | SA400M8240G        | 240 GB | 8324EDC6491A | 256   | 0     | 0.70   |
 | Samsung   | SSD 860 EVO        | 500 GB | A162B1242627 | 256   | 0     | 0.70   |
 | SanDisk   | SDSSDA120G         | 120 GB | 29B11915EE16 | 256   | 0     | 0.70   |
 | SK hynix  | SC311 SATA         | 256 GB | 811DE57900B9 | 256   | 0     | 0.70   |
@@ -13117,10 +13731,12 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 484E127535BA | 255   | 0     | 0.70   |
 | Samsung   | SSD 850 EVO        | 250 GB | D01BEA26F608 | 255   | 0     | 0.70   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 70DD7B46410A | 255   | 0     | 0.70   |
+| Apple     | SSD SM256E         | 256 GB | 08E971E54F7B | 255   | 0     | 0.70   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 7837DDAEC5D7 | 255   | 0     | 0.70   |
 | Samsung   | SSD 850 EVO        | 500 GB | E0731E62CCC5 | 255   | 0     | 0.70   |
 | Samsung   | SSD 850 PRO        | 512 GB | B042EA4B8B2C | 255   | 0     | 0.70   |
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | B31DE1F473F2 | 255   | 0     | 0.70   |
+| Samsung   | SSD 860 PRO        | 256 GB | 1802733E4404 | 255   | 0     | 0.70   |
 | Crucial   | CT250MX500SSD1     | 250 GB | BC932036BC7B | 255   | 0     | 0.70   |
 | Samsung   | MZ7PD256HCGM-000H7 | 256 GB | 93546B2F4C5D | 255   | 0     | 0.70   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 021F71B31C19 | 255   | 0     | 0.70   |
@@ -13153,6 +13769,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA3 256GB SSD    | 256 GB | C15FD7AD6173 | 254   | 0     | 0.70   |
 | Kingston  | SA400S37480G       | 480 GB | B9CB21E5782E | 254   | 0     | 0.70   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | 27F416E0C6CF | 254   | 0     | 0.70   |
+| Samsung   | SSD 830 Series     | 256 GB | DE5725658CEF | 254   | 0     | 0.70   |
 | SanDisk   | SD9SB8W256G1002    | 256 GB | 3B5A08E68A22 | 254   | 0     | 0.70   |
 | Samsung   | SSD 850 EVO        | 500 GB | 29A53C566F8B | 2038  | 7     | 0.70   |
 | ADATA     | AXNS381E-256GM-B   | 256 GB | F43309044C5D | 254   | 0     | 0.70   |
@@ -13169,6 +13786,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 1TB SSD      | 1 TB   | C40BA10BAA7B | 254   | 0     | 0.70   |
 | SPCC      | SSD                | 120 GB | 77E025E5D866 | 254   | 0     | 0.70   |
 | Corsair   | Force GS           | 128 GB | 15386FBC0D75 | 254   | 0     | 0.70   |
+| Kingston  | SA400S37120G       | 120 GB | 462A7F5671FD | 254   | 0     | 0.70   |
 | Samsung   | SSD 840 EVO        | 120 GB | E857E87432EA | 254   | 0     | 0.70   |
 | Samsung   | SSD 840 Series     | 120 GB | D47F4970EE53 | 254   | 0     | 0.70   |
 | Samsung   | SSD 850 EVO        | 250 GB | 728051565367 | 254   | 0     | 0.70   |
@@ -13176,6 +13794,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 75D1F3C94B2C | 254   | 0     | 0.70   |
 | PNY       | CS900 1TB SSD      | 1 TB   | FD7468EA9F79 | 254   | 0     | 0.70   |
 | Samsung   | SSD 840 EVO        | 120 GB | 8F34635B18B0 | 254   | 0     | 0.70   |
+| SanDisk   | SSD PLUS           | 240 GB | 27609E7CE1EB | 254   | 0     | 0.70   |
 | ADATA     | SU800NS38          | 512 GB | 0B46F4B0C073 | 254   | 0     | 0.70   |
 | Samsung   | SSD 840 EVO        | 120 GB | B053279D3965 | 254   | 0     | 0.70   |
 | SanDisk   | SD7TB3Q-256G-1006  | 256 GB | C0D240937BCD | 254   | 0     | 0.70   |
@@ -13186,6 +13805,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | B176AF033C29 | 254   | 0     | 0.70   |
 | Apple     | SSD SM0128G        | 121 GB | 726E5AC9F4EA | 254   | 0     | 0.70   |
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | EAA10D6327BC | 254   | 0     | 0.70   |
+| Kingston  | SA400S37240G       | 240 GB | 1B42A8C97A9A | 254   | 0     | 0.70   |
 | Samsung   | SSD 860 EVO        | 250 GB | 74876BDFC64F | 254   | 0     | 0.70   |
 | SK hynix  | HFS128G32TNF-N3A0A | 128 GB | DFDAD812E4D9 | 254   | 0     | 0.70   |
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | F0C50B01F2C2 | 254   | 0     | 0.70   |
@@ -13202,6 +13822,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37240G      | 240 GB | A7D39B5120C4 | 253   | 0     | 0.70   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 47F8E1471D72 | 253   | 0     | 0.70   |
 | Samsung   | SSD 860 EVO        | 250 GB | FC40E2FAB4A2 | 253   | 0     | 0.69   |
+| Samsung   | SSD PM871b 2.5 7mm | 256 GB | 284C663D9494 | 253   | 0     | 0.69   |
 | Kingston  | SA400S37480G       | 480 GB | 560A6D54C70F | 253   | 0     | 0.69   |
 | Samsung   | MZMPC032HBCD-00000 | 32 GB  | FDE760CDA1E0 | 253   | 0     | 0.69   |
 | SanDisk   | SSD PLUS           | 480 GB | 788829EF97AA | 253   | 0     | 0.69   |
@@ -13209,17 +13830,20 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 78BD0C669E1D | 253   | 0     | 0.69   |
 | Kingston  | SUV500MS240G       | 240 GB | F9549D54AF70 | 253   | 0     | 0.69   |
 | Crucial   | CT2000BX500SSD1    | 2 TB   | 07A89D810FCD | 253   | 0     | 0.69   |
+| Goodram   | SSDPR-CL100-240    | 240 GB | 0015AFBAF0D3 | 253   | 0     | 0.69   |
 | Kingston  | SV300S37A120G      | 120 GB | 50E060F73B00 | 253   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO        | 500 GB | 0F7D1B7B6FCA | 253   | 0     | 0.69   |
 | Intel     | SSDSC2KB240G8      | 240 GB | 2088F46DE813 | 253   | 0     | 0.69   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 1232C3BEC652 | 253   | 0     | 0.69   |
 | Corsair   | Force LS SSD       | 64 GB  | 542D89C51338 | 253   | 0     | 0.69   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | A88C014CD490 | 253   | 0     | 0.69   |
+| Kingston  | SA400S37240G       | 240 GB | 5F6EE79E9D8D | 253   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO        | 1 TB   | FFEBE32BB72C | 253   | 0     | 0.69   |
 | SanDisk   | SDSSDA960G         | 960 GB | CEE1F8F50CED | 253   | 0     | 0.69   |
 | Intel     | SSDSC2CW060A3      | 64 GB  | C1965A95EA56 | 253   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO mSATA  | 500 GB | 46F3A73317F6 | 253   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO        | 500 GB | B3DEEB409FBB | 253   | 0     | 0.69   |
+| T-FORCE   | SSD                | 500 GB | 07D795A6DC9C | 253   | 0     | 0.69   |
 | Corsair   | Force GS           | 128 GB | 3BDB0712498E | 253   | 0     | 0.69   |
 | Crucial   | CT500MX500SSD1     | 500 GB | D27592054459 | 253   | 0     | 0.69   |
 | ADATA     | SU630              | 960 GB | A58CFFFCA15F | 253   | 0     | 0.69   |
@@ -13256,6 +13880,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 1B67972D0940 | 252   | 0     | 0.69   |
 | Kingston  | SV300S37A120G      | 120 GB | A86C43ECBDD2 | 252   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO        | 500 GB | EF4880640DF0 | 252   | 0     | 0.69   |
+| Kingston  | SA400S37480G       | 480 GB | 332AC1521720 | 252   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO        | 500 GB | C75123D71928 | 252   | 0     | 0.69   |
 | OCZ       | AGILITY2           | 64 GB  | FEE865CD5F59 | 252   | 0     | 0.69   |
 | HP        | SSD S700           | 500 GB | 937AD8160998 | 251   | 0     | 0.69   |
@@ -13265,6 +13890,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 1BCDC8DC8998 | 251   | 0     | 0.69   |
 | Kingston  | SA400S37120G       | 120 GB | 94491A73F0C0 | 251   | 0     | 0.69   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 379D31B9B10E | 251   | 0     | 0.69   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 15248A09E08D | 251   | 0     | 0.69   |
 | SPCC      | SSD                | 120 GB | 4FB11DDEBE5C | 251   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO        | 250 GB | 6D84FBD90008 | 251   | 0     | 0.69   |
 | Toshiba   | THNSFJ256GMCT      | 256 GB | C3A177B7F6CF | 251   | 0     | 0.69   |
@@ -13281,18 +13907,24 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 334AE74BF9DB | 503   | 1     | 0.69   |
 | OCZ       | VERTEX4            | 128 GB | A298EBC19C47 | 503   | 1     | 0.69   |
 | Samsung   | SSD 860 EVO        | 500 GB | E0B6EDEC1163 | 251   | 0     | 0.69   |
+| SanDisk   | SDSSDH3500G        | 500 GB | F551715CE2A9 | 251   | 0     | 0.69   |
 | Kingston  | SA400S37480G       | 480 GB | D4A5A034DDB7 | 251   | 0     | 0.69   |
 | Kingston  | SHFS37A120G        | 120 GB | CED75BD02382 | 251   | 0     | 0.69   |
+| Kingston  | SA400S37240G       | 240 GB | 8AECD54E7333 | 251   | 0     | 0.69   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 655661181597 | 251   | 0     | 0.69   |
 | Kingston  | SA400S37120G       | 120 GB | A364A150E143 | 251   | 0     | 0.69   |
 | Kingston  | SUV400S37480G      | 480 GB | 2F4E570C15BD | 251   | 0     | 0.69   |
 | Samsung   | SSD 860 EVO        | 500 GB | 0276CF520814 | 251   | 0     | 0.69   |
+| Kingston  | SA400S37480G       | 480 GB | 91D24D9E1712 | 251   | 0     | 0.69   |
 | SanDisk   | SSD PLUS           | 480 GB | 950BA07DAB0C | 251   | 0     | 0.69   |
 | Kingston  | SA400S37120G       | 120 GB | F304C4544891 | 251   | 0     | 0.69   |
 | Samsung   | SSD 840 EVO        | 250 GB | 2A4F6D615E35 | 251   | 0     | 0.69   |
 | Goodram   | SSDPR-CX300-240    | 240 GB | 55919F53A25D | 251   | 0     | 0.69   |
 | ADATA     | SP600              | 32 GB  | B70B42C60A6D | 251   | 0     | 0.69   |
 | OCZ       | VERTEX3            | 120 GB | F520A8A63682 | 251   | 0     | 0.69   |
+| Lite-On   | IT L8T-256L9G      | 256 GB | 60E983AFCF58 | 251   | 0     | 0.69   |
+| WDC       | WDS480G2G0A-00JH30 | 480 GB | 59C086F63AA7 | 251   | 0     | 0.69   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 30AE4AC53934 | 250   | 0     | 0.69   |
 | Samsung   | SSD 850 EVO        | 500 GB | 216C926854E5 | 250   | 0     | 0.69   |
 | ADATA     | SU800              | 512 GB | 7087DA7406BA | 250   | 0     | 0.69   |
 | Kingston  | SV300S37A120G      | 120 GB | FCCFE7452E6A | 250   | 0     | 0.69   |
@@ -13317,6 +13949,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 240 GB | 5DD1AB04C7A6 | 250   | 0     | 0.69   |
 | Kingston  | SUV400S37240G      | 240 GB | 090A9BC35C36 | 250   | 0     | 0.69   |
 | Plextor   | PX-128M5M          | 128 GB | 04B55DCF6273 | 250   | 0     | 0.69   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 46DE8696A478 | 250   | 0     | 0.69   |
 | Lite-On   | LCH-512V2S         | 512 GB | 458467A3F436 | 250   | 0     | 0.69   |
 | Kingston  | SA400S37960G       | 960 GB | 33485A2FB9C7 | 250   | 0     | 0.69   |
 | OCZ       | VERTEX3            | 120 GB | 2541EF7AE8A3 | 250   | 0     | 0.69   |
@@ -13328,6 +13961,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-128    | 128 GB | D080BCD3A887 | 250   | 0     | 0.69   |
 | Seagate   | BarraCuda 120 S... | 500 GB | 4E0EE5DEF2EA | 250   | 0     | 0.69   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 8A996BF96B2A | 250   | 0     | 0.69   |
+| Kingston  | SA400S37480G       | 480 GB | 8158583AC260 | 250   | 0     | 0.69   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 4D86876A0D22 | 250   | 0     | 0.69   |
 | Plextor   | PX-128M5S          | 128 GB | E1362C6698EC | 250   | 0     | 0.69   |
 | Corsair   | Force GS           | 240 GB | 3DCE1F937F00 | 1750  | 6     | 0.69   |
@@ -13347,6 +13981,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A240G      | 240 GB | B416FA05BD03 | 249   | 0     | 0.68   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 7E1D557FA7D3 | 249   | 0     | 0.68   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 4BF20C5DA922 | 249   | 0     | 0.68   |
+| Samsung   | SSD 870 EVO        | 250 GB | 9448AE69F733 | 249   | 0     | 0.68   |
 | Samsung   | SSD 860 EVO        | 1 TB   | AFF7C0E4380E | 249   | 0     | 0.68   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | A81D648DBB1A | 249   | 0     | 0.68   |
 | China     | SATA SSD           | 120 GB | 1DF6D8E717BF | 249   | 0     | 0.68   |
@@ -13406,6 +14041,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | AF1B6D363147 | 248   | 0     | 0.68   |
 | SanDisk   | SD8TB8U256G1001    | 256 GB | F67DC8AF251A | 248   | 0     | 0.68   |
 | Lite-On   | L8H-256V2G-HP      | 256 GB | 80DD1FF21F60 | 248   | 0     | 0.68   |
+| Kingston  | SA400S37240G       | 240 GB | 33A321F78B5D | 248   | 0     | 0.68   |
 | SanDisk   | SD9SN8W256G1009    | 256 GB | 4AA1DF9D8DB5 | 496   | 1     | 0.68   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 4B32AC83C31C | 248   | 0     | 0.68   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | DE993FE2A1B1 | 248   | 0     | 0.68   |
@@ -13423,6 +14059,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSA6PM-064G-1006  | 64 GB  | F93BD0C5A9C6 | 247   | 0     | 0.68   |
 | Kingston  | SUV400S37240G      | 240 GB | F78DD51500F8 | 247   | 0     | 0.68   |
 | Samsung   | SSD 860 EVO        | 500 GB | 4B76BCA44B68 | 247   | 0     | 0.68   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 752A423562DF | 247   | 0     | 0.68   |
 | Seagate   | BarraCuda 120 S... | 1 TB   | B2E5682F2507 | 247   | 0     | 0.68   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 2EC916B26291 | 247   | 0     | 0.68   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 50BF1BF83E67 | 247   | 0     | 0.68   |
@@ -13513,6 +14150,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 7B1C165B0CFE | 245   | 0     | 0.67   |
 | Kingston  | SA400S37120G       | 120 GB | 34AECA4147FE | 245   | 0     | 0.67   |
 | Intel     | SSDSA2M080G2HP     | 80 GB  | F391606DFC5F | 245   | 0     | 0.67   |
+| Intel     | SSDSC2KW256G8      | 256 GB | 0232CEE556C2 | 245   | 0     | 0.67   |
 | Kingston  | SA400S37120G       | 120 GB | 484AAE2D2085 | 245   | 0     | 0.67   |
 | SanDisk   | SD7SB3Q-256G-1006  | 256 GB | FC8168AF8348 | 245   | 0     | 0.67   |
 | OCZ       | VERTEX4            | 256 GB | F1E378579F07 | 245   | 0     | 0.67   |
@@ -13538,6 +14176,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 8CC73B272BED | 244   | 0     | 0.67   |
 | Samsung   | MZ7LN256HCHP-000H1 | 256 GB | 2621CFC971CF | 244   | 0     | 0.67   |
 | Kingston  | SA400S37120G       | 120 GB | 33F23EC1B50C | 244   | 0     | 0.67   |
+| China     | SSD                | 128 GB | 17929AF505C4 | 244   | 0     | 0.67   |
 | SK hynix  | SC311 SATA         | 256 GB | 1A4F32CD6643 | 244   | 0     | 0.67   |
 | Leven     | JAJS300M240C       | 240 GB | 08551E33E242 | 244   | 0     | 0.67   |
 | Intel     | SSDSA1MH080G1GN    | 80 GB  | C2780508CBA5 | 244   | 0     | 0.67   |
@@ -13579,6 +14218,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 337DCB4A7144 | 243   | 0     | 0.67   |
 | Plextor   | PX-256M8VG         | 256 GB | 3B4D9789FB19 | 243   | 0     | 0.67   |
 | Samsung   | SSD 870 QVO        | 4 TB   | 3713B6C82445 | 243   | 0     | 0.67   |
+| Apple     | SSD SM0512F        | 500 GB | 11A8C4CA5910 | 243   | 0     | 0.67   |
 | Kingston  | SA400S37480G       | 480 GB | B2422815F7C9 | 243   | 0     | 0.67   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | E92E1C701B8C | 243   | 0     | 0.67   |
 | Kingston  | SA400S37120G       | 120 GB | 6592E51B0D71 | 972   | 3     | 0.67   |
@@ -13610,6 +14250,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 240 GB | 24FF88854593 | 242   | 0     | 0.66   |
 | PNY       | CS900 240GB SSD    | 240 GB | 8644CC329356 | 242   | 0     | 0.66   |
 | Palit     | PSP120 SSD         | 120 GB | 238651CCC4DB | 242   | 0     | 0.66   |
+| Samsung   | SSD 850 EVO        | 250 GB | 4C8EA2967685 | 242   | 0     | 0.66   |
 | China     | SSD                | 120 GB | B52875693F2D | 242   | 0     | 0.66   |
 | SanDisk   | SDSSDHII240G       | 240 GB | 2DD6B4F58132 | 242   | 0     | 0.66   |
 | AMD       | R3SL120G           | 120 GB | 90E1299E4EBA | 242   | 0     | 0.66   |
@@ -13619,6 +14260,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 00D4C8EA396B | 242   | 0     | 0.66   |
 | Londisk   | SSD                | 480 GB | A71ACE8B0EF1 | 242   | 0     | 0.66   |
 | Kingston  | SA400S37120G       | 120 GB | 22409A82978E | 241   | 0     | 0.66   |
+| Samsung   | MZ7TE128HMGR-00004 | 128 GB | B534218E5DA1 | 241   | 0     | 0.66   |
 | Crucial   | CT480BX200SSD1     | 480 GB | 54CBB70A3927 | 241   | 0     | 0.66   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | D56BE875E91A | 241   | 0     | 0.66   |
 | Kingston  | SA400S37240G       | 240 GB | 148B0BA99689 | 241   | 0     | 0.66   |
@@ -13644,6 +14286,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPA064HMDR-00000 | 64 GB  | BE46F56D17A9 | 241   | 0     | 0.66   |
 | Samsung   | SSD 860 EVO        | 500 GB | 00590622E99F | 241   | 0     | 0.66   |
 | Apple     | SSD SM0256F        | 256 GB | D4F4411B0AB7 | 241   | 0     | 0.66   |
+| Samsung   | SSD 860 EVO        | 500 GB | BEDB2C36C14B | 241   | 0     | 0.66   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | D66EFE5BB93D | 241   | 0     | 0.66   |
 | Kingston  | RBUSNS8180S3128GI  | 128 GB | 260336FF730C | 241   | 0     | 0.66   |
 | Kingston  | SA400S37240G       | 240 GB | 09A2110574B6 | 241   | 0     | 0.66   |
@@ -13658,6 +14301,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ256G8NY      | 256 GB | 84EB8150E952 | 241   | 0     | 0.66   |
 | VENO S... | SSD                | 240 GB | 30AF56318FE1 | 241   | 0     | 0.66   |
 | Samsung   | SSD 850 EVO        | 250 GB | B45E106723DE | 240   | 0     | 0.66   |
+| Zheino    | CHN25SATAS1 128    | 128 GB | EF5CAA0861ED | 722   | 2     | 0.66   |
 | Corsair   | Force LS SSD       | 120 GB | 8DFB6BC364F7 | 240   | 0     | 0.66   |
 | OCZ       | VERTEX460          | 120 GB | 64EB7B7FD2F3 | 240   | 0     | 0.66   |
 | Plextor   | PX-64M2S           | 64 GB  | B47202A37D4C | 240   | 0     | 0.66   |
@@ -13680,7 +14324,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 8BC6F8B4A2FA | 240   | 0     | 0.66   |
 | SanDisk   | SD8SN8U512G1002    | 512 GB | 08BE4154E7BA | 240   | 0     | 0.66   |
 | China     | SATA SSD           | 64 GB  | 059AC055BF16 | 240   | 0     | 0.66   |
+| Samsung   | SSD 850 EVO        | 250 GB | 75AFDF36546B | 240   | 0     | 0.66   |
 | SanDisk   | SDSSDP256G         | 256 GB | D6E9BF3DEAAE | 240   | 0     | 0.66   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 62E9899E1C06 | 240   | 0     | 0.66   |
 | Kingston  | SUV500MS120G       | 120 GB | CD01073A2FFB | 240   | 0     | 0.66   |
 | Kingston  | SV300S37A120G      | 120 GB | 1E2144CDA06C | 240   | 0     | 0.66   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 59DD4E614A7F | 240   | 0     | 0.66   |
@@ -13774,6 +14420,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV300S37A120G     | 120 GB | 65DDC6036021 | 237   | 0     | 0.65   |
 | Kingston  | SV300S37A120G      | 120 GB | 0749A8CD11E8 | 237   | 0     | 0.65   |
 | Samsung   | SSD 840 EVO        | 752 GB | 2DBDA83C8E2D | 237   | 0     | 0.65   |
+| SanDisk   | SSD PLUS           | 1 TB   | F652C9AAFA2F | 237   | 0     | 0.65   |
 | Kingston  | SV300S37A60G       | 64 GB  | 0FDDCF3060E3 | 237   | 0     | 0.65   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | B2A76914DE6B | 237   | 0     | 0.65   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | 0A44A7AEB976 | 237   | 0     | 0.65   |
@@ -13804,6 +14451,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 93D9AA81A225 | 237   | 0     | 0.65   |
 | Toshiba   | TR150              | 480 GB | DDBC90BA8D8B | 237   | 0     | 0.65   |
 | KingDian  | S280-120GB         | 120 GB | 6DA7161A9CBA | 237   | 0     | 0.65   |
+| SanDisk   | SDSSDA120G         | 120 GB | D166880422A2 | 236   | 0     | 0.65   |
 | Samsung   | SSD 860 EVO        | 1 TB   | C455A16860C0 | 236   | 0     | 0.65   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 25104E194258 | 236   | 0     | 0.65   |
 | Kingston  | SA400S37480G       | 480 GB | 9DD0679CCEA4 | 236   | 0     | 0.65   |
@@ -13904,8 +14552,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHSS37A240G        | 240 GB | 8EA50043511A | 234   | 0     | 0.64   |
 | Samsung   | MZ7LN256HCHP-000L7 | 256 GB | EFB0F7B3DC45 | 234   | 0     | 0.64   |
 | Kingston  | SUV500MS120G       | 120 GB | 5980E39FDB76 | 233   | 0     | 0.64   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | C37C0412D50C | 233   | 0     | 0.64   |
 | WDC       | WDS500G1R0A-68A4W0 | 500 GB | 7E667982B920 | 233   | 0     | 0.64   |
 | SanDisk   | SD7SB3Q-128G-1006  | 128 GB | 1A6C1B1E75A6 | 233   | 0     | 0.64   |
+| WDC       | WDS480G2G0A-00JH30 | 480 GB | 13E1F1F769D3 | 467   | 1     | 0.64   |
 | Samsung   | SSD 850 EVO        | 500 GB | 946BF4063120 | 233   | 0     | 0.64   |
 | Samsung   | SSD 860 PRO        | 512 GB | FC222257FE2E | 233   | 0     | 0.64   |
 | SanDisk   | SSD PLUS           | 480 GB | 838644D4DC6A | 233   | 0     | 0.64   |
@@ -13968,6 +14618,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH31000G       | 1 TB   | 7C0A1A2A849F | 232   | 0     | 0.64   |
 | ADATA     | SU650              | 120 GB | 3A2DDB355159 | 232   | 0     | 0.64   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 2C1A213EC7F3 | 232   | 0     | 0.64   |
+| Samsung   | MZNLN128HAHQ-000H1 | 128 GB | FD546ACE2E38 | 232   | 0     | 0.64   |
 | Samsung   | SSD 850 PRO        | 128 GB | DCC31D2A06B6 | 232   | 0     | 0.64   |
 | Corsair   | Force 3 SSD        | 180 GB | 6425EBD1B760 | 232   | 0     | 0.64   |
 | Kingston  | SA400S37240G       | 240 GB | 72D7A24AF2CA | 232   | 0     | 0.64   |
@@ -13987,12 +14638,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 750 EVO        | 500 GB | 52A7449372D4 | 231   | 0     | 0.64   |
 | Samsung   | SSD 850 PRO        | 256 GB | 1BC76CF5F9B3 | 231   | 0     | 0.64   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 7BD044D679DD | 231   | 0     | 0.64   |
+| Patriot   | P200               | 256 GB | 7571A388C780 | 695   | 2     | 0.64   |
 | Apple     | SSD TS128C         | 121 GB | D6CC177F68EB | 231   | 0     | 0.64   |
 | Kingston  | SA400S37240G       | 240 GB | E881726261A8 | 231   | 0     | 0.64   |
 | Samsung   | MZ7TD128HAFV-000L1 | 128 GB | 588A404C2DB8 | 231   | 0     | 0.64   |
 | Goodram   | SSD                | 120 GB | 0B2BF616B104 | 231   | 0     | 0.64   |
 | Samsung   | SSD 860 EVO        | 500 GB | 386CA078B311 | 231   | 0     | 0.64   |
 | Samsung   | SSD 860 EVO        | 500 GB | 524725C549D9 | 231   | 0     | 0.64   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 7B4F3C89844F | 231   | 0     | 0.64   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 51BBDC698E21 | 231   | 0     | 0.64   |
 | SK hynix  | SC311 SATA         | 128 GB | F61CFCA6AF8F | 231   | 0     | 0.64   |
 | Samsung   | SSD 850 EVO        | 1 TB   | DDF4CF19E709 | 231   | 0     | 0.64   |
@@ -14001,6 +14654,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LN256HAJQ-000L2 | 256 GB | 8529278859EE | 231   | 0     | 0.63   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 67D73C08CFDE | 231   | 0     | 0.63   |
 | Kingston  | SA400S37240G       | 240 GB | A196C88B9ED1 | 231   | 0     | 0.63   |
+| Kingston  | SV300S37A120G      | 120 GB | FECA3109CF7B | 231   | 0     | 0.63   |
 | Samsung   | MZMTE256HMHP-000MV | 256 GB | 0052876A87CC | 231   | 0     | 0.63   |
 | Kingston  | SA400S37240G       | 240 GB | 1DAEDF7E32D6 | 231   | 0     | 0.63   |
 | Samsung   | SSD 850 PRO        | 256 GB | FFD4C6D77DEC | 231   | 0     | 0.63   |
@@ -14020,6 +14674,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650NS38          | 480 GB | 105956A44D54 | 231   | 0     | 0.63   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 3EDC89B0125F | 231   | 0     | 0.63   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 51CB68BFFA14 | 231   | 0     | 0.63   |
+| Team      | T253X6001T         | 1 TB   | F8068ECAD981 | 231   | 0     | 0.63   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 46574687E94E | 230   | 0     | 0.63   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | F70BC6F59E94 | 230   | 0     | 0.63   |
 | Goodram   | IR-SSDPR-S25A-120  | 120 GB | E2D7A4F2623A | 230   | 0     | 0.63   |
@@ -14078,6 +14733,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 120 GB | D720A8C04D54 | 229   | 0     | 0.63   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | AF94F63612AC | 229   | 0     | 0.63   |
 | Crucial   | CT500MX500SSD1     | 500 GB | A2FEC3A99DBE | 229   | 0     | 0.63   |
+| Intenso   | SSD Sata III       | 120 GB | BF97C6F42E05 | 229   | 0     | 0.63   |
 | Micron    | C400-MTFDDAC064MAM | 64 GB  | 9D1EBCDD7B64 | 229   | 0     | 0.63   |
 | SanDisk   | SDSSDHP064G        | 64 GB  | ED20ABEBE766 | 229   | 0     | 0.63   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 3F8F4ED5F7A2 | 229   | 0     | 0.63   |
@@ -14168,6 +14824,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SHGS31-1000GS-2    | 1 TB   | 52D00D83BAF6 | 227   | 0     | 0.62   |
 | Team      | L3 SSD             | 120 GB | 01E60A4E1819 | 227   | 0     | 0.62   |
 | Crucial   | CT480BX300SSD1     | 480 GB | CFCDCFD1FE78 | 227   | 0     | 0.62   |
+| OCZ       | VERTEX3            | 120 GB | 8D4BA3C3852B | 227   | 0     | 0.62   |
 | Toshiba   | Q300               | 480 GB | 4EBB0AB2EBD2 | 227   | 0     | 0.62   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | E8C06ABF898D | 227   | 0     | 0.62   |
 | Samsung   | SSD 860 QVO        | 1 TB   | C16AC3D734CD | 227   | 0     | 0.62   |
@@ -14176,6 +14833,7 @@ MTBF - avg. MTBF in years per sample.
 | BAITITON  | BT58SSD09S         | 240 GB | 1679B3AD9EC2 | 454   | 1     | 0.62   |
 | China     | SSD                | 512 GB | E4B4DFBFA858 | 227   | 0     | 0.62   |
 | Kingston  | SUV400S37240G      | 240 GB | B632FDF43B34 | 227   | 0     | 0.62   |
+| Samsung   | SSD 840 EVO 120... | 120 GB | 12CF6A82BA48 | 227   | 0     | 0.62   |
 | Micron    | MTFDBAK128MAG-1G1  | 128 GB | 297A57E7786E | 227   | 0     | 0.62   |
 | WDC       | WDBNCE0010PNC      | 1 TB   | 82FB0B2BD916 | 227   | 0     | 0.62   |
 | Kingston  | SA400S37240G       | 240 GB | A5AD68ABFEAA | 227   | 0     | 0.62   |
@@ -14191,6 +14849,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 120 GB | AA5A4CA6860E | 226   | 0     | 0.62   |
 | Crucial   | CT240BX500SSD1     | 240 GB | CE4A40702723 | 226   | 0     | 0.62   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 12FD95613203 | 226   | 0     | 0.62   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | A0D2C6CD5856 | 226   | 0     | 0.62   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 78181D992DA0 | 680   | 2     | 0.62   |
 | Intel     | SSDSC2BW240A4      | 240 GB | 8A07194DE5F9 | 226   | 0     | 0.62   |
 | Corsair   | Force GT           | 90 GB  | F3BC14C07990 | 679   | 2     | 0.62   |
@@ -14329,6 +14988,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | C483A8ACE575 | 223   | 0     | 0.61   |
 | Samsung   | SSD 860 EVO        | 500 GB | EB786462D93E | 223   | 0     | 0.61   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | AF8D9117F5E9 | 223   | 0     | 0.61   |
+| Apacer    | AST280             | 480 GB | 6A5D7C830B9E | 223   | 0     | 0.61   |
 | SanDisk   | SSD PLUS           | 240 GB | 13744EF121A8 | 223   | 0     | 0.61   |
 | Intel     | SSDSC2CT120A3      | 120 GB | 355F154EDCC7 | 223   | 0     | 0.61   |
 | SPCC      | SSD                | 256 GB | BFF3B90B4F08 | 223   | 0     | 0.61   |
@@ -14345,6 +15005,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPC032HBCD-000H1 | 32 GB  | 7AE4BF5C5FAA | 222   | 0     | 0.61   |
 | SanDisk   | SD8TN8U256G1001    | 256 GB | D6F42C5DF1A9 | 222   | 0     | 0.61   |
 | Samsung   | SSD 840 PRO Series | 256 GB | CC9D08E609FA | 222   | 0     | 0.61   |
+| Samsung   | SSD 860 EVO        | 2 TB   | ED7E86A57EC1 | 222   | 0     | 0.61   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 0702F66C67C8 | 222   | 0     | 0.61   |
 | Intenso   | SSD                | 120 GB | CA00EFED99F8 | 222   | 0     | 0.61   |
 | Samsung   | SSD 860 EVO        | 500 GB | C8446FD63D10 | 222   | 0     | 0.61   |
@@ -14358,6 +15019,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A240G      | 240 GB | 70B4E90B4564 | 222   | 0     | 0.61   |
 | SanDisk   | SDSSDA240G         | 240 GB | 455E931607DB | 222   | 0     | 0.61   |
 | SanDisk   | SDSSDHII120G       | 120 GB | 874D7DFC65C5 | 222   | 0     | 0.61   |
+| ADATA     | SU800              | 256 GB | 9C9D53BEA1C2 | 222   | 0     | 0.61   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 8D354D271671 | 222   | 0     | 0.61   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | A20F45299821 | 222   | 0     | 0.61   |
 | China     | SATA3 512GB SSD    | 512 GB | 34317DF8044F | 222   | 0     | 0.61   |
@@ -14365,13 +15027,17 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZHPV256HDGL-000L1 | 256 GB | 8F775CDEB5F3 | 222   | 0     | 0.61   |
 | Plextor   | PH6-CE120          | 120 GB | 9BE6038BDF9F | 222   | 0     | 0.61   |
 | SanDisk   | SDSSDH3 1T02       | 1 TB   | 39BC98A2C533 | 222   | 0     | 0.61   |
+| Crucial   | CT500MX500SSD1N    | 500 GB | C62F66F0DAEE | 222   | 0     | 0.61   |
 | SanDisk   | SDSSDX120GG25      | 120 GB | 85BF564B2C41 | 222   | 0     | 0.61   |
 | Samsung   | SSD 850 EVO        | 500 GB | 2BD4F38AE511 | 222   | 0     | 0.61   |
+| ADATA     | SU900              | 256 GB | D12DEA9B2B06 | 222   | 0     | 0.61   |
 | Kingston  | SA400S37120G       | 120 GB | 38B417943CCB | 222   | 0     | 0.61   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 62EB54E05DE6 | 222   | 0     | 0.61   |
+| Crucial   | CT500MX500SSD1     | 500 GB | DF60483FE261 | 222   | 0     | 0.61   |
 | SPCC      | SSD                | 1 TB   | F126D4DB12A7 | 222   | 0     | 0.61   |
 | Kingston  | SV300S37A120G      | 120 GB | 8596CD377FE1 | 221   | 0     | 0.61   |
 | Phison    | S11-64G-PHISON-... | 64 GB  | B6A6EF5A5D39 | 221   | 0     | 0.61   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | B038302E3584 | 221   | 0     | 0.61   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 9F5C02806B02 | 221   | 0     | 0.61   |
 | Samsung   | SSD 750 EVO        | 250 GB | 1226A36C8E8D | 221   | 0     | 0.61   |
 | Kingston  | SA400S37120G       | 120 GB | B6C25A4CB568 | 221   | 0     | 0.61   |
@@ -14386,8 +15052,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 500 GB | 7758864CF42B | 221   | 0     | 0.61   |
 | SanDisk   | SSD i100           | 24 GB  | 65E371213018 | 221   | 0     | 0.61   |
 | HP        | SSD S700           | 500 GB | 28E8B12058DF | 221   | 0     | 0.61   |
+| Kingston  | SV100S264G         | 64 GB  | CB1783AE3466 | 221   | 0     | 0.61   |
 | Kingston  | SA400M8480G        | 480 GB | 3D99E88C103C | 221   | 0     | 0.61   |
 | SPCC      | SSD                | 512 GB | AC73CF480DE1 | 221   | 0     | 0.61   |
+| Seagate   | IronWolf ZA500N... | 500 GB | 1CEB1DF514C8 | 221   | 0     | 0.61   |
 | Samsung   | SSD 860 EVO mSATA  | 1 TB   | E289849BC302 | 221   | 0     | 0.61   |
 | Samsung   | SSD 850 PRO        | 512 GB | BCFE89EFFD26 | 221   | 0     | 0.61   |
 | Samsung   | MZNLN512HMJP-000L7 | 512 GB | 6E0747DE2E7D | 221   | 0     | 0.61   |
@@ -14431,6 +15099,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 1C03ED09F7EC | 220   | 0     | 0.60   |
 | Intel     | SSDSC2BP240G4      | 240 GB | E73A9C78DB32 | 220   | 0     | 0.60   |
 | Samsung   | SSD 860 QVO        | 2 TB   | E63541C13DBD | 220   | 0     | 0.60   |
+| SK hynix  | HFS128G32TND-N210A | 128 GB | F45927585DB8 | 220   | 0     | 0.60   |
 | Samsung   | SSD 850 EVO        | 250 GB | 745F9382AF44 | 220   | 0     | 0.60   |
 | WDC       | PC SA530 SDASB8... | 1 TB   | 84B1CD0C3AA2 | 220   | 0     | 0.60   |
 | OCZ       | VERTEX3            | 120 GB | 1FDC4383C383 | 220   | 0     | 0.60   |
@@ -14444,6 +15113,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1024MX200SSD1    | 1 TB   | 5C5ADA948EA7 | 660   | 2     | 0.60   |
 | Intel     | SSDSC2CT120A3      | 120 GB | 45673AE3C0EA | 220   | 0     | 0.60   |
 | Crucial   | CT250MX200SSD1     | 250 GB | 3451EFD3EC4B | 220   | 0     | 0.60   |
+| China     | SSD                | 1 TB   | 3D7156DBD246 | 220   | 0     | 0.60   |
 | Samsung   | MZ7TY256HDHP-000L7 | 256 GB | B1DC669A1AF3 | 220   | 0     | 0.60   |
 | Corsair   | Force LE SSD       | 480 GB | A99631A8B5EC | 220   | 0     | 0.60   |
 | KIOXIA... | SATA SSD           | 480 GB | 706758884B5C | 220   | 0     | 0.60   |
@@ -14478,12 +15148,14 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37120G      | 120 GB | 98E27B91AEDE | 219   | 0     | 0.60   |
 | Kingston  | SMS200S3120G       | 120 GB | 244A57F2DB1F | 219   | 0     | 0.60   |
 | Samsung   | SSD 850 EVO        | 500 GB | 783387584EF3 | 219   | 0     | 0.60   |
+| Samsung   | SSD 860 EVO        | 500 GB | 8A66FD400459 | 219   | 0     | 0.60   |
 | Crucial   | CT500MX500SSD4     | 500 GB | 2D668684941D | 219   | 0     | 0.60   |
 | Patriot   | Burst              | 480 GB | E2739507E30A | 219   | 0     | 0.60   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | A6B4127D5D4E | 219   | 0     | 0.60   |
 | Intel     | SSDSC2BF180A4H     | 180 GB | 28DEA5CBD2DE | 219   | 0     | 0.60   |
 | Samsung   | MZNLN256HCHP-00000 | 256 GB | BC7FF8DBCE24 | 219   | 0     | 0.60   |
 | Toshiba   | TR200              | 480 GB | DF0E9755B7CB | 219   | 0     | 0.60   |
+| Intenso   | SSD SATAIII        | 512 GB | 48587E99D990 | 219   | 0     | 0.60   |
 | Samsung   | SSD SM871 2.5 7mm  | 256 GB | 2F6A6DB49760 | 438   | 1     | 0.60   |
 | Kingston  | SA400S37120G       | 120 GB | 89A385038324 | 219   | 0     | 0.60   |
 | SK hynix  | SC308 SATA         | 256 GB | 00DD9D1E4E33 | 219   | 0     | 0.60   |
@@ -14547,10 +15219,12 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS250G2B0B        | 250 GB | 4F251B271CB2 | 217   | 0     | 0.60   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 63D906BD94D0 | 217   | 0     | 0.60   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 9C08C7B45286 | 217   | 0     | 0.60   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 8D543DD8B78F | 217   | 0     | 0.60   |
 | Kingston  | SUV400S37120G      | 120 GB | EC11FA915594 | 217   | 0     | 0.60   |
 | OCZ       | VERTEX460A         | 120 GB | E4229596B9F3 | 217   | 0     | 0.60   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 6C3FC049ED4C | 217   | 0     | 0.60   |
 | Kingston  | SV300S37A120G      | 120 GB | 9EFC27075099 | 217   | 0     | 0.60   |
+| Goodram   | CX100              | 240 GB | 8851F362041F | 217   | 0     | 0.60   |
 | Kingston  | RBU-SMSM151S324GD  | 24 GB  | 3013776721DF | 217   | 0     | 0.60   |
 | Samsung   | SSD 860 EVO        | 250 GB | 652153B33E04 | 217   | 0     | 0.60   |
 | Samsung   | SSD 850 EVO        | 500 GB | FEBD13577B60 | 217   | 0     | 0.60   |
@@ -14568,6 +15242,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A480G      | 480 GB | 1FBC18C561E4 | 217   | 0     | 0.59   |
 | Patriot   | Burst              | 480 GB | 0187EC07772F | 217   | 0     | 0.59   |
 | Samsung   | SSD 860 PRO        | 256 GB | 185D233E36B1 | 217   | 0     | 0.59   |
+| SanDisk   | SD7SB6S128G1122    | 128 GB | 31AA816232E0 | 217   | 0     | 0.59   |
 | WDC       | WDS250G2B0B        | 250 GB | A7568D1D4293 | 217   | 0     | 0.59   |
 | Kingston  | SV300S37A120G      | 120 GB | 99B73C9A8603 | 217   | 0     | 0.59   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | BE7DB42DC30C | 217   | 0     | 0.59   |
@@ -14657,8 +15332,10 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSA2M080G2GC     | 80 GB  | DFA91C57E322 | 861   | 3     | 0.59   |
 | Apacer    | AS340              | 480 GB | 596BC1CC7A13 | 215   | 0     | 0.59   |
 | Apple     | SSD SM0128G        | 121 GB | F9CF6F49A83E | 215   | 0     | 0.59   |
+| Intel     | SSDSC2CT240A3      | 240 GB | 78A01AEBC0AE | 430   | 1     | 0.59   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 95C31DD80ABA | 215   | 0     | 0.59   |
 | Samsung   | SSD 860 EVO        | 250 GB | 06A482CA0687 | 215   | 0     | 0.59   |
+| Intel     | SSDSC2CW120A3      | 120 GB | EADA7709B883 | 215   | 0     | 0.59   |
 | Pioneer   | APS-SL3N-512       | 512 GB | 8EBBE0FD6B4C | 215   | 0     | 0.59   |
 | Pioneer   | APS-SL3N-512       | 512 GB | A079CDE9BB8E | 215   | 0     | 0.59   |
 | Samsung   | SSD 860 EVO        | 500 GB | D913C9E6A123 | 215   | 0     | 0.59   |
@@ -14681,6 +15358,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 039C54C6382A | 214   | 0     | 0.59   |
 | Samsung   | SSD 850 EVO        | 120 GB | 7E866BDF8F0F | 214   | 0     | 0.59   |
 | Toshiba   | A100               | 120 GB | CCFA9DB1613C | 214   | 0     | 0.59   |
+| Samsung   | SSD 870 QVO        | 2 TB   | 5F69E5881D65 | 214   | 0     | 0.59   |
 | Plextor   | PH6-CE120          | 120 GB | ED22722FAFE6 | 214   | 0     | 0.59   |
 | Plextor   | PX-128M7VC         | 128 GB | 6B4A37E45226 | 214   | 0     | 0.59   |
 | Samsung   | SSD 830 Series     | 128 GB | 870256BC6217 | 214   | 0     | 0.59   |
@@ -14719,6 +15397,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LF192HCGS-000L1 | 192 GB | E08CC55588CD | 213   | 0     | 0.59   |
 | Kingston  | SA400S37240G       | 240 GB | DF9090CEF669 | 213   | 0     | 0.59   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 681A882A6A3F | 213   | 0     | 0.59   |
+| Crucial   | CT480BX500SSD1     | 480 GB | 9C1FAC385FB0 | 213   | 0     | 0.59   |
+| Goodram   | SSDPR-CX400-128    | 128 GB | 335A39D701B3 | 213   | 0     | 0.59   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 60962A4D7396 | 213   | 0     | 0.59   |
 | Samsung   | MZ7TE256HMHP-000L7 | 256 GB | 15810D348716 | 213   | 0     | 0.58   |
 | Samsung   | SSD 860 EVO        | 1 TB   | DB710EC543A4 | 213   | 0     | 0.58   |
@@ -14730,6 +15410,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN128HAHQ-000L1 | 128 GB | D30413921F5B | 213   | 0     | 0.58   |
 | SPCC      | SSD                | 512 GB | 72EFC55003E3 | 213   | 0     | 0.58   |
 | Samsung   | MZYTY256HDHP-000L2 | 256 GB | 03489B298C36 | 213   | 0     | 0.58   |
+| SanDisk   | SD9SN8W256G1014    | 256 GB | D8A7C07FC01B | 213   | 0     | 0.58   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | CF1510E098AC | 213   | 0     | 0.58   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 1B4F5C5CCD94 | 213   | 0     | 0.58   |
 | Kingston  | SV300S37A60G       | 64 GB  | 8729F667EC69 | 213   | 0     | 0.58   |
@@ -14797,6 +15478,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMS200S360G        | 64 GB  | 7C2C677C1D1A | 211   | 0     | 0.58   |
 | Kingston  | SV300S37A120G      | 120 GB | 7359BDAE9E77 | 211   | 0     | 0.58   |
 | SPCC      | SSD                | 128 GB | E87D271AB9F3 | 211   | 0     | 0.58   |
+| Patriot   | P210               | 256 GB | 42CACB729E3B | 211   | 0     | 0.58   |
 | Samsung   | SSD 850 PRO        | 512 GB | 0E0964AF1A01 | 211   | 0     | 0.58   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 1A70B4E09B94 | 211   | 0     | 0.58   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 5F05176C8960 | 211   | 0     | 0.58   |
@@ -14813,6 +15495,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 120 GB | 3B4B916C0A87 | 211   | 0     | 0.58   |
 | Transcend | TS120GSSD220S      | 120 GB | 80630BCB9B53 | 211   | 0     | 0.58   |
 | Kingston  | SA400S37240G       | 240 GB | D5ACF7A8351E | 211   | 0     | 0.58   |
+| WDC       | WDBNCE0010PNC      | 1 TB   | C418C42825FB | 211   | 0     | 0.58   |
 | FORESEE   | 64GB SSD           | 64 GB  | 6772FFF6EA4F | 211   | 0     | 0.58   |
 | Kingston  | SA400S37240G       | 240 GB | 38D2DC201CCE | 211   | 0     | 0.58   |
 | SanDisk   | SDSSDP128G         | 128 GB | 36BE6222DDCE | 211   | 0     | 0.58   |
@@ -14823,6 +15506,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37240G      | 240 GB | 3A930AEC95F3 | 211   | 0     | 0.58   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | A71C855AE756 | 211   | 0     | 0.58   |
 | SanDisk   | SDSSDH31000G       | 1 TB   | 41EBEE9D0160 | 211   | 0     | 0.58   |
+| Goodram   | SSD                | 120 GB | 64DF4B0AA4E2 | 211   | 0     | 0.58   |
 | SPCC      | SSD                | 64 GB  | 3F576C6CDB26 | 211   | 0     | 0.58   |
 | Samsung   | SSD 850            | 120 GB | 6F28D0180AB2 | 211   | 0     | 0.58   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 7A73FB827C90 | 211   | 0     | 0.58   |
@@ -14947,6 +15631,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | E4780402D448 | 208   | 0     | 0.57   |
 | PNY       | CS900 120GB SSD    | 120 GB | ECE9F44B7576 | 208   | 0     | 0.57   |
 | Patriot   | Burst              | 240 GB | 926557453DCB | 208   | 0     | 0.57   |
+| Kingston  | SA400S37120G       | 120 GB | F3336A149D20 | 1043  | 4     | 0.57   |
 | OCZ       | ARC100             | 120 GB | AFBF65AC28A4 | 208   | 0     | 0.57   |
 | China     | SATA SSD           | 64 GB  | 65F6F3A552C2 | 208   | 0     | 0.57   |
 | Kingston  | SM2280S3G2120G     | 120 GB | 977B732527EA | 208   | 0     | 0.57   |
@@ -14971,18 +15656,22 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU900              | 512 GB | 6611FB57FDCA | 208   | 0     | 0.57   |
 | Kingston  | SV300S37A120G      | 120 GB | C5535C29CA83 | 208   | 0     | 0.57   |
 | Crucial   | CT500BX100SSD1     | 500 GB | BC853018E4A7 | 208   | 0     | 0.57   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | 3F57CAA26F6C | 208   | 0     | 0.57   |
 | China     | SSD                | 256 GB | A286436EE85B | 208   | 0     | 0.57   |
 | Intel     | SSDSC2CT180A4      | 180 GB | EC5A4E02EC5C | 208   | 0     | 0.57   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | E88EFDB0E910 | 208   | 0     | 0.57   |
 | ADATA     | SU650              | 120 GB | 92B41562EC74 | 208   | 0     | 0.57   |
+| Transcend | TS256GMTS400       | 256 GB | ADCB66A1A840 | 208   | 0     | 0.57   |
 | Samsung   | MZ7TY256HDHP-000L7 | 256 GB | 8147FB167AD3 | 207   | 0     | 0.57   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 5B917044E7E5 | 207   | 0     | 0.57   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 2BFF304F233F | 207   | 0     | 0.57   |
 | Team      | L5 SSD             | 120 GB | 0AE08ECD5D6D | 207   | 0     | 0.57   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | BB91A43DA7F3 | 207   | 0     | 0.57   |
 | Crucial   | CT960BX500SSD1     | 960 GB | 130D1E43BAA4 | 207   | 0     | 0.57   |
+| Kingston  | SUV400S37-120G     | 120 GB | 8158F6DEF2BC | 207   | 0     | 0.57   |
 | Samsung   | SSD 830 Series     | 128 GB | 3EBB8812C66C | 207   | 0     | 0.57   |
 | KingDian  | S400               | 120 GB | 0779F3224B7C | 207   | 0     | 0.57   |
+| KingSpec  | NT-512             | 512 GB | EE2355AB59D3 | 207   | 0     | 0.57   |
 | Kingston  | SV300S37A120G      | 120 GB | 0BE0843B7BEC | 207   | 0     | 0.57   |
 | SanDisk   | SD7SN6S-512G-1006  | 512 GB | F573E1B1497D | 207   | 0     | 0.57   |
 | Lite-On   | CV3-8D128-11 SATA  | 128 GB | F2F561FAC32D | 207   | 0     | 0.57   |
@@ -15074,8 +15763,10 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | ST240HM000         | 240 GB | 7738EA6C5741 | 206   | 0     | 0.56   |
 | OCZ       | VERTEX4            | 128 GB | C079262D0C32 | 205   | 0     | 0.56   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 73F112655E16 | 205   | 0     | 0.56   |
+| Intel     | SSDSC2BW120A4      | 120 GB | CBDBF9C32910 | 205   | 0     | 0.56   |
 | Intel     | SSDSC2CT120A3      | 120 GB | 39A90B565605 | 823   | 3     | 0.56   |
 | SanDisk   | SD6SF1M128G1022I   | 128 GB | 7286396D9220 | 411   | 1     | 0.56   |
+| Samsung   | SSD 860 PRO        | 256 GB | 3D848C1864DE | 205   | 0     | 0.56   |
 | Samsung   | SSD 860 QVO        | 1 TB   | E4B125602A8E | 205   | 0     | 0.56   |
 | Toshiba   | THNSNJ512GCSU      | 512 GB | B47454D80E29 | 205   | 0     | 0.56   |
 | Zheino    | CHN-25SATAS3-256   | 256 GB | F8B326D59A59 | 205   | 0     | 0.56   |
@@ -15110,6 +15801,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC311 SATA         | 256 GB | 9D00648DDFC3 | 205   | 0     | 0.56   |
 | Intel     | SSDSC2CW480A3      | 480 GB | BD00F57BD58C | 205   | 0     | 0.56   |
 | Samsung   | MZNLN256HCHP-00000 | 256 GB | B7D0857E5A20 | 205   | 0     | 0.56   |
+| Samsung   | SSD 860 EVO        | 250 GB | 88A4051F8912 | 205   | 0     | 0.56   |
 | Samsung   | SSD 860 EVO        | 500 GB | 5C3A841E6521 | 205   | 0     | 0.56   |
 | Samsung   | SSD PM871b 2.5 7mm | 256 GB | 969164436089 | 205   | 0     | 0.56   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 7BDBC0403EFB | 205   | 0     | 0.56   |
@@ -15126,6 +15818,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SVP200S360G        | 64 GB  | BE06D499ACCB | 205   | 0     | 0.56   |
 | Toshiba   | TR200              | 240 GB | 296C60D1CEA8 | 205   | 0     | 0.56   |
 | Kingston  | SUV400S37120G      | 120 GB | EF9EE5F1BB4C | 204   | 0     | 0.56   |
+| Plextor   | PX-128M5S          | 128 GB | 052BA15C9B4B | 204   | 0     | 0.56   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 663A9032F58D | 204   | 0     | 0.56   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | CDC032282EDF | 204   | 0     | 0.56   |
 | Micron    | MTFDDAK256MBF-1... | 256 GB | 79236E21CC25 | 204   | 0     | 0.56   |
@@ -15163,6 +15856,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 34A0C2F600A3 | 204   | 0     | 0.56   |
 | SanDisk   | SSD G5 BICS4       | 1 TB   | 4F69CB7DA637 | 204   | 0     | 0.56   |
 | Kingston  | SA400S37240G       | 240 GB | C6A5CA50B3E5 | 408   | 1     | 0.56   |
+| WDC       | WDS120G2G0B-00EPW0 | 120 GB | 29A07BB37CEE | 204   | 0     | 0.56   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 42DB2D80C28A | 204   | 0     | 0.56   |
 | Crucial   | CT500MX500SSD1     | 500 GB | C7B206DA2AAC | 204   | 0     | 0.56   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 33387FD02573 | 204   | 0     | 0.56   |
@@ -15170,6 +15864,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7TD128HAFV-000L1 | 128 GB | 11391A935306 | 204   | 0     | 0.56   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | 38178E6BE249 | 204   | 0     | 0.56   |
 | Samsung   | Portable SSD T5    | 1 TB   | 4E3B802F9749 | 204   | 0     | 0.56   |
+| Transcend | TS256GSSD230S      | 256 GB | 460714457D2E | 204   | 0     | 0.56   |
 | Samsung   | Portable SSD T5    | 500 GB | 9C56F4A93812 | 204   | 0     | 0.56   |
 | Micron    | M550_MTFDDAV128MAY | 128 GB | D0043B8E44A4 | 204   | 0     | 0.56   |
 | Samsung   | SSD 860 PRO        | 256 GB | 9F8C1ED7FDBE | 204   | 0     | 0.56   |
@@ -15204,13 +15899,16 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 PRO        | 512 GB | 4A76F81C4193 | 203   | 0     | 0.56   |
 | SanDisk   | SD6SF1M128GG56     | 128 GB | 92375F727DE3 | 203   | 0     | 0.56   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 1D31CCCB9715 | 203   | 0     | 0.56   |
+| SanDisk   | SD8TN8U256G1001    | 256 GB | 53140B4BC847 | 203   | 0     | 0.56   |
 | Samsung   | MZNLN256HMHQ-000H7 | 256 GB | 7F5270FFFC25 | 203   | 0     | 0.56   |
 | Samsung   | SSD 850 EVO        | 500 GB | F9005F4EFC33 | 203   | 0     | 0.56   |
 | Apple     | SSD TS128C         | 121 GB | 7456BEA777C8 | 203   | 0     | 0.56   |
 | Crucial   | CT500MX500SSD1     | 500 GB | F1B13EF72867 | 203   | 0     | 0.56   |
+| Patriot   | Burst              | 480 GB | A2EDF3EB5141 | 203   | 0     | 0.56   |
 | SanDisk   | SSD PLUS           | 240 GB | 12623EC4C036 | 203   | 0     | 0.56   |
 | ADATA     | SP550              | 120 GB | 5E34DBC785AC | 203   | 0     | 0.56   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 4B08F961E852 | 203   | 0     | 0.56   |
+| Micron    | 1100_MTFDDAV256TBN | 256 GB | 288CD17390B0 | 202   | 0     | 0.56   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 74708857D33A | 202   | 0     | 0.56   |
 | Kingston  | RBUSC180S37256GJ   | 256 GB | 11FDCA19BD65 | 202   | 0     | 0.56   |
 | Kingston  | SHFS37A120G        | 120 GB | 7087BF4255A1 | 202   | 0     | 0.56   |
@@ -15244,6 +15942,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | 3D69A490C72A | 202   | 0     | 0.55   |
 | Crucial   | CT480BX500SSD1     | 480 GB | F0A0EABF316E | 202   | 0     | 0.55   |
 | Kingston  | SA400S37480G       | 480 GB | 5094936B0B46 | 202   | 0     | 0.55   |
+| WDC       | WDBNCE0010PNC      | 1 TB   | 6241F997DF25 | 202   | 0     | 0.55   |
 | China     | L06B B0KB          | 960 GB | 5B12CADB2D69 | 202   | 0     | 0.55   |
 | WDC       | WDS250G2B0A        | 250 GB | 2B4E9A83FEFE | 202   | 0     | 0.55   |
 | SK hynix  | SC308 SATA         | 256 GB | 515EA08BA42C | 404   | 1     | 0.55   |
@@ -15260,6 +15959,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 91348BB8FF27 | 201   | 0     | 0.55   |
 | Kingston  | SKC600256G         | 256 GB | CB8FC6B3E7D6 | 201   | 0     | 0.55   |
 | Quaroni   | QSSDS25240G        | 240 GB | A74C6AB77CC8 | 201   | 0     | 0.55   |
+| Intel     | SSDSC2BB480G7K     | 480 GB | 578D7ADFF1F3 | 201   | 0     | 0.55   |
 | Kingston  | SA400S37480G       | 480 GB | 8A26D52DAC45 | 201   | 0     | 0.55   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 7BB973FA48EE | 201   | 0     | 0.55   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 1786500BA256 | 201   | 0     | 0.55   |
@@ -15287,6 +15987,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | X400 M.2 2280      | 256 GB | 0BEA6102810B | 201   | 0     | 0.55   |
 | ADATA     | SP600              | 32 GB  | 30C8B6FD8231 | 201   | 0     | 0.55   |
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | F61A14F73429 | 201   | 0     | 0.55   |
+| Samsung   | SSD 860 PRO        | 1 TB   | FAF01C9FBED4 | 201   | 0     | 0.55   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 448C7B53F868 | 201   | 0     | 0.55   |
 | Intenso   | SSD Sata III       | 240 GB | 629C7960AEA3 | 201   | 0     | 0.55   |
 | Kingston  | SA400S37240G       | 240 GB | 9E6FFDA800B7 | 201   | 0     | 0.55   |
@@ -15317,7 +16018,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 7F42FAE46A0B | 200   | 0     | 0.55   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3839CD039404 | 200   | 0     | 0.55   |
 | Samsung   | SSD 850 EVO        | 500 GB | AC84C9E823E5 | 200   | 0     | 0.55   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | BD0ADF81B4C8 | 200   | 0     | 0.55   |
 | WDC       | WDS100T2B0B        | 1 TB   | 54DDC417D1BD | 200   | 0     | 0.55   |
+| Kingston  | SA400S37480G       | 480 GB | 8D56B0D59595 | 200   | 0     | 0.55   |
 | Samsung   | MZ7TD256HAFV-000L7 | 256 GB | A4E85811C6A5 | 200   | 0     | 0.55   |
 | Apple     | SSD SM0128G        | 121 GB | EEDFE04D1AFA | 200   | 0     | 0.55   |
 | Goodram   | SSDPR-CX400-01T    | 1 TB   | 2A889CA5578C | 200   | 0     | 0.55   |
@@ -15347,6 +16050,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 054FC9EEE1F4 | 200   | 0     | 0.55   |
 | Kingston  | SA400S37240G       | 240 GB | 793A362E97FF | 200   | 0     | 0.55   |
 | Samsung   | SSD 850 EVO        | 250 GB | 6AB114FDF904 | 200   | 0     | 0.55   |
+| Samsung   | SSD 860 EVO        | 250 GB | B5106B04F4BF | 200   | 0     | 0.55   |
 | Samsung   | SSD 870 EVO        | 250 GB | ACDD5B555636 | 200   | 0     | 0.55   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | 72248670E37E | 200   | 0     | 0.55   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 00F667DAE9B0 | 800   | 3     | 0.55   |
@@ -15455,6 +16159,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDHII240G       | 240 GB | 118413C3D620 | 198   | 0     | 0.54   |
 | Crucial   | CT500MX200SSD4     | 500 GB | 96B81E2EDD9D | 198   | 0     | 0.54   |
 | Samsung   | MZ7TY256HDHP-00000 | 256 GB | 5F0C0F126778 | 198   | 0     | 0.54   |
+| Samsung   | Portable SSD T5    | 1 TB   | 20F03B3AB60D | 198   | 0     | 0.54   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 7CB216CF2EFF | 198   | 0     | 0.54   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | CBA116214B6D | 198   | 0     | 0.54   |
 | Kingston  | SA400M8240G        | 240 GB | A4CC38BA0E6F | 198   | 0     | 0.54   |
@@ -15463,6 +16168,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3 4T00       | 4 TB   | A88DCA8D866F | 198   | 0     | 0.54   |
 | Samsung   | SSD 840 EVO        | 500 GB | 1E6EC91CE3EC | 197   | 0     | 0.54   |
 | Samsung   | SSD 850 EVO        | 250 GB | 9CA10B9D3750 | 197   | 0     | 0.54   |
+| Micron    | MTFDDAK128MAM-1J1  | 128 GB | B0B0F18C78E4 | 197   | 0     | 0.54   |
 | Samsung   | SSD 850 EVO        | 250 GB | DA544B63C559 | 197   | 0     | 0.54   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | D6DAAE56797E | 197   | 0     | 0.54   |
 | Samsung   | SSD 860 EVO        | 1 TB   | C81DC4796A79 | 197   | 0     | 0.54   |
@@ -15471,6 +16177,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 480 GB | 84DFAC7C9F69 | 197   | 0     | 0.54   |
 | OCZ       | TRION100           | 240 GB | 7C4A55AF81E8 | 197   | 0     | 0.54   |
 | Samsung   | MZNTY256HDHP-000L2 | 256 GB | BDA020B48242 | 197   | 0     | 0.54   |
+| SPCC      | SSD                | 120 GB | CEF7FD01C44F | 197   | 0     | 0.54   |
 | Samsung   | SSD 860 PRO        | 512 GB | D6B17E570B6D | 197   | 0     | 0.54   |
 | Kingston  | SA400S37120G       | 120 GB | 6AAC92197730 | 197   | 0     | 0.54   |
 | Kingston  | SV300S37A120G      | 120 GB | 1285D1085EF7 | 197   | 0     | 0.54   |
@@ -15533,6 +16240,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 0761DE98CC43 | 196   | 0     | 0.54   |
 | Micron    | MTFDDAV256MBF-1... | 256 GB | FF8B4CC0B482 | 196   | 0     | 0.54   |
 | Transcend | TS240GSSD220S      | 240 GB | F6C9E1BF185F | 196   | 0     | 0.54   |
+| Samsung   | SSD 860 EVO        | 1 TB   | F152C449DD26 | 196   | 0     | 0.54   |
 | Samsung   | SSD 860 EVO        | 250 GB | C852C5DDF5A0 | 196   | 0     | 0.54   |
 | Kingston  | SM2280S3G2240G     | 240 GB | 3CA04E7E0805 | 196   | 0     | 0.54   |
 | OCZ       | ARC100             | 480 GB | B5560E4EC8AC | 196   | 0     | 0.54   |
@@ -15552,6 +16260,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | DB1B2D5929B5 | 195   | 0     | 0.54   |
 | Micron    | 5200_MTFDDAK960TDN | 960 GB | 7C172B846795 | 195   | 0     | 0.54   |
 | SanDisk   | SD8TB8U512G1001    | 512 GB | D619995993AC | 195   | 0     | 0.54   |
+| China     | SATA SSD           | 120 GB | 0F84E807EF65 | 195   | 0     | 0.54   |
 | Intel     | SSDSA2BW160G3L     | 160 GB | 1F906C629318 | 195   | 0     | 0.54   |
 | Samsung   | MZNTY256HDHP-000L2 | 256 GB | E5C2571EFEC4 | 195   | 0     | 0.54   |
 | SPCC      | SSD                | 512 GB | 407022DA3349 | 195   | 0     | 0.54   |
@@ -15614,6 +16323,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD SM256E         | 256 GB | 949285620D65 | 194   | 0     | 0.53   |
 | Intel     | SSDSCKKW128G8      | 128 GB | DE84BFDBE4BB | 194   | 0     | 0.53   |
 | Mushkin   | MKNSSDE3240GB      | 240 GB | 6EA4D48D55DB | 194   | 0     | 0.53   |
+| Apple     | SSD SM256E         | 256 GB | CA4AF8387FEC | 194   | 0     | 0.53   |
 | SanDisk   | SSD i100           | 24 GB  | B33CEA34678C | 194   | 0     | 0.53   |
 | Kingston  | RBU-SC100S37240GE  | 240 GB | CF996CE6A7C6 | 194   | 0     | 0.53   |
 | SanDisk   | SDSSDA240G         | 240 GB | 21DCB8C73CF2 | 194   | 0     | 0.53   |
@@ -15626,6 +16336,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KSG60ZMV512G M.... | 512 GB | 572282102F7B | 194   | 0     | 0.53   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 4DAC1A9A5C60 | 194   | 0     | 0.53   |
 | ADATA     | SU800              | 256 GB | E23BFC55E733 | 194   | 0     | 0.53   |
+| Samsung   | SSD 850 EVO        | 250 GB | F5042BC6A1A4 | 194   | 0     | 0.53   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | B0D630DF8496 | 194   | 0     | 0.53   |
 | Patriot   | P200               | 256 GB | 214A265EA45A | 194   | 0     | 0.53   |
 | Samsung   | SSD 860 QVO        | 1 TB   | BA809B75E7D3 | 194   | 0     | 0.53   |
@@ -15678,6 +16389,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC311 SATA         | 128 GB | 973469456319 | 193   | 0     | 0.53   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 976F0233523B | 193   | 0     | 0.53   |
 | Samsung   | SSD 830 Series     | 256 GB | ACD9EB7CB66B | 193   | 0     | 0.53   |
+| ADATA     | SU800              | 256 GB | 89644C55403D | 192   | 0     | 0.53   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | D1793A797039 | 192   | 0     | 0.53   |
 | Kingston  | SA400S37120G       | 120 GB | 3116398E0496 | 192   | 0     | 0.53   |
 | Kingston  | SV300S37A60G       | 64 GB  | D7925FFF1F84 | 192   | 0     | 0.53   |
@@ -15685,6 +16397,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD G5 BICS4       | 1 TB   | E74DCA35D77D | 192   | 0     | 0.53   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 8E8D1FDA7DBC | 192   | 0     | 0.53   |
 | ADATA     | SX930              | 120 GB | FAA2C75B4673 | 192   | 0     | 0.53   |
+| Plextor   | PX-128M6S          | 128 GB | 8A94A1CFEF4F | 192   | 0     | 0.53   |
 | Corsair   | Force 3 SSD        | 120 GB | DA3A20D7EB62 | 192   | 0     | 0.53   |
 | Kingston  | SV300S37A240G      | 240 GB | FFAF61D3EE79 | 192   | 0     | 0.53   |
 | PNY       | SSD2SC240G1CS17... | 240 GB | 7DD0DFE33DD5 | 192   | 0     | 0.53   |
@@ -15692,6 +16405,8 @@ MTBF - avg. MTBF in years per sample.
 | Londisk   | SSD                | 960 GB | D9B5CC189E7A | 192   | 0     | 0.53   |
 | SanDisk   | SDSSDA240G         | 240 GB | 6B7053A8F9A6 | 192   | 0     | 0.53   |
 | China     | mSATA              | 128 GB | 16BAF16086BE | 192   | 0     | 0.53   |
+| Kingston  | SA400S37240G       | 240 GB | DE01E420102D | 192   | 0     | 0.53   |
+| SanDisk   | SD8SB8U-256G-1006  | 256 GB | 9F76362895DF | 192   | 0     | 0.53   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | A27DC55A7E97 | 192   | 0     | 0.53   |
 | SanDisk   | SSD PLUS           | 480 GB | 57DE05EE14E3 | 385   | 1     | 0.53   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 4309AC8A385C | 192   | 0     | 0.53   |
@@ -15743,6 +16458,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 6B504D521274 | 191   | 0     | 0.52   |
 | Kingston  | SA400S37240G       | 240 GB | 05543785BBDA | 191   | 0     | 0.52   |
 | Kingston  | SV300S37A240G      | 240 GB | 0C543E957EAF | 191   | 0     | 0.52   |
+| SanDisk   | SD8SN8U128G1002    | 128 GB | D3D16A0D3478 | 191   | 0     | 0.52   |
 | Apple     | SSD SM0128G        | 121 GB | EF64E9A2674C | 191   | 0     | 0.52   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 043AD05A4BEF | 191   | 0     | 0.52   |
 | SanDisk   | SDSSDXPS480G       | 480 GB | 4C2FA66C4CE2 | 191   | 0     | 0.52   |
@@ -15786,6 +16502,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 QVO        | 1 TB   | 280AB1001ECD | 190   | 0     | 0.52   |
 | Samsung   | SSD 870 EVO        | 1 TB   | E80635F2D5B3 | 190   | 0     | 0.52   |
 | Neo Forza | NFS011SA328-600... | 128 GB | 3BC31E103B79 | 190   | 0     | 0.52   |
+| Apacer    | AS350              | 128 GB | 7F154B7EDE12 | 190   | 0     | 0.52   |
 | Kingston  | SV300S37A120G      | 120 GB | E1391689A217 | 190   | 0     | 0.52   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | B083C579D5A8 | 190   | 0     | 0.52   |
 | Plextor   | PX-256M5S          | 256 GB | E8AA32CD94EE | 190   | 0     | 0.52   |
@@ -15811,6 +16528,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 PRO Series | 256 GB | 1C1A0E339881 | 189   | 0     | 0.52   |
 | Samsung   | SSD 850 EVO        | 120 GB | BAF4D1B4E438 | 189   | 0     | 0.52   |
 | SanDisk   | SSD PLUS           | 240 GB | 16469E074886 | 189   | 0     | 0.52   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 103DC2FDDFA5 | 189   | 0     | 0.52   |
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | EC102FF61B2C | 189   | 0     | 0.52   |
 | HP        | SSD S700 Pro       | 1 TB   | B7C25D291DE3 | 189   | 0     | 0.52   |
 | Kingston  | SA400S37240G       | 240 GB | AB66AFF29FE6 | 189   | 0     | 0.52   |
@@ -15821,6 +16539,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | B3B1A327B2A9 | 189   | 0     | 0.52   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 04B85A03887A | 189   | 0     | 0.52   |
 | Transcend | TS1TSSD230S        | 1 TB   | D28D7434BB39 | 189   | 0     | 0.52   |
+| Kingston  | RBU-SC100S37128GD  | 128 GB | 09AA01E73498 | 189   | 0     | 0.52   |
 | Micron    | 5300_MTFDDAK3T8TDT | 3.8 TB | 0DE5DAA76599 | 189   | 0     | 0.52   |
 | Micron    | 5300_MTFDDAK3T8TDT | 3.8 TB | 1E2D0FBE4914 | 189   | 0     | 0.52   |
 | Micron    | 5300_MTFDDAK3T8TDT | 3.8 TB | 474777003441 | 189   | 0     | 0.52   |
@@ -15833,6 +16552,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | E9EA7C7F5852 | 189   | 0     | 0.52   |
 | SanDisk   | SDSSDHII240G       | 240 GB | 90678CBECE39 | 189   | 0     | 0.52   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 775B3C889FD9 | 189   | 0     | 0.52   |
+| Samsung   | Portable SSD T5    | 2 TB   | 275D758B3A75 | 189   | 0     | 0.52   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | B4662B204D00 | 189   | 0     | 0.52   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 7B99C7513C88 | 189   | 0     | 0.52   |
 | Samsung   | SSD 850 EVO        | 250 GB | C4D4D0BFDA49 | 189   | 0     | 0.52   |
@@ -15868,6 +16588,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNF128GMCS      | 128 GB | EC22156B2DF7 | 188   | 0     | 0.52   |
 | OCZ       | VECTOR150          | 240 GB | 43D5EF4A4394 | 188   | 0     | 0.52   |
 | Samsung   | SSD 850 EVO        | 250 GB | 883716D39FEB | 188   | 0     | 0.52   |
+| Kingston  | SA400S37240G       | 240 GB | 8B8DA00B0C10 | 188   | 0     | 0.52   |
 | OCZ       | VERTEX460A         | 480 GB | 92734AC0307F | 188   | 0     | 0.52   |
 | Kingston  | SUV400S37120G      | 120 GB | E7CEEACCFDD8 | 188   | 0     | 0.52   |
 | Samsung   | SSD 860 EVO        | 500 GB | 92840624E152 | 188   | 0     | 0.52   |
@@ -15879,10 +16600,12 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | Ultra II           | 480 GB | 3C0D386C7B4A | 188   | 0     | 0.52   |
 | Corsair   | Force LE SSD       | 120 GB | BEA7D6ED96E7 | 188   | 0     | 0.52   |
 | Maxtor    | Z1 SSD             | 480 GB | FE98971A8EBC | 188   | 0     | 0.52   |
+| PNY       | CS900 1TB SSD      | 1 TB   | CE8B7F2AC14C | 188   | 0     | 0.52   |
 | Plextor   | PX-128M5S          | 128 GB | 06CF28C44024 | 188   | 0     | 0.52   |
 | Samsung   | MZNLN128HCGR-00000 | 128 GB | F1F0A4CAFEBF | 188   | 0     | 0.52   |
 | Kingston  | SV300S37A120G      | 120 GB | 613064A66FB0 | 188   | 0     | 0.52   |
 | T-FORCE   | SSD                | 1 TB   | 4066C76114DB | 188   | 0     | 0.52   |
+| Samsung   | SSD 870 EVO        | 250 GB | FCC0081C1ED9 | 188   | 0     | 0.52   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 473604EBE7FC | 188   | 0     | 0.52   |
 | Transcend | TS512GMTS430S      | 512 GB | 39079DD109DB | 188   | 0     | 0.52   |
 | Kingston  | SA400S37240G       | 240 GB | 26E8D5148769 | 188   | 0     | 0.52   |
@@ -15917,9 +16640,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZRPA128HMCD-000SO | 64 GB  | 32488BB97877 | 187   | 0     | 0.51   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | F2C465D3712C | 187   | 0     | 0.51   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 1B5A3AE71A3B | 187   | 0     | 0.51   |
+| Silicon   | SATA3 120GB SSD    | 120 GB | 51A9741F3C81 | 187   | 0     | 0.51   |
 | Apacer    | AS350              | 512 GB | 1B0EC9B03458 | 187   | 0     | 0.51   |
 | Samsung   | MZRPA128HMCD-000SO | 64 GB  | C4BA70FE1AEF | 187   | 0     | 0.51   |
 | Samsung   | SSD 850 PRO        | 256 GB | E80BE56CE0F2 | 187   | 0     | 0.51   |
+| WDC       | WDS120G2G0B-00EPW0 | 120 GB | DDB82E725298 | 375   | 1     | 0.51   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | 555183D4AFEF | 187   | 0     | 0.51   |
 | Kingston  | SA400S37120G       | 120 GB | 6FBFE30D33B1 | 187   | 0     | 0.51   |
 | SanDisk   | SD8SN8U256G1122    | 256 GB | DE292823DD51 | 187   | 0     | 0.51   |
@@ -15938,6 +16663,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 004525F82CF0 | 187   | 0     | 0.51   |
 | Samsung   | SSD 860 EVO        | 500 GB | 3ECAD0E1BA25 | 187   | 0     | 0.51   |
 | Kingston  | SV300S37A120G      | 120 GB | D2D35292232E | 187   | 0     | 0.51   |
+| PNY       | CS900 480GB SSD    | 480 GB | 8E41EEEDFCAF | 187   | 0     | 0.51   |
 | ADATA     | SU800              | 512 GB | 18886E4FDE89 | 187   | 0     | 0.51   |
 | Apple     | SSD SM0128G        | 121 GB | AACB90AF708C | 187   | 0     | 0.51   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 609EDE3F1636 | 187   | 0     | 0.51   |
@@ -15981,6 +16707,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 120 GB | 6B36CE17B344 | 186   | 0     | 0.51   |
 | Kingston  | SV300S37A120G      | 120 GB | 07F03D16F652 | 186   | 0     | 0.51   |
 | Goodram   | C40                | 120 GB | C90CCAAB9CF5 | 372   | 1     | 0.51   |
+| Samsung   | Portable SSD T5    | 500 GB | F7ADF8EB4EE6 | 186   | 0     | 0.51   |
 | Samsung   | SSD 870 EVO        | 2 TB   | C199A13D28CB | 186   | 0     | 0.51   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5A06D5AA6802 | 186   | 0     | 0.51   |
 | Samsung   | SSD 850 EVO        | 500 GB | EAFA5151D812 | 186   | 0     | 0.51   |
@@ -15997,6 +16724,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 2205C7CEAB55 | 185   | 0     | 0.51   |
 | SanDisk   | SD6SN1M-256G-1006  | 256 GB | 8B28E3469E6B | 185   | 0     | 0.51   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 45CD3FCDD95D | 185   | 0     | 0.51   |
+| Kingston  | SUV500240G         | 240 GB | D8C6BFCD0097 | 185   | 0     | 0.51   |
 | Kingmax   | SSD                | 64 GB  | 878AF64AD2CA | 185   | 0     | 0.51   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | 4056284FA320 | 185   | 0     | 0.51   |
 | PNY       | CS900 120GB SSD    | 120 GB | DBEBB760E707 | 185   | 0     | 0.51   |
@@ -16011,6 +16739,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | FD742B8375B7 | 185   | 0     | 0.51   |
 | SanDisk   | SDSSDP128G         | 128 GB | 9FCE2AF342BB | 185   | 0     | 0.51   |
 | Kingston  | SV300S37A120G      | 120 GB | AFC16A962CFC | 927   | 4     | 0.51   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | D2D0CF6A7D21 | 185   | 0     | 0.51   |
 | SPCC      | SSD                | 240 GB | B613573665DD | 185   | 0     | 0.51   |
 | Toshiba   | A100               | 240 GB | F8DA9F51AE3F | 185   | 0     | 0.51   |
 | ShanDi... | SSD                | 256 GB | D4823A1A8365 | 185   | 0     | 0.51   |
@@ -16022,11 +16751,13 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 512 GB | 664417DD1D29 | 185   | 0     | 0.51   |
 | Kingston  | SA400S37240G       | 240 GB | D8A1A3506BF6 | 185   | 0     | 0.51   |
 | Samsung   | SSD 860 EVO        | 500 GB | 902177F004D4 | 185   | 0     | 0.51   |
+| ADATA     | SU650              | 240 GB | 27CF099F0FDD | 184   | 0     | 0.51   |
 | Micron    | MTFDDAV480TCB-1... | 480 GB | 18391A154891 | 184   | 0     | 0.51   |
 | Samsung   | MZMPC128HBFU-000MV | 128 GB | 77A8CDA7E0E0 | 184   | 0     | 0.51   |
 | Samsung   | SSD 840 PRO Series | 256 GB | 732A86FED6E3 | 184   | 0     | 0.51   |
 | Kingston  | SA400S37240G       | 240 GB | 2F69D0692966 | 184   | 0     | 0.51   |
 | SanDisk   | SD9SB8W512G1101    | 512 GB | B6E8B52B8494 | 184   | 0     | 0.51   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | B571801CAB33 | 184   | 0     | 0.51   |
 | Samsung   | MZNTY256HDHP-000L7 | 256 GB | BE0728E5A975 | 184   | 0     | 0.51   |
 | PNY       | CS900 240GB SSD    | 240 GB | 9444ED91AA7F | 184   | 0     | 0.51   |
 | Palit     | UVS                | 120 GB | 9CD19F6A0473 | 184   | 0     | 0.51   |
@@ -16038,6 +16769,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force LE SSD       | 480 GB | CC4C1B6738D4 | 184   | 0     | 0.51   |
 | Crucial   | CT500MX500SSD1     | 500 GB | C2FCEEE21826 | 184   | 0     | 0.51   |
 | Crucial   | M4-CT512M4SSD2     | 512 GB | 8F638C13FF1C | 184   | 0     | 0.51   |
+| Kingston  | SV300S37A60G       | 64 GB  | 3F81935A1152 | 184   | 0     | 0.51   |
 | Goodram   | SSDPR-CX300-240    | 240 GB | 8321B7E28F24 | 184   | 0     | 0.51   |
 | Samsung   | SSD PM871b 2.5 7mm | 256 GB | C8175EB6D51D | 184   | 0     | 0.51   |
 | SanDisk   | X600 M.2 2280 SATA | 128 GB | 0EA1EC2CF482 | 184   | 0     | 0.51   |
@@ -16045,6 +16777,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | F9D76469D51A | 184   | 0     | 0.51   |
 | Kingston  | SV300S37A120G      | 120 GB | 201647F2E03F | 184   | 0     | 0.51   |
 | Kingston  | SV300S37A240G      | 240 GB | 61961678D99D | 184   | 0     | 0.51   |
+| Samsung   | MZMTE256HMHP-000L1 | 256 GB | 910906825679 | 184   | 0     | 0.51   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 04DA0F1A9D44 | 184   | 0     | 0.51   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 885392EBF339 | 184   | 0     | 0.51   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | A9DE666A1C80 | 184   | 0     | 0.51   |
@@ -16062,6 +16795,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMS200S3120G       | 120 GB | D41F57F5F423 | 184   | 0     | 0.51   |
 | Samsung   | MZMTE512HMHP-00000 | 512 GB | E2DDF90C42FF | 184   | 0     | 0.51   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 0D085F4D4CF2 | 184   | 0     | 0.51   |
+| Crucial   | CT120BX500SSD1     | 120 GB | FBB5FCC3E55C | 184   | 0     | 0.51   |
 | Samsung   | SSD 840 EVO 250... | 250 GB | D9C7F7248CC4 | 184   | 0     | 0.51   |
 | KingSpec  | P3-512             | 512 GB | BAE58D553338 | 184   | 0     | 0.50   |
 | Samsung   | MZNTY256HDHP-000L7 | 256 GB | DEA51BB51A59 | 184   | 0     | 0.50   |
@@ -16070,6 +16804,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 4 TB   | 341478731DEA | 184   | 0     | 0.50   |
 | SanDisk   | SDSSDHP128G        | 128 GB | F757A4AC8E1A | 184   | 0     | 0.50   |
 | UNIC2     | S100-480           | 480 GB | C358FB559471 | 184   | 0     | 0.50   |
+| Samsung   | SSD 860 EVO        | 500 GB | 76853F748E32 | 184   | 0     | 0.50   |
+| Samsung   | SSD 860 EVO        | 500 GB | 8440FAF182BB | 184   | 0     | 0.50   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 13A1E2036704 | 184   | 0     | 0.50   |
 | BHT       | WR202I0064G E70... | 64 GB  | 527698147D91 | 184   | 0     | 0.50   |
 | Toshiba   | THNSNH128GCST      | 128 GB | 9901E94A88AE | 368   | 1     | 0.50   |
@@ -16111,6 +16847,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 8D117B3D0EAB | 183   | 0     | 0.50   |
 | Samsung   | SSD 870 QVO        | 4 TB   | D43C5A79582E | 183   | 0     | 0.50   |
 | ASENNO    | AS25               | 1 TB   | 2A8FC6F74AF7 | 183   | 0     | 0.50   |
+| China     | SSD                | 128 GB | 6FE1E8338A33 | 183   | 0     | 0.50   |
 | Kingston  | SA400S37120G       | 120 GB | CE9EC02468DD | 183   | 0     | 0.50   |
 | SPCC      | SSD                | 256 GB | CD63038751F7 | 183   | 0     | 0.50   |
 | Samsung   | MZMTD256HAGM-000L1 | 256 GB | 917EB6626CE8 | 183   | 0     | 0.50   |
@@ -16122,6 +16859,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BF180A4H     | 180 GB | A80E47B6FF4B | 183   | 0     | 0.50   |
 | Samsung   | SSD 840 EVO        | 120 GB | 64AF752BB427 | 183   | 0     | 0.50   |
 | Apacer    | AS350              | 128 GB | C94258EBED10 | 183   | 0     | 0.50   |
+| Samsung   | SSD 870 EVO        | 2 TB   | 6225F74FDA7F | 183   | 0     | 0.50   |
 | OWC       | Mercury Electra... | 240 GB | 2968E01FEAFF | 915   | 4     | 0.50   |
 | Crucial   | CT250MX500SSD1     | 250 GB | A60016E7667C | 183   | 0     | 0.50   |
 | Crucial   | CT960BX500SSD1     | 960 GB | 745064DA90FF | 183   | 0     | 0.50   |
@@ -16168,6 +16906,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT525MX300SSD1     | 528 GB | BE7CA8A871C0 | 547   | 2     | 0.50   |
 | Integral  | V Series SATA SSD  | 240 GB | 8F50104E9E4F | 182   | 0     | 0.50   |
 | Kingston  | SA400S37240G       | 240 GB | 94CDD1909F9D | 182   | 0     | 0.50   |
+| Samsung   | MZ7LF192HCGS-000L1 | 192 GB | 0A9B3A59CE2D | 182   | 0     | 0.50   |
 | Samsung   | MZ7TE128HMGR-000L1 | 128 GB | 901FB3F79829 | 182   | 0     | 0.50   |
 | Samsung   | SSD 850 PRO        | 128 GB | DE09449545EE | 182   | 0     | 0.50   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | D711E8D6BFA7 | 182   | 0     | 0.50   |
@@ -16192,6 +16931,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 49DC4C7100B0 | 181   | 0     | 0.50   |
 | Team      | TM8PS7512G         | 512 GB | 88D1858DCB71 | 181   | 0     | 0.50   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 430CCFC4C1B9 | 181   | 0     | 0.50   |
+| Kingston  | SA400M8480G        | 480 GB | E23F683511B8 | 181   | 0     | 0.50   |
 | Micron    | 5300_MTFDDAK960TDS | 960 GB | 84BEE2E202A6 | 181   | 0     | 0.50   |
 | Zheino    | CHN mSATA02M 256   | 256 GB | 29CA781A9ABA | 181   | 0     | 0.50   |
 | Intel     | SSDSA2M120G2GC     | 120 GB | 750CDCFB6350 | 2000  | 10    | 0.50   |
@@ -16209,6 +16949,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 PRO        | 256 GB | 505CF94A0D20 | 181   | 0     | 0.50   |
 | Samsung   | SSD 860 QVO        | 1 TB   | C2C346F6480D | 181   | 0     | 0.50   |
 | Goodram   | SSDPR-CX400-01T    | 1 TB   | 5CC2B8E36FB5 | 181   | 0     | 0.50   |
+| Samsung   | SSD 860 EVO        | 250 GB | BA599D73656F | 181   | 0     | 0.50   |
 | SPCC      | SSD                | 120 GB | 55AB8871CCAB | 181   | 0     | 0.50   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 647A6D04EC06 | 181   | 0     | 0.50   |
 | Samsung   | SSD 750 EVO        | 250 GB | 5C65E12A9915 | 181   | 0     | 0.50   |
@@ -16241,6 +16982,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BW180A4      | 180 GB | 4D15E2F585E1 | 1266  | 6     | 0.50   |
 | Apple     | SSD SM0128G        | 121 GB | 59785DCAA5AE | 180   | 0     | 0.50   |
 | HP        | SSD S700           | 500 GB | 173F7401AC91 | 180   | 0     | 0.50   |
+| Patriot   | Pyro SSD           | 120 GB | FB116C432FE0 | 180   | 0     | 0.50   |
 | Samsung   | SSD 840 Series     | 250 GB | 94A8ED2B3F63 | 180   | 0     | 0.50   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 2958DFEFE53B | 180   | 0     | 0.50   |
 | SanDisk   | SDSSDA120G         | 120 GB | BF16616DB481 | 180   | 0     | 0.50   |
@@ -16397,6 +17139,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD SM0128G        | 121 GB | 357B38618E2F | 178   | 0     | 0.49   |
 | Phison    | SATA SSD           | 120 GB | B6C36C9453D7 | 178   | 0     | 0.49   |
 | SPCC      | SSD                | 1 TB   | AB50A5681C37 | 178   | 0     | 0.49   |
+| ADATA     | SU650              | 120 GB | E0401043CEB7 | 178   | 0     | 0.49   |
 | KingDian  | S370               | 128 GB | 00D4E534DA99 | 178   | 0     | 0.49   |
 | Plextor   | PH6-CE120-L1       | 120 GB | B9712617CA32 | 178   | 0     | 0.49   |
 | SK hynix  | HFS256G3BTND-N210A | 256 GB | 5E3B95CBC1A3 | 178   | 0     | 0.49   |
@@ -16416,6 +17159,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingch... | SSD                | 128 GB | 65F31B3B10B0 | 177   | 0     | 0.49   |
 | Kingston  | SV300S37A120G      | 120 GB | B4413697C3AE | 177   | 0     | 0.49   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 263844962A44 | 177   | 0     | 0.49   |
+| Team      | T253X1240G         | 240 GB | C861F9EA4C4C | 177   | 0     | 0.49   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 468CBE2388BC | 177   | 0     | 0.49   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 3EA412262455 | 177   | 0     | 0.49   |
 | Goodram   | SSDPR-CX400-256    | 256 GB | 213DE2AA15DE | 177   | 0     | 0.49   |
@@ -16440,18 +17184,21 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37960G       | 960 GB | 832A5AE48AA3 | 177   | 0     | 0.49   |
 | Samsung   | MZNTY128HDHP-000L1 | 128 GB | B0BFFDA188EA | 177   | 0     | 0.49   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 47761DAD7DE9 | 177   | 0     | 0.49   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 42ACDBB29138 | 177   | 0     | 0.49   |
 | KingDian  | S280               | 480 GB | 6ECF049AAF57 | 177   | 0     | 0.49   |
 | SanDisk   | SD8SN8U512G1002    | 512 GB | F6276E1A058F | 177   | 0     | 0.49   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 2DC9F44BB8E9 | 177   | 0     | 0.49   |
 | Kingston  | SA400S37240G       | 240 GB | 710A260BC67D | 177   | 0     | 0.49   |
 | Samsung   | SSD 860 EVO        | 1 TB   | F7F151FA532A | 177   | 0     | 0.49   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 85959BDE99DD | 177   | 0     | 0.49   |
+| Kingston  | SV300S37A120G      | 120 GB | 593630552DCF | 885   | 4     | 0.49   |
 | Kingston  | SV300S37A120G      | 120 GB | 7667A081416F | 177   | 0     | 0.49   |
 | Samsung   | SSD 850 EVO        | 120 GB | DBF19FCA0118 | 177   | 0     | 0.49   |
 | Intel     | SSDSA2BW160G3L     | 160 GB | FB584A007EED | 177   | 0     | 0.49   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 3D24AE9BE275 | 177   | 0     | 0.49   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 5DE3F7E2B514 | 177   | 0     | 0.49   |
 | China     | SSD                | 128 GB | 21C2A9D03524 | 177   | 0     | 0.48   |
+| Samsung   | SSD 860 EVO M.2    | 1 TB   | 447C77FDD617 | 177   | 0     | 0.48   |
 | Transcend | TS240GSSD220S      | 240 GB | 90C1EF39D56F | 177   | 0     | 0.48   |
 | Kingston  | SV300S37A120G      | 120 GB | 88575380AE29 | 176   | 0     | 0.48   |
 | Smartbuy  | SSD                | 120 GB | E1C2E006BCF0 | 176   | 0     | 0.48   |
@@ -16484,6 +17231,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 1 TB   | E3587B4836D0 | 176   | 0     | 0.48   |
 | Pioneer   | APS-SL3N-240       | 240 GB | 4AAEE8C34927 | 176   | 0     | 0.48   |
 | Toshiba   | Q300               | 240 GB | 27EDE13CA202 | 1586  | 8     | 0.48   |
+| SanDisk   | SSD PLUS 240 GB    | 240 GB | 5E8C9534C81E | 705   | 3     | 0.48   |
 | ADATA     | SU700              | 120 GB | D886BC670933 | 176   | 0     | 0.48   |
 | Samsung   | SSD 840 EVO        | 250 GB | 437CD3F096B3 | 176   | 0     | 0.48   |
 | Samsung   | SSD 860 EVO        | 500 GB | F2C52FC128B0 | 176   | 0     | 0.48   |
@@ -16524,12 +17272,14 @@ MTBF - avg. MTBF in years per sample.
 | Vaseky    | V800-64G           | 64 GB  | B9B049413C70 | 175   | 0     | 0.48   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 6876D31D160C | 175   | 0     | 0.48   |
 | Kingston  | SA400S37240G       | 240 GB | D284553E15C0 | 175   | 0     | 0.48   |
+| PNY       | CS900 480GB SSD    | 480 GB | BD8CBCD70431 | 175   | 0     | 0.48   |
 | SPCC      | SSD                | 120 GB | 8A15EDADFD4D | 175   | 0     | 0.48   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 0F9725733941 | 175   | 0     | 0.48   |
 | Apacer    | AS340              | 240 GB | E9B822036262 | 175   | 0     | 0.48   |
 | Kingston  | SA400S37480G       | 480 GB | 2AC438EEA364 | 175   | 0     | 0.48   |
 | SanDisk   | SDSSDH3 500G       | 500 GB | 5845DCA0C26E | 175   | 0     | 0.48   |
 | Kingston  | SV300S37A120G      | 120 GB | 0FB04F7C37E7 | 175   | 0     | 0.48   |
+| PNY       | CS900 480GB SSD    | 480 GB | 3F66A8B152D9 | 175   | 0     | 0.48   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 984CD3C3B063 | 175   | 0     | 0.48   |
 | ADATA     | SU800              | 128 GB | 6A9AE8385A73 | 526   | 2     | 0.48   |
 | Apple     | SSD SM0128G        | 121 GB | D0236087374F | 175   | 0     | 0.48   |
@@ -16572,6 +17322,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | 132E5F69F083 | 174   | 0     | 0.48   |
 | SanDisk   | SDSSDH3 500G       | 500 GB | BE746985E93C | 174   | 0     | 0.48   |
 | Seagate   | BarraCuda SSD Z... | 500 GB | 4240374CD830 | 174   | 0     | 0.48   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 3E8CD9D2FBDC | 174   | 0     | 0.48   |
 | China     | SSD 128G           | 128 GB | 89D88661BADD | 174   | 0     | 0.48   |
 | Kingston  | SA400S37120G       | 120 GB | 0948A92829D6 | 174   | 0     | 0.48   |
 | SPCC      | SSD                | 128 GB | A37FED542EF9 | 174   | 0     | 0.48   |
@@ -16588,6 +17339,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 1F0D763E2DB1 | 174   | 0     | 0.48   |
 | SanDisk   | SDSSDA240G         | 240 GB | DEEBB6421B33 | 174   | 0     | 0.48   |
 | SanDisk   | X600 M.2 2280 SATA | 128 GB | 096A90A5CC9E | 174   | 0     | 0.48   |
+| Kingston  | SV300S37A120G      | 120 GB | 16B12FE6AAEE | 871   | 4     | 0.48   |
 | SPCC      | SSD                | 128 GB | 17FA4BE41A53 | 174   | 0     | 0.48   |
 | Kingston  | SA400S37240G       | 240 GB | 679859CE141A | 174   | 0     | 0.48   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | B8723C6415B7 | 174   | 0     | 0.48   |
@@ -16624,6 +17376,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | A566AAEC9129 | 173   | 0     | 0.48   |
 | Samsung   | SSD 860 EVO        | 250 GB | BB071E39638B | 173   | 0     | 0.48   |
 | Samsung   | SSD 860 QVO        | 1 TB   | FA14C8360F03 | 173   | 0     | 0.48   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 2FF175B33C51 | 347   | 1     | 0.48   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | B0A40CF67548 | 173   | 0     | 0.48   |
 | ADATA     | SU750              | 256 GB | A44070F3FFDC | 173   | 0     | 0.48   |
 | Kingston  | SA400S37240G       | 240 GB | 2FE6D468BAA5 | 173   | 0     | 0.48   |
@@ -16637,6 +17390,7 @@ MTBF - avg. MTBF in years per sample.
 | Faspeed   | F510-120G          | 120 GB | 51C493E900A2 | 173   | 0     | 0.47   |
 | Kingston  | SA400S37240G       | 240 GB | 07FC60168C7C | 173   | 0     | 0.47   |
 | Mushkin   | MKNSSDTR500GB      | 500 GB | F4F81EBFEE7B | 173   | 0     | 0.47   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 809BDF2B6BAC | 173   | 0     | 0.47   |
 | Kingston  | SA400S37240G       | 240 GB | BAE410C5E307 | 173   | 0     | 0.47   |
 | Samsung   | SSD 850 EVO        | 250 GB | EC07F0C91CE9 | 173   | 0     | 0.47   |
 | Lite-On   | LCS-128M6S         | 128 GB | 0E8254132779 | 173   | 0     | 0.47   |
@@ -16709,6 +17463,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-128M7VG         | 128 GB | ADCB7909FB70 | 171   | 0     | 0.47   |
 | Samsung   | SSD 860 EVO        | 500 GB | CCF9FB54A179 | 171   | 0     | 0.47   |
 | Team      | T253TD001T         | 1 TB   | 08DFA4FEB3EC | 171   | 0     | 0.47   |
+| ADATA     | SP550              | 240 GB | C46F46842197 | 171   | 0     | 0.47   |
 | SanDisk   | SDSSDA-1T00        | 1 TB   | 14B9166BDA37 | 171   | 0     | 0.47   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | D6ABC62EC1F5 | 171   | 0     | 0.47   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 2140B0BF7598 | 171   | 0     | 0.47   |
@@ -16720,13 +17475,16 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 4B816372761C | 343   | 1     | 0.47   |
 | T-FORCE   | SSD                | 1 TB   | 38F1DDAC0D4A | 171   | 0     | 0.47   |
 | Kingston  | SHFS37A120G        | 120 GB | DF6717DF7C0E | 514   | 2     | 0.47   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 8B7BACD83B17 | 171   | 0     | 0.47   |
 | SanDisk   | SSD PLUS 480 GB    | 480 GB | 0580444061D5 | 171   | 0     | 0.47   |
 | Kingston  | RBU-SNS8152S351... | 512 GB | 48F27E3D2833 | 171   | 0     | 0.47   |
 | Kingston  | SVP200S37A60G      | 64 GB  | 1EBC9CF38CB9 | 171   | 0     | 0.47   |
 | SanDisk   | SDSSDHP256G        | 256 GB | 5C90DCDFE7ED | 171   | 0     | 0.47   |
+| Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | E09EE08A1CD0 | 1543  | 8     | 0.47   |
 | Samsung   | MZNTY128HDHP-000L2 | 128 GB | EA56E937B8A4 | 171   | 0     | 0.47   |
 | WDC       | WDS500G2B0A        | 500 GB | 1DE2CDE33B88 | 171   | 0     | 0.47   |
 | Samsung   | SSD 860 EVO        | 500 GB | 98ED992B48B1 | 171   | 0     | 0.47   |
+| Vaseky    | V800-256G          | 256 GB | 9B6709441521 | 171   | 0     | 0.47   |
 | BHT       | WR202I0064G E70... | 64 GB  | B47E1F0B7E83 | 171   | 0     | 0.47   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 7770DB3A09CA | 171   | 0     | 0.47   |
 | Kingston  | SA400S37240G       | 240 GB | 58B640AA8094 | 171   | 0     | 0.47   |
@@ -16785,6 +17543,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 693E085D119D | 170   | 0     | 0.47   |
 | Samsung   | SSD 850 EVO        | 250 GB | 6CE44BD4F06E | 170   | 0     | 0.47   |
 | SanDisk   | SDSSDH3512G        | 512 GB | 13D0F7A0C2D0 | 170   | 0     | 0.47   |
+| Kingston  | SA400S37120G       | 120 GB | 1CCE117011A1 | 170   | 0     | 0.47   |
 | ADATA     | SU630              | 240 GB | 7BA5EEE7F52D | 170   | 0     | 0.47   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 3250C42131B3 | 170   | 0     | 0.47   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | 31BDB1599EE7 | 169   | 0     | 0.47   |
@@ -16837,6 +17596,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | 69C074584A6B | 169   | 0     | 0.46   |
 | Samsung   | SSD 870 QVO        | 2 TB   | D2FB5E2D82F9 | 169   | 0     | 0.46   |
 | SanDisk   | SD8TB8U256G1001    | 256 GB | 1B165AD274F8 | 169   | 0     | 0.46   |
+| ADATA     | SU800              | 128 GB | EF9E785F41F3 | 169   | 0     | 0.46   |
 | Crucial   | CT500MX500SSD1     | 500 GB | B79390DD97FD | 169   | 0     | 0.46   |
 | Samsung   | SSD 860 EVO        | 500 GB | 74557D6DBBB6 | 169   | 0     | 0.46   |
 | Dogfish   | SSD                | 128 GB | FAD4B577D22C | 169   | 0     | 0.46   |
@@ -16851,16 +17611,21 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS128GSSD340       | 128 GB | AEF52F4F3893 | 169   | 0     | 0.46   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 02C6BCB4AA70 | 169   | 0     | 0.46   |
 | ADATA     | SU635              | 240 GB | 415820296490 | 169   | 0     | 0.46   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | BBBB45063575 | 169   | 0     | 0.46   |
 | Goodram   | IRIDIUM            | 480 GB | 710EC13D4834 | 169   | 0     | 0.46   |
 | Crucial   | CT240BX500SSD1     | 240 GB | B5BDCEE7ABD4 | 168   | 0     | 0.46   |
 | Kingston  | SA400S37240G       | 240 GB | 07FE5447B95C | 168   | 0     | 0.46   |
 | Crucial   | CT500MX500SSD1     | 500 GB | D593BABDC1AB | 168   | 0     | 0.46   |
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | 8CA1D6EEFDDD | 168   | 0     | 0.46   |
 | ADATA     | SU630              | 240 GB | DBF501DEF959 | 168   | 0     | 0.46   |
+| Crucial   | CT256MX100SSD1     | 256 GB | 216CD40ED9CA | 168   | 0     | 0.46   |
+| ADATA     | SU630              | 960 GB | 0A900CBCA22C | 168   | 0     | 0.46   |
 | Apple     | SSD SM0128G        | 121 GB | 23E984524F3F | 168   | 0     | 0.46   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 8C7D3F241307 | 168   | 0     | 0.46   |
+| Crucial   | CT480BX500SSD1     | 480 GB | C3B28526BD45 | 168   | 0     | 0.46   |
 | HP        | SSD S700           | 250 GB | 420A0541C6CC | 168   | 0     | 0.46   |
 | Samsung   | SSD 850 PRO        | 512 GB | DEC4D7FFBCEF | 168   | 0     | 0.46   |
+| Samsung   | SSD 860 EVO        | 250 GB | A34904D82F7E | 168   | 0     | 0.46   |
 | Kingston  | SV200S3128G        | 128 GB | 268E7CD3A0AE | 1519  | 8     | 0.46   |
 | Lite-On   | CV3-8D128          | 128 GB | 03A53B2B1B9E | 168   | 0     | 0.46   |
 | OCZ       | ARC100             | 120 GB | 5D962F4CF0F0 | 168   | 0     | 0.46   |
@@ -16882,6 +17647,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BW240A4      | 240 GB | 9764999AB0A0 | 1516  | 8     | 0.46   |
 | SanDisk   | SSD PLUS           | 240 GB | D3D098F83BB6 | 168   | 0     | 0.46   |
 | Verbatim  | Vi550 S3 SSD       | 512 GB | 77ECAE1682D5 | 168   | 0     | 0.46   |
+| Gigabyte  | GP-GSTFS31256GTND  | 256 GB | 7CD1F20A3E4E | 168   | 0     | 0.46   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | FB2FD32DF4CA | 168   | 0     | 0.46   |
 | Samsung   | SSD 850 EVO        | 500 GB | 7B592A6950DE | 168   | 0     | 0.46   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 61BF041B6D64 | 168   | 0     | 0.46   |
@@ -16903,6 +17669,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS240GSSD220S      | 240 GB | 0DDF03E72B17 | 168   | 0     | 0.46   |
 | Plextor   | PX-256M5S          | 256 GB | B65C7A50B0B3 | 840   | 4     | 0.46   |
 | Toshiba   | Q300               | 120 GB | AAD0C96D8FF4 | 168   | 0     | 0.46   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 2EA5DEE3EBD8 | 168   | 0     | 0.46   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | A952DA0C03D7 | 167   | 0     | 0.46   |
 | Samsung   | MZNTY128HDHP-000L1 | 128 GB | 4F32E96AE07C | 167   | 0     | 0.46   |
 | Kingston  | SA400S37480G       | 480 GB | E5A4CC7C45BC | 167   | 0     | 0.46   |
@@ -16915,6 +17682,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBUSNS8180DS3256GJ | 256 GB | 825215AE8670 | 167   | 0     | 0.46   |
 | Kingston  | SHFS37A240G        | 240 GB | D80C01980C55 | 167   | 0     | 0.46   |
 | SanDisk   | SDSSDA240G         | 240 GB | 46586D680FD0 | 167   | 0     | 0.46   |
+| WDC       | WDS120G2G0A-00JH30 | 120 GB | 7083D19A418F | 167   | 0     | 0.46   |
 | Kingston  | SUV400S37480G      | 480 GB | FB01AAE55C07 | 167   | 0     | 0.46   |
 | Samsung   | SSD 860 EVO        | 500 GB | 92945E2A25BD | 167   | 0     | 0.46   |
 | SanDisk   | SDLF1CRR-019T-1HA1 | 1.9 TB | 00F7BF7F279E | 167   | 0     | 0.46   |
@@ -16964,6 +17732,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BW120H6      | 120 GB | 94342A784AE8 | 166   | 0     | 0.46   |
 | Platinet  | SSD                | 120 GB | EA30AF9E5D25 | 166   | 0     | 0.46   |
 | Kingston  | SV300S37A120G      | 120 GB | 89BDEE5DE54F | 831   | 4     | 0.46   |
+| SPCC      | SSD                | 512 GB | D283640B8E24 | 166   | 0     | 0.46   |
 | Samsung   | SSD 860 EVO        | 500 GB | ED318BDB6E40 | 166   | 0     | 0.46   |
 | Crucial   | CT500MX500SSD1     | 500 GB | A0B72F4BB61F | 166   | 0     | 0.46   |
 | WDC       | WDS200T2B0B-00YS70 | 2 TB   | 1541D7770E04 | 166   | 0     | 0.46   |
@@ -17001,6 +17770,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV3-8D128          | 128 GB | 3951CB632B23 | 165   | 0     | 0.45   |
 | Phison    | SATA SSD           | 32 GB  | C419389C150A | 165   | 0     | 0.45   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | 0BF048925FE8 | 165   | 0     | 0.45   |
+| Samsung   | SSD 860 EVO        | 1 TB   | 2AECBC749A48 | 165   | 0     | 0.45   |
 | AGI       | AGI960G17AI178     | 960 GB | 19E0B0C92E4C | 165   | 0     | 0.45   |
 | Kingston  | SUV500480G         | 480 GB | 5AAC7BC241C4 | 165   | 0     | 0.45   |
 | Samsung   | SSD 860 QVO        | 1 TB   | DBD501BD693B | 165   | 0     | 0.45   |
@@ -17120,8 +17890,10 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 90CED151F1A2 | 163   | 0     | 0.45   |
 | GLOWAY    | STK720GS3-S7       | 720 GB | DB2D047C91E3 | 163   | 0     | 0.45   |
 | Kingston  | SA400S37240G       | 240 GB | D2AA9305F313 | 163   | 0     | 0.45   |
+| PNY       | CS900 240GB SSD    | 240 GB | CC83398D9518 | 163   | 0     | 0.45   |
 | SK hynix  | HFS128G3BTND-N210A | 128 GB | 8EC2E457BEAF | 163   | 0     | 0.45   |
 | Samsung   | SSD 850 EVO        | 500 GB | A6510A4275F6 | 163   | 0     | 0.45   |
+| Goodram   | SSDPR-CX400-256    | 256 GB | E0631EFC0A03 | 163   | 0     | 0.45   |
 | Kingston  | SA400S37240G       | 240 GB | BBFF1323D7B1 | 163   | 0     | 0.45   |
 | SanDisk   | SDEZS25-240G-Z01   | 240 GB | 18D7080150F3 | 163   | 0     | 0.45   |
 | SanDisk   | SSD PLUS           | 480 GB | 14B272B6D272 | 163   | 0     | 0.45   |
@@ -17165,6 +17937,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV500M8240G       | 240 GB | 0046B5021A89 | 162   | 0     | 0.45   |
 | SanDisk   | SSD PLUS           | 480 GB | 02459B6017C0 | 162   | 0     | 0.45   |
 | Crucial   | CT480BX300SSD1     | 480 GB | 191B85CECF25 | 162   | 0     | 0.45   |
+| Kingston  | SA400S37240G       | 240 GB | F2203A93155E | 162   | 0     | 0.45   |
 | Kingston  | SUV400S37240G      | 240 GB | 1FB9ADB1C1EF | 162   | 0     | 0.45   |
 | Apacer    | AS350              | 480 GB | B984BB1417C2 | 162   | 0     | 0.45   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | D43A670FD991 | 162   | 0     | 0.45   |
@@ -17228,6 +18001,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | D4186F0B5A33 | 161   | 0     | 0.44   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 86842367B085 | 161   | 0     | 0.44   |
 | Kingston  | SKC300S37A120G     | 120 GB | 050134A41DC1 | 161   | 0     | 0.44   |
+| Kingston  | SV300S37A120G      | 120 GB | 1F8A51F62F25 | 161   | 0     | 0.44   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 486C20BCD48D | 161   | 0     | 0.44   |
 | SanDisk   | SSD PLUS           | 240 GB | EE03CE70AC1A | 161   | 0     | 0.44   |
 | SanDisk   | SSD PLUS           | 240 GB | F3D4D894AFA0 | 161   | 0     | 0.44   |
@@ -17312,6 +18086,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-128M6Pro        | 128 GB | D13475C8FEB0 | 159   | 0     | 0.44   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | 5230D285A58C | 159   | 0     | 0.44   |
 | Samsung   | SSD 850 EVO        | 1 TB   | E68756BB6120 | 159   | 0     | 0.44   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 2BC5DE1ACF41 | 159   | 0     | 0.44   |
 | Goodram   | SSDPR-CL100-240-G3 | 240 GB | 88CC036CD091 | 159   | 0     | 0.44   |
 | Goodram   | SSDPR-CL100-480-G2 | 480 GB | A8AE7A8A226F | 159   | 0     | 0.44   |
 | Micron    | MTFDDAK256MAM-1K1  | 256 GB | 29CCFC77EEE0 | 159   | 0     | 0.44   |
@@ -17327,6 +18102,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 3E5C86B2B309 | 159   | 0     | 0.44   |
 | SanDisk   | SSD G5 BICS4       | 1 TB   | 2037E5D2A17F | 159   | 0     | 0.44   |
 | Goodram   | SSDPR-CL100-240-G2 | 240 GB | 9A0DEFF13B58 | 159   | 0     | 0.44   |
+| Kingston  | SA400S37240G       | 240 GB | 8F7C40760485 | 159   | 0     | 0.44   |
 | Kingston  | SV300S37A120G      | 120 GB | 03543808A022 | 159   | 0     | 0.44   |
 | OCZ       | ARC100             | 240 GB | FB0FE39FAD66 | 159   | 0     | 0.44   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | DA58DB660698 | 159   | 0     | 0.44   |
@@ -17350,6 +18126,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | C902B627E818 | 158   | 0     | 0.44   |
 | Samsung   | SSD 840 EVO 250... | 250 GB | 39A69EC27F1F | 158   | 0     | 0.44   |
 | Zheino    | CHN 25SATAA3 360   | 360 GB | C1631860A713 | 158   | 0     | 0.44   |
+| ADATA     | SU650              | 120 GB | DB260B2A245B | 158   | 0     | 0.44   |
 | China     | SATA SSD           | 120 GB | 19F971B1D652 | 158   | 0     | 0.44   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 629AC19F2661 | 158   | 0     | 0.44   |
 | Kingston  | SA400S37120G       | 120 GB | C9794CDA0CEA | 158   | 0     | 0.44   |
@@ -17443,17 +18220,20 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 0B9FC1AEFF85 | 157   | 0     | 0.43   |
 | Lite-On   | CV1-CC128-11 2.... | 128 GB | 87755573DA91 | 157   | 0     | 0.43   |
 | Samsung   | SSD 850 EVO        | 500 GB | 7982CFED29AA | 157   | 0     | 0.43   |
+| Samsung   | SSD 860 EVO M.2    | 250 GB | BAC104688B9C | 157   | 0     | 0.43   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 596836B80F1E | 157   | 0     | 0.43   |
 | Samsung   | SSD 860 EVO        | 1 TB   | D24C739996C9 | 156   | 0     | 0.43   |
 | GLOWAY    | YCT512GS3-S7 Pro   | 512 GB | 7437ECA27B8C | 156   | 0     | 0.43   |
 | Samsung   | SSD 850 PRO        | 128 GB | 2C6E879585D6 | 156   | 0     | 0.43   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 96028D6AED24 | 156   | 0     | 0.43   |
 | Kingston  | SA400S37240G       | 240 GB | 52D1DA479BDC | 156   | 0     | 0.43   |
+| SanDisk   | SSD PLUS 480 GB    | 480 GB | C7EF01848C15 | 156   | 0     | 0.43   |
 | Intel     | SSDSC2KW128G8      | 128 GB | 9089E45A6124 | 156   | 0     | 0.43   |
 | Samsung   | SSD 850 EVO        | 250 GB | B979E37A4581 | 156   | 0     | 0.43   |
 | Crucial   | CT525MX300SSD4     | 528 GB | 0F7764488760 | 156   | 0     | 0.43   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 782DFEAA138D | 156   | 0     | 0.43   |
 | China     | SSD                | 1 TB   | 3CC25E6A2C1C | 156   | 0     | 0.43   |
+| Intenso   | SSD SATAIII        | 120 GB | A14491B7D787 | 156   | 0     | 0.43   |
 | RZX       | 19SSD6G-480GB      | 480 GB | F04E1B0EE7CC | 156   | 0     | 0.43   |
 | Kingston  | SHSS37A120G        | 120 GB | 28031B8B3192 | 156   | 0     | 0.43   |
 | Kingston  | SV300S37A240G      | 240 GB | 683450ED8818 | 156   | 0     | 0.43   |
@@ -17462,6 +18242,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | D694AA977C3C | 156   | 0     | 0.43   |
 | Phison    | SATA SSD           | 128 GB | 795C67667982 | 156   | 0     | 0.43   |
 | Kingston  | SA400S37480G       | 480 GB | 57B5A2FF9404 | 156   | 0     | 0.43   |
+| Transcend | TS480GSSD220S      | 480 GB | 14741E305F3D | 156   | 0     | 0.43   |
 | Kingston  | SA400S37480G       | 480 GB | 3757E0750A62 | 156   | 0     | 0.43   |
 | Kingston  | SHFS37A240G        | 240 GB | 8566859EE08C | 156   | 0     | 0.43   |
 | Samgporse | SP-8 PRO           | 1 TB   | 545B38CB76A5 | 156   | 0     | 0.43   |
@@ -17485,11 +18266,13 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253X2001T         | 1 TB   | D30F9242DDCC | 156   | 0     | 0.43   |
 | Kingston  | SA400S37240G       | 240 GB | B1AA0F43398A | 156   | 0     | 0.43   |
 | Kingston  | SA400S37960G       | 960 GB | C7222A13880A | 156   | 0     | 0.43   |
+| SK hynix  | SC401 SATA         | 256 GB | 607BBD9D6479 | 156   | 0     | 0.43   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 7D24DB5AE115 | 156   | 0     | 0.43   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 992869952D13 | 156   | 0     | 0.43   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 3F82EB35F006 | 155   | 0     | 0.43   |
 | Samsung   | SSD 750 EVO        | 120 GB | 5F361C52E1DC | 155   | 0     | 0.43   |
 | Samsung   | SSD 860 EVO        | 250 GB | 961FD6E2B4FE | 155   | 0     | 0.43   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | 9CFC2CC082F5 | 155   | 0     | 0.43   |
 | Kingston  | SA400S37480G       | 480 GB | 6C73E6017E89 | 155   | 0     | 0.43   |
 | Samsung   | MMCRE64GFMPP-MVA   | 64 GB  | AA9A8D2560C6 | 155   | 0     | 0.43   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 2652FC894414 | 155   | 0     | 0.43   |
@@ -17523,6 +18306,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSCKKF256G8 SATA | 256 GB | C49EC316CC93 | 155   | 0     | 0.43   |
 | Corsair   | Force LS SSD       | 64 GB  | 9ADAA62E646B | 1087  | 6     | 0.43   |
 | ADATA     | SU650              | 120 GB | FCD1AA5AC7B0 | 155   | 0     | 0.43   |
+| China     | SSD                | 120 GB | B91D6B4DC5ED | 155   | 0     | 0.43   |
 | Kingston  | SV300S37A120G      | 120 GB | E8F412B0AD31 | 155   | 0     | 0.43   |
 | OCZ       | VECTOR150          | 120 GB | 3F431D3493AE | 155   | 0     | 0.43   |
 | Samsung   | SSD 830 Series     | 512 GB | 83BA52C2F587 | 155   | 0     | 0.43   |
@@ -17531,6 +18315,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 0D10E39E691E | 155   | 0     | 0.43   |
 | Crucial   | CT500BX100SSD1     | 500 GB | F7F6D3857B8D | 155   | 0     | 0.43   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 84B1DFB768C1 | 155   | 0     | 0.43   |
+| Crucial   | CT480BX500SSD1     | 480 GB | DCEEA2A3F390 | 155   | 0     | 0.43   |
 | Kingston  | SA400S37240G       | 240 GB | FAB27E921FB5 | 155   | 0     | 0.43   |
 | SanDisk   | SDSSDH3 250G       | 250 GB | F4834993083D | 155   | 0     | 0.43   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 0BB6CAA7C16A | 155   | 0     | 0.43   |
@@ -17541,8 +18326,10 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U100           | 24 GB  | 2B5C09929FB8 | 155   | 0     | 0.42   |
 | Kingston  | SA400S37240G       | 240 GB | 3CD849780BCC | 155   | 0     | 0.42   |
 | SPCC      | SSD                | 120 GB | DE28C3D0674D | 155   | 0     | 0.42   |
+| Toshiba   | KSG60ZMV256G M.... | 256 GB | AE61E66DE0F8 | 155   | 0     | 0.42   |
 | Samsung   | SSD 860 EVO        | 500 GB | C1EAD24C1500 | 155   | 0     | 0.42   |
 | WDC       | WDS500G2B0A        | 500 GB | D870ED0A484C | 155   | 0     | 0.42   |
+| Kingston  | SV300S37A120G      | 120 GB | C3E756AF115B | 774   | 4     | 0.42   |
 | ADATA     | SU800              | 2 TB   | 973F18A4B0F1 | 154   | 0     | 0.42   |
 | Dogfish   | SSD                | 128 GB | 5D1EF80A7885 | 154   | 0     | 0.42   |
 | Intel     | SSDSC2BP240G4      | 240 GB | CE105819F4F8 | 154   | 0     | 0.42   |
@@ -17550,13 +18337,16 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | FED06CDAEA4D | 154   | 0     | 0.42   |
 | Kingston  | SA400S37960G       | 960 GB | A61F783CCF41 | 154   | 0     | 0.42   |
 | Kingston  | SUV500MS240G       | 240 GB | 7991AF480277 | 154   | 0     | 0.42   |
+| Samsung   | SSD 850 PRO        | 1 TB   | A0F21BF7E10B | 154   | 0     | 0.42   |
 | Samsung   | SSD 860 EVO        | 500 GB | 62E268A687AC | 154   | 0     | 0.42   |
+| China     | SATA SSD           | 120 GB | 0D39F836D18B | 154   | 0     | 0.42   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 2B8B477C2B4D | 154   | 0     | 0.42   |
 | Smartbuy  | SSD                | 64 GB  | 0F319178BC38 | 154   | 0     | 0.42   |
 | Corsair   | Force GS           | 240 GB | D927894E796F | 1702  | 10    | 0.42   |
 | ADATA     | SP550              | 960 GB | 2FCDFE64E44E | 154   | 0     | 0.42   |
 | Samsung   | SSD 850 EVO        | 250 GB | 2565111EE95E | 154   | 0     | 0.42   |
 | Kingston  | SA400S37240G       | 240 GB | 846B443CB27A | 154   | 0     | 0.42   |
+| PNY       | CS900 120GB SSD    | 120 GB | 1AD7511412D5 | 154   | 0     | 0.42   |
 | Micron    | M600_MTFDDAK1T0MBF | 1 TB   | 84F0CC659B7F | 154   | 0     | 0.42   |
 | Intel     | SSDSC2BF180A4L     | 180 GB | 9B8A5B6262A7 | 154   | 0     | 0.42   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 0FE5327CCD39 | 154   | 0     | 0.42   |
@@ -17659,7 +18449,9 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KW256G8      | 256 GB | 503D311E1DD8 | 153   | 0     | 0.42   |
 | OCZ       | VECTOR150          | 120 GB | 0B04A90C4505 | 153   | 0     | 0.42   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 33C0B53C05D2 | 153   | 0     | 0.42   |
+| SanDisk   | SDSSDA120G         | 120 GB | C4CA561CCF10 | 153   | 0     | 0.42   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | A8305BBF11AF | 153   | 0     | 0.42   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 3EE9EA6F45AE | 153   | 0     | 0.42   |
 | Toshiba   | Q300               | 960 GB | EDE69E6188FA | 153   | 0     | 0.42   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 79EEF59D8287 | 152   | 0     | 0.42   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 144E306E69F6 | 152   | 0     | 0.42   |
@@ -17779,6 +18571,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH32000G       | 2 TB   | 7BCDD2F8DD36 | 150   | 0     | 0.41   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 734C92BEB1D2 | 150   | 0     | 0.41   |
 | Kston     | SSD                | 128 GB | 5132F87D6D99 | 150   | 0     | 0.41   |
+| PNY       | EU SSD CS1311      | 120 GB | 5360EB8DB257 | 150   | 0     | 0.41   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 8D7B3C8F3273 | 150   | 0     | 0.41   |
 | KingSpec  | MT-128             | 128 GB | DE0F6357B2F1 | 150   | 0     | 0.41   |
 | Kingston  | SA400S37120G       | 120 GB | 9CF394FE5727 | 150   | 0     | 0.41   |
@@ -17864,6 +18657,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | X300 MSATA         | 128 GB | 8E9C99DD13BF | 149   | 0     | 0.41   |
 | Intel     | SSDSCKJF180A5L     | 180 GB | 1D8E1D55BA24 | 299   | 1     | 0.41   |
 | Kingston  | SA400S37240G       | 240 GB | 9EEB116F0993 | 448   | 2     | 0.41   |
+| Micron    | 5300_MTFDDAK960TDT | 960 GB | ADF77FAFFDA3 | 149   | 0     | 0.41   |
 | Transcend | TS256GSSD370S      | 256 GB | F0D83EBE87A9 | 149   | 0     | 0.41   |
 | WDC       | WDS120G1G0B-00RC30 | 120 GB | 3C9B397650B6 | 149   | 0     | 0.41   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 040675AACB06 | 149   | 0     | 0.41   |
@@ -17917,6 +18711,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 975604A28145 | 148   | 0     | 0.41   |
 | SK hynix  | SC308 SATA         | 128 GB | 1E9D31D52E0A | 148   | 0     | 0.41   |
 | Samsung   | SSD 850 EVO        | 500 GB | 485F8DF20F65 | 148   | 0     | 0.41   |
+| SanDisk   | SD8SN8U-256G-1006  | 256 GB | DC9409893403 | 148   | 0     | 0.41   |
 | SanDisk   | SSD U100           | 24 GB  | 8922A8B52BEF | 148   | 0     | 0.41   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 78E25686259A | 148   | 0     | 0.41   |
 | OCZ       | VERTEX3            | 240 GB | 76651243DF4E | 445   | 2     | 0.41   |
@@ -17925,11 +18720,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 0DEEDCE658FC | 148   | 0     | 0.41   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 3FEE040FC3A1 | 444   | 2     | 0.41   |
 | Crucial   | CT512MX100SSD1     | 512 GB | B43C3D5CE569 | 148   | 0     | 0.41   |
+| Samsung   | MZNTY256HDHP-000L7 | 256 GB | 5560A630F05E | 148   | 0     | 0.41   |
 | Samsung   | SSD 860 EVO        | 500 GB | E760EDE060A6 | 148   | 0     | 0.41   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | AE72B8701C27 | 148   | 0     | 0.41   |
 | China     | SATA SSD           | 20 GB  | 43C343469006 | 148   | 0     | 0.41   |
 | Lite-On   | CV3-8D256          | 256 GB | DBCF7457D6F2 | 148   | 0     | 0.41   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 235C9CBDA5DF | 148   | 0     | 0.41   |
+| Samsung   | SSD 860 EVO        | 1 TB   | AADCFA39DD8A | 148   | 0     | 0.41   |
 | Samsung   | SSD 860 PRO        | 256 GB | 8F68AD3BEDA3 | 148   | 0     | 0.41   |
 | SanDisk   | SDSSDP128G         | 128 GB | E25A811BED44 | 148   | 0     | 0.41   |
 | PNY       | CS900 240GB SSD    | 240 GB | FF3EFD554802 | 148   | 0     | 0.41   |
@@ -17967,6 +18764,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | B5A5BF6A5BBE | 147   | 0     | 0.40   |
 | Crucial   | CT960BX200SSD1     | 960 GB | 0E7148DE7DA3 | 147   | 0     | 0.40   |
 | OCZ       | VERTEX4            | 64 GB  | 28A3B85F319B | 147   | 0     | 0.40   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 97AC97B0C448 | 147   | 0     | 0.40   |
 | SanDisk   | SSD PLUS           | 120 GB | 1F0A5AF97378 | 147   | 0     | 0.40   |
 | Transcend | TS240GMTS420S      | 240 GB | 7CC085E7A504 | 147   | 0     | 0.40   |
 | Kingston  | SA400S37240G       | 240 GB | E89EF174FAEF | 147   | 0     | 0.40   |
@@ -17975,13 +18773,16 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 79DA99F46F50 | 147   | 0     | 0.40   |
 | SPCC      | SSD                | 512 GB | 3D9E0EF6E169 | 147   | 0     | 0.40   |
 | Lite-On   | CV3-DE128          | 128 GB | A242A8B59603 | 147   | 0     | 0.40   |
+| Samsung   | SSD 850 EVO        | 500 GB | A51AED6F46D4 | 147   | 0     | 0.40   |
 | Corsair   | Force 3 SSD        | 120 GB | 2E6051603C67 | 1325  | 8     | 0.40   |
 | Crucial   | CT525MX300SSD4     | 528 GB | D9E7AC5EA9CC | 147   | 0     | 0.40   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 11D1771B44C0 | 147   | 0     | 0.40   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 03D5C8F36983 | 147   | 0     | 0.40   |
 | Intenso   | SSD SATAIII        | 512 GB | 64828DD089CA | 147   | 0     | 0.40   |
 | Kingston  | RBUSNS8180S3128GI1 | 128 GB | A09DE2FEE42A | 147   | 0     | 0.40   |
 | Kingston  | SUV400S37120G      | 120 GB | 2DB7FD205AB3 | 147   | 0     | 0.40   |
 | Kingston  | SV300S37A60G       | 64 GB  | 30D7521D8999 | 147   | 0     | 0.40   |
+| Kingston  | SA400S37120G       | 120 GB | 9966FF3B879D | 147   | 0     | 0.40   |
 | Kingston  | SA400S37240G       | 240 GB | 0C5158DA1FC9 | 147   | 0     | 0.40   |
 | Samsung   | SSD PM871b M.2 ... | 256 GB | 057106A56198 | 147   | 0     | 0.40   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 5BA3415A147C | 147   | 0     | 0.40   |
@@ -17995,6 +18796,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 289C85CFD9D2 | 146   | 0     | 0.40   |
 | Samsung   | SSD 860 EVO        | 250 GB | 5A97ECC83C7D | 146   | 0     | 0.40   |
 | Samsung   | SSD 850 EVO        | 500 GB | A186A4F9EE8B | 146   | 0     | 0.40   |
+| WDC       | WDS120G2G0A-00JH30 | 120 GB | E21C95CD8D4C | 146   | 0     | 0.40   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 6783DA696D87 | 146   | 0     | 0.40   |
 | SPCC      | SSD                | 128 GB | 33E56AB74732 | 146   | 0     | 0.40   |
 | ADATA     | SP600              | 64 GB  | 2CD215426A7A | 146   | 0     | 0.40   |
@@ -18023,8 +18825,11 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37240G      | 240 GB | 644E1AC7EE33 | 146   | 0     | 0.40   |
 | Samsung   | SSD 860 EVO        | 1 TB   | F570EBAEBF4F | 146   | 0     | 0.40   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 8756CEFF5187 | 439   | 2     | 0.40   |
+| China     | SATA SSD           | 128 GB | 7D08EBAC527E | 146   | 0     | 0.40   |
 | SanDisk   | SDSSDA120G         | 120 GB | A96D088C6B08 | 146   | 0     | 0.40   |
+| China     | SSD                | 128 GB | 9C3E1C4993E3 | 146   | 0     | 0.40   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 907CEAC8E8DF | 146   | 0     | 0.40   |
+| Netac     | SSD                | 1 TB   | 38DFCA19592A | 146   | 0     | 0.40   |
 | Samsung   | SSD 860 EVO        | 250 GB | 942331E0E5FF | 146   | 0     | 0.40   |
 | SanDisk   | X600 M.2 2280 SATA | 128 GB | B7CC1E41F2C0 | 146   | 0     | 0.40   |
 | Samsung   | MZNLN512HCJH-000L1 | 512 GB | 6162D3D0A042 | 146   | 0     | 0.40   |
@@ -18070,6 +18875,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | D89E977B06F1 | 145   | 0     | 0.40   |
 | ADATA     | SU630              | 240 GB | 693E18169675 | 145   | 0     | 0.40   |
 | Lite-On   | CV3-CE128-11 SATA  | 128 GB | AFE391D5860E | 145   | 0     | 0.40   |
+| Samsung   | SSD 860 QVO        | 1 TB   | 1002DA1F770F | 145   | 0     | 0.40   |
 | Crucial   | CT120M500SSD1      | 120 GB | BFCFE90D1A6F | 2468  | 16    | 0.40   |
 | Crucial   | CT960M500SSD1      | 960 GB | AB2BD093CAA6 | 145   | 0     | 0.40   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | 7D74F313D09F | 145   | 0     | 0.40   |
@@ -18104,6 +18910,7 @@ MTBF - avg. MTBF in years per sample.
 | Pioneer   | APS-SL3N-512       | 512 GB | 231E315D6183 | 144   | 0     | 0.40   |
 | SanDisk   | SDSSDA240G         | 240 GB | 3597D3C6D13D | 144   | 0     | 0.40   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | CF11C53866D6 | 144   | 0     | 0.40   |
+| Kingston  | SH100S3120G        | 120 GB | D44F47461DB1 | 144   | 0     | 0.40   |
 | Samsung   | MZNLN256HCHP-000H1 | 256 GB | 6CBAD7496EB8 | 144   | 0     | 0.40   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 010E539EF241 | 144   | 0     | 0.40   |
 | Samsung   | SSD 860 EVO        | 500 GB | 42BBF0E662D6 | 144   | 0     | 0.40   |
@@ -18119,10 +18926,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 5D591F9B2A3A | 144   | 0     | 0.40   |
 | Kingston  | SA400S37480G       | 480 GB | 3AE4E2DEEB98 | 144   | 0     | 0.40   |
 | Kingston  | SA400S37480G       | 480 GB | 500FD2A56B65 | 144   | 0     | 0.40   |
+| WDC       | WDS250G2B0A-00SM50 | 250 GB | 51FB51CD375C | 144   | 0     | 0.40   |
+| Samsung   | SSD 840 EVO        | 120 GB | D7A4A8764025 | 144   | 0     | 0.40   |
 | Samsung   | SSD 860 EVO        | 250 GB | 71805D45AF4D | 144   | 0     | 0.40   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 5A8ED2E0447A | 144   | 0     | 0.40   |
 | Crucial   | CT525MX300SSD1     | 528 GB | DF9BA7667C56 | 144   | 0     | 0.40   |
 | SanDisk   | SSD i100           | 24 GB  | A133FEAE0C0C | 144   | 0     | 0.40   |
+| Samsung   | SSD 860 EVO        | 2 TB   | 76A2CA5B4095 | 144   | 0     | 0.40   |
 | WDC       | WDS250G2B0B        | 250 GB | AFAA7A24C311 | 144   | 0     | 0.40   |
 | China     | SSD                | 128 GB | D7A2C27426C1 | 144   | 0     | 0.40   |
 | Lite-On   | CV3-8D128-HP       | 128 GB | 8421875BEA5B | 144   | 0     | 0.40   |
@@ -18163,6 +18973,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO M.2    | 250 GB | BFC6A8CAF52F | 143   | 0     | 0.39   |
 | Samsung   | SSD 860 EVO        | 1 TB   | D659426064DA | 143   | 0     | 0.39   |
 | Kingston  | SA400S37240G       | 240 GB | 9BCEA303A07E | 143   | 0     | 0.39   |
+| Leven     | JAJS300M240C       | 240 GB | E855ED89E4A3 | 143   | 0     | 0.39   |
 | SanDisk   | SSD PLUS           | 120 GB | F42F12D524C0 | 143   | 0     | 0.39   |
 | KingFast  | SSD                | 240 GB | FA0A7EAAF770 | 143   | 0     | 0.39   |
 | SanDisk   | SDSSDXPS480G       | 480 GB | 0DF36FC5F317 | 143   | 0     | 0.39   |
@@ -18206,6 +19017,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 0B95E7CC79AE | 143   | 0     | 0.39   |
 | SPCC      | SSD                | 120 GB | 5B814B12BA80 | 143   | 0     | 0.39   |
 | Samsung   | MZNLN256HCHP-000L7 | 256 GB | 7276611629AE | 143   | 0     | 0.39   |
+| Samsung   | SSD 840 EVO        | 250 GB | 54451A8966FC | 143   | 0     | 0.39   |
 | GLOWAY    | STK1TS3-S7         | 1 TB   | C4B205968996 | 143   | 0     | 0.39   |
 | Kingston  | SA400S37480G       | 480 GB | EBF5F25A55A3 | 143   | 0     | 0.39   |
 | SanDisk   | SDSSDH3250G        | 250 GB | 07F955491206 | 143   | 0     | 0.39   |
@@ -18217,6 +19029,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 750 EVO        | 120 GB | E90F54A8F9B5 | 143   | 0     | 0.39   |
 | Kingston  | SUV500480G         | 480 GB | EA5454EE96D0 | 143   | 0     | 0.39   |
 | Leven     | JAJS300M120C       | 120 GB | 044CED1A6BC7 | 143   | 0     | 0.39   |
+| Samsung   | SSD 840 Series     | 500 GB | 8DD6582F5B3B | 143   | 0     | 0.39   |
 | Samsung   | SSD 850 PRO        | 256 GB | FF4FA543B647 | 143   | 0     | 0.39   |
 | SanDisk   | SSD G5 BICS4       | 500 GB | 8DD199B70202 | 143   | 0     | 0.39   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 9C5C48075B72 | 143   | 0     | 0.39   |
@@ -18248,6 +19061,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 6E0DAB0BB12E | 142   | 0     | 0.39   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 56801221A92C | 142   | 0     | 0.39   |
 | China     | SATA SSD           | 64 GB  | 2B9C3D7A0C0A | 142   | 0     | 0.39   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | 8FF53D12C23F | 142   | 0     | 0.39   |
 | Kingston  | SA400S37240G       | 240 GB | 6FD2C5910285 | 142   | 0     | 0.39   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | F5AD5F05E8E9 | 142   | 0     | 0.39   |
 | Patriot   | Burst              | 240 GB | 8E5603577FDA | 142   | 0     | 0.39   |
@@ -18352,6 +19166,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO M.2    | 250 GB | E42C962A8B3F | 140   | 0     | 0.39   |
 | Samsung   | SSD 860 EVO        | 1 TB   | DF60817EA07E | 140   | 0     | 0.39   |
 | Samsung   | SSD 860 QVO        | 4 TB   | F6DCE82DF3AF | 140   | 0     | 0.39   |
+| ADATA     | SU800NS38          | 128 GB | C57FCEA29AB5 | 140   | 0     | 0.39   |
 | Innodisk  | mSATA mini 3ME ... | 32 GB  | FD7192312395 | 140   | 0     | 0.39   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 62DA7DF05645 | 140   | 0     | 0.39   |
 | AMD       | R5SL120G           | 120 GB | F77DA67D8E84 | 140   | 0     | 0.39   |
@@ -18387,6 +19202,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 34C0C99768BD | 140   | 0     | 0.38   |
 | Mushkin   | MKNSSDRW500GB      | 480 GB | F2B6C5B7F3BE | 140   | 0     | 0.38   |
 | Corsair   | Performance3 SSD   | 256 GB | 2D1A01EB9B70 | 140   | 0     | 0.38   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | FE49DD486555 | 140   | 0     | 0.38   |
 | WDC       | WDS200T2G0A-00JH30 | 2 TB   | 8B13B42993CA | 140   | 0     | 0.38   |
 | Samsung   | SSD 840 Series     | 500 GB | 0028415B6B38 | 420   | 2     | 0.38   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 643994A2EC21 | 140   | 0     | 0.38   |
@@ -18431,6 +19247,7 @@ MTBF - avg. MTBF in years per sample.
 | INNOVA... | SSD                | 480 GB | 82647988E8A5 | 139   | 0     | 0.38   |
 | MENGMI    | SSD                | 240 GB | B2B7EA4272EE | 139   | 0     | 0.38   |
 | SPCC      | SSD                | 240 GB | DB02A77C8FA0 | 139   | 0     | 0.38   |
+| Samsung   | SSD 840 EVO        | 120 GB | ECBD8EF7BED0 | 139   | 0     | 0.38   |
 | Samsung   | SSD 860 EVO        | 500 GB | D13CBA7E1085 | 139   | 0     | 0.38   |
 | Kingston  | RBUSNS8180DS3128GH | 128 GB | 7BBA0F5E206D | 139   | 0     | 0.38   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 910A02E0103D | 139   | 0     | 0.38   |
@@ -18535,6 +19352,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV3-8D256          | 256 GB | 151901E62B0B | 137   | 0     | 0.38   |
 | SPCC      | SSD                | 1 TB   | A5F147DFBF12 | 137   | 0     | 0.38   |
 | Kingston  | SA400S37240G       | 240 GB | E7F6ED5D97CE | 137   | 0     | 0.38   |
+| Team      | T253X1480G         | 480 GB | 664559DD7F6F | 137   | 0     | 0.38   |
 | Integral  | V Series SATA SSD  | 240 GB | DC3E3082E7D7 | 137   | 0     | 0.38   |
 | SanDisk   | SD8SBBU120G1122    | 120 GB | 2AD03067AD26 | 137   | 0     | 0.38   |
 | Phison    | SATA SSD           | 256 GB | D4257EAB89D2 | 137   | 0     | 0.38   |
@@ -18546,6 +19364,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | Ultra II           | 250 GB | 7DB702ACBE45 | 137   | 0     | 0.38   |
 | ADATA     | SP600              | 32 GB  | 7F0744EDDF31 | 137   | 0     | 0.38   |
 | HP        | SSD S700           | 500 GB | 869D9A562A27 | 137   | 0     | 0.38   |
+| Hikvision | HS-SSD-C100 240G   | 240 GB | FC1999286A73 | 137   | 0     | 0.38   |
 | Samsung   | MZ7LH480HAHQ0D3    | 480 GB | E4538ECEBA28 | 137   | 0     | 0.38   |
 | Samsung   | MZ7LH480HAHQ0D3    | 480 GB | FC29F3F1EE8B | 137   | 0     | 0.38   |
 | XrayDisk  | SSD                | 256 GB | F416A4572556 | 137   | 0     | 0.38   |
@@ -18560,13 +19379,16 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | 458139B711FC | 137   | 0     | 0.38   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 7CEE259CDD33 | 137   | 0     | 0.38   |
 | Crucial   | CT525MX300SSD4     | 528 GB | EE551F9F1D7D | 137   | 0     | 0.38   |
+| Samsung   | MZNLN256HMHQ-000H1 | 256 GB | FF72BE13F1DC | 137   | 0     | 0.38   |
 | Samsung   | SSD 860 EVO        | 1 TB   | E81FB085DAAF | 137   | 0     | 0.38   |
 | Samsung   | SSD 860 QVO        | 1 TB   | AA5D32434EB6 | 137   | 0     | 0.38   |
 | SanDisk   | SDSSDH31024G       | 1 TB   | E53310119534 | 137   | 0     | 0.38   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 2E380F7F29E0 | 137   | 0     | 0.38   |
 | Samsung   | SSD 850 PRO        | 256 GB | 90C66A7A86EA | 137   | 0     | 0.38   |
 | Transcend | TS1TSSD230S        | 1 TB   | 85BD1C9F0A90 | 137   | 0     | 0.38   |
+| SanDisk   | SD7TN3Q-256G-1006  | 256 GB | C09B2258BE29 | 411   | 2     | 0.38   |
 | Samsung   | SSD 860 PRO        | 256 GB | 91E2CB71EC8B | 137   | 0     | 0.38   |
+| Apacer    | AS340              | 240 GB | FD910F902B5B | 136   | 0     | 0.38   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 18211362250E | 136   | 0     | 0.38   |
 | Kingston  | SA400S37120G       | 120 GB | AA4E4799F2C7 | 136   | 0     | 0.38   |
 | Samsung   | SSD 850 EVO        | 500 GB | DDFBF4C3FD9E | 136   | 0     | 0.38   |
@@ -18599,6 +19421,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | E55923C13A12 | 136   | 0     | 0.37   |
 | SK hynix  | SC311 SATA         | 256 GB | A5AAA8C59EB0 | 136   | 0     | 0.37   |
 | Samsung   | MZ7LN512HCHP-000L1 | 512 GB | F9C3F82B7821 | 136   | 0     | 0.37   |
+| SanDisk   | SSD PLUS           | 1 TB   | 3B136CE129D9 | 136   | 0     | 0.37   |
 | SanDisk   | SSD PLUS           | 240 GB | C0577808C56F | 136   | 0     | 0.37   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 5115B46D75E0 | 136   | 0     | 0.37   |
 | OCZ       | VERTEX3 MI         | 120 GB | 92276467F8AE | 136   | 0     | 0.37   |
@@ -18720,6 +19543,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | A3C00C0EC6DF | 134   | 0     | 0.37   |
 | Kingston  | SA400S37120G       | 120 GB | 7A0E23CB501A | 134   | 0     | 0.37   |
 | Kingston  | SA400S37960G       | 960 GB | 1CF3DF8AC561 | 134   | 0     | 0.37   |
+| MACROVIP  | SSD                | 240 GB | 186CCBE6A368 | 134   | 0     | 0.37   |
 | SPCC      | SSD                | 120 GB | 372A831E803A | 134   | 0     | 0.37   |
 | Samsung   | SSD 860 EVO        | 500 GB | E6EA568F5337 | 134   | 0     | 0.37   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | DF5A97100528 | 134   | 0     | 0.37   |
@@ -18739,6 +19563,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 9808DE764D69 | 134   | 0     | 0.37   |
 | ADATA     | SP900              | 256 GB | 917E20477CC2 | 403   | 2     | 0.37   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | F6007C834282 | 403   | 2     | 0.37   |
+| Kross ... | KE-SSDIS12G        | 120 GB | 11AD2EBBE879 | 134   | 0     | 0.37   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 77663309F67F | 134   | 0     | 0.37   |
 | Samsung   | SSD 870 QVO        | 2 TB   | AA0C3CBFC5BF | 134   | 0     | 0.37   |
 | ADATA     | SU800              | 1 TB   | 79AFE7A638BB | 134   | 0     | 0.37   |
@@ -18747,12 +19572,14 @@ MTBF - avg. MTBF in years per sample.
 | Drevo     | X1 SSD             | 128 GB | 332A3826CE3A | 671   | 4     | 0.37   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 5E580AFD5703 | 134   | 0     | 0.37   |
 | Samsung   | SSD 860 QVO        | 1 TB   | D16C2849C6FC | 134   | 0     | 0.37   |
+| Crucial   | CT120BX500SSD1     | 120 GB | FA540E575163 | 134   | 0     | 0.37   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 59021B03D3A5 | 134   | 0     | 0.37   |
 | WDC       | WDS400T2B0A-00SM50 | 4 TB   | 837E4A50AA0D | 134   | 0     | 0.37   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 961D028F48B6 | 134   | 0     | 0.37   |
 | Kingston  | SHSS37A120G        | 120 GB | 7E69F90561B7 | 134   | 0     | 0.37   |
 | Patriot   | Burst              | 960 GB | BA0475555C24 | 134   | 0     | 0.37   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | D12CB85D08B2 | 134   | 0     | 0.37   |
+| SanDisk   | SDSSDP064G         | 64 GB  | B3A5F0F589D6 | 134   | 0     | 0.37   |
 | Kingston  | SA400S37           | 120 GB | 19FDD3CB76CE | 938   | 6     | 0.37   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 31D418E7EEF6 | 402   | 2     | 0.37   |
 | SPCC      | SSD                | 128 GB | 42DFE6391C43 | 134   | 0     | 0.37   |
@@ -18813,7 +19640,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 286C1D79A527 | 133   | 0     | 0.36   |
 | SanDisk   | SDSSDH3512G        | 512 GB | CF4658479F5A | 133   | 0     | 0.36   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | C07C306F9819 | 133   | 0     | 0.36   |
+| Lexar     | SSD                | 256 GB | 2D9CC5DD9F2E | 133   | 0     | 0.36   |
 | Kingston  | SUV500MS240G       | 240 GB | 6EC3703B743A | 133   | 0     | 0.36   |
+| Samsung   | SSD 860 EVO        | 1 TB   | 32F8A623099A | 133   | 0     | 0.36   |
 | Kingston  | SUV400S37240G      | 240 GB | 1574F3642713 | 133   | 0     | 0.36   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 7268DF2DAB94 | 133   | 0     | 0.36   |
 | Corsair   | Neutron SSD        | 64 GB  | 60AAFC4CE110 | 133   | 0     | 0.36   |
@@ -18824,10 +19653,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 0235D3BB4F29 | 132   | 0     | 0.36   |
 | SPCC      | SSD                | 64 GB  | 80413936AFA5 | 132   | 0     | 0.36   |
 | SanDisk   | SD7SN6S512G1001    | 512 GB | 8B785828A9CB | 132   | 0     | 0.36   |
+| SanDisk   | SSD PLUS 240 GB    | 240 GB | 54C404AC3250 | 132   | 0     | 0.36   |
 | Samsung   | MZNTY256HDHP-000L7 | 256 GB | C70A1E615B11 | 132   | 0     | 0.36   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 15B4F9356CEB | 132   | 0     | 0.36   |
 | ADATA     | SP920SS            | 256 GB | 6262C2E35FB5 | 132   | 0     | 0.36   |
 | SPCC      | SSD                | 120 GB | C413C9844B8F | 132   | 0     | 0.36   |
+| Samsung   | MZNLN256HAJQ-00007 | 256 GB | 5BF60DC33A6B | 132   | 0     | 0.36   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | D56B606B18A7 | 132   | 0     | 0.36   |
 | Samsung   | SSD 840 EVO        | 500 GB | 087DD2122EC5 | 132   | 0     | 0.36   |
 | Samsung   | SSD 860 EVO        | 500 GB | D44CEDD1FA46 | 132   | 0     | 0.36   |
@@ -18856,11 +19687,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA-1T00        | 1 TB   | B7AA8722D562 | 132   | 0     | 0.36   |
 | Lite-On   | CV8-8E256-11 SATA  | 256 GB | 94B907131A55 | 132   | 0     | 0.36   |
 | Kingston  | SA400S37240G       | 240 GB | 577DC452D6D3 | 132   | 0     | 0.36   |
+| China     | SSD                | 120 GB | 85845BCF3DDC | 132   | 0     | 0.36   |
 | Kingston  | SA400S37480G       | 480 GB | A0E951D7D61F | 132   | 0     | 0.36   |
 | KingSpec  | P4-240             | 240 GB | C21026D11231 | 132   | 0     | 0.36   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | C9F19C8B7654 | 132   | 0     | 0.36   |
 | SanDisk   | SDSSDH3512G        | 512 GB | BE8D01AC2BD5 | 132   | 0     | 0.36   |
 | Kingston  | SA400S37240G       | 240 GB | 244058E60CE4 | 396   | 2     | 0.36   |
+| Crucial   | CT480BX500SSD1     | 480 GB | 88CD6AA37FCA | 132   | 0     | 0.36   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | B9BAE96DB127 | 132   | 0     | 0.36   |
 | ADATA     | IM2S3338-128GD2    | 128 GB | B1736F68E513 | 132   | 0     | 0.36   |
 | Netac     | SSD                | 128 GB | 6F8973A9A5B7 | 132   | 0     | 0.36   |
@@ -18915,6 +19748,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 480 GB | E1C963B5E21A | 131   | 0     | 0.36   |
 | ADATA     | SP900              | 64 GB  | D1C8F327ABD4 | 131   | 0     | 0.36   |
 | China     | mSATA SSD          | 128 GB | 35DD4E16EB11 | 131   | 0     | 0.36   |
+| Micron    | MTFDDAK128MAM-1J1  | 128 GB | 041F3520D7BB | 131   | 0     | 0.36   |
 | WDC       | WDS120G1G0B-00RC30 | 120 GB | 88C3C316C2C7 | 131   | 0     | 0.36   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | AE4C4C31F4EE | 131   | 0     | 0.36   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 05024F8D4587 | 131   | 0     | 0.36   |
@@ -18955,6 +19789,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 PRO Series | 128 GB | AA338A7E6CD4 | 1828  | 13    | 0.36   |
 | ADATA     | SSD S599           | 64 GB  | 608F8B19EF43 | 130   | 0     | 0.36   |
 | China     | SSD                | 128 GB | AB3CED82568A | 130   | 0     | 0.36   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 0BD5FA409AB1 | 130   | 0     | 0.36   |
 | Kingston  | SUV500M8480G       | 480 GB | 1255FE89D6C4 | 130   | 0     | 0.36   |
 | SanDisk   | SD5SE2256G1002E    | 256 GB | BE4942C7CCC9 | 130   | 0     | 0.36   |
 | Toshiba   | THNSNJ256GCSU      | 256 GB | 9CF29A440D7C | 130   | 0     | 0.36   |
@@ -19010,6 +19845,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD 120G           | 120 GB | 3A2DCBEC5898 | 129   | 0     | 0.36   |
 | Intel     | SSDSC2BW480H6      | 480 GB | B94D789BFB26 | 129   | 0     | 0.36   |
 | SanDisk   | X600 M.2 2280 SATA | 128 GB | 021FAC6FF215 | 129   | 0     | 0.36   |
+| ADATA     | SU800NS38          | 256 GB | 82EE896C52CE | 129   | 0     | 0.36   |
 | Kingston  | SHFS37A120G        | 120 GB | 72DF002D0EEA | 389   | 2     | 0.36   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 90E79D4126AA | 129   | 0     | 0.36   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 6621744FCDA5 | 129   | 0     | 0.36   |
@@ -19138,6 +19974,7 @@ MTBF - avg. MTBF in years per sample.
 | JASTER    | SSD                | 128 GB | 44A865A249BF | 127   | 0     | 0.35   |
 | Kingston  | SA400S37960G       | 960 GB | 84998B6364A8 | 127   | 0     | 0.35   |
 | Kingston  | SH100S3120G        | 120 GB | BC39EC2BB199 | 127   | 0     | 0.35   |
+| Samsung   | SSD 850 EVO        | 500 GB | 89F698879268 | 127   | 0     | 0.35   |
 | Samsung   | SSD 860 EVO        | 2 TB   | AD3D834842CA | 127   | 0     | 0.35   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 4C2CB97D2C94 | 127   | 0     | 0.35   |
 | Goodram   | C40                | 120 GB | B8AC519ECDB4 | 127   | 0     | 0.35   |
@@ -19179,6 +20016,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | A29A51163D2F | 127   | 0     | 0.35   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 7A4662540426 | 127   | 0     | 0.35   |
 | Kingston  | SA400S37240G       | 240 GB | D67EA795CB65 | 127   | 0     | 0.35   |
+| SanDisk   | SSD PLUS           | 480 GB | 6A2B64A4B065 | 127   | 0     | 0.35   |
 | Goodram   | SSD                | 120 GB | CF664124626B | 127   | 0     | 0.35   |
 | HGST      | HUSKY SSD          | 128 GB | 0050E6A404A6 | 127   | 0     | 0.35   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | DC995B290679 | 127   | 0     | 0.35   |
@@ -19196,6 +20034,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD PM800 Serie... | 256 GB | 92410454F6BA | 889   | 6     | 0.35   |
 | Samsung   | SSD 870 EVO        | 500 GB | AFFA87154EBC | 127   | 0     | 0.35   |
 | SanDisk   | SDSSDA240G         | 240 GB | DDD76DFC9597 | 127   | 0     | 0.35   |
+| Intel     | SSDSC2CT120A3      | 120 GB | 6B6501F5EB69 | 126   | 0     | 0.35   |
 | SanDisk   | SDSSDA240G         | 240 GB | 3E0370B35907 | 126   | 0     | 0.35   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | A63600AD974A | 126   | 0     | 0.35   |
 | Lite-On   | LMT-256M3M         | 256 GB | 342FEF647F03 | 253   | 1     | 0.35   |
@@ -19232,9 +20071,12 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 4F56F34EDDD7 | 126   | 0     | 0.35   |
 | Intel     | SSDSC2CT240A4      | 240 GB | E96AAF56B3C5 | 126   | 0     | 0.35   |
 | SanDisk   | SD6SN1M-256G-1006  | 256 GB | 7FCA3BC90B39 | 379   | 2     | 0.35   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | DB1E12CCB0F1 | 126   | 0     | 0.35   |
+| WDC       | WDS120G2G0B-00EPW0 | 120 GB | 66F208B1997C | 252   | 1     | 0.35   |
 | Gigabyte  | GP-GSTFS30256GTTD  | 256 GB | B3AAB947FF07 | 126   | 0     | 0.35   |
 | Kingston  | SA400S37240G       | 240 GB | ED33F380D84A | 126   | 0     | 0.35   |
 | Kingston  | SUV500MS480G       | 480 GB | 6AA908BDF28A | 126   | 0     | 0.35   |
+| Lite-On   | CV3-8D256-11 SATA  | 256 GB | A1A0AFDA03EA | 126   | 0     | 0.35   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 4A0A3F59E454 | 126   | 0     | 0.35   |
 | Seagate   | ZA480NM10001       | 480 GB | 3A24DC09FF81 | 126   | 0     | 0.35   |
 | TrekStor  | TREKSTORSSD128GB   | 128 GB | 971EAE15FBE7 | 126   | 0     | 0.35   |
@@ -19275,6 +20117,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBUSNS8180DS3128GJ | 128 GB | BC8F894E5419 | 125   | 0     | 0.34   |
 | Samsung   | SSD 830 Series     | 64 GB  | 3760A49BB168 | 125   | 0     | 0.34   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 9D0593C31295 | 125   | 0     | 0.34   |
+| Samsung   | SSD 840 Series     | 250 GB | BD49E9F12C15 | 125   | 0     | 0.34   |
 | Samsung   | SSD 850 EVO        | 250 GB | 2C98E7F8A8C2 | 125   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 39F275240F94 | 125   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 1 TB   | F041AE39DC4D | 125   | 0     | 0.34   |
@@ -19284,6 +20127,8 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | 74E40F00BAA3 | 125   | 0     | 0.34   |
 | SanDisk   | SDSSDA120G         | 120 GB | 0FE470A11ABF | 251   | 1     | 0.34   |
 | China     | SSD                | 128 GB | 56C1EC1F35D3 | 125   | 0     | 0.34   |
+| Patriot   | Burst              | 240 GB | 61709D91F7B9 | 125   | 0     | 0.34   |
+| Samsung   | SSD 850 EVO        | 4 TB   | 84204872AD05 | 125   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 500 GB | A4615C1F8465 | 125   | 0     | 0.34   |
 | China     | SATA SSD           | 240 GB | 1800191A2E55 | 125   | 0     | 0.34   |
 | SPCC      | SSD                | 512 GB | 3321C7C9B947 | 125   | 0     | 0.34   |
@@ -19292,11 +20137,13 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 8B3E9F849EC1 | 125   | 0     | 0.34   |
 | Patriot   | Burst              | 240 GB | 69D0351EB5D1 | 125   | 0     | 0.34   |
 | SK hynix  | SC311 SATA         | 256 GB | 2A772C132532 | 125   | 0     | 0.34   |
+| Samsung   | SSD 870 EVO        | 250 GB | 72B6B4527190 | 125   | 0     | 0.34   |
 | Samsung   | SSD 870 QVO        | 4 TB   | 27B2E95541A4 | 125   | 0     | 0.34   |
 | KingFast  | SSD                | 32 GB  | B6B37F96E264 | 125   | 0     | 0.34   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 185625D5A773 | 125   | 0     | 0.34   |
 | Kingston  | RBUSNS8180DS3256GJ | 256 GB | B99DE6DF5C30 | 125   | 0     | 0.34   |
 | Crucial   | CT120BX500SSD1     | 120 GB | EDD13F795AB8 | 125   | 0     | 0.34   |
+| Kingston  | SKC600256G         | 256 GB | 06B7EC8F86DB | 125   | 0     | 0.34   |
 | Samsung   | SSD 850 PRO        | 256 GB | D0E6A195C154 | 125   | 0     | 0.34   |
 | BRAVEE... | SSD                | 240 GB | 6F679451DC8D | 125   | 0     | 0.34   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 0CC4D6E6A20A | 125   | 0     | 0.34   |
@@ -19332,6 +20179,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 120 GB | 4869CCC29119 | 124   | 0     | 0.34   |
 | SanDisk   | SD7SB3Q-256G-1006  | 256 GB | 55E14A16575D | 124   | 0     | 0.34   |
 | Toshiba   | THNSNJ256G8NY      | 256 GB | AD00CE6F1783 | 374   | 2     | 0.34   |
+| WDC       | WDS500G2B0A        | 500 GB | AF5D49D4C930 | 124   | 0     | 0.34   |
 | Intel     | SSDSC2BW120A4      | 120 GB | D740868CA4EF | 624   | 4     | 0.34   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 307D9F981B63 | 124   | 0     | 0.34   |
 | Samsung   | Portable SSD T5    | 500 GB | D9CF457C440D | 124   | 0     | 0.34   |
@@ -19342,6 +20190,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 01488E40DDC1 | 124   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 250 GB | EA40F43B385C | 124   | 0     | 0.34   |
 | SanDisk   | SSD PLUS           | 240 GB | 936BB96E5FA9 | 124   | 0     | 0.34   |
+| INNOVA... | SSD_2.5"_TLC_24... | 240 GB | 5B5FC1FF0138 | 124   | 0     | 0.34   |
 | KingDian  | S280               | 240 GB | F7FD9358CC68 | 124   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 500 GB | ED8937DF41C1 | 124   | 0     | 0.34   |
 | SanDisk   | SSD PLUS 240 GB    | 240 GB | 58EC843FF0F1 | 124   | 0     | 0.34   |
@@ -19354,7 +20203,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 500 GB | F33904C5C42E | 124   | 0     | 0.34   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 128D5F43CD91 | 124   | 0     | 0.34   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | D22C178CAC01 | 124   | 0     | 0.34   |
+| Kingston  | SA400S37480G       | 480 GB | 6C55118C32D2 | 124   | 0     | 0.34   |
 | VISIPRO   | SDVPSA1910256      | 256 GB | 7C84F12B3E2A | 124   | 0     | 0.34   |
+| Lite-On   | IT LST-32S9G-HP    | 32 GB  | 3AB03CC4F083 | 124   | 0     | 0.34   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 1E5608CF8391 | 124   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 500 GB | 9C496DC3FC2A | 124   | 0     | 0.34   |
 | Goodram   | SSD                | 120 GB | D0A050A31B69 | 124   | 0     | 0.34   |
@@ -19386,6 +20237,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 831B28FF332A | 867   | 6     | 0.34   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 3582CC1A2E14 | 123   | 0     | 0.34   |
 | TAMMUZ    | SSD                | 512 GB | 240A8A9565AD | 123   | 0     | 0.34   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 78BCD96D32F5 | 123   | 0     | 0.34   |
 | Kingston  | SHFS37A120G        | 120 GB | 4D84DF25D844 | 123   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 250 GB | 1750A3A54AE4 | 123   | 0     | 0.34   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 4505B2B4901C | 123   | 0     | 0.34   |
@@ -19412,6 +20264,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 5A382EE69041 | 123   | 0     | 0.34   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 7CFA7619194C | 123   | 0     | 0.34   |
 | Kingston  | SA400S37120G       | 120 GB | 147DA3220138 | 123   | 0     | 0.34   |
+| Kingston  | SV300S37A60G       | 64 GB  | 37229DADABB1 | 617   | 4     | 0.34   |
 | SanDisk   | SSD PLUS           | 480 GB | 783B7DCF2773 | 246   | 1     | 0.34   |
 | SanDisk   | Ultra II           | 240 GB | BA80DEE9557D | 123   | 0     | 0.34   |
 | China     | 120GB SSD          | 120 GB | 510676F621F9 | 123   | 0     | 0.34   |
@@ -19437,6 +20290,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMTD128HAFV-000L1 | 128 GB | 04B95DCF649D | 246   | 1     | 0.34   |
 | Samsung   | SSD 860 PRO        | 512 GB | F557EB5EDB73 | 123   | 0     | 0.34   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 152A38E84C12 | 123   | 0     | 0.34   |
+| Intel     | SSDSC2KW512G8      | 512 GB | DC4A4D252D27 | 123   | 0     | 0.34   |
 | Kingston  | SUV300S37A240G     | 240 GB | 3C9172F3711E | 123   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 250 GB | 878966D60D73 | 123   | 0     | 0.34   |
 | SanDisk   | SD5SG2256G1052E    | 256 GB | 338B72E42999 | 246   | 1     | 0.34   |
@@ -19454,6 +20308,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 512 GB | D03C56075FF7 | 122   | 0     | 0.34   |
 | Samsung   | SSD 850 EVO        | 250 GB | 89B1A5D23C86 | 122   | 0     | 0.34   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 45DBC55FB12E | 122   | 0     | 0.34   |
+| Toshiba   | THNSNH128GCST      | 128 GB | 6E8D9E787C55 | 122   | 0     | 0.34   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 958907412A56 | 122   | 0     | 0.34   |
 | Samsung   | SSD 870 QVO        | 1 TB   | E14463071D31 | 122   | 0     | 0.34   |
 | Team      | T253X2001T         | 1 TB   | 7280DE55D873 | 122   | 0     | 0.34   |
@@ -19493,6 +20348,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | CB0A68E869C6 | 122   | 0     | 0.33   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 69B739FCF266 | 122   | 0     | 0.33   |
 | Patriot   | Burst              | 960 GB | 4566EFC593B2 | 122   | 0     | 0.33   |
+| PNY       | CS900 120GB SSD    | 120 GB | 27C077CE4CC9 | 122   | 0     | 0.33   |
 | PNY       | CS900 120GB SSD    | 120 GB | 87FC447F9703 | 122   | 0     | 0.33   |
 | Samsung   | MZ7LN256HCHP-000L7 | 256 GB | 815C84C01AB4 | 122   | 0     | 0.33   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | F19D5C3A0B64 | 122   | 0     | 0.33   |
@@ -19504,12 +20360,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN512HAJQ-00000 | 512 GB | D8AA38375F36 | 122   | 0     | 0.33   |
 | WDC       | PC SA530 SDASB8... | 1 TB   | C7F3B341AFB8 | 122   | 0     | 0.33   |
 | Apacer    | AS350              | 128 GB | 3767BE4D2119 | 122   | 0     | 0.33   |
+| Samsung   | MZNLN256HCHP-000H1 | 256 GB | 099300E1E221 | 122   | 0     | 0.33   |
 | Samsung   | SSD 850 PRO        | 256 GB | 37E75F59EECF | 122   | 0     | 0.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | 14117E4727B6 | 122   | 0     | 0.33   |
 | Kingston  | SV300S37A120G      | 120 GB | EE65A7BA3986 | 365   | 2     | 0.33   |
 | Goodram   | SSDPR-CL100-240    | 240 GB | 7818C461C0CF | 121   | 0     | 0.33   |
 | Samsung   | SSD 860 EVO        | 250 GB | D8EA16C68B29 | 121   | 0     | 0.33   |
 | SanDisk   | SSD PLUS           | 240 GB | C6F71940F5DE | 121   | 0     | 0.33   |
+| Toshiba   | TR200              | 480 GB | B3F6CD40814C | 121   | 0     | 0.33   |
 | Intel     | SSDSC2BP480G4      | 480 GB | 7D0555810C70 | 243   | 1     | 0.33   |
 | Kingston  | SA400S37240G       | 240 GB | 3160CB8801E4 | 121   | 0     | 0.33   |
 | Kingston  | SA400S37480G       | 480 GB | 1B6B66E8C0F6 | 121   | 0     | 0.33   |
@@ -19518,6 +20376,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LCS-256M6S         | 256 GB | 9A70244961A3 | 121   | 0     | 0.33   |
 | OCZ       | VERTEX450          | 128 GB | FA31DB0E85A8 | 121   | 0     | 0.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | EBBD4F7586CF | 121   | 0     | 0.33   |
+| Smartbuy  | SSD                | 120 GB | 337400FF4FA0 | 121   | 0     | 0.33   |
 | Kingston  | SA400S37480G       | 480 GB | 2D31DE2F0BCA | 121   | 0     | 0.33   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 39E417276913 | 243   | 1     | 0.33   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 05D51BB9363F | 121   | 0     | 0.33   |
@@ -19534,9 +20393,11 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT275MX300SSD1     | 275 GB | 53C30D57EA9A | 121   | 0     | 0.33   |
 | Samsung   | SSD 860 EVO        | 1 TB   | E343CC5AABBD | 121   | 0     | 0.33   |
 | SanDisk   | SSD PLUS           | 240 GB | 4479C2A6F9C4 | 121   | 0     | 0.33   |
+| Intel     | SSDSA2BW160G3L     | 160 GB | D45C428341C3 | 121   | 0     | 0.33   |
 | Kingston  | SA400S37120G       | 120 GB | 72AB6CE2EDFE | 121   | 0     | 0.33   |
 | Intenso   | SATA III SSD       | 480 GB | CEB27D9DAC9D | 121   | 0     | 0.33   |
 | SanDisk   | Ultra II           | 960 GB | 06423D67EBC2 | 121   | 0     | 0.33   |
+| Smartbuy  | SSD                | 120 GB | 2B36B4888906 | 121   | 0     | 0.33   |
 | Kingston  | SUV400S37240G      | 240 GB | 168FC3889A93 | 121   | 0     | 0.33   |
 | Kingston  | SV300S37A120G      | 120 GB | D8B9DAFB5792 | 121   | 0     | 0.33   |
 | Samsung   | SSD 850 EVO        | 1 TB   | A241072ACB4B | 121   | 0     | 0.33   |
@@ -19601,6 +20462,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 2 TB   | 9A6E7B5C7AC4 | 120   | 0     | 0.33   |
 | Kingston  | SA400S37120G       | 120 GB | 4E765126DC9B | 120   | 0     | 0.33   |
 | SanDisk   | SDSSDHP256G        | 256 GB | 6C5F863249B0 | 120   | 0     | 0.33   |
+| Transcend | TS2TSSD220Q        | 2 TB   | EC61686B8E5D | 120   | 0     | 0.33   |
 | Kingston  | SUV500M8240G       | 240 GB | 933B0BA93B21 | 120   | 0     | 0.33   |
 | Lite-On   | LCH-256V2S         | 256 GB | 0C8E39995B7A | 120   | 0     | 0.33   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 8986186F4AB3 | 120   | 0     | 0.33   |
@@ -19621,6 +20483,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS480G2G0B-00EPW0 | 480 GB | CF92F216271E | 120   | 0     | 0.33   |
 | Kingston  | SA400M8240G        | 240 GB | FC5B39E1F126 | 120   | 0     | 0.33   |
 | Kingston  | SUV500480G         | 480 GB | 35E743AE2E93 | 120   | 0     | 0.33   |
+| XrayDisk  | SSD                | 128 GB | 76FD730FEC4B | 120   | 0     | 0.33   |
 | Samsung   | SSD 750 EVO        | 250 GB | 8FBD47EC3D89 | 120   | 0     | 0.33   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 7790D4063BEE | 120   | 0     | 0.33   |
 | Samsung   | SSD 860 EVO        | 500 GB | 3CF474B601D4 | 120   | 0     | 0.33   |
@@ -19745,6 +20608,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 QVO        | 2 TB   | 920C957B5A7E | 118   | 0     | 0.32   |
 | ADATA     | SP550              | 120 GB | AF55B1530476 | 118   | 0     | 0.32   |
 | Kingston  | SA400S37480G       | 480 GB | E527064C177E | 118   | 0     | 0.32   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 7625A9D122F2 | 118   | 0     | 0.32   |
 | Samsung   | SSD 840 EVO        | 120 GB | 27D28115F93C | 118   | 0     | 0.32   |
 | Samsung   | SSD 860 EVO        | 500 GB | E2490BBAB532 | 118   | 0     | 0.32   |
 | Intel     | SSDSCKGF240A5L     | 240 GB | 9B7BB5072E0E | 118   | 0     | 0.32   |
@@ -19769,14 +20633,18 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2000BX500SSD1    | 2 TB   | 1035B73B0534 | 117   | 0     | 0.32   |
 | Kingston  | SUV400S37120G      | 120 GB | 69D8E83A7DD7 | 117   | 0     | 0.32   |
 | Smartbuy  | SSD                | 256 GB | 84E399454C7C | 117   | 0     | 0.32   |
+| Kingston  | SA400S37480G       | 480 GB | B95F0002BEA7 | 589   | 4     | 0.32   |
 | China     | SSD-128GB          | 128 GB | 47AB42F3F1F2 | 117   | 0     | 0.32   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 6AC02D0C16CF | 117   | 0     | 0.32   |
 | Goodram   | SSDPR-CX400-256    | 256 GB | BAFD6151C001 | 117   | 0     | 0.32   |
 | Kingston  | SA400S37480G       | 480 GB | 821CC616F087 | 117   | 0     | 0.32   |
 | Kingston  | SV300S37A240G      | 240 GB | 154E98AC55E2 | 117   | 0     | 0.32   |
 | Maxtor    | Z1 SSD             | 240 GB | 47AA5CF55FFF | 117   | 0     | 0.32   |
+| OCZ       | TRION100           | 240 GB | 1395EC151AE0 | 117   | 0     | 0.32   |
 | SanDisk   | SDSSDHII480G       | 480 GB | 3F08D1D82FB7 | 353   | 2     | 0.32   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | B9FA878643E5 | 117   | 0     | 0.32   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 5A1AF3CF4C2A | 117   | 0     | 0.32   |
+| Fanxiang  | S101-1TB           | 1 TB   | DCB1CE2E9E4D | 117   | 0     | 0.32   |
 | Kingston  | SA400S37240G       | 240 GB | 564245F953AA | 117   | 0     | 0.32   |
 | OCZ       | ARC100             | 120 GB | 57800A90E2F9 | 117   | 0     | 0.32   |
 | ADATA     | SU650              | 120 GB | CF67CFD55CEA | 117   | 0     | 0.32   |
@@ -19797,8 +20665,11 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 89C9374E9118 | 117   | 0     | 0.32   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 9C5982FE836E | 117   | 0     | 0.32   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | ABAC10D2005D | 117   | 0     | 0.32   |
+| Leven     | JAJS600M256C       | 256 GB | 8F06398CC271 | 117   | 0     | 0.32   |
+| Lite-On   | CV3-8D128-11 SATA  | 128 GB | 45A62F2DA683 | 117   | 0     | 0.32   |
 | Apple     | SSD SM0256F        | 256 GB | F491E8E7A705 | 117   | 0     | 0.32   |
 | SPCC      | SSD                | 256 GB | 4F275A8D5378 | 117   | 0     | 0.32   |
+| Samsung   | SSD 870 QVO        | 2 TB   | 99A78EB9B8DA | 117   | 0     | 0.32   |
 | Kingston  | SA400S37120G       | 120 GB | B217552E7659 | 234   | 1     | 0.32   |
 | SPCC      | SSD                | 128 GB | 5AE74C41942E | 117   | 0     | 0.32   |
 | SPCC      | SSD                | 128 GB | EDB5B364EB39 | 117   | 0     | 0.32   |
@@ -19815,6 +20686,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 PRO        | 512 GB | 526D20927EE0 | 117   | 0     | 0.32   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 13C0F0CFB7FA | 117   | 0     | 0.32   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 563A74A2571A | 117   | 0     | 0.32   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 714775D276A5 | 351   | 2     | 0.32   |
 | SK hynix  | SC300 2.5 7MM      | 256 GB | B5694B95E4BB | 117   | 0     | 0.32   |
 | Kingston  | SA400S37120G       | 120 GB | A985559C5736 | 117   | 0     | 0.32   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 68296F163675 | 117   | 0     | 0.32   |
@@ -19832,6 +20704,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1024MX200SSD1    | 1 TB   | F25297655E55 | 116   | 0     | 0.32   |
 | Intel     | SSDSC2CT240A4      | 240 GB | C99436A85F0F | 1285  | 10    | 0.32   |
 | Samsung   | SSD 750 EVO        | 250 GB | 3E16AEA825CA | 116   | 0     | 0.32   |
+| Samsung   | SSD 850 EVO        | 250 GB | 3FF7EBC19B7F | 116   | 0     | 0.32   |
 | Union ... | RTOTJ128VGD2EYX    | 128 GB | FE22BDCA4086 | 116   | 0     | 0.32   |
 | Lite-On   | LSS-32L6G-HP       | 32 GB  | CEC89209E728 | 116   | 0     | 0.32   |
 | SK hynix  | SC308 SATA         | 256 GB | 22B6AE75B857 | 116   | 0     | 0.32   |
@@ -19863,6 +20736,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 2 TB   | 517D88FD6C67 | 116   | 0     | 0.32   |
 | Samsung   | SSD 870 QVO        | 2 TB   | ED6219DE959D | 116   | 0     | 0.32   |
 | SanDisk   | SDSSDA240G         | 240 GB | 73942538089B | 116   | 0     | 0.32   |
+| China     | HS1TBQE            | 1 TB   | 474BCBD17415 | 116   | 0     | 0.32   |
 | Kingston  | SA400S37240G       | 240 GB | 43657D453917 | 116   | 0     | 0.32   |
 | OCZ       | TRION150           | 240 GB | 853AC567F5E5 | 116   | 0     | 0.32   |
 | Samsung   | SSD 860 EVO        | 1 TB   | AAEE98ABCB4A | 116   | 0     | 0.32   |
@@ -19883,11 +20757,13 @@ MTBF - avg. MTBF in years per sample.
 | Silicon   | SATA3 1TB SSD      | 1 TB   | E14B6576E61F | 116   | 0     | 0.32   |
 | ADATA     | SP600              | 32 GB  | 903A998C31D1 | 116   | 0     | 0.32   |
 | Kingston  | SV300S37A120G      | 120 GB | 3D283B82B2CC | 348   | 2     | 0.32   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 82AFCB474B01 | 116   | 0     | 0.32   |
 | Corsair   | Force LS SSD       | 120 GB | A7C68B0867A9 | 116   | 0     | 0.32   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 13F104507C62 | 116   | 0     | 0.32   |
 | Intel     | SSDSA2BW120G3H     | 120 GB | 4C68407BCBC3 | 116   | 0     | 0.32   |
 | Kingston  | SUV400S37120G      | 120 GB | 0F770A03F0B4 | 116   | 0     | 0.32   |
 | Kingston  | SV300S37A120G      | 120 GB | 1DC8B2209F3B | 116   | 0     | 0.32   |
+| Samsung   | SSD 850 EVO        | 250 GB | A0C1728DF6F2 | 116   | 0     | 0.32   |
 | Transcend | TS256GSSD370S      | 256 GB | ABD08CDFB6F8 | 116   | 0     | 0.32   |
 | Kingston  | RBUSNS8180DS3256GJ | 256 GB | E28368C6ADDC | 116   | 0     | 0.32   |
 | Samsung   | SSD 870 QVO        | 8 TB   | 10C0EAF01997 | 116   | 0     | 0.32   |
@@ -19913,6 +20789,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD                | 128 GB | 63CB8EEE4245 | 115   | 0     | 0.32   |
 | SanDisk   | SD9SB8W128G1001    | 128 GB | 0D5C90ED17F9 | 115   | 0     | 0.32   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 3135D36BD4D5 | 115   | 0     | 0.32   |
+| Apacer    | AS450              | 120 GB | D197EE569142 | 115   | 0     | 0.32   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 38B1B10E42E7 | 115   | 0     | 0.32   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 93E2E6B07CD2 | 115   | 0     | 0.32   |
 | Kingston  | SMS200S3120G       | 120 GB | 9B2AA21913D2 | 115   | 0     | 0.32   |
@@ -19964,6 +20841,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | C2BB05BFA649 | 115   | 0     | 0.32   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 6A0EB6F4B519 | 114   | 0     | 0.31   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 4AC473A7F9C0 | 114   | 0     | 0.31   |
+| Patriot   | Burst              | 240 GB | 27D63F1FBB96 | 114   | 0     | 0.31   |
 | Samsung   | MZMPC128HBFU-000   | 128 GB | 5B3FDB870FAD | 114   | 0     | 0.31   |
 | Samsung   | SSD 850 EVO        | 250 GB | C02D0D970181 | 114   | 0     | 0.31   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 006B159F68F6 | 114   | 0     | 0.31   |
@@ -19973,6 +20851,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX4            | 128 GB | 70E1E18C0DAA | 114   | 0     | 0.31   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | CAB21AE136A2 | 114   | 0     | 0.31   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | A7847D49F6FB | 114   | 0     | 0.31   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | F3CBB445EF33 | 114   | 0     | 0.31   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 56CDC20FCFAE | 114   | 0     | 0.31   |
 | Maxtor    | Z1 SSD             | 960 GB | 8C4BA2DEFAF5 | 114   | 0     | 0.31   |
 | Phison    | SATA SSD           | 1 TB   | 789200FB5D66 | 114   | 0     | 0.31   |
@@ -20111,6 +20990,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100 SATA          | 256 GB | B89EEFC8FB91 | 112   | 0     | 0.31   |
 | SK hynix  | SC311 SATA         | 512 GB | 6B05B6738162 | 112   | 0     | 0.31   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | CF18C5943AC8 | 112   | 0     | 0.31   |
+| SanDisk   | SDSSDHII240G       | 240 GB | 43C1724EFDB1 | 112   | 0     | 0.31   |
 | SanDisk   | SDSSDP128G         | 128 GB | 703F6FFE696D | 112   | 0     | 0.31   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | B2DC3C9FA00F | 112   | 0     | 0.31   |
 | ADATA     | SU650              | 120 GB | 9A895FE8B422 | 112   | 0     | 0.31   |
@@ -20136,6 +21016,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | F28EDC7D1AF5 | 112   | 0     | 0.31   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 5BE9214CBA70 | 112   | 0     | 0.31   |
 | Goodram   | IR-SSDPR-S25A-120  | 120 GB | 6CA18014BBFF | 112   | 0     | 0.31   |
+| Netac     | SSD                | 1 TB   | 5CE27ECB1AB1 | 337   | 2     | 0.31   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | B26A268AE015 | 112   | 0     | 0.31   |
 | China     | SSD128GBS800       | 128 GB | 6B2A5164DC33 | 112   | 0     | 0.31   |
 | KIOXIA... | SATA SSD           | 240 GB | 3EC3ED408A29 | 112   | 0     | 0.31   |
@@ -20180,9 +21061,11 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | B4899742B15C | 111   | 0     | 0.31   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 9A9F8B4D77CB | 111   | 0     | 0.31   |
 | Kingston  | SUV400S37240G      | 240 GB | 3F127B941C00 | 559   | 4     | 0.31   |
+| GS Nan... | 256-16 GSPTA256... | 256 GB | 1B696E5B4FED | 111   | 0     | 0.31   |
 | Kingston  | SA400S37480G       | 480 GB | 6ECDF4347D69 | 111   | 0     | 0.31   |
 | Samsung   | SSD 860 EVO        | 250 GB | 57CB28B34A71 | 111   | 0     | 0.31   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 5EB67B94049D | 111   | 0     | 0.31   |
+| GS Nan... | 256-16 GSPTA256... | 256 GB | 719230FB5992 | 111   | 0     | 0.31   |
 | Intel     | SSDSCKGF256A5 SATA | 256 GB | 9595C3F75F98 | 111   | 0     | 0.31   |
 | Kingston  | SA400S37120G       | 120 GB | 23829545CA60 | 111   | 0     | 0.31   |
 | WDC       | WDS120G1G0B-00RC30 | 120 GB | E8EE96087A1A | 111   | 0     | 0.31   |
@@ -20199,9 +21082,11 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BW240H6      | 240 GB | 2503B937712D | 111   | 0     | 0.31   |
 | SK hynix  | SC311 SATA         | 128 GB | 702FF45EC839 | 111   | 0     | 0.31   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 45CCCC316C6B | 111   | 0     | 0.31   |
+| Samsung   | SSD 860 QVO        | 1 TB   | 8FC5091DE635 | 111   | 0     | 0.31   |
 | Toshiba   | THNSNK256GVN8      | 256 GB | 21A83AAF1B75 | 111   | 0     | 0.31   |
 | China     | SSD                | 120 GB | 9022377ED0D2 | 111   | 0     | 0.31   |
 | Kingston  | SA400S37120G       | 120 GB | CBECC26A4C5C | 111   | 0     | 0.31   |
+| SFAS      | SSD                | 480 GB | CE47C4ABA1E8 | 111   | 0     | 0.31   |
 | Kingston  | SA400S37240G       | 240 GB | 922625EB2952 | 111   | 0     | 0.31   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | 9AAF74177D76 | 111   | 0     | 0.31   |
 | Toshiba   | TR200              | 480 GB | 6BC994A19259 | 111   | 0     | 0.31   |
@@ -20266,6 +21151,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBUSNS8180S3128GJ  | 128 GB | B6D02F83EC95 | 110   | 0     | 0.30   |
 | Lite-On   | CV3-8D128-11 SATA  | 128 GB | 5928F2DBCFE5 | 110   | 0     | 0.30   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 615B00852E1A | 110   | 0     | 0.30   |
+| Kingston  | SA400S37240G       | 240 GB | BD3C3FF05792 | 110   | 0     | 0.30   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 964C1FDA76BF | 110   | 0     | 0.30   |
 | SPCC      | SSD                | 240 GB | A18F501FCF4B | 994   | 8     | 0.30   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 755538B80A58 | 110   | 0     | 0.30   |
@@ -20342,6 +21228,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 2 TB   | 1F5EFCDC8D3D | 109   | 0     | 0.30   |
 | China     | SATA SSD           | 120 GB | 50A6BF30974D | 109   | 0     | 0.30   |
 | OWC       | Mercury Electra... | 1 TB   | ADE2DF25684A | 109   | 0     | 0.30   |
+| Samsung   | SSD 870 EVO        | 500 GB | C0C4C3E3E12C | 109   | 0     | 0.30   |
 | Apacer    | AS340              | 240 GB | CC9B38AB4842 | 109   | 0     | 0.30   |
 | Kingston  | OMSP0S364B-00      | 64 GB  | 898F8E6D785E | 109   | 0     | 0.30   |
 | Kingston  | RBU-SNS8152S312... | 128 GB | 537A90C609C1 | 109   | 0     | 0.30   |
@@ -20354,6 +21241,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPC128HBFU-000   | 128 GB | AA9A50E3639A | 109   | 0     | 0.30   |
 | SK hynix  | SC311 SATA         | 256 GB | 4E9015C2E1B0 | 327   | 2     | 0.30   |
 | SanDisk   | SD9SB8W512G1101    | 512 GB | 629C80702575 | 109   | 0     | 0.30   |
+| Innodisk  | DEM24-16GM41BC1... | 16 GB  | 78270CA3D86E | 109   | 0     | 0.30   |
 | Lexar     | 128GB SSD          | 128 GB | A7A30A9FD4F3 | 109   | 0     | 0.30   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 15AD2892B066 | 109   | 0     | 0.30   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 9C5E0F195F32 | 109   | 0     | 0.30   |
@@ -20368,6 +21256,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 1 TB   | 84DEF40FDD2C | 109   | 0     | 0.30   |
 | SanDisk   | SSD PLUS           | 480 GB | AE444E1EE8B7 | 109   | 0     | 0.30   |
 | Plextor   | PX-256M6S          | 256 GB | 7B15F89486E2 | 108   | 0     | 0.30   |
+| Samsung   | MZMPC032HBCD-000L1 | 32 GB  | E0174749D3E4 | 108   | 0     | 0.30   |
 | Zheino    | CHN-25SATAC3-120   | 120 GB | EBF1A1E7AE58 | 108   | 0     | 0.30   |
 | Kingston  | SV300S37A480G      | 480 GB | 3A9DFD71433E | 326   | 2     | 0.30   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | B164CE4E5346 | 108   | 0     | 0.30   |
@@ -20399,6 +21288,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | F8A5E700CBE6 | 108   | 0     | 0.30   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 2354576D9C88 | 108   | 0     | 0.30   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 876297C5DED8 | 108   | 0     | 0.30   |
+| Leven     | JAJS600M512C       | 512 GB | FF2D863AC9DE | 108   | 0     | 0.30   |
 | SK hynix  | SC311 SATA         | 256 GB | 61838C1DA3BF | 108   | 0     | 0.30   |
 | Samsung   | SSD 850 EVO        | 250 GB | CD7BADC83BDE | 108   | 0     | 0.30   |
 | ADATA     | SU650              | 120 GB | 07C0AD23672D | 108   | 0     | 0.30   |
@@ -20428,8 +21318,10 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CL100-120-G2 | 120 GB | D64F55B41342 | 108   | 0     | 0.30   |
 | SPCC      | SSD                | 256 GB | 18C5C19CD431 | 108   | 0     | 0.30   |
 | SPCC      | SSD                | 256 GB | A6ABEA0418C5 | 108   | 0     | 0.30   |
+| Samsung   | SSD 860 EVO M.2    | 1 TB   | AA076D7689E9 | 108   | 0     | 0.30   |
 | Kingston  | SA400S37480G       | 480 GB | D0E49B29D374 | 108   | 0     | 0.30   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 7E7F36C23C87 | 108   | 0     | 0.30   |
+| Kingston  | SA400S37240G       | 240 GB | E1D5B29084FC | 108   | 0     | 0.30   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | EAF6E802F422 | 108   | 0     | 0.30   |
 | ADATA     | SP600              | 64 GB  | CF1DCD47F4F8 | 972   | 8     | 0.30   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 9CF4F662E0FC | 108   | 0     | 0.30   |
@@ -20444,6 +21336,7 @@ MTBF - avg. MTBF in years per sample.
 | GeIL      | R3_128GB           | 128 GB | 7343FC1BEA78 | 107   | 0     | 0.30   |
 | Kingston  | SUV400S37240G      | 240 GB | 46FDDA4C65E9 | 107   | 0     | 0.30   |
 | Lexar     | 256GB SSD          | 256 GB | 75B05F65FDD6 | 107   | 0     | 0.30   |
+| ADATA     | AXNS381E-256GM-B   | 256 GB | BB8BD6246AAB | 107   | 0     | 0.30   |
 | PNY       | CS900 500GB SSD    | 500 GB | 68E77E6C058D | 107   | 0     | 0.30   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 140E6BD021F5 | 107   | 0     | 0.30   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 80941D747CCD | 107   | 0     | 0.30   |
@@ -20483,6 +21376,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | 4FDC12382A96 | 107   | 0     | 0.29   |
 | Kingston  | SA400S37240G       | 240 GB | 8C6ECCC7C97A | 107   | 0     | 0.29   |
 | Kingston  | SUV500480G         | 480 GB | 9CDE4A93E082 | 107   | 0     | 0.29   |
+| Samsung   | SSD 860 EVO        | 500 GB | 8D84C03E0028 | 107   | 0     | 0.29   |
 | Lite-On   | LCS-128M6S         | 128 GB | 5839FD96DED2 | 107   | 0     | 0.29   |
 | SanDisk   | SD8TN8U256G1001    | 256 GB | D837D221D538 | 107   | 0     | 0.29   |
 | China     | 120GB SSD          | 120 GB | D5F1C8D35256 | 107   | 0     | 0.29   |
@@ -20500,6 +21394,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 98AC89D5C1E8 | 107   | 0     | 0.29   |
 | AMD       | R3SL120G           | 120 GB | 3E420614F267 | 107   | 0     | 0.29   |
 | SK hynix  | HFS128G3BMND-3210A | 128 GB | 6DB0A0BE5172 | 107   | 0     | 0.29   |
+| Samsung   | SSD 870 QVO        | 2 TB   | 26092B28623B | 107   | 0     | 0.29   |
 | Kingston  | SUV400S37480G      | 480 GB | A5F6629B6D43 | 214   | 1     | 0.29   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | DE03CB3A7631 | 107   | 0     | 0.29   |
 | Transcend | TS120GMTS420S      | 120 GB | 3260B24C91A0 | 107   | 0     | 0.29   |
@@ -20549,6 +21444,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | C6E566CBC061 | 106   | 0     | 0.29   |
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | AED27B6851A0 | 106   | 0     | 0.29   |
 | KingFast  | SSD                | 256 GB | E12D11B75F0A | 106   | 0     | 0.29   |
+| Kingston  | SA400S37240G       | 240 GB | B203A64CB8AF | 106   | 0     | 0.29   |
 | Samsung   | MZYTE128HMGR-000L2 | 128 GB | DC222865A7CA | 106   | 0     | 0.29   |
 | Crucial   | CT480BX500SSD1     | 480 GB | CECB683E64AC | 106   | 0     | 0.29   |
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 26C0A9492670 | 106   | 0     | 0.29   |
@@ -20572,6 +21468,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 7CF3155BA1AA | 106   | 0     | 0.29   |
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 8FD32F6E11E7 | 106   | 0     | 0.29   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | B9526B37737C | 106   | 0     | 0.29   |
+| SPCC      | SSD                | 256 GB | 0ED9980B6FE0 | 106   | 0     | 0.29   |
 | SanDisk   | SSD PLUS           | 1 TB   | 3DCFC68AB5D0 | 106   | 0     | 0.29   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 790D079000BB | 106   | 0     | 0.29   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 68AA1BA679BD | 106   | 0     | 0.29   |
@@ -20587,7 +21484,9 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | lntenso SSD Sat... | 128 GB | CC405438B5B0 | 105   | 0     | 0.29   |
 | Samsung   | SSD 860 EVO        | 250 GB | 35EF38766AF9 | 105   | 0     | 0.29   |
 | Goodram   | SSD                | 120 GB | 2B3A14480F6E | 105   | 0     | 0.29   |
+| Kingston  | SA400S37480G       | 480 GB | 064A21B63B89 | 105   | 0     | 0.29   |
 | Lite-On   | IT L8T-128L9G      | 128 GB | 963B8A98F707 | 105   | 0     | 0.29   |
+| Samsung   | SSD 840 Series     | 120 GB | E10B1C9B8917 | 105   | 0     | 0.29   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 07A156B14C2A | 105   | 0     | 0.29   |
 | Kingston  | SUV400S37120G      | 120 GB | 3A369D126B02 | 105   | 0     | 0.29   |
 | Kingston  | SV300S37A120G      | 120 GB | D517A7AC6F7A | 105   | 0     | 0.29   |
@@ -20597,6 +21496,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 1 TB   | D814559215D5 | 105   | 0     | 0.29   |
 | Samsung   | SSD 870 EVO        | 1 TB   | E046104A85B9 | 105   | 0     | 0.29   |
 | SanDisk   | SDSSDHP256G        | 256 GB | 6D662AE5F097 | 105   | 0     | 0.29   |
+| WDC       | WDS480G2G0A-00JH30 | 480 GB | 84225A42E221 | 105   | 0     | 0.29   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 30413B45C6D9 | 105   | 0     | 0.29   |
 | SanDisk   | SD9SN8W256G1102    | 256 GB | 8435FC78BB93 | 105   | 0     | 0.29   |
 | SanDisk   | SSD PLUS 240 GB    | 240 GB | BEC674F5EADE | 105   | 0     | 0.29   |
@@ -20708,6 +21608,7 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R5SL240G           | 240 GB | C38D4DE5CB0C | 104   | 0     | 0.29   |
 | Intel     | SSDSC2CT180A4      | 180 GB | 97EE06649365 | 104   | 0     | 0.29   |
 | Samsung   | SSD 860 EVO        | 250 GB | 6A0E17C9B085 | 104   | 0     | 0.29   |
+| Samsung   | SSD 860 EVO        | 250 GB | 9CA90BAD6862 | 104   | 0     | 0.29   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 899CF22BC401 | 104   | 0     | 0.29   |
 | SanDisk   | SSD PLUS           | 240 GB | F54E2D413FA0 | 104   | 0     | 0.29   |
 | ADATA     | SU650              | 120 GB | 57AB77D393D0 | 104   | 0     | 0.29   |
@@ -20750,8 +21651,10 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | 1BF120E9CB9B | 103   | 0     | 0.28   |
 | Kingston  | SVP200S3240G       | 240 GB | 3A88364B6698 | 103   | 0     | 0.28   |
 | Kingston  | SV300S37A120G      | 120 GB | 9A2CC27B9332 | 103   | 0     | 0.28   |
+| Samsung   | SSD 870 EVO        | 250 GB | 7F424785E273 | 103   | 0     | 0.28   |
 | Kingston  | SA400S37240G       | 240 GB | BB40157A2186 | 103   | 0     | 0.28   |
 | OCZ       | VERTEX4            | 128 GB | 11558ED91D0D | 103   | 0     | 0.28   |
+| Samsung   | SSD 870 EVO        | 4 TB   | 0F9F4B73A8FE | 103   | 0     | 0.28   |
 | Kingston  | SA400S37240G       | 240 GB | BFAB0DCA623F | 103   | 0     | 0.28   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 2181CA53ABCD | 103   | 0     | 0.28   |
 | Lite-On   | LCH-256V2S-11 2... | 256 GB | 2F551DC534BA | 103   | 0     | 0.28   |
@@ -20759,6 +21662,7 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM8PS7512G         | 512 GB | 9B3A55167FFD | 103   | 0     | 0.28   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | F0563B33D074 | 103   | 0     | 0.28   |
 | Apacer    | AS350              | 256 GB | 5902A41CE4EB | 103   | 0     | 0.28   |
+| Crucial   | CT240BX500SSD1     | 240 GB | F5FA32A17C68 | 103   | 0     | 0.28   |
 | Samsung   | SSD 860 EVO        | 250 GB | 5955499326BD | 103   | 0     | 0.28   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 6A047FB17BEF | 103   | 0     | 0.28   |
 | Kingston  | SH103S3240G        | 240 GB | 9C61E49AD495 | 1658  | 15    | 0.28   |
@@ -20787,9 +21691,11 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 120 GB | 6698D7BD1205 | 103   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO        | 500 GB | A6EB105CD6BF | 103   | 0     | 0.28   |
 | Samsung   | SSD 850 PRO        | 1 TB   | 0C2AF6A8EE2C | 103   | 0     | 0.28   |
+| Goodram   | SSDPR-CX400-01T-G2 | 1 TB   | 5919155B7386 | 103   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO        | 120 GB | 0C1BF28B2060 | 103   | 0     | 0.28   |
 | SanDisk   | SSD PLUS           | 480 GB | 1623DF0C15CB | 103   | 0     | 0.28   |
 | Samsung   | SSD 860 EVO        | 1 TB   | AC53E64CE977 | 103   | 0     | 0.28   |
+| Samsung   | SSD 860 EVO        | 500 GB | 94461DCB9FD4 | 103   | 0     | 0.28   |
 | Fujitsu   | F300               | 480 GB | 7A73FBD6EEF0 | 103   | 0     | 0.28   |
 | KingSpec  | Q-90               | 90 GB  | 0AEAC85A3610 | 103   | 0     | 0.28   |
 | Kingston  | SA400M8240G        | 240 GB | 2B161FA036AD | 103   | 0     | 0.28   |
@@ -20809,9 +21715,12 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSA2BW120G3H     | 120 GB | 062D0ACBD757 | 102   | 0     | 0.28   |
 | Transcend | TS128GSSD370S      | 128 GB | DFBC60C13DE2 | 102   | 0     | 0.28   |
 | Intenso   | SSD Sata III       | 256 GB | 71E0A66B5E1B | 102   | 0     | 0.28   |
+| Samsung   | SSD 860 EVO        | 250 GB | 0247A424C640 | 308   | 2     | 0.28   |
 | Goodram   | SSDPR-CX400-256    | 256 GB | 5F81B05D8F28 | 102   | 0     | 0.28   |
 | Intel     | SSDSA2BW160G3H     | 160 GB | 0AB9A5760BCB | 102   | 0     | 0.28   |
 | Kingston  | SA400S37240G       | 240 GB | 6B0CDDA160CF | 102   | 0     | 0.28   |
+| Crucial   | CT480BX500SSD1     | 480 GB | 320E81FCEE97 | 102   | 0     | 0.28   |
+| KingSpec  | P4-240             | 240 GB | EB09D061F5DB | 308   | 2     | 0.28   |
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 5001D1665A03 | 102   | 0     | 0.28   |
 | Intel     | SSDSC2KW128G8      | 128 GB | 292B569FF31F | 102   | 0     | 0.28   |
 | KingSpec  | P3-128             | 128 GB | C20DE8A46D7E | 102   | 0     | 0.28   |
@@ -20824,6 +21733,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KW256G8      | 256 GB | F02A9C0D3D63 | 102   | 0     | 0.28   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 11D7FC7DF26C | 102   | 0     | 0.28   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 730B833130A5 | 102   | 0     | 0.28   |
+| Intenso   | SATA III SSD       | 120 GB | B9402746DEBE | 102   | 0     | 0.28   |
 | Samsung   | MZ7TY256HDHP-000L7 | 256 GB | B5B51FF89EED | 102   | 0     | 0.28   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 1622F4436C4C | 102   | 0     | 0.28   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 72BA19796FCF | 102   | 0     | 0.28   |
@@ -20893,6 +21803,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT250MX500SSD1     | 250 GB | 6DF2BF769AEC | 101   | 0     | 0.28   |
 | Leven     | JAJS600M256C       | 256 GB | 185017CC8135 | 101   | 0     | 0.28   |
 | Samsung   | SSD 860 EVO        | 250 GB | 2E704041C865 | 101   | 0     | 0.28   |
+| Samsung   | SSD 860 EVO        | 500 GB | 544DB91F4390 | 101   | 0     | 0.28   |
 | Phison    | SSM28512GPTCB3B... | 512 GB | E1712B079D4A | 101   | 0     | 0.28   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | BBD770D42FB3 | 101   | 0     | 0.28   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 0982CFE88837 | 101   | 0     | 0.28   |
@@ -20923,7 +21834,9 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP920SS            | 256 GB | CB282A4720A3 | 101   | 0     | 0.28   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 9F5DF6BBDB6C | 101   | 0     | 0.28   |
 | Kingston  | SA400S37240G       | 240 GB | 870EFF801147 | 101   | 0     | 0.28   |
+| SK hynix  | HFS256G3BTND-N210A | 256 GB | 10E55424C59C | 202   | 1     | 0.28   |
 | SPCC      | SSD                | 512 GB | B0CE71EDC64C | 101   | 0     | 0.28   |
+| Samsung   | MZNLN256HMHQ-000H7 | 256 GB | 7817F7301BA4 | 101   | 0     | 0.28   |
 | KingSpec  | MT-256             | 256 GB | 8E457DB85EC1 | 101   | 0     | 0.28   |
 | Patriot   | Burst              | 120 GB | 38479E5B871A | 101   | 0     | 0.28   |
 | Samsung   | MZNLN128HCGR-000HW | 128 GB | 58D8F2CE899B | 101   | 0     | 0.28   |
@@ -20934,6 +21847,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 23004B0E5C23 | 101   | 0     | 0.28   |
 | Team      | L3 EVO SSD         | 120 GB | 9D44EED2F197 | 101   | 0     | 0.28   |
 | ADATA     | SP900              | 128 GB | 6475275C9CE7 | 101   | 0     | 0.28   |
+| Crucial   | CT2000BX500SSD1    | 2 TB   | DD788CD707C9 | 101   | 0     | 0.28   |
 | Crucial   | CT960BX500SSD1     | 960 GB | 99A70737978A | 101   | 0     | 0.28   |
 | Kingston  | SA400S37480G       | 480 GB | E63A7B6A163D | 101   | 0     | 0.28   |
 | SanDisk   | SDSSDXP240G        | 240 GB | EF373AB7E728 | 101   | 0     | 0.28   |
@@ -20943,6 +21857,7 @@ MTBF - avg. MTBF in years per sample.
 | FORESEE   | 128GB SSD          | 128 GB | 1E33DE336E4B | 101   | 0     | 0.28   |
 | Kingston  | SA400S37120G       | 120 GB | 0B471E5DDB41 | 101   | 0     | 0.28   |
 | Kingston  | SH103S3240G        | 240 GB | 1C72EE861E99 | 101   | 0     | 0.28   |
+| Transcend | TS128GSSD370       | 128 GB | 208756C79A16 | 101   | 0     | 0.28   |
 | WDC       | WDS500G1R0A-68A4W0 | 500 GB | 04A45F00B33B | 101   | 0     | 0.28   |
 | Crucial   | CT250MX500SSD4     | 250 GB | 55F546AA46CA | 101   | 0     | 0.28   |
 | Crucial   | CT500MX500SSD4     | 500 GB | 1748BC350169 | 101   | 0     | 0.28   |
@@ -21004,6 +21919,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | SSD S700           | 250 GB | 92656F73BA00 | 100   | 0     | 0.28   |
 | Kingston  | SKC6001024G        | 1 TB   | BDA1BBBE46E6 | 100   | 0     | 0.28   |
 | Phison    | SATA SSD           | 120 GB | BE51C5477EFB | 100   | 0     | 0.28   |
+| Crucial   | CT2000BX500SSD1    | 2 TB   | 0454EF297F9A | 100   | 0     | 0.27   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 3B47D6153F59 | 100   | 0     | 0.27   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | B3D9308386FE | 100   | 0     | 0.27   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 9BCAD1A7E562 | 200   | 1     | 0.27   |
@@ -21023,6 +21939,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 4336E21FDCEB | 100   | 0     | 0.27   |
 | Kingston  | SA400S37240G       | 240 GB | 62326DBB6703 | 100   | 0     | 0.27   |
 | Intel     | SSDSC2BW240A4      | 240 GB | E82EFFB3755E | 300   | 2     | 0.27   |
+| Crucial   | CT2000BX500SSD1    | 2 TB   | 2970E0B81EF9 | 100   | 0     | 0.27   |
 | Kingston  | SA400S37480G       | 480 GB | E0F1214C2076 | 100   | 0     | 0.27   |
 | Samsung   | MZNTY128HDHP-00000 | 128 GB | 2DFF04E6D4F4 | 100   | 0     | 0.27   |
 | Samsung   | SSD 860 EVO        | 2 TB   | B080A3B80AB2 | 100   | 0     | 0.27   |
@@ -21052,11 +21969,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | AF7846E8CE4E | 99    | 0     | 0.27   |
 | SanDisk   | SD7SN3Q128G1002    | 128 GB | 983A56119921 | 99    | 0     | 0.27   |
 | Samsung   | Portable SSD T5    | 500 GB | 7DDA3EEB47FA | 99    | 0     | 0.27   |
+| SanDisk   | SDSSDH3 500G       | 500 GB | C9360486FAF5 | 99    | 0     | 0.27   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 057B89C98DC4 | 99    | 0     | 0.27   |
 | Kingston  | SA400S37240G       | 240 GB | 5D53D8B9A03C | 99    | 0     | 0.27   |
 | SanDisk   | SSD PLUS           | 120 GB | 709C3F5C3DF0 | 99    | 0     | 0.27   |
 | Maxtor    | Z1 SSD             | 240 GB | CB0DCC64145F | 99    | 0     | 0.27   |
 | OCZ       | AGILITY3           | 120 GB | 17088269940E | 99    | 0     | 0.27   |
+| SPCC      | SSD                | 512 GB | 52C3D096F647 | 99    | 0     | 0.27   |
 | Samsung   | MZ7LN512HCHP-000L1 | 512 GB | 19D1BD1E0A2E | 99    | 0     | 0.27   |
 | Samsung   | SSD 850 PRO        | 512 GB | 384FAED7AB65 | 99    | 0     | 0.27   |
 | SanDisk   | SDSSDHII240G       | 240 GB | D68639A7E490 | 99    | 0     | 0.27   |
@@ -21069,6 +21988,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 3653D1CE2672 | 896   | 8     | 0.27   |
 | Crucial   | CT500MX500SSD1     | 500 GB | F11A91792C2B | 99    | 0     | 0.27   |
 | Kingston  | SA400S37120G       | 120 GB | 4C744BE9E62D | 99    | 0     | 0.27   |
+| Kingston  | SV300S37A120G      | 120 GB | 093D291F75EC | 99    | 0     | 0.27   |
 | Transcend | TS480GSSD220S      | 480 GB | 59C595B77EC0 | 99    | 0     | 0.27   |
 | WDC       | WDBNCE0010PNC      | 1 TB   | F1CC96AE025D | 99    | 0     | 0.27   |
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 8B3A4DABAA30 | 99    | 0     | 0.27   |
@@ -21078,6 +21998,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | SSD M700           | 120 GB | 2FB8441DED98 | 99    | 0     | 0.27   |
 | Hikvision | HKVSN HS-SSD-C1... | 240 GB | 5420BD9585A7 | 99    | 0     | 0.27   |
 | Intenso   | SSD SATA III       | 240 GB | 3E5A0C0E7820 | 99    | 0     | 0.27   |
+| Kingston  | SA400S37480G       | 480 GB | E74C003C2931 | 99    | 0     | 0.27   |
 | Kingston  | SV300S37A120G      | 120 GB | B0A7E80505F7 | 99    | 0     | 0.27   |
 | PUSKILL   | SSD                | 128 GB | B907C9289DCF | 99    | 0     | 0.27   |
 | Samsung   | MZ7LN256HAJQ-000L2 | 256 GB | 11BE0DFCB052 | 99    | 0     | 0.27   |
@@ -21123,6 +22044,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 240 GB | AE8D91A55E22 | 98    | 0     | 0.27   |
 | OCZ       | VERTEX3            | 120 GB | 9541F84AB0D6 | 1086  | 10    | 0.27   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 42102A391C93 | 98    | 0     | 0.27   |
+| Kingston  | SA400S37480G       | 480 GB | 9419DB1D8819 | 98    | 0     | 0.27   |
 | Londisk   | SSD                | 240 GB | BAD050DD5B4E | 98    | 0     | 0.27   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 79D49629362F | 98    | 0     | 0.27   |
 | Kingston  | SA400S37240G       | 240 GB | 78BA752904D7 | 98    | 0     | 0.27   |
@@ -21144,6 +22066,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDP256G         | 256 GB | 70A8F58985D9 | 98    | 0     | 0.27   |
 | Samsung   | SSD 860 QVO        | 2 TB   | A4685349BBA6 | 98    | 0     | 0.27   |
 | SPCC      | SSD                | 240 GB | D965499F3A41 | 98    | 0     | 0.27   |
+| Samsung   | SSD 860 EVO        | 500 GB | 8E4E01CC4FDE | 98    | 0     | 0.27   |
 | Kingston  | SA400S37240G       | 240 GB | C9C346AC9503 | 98    | 0     | 0.27   |
 | Lexar     | SSD                | 480 GB | F4511DF1C623 | 98    | 0     | 0.27   |
 | PNY       | CS900 500GB SSD    | 500 GB | B38977EA921F | 98    | 0     | 0.27   |
@@ -21157,6 +22080,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 1 TB   | A74BD7015562 | 98    | 0     | 0.27   |
 | AMD       | R3SL480G           | 480 GB | EC4A6033FD4F | 98    | 0     | 0.27   |
 | Samsung   | SSD 860 EVO        | 1 TB   | DBEE31345C2F | 98    | 0     | 0.27   |
+| Samsung   | SSD 860 EVO        | 500 GB | B928DE27DC57 | 98    | 0     | 0.27   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 4CFB5C564A70 | 294   | 2     | 0.27   |
 | KingDian  | S200               | 120 GB | 546EA4C4101A | 98    | 0     | 0.27   |
 | Samsung   | SSD 860 EVO        | 500 GB | 19F7D2053DE7 | 98    | 0     | 0.27   |
@@ -21173,8 +22097,10 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 480 GB | 5991F6D12D20 | 97    | 0     | 0.27   |
 | ADATA     | SX900              | 256 GB | 1C6B5A09BE1B | 97    | 0     | 0.27   |
 | Intel     | SSDSCKGF240A5L     | 240 GB | CB3D47108D3B | 97    | 0     | 0.27   |
+| SanDisk   | SSD PLUS           | 1 TB   | 1210F9FD34B0 | 97    | 0     | 0.27   |
 | Crucial   | CT275MX300SSD4     | 275 GB | 9C6AA7B48B59 | 97    | 0     | 0.27   |
 | HP        | SSD S700           | 250 GB | 566609F4CA94 | 97    | 0     | 0.27   |
+| Kingston  | SA400S37120G       | 120 GB | 8A755253EEED | 97    | 0     | 0.27   |
 | ADATA     | SP610              | 512 GB | 719F0009F8AC | 97    | 0     | 0.27   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | C303D6424416 | 97    | 0     | 0.27   |
 | Crucial   | CT275MX300SSD4     | 275 GB | 99FEB128D645 | 97    | 0     | 0.27   |
@@ -21186,6 +22112,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 480 GB | 063C37738D4D | 97    | 0     | 0.27   |
 | Lexar     | 240GB SSD          | 240 GB | C3AA1987713F | 97    | 0     | 0.27   |
 | Lite-On   | CV3-8D128          | 128 GB | 6A01453E07EC | 97    | 0     | 0.27   |
+| SPCC      | SPCCSolidStateDisk | 256 GB | 71F15BE7A9EC | 97    | 0     | 0.27   |
 | Samsung   | SSD 860 EVO        | 500 GB | 8568A3445655 | 97    | 0     | 0.27   |
 | Samsung   | SSD 850 EVO mSATA  | 250 GB | B2C9967B400F | 97    | 0     | 0.27   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 854B261CE69E | 97    | 0     | 0.27   |
@@ -21228,9 +22155,12 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | pSSD               | 128 GB | 3289BE36E255 | 97    | 0     | 0.27   |
 | Kingston  | RBUSNS8280S3128GH2 | 128 GB | 31766C29E597 | 97    | 0     | 0.27   |
 | Kingston  | SA400S37480G       | 480 GB | 21D1D83A3401 | 97    | 0     | 0.27   |
+| SanDisk   | SD8SBAT256G1122    | 256 GB | 9E87E25B2858 | 97    | 0     | 0.27   |
+| SanDisk   | SDSSDH3500G        | 500 GB | 211C73214847 | 97    | 0     | 0.27   |
 | SanDisk   | SSD PLUS           | 1 TB   | A1B4CB9B40CC | 97    | 0     | 0.27   |
 | Samsung   | SSD 650            | 120 GB | 7F71237A224D | 97    | 0     | 0.27   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 276CF79B8B07 | 97    | 0     | 0.27   |
+| Lite-On   | CV8-8E256          | 256 GB | 54A1075AA777 | 97    | 0     | 0.27   |
 | Micron    | 1100 SATA          | 256 GB | 02E63E6FF019 | 97    | 0     | 0.27   |
 | SanDisk   | SD8SBAT-256G-1006  | 256 GB | 05E233373618 | 97    | 0     | 0.27   |
 | SanDisk   | SSD PLUS 120 GB    | 120 GB | D8EDD9930DF2 | 97    | 0     | 0.27   |
@@ -21298,6 +22228,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 PRO        | 512 GB | 73648A0139B6 | 96    | 0     | 0.26   |
 | HXY       | SSD 120G           | 120 GB | 09948E585410 | 96    | 0     | 0.26   |
 | Plextor   | PX-128M6S          | 128 GB | 1A1A3ED16C4F | 96    | 0     | 0.26   |
+| Kingston  | SA400S37240G       | 240 GB | A5DFACD424B4 | 96    | 0     | 0.26   |
 | Leven     | JAJS600M128C       | 128 GB | 5ACD2F58856A | 96    | 0     | 0.26   |
 | SanDisk   | SD9TN8W256G1001    | 256 GB | FA379A736E34 | 96    | 0     | 0.26   |
 | Smartbuy  | SSD                | 256 GB | 3F14A8E8A065 | 96    | 0     | 0.26   |
@@ -21305,6 +22236,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNK128GVN8      | 128 GB | C0CAE8A38F23 | 96    | 0     | 0.26   |
 | Kingston  | SH103S3120G        | 120 GB | 3FEC1366AE2F | 96    | 0     | 0.26   |
 | Kingston  | SV300S37A240G      | 240 GB | 7ABF083BB2A9 | 96    | 0     | 0.26   |
+| Kingston  | SA400S37480G       | 480 GB | A1A2C4B81095 | 192   | 1     | 0.26   |
 | Samsung   | SSD PM871b M.2 ... | 256 GB | 811433038A45 | 96    | 0     | 0.26   |
 | China     | SSD                | 256 GB | AFAF6870A8F5 | 96    | 0     | 0.26   |
 | Kingston  | SA400S37120G       | 120 GB | 2B3A5DD1E7FC | 96    | 0     | 0.26   |
@@ -21359,6 +22291,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | C9966FDB792A | 95    | 0     | 0.26   |
 | Kingston  | SA400S37480G       | 480 GB | 986587925446 | 95    | 0     | 0.26   |
 | PNY       | CS900 240GB SSD    | 240 GB | 4176C68777B4 | 95    | 0     | 0.26   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | AD973C932D64 | 95    | 0     | 0.26   |
 | Win Me... | SWR256G-201II      | 256 GB | 32F9E7C89E40 | 95    | 0     | 0.26   |
 | Kingston  | SA400S37240G       | 240 GB | 186641DDDDAF | 95    | 0     | 0.26   |
 | Kingston  | SUV400S37120G      | 120 GB | 44AF3F8ACF58 | 477   | 4     | 0.26   |
@@ -21374,6 +22307,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | C9448ACDFCF5 | 95    | 0     | 0.26   |
 | Verbatim  | Vi550 S3 SSD       | 512 GB | 9F441A03F25F | 95    | 0     | 0.26   |
 | Crucial   | CT480BX500SSD1     | 480 GB | B9ED032A8BA2 | 95    | 0     | 0.26   |
+| KIOXIA... | SATA SSD           | 240 GB | 44F820FC016A | 95    | 0     | 0.26   |
 | Kingston  | SA400S37240G       | 240 GB | B82A08441C03 | 95    | 0     | 0.26   |
 | Kingston  | SA400S37240G       | 240 GB | EFC1296ACDE5 | 95    | 0     | 0.26   |
 | Kingston  | SH103S3240G        | 240 GB | 85EFDF35DD19 | 95    | 0     | 0.26   |
@@ -21427,6 +22361,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | JAJM600M1TB        | 1 TB   | B779A4A12ED7 | 94    | 0     | 0.26   |
 | Samsung   | SSD 860 EVO        | 250 GB | 4E0EC2CB73C0 | 94    | 0     | 0.26   |
 | SanDisk   | SSD U100           | 256 GB | 16636F960BBF | 94    | 0     | 0.26   |
+| Samsung   | SSD 870 EVO        | 500 GB | FD7921F145BE | 283   | 2     | 0.26   |
 | OCZ       | TRION100           | 480 GB | 8AC022F7169F | 94    | 0     | 0.26   |
 | Samsung   | SSD 850 EVO        | 500 GB | D9E1224248D2 | 94    | 0     | 0.26   |
 | Kingston  | SA400S37120G       | 120 GB | FB7FC082244F | 94    | 0     | 0.26   |
@@ -21477,6 +22412,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 52E0D69A9348 | 93    | 0     | 0.26   |
 | Kingston  | SV300S37A240G      | 240 GB | B5E2FA937E54 | 93    | 0     | 0.26   |
 | Samsung   | SSD 860 EVO        | 1 TB   | C120350EB22D | 93    | 0     | 0.26   |
+| Apple     | SSD SM0128G        | 121 GB | C837EB7C3BF6 | 93    | 0     | 0.26   |
 | Goodram   | IR-SSDPR-S25A-240  | 240 GB | FBFC528A817A | 93    | 0     | 0.26   |
 | Kingston  | SA400S37240G       | 240 GB | 87CBA11428E2 | 93    | 0     | 0.26   |
 | Lite-On   | LCS-256L9S-11 2... | 256 GB | 231E719CE664 | 93    | 0     | 0.26   |
@@ -21527,6 +22463,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 120GB SSD    | 120 GB | 57F4566F8C22 | 93    | 0     | 0.26   |
 | SanDisk   | SSD PLUS           | 1 TB   | 12AD7007CB42 | 93    | 0     | 0.26   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 8F3D6CF4DF19 | 93    | 0     | 0.26   |
+| WDC       | WDBNCE5000PNC      | 500 GB | B588BAC934CB | 93    | 0     | 0.26   |
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 9C020F1F76FE | 93    | 0     | 0.26   |
 | Samsung   | SSD 860 EVO        | 250 GB | B780CCE57ED4 | 93    | 0     | 0.26   |
 | SanDisk   | SDSSDH3500G        | 500 GB | 3FB4DAEA463E | 93    | 0     | 0.26   |
@@ -21535,6 +22472,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD TS256C         | 256 GB | 440BFEE42357 | 93    | 0     | 0.26   |
 | Kingston  | SV300S37A120G      | 120 GB | BBCE0243A5CE | 93    | 0     | 0.26   |
 | Mushkin   | MKNSSDSR250GB      | 250 GB | 3F23AADAAE35 | 93    | 0     | 0.26   |
+| WDC       | WDS250G2B0A        | 250 GB | CDEA42E29EFE | 93    | 0     | 0.26   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | FC8765A1E58C | 93    | 0     | 0.26   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | DDBE43E2FC93 | 93    | 0     | 0.26   |
 | Samsung   | MZNLN256HAJQ-00000 | 256 GB | 20C37D24249B | 93    | 0     | 0.26   |
@@ -21551,6 +22489,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 76E60C799753 | 93    | 0     | 0.25   |
 | OWC       | Neptune 6G SSD     | 240 GB | 24762A9855A3 | 93    | 0     | 0.25   |
 | Samsung   | Portable SSD T5    | 250 GB | 12B13D5864CD | 93    | 0     | 0.25   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 1253FDA8551B | 93    | 0     | 0.25   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | DF5FF177A536 | 93    | 0     | 0.25   |
 | Crucial   | CT480BX500SSD1     | 480 GB | B29A7DBC70D7 | 93    | 0     | 0.25   |
 | Crucial   | CT500MX500SSD1     | 500 GB | E57C3946727C | 93    | 0     | 0.25   |
@@ -21652,6 +22591,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | F8B4B3E29869 | 92    | 0     | 0.25   |
 | Samsung   | SSD 860 EVO        | 500 GB | F5B9C9A93734 | 91    | 0     | 0.25   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | FC07BB512580 | 91    | 0     | 0.25   |
+| Crucial   | CT500MX500SSD1     | 500 GB | F1D77EBA10E2 | 91    | 0     | 0.25   |
 | Patriot   | Burst Elite        | 960 GB | 42F66F2F0FDB | 91    | 0     | 0.25   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | B3B4B133A477 | 91    | 0     | 0.25   |
 | SanDisk   | SDSSDH3512G        | 512 GB | 07C0A6DA7EF5 | 91    | 0     | 0.25   |
@@ -21669,12 +22609,14 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | EB6DD2EB4F07 | 91    | 0     | 0.25   |
 | Kingston  | SA400S37240G       | 240 GB | 693F621B351C | 91    | 0     | 0.25   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 70110D3A602A | 91    | 0     | 0.25   |
+| SanDisk   | SDSSDA120G         | 120 GB | B6FC7C05D439 | 91    | 0     | 0.25   |
 | Toshiba   | TR200              | 240 GB | 9684B65D48C8 | 91    | 0     | 0.25   |
 | Kingston  | SV300S37A120G      | 120 GB | 5871B08F5386 | 458   | 4     | 0.25   |
 | China     | SSD                | 1 TB   | 24F3738FFD54 | 91    | 0     | 0.25   |
 | FORESEE   | 128GB SSD          | 128 GB | 62839946D593 | 91    | 0     | 0.25   |
 | Samsung   | SSD 840 Series     | 120 GB | AAB9D388ED89 | 91    | 0     | 0.25   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | D2F08667F6D6 | 91    | 0     | 0.25   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 08F6B0954FE9 | 91    | 0     | 0.25   |
 | Hyundai   | C2S3T-240G         | 240 GB | E111730C7022 | 91    | 0     | 0.25   |
 | Kingston  | RBUSNS8180S3512GJ  | 512 GB | 74767FEE4A74 | 91    | 0     | 0.25   |
 | Samsung   | SSD 850 EVO        | 500 GB | 5A233F6A7A58 | 91    | 0     | 0.25   |
@@ -21683,10 +22625,12 @@ MTBF - avg. MTBF in years per sample.
 | China     | ESA3SMH2ISN3BT0... | 64 GB  | 5FFA13C245DA | 91    | 0     | 0.25   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 53710E3C7B68 | 91    | 0     | 0.25   |
 | SanDisk   | SDSSDHII120G       | 120 GB | B20053CC603C | 91    | 0     | 0.25   |
+| ADATA     | SU650              | 120 GB | 2FC4D90BABA2 | 91    | 0     | 0.25   |
 | ADATA     | SU800              | 1 TB   | DC2A4ACBDD97 | 91    | 0     | 0.25   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 68168219B6B2 | 91    | 0     | 0.25   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 67B3D1544538 | 91    | 0     | 0.25   |
 | China     | 120GB SSD          | 120 GB | 68FE85A3B98F | 91    | 0     | 0.25   |
+| Crucial   | CT1000BX100SSD1    | 1 TB   | 7E9E3CEA8CB8 | 91    | 0     | 0.25   |
 | ADATA     | SU630              | 480 GB | 47B4E4561975 | 91    | 0     | 0.25   |
 | Micron    | MTFDDAK256MAM-1K12 | 256 GB | D635205BBCBE | 91    | 0     | 0.25   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 61B696721E40 | 91    | 0     | 0.25   |
@@ -21703,6 +22647,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 968913659ABA | 456   | 4     | 0.25   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 763E3BECC962 | 182   | 1     | 0.25   |
 | ADATA     | SU650              | 480 GB | D1DCD86DF5FE | 91    | 0     | 0.25   |
+| Crucial   | CT480BX500SSD1     | 480 GB | A24475F6A5BC | 91    | 0     | 0.25   |
 | Kingston  | SA400S37120G       | 120 GB | D15A2918A20E | 91    | 0     | 0.25   |
 | SanDisk   | SDSSDXP240G        | 240 GB | F4F36FE35111 | 91    | 0     | 0.25   |
 | WDC       | WDS100T1R0A-68A4W0 | 1 TB   | 29C7EFA8AA60 | 91    | 0     | 0.25   |
@@ -21811,6 +22756,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS120GSSD220S      | 120 GB | 5F118952F723 | 90    | 0     | 0.25   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 17EF8104C5CF | 90    | 0     | 0.25   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | EA6E38128D69 | 90    | 0     | 0.25   |
+| WDC       | WDS250G2B0A        | 250 GB | 4891A19F3AC7 | 90    | 0     | 0.25   |
 | China     | 512GB SSD          | 512 GB | F86AFF6D0993 | 90    | 0     | 0.25   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | E819ABAEA380 | 450   | 4     | 0.25   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 1E48ED568A22 | 90    | 0     | 0.25   |
@@ -21853,7 +22799,9 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 5BEB3C0DA317 | 89    | 0     | 0.25   |
 | Kingston  | SV300S37A120G      | 120 GB | A4FFB56BEC84 | 89    | 0     | 0.25   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 2FAB76F7E7FF | 89    | 0     | 0.25   |
+| China     | SSD                | 256 GB | 3F9E8E065D30 | 89    | 0     | 0.25   |
 | PNY       | CS900 500GB SSD    | 500 GB | 8415BCB13057 | 89    | 0     | 0.25   |
+| Patriot   | Burst              | 240 GB | D793808F6061 | 89    | 0     | 0.25   |
 | Transcend | TS480GSSD220S      | 480 GB | 578358DF134E | 89    | 0     | 0.25   |
 | China     | SATA SSD           | 120 GB | 16FED93C477A | 89    | 0     | 0.25   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 9CA22B4DD85A | 89    | 0     | 0.25   |
@@ -21911,6 +22859,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN512HCJH-000L1 | 512 GB | 063D3B47CA01 | 88    | 0     | 0.24   |
 | Samsung   | MZNLN512HCJH-000L1 | 512 GB | 2735F0DB6883 | 88    | 0     | 0.24   |
 | SanDisk   | SSD PLUS           | 480 GB | C108E676979A | 88    | 0     | 0.24   |
+| Apple     | SSD SM0128G        | 121 GB | B5E85642FDDE | 88    | 0     | 0.24   |
 | Kingston  | SA400S37240G       | 240 GB | 236124293498 | 88    | 0     | 0.24   |
 | Samsung   | SSD 860 EVO        | 500 GB | B26BF632409E | 88    | 0     | 0.24   |
 | Kingston  | SV300S37A120G      | 120 GB | FDBEE470CBA7 | 444   | 4     | 0.24   |
@@ -21995,9 +22944,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 886D7AB35DA4 | 88    | 0     | 0.24   |
 | SanDisk   | SDSSDA960G         | 960 GB | 9A3DD5DB9773 | 88    | 0     | 0.24   |
 | WDC       | WDS200T2B0B-00YS70 | 2 TB   | 7AAAFC3A8AF6 | 88    | 0     | 0.24   |
+| Kingston  | SA400S37480G       | 480 GB | 3B21407832BF | 88    | 0     | 0.24   |
 | Lite-On   | CV1-8B256          | 256 GB | A5699F3BD765 | 88    | 0     | 0.24   |
 | SanDisk   | SSD PLUS           | 240 GB | 429D9688A78A | 88    | 0     | 0.24   |
 | KingSpec  | Q-180              | 180 GB | 1591A7BF778D | 87    | 0     | 0.24   |
+| OWC       | Mercury Electra... | 240 GB | 07F5C869A00E | 87    | 0     | 0.24   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 73B0BC65D339 | 87    | 0     | 0.24   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 77FCE4324B61 | 87    | 0     | 0.24   |
 | Kingston  | SA400S37480G       | 480 GB | 6BA5EE7ABD75 | 87    | 0     | 0.24   |
@@ -22038,6 +22989,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 240 GB | 2888BB29F6F3 | 262   | 2     | 0.24   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | D877B4FB8114 | 87    | 0     | 0.24   |
 | Kingston  | SA400S37240G       | 240 GB | 74BB2AFE6ED3 | 87    | 0     | 0.24   |
+| Kingston  | SA400S37480G       | 480 GB | AA20D9702FDE | 87    | 0     | 0.24   |
 | Toshiba   | THNSNH128GBST      | 128 GB | 7EF459958E63 | 87    | 0     | 0.24   |
 | WDC       | WDBNCE5000PNC      | 500 GB | C0A6A2C9BEBF | 87    | 0     | 0.24   |
 | ORICO     | N300               | 256 GB | 357F7CFC7093 | 262   | 2     | 0.24   |
@@ -22078,6 +23030,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 960GB SSD    | 960 GB | 46F8DE879C2D | 87    | 0     | 0.24   |
 | Smartbuy  | SSD                | 120 GB | 2DE93DF6F4F5 | 87    | 0     | 0.24   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 39DFBE870EF5 | 87    | 0     | 0.24   |
+| Intenso   | SSD                | 256 GB | AECB6704B301 | 86    | 0     | 0.24   |
 | KingSpec  | P3-128             | 128 GB | 605E3F38BB7B | 86    | 0     | 0.24   |
 | Kingston  | SKC380S3120G       | 120 GB | 6F72FF8075F7 | 86    | 0     | 0.24   |
 | Samsung   | SSD 840 EVO        | 250 GB | 731EB9D782BB | 86    | 0     | 0.24   |
@@ -22089,6 +23042,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 240 GB | 6B97EA193770 | 86    | 0     | 0.24   |
 | Samsung   | SSD 850 EVO        | 500 GB | 18B91B722775 | 86    | 0     | 0.24   |
 | SanDisk   | ASMT109x- Volume   | 756 GB | B478C760C446 | 86    | 0     | 0.24   |
+| Kingston  | SA400S37480G       | 480 GB | 239F555C7100 | 173   | 1     | 0.24   |
 | Kingston  | SA400S37240G       | 240 GB | 98CD5D902147 | 86    | 0     | 0.24   |
 | SPCC      | SSD                | 120 GB | 74D384DBD114 | 86    | 0     | 0.24   |
 | Samsung   | SSD 830 Series     | 128 GB | 3C4195E8FF4E | 86    | 0     | 0.24   |
@@ -22111,6 +23065,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD4     | 500 GB | 3D7C0E1E66BB | 86    | 0     | 0.24   |
 | Kingston  | SUV300S37A120G     | 120 GB | 6624512923F5 | 86    | 0     | 0.24   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | 3E18942695AB | 86    | 0     | 0.24   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 4BB45C56ADF1 | 86    | 0     | 0.24   |
 | Apacer    | AS350              | 128 GB | FF1FFD4B1B97 | 86    | 0     | 0.24   |
 | Apple     | SSD SM0128G        | 121 GB | 8545FA64F960 | 86    | 0     | 0.24   |
 | China     | SSD                | 120 GB | F4F73FDCA226 | 86    | 0     | 0.24   |
@@ -22127,6 +23082,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZMPA128HMFU-000H1 | 128 GB | EF8EDCF97FD4 | 259   | 2     | 0.24   |
 | ADATA     | SU800              | 1 TB   | 964E3DEA6CBD | 86    | 0     | 0.24   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | B1BBFA064BF9 | 86    | 0     | 0.24   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 8F95443E1A3D | 86    | 0     | 0.24   |
 | Kingston  | SA400S37240G       | 240 GB | C5F20973C634 | 86    | 0     | 0.24   |
 | SanDisk   | SD8TN8U256G1001    | 256 GB | 8CCA765C4B6A | 86    | 0     | 0.24   |
 | Leven     | JAJS600M512C       | 512 GB | 3C5FD2BE050B | 86    | 0     | 0.24   |
@@ -22182,6 +23138,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS256GSSD370S      | 256 GB | F20754A09694 | 85    | 0     | 0.23   |
 | China     | SATA SSD           | 64 GB  | 32CC0B72B86F | 85    | 0     | 0.23   |
 | Kingston  | RBUSNS8180DS3128GJ | 128 GB | B53680CAE27F | 85    | 0     | 0.23   |
+| Samsung   | SSD 860 EVO        | 500 GB | 1917A33AED48 | 85    | 0     | 0.23   |
 | Samsung   | SSD 860 EVO        | 500 GB | C6B5810622D7 | 85    | 0     | 0.23   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 8BD075C9817C | 85    | 0     | 0.23   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | F583D7D067FC | 85    | 0     | 0.23   |
@@ -22196,6 +23153,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37960G       | 960 GB | 7F8D40C78D88 | 85    | 0     | 0.23   |
 | Samsung   | SSD 850 EVO        | 250 GB | D44A12D364FC | 85    | 0     | 0.23   |
 | Samsung   | SSD 870 EVO        | 2 TB   | 1F1366027E96 | 85    | 0     | 0.23   |
+| Team      | TM8PS7512G         | 512 GB | 1A8E7171A32E | 85    | 0     | 0.23   |
 | Zheino    | CHN mSATA02M 256   | 256 GB | CDB74D2DD577 | 256   | 2     | 0.23   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | D23F07843576 | 85    | 0     | 0.23   |
 | Kingston  | SA400S37480G       | 480 GB | CA17C339F3B9 | 85    | 0     | 0.23   |
@@ -22216,6 +23174,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 2BDB0997CEE8 | 85    | 0     | 0.23   |
 | Kingston  | SV300S37A120G      | 120 GB | F4BD4350F094 | 426   | 4     | 0.23   |
 | ADATA     | SU650NS38          | 240 GB | 191B7D9C13B9 | 85    | 0     | 0.23   |
+| China     | SATA SSD           | 480 GB | EEDF4A19BFD4 | 85    | 0     | 0.23   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 89313F38DD8A | 85    | 0     | 0.23   |
 | Crucial   | CT256MX100SSD1     | 256 GB | BE9A0FB247DC | 85    | 0     | 0.23   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 4B80B17448B0 | 597   | 6     | 0.23   |
@@ -22247,6 +23206,7 @@ MTBF - avg. MTBF in years per sample.
 | XPG       | SX950U             | 240 GB | C8E03AF701D5 | 85    | 0     | 0.23   |
 | China     | SSD                | 256 GB | B9119F829812 | 85    | 0     | 0.23   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 978E58B76C0A | 85    | 0     | 0.23   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 70F9F319F1B6 | 85    | 0     | 0.23   |
 | Kingston  | SV300S37A120G      | 120 GB | A99C20A79811 | 85    | 0     | 0.23   |
 | Plextor   | PX-128M6Pro        | 128 GB | AE952447B3A3 | 85    | 0     | 0.23   |
 | SPCC      | SSD                | 240 GB | C72FB9EEFD14 | 85    | 0     | 0.23   |
@@ -22286,6 +23246,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | CDC425951321 | 84    | 0     | 0.23   |
 | SanDisk   | SSD PLUS           | 240 GB | AA96E63D2CDF | 84    | 0     | 0.23   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | A7A020127E1E | 84    | 0     | 0.23   |
+| China     | SATA SSD           | 20 GB  | 1DB31B97F326 | 84    | 0     | 0.23   |
 | Intenso   | SSD Sata III       | 128 GB | 84F02CB24B65 | 84    | 0     | 0.23   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | C95F91F371EC | 84    | 0     | 0.23   |
 | Crucial   | CT250MX500SSD4     | 250 GB | AF0410DBAE8D | 84    | 0     | 0.23   |
@@ -22333,6 +23294,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 5DD4AF35B798 | 84    | 0     | 0.23   |
 | Samsung   | MZNTY128HDHP-00000 | 128 GB | 3DB3E4810B19 | 84    | 0     | 0.23   |
 | Samsung   | SSD 850 EVO        | 250 GB | 976B9D4CFE4E | 84    | 0     | 0.23   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 47789C7D273D | 84    | 0     | 0.23   |
 | PNY       | CS1311 240GB SSD   | 240 GB | F76773D676D6 | 84    | 0     | 0.23   |
 | SPCC      | SSD                | 120 GB | 6CA4E3E6FB53 | 84    | 0     | 0.23   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 7C83C99BB36C | 84    | 0     | 0.23   |
@@ -22350,6 +23312,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 6D5C5F188DDA | 84    | 0     | 0.23   |
 | SanDisk   | SSD PLUS           | 1 TB   | 3999BD415689 | 84    | 0     | 0.23   |
 | Apacer    | AS340              | 240 GB | B4665AC727E0 | 84    | 0     | 0.23   |
+| China     | SSD                | 256 GB | 5205485AF451 | 84    | 0     | 0.23   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 0E66F57D412C | 84    | 0     | 0.23   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 1163DE9A6F0D | 84    | 0     | 0.23   |
 | Hikvision | HS-SSD-C100 240G   | 240 GB | FB0371963C1B | 84    | 0     | 0.23   |
@@ -22376,9 +23339,11 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 37841FC92A55 | 83    | 0     | 0.23   |
 | Kingston  | SUV400S37120G      | 120 GB | 8A9B0E82A0BF | 83    | 0     | 0.23   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 25A75430624B | 83    | 0     | 0.23   |
+| Micron    | 1100_MTFDDAV256TBN | 256 GB | 33311DDDCD1A | 83    | 0     | 0.23   |
 | Samsung   | SSD 750 EVO        | 120 GB | 97A03ACB8810 | 83    | 0     | 0.23   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | C304DB20882E | 83    | 0     | 0.23   |
 | ADATA     | SU800              | 128 GB | 2519E4CAACF3 | 83    | 0     | 0.23   |
+| Blackpcs  | AS201 SSD          | 120 GB | 875F97075433 | 83    | 0     | 0.23   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 1EFBA356700D | 83    | 0     | 0.23   |
 | Kingston  | SA400S37120G       | 120 GB | A4D7D0981D0D | 83    | 0     | 0.23   |
 | Samsung   | SSD 850 EVO        | 250 GB | 3585ED91811F | 83    | 0     | 0.23   |
@@ -22396,6 +23361,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZYTY128HDHP-000L2 | 128 GB | 6E84E02F7696 | 83    | 0     | 0.23   |
 | Samsung   | SSD 860 EVO        | 1 TB   | D636CF639493 | 83    | 0     | 0.23   |
 | Crucial   | CT480BX500SSD1     | 480 GB | E0C005838ED6 | 83    | 0     | 0.23   |
+| Crucial   | CT500MX500SSD1     | 500 GB | DE16A44C8913 | 83    | 0     | 0.23   |
 | Goodram   | SSD                | 120 GB | F2891C606E3A | 83    | 0     | 0.23   |
 | Kingston  | SKC600256G         | 256 GB | EC36B7AC984A | 83    | 0     | 0.23   |
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 34AAB5C793E0 | 83    | 0     | 0.23   |
@@ -22438,6 +23404,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT275MX300SSD1     | 275 GB | 8C840A1D94C1 | 83    | 0     | 0.23   |
 | Mushkin   | MKNSSDRE2TB        | 2 TB   | AA1CBEA104FE | 83    | 0     | 0.23   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 755376BDB3DC | 83    | 0     | 0.23   |
+| Seagate   | BarraCuda 120 S... | 250 GB | EE27383E4FCA | 83    | 0     | 0.23   |
 | Phison    | SATA SSD           | 120 GB | 419E85D912D3 | 83    | 0     | 0.23   |
 | SPCC      | SSD                | 128 GB | 5B4432126DA2 | 83    | 0     | 0.23   |
 | Smartbuy  | SSD                | 120 GB | E2215509B4E3 | 83    | 0     | 0.23   |
@@ -22450,6 +23417,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 2967A5C649CA | 83    | 0     | 0.23   |
 | Lexar     | 256GB SSD          | 256 GB | 9DB93A43F912 | 83    | 0     | 0.23   |
 | Plextor   | PX-128M6S          | 128 GB | 8E0C84C931EB | 83    | 0     | 0.23   |
+| Kingston  | SA400S37120G       | 120 GB | 1CCF5314F8A2 | 82    | 0     | 0.23   |
 | Kingston  | SA400S37480G       | 480 GB | 3CE19662E161 | 82    | 0     | 0.23   |
 | Lite-On   | CV4-8Q128-HP       | 128 GB | 71E8F5B2ECAB | 82    | 0     | 0.23   |
 | Samsung   | SSD 860 EVO        | 1 TB   | A409B20858D9 | 82    | 0     | 0.23   |
@@ -22470,6 +23438,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G32TNF-N3A0A | 128 GB | 48BAB3B28602 | 82    | 0     | 0.23   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 4582B7320C2C | 82    | 0     | 0.23   |
 | SanDisk   | X400 2.5 7MM       | 256 GB | DA1D5A14D2EC | 82    | 0     | 0.23   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 88732E254EC6 | 82    | 0     | 0.23   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 528A999ED496 | 82    | 0     | 0.23   |
 | Samsung   | SSD 750 EVO        | 250 GB | 2B5318695C81 | 82    | 0     | 0.23   |
 | Samsung   | SSD 850 EVO        | 250 GB | E3198F6FB29A | 82    | 0     | 0.23   |
@@ -22502,6 +23471,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 QVO        | 1 TB   | 2DC5546EC9E0 | 82    | 0     | 0.23   |
 | T-FORCE   | SSD                | 512 GB | 90EAC4C9239A | 82    | 0     | 0.23   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 5031CBA2C845 | 82    | 0     | 0.23   |
+| Intenso   | SSD                | 256 GB | 097AC8E9C0FF | 82    | 0     | 0.23   |
+| Samsung   | SSD 840 Series     | 250 GB | 07A325F1BDC9 | 82    | 0     | 0.23   |
 | Toshiba   | TR200              | 240 GB | 27A67718C4BE | 82    | 0     | 0.23   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | B9A32478EFFF | 82    | 0     | 0.23   |
 | ADATA     | SP550              | 120 GB | 78938C47F96D | 82    | 0     | 0.23   |
@@ -22546,6 +23517,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 9D4217E154D2 | 409   | 4     | 0.22   |
 | Kingston  | SKC600256G         | 256 GB | 4E1462D86D08 | 81    | 0     | 0.22   |
 | Kingston  | SQ500S37120G       | 120 GB | ABD3C6A0AC16 | 81    | 0     | 0.22   |
+| Micron    | 5200_MTFDDAK480TDC | 480 GB | 65CDD428D58D | 81    | 0     | 0.22   |
 | Kingston  | SMS200S360G        | 64 GB  | E7477888EC63 | 736   | 8     | 0.22   |
 | Samsung   | SSD 860 EVO        | 500 GB | C4514696A3E3 | 81    | 0     | 0.22   |
 | Crucial   | CT240BX500SSD1     | 240 GB | A479CCBD535B | 81    | 0     | 0.22   |
@@ -22553,6 +23525,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | C69D0F928CBB | 81    | 0     | 0.22   |
 | ADATA     | SP550              | 120 GB | EA4DEDF0F079 | 81    | 0     | 0.22   |
 | Samsung   | SSD 840 EVO        | 250 GB | 242F336568D6 | 81    | 0     | 0.22   |
+| WDC       | WDBNCE5000PNC      | 500 GB | 537FDD2F9F65 | 81    | 0     | 0.22   |
 | Apple     | SSD TS064C         | 64 GB  | D30260EBF19E | 81    | 0     | 0.22   |
 | China     | SSD                | 120 GB | 9AE40335D946 | 81    | 0     | 0.22   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 856B0E69344E | 81    | 0     | 0.22   |
@@ -22561,6 +23534,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | A2B011AFAF72 | 81    | 0     | 0.22   |
 | SanDisk   | SD9SN8W128G1002    | 128 GB | 4A23A008E4F5 | 81    | 0     | 0.22   |
 | SanDisk   | SD9SN8W256G1102    | 256 GB | E74714F18B70 | 81    | 0     | 0.22   |
+| ADATA     | SU650              | 480 GB | 2FEC36317356 | 81    | 0     | 0.22   |
 | Kingston  | SUV400S37120G      | 120 GB | 279B1E156F2D | 81    | 0     | 0.22   |
 | PNY       | CS900 1TB SSD      | 1 TB   | 69180B90250D | 81    | 0     | 0.22   |
 | Transcend | TS240GSSD220S      | 240 GB | BB763FE4F137 | 81    | 0     | 0.22   |
@@ -22662,6 +23636,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT525MX300SSD1     | 528 GB | DEEF1C229E3D | 402   | 4     | 0.22   |
 | ADATA     | SU650              | 120 GB | 23F38988A572 | 80    | 0     | 0.22   |
 | KingDian  | S180               | 64 GB  | E41A6D87E7F0 | 80    | 0     | 0.22   |
+| Netac     | S535N8-256GYN      | 256 GB | 55B08263B7B4 | 80    | 0     | 0.22   |
 | Samsung   | Portable SSD T5    | 500 GB | 7C686FD0F436 | 80    | 0     | 0.22   |
 | SanDisk   | SSD PLUS           | 1 TB   | 837756260285 | 80    | 0     | 0.22   |
 | ADATA     | SU650              | 480 GB | D71DED9EEAB7 | 161   | 1     | 0.22   |
@@ -22704,6 +23679,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC311 SATA         | 256 GB | 89A4A59A38AF | 79    | 0     | 0.22   |
 | Lite-On   | LAT-256M2S         | 256 GB | B1B9B9E7A60E | 239   | 2     | 0.22   |
 | China     | SATA SSD           | 120 GB | 19DC16C8C910 | 79    | 0     | 0.22   |
+| Crucial   | CT500MX200SSD1     | 500 GB | 5755D5625BAE | 79    | 0     | 0.22   |
 | Dogfish   | SSD                | 256 GB | AFB6A673E8C6 | 79    | 0     | 0.22   |
 | Samsung   | SSD PM871b M.2 ... | 128 GB | 3B75A6C7DB3F | 79    | 0     | 0.22   |
 | Plextor   | PX-128M5Pro        | 128 GB | 2AA8B537768B | 79    | 0     | 0.22   |
@@ -22748,6 +23724,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 9C4027B8045A | 79    | 0     | 0.22   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 43DB8C10CEE5 | 79    | 0     | 0.22   |
 | ASMedia   | ASMT109x- Fast     | 2 TB   | B425B595DF88 | 79    | 0     | 0.22   |
+| Intenso   | SSD Sata III       | 500 GB | D077F8F636C4 | 79    | 0     | 0.22   |
 | KingDian  | S400               | 120 GB | 698EB3E3F8EC | 79    | 0     | 0.22   |
 | PNY       | SSD2SC120G1CS17... | 120 GB | 3F4661C55655 | 79    | 0     | 0.22   |
 | Samsung   | MZ7LN256HCHP-000L7 | 256 GB | 736342E96A9E | 79    | 0     | 0.22   |
@@ -22806,6 +23783,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 5B9EF8B054FA | 78    | 0     | 0.22   |
 | China     | SATA SSD           | 240 GB | 6CE156DE4C3A | 78    | 0     | 0.22   |
 | Lite-On   | L8H-256V2G-HP      | 256 GB | F3402036A597 | 78    | 0     | 0.22   |
+| Samsung   | MZ7TY128HDHP-000L1 | 128 GB | 9756FAD0335A | 78    | 0     | 0.22   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | F3D96EFFF8C2 | 78    | 0     | 0.22   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 52F90893D3A8 | 78    | 0     | 0.22   |
 | Samsung   | SSD 860 EVO        | 250 GB | 92405D59B0C3 | 78    | 0     | 0.22   |
@@ -22827,6 +23805,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 2 TB   | 5C88915F73EA | 78    | 0     | 0.21   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 7959030EE115 | 78    | 0     | 0.21   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 0934499AE696 | 78    | 0     | 0.21   |
+| SPCC      | M.2 SSD            | 1 TB   | F2D177C98A61 | 78    | 0     | 0.21   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | F36E3C46161E | 78    | 0     | 0.21   |
 | ADATA     | SU650              | 240 GB | 63868CF30683 | 234   | 2     | 0.21   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 11CE212DD82C | 78    | 0     | 0.21   |
@@ -22873,6 +23852,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 240 GB | 58C5D2C4BD76 | 77    | 0     | 0.21   |
 | Lite-On   | LCH-256V2S         | 256 GB | 139C8C1F3FA6 | 77    | 0     | 0.21   |
 | SanDisk   | SDSSDA120G         | 120 GB | 61324097BF3C | 77    | 0     | 0.21   |
+| Samsung   | SSD 840 PRO Series | 256 GB | 3709981FC395 | 1709  | 21    | 0.21   |
 | Kingston  | SA400S37120G       | 120 GB | 14E710653571 | 77    | 0     | 0.21   |
 | Kingston  | SA400S37240G       | 240 GB | 9C752F16B112 | 77    | 0     | 0.21   |
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | 04DF25BC21DF | 77    | 0     | 0.21   |
@@ -22890,6 +23870,7 @@ MTBF - avg. MTBF in years per sample.
 | KingDian  | S280-240GB         | 240 GB | 7424B7555814 | 155   | 1     | 0.21   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 5DE50B55E610 | 77    | 0     | 0.21   |
 | SPCC      | SSD                | 512 GB | 5B12CADB2D69 | 542   | 6     | 0.21   |
+| Apacer    | AS340              | 240 GB | F394D862EADB | 77    | 0     | 0.21   |
 | China     | SH00R480GB         | 480 GB | 23AA00ECD230 | 77    | 0     | 0.21   |
 | KingDian  | S280-240GB         | 240 GB | 352174C6E676 | 77    | 0     | 0.21   |
 | Samsung   | SSD 860 EVO        | 500 GB | 54BFD31FFBC2 | 77    | 0     | 0.21   |
@@ -22912,7 +23893,9 @@ MTBF - avg. MTBF in years per sample.
 | Netac     | SSD                | 256 GB | 11D7A6DA7DB9 | 77    | 0     | 0.21   |
 | Samsung   | SSD 860 EVO        | 500 GB | 4D026F0E2D78 | 77    | 0     | 0.21   |
 | WDC       | WDS500G2B0A        | 500 GB | C6CA65E2104A | 77    | 0     | 0.21   |
+| Intel     | SSDSC2BB120G6      | 120 GB | 2A3889ACAF2E | 77    | 0     | 0.21   |
 | TCSUNBOW  | X3                 | 480 GB | BD9D25795E44 | 77    | 0     | 0.21   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 03546F9233F9 | 77    | 0     | 0.21   |
 | Kingston  | SUV300S37A480G     | 480 GB | 3169BEB08C80 | 77    | 0     | 0.21   |
 | Lite-On   | LCS-256L9S-11 2... | 256 GB | CCBDE0FA8167 | 77    | 0     | 0.21   |
 | Samsung   | SSD 840 EVO        | 500 GB | 2F3C58FBB649 | 77    | 0     | 0.21   |
@@ -22927,6 +23910,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC311 SATA         | 512 GB | 99A79B3E17CA | 77    | 0     | 0.21   |
 | Vaseky    | V800-128G          | 128 GB | A1F2779EADC9 | 77    | 0     | 0.21   |
 | ADATA     | SU650              | 480 GB | 8AD0377D04C1 | 77    | 0     | 0.21   |
+| Patriot   | Burst              | 240 GB | EA4F1CAC9DB4 | 77    | 0     | 0.21   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | DFEF822C95E6 | 77    | 0     | 0.21   |
 | SanDisk   | SSD PLUS           | 1 TB   | 493B4A6F9F66 | 77    | 0     | 0.21   |
 | Apple     | SSD SM0128G        | 121 GB | 098E995FFF8B | 77    | 0     | 0.21   |
@@ -22939,7 +23923,10 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | 80524E26FAFA | 76    | 0     | 0.21   |
 | Toshiba   | THNSNJ256GCSU      | 256 GB | E450F346A462 | 76    | 0     | 0.21   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 0FB73B1A1CBD | 76    | 0     | 0.21   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 5AEB50B64BBC | 76    | 0     | 0.21   |
+| Crucial   | CT480BX500SSD1     | 480 GB | 6E2ABBA882DD | 76    | 0     | 0.21   |
 | EMTEC     | X150               | 240 GB | BECAD537EA0F | 76    | 0     | 0.21   |
+| Transcend | TS128GSSD370S      | 128 GB | AB8F45B1194A | 76    | 0     | 0.21   |
 | KingSpec  | NT-128             | 128 GB | 68FE01B868CF | 76    | 0     | 0.21   |
 | Micron    | 1100 SATA          | 256 GB | 4D0C410BBCA1 | 76    | 0     | 0.21   |
 | PNY       | CS900 120GB SSD    | 120 GB | 7EF329611D51 | 76    | 0     | 0.21   |
@@ -22974,6 +23961,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000BX500SSD1    | 1 TB   | F1C42020FCBA | 76    | 0     | 0.21   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 9FC1FFF4AB63 | 76    | 0     | 0.21   |
 | Kingston  | SV300S37A120G      | 120 GB | DE79C4A3133C | 76    | 0     | 0.21   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | F54D3A572AF7 | 76    | 0     | 0.21   |
 | Gigaby... | GP-GSTFS30256GTTD  | 256 GB | 0561F87EF9A6 | 76    | 0     | 0.21   |
 | Lexar     | 256GB SSD          | 256 GB | 64D27901E169 | 76    | 0     | 0.21   |
 | INNOVA... | SSD                | 120 GB | 13C39CC89128 | 76    | 0     | 0.21   |
@@ -22992,6 +23980,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 050243B38209 | 76    | 0     | 0.21   |
 | Samsung   | SSD 860 PRO        | 256 GB | 1FF52888BB7B | 76    | 0     | 0.21   |
 | SanDisk   | SDSSDA240G         | 240 GB | EDE61102AC33 | 76    | 0     | 0.21   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | FE1EAB599955 | 76    | 0     | 0.21   |
 | Crucial   | CT240BX500SSD1     | 240 GB | CBDE06EB3E44 | 76    | 0     | 0.21   |
 | SPCC      | SSD                | 120 GB | 3D2D8628B61B | 76    | 0     | 0.21   |
 | SanDisk   | SSD U100           | 24 GB  | 529E5256A145 | 76    | 0     | 0.21   |
@@ -23003,6 +23992,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SATA SSD           | 240 GB | E1B70A23EF40 | 76    | 0     | 0.21   |
 | Samsung   | SSD 850 EVO        | 500 GB | 575DE965F0D3 | 76    | 0     | 0.21   |
 | Toshiba   | TR150              | 480 GB | 8AC4A21157BA | 685   | 8     | 0.21   |
+| Kingston  | SA400S37960G       | 960 GB | C210EF2369B5 | 152   | 1     | 0.21   |
 | China     | SATA SSD           | 120 GB | AD9BBE7F7C98 | 76    | 0     | 0.21   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | DBAC264CBAC1 | 76    | 0     | 0.21   |
 | Samsung   | SSD 850 EVO        | 250 GB | C35B162E6E5E | 76    | 0     | 0.21   |
@@ -23043,6 +24033,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | CEECE78FB7D4 | 75    | 0     | 0.21   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | C9E770B953AE | 75    | 0     | 0.21   |
 | Samsung   | SSD 850 EVO        | 250 GB | 46AAD2F92EB5 | 75    | 0     | 0.21   |
+| Samsung   | SSD 870 EVO        | 500 GB | DAC3732BC714 | 151   | 1     | 0.21   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 238B231FA1D5 | 75    | 0     | 0.21   |
 | AMD       | R3SL120G           | 120 GB | 72B30ACEAE66 | 75    | 0     | 0.21   |
 | SPCC      | SSD                | 55 GB  | 80FAFC904E6C | 75    | 0     | 0.21   |
@@ -23061,6 +24052,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 120 GB | 879670ACE13A | 75    | 0     | 0.21   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 2C309982A291 | 75    | 0     | 0.21   |
 | Samsung   | SSD 750 EVO        | 250 GB | 4B89E632A6F3 | 75    | 0     | 0.21   |
+| Toshiba   | THNSNJ256GMCU      | 256 GB | 9405C8374AE9 | 75    | 0     | 0.21   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 5C1D76460F82 | 75    | 0     | 0.21   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 916496C5551C | 75    | 0     | 0.21   |
 | KingSpec  | NT-512             | 512 GB | E2339EAE02E1 | 75    | 0     | 0.21   |
@@ -23068,8 +24060,10 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 691E2572CC3F | 75    | 0     | 0.21   |
 | SanDisk   | SDSSDA240G         | 240 GB | 3BD51C236FE5 | 75    | 0     | 0.21   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 7E902D148339 | 75    | 0     | 0.21   |
+| KingDian  | P10                | 250 GB | BA8288739190 | 75    | 0     | 0.21   |
 | KingDian  | S280-120GB         | 120 GB | 982D366BF643 | 75    | 0     | 0.21   |
 | KingSpec  | Q-180              | 180 GB | E17BAAFB6DEE | 75    | 0     | 0.21   |
+| Kingston  | SA400S37120G       | 120 GB | 5558466A9483 | 151   | 1     | 0.21   |
 | ADATA     | SU650              | 120 GB | DF0C2AB8E138 | 75    | 0     | 0.21   |
 | Kingston  | SA400S37-240G      | 240 GB | A360ACE8B701 | 75    | 0     | 0.21   |
 | SPCC      | SSD                | 128 GB | 6455F0E6D1A4 | 75    | 0     | 0.21   |
@@ -23084,6 +24078,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS64GSSD360S       | 64 GB  | 3B3CF90F4DED | 75    | 0     | 0.21   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 0D361775DA21 | 75    | 0     | 0.21   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 6BEF5A3C7BD9 | 75    | 0     | 0.21   |
+| Micron    | MTFDDAK256MAM-1K12 | 256 GB | FA29828C15C0 | 75    | 0     | 0.21   |
 | Samsung   | SSD 850 EVO        | 250 GB | 35C6B2F8A28A | 75    | 0     | 0.21   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 2F0C7E5D04DF | 75    | 0     | 0.21   |
 | China     | SATA SSD           | 120 GB | A1B83166D91B | 75    | 0     | 0.21   |
@@ -23112,10 +24107,12 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 4D6DD5EEA388 | 75    | 0     | 0.21   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 40770B5F015E | 75    | 0     | 0.21   |
 | Crucial   | CT480BX500SSD1     | 480 GB | CC181C47DE6B | 75    | 0     | 0.21   |
+| Fanxiang  | S101               | 512 GB | E3173C0EF191 | 75    | 0     | 0.21   |
 | Lite-On   | CV6-8Q128          | 128 GB | 3F2D31B3E5B8 | 75    | 0     | 0.21   |
 | Patriot   | P210               | 256 GB | DA8892E574F7 | 75    | 0     | 0.21   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 91E30AEF6436 | 75    | 0     | 0.21   |
 | China     | SSD                | 128 GB | 1F933907FE1A | 75    | 0     | 0.21   |
+| Intel     | SSDSCKKF256H6 SATA | 256 GB | 76B8F74CBBE7 | 75    | 0     | 0.21   |
 | Micron    | MTFDDAK256MAM-1K12 | 256 GB | AEE547CDC905 | 75    | 0     | 0.21   |
 | Kingston  | SA400S37480G       | 480 GB | 8447DC29C7A2 | 74    | 0     | 0.21   |
 | Kingston  | SV300S37A120G      | 120 GB | 6A9459A3930D | 74    | 0     | 0.21   |
@@ -23156,6 +24153,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 120 GB | B78D8981B93D | 74    | 0     | 0.20   |
 | Kingston  | SA400S37240G       | 240 GB | 7E687B7F5033 | 74    | 0     | 0.20   |
 | Team      | T253LE240G         | 240 GB | A331079CE887 | 74    | 0     | 0.20   |
+| Kingston  | SA400S37120G       | 120 GB | F8FB86278846 | 74    | 0     | 0.20   |
 | Kingston  | SA400S37480G       | 480 GB | AC6638E07D6E | 74    | 0     | 0.20   |
 | Apple     | SSD SM0256G        | 256 GB | 8894E8098866 | 74    | 0     | 0.20   |
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 02A0C171F396 | 74    | 0     | 0.20   |
@@ -23170,6 +24168,7 @@ MTBF - avg. MTBF in years per sample.
 | BIWIN     | SSD                | 256 GB | 647887E3084A | 74    | 0     | 0.20   |
 | Kingston  | SA400S37120G       | 120 GB | 64043ED45711 | 74    | 0     | 0.20   |
 | OCZ       | VERTEX460          | 240 GB | EE38E730D4BD | 74    | 0     | 0.20   |
+| Samsung   | SSD 860 EVO M.2    | 1 TB   | 758739073499 | 74    | 0     | 0.20   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 6B0471CC47BF | 74    | 0     | 0.20   |
 | Kingston  | SA400S37240G       | 240 GB | 504B2FD5FB4C | 74    | 0     | 0.20   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 02B99135AB77 | 74    | 0     | 0.20   |
@@ -23218,6 +24217,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZYTN512HDJH-000L2 | 512 GB | 545A15278F9C | 73    | 0     | 0.20   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 65D7882C3724 | 73    | 0     | 0.20   |
 | KingDian  | S280               | 240 GB | 7ADE9DC871CC | 73    | 0     | 0.20   |
+| Crucial   | CT250MX500SSD1     | 250 GB | E17B333283F1 | 73    | 0     | 0.20   |
 | Kingston  | SA400S37240G       | 240 GB | 28CA31ED3819 | 73    | 0     | 0.20   |
 | Kingston  | SV300S37A240G      | 240 GB | 152DA435C142 | 73    | 0     | 0.20   |
 | ADATA     | SP920SS            | 128 GB | C76339B92AE2 | 73    | 0     | 0.20   |
@@ -23231,6 +24231,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | JAJM600M128C       | 128 GB | FDA28D8C6636 | 73    | 0     | 0.20   |
 | Intenso   | SSD256GBS420       | 256 GB | 132CB8F1C44C | 73    | 0     | 0.20   |
 | Kingston  | SA400S37240G       | 240 GB | C07F7B98D223 | 73    | 0     | 0.20   |
+| Kingston  | RBU-SNS8152S325... | 256 GB | 5A64E7CACF3D | 73    | 0     | 0.20   |
 | Lite-On   | L8H-256V2G-11 M... | 256 GB | C50BB4FFBFB9 | 73    | 0     | 0.20   |
 | Smartbuy  | SSD                | 120 GB | 320219601B9C | 73    | 0     | 0.20   |
 | Transcend | TS120GSSD220S      | 120 GB | 1D0348A04DF8 | 221   | 2     | 0.20   |
@@ -23246,9 +24247,11 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-512M8VC         | 512 GB | 39B3CA8096F4 | 73    | 0     | 0.20   |
 | Samsung   | SSD 850 EVO        | 120 GB | 2864CADC01A8 | 73    | 0     | 0.20   |
 | ADATA     | SP580              | 240 GB | FD35356C7D98 | 73    | 0     | 0.20   |
+| Kingston  | SA400S37240G       | 240 GB | C459F5B988C7 | 73    | 0     | 0.20   |
 | Kingston  | SA400S37240G       | 240 GB | FC599920FD40 | 73    | 0     | 0.20   |
 | Kingston  | SA400S37960G       | 960 GB | 53BB78846D78 | 73    | 0     | 0.20   |
 | Kingston  | SV300S37A120G      | 120 GB | E7B04EA29685 | 73    | 0     | 0.20   |
+| Patriot   | P210               | 512 GB | 693716E00CDD | 73    | 0     | 0.20   |
 | Samsung   | SSD 860 PRO        | 512 GB | F6C479F85519 | 73    | 0     | 0.20   |
 | SanDisk   | SSD i100           | 8 GB   | 4ABBAC366AE5 | 73    | 0     | 0.20   |
 | WDC       | WDS250G1B0B-00AS40 | 250 GB | 9A773A219802 | 73    | 0     | 0.20   |
@@ -23280,6 +24283,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 256 GB | D8FC6E6748A1 | 73    | 0     | 0.20   |
 | Samsung   | SSD 850 PRO        | 1 TB   | D96A44680E72 | 73    | 0     | 0.20   |
 | Samsung   | SSD 860 EVO        | 250 GB | A292028E492A | 73    | 0     | 0.20   |
+| SanDisk   | SSD PLUS           | 120 GB | 39DF52193C70 | 73    | 0     | 0.20   |
 | Toshiba   | KHK61VSE960G       | 960 GB | EA8C2659BE53 | 73    | 0     | 0.20   |
 | V-GeN     | V-GEN01SM22AR10... | 1 TB   | C6734E406EBC | 73    | 0     | 0.20   |
 | Goodram   | SSDPR-CL100-240-G2 | 240 GB | 689C11204E6C | 73    | 0     | 0.20   |
@@ -23316,6 +24320,8 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253X2001T         | 1 TB   | 29A2CDBFFE27 | 72    | 0     | 0.20   |
 | WDC       | WDS120G1G0B-00RC30 | 120 GB | 3F63BE516599 | 72    | 0     | 0.20   |
 | WDC       | WDS500G2B0A        | 500 GB | F13696577CBD | 72    | 0     | 0.20   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | E1E99D39827E | 72    | 0     | 0.20   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | 1E5F6C17842E | 72    | 0     | 0.20   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 53C43B7ECB46 | 72    | 0     | 0.20   |
 | Union ... | RTOTJ128VGD2EYX    | 128 GB | D90CF2F26375 | 72    | 0     | 0.20   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 4D5C2F337A04 | 72    | 0     | 0.20   |
@@ -23385,6 +24391,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U100           | 24 GB  | 434F4CF5AA05 | 72    | 0     | 0.20   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 0AF94633DE85 | 72    | 0     | 0.20   |
 | Samsung   | SSD 860 EVO        | 1 TB   | F0D2597FF806 | 72    | 0     | 0.20   |
+| Samsung   | SSD 860 EVO        | 250 GB | 721DCB54C866 | 72    | 0     | 0.20   |
 | Kingston  | SA400S37240G       | 240 GB | A107CDF8E54B | 72    | 0     | 0.20   |
 | Kingston  | SHFS37A120G        | 120 GB | 915C5BBFF5C5 | 216   | 2     | 0.20   |
 | Patriot   | P210               | 1 TB   | 2D0564A0B173 | 72    | 0     | 0.20   |
@@ -23436,8 +24443,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 PRO        | 256 GB | 7A115A32C1CF | 71    | 0     | 0.20   |
 | Team      | T253X6001T         | 1 TB   | 4595B3D06B0E | 71    | 0     | 0.20   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 6553B78F2DA4 | 71    | 0     | 0.20   |
+| KLLISRE   | SSD                | 256 GB | D20F01D66C78 | 71    | 0     | 0.20   |
 | Kingston  | SA400S37480G       | 480 GB | 4E07D9531C05 | 71    | 0     | 0.20   |
 | Samsung   | SSD 850            | 120 GB | 5150D9C59C4B | 71    | 0     | 0.20   |
+| XrayDisk  | 512GB SSD          | 512 GB | 363EE4FDD04F | 71    | 0     | 0.20   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | C33F1D7FF594 | 71    | 0     | 0.20   |
 | Kingston  | SV300S37A120G      | 120 GB | 701E24658A8B | 357   | 4     | 0.20   |
 | SK hynix  | HFS256G3BTND-N210A | 256 GB | 9367EF40B1DB | 71    | 0     | 0.20   |
@@ -23470,6 +24479,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 41B73032B632 | 71    | 0     | 0.19   |
 | PNY       | CS900 240GB SSD    | 240 GB | 30C57D362F18 | 71    | 0     | 0.19   |
 | SanDisk   | SSD PLUS           | 120 GB | F621156F41BF | 71    | 0     | 0.19   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | FB1A8A39EFD2 | 71    | 0     | 0.19   |
 | Crucial   | CT480BX500SSD1     | 480 GB | E026E2B048DC | 71    | 0     | 0.19   |
 | Patriot   | Burst              | 960 GB | A643B4399E7D | 71    | 0     | 0.19   |
 | Samsung   | SSD 860 EVO        | 500 GB | F2825A82C2D9 | 71    | 0     | 0.19   |
@@ -23570,6 +24580,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 01C9694EB185 | 70    | 0     | 0.19   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 517E92DEF186 | 69    | 0     | 0.19   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 1DB6662DCAD7 | 69    | 0     | 0.19   |
+| Kingston  | SV300S37A240G      | 240 GB | 64CCA8E69CD3 | 69    | 0     | 0.19   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 980C1AF5ECD2 | 69    | 0     | 0.19   |
 | Kingston  | SV300S37A120G      | 120 GB | 3621FD8918BD | 69    | 0     | 0.19   |
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | 1B04BA06A642 | 69    | 0     | 0.19   |
@@ -23591,6 +24602,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS120GMTS420S      | 120 GB | 791C9706A504 | 69    | 0     | 0.19   |
 | Acer      | SSD SA100          | 120 GB | 10BC44DBB972 | 69    | 0     | 0.19   |
 | Apacer    | AS340              | 240 GB | 7DFEF10E1970 | 69    | 0     | 0.19   |
+| Intel     | SSDSCKJF180A5H REF | 180 GB | 0EB5D34939AC | 69    | 0     | 0.19   |
 | Kingston  | SA400S37240G       | 240 GB | EDE3477FB292 | 69    | 0     | 0.19   |
 | Kingston  | SUV400S37120G      | 120 GB | 59E882A22E58 | 69    | 0     | 0.19   |
 | Kingston  | SA400S37480G       | 480 GB | EE44BE6C3B44 | 69    | 0     | 0.19   |
@@ -23617,6 +24629,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | Z1 SSD             | 240 GB | A4526920F63E | 69    | 0     | 0.19   |
 | Micron    | MTFDDAV256MBF-1... | 256 GB | 457521E3A600 | 69    | 0     | 0.19   |
 | SK hynix  | SC311 SATA         | 256 GB | 6F6CF24A0EA1 | 69    | 0     | 0.19   |
+| Samsung   | SSD 870 QVO        | 2 TB   | E980E0A058E1 | 69    | 0     | 0.19   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 470A0D5DA2A9 | 69    | 0     | 0.19   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 90119CCFBFA1 | 69    | 0     | 0.19   |
 | HP        | SSD S700           | 250 GB | 20B02AEFEA0B | 69    | 0     | 0.19   |
@@ -23697,6 +24710,7 @@ MTBF - avg. MTBF in years per sample.
 | XrayDisk  | SSD                | 240 GB | 7535377A31E6 | 68    | 0     | 0.19   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 65C0A091064A | 68    | 0     | 0.19   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 7DDA36972AEF | 68    | 0     | 0.19   |
+| Kingston  | RBU-SC100S37256GD  | 256 GB | 47C4362DAA2C | 68    | 0     | 0.19   |
 | Kingston  | SV300S37A240G      | 240 GB | FB2D3AE02BBB | 68    | 0     | 0.19   |
 | ADATA     | SU800NS38          | 512 GB | 103098084A21 | 68    | 0     | 0.19   |
 | Apacer    | AS350              | 120 GB | 67C2AFE315AA | 68    | 0     | 0.19   |
@@ -23795,6 +24809,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 8E65401AF089 | 67    | 0     | 0.19   |
 | Kingston  | SUV500MS120G       | 120 GB | CFE1D0A86798 | 67    | 0     | 0.19   |
 | Smartbuy  | SSD                | 64 GB  | B1F612F74D4B | 67    | 0     | 0.19   |
+| Transcend | TS32GMSA370        | 32 GB  | 085C0BAA81D1 | 67    | 0     | 0.19   |
 | ADATA     | SP900              | 64 GB  | 2B315FC90140 | 338   | 4     | 0.19   |
 | Kingston  | SA400S37120G       | 120 GB | 6458C5D9847F | 67    | 0     | 0.19   |
 | Kingston  | SUV500240G         | 240 GB | CF1A2451FB09 | 67    | 0     | 0.19   |
@@ -23806,6 +24821,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S371920G      | 1.9 TB | F26BAE921328 | 67    | 0     | 0.19   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | FA49A6E9979A | 67    | 0     | 0.19   |
 | Kingston  | SV300S37A60G       | 64 GB  | 859C263139C4 | 1149  | 16    | 0.19   |
+| SK hynix  | HFS250G32TND-N1A2A | 250 GB | 7F757CAE105D | 67    | 0     | 0.19   |
 | SanDisk   | SSD G5 BICS4       | 500 GB | 0FE045E3589B | 67    | 0     | 0.19   |
 | Dogfish   | SSD                | 512 GB | A478C8E63885 | 67    | 0     | 0.19   |
 | Goodram   | SSD                | 120 GB | 773DF50D165D | 67    | 0     | 0.19   |
@@ -23823,6 +24839,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX460          | 240 GB | 7D412BA3EB75 | 67    | 0     | 0.19   |
 | Samsung   | SSD 860 EVO        | 250 GB | D7F89CCE7A33 | 67    | 0     | 0.19   |
 | Samsung   | SSD 860 EVO        | 500 GB | 46346A09A876 | 67    | 0     | 0.19   |
+| SanDisk   | SD7TN3Q-256G-1006  | 256 GB | 6E5E5AF3A655 | 67    | 0     | 0.19   |
 | T-FORCE   | SSD                | 512 GB | 28AE3CDD740C | 67    | 0     | 0.19   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | E7EC417FFF1F | 67    | 0     | 0.18   |
 | Samsung   | SSD 860 EVO        | 500 GB | 7FB4D04D50C9 | 67    | 0     | 0.18   |
@@ -23843,6 +24860,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3512G        | 512 GB | 8E546D02139C | 67    | 0     | 0.18   |
 | Apacer    | AS350              | 256 GB | 5785E72E875D | 67    | 0     | 0.18   |
 | AMD       | R3SL60G            | 64 GB  | 489005CF1929 | 67    | 0     | 0.18   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 02805677B218 | 67    | 0     | 0.18   |
 | Plextor   | PX-128M6Pro        | 128 GB | D4C7197A4F07 | 67    | 0     | 0.18   |
 | Samsung   | SSD 860 EVO        | 500 GB | 83EDB6104911 | 67    | 0     | 0.18   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 8B61A5A9C302 | 67    | 0     | 0.18   |
@@ -23852,7 +24870,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 1296D18CF994 | 67    | 0     | 0.18   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | F0F82F568B63 | 67    | 0     | 0.18   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 999DED37ABC5 | 336   | 4     | 0.18   |
+| Crucial   | CT120BX500SSD1     | 120 GB | 7B08157B2130 | 67    | 0     | 0.18   |
 | SanDisk   | X400 M.2 2280      | 128 GB | 58AF3B86A397 | 67    | 0     | 0.18   |
+| SemsoTai  | L150 SSD           | 240 GB | F4558332A794 | 67    | 0     | 0.18   |
 | Goodram   | SSDPR-CX400-512-G2 | 512 GB | 8063F0975449 | 67    | 0     | 0.18   |
 | Lexar     | 120GB SSD          | 120 GB | AAB585661EF3 | 67    | 0     | 0.18   |
 | Netac     | SSD                | 720 GB | 63B345DD3341 | 67    | 0     | 0.18   |
@@ -23882,6 +24902,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | C1D4A64315F1 | 66    | 0     | 0.18   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 4DBCF305A348 | 66    | 0     | 0.18   |
 | BlueRay   | SDM8SI480A         | 480 GB | 8160260FEFEF | 200   | 2     | 0.18   |
+| Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | A27AD38E8D67 | 1538  | 22    | 0.18   |
 | China     | SSD                | 120 GB | EEE539AC00B9 | 66    | 0     | 0.18   |
 | Samsung   | SSD 860 EVO        | 500 GB | 3FEDF0AF583D | 66    | 0     | 0.18   |
 | Crucial   | M4-CT512M4SSD1     | 512 GB | D81F7E9725AD | 66    | 0     | 0.18   |
@@ -23903,11 +24924,13 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SATA III SSD       | 240 GB | DA3252645E72 | 66    | 0     | 0.18   |
 | Kingston  | SV300S37A120G      | 120 GB | 3307441A5155 | 333   | 4     | 0.18   |
 | China     | 1TB PCS 2.5" SSD   | 1 TB   | 52FD92C97923 | 66    | 0     | 0.18   |
+| Kingston  | SA400S37480G       | 480 GB | 1EE97869D37D | 66    | 0     | 0.18   |
 | Kingston  | SA400S37960G       | 960 GB | D7B6ABA48F35 | 66    | 0     | 0.18   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 20307F873681 | 66    | 0     | 0.18   |
 | SanDisk   | SSD U100           | 128 GB | 60D355621C97 | 199   | 2     | 0.18   |
 | Transcend | TS256GMTS430S      | 256 GB | 52DAC9355C2C | 66    | 0     | 0.18   |
 | AMD       | R5SL120G           | 120 GB | FD8DB17FF775 | 66    | 0     | 0.18   |
+| Crucial   | CT480BX500SSD1     | 480 GB | 83520E95521B | 66    | 0     | 0.18   |
 | Intel     | SSDSA2BW160G3L     | 160 GB | AF8D52B506A0 | 66    | 0     | 0.18   |
 | Intel     | SSDSCKKW128G8      | 128 GB | E2CB291D4498 | 66    | 0     | 0.18   |
 | Kingston  | SA400M8240G        | 240 GB | 2929326C5CA0 | 66    | 0     | 0.18   |
@@ -23929,6 +24952,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | 45F7E5FA05E5 | 66    | 0     | 0.18   |
 | GLOWAY    | YCT512GS3-S7 Pro   | 512 GB | B7396B4D055E | 66    | 0     | 0.18   |
 | Kingston  | SA400S37240G       | 240 GB | 67548B675D8A | 66    | 0     | 0.18   |
+| Kingston  | SKC600256G         | 256 GB | A186CB76DA07 | 66    | 0     | 0.18   |
 | Plextor   | PX-128S2G          | 128 GB | 6E0DA35DDB15 | 66    | 0     | 0.18   |
 | Samsung   | SSD 860 PRO        | 512 GB | 64502149E31D | 66    | 0     | 0.18   |
 | SanDisk   | PLUS               | 480 GB | 45161CEC8929 | 66    | 0     | 0.18   |
@@ -23941,6 +24965,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37120G      | 120 GB | 20DD2D51F7B0 | 66    | 0     | 0.18   |
 | Lite-On   | L8H-256V2G         | 256 GB | FF1B296B7745 | 66    | 0     | 0.18   |
 | Samsung   | SSD 750 EVO        | 250 GB | 5A5E5DB5C5E0 | 66    | 0     | 0.18   |
+| Kingston  | RBUSC180DS37256GJ  | 256 GB | FD75C9C342FB | 66    | 0     | 0.18   |
 | PNY       | CS900 120GB SSD    | 120 GB | 7A626E6DEAF4 | 66    | 0     | 0.18   |
 | Plextor   | PX-128M6S          | 128 GB | D03F74C1B8B8 | 66    | 0     | 0.18   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 94242F069A28 | 66    | 0     | 0.18   |
@@ -23948,11 +24973,15 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 651C29F4586B | 66    | 0     | 0.18   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | DAC108D2B434 | 66    | 0     | 0.18   |
 | China     | SSD                | 2 TB   | 6A2C2C26824D | 66    | 0     | 0.18   |
+| Crucial   | CT480BX500SSD1     | 480 GB | B0673414B7F8 | 66    | 0     | 0.18   |
 | Intel     | SSDSCKKW256G8      | 256 GB | 87465C2A39F2 | 66    | 0     | 0.18   |
 | Samsung   | MZMTD128HAFV-000   | 128 GB | 101BB91FE944 | 66    | 0     | 0.18   |
+| Samsung   | SSD 860 EVO        | 500 GB | 9AD620FCED86 | 66    | 0     | 0.18   |
 | Samsung   | SSD PM810 2.5" 7mm | 256 GB | CC1DB639C6A9 | 397   | 5     | 0.18   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 8E7AB7C505B0 | 66    | 0     | 0.18   |
+| Apacer    | 16GB SATA Flash... | 16 GB  | DA53116A7343 | 66    | 0     | 0.18   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 9083FD6D7A01 | 66    | 0     | 0.18   |
+| Samsung   | SSD 860 EVO        | 500 GB | 6334AF5DB176 | 66    | 0     | 0.18   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | F50C15AFFF39 | 66    | 0     | 0.18   |
 | SanDisk   | SDSSDA120G         | 120 GB | D62023F8EC79 | 66    | 0     | 0.18   |
 | Phison    | SATA SSD           | 480 GB | A2A65F525843 | 66    | 0     | 0.18   |
@@ -23961,14 +24990,17 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 3B775A364E08 | 66    | 0     | 0.18   |
 | Toshiba   | TR200              | 240 GB | 0757670B622F | 66    | 0     | 0.18   |
 | Intel     | SSDSC2KW512G8      | 512 GB | CAD0E8848EAB | 66    | 0     | 0.18   |
+| Phison    | S11-128G-PHISON... | 128 GB | 8F0FF612C70E | 66    | 0     | 0.18   |
 | Samsung   | SSD 850 EVO        | 1 TB   | B4C00EB31F89 | 66    | 0     | 0.18   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | AF3962664081 | 66    | 0     | 0.18   |
 | Kingston  | SV100S264G         | 64 GB  | 894D33E4CB13 | 594   | 8     | 0.18   |
 | OCZ       | TRION100           | 480 GB | 113058DBAD5B | 462   | 6     | 0.18   |
 | Kingston  | HyperX Fury 3D     | 240 GB | FD92058A30B4 | 66    | 0     | 0.18   |
 | Kingston  | SA400S37240G       | 240 GB | D6A3CA2658D4 | 66    | 0     | 0.18   |
+| Samsung   | MZNLN256HMHQ-000H7 | 256 GB | 009C209522C7 | 66    | 0     | 0.18   |
 | Kingston  | SA400M8240G        | 240 GB | 027F84E4B1CE | 65    | 0     | 0.18   |
 | Kingston  | SA400M8240G        | 240 GB | 59D8E9D50994 | 65    | 0     | 0.18   |
+| Toshiba   | KSG60ZMV256G M.... | 256 GB | 1F1905DCC99D | 65    | 0     | 0.18   |
 | Kingston  | SA400S37240G       | 240 GB | 72D16D427FA7 | 658   | 9     | 0.18   |
 | Crucial   | CT525MX300SSD1     | 528 GB | FFF910443043 | 65    | 0     | 0.18   |
 | Kingston  | SA400S37240G       | 240 GB | 0921A77DDB9D | 65    | 0     | 0.18   |
@@ -23978,6 +25010,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 5512CFC3FBBF | 65    | 0     | 0.18   |
 | SanDisk   | SD9SN8W256G1102    | 256 GB | BBC2ED391894 | 65    | 0     | 0.18   |
 | SanDisk   | SSD PLUS           | 240 GB | 04C58C0F56DF | 65    | 0     | 0.18   |
+| SanDisk   | WD Green 2.5       | 1 TB   | 5B480ECF8950 | 65    | 0     | 0.18   |
 | China     | SSD                | 960 GB | AE49EAA22A5A | 65    | 0     | 0.18   |
 | SPCC      | M.2 SSD            | 256 GB | 83FD5B549E75 | 65    | 0     | 0.18   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 95006E7CFF5F | 65    | 0     | 0.18   |
@@ -24039,6 +25072,7 @@ MTBF - avg. MTBF in years per sample.
 | INNOVA... | SSD                | 240 GB | D4A89A6E44B9 | 65    | 0     | 0.18   |
 | Intel     | SSDSC2BW480A4      | 480 GB | 26EAC3E78DF5 | 65    | 0     | 0.18   |
 | Samsung   | SSD 860 EVO        | 500 GB | 8054ECC38D05 | 65    | 0     | 0.18   |
+| SanDisk   | SSD PLUS           | 1 TB   | CFD95F267ADF | 65    | 0     | 0.18   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 86530108C46C | 521   | 7     | 0.18   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 58A732AD4741 | 65    | 0     | 0.18   |
 | Intel     | SSDSC2KW256G8      | 256 GB | B99A6BB7363F | 65    | 0     | 0.18   |
@@ -24081,6 +25115,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CL100-120-G3 | 120 GB | 3AC225F5873B | 64    | 0     | 0.18   |
 | Samsung   | SSD 870 EVO        | 500 GB | 3F66A1E9194F | 64    | 0     | 0.18   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | F8B48D63489B | 64    | 0     | 0.18   |
+| Kingston  | SA400S37120G       | 120 GB | 7C3582572844 | 64    | 0     | 0.18   |
 | Kingston  | SA400S37120G       | 120 GB | 7CA393F7A499 | 64    | 0     | 0.18   |
 | SPCC      | SSD                | 128 GB | 32DB37AADF71 | 64    | 0     | 0.18   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 01D702FAC999 | 64    | 0     | 0.18   |
@@ -24160,6 +25195,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 2B62A2DA1374 | 64    | 0     | 0.18   |
 | Seagate   | BarraCuda 120 S... | 500 GB | 9AD1B2378A51 | 64    | 0     | 0.18   |
 | BAITITON  | BT58SSD09S         | 240 GB | 09F21124883B | 128   | 1     | 0.18   |
+| Lite-On   | LCH-128V2S-11 2... | 128 GB | 1EAD1E527910 | 64    | 0     | 0.18   |
 | Patriot   | P200               | 512 GB | A78FE45E0935 | 64    | 0     | 0.18   |
 | ADATA     | SP900              | 256 GB | 81E989BE2CFB | 832   | 12    | 0.18   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 3EE4E53AD232 | 128   | 1     | 0.18   |
@@ -24183,10 +25219,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 6ADA44846F67 | 63    | 0     | 0.17   |
 | Samsung   | SSD 850 EVO        | 250 GB | 4727A8B28C82 | 63    | 0     | 0.17   |
 | Apple     | SSD TS128E         | 121 GB | A96FB449CC89 | 63    | 0     | 0.17   |
+| Colorful  | SL500              | 240 GB | 2F7CB72770A8 | 63    | 0     | 0.17   |
 | Crucial   | CT250BX100SSD1     | 250 GB | B52EBDA908AE | 63    | 0     | 0.17   |
 | Goodram   | SSDPR-CX300-120    | 120 GB | 61F4AD64626A | 63    | 0     | 0.17   |
 | Kingston  | SA400S37120G       | 120 GB | DE647AC08C0F | 63    | 0     | 0.17   |
 | Pioneer   | APS-SL3N-256       | 256 GB | D0C72F60F884 | 63    | 0     | 0.17   |
+| SPCC      | SSD                | 512 GB | A0D29D4FA4D3 | 63    | 0     | 0.17   |
 | Samsung   | SSD 870 EVO        | 500 GB | 6747CB29AFE2 | 63    | 0     | 0.17   |
 | SanDisk   | SSD PLUS           | 240 GB | 41E814E0726F | 63    | 0     | 0.17   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 93D3D4CE077F | 63    | 0     | 0.17   |
@@ -24199,6 +25237,7 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | NT-256             | 256 GB | E1A473E841FE | 63    | 0     | 0.17   |
 | Kingston  | SKC6002048G        | 2 TB   | B61D4FF681FA | 63    | 0     | 0.17   |
 | Lite-On   | L8H-256V2G-HP      | 256 GB | F9799F96E9FC | 63    | 0     | 0.17   |
+| SPCC      | SSD                | 128 GB | 40FF1C50E7DC | 63    | 0     | 0.17   |
 | Apacer    | AS350              | 128 GB | 56397A9BBC70 | 63    | 0     | 0.17   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 7E8EF8D3C1CF | 63    | 0     | 0.17   |
 | Lite-On   | CV8-8E256          | 256 GB | C48567E80CE7 | 63    | 0     | 0.17   |
@@ -24211,6 +25250,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 240 GB | 76B9FEEA1C6C | 63    | 0     | 0.17   |
 | Verbatim  | Vi500 S3 120GB SSD | 120 GB | 73D2A902E1AF | 63    | 0     | 0.17   |
 | Crucial   | CT120BX500SSD1     | 120 GB | CBCB455F3FEB | 63    | 0     | 0.17   |
+| Crucial   | CT240BX500SSD1     | 240 GB | A426E9E861AC | 63    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | DC096AFEF80B | 63    | 0     | 0.17   |
 | PNY       | CS900 240GB SSD    | 240 GB | 001C7CFF60AD | 63    | 0     | 0.17   |
 | Apacer    | AS350              | 128 GB | 57212699D25F | 63    | 0     | 0.17   |
@@ -24219,6 +25259,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAV512TDL-1... | 512 GB | B70D42F9F001 | 63    | 0     | 0.17   |
 | PNY       | CS900 120GB SSD    | 120 GB | 478A71FC4508 | 63    | 0     | 0.17   |
 | Samsung   | Portable SSD T5    | 1 TB   | CEA6415DC05D | 63    | 0     | 0.17   |
+| Samsung   | SSD 850 EVO mSATA  | 250 GB | 9305077A108D | 63    | 0     | 0.17   |
 | Samsung   | SSD 870 EVO        | 500 GB | 9EF23E97831D | 63    | 0     | 0.17   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 9F1534FDAA92 | 63    | 0     | 0.17   |
 | Kingston  | SA400S37480G       | 480 GB | 02352DBDA6A9 | 63    | 0     | 0.17   |
@@ -24289,6 +25330,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | 43F2D7DFA4B9 | 62    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | 84B74B0A3F41 | 62    | 0     | 0.17   |
 | Plextor   | PX-128M5S          | 128 GB | 824DC5B0B931 | 125   | 1     | 0.17   |
+| Apacer    | AS350              | 512 GB | 20D8A7739BE9 | 62    | 0     | 0.17   |
 | Lite-On   | LCS-256M6S         | 256 GB | C052127E1557 | 62    | 0     | 0.17   |
 | Patriot   | Burst              | 120 GB | 48E200CB0A90 | 62    | 0     | 0.17   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 5B541D53EBE3 | 62    | 0     | 0.17   |
@@ -24310,6 +25352,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-128M5S          | 128 GB | C772AE79147F | 62    | 0     | 0.17   |
 | Samsung   | SSD 860 QVO        | 1 TB   | A7484169E572 | 62    | 0     | 0.17   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 4E6FBC1B0A65 | 188   | 2     | 0.17   |
+| Ramaxel   | RTIRB128RFM2KWDL   | 128 GB | 4CC5B0319308 | 375   | 5     | 0.17   |
 | Kingston  | SUV400S37240G      | 240 GB | 1DD45CD6B83B | 187   | 2     | 0.17   |
 | Samsung   | SSD 850 EVO        | 250 GB | A5F9F49ABD72 | 62    | 0     | 0.17   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | EBB30671D9C2 | 62    | 0     | 0.17   |
@@ -24339,15 +25382,19 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 1 TB   | E1DE78DE2FDF | 62    | 0     | 0.17   |
 | Kingston  | SV300S37A120G      | 120 GB | 63A5FB92E50B | 311   | 4     | 0.17   |
 | China     | SCCTS-603-128G SSD | 128 GB | 321C67277398 | 62    | 0     | 0.17   |
+| Kingston  | SA400S37240G       | 240 GB | 37FDEF7B8FD6 | 62    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | B34D0EBD8E44 | 62    | 0     | 0.17   |
 | Netac     | W800S 512GB SSD    | 512 GB | BE8CE3158F53 | 62    | 0     | 0.17   |
 | Toshiba   | THNSNF128GMCS      | 128 GB | B3AB5310462D | 62    | 0     | 0.17   |
+| KIOXIA... | SATA SSD           | 480 GB | 1E6A20B87C7E | 62    | 0     | 0.17   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | 2BAF5CB1734A | 62    | 0     | 0.17   |
+| China     | C500               | 128 GB | 7088DC22EB2F | 62    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | 1E2D750AD6F0 | 62    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | A1C618650DB8 | 62    | 0     | 0.17   |
 | Team      | T2535T480G         | 480 GB | 18D003C50FDE | 1243  | 19    | 0.17   |
 | China     | NGFF 2280 256GB... | 256 GB | AFA2E4872FC6 | 62    | 0     | 0.17   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | EF21F34ACC3D | 62    | 0     | 0.17   |
+| Kingston  | SQ500S37240G       | 240 GB | 572F8CF64AF6 | 62    | 0     | 0.17   |
 | Samsung   | MZMTD512HAGL-000L1 | 512 GB | E6CFC485C3C4 | 62    | 0     | 0.17   |
 | ADATA     | SP550              | 120 GB | 492762D3A10F | 62    | 0     | 0.17   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 38F775A44C59 | 62    | 0     | 0.17   |
@@ -24380,6 +25427,7 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253LE120G         | 120 GB | B1C61E2FD430 | 61    | 0     | 0.17   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | B82C640E1791 | 61    | 0     | 0.17   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 5E0377C44697 | 61    | 0     | 0.17   |
+| Patriot   | Burst Elite        | 480 GB | 0647E1653C83 | 61    | 0     | 0.17   |
 | SPCC      | SSD                | 128 GB | B7A667923336 | 61    | 0     | 0.17   |
 | Samsung   | SSD 860 PRO        | 2 TB   | 1A68C3051ED6 | 61    | 0     | 0.17   |
 | Smartbuy  | SSD                | 512 GB | D6FDE1A41947 | 61    | 0     | 0.17   |
@@ -24404,21 +25452,26 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD4     | 500 GB | 186E7EB108B1 | 61    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | 654AEDC5745F | 61    | 0     | 0.17   |
 | Kingston  | SUV400S37240G      | 240 GB | CC3C12302BF8 | 61    | 0     | 0.17   |
+| Intel     | SSDSC2BW240A4      | 240 GB | B1BF9BA20003 | 554   | 8     | 0.17   |
 | ADATA     | SU650              | 512 GB | 3BD033DF9A11 | 61    | 0     | 0.17   |
 | Kingston  | SV300S37A240G      | 240 GB | 5545E2C599C0 | 61    | 0     | 0.17   |
 | SanDisk   | SSD PLUS           | 480 GB | 389CDBEE3BC6 | 61    | 0     | 0.17   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 64981E5F208A | 61    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | 6BC9AC952933 | 61    | 0     | 0.17   |
 | Micron    | MTFDDAK256MAM-1K12 | 256 GB | F3FBCC939E82 | 61    | 0     | 0.17   |
+| Kingston  | SUV400S37120G      | 120 GB | 5C544E3FE30F | 61    | 0     | 0.17   |
 | Apple     | SSD TS064C         | 64 GB  | 79CBC8692D37 | 61    | 0     | 0.17   |
 | Lite-On   | LST-32S9G-11 SATA  | 32 GB  | DEF35DE3DF5A | 61    | 0     | 0.17   |
 | Plextor   | PX-128M5S          | 128 GB | AF03ECFF0C42 | 61    | 0     | 0.17   |
 | Toshiba   | Q200 EX            | 240 GB | FBD5CD7C05A9 | 61    | 0     | 0.17   |
 | Toshiba   | TR200              | 480 GB | D8849A75A29E | 61    | 0     | 0.17   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 2218DFBBDAD7 | 61    | 0     | 0.17   |
+| Samsung   | SSD 860 EVO M.2    | 1 TB   | 2C0B92BBCD37 | 61    | 0     | 0.17   |
 | SanDisk   | SDSSDH3500G        | 500 GB | D97E66DD0470 | 61    | 0     | 0.17   |
 | WDC       | WDS250G2B0A        | 250 GB | 2E0DE85BAB63 | 61    | 0     | 0.17   |
 | Intel     | SSDSC2BW480A4      | 480 GB | F567CBE9B2C1 | 552   | 8     | 0.17   |
 | Crucial   | CT2000BX500SSD1    | 2 TB   | 7F083E30CDF8 | 61    | 0     | 0.17   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 8A187A0BE8C9 | 61    | 0     | 0.17   |
 | Crucial   | CT500MX500SSD1     | 500 GB | AC639DF17263 | 61    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | 3254DC6357F7 | 61    | 0     | 0.17   |
 | Kingston  | SA400S37960G       | 960 GB | 9851718F993A | 61    | 0     | 0.17   |
@@ -24464,6 +25517,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | 8D989D0F43DB | 61    | 0     | 0.17   |
 | SanDisk   | SDSSDA120G         | 120 GB | 66E9396465B1 | 61    | 0     | 0.17   |
 | ADATA     | SU650              | 120 GB | EC0C0C4866B5 | 61    | 0     | 0.17   |
+| China     | SSD                | 1 TB   | 34C16BD1F5D1 | 61    | 0     | 0.17   |
 | Kingston  | SA400S37120G       | 120 GB | CB8E5727EADD | 61    | 0     | 0.17   |
 | SanDisk   | SD8SBBU240G1122    | 240 GB | B9B01D071B27 | 61    | 0     | 0.17   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | FACE3D82CF05 | 61    | 0     | 0.17   |
@@ -24491,6 +25545,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | CAB9D4696742 | 60    | 0     | 0.17   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 3597AAD62EF2 | 60    | 0     | 0.17   |
 | Crucial   | CT240BX500SSD1     | 240 GB | F52ECC273A18 | 60    | 0     | 0.17   |
+| Kingston  | SUV400S37240G      | 240 GB | 1E00CA63E60B | 60    | 0     | 0.17   |
 | ADATA     | SU800              | 256 GB | F5494F26B687 | 60    | 0     | 0.17   |
 | Kingston  | SA400S37240G       | 240 GB | DB7EEEF2EC0F | 60    | 0     | 0.17   |
 | SanDisk   | SDSSDA240G         | 240 GB | DB7A5BEC77D7 | 60    | 0     | 0.17   |
@@ -24522,6 +25577,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ128GVNU      | 128 GB | E4D00F9C2BD8 | 60    | 0     | 0.17   |
 | Intel     | SSDSC2BW120A4      | 120 GB | D2B4D04636A7 | 60    | 0     | 0.17   |
 | SanDisk   | SD8SBAT128G1002    | 128 GB | 82858E3D3992 | 60    | 0     | 0.17   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 3C487E7FC72A | 60    | 0     | 0.17   |
 | SanDisk   | SSD PLUS           | 120 GB | B83040B48437 | 60    | 0     | 0.17   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 42B7682D3615 | 60    | 0     | 0.17   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | B12EDC912243 | 60    | 0     | 0.17   |
@@ -24546,6 +25602,7 @@ MTBF - avg. MTBF in years per sample.
 | Super ... | FNX256MORM         | 256 GB | 706FD53F6EA3 | 60    | 0     | 0.17   |
 | Toshiba   | THNSN9480GESG      | 480 GB | DEFA32D2C78D | 60    | 0     | 0.17   |
 | XrayDisk  | 512GB SSD          | 512 GB | 0DDFA4A8850B | 60    | 0     | 0.17   |
+| Kingston  | SA400S37120G       | 120 GB | 01E43162A263 | 60    | 0     | 0.16   |
 | LDLC      | SSD                | 128 GB | 18D331FFAF47 | 60    | 0     | 0.16   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 6375AFC28F96 | 60    | 0     | 0.16   |
 | Samsung   | SSD 850 EVO        | 500 GB | 264C255A72D5 | 60    | 0     | 0.16   |
@@ -24569,12 +25626,15 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHPM2280P2H-480G   | 480 GB | 4AD0F96BC1BE | 180   | 2     | 0.16   |
 | Kingston  | SV300S37A120G      | 120 GB | A00917009494 | 180   | 2     | 0.16   |
 | PNY       | CS900 480GB SSD    | 480 GB | 50C3C9B92DEA | 60    | 0     | 0.16   |
+| Samsung   | SSD 840 Series     | 120 GB | A873D9D47478 | 60    | 0     | 0.16   |
 | Samsung   | SSD 850 EVO        | 250 GB | D21FFE730601 | 60    | 0     | 0.16   |
 | Samsung   | SSD 860 EVO        | 500 GB | 26CAE905461F | 60    | 0     | 0.16   |
 | Samsung   | SSD 860 EVO        | 500 GB | E5615878DEB9 | 60    | 0     | 0.16   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | B09405031A24 | 60    | 0     | 0.16   |
+| China     | SSV5               | 480 GB | D64B61F4EC4F | 60    | 0     | 0.16   |
 | SUNEAST   | SSD SE800          | 1.9 TB | 1973BC38BF5C | 60    | 0     | 0.16   |
 | Seagate   | BarraCuda SSD Z... | 500 GB | EE3A36CEF66A | 60    | 0     | 0.16   |
+| V-GeN     | V-GEN10SM21SCY5... | 512 GB | 876E1B04D634 | 60    | 0     | 0.16   |
 | China     | 1TB SSD            | 1 TB   | 551C9D9F20A8 | 60    | 0     | 0.16   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 1CB61BAC6E29 | 60    | 0     | 0.16   |
 | Goodram   | SSDPR-CL100-120-G3 | 120 GB | E376DB1F15A6 | 60    | 0     | 0.16   |
@@ -24646,6 +25706,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 64 GB  | A3061F6CC912 | 59    | 0     | 0.16   |
 | SanDisk   | SD7TN3Q-256G-1006  | 256 GB | 25660DF96D6D | 59    | 0     | 0.16   |
 | Kingston  | SA400S37240G       | 240 GB | 63022C657003 | 118   | 1     | 0.16   |
+| Kingston  | SA400S37240G       | 240 GB | 9D14264C5A73 | 59    | 0     | 0.16   |
 | Lite-On   | CV3-CE128          | 128 GB | 3536AE5465D5 | 59    | 0     | 0.16   |
 | SanDisk   | SD8SBAT128G1002    | 128 GB | A938925BA98B | 59    | 0     | 0.16   |
 | SanDisk   | SSD U100           | 24 GB  | 97F83FD6981F | 59    | 0     | 0.16   |
@@ -24689,6 +25750,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | D3D0EA47309D | 58    | 0     | 0.16   |
 | Samsung   | SSD 870 QVO        | 1 TB   | E01C9AD3FF95 | 58    | 0     | 0.16   |
 | SanDisk   | SSD PLUS           | 240 GB | 9506BF40A842 | 58    | 0     | 0.16   |
+| OCZ       | AGILITY3           | 64 GB  | 32B881B66549 | 1707  | 28    | 0.16   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 70D4745A380A | 58    | 0     | 0.16   |
 | Crucial   | CT500MX500SSD1     | 500 GB | BC4CC618995C | 58    | 0     | 0.16   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 2D95FEDE2369 | 58    | 0     | 0.16   |
@@ -24714,6 +25776,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | B38EEF2B43B5 | 58    | 0     | 0.16   |
 | Plextor   | PX-128M5S          | 128 GB | B180C04B6B85 | 58    | 0     | 0.16   |
 | Samsung   | SSD 850 EVO        | 250 GB | 8B0DB59540ED | 58    | 0     | 0.16   |
+| Samsung   | SSD 850 EVO        | 500 GB | 38F4A18C96D6 | 58    | 0     | 0.16   |
 | Samsung   | SSD 860 EVO        | 250 GB | 05E8259C6EFA | 58    | 0     | 0.16   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 522B0BFFCDDF | 58    | 0     | 0.16   |
 | Crucial   | CT240BX500SSD1     | 240 GB | E8EEB1565C1A | 58    | 0     | 0.16   |
@@ -24751,6 +25814,7 @@ MTBF - avg. MTBF in years per sample.
 | Smartbuy  | SSD                | 120 GB | CAAD6408CDE0 | 58    | 0     | 0.16   |
 | Crucial   | CT960M500SSD1      | 960 GB | 9410AE4BF4D3 | 992   | 16    | 0.16   |
 | Kingston  | SUV300S37A240G     | 240 GB | 70033AFCA491 | 641   | 10    | 0.16   |
+| Kingston  | SA400S37120G       | 120 GB | 60FAB4C8803F | 58    | 0     | 0.16   |
 | Kingston  | SV300S37A240G      | 240 GB | 6A207F07A110 | 58    | 0     | 0.16   |
 | Patriot   | Burst              | 120 GB | A75440DE603F | 58    | 0     | 0.16   |
 | XrayDisk  | SSD                | 240 GB | CF08449D7FBB | 58    | 0     | 0.16   |
@@ -24787,6 +25851,7 @@ MTBF - avg. MTBF in years per sample.
 | Union ... | RTOTJ128VGD2EYX    | 128 GB | 836A99C5D67A | 58    | 0     | 0.16   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 7EA76AE39CB5 | 58    | 0     | 0.16   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 99F51BFD73C0 | 58    | 0     | 0.16   |
+| KingFast  | SSD                | 512 GB | D43F5C76A3B5 | 58    | 0     | 0.16   |
 | Kingmax   | SSD                | 64 GB  | B0F738CF97E5 | 290   | 4     | 0.16   |
 | OCZ       | TRION100           | 480 GB | 272D50BFEB8C | 58    | 0     | 0.16   |
 | Crucial   | CT250BX100SSD1     | 250 GB | CF5F43D3DB67 | 58    | 0     | 0.16   |
@@ -24809,6 +25874,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SM2280S3G2240G     | 240 GB | 949D457D6F5B | 57    | 0     | 0.16   |
 | Micron    | MTFDDAK256MBF-1... | 256 GB | 0F9E2F7937DF | 57    | 0     | 0.16   |
 | Toshiba   | Q300               | 120 GB | 08D30167EC0C | 57    | 0     | 0.16   |
+| Vaseky    | V800-120G          | 120 GB | 815BF522949A | 57    | 0     | 0.16   |
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 482AB58857F1 | 57    | 0     | 0.16   |
 | Kingston  | SA400S37120G       | 120 GB | 174A34B7D803 | 57    | 0     | 0.16   |
 | Kingston  | SA400S37240G       | 240 GB | 3DA4DCDA90A5 | 57    | 0     | 0.16   |
@@ -24822,6 +25888,7 @@ MTBF - avg. MTBF in years per sample.
 | TEKET     | SA18-032M-4F       | 32 GB  | 560269C7D1ED | 57    | 0     | 0.16   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 713C078A5C2B | 57    | 0     | 0.16   |
 | tigo      | SSD                | 120 GB | AB6EBA8598E1 | 57    | 0     | 0.16   |
+| Crucial   | CT275MX300SSD4     | 275 GB | D8924B019D13 | 2022  | 34    | 0.16   |
 | AMD       | R5SL480G           | 480 GB | B71B9A61206D | 57    | 0     | 0.16   |
 | Innodisk  | 2.5" SATA SSD 3... | 248 GB | 0B3093352FC0 | 57    | 0     | 0.16   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 74C3C4C0587A | 57    | 0     | 0.16   |
@@ -24917,14 +25984,18 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | B672AA65C867 | 56    | 0     | 0.16   |
 | Kingston  | SA400S37960G       | 960 GB | E9E92421815E | 56    | 0     | 0.16   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 7E50821F1DAB | 56    | 0     | 0.16   |
+| HP        | SSD S750           | 256 GB | 3C561ABFCDAD | 56    | 0     | 0.16   |
 | Kingston  | SA400S37120G       | 120 GB | A998D6F806E9 | 56    | 0     | 0.16   |
+| Kingston  | SA400S37960G       | 960 GB | 5B9420C044E2 | 56    | 0     | 0.16   |
 | SK hynix  | SC401 SATA         | 256 GB | 5E85526BF907 | 56    | 0     | 0.16   |
 | Samsung   | SSD 850 EVO        | 1 TB   | 553678112CC3 | 56    | 0     | 0.16   |
 | Samsung   | SSD 850 EVO        | 250 GB | C86D1FAAB7B8 | 56    | 0     | 0.16   |
 | Samsung   | SSD 860 EVO        | 1 TB   | D13280B02E0A | 56    | 0     | 0.16   |
 | SanDisk   | SDSSDA480G         | 480 GB | 52060A1C2AC1 | 56    | 0     | 0.16   |
+| Kingston  | SA400S37480G       | 480 GB | 3056EAC4091E | 56    | 0     | 0.16   |
 | SanDisk   | SD7SN3Q128G1002    | 128 GB | 24DEB60C290E | 56    | 0     | 0.16   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 9E8D7DF85114 | 56    | 0     | 0.16   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | E4F57BA1B279 | 56    | 0     | 0.16   |
 | Kingston  | SUV400S37120G      | 120 GB | BB5B1C690F76 | 56    | 0     | 0.16   |
 | Patriot   | Burst              | 240 GB | FDDE2B49DF19 | 56    | 0     | 0.16   |
 | Samsung   | Portable SSD T5    | 250 GB | 7836645059FB | 56    | 0     | 0.16   |
@@ -24934,6 +26005,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA960G         | 960 GB | 3A8E123F39F0 | 56    | 0     | 0.16   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 05486F80D389 | 56    | 0     | 0.16   |
 | Kingston  | SA400S37120G       | 120 GB | D6232BBE26C8 | 56    | 0     | 0.16   |
+| Plextor   | PX-256M6V          | 256 GB | E1D06FF30D08 | 56    | 0     | 0.16   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | F8D5634749E7 | 56    | 0     | 0.16   |
 | Samsung   | SSD 850 EVO        | 1 TB   | D254D9643228 | 56    | 0     | 0.16   |
 | Corsair   | Force GT           | 64 GB  | 5C0829D5ACF1 | 56    | 0     | 0.15   |
@@ -24959,6 +26031,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | A306D69EF224 | 56    | 0     | 0.15   |
 | Samsung   | SSD 860 EVO        | 250 GB | 56F7A745F1DD | 56    | 0     | 0.15   |
 | Samsung   | SSD 860 EVO        | 250 GB | 8F0003A57F72 | 56    | 0     | 0.15   |
+| Apple     | SSD SM512E         | 500 GB | E5BF68FF0C03 | 169   | 2     | 0.15   |
 | Samsung   | MZ7TY128HDHP-00000 | 128 GB | B223B7007BF1 | 56    | 0     | 0.15   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | 0026F44D0546 | 56    | 0     | 0.15   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 5C4BBA60C210 | 56    | 0     | 0.15   |
@@ -24968,18 +26041,21 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP900              | 128 GB | 63450BFDAE70 | 56    | 0     | 0.15   |
 | Kingston  | SV300S37A60G       | 64 GB  | 0B8CCDF2BDDD | 56    | 0     | 0.15   |
 | SPCC      | SSD                | 240 GB | 100029E42ABC | 56    | 0     | 0.15   |
+| Samsung   | SSD 840 EVO        | 752 GB | 466E36A83AF6 | 56    | 0     | 0.15   |
 | SanDisk   | SDSSDA240G         | 240 GB | 087A8AE16C2D | 56    | 0     | 0.15   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | CED64B5262B2 | 112   | 1     | 0.15   |
 | Golden... | SSD                | 240 GB | 4C400F974D5D | 56    | 0     | 0.15   |
 | Lexar     | SSD                | 480 GB | 8CBC0C2B1FCD | 56    | 0     | 0.15   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | A2E0BFB80C8B | 56    | 0     | 0.15   |
 | Corsair   | Force LS SSD       | 64 GB  | 57682BB60AB0 | 56    | 0     | 0.15   |
+| Innodisk  | 2.5" SATA SSD 3ME3 | 128 GB | D6DB9A7B206D | 56    | 0     | 0.15   |
 | Intel     | SSDSA2CW160G3      | 160 GB | C868792DA7AB | 56    | 0     | 0.15   |
 | Kingston  | SV300S37A120G      | 120 GB | BBEFBBEC89FF | 56    | 0     | 0.15   |
 | Lite-On   | CV3-8D128-HP       | 128 GB | F09DE11CE822 | 56    | 0     | 0.15   |
 | Patriot   | Burst              | 240 GB | 81166A2C7B8B | 56    | 0     | 0.15   |
 | Samsung   | SSD 850 EVO        | 250 GB | 5B5137D5EDB0 | 56    | 0     | 0.15   |
 | Gigaby... | GP-GSTFS31256GTND  | 256 GB | 0DDBA0A0D786 | 56    | 0     | 0.15   |
+| Innodisk  | 2.5" SATA SSD 3ME3 | 128 GB | 05483FCD4190 | 56    | 0     | 0.15   |
 | Kingston  | SA400S37240G       | 240 GB | 00D597219D82 | 56    | 0     | 0.15   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 4B8ED3C6F484 | 56    | 0     | 0.15   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 868DF154091A | 56    | 0     | 0.15   |
@@ -24987,6 +26063,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD170             | 120 GB | 909E470924FC | 393   | 6     | 0.15   |
 | ADATA     | SU630              | 240 GB | 5649FB0F9619 | 56    | 0     | 0.15   |
 | China     | SATA SSD           | 240 GB | 65C753273D6B | 56    | 0     | 0.15   |
+| INNOVA... | SSD_M.2_512GB_I... | 512 GB | F856E1F40363 | 56    | 0     | 0.15   |
 | Kingston  | SA400S37240G       | 240 GB | C27EC6F6ACF7 | 56    | 0     | 0.15   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 0D5000596F31 | 56    | 0     | 0.15   |
 | SPCC      | SSD                | 64 GB  | 7E3E3F1E2C4F | 56    | 0     | 0.15   |
@@ -25008,6 +26085,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | A1210E29632A | 56    | 0     | 0.15   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 33324F44B483 | 56    | 0     | 0.15   |
 | Samsung   | SSD 850 PRO        | 128 GB | AC1ACE6B043B | 56    | 0     | 0.15   |
+| Samsung   | SSD 870 QVO        | 2 TB   | BED8591921ED | 56    | 0     | 0.15   |
 | SanDisk   | SD6PP4M-256G-1006  | 256 GB | A1BDC633F6B3 | 56    | 0     | 0.15   |
 | Toshiba   | TR150              | 240 GB | 068B0925B079 | 56    | 0     | 0.15   |
 | Hikvision | HS-SSD-E100 1024G  | 1 TB   | 22F3B4E8248C | 55    | 0     | 0.15   |
@@ -25041,6 +26119,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD SATAIII        | 128 GB | 2888BB29F6F3 | 55    | 0     | 0.15   |
 | Plextor   | PX-128M8VC         | 128 GB | 11DB74C7EC30 | 55    | 0     | 0.15   |
 | ADATA     | SP550              | 240 GB | 43A20D81F60F | 55    | 0     | 0.15   |
+| China     | JOYSSD512          | 512 GB | 836AB5BD8902 | 55    | 0     | 0.15   |
 | Samsung   | SSD 840 EVO        | 250 GB | FE142D6E3386 | 55    | 0     | 0.15   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 5BE123E7C71E | 55    | 0     | 0.15   |
 | Crucial   | CT128MX100SSD1     | 128 GB | 0D565D669412 | 946   | 16    | 0.15   |
@@ -25062,6 +26141,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 601F37637CAA | 55    | 0     | 0.15   |
 | SanDisk   | SDSSDA120G         | 120 GB | 4CDFCF1364A1 | 55    | 0     | 0.15   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 82C4BEE4DCF6 | 166   | 2     | 0.15   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | A876F501FC4E | 55    | 0     | 0.15   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 7AF1EB13D72C | 55    | 0     | 0.15   |
 | Kingston  | SA400M8240G        | 240 GB | DFFB66FC344F | 55    | 0     | 0.15   |
 | Samsung   | SSD 840 EVO        | 120 GB | 142FE0727208 | 55    | 0     | 0.15   |
@@ -25204,6 +26284,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC311 SATA         | 256 GB | 2078D3D1E5F5 | 54    | 0     | 0.15   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 42E3180705A5 | 542   | 9     | 0.15   |
 | INNOVA... | SSD                | 512 GB | 323C4A36ABD1 | 54    | 0     | 0.15   |
+| Kingston  | SA400S37480G       | 480 GB | DB405A589148 | 54    | 0     | 0.15   |
 | Patriot   | Spark              | 128 GB | 193162CFD1B7 | 54    | 0     | 0.15   |
 | Samsung   | SSD 860 EVO        | 1 TB   | AFD054D86C89 | 54    | 0     | 0.15   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | 7A0766FEEB11 | 54    | 0     | 0.15   |
@@ -25296,6 +26377,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 240GB SSD    | 240 GB | 171AF7600AEE | 53    | 0     | 0.15   |
 | China     | SSD                | 240 GB | AD99A9F5E25C | 53    | 0     | 0.15   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 9B9BAF638660 | 53    | 0     | 0.15   |
+| Samsung   | SSD 870 EVO        | 500 GB | 2AB1F2F85197 | 53    | 0     | 0.15   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | E2AA01251CB0 | 53    | 0     | 0.15   |
 | ADATA     | SP600              | 64 GB  | 61BE2566209A | 53    | 0     | 0.15   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 44709ED69B40 | 53    | 0     | 0.15   |
@@ -25304,6 +26386,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | A188AA84D37D | 53    | 0     | 0.15   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | C1801C98BAE6 | 53    | 0     | 0.15   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 052FD32EE79C | 53    | 0     | 0.15   |
+| Crucial   | CT480BX500SSD1     | 480 GB | 47820A62463B | 53    | 0     | 0.15   |
 | Plextor   | PX-128M6S          | 128 GB | A49DFC0D2379 | 53    | 0     | 0.15   |
 | Samsung   | SSD 860 EVO        | 250 GB | F9D7A49ED43A | 53    | 0     | 0.15   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | D421BD6AEC3E | 53    | 0     | 0.15   |
@@ -25442,7 +26525,9 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV3-8D128-11 SATA  | 128 GB | 5FFD43EEB655 | 52    | 0     | 0.14   |
 | Kingston  | SA400S37120G       | 120 GB | F6A3CCBC2CE2 | 52    | 0     | 0.14   |
 | SPCC      | SSD                | 120 GB | 998A070FB0CC | 52    | 0     | 0.14   |
+| Samsung   | SSD 870 EVO        | 1 TB   | BA175D25DE3C | 52    | 0     | 0.14   |
 | ADATA     | SP900              | 64 GB  | B95454127458 | 260   | 4     | 0.14   |
+| China     | M.2 SSD            | 256 GB | 3C8B91EDC06D | 52    | 0     | 0.14   |
 | Crucial   | CT500MX500SSD4     | 500 GB | 079738E0DE8D | 52    | 0     | 0.14   |
 | KingSpec  | P3-128             | 128 GB | 9D7BE4E0924F | 52    | 0     | 0.14   |
 | Kingston  | SA400S37120G       | 120 GB | CB45FA440DCF | 52    | 0     | 0.14   |
@@ -25450,6 +26535,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 67029CF11309 | 52    | 0     | 0.14   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 0E3858ED10A4 | 52    | 0     | 0.14   |
 | Kingston  | SA400S37480G       | 480 GB | 1EE3992A41A6 | 52    | 0     | 0.14   |
+| Samsung   | SSD 870 EVO        | 500 GB | 82DBA29ECC99 | 51    | 0     | 0.14   |
 | Team      | T253LE120G         | 120 GB | 383E9DF8D57E | 51    | 0     | 0.14   |
 | ADATA     | SU800              | 512 GB | 1CE325F71533 | 51    | 0     | 0.14   |
 | SanDisk   | SSD U110           | 16 GB  | EB5CD8E41937 | 51    | 0     | 0.14   |
@@ -25472,10 +26558,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | E4432ECE08E0 | 51    | 0     | 0.14   |
 | OCZ       | VERTEX3            | 120 GB | A5D4558AA504 | 155   | 2     | 0.14   |
 | HP        | VK000240GWCFD      | 240 GB | 8C0B46FDF550 | 51    | 0     | 0.14   |
+| Lite-On   | CV3-SD512          | 512 GB | 1F97C4DCBD96 | 51    | 0     | 0.14   |
 | Samsung   | SSD 860 PRO        | 512 GB | 249409F49AEC | 51    | 0     | 0.14   |
 | BHT       | WR202HH032G E70... | 32 GB  | 1FB2037E1D4C | 51    | 0     | 0.14   |
 | Intenso   | SSD256M2S80        | 256 GB | B5C157D8A3B5 | 51    | 0     | 0.14   |
+| Lite-On   | IT LDS-128L9S      | 128 GB | 016357811641 | 51    | 0     | 0.14   |
 | Kingston  | SA400S37240G       | 240 GB | D28D12E81EDE | 258   | 4     | 0.14   |
+| Apacer    | AS340              | 960 GB | A88DE3D4CCD2 | 51    | 0     | 0.14   |
 | China     | 80GB SSD           | 80 GB  | FD207315846E | 51    | 0     | 0.14   |
 | RCESSD    | SSD                | 512 GB | 0CDC66CF9991 | 51    | 0     | 0.14   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | 525535F63897 | 51    | 0     | 0.14   |
@@ -25488,10 +26577,12 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LMT-19nmBGA-128G   | 128 GB | DEB6C33C2894 | 51    | 0     | 0.14   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | EDE23F6409AE | 51    | 0     | 0.14   |
 | Apple     | SSD TS256C         | 256 GB | 857B2CE67CC2 | 51    | 0     | 0.14   |
+| Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 532EAC1B532B | 51    | 0     | 0.14   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 9E23C4F2C7B7 | 103   | 1     | 0.14   |
 | Netac     | SSD                | 240 GB | 3AD0DFB387ED | 154   | 2     | 0.14   |
 | ADATA     | SU650NS38          | 480 GB | 1198697E1B26 | 51    | 0     | 0.14   |
 | Crucial   | CT250MX200SSD1     | 250 GB | C5CA601ECC83 | 51    | 0     | 0.14   |
+| Crucial   | CT500MX500SSD1     | 500 GB | D45491C69C45 | 51    | 0     | 0.14   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | 4100BC7128A0 | 51    | 0     | 0.14   |
 | Kingston  | SA400S37240G       | 240 GB | 3342ED52DA34 | 51    | 0     | 0.14   |
 | Samsung   | SSD 840 PRO Series | 256 GB | CC40A79E599E | 51    | 0     | 0.14   |
@@ -25539,6 +26630,7 @@ MTBF - avg. MTBF in years per sample.
 | DeTech    | SSD                | 120 GB | 929EA0FF2821 | 51    | 0     | 0.14   |
 | KingSpec  | CHA-M2B7-M256      | 256 GB | 8160B8A60857 | 51    | 0     | 0.14   |
 | Kingston  | SV300S37A60G       | 64 GB  | 30B36326FF23 | 664   | 12    | 0.14   |
+| Samsung   | SSD 860 EVO M.2    | 250 GB | 9E1A8886710D | 51    | 0     | 0.14   |
 | Crucial   | CT250MX500SSD1     | 250 GB | DAAAB062FFA4 | 51    | 0     | 0.14   |
 | SanDisk   | SDSSDX480GG25      | 480 GB | 33C978630254 | 3318  | 64    | 0.14   |
 | China     | SATA SSD           | 512 GB | 7D893B1AEC86 | 51    | 0     | 0.14   |
@@ -25597,6 +26689,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 1 TB   | 2F24A67A5ADE | 50    | 0     | 0.14   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 802A3D756B7B | 50    | 0     | 0.14   |
 | Samsung   | SSD 870 QVO        | 2 TB   | F48CC1C07C69 | 50    | 0     | 0.14   |
+| Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | C5354DD10635 | 1264  | 24    | 0.14   |
 | Acer      | SSD SA100          | 120 GB | 30C0F38CE5C5 | 50    | 0     | 0.14   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5BBE6ABACB5F | 50    | 0     | 0.14   |
 | SanDisk   | pSSD               | 16 GB  | 231CE95DBA7E | 50    | 0     | 0.14   |
@@ -25606,6 +26699,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 0321EF606DFC | 50    | 0     | 0.14   |
 | Kingston  | SA400S37240G       | 240 GB | 02382941C3F5 | 50    | 0     | 0.14   |
 | Crucial   | CT960M500SSD1      | 960 GB | ECE5CCDB72F9 | 1060  | 20    | 0.14   |
+| Intel     | SSDSC2BF240A4L     | 240 GB | E50121EFC08B | 252   | 4     | 0.14   |
 | Patriot   | Burst              | 120 GB | 9BD71AEBEEE9 | 50    | 0     | 0.14   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 53003ED1D67A | 50    | 0     | 0.14   |
 | Samsung   | SSD PM871b M.2 ... | 256 GB | 9C90C052D076 | 50    | 0     | 0.14   |
@@ -25630,6 +26724,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX930              | 120 GB | C241B5440E2F | 50    | 0     | 0.14   |
 | Apacer    | AS350              | 512 GB | 1D1DDBCDD122 | 50    | 0     | 0.14   |
 | Crucial   | CT500MX500SSD1     | 500 GB | B493270967E0 | 50    | 0     | 0.14   |
+| Kingston  | SKC600MS256G       | 256 GB | 37996A2E0B35 | 50    | 0     | 0.14   |
 | Samsung   | SSD PB22-CS3 FD... | 256 GB | 7C8FA3F1B2B0 | 50    | 0     | 0.14   |
 | China     | NGFF 2280 128GB... | 128 GB | 97DA9D13C851 | 50    | 0     | 0.14   |
 | Kingston  | SA400M8240G        | 240 GB | 6EBC6CD3AE45 | 50    | 0     | 0.14   |
@@ -25668,6 +26763,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD110             | 64 GB  | 05C5C1671DD1 | 1049  | 20    | 0.14   |
 | ADATA     | SU800              | 512 GB | DAD9AF906F93 | 49    | 0     | 0.14   |
 | Kingston  | SA400S37240G       | 240 GB | 5B932735CC10 | 49    | 0     | 0.14   |
+| Samsung   | SSD 870 EVO        | 500 GB | DF8CED76B485 | 49    | 0     | 0.14   |
 | SanDisk   | SSD PLUS           | 240 GB | 727D733C965C | 49    | 0     | 0.14   |
 | Toshiba   | THNSFJ256GCSU      | 256 GB | CCCDFE27D87B | 49    | 0     | 0.14   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 85829B80ADE1 | 49    | 0     | 0.14   |
@@ -25680,6 +26776,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA-1T00        | 1 TB   | 2E67161840CD | 49    | 0     | 0.14   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | AD778B53EFD0 | 49    | 0     | 0.14   |
 | China     | WPC-240GB          | 240 GB | 010231D72D96 | 49    | 0     | 0.14   |
+| Goodram   | SSDPR-CX400-512    | 512 GB | 05BC434B5519 | 49    | 0     | 0.14   |
 | Kingston  | SV300S37A120G      | 120 GB | 584F1927069D | 49    | 0     | 0.14   |
 | Lite-On   | CV1-8B256          | 256 GB | 7D2D57A25F49 | 49    | 0     | 0.14   |
 | SanDisk   | SSD PLUS 120 GB    | 120 GB | 68EF50DD9059 | 49    | 0     | 0.14   |
@@ -25698,8 +26795,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMS200S3120G       | 120 GB | 983AF520E3E3 | 49    | 0     | 0.14   |
 | SanDisk   | SSD PLUS           | 480 GB | 84A4C4655403 | 49    | 0     | 0.14   |
 | Team      | TM8PS7256G         | 256 GB | 6F04446C03F3 | 49    | 0     | 0.14   |
+| Kingston  | SA400S37240G       | 240 GB | 992F77BC3A09 | 49    | 0     | 0.14   |
 | Patriot   | Burst              | 120 GB | 8BAF77D591F2 | 49    | 0     | 0.14   |
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | BA004B6D1F17 | 49    | 0     | 0.14   |
+| Micron    | 1100_MTFDDAV256TBN | 256 GB | 7BE815AB40CF | 49    | 0     | 0.14   |
 | SanDisk   | SD7SN3Q128G1002    | 128 GB | BC2AFAF25362 | 99    | 1     | 0.14   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 689A02937044 | 49    | 0     | 0.14   |
 | Kingston  | SA400S37240G       | 240 GB | 7B8D2020F606 | 49    | 0     | 0.14   |
@@ -25715,8 +26814,10 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDBNCE2500PNC      | 250 GB | 9145772395DA | 49    | 0     | 0.14   |
 | AMD       | R5SL240G           | 240 GB | FE286E420E19 | 49    | 0     | 0.14   |
 | China     | SSD                | 128 GB | F4AF564183CC | 49    | 0     | 0.14   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 711312EE9E23 | 49    | 0     | 0.14   |
 | Eluktro   | TRO-SSD7-128GB-PRO | 128 GB | A6781E909A77 | 49    | 0     | 0.14   |
 | Kingston  | SA400S37480G       | 480 GB | C7C4C7A678F6 | 49    | 0     | 0.14   |
+| Samsung   | SSD 860 PRO        | 1 TB   | 39614374E216 | 49    | 0     | 0.14   |
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | 5AFF38B79B77 | 49    | 0     | 0.14   |
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | 8E31A7B5C89B | 49    | 0     | 0.14   |
 | ADATA     | SU650              | 120 GB | 5E5644D45ADF | 49    | 0     | 0.14   |
@@ -25777,9 +26878,12 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 120 GB | BCE75FE91A2A | 49    | 0     | 0.13   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 38384A69493B | 49    | 0     | 0.13   |
 | Goodram   | SSDPR-CL100-240-G3 | 240 GB | 8CED923ED190 | 49    | 0     | 0.13   |
+| Pioneer   | APS-SL3N-120       | 120 GB | BB6E29D8B18D | 49    | 0     | 0.13   |
 | SanDisk   | SDSA5DK 32G        | 32 GB  | B38C083156D1 | 49    | 0     | 0.13   |
+| SanDisk   | pSSD               | 32 GB  | 4C69F62E767E | 49    | 0     | 0.13   |
 | Transcend | TS120GMTS420S      | 120 GB | E2F977297201 | 49    | 0     | 0.13   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 6E61D528E228 | 49    | 0     | 0.13   |
+| Kingston  | SA400S37240G       | 240 GB | 13B6F1743F0B | 49    | 0     | 0.13   |
 | SPCC      | SSD                | 256 GB | DD8CEFFCC162 | 49    | 0     | 0.13   |
 | ADATA     | SU630              | 240 GB | 66D661A4FA21 | 48    | 0     | 0.13   |
 | China     | SATA SSD           | 256 GB | 998A8BFF63A2 | 48    | 0     | 0.13   |
@@ -25787,6 +26891,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 2 TB   | 8B7926A283FF | 48    | 0     | 0.13   |
 | SanDisk   | SDSSDH3500G        | 500 GB | DF10C511F543 | 48    | 0     | 0.13   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 2270152C5DB0 | 48    | 0     | 0.13   |
+| Kingston  | SA400S37120G       | 120 GB | 2D5C08125260 | 244   | 4     | 0.13   |
 | Crucial   | CT120M500SSD1      | 120 GB | E6D0AD729A4F | 831   | 16    | 0.13   |
 | HP        | SSD S700 Pro       | 1 TB   | F1F0E50954E4 | 48    | 0     | 0.13   |
 | Kingston  | SA400S37240G       | 240 GB | 2A0CCD2A2499 | 48    | 0     | 0.13   |
@@ -25797,12 +26902,15 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 500 GB | D605161ACB89 | 48    | 0     | 0.13   |
 | Seagate   | BarraCuda 120 S... | 250 GB | CEBA91535A7E | 48    | 0     | 0.13   |
 | Smartbuy  | SSD                | 120 GB | 266E19CF92FA | 48    | 0     | 0.13   |
+| Transcend | TS120GMTS420S      | 120 GB | F14F2DB00782 | 48    | 0     | 0.13   |
 | Transcend | TS32GSSD370S       | 32 GB  | 5E1006A2DD90 | 48    | 0     | 0.13   |
 | Crucial   | CT480BX500SSD1     | 480 GB | A91755496C54 | 48    | 0     | 0.13   |
+| Samsung   | SSD 850 EVO        | 250 GB | 4DDA4172D898 | 48    | 0     | 0.13   |
 | Team      | T253X1240G         | 240 GB | 96A95CDEDDDA | 48    | 0     | 0.13   |
 | Transcend | TS120GSSD220S      | 120 GB | 371ACA94E7A0 | 48    | 0     | 0.13   |
 | AMD       | R5SL120G           | 120 GB | 1193B66E63BA | 48    | 0     | 0.13   |
 | Colorful  | SL500              | 480 GB | 6DA48D670921 | 48    | 0     | 0.13   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 20E35020D437 | 48    | 0     | 0.13   |
 | Samsung   | MZNLN256HCHP-00000 | 256 GB | 6685756A53E6 | 48    | 0     | 0.13   |
 | Samsung   | SSD 860 EVO        | 250 GB | CE77601D7D52 | 48    | 0     | 0.13   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | 9B977FDF7F03 | 48    | 0     | 0.13   |
@@ -25830,6 +26938,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | AC0EEF5AAB00 | 48    | 0     | 0.13   |
 | Kingston  | SUV400S37240G      | 240 GB | 3DF7DCCA74B4 | 243   | 4     | 0.13   |
 | ADATA     | SP900              | 256 GB | F7E6DEB3B93A | 48    | 0     | 0.13   |
+| China     | SH00N256GB         | 256 GB | 7FADEBC72728 | 48    | 0     | 0.13   |
 | Kingston  | SA400S37120G       | 120 GB | 3E3E6482B63C | 48    | 0     | 0.13   |
 | Crucial   | CT480BX500SSD1     | 480 GB | F1F166D5F5AD | 48    | 0     | 0.13   |
 | Kingston  | SA400S37120G       | 120 GB | 0E0D692BA1A8 | 48    | 0     | 0.13   |
@@ -25875,6 +26984,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | AGILITY3           | 64 GB  | 47959519F7BF | 48    | 0     | 0.13   |
 | Samsung   | SSD 860 QVO        | 1 TB   | A20EDECC2D16 | 48    | 0     | 0.13   |
 | SK hynix  | HFS256G32MND-2200A | 256 GB | DBD10EDC686C | 965   | 19    | 0.13   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 64922DF8D797 | 48    | 0     | 0.13   |
 | Kingston  | SA400S37120G       | 120 GB | FC9987C865E8 | 48    | 0     | 0.13   |
 | Kingston  | SA400S37240G       | 240 GB | 283B211E3988 | 48    | 0     | 0.13   |
 | SanDisk   | SDSSDA240G         | 240 GB | 6E751F36B7F4 | 48    | 0     | 0.13   |
@@ -25883,10 +26993,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 5F60E27F76E2 | 48    | 0     | 0.13   |
 | Kingston  | SUV500M8120G       | 120 GB | 17139E6239B4 | 48    | 0     | 0.13   |
 | Samsung   | SSD 850 PRO        | 256 GB | 87F759AC411D | 48    | 0     | 0.13   |
+| Star D... | SATA SSD           | 240 GB | 523CC12F055C | 48    | 0     | 0.13   |
 | Apacer    | AS350              | 128 GB | 89B7FF922894 | 48    | 0     | 0.13   |
 | SanDisk   | SD8SB8U256G1122    | 256 GB | 465E22A44663 | 48    | 0     | 0.13   |
 | Kingston  | SH103S3120G        | 120 GB | 33D17D523685 | 432   | 8     | 0.13   |
 | China     | SATA SSD           | 64 GB  | 916777EB4F41 | 48    | 0     | 0.13   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 0D6150EDBC28 | 48    | 0     | 0.13   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 4B94CA91D67E | 48    | 0     | 0.13   |
 | Kingston  | RBUSNS8180DS3512GJ | 512 GB | 260DDFB8FF6D | 48    | 0     | 0.13   |
 | Kingston  | SA400S37240G       | 240 GB | A85913F40D94 | 48    | 0     | 0.13   |
@@ -25901,6 +27013,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 6D0265642250 | 144   | 2     | 0.13   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 84AE693BA95B | 48    | 0     | 0.13   |
 | Intenso   | SSD Sata III       | 256 GB | C7CBCCF5466C | 48    | 0     | 0.13   |
+| Kingston  | SA400S37480G       | 480 GB | 07B2634D710B | 48    | 0     | 0.13   |
 | SK hynix  | HFS128G32MND-3212A | 128 GB | 33EBD08D584A | 48    | 0     | 0.13   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 59895EAD63E7 | 48    | 0     | 0.13   |
 | WDC       | WDS480G2G0B-00EPW0 | 480 GB | 7E41E8D86754 | 48    | 0     | 0.13   |
@@ -25973,7 +27086,9 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 85E519BAD072 | 47    | 0     | 0.13   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | BE0E958E0ECC | 47    | 0     | 0.13   |
 | China     | SATA SSD           | 240 GB | 64607C0A7B90 | 47    | 0     | 0.13   |
+| Kingston  | SV300S37A240G      | 240 GB | FD71ACB77C46 | 47    | 0     | 0.13   |
 | Micron    | MTFDDAV256MBF-1... | 256 GB | F0188BCCF5BC | 47    | 0     | 0.13   |
+| Netac     | SSD                | 64 GB  | 4B16F3AF277A | 47    | 0     | 0.13   |
 | Patriot   | Burst              | 120 GB | 04AB33F1F1C3 | 47    | 0     | 0.13   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | DD3BAAE2EBF8 | 47    | 0     | 0.13   |
 | Samsung   | SSD 860 EVO        | 500 GB | 6E890D1152ED | 47    | 0     | 0.13   |
@@ -26016,6 +27131,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD                | 128 GB | D51BE97BF708 | 93    | 1     | 0.13   |
 | Kingston  | SNV425S264GB       | 64 GB  | 4194CDE40300 | 422   | 8     | 0.13   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 7D6BE59F8FDB | 46    | 0     | 0.13   |
+| Samsung   | SSD 870 EVO        | 250 GB | 0314406506A7 | 46    | 0     | 0.13   |
 | Crucial   | CT240BX500SSD1     | 240 GB | D74CBD5C3476 | 46    | 0     | 0.13   |
 | Kingston  | SA400S37240G       | 240 GB | 02721EF92624 | 46    | 0     | 0.13   |
 | Kingston  | SV300S37A120G      | 120 GB | 394CA9A66C8D | 234   | 4     | 0.13   |
@@ -26035,6 +27151,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 256 GB | 330CD0E1B7CF | 140   | 2     | 0.13   |
 | Kingston  | SV300S37A120G      | 120 GB | 04B847B1DCA3 | 46    | 0     | 0.13   |
 | Plextor   | PX-128M5M          | 128 GB | 3361285219E9 | 46    | 0     | 0.13   |
+| Samsung   | SSD 870 EVO        | 1 TB   | EF9B116262A9 | 46    | 0     | 0.13   |
 | Crucial   | CT500MX500SSD1     | 500 GB | BA60DBA69DEF | 46    | 0     | 0.13   |
 | Kingston  | SA400S37120G       | 120 GB | B7204E2584DC | 46    | 0     | 0.13   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | D3435C5AA4FB | 46    | 0     | 0.13   |
@@ -26057,6 +27174,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 51E44147E8FE | 46    | 0     | 0.13   |
 | Lite-On   | LCS-128M6S         | 128 GB | 9911F87A9C84 | 46    | 0     | 0.13   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 9C1F5B24F22E | 46    | 0     | 0.13   |
+| SanDisk   | SSD PLUS           | 1 TB   | CA369D73F6ED | 46    | 0     | 0.13   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | C235B76751E6 | 93    | 1     | 0.13   |
 | INNOVA... | SSD_2.5"_TLC_24... | 240 GB | B9450F92FDEA | 46    | 0     | 0.13   |
 | Kingston  | SA400S37480G       | 480 GB | 661C1D9A4EEB | 46    | 0     | 0.13   |
@@ -26098,6 +27216,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 1 TB   | 46A823F7F88F | 46    | 0     | 0.13   |
 | Toshiba   | TR150              | 240 GB | C082B759AC2A | 46    | 0     | 0.13   |
 | Crucial   | CT256M550SSD1      | 256 GB | 83A82FC34D08 | 784   | 16    | 0.13   |
+| Crucial   | CT500BX100SSD1     | 500 GB | 7DF082CE3702 | 46    | 0     | 0.13   |
 | Kingston  | SA400S37480G       | 480 GB | 1451DD80299F | 46    | 0     | 0.13   |
 | LENSEN    | LS600 120G         | 120 GB | A450AAA931DA | 46    | 0     | 0.13   |
 | Samsung   | MZNLH512HALU-00000 | 512 GB | 23B3B42A87CB | 46    | 0     | 0.13   |
@@ -26114,6 +27233,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | D1A2BD0AE6C2 | 46    | 0     | 0.13   |
 | Samsung   | SSD 850 EVO        | 250 GB | 5FC887B8C360 | 46    | 0     | 0.13   |
 | Crucial   | CT500MX500SSD4     | 500 GB | E2E5A2501D22 | 45    | 0     | 0.13   |
+| INNOVA... | SSD_M.2_1TB_Inn... | 1 TB   | 52709793995C | 45    | 0     | 0.13   |
 | KingDian  | N400               | 32 GB  | BA7E4C236A2F | 45    | 0     | 0.13   |
 | Lite-On   | CX1-JB256-HP       | 256 GB | 9E6244162F12 | 45    | 0     | 0.13   |
 | SK hynix  | HFS128G32TNF-N3A0A | 128 GB | 8E88254168DC | 45    | 0     | 0.13   |
@@ -26185,6 +27305,7 @@ MTBF - avg. MTBF in years per sample.
 | Verbatim  | Vi550 S3 SSD       | 128 GB | 6DFA3756B0AB | 45    | 0     | 0.12   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | E5EDD7F34F79 | 45    | 0     | 0.12   |
 | China     | SSD                | 120 GB | 314E67E45015 | 45    | 0     | 0.12   |
+| KingSpec  | P3-512             | 512 GB | A2F117221911 | 45    | 0     | 0.12   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | B71526B4A5A7 | 45    | 0     | 0.12   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 338C8C11697E | 45    | 0     | 0.12   |
 | KIOXIA... | SATA SSD           | 480 GB | 35BBFE3E520A | 45    | 0     | 0.12   |
@@ -26218,6 +27339,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 1 TB   | 447562E36648 | 45    | 0     | 0.12   |
 | Kingston  | SA400S37480G       | 480 GB | 0D3D5AE31E7B | 45    | 0     | 0.12   |
 | Samsung   | SSD 840 EVO        | 500 GB | D8275CA5112D | 45    | 0     | 0.12   |
+| WDC       | WDBNCE5000PNC      | 500 GB | EE9809BD84FB | 45    | 0     | 0.12   |
 | Kingston  | SUV400S37240G      | 240 GB | 371D01A14A4A | 45    | 0     | 0.12   |
 | Kingston  | SV300S37A60G       | 64 GB  | 3811BC31B7FA | 45    | 0     | 0.12   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 260ECBB713D2 | 45    | 0     | 0.12   |
@@ -26230,9 +27352,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 2 TB   | 4D822F075698 | 45    | 0     | 0.12   |
 | Transcend | TS128GSSD360S      | 128 GB | 598DB0EC266D | 45    | 0     | 0.12   |
 | Transcend | TS512GSSD230S      | 512 GB | 79C24E97FF93 | 45    | 0     | 0.12   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 7B5F5266070A | 45    | 0     | 0.12   |
 | Samsung   | SSD 860 PRO        | 256 GB | 29EC40118745 | 45    | 0     | 0.12   |
 | Zheino    | CHN 25SATAA3 360   | 360 GB | 8D29A929B199 | 45    | 0     | 0.12   |
 | Corsair   | Force LS SSD       | 64 GB  | 03A061BF003C | 90    | 1     | 0.12   |
+| KIOXIA... | SATA SSD           | 240 GB | CF43D74A4DAE | 45    | 0     | 0.12   |
 | Kingston  | SUV500480G         | 480 GB | 8DC1D7381A1F | 45    | 0     | 0.12   |
 | Plextor   | PX-128M6S          | 128 GB | 31BE01FF1AAD | 45    | 0     | 0.12   |
 | China     | W552-256G          | 256 GB | 4F2D26E22FE6 | 45    | 0     | 0.12   |
@@ -26268,6 +27392,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | F8A0BC40642B | 44    | 0     | 0.12   |
 | Kingston  | SA400S37480G       | 480 GB | 7B1AA15B336A | 44    | 0     | 0.12   |
 | SanDisk   | Z400s 2.5 7MM      | 256 GB | 8F40A018AFAB | 44    | 0     | 0.12   |
+| China     | SATA3 1TB SSD      | 1 TB   | 14A5CE6A5AB7 | 44    | 0     | 0.12   |
 | Intenso   | SSD Sata III       | 120 GB | 71E9A9C4EC9A | 44    | 0     | 0.12   |
 | Samsung   | SSD 840 Series     | 120 GB | F0D144EAF413 | 44    | 0     | 0.12   |
 | SanDisk   | SSD PLUS           | 480 GB | 122042F6A5C8 | 44    | 0     | 0.12   |
@@ -26287,6 +27412,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3250G        | 250 GB | 8F6895BA4E34 | 44    | 0     | 0.12   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | D4E6F13E2F03 | 44    | 0     | 0.12   |
 | Intel     | SSDSC2BW120H6      | 120 GB | 4D6A1B7666D5 | 44    | 0     | 0.12   |
+| PNY       | CS900 120GB SSD    | 120 GB | 90D8CCAB8C38 | 44    | 0     | 0.12   |
 | Samsung   | SSD 870 EVO        | 250 GB | CCC276282F59 | 44    | 0     | 0.12   |
 | Kingston  | SV300S37A120G      | 120 GB | AAA164A37D1B | 44    | 0     | 0.12   |
 | OCZ       | VERTEX4            | 128 GB | 7522A9261077 | 44    | 0     | 0.12   |
@@ -26304,6 +27430,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS256GMTS800       | 256 GB | 4075211A1F33 | 44    | 0     | 0.12   |
 | Crucial   | CT240M500SSD1      | 240 GB | FA5893EEB491 | 756   | 16    | 0.12   |
 | China     | SSD                | 128 GB | 1298072058DC | 44    | 0     | 0.12   |
+| Netac     | SSD                | 1 TB   | 03190A938C4E | 44    | 0     | 0.12   |
 | Hikvision | HS-SSD-E100 128G   | 128 GB | BA845559D551 | 133   | 2     | 0.12   |
 | Kingston  | SA400S37240G       | 240 GB | 3BF20790E688 | 44    | 0     | 0.12   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | FE48A1719052 | 133   | 2     | 0.12   |
@@ -26314,8 +27441,10 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | IR-SSDPR-S25A-240  | 240 GB | 942BA370DEC0 | 44    | 0     | 0.12   |
 | Samsung   | SSD 850 EVO        | 120 GB | 531B900C431D | 44    | 0     | 0.12   |
 | Samsung   | SSD 860 QVO        | 1 TB   | B38D696FA65B | 44    | 0     | 0.12   |
+| Samsung   | SSD 870 EVO        | 500 GB | B79977D1A3D4 | 44    | 0     | 0.12   |
 | SanDisk   | SSD U100           | 24 GB  | E15A35A27B7A | 44    | 0     | 0.12   |
 | Lite-On   | LAT-128M2S         | 128 GB | 9C18031962FD | 355   | 7     | 0.12   |
+| Apacer    | AS350              | 256 GB | 960F15169036 | 44    | 0     | 0.12   |
 | Crucial   | CT480BX500SSD1     | 480 GB | D85FC1BA584E | 44    | 0     | 0.12   |
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | 6821D81448F3 | 44    | 0     | 0.12   |
 | HP        | SSD S700           | 500 GB | F1115B00A0DC | 44    | 0     | 0.12   |
@@ -26331,10 +27460,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | C0DBE8FA512D | 44    | 0     | 0.12   |
 | XrayDisk  | SSD                | 128 GB | 3DF5D423C0BF | 44    | 0     | 0.12   |
 | Apacer    | AS350              | 256 GB | F5823A33E692 | 44    | 0     | 0.12   |
+| China     | SATA SSD           | 120 GB | AACEB9C0E11E | 44    | 0     | 0.12   |
 | Intenso   | SSD Sata III       | 128 GB | 12B68A40FBE4 | 44    | 0     | 0.12   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | D2CB060753F8 | 44    | 0     | 0.12   |
 | PNY       | 480GB SATA SSD     | 480 GB | 25445B7F151F | 44    | 0     | 0.12   |
 | SPCC      | SSD                | 256 GB | F2EBED547A9D | 44    | 0     | 0.12   |
+| SanDisk   | SD8SBAT128G1002    | 128 GB | 37B1D872D345 | 44    | 0     | 0.12   |
+| SanDisk   | SSD PLUS           | 240 GB | 08DF77EE4F79 | 44    | 0     | 0.12   |
 | WDC       | WDS200T2B0B-00YS70 | 2 TB   | 6421FCF34C4E | 44    | 0     | 0.12   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 68E31EC3DBBB | 44    | 0     | 0.12   |
 | ADATA     | SU800              | 128 GB | BCA840BF559F | 44    | 0     | 0.12   |
@@ -26345,6 +27477,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 120 GB | 9AC5E5940212 | 44    | 0     | 0.12   |
 | ADATA     | SU900              | 1 TB   | 22EC38DB4FAB | 44    | 0     | 0.12   |
 | Apacer    | AS350              | 240 GB | B292E7C0835B | 44    | 0     | 0.12   |
+| China     | SSD                | 120 GB | BEB8998C3892 | 44    | 0     | 0.12   |
 | Kingston  | SUV500MS120G       | 120 GB | 4137A5D8F2E9 | 44    | 0     | 0.12   |
 | Kingston  | SV300S37A60G       | 64 GB  | E93E7001B47C | 44    | 0     | 0.12   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 1F8F641D5FB5 | 44    | 0     | 0.12   |
@@ -26392,6 +27525,7 @@ MTBF - avg. MTBF in years per sample.
 | Faspeed   | K7N8-256GF         | 256 GB | 4DF9B3714B2B | 43    | 0     | 0.12   |
 | Lite-On   | CV1-8B128          | 128 GB | 2D2D4F226E5E | 43    | 0     | 0.12   |
 | Samsung   | SSD 840 EVO        | 120 GB | A5905A16AFF2 | 43    | 0     | 0.12   |
+| Samsung   | SSD 870 EVO        | 250 GB | E6955A477FA2 | 43    | 0     | 0.12   |
 | China     | SATA SSD           | 240 GB | BC544C0EFF5C | 43    | 0     | 0.12   |
 | KingSpec  | P4-60              | 64 GB  | 83321E1DB1DD | 43    | 0     | 0.12   |
 | Kingston  | SA400S37120G       | 120 GB | D98D4A0CEF8F | 43    | 0     | 0.12   |
@@ -26399,6 +27533,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAT256MAM-1K2  | 256 GB | 015210E35499 | 43    | 0     | 0.12   |
 | OCZ       | ARC100             | 480 GB | 7D6F8E90EEF5 | 43    | 0     | 0.12   |
 | Plextor   | PX-128M5Pro        | 128 GB | 8E98BC1E4419 | 43    | 0     | 0.12   |
+| SPCC      | SSD                | 512 GB | A7775C78F9A7 | 43    | 0     | 0.12   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 3A1F855CD7C3 | 43    | 0     | 0.12   |
 | ADATA     | SU800NS38          | 1 TB   | E54A28910528 | 43    | 0     | 0.12   |
 | China     | SATA3 1TB SSD      | 1 TB   | AAF394CD4A55 | 43    | 0     | 0.12   |
@@ -26437,6 +27572,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | F40CF1AA8EDB | 43    | 0     | 0.12   |
 | Kingston  | SA400S37240G       | 240 GB | 1DA7A91A4B29 | 43    | 0     | 0.12   |
 | Kingston  | SUV400S37240G      | 240 GB | 04B237251F1A | 217   | 4     | 0.12   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 07E74A26A67B | 130   | 2     | 0.12   |
 | Intel     | SSDSA2BW160G3H     | 160 GB | 3E4330CD2CB8 | 43    | 0     | 0.12   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 901655C74BB8 | 43    | 0     | 0.12   |
 | ADATA     | SU650              | 120 GB | 89D4F1AF758C | 43    | 0     | 0.12   |
@@ -26471,6 +27607,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHSS37A480G        | 480 GB | E43FE5DBF8EB | 43    | 0     | 0.12   |
 | SanDisk   | SSD i100           | 24 GB  | 4209D3C4EC5E | 43    | 0     | 0.12   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 62638130E9BD | 43    | 0     | 0.12   |
+| KingSpec  | NT-256             | 256 GB | B02C0C639E6E | 43    | 0     | 0.12   |
 | Kingston  | SM2280S3G2120G     | 120 GB | C9A9A3163F69 | 43    | 0     | 0.12   |
 | Kingston  | SUV400S37240G      | 240 GB | BB93B735E23A | 43    | 0     | 0.12   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | C64BF7187AED | 43    | 0     | 0.12   |
@@ -26490,6 +27627,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 5EEE73A582ED | 43    | 0     | 0.12   |
 | Samsung   | SSD 860 EVO        | 500 GB | A9F0CAC65059 | 43    | 0     | 0.12   |
 | SanDisk   | iSSD P4            | 8 GB   | 652F2ABF7AC2 | 301   | 6     | 0.12   |
+| Kingston  | SA400S37240G       | 240 GB | 590082B36CD3 | 43    | 0     | 0.12   |
 | Samsung   | SSD 860 EVO        | 250 GB | 4C8D05DD7290 | 43    | 0     | 0.12   |
 | SanDisk   | SD8SBAT128G1122    | 128 GB | AFCFDA8C2F23 | 43    | 0     | 0.12   |
 | SanDisk   | SDSSDA120G         | 120 GB | C213325E5952 | 43    | 0     | 0.12   |
@@ -26535,6 +27673,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-256M5S          | 256 GB | 813A317F8DA8 | 42    | 0     | 0.12   |
 | SanDisk   | SDSSDA240G         | 240 GB | EA24098C4E4D | 42    | 0     | 0.12   |
 | China     | 120GB SSD          | 120 GB | 2656CB68CC2D | 42    | 0     | 0.12   |
+| Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 4552C92EBE2F | 42    | 0     | 0.12   |
 | Intel     | SSDSC2BW120A4      | 120 GB | E7ECD078D763 | 42    | 0     | 0.12   |
 | Kingston  | SM2280S3G2120G     | 120 GB | 01F83152BDA1 | 42    | 0     | 0.12   |
 | Kingston  | SUV400S37240G      | 240 GB | 00A35E512EE2 | 42    | 0     | 0.12   |
@@ -26570,8 +27709,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | B47A4931F50A | 42    | 0     | 0.12   |
 | SanDisk   | SDSSDA240G         | 240 GB | 8785C0C402DE | 42    | 0     | 0.12   |
 | Crucial   | CT120BX100SSD1     | 120 GB | 0EA038D4DE94 | 42    | 0     | 0.12   |
+| Lexar     | 128GB SSD          | 128 GB | 2AF9915EE52A | 42    | 0     | 0.12   |
 | Micron    | 1100 SATA          | 512 GB | F93C5C46DE4B | 42    | 0     | 0.12   |
 | Samsung   | MZNLN128HAHQ-000L2 | 128 GB | 3A7E2C4EB02A | 42    | 0     | 0.12   |
+| Samsung   | MZNTY128HDHP-000L1 | 128 GB | FD0DC90FE418 | 42    | 0     | 0.12   |
 | Samsung   | SSD 860 EVO        | 1 TB   | C4D655D21291 | 42    | 0     | 0.12   |
 | China     | SSD                | 256 GB | 27E58C4947AF | 42    | 0     | 0.12   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | B219D149293E | 42    | 0     | 0.12   |
@@ -26597,6 +27738,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 3FDFFD3DD859 | 42    | 0     | 0.12   |
 | ADATA     | SU750              | 1 TB   | 80DC3DBF928D | 42    | 0     | 0.12   |
 | Intel     | SSDSC2KG480G8      | 480 GB | 3D95D3D23680 | 42    | 0     | 0.12   |
+| Intenso   | SSD Sata III       | 120 GB | 93C747065054 | 42    | 0     | 0.12   |
 | PNY       | CS900 120GB SSD    | 120 GB | 6E6597564183 | 42    | 0     | 0.12   |
 | SanDisk   | SSD U110           | 16 GB  | C7D65EE4A0C0 | 42    | 0     | 0.12   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | BA78D17847A4 | 42    | 0     | 0.12   |
@@ -26614,10 +27756,12 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | 3F0620FA35F3 | 42    | 0     | 0.12   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 72E518D43423 | 42    | 0     | 0.12   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 5DB5DE729335 | 42    | 0     | 0.12   |
+| XrayDisk  | SSD                | 240 GB | DF14DD7F71BD | 210   | 4     | 0.12   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 61B4ECB58CE2 | 42    | 0     | 0.12   |
 | SPCC      | M.2 SSD            | 256 GB | ED475AC60D69 | 42    | 0     | 0.12   |
 | Samsung   | MZNLN256HMHQ-000H1 | 256 GB | 21595841B612 | 42    | 0     | 0.12   |
 | Plextor   | PX-128M5S          | 128 GB | B31D613CA412 | 42    | 0     | 0.12   |
+| QUMO      | Q3DT-256GSCY       | 256 GB | 3A52B0D88841 | 42    | 0     | 0.12   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 5F9F6C50EE3A | 42    | 0     | 0.12   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 359A16F46A3E | 42    | 0     | 0.12   |
 | Crucial   | CT120M500SSD1      | 120 GB | 517AF467FC0A | 714   | 16    | 0.12   |
@@ -26630,6 +27774,7 @@ MTBF - avg. MTBF in years per sample.
 | Lexar     | 240GB SSD          | 240 GB | 055EED318870 | 42    | 0     | 0.12   |
 | Samsung   | SSD 850 PRO        | 128 GB | 1D507B6E66BF | 42    | 0     | 0.12   |
 | Samsung   | SSD 860 PRO        | 256 GB | 6A8F65E20198 | 42    | 0     | 0.12   |
+| China     | SH00R120GB         | 120 GB | 806A135E6989 | 41    | 0     | 0.11   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | A1DB9FF86EFD | 41    | 0     | 0.11   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 8C3832FEB787 | 41    | 0     | 0.11   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | B54C1FDE2764 | 41    | 0     | 0.11   |
@@ -26677,6 +27822,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | F38AA392046B | 41    | 0     | 0.11   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | A653959E9BBD | 41    | 0     | 0.11   |
 | Kingston  | SA400S37240G       | 240 GB | 7F3FB1BD8749 | 41    | 0     | 0.11   |
+| Kingston  | SA400S37240G       | 240 GB | D878CF8F523E | 41    | 0     | 0.11   |
 | Samsung   | SSD 840 Series     | 120 GB | C9844E521307 | 41    | 0     | 0.11   |
 | Samsung   | SSD 860 EVO        | 500 GB | D30FD3CBC553 | 41    | 0     | 0.11   |
 | Kingston  | SA400S37480G       | 480 GB | 1E737E2BB882 | 291   | 6     | 0.11   |
@@ -26760,6 +27906,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U100           | 64 GB  | 44CF86F99F6C | 41    | 0     | 0.11   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | FE2375654FE2 | 41    | 0     | 0.11   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 6B070E703A46 | 41    | 0     | 0.11   |
+| Crucial   | CT240BX500SSD1     | 240 GB | B7006C8219FE | 41    | 0     | 0.11   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 414281F69BBA | 41    | 0     | 0.11   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | FA2D098CC942 | 41    | 0     | 0.11   |
 | Samsung   | SSD 850 EVO        | 500 GB | 4D520F482F0D | 41    | 0     | 0.11   |
@@ -26783,6 +27930,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 252C536EB85E | 40    | 0     | 0.11   |
 | Lite-On   | LMT-128M6M         | 128 GB | 837275F2B963 | 40    | 0     | 0.11   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | C9675C308357 | 40    | 0     | 0.11   |
+| SanDisk   | SDSSDH3 1T00       | 1 TB   | B29D161F5851 | 81    | 1     | 0.11   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 2585E59680BC | 81    | 1     | 0.11   |
 | Crucial   | CT960M500SSD1      | 960 GB | 4E0335110512 | 367   | 8     | 0.11   |
 | Kingston  | SA400S37480G       | 480 GB | 21C0D82BD502 | 40    | 0     | 0.11   |
@@ -26792,6 +27940,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 01812006A912 | 40    | 0     | 0.11   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 558F5E0837D4 | 40    | 0     | 0.11   |
 | Kingston  | SA400S37960G       | 960 GB | 994004DBA852 | 40    | 0     | 0.11   |
+| Kingston  | SKC600512G         | 512 GB | 3E83EA09CBE2 | 40    | 0     | 0.11   |
 | SPCC      | SSD                | 240 GB | 074A62FF8AE0 | 40    | 0     | 0.11   |
 | Samsung   | SSD 860 EVO        | 250 GB | 9D7C3814AC3A | 40    | 0     | 0.11   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 02A30F5AEE5E | 40    | 0     | 0.11   |
@@ -26801,6 +27950,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8P0S3256B-A0     | 256 GB | B5865DF6B209 | 40    | 0     | 0.11   |
 | Kingston  | SA400S37480G       | 480 GB | 55EB2F4D7036 | 40    | 0     | 0.11   |
 | Kingston  | SUV300S37A120G     | 120 GB | 4306C5B64450 | 40    | 0     | 0.11   |
+| Micron    | 1100 SATA          | 256 GB | 4627B9E58E23 | 40    | 0     | 0.11   |
 | Samsung   | SSD 860 EVO        | 500 GB | E246934098E0 | 40    | 0     | 0.11   |
 | Samsung   | SSD 860 PRO        | 512 GB | 6637890F4D62 | 40    | 0     | 0.11   |
 | SanDisk   | SDSSDH3512G        | 512 GB | B257FC955D7C | 40    | 0     | 0.11   |
@@ -26929,6 +28079,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37960G       | 960 GB | A443A888F52F | 39    | 0     | 0.11   |
 | Kingston  | SA400S37960G       | 960 GB | EDE93B471122 | 39    | 0     | 0.11   |
 | Samsung   | SSD 860 EVO        | 500 GB | 006588A987C3 | 39    | 0     | 0.11   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 7E582D8563B9 | 39    | 0     | 0.11   |
 | Seagate   | ST480HM000         | 480 GB | 2CDF8E17D0E2 | 39    | 0     | 0.11   |
 | Kingston  | RBU-SNS8151S396GG  | 96 GB  | AB3FC6ED9633 | 317   | 7     | 0.11   |
 | ADATA     | SU800NS38          | 256 GB | 6FF0E98A2D77 | 39    | 0     | 0.11   |
@@ -26938,6 +28089,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 5056F67C156E | 39    | 0     | 0.11   |
 | SanDisk   | SDSSDH3512G        | 512 GB | 97FB2296ACF6 | 39    | 0     | 0.11   |
 | China     | 120GB SSD          | 120 GB | E19B082EA384 | 39    | 0     | 0.11   |
+| Kingston  | SA400S37240G       | 240 GB | 6560A405DD8E | 39    | 0     | 0.11   |
 | Lite-On   | CV8-8E256-11 SATA  | 256 GB | DD383617ABD3 | 39    | 0     | 0.11   |
 | SanDisk   | Ultra II           | 240 GB | A4DFC8E97CBD | 39    | 0     | 0.11   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 0AE38FB79565 | 39    | 0     | 0.11   |
@@ -27044,6 +28196,7 @@ MTBF - avg. MTBF in years per sample.
 | Colorful  | SL300              | 128 GB | 035744E52942 | 39    | 0     | 0.11   |
 | Intenso   | SSD Sata III       | 256 GB | 71FD9CAE7DC6 | 39    | 0     | 0.11   |
 | Kingston  | SA400S37120G       | 120 GB | EEAECB0C2640 | 39    | 0     | 0.11   |
+| Samsung   | SSD 860 EVO        | 250 GB | E70642E14506 | 39    | 0     | 0.11   |
 | Samsung   | SSD 860 EVO        | 500 GB | 6D2AC7C9CC67 | 39    | 0     | 0.11   |
 | ADATA     | SU800              | 128 GB | 6FEACF94853D | 38    | 0     | 0.11   |
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 053203E23AC3 | 38    | 0     | 0.11   |
@@ -27067,6 +28220,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 77CBE144FDE5 | 349   | 8     | 0.11   |
 | Kingston  | SA400S37240G       | 240 GB | FE937C27C3A0 | 38    | 0     | 0.11   |
 | Kingston  | SKC600256G         | 256 GB | AA9282A3CB07 | 38    | 0     | 0.11   |
+| ORTIAL    | SSD                | 256 GB | F75D8036EC8A | 38    | 0     | 0.11   |
 | Samsung   | MZ7GE240HMGR-00003 | 240 GB | DA0E9036524F | 38    | 0     | 0.11   |
 | Team      | T253TD480G         | 480 GB | 73032265A5B0 | 38    | 0     | 0.11   |
 | Crucial   | CT250MX500SSD1     | 250 GB | D3FF40F1F768 | 38    | 0     | 0.11   |
@@ -27116,6 +28270,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | F394FBD7E185 | 38    | 0     | 0.11   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 07958930FA35 | 346   | 8     | 0.11   |
 | Lite-On   | LCH-128V2S-HP      | 128 GB | 6F142A432423 | 38    | 0     | 0.11   |
+| SanDisk   | SD8SN8U-256G-1006  | 256 GB | E5AD3D9F5071 | 38    | 0     | 0.11   |
 | SanDisk   | SSD PLUS           | 240 GB | A36CBEB725F7 | 38    | 0     | 0.11   |
 | SanDisk   | SSD P4             | 32 GB  | 46244FFA36CC | 346   | 8     | 0.11   |
 | Intel     | SSDSC2BB240G7      | 240 GB | BF37132F929E | 38    | 0     | 0.11   |
@@ -27129,6 +28284,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | AEEEC0759025 | 38    | 0     | 0.11   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | B132FF5E0A0C | 38    | 0     | 0.11   |
 | Phison    | S11-512G-PHISON... | 512 GB | 12749802E382 | 38    | 0     | 0.11   |
+| RX7       | SSD                | 256 GB | 9C091DD088D9 | 38    | 0     | 0.11   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 542A413DA755 | 38    | 0     | 0.11   |
 | SanDisk   | SD8SB8U-256G-1006  | 256 GB | 6B10E3D9083B | 38    | 0     | 0.11   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 86887A328397 | 38    | 0     | 0.11   |
@@ -27168,6 +28324,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500BX100SSD1     | 500 GB | D88168121A34 | 38    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | A8BA8EEF41AF | 38    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | FCD14A0EB2FA | 38    | 0     | 0.10   |
+| Lexar     | 960GB SSD          | 960 GB | 752CF1C4FB40 | 38    | 0     | 0.10   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 039D40CD92CE | 38    | 0     | 0.10   |
 | SanDisk   | SD7SB6S-256G-1006  | 256 GB | C2B66565B422 | 38    | 0     | 0.10   |
 | SanDisk   | SDSSDA120G         | 120 GB | 14CACF36ABF8 | 38    | 0     | 0.10   |
@@ -27200,6 +28357,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT960BX500SSD1     | 960 GB | 87132DE45D5F | 37    | 0     | 0.10   |
 | Kingston  | SUV500MS240G       | 240 GB | F332F0837F14 | 37    | 0     | 0.10   |
 | SanDisk   | SDSSDH3 1T02       | 1 TB   | D9D14F9A3817 | 37    | 0     | 0.10   |
+| Kingston  | SV300S37A120G      | 120 GB | 2AAE240A55D6 | 189   | 4     | 0.10   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 264D8ECC67B3 | 37    | 0     | 0.10   |
 | Kingston  | SA400S37120G       | 120 GB | C5592D7F55BC | 37    | 0     | 0.10   |
 | Kingston  | SV300S37A240G      | 240 GB | B6B4924142B2 | 37    | 0     | 0.10   |
@@ -27209,11 +28367,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 QVO        | 1 TB   | 58DD56510B12 | 37    | 0     | 0.10   |
 | Transcend | TS120GSSD220S      | 120 GB | 9E497E90455E | 37    | 0     | 0.10   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | BFFCEFA55AB8 | 37    | 0     | 0.10   |
+| Crucial   | CT250MX200SSD1     | 250 GB | 81E10AA75C71 | 37    | 0     | 0.10   |
 | Kingston  | SKC600512G         | 512 GB | 16246E18FCED | 37    | 0     | 0.10   |
 | Samsung   | SSD 860 EVO        | 250 GB | DEC726220DCC | 37    | 0     | 0.10   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 8E7963DA3F08 | 37    | 0     | 0.10   |
 | Zheino    | CHN-mSATAM3-128    | 128 GB | 7ECA0598CAC4 | 37    | 0     | 0.10   |
 | Apple     | SSD SM0128G        | 121 GB | 02B707E439F6 | 37    | 0     | 0.10   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 1209B7E62283 | 37    | 0     | 0.10   |
 | KingFast  | SSD                | 512 GB | 8971E1FAB04A | 37    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | 6006D0A9D37A | 37    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | B6323DF94AE0 | 37    | 0     | 0.10   |
@@ -27221,6 +28381,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U110           | 16 GB  | 6CB820692F5F | 37    | 0     | 0.10   |
 | ADATA     | SU800              | 256 GB | 76351873B043 | 37    | 0     | 0.10   |
 | China     | 120GB SSD          | 120 GB | 0D55613E67CF | 37    | 0     | 0.10   |
+| China     | SATA SSD           | 240 GB | 698800D71C44 | 37    | 0     | 0.10   |
 | Drevo     | X1-60G             | 64 GB  | 76B7929E9159 | 37    | 0     | 0.10   |
 | Kingston  | SA400S37120G       | 120 GB | 39198B4631CD | 37    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | 4A34FC51FE28 | 37    | 0     | 0.10   |
@@ -27229,6 +28390,8 @@ MTBF - avg. MTBF in years per sample.
 | BAITITON  | BT58SSD15S         | 2 TB   | B731AC33104E | 37    | 0     | 0.10   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 1023CBCEBF91 | 75    | 1     | 0.10   |
 | SanDisk   | SDSSDA240G         | 240 GB | EAE0FF98D75C | 37    | 0     | 0.10   |
+| OCZ       | VECTOR150          | 240 GB | 3643E1C55257 | 2590  | 68    | 0.10   |
+| China     | SATA3 2TB SSD      | 2 TB   | 8EE8DE9202C1 | 37    | 0     | 0.10   |
 | China     | SSD                | 240 GB | 31426F9305B9 | 37    | 0     | 0.10   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 0A648D13A8FD | 37    | 0     | 0.10   |
 | ADATA     | SU800              | 512 GB | 5933EDBA7ADB | 37    | 0     | 0.10   |
@@ -27260,6 +28423,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 3D39DB9D6EEA | 523   | 13    | 0.10   |
 | Apple     | SSD SD0128F        | 121 GB | EE70DF6A1F4C | 37    | 0     | 0.10   |
 | BAITITON  | BT58SSD10N         | 256 GB | E7ECD9CF2619 | 37    | 0     | 0.10   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 6A4DDF76D7E9 | 37    | 0     | 0.10   |
 | Intenso   | SSD                | 120 GB | 0EDD29A12A49 | 37    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | 5280568F347C | 37    | 0     | 0.10   |
 | Samsung   | SSD 830 Series     | 128 GB | 5D26D6992007 | 37    | 0     | 0.10   |
@@ -27272,6 +28436,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 1BC68E2AC68A | 37    | 0     | 0.10   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 423241FA10F0 | 37    | 0     | 0.10   |
 | INNOVA... | SSD_2.5"_TLC_25... | 256 GB | 864937CC2F6E | 37    | 0     | 0.10   |
+| Kingston  | SA400S37240G       | 240 GB | F80B2F6A6C19 | 37    | 0     | 0.10   |
 | Kingston  | SUV400S37120G      | 120 GB | 5033C901D8E2 | 37    | 0     | 0.10   |
 | Lexar     | SSD                | 240 GB | 2796CFC35519 | 37    | 0     | 0.10   |
 | Samsung   | MZ7LN128HAHQ-000L2 | 128 GB | 922935E6C13F | 37    | 0     | 0.10   |
@@ -27343,6 +28508,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDHP128G        | 128 GB | 67250CE436C4 | 36    | 0     | 0.10   |
 | Crucial   | CT256M550SSD1      | 256 GB | 9DF70AA8088D | 1950  | 52    | 0.10   |
 | ADATA     | SU800              | 1 TB   | DFD7262D3874 | 36    | 0     | 0.10   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 25BD9891F711 | 36    | 0     | 0.10   |
 | Lite-On   | CV3-DE256          | 256 GB | 0C32FD8891FD | 36    | 0     | 0.10   |
 | SK hynix  | HFS256G32TNH-73A0A | 256 GB | EE3635DAC5B6 | 36    | 0     | 0.10   |
 | Samsung   | MZ7L33T8HBLT-00... | 3.8 TB | 86F2066D0F3A | 36    | 0     | 0.10   |
@@ -27377,6 +28543,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3500G        | 500 GB | 924BE5BDD03D | 36    | 0     | 0.10   |
 | Silico... | AAR512GS021022030  | 512 GB | F3DFD7173EA5 | 36    | 0     | 0.10   |
 | Patriot   | Burst              | 240 GB | 628BAB7F7C80 | 36    | 0     | 0.10   |
+| Acer      | SSD SA100          | 120 GB | BAE23EE7AE2F | 36    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | 70DC19D42F4E | 36    | 0     | 0.10   |
 | PNY       | CS1311 240GB SSD   | 240 GB | 2F8BD841CE55 | 36    | 0     | 0.10   |
 | Transcend | TS32GSSD370S       | 32 GB  | C58D918E5AC2 | 36    | 0     | 0.10   |
@@ -27429,6 +28596,7 @@ MTBF - avg. MTBF in years per sample.
 | Drevo     | X1 SSD             | 120 GB | B8FB4D7A7018 | 36    | 0     | 0.10   |
 | Intel     | SSDSCKKW010X6      | 1 TB   | 24DB9F351E52 | 72    | 1     | 0.10   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | 2EA21BD028A4 | 36    | 0     | 0.10   |
+| Samsung   | SSD 870 EVO        | 1 TB   | BAF566B00CA3 | 252   | 6     | 0.10   |
 | China     | 2.5'' SSD          | 120 GB | B8B9C189E13F | 36    | 0     | 0.10   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 088B2F929112 | 36    | 0     | 0.10   |
 | Crucial   | CT500MX500SSD1     | 500 GB | A1C2C439C4DE | 36    | 0     | 0.10   |
@@ -27449,6 +28617,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDBNCE5000PNC      | 500 GB | 07AB2D44B300 | 36    | 0     | 0.10   |
 | Apacer    | AS350              | 120 GB | 100EA5F0061B | 35    | 0     | 0.10   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 6B7F956917A4 | 35    | 0     | 0.10   |
+| Hikvision | HS-SSD-E100 1024G  | 1 TB   | A2FD3275B3EF | 35    | 0     | 0.10   |
 | Phison    | SATA SSD           | 120 GB | 168209780B2C | 35    | 0     | 0.10   |
 | SanDisk   | SSD PLUS           | 480 GB | 9455C3111AD7 | 35    | 0     | 0.10   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 9FCA12A0DF77 | 35    | 0     | 0.10   |
@@ -27461,20 +28630,25 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS128GSSD370S      | 128 GB | 861E7AF9E699 | 35    | 0     | 0.10   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 4A807473F3F5 | 35    | 0     | 0.10   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 8F83B03B2FBD | 35    | 0     | 0.10   |
+| China     | SSV5               | 480 GB | B0AD0B3E14CC | 35    | 0     | 0.10   |
 | Kingston  | SA400S37120G       | 120 GB | 9700EBBBD930 | 35    | 0     | 0.10   |
 | Seagate   | BarraCuda SSD Z... | 500 GB | 33246EDD10F8 | 35    | 0     | 0.10   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 6E0FBB120BE5 | 35    | 0     | 0.10   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 14C040CF0480 | 107   | 2     | 0.10   |
+| China     | NGFF 2280 128GB... | 128 GB | A6EABE50A002 | 35    | 0     | 0.10   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | C1D07503AC1C | 35    | 0     | 0.10   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 7E5D4E46D858 | 35    | 0     | 0.10   |
 | ADATA     | SP900              | 128 GB | E3F86EECDBD8 | 35    | 0     | 0.10   |
+| HP        | SSD S600           | 240 GB | 00F17C9E7EA1 | 35    | 0     | 0.10   |
 | Kingston  | SA400S37480G       | 480 GB | B958DAD78B90 | 35    | 0     | 0.10   |
 | LDLC      | SSD F6 PLUS M.2... | 960 GB | 09DDFD79196D | 35    | 0     | 0.10   |
 | Lite-On   | LCS-256L9S-11 2... | 256 GB | 0C57F4BDF594 | 35    | 0     | 0.10   |
 | Lite-On   | LGT-256M6G         | 256 GB | 56745FCDD2EA | 35    | 0     | 0.10   |
+| PNY       | CS900 240GB SSD    | 240 GB | 5FF5BD076524 | 35    | 0     | 0.10   |
 | SPCC      | SSD                | 120 GB | BBAC60F88482 | 35    | 0     | 0.10   |
 | Samsung   | SSD 860 EVO        | 500 GB | 85F8A7B48760 | 35    | 0     | 0.10   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | F053183C60F4 | 35    | 0     | 0.10   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 4E990D560ECE | 35    | 0     | 0.10   |
 | SanDisk   | SSD U110           | 16 GB  | 0565C00EFF7F | 35    | 0     | 0.10   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 26B378849F61 | 35    | 0     | 0.10   |
 | Crucial   | CT480BX500SSD1     | 480 GB | F5770255443D | 35    | 0     | 0.10   |
@@ -27498,6 +28672,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 4ACC75DBE824 | 35    | 0     | 0.10   |
 | SanDisk   | SSD PLUS           | 1 TB   | 8FA4E90B3546 | 35    | 0     | 0.10   |
 | Kingston  | SUV400S37240G      | 240 GB | 64461EB6B340 | 462   | 12    | 0.10   |
+| Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | 7B7B246D4A54 | 533   | 14    | 0.10   |
 | ADATA     | SU800              | 256 GB | E5B59F9D3712 | 35    | 0     | 0.10   |
 | KingSpec  | MSH-256            | 256 GB | ACEA0318719E | 35    | 0     | 0.10   |
 | PNY       | CS900 240GB SSD    | 240 GB | 56EF7237874C | 35    | 0     | 0.10   |
@@ -27515,6 +28690,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS256GMSA370       | 256 GB | 892149E9E51D | 35    | 0     | 0.10   |
 | HP        | SSD S600           | 240 GB | 00DB97E73DEA | 35    | 0     | 0.10   |
 | SPCC      | SSD                | 64 GB  | BAEFD04F21DD | 35    | 0     | 0.10   |
+| Team      | T253A3512G         | 512 GB | 53A2F7BACA2B | 35    | 0     | 0.10   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 2CAC1FB37C69 | 35    | 0     | 0.10   |
 | SanDisk   | SSD PLUS           | 240 GB | 352788346C64 | 460   | 12    | 0.10   |
 | SK hynix  | HFS128G3BTND-N210A | 128 GB | 5D78B0211244 | 318   | 8     | 0.10   |
@@ -27524,6 +28700,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | IT LMT-128L9M      | 128 GB | CF466848ECFC | 35    | 0     | 0.10   |
 | Samsung   | SSD 850 EVO mSATA  | 250 GB | 9978397B4F43 | 35    | 0     | 0.10   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 4A68A72D9B5F | 35    | 0     | 0.10   |
+| ADATA     | SU630              | 240 GB | C25C8A1548B7 | 35    | 0     | 0.10   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 92E90DC56C79 | 35    | 0     | 0.10   |
 | Intel     | SSDSC2BW120A4      | 120 GB | FBCA642A52F1 | 35    | 0     | 0.10   |
 | Kingston  | SA400M8240G        | 240 GB | 1A3E7309EC6C | 35    | 0     | 0.10   |
@@ -27562,6 +28739,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 12C110FFE494 | 35    | 0     | 0.10   |
 | SanDisk   | SD9SN8W256G1102    | 256 GB | 3DD92F2D101E | 35    | 0     | 0.10   |
 | Super ... | FTM56N325H         | 256 GB | 55E467BC62C8 | 35    | 0     | 0.10   |
+| China     | SSD                | 480 GB | 13B697526AE3 | 35    | 0     | 0.10   |
 | Kingston  | SUV400S37120G      | 120 GB | 75C8E28F1CE8 | 35    | 0     | 0.10   |
 | Lite-On   | IT LMT-128L9M      | 128 GB | E11449256A84 | 35    | 0     | 0.10   |
 | Samsung   | SSD 650            | 120 GB | E77676B04215 | 35    | 0     | 0.10   |
@@ -27597,6 +28775,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VECTOR180          | 240 GB | AFFE4E345940 | 34    | 0     | 0.10   |
 | TakeMS    | SSD UTX-2200       | 240 GB | 919DBE7C0DF2 | 34    | 0     | 0.10   |
 | ADATA     | SU650NS38          | 240 GB | 54EE2961C7E9 | 34    | 0     | 0.10   |
+| Crucial   | CT500MX500SSD1     | 500 GB | CDCD8175644B | 34    | 0     | 0.10   |
 | Kingston  | SA400S37240G       | 240 GB | F2F089D576F1 | 34    | 0     | 0.10   |
 | Plextor   | PX-256S3C          | 256 GB | 0D814CE6DE59 | 34    | 0     | 0.10   |
 | Samsung   | SSD 850 EVO        | 500 GB | 5523A450F967 | 34    | 0     | 0.10   |
@@ -27607,6 +28786,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | C776D76981C5 | 34    | 0     | 0.10   |
 | Goodram   | SSDPR-CL100-120-G2 | 120 GB | EF110FCFCC5C | 34    | 0     | 0.10   |
 | Innodisk  | Corp. - mSATA 3... | 128 GB | 334A87E7591C | 34    | 0     | 0.10   |
+| RESCUE    | RESCUE08SM22AR1... | 120 GB | 47E5870CD130 | 34    | 0     | 0.10   |
 | SPCC      | SSD                | 128 GB | 8B0F24C08845 | 34    | 0     | 0.10   |
 | ZOTAC     | SATA SSD           | 120 GB | B3C3F809C170 | 34    | 0     | 0.10   |
 | Kingston  | SA400S37480G       | 480 GB | A66DC1458450 | 104   | 2     | 0.10   |
@@ -27645,11 +28825,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 120 GB | 8EE1C758D42A | 34    | 0     | 0.09   |
 | Team      | TM8PS7256G         | 256 GB | 8629DB6C4A6A | 34    | 0     | 0.09   |
 | Toshiba   | TR200              | 240 GB | 7D929FECA133 | 34    | 0     | 0.09   |
+| SK hynix  | SH920 mSATA        | 256 GB | 44E4BAE32AF0 | 519   | 14    | 0.09   |
 | ADATA     | SU635              | 480 GB | 2DC4920BBA7B | 34    | 0     | 0.09   |
 | ADATA     | SU650              | 120 GB | E8DEDCDFCA39 | 34    | 0     | 0.09   |
 | Crucial   | CT250MX200SSD1     | 250 GB | 6934043A700B | 34    | 0     | 0.09   |
 | Crucial   | CT480BX500SSD1     | 480 GB | DD7E034E93CB | 34    | 0     | 0.09   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 64859384DC8F | 34    | 0     | 0.09   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | F18FDA92CE15 | 34    | 0     | 0.09   |
 | Kingston  | SVP200S37A60G      | 64 GB  | 5442AB54E392 | 1139  | 32    | 0.09   |
 | Apple     | SSD SM0128G        | 121 GB | 51FB48B02F19 | 34    | 0     | 0.09   |
 | Crucial   | FCCT256M4SSD1      | 256 GB | BBB6910B4A54 | 34    | 0     | 0.09   |
@@ -27677,6 +28859,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 7D7ADC006190 | 34    | 0     | 0.09   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | C84D90349CAF | 34    | 0     | 0.09   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 092F85ADDE1F | 34    | 0     | 0.09   |
+| Kingston  | SA400S37960G       | 960 GB | A0930898FE7C | 34    | 0     | 0.09   |
 | OCZ       | VERTEX460A         | 120 GB | 7E51F88C32E0 | 34    | 0     | 0.09   |
 | SanDisk   | SD8SN8U128G1122    | 128 GB | 52DA51F11BDD | 34    | 0     | 0.09   |
 | Kingston  | SKC300S37A60G      | 64 GB  | DFE4B6C59ED1 | 1134  | 32    | 0.09   |
@@ -27691,6 +28874,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SKC300S37A120G     | 120 GB | 5F037EB9BED6 | 34    | 0     | 0.09   |
 | Samsung   | MZ7L3960HBLT-00A07 | 960 GB | 75F594CFA8A2 | 34    | 0     | 0.09   |
 | Samsung   | SSD 850 EVO        | 120 GB | FC4410886357 | 34    | 0     | 0.09   |
+| Samsung   | SSD 860 EVO M.2    | 500 GB | 362EBA17ACFD | 34    | 0     | 0.09   |
 | SanDisk   | SDSSDA120G         | 120 GB | 8DCC1E425D60 | 34    | 0     | 0.09   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 62D00EFD4CB1 | 34    | 0     | 0.09   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 2EE78F57D758 | 34    | 0     | 0.09   |
@@ -27700,6 +28884,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | E46F408685B1 | 34    | 0     | 0.09   |
 | Kingston  | SA400S37240G       | 240 GB | FC581A513C70 | 34    | 0     | 0.09   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 8FAA02598790 | 34    | 0     | 0.09   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 1AE968F158EB | 34    | 0     | 0.09   |
 | Team      | T253X2128G         | 128 GB | 2CE3DA64A0A5 | 34    | 0     | 0.09   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 1874F610100C | 34    | 0     | 0.09   |
 | Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 0C4FD0D7F520 | 34    | 0     | 0.09   |
@@ -27760,6 +28945,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 120 GB | C4FCB2563795 | 33    | 0     | 0.09   |
 | ADATA     | SU650              | 240 GB | 1EC529969104 | 304   | 8     | 0.09   |
 | Crucial   | CT120M500SSD1      | 120 GB | 3CD5137CC8B6 | 575   | 16    | 0.09   |
+| China     | SSD                | 120 GB | E53C4F1EA914 | 33    | 0     | 0.09   |
 | Crucial   | CT250MX500SSD1     | 250 GB | A310543432C0 | 33    | 0     | 0.09   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 4842E09ECC06 | 33    | 0     | 0.09   |
 | KIOXIA... | SATA SSD           | 240 GB | 46D22C6D21AE | 33    | 0     | 0.09   |
@@ -27789,6 +28975,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | F65F5EFE2793 | 33    | 0     | 0.09   |
 | Samsung   | SSD 850 EVO        | 250 GB | BEDCC115A5DC | 33    | 0     | 0.09   |
 | SanDisk   | SDSSDA240G         | 240 GB | 63938498FAE6 | 33    | 0     | 0.09   |
+| Transcend | TS256GMTS430S      | 256 GB | 9C3C91BFD34F | 33    | 0     | 0.09   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 9E594EF59697 | 33    | 0     | 0.09   |
 | ADATA     | SU630              | 240 GB | F4212806C9FB | 33    | 0     | 0.09   |
 | China     | SSD                | 256 GB | 5A23A036E53D | 33    | 0     | 0.09   |
@@ -27807,6 +28994,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 256 GB | 26D386D01DF4 | 33    | 0     | 0.09   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 08698292ACA6 | 33    | 0     | 0.09   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 341F88603FA0 | 33    | 0     | 0.09   |
+| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 609D7092CCB8 | 33    | 0     | 0.09   |
 | Kingston  | SA400S37240G       | 240 GB | 7B176D38E368 | 33    | 0     | 0.09   |
 | Kingston  | SKC600256G         | 256 GB | BD8CED57B427 | 33    | 0     | 0.09   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | CF46EA9ECB0A | 33    | 0     | 0.09   |
@@ -27824,9 +29012,11 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U100           | 24 GB  | 1FEAE4AD832D | 33    | 0     | 0.09   |
 | Apacer    | AS350              | 512 GB | 188AC916AB9F | 33    | 0     | 0.09   |
 | BR        | SSD                | 240 GB | F4ED3612E07F | 33    | 0     | 0.09   |
+| China     | SSD                | 256 GB | 200AAC667CE0 | 33    | 0     | 0.09   |
 | Patriot   | Burst              | 120 GB | 98538EC4325E | 33    | 0     | 0.09   |
 | Phison    | 128GB PS3109-S9    | 128 GB | 7F98F281114C | 33    | 0     | 0.09   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 945733BFFA29 | 33    | 0     | 0.09   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 90158F1CA83B | 33    | 0     | 0.09   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 24D569BD5271 | 33    | 0     | 0.09   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 87A140DDEFFF | 33    | 0     | 0.09   |
 | QUMO      | Q3DT-128GMCY       | 128 GB | A8A2EA6B60F7 | 33    | 0     | 0.09   |
@@ -27978,11 +29168,13 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-256    | 256 GB | D41D0B51A27C | 32    | 0     | 0.09   |
 | Lexar     | SSD                | 128 GB | 14CB98B6D0F7 | 32    | 0     | 0.09   |
 | Plextor   | PX-128M6S          | 128 GB | 9EC46ECD1B05 | 32    | 0     | 0.09   |
+| Samsung   | SSD 870 EVO        | 500 GB | 5792CCC3FDF1 | 32    | 0     | 0.09   |
 | T-FORCE   | SSD                | 1 TB   | 0032C999F299 | 32    | 0     | 0.09   |
 | T-FORCE   | SSD                | 1 TB   | 4E21392BD03F | 32    | 0     | 0.09   |
 | T-FORCE   | SSD                | 1 TB   | 50DA0B3DBF3F | 32    | 0     | 0.09   |
 | T-FORCE   | SSD                | 1 TB   | C8A30FA68676 | 32    | 0     | 0.09   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 4ABF4ED12223 | 96    | 2     | 0.09   |
+| Intenso   | JAJM600M1TB        | 1 TB   | B881A076D0BE | 32    | 0     | 0.09   |
 | Plextor   | PX-128M5S          | 128 GB | 6916B162B978 | 32    | 0     | 0.09   |
 | Samsung   | SSD 870 EVO        | 500 GB | 65A484C52802 | 32    | 0     | 0.09   |
 | T-FORCE   | SSD                | 1 TB   | FEBE8A80BA82 | 32    | 0     | 0.09   |
@@ -28010,6 +29202,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 128 GB | 2A9AFFD64E6D | 32    | 0     | 0.09   |
 | Goodram   | SSDPR-CL100-240-G3 | 240 GB | 4762A89B4A49 | 32    | 0     | 0.09   |
 | HEORIADY  | HX-001 F 512G      | 512 GB | B50BD6E6D8FB | 32    | 0     | 0.09   |
+| Kingston  | SV300S37A120G      | 120 GB | 70988F7ACEB0 | 32    | 0     | 0.09   |
 | Lite-On   | CV8-8E256          | 256 GB | 0280CD42D9F6 | 32    | 0     | 0.09   |
 | Micron    | C400-MTFDDAK256MAM | 256 GB | 942C87810832 | 32    | 0     | 0.09   |
 | Micron    | MTFDDAK128MAM-1J1  | 128 GB | B4ED32337A30 | 32    | 0     | 0.09   |
@@ -28041,12 +29234,14 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 94BD59CFBAAC | 158   | 4     | 0.09   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | C978DB24F46B | 31    | 0     | 0.09   |
 | Kingston  | SA400S37120G       | 120 GB | 5E9B752F9ECF | 31    | 0     | 0.09   |
+| Kingston  | SA400S37480G       | 480 GB | B97A89F1E8A7 | 31    | 0     | 0.09   |
 | Patriot   | Burst Elite        | 240 GB | 39665A2D3F99 | 31    | 0     | 0.09   |
 | SPCC      | SSD                | 512 GB | B2BFBAD17065 | 31    | 0     | 0.09   |
 | SanDisk   | SSD U110           | 16 GB  | 6EB3921A6E43 | 31    | 0     | 0.09   |
 | Super ... | FTM56N325H         | 256 GB | F9D8B6E14DF0 | 31    | 0     | 0.09   |
 | WDC       | WDBNCE0010PNC      | 1 TB   | 9524B71BE1BA | 31    | 0     | 0.09   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 24D41D64CB17 | 31    | 0     | 0.09   |
+| Crucial   | CT275MX300SSD1     | 275 GB | A2C6E6ED9E97 | 31    | 0     | 0.09   |
 | GLOWAY    | FER120GS3-S7       | 120 GB | 4F95EF7D21FE | 31    | 0     | 0.09   |
 | SK hynix  | SC313 SATA         | 256 GB | 3CBA77F06423 | 31    | 0     | 0.09   |
 | SanDisk   | SSD U100           | 24 GB  | 591803FCD05E | 31    | 0     | 0.09   |
@@ -28062,6 +29257,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 8FD1764B3052 | 31    | 0     | 0.09   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | B16AB0555BB2 | 31    | 0     | 0.09   |
 | Transcend | TS1TMTS800         | 1 TB   | F25B9910DF64 | 31    | 0     | 0.09   |
+| WDC       | WDS480G2G0B-00EPW0 | 480 GB | 72DBB13D8A36 | 31    | 0     | 0.09   |
 | Kingston  | SA400S37480G       | 480 GB | 2C1703848401 | 695   | 21    | 0.09   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 818A3B9DD4E0 | 31    | 0     | 0.09   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 8EE72178C288 | 31    | 0     | 0.09   |
@@ -28084,6 +29280,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 56D5F7A6EA50 | 31    | 0     | 0.09   |
 | ADATA     | SU630              | 240 GB | 50514160276C | 31    | 0     | 0.09   |
 | China     | 120GB SSD          | 120 GB | 2B17BD7BB57B | 31    | 0     | 0.09   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 1D9E072AE173 | 31    | 0     | 0.09   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | 424157080DDC | 31    | 0     | 0.09   |
 | Samsung   | SSD 850 PRO        | 256 GB | F23F7441A4D4 | 31    | 0     | 0.09   |
 | SanDisk   | SSD U100           | 24 GB  | D04791B335D5 | 31    | 0     | 0.09   |
@@ -28095,10 +29292,12 @@ MTBF - avg. MTBF in years per sample.
 | Teclast   | 256GB NS550-2242   | 256 GB | 67ABAE5340C9 | 31    | 0     | 0.09   |
 | ADATA     | SP580              | 120 GB | C6AC306545E0 | 31    | 0     | 0.09   |
 | ADATA     | SU810NS38 SATA ... | 256 GB | F5A33041197C | 31    | 0     | 0.09   |
+| AMD       | R5SL240G           | 240 GB | D117A65B22EC | 31    | 0     | 0.09   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 55396E29B3C7 | 31    | 0     | 0.09   |
 | SanDisk   | SSD PLUS           | 240 GB | EF097C4AEE2E | 125   | 3     | 0.09   |
 | SPCC      | SSD                | 64 GB  | D3DAAAA3967C | 125   | 3     | 0.09   |
 | Crucial   | CT1000BX100SSD1    | 1 TB   | 640921180DAF | 31    | 0     | 0.09   |
+| Kingston  | RBUSC180DS37128GJ  | 128 GB | D7DE8B4AC212 | 31    | 0     | 0.09   |
 | Kingston  | SA400S37120G       | 120 GB | 81F9965FABC5 | 31    | 0     | 0.09   |
 | Kingston  | SA400S37240G       | 240 GB | 275BAB8564E9 | 31    | 0     | 0.09   |
 | Kingston  | SA400S37480G       | 480 GB | 09AD4A2CD279 | 31    | 0     | 0.09   |
@@ -28112,6 +29311,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 240 GB | 781B38286204 | 31    | 0     | 0.09   |
 | China     | SATA SSD           | 120 GB | 6D9442912353 | 31    | 0     | 0.09   |
 | Samsung   | SSD 850 EVO        | 120 GB | 512ABFCA4CC6 | 31    | 0     | 0.09   |
+| Samsung   | SSD 850 EVO        | 250 GB | E804AC288F66 | 31    | 0     | 0.09   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 9347C66B37D7 | 31    | 0     | 0.09   |
 | Transcend | TS64GSSD370S       | 64 GB  | 945305BC806D | 31    | 0     | 0.09   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 42AC657D8256 | 31    | 0     | 0.09   |
@@ -28175,6 +29375,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SKC300S37A120G     | 120 GB | 426A8AEDE00E | 31    | 0     | 0.08   |
 | PNY       | CS1311 32GB SSD    | 32 GB  | 6FA5D0983AF1 | 31    | 0     | 0.08   |
 | Samsung   | SSD 860 PRO        | 256 GB | 95BB3558C256 | 31    | 0     | 0.08   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 52D82731B4CE | 31    | 0     | 0.08   |
 | SanDisk   | SDSSDA240G         | 240 GB | 0175C1D06E22 | 31    | 0     | 0.08   |
 | SanDisk   | SSD PLUS           | 240 GB | 19FAF8CDFC16 | 31    | 0     | 0.08   |
 | Intel     | SSDSA2M160G2GC     | 160 GB | F7A5BCC6B50C | 712   | 22    | 0.08   |
@@ -28198,7 +29399,9 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 2F5F32CDF33B | 30    | 0     | 0.08   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 621969B91F9F | 30    | 0     | 0.08   |
 | KingSpec  | P4-240             | 240 GB | C0B2E40E3903 | 30    | 0     | 0.08   |
+| Kingston  | SA400S37480G       | 480 GB | D681E2B396E9 | 30    | 0     | 0.08   |
 | Apacer    | AS350              | 512 GB | 69E9B1188D1F | 92    | 2     | 0.08   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 86D5F3A82CB2 | 524   | 16    | 0.08   |
 | ADATA     | SU635              | 240 GB | 998681FF9286 | 30    | 0     | 0.08   |
 | Apacer    | AS350              | 256 GB | 4E2A12A38E79 | 30    | 0     | 0.08   |
 | Crucial   | CT480BX300SSD1     | 480 GB | 7EFD1FB51900 | 30    | 0     | 0.08   |
@@ -28262,6 +29465,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | DB999BD79276 | 30    | 0     | 0.08   |
 | SK hynix  | HFS480G32FEH-BA10A | 480 GB | 187C8C54151E | 30    | 0     | 0.08   |
 | Samsung   | SSD 850 PRO        | 256 GB | 82C8B01F3529 | 30    | 0     | 0.08   |
+| SanDisk   | SDSSDP064G         | 64 GB  | 748753D5A822 | 30    | 0     | 0.08   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 491454FD2B0B | 30    | 0     | 0.08   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 7E661727F2A1 | 60    | 1     | 0.08   |
 | Apple     | SSD SM0128G        | 121 GB | 8510A9F1D375 | 30    | 0     | 0.08   |
@@ -28292,6 +29496,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | BD3A78438D57 | 30    | 0     | 0.08   |
 | Crucial   | CT480BX500SSD1     | 480 GB | C8F2AB5052C9 | 30    | 0     | 0.08   |
 | Kingston  | SV300S37A120G      | 120 GB | BE62CC02DA28 | 30    | 0     | 0.08   |
+| Netac     | SSD                | 128 GB | 46CA32EB58D2 | 30    | 0     | 0.08   |
 | SanDisk   | Ultra II           | 480 GB | D9C94B39142F | 30    | 0     | 0.08   |
 | BIWIN     | SSD                | 256 GB | 600E37B17229 | 30    | 0     | 0.08   |
 | Crucial   | CT250MX500SSD1     | 250 GB | BA887FDA012D | 30    | 0     | 0.08   |
@@ -28360,6 +29565,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 480 GB | E50E9D56E074 | 29    | 0     | 0.08   |
 | SanDisk   | SSD U100           | 24 GB  | B838B3DEA9A9 | 29    | 0     | 0.08   |
 | SanDisk   | SSD U110           | 16 GB  | A451873238C6 | 29    | 0     | 0.08   |
+| AMD       | R5SL240G           | 240 GB | 159235C24EC1 | 208   | 6     | 0.08   |
 | China     | 120GB SSD          | 120 GB | D669E482AEC7 | 29    | 0     | 0.08   |
 | Crucial   | CT275MX300SSD4     | 275 GB | 54E8E6D49A95 | 29    | 0     | 0.08   |
 | Intenso   | SSD                | 128 GB | 812181DE7C6E | 29    | 0     | 0.08   |
@@ -28377,6 +29583,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | EE23DCF0305F | 29    | 0     | 0.08   |
 | SPCC      | SSD                | 120 GB | 75BB7B12DFF3 | 148   | 4     | 0.08   |
 | Kingston  | SA400S37240G       | 240 GB | 461D7119C58D | 29    | 0     | 0.08   |
+| Netac     | SSD 128G           | 128 GB | 0C5DDCA952C0 | 29    | 0     | 0.08   |
 | SPCC      | SSD                | 120 GB | 46C2AF94C605 | 29    | 0     | 0.08   |
 | Samsung   | SSD 860 EVO        | 500 GB | C79AEA4FBCBE | 29    | 0     | 0.08   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 0054C71E7BC0 | 29    | 0     | 0.08   |
@@ -28397,6 +29604,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 4F93E40156D6 | 118   | 3     | 0.08   |
 | Apple     | SSD SD0128F        | 121 GB | DC9F6BD41A2A | 29    | 0     | 0.08   |
 | Intel     | SSDSCKJF240A5L     | 240 GB | 857ADDFB7651 | 88    | 2     | 0.08   |
+| Kingston  | SA400S37120G       | 120 GB | C0561E2F0EE8 | 29    | 0     | 0.08   |
 | Lite-On   | LMT-512L9M-11 M... | 512 GB | AF152DB4E1A1 | 29    | 0     | 0.08   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | DC811201CBF8 | 29    | 0     | 0.08   |
 | PNY       | SSD2SC480G1CS27... | 480 GB | 0E69F305CE3A | 29    | 0     | 0.08   |
@@ -28406,6 +29614,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 240 GB | 728817A8F0B5 | 29    | 0     | 0.08   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | D2D23B60638B | 29    | 0     | 0.08   |
 | Kingston  | SA400S37120G       | 120 GB | 1E9254B6380D | 29    | 0     | 0.08   |
+| Kingston  | SKC600MS1024G      | 1 TB   | 135DAAB53B3F | 29    | 0     | 0.08   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 699E57F1D896 | 29    | 0     | 0.08   |
 | Samsung   | MZNLN512HAJQ-00000 | 512 GB | 6071D0BF3F2D | 29    | 0     | 0.08   |
 | WDC       | WDBNCE5000PNC      | 500 GB | C40E56FC8A76 | 29    | 0     | 0.08   |
@@ -28426,6 +29635,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | 500GB SATA SSD     | 500 GB | 31ED88BE5074 | 29    | 0     | 0.08   |
 | Apacer    | AS350              | 256 GB | A7FA00F61BA9 | 29    | 0     | 0.08   |
 | China     | SSD                | 480 GB | 6DAAEFE57602 | 29    | 0     | 0.08   |
+| Samsung   | SSD 870 EVO        | 250 GB | 2F36270A086E | 29    | 0     | 0.08   |
 | Samsung   | SSD 870 EVO        | 500 GB | 8358DDE88E71 | 29    | 0     | 0.08   |
 | WDC       | WDS200T2B0B-00YS70 | 2 TB   | FBF07389A422 | 29    | 0     | 0.08   |
 | Patriot   | P200               | 256 GB | E5E8936E2570 | 499   | 16    | 0.08   |
@@ -28456,6 +29666,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | DE287F670006 | 29    | 0     | 0.08   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 86DDC5813694 | 29    | 0     | 0.08   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 0BC7556DE5B9 | 29    | 0     | 0.08   |
+| China     | M.2 SSD            | 256 GB | 3BA880C891FD | 29    | 0     | 0.08   |
 | Crucial   | CT525MX300SSD1     | 528 GB | B08B27D24FEF | 29    | 0     | 0.08   |
 | Kingston  | RBUSC180DS37256GH  | 256 GB | 45C2812D05E5 | 29    | 0     | 0.08   |
 | Kingston  | SA400S37240G       | 240 GB | 69FD361C811D | 29    | 0     | 0.08   |
@@ -28508,6 +29719,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 240 GB | AE4085562B3C | 173   | 5     | 0.08   |
 | China     | SSD                | 128 GB | 8B3A47BA582B | 28    | 0     | 0.08   |
 | Lite-On   | LSS-32L6G-HP       | 32 GB  | 1E5D234FDDE6 | 28    | 0     | 0.08   |
+| PNY       | CS900 120GB SSD    | 120 GB | 29DEF54C812A | 28    | 0     | 0.08   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | E538C280ECE2 | 28    | 0     | 0.08   |
 | SanDisk   | SSD PLUS           | 1 TB   | 47A5A15BAAD8 | 57    | 1     | 0.08   |
 | SanDisk   | SSD PLUS           | 240 GB | B31026EA8291 | 28    | 0     | 0.08   |
@@ -28521,6 +29733,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 95F5411C6368 | 28    | 0     | 0.08   |
 | Goodram   | SSDPR-CL100-120-G2 | 120 GB | 073ECE60757B | 28    | 0     | 0.08   |
 | KingFast  | SSD                | 256 GB | 1A1E65B2B601 | 28    | 0     | 0.08   |
+| Kingston  | SKC600MS1024G      | 1 TB   | 6AE0930B3D4C | 28    | 0     | 0.08   |
 | LDLC      | SSD                | 128 GB | 9B097B061141 | 28    | 0     | 0.08   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 57F12CFBEBF7 | 57    | 1     | 0.08   |
 | WDC       | WDS500G2B0A        | 500 GB | 40E62F328438 | 28    | 0     | 0.08   |
@@ -28539,6 +29752,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV500120G         | 120 GB | F679FD8C14C1 | 28    | 0     | 0.08   |
 | Samsung   | SSD 860 EVO        | 500 GB | 9832E593DDF7 | 28    | 0     | 0.08   |
 | SanDisk   | SDSSDA480G         | 480 GB | E3FB6D7F9B56 | 28    | 0     | 0.08   |
+| Team      | T253512GB          | 512 GB | 46B17E77D29D | 28    | 0     | 0.08   |
 | ADATA     | SU650              | 120 GB | 232B64009937 | 28    | 0     | 0.08   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 68AB2F383F31 | 28    | 0     | 0.08   |
 | Kingston  | SV300S37A120G      | 120 GB | 390C70F715AB | 28    | 0     | 0.08   |
@@ -28594,6 +29808,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | Mit-SSD512A        | 512 GB | 41B318897C1E | 28    | 0     | 0.08   |
 | Kingston  | SA400S37240G       | 240 GB | 575F5BDC9E7B | 28    | 0     | 0.08   |
 | Samsung   | SSD 860 EVO        | 500 GB | 548FD6EACA58 | 28    | 0     | 0.08   |
+| SanDisk   | SSD PLUS           | 1 TB   | 7E3C19C43EDA | 28    | 0     | 0.08   |
 | ADATA     | SU800              | 128 GB | A95A72FC0E97 | 28    | 0     | 0.08   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 33356DC981EC | 28    | 0     | 0.08   |
 | Samsung   | SSD 860 EVO        | 500 GB | A125685AE2C1 | 28    | 0     | 0.08   |
@@ -28607,6 +29822,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 334506FBC567 | 28    | 0     | 0.08   |
 | Samsung   | Portable SSD T5    | 250 GB | DE887E93CB2E | 28    | 0     | 0.08   |
 | Samsung   | SSD 850 EVO        | 120 GB | 2DC7A8BB493A | 28    | 0     | 0.08   |
+| WDC       | WDS100T2B0B-00YS70 | 1 TB   | B7F7B5B7C4C0 | 28    | 0     | 0.08   |
 | KingDian  | S280               | 240 GB | 075E727BA884 | 28    | 0     | 0.08   |
 | Kingston  | SA400S37960G       | 960 GB | 0FD022B17875 | 28    | 0     | 0.08   |
 | Samsung   | SSD 850 EVO        | 250 GB | 4D6229C15F86 | 28    | 0     | 0.08   |
@@ -28617,6 +29833,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 1 TB   | 1FB04A22BED3 | 225   | 7     | 0.08   |
 | ADATA     | SU800              | 256 GB | 40D00C8E05B2 | 28    | 0     | 0.08   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 93534478DC2C | 28    | 0     | 0.08   |
+| Kingston  | SA400S37120G       | 120 GB | 564D030F47F3 | 28    | 0     | 0.08   |
 | Kingston  | SA400S37240G       | 240 GB | E29CFAA9BC2D | 28    | 0     | 0.08   |
 | Kingston  | SUV300S37A240G     | 240 GB | 5F8814386C8E | 28    | 0     | 0.08   |
 | Micron    | MTFDDAV256MBF-1... | 256 GB | B563F14D17D0 | 28    | 0     | 0.08   |
@@ -28652,9 +29869,11 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS128GSSD370S      | 128 GB | 751F7AC90EA9 | 28    | 0     | 0.08   |
 | Kingston  | SA400S37480G       | 480 GB | AF1641A25E90 | 195   | 6     | 0.08   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 8153AEF46B45 | 27    | 0     | 0.08   |
+| KIOXIA... | SATA SSD           | 480 GB | 47BDE862CA72 | 27    | 0     | 0.08   |
 | KingSpec  | P3-256             | 256 GB | C568F21A3E2D | 27    | 0     | 0.08   |
 | Kingston  | SA400S37480G       | 480 GB | 80EEA2174AEB | 27    | 0     | 0.08   |
 | SPCC      | SSD                | 256 GB | C6DB6E118BB6 | 27    | 0     | 0.08   |
+| Mushkin   | MKNSSDCR120GB      | 120 GB | 2880DA1613E2 | 586   | 20    | 0.08   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 2F9B146A4EE1 | 27    | 0     | 0.08   |
 | KIOXIA... | SATA SSD           | 480 GB | 8270EA6B1304 | 27    | 0     | 0.08   |
 | Plextor   | PX-128M6G-2242     | 128 GB | ED2DA94373F8 | 27    | 0     | 0.08   |
@@ -28668,7 +29887,9 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | 83C1B4EB6CC3 | 27    | 0     | 0.08   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 140083CC37BA | 27    | 0     | 0.08   |
 | KingSpec  | P3-256             | 256 GB | B9E444D4AF69 | 27    | 0     | 0.08   |
+| Kingston  | SA400S37240G       | 240 GB | 12787AFEC5CB | 27    | 0     | 0.08   |
 | Kingston  | SV300S37A120G      | 120 GB | D199C0F3592F | 27    | 0     | 0.08   |
+| Verbatim  | Vi550 S3           | 512 GB | 95BF6480ACA0 | 27    | 0     | 0.08   |
 | ADATA     | SU655              | 120 GB | FB031675FEA2 | 27    | 0     | 0.08   |
 | Apple     | SSD SM256E         | 256 GB | A71259D70768 | 27    | 0     | 0.08   |
 | Kingston  | SA400S37240G       | 240 GB | 033587E54B44 | 27    | 0     | 0.08   |
@@ -28692,6 +29913,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | BFA03169FC36 | 27    | 0     | 0.08   |
 | TAISU     | SSD 240G           | 240 GB | BFAE556590A9 | 27    | 0     | 0.08   |
 | Kingmax   | SSD                | 120 GB | 546115091D19 | 27    | 0     | 0.08   |
+| Kingston  | SA400S37480G       | 480 GB | 063C4E4EA77A | 27    | 0     | 0.08   |
 | Micron    | MTFDDAV256MBF-1... | 256 GB | 3B5FB850FA2B | 27    | 0     | 0.08   |
 | SanDisk   | SDSSDH3500G        | 500 GB | 42ABB7FCEC4C | 27    | 0     | 0.08   |
 | Intenso   | AFK-120GB          | 120 GB | 3B76C80354AE | 27    | 0     | 0.08   |
@@ -28699,6 +29921,8 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8P0S3256B-A0     | 256 GB | 6255BB28656D | 27    | 0     | 0.08   |
 | Kingston  | RBU-SNS8152S325... | 256 GB | 810E61322F10 | 27    | 0     | 0.08   |
 | Lexar     | 128GB SSD          | 128 GB | F904EEC7C835 | 27    | 0     | 0.08   |
+| SanDisk   | SD8SNAT128G1002    | 128 GB | 50A432B6F57D | 27    | 0     | 0.08   |
+| Tammuz    | RX440              | 120 GB | 59F975A58276 | 27    | 0     | 0.08   |
 | V-GeN     | V-GEN03SM22AR10... | 1 TB   | 5C668D55A130 | 27    | 0     | 0.08   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 462EB7B401FA | 110   | 3     | 0.08   |
 | Crucial   | CT500MX500SSD4     | 500 GB | C0FA6811CB5B | 27    | 0     | 0.08   |
@@ -28747,7 +29971,9 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD Sata III       | 120 GB | BBF26E892090 | 27    | 0     | 0.07   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 0B15B40618DC | 27    | 0     | 0.07   |
 | ADATA     | SP550              | 240 GB | 6A32B1B69919 | 27    | 0     | 0.07   |
+| ADATA     | SU650              | 240 GB | FC6FDE537FF2 | 27    | 0     | 0.07   |
 | ADATA     | SU720              | 1 TB   | 8DB0FBB75344 | 27    | 0     | 0.07   |
+| ADATA     | SU800              | 512 GB | CCD2E44D2E87 | 27    | 0     | 0.07   |
 | China     | SSD                | 128 GB | 50F1F6BE1629 | 27    | 0     | 0.07   |
 | Kingston  | SA400M8480G        | 480 GB | 89CEA0AD94A0 | 27    | 0     | 0.07   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 4D63B17377F8 | 27    | 0     | 0.07   |
@@ -28781,6 +30007,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 22326EF35F50 | 27    | 0     | 0.07   |
 | Kingston  | SUV400S37120G      | 120 GB | B08B7FD33E34 | 27    | 0     | 0.07   |
 | Lite-On   | CV1-8B256          | 256 GB | 9F31ED46C047 | 27    | 0     | 0.07   |
+| PNY       | CS900 240GB SSD    | 240 GB | 95A63D5668A6 | 27    | 0     | 0.07   |
 | SanDisk   | X400 2.5 7MM       | 128 GB | 00CC80F69CA9 | 27    | 0     | 0.07   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | C8828F77748B | 27    | 0     | 0.07   |
 | ADATA     | SU630              | 240 GB | 952DCDC10971 | 27    | 0     | 0.07   |
@@ -28889,6 +30116,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | F9A874389A97 | 26    | 0     | 0.07   |
 | Goodram   | IR-SSDPR-S25A-120  | 120 GB | 71F452A2EC95 | 26    | 0     | 0.07   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | 1858802256F1 | 26    | 0     | 0.07   |
+| Patriot   | Burst Elite        | 120 GB | 4F3AF9979DFD | 26    | 0     | 0.07   |
 | SPCC      | SSD                | 64 GB  | FF698D35CFFB | 26    | 0     | 0.07   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 1BCF341B3D68 | 26    | 0     | 0.07   |
 | Toshiba   | THNSNF128GCSS      | 128 GB | 1E70799F6C5E | 26    | 0     | 0.07   |
@@ -28909,6 +30137,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | D847C3BB79B7 | 26    | 0     | 0.07   |
 | Crucial   | CT120M500SSD3      | 120 GB | 545B85FBFC83 | 448   | 16    | 0.07   |
 | ADATA     | SU650              | 120 GB | 20EF800B516F | 26    | 0     | 0.07   |
+| Kingston  | SA400S37480G       | 480 GB | 127F2D328E36 | 26    | 0     | 0.07   |
 | Kingston  | SMS200S360G        | 64 GB  | CE9012D67D67 | 79    | 2     | 0.07   |
 | Patriot   | Burst              | 120 GB | 81643A925257 | 26    | 0     | 0.07   |
 | Samsung   | SSD 860 EVO        | 1 TB   | AFD7D937C261 | 26    | 0     | 0.07   |
@@ -28929,6 +30158,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 2 TB   | BD690B7FC55C | 26    | 0     | 0.07   |
 | SanDisk   | SSD PLUS 240 GB    | 240 GB | 5F6C6C75BA1A | 26    | 0     | 0.07   |
 | SanDisk   | SSD PLUS           | 480 GB | 98F085777AF1 | 26    | 0     | 0.07   |
+| Toshiba   | THNSNS128GCSP      | 128 GB | 1920666F470B | 26    | 0     | 0.07   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 94E112AFCF0E | 26    | 0     | 0.07   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 7F1B34B73C91 | 26    | 0     | 0.07   |
 | Plextor   | PX-256M6Pro        | 256 GB | D916ACAAACEC | 131   | 4     | 0.07   |
@@ -28952,6 +30182,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 64 GB  | F9786615B324 | 26    | 0     | 0.07   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 94895B192E1D | 26    | 0     | 0.07   |
 | Intel     | SSDSCKKF256G8 SATA | 256 GB | 77E04B388B85 | 26    | 0     | 0.07   |
+| Samsung   | SSD 840 PRO Series | 128 GB | 756D2A2DF327 | 26    | 0     | 0.07   |
 | SanDisk   | SDSSDA120G         | 120 GB | CD22D620DB4F | 26    | 0     | 0.07   |
 | Crucial   | CT480BX300SSD1     | 480 GB | 1BE75A2A0E4D | 26    | 0     | 0.07   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 3164AA360D3F | 26    | 0     | 0.07   |
@@ -28961,6 +30192,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 Series     | 500 GB | 73E6799B8406 | 1198  | 45    | 0.07   |
 | Intel     | SSDSC2BF240A4L     | 240 GB | EC1F14F75107 | 130   | 4     | 0.07   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 928320BB9735 | 26    | 0     | 0.07   |
+| PNY       | CS900 960GB SSD    | 960 GB | 5842E911A2A2 | 26    | 0     | 0.07   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 2B1B5812E028 | 26    | 0     | 0.07   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 4BEA761E9965 | 182   | 6     | 0.07   |
 | WDC       | WDS240G1G0B-00RC30 | 240 GB | 53FBB38CBAE7 | 26    | 0     | 0.07   |
@@ -28982,12 +30214,14 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA120G         | 120 GB | 5F1AC0C53071 | 25    | 0     | 0.07   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | C7A16F33D6ED | 25    | 0     | 0.07   |
 | Gigabyte  | GP-GSTFS31256GTND  | 256 GB | DB4ED923D798 | 25    | 0     | 0.07   |
+| Kingston  | SA400S37480G       | 480 GB | AA815F66E8BB | 25    | 0     | 0.07   |
 | Samsung   | SSD 860 EVO        | 250 GB | 571851CFD254 | 25    | 0     | 0.07   |
 | SanDisk   | SSD PLUS           | 1 TB   | D05723C79250 | 25    | 0     | 0.07   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | E3766F65A1D6 | 25    | 0     | 0.07   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 4F63D6798A4F | 51    | 1     | 0.07   |
 | Apacer    | AS350              | 120 GB | FC48EC73D814 | 25    | 0     | 0.07   |
 | Kingston  | SV300S37A120G      | 120 GB | 4FB82B0441AE | 25    | 0     | 0.07   |
+| Lite-On   | LCH-128V2S-11 2... | 128 GB | A8FE86CED092 | 25    | 0     | 0.07   |
 | Lite-On   | LCH-256V2S         | 256 GB | F17BCF368055 | 25    | 0     | 0.07   |
 | Pasoul    | OASDX-120G         | 120 GB | 394B5D3AC823 | 25    | 0     | 0.07   |
 | SPCC      | SSD                | 128 GB | 2907F0B9ED2C | 25    | 0     | 0.07   |
@@ -28995,7 +30229,9 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM8PS7512G         | 512 GB | EF6E477D28D8 | 25    | 0     | 0.07   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 1F80845EA8A6 | 25    | 0     | 0.07   |
 | XrayDisk  | SSD                | 240 GB | EEE539AC00B9 | 25    | 0     | 0.07   |
+| TwinMOS   | SSD                | 128 GB | 857EF16293CE | 77    | 2     | 0.07   |
 | ADATA     | SU800              | 1 TB   | 70E1DFC55CC3 | 25    | 0     | 0.07   |
+| KIOXIA... | SATA SSD           | 480 GB | 7BF21B54938C | 25    | 0     | 0.07   |
 | KingSpec  | T-120              | 120 GB | 60CD153B3008 | 25    | 0     | 0.07   |
 | Kingston  | SV300S37A60G       | 64 GB  | 513F16021DE8 | 25    | 0     | 0.07   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 974501B96A79 | 25    | 0     | 0.07   |
@@ -29029,6 +30265,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 547AEE031EF0 | 25    | 0     | 0.07   |
 | Samsung   | SSD 860 QVO        | 2 TB   | C6E6BB16DB33 | 25    | 0     | 0.07   |
 | Smartbuy  | SSD                | 120 GB | 1F10029C7DB4 | 25    | 0     | 0.07   |
+| Transcend | TS240GMTS420S      | 240 GB | BC15120CF410 | 25    | 0     | 0.07   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 00054D44DF03 | 25    | 0     | 0.07   |
 | FORESEE   | 256GB SSD          | 256 GB | 62BC2BE82EAC | 25    | 0     | 0.07   |
 | Goodram   | SSDPR-CX400-01T    | 1 TB   | 6F4EACDEC15C | 25    | 0     | 0.07   |
@@ -29036,6 +30273,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 4 TB   | 98454522EE53 | 25    | 0     | 0.07   |
 | Samsung   | SSD 860 EVO        | 4 TB   | C6259141021F | 25    | 0     | 0.07   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 564FF6D495BD | 25    | 0     | 0.07   |
+| SanDisk   | WD Green 2.5       | 1 TB   | 9AB720333B13 | 229   | 8     | 0.07   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 94B470B46866 | 25    | 0     | 0.07   |
 | Kingston  | SUV400S37120G      | 120 GB | 74723AF4D68C | 25    | 0     | 0.07   |
 | Plextor   | PX-128M6M          | 128 GB | C916794D8A09 | 25    | 0     | 0.07   |
@@ -29094,6 +30332,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LCH-128V2S         | 128 GB | 38283D31E889 | 25    | 0     | 0.07   |
 | Samsung   | SSD 870 EVO        | 1 TB   | AF129187B83B | 25    | 0     | 0.07   |
 | Samsung   | SSD 870 EVO        | 4 TB   | 797DA9B500B2 | 25    | 0     | 0.07   |
+| WDC       | WDBNCE5000PNC      | 500 GB | F33C46A01125 | 25    | 0     | 0.07   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 6A120A0BBD74 | 25    | 0     | 0.07   |
 | China     | 120GB SSD          | 120 GB | 5F9D7D4D02DC | 25    | 0     | 0.07   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 0EC1413DA271 | 25    | 0     | 0.07   |
@@ -29113,9 +30352,11 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | MSH-256            | 256 GB | 9A2CB5608F72 | 25    | 0     | 0.07   |
 | Kingston  | SA400S37240G       | 240 GB | E5CA2B4F0326 | 25    | 0     | 0.07   |
 | Plextor   | PX-128M5S          | 128 GB | 3455BDC34212 | 25    | 0     | 0.07   |
+| Samsung   | SSD 870 EVO        | 500 GB | 81E7AC8D35B0 | 25    | 0     | 0.07   |
 | Samsung   | SSD 870 EVO        | 500 GB | F18172887C77 | 125   | 4     | 0.07   |
 | SanDisk   | SD8SBAT256G1122    | 256 GB | 70036F033B6E | 25    | 0     | 0.07   |
 | Kingston  | SV300S37A120G      | 120 GB | FF4381164FAC | 425   | 16    | 0.07   |
+| China     | 2000GB SSD         | 2 TB   | C2893F48B5BF | 25    | 0     | 0.07   |
 | Kingston  | SA400S37120G       | 120 GB | D7C98A5CC954 | 25    | 0     | 0.07   |
 | PNY       | CS900 120GB SSD    | 120 GB | 3AE56FEDCF71 | 25    | 0     | 0.07   |
 | Patriot   | P210               | 512 GB | 4D69F908F5F1 | 25    | 0     | 0.07   |
@@ -29126,14 +30367,17 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 365815D52F31 | 575   | 22    | 0.07   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 2DF738E1F584 | 25    | 0     | 0.07   |
 | Crucial   | CT525MX300SSD1     | 528 GB | F34F94F4F2D4 | 25    | 0     | 0.07   |
+| EVM       | 512GB SSD          | 512 GB | 27C713EDB933 | 25    | 0     | 0.07   |
 | Goodram   | SSDPR-CL100-240    | 240 GB | E7870EB19887 | 25    | 0     | 0.07   |
 | Kingston  | SA400S37120G       | 120 GB | CD1D4D951DB4 | 25    | 0     | 0.07   |
 | Lite-On   | LMH-256V2M-41 M... | 256 GB | 3D80ADD78753 | 25    | 0     | 0.07   |
 | Plextor   | PX-128M5M          | 128 GB | 9DDF98B1FD61 | 25    | 0     | 0.07   |
+| Samsung   | MZ7L3480HCHQ-00A07 | 480 GB | 5DFDA5463A84 | 25    | 0     | 0.07   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | CBDB9D5AA494 | 25    | 0     | 0.07   |
 | Corsair   | Force 3 SSD        | 64 GB  | 18F39333AE43 | 24    | 0     | 0.07   |
 | Intenso   | SSD Sata III       | 120 GB | FF074025905D | 24    | 0     | 0.07   |
 | KingDian  | S400               | 120 GB | 3A8764046B92 | 24    | 0     | 0.07   |
+| Kingston  | SA400S37240G       | 240 GB | E5AF7416B4BF | 24    | 0     | 0.07   |
 | Lite-On   | CV3-CE256-HP       | 256 GB | 872A31B8827D | 24    | 0     | 0.07   |
 | Lite-On   | CV5-8Q256          | 256 GB | 0FB1487E0F2C | 24    | 0     | 0.07   |
 | Samsung   | SSD 860 QVO        | 1 TB   | F981AA52E26F | 24    | 0     | 0.07   |
@@ -29163,6 +30407,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 3849A2E8E5AB | 99    | 3     | 0.07   |
 | China     | 120GB SSD          | 120 GB | 85E09B702FC2 | 24    | 0     | 0.07   |
 | China     | SSD 128G           | 128 GB | 43B6E44C9B4E | 24    | 0     | 0.07   |
+| SanDisk   | SDSSDH3512G        | 512 GB | B757B80A2A5B | 24    | 0     | 0.07   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | BE9173F42E91 | 24    | 0     | 0.07   |
 | Corsair   | CSSD-V32GB2        | 32 GB  | B4B4599A2B75 | 99    | 3     | 0.07   |
 | Apacer    | AS350              | 480 GB | 235B6853226A | 24    | 0     | 0.07   |
@@ -29196,6 +30441,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD Sata III       | 128 GB | 097EBF993FBD | 24    | 0     | 0.07   |
 | Kingston  | SA400S37120G       | 120 GB | E00D8B053F8E | 24    | 0     | 0.07   |
 | Kingston  | SKC300S37A120G     | 120 GB | 9930013B64AB | 24    | 0     | 0.07   |
+| Lite-On   | IT L8T-256L9G-HP   | 256 GB | 8681F29A9ACF | 24    | 0     | 0.07   |
 | Lite-On   | LMT-256L9M-11 M... | 256 GB | 24233CCD2A8F | 24    | 0     | 0.07   |
 | SPCC      | SSD                | 240 GB | 429A619C2246 | 24    | 0     | 0.07   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 2C5E2D45D4A8 | 24    | 0     | 0.07   |
@@ -29212,6 +30458,7 @@ MTBF - avg. MTBF in years per sample.
 | RAMOS     | SSD                | 256 GB | B484F24CB571 | 24    | 0     | 0.07   |
 | Samsung   | SSD 860 EVO        | 500 GB | 1B1EA515FBBB | 24    | 0     | 0.07   |
 | Samsung   | SSD 860 EVO        | 500 GB | D4CA107A2480 | 24    | 0     | 0.07   |
+| Transcend | TS256GSSD370S      | 256 GB | BB8ED6B59471 | 24    | 0     | 0.07   |
 | V-GeN     | V-GEN01SM21AR10... | 1 TB   | F2255F3A749A | 24    | 0     | 0.07   |
 | WDC       | WDS250G2B0A        | 250 GB | 8B0FEA659BE4 | 24    | 0     | 0.07   |
 | Kingston  | SV300S37A60G       | 64 GB  | 846FAF2E965C | 416   | 16    | 0.07   |
@@ -29255,6 +30502,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AST280             | 120 GB | 8645D961AF35 | 24    | 0     | 0.07   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 18C83E1F23A2 | 24    | 0     | 0.07   |
 | Samsung   | SSD 860 EVO        | 500 GB | 4F327009EAA4 | 24    | 0     | 0.07   |
+| Samsung   | SSD 860 EVO M.2    | 500 GB | E51A854F0B91 | 24    | 0     | 0.07   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | EBB948EA577C | 24    | 0     | 0.07   |
 | OCZ       | AGILITY3           | 64 GB  | BFDBF2B7B114 | 849   | 34    | 0.07   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 801C0824EFB1 | 266   | 10    | 0.07   |
@@ -29282,6 +30530,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 4B45E491B649 | 24    | 0     | 0.07   |
 | Kingston  | SA400S37480G       | 480 GB | 8F99D8A56CAD | 24    | 0     | 0.07   |
 | SK hynix  | SC401 SATA         | 512 GB | 389AF7AEB155 | 24    | 0     | 0.07   |
+| Samsung   | SSD 870 EVO        | 500 GB | DC3498BF3CEB | 24    | 0     | 0.07   |
 | SanDisk   | SSD PLUS           | 240 GB | FACA972FA297 | 24    | 0     | 0.07   |
 | SanDisk   | Z400s 2.5 7MM      | 128 GB | 1ABB8F92CBEA | 24    | 0     | 0.07   |
 | Toshiba   | Q300               | 480 GB | D07E3C6CA04C | 24    | 0     | 0.07   |
@@ -29309,6 +30558,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS64GMTS800        | 64 GB  | DAC4F450DFB0 | 24    | 0     | 0.07   |
 | ADATA     | SU800NS38          | 512 GB | FB2A5B933270 | 168   | 6     | 0.07   |
 | Apacer    | AS350              | 128 GB | 47361211485B | 24    | 0     | 0.07   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | D64151E17C68 | 24    | 0     | 0.07   |
 | Intel     | SSDSCKKF512G8 SATA | 512 GB | 1AEF69063491 | 24    | 0     | 0.07   |
 | KIOXIA... | SATA SSD           | 480 GB | 9451C8B5E08F | 24    | 0     | 0.07   |
 | Kingston  | SA400S37240G       | 240 GB | 49A23EF9B1B6 | 24    | 0     | 0.07   |
@@ -29364,6 +30614,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 480 GB | 845C777AB6A1 | 23    | 0     | 0.06   |
 | Plextor   | PX-128M6S          | 128 GB | 31C70773E161 | 23    | 0     | 0.06   |
 | Samsung   | SSD 850 EVO        | 250 GB | D95F6FF7C659 | 23    | 0     | 0.06   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | 981F106E2694 | 23    | 0     | 0.06   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 62ECA27CAB93 | 23    | 0     | 0.06   |
 | ADATA     | SU650              | 480 GB | 312FEAF81768 | 23    | 0     | 0.06   |
 | AMD       | R3SL120G           | 120 GB | 962AFFEFE585 | 23    | 0     | 0.06   |
@@ -29390,6 +30641,7 @@ MTBF - avg. MTBF in years per sample.
 | Teclast   | 256GB NS550-2242   | 256 GB | 1526943DA244 | 23    | 0     | 0.06   |
 | Transcend | TS120GMTS420S      | 120 GB | BEF4DB082919 | 23    | 0     | 0.06   |
 | ADATA     | SU750              | 256 GB | 1B0890D14696 | 23    | 0     | 0.06   |
+| Apacer    | AS350              | 512 GB | 9C133D77629C | 23    | 0     | 0.06   |
 | Crucial   | CT500MX500SSD1     | 500 GB | BF49C72C064B | 23    | 0     | 0.06   |
 | FORESEE   | 128GB SSD          | 128 GB | B7B8C04421E3 | 23    | 0     | 0.06   |
 | HP        | SSD S700           | 250 GB | 01F44A64FF9A | 23    | 0     | 0.06   |
@@ -29430,6 +30682,7 @@ MTBF - avg. MTBF in years per sample.
 | Teclast   | 360GB A850         | 360 GB | 708BDC4CCDB7 | 257   | 10    | 0.06   |
 | Transcend | TS256GSSD230S      | 256 GB | 069417E6BC41 | 117   | 4     | 0.06   |
 | Kingston  | SUV300S37A120G     | 120 GB | D7A1A9F2BDC1 | 257   | 10    | 0.06   |
+| ADATA     | SP600              | 32 GB  | B835A0C0E305 | 23    | 0     | 0.06   |
 | Lite-On   | CV1-8B128          | 128 GB | DCF960FB3081 | 23    | 0     | 0.06   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 402205F48951 | 23    | 0     | 0.06   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 684A34AF2841 | 23    | 0     | 0.06   |
@@ -29476,6 +30729,7 @@ MTBF - avg. MTBF in years per sample.
 | XrayDisk  | SSD                | 480 GB | 84CEFDF2EDA8 | 23    | 0     | 0.06   |
 | Intel     | SSDSCKKW240H6      | 240 GB | B49684C6BC64 | 46    | 1     | 0.06   |
 | Transcend | TS32GMSA310        | 32 GB  | C5B2C3D7626B | 46    | 1     | 0.06   |
+| Kingston  | SA400S37120G       | 120 GB | A25B6526D8A5 | 300   | 12    | 0.06   |
 | Crucial   | CT240BX500SSD1     | 240 GB | DF370BB1F70B | 23    | 0     | 0.06   |
 | Dogfish   | SSD                | 512 GB | 9FC2EA7D50E4 | 23    | 0     | 0.06   |
 | Kingston  | SA400S37480G       | 480 GB | 44EDCD0E3B55 | 23    | 0     | 0.06   |
@@ -29516,6 +30770,7 @@ MTBF - avg. MTBF in years per sample.
 | Smartbuy  | SSD                | 128 GB | D3052C5903F0 | 22    | 0     | 0.06   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 8208C26E7E85 | 22    | 0     | 0.06   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | F678149A7E08 | 22    | 0     | 0.06   |
+| Crucial   | CT240BX200SSD1     | 240 GB | E4892B21BBBD | 22    | 0     | 0.06   |
 | Crucial   | CT500MX500SSD1     | 500 GB | C822FA6F9C91 | 22    | 0     | 0.06   |
 | Kingston  | SA400M8120G        | 120 GB | D01E0D79A015 | 22    | 0     | 0.06   |
 | Samsung   | SSD 850 EVO mSATA  | 500 GB | 0C328A07A856 | 22    | 0     | 0.06   |
@@ -29540,6 +30795,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31480GNTD  | 480 GB | 44612BAEBFC0 | 22    | 0     | 0.06   |
 | Kingston  | SA400S37120G       | 120 GB | EF5AC9F9CED0 | 22    | 0     | 0.06   |
 | Kingston  | SA400S37120G       | 120 GB | F837C581A301 | 22    | 0     | 0.06   |
+| Kingston  | SA400S37240G       | 240 GB | 839D9F71CF59 | 22    | 0     | 0.06   |
 | PNY       | CS900 120GB SSD    | 120 GB | D5C86A0AC031 | 22    | 0     | 0.06   |
 | Samsung   | SSD 870 QVO        | 2 TB   | E566635977E8 | 22    | 0     | 0.06   |
 | SanDisk   | SDSSDA240G         | 240 GB | 03A3C77A352A | 22    | 0     | 0.06   |
@@ -29557,6 +30813,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | IT LCS-256L9S-HP   | 256 GB | 428116C85980 | 113   | 4     | 0.06   |
 | Apacer    | AS340              | 240 GB | E6A9FDFAB074 | 22    | 0     | 0.06   |
 | Intel     | SSDSC2KI128G8      | 128 GB | D1F6F675065E | 22    | 0     | 0.06   |
+| Intenso   | SSD SATAIII        | 240 GB | 9EBBCF0A84ED | 22    | 0     | 0.06   |
 | Kingston  | SUV300S37A120G     | 120 GB | D55CC6F127B7 | 22    | 0     | 0.06   |
 | Samsung   | SSD 850 EVO        | 250 GB | CC99DDC0FF8B | 22    | 0     | 0.06   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 1B72EB43154A | 22    | 0     | 0.06   |
@@ -29586,6 +30843,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 47561398D7F3 | 22    | 0     | 0.06   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 1E26871C608E | 22    | 0     | 0.06   |
 | e2e4      | SSD                | 120 GB | 11D966395833 | 22    | 0     | 0.06   |
+| Intel     | SSDSA2M160G2GC     | 160 GB | 27FFB09CEC15 | 203   | 8     | 0.06   |
 | Crucial   | CT128M550SSD3      | 128 GB | D545113E0B81 | 383   | 16    | 0.06   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 9AC6DDA14DF5 | 22    | 0     | 0.06   |
 | Samsung   | SSD 860 EVO        | 500 GB | B32B16D43770 | 22    | 0     | 0.06   |
@@ -29596,8 +30854,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | 480GBV500          | 480 GB | E8416FEF5272 | 22    | 0     | 0.06   |
 | Kingston  | SA400S37240G       | 240 GB | 6F3440401FD7 | 22    | 0     | 0.06   |
 | Kingston  | SA400S37240G       | 240 GB | 7DE89ED9E2A7 | 22    | 0     | 0.06   |
+| Kingston  | SA400S37480G       | 480 GB | DCFB0E4D7F33 | 22    | 0     | 0.06   |
 | PNY       | CS900 120GB SSD    | 120 GB | 449B92F51E23 | 22    | 0     | 0.06   |
 | Plextor   | PX-128M6V          | 128 GB | 8D4AF3B2FA1D | 22    | 0     | 0.06   |
+| SK hynix  | HFS256G39TND-N210A | 256 GB | 7B436FC54787 | 22    | 0     | 0.06   |
 | SanDisk   | SSD PLUS           | 120 GB | 4839668ADAF7 | 22    | 0     | 0.06   |
 | SanDisk   | SSD PLUS           | 2 TB   | 5F934EAB3658 | 22    | 0     | 0.06   |
 | SPCC      | SPCCSolidStateDisk | 128 GB | 37C188C8B0F9 | 292   | 12    | 0.06   |
@@ -29655,6 +30915,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLF128HCHP-00000 | 128 GB | AD497E6E3B0D | 22    | 0     | 0.06   |
 | Samsung   | SSD 850 EVO mSATA  | 500 GB | E625EE9BA012 | 22    | 0     | 0.06   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 6375F66FD070 | 22    | 0     | 0.06   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | A95DAF9C8F81 | 66    | 2     | 0.06   |
 | Kingston  | SA400S37480G       | 480 GB | 7DA9721B1642 | 22    | 0     | 0.06   |
 | Kingston  | SUV500MS120G       | 120 GB | FB8A8D6968AD | 22    | 0     | 0.06   |
 | Kingston  | SV300S37A120G      | 120 GB | 340FA57E3C5A | 22    | 0     | 0.06   |
@@ -29672,6 +30933,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 1816FDE7896F | 22    | 0     | 0.06   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 3262402A0BDE | 22    | 0     | 0.06   |
 | Foxline   | FLSSD480X5SE       | 480 GB | 5AB607236FE9 | 22    | 0     | 0.06   |
+| SPCC      | SSD                | 256 GB | FEEB5D573574 | 22    | 0     | 0.06   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | BE3C744FF54D | 22    | 0     | 0.06   |
 | e2e4      | SSD                | 120 GB | D27EF2820FF8 | 22    | 0     | 0.06   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 03114AD13F6D | 22    | 0     | 0.06   |
@@ -29685,6 +30947,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigastone | Prime Series       | 256 GB | C99FE4868B0E | 22    | 0     | 0.06   |
 | Samsung   | SSD 860 EVO        | 250 GB | E0B7E537EC81 | 22    | 0     | 0.06   |
 | Seagate   | BarraCuda Q1 SS... | 240 GB | 21E60AB58BF5 | 22    | 0     | 0.06   |
+| Team      | T2531TB            | 1 TB   | 5097F16D4F24 | 22    | 0     | 0.06   |
 | Crucial   | CT525MX300SSD1     | 528 GB | CA2C415203DB | 329   | 14    | 0.06   |
 | ADATA     | SSD S510           | 120 GB | 242D5BDEB707 | 153   | 6     | 0.06   |
 | Micron    | 1100 SATA          | 256 GB | 95B4A509BAD2 | 131   | 5     | 0.06   |
@@ -29711,6 +30974,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-128M6Pro        | 128 GB | D6D37B047BC2 | 21    | 0     | 0.06   |
 | Samsung   | SSD 860 EVO        | 250 GB | 9F7FE396A54A | 21    | 0     | 0.06   |
 | ADATA     | SU635              | 240 GB | 6FC43E3A0107 | 21    | 0     | 0.06   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 18145356FAED | 21    | 0     | 0.06   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 73C8974AEB56 | 21    | 0     | 0.06   |
 | Kingston  | SA400S37480G       | 480 GB | 74B0B0399DCE | 21    | 0     | 0.06   |
 | 2-Power   | SSD2042B           | 256 GB | BFAFD0A51BA0 | 21    | 0     | 0.06   |
@@ -29720,10 +30984,12 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS1T9G32FEH-BA10A | 1.9 TB | A04932DD6315 | 21    | 0     | 0.06   |
 | SK hynix  | HFS1T9G32FEH-BA10A | 1.9 TB | D17219A4C0A0 | 21    | 0     | 0.06   |
 | Samsung   | MZ7LN1T0HAJQ-00000 | 1 TB   | 52B3FBBD3BCB | 21    | 0     | 0.06   |
+| Samsung   | SSD 860 EVO        | 250 GB | 2BC998F15E01 | 21    | 0     | 0.06   |
 | Hikvision | HS-SSD-C100 240G   | 240 GB | 6A4FB50C7C77 | 21    | 0     | 0.06   |
 | Kingston  | OM8P0S3128B-A0     | 128 GB | C17CA547073A | 21    | 0     | 0.06   |
 | Kingston  | SA400S37960G       | 960 GB | FD6649125D74 | 21    | 0     | 0.06   |
 | Maximus   | SSD                | 128 GB | 588256BE4C25 | 21    | 0     | 0.06   |
+| Patriot   | Burst Elite        | 120 GB | EC708EFE9D47 | 21    | 0     | 0.06   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 62A25CF2B82E | 21    | 0     | 0.06   |
 | Silicon   | T60                | 64 GB  | 04829510E9A0 | 21    | 0     | 0.06   |
 | Smartbuy  | SSD                | 240 GB | 0EC342F51D21 | 21    | 0     | 0.06   |
@@ -29777,6 +31043,7 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM8PS7512G         | 512 GB | 2562BBAEB4E2 | 21    | 0     | 0.06   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 9A52DAAE55A4 | 21    | 0     | 0.06   |
 | ADATA     | SU800              | 2 TB   | 3502275A9963 | 21    | 0     | 0.06   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 43276D2A7D17 | 21    | 0     | 0.06   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 673ABB35EF56 | 21    | 0     | 0.06   |
 | Apacer    | 16GB SATA Flash... | 16 GB  | 6DA39BD91473 | 836   | 38    | 0.06   |
 | AFOX      | SSD SD250-1000GB   | 1 TB   | 2E4212259BCB | 21    | 0     | 0.06   |
@@ -29805,6 +31072,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 7CAA9CE8A00C | 21    | 0     | 0.06   |
 | Kingston  | SA400S37240G       | 240 GB | 2939C765D920 | 21    | 0     | 0.06   |
 | Kingston  | SA400S37480G       | 480 GB | EDC5094E2C37 | 21    | 0     | 0.06   |
+| Kingston  | SA400S37960G       | 960 GB | C33EB225FF34 | 21    | 0     | 0.06   |
 | Lite-On   | L8H-256V2G         | 256 GB | 5CC71842D2C8 | 21    | 0     | 0.06   |
 | Plextor   | PX-128M6S          | 128 GB | C6D4D0F17ACF | 21    | 0     | 0.06   |
 | SanDisk   | SD8SNAT-128G-1006  | 128 GB | D62387EE0C29 | 21    | 0     | 0.06   |
@@ -29823,6 +31091,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSCKKF256H6 SATA | 256 GB | 82C97F85D3EB | 21    | 0     | 0.06   |
 | ADATA     | SU630              | 240 GB | 1613B8EBDEC8 | 21    | 0     | 0.06   |
 | China     | SATA SSD           | 120 GB | 12166FB7CACD | 21    | 0     | 0.06   |
+| China     | SATA SSD           | 16 GB  | 12EBD02D2595 | 21    | 0     | 0.06   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5F9557E7FF72 | 21    | 0     | 0.06   |
 | KingFast  | SSD                | 128 GB | A049D73B452F | 21    | 0     | 0.06   |
 | Kingston  | SA400S37240G       | 240 GB | 4F1D747D8C49 | 21    | 0     | 0.06   |
@@ -29853,6 +31122,8 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | A97E32FCB251 | 21    | 0     | 0.06   |
 | SK hynix  | HFS256G32MND-2200A | 256 GB | 717C33148D54 | 189   | 8     | 0.06   |
 | Crucial   | CT120M500SSD1      | 120 GB | 3660D0B61033 | 358   | 16    | 0.06   |
+| ADATA     | SU650              | 120 GB | 9EF080291ED3 | 21    | 0     | 0.06   |
+| ADATA     | SU800              | 256 GB | E7526655E7BC | 21    | 0     | 0.06   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | B5954E2FB1AB | 21    | 0     | 0.06   |
 | Crucial   | CT500MX500SSD1     | 500 GB | C0C61E426971 | 21    | 0     | 0.06   |
 | Kingston  | SA400S37240G       | 240 GB | 7CAAF565670D | 21    | 0     | 0.06   |
@@ -29873,6 +31144,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BW120A4      | 120 GB | 4F17E51A136D | 21    | 0     | 0.06   |
 | Kingston  | SA400S37480G       | 480 GB | 8323ABE31FA3 | 21    | 0     | 0.06   |
 | Patriot   | Burst              | 120 GB | 772879E847E6 | 21    | 0     | 0.06   |
+| China     | SSD                | 256 GB | 0D6A780D5AD9 | 125   | 5     | 0.06   |
 | ADATA     | SU800              | 1 TB   | 1227BE18469A | 20    | 0     | 0.06   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 2AED8556C8CF | 20    | 0     | 0.06   |
 | Netac     | SSD                | 256 GB | DAF1FC274F95 | 20    | 0     | 0.06   |
@@ -29897,6 +31169,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV500240G         | 240 GB | 0C9FBA6950D1 | 20    | 0     | 0.06   |
 | OCZ       | AGILITY3           | 64 GB  | 246BE9816A18 | 20    | 0     | 0.06   |
 | Plextor   | PX-128M6M          | 128 GB | 89505C09BF43 | 20    | 0     | 0.06   |
+| SanDisk   | SSD i110           | 128 GB | 52D41C78047D | 20    | 0     | 0.06   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | C9CF0A628D56 | 20    | 0     | 0.06   |
 | ADATA     | SU655              | 240 GB | 1663D2F26FF8 | 20    | 0     | 0.06   |
 | Crucial   | CT500MX500SSD4     | 500 GB | 6B360F93D60C | 20    | 0     | 0.06   |
@@ -29936,12 +31209,14 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | A403C8D7B1A0 | 20    | 0     | 0.06   |
 | GHIA      | GM2256G            | 256 GB | 3218BFC52D7A | 20    | 0     | 0.06   |
 | Goldkey   | GKH84-256GB        | 256 GB | AAF82F85BF16 | 20    | 0     | 0.06   |
+| KIOXIA... | SATA SSD           | 480 GB | 1423F9167728 | 20    | 0     | 0.06   |
 | KingFast  | SSD                | 256 GB | C0B3B83C3352 | 20    | 0     | 0.06   |
 | Kingston  | SA400S37240G       | 240 GB | 4D8906A62D86 | 20    | 0     | 0.06   |
 | Mushkin   | MKNSSDS21TB        | 1 TB   | E9A8EBE2FFA0 | 20    | 0     | 0.06   |
 | Samsung   | SSD 860 EVO        | 500 GB | F48B7835BBCB | 20    | 0     | 0.06   |
 | Smartbuy  | SSD                | 64 GB  | F60F70F0EE03 | 20    | 0     | 0.06   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | CC80928363B1 | 20    | 0     | 0.06   |
+| Verbatim  | Vi550 S3           | 256 GB | 29CCE58C56D9 | 20    | 0     | 0.06   |
 | ADATA     | IM2S3338-128GD2    | 128 GB | 6FC559DFC4C2 | 20    | 0     | 0.06   |
 | Crucial   | CT500MX500SSD1     | 500 GB | E70D7510A4B6 | 20    | 0     | 0.06   |
 | Intel     | SSDSC2CT180A3      | 180 GB | D85E5043C090 | 20    | 0     | 0.06   |
@@ -29952,6 +31227,7 @@ MTBF - avg. MTBF in years per sample.
 | Netac     | SSD                | 480 GB | 505B00C36A51 | 20    | 0     | 0.06   |
 | Samsung   | SSD 850 EVO        | 500 GB | EB2AF53FA27D | 20    | 0     | 0.06   |
 | SanDisk   | SSD PLUS           | 120 GB | 6706D25FBBE9 | 20    | 0     | 0.06   |
+| Toshiba   | THNSNS064GMCP      | 64 GB  | 8D4FB8E34840 | 20    | 0     | 0.06   |
 | China     | SSD                | 96 GB  | 9C038CE18201 | 20    | 0     | 0.06   |
 | Crucial   | CT250MX500SSD4     | 250 GB | 19163A269808 | 20    | 0     | 0.06   |
 | KINGBANK  | KP320              | 128 GB | D2F9A9FB2298 | 20    | 0     | 0.06   |
@@ -29981,6 +31257,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 7C8308169258 | 61    | 2     | 0.06   |
 | PNY       | CS900 120GB SSD    | 120 GB | 602F7F1BE585 | 20    | 0     | 0.06   |
 | Patriot   | Burst              | 120 GB | 5EF9890D09ED | 20    | 0     | 0.06   |
+| SanDisk   | SDSSDH3 1T02       | 1 TB   | 945FAA49AEF4 | 20    | 0     | 0.06   |
 | Team      | T253X1240G         | 240 GB | 54D0C1255E32 | 20    | 0     | 0.06   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 351623D141C5 | 20    | 0     | 0.06   |
 | Intel     | SSDSC2KR120H6      | 120 GB | 321044AB051F | 20    | 0     | 0.06   |
@@ -29998,6 +31275,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNTY128HDHP-000H1 | 128 GB | 9831DBC36523 | 20    | 0     | 0.06   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 8630E1C1E661 | 20    | 0     | 0.06   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 127D7AD774F7 | 40    | 1     | 0.06   |
+| ACOS      | AS-512             | 512 GB | 535BAB71EE77 | 81    | 3     | 0.06   |
+| China     | NGFF 2280 256GB... | 256 GB | 54FB13DC605D | 20    | 0     | 0.06   |
+| Kingston  | SA400S37240G       | 240 GB | B5A37CBE0370 | 20    | 0     | 0.06   |
 | Patriot   | Burst Elite        | 240 GB | DA98EDF77CB3 | 60    | 2     | 0.06   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 8D60BADBA454 | 20    | 0     | 0.06   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 3D2A442B236D | 20    | 0     | 0.06   |
@@ -30115,6 +31395,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Blast              | 120 GB | 67FF484C62A7 | 19    | 0     | 0.05   |
 | SanDisk   | pSSD               | 64 GB  | 42175D12548D | 19    | 0     | 0.05   |
 | Transcend | TS32GHSD370        | 32 GB  | 8E3C8D25C7D7 | 19    | 0     | 0.05   |
+| WDC       | WDS100T2B0B        | 1 TB   | 37327E082440 | 19    | 0     | 0.05   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 08E5FBD0A33A | 19    | 0     | 0.05   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | D82DA656BE29 | 19    | 0     | 0.05   |
 | ADATA     | SSD                | 32 GB  | 4350412E22AC | 334   | 16    | 0.05   |
@@ -30131,6 +31412,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMS200S360G        | 64 GB  | D84EE30C7A13 | 1668  | 84    | 0.05   |
 | Samsung   | SSD 870 EVO        | 500 GB | 2752EE36CE10 | 215   | 10    | 0.05   |
 | DUEX      | DX300256A5xnEMLC   | 256 GB | F7019F37A8D8 | 1077  | 54    | 0.05   |
+| ADATA     | SU800              | 512 GB | A1D071EDD0F8 | 19    | 0     | 0.05   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 1F687F67578C | 19    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | DD9ECB0B586C | 19    | 0     | 0.05   |
 | Lite-On   | L8H-256V2G-HP      | 256 GB | 1DC66C89F805 | 19    | 0     | 0.05   |
@@ -30140,6 +31422,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP580              | 120 GB | 24FCFD208B29 | 19    | 0     | 0.05   |
 | Force Le  | 200                | 240 GB | 8FA76DCD102A | 19    | 0     | 0.05   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 5E0B8D1D95B8 | 19    | 0     | 0.05   |
+| Kingston  | 120GBV500          | 120 GB | 6AF285E1410E | 19    | 0     | 0.05   |
 | Kingston  | SUV400S37120G      | 120 GB | C9550DD0B96A | 19    | 0     | 0.05   |
 | OCZ       | VERTEX4            | 64 GB  | 401261AD3DC3 | 19    | 0     | 0.05   |
 | SanDisk   | SDSSDA120G         | 120 GB | DD1337B3C136 | 19    | 0     | 0.05   |
@@ -30199,10 +31482,13 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD                | 128 GB | 4B39378AFBBC | 19    | 0     | 0.05   |
 | Micron    | MTFDDAK1T0TBN-1... | 1 TB   | 0082BFD0D093 | 19    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 500 GB | EEEE8E21F12C | 19    | 0     | 0.05   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 35071A17A909 | 172   | 8     | 0.05   |
 | SanDisk   | SSD PLUS           | 240 GB | DD49F67CC99E | 19    | 0     | 0.05   |
+| SanDisk   | SSD PLUS           | 480 GB | AA3F2FD51CE2 | 19    | 0     | 0.05   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 3CF30F727B76 | 19    | 0     | 0.05   |
 | China     | SSD                | 120 GB | 0757BAD023F3 | 19    | 0     | 0.05   |
 | Hikvision | HS-SSD-C100 240G   | 240 GB | EC5E75E5528B | 19    | 0     | 0.05   |
+| Intenso   | SSD Sata III       | 1 TB   | C44D41F4D3BE | 19    | 0     | 0.05   |
 | Kingmax   | SSD                | 120 GB | 351F8D0EC53E | 19    | 0     | 0.05   |
 | Kingston  | SA400M8240G        | 240 GB | EC7149BC3B56 | 19    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | 36FF4D251CA4 | 19    | 0     | 0.05   |
@@ -30221,14 +31507,18 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8P0S3256B-A0     | 256 GB | 671DAF84919F | 19    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | 5C35FFA81B48 | 19    | 0     | 0.05   |
 | Kingston  | SA400S37960G       | 960 GB | DEC6C614A48B | 19    | 0     | 0.05   |
+| Netac     | SSD                | 1 TB   | 493A9E5EC91E | 19    | 0     | 0.05   |
+| Phison    | S11-512G-PHISON... | 512 GB | B37BE91E9738 | 19    | 0     | 0.05   |
 | SanDisk   | SSD PLUS           | 120 GB | 6F4FDCB41169 | 19    | 0     | 0.05   |
 | SanDisk   | SSD PLUS           | 2 TB   | 5D24DCBA19F6 | 19    | 0     | 0.05   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 2972F40C01D5 | 19    | 0     | 0.05   |
 | Samsung   | SSD 850 PRO        | 2 TB   | D4D44CAF68E3 | 837   | 43    | 0.05   |
 | ADATA     | SP550              | 120 GB | E8DC70D67A01 | 19    | 0     | 0.05   |
 | Apacer    | AS350              | 256 GB | F931C2A8839A | 19    | 0     | 0.05   |
+| Crucial   | CT240BX500SSD1     | 240 GB | FD95340CB32A | 19    | 0     | 0.05   |
 | Dogfish   | SSD                | 128 GB | A2CAEEA3F014 | 19    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | 164A659A2574 | 19    | 0     | 0.05   |
+| Kingston  | SV300S37A120G      | 120 GB | 855EA6E3D49A | 19    | 0     | 0.05   |
 | Qumo      | SSD                | 240 GB | 5FF02AC29194 | 19    | 0     | 0.05   |
 | Samsung   | MZNLN256HAJQ-000L7 | 256 GB | 003CCB671E05 | 19    | 0     | 0.05   |
 | Samsung   | SSD 850 EVO        | 250 GB | F46A1581B766 | 19    | 0     | 0.05   |
@@ -30260,7 +31550,9 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | B69585EBD578 | 18    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | D7D9290709FA | 131   | 6     | 0.05   |
 | Crucial   | CT240BX500SSD1     | 240 GB | A97BB3DE9D9C | 18    | 0     | 0.05   |
+| Crucial   | CT250MX500SSD4     | 250 GB | A7740F4349D2 | 18    | 0     | 0.05   |
 | Kingston  | SA400S37120G       | 120 GB | 85022F3895D1 | 18    | 0     | 0.05   |
+| Samsung   | SSD 870 QVO        | 2 TB   | 253436E6BCF8 | 18    | 0     | 0.05   |
 | Transcend | TS32GMTS800        | 32 GB  | FC255D0D3FF8 | 18    | 0     | 0.05   |
 | Samsung   | SSD 840 EVO        | 120 GB | 39B515EB81E8 | 169   | 8     | 0.05   |
 | ADATA     | SP920SS            | 128 GB | 6A64282EC4C5 | 319   | 16    | 0.05   |
@@ -30321,7 +31613,9 @@ MTBF - avg. MTBF in years per sample.
 | VISIPRO   | SDVPSA1910256      | 256 GB | AA93766B9AED | 18    | 0     | 0.05   |
 | China     | SATA SSD           | 128 GB | B039DC0842AA | 18    | 0     | 0.05   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 69343A957B18 | 18    | 0     | 0.05   |
+| KODAK     | SSD X120 120G      | 120 GB | 139E40D1769B | 18    | 0     | 0.05   |
 | Plextor   | PX-256M8VC         | 256 GB | 4480D87FDADC | 18    | 0     | 0.05   |
+| Samsung   | SSD 840 EVO        | 120 GB | C91B13B55951 | 18    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 250 GB | B465AB0A72F5 | 18    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 250 GB | DE68C0F0E392 | 18    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 500 GB | 291D2A8C8A49 | 18    | 0     | 0.05   |
@@ -30333,6 +31627,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 240GB SSD    | 240 GB | F90092891D6C | 18    | 0     | 0.05   |
 | Samsung   | Portable SSD T5    | 1 TB   | 441F09E80B9D | 18    | 0     | 0.05   |
 | Samsung   | SSD 850 EVO        | 250 GB | 5B4A86033ECB | 18    | 0     | 0.05   |
+| SanDisk   | SDSSDA120G         | 120 GB | 28EAAC8D8E84 | 18    | 0     | 0.05   |
 | XrayDisk  | SSD                | 128 GB | 882581B223B5 | 18    | 0     | 0.05   |
 | Kingston  | SV300S37A120G      | 120 GB | 3B7C4112435B | 92    | 4     | 0.05   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 4D55B1B0B867 | 460   | 24    | 0.05   |
@@ -30347,13 +31642,16 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 128 GB | CC4433A41C48 | 18    | 0     | 0.05   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 4F8EFEAAB97A | 18    | 0     | 0.05   |
 | Crucial   | CT500BX100SSD1     | 500 GB | 793F378F561B | 18    | 0     | 0.05   |
+| Kingston  | SUV300S37A120G     | 120 GB | 0FE2DB7EB464 | 18    | 0     | 0.05   |
 | Netac     | SSD                | 512 GB | 84C659F83815 | 18    | 0     | 0.05   |
 | Patriot   | Burst              | 240 GB | DEA8371B7609 | 18    | 0     | 0.05   |
+| XrayDisk  | 256GB SSD          | 256 GB | FA7D361CDE89 | 18    | 0     | 0.05   |
 | Kingston  | SUV400S37480G      | 480 GB | 8302ED02DC83 | 55    | 2     | 0.05   |
 | Apacer    | AS350              | 128 GB | E4432FDBCF7C | 18    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | 49DF15686D80 | 18    | 0     | 0.05   |
 | Kingston  | SHFS37A240G        | 240 GB | DFE60E455C16 | 18    | 0     | 0.05   |
 | Patriot   | Memory 32GB PAT... | 32 GB  | 05EC8ADA106F | 18    | 0     | 0.05   |
+| SCY       | SNM4BBG12800D      | 128 GB | 693E0A081856 | 18    | 0     | 0.05   |
 | Samsung   | SSD 860 PRO        | 1 TB   | 15F84361BE28 | 18    | 0     | 0.05   |
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | 46B74519220F | 73    | 3     | 0.05   |
 | SanDisk   | SSD PLUS           | 1 TB   | 92899FDEAE77 | 18    | 0     | 0.05   |
@@ -30368,6 +31666,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SATA SSD           | 960 GB | 105BD0907D8C | 18    | 0     | 0.05   |
 | SanDisk   | SSD PLUS           | 480 GB | 8309D9751D85 | 18    | 0     | 0.05   |
 | WDC       | WDS500G2B0A        | 500 GB | CAB12B8AA306 | 18    | 0     | 0.05   |
+| XrayDisk  | SSD                | 120 GB | 09B9F7B55455 | 18    | 0     | 0.05   |
 | ADATA     | SU650              | 120 GB | E5AB105994BC | 18    | 0     | 0.05   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | BCB93E442BE3 | 18    | 0     | 0.05   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 209A3F1CE819 | 18    | 0     | 0.05   |
@@ -30387,6 +31686,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | TRION150           | 240 GB | DBC8DB37C2C9 | 18    | 0     | 0.05   |
 | WALRAM    | SSD                | 256 GB | F0964FC03A3C | 18    | 0     | 0.05   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 16F76BB33DC5 | 18    | 0     | 0.05   |
+| PNY       | CS900 240GB SSD    | 240 GB | AB6E447E2E6C | 18    | 0     | 0.05   |
 | Samsung   | SSD 850 PRO        | 256 GB | 82613443E71E | 18    | 0     | 0.05   |
 | ADATA     | SU800              | 512 GB | 4B64EF5B68FE | 36    | 1     | 0.05   |
 | Crucial   | CT240M500SSD1      | 240 GB | 276341D93E1C | 308   | 16    | 0.05   |
@@ -30397,6 +31697,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 120GB SSD    | 120 GB | 64F4C51DBB2B | 18    | 0     | 0.05   |
 | SanDisk   | SDSSDA120G         | 120 GB | 9045F29D27B9 | 18    | 0     | 0.05   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 7E46FEBF612A | 18    | 0     | 0.05   |
+| XrayDisk  | 2TB SSD            | 2 TB   | F09E5836E421 | 18    | 0     | 0.05   |
 | Crucial   | CT120BX500SSD1     | 120 GB | E0BE154DE124 | 18    | 0     | 0.05   |
 | Crucial   | CT240BX500SSD1     | 240 GB | F617DAFF2A0F | 18    | 0     | 0.05   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 2FCFFA49CAE6 | 18    | 0     | 0.05   |
@@ -30446,6 +31747,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 120GB SSD    | 120 GB | 125640C6AC73 | 17    | 0     | 0.05   |
 | PNY       | CS900 120GB SSD    | 120 GB | EB305863E0AA | 17    | 0     | 0.05   |
 | Samsung   | MZNLN256HAJQ-00000 | 256 GB | 1C5CD3BF8C44 | 17    | 0     | 0.05   |
+| Samsung   | PM881 SATA         | 512 GB | 92988B940D23 | 17    | 0     | 0.05   |
 | SanDisk   | SD8SNAT256G1002    | 256 GB | DB44606C85EC | 17    | 0     | 0.05   |
 | SanDisk   | SSD PLUS           | 240 GB | 08CAC3FB839D | 17    | 0     | 0.05   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 0B0A30D48A47 | 17    | 0     | 0.05   |
@@ -30469,28 +31771,34 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS128GSSD370S      | 128 GB | AA71ACFBF2EB | 17    | 0     | 0.05   |
 | WDC       | WDBNCE5000PNC      | 500 GB | 376C965650E2 | 17    | 0     | 0.05   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 14259F3B68B6 | 17    | 0     | 0.05   |
+| Yeestor   | SSD                | 512 GB | 23CD2F909E32 | 17    | 0     | 0.05   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 13CECC2473E6 | 391   | 21    | 0.05   |
 | ADATA     | SU650              | 120 GB | 95375F883B15 | 17    | 0     | 0.05   |
 | Crucial   | CT500MX500SSD4     | 500 GB | 0D62A18613DA | 17    | 0     | 0.05   |
 | Kingston  | SA400S37960G       | 960 GB | 80BC75A3E255 | 17    | 0     | 0.05   |
 | Micron    | 1100 SATA          | 256 GB | 4C83E9FED9D4 | 17    | 0     | 0.05   |
 | Samsung   | SSD 750 EVO        | 120 GB | D35A224786AD | 17    | 0     | 0.05   |
+| Smartbuy  | SSD                | 120 GB | 2CFD47C559D2 | 17    | 0     | 0.05   |
+| KingSpec  | NT-256             | 256 GB | B1AE918C1380 | 124   | 6     | 0.05   |
 | Intel     | SSDSCKJF180A5H ... | 180 GB | BA6E1DEBE382 | 88    | 4     | 0.05   |
 | Micron    | MTFDDAK256MAY-1... | 256 GB | F7E61AA9AA89 | 301   | 16    | 0.05   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5DAD5A4929AC | 17    | 0     | 0.05   |
 | Intel     | SSDSC2BW240H6      | 240 GB | A5FC6435206A | 17    | 0     | 0.05   |
 | KingSpec  | T-64               | 64 GB  | 755E3A3C796C | 17    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 5A1C3329E9BF | 17    | 0     | 0.05   |
+| Samsung   | SSD 870 EVO        | 500 GB | B37821E25FC7 | 17    | 0     | 0.05   |
 | Yeyian    | VALK 1000          | 120 GB | 2F9A58C31375 | 17    | 0     | 0.05   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 42847EC0FD83 | 159   | 8     | 0.05   |
 | Crucial   | CT960BX500SSD1     | 960 GB | 62E28D0D7B07 | 17    | 0     | 0.05   |
 | Gigabyte  | GP-GSTFS31960GN... | 960 GB | 8DE92FCD5619 | 17    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | FF280039EEBA | 17    | 0     | 0.05   |
+| Leven     | JAJS600M1024C      | 1 TB   | C64455A9BF66 | 17    | 0     | 0.05   |
 | SanDisk   | SD6PP4M-256G-1006  | 256 GB | C13EA6C67FB5 | 17    | 0     | 0.05   |
 | Toshiba   | TR200              | 480 GB | 2DC5CCDBC71A | 17    | 0     | 0.05   |
 | Crucial   | CT500BX100SSD1     | 500 GB | 17221739F1AF | 17    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | 3202B6B253A4 | 17    | 0     | 0.05   |
 | Lite-On   | IT LCS-128L9S-HP   | 128 GB | 49B43D0CF5C9 | 17    | 0     | 0.05   |
+| QUMO      | Q3DT-240GSCY       | 240 GB | D00B724AF3B5 | 17    | 0     | 0.05   |
 | SPCC      | SSD                | 240 GB | 886C197862DC | 17    | 0     | 0.05   |
 | Samsung   | SSD 850 EVO        | 250 GB | 34A4A46501BE | 17    | 0     | 0.05   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 3E51961F86F1 | 17    | 0     | 0.05   |
@@ -30524,6 +31832,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU700              | 120 GB | F8A4E96376F5 | 157   | 8     | 0.05   |
 | China     | 60GB SSD           | 64 GB  | 66902C76F4E0 | 17    | 0     | 0.05   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 573518F88E4F | 17    | 0     | 0.05   |
+| Kingston  | SA400S37240G       | 240 GB | 18605224DA9A | 17    | 0     | 0.05   |
 | Kingston  | SA400S37480G       | 480 GB | 3B4E23108C05 | 52    | 2     | 0.05   |
 | Plextor   | PX-128M5Pro        | 128 GB | 0ED4BFEA8AD7 | 17    | 0     | 0.05   |
 | Samsung   | SSD 840 EVO        | 250 GB | D2B82128477E | 17    | 0     | 0.05   |
@@ -30548,6 +31857,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 839B5D2D3209 | 17    | 0     | 0.05   |
 | SanDisk   | SD6SB1M128G1001    | 128 GB | 0518307236AB | 17    | 0     | 0.05   |
 | SanDisk   | SSD PLUS           | 240 GB | 6BF1F2DC8CFA | 17    | 0     | 0.05   |
+| SanDisk   | WD Green 2.5       | 1 TB   | 20CEAA350BE1 | 17    | 0     | 0.05   |
 | ADATA     | SP900              | 64 GB  | 9DD98A064703 | 86    | 4     | 0.05   |
 | China     | SSD                | 120 GB | 06D9F9EDAEE5 | 17    | 0     | 0.05   |
 | Dell      | WR202KD032G E70... | 32 GB  | 884C27875E68 | 17    | 0     | 0.05   |
@@ -30557,6 +31867,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 240 GB | 10AD9EC482DE | 17    | 0     | 0.05   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 0BEEA7E09C84 | 17    | 0     | 0.05   |
 | WDC       | WDS250G2B0B        | 250 GB | 818A601432D4 | 17    | 0     | 0.05   |
+| ADATA     | SU650              | 240 GB | E969F8707EAF | 17    | 0     | 0.05   |
 | Apple     | SSD SD0128F        | 121 GB | CDA219E9C77A | 17    | 0     | 0.05   |
 | Crucial   | CT250MX500SSD4     | 250 GB | CEBCE3FC5600 | 17    | 0     | 0.05   |
 | KingSpec  | NT-256             | 256 GB | 236D49B2E0DC | 17    | 0     | 0.05   |
@@ -30581,6 +31892,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN512HCJH-000L1 | 512 GB | A29021BDD42A | 17    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 250 GB | 60348C2AA615 | 17    | 0     | 0.05   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 1CC1C3E07807 | 17    | 0     | 0.05   |
+| Apacer    | AS340              | 120 GB | 3B23830B6163 | 17    | 0     | 0.05   |
 | Apacer    | AS340              | 240 GB | A24E05880F52 | 17    | 0     | 0.05   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 25453C8FC1B0 | 17    | 0     | 0.05   |
 | Intel     | SSDSA2BW160G3H     | 160 GB | AF8163BE159A | 17    | 0     | 0.05   |
@@ -30633,6 +31945,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 870E2EFC61DF | 220   | 12    | 0.05   |
 | BIWIN     | SSD                | 512 GB | EDEC14174E97 | 16    | 0     | 0.05   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | EE7BC7AF8C3B | 16    | 0     | 0.05   |
+| Fanxiang  | S101               | 2 TB   | 325BD5D3BF18 | 16    | 0     | 0.05   |
 | Goodram   | SSDPR-CL100-480-G3 | 480 GB | 9583007CFE28 | 16    | 0     | 0.05   |
 | Samsung   | MZNLN128HAHQ-000H1 | 128 GB | F71CD4DA5645 | 16    | 0     | 0.05   |
 | Samsung   | SSD 860 EVO        | 250 GB | EBB01BC19200 | 16    | 0     | 0.05   |
@@ -30644,6 +31957,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | FF164868C082 | 16    | 0     | 0.05   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | 3FE9E3E57C6D | 16    | 0     | 0.05   |
 | Transcend | TS128GSSD360S      | 128 GB | 5E3A0BC92FA2 | 16    | 0     | 0.05   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 95C8484EE694 | 16    | 0     | 0.05   |
 | Intenso   | SSD Sata III       | 120 GB | 607AB6C51C3A | 16    | 0     | 0.05   |
 | KingDian  | S280               | 240 GB | BB8BB2C79007 | 16    | 0     | 0.05   |
 | Netac     | SSD                | 256 GB | 84B7F320BA89 | 16    | 0     | 0.05   |
@@ -30682,6 +31996,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD i100           | 24 GB  | 2DBF3489A220 | 16    | 0     | 0.05   |
 | Intel     | SSDSCKKF512H6 SATA | 512 GB | F0F779D99B10 | 249   | 14    | 0.05   |
 | ADATA     | SU650              | 120 GB | D146B736E838 | 16    | 0     | 0.05   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 55EBF3F7418E | 16    | 0     | 0.05   |
 | Kingston  | SA400S37240G       | 240 GB | 30ABFBDF2AF5 | 16    | 0     | 0.05   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | E99BDBF7B5D3 | 16    | 0     | 0.05   |
 | Netac     | SSD                | 256 GB | 93386FDBA425 | 16    | 0     | 0.05   |
@@ -30785,8 +32100,10 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | BarraCuda 120 S... | 250 GB | 9F46F2729D53 | 16    | 0     | 0.04   |
 | AXIOMTEK  | FSA128GMC2T        | 128 GB | F2499AD6AD87 | 16    | 0     | 0.04   |
 | Crucial   | CT275MX300SSD1     | 275 GB | FDBE5B2582E3 | 16    | 0     | 0.04   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 0AE24E2C21B6 | 16    | 0     | 0.04   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 75DA4AC4E316 | 16    | 0     | 0.04   |
 | Intel     | SSDMCEAW080A4      | 80 GB  | C87EC15557E5 | 16    | 0     | 0.04   |
+| Intenso   | SSD                | 250 GB | 0BCCC074EA11 | 16    | 0     | 0.04   |
 | Kingston  | SA400S37120G       | 120 GB | B491D7CC12E5 | 16    | 0     | 0.04   |
 | Lite-On   | CV1-8B256-HP       | 256 GB | 488E620AA87B | 16    | 0     | 0.04   |
 | PNY       | CS900 480GB SSD    | 480 GB | 5A0A6D474859 | 16    | 0     | 0.04   |
@@ -30802,10 +32119,12 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LMH-128V2M-11 M... | 128 GB | 72B1DE71784B | 16    | 0     | 0.04   |
 | XUM       | HX240GSSDSATA3     | 240 GB | A5992199C85D | 16    | 0     | 0.04   |
 | OCZ       | VERTEX3            | 256 GB | 307FC73B7AF3 | 533   | 32    | 0.04   |
+| Kingrich  | SSD                | 128 GB | F46D217B22C8 | 16    | 0     | 0.04   |
 | Kingston  | SA400S37240G       | 240 GB | 668A5FFD02D4 | 16    | 0     | 0.04   |
 | Lite-On   | LMH-256V2M-11 M... | 256 GB | 6C6824F4A286 | 16    | 0     | 0.04   |
 | Toshiba   | KSG60ZMV256G       | 256 GB | 1EFDE1004CC5 | 16    | 0     | 0.04   |
 | Transcend | TS64GSSD25S-M      | 64 GB  | 2DB4C6F3470B | 16    | 0     | 0.04   |
+| UMAX      | 2242               | 512 GB | DB357AC574FC | 16    | 0     | 0.04   |
 | Micron    | 1100 SATA          | 256 GB | C9A98866961B | 48    | 2     | 0.04   |
 | ADATA     | SU630              | 240 GB | FFD6AB347F46 | 16    | 0     | 0.04   |
 | Apacer    | AS350              | 128 GB | 8730E57B6C63 | 16    | 0     | 0.04   |
@@ -30828,6 +32147,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 54196B7FC3D3 | 16    | 0     | 0.04   |
 | Apple     | SSD SM256E         | 256 GB | DA0B89B7AD26 | 15    | 0     | 0.04   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 3FAD485EFCC8 | 15    | 0     | 0.04   |
+| Goodram   | SSDPR-CL100-120-G3 | 120 GB | CE8AC7359367 | 15    | 0     | 0.04   |
 | Kingston  | SA400S37120G       | 120 GB | CAE355606DBD | 15    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | 1C3A2D43AAB4 | 15    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | D69101E82695 | 15    | 0     | 0.04   |
@@ -30868,6 +32188,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLN256HAJQ-00000 | 256 GB | EBCF28B7CD9F | 15    | 0     | 0.04   |
 | Samsung   | MZNLN256HAJQ-000L7 | 256 GB | EEFDF235D2D1 | 15    | 0     | 0.04   |
 | Samsung   | SSD 870 QVO        | 1 TB   | C2CBFFC0C7AC | 15    | 0     | 0.04   |
+| WDC       | WDBNCE5000PNC      | 500 GB | 7773107E7E4B | 15    | 0     | 0.04   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | C50A3D012F52 | 15    | 0     | 0.04   |
 | SanDisk   | iSSD P4            | 8 GB   | 86810A8D9F7C | 380   | 23    | 0.04   |
 | Innodisk  | 2.5" SATA SSD 3ME4 | 128 GB | F085BDD2748F | 15    | 0     | 0.04   |
@@ -30891,14 +32212,17 @@ MTBF - avg. MTBF in years per sample.
 | HP        | SSD S700           | 250 GB | 3F473A66A1F0 | 15    | 0     | 0.04   |
 | Patriot   | P210               | 256 GB | 9AD2855CDE38 | 15    | 0     | 0.04   |
 | Samsung   | SSD 840 PRO Series | 128 GB | A09FEA21792C | 15    | 0     | 0.04   |
+| SanDisk   | SSD PLUS           | 240 GB | 33CF2BF1B96E | 15    | 0     | 0.04   |
 | AFOX      | SSD                | 500 GB | E546ED03E9C1 | 15    | 0     | 0.04   |
 | China     | NGFF 2280 256GB... | 256 GB | 429EE29CBD82 | 15    | 0     | 0.04   |
 | EMTEC     | X150               | 480 GB | DE528B43BD0C | 15    | 0     | 0.04   |
+| Kingston  | SA400S37480G       | 480 GB | 94BF79AA9F16 | 15    | 0     | 0.04   |
 | Kingston  | SUV400S37120G      | 120 GB | A190C7656DC7 | 15    | 0     | 0.04   |
 | Kingston  | SV300S37A120G      | 120 GB | ECDDBCCC5EF9 | 15    | 0     | 0.04   |
 | SPCC      | SSD                | 128 GB | EBF4AC26B4FA | 15    | 0     | 0.04   |
 | Samsung   | SSD 860 EVO        | 250 GB | 8C176145A128 | 15    | 0     | 0.04   |
 | SanDisk   | SD8SNAT128G1122    | 128 GB | 83BFC4599489 | 15    | 0     | 0.04   |
+| Apple     | SSD SD0128F        | 121 GB | C1212331A1C6 | 15    | 0     | 0.04   |
 | Kingston  | SKC600MS512G       | 512 GB | 3ADF9E3CC947 | 15    | 0     | 0.04   |
 | MOVESPEED | YSSDMDS-256GSQ-MG  | 256 GB | A8449EFA81E6 | 15    | 0     | 0.04   |
 | Samsung   | SSD 850 PRO        | 512 GB | CB65014BFCC4 | 15    | 0     | 0.04   |
@@ -30912,8 +32236,10 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD                | 512 GB | 2724CA021B73 | 15    | 0     | 0.04   |
 | SanDisk   | SSD PLUS           | 240 GB | 31D407BC2A68 | 15    | 0     | 0.04   |
 | SanDisk   | SSD PLUS           | 240 GB | A8EF8CE7EE9B | 31    | 1     | 0.04   |
+| WDC       | WDBNCE0010PNC      | 1 TB   | 48733390FCE3 | 15    | 0     | 0.04   |
 | XrayDisk  | SSD                | 1 TB   | 7280DE55D873 | 15    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | 88D735483483 | 390   | 24    | 0.04   |
+| ADATA     | SU800              | 512 GB | 11F30D56161B | 31    | 1     | 0.04   |
 | AXIOMTEK  | FSA128GMC2T        | 128 GB | 47D82AD4E26A | 15    | 0     | 0.04   |
 | China     | 128GB SSD          | 128 GB | 25653BF9DE24 | 15    | 0     | 0.04   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | C9EE4FF0E2F4 | 15    | 0     | 0.04   |
@@ -30981,6 +32307,7 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R3SL120G           | 120 GB | C3274F4C9C9D | 15    | 0     | 0.04   |
 | China     | SSD                | 128 GB | 95A4315F7386 | 15    | 0     | 0.04   |
 | China     | SSD                | 128 GB | 96655254700A | 15    | 0     | 0.04   |
+| Crucial   | CT275MX300SSD1     | 275 GB | 28A0CCF9119A | 15    | 0     | 0.04   |
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | 394A97A46624 | 15    | 0     | 0.04   |
 | Intenso   | SSD Sata III       | 128 GB | DA2030499852 | 15    | 0     | 0.04   |
 | KingSpec  | NT-1TB             | 1 TB   | 39DE81664B2C | 15    | 0     | 0.04   |
@@ -30995,6 +32322,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | 73ED5864AA12 | 15    | 0     | 0.04   |
 | Intenso   | SSD Sata III       | 128 GB | 3269B88E4B7A | 15    | 0     | 0.04   |
 | KingSpec  | NT-1TB             | 1 TB   | 8B8B448CDD6A | 15    | 0     | 0.04   |
+| SPCC      | SSD                | 1 TB   | 0D01EDD31FB2 | 15    | 0     | 0.04   |
 | Samsung   | SSD 850 EVO        | 250 GB | 5EF3AFCE9658 | 15    | 0     | 0.04   |
 | SanDisk   | SD8SNAT256G1002    | 256 GB | ABBA5B11FF3B | 15    | 0     | 0.04   |
 | Smartbuy  | SSD                | 256 GB | B0E01B60404C | 15    | 0     | 0.04   |
@@ -31018,6 +32346,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | ABBCBABE49A7 | 257   | 16    | 0.04   |
 | Kingston  | SA400S37120G       | 120 GB | 6BA38526CEB5 | 15    | 0     | 0.04   |
 | Lite-On   | CV1-SB128          | 128 GB | 946FA1C96956 | 15    | 0     | 0.04   |
+| PNY       | CS900 480GB SSD    | 480 GB | 31B63054CB34 | 15    | 0     | 0.04   |
 | Patriot   | P210               | 256 GB | 133CDCFDD8F9 | 15    | 0     | 0.04   |
 | Corsair   | Force LS SSD       | 64 GB  | 9A8011D68F8E | 136   | 8     | 0.04   |
 | Apple     | SSD TS0128F        | 121 GB | 06AAAC5EB663 | 15    | 0     | 0.04   |
@@ -31025,6 +32354,8 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | F6D48F451617 | 15    | 0     | 0.04   |
 | KingFast  | SSD                | 256 GB | C5551431EF36 | 15    | 0     | 0.04   |
 | Kingston  | SA400S37120G       | 120 GB | 3B004F64458B | 15    | 0     | 0.04   |
+| Kingston  | SA400S37240G       | 240 GB | 69CB1A22216B | 15    | 0     | 0.04   |
+| Kingston  | SA400S37480G       | 480 GB | 53BC41B29FE7 | 15    | 0     | 0.04   |
 | Kingston  | SV300S37A240G      | 240 GB | 440E71F750C7 | 15    | 0     | 0.04   |
 | SPCC      | SSD                | 480 GB | 8049F75EE47B | 15    | 0     | 0.04   |
 | Samsung   | SSD 860 EVO mSATA  | 500 GB | 194676265A2A | 15    | 0     | 0.04   |
@@ -31056,8 +32387,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A60G       | 64 GB  | 89B43CA5DD62 | 15    | 0     | 0.04   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 892AB66C2209 | 15    | 0     | 0.04   |
 | SCY       | SNM4BBG12800D      | 128 GB | 23879FAFDC95 | 15    | 0     | 0.04   |
+| Digma     | 512GB RUN S9       | 512 GB | 7569016E2CF2 | 14    | 0     | 0.04   |
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | A99CAB08CD81 | 14    | 0     | 0.04   |
 | Hikvision | HS-SSD-C100 240G   | 240 GB | 8E03B7B16CE0 | 14    | 0     | 0.04   |
+| Intenso   | SSD                | 2 TB   | B8CBC08572FC | 14    | 0     | 0.04   |
 | Kingston  | KingstonSA400S37   | 1 TB   | 0A4713F1BDE4 | 14    | 0     | 0.04   |
 | Patriot   | Burst              | 480 GB | 885FE39BC378 | 14    | 0     | 0.04   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 31309FC27C0E | 14    | 0     | 0.04   |
@@ -31074,6 +32407,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | S500               | 512 GB | E6CBD7FB7AC6 | 14    | 0     | 0.04   |
 | China     | SSD                | 128 GB | 116F1DE78B1A | 14    | 0     | 0.04   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 1D946DC831EF | 14    | 0     | 0.04   |
+| KIOXIA... | SATA SSD           | 480 GB | 8FB5C3C8FF9E | 14    | 0     | 0.04   |
 | Kingston  | SA400S37240G       | 240 GB | 09C980EB82E5 | 14    | 0     | 0.04   |
 | Smartbuy  | SSD                | 120 GB | F3CFF70EBF8B | 14    | 0     | 0.04   |
 | TCSUNBOW  | X3                 | 64 GB  | A8E0B3FB45FD | 14    | 0     | 0.04   |
@@ -31123,6 +32457,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT120BX500SSD1     | 120 GB | 08D8BBB70973 | 14    | 0     | 0.04   |
 | Intenso   | SSD Sata III       | 256 GB | B607421EAFE3 | 14    | 0     | 0.04   |
 | Kingmax   | SSD                | 120 GB | 8B84EBBEBF86 | 14    | 0     | 0.04   |
+| Kingston  | SA400S37120G       | 120 GB | 3FC81A151B81 | 14    | 0     | 0.04   |
 | Kingston  | SUV400S37480G      | 480 GB | E5B8F6D57740 | 14    | 0     | 0.04   |
 | Lenovo    | SSD SL700 120G     | 120 GB | A0F1896F0693 | 14    | 0     | 0.04   |
 | SPCC      | SSD                | 128 GB | 994EEBAE5E13 | 14    | 0     | 0.04   |
@@ -31148,8 +32483,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD PM810 2.5" 7mm | 256 GB | D54ACA8C2C7E | 361   | 24    | 0.04   |
 | AXIOMTEK  | FSA128GMC2T        | 128 GB | 954645A86BD1 | 14    | 0     | 0.04   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 740EBAF03600 | 14    | 0     | 0.04   |
+| Intenso   | SSD Sata III       | 128 GB | 3F93DF82CF7A | 14    | 0     | 0.04   |
 | Kingston  | SA400S37240G       | 240 GB | 328A59A5524B | 14    | 0     | 0.04   |
 | Kingston  | SA400S37240G       | 240 GB | C7D07BE6982F | 14    | 0     | 0.04   |
+| Plextor   | PX-128S3G          | 128 GB | 4BA97F3CC921 | 14    | 0     | 0.04   |
 | SPCC      | SSD                | 512 GB | C2193083288C | 14    | 0     | 0.04   |
 | Samsung   | SSD 870 EVO        | 250 GB | 70B944D45756 | 14    | 0     | 0.04   |
 | Transcend | TS256GSSD370S      | 256 GB | 955E1BEC4233 | 14    | 0     | 0.04   |
@@ -31172,6 +32509,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SNAT256G1122    | 256 GB | 20B7F9722CCB | 14    | 0     | 0.04   |
 | Transcend | TS120GSSD220S      | 120 GB | CF51A78659C3 | 14    | 0     | 0.04   |
 | XrayDisk  | SSD                | 240 GB | 3E3FD0BDCE00 | 14    | 0     | 0.04   |
+| Crucial   | CT240M500SSD1      | 240 GB | 25842FE5B051 | 244   | 16    | 0.04   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | CA7A2F2DEE27 | 14    | 0     | 0.04   |
 | Intenso   | MMY HC256GS6HA7T   | 256 GB | 9789C8073850 | 14    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | 1F2EE6D29C74 | 14    | 0     | 0.04   |
@@ -31182,6 +32520,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 381567355E93 | 14    | 0     | 0.04   |
 | Lite-On   | CV3-8D512-41 SA... | 512 GB | 5B25B8A35488 | 272   | 18    | 0.04   |
 | Apacer    | AS350              | 128 GB | 596DD942ADDB | 14    | 0     | 0.04   |
+| Crucial   | CT500MX500SSD1     | 500 GB | D31942243CC6 | 14    | 0     | 0.04   |
 | Intel     | SSDSC2KW256G8      | 256 GB | 42D147FFB47A | 14    | 0     | 0.04   |
 | KIOXIA... | SATA SSD           | 480 GB | 9BD86B3D280A | 14    | 0     | 0.04   |
 | KingFast  | SSD                | 256 GB | 1C1F3D59980E | 14    | 0     | 0.04   |
@@ -31206,6 +32545,7 @@ MTBF - avg. MTBF in years per sample.
 | Yeyian    | VALK 1500          | 240 GB | 5C5D6936FA12 | 14    | 0     | 0.04   |
 | Netac     | SSD                | 256 GB | B11FF8F180A5 | 142   | 9     | 0.04   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 8C0FF08DBE75 | 14    | 0     | 0.04   |
+| Dogfish   | SSD                | 256 GB | 105E9E434F0B | 14    | 0     | 0.04   |
 | Kingston  | RBU-SUS151S364GD   | 64 GB  | 16FC9E31B387 | 14    | 0     | 0.04   |
 | Kingston  | SA400S37120G       | 120 GB | ABEC679F5BFD | 14    | 0     | 0.04   |
 | Kingston  | SA400S37240G       | 240 GB | 661CC6906B62 | 14    | 0     | 0.04   |
@@ -31214,6 +32554,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 64 GB  | 8671C45B0DF3 | 14    | 0     | 0.04   |
 | SanDisk   | SSD PLUS           | 240 GB | E08C3B349362 | 14    | 0     | 0.04   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | DDD1CDD1EFDD | 14    | 0     | 0.04   |
+| Intel     | SSDSC2BW240A4      | 240 GB | BDAADB87FF3B | 384   | 26    | 0.04   |
 | ADATA     | SX300              | 64 GB  | 83724F823F22 | 14    | 0     | 0.04   |
 | China     | 128GB SSD          | 128 GB | C1B4A045F985 | 14    | 0     | 0.04   |
 | China     | SSD                | 128 GB | C7C866EE5FB8 | 14    | 0     | 0.04   |
@@ -31245,6 +32586,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 21C7056D85AA | 14    | 0     | 0.04   |
 | Kingston  | SA400S37240G       | 240 GB | C611D651BA40 | 14    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | ECFD1214B903 | 14    | 0     | 0.04   |
+| Lexar     | SSD                | 240 GB | E7E30E4B3D55 | 14    | 0     | 0.04   |
 | SPCC      | SSD                | 256 GB | 2D8668CE763E | 14    | 0     | 0.04   |
 | Transcend | TS256GSSD230S      | 256 GB | B72BFFD3AA98 | 14    | 0     | 0.04   |
 | ADATA     | SU650NS38          | 120 GB | D8B3187DFF98 | 14    | 0     | 0.04   |
@@ -31285,6 +32627,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | pSSD               | 128 GB | 5C2472C4C199 | 14    | 0     | 0.04   |
 | Transcend | TS64GMTS400S       | 64 GB  | BF6160FA66BD | 14    | 0     | 0.04   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 059D0973649C | 14    | 0     | 0.04   |
+| China     | SSDG2-256G         | 256 GB | EA39B6DB1C7C | 153   | 10    | 0.04   |
 | SK hynix  | SC210 2.5 7MM      | 128 GB | E04B7425E4F3 | 419   | 29    | 0.04   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | FB2C85868E36 | 13    | 0     | 0.04   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | EBE999D124EC | 13    | 0     | 0.04   |
@@ -31294,6 +32637,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LN256HAJQ-000L7 | 256 GB | B900C4717163 | 13    | 0     | 0.04   |
 | Samsung   | Portable SSD T5    | 1 TB   | 82A90CFCB3D9 | 13    | 0     | 0.04   |
 | SanDisk   | SDSSDP256G         | 256 GB | 30D2B14C7124 | 13    | 0     | 0.04   |
+| SanDisk   | SSD U100           | 128 GB | 54EF2F1D709F | 13    | 0     | 0.04   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 674987BD41B7 | 13    | 0     | 0.04   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | F97629D89A39 | 13    | 0     | 0.04   |
 | Apple     | SSD TS128E         | 121 GB | EF370DF5F084 | 69    | 4     | 0.04   |
@@ -31307,9 +32651,11 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 128 GB | FE6A866D623D | 13    | 0     | 0.04   |
 | ADATA     | SU800              | 512 GB | 292E354BD419 | 13    | 0     | 0.04   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 60CE35D61C4A | 13    | 0     | 0.04   |
+| Kingston  | SA400S37240G       | 240 GB | 7C2BC8CB916D | 13    | 0     | 0.04   |
 | Kingston  | SHFS37A120G        | 120 GB | 22F55E7A9F8F | 13    | 0     | 0.04   |
 | SMI       | SSD DISK           | 128 GB | 4413D9AD8148 | 13    | 0     | 0.04   |
 | SPCC      | SSD                | 128 GB | 49759D35C0CC | 13    | 0     | 0.04   |
+| SPCC      | SSD                | 1 TB   | 9FBE75F35267 | 13    | 0     | 0.04   |
 | Samsung   | Portable SSD T5    | 500 GB | D92268F1FC80 | 13    | 0     | 0.04   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 734497392BED | 13    | 0     | 0.04   |
 | SanDisk   | SDSSDA120G         | 120 GB | 66CE6E2F1FDC | 13    | 0     | 0.04   |
@@ -31333,6 +32679,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 496DEA04053C | 13    | 0     | 0.04   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 41AE04020018 | 13    | 0     | 0.04   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 7CEC72B24942 | 13    | 0     | 0.04   |
+| Kingston  | SA400S37120G       | 120 GB | 2430C3661B98 | 27    | 1     | 0.04   |
 | Crucial   | CT2050MX300SSD1    | 2 TB   | A886D55964D3 | 41    | 2     | 0.04   |
 | China     | SATA3 480GB SSD    | 480 GB | BF19883CF52E | 13    | 0     | 0.04   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 0295CCB94184 | 13    | 0     | 0.04   |
@@ -31349,6 +32696,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 3C2C03347C4B | 13    | 0     | 0.04   |
 | Transcend | TS480GSSD220S      | 480 GB | 80C365A4C596 | 13    | 0     | 0.04   |
 | WDC       | WDS480G2G0B-00EPW0 | 480 GB | 825702A79BFF | 13    | 0     | 0.04   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 150A5CCA8B93 | 13    | 0     | 0.04   |
 | Kingston  | SA400S37120G       | 120 GB | 04C2D2010639 | 355   | 25    | 0.04   |
 | ADATA     | SU800              | 512 GB | D2C5680446B5 | 13    | 0     | 0.04   |
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | 9E6810B8DF99 | 13    | 0     | 0.04   |
@@ -31388,7 +32736,9 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 480 GB | 5422E079B5B6 | 13    | 0     | 0.04   |
 | Samsung   | SSD 840 EVO        | 250 GB | F83DD33E15FA | 13    | 0     | 0.04   |
 | SanDisk   | SD8SNAT128G1002    | 128 GB | CA038379C4EC | 13    | 0     | 0.04   |
+| SanDisk   | SSD PLUS           | 240 GB | 9CECD4E6BCFC | 13    | 0     | 0.04   |
 | Seagate   | BarraCuda SSD Z... | 500 GB | 6AAEACFB797F | 13    | 0     | 0.04   |
+| WDC       | WDBNCE2500PNC      | 250 GB | 16C8F4340BCF | 13    | 0     | 0.04   |
 | Apacer    | 16GB SATA Flash... | 16 GB  | 2B9B59A497E2 | 121   | 8     | 0.04   |
 | China     | SATA SSD           | 120 GB | E2C1D74FCCCE | 121   | 8     | 0.04   |
 | ADATA     | SU650NS38          | 240 GB | D34233184578 | 13    | 0     | 0.04   |
@@ -31402,7 +32752,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 2 TB   | E6988AE21848 | 13    | 0     | 0.04   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 6A92A31E22B2 | 13    | 0     | 0.04   |
 | Samsung   | SSD 870 EVO        | 1 TB   | CB045A2C4C1E | 107   | 7     | 0.04   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 75855185AB39 | 13    | 0     | 0.04   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 4C5D52EB716B | 13    | 0     | 0.04   |
+| Samsung   | SSD 870 EVO        | 500 GB | 9D59D219EA08 | 107   | 7     | 0.04   |
 | China     | SSD                | 256 GB | 1897139675C4 | 13    | 0     | 0.04   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | BD33D59FAF9C | 13    | 0     | 0.04   |
 | SanDisk   | SSD PLUS           | 480 GB | 3F4D6F320C2B | 40    | 2     | 0.04   |
@@ -31429,6 +32781,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 3DFD667FA7E9 | 13    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | 25E87CB7743F | 13    | 0     | 0.04   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 2707411ED3C9 | 13    | 0     | 0.04   |
+| Goodram   | SSDPR-CX400-512-G2 | 512 GB | ED625A5D3E09 | 225   | 16    | 0.04   |
 | Crucial   | CT240BX500SSD1     | 240 GB | AE15F06E20E2 | 13    | 0     | 0.04   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 1D05F2ED40F3 | 13    | 0     | 0.04   |
 | KingSpec  | MT-1TB             | 1 TB   | 0FC54AC535B0 | 13    | 0     | 0.04   |
@@ -31436,6 +32789,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A240G      | 240 GB | 182E569D8D1A | 13    | 0     | 0.04   |
 | Plextor   | PX-128M6S+         | 128 GB | C21BFCA4F598 | 13    | 0     | 0.04   |
 | SanDisk   | SDSSDA120G         | 120 GB | B55C5E76A764 | 13    | 0     | 0.04   |
+| ShiJi     | SSD                | 1 TB   | 0D41D78C502E | 13    | 0     | 0.04   |
 | Crucial   | CT525MX300SSD4     | 528 GB | 1B8BD8E37265 | 251   | 18    | 0.04   |
 | Origin... | TLC830 Pro Series  | 256 GB | DEC7888908B5 | 171   | 12    | 0.04   |
 | BIWIN     | SSD                | 120 GB | 7D79B4C44CB6 | 13    | 0     | 0.04   |
@@ -31490,6 +32844,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 15D093F26785 | 13    | 0     | 0.04   |
 | Crucial   | CT120BX100SSD1     | 120 GB | A891A2005E78 | 13    | 0     | 0.04   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 62365549C1F6 | 65    | 4     | 0.04   |
+| Kingston  | SA400S37240G       | 240 GB | 87EB7F9A72A5 | 13    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | AF34EF480080 | 39    | 2     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | CEE006367278 | 13    | 0     | 0.04   |
 | MyDigi... | SB2                | 240 GB | 2B2E80AC8BA5 | 13    | 0     | 0.04   |
@@ -31511,7 +32866,10 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS512GSSD370       | 512 GB | F6FE5CDB2B74 | 13    | 0     | 0.04   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | C4C5ABA90B55 | 13    | 0     | 0.04   |
 | e2e4      | SSD                | 64 GB  | 2A3E3F8D92E4 | 13    | 0     | 0.04   |
+| Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | 031F522E9063 | 1246  | 95    | 0.04   |
+| Intenso   | SSD                | 120 GB | D7F9AC7134FD | 12    | 0     | 0.04   |
 | Kingston  | SA400S37480G       | 480 GB | AD1606887633 | 12    | 0     | 0.04   |
+| Lenovo    | SSD SL700          | 4 TB   | BF13851ED7C5 | 12    | 0     | 0.04   |
 | Samsung   | MZNLN256HAJQ-000L7 | 256 GB | E89306EE63B1 | 12    | 0     | 0.04   |
 | XrayDisk  | SSD                | 120 GB | EF6DCF59BB7A | 12    | 0     | 0.04   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 6057AE863ADC | 478   | 36    | 0.04   |
@@ -31521,6 +32879,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 64CEC8E94162 | 12    | 0     | 0.04   |
 | Samsung   | SSD 860 PRO        | 256 GB | 67D048E1AE1D | 12    | 0     | 0.04   |
 | SanDisk   | SDSSDA120G         | 120 GB | 6AE5BCCEFCFF | 12    | 0     | 0.04   |
+| Smartbuy  | SSD                | 120 GB | 430BB0F2220D | 12    | 0     | 0.04   |
 | SanDisk   | SD6SB1M128G1022    | 128 GB | 7B28949DF5BC | 219   | 16    | 0.04   |
 | Intel     | SSDSC2BF180A4L     | 180 GB | 31D05FA3CFAD | 116   | 8     | 0.04   |
 | ADATA     | SX900              | 128 GB | F600CB3C5000 | 12    | 0     | 0.04   |
@@ -31540,15 +32899,18 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KW256G8      | 256 GB | 8B5AE0120DE9 | 12    | 0     | 0.04   |
 | Kingston  | SA400S37240G       | 240 GB | 5DC646FC9DBD | 12    | 0     | 0.04   |
 | Phison    | S11-256G-PHISON... | 256 GB | FF4AEC75E2B4 | 12    | 0     | 0.04   |
+| QUMO      | SSD                | 240 GB | FFFE935B38F6 | 12    | 0     | 0.04   |
 | Samsung   | SSD 850 PRO        | 256 GB | 0EC4CF99B18C | 12    | 0     | 0.04   |
 | Samsung   | SSD 850 PRO        | 256 GB | 260C6AC7F1A3 | 12    | 0     | 0.04   |
 | Intenso   | SATA3 1TB SSD      | 1 TB   | 256A4418973E | 320   | 24    | 0.04   |
+| SomnAm... | SSD                | 120 GB | 2D8C7239D542 | 25    | 1     | 0.04   |
 | Apacer    | AS510S             | 64 GB  | 0EE5530F24D6 | 12    | 0     | 0.04   |
 | Goodram   | SSDPR-CL100-480-G2 | 480 GB | EE0D6037A1BC | 12    | 0     | 0.04   |
 | KingDian  | S180               | 64 GB  | 1A90DA85A3B9 | 12    | 0     | 0.04   |
 | Micron    | MTFDDAK256MAM-1K1  | 256 GB | 04F85A533BBE | 12    | 0     | 0.04   |
 | SPCC      | SSD                | 120 GB | 272F013F0059 | 12    | 0     | 0.04   |
 | Samsung   | MZ7LH128HBHQ-000L1 | 128 GB | A7707D654BBC | 12    | 0     | 0.04   |
+| Transcend | TS512GMTS430S      | 512 GB | 603BF543857F | 12    | 0     | 0.04   |
 | China     | SATA SSD           | 128 GB | 19D3386A9B28 | 12    | 0     | 0.03   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 0F3713FE0146 | 12    | 0     | 0.03   |
 | Intel     | SSDSCKKF128G8 SATA | 128 GB | 095234172E80 | 25    | 1     | 0.03   |
@@ -31578,6 +32940,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 3D8FA84C7FD8 | 12    | 0     | 0.03   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 177376E8EA7C | 12    | 0     | 0.03   |
 | Kingston  | SKC300S37A120G     | 120 GB | 0A1FF6DFD4DD | 12    | 0     | 0.03   |
+| Patriot   | P210               | 256 GB | 5CCF56068620 | 12    | 0     | 0.03   |
 | Samsung   | MZ7LN256HAJQ-000L2 | 256 GB | EAE1BC04049E | 12    | 0     | 0.03   |
 | Samsung   | SSD 840 EVO 120... | 120 GB | DD901732839F | 12    | 0     | 0.03   |
 | Transcend | TS512GMSA370       | 512 GB | AF47DAB1DBA4 | 12    | 0     | 0.03   |
@@ -31586,9 +32949,11 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 240 GB | 5597B15662CB | 12    | 0     | 0.03   |
 | Crucial   | CT120BX500SSD1     | 120 GB | C439E12211BE | 12    | 0     | 0.03   |
 | Crucial   | CT500MX500SSD1     | 500 GB | A28A5F16471E | 12    | 0     | 0.03   |
+| Crucial   | CT500MX500SSD1     | 500 GB | FA556FADD1E6 | 12    | 0     | 0.03   |
 | PNY       | CS900 1TB SSD      | 1 TB   | A890786E16E7 | 12    | 0     | 0.03   |
 | Samsung   | SSD 850 EVO        | 500 GB | 1DD5E4A54419 | 12    | 0     | 0.03   |
 | Lite-On   | LMH-128V2M         | 128 GB | 8364D519030A | 37    | 2     | 0.03   |
+| Kingston  | SV300S37A120G      | 120 GB | EFBA4892DFF1 | 2026  | 160   | 0.03   |
 | ADATA     | SU650              | 120 GB | 093F34FB60F4 | 12    | 0     | 0.03   |
 | ADATA     | SU800              | 512 GB | CD572CC2A864 | 12    | 0     | 0.03   |
 | Crucial   | CT240BX500SSD1     | 240 GB | BE9DC3ABEF66 | 12    | 0     | 0.03   |
@@ -31624,6 +32989,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force LE200 SSD    | 240 GB | 652F4CB61803 | 749   | 59    | 0.03   |
 | Micron    | MTFDDAK256MAY-1... | 256 GB | 4151DE58BC28 | 212   | 16    | 0.03   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 6795FD888477 | 12    | 0     | 0.03   |
+| Intenso   | SSD                | 240 GB | B541FB8690EA | 12    | 0     | 0.03   |
 | KingDian  | S280-240GB         | 240 GB | B3F9FEE93228 | 12    | 0     | 0.03   |
 | Kingston  | SA400S37480G       | 480 GB | C085DB21E4BF | 12    | 0     | 0.03   |
 | Samsung   | SSD 850 PRO        | 1 TB   | 10A20E281DE7 | 12    | 0     | 0.03   |
@@ -31651,12 +33017,16 @@ MTBF - avg. MTBF in years per sample.
 | Microtech | SSD 60G            | 64 GB  | FF8B1339BB50 | 12    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 250 GB | FE056EA61D12 | 12    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 2 TB   | B495FE3F8D81 | 12    | 0     | 0.03   |
+| Samsung   | SSD 870 EVO        | 2 TB   | 7BCB420920B1 | 12    | 0     | 0.03   |
+| Transcend | TS512GSSD230S      | 512 GB | B23AACB938C4 | 12    | 0     | 0.03   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 4F9ED76DC1D0 | 12    | 0     | 0.03   |
 | Wicgtyp   | M900-128           | 128 GB | 528605FC2EE5 | 12    | 0     | 0.03   |
 | AMD       | R5SL960G           | 960 GB | 6B2E9284918C | 61    | 4     | 0.03   |
 | AXIOMTEK  | FSA128GMC2T        | 128 GB | 41678F40984C | 12    | 0     | 0.03   |
 | China     | 512GB SSD          | 512 GB | 7A770D617F1B | 12    | 0     | 0.03   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 359DD90C64B4 | 12    | 0     | 0.03   |
 | KIOXIA... | SATA SSD           | 240 GB | C900DE49A330 | 12    | 0     | 0.03   |
+| KIOXIA... | SATA SSD           | 480 GB | ABBC711CB40C | 12    | 0     | 0.03   |
 | Kston     | SSD                | 256 GB | D04B27E5F364 | 12    | 0     | 0.03   |
 | SK hynix  | SC308 SATA         | 128 GB | 8C91035AAB25 | 12    | 0     | 0.03   |
 | SanDisk   | SD6SF1M256G1022I   | 256 GB | 7FB4F471AA30 | 12    | 0     | 0.03   |
@@ -31673,10 +33043,13 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 8D5074CEFDBC | 24    | 1     | 0.03   |
 | Lite-On   | CV1-8B256          | 256 GB | 8BA558DA48B7 | 12    | 0     | 0.03   |
 | Lite-On   | CV3-8D128-11 SATA  | 128 GB | 3E85705E9C1F | 12    | 0     | 0.03   |
+| PNY       | 1TB SATA SSD       | 1 TB   | F142FCBD10A3 | 12    | 0     | 0.03   |
+| PNY       | CS900 120GB SSD    | 120 GB | 70C6613D471B | 12    | 0     | 0.03   |
 | Samsung   | MZ7LN256HAJQ-000L7 | 256 GB | 0A8CDD14EB2C | 12    | 0     | 0.03   |
 | Samsung   | MZ7LN256HAJQ-000L7 | 256 GB | 9808A5889D28 | 12    | 0     | 0.03   |
 | Samsung   | MZ7PA128HMCD-010H1 | 128 GB | DB4601B50F9B | 12    | 0     | 0.03   |
 | Samsung   | SSD 850 EVO        | 250 GB | EB0CFA9F722B | 12    | 0     | 0.03   |
+| Team      | TM8PS7512G         | 512 GB | EC60D1B14B0D | 12    | 0     | 0.03   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 9349128E0688 | 12    | 0     | 0.03   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 39E025FD576E | 12    | 0     | 0.03   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | B7DEF31DEE16 | 12    | 0     | 0.03   |
@@ -31693,6 +33066,7 @@ MTBF - avg. MTBF in years per sample.
 | AXIOMTEK  | FSA128GMC2T        | 128 GB | 3285FD737A5E | 12    | 0     | 0.03   |
 | China     | SATA SSD           | 64 GB  | C09A35DE201F | 12    | 0     | 0.03   |
 | China     | SSD 256G           | 256 GB | 2B2EB30C6EFA | 12    | 0     | 0.03   |
+| Digma     | 512GB RUN S9       | 512 GB | CB20B1695E72 | 12    | 0     | 0.03   |
 | Dogfish   | SSD                | 1 TB   | 7B1D6DE7132F | 12    | 0     | 0.03   |
 | Goodram   | SSD                | 120 GB | 8CDBE1861E2D | 12    | 0     | 0.03   |
 | KingDian  | S280               | 32 GB  | 608633B8F617 | 12    | 0     | 0.03   |
@@ -31785,6 +33159,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA120G         | 120 GB | 4F94B07BC9DA | 11    | 0     | 0.03   |
 | SanDisk   | SDSSDA120G         | 120 GB | 5DBFA95B7695 | 11    | 0     | 0.03   |
 | SanDisk   | SSD U100           | 24 GB  | 44EB20E813AD | 11    | 0     | 0.03   |
+| T-FORCE   | SSD                | 512 GB | 3F640F1A9806 | 11    | 0     | 0.03   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 7074BDF303EE | 11    | 0     | 0.03   |
 | SanDisk   | SSD PLUS           | 240 GB | 9545B303600D | 23    | 1     | 0.03   |
 | KingSpec  | P3-128             | 128 GB | 1349C6C4D0ED | 11    | 0     | 0.03   |
@@ -31821,6 +33196,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 15D507520C1E | 11    | 0     | 0.03   |
 | China     | SSD                | 360 GB | D7F6CF98B455 | 70    | 5     | 0.03   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | F2AED7100A30 | 94    | 7     | 0.03   |
+| ADATA     | SU650              | 120 GB | 080996E60CEB | 11    | 0     | 0.03   |
 | Intenso   | SSD                | 240 GB | 7EB603FA4B79 | 11    | 0     | 0.03   |
 | KingSpec  | P3-128             | 128 GB | 7E7B7985799B | 11    | 0     | 0.03   |
 | Kingston  | SA400S37120G       | 120 GB | 7C2AB2C8BED7 | 11    | 0     | 0.03   |
@@ -31828,6 +33204,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 90EF5B258717 | 11    | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | D0D6222E47DE | 11    | 0     | 0.03   |
 | Kingston  | SA400S37480G       | 480 GB | 1DB64A762C98 | 11    | 0     | 0.03   |
+| Kingston  | SUV400S37240G      | 240 GB | CAC7127A6F5C | 11    | 0     | 0.03   |
 | Micron    | MTFDDAK512TBN-1... | 512 GB | 6480E32400B3 | 70    | 5     | 0.03   |
 | Samsung   | MZ7LN128HAHQ-00000 | 128 GB | FB25C28B1476 | 11    | 0     | 0.03   |
 | Samsung   | SSD 840 EVO        | 250 GB | 61FDD6F911A4 | 11    | 0     | 0.03   |
@@ -31843,6 +33220,8 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 256 GB | 3D6003C293CC | 11    | 0     | 0.03   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 04D8AAC444C5 | 11    | 0     | 0.03   |
 | HP        | SSD S700           | 250 GB | D12459499622 | 11    | 0     | 0.03   |
+| Kingston  | SV300S37A240G      | 240 GB | 965113E7F73F | 11    | 0     | 0.03   |
+| PNY       | CS900 240GB SSD    | 240 GB | 5F4551F23752 | 11    | 0     | 0.03   |
 | PNY       | SSD2SC120G1CS17... | 120 GB | AA6FD31E1125 | 11    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 500 GB | E15D2C6AE607 | 11    | 0     | 0.03   |
 | Samsung   | SSD 870 EVO        | 500 GB | 0E5904358F9D | 11    | 0     | 0.03   |
@@ -31856,6 +33235,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | C720E8DA7472 | 11    | 0     | 0.03   |
 | PNY       | SSD2SC120G1SA75... | 120 GB | 71E86CBE2F93 | 11    | 0     | 0.03   |
 | SK hynix  | SC311 SATA         | 128 GB | 48F4BCD45A3C | 11    | 0     | 0.03   |
+| Samsung   | SSD 860 EVO        | 250 GB | 51B4F4A62D0A | 11    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 500 GB | 522D51E1F06F | 11    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 500 GB | C0D68F727EFC | 11    | 0     | 0.03   |
 | Samsung   | SSD 870 EVO        | 500 GB | AC2FC41692B4 | 11    | 0     | 0.03   |
@@ -31874,6 +33254,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G39TNF-N3A0A | 128 GB | 4535ABA08D18 | 11    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 664D69E8D698 | 11    | 0     | 0.03   |
 | SanDisk   | SD8SNAT128G1002    | 128 GB | C7F26964217D | 11    | 0     | 0.03   |
+| Verbatim  | Vi550 S3 SSD       | 256 GB | 5ECEA83F782A | 11    | 0     | 0.03   |
 | Intel     | SSDSA2M160G2LE     | 160 GB | 08183CB7BD51 | 266   | 22    | 0.03   |
 | Corsair   | CSSD-V60GB2        | 64 GB  | E5D6C2FDE9CC | 104   | 8     | 0.03   |
 | Kingston  | SA400S37480G       | 480 GB | 86166977F90F | 612   | 52    | 0.03   |
@@ -31905,6 +33286,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV1-8B256          | 256 GB | 52A27A1F077E | 11    | 0     | 0.03   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | CA9164892837 | 11    | 0     | 0.03   |
 | SPCC      | SSD                | 120 GB | C380F3231F57 | 11    | 0     | 0.03   |
+| SPCC      | SSD                | 1 TB   | 5D19422D255B | 11    | 0     | 0.03   |
 | China     | SATA SSD           | 64 GB  | 105677111280 | 11    | 0     | 0.03   |
 | China     | SATA3 256GB SSD    | 256 GB | 023A45C615BF | 11    | 0     | 0.03   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 0D14C12B57BF | 11    | 0     | 0.03   |
@@ -31919,12 +33301,15 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U110           | 16 GB  | D07060F1C427 | 11    | 0     | 0.03   |
 | Transcend | TS256GSSD370S      | 256 GB | FD7B992A13D9 | 11    | 0     | 0.03   |
 | OCZ       | VERTEX4            | 64 GB  | C7CCFEC5B6C1 | 22    | 1     | 0.03   |
+| Intenso   | SSD                | 240 GB | 4F0A36CE7284 | 34    | 2     | 0.03   |
 | ADATA     | SU650              | 240 GB | AD0F3161EA4F | 11    | 0     | 0.03   |
 | Kingston  | SA400S37120G       | 120 GB | D24D2E176753 | 11    | 0     | 0.03   |
+| Kingston  | SA400S37240G       | 240 GB | 76A86F2F70CB | 11    | 0     | 0.03   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | C10C534551FD | 11    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 17CBC0BD66E3 | 11    | 0     | 0.03   |
 | WDC       | WDBNCE5000PNC      | 500 GB | A9790690F42D | 11    | 0     | 0.03   |
 | Kingston  | SMS200S3120G       | 120 GB | 364A2508B314 | 228   | 19    | 0.03   |
+| Apacer    | AS350              | 512 GB | 8363BF2A4FDA | 11    | 0     | 0.03   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 731A9F0A0361 | 11    | 0     | 0.03   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | 808CE2D19D36 | 11    | 0     | 0.03   |
 | Kingston  | SA400S37120G       | 120 GB | A64580530261 | 11    | 0     | 0.03   |
@@ -31945,6 +33330,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 2 TB   | 4DA9AE4F83F0 | 11    | 0     | 0.03   |
 | SanDisk   | SD8SNAT-128G-1006  | 128 GB | F071287440E2 | 11    | 0     | 0.03   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 1DACE5E55C94 | 11    | 0     | 0.03   |
+| Apple     | SSD TS064E         | 64 GB  | E27C7DA43D0A | 101   | 8     | 0.03   |
 | Kingston  | SUV400S37240G      | 240 GB | FE1805A6D9D9 | 554   | 48    | 0.03   |
 | Crucial   | CT240M500SSD1      | 240 GB | FF12DC228391 | 192   | 16    | 0.03   |
 | China     | SSD                | 128 GB | 8DF478A3A77C | 11    | 0     | 0.03   |
@@ -31955,6 +33341,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 256 GB | B331586DF7A5 | 11    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 500 GB | A1EA9D8F5FBE | 11    | 0     | 0.03   |
 | SanDisk   | SDSSDA120G         | 120 GB | CD3E443B487E | 11    | 0     | 0.03   |
+| SanDisk   | SDSSDH3 500G       | 500 GB | 16148C846A07 | 11    | 0     | 0.03   |
 | Transcend | TS240GSSD220S      | 240 GB | E60D439E35E1 | 11    | 0     | 0.03   |
 | SanDisk   | SSD U100           | 256 GB | 7A9ED46FED63 | 22    | 1     | 0.03   |
 | ADATA     | SU650              | 120 GB | C460E1456EDC | 11    | 0     | 0.03   |
@@ -31986,6 +33373,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | 3F15F637B55B | 11    | 0     | 0.03   |
 | Dell      | WR202KD032G E70... | 32 GB  | 4B774B3282B0 | 11    | 0     | 0.03   |
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | C5D397235527 | 11    | 0     | 0.03   |
+| INDMEM    | SSD mSATA          | 512 GB | 3FA12227B34A | 11    | 0     | 0.03   |
 | Kingston  | SKC600256G         | 256 GB | A01223E0D0CC | 11    | 0     | 0.03   |
 | PNY       | CS900 240GB SSD    | 240 GB | F33508C1FFE8 | 11    | 0     | 0.03   |
 | Qumo      | SSD                | 240 GB | DDC289A4D88D | 11    | 0     | 0.03   |
@@ -32021,7 +33409,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 0A18CF68AFEF | 319   | 28    | 0.03   |
 | Apacer    | AS350              | 128 GB | 8D638A3F284C | 11    | 0     | 0.03   |
 | China     | 1TBE               | 1 TB   | B321C3838EF2 | 11    | 0     | 0.03   |
+| Goodram   | SSDPR-CX400-128    | 128 GB | D7EAD4DD0D0D | 11    | 0     | 0.03   |
 | KingSpec  | P4-480             | 480 GB | DF8912C937D7 | 11    | 0     | 0.03   |
+| SPCC      | SSD                | 1 TB   | D47100D13231 | 11    | 0     | 0.03   |
 | SUNEAST   | SSD SE800          | 256 GB | 29B6601DE87F | 11    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | D1F3A1C82FE8 | 11    | 0     | 0.03   |
 | SanDisk   | SSD PLUS           | 240 GB | 04621B239B55 | 11    | 0     | 0.03   |
@@ -32059,6 +33449,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | 477DF012F39C | 10    | 0     | 0.03   |
 | Intenso   | SSD Sata III       | 240 GB | 1D2F38F02946 | 10    | 0     | 0.03   |
 | Kingston  | SA400S37480G       | 480 GB | FAC55E067CC8 | 10    | 0     | 0.03   |
+| MidasF... | SSD                | 128 GB | 66A67948D70E | 10    | 0     | 0.03   |
 | Plextor   | PX-256M5S          | 256 GB | 77D0842472AB | 10    | 0     | 0.03   |
 | SPCC      | SSD                | 128 GB | EB9A704EA474 | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 48BB325F040C | 10    | 0     | 0.03   |
@@ -32106,12 +33497,14 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU630              | 480 GB | D79EA07593BA | 10    | 0     | 0.03   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | CE187F418B55 | 10    | 0     | 0.03   |
 | Crucial   | CT240BX500SSD1     | 240 GB | C5324E029660 | 10    | 0     | 0.03   |
+| Goodram   | SSDPR-CX400-512-G2 | 512 GB | 212B445C0474 | 10    | 0     | 0.03   |
 | Kingston  | SUV500240G         | 240 GB | 9B0A3EFB6CB4 | 10    | 0     | 0.03   |
 | Maxtor    | Z1 SSD             | 240 GB | 88391301EA4F | 10    | 0     | 0.03   |
 | SPCC      | SSD                | 1 TB   | FD20CC44B82A | 10    | 0     | 0.03   |
 | Samsung   | SSD 850 EVO        | 250 GB | 9489C78A2D56 | 10    | 0     | 0.03   |
 | Samsung   | SSD 850 EVO mSATA  | 500 GB | 9CE0F444DD97 | 10    | 0     | 0.03   |
 | WDC       | WDS100T2B0B        | 1 TB   | 6CFEBDA57D5B | 10    | 0     | 0.03   |
+| China     | SK                 | 256 GB | DDC33425817B | 10    | 0     | 0.03   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 140D9EC7022C | 10    | 0     | 0.03   |
 | Kingston  | OCP0S364B-A0       | 64 GB  | BB37B5DCE8CC | 10    | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | 828A62836C71 | 10    | 0     | 0.03   |
@@ -32121,6 +33514,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 960GB SSD    | 960 GB | 01214B9AFBCA | 10    | 0     | 0.03   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 38B35951A8D4 | 10    | 0     | 0.03   |
 | ADATA     | SU800              | 512 GB | 71C25B0D1D92 | 10    | 0     | 0.03   |
+| China     | SSD                | 64 GB  | 075376AE13E3 | 10    | 0     | 0.03   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 174AEE35F734 | 10    | 0     | 0.03   |
 | Intenso   | SSD                | 120 GB | 00F1887F191C | 10    | 0     | 0.03   |
 | KingDian  | S180               | 64 GB  | 5B3F80185D2C | 10    | 0     | 0.03   |
@@ -32141,10 +33535,12 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 256 GB | C2CF21C41F9E | 10    | 0     | 0.03   |
 | China     | CYX-SSD-S1000      | 512 GB | CC9EC14DAAAF | 10    | 0     | 0.03   |
 | KingDian  | S400               | 120 GB | F8023E05D038 | 10    | 0     | 0.03   |
+| Kingston  | SA400M8240G        | 240 GB | 5F3CB5122BE9 | 10    | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | 28D51DE65E55 | 10    | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | E45970BC65F4 | 10    | 0     | 0.03   |
 | Patriot   | Burst Elite        | 120 GB | 87A708A047F6 | 10    | 0     | 0.03   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 96885B76E3CA | 10    | 0     | 0.03   |
+| SanDisk   | SDSSDH3 250G       | 250 GB | F98E53B36556 | 10    | 0     | 0.03   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 5FE0F2F529E8 | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 QVO        | 1 TB   | A8D583315EA7 | 253   | 23    | 0.03   |
 | SPCC      | SSD                | 120 GB | 0327C0946E06 | 1163  | 109   | 0.03   |
@@ -32163,6 +33559,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 67F3F373D198 | 10    | 0     | 0.03   |
 | SPCC      | SPCCSolidStateDisk | 512 GB | 065FE9810743 | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO        | 1 TB   | B240AC32B760 | 10    | 0     | 0.03   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 1A37EED1CFD4 | 10    | 0     | 0.03   |
 | SanDisk   | SSD PLUS           | 120 GB | 2FA170DA9EA9 | 10    | 0     | 0.03   |
 | SanDisk   | SSD PLUS           | 480 GB | E8A278D5D63F | 10    | 0     | 0.03   |
 | SanDisk   | X600 2.5 7MM SATA  | 256 GB | CC2227C554C7 | 10    | 0     | 0.03   |
@@ -32174,6 +33571,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 240 GB | DB3A2DC6552B | 73    | 6     | 0.03   |
 | China     | SSD 128G           | 128 GB | EAD247F8B630 | 10    | 0     | 0.03   |
 | Crucial   | CT240BX500SSD1     | 240 GB | A179F5D4BF18 | 10    | 0     | 0.03   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 50B06295AD1B | 10    | 0     | 0.03   |
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | D28629478D61 | 10    | 0     | 0.03   |
 | Kingston  | SA400S37120G       | 120 GB | 4B3E6C2F4137 | 10    | 0     | 0.03   |
 | Kingston  | SA400S37480G       | 480 GB | 7452BE598F26 | 10    | 0     | 0.03   |
@@ -32182,6 +33580,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | BarraCuda Q1 SS... | 960 GB | 080D55D2A2BA | 10    | 0     | 0.03   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 31D9A33136D8 | 10    | 0     | 0.03   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | B1E9F1726E30 | 10    | 0     | 0.03   |
+| KingFast  | SSD                | 128 GB | 32F1373F3C9A | 10    | 0     | 0.03   |
 | Kingston  | SA400S37120G       | 120 GB | 533603F1086A | 10    | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | B9C92EED3087 | 10    | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | CB5DB3C7F028 | 10    | 0     | 0.03   |
@@ -32252,6 +33651,7 @@ MTBF - avg. MTBF in years per sample.
 | UNIC2     | S5170-256-80       | 256 GB | 71FFFD929680 | 10    | 0     | 0.03   |
 | V-GeN     | V-GEN10SM21AR256HY | 256 GB | 5B05BBD9ADD2 | 10    | 0     | 0.03   |
 | WDC       | WDS250G2B0B        | 250 GB | AFEA23BD88D1 | 10    | 0     | 0.03   |
+| Kingston  | SA400S37120G       | 120 GB | 0F75D5FDDCBF | 91    | 8     | 0.03   |
 | Plextor   | PX-128M6S          | 128 GB | E41CB1444B17 | 112   | 10    | 0.03   |
 | ADATA     | SU800              | 128 GB | 5D4F5E2D857A | 10    | 0     | 0.03   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 2E080798C1A5 | 10    | 0     | 0.03   |
@@ -32265,6 +33665,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS128GSSD370S      | 128 GB | A7BDB72084C7 | 10    | 0     | 0.03   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 0B0929F6D239 | 10    | 0     | 0.03   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 4804B85EC800 | 10    | 0     | 0.03   |
+| Patriot   | Burst Elite        | 120 GB | 4E39275BE5A5 | 10    | 0     | 0.03   |
 | Samsung   | MZ7LN256HAJQ-000L2 | 256 GB | 9FBE104D3BEC | 10    | 0     | 0.03   |
 | Samsung   | Portable SSD T5    | 500 GB | 78BE8532FA6D | 10    | 0     | 0.03   |
 | SanDisk   | SD8SBAT128G1122    | 128 GB | 0F6C08EDF2C3 | 10    | 0     | 0.03   |
@@ -32295,6 +33696,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 120 GB | A0949D8F6DBA | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 0A007285F3C2 | 10    | 0     | 0.03   |
 | SanDisk   | SSD PLUS           | 480 GB | 650AAA1D2016 | 10    | 0     | 0.03   |
+| ShiJi     | SSD                | 256 GB | 8349C2EB35C5 | 10    | 0     | 0.03   |
 | WDC       | WDS500G1B0A-00H9H0 | 500 GB | C3D68FFF534F | 10    | 0     | 0.03   |
 | Crucial   | CT240M500SSD1      | 240 GB | 30CC9838F389 | 210   | 20    | 0.03   |
 | ADATA     | SP900              | 64 GB  | 8DD7D0620C90 | 10    | 0     | 0.03   |
@@ -32304,6 +33706,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 6FB9C2271406 | 10    | 0     | 0.03   |
 | Kingston  | SUV400S37120G      | 120 GB | BF2FCF94835B | 10    | 0     | 0.03   |
 | Lexar     | 256GB SSD          | 256 GB | DA6677685C32 | 10    | 0     | 0.03   |
+| Micron    | 1100 SATA          | 256 GB | B59E6C75A8F3 | 10    | 0     | 0.03   |
 | Netac     | S535N8-256GYN      | 256 GB | 2208EECE617F | 10    | 0     | 0.03   |
 | PNY       | CS900 120GB SSD    | 120 GB | 3D246ABA938E | 10    | 0     | 0.03   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 68B60A9DBE6F | 10    | 0     | 0.03   |
@@ -32314,6 +33717,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | DF662571DB4B | 30    | 2     | 0.03   |
 | Crucial   | CT512M550SSD1      | 512 GB | 5DF5BD0E8090 | 279   | 27    | 0.03   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 4DE27CA7A825 | 59    | 5     | 0.03   |
+| Samsung   | SSD 840 EVO        | 250 GB | 4A994BF2B932 | 398   | 39    | 0.03   |
 | Apacer    | AS350              | 128 GB | 4ED646790140 | 9     | 0     | 0.03   |
 | China     | SSD                | 120 GB | 531599F923F3 | 9     | 0     | 0.03   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 351659BEE749 | 9     | 0     | 0.03   |
@@ -32323,6 +33727,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | C7973395096B | 9     | 0     | 0.03   |
 | Kingston  | SHSS37A240G        | 240 GB | F2855A07746C | 9     | 0     | 0.03   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 233E4547FDA7 | 9     | 0     | 0.03   |
+| Integral  | V Series SATA S... | 1 TB   | DC8FA6FECE50 | 9     | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | 0CA63A8B1786 | 9     | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | F68C9BB2455B | 9     | 0     | 0.03   |
 | Kingston  | SUV500MS240G       | 240 GB | DE68408F7669 | 9     | 0     | 0.03   |
@@ -32331,6 +33736,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 120 GB | A0FC0BDF9C6D | 9     | 0     | 0.03   |
 | SPCC      | SSD                | 1 TB   | F9BEAFB33704 | 9     | 0     | 0.03   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 41B0052FBE9C | 9     | 0     | 0.03   |
+| Samsung   | SSD 870 QVO        | 1 TB   | BE4588D4716D | 9     | 0     | 0.03   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 00C825C7133F | 9     | 0     | 0.03   |
 | XrayDisk  | SSD                | 256 GB | 0FC71E9E3E95 | 9     | 0     | 0.03   |
 | AMD       | R5SL240G           | 240 GB | 82B79EC42E50 | 9     | 0     | 0.03   |
@@ -32354,6 +33760,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480M500SSD1      | 480 GB | D790F42FC195 | 166   | 16    | 0.03   |
 | Samsung   | SSD 870 EVO        | 1 TB   | F1106FF7E07E | 68    | 6     | 0.03   |
 | Kingston  | SKC300S37A60G      | 64 GB  | 2539B17E4971 | 323   | 32    | 0.03   |
+| China     | KZ128              | 128 GB | 59BD288FD825 | 9     | 0     | 0.03   |
 | China     | SSD                | 1 TB   | 6C500352F666 | 9     | 0     | 0.03   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 7943DECE9758 | 9     | 0     | 0.03   |
 | Dogfish   | SSD                | 1 TB   | 7CF67A207138 | 9     | 0     | 0.03   |
@@ -32375,6 +33782,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDP128G         | 128 GB | 4FDA7CA2EF9E | 9     | 0     | 0.03   |
 | Transcend | TS32GSSD370S       | 32 GB  | 5C04D60A4910 | 9     | 0     | 0.03   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 5A5B10853A13 | 9     | 0     | 0.03   |
+| XrayDisk  | SSD                | 256 GB | A1D2FA0E4DE5 | 9     | 0     | 0.03   |
 | ADATA     | SU650              | 240 GB | 9254A6909AF6 | 9     | 0     | 0.03   |
 | Intel     | SSDSC2KF128G8L     | 128 GB | 69B9A6BA25B0 | 9     | 0     | 0.03   |
 | Kingston  | SUV500MS240G       | 240 GB | D0CEA1AAFCE9 | 9     | 0     | 0.03   |
@@ -32463,6 +33871,7 @@ MTBF - avg. MTBF in years per sample.
 | EMTEC     | X250               | 256 GB | 3914016EC3EE | 9     | 0     | 0.03   |
 | HP        | SSD S600           | 120 GB | 070022781BBD | 9     | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | 69A3A6C833CA | 9     | 0     | 0.03   |
+| Kingston  | SA400S37480G       | 480 GB | 36304C54F7BB | 9     | 0     | 0.03   |
 | Kingston  | SUV500MS120G       | 120 GB | C1C6652426C2 | 9     | 0     | 0.03   |
 | Lexar     | 128GB SSD          | 128 GB | 44764D90E7F2 | 9     | 0     | 0.03   |
 | Netac     | SSD                | 512 GB | E7A3CA518053 | 9     | 0     | 0.03   |
@@ -32481,6 +33890,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP900NS38          | 128 GB | D1E994CDA63E | 9     | 0     | 0.03   |
 | China     | SSD                | 1 TB   | 75A62F98A906 | 9     | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | 34C5CDD9CA90 | 9     | 0     | 0.03   |
+| Kingston  | SA400S37240G       | 240 GB | 6BDDFDD7DD14 | 9     | 0     | 0.03   |
 | Kingston  | SA400S37240G       | 240 GB | 9D8B5B5A73DD | 9     | 0     | 0.03   |
 | Kingston  | SKC600256G         | 256 GB | A874D3141DB2 | 9     | 0     | 0.03   |
 | Kingston  | SV300S37A120G      | 120 GB | 34F7B9058C8D | 9     | 0     | 0.03   |
@@ -32568,6 +33978,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSA1M080G2HP     | 80 GB  | 3E69C66CAC06 | 208   | 22    | 0.02   |
 | Kingston  | SKC300S37A60G      | 64 GB  | E41AC0A4E0EB | 27    | 2     | 0.02   |
 | SanDisk   | SD6PP4M-256G-1006  | 256 GB | E38A9ED3D1A0 | 325   | 35    | 0.02   |
+| ADATA     | SU650              | 120 GB | BA319349C3D5 | 9     | 0     | 0.02   |
 | Crucial   | CT500MX500SSD1     | 500 GB | B1DD0E5BEA56 | 9     | 0     | 0.02   |
 | Intel     | SSDMCEAW180A4      | 180 GB | 16D2BCD88D66 | 9     | 0     | 0.02   |
 | KingDian  | S280               | 480 GB | E4153CD9268E | 9     | 0     | 0.02   |
@@ -32577,6 +33988,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G3BTND-N210A | 128 GB | D0DB09F1893B | 9     | 0     | 0.02   |
 | Samsung   | MZ7KH240HAHQ-00005 | 240 GB | 85089FCB0A75 | 9     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | 475200F2CFF1 | 9     | 0     | 0.02   |
+| Samsung   | SSD 870 EVO        | 250 GB | BA3B53297649 | 9     | 0     | 0.02   |
 | Samsung   | SSD 870 EVO        | 500 GB | 0CC2EB8FC67A | 9     | 0     | 0.02   |
 | SanDisk   | WD easystore       | 240 GB | 553246A2D8AA | 9     | 0     | 0.02   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 25AFB826CE84 | 9     | 0     | 0.02   |
@@ -32588,6 +34000,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7UB2Q512G1122    | 512 GB | D7E43D4779EC | 9     | 0     | 0.02   |
 | SanDisk   | SD8SB8U256G1122    | 256 GB | EE2A071794E1 | 9     | 0     | 0.02   |
 | SanDisk   | SD8SMAT-128G-1006  | 128 GB | 7CCA54D4FB2A | 9     | 0     | 0.02   |
+| SanDisk   | SSD U100           | 64 GB  | E08771CA0C21 | 9     | 0     | 0.02   |
 | Toshiba   | TR200              | 240 GB | 3BCCB84F35C0 | 9     | 0     | 0.02   |
 | Kingston  | SV300S37A480G      | 480 GB | 4554D63E6143 | 2294  | 254   | 0.02   |
 | Kingston  | SV300S37A120G      | 120 GB | FF4DE1E14429 | 296   | 32    | 0.02   |
@@ -32602,9 +34015,11 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAK128MAY-1... | 128 GB | 73BFE140714E | 151   | 16    | 0.02   |
 | Micron    | MTFDDAK128MAY-1... | 128 GB | 7C40FDA31125 | 151   | 16    | 0.02   |
 | ADATA     | SU630              | 240 GB | DF719FC3E30A | 8     | 0     | 0.02   |
+| ADATA     | SU635              | 240 GB | 1719EF6E75FB | 8     | 0     | 0.02   |
 | ADATA     | SU650              | 480 GB | 424812BA6117 | 8     | 0     | 0.02   |
 | ADATA     | SU800              | 256 GB | 90FAA5253926 | 8     | 0     | 0.02   |
 | AMD       | R5SL120G           | 120 GB | B8FED76F175F | 8     | 0     | 0.02   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 7829DEE9664C | 8     | 0     | 0.02   |
 | Kingston  | SA400S37120G       | 120 GB | 39B4CD837C49 | 8     | 0     | 0.02   |
 | Kingston  | SUV500240G         | 240 GB | F9A6426832A1 | 8     | 0     | 0.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 74C6B31518E9 | 8     | 0     | 0.02   |
@@ -32616,8 +34031,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | F6CC4E13AE4D | 8     | 0     | 0.02   |
 | Patriot   | Burst              | 120 GB | 97B638715F33 | 8     | 0     | 0.02   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 3F058938EAAE | 8     | 0     | 0.02   |
+| Samsung   | SSD 870 EVO        | 250 GB | 3F6080DED5FB | 8     | 0     | 0.02   |
 | Samsung   | SSD 870 EVO        | 500 GB | FC1194A271DE | 8     | 0     | 0.02   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 72E79B771986 | 8     | 0     | 0.02   |
+| Samsung   | SSD 870 QVO        | 4 TB   | 67EC315C933C | 8     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 120 GB | FEF5178BE0B7 | 8     | 0     | 0.02   |
 | Teclast   | 128GB MS550        | 128 GB | 096A6BAD936A | 8     | 0     | 0.02   |
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | CBA33E070A87 | 8     | 0     | 0.02   |
@@ -32638,6 +34055,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SPCCSolidStateDisk | 256 GB | 5EC7C2F18721 | 8     | 0     | 0.02   |
 | SPCC      | SSD                | 256 GB | 88F12B9E7755 | 8     | 0     | 0.02   |
 | Samsung   | SSD 870 EVO        | 500 GB | 421B4E5DCAA7 | 8     | 0     | 0.02   |
+| Samsung   | SSD 870 QVO        | 4 TB   | 293BF743D218 | 8     | 0     | 0.02   |
 | Verbatim  | Vi550 S3 SSD       | 128 GB | 6912CA885D30 | 8     | 0     | 0.02   |
 | SanDisk   | iSSD P4            | 16 GB  | B4C0E98D1F68 | 238   | 26    | 0.02   |
 | Lite-On   | L8H-256V2G         | 256 GB | 3918A4FE3F22 | 61    | 6     | 0.02   |
@@ -32656,6 +34074,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | 120GB SSD          | 120 GB | 18B98D4CEB84 | 8     | 0     | 0.02   |
 | China     | SATA SSD           | 240 GB | E19F85190393 | 8     | 0     | 0.02   |
 | KingSpec  | T-60               | 64 GB  | 73B87CB24494 | 8     | 0     | 0.02   |
+| Kingston  | SA400S37240G       | 240 GB | 41D1AE1BA476 | 8     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 4513B243035D | 8     | 0     | 0.02   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | CE5A098258C5 | 8     | 0     | 0.02   |
 | PNY       | CS900 120GB SSD    | 120 GB | 19B4323BE13D | 8     | 0     | 0.02   |
@@ -32688,6 +34107,8 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 480 GB | 1845C1909139 | 8     | 0     | 0.02   |
 | Smartbuy  | SSD                | 64 GB  | CA0FB7281E26 | 8     | 0     | 0.02   |
 | Toshiba   | A100               | 120 GB | 2C32A1D923CE | 8     | 0     | 0.02   |
+| Apacer    | AS350              | 256 GB | 51421DC1FF60 | 8     | 0     | 0.02   |
+| China     | SATA SSD           | 240 GB | CFAEC4BFC7A0 | 8     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 232A36EFF577 | 8     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 71EAE13C1911 | 8     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 9B83CB74333F | 8     | 0     | 0.02   |
@@ -32698,6 +34119,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7SN6S-128G-1006  | 128 GB | EC1C34CB0DF7 | 8     | 0     | 0.02   |
 | SanDisk   | SD8SBAT256G1122    | 256 GB | 1E0777664B38 | 8     | 0     | 0.02   |
 | Smartbuy  | SSD                | 256 GB | 0234F129ADE6 | 8     | 0     | 0.02   |
+| WALRAM    | SSD 120G           | 120 GB | 541BEE2426BA | 8     | 0     | 0.02   |
 | ADATA     | SU800              | 128 GB | C464BED4B173 | 8     | 0     | 0.02   |
 | Biostar   | S160-256GB         | 256 GB | 11BA8DEBF117 | 8     | 0     | 0.02   |
 | China     | SH00R480GB         | 480 GB | 79B8DA373D36 | 8     | 0     | 0.02   |
@@ -32711,6 +34133,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 QVO        | 2 TB   | 645D58FAC088 | 8     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 240 GB | 5DED0ADFA2D7 | 8     | 0     | 0.02   |
 | Smartbuy  | SSD                | 128 GB | 355405A81D28 | 8     | 0     | 0.02   |
+| Transcend | TS480GSSD220S      | 480 GB | 91C4599DDB90 | 8     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 480 GB | 8CB409522E0A | 17    | 1     | 0.02   |
 | Kingston  | RBU-SNS8100S3128GD | 128 GB | B8448E0E50AC | 393   | 45    | 0.02   |
 | KingSpec  | ACSC4M128MSA       | 128 GB | 7F571597D9E0 | 8     | 0     | 0.02   |
@@ -32737,6 +34160,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 820548E7EDE4 | 8     | 0     | 0.02   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 0A40C68CBBBE | 76    | 8     | 0.02   |
 | Samsung   | SSD 870 EVO        | 250 GB | 0EB759DEF0BF | 8     | 0     | 0.02   |
+| Team      | TM8PS7256G         | 256 GB | C0F41F5286DF | 8     | 0     | 0.02   |
 | Intel     | SSDSCKKW120H6      | 120 GB | CE22A051A966 | 76    | 8     | 0.02   |
 | China     | 240GB SSD          | 240 GB | 3EDD293DF4DD | 8     | 0     | 0.02   |
 | China     | SATA SSD           | 120 GB | 3CCF556CB2A7 | 8     | 0     | 0.02   |
@@ -32753,6 +34177,7 @@ MTBF - avg. MTBF in years per sample.
 | Smartbuy  | SSD                | 120 GB | C9B1DE40178B | 8     | 0     | 0.02   |
 | ADATA     | SP920SS            | 256 GB | A5EA2B27ACA3 | 143   | 16    | 0.02   |
 | ADATA     | SP900              | 128 GB | A3AF39475DC9 | 8     | 0     | 0.02   |
+| ADATA     | SU650              | 480 GB | EF4E34B2472A | 8     | 0     | 0.02   |
 | China     | SSD                | 1 TB   | AE9719BEE5A0 | 8     | 0     | 0.02   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 9A59F038D6A0 | 8     | 0     | 0.02   |
 | Goodram   | SSD                | 120 GB | 515D3CDC8091 | 8     | 0     | 0.02   |
@@ -32774,6 +34199,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT275MX300SSD1     | 275 GB | 315FB6B9C135 | 8     | 0     | 0.02   |
 | Intenso   | SSD SATAIII        | 240 GB | B3A995268296 | 8     | 0     | 0.02   |
 | Kingspeed | SSD                | 240 GB | 8E58777E482E | 8     | 0     | 0.02   |
+| Kingston  | A400 960G          | 960 GB | BE5D16D83551 | 8     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 4DBC78A0C951 | 8     | 0     | 0.02   |
 | SPCC      | SSD                | 120 GB | D02CC68DF714 | 8     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 240 GB | 03B089301508 | 8     | 0     | 0.02   |
@@ -32786,14 +34212,17 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP600              | 64 GB  | FDFDAD4CE97E | 8     | 0     | 0.02   |
 | BaseTech  | A400 m.2 256Gb     | 256 GB | D927CED07DF3 | 8     | 0     | 0.02   |
 | Crucial   | CT500MX500SSD1     | 500 GB | FAF09F5DAEFE | 8     | 0     | 0.02   |
+| Goodram   | SSDPR-CX400-256-G2 | 256 GB | 71827C47CF3D | 8     | 0     | 0.02   |
 | KingSpec  | T-64               | 64 GB  | 1C45ACFBEB52 | 8     | 0     | 0.02   |
 | MicroD... | 512G SSD           | 512 GB | FE3561709B02 | 8     | 0     | 0.02   |
 | SPCC      | SSD                | 256 GB | 3D2506843189 | 8     | 0     | 0.02   |
 | Samsung   | SSD 850            | 120 GB | 65D49AE2D435 | 8     | 0     | 0.02   |
+| SanDisk   | SSD PLUS           | 1 TB   | 9AD0C07874A2 | 8     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 120 GB | 6AD288551137 | 8     | 0     | 0.02   |
 | Transcend | TS128GSSD230S      | 128 GB | 2A9A533B275C | 8     | 0     | 0.02   |
 | Teclast   | 480GB A800         | 480 GB | BD3447478286 | 174   | 20    | 0.02   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 4410BCF10367 | 8     | 0     | 0.02   |
+| Intel     | SSDSC2BW480A4      | 480 GB | B466E8B94EF1 | 41    | 4     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 7220918C1699 | 8     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 9C775134BB2D | 8     | 0     | 0.02   |
 | Kingston  | SHFS37A240G        | 240 GB | 03DCA7A51EBB | 8     | 0     | 0.02   |
@@ -32806,6 +34235,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD 256G           | 256 GB | 5656AA4EB41C | 8     | 0     | 0.02   |
 | Crucial   | CT250BX100SSD1     | 250 GB | BD4DABB67BEA | 8     | 0     | 0.02   |
 | Crucial   | CT500MX500SSD1     | 500 GB | B364088C7C4F | 8     | 0     | 0.02   |
+| Kingston  | SA400S37120G       | 120 GB | 39ABAE5B8110 | 8     | 0     | 0.02   |
 | MidasF... | SSD                | 256 GB | DE0882E2099C | 8     | 0     | 0.02   |
 | Plextor   | PH6-CE120          | 120 GB | F155FF06FF15 | 8     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | DE72E8FA4779 | 8     | 0     | 0.02   |
@@ -32874,6 +34304,8 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3250G        | 250 GB | 5AF689DAE7C0 | 8     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 120 GB | 1C6B2A167EDF | 8     | 0     | 0.02   |
 | SanDisk   | SSD U100           | 16 GB  | E461A10CB497 | 8     | 0     | 0.02   |
+| Team      | T253512GB          | 512 GB | 43D5101FD29A | 8     | 0     | 0.02   |
+| ADATA     | SU635              | 240 GB | FE0ABBD71609 | 8     | 0     | 0.02   |
 | AMD       | R5SL120G           | 120 GB | FF7FEA314CF7 | 8     | 0     | 0.02   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 91476A98F083 | 8     | 0     | 0.02   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | B20C76862D05 | 8     | 0     | 0.02   |
@@ -32917,6 +34349,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3512G        | 512 GB | 8B4F72F81A56 | 7     | 0     | 0.02   |
 | Kingston  | SA400S37120G       | 120 GB | F62CE09BF86D | 71    | 8     | 0.02   |
 | SanDisk   | SDSSDX480GG25      | 480 GB | 88085B07A333 | 1113  | 140   | 0.02   |
+| ADATA     | SU630              | 480 GB | 7B9D2B56E348 | 7     | 0     | 0.02   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 34AF2E956D2C | 7     | 0     | 0.02   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 82A27DFABE6B | 7     | 0     | 0.02   |
 | HP        | SSD M700           | 120 GB | 782FCEFB339E | 7     | 0     | 0.02   |
@@ -32925,6 +34358,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV400S37240G      | 240 GB | A4D70DAB425D | 7     | 0     | 0.02   |
 | Micron    | MTFDDAK512TBN-1... | 512 GB | 3CFE2EEFB919 | 7     | 0     | 0.02   |
 | Samsung   | SSD 850 EVO        | 250 GB | 020F56141312 | 7     | 0     | 0.02   |
+| Samsung   | SSD 870 EVO        | 500 GB | 86C7F8028CBB | 7     | 0     | 0.02   |
 | ADATA     | SU650              | 120 GB | AFF6D25BFF55 | 7     | 0     | 0.02   |
 | ADATA     | SU900              | 256 GB | D022B632B16C | 7     | 0     | 0.02   |
 | China     | MSATA SSD          | 256 GB | 4A81E1364018 | 7     | 0     | 0.02   |
@@ -32932,11 +34366,13 @@ MTBF - avg. MTBF in years per sample.
 | FASTDISK  | SSD 120G           | 120 GB | 4E6F8512D099 | 7     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | C14A4FB883EF | 7     | 0     | 0.02   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | 6445A1F8AC95 | 7     | 0     | 0.02   |
+| Mach X... | MXSSD3MDSFG-120G   | 120 GB | 23010D48FD64 | 7     | 0     | 0.02   |
 | Micron    | MTFDDAK256TDL      | 256 GB | 9D20132EC35C | 7     | 0     | 0.02   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | B8D86732A5F6 | 7     | 0     | 0.02   |
 | Phison    | SATA SSD           | 1 TB   | 34E855C4849D | 7     | 0     | 0.02   |
 | Samsung   | SSD 850 EVO        | 250 GB | 620AAA08FE44 | 7     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | 0AAFD9509FDE | 7     | 0     | 0.02   |
+| Samsung   | SSD 870 EVO        | 1 TB   | ABFB725C19D0 | 7     | 0     | 0.02   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 93468B44CCDE | 7     | 0     | 0.02   |
 | Kingston  | SA400S37480G       | 480 GB | 34342C051270 | 39    | 4     | 0.02   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | AB83C6282252 | 7     | 0     | 0.02   |
@@ -32988,6 +34424,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 1 TB   | 5BAA33C16996 | 7     | 0     | 0.02   |
 | Transcend | TS256GMTS430S      | 256 GB | F1E7D36B1855 | 7     | 0     | 0.02   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 0EBC9E734519 | 7     | 0     | 0.02   |
+| XrayDisk  | SSD                | 240 GB | E5E8936E2570 | 7     | 0     | 0.02   |
 | Samsung   | SSD 850 EVO        | 250 GB | 36704F815EFD | 743   | 96    | 0.02   |
 | OCZ       | REVODRIVE          | 25 GB  | C5127607379B | 1968  | 256   | 0.02   |
 | China     | 128GB SSD          | 128 GB | CDFB3953C9ED | 7     | 0     | 0.02   |
@@ -33021,6 +34458,8 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 90D675D2A5DF | 7     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 90528D49359A | 7     | 0     | 0.02   |
 | Hoodisk   | SSD                | 256 GB | 9D05893A0042 | 7     | 0     | 0.02   |
+| KingSpec  | NT-512             | 512 GB | CC84F04D51E3 | 7     | 0     | 0.02   |
+| Kingston  | SA400S37240G       | 240 GB | 620DDD911221 | 7     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 655DF56D5208 | 7     | 0     | 0.02   |
 | Netac     | SSD                | 240 GB | 17B261472CE7 | 7     | 0     | 0.02   |
 | PNY       | CS900 500GB SSD    | 500 GB | 2B7D34808CBF | 7     | 0     | 0.02   |
@@ -33040,6 +34479,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | CA630B7D4957 | 7     | 0     | 0.02   |
 | China     | SSD                | 500 GB | 1D2451F446D7 | 7     | 0     | 0.02   |
 | Intenso   | SSD Sata III       | 120 GB | DDA8359291C7 | 7     | 0     | 0.02   |
+| Kingston  | SA400M8240G        | 240 GB | 891C5C7C889E | 7     | 0     | 0.02   |
 | Kingston  | SKC600256G         | 256 GB | 59B234718D94 | 7     | 0     | 0.02   |
 | Kingston  | SV300S37A240G      | 240 GB | 6F038F7E44B9 | 7     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | E4A283FDC76A | 7     | 0     | 0.02   |
@@ -33054,12 +34494,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 250 GB | 888B2C76A49B | 7     | 0     | 0.02   |
 | WDC       | WDS100T1R0B-68A4Z0 | 1 TB   | F5E58E815AF8 | 7     | 0     | 0.02   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 9DB6351B8DC4 | 81    | 10    | 0.02   |
+| Crucial   | CT275MX300SSD4     | 275 GB | 11DCB6599408 | 126   | 16    | 0.02   |
 | ADATA     | SU650              | 256 GB | 93BC657FE45D | 7     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5655FB57A5A5 | 7     | 0     | 0.02   |
 | Kingston  | HyperX Fury 3D     | 120 GB | 213C48B64DF8 | 7     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | CF6179E61733 | 7     | 0     | 0.02   |
 | Kingston  | SUV400S37120G      | 120 GB | DD75B235D5C8 | 7     | 0     | 0.02   |
 | PNY       | CS900 240GB SSD    | 240 GB | 20C22FFE52A3 | 7     | 0     | 0.02   |
+| SPCC      | SSD                | 512 GB | 24A3067373CA | 7     | 0     | 0.02   |
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 6D29670BC364 | 7     | 0     | 0.02   |
 | Samsung   | MZ7LN1T0HAJQ-00000 | 1 TB   | C8EDB3FCA14D | 7     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | C42AA772BC31 | 7     | 0     | 0.02   |
@@ -33082,6 +34524,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS1TSSD230S        | 1 TB   | 1977BB70D0C0 | 7     | 0     | 0.02   |
 | China     | SSD                | 120 GB | 32E6517CFE31 | 243   | 32    | 0.02   |
 | AMD       | R3SL120G           | 120 GB | C475E5D6BE35 | 7     | 0     | 0.02   |
+| China     | SATA SSD           | 512 GB | 6E02D31A7587 | 7     | 0     | 0.02   |
 | China     | SSD                | 256 GB | E54A2734EFEB | 7     | 0     | 0.02   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 5EEC9C2C3433 | 7     | 0     | 0.02   |
 | Crucial   | CT512MX100SSD1     | 512 GB | 51769E3215D9 | 7     | 0     | 0.02   |
@@ -33101,6 +34544,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 240 GB | EC1CE3269714 | 7     | 0     | 0.02   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 740D2DC3C68A | 7     | 0     | 0.02   |
 | Patriot   | Morebeck-N100      | 256 GB | 72D75D85DBF0 | 7     | 0     | 0.02   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 73BD05EBD8B5 | 131   | 17    | 0.02   |
 | Samsung   | SSD 870 QVO        | 1 TB   | EFB255CAB9C5 | 7     | 0     | 0.02   |
 | Transcend | TS128GSSD230S      | 128 GB | D81C05A49DCC | 7     | 0     | 0.02   |
 | Transcend | TS64GMTS400        | 64 GB  | F14B3E794456 | 7     | 0     | 0.02   |
@@ -33113,6 +34557,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | DD56A7E578B5 | 7     | 0     | 0.02   |
 | Crucial   | CT500BX100SSD1     | 500 GB | DE60BD08EB90 | 7     | 0     | 0.02   |
 | Hoodisk   | SSD                | 256 GB | 8266C972B70E | 7     | 0     | 0.02   |
+| Patriot   | Burst              | 240 GB | 171395296A0E | 7     | 0     | 0.02   |
 | SK hynix  | SHGS31-1000GS-2    | 1 TB   | 2DB22FE08E53 | 7     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | 415ADEA15D83 | 7     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | E190B0BC32BF | 7     | 0     | 0.02   |
@@ -33142,14 +34587,17 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 094CD69CE0B2 | 7     | 0     | 0.02   |
 | KingDian  | S200               | 64 GB  | 3A79999FC052 | 7     | 0     | 0.02   |
 | Kingston  | SUV500MS120G       | 120 GB | 28096E7AB4B8 | 7     | 0     | 0.02   |
+| Netac     | SSD                | 128 GB | 9E22CA2F2370 | 7     | 0     | 0.02   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | 817F1470FD8D | 7     | 0     | 0.02   |
 | Samsung   | SSD 850 EVO        | 500 GB | D61EE8340206 | 7     | 0     | 0.02   |
 | SanDisk   | SDSSDH3 4T00       | 4 TB   | 33557978E821 | 7     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 480 GB | 4378670A9B03 | 14    | 1     | 0.02   |
 | Smartbuy  | SSD                | 120 GB | 859664D43611 | 7     | 0     | 0.02   |
 | Toshiba   | TR200              | 480 GB | 1A25E05F1DAC | 7     | 0     | 0.02   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 16CC86B7AF07 | 7     | 0     | 0.02   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 95ADB50C2550 | 92    | 12    | 0.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 67DA351A8BC0 | 235   | 32    | 0.02   |
+| Netac     | SSD                | 720 GB | 775E94578CD6 | 370   | 51    | 0.02   |
 | ADATA     | SU650              | 240 GB | B21C13943354 | 7     | 0     | 0.02   |
 | AMD       | R3SL120G           | 120 GB | 06DFDDCE6615 | 7     | 0     | 0.02   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 4E0578EFD1EF | 7     | 0     | 0.02   |
@@ -33172,6 +34620,7 @@ MTBF - avg. MTBF in years per sample.
 | Verbatim  | Vi500 S3 120GB SSD | 120 GB | E6169A5168A3 | 7     | 0     | 0.02   |
 | SanDisk   | SDSSDXPS240G       | 240 GB | F52E24E7FB85 | 852   | 120   | 0.02   |
 | ADATA     | SP600              | 32 GB  | 6FAF300F527B | 7     | 0     | 0.02   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 487BB8FFA82E | 7     | 0     | 0.02   |
 | Goodram   | SSDPR-CX400-512-G2 | 512 GB | 1277DBE18533 | 7     | 0     | 0.02   |
 | Kingston  | SHFS37A240G        | 240 GB | A30811CC85B7 | 7     | 0     | 0.02   |
 | Lite-On   | CV8-8E256          | 256 GB | 41E74B59CA48 | 7     | 0     | 0.02   |
@@ -33196,22 +34645,26 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | E3A35CF71C42 | 7     | 0     | 0.02   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | E3BC08B676A0 | 7     | 0     | 0.02   |
 | SanDisk   | SSD PLUS           | 480 GB | 9476CF9C2E51 | 7     | 0     | 0.02   |
+| Transcend | TS128GMTS800       | 128 GB | 9B665A9FEC24 | 7     | 0     | 0.02   |
 | Transcend | TS128GSSD370S      | 128 GB | 1786FE88A989 | 7     | 0     | 0.02   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 8693339254A1 | 49    | 6     | 0.02   |
 | ADATA     | SU650              | 240 GB | 09317BD1111F | 6     | 0     | 0.02   |
 | ADATA     | SU800              | 512 GB | 9A4D84B2C8E2 | 6     | 0     | 0.02   |
 | ADATA     | SU800NS38          | 256 GB | 5D385D9AD5D2 | 6     | 0     | 0.02   |
+| Crucial   | CT480BX500SSD1     | 480 GB | B0F232199357 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 2 TB   | 61A0F04B8BB8 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 78DC64420A94 | 6     | 0     | 0.02   |
 | Samsung   | SSD 870 QVO        | 1 TB   | EEBA6CA34CB5 | 6     | 0     | 0.02   |
 | WDC       | WDS100T1R0A-68A4W0 | 1 TB   | C5DE07D5BB57 | 6     | 0     | 0.02   |
 | tigo      | SSD                | 128 GB | 859828424D47 | 6     | 0     | 0.02   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 64799AFC35DA | 1383  | 198   | 0.02   |
+| SanDisk   | Ultra II           | 240 GB | BA4EFD3F6535 | 20    | 2     | 0.02   |
 | Intel     | SSDSA2M080G2LE     | 80 GB  | DAA06A890888 | 90    | 12    | 0.02   |
 | Intel     | SSDSC2BW240H6      | 240 GB | E2D7E3D06A2F | 491   | 70    | 0.02   |
 | ADATA     | SP550              | 120 GB | 5BA887586369 | 6     | 0     | 0.02   |
 | Crucial   | CT120BX500SSD1     | 120 GB | E9725D45BA90 | 6     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 6D5A653C43C1 | 6     | 0     | 0.02   |
+| Crucial   | CT500BX500SSD1     | 500 GB | F30A27679BBD | 6     | 0     | 0.02   |
 | Kingston  | SA400S371920G      | 1.9 TB | 3CB3835FF8B5 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 0F236AB3EB69 | 6     | 0     | 0.02   |
 | Kingston  | SUV500240G         | 240 GB | 67A8E03FCCEF | 6     | 0     | 0.02   |
@@ -33234,6 +34687,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 6EE485784A91 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | C9C9759B95CC | 6     | 0     | 0.02   |
 | Kingston  | SV300S37A 120G     | 120 GB | 376E132A0007 | 6     | 0     | 0.02   |
+| Lexar     | 512GB SSD          | 512 GB | A02B48B8D8D8 | 6     | 0     | 0.02   |
 | Patriot   | Burst              | 240 GB | C851637DD26F | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | BB179EACD09E | 6     | 0     | 0.02   |
 | Samsung   | SSD 870 EVO        | 500 GB | AC442F80ADC9 | 6     | 0     | 0.02   |
@@ -33247,6 +34701,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU630              | 240 GB | EB77C1674077 | 6     | 0     | 0.02   |
 | China     | SSD                | 120 GB | 448BCE0E53CF | 6     | 0     | 0.02   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 9BD563207BB1 | 6     | 0     | 0.02   |
+| Crucial   | CT960BX500SSD1     | 960 GB | 0FAD27C13C6B | 6     | 0     | 0.02   |
 | FORESEE   | 128GB SSD          | 128 GB | 1BA7D105D1D5 | 6     | 0     | 0.02   |
 | FORESEE   | 128GB SSD          | 128 GB | 28E241476DDB | 6     | 0     | 0.02   |
 | HP        | SSD S700           | 500 GB | 3641154151D5 | 6     | 0     | 0.02   |
@@ -33258,6 +34713,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SSBP064GTB3C0-S11  | 64 GB  | E96AC8D5FBEF | 6     | 0     | 0.02   |
 | Plextor   | PX-128M5Pro        | 128 GB | 15FABF74CD7B | 6     | 0     | 0.02   |
 | SPCC      | SSD                | 256 GB | 415885F8CFFF | 6     | 0     | 0.02   |
+| SPCC      | SSD                | 512 GB | 7D8A916808AB | 6     | 0     | 0.02   |
 | Samsung   | MZ7LH1T9HMLT-00005 | 1.9 TB | 21E4FCB5FE16 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 4 TB   | 9B5A42AF8D2D | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | 1272A6847236 | 6     | 0     | 0.02   |
@@ -33267,8 +34723,10 @@ MTBF - avg. MTBF in years per sample.
 | ShanDi... | SSD                | 512 GB | EAEE6D846BF0 | 6     | 0     | 0.02   |
 | Transcend | TS2TSSD220Q        | 2 TB   | A84F1F42E458 | 6     | 0     | 0.02   |
 | Intel     | SSDSA1M160G2HP     | 160 GB | FE2A4508E016 | 279   | 40    | 0.02   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | E68C68B35AC7 | 6     | 0     | 0.02   |
 | Crucial   | CT120BX500SSD1     | 120 GB | CA164C580FEF | 6     | 0     | 0.02   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 276395D99913 | 6     | 0     | 0.02   |
+| Foxline   | FLSSD256M80E13TCX5 | 256 GB | AEE03D43D0D2 | 6     | 0     | 0.02   |
 | Intel     | SSDSC2KB480G8      | 480 GB | 35A1566CEBA1 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37120G       | 120 GB | 79C053E572AE | 6     | 0     | 0.02   |
 | Kingston  | SA400S37480G       | 480 GB | 1FFE9852D783 | 6     | 0     | 0.02   |
@@ -33278,6 +34736,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | C72F05F51245 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 566206244132 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 QVO        | 1 TB   | B66E6239AA88 | 6     | 0     | 0.02   |
+| SanDisk   | SSD i100           | 32 GB  | DC685B78195F | 6     | 0     | 0.02   |
+| Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | BEC217165276 | 1264  | 186   | 0.02   |
 | Patriot   | P200               | 2 TB   | B0A7D4A8BB5C | 317   | 46    | 0.02   |
 | ADATA     | SU800              | 256 GB | 445E8EB4DA03 | 6     | 0     | 0.02   |
 | Intel     | SSDSA1M080G2LE     | 80 GB  | 6BFCCE81C02F | 20    | 2     | 0.02   |
@@ -33336,6 +34796,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | CA66B7B3EB50 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | DE2752156CE7 | 6     | 0     | 0.02   |
 | Lite-On   | LCS-128M6S         | 128 GB | C434A0AEC459 | 6     | 0     | 0.02   |
+| Netac     | SSD                | 256 GB | F185CEEBFBC0 | 6     | 0     | 0.02   |
 | PNY       | CS900 120GB SSD    | 120 GB | 977B4CE757A9 | 6     | 0     | 0.02   |
 | Patriot   | Burst              | 240 GB | ABB66422B1DF | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 500 GB | C5C6C2F25F84 | 6     | 0     | 0.02   |
@@ -33383,9 +34844,11 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VECTOR150          | 120 GB | A4D13EFD0DE8 | 6     | 0     | 0.02   |
 | Phison    | SATA SSD           | 120 GB | 559C62AE3D42 | 6     | 0     | 0.02   |
 | Samsung   | SSD 850 EVO        | 500 GB | 83492B305E18 | 6     | 0     | 0.02   |
+| Samsung   | SSD 870 EVO        | 500 GB | 4BF0B4192E14 | 6     | 0     | 0.02   |
 | Kingston  | SV300S37A60G       | 64 GB  | 9BA108E6580D | 19    | 2     | 0.02   |
 | ADATA     | SU630              | 240 GB | 0DD20FAE277C | 6     | 0     | 0.02   |
 | ADATA     | SX850              | 256 GB | E832171DA33C | 6     | 0     | 0.02   |
+| China     | SSD                | 256 GB | 0BF812A323B8 | 6     | 0     | 0.02   |
 | Intenso   | SSD Sata III       | 256 GB | 1BD380253A77 | 25    | 3     | 0.02   |
 | Intenso   | SSD128GBCSU2-E7    | 128 GB | ABE2B765E349 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37960G       | 960 GB | 2A20DE9AA4F9 | 6     | 0     | 0.02   |
@@ -33463,6 +34926,7 @@ MTBF - avg. MTBF in years per sample.
 | FORESEE   | 128GB SSD          | 128 GB | 249D10256244 | 6     | 0     | 0.02   |
 | GS Nan... | GSPMA512M16STF     | 512 GB | EC56FBC5A1EB | 6     | 0     | 0.02   |
 | Kingston  | SA400S37120G       | 120 GB | 81B547849852 | 6     | 0     | 0.02   |
+| Kingston  | SA400S37240G       | 240 GB | 2829B363B6D3 | 6     | 0     | 0.02   |
 | Kingston  | SUV500240G         | 240 GB | E31B7D4E8226 | 6     | 0     | 0.02   |
 | Kingston  | SV300S37A240G      | 240 GB | 1A67AE2AD6BF | 6     | 0     | 0.02   |
 | Patriot   | Burst              | 480 GB | F3474A3102F9 | 6     | 0     | 0.02   |
@@ -33483,8 +34947,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 38E216A54352 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | F77813586E5B | 6     | 0     | 0.02   |
 | SanDisk   | SDSSDH3250G        | 250 GB | BC88478FFA2F | 6     | 0     | 0.02   |
+| T-FORCE   | SSD                | 1 TB   | 6BCC7A6E73A6 | 6     | 0     | 0.02   |
 | Toshiba   | TR200              | 240 GB | 1EE94569AF5A | 6     | 0     | 0.02   |
 | Toshiba   | TR200              | 240 GB | 70E24BCE2F7C | 6     | 0     | 0.02   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 46728BBE65B8 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 40BB3AF9DA74 | 528   | 84    | 0.02   |
 | ADATA     | SP550              | 240 GB | A9F40F6D5D50 | 6     | 0     | 0.02   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 6599212DDF1F | 6     | 0     | 0.02   |
@@ -33517,6 +34983,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBU-SNS8350DES3... | 128 GB | EB1CB63F19B5 | 521   | 84    | 0.02   |
 | Apple     | SSD SM128C         | 121 GB | 672E562BE0CF | 122   | 19    | 0.02   |
 | ADATA     | SU650              | 120 GB | 04E9A9325161 | 6     | 0     | 0.02   |
+| China     | 256GB SSD          | 256 GB | B1050E0ADA70 | 6     | 0     | 0.02   |
 | Goodram   | IR-SSDPR-S25A-240  | 240 GB | 357411B83233 | 6     | 0     | 0.02   |
 | Kimtigo   | SSD                | 128 GB | 30FB3B0E659A | 6     | 0     | 0.02   |
 | Kingston  | SA400M8240G        | 240 GB | 30D5E120446F | 6     | 0     | 0.02   |
@@ -33528,13 +34995,16 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 6EF4D1EB6EDF | 67    | 10    | 0.02   |
 | Samsung   | SSD 870 EVO        | 500 GB | B32B76666C0A | 249   | 40    | 0.02   |
 | GeIL      | Zenith A3-PRO      | 240 GB | 6855478CF747 | 6     | 0     | 0.02   |
+| Hikvision | HS-SSD-E100 256G   | 256 GB | C01DB3417D74 | 6     | 0     | 0.02   |
 | Intenso   | M.2 2242-128GB SSD | 128 GB | 49452CA2F3A6 | 6     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 45BF8BB0CEFE | 6     | 0     | 0.02   |
 | Kingston  | SKC600512G         | 512 GB | DB1291BE4B84 | 6     | 0     | 0.02   |
 | Kingston  | SUV500MS240G       | 240 GB | DE6C9E2500B5 | 6     | 0     | 0.02   |
 | PNY       | CS900 500GB SSD    | 500 GB | 68E5E087357C | 6     | 0     | 0.02   |
+| SPCC      | SSD                | 1 TB   | 6C913AFF2CEE | 6     | 0     | 0.02   |
 | SPCC      | SSD                | 64 GB  | F3540065CD71 | 6     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 60CE79E01DB3 | 6     | 0     | 0.02   |
+| Samsung   | SSD 870 EVO        | 1 TB   | B48183538B70 | 6     | 0     | 0.02   |
 | ADATA     | SU650              | 120 GB | F28245C938AD | 78    | 12    | 0.02   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 62A226F75761 | 18    | 2     | 0.02   |
 | ADATA     | SU630              | 480 GB | 9C3606ECEF73 | 6     | 0     | 0.02   |
@@ -33550,6 +35020,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | 4E1C94A0868A | 6     | 0     | 0.02   |
 | SanDisk   | SSD U110           | 16 GB  | 92FAA2096D17 | 6     | 0     | 0.02   |
 | SanDisk   | WD easystore       | 240 GB | B7705A91652D | 6     | 0     | 0.02   |
+| Team      | TEAML5Lite3D120G   | 120 GB | 52A2D3A3CEBB | 6     | 0     | 0.02   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 77BB27A1787C | 6     | 0     | 0.02   |
 | Lite-On   | CMT-64L3M          | 64 GB  | 816C73A904A9 | 150   | 24    | 0.02   |
 | Intel     | SSDSA1M080G2LE     | 80 GB  | EBF14F9A0B5E | 48    | 7     | 0.02   |
@@ -33578,6 +35049,7 @@ MTBF - avg. MTBF in years per sample.
 | Faspeed   | K7N8-256GH         | 256 GB | 6B526F32EA56 | 5     | 0     | 0.02   |
 | Intenso   | SSD                | 128 GB | 738BF91A106F | 5     | 0     | 0.02   |
 | J.ZAO     | 3 SERIES 2.5 IN... | 240 GB | E0DD739DE22B | 5     | 0     | 0.02   |
+| Kingston  | SA400S37240G       | 240 GB | 6D617F70C160 | 5     | 0     | 0.02   |
 | Kingston  | SV300S37A120G      | 120 GB | 0341DCA16411 | 5     | 0     | 0.02   |
 | Netac     | SSD                | 128 GB | 014A2EBDECB5 | 5     | 0     | 0.02   |
 | PNY       | CS1311 240GB SSD   | 240 GB | 220901E7C7D9 | 5     | 0     | 0.02   |
@@ -33620,6 +35092,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 7F7218D11D03 | 5     | 0     | 0.02   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 8C67651763EC | 5     | 0     | 0.02   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 20F4C321E69F | 5     | 0     | 0.02   |
+| Crucial   | CT480BX500SSD1     | 480 GB | BB75A3F351FD | 5     | 0     | 0.02   |
 | INDMEM    | SSD mSATA          | 128 GB | B24DB72CC9F9 | 5     | 0     | 0.02   |
 | KingSpec  | MT-256             | 256 GB | 2F64BCC144FA | 5     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | 8814E0053D2F | 5     | 0     | 0.02   |
@@ -33633,6 +35106,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 240 GB | 8B3FF6583B23 | 5     | 0     | 0.02   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 405189E6899C | 5     | 0     | 0.02   |
 | Crucial   | CT240BX500SSD1     | 240 GB | F9D983D84DAC | 5     | 0     | 0.02   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 28EE1E0E4E64 | 5     | 0     | 0.02   |
 | Kingston  | SA400S37120G       | 120 GB | 1A8351611D16 | 5     | 0     | 0.02   |
 | Kingston  | SUV300S37A240G     | 240 GB | 9E731043ADC0 | 5     | 0     | 0.02   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 5EF6751F6819 | 5     | 0     | 0.02   |
@@ -33706,6 +35180,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LSS-24L6G          | 24 GB  | DC7809521CF3 | 5     | 0     | 0.02   |
 | Patriot   | P210               | 256 GB | F1F84CAE3BB4 | 5     | 0     | 0.02   |
 | Plextor   | PX-128M6S          | 128 GB | 1E5D688E7681 | 5     | 0     | 0.02   |
+| QUMO      | Q3DT-256GMSY-M2    | 256 GB | 49FEA7D9186B | 5     | 0     | 0.02   |
 | SPCC      | SSD                | 64 GB  | 0C9D616D3A11 | 5     | 0     | 0.02   |
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 515ECCEBD027 | 5     | 0     | 0.02   |
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 812D4B1387C9 | 5     | 0     | 0.02   |
@@ -33720,6 +35195,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | AGILITY3           | 240 GB | B4EAF8967675 | 1000  | 178   | 0.02   |
 | Samsung   | SSD 840 EVO        | 250 GB | 465C622E1458 | 715   | 127   | 0.02   |
 | Crucial   | CT275MX300SSD1     | 275 GB | D1B9C03C8D1E | 5     | 0     | 0.02   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 572F71E9804C | 5     | 0     | 0.02   |
 | Dell      | WR202KD128G E70... | 128 GB | 5597EEF5845E | 5     | 0     | 0.02   |
 | Intenso   | SSD0128S00         | 128 GB | C3E3C1E44FFA | 5     | 0     | 0.02   |
 | Kingston  | SA400S37120G       | 120 GB | 685D712D9DD7 | 5     | 0     | 0.02   |
@@ -33750,6 +35226,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 7C7BD4F21A83 | 5     | 0     | 0.02   |
 | Kingston  | SA400S37240G       | 240 GB | A2EF1D332860 | 5     | 0     | 0.02   |
 | Kingston  | SA400S37480G       | 480 GB | 00FBE3A455C8 | 5     | 0     | 0.02   |
+| Lite-On   | L8H-256V2G-HP      | 256 GB | DC6A65DB99F4 | 5     | 0     | 0.02   |
 | SPCC      | SSD                | 128 GB | C78F94A3D8A1 | 5     | 0     | 0.02   |
 | Samsung   | SSD 860 EVO        | 250 GB | 046CF6B2EA8F | 5     | 0     | 0.02   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 92F582123215 | 368   | 66    | 0.02   |
@@ -33772,6 +35249,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNK256GVN8 M... | 256 GB | EC0FA58343C7 | 651   | 119   | 0.01   |
 | AMD       | R5SL240G           | 240 GB | D941EF29F87F | 5     | 0     | 0.01   |
 | FORESEE   | 64GB SSD           | 64 GB  | 766546F1F62B | 5     | 0     | 0.01   |
+| Fanxiang  | S201               | 512 GB | 764FABE2784E | 5     | 0     | 0.01   |
 | Intenso   | SSD                | 480 GB | 684D6A0A22F7 | 5     | 0     | 0.01   |
 | KingSpec  | P4-240             | 240 GB | 9DC5ED380B28 | 5     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | EDC1A9805A51 | 5     | 0     | 0.01   |
@@ -33817,6 +35295,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 256 GB | 2A5650F02142 | 5     | 0     | 0.01   |
 | ADATA     | SU800              | 512 GB | FB9C3DD8CF1F | 5     | 0     | 0.01   |
 | Apacer    | AS510S             | 256 GB | D63415AFDE76 | 10    | 1     | 0.01   |
+| China     | CYX-SSD-S1000      | 512 GB | 3CE2D68232B9 | 5     | 0     | 0.01   |
 | China     | NGFF 2280 256GB... | 256 GB | 565A7CB7943B | 5     | 0     | 0.01   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 69D5568E6DC2 | 5     | 0     | 0.01   |
 | Crucial   | CT250MX500SSD1     | 250 GB | E6E21BF5D4E7 | 5     | 0     | 0.01   |
@@ -33826,6 +35305,8 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A240G      | 240 GB | CD9FF2780EAF | 5     | 0     | 0.01   |
 | Lite-On   | CV3-CE128-11 SATA  | 128 GB | 3457DB2B852B | 5     | 0     | 0.01   |
 | Lite-On   | L8T-256L9G-11 M... | 256 GB | 6826824D284E | 5     | 0     | 0.01   |
+| Micron    | MTFDDAV240TDU      | 240 GB | 8B76F1AE85A5 | 5     | 0     | 0.01   |
+| Micron    | MTFDDAV240TDU      | 240 GB | B551109B6366 | 5     | 0     | 0.01   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 2E432F5F36A2 | 5     | 0     | 0.01   |
 | Patriot   | Burst              | 120 GB | E5579D28B61F | 5     | 0     | 0.01   |
 | Samsung   | MZ7LN256HMJP-000H1 | 256 GB | 154D045DF924 | 5     | 0     | 0.01   |
@@ -33841,7 +35322,9 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | NT-128             | 128 GB | E94EA2F1EB2B | 5     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 112398CBAA28 | 5     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 50E63F3F8E74 | 5     | 0     | 0.01   |
+| Kingston  | SUV300S37A120G     | 120 GB | 590BFED2007E | 5     | 0     | 0.01   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 2024FE6D365E | 5     | 0     | 0.01   |
+| Micron    | 5300_MTFDDAK7T6TDS | 7.6 TB | 2E3C2151D89D | 5     | 0     | 0.01   |
 | Netac     | SSD                | 128 GB | 7FACD8F00BA4 | 5     | 0     | 0.01   |
 | PNY       | CS900 480GB SSD    | 480 GB | 7FE7BD9A2D74 | 5     | 0     | 0.01   |
 | Ramaxel   | RTITF128PCA1MADL   | 128 GB | B2EFEBF683E6 | 5     | 0     | 0.01   |
@@ -33946,6 +35429,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSA2M160G2GC     | 160 GB | EE5FD1D8710D | 55    | 10    | 0.01   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 529B6D370E49 | 353   | 69    | 0.01   |
 | Apple     | SSD SM256C         | 256 GB | 3739F5BAFFDC | 544   | 107   | 0.01   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 1EFA5DF2184C | 5     | 0     | 0.01   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 889535DAA2F7 | 5     | 0     | 0.01   |
 | EMTEC     | X150               | 120 GB | 02464DCDF5ED | 5     | 0     | 0.01   |
 | Goodram   | SSDPR-CL100-240-G3 | 240 GB | 050952FED33E | 5     | 0     | 0.01   |
@@ -33977,7 +35461,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | C89451A181BA | 5     | 0     | 0.01   |
 | Kingston  | SHPM2280P2H-240G   | 240 GB | 08314AF8C487 | 975   | 194   | 0.01   |
 | MaxDig... | MD500 120G         | 120 GB | 4D42B916D377 | 5     | 0     | 0.01   |
+| Netac     | SSD                | 128 GB | 4840EA81DE56 | 5     | 0     | 0.01   |
 | SPCC      | SSD                | 120 GB | 808254702178 | 5     | 0     | 0.01   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 1113354ED8CB | 5     | 0     | 0.01   |
 | Teclast   | 512GB A850         | 512 GB | 395FD289C83C | 5     | 0     | 0.01   |
 | SK hynix  | SC308 SATA         | 512 GB | 341400F8049B | 534   | 106   | 0.01   |
 | Intel     | SSDSC2BW080A4      | 80 GB  | D3F90DF84119 | 24    | 4     | 0.01   |
@@ -33991,6 +35477,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | F2E8F13365FA | 4     | 0     | 0.01   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 981F2D630416 | 4     | 0     | 0.01   |
 | KingSpec  | MSH-128            | 128 GB | 874B2212BEE3 | 4     | 0     | 0.01   |
+| KingSpec  | P4-120             | 120 GB | BA80F3285841 | 4     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 12B1C160040C | 4     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 70023EBF87D2 | 4     | 0     | 0.01   |
 | Kingston  | SA400S37480G       | 480 GB | AD036667535E | 4     | 0     | 0.01   |
@@ -34016,7 +35503,9 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | A545F496709F | 4     | 0     | 0.01   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | AD7EEB1F1672 | 4     | 0     | 0.01   |
 | SPCC      | SSD                | 120 GB | 55139FF9C9D8 | 44    | 8     | 0.01   |
+| Apacer    | AS350              | 512 GB | 737924DADE2B | 4     | 0     | 0.01   |
 | Biostar   | S100-120GB         | 120 GB | CBC3C2648899 | 4     | 0     | 0.01   |
+| China     | SSD                | 512 GB | B0E70A2C4155 | 4     | 0     | 0.01   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 3F559A612565 | 4     | 0     | 0.01   |
 | Crucial   | CT240BX200SSD1     | 240 GB | E15129FC2F1F | 4     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 83A984D4E5E3 | 4     | 0     | 0.01   |
@@ -34054,6 +35543,7 @@ MTBF - avg. MTBF in years per sample.
 | SUNEAST   | SSD SE800 mSATA    | 512 GB | A6F4F424220C | 4     | 0     | 0.01   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | 00B7FB45AB81 | 4     | 0     | 0.01   |
 | Samsung   | Portable SSD T5    | 500 GB | F46FE6B9B493 | 4     | 0     | 0.01   |
+| Samsung   | SSD 750 EVO        | 250 GB | 47E90AB31497 | 4     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 1 TB   | A78E46283689 | 4     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 1 TB   | B2E2085FACDD | 4     | 0     | 0.01   |
 | SanDisk   | SDSSDH3 500G       | 500 GB | 52E08B73DEF6 | 4     | 0     | 0.01   |
@@ -34065,6 +35555,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BW120H6      | 120 GB | 8F5559086C1F | 309   | 63    | 0.01   |
 | Kingston  | SV300S37A120G      | 120 GB | E9A998C867A2 | 62    | 12    | 0.01   |
 | Corsair   | CSSD-F60GB2        | 64 GB  | 4E938CDED89D | 2780  | 576   | 0.01   |
+| Crucial   | CT240BX500SSD1     | 240 GB | F5912F3A793E | 4     | 0     | 0.01   |
 | Hoodisk   | SSD                | 256 GB | 2F61B6DD1F92 | 4     | 0     | 0.01   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 2C0EF7E9B082 | 9     | 1     | 0.01   |
 | KingSpec  | NT-256             | 256 GB | E2DC62E336C2 | 4     | 0     | 0.01   |
@@ -34075,11 +35566,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | Portable SSD T5    | 250 GB | 5C481B0B44F0 | 4     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 8EE834403CF0 | 4     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 1 TB   | C42EB729EA04 | 4     | 0     | 0.01   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 56D8A8A180B9 | 4     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 1 TB   | D12FFFC4F384 | 4     | 0     | 0.01   |
 | Smartbuy  | m.2 S11-2280       | 128 GB | 05857F1155FE | 4     | 0     | 0.01   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | EA26676D91CF | 4     | 0     | 0.01   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | EFAD31AAD77D | 4     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 1AC3C40BB36F | 367   | 76    | 0.01   |
+| SPCC      | SSD                | 128 GB | 2E5BB54F6712 | 228   | 47    | 0.01   |
 | Micron    | MTFDDAK256MAY-1... | 256 GB | B2FF0ED0CAC1 | 81    | 16    | 0.01   |
 | AXIOMTEK  | FSA128GMC2T        | 128 GB | 3A2FEB42246F | 4     | 0     | 0.01   |
 | Apacer    | AS350              | 512 GB | 00B8BF04A821 | 4     | 0     | 0.01   |
@@ -34102,6 +35595,7 @@ MTBF - avg. MTBF in years per sample.
 | TAMMUZ    | SSD                | 120 GB | 665B47E85D11 | 4     | 0     | 0.01   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 400CB00F8663 | 9     | 1     | 0.01   |
 | Crucial   | CT480BX500SSD1     | 480 GB | CBA1512BC2AD | 4     | 0     | 0.01   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 0A62B1180B11 | 4     | 0     | 0.01   |
 | GLOWAY    | VAL32GS3-mSATA     | 32 GB  | 5DBD352F1400 | 4     | 0     | 0.01   |
 | KingSpec  | ACSC2M128S25       | 128 GB | E958BD902716 | 4     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | DB9B163FDB2F | 4     | 0     | 0.01   |
@@ -34144,6 +35638,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 1 TB   | 1543DD079C49 | 4     | 0     | 0.01   |
 | SanDisk   | SDSSDA120G         | 120 GB | 8A3DA6E7CC51 | 4     | 0     | 0.01   |
 | SanDisk   | SSD PLUS           | 480 GB | B6F34CDC0D52 | 4     | 0     | 0.01   |
+| SanDisk   | SSD U100           | 64 GB  | 12C28C895455 | 4     | 0     | 0.01   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 2280267D1472 | 4     | 0     | 0.01   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 0BEEE6F3DBD4 | 4     | 0     | 0.01   |
 | KingSpec  | P4-240             | 240 GB | 03C21C79BDF6 | 27    | 5     | 0.01   |
@@ -34174,6 +35669,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS340              | 480 GB | CB70C2549E32 | 4     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 510AD530EE03 | 4     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 051EA82101E9 | 4     | 0     | 0.01   |
+| Kingston  | SA400S37240G       | 240 GB | A2C9DEF6FBE3 | 4     | 0     | 0.01   |
 | Kingston  | SKC600512G         | 512 GB | FDDE9967DF2F | 4     | 0     | 0.01   |
 | Lite-On   | CV1-8B128          | 128 GB | 3B2718C1296E | 4     | 0     | 0.01   |
 | Netac     | SSD                | 256 GB | FE9782FF5051 | 4     | 0     | 0.01   |
@@ -34230,6 +35726,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | B48D71B84160 | 4     | 0     | 0.01   |
 | Kingston  | SUV500480G         | 480 GB | 953B83F3F5C5 | 4     | 0     | 0.01   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | F50F4920EDE3 | 4     | 0     | 0.01   |
+| Netac     | SSD                | 1 TB   | D8FD23A6D1CA | 4     | 0     | 0.01   |
 | Phison    | SATA SSD           | 128 GB | 194F0ADCF4F4 | 4     | 0     | 0.01   |
 | SK hynix  | SC311 SATA         | 256 GB | 307078B6E08B | 4     | 0     | 0.01   |
 | SPCC      | SSD                | 256 GB | B7B901FE2944 | 4     | 0     | 0.01   |
@@ -34288,6 +35785,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS64GSSD370S       | 64 GB  | C10322385AE6 | 4     | 0     | 0.01   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 82190EC506AC | 4     | 0     | 0.01   |
 | China     | SSD                | 256 GB | 56347BC809EB | 12    | 2     | 0.01   |
+| Intel     | SSDSCKJF180A5L     | 180 GB | 8F9B1C73EE59 | 12    | 2     | 0.01   |
 | OCZ       | AGILITY3           | 120 GB | EA4E444A3101 | 1325  | 306   | 0.01   |
 | Kingston  | SV300S37A120G      | 120 GB | 4EAAE5B0AA47 | 73    | 16    | 0.01   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 4B89E3835D58 | 64    | 14    | 0.01   |
@@ -34314,6 +35812,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 24B92D803F07 | 4     | 0     | 0.01   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | BAA2A1719D0A | 4     | 0     | 0.01   |
 | ADATA     | SU650              | 240 GB | 203277E3D1D2 | 4     | 0     | 0.01   |
+| ASint     | AS606              | 64 GB  | D00220A26FF2 | 4     | 0     | 0.01   |
 | Apacer    | AS350              | 512 GB | 69205A6E6EFA | 4     | 0     | 0.01   |
 | China     | 64GB SSD           | 64 GB  | 9DC21BAF77BC | 4     | 0     | 0.01   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | B91868FC5F1A | 4     | 0     | 0.01   |
@@ -34416,6 +35915,7 @@ MTBF - avg. MTBF in years per sample.
 | Drevo     | X1 SSD             | 120 GB | D2A0C590DDD8 | 958   | 235   | 0.01   |
 | Apacer    | AS340              | 480 GB | FFC87F707D02 | 4     | 0     | 0.01   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 970C09DB0A29 | 4     | 0     | 0.01   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 9752394CB89F | 4     | 0     | 0.01   |
 | Crucial   | CT500MX500SSD1     | 500 GB | B0086E890DC2 | 4     | 0     | 0.01   |
 | Crucial   | CT500MX500SSD1     | 500 GB | C058AD56A148 | 4     | 0     | 0.01   |
 | Intel     | SSDMAEMC080G2H     | 80 GB  | 88FD05EE06C8 | 4     | 0     | 0.01   |
@@ -34449,6 +35949,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV500MS240G       | 240 GB | 02F9ABC60FF3 | 4     | 0     | 0.01   |
 | Patriot   | Burst              | 120 GB | 93E0836CC4A7 | 4     | 0     | 0.01   |
 | SPCC      | SSD                | 120 GB | 4FA172EA4514 | 4     | 0     | 0.01   |
+| SPCC      | SSD                | 512 GB | 73945B633D2B | 4     | 0     | 0.01   |
 | Samsung   | SSD 840 EVO        | 250 GB | DB5B933C8075 | 4     | 0     | 0.01   |
 | Samsung   | SSD 850 EVO        | 500 GB | 7044F1B5169C | 4     | 0     | 0.01   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | 2CF20ABD6637 | 4     | 0     | 0.01   |
@@ -34484,11 +35985,13 @@ MTBF - avg. MTBF in years per sample.
 | China     | Mit-SSD128A        | 128 GB | 852DB2FE5C02 | 3     | 0     | 0.01   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 5E366C402A96 | 3     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 90B3427994C6 | 3     | 0     | 0.01   |
+| Crucial   | CT500BX500SSD1     | 500 GB | 962B89E4A500 | 3     | 0     | 0.01   |
 | Hikvision | HS-SSD-C100 240G   | 240 GB | 77853DCF8DFF | 3     | 0     | 0.01   |
 | Intel     | SSDSC2KF010T8      | 1 TB   | 7156517D4EE9 | 3     | 0     | 0.01   |
 | KingSpec  | P3-256             | 256 GB | E009A2909564 | 3     | 0     | 0.01   |
 | Netac     | SSD                | 256 GB | E7C2FEEF8626 | 3     | 0     | 0.01   |
 | PNY       | CS900 240GB SSD    | 240 GB | 2F397C929335 | 3     | 0     | 0.01   |
+| ROKOT     | SSD 512 Gb         | 512 GB | 8D813B00138C | 3     | 0     | 0.01   |
 | SPCC      | SSD                | 120 GB | E7097B2ED2C7 | 3     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 1EF38DD9CA08 | 3     | 0     | 0.01   |
 | SanDisk   | SSD U110           | 16 GB  | 5BDDC7F07627 | 3     | 0     | 0.01   |
@@ -34517,6 +36020,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 1 TB   | A1770C3D38A7 | 3     | 0     | 0.01   |
 | SanDisk   | Ultra II           | 240 GB | 3CEBFA6BAAC1 | 3     | 0     | 0.01   |
 | SanDisk   | Z400s M.2 2280     | 128 GB | A24FE5302D6F | 3     | 0     | 0.01   |
+| Team      | T253256GB          | 256 GB | B6E33BE0ADEE | 3     | 0     | 0.01   |
 | Team      | T253X1240G         | 240 GB | 444C0199C73C | 3     | 0     | 0.01   |
 | Team      | TM8PS7512G         | 512 GB | 71F65742405B | 3     | 0     | 0.01   |
 | Team      | TM8PS7512G         | 512 GB | A4495974CE99 | 3     | 0     | 0.01   |
@@ -34534,6 +36038,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD SATAIII        | 240 GB | BEF647C8DCAF | 3     | 0     | 0.01   |
 | Intenso   | SSD Sata III       | 120 GB | 91D9B2D0F0A1 | 3     | 0     | 0.01   |
 | Kingston  | SA400S37120G       | 120 GB | 048E014E01EB | 3     | 0     | 0.01   |
+| Kingston  | SA400S37240G       | 240 GB | B776AA533796 | 3     | 0     | 0.01   |
 | Kingston  | SKC300S37A120G     | 120 GB | C6683891761C | 34    | 8     | 0.01   |
 | Lite-On   | LSS-16L6G          | 16 GB  | 77EE1B29B5A1 | 3     | 0     | 0.01   |
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | DE19894ED154 | 3     | 0     | 0.01   |
@@ -34547,11 +36052,14 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSA1M080G2LE     | 80 GB  | 3D5FC85112D4 | 121   | 31    | 0.01   |
 | ADATA     | SP550              | 120 GB | 854446FED3B3 | 3     | 0     | 0.01   |
 | ADATA     | SU630              | 480 GB | 14DCD1C4895B | 3     | 0     | 0.01   |
+| BHT       | WR202H0032G E70... | 32 GB  | A8288DA91166 | 3     | 0     | 0.01   |
 | BIOSTAR   | S100-240GB         | 240 GB | 9C81B7506556 | 3     | 0     | 0.01   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 8BF62BDB0FF0 | 3     | 0     | 0.01   |
 | Hikvision | HS-SSD-E100N 128G  | 128 GB | A9400683522F | 3     | 0     | 0.01   |
 | KIOXIA... | SATA SSD           | 480 GB | E8A8C6F36AB9 | 3     | 0     | 0.01   |
 | KingDian  | S200               | 64 GB  | 69A946104AFD | 3     | 0     | 0.01   |
 | KingSpec  | P3-256             | 256 GB | A4CB0941E181 | 3     | 0     | 0.01   |
+| Kingston  | SA400S37240G       | 240 GB | 102EB388BA29 | 3     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 3E8246893633 | 3     | 0     | 0.01   |
 | Kingston  | SUV400S37120G      | 120 GB | 7DD088683D24 | 3     | 0     | 0.01   |
 | Micron    | MTFDDAK960TDS-1... | 960 GB | 0A1B6ACA46BA | 3     | 0     | 0.01   |
@@ -34617,6 +36125,7 @@ MTBF - avg. MTBF in years per sample.
 | AEGO      | SSD                | 240 GB | 76C57111CFA3 | 3     | 0     | 0.01   |
 | BHT       | WR202I0064G E70... | 64 GB  | C7510CDD97C6 | 3     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | F5488411BF6A | 3     | 0     | 0.01   |
+| Dogfish   | SSD                | 1 TB   | 09D7E659490C | 3     | 0     | 0.01   |
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | E19453ED63D8 | 3     | 0     | 0.01   |
 | KingSpec  | MT-512             | 512 GB | D6335EB157DC | 3     | 0     | 0.01   |
 | Kingston  | SA400M8240G        | 240 GB | 00E5F503164B | 3     | 0     | 0.01   |
@@ -34624,6 +36133,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | AB7F06090515 | 3     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | EA23FE01F638 | 3     | 0     | 0.01   |
 | Kingston  | SA400S37480G       | 480 GB | 824A70E461BA | 3     | 0     | 0.01   |
+| Kingston  | SA400S37480G       | 480 GB | F0485AD591DC | 3     | 0     | 0.01   |
 | Kingston  | SV300S37A240G      | 240 GB | 801E31923EA2 | 3     | 0     | 0.01   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 05D080C051B6 | 3     | 0     | 0.01   |
 | Patriot   | P210               | 512 GB | 3C5C39C74179 | 3     | 0     | 0.01   |
@@ -34646,6 +36156,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | 256GB SSD          | 256 GB | EA84FE506B60 | 3     | 0     | 0.01   |
 | China     | M.2 SSD            | 128 GB | 417D2B9F8C2B | 3     | 0     | 0.01   |
 | China     | SATA3 1TB SSD      | 1 TB   | 83A1A568A5AC | 3     | 0     | 0.01   |
+| China     | SSD                | 240 GB | 2EFFF055C0EE | 3     | 0     | 0.01   |
 | China     | SSD                | 240 GB | 92CA209A3D2C | 3     | 0     | 0.01   |
 | China     | SSD                | 512 GB | 48DEA05B4B63 | 3     | 0     | 0.01   |
 | Goodram   | SSDPR-CL100-960-G3 | 960 GB | DD4EC3D7FAC4 | 3     | 0     | 0.01   |
@@ -34662,6 +36173,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 324B4C87F15C | 3     | 0     | 0.01   |
 | SanDisk   | SDSSDA240G         | 240 GB | 499BE6B48B24 | 3     | 0     | 0.01   |
 | SanDisk   | SSD PLUS           | 480 GB | 7C93D98C33D9 | 3     | 0     | 0.01   |
+| SanDisk   | Z400s M.2 2280     | 128 GB | E508C5D9EBAB | 3     | 0     | 0.01   |
 | Transcend | TS240GSSD220S      | 240 GB | C5750E0D3266 | 3     | 0     | 0.01   |
 | Transcend | TS256GMTS400       | 256 GB | 8BEBB0AE8337 | 3     | 0     | 0.01   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | CC6139C123F6 | 3     | 0     | 0.01   |
@@ -34672,6 +36184,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD                | 1 TB   | 3D7019D5CCD7 | 10    | 2     | 0.01   |
 | Toshiba   | Q300               | 240 GB | D42CE130A0B3 | 32    | 8     | 0.01   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 9F9CA06D2BA2 | 46    | 12    | 0.01   |
+| China     | FPT310M4SSD256G    | 256 GB | 49C0A8514FAC | 3     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | BE1781D91D02 | 3     | 0     | 0.01   |
 | DEPO      | SM3DT-120          | 120 GB | 8705C9A5749D | 3     | 0     | 0.01   |
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | 81A3DB432E11 | 3     | 0     | 0.01   |
@@ -34681,6 +36194,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 937D34E4D914 | 3     | 0     | 0.01   |
 | Samsung   | SSD 860 PRO        | 512 GB | 65E71C67966B | 3     | 0     | 0.01   |
 | SanDisk   | SDSSDA240G         | 240 GB | CD1C42D3B02A | 3     | 0     | 0.01   |
+| SanDisk   | SSD PLUS           | 480 GB | DEB989A585AE | 3     | 0     | 0.01   |
 | Seagate   | BarraCuda SSD Z... | 1 TB   | E22BB6CAE342 | 3     | 0     | 0.01   |
 | Smartbuy  | SSD                | 64 GB  | 753177775A1C | 3     | 0     | 0.01   |
 | Team      | TM8PS7001T         | 1 TB   | FF2F2061A2C2 | 3     | 0     | 0.01   |
@@ -34705,6 +36219,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 480 GB | 083E494FE9FA | 3     | 0     | 0.01   |
 | ShanDi... | SSD                | 128 GB | 0E3259AC13B9 | 3     | 0     | 0.01   |
 | Team      | T253X2128G         | 128 GB | D9EC8F6D92BB | 3     | 0     | 0.01   |
+| Transcend | TS240GJDM520       | 240 GB | B2C94A70058D | 3     | 0     | 0.01   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 6DC21F9B7770 | 3     | 0     | 0.01   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 149DBCFED22F | 3     | 0     | 0.01   |
 | Wibtek    | W800S              | 512 GB | 328DC8CF8F87 | 3     | 0     | 0.01   |
@@ -34728,6 +36243,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U100           | 24 GB  | 48066135DC9D | 3     | 0     | 0.01   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 3B3594BB13D2 | 3     | 0     | 0.01   |
 | XrayDisk  | SSD                | 256 GB | 2778BEB31C3D | 3     | 0     | 0.01   |
+| Crucial   | CT275MX300SSD1     | 275 GB | 8C2FFE3BC7EA | 226   | 64    | 0.01   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | F18DC52C5D87 | 59    | 16    | 0.01   |
 | Samsung   | SSD 870 EVO        | 1 TB   | F8E749FF748E | 337   | 96    | 0.01   |
 | Kingston  | SV300S37A120G      | 120 GB | 7939A6DDC85E | 312   | 89    | 0.01   |
@@ -34749,6 +36265,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | IT L8H-64V2G       | 64 GB  | 8E9FB6AB1B85 | 3     | 0     | 0.01   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 8014AC11D318 | 3     | 0     | 0.01   |
 | SanDisk   | SSD PLUS           | 120 GB | 1FA0037CA132 | 3     | 0     | 0.01   |
+| Team      | T253240GB          | 240 GB | 5742B419B840 | 3     | 0     | 0.01   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 8C85BD703517 | 3     | 0     | 0.01   |
 | Kingston  | SA400S37480G       | 480 GB | B760F60EA27B | 494   | 142   | 0.01   |
 | Samsung   | SSD 870 EVO        | 500 GB | B3647852C0CD | 602   | 174   | 0.01   |
@@ -34770,6 +36287,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV500MS120G       | 120 GB | 1425B1C60E2E | 3     | 0     | 0.01   |
 | Micron    | 1300 SATA          | 256 GB | 5CBDB080B6A7 | 3     | 0     | 0.01   |
 | SPCC      | SSD                | 128 GB | 0BE16F984BE2 | 3     | 0     | 0.01   |
+| Samsung   | SSD 870 EVO        | 500 GB | DCD916725815 | 3     | 0     | 0.01   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 4CB8A89FE631 | 3     | 0     | 0.01   |
 | SanDisk   | SD8SBAT128G1122    | 128 GB | 0678DE7014FA | 3     | 0     | 0.01   |
 | SanDisk   | SDSSDA120G         | 120 GB | 00A832DE961B | 3     | 0     | 0.01   |
@@ -34857,6 +36375,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 1 TB   | 77E3FD48B868 | 430   | 131   | 0.01   |
 | DGM       | SSD 120GB S3-120A  | 120 GB | E83806FC85FC | 140   | 42    | 0.01   |
 | ADATA     | SU630              | 480 GB | CB6FBD90B493 | 3     | 0     | 0.01   |
+| Crucial   | CT256MX100SSD1     | 256 GB | 31AAE069836B | 3     | 0     | 0.01   |
 | EMTEC     | X150               | 480 GB | E8D9F10D1E69 | 3     | 0     | 0.01   |
 | Foxline   | FLSSD256X5SE       | 256 GB | A921BC50D689 | 3     | 0     | 0.01   |
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | BF6AF05350DA | 3     | 0     | 0.01   |
@@ -34924,6 +36443,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD4     | 500 GB | A23F06592210 | 3     | 0     | 0.01   |
 | Intenso   | SATA III SSD       | 120 GB | 7385D3B011BE | 3     | 0     | 0.01   |
 | KingDian  | S280               | 120 GB | 2BCCC728013F | 3     | 0     | 0.01   |
+| Kingston  | SA400S37240G       | 240 GB | 0BA12C9B11BF | 3     | 0     | 0.01   |
 | SK hynix  | HFS128G32TNF-N3A0A | 128 GB | 8C0A766D2EE5 | 3     | 0     | 0.01   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | E549357C958D | 3     | 0     | 0.01   |
 | SPCC      | SSD                | 64 GB  | 0021418EF411 | 3     | 0     | 0.01   |
@@ -34932,6 +36452,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SC210 mSATA        | 256 GB | 7EFC2CDC622D | 82    | 25    | 0.01   |
 | Crucial   | CT275MX300SSD1     | 275 GB | BEE08ECD84BD | 22    | 6     | 0.01   |
 | SPCC      | 2.5" SSD           | 512 GB | 2DC651D22569 | 150   | 47    | 0.01   |
+| ADATA     | SU630              | 240 GB | 53086D9E74FD | 3     | 0     | 0.01   |
 | ADATA     | SU650              | 240 GB | 30B6153EF53B | 3     | 0     | 0.01   |
 | ADATA     | SU750              | 512 GB | B745B1AF4A11 | 3     | 0     | 0.01   |
 | Apacer    | AS350              | 256 GB | E58895D50FFA | 3     | 0     | 0.01   |
@@ -34952,6 +36473,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | A1F0E898CE2A | 3     | 0     | 0.01   |
 | Netac     | M.2 2280-128GB SSD | 128 GB | 2F7BB24C0114 | 3     | 0     | 0.01   |
 | Phison    | SATA SSD           | 240 GB | BDC7C0073D9A | 3     | 0     | 0.01   |
+| QUMO      | Q3DT-480GSCY       | 480 GB | ECC33F89AB9E | 3     | 0     | 0.01   |
 | SK hynix  | HFS960G32FEH-7A10A | 960 GB | B472939C2593 | 3     | 0     | 0.01   |
 | Samsung   | SSD 840 EVO        | 250 GB | ACF439B8A118 | 3     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 500 GB | 3B4377840E2A | 3     | 0     | 0.01   |
@@ -34979,6 +36501,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 1 TB   | 2B1A5CBE3CD7 | 3     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 44EA638CDB96 | 3     | 0     | 0.01   |
 | SanDisk   | SSD U100           | 16 GB  | 7C792FE96244 | 3     | 0     | 0.01   |
+| SanDisk   | pSSD               | 32 GB  | D97588299B91 | 3     | 0     | 0.01   |
 | Smart     | SSD                | 240 GB | B46B7D53F9A1 | 3     | 0     | 0.01   |
 | Star D... | SATA SSD           | 240 GB | 13E9E206F995 | 3     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 9446C6826E00 | 6     | 1     | 0.01   |
@@ -34986,6 +36509,7 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R3SL240G           | 240 GB | BB3C5576D168 | 787   | 257   | 0.01   |
 | ADATA     | SU650NS38          | 120 GB | CC013BF1A81F | 3     | 0     | 0.01   |
 | China     | SSD                | 128 GB | AAA1D55CF99B | 3     | 0     | 0.01   |
+| Crucial   | CT525MX300SSD1     | 528 GB | 3018FA1A2F16 | 3     | 0     | 0.01   |
 | GOKE      | GG2ZT256S3C27      | 256 GB | D8620218A71A | 3     | 0     | 0.01   |
 | Intel     | SSDSC2KB480G7      | 480 GB | D04B8FE4EB5D | 3     | 0     | 0.01   |
 | Intenso   | SSD256GBS420       | 256 GB | 4FEAADB5B0F6 | 3     | 0     | 0.01   |
@@ -34994,6 +36518,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 5377F153F6C7 | 3     | 0     | 0.01   |
 | Kingston  | SA400S37480G       | 480 GB | 58AE376131CA | 3     | 0     | 0.01   |
 | Kingston  | SKC600256G         | 256 GB | ACACB5AD694E | 3     | 0     | 0.01   |
+| Netac     | SSD                | 512 GB | 7E97F62BE27B | 3     | 0     | 0.01   |
 | Pichau    | Gaming PG256X      | 256 GB | 45AB6CFE5F8D | 3     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 6B80EB30FF1F | 3     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 500 GB | 886418B0406A | 3     | 0     | 0.01   |
@@ -35083,6 +36608,7 @@ MTBF - avg. MTBF in years per sample.
 | KingDian  | S180               | 64 GB  | 3FEAD9EF0DE3 | 2     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 267C2E7B79D9 | 2     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 3C0BC6CD039E | 2     | 0     | 0.01   |
+| Kingston  | SA400S37480G       | 480 GB | 1E5CF2FC47A7 | 2     | 0     | 0.01   |
 | Lite-On   | IT LST-32S9G-HP    | 32 GB  | 474E4E6F3B94 | 2     | 0     | 0.01   |
 | Netac     | SSD                | 512 GB | DECFEBCC398A | 2     | 0     | 0.01   |
 | SK hynix  | SC311 SATA         | 512 GB | 5F8D827D7CF0 | 2     | 0     | 0.01   |
@@ -35090,6 +36616,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850            | 120 GB | AE17CA9D6A40 | 2     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 250 GB | 3EBA81E3C134 | 2     | 0     | 0.01   |
 | Samsung   | SSD 870 EVO        | 500 GB | E53346218FDA | 2     | 0     | 0.01   |
+| SanDisk   | SD8SBAT128G1122    | 128 GB | 7F3BD3F961BE | 2     | 0     | 0.01   |
 | SanDisk   | SD9SB8W256G1102    | 256 GB | D47C782D273D | 2     | 0     | 0.01   |
 | SanDisk   | SSD PLUS           | 240 GB | 332D458910F7 | 2     | 0     | 0.01   |
 | Smartbuy  | SSD                | 120 GB | 8900F47701CE | 2     | 0     | 0.01   |
@@ -35142,6 +36669,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SBAT064G1122    | 64 GB  | 9C71B8AAC3C4 | 2     | 0     | 0.01   |
 | SanDisk   | SSD i110           | 128 GB | 6F9A720A48CD | 2     | 0     | 0.01   |
 | Smartbuy  | SSD                | 240 GB | 8500734F0559 | 2     | 0     | 0.01   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 59B1CF7F7FD6 | 2     | 0     | 0.01   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | 514A71B80ADF | 2     | 0     | 0.01   |
 | Kingston  | SUV400S37240G      | 240 GB | 83090FEDB56E | 645   | 227   | 0.01   |
 | Corsair   | Force 3 SSD        | 120 GB | 26F8A9278EA7 | 764   | 270   | 0.01   |
@@ -35199,6 +36727,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | 07B767ECF189 | 2     | 0     | 0.01   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 16532E3ACAA1 | 2     | 0     | 0.01   |
 | OCZ       | VERTEX3            | 120 GB | 94A84A0F6649 | 1783  | 648   | 0.01   |
+| SUNEAST   | SSD SE800          | 1 TB   | 419E389EB640 | 476   | 173   | 0.01   |
 | SanDisk   | SSD P4             | 32 GB  | 34C25C32B638 | 54    | 19    | 0.01   |
 | Crucial   | M4-CT512M4SSD2     | 512 GB | A30861372D2A | 2750  | 1010  | 0.01   |
 | OYUNKEY   | SSD                | 120 GB | B8A2AE918D11 | 362   | 132   | 0.01   |
@@ -35213,8 +36742,10 @@ MTBF - avg. MTBF in years per sample.
 | KingDian  | S280               | 240 GB | CE1D8A4E76AA | 2     | 0     | 0.01   |
 | Kingch... | SSD                | 64 GB  | 76C5E6B1C083 | 2     | 0     | 0.01   |
 | Kingston  | SA400S37120G       | 120 GB | F2F7BE1086B6 | 2     | 0     | 0.01   |
+| Kingston  | SA400S37240G       | 240 GB | 5DCD246C37C8 | 2     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | CC7D04AB246E | 2     | 0     | 0.01   |
 | Kingston  | SA400S37480G       | 480 GB | 2372AE962583 | 2     | 0     | 0.01   |
+| Kingston  | SA400S37480G       | 480 GB | ED01D708B681 | 2     | 0     | 0.01   |
 | Kingston  | SV300S37A240G      | 240 GB | 053BE8118D67 | 2     | 0     | 0.01   |
 | Kingston  | SV300S37A240G      | 240 GB | DEC2B56D5EC7 | 2     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 250 GB | 6A57E1FE2F19 | 2     | 0     | 0.01   |
@@ -35229,6 +36760,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 03F80BE226B7 | 2     | 0     | 0.01   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 6F376150C7EC | 2     | 0     | 0.01   |
 | Toshiba   | THNSNK128GVN8 M... | 128 GB | DA5861278B9F | 272   | 100   | 0.01   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 6B74D51921D1 | 279   | 103   | 0.01   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 7021F715954B | 24    | 8     | 0.01   |
 | KingSpec  | NT-512             | 512 GB | 59CB24C7B8F1 | 24    | 8     | 0.01   |
 | ADATA     | IM2S3338-128GD2    | 128 GB | BD1A7D277144 | 2     | 0     | 0.01   |
@@ -35259,6 +36791,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | 1181DA2903B9 | 266   | 100   | 0.01   |
 | AMD       | R5SL480G           | 480 GB | 795C9E33F3BF | 382   | 144   | 0.01   |
 | Intel     | SSDSC2CW060A3      | 64 GB  | 6217A631312A | 2688  | 1019  | 0.01   |
+| ADATA     | SSD SP900          | 256 GB | 258DA2C2AAB2 | 2673  | 1016  | 0.01   |
 | Intel     | SSDSA1M160G2HP     | 160 GB | CB6074202404 | 57    | 21    | 0.01   |
 | ADATA     | SU630              | 240 GB | 6C864F49D58D | 2     | 0     | 0.01   |
 | Apacer    | AS350              | 512 GB | D247AB81EDB9 | 2     | 0     | 0.01   |
@@ -35283,6 +36816,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS512GSSD230S      | 512 GB | 72984A9EBF2F | 2     | 0     | 0.01   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 06906FC45DC7 | 2     | 0     | 0.01   |
 | SanDisk   | SSD PLUS           | 480 GB | 485E56A184FC | 54    | 20    | 0.01   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | D6D1B28A9AFA | 938   | 358   | 0.01   |
 | Intel     | SSDSA2M160G2LE     | 160 GB | A8EE6C3D73EF | 57    | 21    | 0.01   |
 | SanDisk   | SDSA5GK-016G-1006  | 16 GB  | 7B66A86B2730 | 276   | 106   | 0.01   |
 | ADATA     | SU800              | 256 GB | 8B9A5F7C889A | 2     | 0     | 0.01   |
@@ -35326,6 +36860,8 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-512-G2 | 512 GB | 74271F261B62 | 2     | 0     | 0.01   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | 5906BB5A215B | 2     | 0     | 0.01   |
 | KIOXIA... | SATA SSD           | 240 GB | 6A5E3D0CF6FC | 2     | 0     | 0.01   |
+| KOOTION   | X12 SSD            | 480 GB | B5F8794C819E | 2     | 0     | 0.01   |
+| LEQIXIANG | SSD                | 256 GB | BB01C4221CF4 | 2     | 0     | 0.01   |
 | Neo Forza | NFS011SA324-600... | 240 GB | CFD593F8D9EF | 2     | 0     | 0.01   |
 | Phison    | S11-128G-PHISON... | 128 GB | 58E40A07CDDE | 2     | 0     | 0.01   |
 | SPCC      | SSD                | 128 GB | 1EEE715C4C67 | 2     | 0     | 0.01   |
@@ -35340,6 +36876,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 83AE09F347BD | 797   | 315   | 0.01   |
 | ADATA     | XM11 256GB-V2      | 256 GB | 1FBC9A14B9DD | 2557  | 1018  | 0.01   |
 | ADATA     | SU810NS38 SATA ... | 256 GB | A69C33A622E9 | 2     | 0     | 0.01   |
+| BHT       | WR202I0064G E70... | 64 GB  | C9C18B7AB6A4 | 2     | 0     | 0.01   |
 | Colorful  | SL300              | 120 GB | AC837C71014F | 2     | 0     | 0.01   |
 | Crucial   | CT120BX500SSD1     | 120 GB | B32CAA8F8BEE | 2     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 6D8A6D2001F6 | 2     | 0     | 0.01   |
@@ -35352,7 +36889,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 7C0157B84841 | 2     | 0     | 0.01   |
 | Kingston  | SA400S37120G       | 120 GB | D9199C6CE3F9 | 2     | 0     | 0.01   |
 | Netac     | S535N8-256GYN      | 256 GB | 1EFCA2F98AF4 | 2     | 0     | 0.01   |
+| Samsung   | SSD 850 EVO        | 500 GB | 2C4C582D76DE | 2     | 0     | 0.01   |
 | Samsung   | SSD 870 QVO        | 4 TB   | B99669CAA808 | 2     | 0     | 0.01   |
+| SanDisk   | SDSSDH3 1T00       | 1 TB   | F0F7C9F866DF | 2     | 0     | 0.01   |
 | Transcend | TS120GMTS820S      | 120 GB | 5259A25C3D48 | 2     | 0     | 0.01   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 4D3BF5A6364B | 2     | 0     | 0.01   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | D1BE4BA61F18 | 2     | 0     | 0.01   |
@@ -35376,6 +36915,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CL100-240-G2 | 240 GB | 8F6126A76178 | 2     | 0     | 0.01   |
 | Intenso   | SSD                | 1 TB   | 56C30859B22D | 2     | 0     | 0.01   |
 | Kingston  | SA400S37120G       | 120 GB | 3A1290DDE438 | 2     | 0     | 0.01   |
+| Kingston  | SA400S37240G       | 240 GB | DACCB3F9B355 | 2     | 0     | 0.01   |
 | Kingston  | SV300S37A240G      | 240 GB | 7C78793E31CB | 2     | 0     | 0.01   |
 | Kingston  | SV300S37A240G      | 240 GB | D6F8BA36275B | 2     | 0     | 0.01   |
 | Lite-On   | CV1-8B256          | 256 GB | 91778A9ECDA3 | 2     | 0     | 0.01   |
@@ -35393,6 +36933,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 256 GB | 5C6E39B24E45 | 2     | 0     | 0.01   |
 | China     | M.2 SSD            | 256 GB | C30CE572C7DD | 2     | 0     | 0.01   |
 | China     | SSD 128G           | 128 GB | 141283160C1A | 2     | 0     | 0.01   |
+| China     | SSD                | 2 TB   | 194B655E57FD | 2     | 0     | 0.01   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 14963D0C01BE | 2     | 0     | 0.01   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 1E204952EEC8 | 2     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 2D0BB82B1937 | 2     | 0     | 0.01   |
@@ -35407,6 +36948,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA240G         | 240 GB | 5AEE3A18E241 | 2     | 0     | 0.01   |
 | SanDisk   | SSD PLUS           | 240 GB | C777E1A3E4EF | 7     | 2     | 0.01   |
 | SanDisk   | SSD PLUS           | 240 GB | F2887C3341A1 | 2     | 0     | 0.01   |
+| Transcend | TS256GMTS430S      | 256 GB | B3CD65382CB8 | 2     | 0     | 0.01   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 1598AEB341BF | 2     | 0     | 0.01   |
 | WDC       | WDS250G2B0B        | 250 GB | BAA105F690BA | 2     | 0     | 0.01   |
 | Crucial   | CT3500SC           | 500 GB | 36C22C5269D6 | 31    | 12    | 0.01   |
@@ -35429,10 +36971,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV500M8120G       | 120 GB | 6D542F016E1A | 2     | 0     | 0.01   |
 | Kingston  | SV300S37A240G      | 240 GB | A1DB304C2F97 | 2     | 0     | 0.01   |
 | Netac     | SSD                | 256 GB | A388D80C04EA | 2     | 0     | 0.01   |
+| Netac     | SSD                | 512 GB | BD7A9349F2B2 | 2     | 0     | 0.01   |
 | PNY       | CS900 250GB SSD    | 250 GB | DEC43C308BE6 | 2     | 0     | 0.01   |
 | Samsung   | SSD 850 EVO        | 250 GB | 32D1471F74DE | 2     | 0     | 0.01   |
 | Samsung   | SSD 860 PRO        | 512 GB | 28B6C63D0016 | 2     | 0     | 0.01   |
 | SanDisk   | SSD PLUS           | 1 TB   | E92F65FEAB41 | 2     | 0     | 0.01   |
+| Team      | T253480GB          | 480 GB | 6A66016CB3C4 | 2     | 0     | 0.01   |
 | Verbatim  | Vi550 S3 SSD       | 512 GB | 4F3A13CE4731 | 2     | 0     | 0.01   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | EC6D3EE4F8BC | 2     | 0     | 0.01   |
 | SOLIDATA  | SSD                | 120 GB | 6DBA5EE17832 | 2420  | 1019  | 0.01   |
@@ -35479,6 +37023,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNH128GBST      | 128 GB | 2AAB4E4DE78F | 1496  | 648   | 0.01   |
 | SK hynix  | SC401 SATA         | 512 GB | BC4D3EB5BE52 | 375   | 162   | 0.01   |
 | SK hynix  | HFS256G39TND-N210A | 256 GB | D38F7C48C72C | 409   | 177   | 0.01   |
+| SK hynix  | HFS256G3AMNB-2200A | 256 GB | B379750B792C | 530   | 230   | 0.01   |
 | ADATA     | SU630              | 480 GB | 1F6E3D55756D | 2     | 0     | 0.01   |
 | ADATA     | SU800NS38          | 512 GB | E0735438EB68 | 2     | 0     | 0.01   |
 | Apacer    | AS340              | 240 GB | 112ED86A17FB | 2     | 0     | 0.01   |
@@ -35554,6 +37099,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 120 GB | AFB7DDA5517C | 2     | 0     | 0.01   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 2EFB63EEE68B | 2     | 0     | 0.01   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 0CBDF0B55810 | 2     | 0     | 0.01   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 694450F52464 | 2     | 0     | 0.01   |
 | Foxline   | FLSSD256X5         | 256 GB | E76B464B66FD | 2     | 0     | 0.01   |
 | Intenso   | SSD SATAIII        | 256 GB | 86FC3CCDF849 | 2     | 0     | 0.01   |
 | Kingston  | SA400M8240G        | 240 GB | A9025CFFD034 | 2     | 0     | 0.01   |
@@ -35581,8 +37127,10 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | C0C3E3F3EEEB | 2     | 0     | 0.01   |
 | Fanxiang  | I200               | 128 GB | 52BFB19550F5 | 2     | 0     | 0.01   |
 | Goodram   | SSDPR-CL100-960-G3 | 960 GB | E8C30EB3BB03 | 2     | 0     | 0.01   |
+| Intenso   | SSD                | 240 GB | 8D8EE4922B2F | 2     | 0     | 0.01   |
 | LDLC      | SSD                | 128 GB | 01A5357A8EAA | 2     | 0     | 0.01   |
 | Netac     | N600               | 512 GB | 600D225F1267 | 2     | 0     | 0.01   |
+| Netac     | SSD                | 1 TB   | 7645D4F9168E | 2     | 0     | 0.01   |
 | Netac     | SSD                | 256 GB | FCD9D2318017 | 2     | 0     | 0.01   |
 | Patriot   | Burst              | 480 GB | CB5DB3C7F028 | 2     | 0     | 0.01   |
 | SPCC      | SSD                | 1 TB   | C8008B6CA168 | 2     | 0     | 0.01   |
@@ -35619,6 +37167,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | SSD S700           | 120 GB | 04A296EB9BFF | 2     | 0     | 0.01   |
 | Indilinx  | IND-S3N80S-256G    | 256 GB | 0D41D78C502E | 2     | 0     | 0.01   |
 | Intenso   | SATA3 256GB SSD    | 256 GB | 4A3D03B3F54D | 2     | 0     | 0.01   |
+| KeepData  | GIM128             | 128 GB | 0BEDDA9F0AF3 | 2     | 0     | 0.01   |
 | Kingston  | SA400S37120G       | 120 GB | 2E5429C84B5F | 2     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | DD5D0F4F6D43 | 2     | 0     | 0.01   |
 | Netac     | SSD                | 128 GB | 82EE06D608E3 | 2     | 0     | 0.01   |
@@ -35637,9 +37186,11 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LAT-256M3S         | 256 GB | C5008B8182B3 | 2135  | 1015  | 0.01   |
 | Intel     | SSDSC2BA400G3R     | 400 GB | FCD17F5B2755 | 2162  | 1028  | 0.01   |
 | OCZ       | REVODRIVE X2       | 64 GB  | 24FE1B892D07 | 1206  | 576   | 0.01   |
+| Toshiba   | THNSNK256GVN8 M... | 256 GB | 88701655713D | 211   | 100   | 0.01   |
 | Crucial   | CT512M550SSD1      | 512 GB | 6F26ED5EDEC1 | 1265  | 606   | 0.01   |
 | ADATA     | SU630              | 240 GB | DE8D469087BF | 2     | 0     | 0.01   |
 | China     | MSATA SSD          | 128 GB | 4A31B3186632 | 2     | 0     | 0.01   |
+| China     | SSD                | 250 GB | 820360A84DDC | 2     | 0     | 0.01   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 9425ED99206C | 2     | 0     | 0.01   |
 | Crucial   | CT1024MX200SSD1    | 1 TB   | 94FB9C19D315 | 2     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 53EB4839F4CC | 2     | 0     | 0.01   |
@@ -35647,6 +37198,7 @@ MTBF - avg. MTBF in years per sample.
 | Dogfish   | SSD                | 512 GB | B356F6CB3FFB | 2     | 0     | 0.01   |
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | 9C999A8982BB | 2     | 0     | 0.01   |
 | Kingston  | SA400S37120G       | 120 GB | C0485EB6D3E4 | 2     | 0     | 0.01   |
+| Kingston  | SA400S37480G       | 480 GB | 8D229C6B5613 | 2     | 0     | 0.01   |
 | Kingston  | SKC600256G         | 256 GB | 5D3DACB2AB9A | 2     | 0     | 0.01   |
 | Netac     | SSD                | 256 GB | 7AC9A233CA8D | 2     | 0     | 0.01   |
 | Netac     | SSD                | 512 GB | 58744B16CDAB | 2     | 0     | 0.01   |
@@ -35656,6 +37208,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 Series     | 120 GB | 126BC3FA1027 | 2     | 0     | 0.01   |
 | Samsung   | SSD 860 QVO        | 2 TB   | D1D56EA3A0C4 | 2     | 0     | 0.01   |
 | SanDisk   | SDSSDXPS240G       | 240 GB | 9CCFE38A1A5E | 2     | 0     | 0.01   |
+| SanDisk   | SSD U110           | 32 GB  | 753C5A8B5538 | 2     | 0     | 0.01   |
 | Seagate   | BarraCuda SSD Z... | 2 TB   | 719E8FB9B178 | 2     | 0     | 0.01   |
 | Transcend | TS120GMTS420S      | 120 GB | 41940F98AE42 | 2     | 0     | 0.01   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 7C26F20AB373 | 2     | 0     | 0.01   |
@@ -35663,6 +37216,7 @@ MTBF - avg. MTBF in years per sample.
 | Win Me... | SWR256G-301II      | 256 GB | E8FC526CB46D | 2     | 0     | 0.01   |
 | PNY       | SSD2SC120GB1DA1... | 120 GB | 932ACB658DAF | 2248  | 1081  | 0.01   |
 | SanDisk   | SDSSDXPS480G       | 480 GB | 2158B2B459AF | 940   | 452   | 0.01   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 7F8FCCA59DCC | 140   | 67    | 0.01   |
 | ADATA     | SP900              | 256 GB | ED2FF35916B6 | 26    | 12    | 0.01   |
 | Mushkin   | MKNSSDCL120GB      | 120 GB | 933B54E42AB0 | 2066  | 1007  | 0.01   |
 | Samsung   | SSD 870 EVO        | 2 TB   | A8A2B60BB7A1 | 520   | 253   | 0.01   |
@@ -35702,6 +37256,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 512 GB | 84DC094DC5B6 | 2     | 0     | 0.01   |
 | BR        | SSD                | 64 GB  | B07BD1704325 | 2     | 0     | 0.01   |
 | China     | 120GB SSD          | 120 GB | F18E2B5A7F42 | 2     | 0     | 0.01   |
+| China     | SATA SSD           | 240 GB | 9912CD39246B | 2     | 0     | 0.01   |
 | China     | SATA SSD           | 480 GB | CD6AAC0F29FC | 2     | 0     | 0.01   |
 | China     | SSD                | 128 GB | 47972B7533BB | 2     | 0     | 0.01   |
 | China     | SSD                | 1 TB   | 26DC1E0DBEBD | 2     | 0     | 0.01   |
@@ -35741,6 +37296,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 512 GB | ACF2C7CEC332 | 1     | 0     | 0.01   |
 | Apacer    | AS340              | 120 GB | FA233FA51F97 | 1     | 0     | 0.01   |
 | Apacer    | AS340              | 480 GB | 0631FD30716E | 1     | 0     | 0.01   |
+| China     | FPT310M8SSD128G    | 128 GB | FDDB68758DC3 | 1     | 0     | 0.01   |
 | China     | SSD                | 128 GB | 9FF94DCA1400 | 1     | 0     | 0.01   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 1A4AB04B05A7 | 1     | 0     | 0.01   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 15333B79FFF4 | 1     | 0     | 0.01   |
@@ -35778,7 +37334,9 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSA6MM-016G-1006  | 16 GB  | F99E0C9BA75D | 1059  | 546   | 0.01   |
 | ADATA     | SX900              | 256 GB | 8BCC2F354655 | 1986  | 1027  | 0.01   |
 | Intel     | SSDSC2BF180A5L     | 180 GB | 3F92CEFA1218 | 127   | 65    | 0.01   |
+| China     | SSD                | 64 GB  | 4CF9E380597F | 55    | 28    | 0.01   |
 | XrayDisk  | SSD                | 256 GB | 61EB0D696AB8 | 28    | 14    | 0.01   |
+| Azerty    | M500               | 512 GB | F6B8DD349E42 | 1     | 0     | 0.01   |
 | BHT       | WR202HH032G E70... | 32 GB  | 6D9FB77797AF | 1     | 0     | 0.01   |
 | China     | SSD                | 1 TB   | 7BED157BFE23 | 1     | 0     | 0.01   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 866E1CD9E17A | 1     | 0     | 0.01   |
@@ -35792,6 +37350,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst Elite        | 480 GB | 389F34006C82 | 1     | 0     | 0.01   |
 | Phison    | SATA SSD           | 120 GB | 282DF5792BCD | 1     | 0     | 0.01   |
 | Plextor   | PX-128M6S          | 128 GB | FAA68ACCF45B | 1     | 0     | 0.01   |
+| SPCC      | M.2 SSD            | 512 GB | 7D28850F8140 | 1     | 0     | 0.01   |
 | Samsung   | SSD 850 EVO        | 1 TB   | AAAB0E2D2CEA | 1     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 009E8EF60833 | 1     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 250 GB | 8896F45C9C28 | 1     | 0     | 0.01   |
@@ -35818,14 +37377,17 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD                | 480 GB | E57EDBD75374 | 1     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 07B8784C364D | 1     | 0     | 0.01   |
 | Kingston  | SA400S37240G       | 240 GB | 1F9DB3F2CDA6 | 1     | 0     | 0.01   |
+| Kingston  | SA400S37480G       | 480 GB | 8C5BB1F568A0 | 1     | 0     | 0.01   |
 | Netac     | SSD                | 240 GB | 162C5D87AC64 | 1     | 0     | 0.01   |
 | PNY       | CS900 1TB SSD      | 1 TB   | A873ECC3829D | 1     | 0     | 0.01   |
 | Patriot   | Burst              | 120 GB | 54239FA6E9CB | 1     | 0     | 0.01   |
 | Patriot   | Burst              | 480 GB | 61232061D9B0 | 1     | 0     | 0.01   |
+| SPCC      | SSD                | 1 TB   | ACBDB9706A59 | 1     | 0     | 0.01   |
 | Samsung   | MZ7LN256HAJQ-000L7 | 256 GB | 2EFE5E81343F | 1     | 0     | 0.01   |
 | Samsung   | SSD 860 EVO        | 250 GB | 033956588DD6 | 1     | 0     | 0.01   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 2E457193C801 | 1     | 0     | 0.01   |
 | TMI       | 256GB SATA CRMP... | 240 GB | F0B375B0422E | 1     | 0     | 0.01   |
+| VICKTER   | SSD                | 128 GB | EE594B12CD91 | 1     | 0     | 0.01   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 5FFF8B206E6A | 1     | 0     | 0.01   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 0F0582D3B523 | 1     | 0     | 0.01   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 3B6FC6A2276B | 20    | 10    | 0.01   |
@@ -35867,6 +37429,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SBAT128G1122    | 128 GB | 3FD2DB876B99 | 1     | 0     | 0.01   |
 | Toshiba   | TR200              | 480 GB | 6D051D49F4AC | 1     | 0     | 0.01   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 1E3CFBBE1B7E | 1     | 0     | 0.01   |
+| WDC       | WDS500G1R0B-68A4Z0 | 500 GB | D92D1A3268BB | 1     | 0     | 0.01   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 3401F278188E | 34    | 18    | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 1F1FC71193FD | 61    | 33    | 0.00   |
 | Samsung   | SSD 840 EVO        | 120 GB | 5136842C24D9 | 1827  | 1012  | 0.00   |
@@ -35889,6 +37452,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHSS37A480G        | 480 GB | CC7EFF035E9D | 1     | 0     | 0.00   |
 | Kingston  | SKC600256G         | 256 GB | B306E8BF4EB8 | 1     | 0     | 0.00   |
 | Netac     | GN256 2280         | 256 GB | 7BCBE1E718E7 | 1     | 0     | 0.00   |
+| OCZ       | VERTEX PLUS        | 64 GB  | 23BC978B739E | 1     | 0     | 0.00   |
 | OWC       | Mercury EXTREME... | 480 GB | E69E155792A6 | 1     | 0     | 0.00   |
 | PNY       | CS900 120GB SSD    | 120 GB | 570DA3D7747A | 1     | 0     | 0.00   |
 | Plextor   | PX-128M5M          | 128 GB | 1AC7914AD963 | 1     | 0     | 0.00   |
@@ -35901,6 +37465,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 120 GB | F4CD52E18817 | 1     | 0     | 0.00   |
 | Smartbuy  | SSD                | 240 GB | D1D7C5426514 | 1     | 0     | 0.00   |
 | Team      | T253E2001T         | 1 TB   | 011227F334AD | 1     | 0     | 0.00   |
+| Valuetech | Basics             | 256 GB | 81A6A65BD38C | 1     | 0     | 0.00   |
 | WALRAM    | SSD                | 1 TB   | FE4D7DB486F3 | 1     | 0     | 0.00   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 52DA407E6E9F | 1     | 0     | 0.00   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 17262DB9772A | 1     | 0     | 0.00   |
@@ -35913,6 +37478,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 250 GB | 81252EFE0935 | 1776  | 1009  | 0.00   |
 | ADATA     | SU650NS38          | 120 GB | C360769E5E3A | 1     | 0     | 0.00   |
 | ADATA     | SU800              | 256 GB | 196EE7387F64 | 1     | 0     | 0.00   |
+| ADATA     | SU800              | 512 GB | 1A1DBD2792E2 | 1     | 0     | 0.00   |
 | ADATA     | SU800              | 512 GB | BA83954219E3 | 1     | 0     | 0.00   |
 | Apacer    | AS350              | 256 GB | FE462BEE7A99 | 1     | 0     | 0.00   |
 | China     | S41CF256G          | 256 GB | 0307A012A2BD | 1     | 0     | 0.00   |
@@ -35929,9 +37495,11 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 7E3C697B6A02 | 1     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | B8FDA8F61966 | 1     | 0     | 0.00   |
 | Kingston  | SKC600256G         | 256 GB | 5F1FE4CACB37 | 1     | 0     | 0.00   |
+| Kingston  | SV300S37A240G      | 240 GB | 6C92068CB40B | 1     | 0     | 0.00   |
 | Maxtor    | Z1 SSD             | 480 GB | 447E004B7442 | 1     | 0     | 0.00   |
 | Netac     | SSD                | 512 GB | 2BF36ABBFB4F | 1     | 0     | 0.00   |
 | Plextor   | PX-128M5S          | 128 GB | 43EE2B5C3D2A | 1     | 0     | 0.00   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 81F21B1D744C | 1     | 0     | 0.00   |
 | Samsung   | SSD 870 EVO        | 250 GB | F59796D1857D | 1     | 0     | 0.00   |
 | Samsung   | SSD 870 EVO        | 500 GB | 90179FD68DE7 | 1     | 0     | 0.00   |
 | Samsung   | SSD PM871b M.2 ... | 512 GB | F448ABD0CD49 | 1     | 0     | 0.00   |
@@ -35939,6 +37507,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD PLUS           | 120 GB | 1CF8F1D55C64 | 1     | 0     | 0.00   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 3DE4973C32AF | 69    | 39    | 0.00   |
 | Drevo     | X1 pro             | 1 TB   | BCA1313D6DAB | 33    | 18    | 0.00   |
+| Crucial   | CT275MX300SSD1     | 275 GB | 730FD7491C33 | 1929  | 1112  | 0.00   |
 | OCZ       | VERTEX3 MI         | 120 GB | BD8706965916 | 1745  | 1009  | 0.00   |
 | Samsung   | MZNLN256HAJQ-000H1 | 256 GB | 2098BAA6D0BB | 174   | 100   | 0.00   |
 | Intel     | SSDSCKKF256H6 SATA | 256 GB | E20C52BCD1CD | 94    | 54    | 0.00   |
@@ -35950,6 +37519,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 256 GB | D5DF0AAA34CA | 1     | 0     | 0.00   |
 | China     | SSD                | 480 GB | 22D93478A6F5 | 1     | 0     | 0.00   |
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | 9B0C4B7ED322 | 1     | 0     | 0.00   |
+| KLLISRE   | SSD                | 512 GB | EC3569A3123C | 1     | 0     | 0.00   |
 | KingFast  | SSD                | 128 GB | 6907F6EDBCCC | 1     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 42F98BC1133D | 1     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 949118D1753E | 1     | 0     | 0.00   |
@@ -35961,6 +37531,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 120 GB | 3AA7588EF19A | 1     | 0     | 0.00   |
 | Plextor   | PH6-CE240          | 240 GB | 04303AE7D55C | 1     | 0     | 0.00   |
 | SPCC      | SSD                | 512 GB | 1A5D73CDF6D6 | 1     | 0     | 0.00   |
+| SXMicro   | NF830              | 256 GB | 2F00FB2AEE42 | 1     | 0     | 0.00   |
 | Samsung   | SSD 750 EVO        | 120 GB | EFEE7C9A1DB6 | 1     | 0     | 0.00   |
 | Samsung   | SSD 860 EVO        | 250 GB | 385C81CE9218 | 1     | 0     | 0.00   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 9B9609E08B91 | 1     | 0     | 0.00   |
@@ -35969,6 +37540,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS32GSSD370S       | 32 GB  | 33143112B23D | 1     | 0     | 0.00   |
 | Transcend | TS512GMTS430S      | 512 GB | CECAC307017D | 1     | 0     | 0.00   |
 | VICKTER   | SSD                | 128 GB | B066C6AB1C6B | 1     | 0     | 0.00   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | F45CF79CAC94 | 1     | 0     | 0.00   |
 | ADATA     | SU800              | 512 GB | 33F72FF366CB | 150   | 87    | 0.00   |
 | SK hynix  | SC401 SATA         | 512 GB | 6327AA81DC88 | 112   | 65    | 0.00   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 08AF2DC18723 | 1705  | 1009  | 0.00   |
@@ -36016,6 +37588,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBU-SNS8350DES3... | 128 GB | 7ADD942D444E | 166   | 100   | 0.00   |
 | Toshiba   | KSG60ZMV256G M.... | 256 GB | 306CB49786C5 | 166   | 100   | 0.00   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 65A1E81F070D | 109   | 66    | 0.00   |
+| Intel     | SSDSC2KF256H6L     | 256 GB | 79E657E460CE | 65    | 39    | 0.00   |
 | SPCC      | SSD                | 120 GB | 667223F559CA | 1653  | 1016  | 0.00   |
 | Apacer    | AS340              | 120 GB | 5DDB618D5D53 | 1     | 0     | 0.00   |
 | Apacer    | AS350              | 512 GB | D26E100DB2A9 | 1     | 0     | 0.00   |
@@ -36045,6 +37618,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | TR200              | 240 GB | 06B2A8D3430C | 1     | 0     | 0.00   |
 | Toshiba   | TR200              | 240 GB | 7C19F52C924B | 1     | 0     | 0.00   |
 | Transcend | TS240GMTS420S      | 240 GB | DCBE20ED9E58 | 1     | 0     | 0.00   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 8EF35FD69D1A | 1     | 0     | 0.00   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | D7406FE47938 | 1     | 0     | 0.00   |
 | Zheino    | CHN25SATAS1 064    | 64 GB  | 487DC5DC3224 | 1     | 0     | 0.00   |
 | addlink   | SATA SSD           | 256 GB | 8D1C731C65B3 | 1     | 0     | 0.00   |
@@ -36061,6 +37635,7 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R5SL128G           | 128 GB | 8EBE325953B8 | 1     | 0     | 0.00   |
 | China     | SATA SSD           | 120 GB | 78B54B64979F | 1     | 0     | 0.00   |
 | China     | SSD                | 128 GB | BBC0A345BC74 | 1     | 0     | 0.00   |
+| China     | SSD                | 240 GB | ED1F18A28CDB | 1     | 0     | 0.00   |
 | China     | SSD 256G           | 256 GB | 62DA317224D6 | 1     | 0     | 0.00   |
 | China     | SSDS2TA120G-BULK   | 120 GB | 63A752AB3B65 | 1     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 00663632CB36 | 1     | 0     | 0.00   |
@@ -36177,8 +37752,11 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | E1A0A1932C7D | 7     | 4     | 0.00   |
 | SanDisk   | SDSSDA240G         | 240 GB | 74173930240C | 259   | 174   | 0.00   |
 | SPCC      | SSD                | 55 GB  | A9DFF8DA3803 | 1508  | 1018  | 0.00   |
+| Kingston  | SA400S37240G       | 240 GB | 4B9FC131A176 | 38    | 25    | 0.00   |
 | Mushkin   | MKNSSDCR240GB      | 240 GB | 34F07833D31D | 1538  | 1042  | 0.00   |
+| China     | SSD                | 240 GB | 1DEDF398C874 | 19    | 12    | 0.00   |
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | 53BD883E7D1A | 30    | 20    | 0.00   |
+| Kingston  | SUV400S37240G      | 240 GB | 82F6AFEC8528 | 387   | 262   | 0.00   |
 | Toshiba   | THNSNK256GVN8 M... | 256 GB | 73F1A3496A5C | 148   | 100   | 0.00   |
 | Netac     | SSD                | 256 GB | 198726FAB268 | 22    | 14    | 0.00   |
 | Samsung   | MZNLH128HBHQ-000H1 | 128 GB | 07BF46B987A8 | 148   | 100   | 0.00   |
@@ -36197,10 +37775,13 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CL100-120-G2 | 120 GB | 72D89B6F7CD6 | 1     | 0     | 0.00   |
 | Hoodisk   | SSD                | 128 GB | 7B5D74628ABC | 1     | 0     | 0.00   |
 | KingSpec  | NT-128             | 128 GB | 45EA01D10A5B | 1     | 0     | 0.00   |
+| Kingston  | SA400S37-120G      | 120 GB | 7D44DB5D4CB0 | 1     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 1CBCF45E918B | 1     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 41756D436BBA | 1     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | AA0FA7EDA6B7 | 1     | 0     | 0.00   |
+| Kingston  | SA400S37480G       | 480 GB | AFE6BBDD2EF9 | 1     | 0     | 0.00   |
 | Kingston  | SV300S37A120G      | 120 GB | AD32999C89D5 | 1     | 0     | 0.00   |
+| Lexar     | 256GB SSD          | 256 GB | E3EEA92BF942 | 1     | 0     | 0.00   |
 | MidasF... | SSD                | 120 GB | 05371ED66171 | 1     | 0     | 0.00   |
 | Netac     | SSD                | 240 GB | 778F06698ADD | 1     | 0     | 0.00   |
 | Plextor   | PX-128M5Pro        | 128 GB | 4E64C670E9B5 | 1     | 0     | 0.00   |
@@ -36273,7 +37854,9 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 6D202D8CDD90 | 1     | 0     | 0.00   |
 | Kingston  | SV300S37A240G      | 240 GB | 8447D467B330 | 1020  | 720   | 0.00   |
 | Intenso   | SSD Sata III       | 256 GB | 91F32653CDA6 | 35    | 24    | 0.00   |
+| China     | SSD                | 512 GB | 7C496D8953F0 | 46    | 32    | 0.00   |
 | SanDisk   | SDSSDX240GG25      | 240 GB | 84F4913C0B58 | 667   | 472   | 0.00   |
+| Intel     | SSDSC2BF180A5L     | 180 GB | BD8C10CFA197 | 126   | 89    | 0.00   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 8D452019FD6B | 1408  | 1006  | 0.00   |
 | Plextor   | PX-128M6S          | 128 GB | 768A1D3D7FEF | 129   | 92    | 0.00   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 1548670FBD07 | 1410  | 1016  | 0.00   |
@@ -36296,6 +37879,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37480G       | 480 GB | 1A641AE2957A | 1     | 0     | 0.00   |
 | Kingston  | SKC300S37A240G     | 240 GB | 1A3CFDC22F03 | 1     | 0     | 0.00   |
 | Kingston  | SKC300S37A60G      | 64 GB  | 04ED899F92F1 | 1     | 0     | 0.00   |
+| Netac     | SSD                | 128 GB | 897CF69F8BC0 | 1     | 0     | 0.00   |
 | PNY       | CS900 240GB SSD    | 240 GB | F12A40B4B192 | 1     | 0     | 0.00   |
 | Pioneer   | APS-SL3N-256       | 256 GB | 438DA5E23817 | 1     | 0     | 0.00   |
 | Plextor   | PX-128M6S          | 128 GB | 9D43D0B98E4F | 1     | 0     | 0.00   |
@@ -36363,13 +37947,16 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS960G3H2X069N    | 960 GB | 0B930BB823B2 | 1     | 0     | 0.00   |
 | SK hynix  | HFS960G3H2X069N    | 960 GB | 5DC78225E7C0 | 1     | 0     | 0.00   |
 | SanDisk   | SDSSDA480G         | 480 GB | F5CEBBAE3CC8 | 1     | 0     | 0.00   |
+| SanDisk   | SSD U100           | 64 GB  | A810AC631794 | 1     | 0     | 0.00   |
 | Seagate   | BarraCuda Q1 SS... | 240 GB | 15910333BA10 | 1     | 0     | 0.00   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | B2679F83BFAE | 1     | 0     | 0.00   |
 | XrayDisk  | 512GB SSD          | 512 GB | 3939DE9F6022 | 1     | 0     | 0.00   |
+| SK hynix  | HFS256G39TND-N210A | 256 GB | 97A8E59F5F30 | 234   | 175   | 0.00   |
 | Samsung   | SSD 870 EVO        | 2 TB   | 7B2E056FF26F | 153   | 115   | 0.00   |
 | Toshiba   | THNSNK128GVN8 M... | 128 GB | 9B3678F84BF6 | 133   | 100   | 0.00   |
 | Crucial   | CT1050MX300SSD4    | 1 TB   | D4039F471379 | 97    | 73    | 0.00   |
 | Corsair   | CSSD-F60GB2        | 64 GB  | 7CED46C6BFE6 | 1327  | 1006  | 0.00   |
+| WDC       | WDS480G2G0A-00JH30 | 480 GB | CE9514B6232B | 21    | 15    | 0.00   |
 | Samsung   | SSD 840 EVO        | 250 GB | B329C7ABD3C4 | 1330  | 1009  | 0.00   |
 | SK hynix  | SH920 2.5 7MM      | 256 GB | 62DE0415E5A7 | 438   | 334   | 0.00   |
 | Kingston  | SUV400S37240G      | 240 GB | 634494A00CD1 | 1345  | 1029  | 0.00   |
@@ -36384,6 +37971,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 256 GB | 52D10269A571 | 1     | 0     | 0.00   |
 | China     | SSD                | 480 GB | D6FC5C628D23 | 1     | 0     | 0.00   |
 | Corsair   | Force LE200 SSD    | 120 GB | E024ECC3B1A7 | 1     | 0     | 0.00   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 9BC30C83E06E | 1     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 0946AA6FA065 | 1     | 0     | 0.00   |
 | EMTEC     | X150               | 120 GB | F87584F6254A | 1     | 0     | 0.00   |
 | FORESEE   | 128GB SSD          | 128 GB | 0EDC75D42B31 | 1     | 0     | 0.00   |
@@ -36446,6 +38034,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 7AF2B310A2E3 | 1     | 0     | 0.00   |
 | Lexar     | 128GB SSD          | 128 GB | 4C6301577EC2 | 1     | 0     | 0.00   |
 | Lite-On   | LMT-19nmBGA-128... | 128 GB | C90770E71670 | 1     | 0     | 0.00   |
+| Netac     | SSD                | 128 GB | EB6338D1457E | 1     | 0     | 0.00   |
 | Netac     | SSD                | 1 TB   | A2A4FF2846DB | 1     | 0     | 0.00   |
 | Netac     | SSD                | 1 TB   | F6E323F1368E | 1     | 0     | 0.00   |
 | OEM       | Genuine            | 1 TB   | 03BEE8728625 | 1     | 0     | 0.00   |
@@ -36483,6 +38072,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | 08ADD0DEEE4A | 1     | 0     | 0.00   |
 | Crucial   | CT250BX100SSD1     | 250 GB | D38E4FF54DAA | 1     | 0     | 0.00   |
 | GeIL      | ZENITH R3_120GB    | 120 GB | 0E763BAF220A | 1     | 0     | 0.00   |
+| Intenso   | SSD                | 250 GB | 60BA29567A80 | 1     | 0     | 0.00   |
 | KIOXIA... | SATA SSD           | 240 GB | 934571FC7414 | 1     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 1B2A9DF23D07 | 1     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | E22D402BB853 | 1     | 0     | 0.00   |
@@ -36525,6 +38115,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | EABE28C56E5B | 1     | 0     | 0.00   |
 | FORESEE   | 256GB SSD          | 256 GB | 05615A67293E | 1     | 0     | 0.00   |
 | Goodram   | SSDPR-CL100-480-G2 | 480 GB | 74C5A1893500 | 1     | 0     | 0.00   |
+| HP        | SSD S700           | 250 GB | C720A9DCCA43 | 1     | 0     | 0.00   |
 | Intel     | SSDSC2BW240H6      | 240 GB | 0908EE3B24F4 | 1     | 0     | 0.00   |
 | Intel     | SSDSC2KB960G8      | 960 GB | ECD99687AEB9 | 1     | 0     | 0.00   |
 | Intel     | SSDSC2KF256H6L     | 256 GB | 6B511A455E41 | 1     | 0     | 0.00   |
@@ -36633,6 +38224,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | 2A8618A34D9B | 1     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 4B915D45B732 | 1     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD4     | 250 GB | 3AA9F2C47B21 | 1     | 0     | 0.00   |
+| Crucial   | CT500BX500SSD1     | 500 GB | 24FC9F65A87D | 1     | 0     | 0.00   |
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | B6D7162A1787 | 1     | 0     | 0.00   |
 | HP        | SSD S700 Pro       | 128 GB | 7BFD9496FDFE | 1     | 0     | 0.00   |
 | Kingston  | OM8P0S3256B-A0     | 256 GB | F067F2BBEEC4 | 1     | 0     | 0.00   |
@@ -36648,6 +38240,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 240GB SSD    | 240 GB | DB2BD286D9AB | 1     | 0     | 0.00   |
 | Phison    | SATA SSD           | 120 GB | C3997681FA99 | 1     | 0     | 0.00   |
 | Phison    | SATA SSD           | 256 GB | 44A713C5399F | 1     | 0     | 0.00   |
+| RAMOS     | 2.5 inch SATA 2... | 256 GB | 1E5670CD042B | 1     | 0     | 0.00   |
 | SPCC      | SSD                | 128 GB | 6CBD13833B49 | 1     | 0     | 0.00   |
 | SPCC      | SSD                | 256 GB | 339841398D1C | 1     | 0     | 0.00   |
 | Samsung   | SSD 850 EVO        | 250 GB | 723956C12A36 | 1     | 0     | 0.00   |
@@ -36666,6 +38259,8 @@ MTBF - avg. MTBF in years per sample.
 | XrayDisk  | SSD                | 120 GB | 7062EE0214BB | 1     | 0     | 0.00   |
 | ADATA     | SX900              | 128 GB | 70914847C406 | 1103  | 1019  | 0.00   |
 | SanDisk   | SSD PLUS           | 240 GB | 83BABB2EF4C5 | 3     | 2     | 0.00   |
+| SanDisk   | SSD PLUS           | 480 GB | 8074E29CB1AC | 14    | 13    | 0.00   |
+| SanDisk   | SSD PLUS           | 120 GB | 8F3AA62B1D63 | 436   | 409   | 0.00   |
 | SPCC      | SSD170             | 55 GB  | 86525C7B1F50 | 1080  | 1016  | 0.00   |
 | Samsung   | MZNLH256HAJD-000H1 | 256 GB | 5BBD494DFCD5 | 107   | 100   | 0.00   |
 | SK hynix  | HFS256G39MND-2300A | 256 GB | 0CC4E313C4BF | 189   | 178   | 0.00   |
@@ -36718,6 +38313,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU630              | 240 GB | 85CB06C7D43C | 205   | 198   | 0.00   |
 | SanDisk   | SDSSDX240GG25      | 240 GB | 147E8E0E4B7D | 368   | 356   | 0.00   |
 | Seagate   | 2E256-TU2-510B00   | 170 GB | BA25F15B3A27 | 2111  | 2049  | 0.00   |
+| OCZ       | AGILITY3           | 120 GB | B5A5AE4BA5FD | 1070  | 1044  | 0.00   |
 | ADATA     | SU800              | 256 GB | 298D2CBE57BC | 67    | 65    | 0.00   |
 | Intel     | SSDSC2CW120A3      | 120 GB | AB78BD4D74C1 | 1039  | 1016  | 0.00   |
 | Kingston  | RBU-SNS8350DES3... | 128 GB | D09DD4707A69 | 94    | 92    | 0.00   |
@@ -36745,6 +38341,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT275MX300SSD1     | 275 GB | E54AC906F111 | 1     | 0     | 0.00   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 6A36DFA8762E | 1     | 0     | 0.00   |
 | Crucial   | CT480BX500SSD1     | 480 GB | CA0107C10F69 | 1     | 0     | 0.00   |
+| Crucial   | CT500BX500SSD1     | 500 GB | 59A3F93A204E | 1     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | B952698A9513 | 1     | 0     | 0.00   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 760E6961F66A | 1     | 0     | 0.00   |
 | Foxline   | FLSSD256M80E13TCX5 | 256 GB | 5173C09478B4 | 1     | 0     | 0.00   |
@@ -36760,6 +38357,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV300S37A120G     | 120 GB | 58336BD36759 | 1     | 0     | 0.00   |
 | Kingston  | SV300S37A240G      | 240 GB | C1FC74A9FD84 | 1     | 0     | 0.00   |
 | Kingston  | SV300S37A240G      | 240 GB | FFD254D05484 | 1     | 0     | 0.00   |
+| Lexar     | 256GB SSD          | 256 GB | D23BD51511F3 | 1     | 0     | 0.00   |
 | Lite-On   | CV1-CC256          | 256 GB | CA0D19BDD3E7 | 1     | 0     | 0.00   |
 | Lite-On   | CV1-CC256          | 256 GB | D04CC694DF61 | 1     | 0     | 0.00   |
 | Lite-On   | CV3-8D128          | 128 GB | ED3B39BD43CD | 1     | 0     | 0.00   |
@@ -36789,6 +38387,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480M500SSD1      | 480 GB | 20ACDF40D339 | 1000  | 1029  | 0.00   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 51146D8BCB4C | 14    | 14    | 0.00   |
 | SanDisk   | SSD P4             | 64 GB  | 7F1D5E09724F | 14    | 14    | 0.00   |
+| Samsung   | SSD PM830 2.5" 7mm | 256 GB | 857288AAE035 | 973   | 1009  | 0.00   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | D1762E060ED7 | 998   | 1035  | 0.00   |
 | SPCC      | SSD                | 32 GB  | A9ECF1BDA0C8 | 998   | 1036  | 0.00   |
 | ADATA     | SX900              | 256 GB | CE446789E798 | 1159  | 1204  | 0.00   |
@@ -36798,6 +38397,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800NS38          | 256 GB | 479333D18A9F | 0     | 0     | 0.00   |
 | China     | 120GB SSD          | 120 GB | 1F6AC0541FCF | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 512 GB | 5EB95CDA02C0 | 0     | 0     | 0.00   |
+| China     | SSD                | 1 TB   | C6577D81B3D9 | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 454582D40D6D | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 8E3AF32062D6 | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 98000AD6CEDD | 0     | 0     | 0.00   |
@@ -36833,6 +38433,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | C9C6448D77D8 | 391   | 416   | 0.00   |
 | SK hynix  | SH920 2.5 7MM      | 512 GB | 512392282E4E | 314   | 336   | 0.00   |
 | SanDisk   | SDSSDXPS960G       | 960 GB | B987F6496766 | 253   | 271   | 0.00   |
+| SPCC      | SSD                | 512 GB | BB3AA81F9834 | 30    | 32    | 0.00   |
 | SK hynix  | SH920 2.5 7MM      | 256 GB | 71239B92B00E | 289   | 311   | 0.00   |
 | Kingston  | SUV400S37240G      | 240 GB | 51CD555F90CD | 997   | 1074  | 0.00   |
 | Kingston  | SKC6002048G        | 2 TB   | DF71CE0B0AD4 | 62    | 66    | 0.00   |
@@ -36877,6 +38478,7 @@ MTBF - avg. MTBF in years per sample.
 | Lexar     | 128GB SSD          | 128 GB | 1F1CDF0EEEB6 | 0     | 0     | 0.00   |
 | Lite-On   | LMT-128M6M         | 128 GB | D22BA457EB1C | 0     | 0     | 0.00   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 84E423230B87 | 6     | 6     | 0.00   |
+| Netac     | NS512GSSD340       | 512 GB | 2F6AAEE3F393 | 0     | 0     | 0.00   |
 | Netac     | S535N8-256GYN      | 256 GB | 9A6CA40FF3F7 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 256 GB | 1EAF666CCC3A | 0     | 0     | 0.00   |
 | OWC       | 1.0TB Mercury E... | 1 TB   | BDD6AB0D386E | 0     | 0     | 0.00   |
@@ -36890,6 +38492,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 1 TB   | 2820F85F1CDB | 0     | 0     | 0.00   |
 | SanDisk   | SD8SBAT256G1122    | 256 GB | F92867122302 | 0     | 0     | 0.00   |
 | SanDisk   | SD8SNAT-128G-1006  | 128 GB | 794CC60BD4FF | 0     | 0     | 0.00   |
+| SanDisk   | SSD PLUS           | 480 GB | 125D71A0F899 | 0     | 0     | 0.00   |
 | Teclast   | BD256GB SHCB-2280  | 256 GB | 0E355147E30C | 0     | 0     | 0.00   |
 | Transcend | TS240GMTS420S      | 240 GB | 20C821C6B875 | 0     | 0     | 0.00   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | 95069EF7E3E0 | 0     | 0     | 0.00   |
@@ -36978,6 +38581,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7SB2Q512G1001    | 512 GB | 90A92B88FB55 | 86    | 100   | 0.00   |
 | Intel     | SSDSC2BA800G4R     | 800 GB | B40A221F2E14 | 877   | 1027  | 0.00   |
 | Crucial   | M4-CT064M4SSD2     | 64 GB  | 42BCE676B07E | 866   | 1017  | 0.00   |
+| China     | SATA SSD           | 120 GB | 6E34FD615BD0 | 2     | 2     | 0.00   |
 | SanDisk   | SD6SB1M256G1022I   | 256 GB | 506B6BEBF96F | 400   | 474   | 0.00   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 348F4829F35B | 12    | 14    | 0.00   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 8BE5F7B67631 | 858   | 1019  | 0.00   |
@@ -36993,6 +38597,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 128 GB | 8C22CC50288E | 0     | 0     | 0.00   |
 | China     | SSD                | 128 GB | FBE382672FDA | 0     | 0     | 0.00   |
 | China     | SSD                | 1 TB   | 52CE8E73DF1C | 0     | 0     | 0.00   |
+| China     | SSD                | 2 TB   | 888D47F10C58 | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 77E1C73A2ABD | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | F255DF6E3B5C | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 6013D63CDFC7 | 0     | 0     | 0.00   |
@@ -37017,6 +38622,7 @@ MTBF - avg. MTBF in years per sample.
 | Londisk   | SSD                | 120 GB | F6E09175EA97 | 0     | 0     | 0.00   |
 | Maxmemory | X100               | 240 GB | B9DBE5EA63BE | 0     | 0     | 0.00   |
 | ORTIAL    | SSD                | 256 GB | 9D9360300E2B | 0     | 0     | 0.00   |
+| PNY       | CS900 500GB SSD    | 500 GB | B3A8DE9B29A4 | 0     | 0     | 0.00   |
 | Patriot   | Burst Elite        | 240 GB | 2709F34BE61F | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 128 GB | 366645A0B496 | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 128 GB | 98536175FC27 | 0     | 0     | 0.00   |
@@ -37059,6 +38665,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 256 GB | CE63F146FBA9 | 0     | 0     | 0.00   |
 | ADATA     | SU800NS38          | 256 GB | 732C5CEB303E | 0     | 0     | 0.00   |
 | Apacer    | AS340              | 120 GB | DC16A8B355A0 | 0     | 0     | 0.00   |
+| Apacer    | AS340              | 240 GB | D3846B19CFE7 | 0     | 0     | 0.00   |
 | China     | SSD                | 120 GB | 7B2BBF109D2C | 0     | 0     | 0.00   |
 | China     | SSD                | 256 GB | BB222AE1DDC7 | 0     | 0     | 0.00   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 965B9786CEA4 | 0     | 0     | 0.00   |
@@ -37082,6 +38689,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 96CEA48456AF | 0     | 0     | 0.00   |
 | Netac     | SSD                | 1 TB   | CFAFD170EFD8 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 256 GB | 4D73E8CDB399 | 0     | 0     | 0.00   |
+| PNY       | CS900 240GB SSD    | 240 GB | 2762D8500EB7 | 0     | 0     | 0.00   |
 | Patriot   | Burst              | 120 GB | A56E5717E8C7 | 0     | 0     | 0.00   |
 | Patriot   | JAJM600M128C       | 128 GB | 1598DF4BC591 | 0     | 0     | 0.00   |
 | Patriot   | P210               | 128 GB | B4E80D8875BE | 0     | 0     | 0.00   |
@@ -37129,16 +38737,19 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU900              | 256 GB | 80F9317F07E1 | 2     | 2     | 0.00   |
 | AMD       | R5SL120G           | 120 GB | AE41C5E4A9E1 | 0     | 0     | 0.00   |
 | China     | G535NW-512G        | 512 GB | E04551E55C5F | 0     | 0     | 0.00   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 4CBF377937AA | 0     | 0     | 0.00   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | A8D2E44723B7 | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 9724BA2B8AEE | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 5D247F17927A | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | DE1250CFDE9C | 0     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD1     | 250 GB | D885F3F9809A | 0     | 0     | 0.00   |
+| Crucial   | CT250MX500SSD1     | 250 GB | EF87E4B0503D | 0     | 0     | 0.00   |
 | Dogfish   | SSD                | 256 GB | 82E6026C9B77 | 0     | 0     | 0.00   |
 | FORESEE   | 128GB SSD          | 128 GB | C6212B462004 | 0     | 0     | 0.00   |
 | FORESEE   | G500F256GB         | 256 GB | CDAEB1CFE111 | 0     | 0     | 0.00   |
 | Goodram   | SSDPR-CX400-512-G2 | 512 GB | 4C4C971242E6 | 0     | 0     | 0.00   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | E275314F5CE2 | 0     | 0     | 0.00   |
+| KingSpec  | P3-128             | 128 GB | CF53F753FE29 | 0     | 0     | 0.00   |
 | Kingmax   | SSD                | 240 GB | C52239E08455 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | BAFE22D0D42E | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | A2DFFEF45238 | 0     | 0     | 0.00   |
@@ -37178,6 +38789,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX900              | 64 GB  | 6FF95A44476C | 755   | 1017  | 0.00   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 856F6896D970 | 8     | 10    | 0.00   |
 | Samsung   | SSD 840 PRO Series | 512 GB | 79C20440AC3A | 747   | 1008  | 0.00   |
+| Apacer    | AS350              | 128 GB | 3A5F5B7BB876 | 67    | 90    | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 8FE7605515F8 | 8     | 10    | 0.00   |
 | SK hynix  | SH920 2.5 7MM      | 512 GB | 883A6B25F99E | 314   | 431   | 0.00   |
 | Samsung   | SSD PM830 2.5" 7mm | 128 GB | 26568BC196C9 | 733   | 1009  | 0.00   |
@@ -37202,6 +38814,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 512 GB | C422ECD5DAC7 | 0     | 0     | 0.00   |
 | ADATA     | SU800NS38          | 256 GB | AB8DD18969ED | 0     | 0     | 0.00   |
 | BAITITON  | BT58SSD11S         | 480 GB | 81DB8788199D | 0     | 0     | 0.00   |
+| Blackpcs  | SSDPro             | 240 GB | 7152871C1759 | 0     | 0     | 0.00   |
 | China     | M900-1T            | 1 TB   | 8B4EDC890F68 | 0     | 0     | 0.00   |
 | China     | REVOLUTIONS500_256 | 256 GB | 371C322C8736 | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 120 GB | 20D50FBFAA96 | 0     | 0     | 0.00   |
@@ -37220,6 +38833,7 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | P3-256             | 256 GB | B06A3405C95C | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 421A2F320E21 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | A9F5A46E0554 | 0     | 0     | 0.00   |
+| Kingston  | SA400S37240G       | 240 GB | 56058858F472 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 7EDB3EC43C11 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | FF17B12308CF | 0     | 0     | 0.00   |
 | Leven     | JAJS600M512C       | 512 GB | 1234393A31AF | 0     | 0     | 0.00   |
@@ -37260,6 +38874,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | E200-160           | 160 GB | 959A0F7C72A8 | 12    | 18    | 0.00   |
 | ADATA     | SSD S511           | 64 GB  | CB36297EF59A | 683   | 1018  | 0.00   |
 | Crucial   | M4-CT256M4SSD2     | 256 GB | 25159B95CA12 | 680   | 1014  | 0.00   |
+| SK hynix  | HFS128G3AMNB-2200A | 128 GB | 76310D19F0F9 | 676   | 1009  | 0.00   |
 | Samsung   | SSD 870 EVO        | 2 TB   | AAC3DE774280 | 153   | 229   | 0.00   |
 | Toshiba   | THNSNK256GVN8 M... | 256 GB | 39643E613030 | 67    | 100   | 0.00   |
 | ADATA     | SU630              | 240 GB | 0DCE077B43BE | 0     | 0     | 0.00   |
@@ -37277,6 +38892,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 360 GB | F094B82CD087 | 0     | 0     | 0.00   |
 | China     | SSD                | 64 GB  | B0F6CA9CD80C | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 709390D29A83 | 0     | 0     | 0.00   |
+| Crucial   | CT240BX500SSD1     | 240 GB | E28C20B4B5C7 | 0     | 0     | 0.00   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 645EABCBE4D7 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 26CF85BB9FC1 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 3952654E20F3 | 0     | 0     | 0.00   |
@@ -37301,6 +38917,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX v1.10       | 64 GB  | D60AD9FF5B4A | 1     | 1     | 0.00   |
 | Patriot   | Burst              | 240 GB | C369747DB9E1 | 0     | 0     | 0.00   |
 | Patriot   | Burst Elite        | 120 GB | 3B752E726275 | 0     | 0     | 0.00   |
+| Patriot   | P210               | 128 GB | AB2B0EC11A57 | 0     | 0     | 0.00   |
 | Samsung   | Portable SSD T5    | 500 GB | 3FB33A4093F9 | 0     | 0     | 0.00   |
 | Samsung   | SSD 750 EVO        | 120 GB | 59659DACDDB6 | 0     | 0     | 0.00   |
 | Samsung   | SSD 850 PRO        | 256 GB | 24233DADEACC | 0     | 0     | 0.00   |
@@ -37382,6 +38999,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 796710CFD750 | 0     | 0     | 0.00   |
 | PNY       | CS900 1TB SSD      | 1 TB   | 9E09D96F1316 | 0     | 0     | 0.00   |
 | Patriot   | Burst              | 120 GB | 34F393B653A3 | 0     | 0     | 0.00   |
+| Patriot   | Morebeck-N100      | 256 GB | E6A4366C623A | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 256 GB | FC50F6F8CD58 | 0     | 0     | 0.00   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 2F63445507C7 | 0     | 0     | 0.00   |
 | Samsung   | SSD 860 EVO        | 250 GB | 339C1310DCB6 | 0     | 0     | 0.00   |
@@ -37394,6 +39012,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 500 GB | 9AB1C13A338D | 0     | 0     | 0.00   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 9E3AB77BF8D4 | 0     | 0     | 0.00   |
 | SanDisk   | SDSSDA240G         | 240 GB | 1C96386822ED | 0     | 0     | 0.00   |
+| SanDisk   | SSD PLUS           | 1 TB   | 0D8D03722875 | 0     | 0     | 0.00   |
 | SanDisk   | SSD U100           | 64 GB  | B6670DB809DC | 0     | 0     | 0.00   |
 | SanDisk   | SSD U100           | 64 GB  | C5264239F820 | 0     | 0     | 0.00   |
 | Seagate   | BarraCuda SSD Z... | 500 GB | C28B6A6AF756 | 0     | 0     | 0.00   |
@@ -37402,6 +39021,7 @@ MTBF - avg. MTBF in years per sample.
 | Teclast   | BD256GB SHCB-2280  | 256 GB | 4CCCAF2D8922 | 0     | 0     | 0.00   |
 | Transcend | TS128GSSD370       | 128 GB | B763EBCF2390 | 0     | 0     | 0.00   |
 | Transcend | TS32GMSA370        | 32 GB  | B0CD7B551B6B | 0     | 0     | 0.00   |
+| Transcend | TS480GMTS420S      | 480 GB | 808024FD86AD | 0     | 0     | 0.00   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | A131D2534FA7 | 0     | 0     | 0.00   |
 | WDC       | WDS200T2B0B-00YS70 | 2 TB   | 7E01F347D302 | 0     | 0     | 0.00   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 3E4E55F6BC39 | 0     | 0     | 0.00   |
@@ -37429,6 +39049,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLH128HBHQ-000H1 | 128 GB | 0684630A6750 | 61    | 100   | 0.00   |
 | Corsair   | Force LS SSD       | 64 GB  | 35DD7FA97615 | 269   | 445   | 0.00   |
 | Toshiba   | THNSNK256GVN8 M... | 256 GB | 18DA44FC0812 | 60    | 100   | 0.00   |
+| Kingston  | SUV400S37480G      | 480 GB | 22D86A513B08 | 72    | 120   | 0.00   |
 | SanDisk   | SD8SBAT256G1122    | 256 GB | C36B6CAB63FD | 24    | 40    | 0.00   |
 | SPCC      | SSD                | 55 GB  | 04F7A34352DD | 608   | 1017  | 0.00   |
 | Reeioon   | FR120GB R2S3       | 120 GB | 24E322074F5C | 226   | 377   | 0.00   |
@@ -37472,6 +39093,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A480G      | 480 GB | 9DF2BD3124F9 | 0     | 0     | 0.00   |
 | Micron    | 5300_MTFDDAV480TDS | 480 GB | B251091978E8 | 0     | 0     | 0.00   |
 | Micron    | 5300_MTFDDAV480TDS | 480 GB | D2B9E8B360A1 | 0     | 0     | 0.00   |
+| PNY       | 1TB SATA SSD       | 1 TB   | FF2FB1AF7A6E | 0     | 0     | 0.00   |
 | Patriot   | P210               | 512 GB | 9B4AEF5D79AE | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 120 GB | A5B8FD66B5BE | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 256 GB | 8AE074CFF22A | 0     | 0     | 0.00   |
@@ -37487,16 +39109,19 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS256ASTMM1600X    | 256 GB | 0ABE2FCB66BC | 0     | 0     | 0.00   |
 | UMAX      | 2242               | 512 GB | E2E042235FE1 | 0     | 0     | 0.00   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | CBAA29913E7C | 0     | 0     | 0.00   |
+| WDC       | WDS200T2B0B-00YS70 | 2 TB   | 40576A1C8233 | 0     | 0     | 0.00   |
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 223768973599 | 0     | 0     | 0.00   |
 | XrayDisk  | SSD                | 256 GB | AD91C8CD5AB1 | 0     | 0     | 0.00   |
 | ZTC       | SM201-256G         | 256 GB | 1FF9757FE17B | 0     | 0     | 0.00   |
 | Intel     | SSDSCKKF240H6L     | 240 GB | 8C70AC90F631 | 54    | 92    | 0.00   |
+| SanDisk   | SSD P4             | 32 GB  | 2291A43AC8DA | 21    | 36    | 0.00   |
 | ADATA     | SSD DP900 128GB... | 128 GB | 551DA187DA92 | 590   | 1016  | 0.00   |
 | SanDisk   | SSD PLUS           | 1 TB   | A2AAD1C10115 | 577   | 1012  | 0.00   |
 | Qumo      | SSD                | 120 GB | 16160DB427BD | 579   | 1017  | 0.00   |
 | Intel     | SSDSC2CW060A3      | 64 GB  | D714C63C4009 | 578   | 1015  | 0.00   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 1B40C652E533 | 436   | 765   | 0.00   |
 | Crucial   | CT2050MX300SSD1    | 2 TB   | 48837FBF6D45 | 16    | 28    | 0.00   |
+| Toshiba   | THNSNK128GCS8 SATA | 128 GB | A20994DCC42F | 57    | 100   | 0.00   |
 | Kingston  | SHFS37A120G        | 120 GB | B883BF424A2D | 581   | 1023  | 0.00   |
 | Intel     | SSDSC2CW060A3      | 64 GB  | 9B215A1E04D1 | 575   | 1016  | 0.00   |
 | Intel     | SSDSCKKF256G8H     | 256 GB | 2724D3569887 | 54    | 96    | 0.00   |
@@ -37531,6 +39156,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | NGFF 2280 128GB... | 128 GB | 4B00B2F3DF5A | 0     | 0     | 0.00   |
 | China     | SSD                | 128 GB | 62B5E53D806E | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 393E498483B4 | 0     | 0     | 0.00   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 5B5DF07C776F | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 0D005D23E5BC | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 87908199969B | 0     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD4     | 250 GB | 838E4AA5C623 | 0     | 0     | 0.00   |
@@ -37539,6 +39165,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31256GTND  | 256 GB | 51E9023F5D3A | 0     | 0     | 0.00   |
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | 6B6F91214EF5 | 0     | 0     | 0.00   |
 | Intenso   | SSD                | 120 GB | C0D5D372E7FB | 0     | 0     | 0.00   |
+| Intenso   | SSD                | 512 GB | 578871FA0E7E | 0     | 0     | 0.00   |
 | Intenso   | SSD Sata III       | 256 GB | 8D5EC52E83EF | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 07BA8935053A | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 08BB882E5606 | 0     | 0     | 0.00   |
@@ -37551,11 +39178,14 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | DCAB82AC96C6 | 0     | 0     | 0.00   |
 | Kingston  | SUV400S37240G      | 240 GB | CEEC7DAF6BD5 | 0     | 0     | 0.00   |
 | Kingston  | SUV500120G         | 120 GB | 2BB68D08C990 | 0     | 0     | 0.00   |
+| Kingston  | SV300S37A480G      | 480 GB | 5821E6E10066 | 0     | 0     | 0.00   |
 | Netac     | MST1002-1T         | 1 TB   | 9C5442627351 | 0     | 0     | 0.00   |
 | Netac     | S535M3-128GYN      | 128 GB | F0232C154AA3 | 0     | 0     | 0.00   |
 | Netac     | S535N8-256GYN      | 256 GB | F4C197E159C3 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 256 GB | 94BAF7A0EECB | 0     | 0     | 0.00   |
+| Patriot   | Burst              | 120 GB | 670643F0AA96 | 0     | 0     | 0.00   |
 | Patriot   | Burst              | 240 GB | 71C7B9140BDD | 0     | 0     | 0.00   |
+| S3+       | S3SSDC240          | 240 GB | FAAC8EF8DBCA | 0     | 0     | 0.00   |
 | SK hynix  | HFS128G39TNF-N3A0A | 128 GB | 7028928EA643 | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 128 GB | 5F8B0CF3AC15 | 0     | 0     | 0.00   |
 | Samsung   | MZ7LN256HAJQ-000L2 | 256 GB | 5ECCE2FC2326 | 0     | 0     | 0.00   |
@@ -37572,6 +39202,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SBAT128G1122    | 128 GB | 5CB572E5AF9F | 0     | 0     | 0.00   |
 | SanDisk   | SD8SBAT128G1122    | 128 GB | EC43943AA3D3 | 0     | 0     | 0.00   |
 | SanDisk   | SSD PLUS           | 480 GB | E03628E8D5E0 | 0     | 0     | 0.00   |
+| SanDisk   | WD Blue SA510 2.5  | 1 TB   | 6968746E8D90 | 0     | 0     | 0.00   |
 | Smartbuy  | SSD                | 480 GB | 1D0FD99E6558 | 0     | 0     | 0.00   |
 | Team      | T253X2001T         | 1 TB   | C621D018412E | 0     | 0     | 0.00   |
 | Team      | T253X2512G         | 512 GB | 60E754AB0FA8 | 0     | 0     | 0.00   |
@@ -37625,6 +39256,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 256 GB | D78B0529CB4A | 0     | 0     | 0.00   |
 | China     | SSD                | 360 GB | 46DDE8C36F0E | 0     | 0     | 0.00   |
 | China     | T60                | 64 GB  | 52270E5E1735 | 0     | 0     | 0.00   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | 9731852B8558 | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | C152EF9D7280 | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 1C1888CFCCF1 | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 777BF045621E | 0     | 0     | 0.00   |
@@ -37636,6 +39268,7 @@ MTBF - avg. MTBF in years per sample.
 | Dogfish   | SSD                | 512 GB | 73CAB37DB050 | 0     | 0     | 0.00   |
 | EMTEC     | X150               | 240 GB | B051B48B2AA9 | 0     | 0     | 0.00   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 3C53BCE4C783 | 0     | 0     | 0.00   |
+| Goodram   | SSDPR-CX400-256-G2 | 256 GB | A3E833C635CF | 0     | 0     | 0.00   |
 | Indilinx  | InM2246S3-128G     | 128 GB | D23AF350F4FE | 0     | 0     | 0.00   |
 | Intenso   | SATA3 128GB SSD    | 128 GB | 834FE9537D32 | 0     | 0     | 0.00   |
 | KingSpec  | P3-128             | 128 GB | 8884CEA92054 | 0     | 0     | 0.00   |
@@ -37670,6 +39303,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8TN8U256G2000    | 256 GB | 353FCC441E38 | 0     | 0     | 0.00   |
 | SanDisk   | SDSSDH3500G        | 500 GB | 73EC723F8575 | 0     | 0     | 0.00   |
 | SanDisk   | SSD PLUS           | 240 GB | 33E8760DF677 | 0     | 0     | 0.00   |
+| SanDisk   | SSD U100           | 64 GB  | FBA6B3F7608D | 0     | 0     | 0.00   |
 | Transcend | TS120GSSD220S      | 120 GB | 1A5372B3110C | 0     | 0     | 0.00   |
 | Transcend | TS120GSSD220S      | 120 GB | 79B63C84D9A5 | 0     | 0     | 0.00   |
 | Transcend | TS240GMTS420S      | 240 GB | F2AF94C2F24B | 0     | 0     | 0.00   |
@@ -37686,6 +39320,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KSG60ZSE512G SATA  | 512 GB | 0A078FA14B11 | 49    | 100   | 0.00   |
 | Intel     | SSDSCKKF256G8H     | 256 GB | 265CAF88C43F | 46    | 93    | 0.00   |
 | Hypertec  | SSD2S240SF1200SA2  | 240 GB | 0CCBC4796EDC | 499   | 1023  | 0.00   |
+| Samsung   | SSD 870 EVO        | 500 GB | 9C42A39BA893 | 272   | 558   | 0.00   |
 | Corsair   | CSSD-F40GB2        | 40 GB  | E98FDD050E62 | 281   | 576   | 0.00   |
 | China     | SSD                | 240 GB | AA34091EF251 | 8     | 17    | 0.00   |
 | Crucial   | CT525MX300SSD4     | 528 GB | D51AC344C60F | 263   | 553   | 0.00   |
@@ -37701,6 +39336,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 840D416F7C08 | 19    | 41    | 0.00   |
 | Samsung   | MZ7PA128HMCD-010L1 | 128 GB | 6429EA750BF6 | 436   | 945   | 0.00   |
 | Micron    | MTFDDAK512MAM-1K1  | 512 GB | 1F988D8A120B | 390   | 846   | 0.00   |
+| Netac     | SSD                | 256 GB | 9265FF9816E3 | 43    | 94    | 0.00   |
 | Kingston  | SNS4151S316GD      | 16 GB  | 557F8A0C219D | 469   | 1022  | 0.00   |
 | ADATA     | SU750              | 256 GB | 67DE181FFC25 | 0     | 0     | 0.00   |
 | ADATA     | SU800              | 512 GB | 2F2E2E401FBD | 0     | 0     | 0.00   |
@@ -37735,7 +39371,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 770446E8274B | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | 251343CA55E9 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | 5F93ECD71D67 | 0     | 0     | 0.00   |
+| Kingston  | SA400S37480G       | 480 GB | 66C455FF3858 | 0     | 0     | 0.00   |
 | Kingston  | SUV300S37A240G     | 240 GB | F244E98B158F | 0     | 0     | 0.00   |
+| LEQIXIANG | SSD                | 256 GB | D323CEFF78B4 | 0     | 0     | 0.00   |
 | Liren     | LIREN128G          | 128 GB | AE3D7426DD76 | 0     | 0     | 0.00   |
 | Netac     | S539N8-256GSN      | 256 GB | 22019F66A902 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 128 GB | 667A85229378 | 0     | 0     | 0.00   |
@@ -37777,10 +39415,12 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0A-00JH30 | 240 GB | 604166B98491 | 0     | 0     | 0.00   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | B053759677B1 | 0     | 0     | 0.00   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 9BC37C086E22 | 0     | 0     | 0.00   |
+| iODD      | MST1000 - 256      | 256 GB | F9414C81C167 | 0     | 0     | 0.00   |
 | Kingmax   | SSD                | 64 GB  | 269398C94999 | 468   | 1021  | 0.00   |
 | ADATA     | XM12               | 32 GB  | B67D65B7BD15 | 465   | 1015  | 0.00   |
 | Kingston  | SUV400S37480G      | 480 GB | 858F16336177 | 466   | 1020  | 0.00   |
 | SanDisk   | SSD U100           | 24 GB  | D160266C16A4 | 458   | 1006  | 0.00   |
+| SanDisk   | WD Blue SA510 2.5  | 1 TB   | BB491BD0015C | 5     | 10    | 0.00   |
 | Neo Forza | NFS121SA312-600... | 120 GB | 5EC026EBC283 | 8     | 18    | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | A212FEEE6121 | 390   | 860   | 0.00   |
 | SanDisk   | SSD PLUS           | 240 GB | 150C4A1D22EB | 8     | 17    | 0.00   |
@@ -37901,6 +39541,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8SN8U-128G-1006  | 128 GB | FAC5011A7BA1 | 411   | 1023  | 0.00   |
 | Kingston  | SVP200S3120G       | 120 GB | ABD168482DBA | 328   | 823   | 0.00   |
 | SanDisk   | SSD U100           | 24 GB  | 4344C193C8E7 | 109   | 274   | 0.00   |
+| SK hynix  | HFS256G39TND-N210A | 256 GB | 7B2C93763276 | 821   | 2075  | 0.00   |
 | Corsair   | Force LS SSD       | 64 GB  | BFF38E534D1F | 82    | 207   | 0.00   |
 | SanDisk   | SD9SB8W-256G-1006  | 256 GB | F028A18CCB71 | 390   | 989   | 0.00   |
 | Micron    | 1100 SATA          | 512 GB | A173637367E3 | 142   | 363   | 0.00   |
@@ -37913,6 +39554,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS340              | 480 GB | 73C81B6DB554 | 1     | 4     | 0.00   |
 | Crucial   | CT480M500SSD1      | 480 GB | 1E6F211D8CA9 | 8     | 22    | 0.00   |
 | Transcend | TS128GSSD340       | 128 GB | 15C518F3239E | 383   | 1008  | 0.00   |
+| Kingston  | SUV400S37120G      | 120 GB | D017BBB4C39B | 395   | 1047  | 0.00   |
 | Plextor   | PX-128M6S          | 128 GB | 7AC7E24678E3 | 194   | 515   | 0.00   |
 | Kingston  | SV300S37A120G      | 120 GB | C1C357FBA4D0 | 346   | 919   | 0.00   |
 | ADATA     | SP550              | 120 GB | 08F542F30054 | 0     | 0     | 0.00   |
@@ -37927,6 +39569,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 512 GB | 195DBBBCEABD | 0     | 0     | 0.00   |
 | ADATA     | SU800NS38          | 256 GB | 56CC3DF01FD6 | 0     | 0     | 0.00   |
 | China     | 120GB SSD          | 120 GB | AD22298761C3 | 0     | 0     | 0.00   |
+| China     | FPT310M8SSD128G    | 128 GB | 7CCE5CFB3100 | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 240 GB | 6AACD8EA7E13 | 0     | 0     | 0.00   |
 | China     | SSD                | 240 GB | 1AED93D32E9D | 0     | 0     | 0.00   |
 | China     | SSD                | 240 GB | BCBFFCC65E22 | 0     | 0     | 0.00   |
@@ -37945,6 +39588,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBUSNS8180DS3256GJ | 256 GB | F6B321493F8F | 0     | 0     | 0.00   |
 | Kingston  | SA400M8120G        | 120 GB | F88595CA5EBE | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | 90E75F427B8E | 0     | 0     | 0.00   |
+| Kingston  | SA400S37240G       | 240 GB | 01847BD360BA | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | CA20D676E576 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | 28056DAA85B5 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | 2C7A3507C7C6 | 0     | 0     | 0.00   |
@@ -37958,6 +39602,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | 3416120C8C3B | 0     | 0     | 0.00   |
 | Micron    | 1100_MTFDDAK1T0TBN | 1 TB   | 5B7A396F4160 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 240 GB | 76A5E3F3451E | 0     | 0     | 0.00   |
+| Netac     | SSD                | 256 GB | 24F4C3E5149A | 0     | 0     | 0.00   |
 | Netac     | SSD                | 256 GB | 796943BA556D | 0     | 0     | 0.00   |
 | PNY       | CS900 120GB SSD    | 120 GB | AA82D100889C | 0     | 0     | 0.00   |
 | Patriot   | P210               | 128 GB | FAB4AED62B95 | 0     | 0     | 0.00   |
@@ -38008,6 +39653,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 4BCCC83EF8F2 | 363   | 1009  | 0.00   |
 | SPCC      | SSD                | 120 GB | 740FBC93DB06 | 365   | 1018  | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | 8C77B3EE7B29 | 338   | 944   | 0.00   |
+| Apacer    | AS340              | 240 GB | C252E74E16CF | 758   | 2117  | 0.00   |
 | OCZ       | VERTEX3            | 120 GB | 5D8633C87505 | 415   | 1160  | 0.00   |
 | Crucial   | CT256M550SSD1      | 256 GB | 91F98CCECE33 | 366   | 1024  | 0.00   |
 | Bliksem   | SSD                | 256 GB | 3C1A35BB50A4 | 10    | 28    | 0.00   |
@@ -38080,6 +39726,7 @@ MTBF - avg. MTBF in years per sample.
 | ORTIAL    | SSD                | 128 GB | 603D34337821 | 0     | 0     | 0.00   |
 | PNY       | CS900 120GB SSD    | 120 GB | 08DE3320F65B | 0     | 0     | 0.00   |
 | Plextor   | PX-128M5Pro        | 128 GB | 42D610C9923A | 0     | 0     | 0.00   |
+| SPCC      | M.2 SSD            | 512 GB | 7B050EC3A3C4 | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 128 GB | 57602FE32172 | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 128 GB | CA304C40DD2E | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 512 GB | 6E671B0C35B3 | 0     | 0     | 0.00   |
@@ -38146,6 +39793,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | 64GB SSD           | 65 GB  | 7FA4AC662DDB | 0     | 0     | 0.00   |
 | China     | ESA3ASA2ISN1BQ4... | 480 GB | A132F7416FC6 | 0     | 0     | 0.00   |
 | China     | GSDSL128TY2AAQGCX  | 128 GB | 7ABC5B30CFCF | 0     | 0     | 0.00   |
+| China     | M.2 SSD            | 1 TB   | F9913B040EE4 | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 120 GB | 6B388B123D1F | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 128 GB | 4E89D69E669D | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 256 GB | 124AABFF811C | 0     | 0     | 0.00   |
@@ -38153,6 +39801,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 256 GB | 64328CE350F4 | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 75740812881E | 0     | 0     | 0.00   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 805CA60D91EE | 0     | 0     | 0.00   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | D7EE27E12BCD | 0     | 0     | 0.00   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 9FD366C5CBA3 | 0     | 0     | 0.00   |
 | Crucial   | CT120BX500SSD1     | 120 GB | B71EBECEA848 | 0     | 0     | 0.00   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | 1BDA301E27DE | 0     | 0     | 0.00   |
@@ -38186,6 +39835,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 91F9625A9328 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | FA1AC3FD2066 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 514452076B25 | 0     | 0     | 0.00   |
+| Kingston  | SA400S37240G       | 240 GB | 6A85B8095582 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | F744375F5EDC | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | FA131B2141F1 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | 04CC7AC77A39 | 0     | 0     | 0.00   |
@@ -38243,6 +39893,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS256G3AMNB-2200A | 256 GB | 76B3CED595C9 | 283   | 1006  | 0.00   |
 | Samsung   | SSD 860 EVO        | 500 GB | BF2804A91731 | 288   | 1028  | 0.00   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 7F28785893D5 | 1     | 6     | 0.00   |
+| SanDisk   | SSD PLUS           | 1 TB   | 3B6568E2F0B0 | 283   | 1013  | 0.00   |
 | Apple     | SSD SM256C         | 256 GB | B014B7964F2E | 113   | 407   | 0.00   |
 | Kingston  | SUV400S37120G      | 120 GB | 9B731D2B8C29 | 288   | 1043  | 0.00   |
 | Corsair   | CSSD-F60GB2        | 64 GB  | F08FC5279BA0 | 70    | 256   | 0.00   |
@@ -38277,8 +39928,10 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS330              | 120 GB | 5D25B82CB804 | 0     | 0     | 0.00   |
 | Apacer    | AS350              | 256 GB | CC2E03943BB5 | 0     | 0     | 0.00   |
 | Apacer    | AST280             | 120 GB | 21C4C8A94FC6 | 0     | 0     | 0.00   |
+| BAITITON  | BT58SSD10M         | 256 GB | EE19BE2C991B | 0     | 0     | 0.00   |
 | BAITITON  | BT58SSD10S         | 256 GB | 8FFD0C2B162B | 0     | 0     | 0.00   |
 | China     | M.2 SSD            | 256 GB | 752B0A2CA661 | 0     | 0     | 0.00   |
+| China     | NGFF 2242 128GB... | 128 GB | 394353EBE17E | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 240 GB | 1526289953D8 | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 64 GB  | 9459A98338D8 | 0     | 0     | 0.00   |
 | China     | SSD                | 360 GB | F58B9B98B5C6 | 0     | 0     | 0.00   |
@@ -38330,6 +39983,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | 41DBC889FF57 | 0     | 0     | 0.00   |
 | Kingston  | SV300S37A240G      | 240 GB | 3C88B2F19514 | 0     | 0     | 0.00   |
 | Lexar     | 128GB SSD          | 128 GB | AD23D29A553A | 0     | 0     | 0.00   |
+| MAX SPEED | SSD                | 256 GB | 1150930310E9 | 0     | 0     | 0.00   |
 | Micron    | MTFDDAK2T0TDL      | 2 TB   | DA8741C0A6C8 | 0     | 0     | 0.00   |
 | Netac     | S535N8-256GYN      | 256 GB | 636A441C8C66 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 128 GB | 5ACF77E6E46F | 0     | 0     | 0.00   |
@@ -38353,6 +40007,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 1 TB   | 66BAA43C6569 | 0     | 0     | 0.00   |
 | Samsung   | SSD 860 EVO M.2    | 250 GB | 91FD2544607A | 0     | 0     | 0.00   |
 | Samsung   | SSD 860 PRO        | 256 GB | 3FE41E65FFFD | 0     | 0     | 0.00   |
+| Samsung   | SSD 870 EVO        | 500 GB | 74B37937A74A | 0     | 0     | 0.00   |
 | SanDisk   | SD9TB8W256G1001    | 256 GB | 2AF6DF4D74BA | 0     | 0     | 0.00   |
 | SanDisk   | SDSSDA120G         | 120 GB | B0EDB8A6E522 | 0     | 0     | 0.00   |
 | SanDisk   | SSD PLUS           | 1 TB   | 225259A22656 | 0     | 0     | 0.00   |
@@ -38366,6 +40021,7 @@ MTBF - avg. MTBF in years per sample.
 | Teutons   | SSD                | 256 GB | C821BF0A3C83 | 0     | 0     | 0.00   |
 | Toshiba   | THNSF81Q92CSE      | 1.9 TB | 9F274E579AD2 | 0     | 0     | 0.00   |
 | Transcend | TS120GSSD220S      | 120 GB | 75DD83253FD7 | 0     | 0     | 0.00   |
+| Transcend | TS128GSSD420K      | 128 GB | 723C064DDC2B | 0     | 0     | 0.00   |
 | Transcend | TS32GSSD370        | 32 GB  | 7EAB86514CB8 | 0     | 0     | 0.00   |
 | Tronos    | TN240G-SSD         | 240 GB | 2D4A8AA136C1 | 0     | 0     | 0.00   |
 | WDC       | WDS100T2B0A-00SM50 | 1 TB   | 3F4AA7544541 | 0     | 0     | 0.00   |
@@ -38385,6 +40041,8 @@ MTBF - avg. MTBF in years per sample.
 | Bamba     | SSD                | 240 GB | 829BE8D084E1 | 60    | 249   | 0.00   |
 | Kingston  | SUV400S37120G      | 120 GB | 314D5FECB665 | 54    | 225   | 0.00   |
 | SK hynix  | HFS256G3AMNB-2200A | 256 GB | FAC7C2C14E19 | 244   | 1010  | 0.00   |
+| LDLC      | SSD                | 120 GB | 054CE2E95B8A | 76    | 318   | 0.00   |
+| ADATA     | SX900              | 128 GB | FD28DDBB3A87 | 244   | 1017  | 0.00   |
 | GeIL      | ZENITH S3-120GB    | 120 GB | C525A556FDE0 | 245   | 1021  | 0.00   |
 | Intel     | SSDSC2CW060A3      | 64 GB  | 7227D603EDBD | 240   | 1016  | 0.00   |
 | Samsung   | SSD 870 EVO        | 1 TB   | B4C4F5DA75FD | 243   | 1035  | 0.00   |
@@ -38440,6 +40098,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT480BX500SSD1     | 480 GB | E12B346CA8B2 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 19AB8FEEF0F7 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | F8BCC31F0B00 | 0     | 0     | 0.00   |
+| Dogfish   | SSD                | 256 GB | 9B9838629A9F | 0     | 0     | 0.00   |
 | ExeGate   | EX280463RUS(512GB) | 512 GB | 39FE435E45AE | 0     | 0     | 0.00   |
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | D582EB069347 | 0     | 0     | 0.00   |
 | Goldenfir | T650-120G          | 128 GB | A3C0E126A158 | 0     | 0     | 0.00   |
@@ -38456,6 +40115,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD                | 120 GB | A938EF0BFD34 | 0     | 0     | 0.00   |
 | Intenso   | SSD                | 120 GB | B9C130A95661 | 0     | 0     | 0.00   |
 | Intenso   | SSD Sata III       | 128 GB | A489A0E52D6E | 0     | 0     | 0.00   |
+| KLEVV     | NEO N610 SSD       | 512 GB | 0FAF38B9DFA9 | 0     | 0     | 0.00   |
 | KUIJIA    | DK500-64G          | 64 GB  | 91ACEADF2F02 | 0     | 0     | 0.00   |
 | KingSpec  | KSD-SA25.7-016MJ   | 16 GB  | 5429480DFB43 | 0     | 0     | 0.00   |
 | KingSpec  | MT-256             | 256 GB | 12264DB25835 | 0     | 0     | 0.00   |
@@ -38464,6 +40124,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 3EE967BF1F7B | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | AC800CE02AA4 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37120G       | 120 GB | F8ACEE873D65 | 0     | 0     | 0.00   |
+| Kingston  | SA400S37240G       | 240 GB | 766C1D4504A4 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | A78088AB4974 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | DD16A5DB966F | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | 182FFEEA2BC3 | 0     | 0     | 0.00   |
@@ -38472,6 +40133,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A120G      | 120 GB | CBADC31336CE | 0     | 0     | 0.00   |
 | Lexar     | 256GB SSD          | 256 GB | 1E684822D93F | 0     | 0     | 0.00   |
 | Lite-On   | S960 256           | 256 GB | 9B66FD40F838 | 0     | 0     | 0.00   |
+| MaiChai   | SSD 512G           | 512 GB | 292E4128E52A | 0     | 0     | 0.00   |
 | Netac     | SSD                | 128 GB | FFA790C5A576 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 256 GB | 2601A24E5D8E | 2     | 10    | 0.00   |
 | Netac     | SSD                | 256 GB | 970EB08B4A05 | 0     | 0     | 0.00   |
@@ -38494,9 +40156,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 500 GB | 192DD3C60A0E | 0     | 0     | 0.00   |
 | SanDisk   | SD8SBAT128G1122    | 128 GB | 3F2EFA37965F | 0     | 0     | 0.00   |
 | SanDisk   | SD8SBAT128G1122    | 128 GB | D71E66AD691B | 0     | 0     | 0.00   |
+| SanDisk   | SDSSDH3 500G       | 500 GB | DA521E588060 | 0     | 0     | 0.00   |
 | SanDisk   | SSD PLUS 120 GB    | 120 GB | 28063AFA8757 | 0     | 0     | 0.00   |
 | SanDisk   | SSD PLUS           | 240 GB | A7048338C7CA | 0     | 0     | 0.00   |
+| SanDisk   | WD Green 2.5       | 480 GB | 48CB5249E48B | 0     | 2     | 0.00   |
 | SanDisk   | WD Green M.2 2280  | 240 GB | 3CBF02E18D00 | 4     | 21    | 0.00   |
+| SanDisk   | WD Green M.2 2280  | 240 GB | A3959F6F179E | 0     | 0     | 0.00   |
 | SanDisk   | X600 M.2 2280 SATA | 128 GB | 13459AD6602E | 0     | 0     | 0.00   |
 | SanDisk   | pSSD               | 128 GB | 988C365401F6 | 1     | 4     | 0.00   |
 | Smartbuy  | SSD                | 256 GB | 592D9C9EEF8C | 0     | 0     | 0.00   |
@@ -38529,9 +40194,11 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS256GSSD230S      | 256 GB | E46B4B809141 | 201   | 1034  | 0.00   |
 | China     | MKSCE1BD060M4      | 64 GB  | 4F63B587C2E1 | 196   | 1016  | 0.00   |
 | PNY       | 69D03094-T         | 40 GB  | D581D792E4A4 | 195   | 1016  | 0.00   |
+| SK hynix  | HFS256G3AMNB-2200A | 256 GB | 6F3818BB69E1 | 191   | 1010  | 0.00   |
 | Intel     | SSDSC2CW060A3      | 64 GB  | 80510896F15D | 192   | 1017  | 0.00   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | BD2503722B21 | 203   | 1074  | 0.00   |
 | China     | ESA3SMD2HTGT240GB  | 240 GB | 19711CAC3E53 | 51    | 273   | 0.00   |
+| China     | Solid              | 512 GB | D89E22F3A9C7 | 22    | 118   | 0.00   |
 | Crucial   | CT240M500SSD1      | 240 GB | 78A3DEBF0E80 | 210   | 1118  | 0.00   |
 | Wellco... | 128GB SSD          | 128 GB | EA3CC7EEC24D | 13    | 71    | 0.00   |
 | Kingston  | SHFS37A120G        | 120 GB | 8721A6FB0D9E | 188   | 1018  | 0.00   |
@@ -38570,6 +40237,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800              | 128 GB | EA94AD28D406 | 0     | 0     | 0.00   |
 | AMD       | R3SL120G           | 120 GB | 8668AB8BE6F2 | 0     | 3     | 0.00   |
 | Apacer    | AS340              | 240 GB | 510099D3DCB8 | 0     | 0     | 0.00   |
+| Apacer    | AS340              | 240 GB | E56DEFB6F89C | 0     | 0     | 0.00   |
 | Apacer    | AS350              | 120 GB | 4045E2D722F4 | 0     | 0     | 0.00   |
 | BIOSTAR   | S100-480GB         | 480 GB | 4857A13F01BE | 0     | 0     | 0.00   |
 | China     | LS 512GB M300      | 512 GB | 3C7A53B0D78C | 0     | 0     | 0.00   |
@@ -38591,6 +40259,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | C8E08602B148 | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | F249B404B40A | 0     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 8872C88081FB | 0     | 0     | 0.00   |
+| Crucial   | CT250MX500SSD1     | 250 GB | E9CCBF01ECCA | 0     | 0     | 0.00   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 50E7DE5505D4 | 0     | 0     | 0.00   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 9FD4864E4831 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 856A20D4E4CB | 0     | 0     | 0.00   |
@@ -38651,6 +40320,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 240GB SSD    | 240 GB | B0DA80182932 | 0     | 0     | 0.00   |
 | Patriot   | Burst Elite        | 240 GB | 9FFAA72143A5 | 0     | 0     | 0.00   |
 | Patriot   | P210               | 512 GB | E8367F96A67F | 0     | 0     | 0.00   |
+| SPCC      | SSD                | 128 GB | 8A74A0D5E697 | 0     | 0     | 0.00   |
 | Samsung   | MZ7LN128HAHQ-000L2 | 128 GB | EDD3E34724D2 | 0     | 0     | 0.00   |
 | Samsung   | SSD 850            | 120 GB | FAD09019FBD9 | 0     | 0     | 0.00   |
 | Samsung   | SSD 860 EVO        | 500 GB | 48D89FA6C2CA | 0     | 0     | 0.00   |
@@ -38665,6 +40335,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | CF Card            | 16 GB  | 489D4FC4A592 | 0     | 0     | 0.00   |
 | SanDisk   | CF Card            | 8 GB   | EB37C2E376F7 | 0     | 0     | 0.00   |
 | SanDisk   | SD8SBAT-032G-1006  | 32 GB  | B774AC39F6E6 | 0     | 0     | 0.00   |
+| SanDisk   | SD8SBAT128G1122    | 128 GB | D2837BB34152 | 0     | 0     | 0.00   |
 | SanDisk   | SDSSDA120G         | 120 GB | 946FBFE22BE9 | 0     | 0     | 0.00   |
 | SanDisk   | SDSSDH3 1T00       | 1 TB   | 10C6D14AB5DC | 0     | 0     | 0.00   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | 2BB6B547FBB9 | 0     | 0     | 0.00   |
@@ -38674,6 +40345,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Blue SA510 2.5  | 500 GB | 56C1CB5F0438 | 0     | 0     | 0.00   |
 | Teutons   | Platinum SSD       | 256 GB | 4DB77203C715 | 0     | 0     | 0.00   |
 | Toshiba   | TR150              | 240 GB | E95175072599 | 0     | 0     | 0.00   |
+| Transcend | TS256GMTS830S      | 256 GB | D6EA0768C4A1 | 0     | 0     | 0.00   |
 | Transcend | TS64GMSA230S       | 64 GB  | 1E693EA6CA74 | 0     | 0     | 0.00   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | D3EF2E476F94 | 0     | 0     | 0.00   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | C55FB8023C24 | 0     | 0     | 0.00   |
@@ -38713,6 +40385,7 @@ MTBF - avg. MTBF in years per sample.
 | Innodisk  | 2.5" SATA SSD 3... | 480 GB | AB3A5DEC5245 | 147   | 1012  | 0.00   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 9C99CBF1CC02 | 46    | 316   | 0.00   |
 | OCZ       | AGILITY3           | 120 GB | D95DEF3BC369 | 169   | 1166  | 0.00   |
+| ADATA     | SU750              | 256 GB | 749754129A64 | 128   | 886   | 0.00   |
 | ADATA     | SSD DP900 128GB... | 128 GB | 46DBA8ACE012 | 147   | 1023  | 0.00   |
 | Kingston  | SUV400S37240G      | 240 GB | B73B822A12B8 | 149   | 1039  | 0.00   |
 | Lite-On   | LMT-64M6M-HP       | 64 GB  | A6A9E63F9688 | 145   | 1014  | 0.00   |
@@ -38723,6 +40396,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 1 TB   | 7ACE6B96152A | 166   | 1180  | 0.00   |
 | Kingston  | SKC300S37A180G     | 180 GB | 852A4B499483 | 288   | 2050  | 0.00   |
 | Netac     | SSD                | 120 GB | DA394F7E79B8 | 1     | 10    | 0.00   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 4730A5DC38C4 | 159   | 1143  | 0.00   |
 | OCZ       | AGILITY3           | 240 GB | 07A1EE3C37D1 | 27    | 194   | 0.00   |
 | PNY       | SSD2SC240G3LC70... | 240 GB | 0CBAED4A898E | 141   | 1017  | 0.00   |
 | WALRAM    | SSD                | 256 GB | 54CA20B96535 | 2     | 18    | 0.00   |
@@ -38757,7 +40431,9 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU800NS38          | 1 TB   | 2022949B37A4 | 0     | 0     | 0.00   |
 | AEGO      | SSD                | 240 GB | 0F0865DB3B30 | 0     | 0     | 0.00   |
 | Apacer    | AS350              | 240 GB | D7E689C0579A | 0     | 0     | 0.00   |
+| China     | 128GB SSD          | 128 GB | 555ED3A984D1 | 0     | 0     | 0.00   |
 | China     | NGFF 2280 256GB... | 256 GB | 72F2707CBFEF | 0     | 0     | 0.00   |
+| China     | NT-1TB 2280        | 1 TB   | F926CDB5B906 | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 120 GB | B72AF0CF758A | 0     | 0     | 0.00   |
 | China     | SATA SSD           | 480 GB | D667C7C2C1AF | 0     | 0     | 0.00   |
 | China     | SH00M256GB         | 256 GB | 0BF014D52162 | 0     | 0     | 0.00   |
@@ -38774,6 +40450,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2000MX500SSD1    | 2 TB   | E155E0324D43 | 0     | 0     | 0.00   |
 | Crucial   | CT2000MX500SSD1    | 2 TB   | E7A1B6F97EDB | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | 24A5EC4D6CA6 | 0     | 0     | 0.00   |
+| Crucial   | CT240BX500SSD1     | 240 GB | CE91C28BE447 | 0     | 0     | 0.00   |
 | Crucial   | CT500MX500SSD1     | 500 GB | E641D12D8B53 | 0     | 0     | 0.00   |
 | Dogfish   | SSD                | 64 GB  | AA835ADC28F0 | 0     | 0     | 0.00   |
 | ExeGate   | EX276536RUS(120GB) | 120 GB | 4C0012605CD9 | 0     | 0     | 0.00   |
@@ -38794,6 +40471,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 6DD731CD11CB | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 8900A45F64EE | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | E43DB675A473 | 0     | 0     | 0.00   |
+| Kingston  | SA400S37480G       | 480 GB | 32CA45E66DA6 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | 9E677B77F005 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37480G       | 480 GB | BEA7FBEA8F39 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37960G       | 960 GB | 2B39EF43AA45 | 0     | 0     | 0.00   |
@@ -38802,6 +40480,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A240G      | 240 GB | 0AF39CBFAF9D | 0     | 0     | 0.00   |
 | Kingston  | SV300S37A240G      | 240 GB | F256132CA425 | 0     | 0     | 0.00   |
 | Lexar     | 1TB SSD            | 1 TB   | FF70969F1784 | 0     | 0     | 0.00   |
+| Lexar     | 256GB SSD          | 256 GB | 0C796AB05DD0 | 0     | 0     | 0.00   |
 | MicroD... | 512G SSD           | 512 GB | 0423D35904E4 | 0     | 0     | 0.00   |
 | Netac     | GM256              | 256 GB | D6521D61F6E1 | 0     | 0     | 0.00   |
 | Netac     | S535N8-256GYN      | 256 GB | 047BDD986EF6 | 0     | 0     | 0.00   |
@@ -38813,6 +40492,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 120GB SSD    | 120 GB | EDECF4352C22 | 0     | 0     | 0.00   |
 | PNY       | CS900 120GB SSD    | 120 GB | F2005BCFBDEF | 0     | 0     | 0.00   |
 | Plextor   | PH6-CE240          | 240 GB | B93E388C7CB2 | 0     | 0     | 0.00   |
+| QUMO      | Q3DT-240GSCY       | 240 GB | F814BB54CA7B | 0     | 0     | 0.00   |
 | Qumo      | SSD                | 120 GB | E32FDA635021 | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 128 GB | 15F87FF150E0 | 0     | 0     | 0.00   |
 | SPCC      | SSD                | 256 GB | 5FFA28E03AAF | 0     | 0     | 0.00   |
@@ -38829,6 +40509,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 500 GB | 996EB9E6B989 | 0     | 0     | 0.00   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 262DD5613BF0 | 0     | 0     | 0.00   |
 | Samsung   | SSD 870 QVO        | 1 TB   | 4E031E9232F9 | 0     | 0     | 0.00   |
+| Samsung   | SSD 870 QVO        | 1 TB   | EDD89040230B | 0     | 0     | 0.00   |
 | SanDisk   | SD9TB8W1T001001    | 1 TB   | 9CE6E4124FC1 | 0     | 0     | 0.00   |
 | SanDisk   | SDSSDA240G         | 240 GB | C5B24EDAEBBA | 0     | 0     | 0.00   |
 | SanDisk   | pSSD               | 128 GB | D3B06E732F5C | 0     | 0     | 0.00   |
@@ -38862,12 +40543,14 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CMT-64L3M          | 64 GB  | E0483A22CA6B | 126   | 1043  | 0.00   |
 | SanDisk   | SSD P4             | 64 GB  | 0EE079EC0381 | 106   | 883   | 0.00   |
 | BIWIN     | SSD                | 128 GB | 739F76C16A87 | 371   | 3089  | 0.00   |
+| ADATA     | SU630              | 480 GB | 2B797C37915F | 124   | 1051  | 0.00   |
 | Kingston  | SHFS37A120G        | 120 GB | F29B433A9ACE | 120   | 1020  | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | 273F73435E97 | 114   | 974   | 0.00   |
 | Drevo     | X1                 | 120 GB | E398B9746702 | 239   | 2029  | 0.00   |
 | SK hynix  | HFS500G32TND-3110A | 500 GB | BC61D3638FCC | 142   | 1209  | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | 0B6C267DBFD6 | 114   | 976   | 0.00   |
 | SanDisk   | pSSD               | 256 GB | FBCD7B346598 | 0     | 4     | 0.00   |
+| HP        | SSD S700           | 250 GB | 71CD7EE1F771 | 76    | 660   | 0.00   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 487F18E47BEF | 12    | 108   | 0.00   |
 | Colorful  | SL500              | 480 GB | A6861ADD7ACF | 22    | 195   | 0.00   |
 | ADATA     | SX900              | 128 GB | 1218B809DB31 | 118   | 1033  | 0.00   |
@@ -38892,6 +40575,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | 796DA71B788C | 108   | 1017  | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | D1A07C72E9EB | 104   | 985   | 0.00   |
 | Samsung   | SSD 870 EVO        | 4 TB   | 40B8F7A7EBFC | 85    | 813   | 0.00   |
+| Lite-On   | LMT-256M6M-HP      | 256 GB | E9B9E100F189 | 120   | 1145  | 0.00   |
 | Micron    | 1100 SATA          | 512 GB | D8EF0975341E | 62    | 596   | 0.00   |
 | SPCC      | SSD                | 240 GB | A73E86B65219 | 105   | 1016  | 0.00   |
 | SanDisk   | SD9SN8W-256G-1006  | 256 GB | EFBCC92DDF21 | 101   | 986   | 0.00   |
@@ -38989,6 +40673,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 7F58BDD599EA | 0     | 0     | 0.00   |
 | Goodram   | SSDPR-CL100-120-G3 | 120 GB | A29B0EAB08E8 | 0     | 0     | 0.00   |
 | Goodram   | SSDPR-CL100-240-G3 | 240 GB | 4C1AF25DCEAA | 0     | 0     | 0.00   |
+| Goodram   | SSDPR-CX400-256-G2 | 256 GB | 05A76AF2B5C5 | 0     | 0     | 0.00   |
 | HP        | SSD S600           | 240 GB | E19817C7D23D | 0     | 0     | 0.00   |
 | HP        | SSD S750           | 512 GB | 819313264571 | 0     | 0     | 0.00   |
 | INNOVA... | SSD_2.5"_1TB_In... | 1 TB   | 99B0784D0AC9 | 0     | 0     | 0.00   |
@@ -39004,6 +40689,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | AEC60D6AD202 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 0EB9AC6897C9 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 152FDF11BBF1 | 0     | 0     | 0.00   |
+| Kingston  | SA400S37240G       | 240 GB | 27A26A7B7BB8 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 61AA3F26C1FA | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 9B8A31C8D261 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | B68AE0588B44 | 0     | 0     | 0.00   |
@@ -39027,6 +40713,7 @@ MTBF - avg. MTBF in years per sample.
 | Netac     | SSD                | 256 GB | 6259A9145EA2 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 256 GB | C273DB948948 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 512 GB | 07D6C8EABA99 | 0     | 0     | 0.00   |
+| PNY       | CS900 120GB SSD    | 120 GB | 5B18273E9FC8 | 0     | 0     | 0.00   |
 | PNY       | CS900 120GB SSD    | 120 GB | 78A9F0C9972F | 0     | 0     | 0.00   |
 | PNY       | CS900 120GB SSD    | 120 GB | 9E2CB4281E52 | 0     | 0     | 0.00   |
 | PNY       | CS900 120GB SSD    | 120 GB | FC7023314E4E | 0     | 0     | 0.00   |
@@ -39037,6 +40724,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Burst              | 240 GB | 539E27C74CA7 | 0     | 0     | 0.00   |
 | Patriot   | Burst              | 480 GB | 182E3BB14665 | 0     | 0     | 0.00   |
 | Patriot   | Burst Elite        | 120 GB | BB418A077278 | 0     | 0     | 0.00   |
+| Patriot   | P210               | 256 GB | 27ECAC88FA76 | 0     | 0     | 0.00   |
 | Plextor   | PX-32G5L           | 32 GB  | 74B107ED9AD4 | 0     | 0     | 0.00   |
 | Protectli | 64GB mSATA         | 64 GB  | CDFDB87FEF4D | 0     | 0     | 0.00   |
 | SK hynix  | SHGS31-500GS-2     | 500 GB | 7DAC2339955A | 0     | 0     | 0.00   |
@@ -39055,6 +40743,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 500 GB | B0B3CDCF6C9D | 0     | 0     | 0.00   |
 | Samsung   | SSD 860 EVO        | 500 GB | CC84BE152AA5 | 0     | 0     | 0.00   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 404D4E85376A | 0     | 0     | 0.00   |
+| Samsung   | SSD 870 EVO        | 1 TB   | 613D961FE419 | 0     | 0     | 0.00   |
 | Samsung   | SSD 870 EVO        | 1 TB   | F142C97EEB19 | 0     | 0     | 0.00   |
 | Samsung   | SSD 870 EVO        | 250 GB | CDBB0B4DB9E6 | 0     | 0     | 0.00   |
 | Samsung   | SSD 870 EVO        | 250 GB | F93D5294CD58 | 0     | 0     | 0.00   |
@@ -39066,8 +40755,11 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U100           | 16 GB  | 44333E117371 | 0     | 0     | 0.00   |
 | SanDisk   | SSD U100           | 32 GB  | A75A7C2DE8E1 | 0     | 0     | 0.00   |
 | SanDisk   | SSD U100           | 64 GB  | 4809B6F8D8DF | 0     | 0     | 0.00   |
+| SanDisk   | WD Blue SA510 2.5  | 1 TB   | 13B7C43EA040 | 0     | 0     | 0.00   |
+| SanDisk   | WD Green M.2 2280  | 480 GB | D87496B70569 | 0     | 0     | 0.00   |
 | SanDisk   | pSSD               | 256 GB | A2B72BBAF5AF | 0     | 4     | 0.00   |
 | Smartbuy  | 120GB STELS        | 128 GB | AAE06FD7AF94 | 0     | 0     | 0.00   |
+| Smartbuy  | SSD                | 120 GB | 98C27C963BE2 | 0     | 0     | 0.00   |
 | Smartbuy  | SSD                | 256 GB | 3E586DE81BC6 | 0     | 0     | 0.00   |
 | TMI       | 512GB M2 CRMP.4... | 512 GB | 4FB548913449 | 0     | 0     | 0.00   |
 | Team      | T2531TB            | 1 TB   | 0165A162EDAF | 0     | 0     | 0.00   |
@@ -39093,6 +40785,7 @@ MTBF - avg. MTBF in years per sample.
 | XrayDisk  | SSD                | 128 GB | 6C500352F666 | 0     | 0     | 0.00   |
 | PNY       | SSD2SC240GC2DH1... | 240 GB | A8950DD4AA54 | 85    | 1023  | 0.00   |
 | Intel     | SSDSC2KF256H6 SATA | 256 GB | 84C9C0B3DB13 | 9     | 112   | 0.00   |
+| Kingston  | RBU-SNS8350DES3... | 128 GB | B193127A54F3 | 8     | 98    | 0.00   |
 | Micron    | C400-MTFDDAK256MAM | 256 GB | 427B1D17B0E1 | 83    | 1011  | 0.00   |
 | Kingmax   | SSD                | 120 GB | 5043CD28ADAD | 84    | 1023  | 0.00   |
 | Intel     | SSDSC2KF512H6 SATA | 512 GB | F207792E14FE | 7     | 84    | 0.00   |
@@ -39105,6 +40798,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA3 480GB SSD    | 480 GB | 40080DE6D44E | 12    | 148   | 0.00   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 06D1BFF6EE56 | 136   | 1693  | 0.00   |
 | Kingmax   | SSD                | 120 GB | B805585CBC42 | 82    | 1031  | 0.00   |
+| ADATA     | SU750              | 1 TB   | 2E43899E24D8 | 161   | 2022  | 0.00   |
 | HP Phison | PSSBN032GA27MC0    | 32 GB  | 9D68A725BC00 | 81    | 1039  | 0.00   |
 | Netac     | SSD                | 120 GB | 05925F23757E | 236   | 3025  | 0.00   |
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 2904ABC39E2F | 250   | 3242  | 0.00   |
@@ -39130,6 +40824,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMS200S3120G       | 120 GB | C7EC88FD59F5 | 54    | 766   | 0.00   |
 | SanDisk   | SDSSDX480GG25      | 480 GB | 6217DE6A30F9 | 76    | 1090  | 0.00   |
 | SPCC      | SSD                | 240 GB | 048506D0293D | 71    | 1017  | 0.00   |
+| Patriot   | Burst Elite        | 480 GB | BED1E8465FCA | 0     | 2     | 0.00   |
 | ADATA     | SU630              | 240 GB | 7444E3BFA1F2 | 71    | 1042  | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | 46BA374AF110 | 67    | 982   | 0.00   |
 | Mushkin   | MKNSSDS21TB        | 1 TB   | C577B4585B59 | 20    | 302   | 0.00   |
@@ -39152,6 +40847,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHFS37A120G        | 120 GB | C61BD7939664 | 60    | 1015  | 0.00   |
 | ADATA     | SU650              | 120 GB | DA4ACD1C65D9 | 126   | 2121  | 0.00   |
 | Intenso   | SSD Sata III       | 128 GB | 8F3B6EE9B6D4 | 120   | 2052  | 0.00   |
+| Kingston  | A400               | 120 GB | CB65D1A272FC | 0     | 9     | 0.00   |
 | Kingston  | SUV400S37120G      | 120 GB | F429412DB1D0 | 0     | 4     | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | 43DDE074A30C | 54    | 940   | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | 808FAECBA470 | 57    | 1007  | 0.00   |
@@ -39159,6 +40855,8 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KW480H6      | 480 GB | FD4EDA912799 | 27    | 477   | 0.00   |
 | SanDisk   | SD9SN8W-256G-1006  | 256 GB | CE99821C40EA | 55    | 993   | 0.00   |
 | Kingston  | SUV400S37120G      | 120 GB | FA343E480B05 | 57    | 1023  | 0.00   |
+| Kingston  | SNS4151S332G       | 32 GB  | 278D95781682 | 56    | 1022  | 0.00   |
+| SanDisk   | WD Blue SA510 2.5  | 500 GB | E6B562855DEE | 2     | 35    | 0.00   |
 | ADATA     | SU800NS38          | 256 GB | 05D5D086F8AD | 57    | 1057  | 0.00   |
 | Kingston  | SHFS37A120G        | 120 GB | 2828E412E59D | 55    | 1018  | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | 89CD534DCDF1 | 54    | 1007  | 0.00   |
@@ -39191,6 +40889,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV8-8E128-HP       | 128 GB | 9FC819A7538B | 46    | 1007  | 0.00   |
 | Colorful  | SL300              | 128 GB | ED01C8B24E41 | 46    | 1010  | 0.00   |
 | SPCC      | SSD                | 64 GB  | 4714BB992F48 | 46    | 1017  | 0.00   |
+| Crucial   | CT1000MX500SSD1    | 1 TB   | B6725F705571 | 45    | 1011  | 0.00   |
 | Kingston  | SSDNOW 240         | 240 GB | AA1AFC4CA3D6 | 45    | 1018  | 0.00   |
 | Crucial   | CT240M500SSD1      | 240 GB | AA72E97F5EEE | 47    | 1055  | 0.00   |
 | Micron    | 1100 SATA          | 512 GB | 87C85DBD81DA | 45    | 1030  | 0.00   |
@@ -39201,6 +40900,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLH128HBHQ-000H1 | 128 GB | 12D41F891D4B | 4     | 100   | 0.00   |
 | Kingston  | SUV400S37120G      | 120 GB | 476203FE2AB6 | 44    | 1024  | 0.00   |
 | Micron    | 1100 SATA          | 256 GB | C04C7ED31490 | 46    | 1083  | 0.00   |
+| Micron    | MTFDDAV256TDL-1... | 256 GB | 0F6E867372CB | 42    | 1008  | 0.00   |
 | Plextor   | PX-128M6M          | 128 GB | 6DA010B87FC4 | 109   | 2573  | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | D059D90CCD29 | 42    | 1007  | 0.00   |
 | KingSpec  | ACJC2M060S25       | 64 GB  | 0C415DE4949E | 29    | 705   | 0.00   |
@@ -39213,10 +40913,12 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 8A7FF2AEF0D5 | 0     | 0     | 0.00   |
 | ADATA     | SU650              | 120 GB | DCC0307DF765 | 0     | 0     | 0.00   |
 | ADATA     | SU650              | 256 GB | A3AA05A23BF9 | 0     | 0     | 0.00   |
+| ADATA     | SU650              | 480 GB | 3F9E7B054184 | 0     | 0     | 0.00   |
 | ADATA     | SU750              | 512 GB | 086D824FE3FF | 0     | 0     | 0.00   |
 | AMD       | R5SL120G           | 120 GB | 64C8878FD212 | 0     | 0     | 0.00   |
 | Advantech | SQF-SHMM2-8G-S9C   | 8 GB   | 1AE65E3067C9 | 0     | 0     | 0.00   |
 | Apacer    | AS350              | 128 GB | 0F11C1B97306 | 0     | 0     | 0.00   |
+| Apacer    | AS350              | 128 GB | 2DB1D75976B7 | 0     | 0     | 0.00   |
 | China     | GCM2IN2280256C     | 256 GB | C22E7B2AEBE8 | 0     | 0     | 0.00   |
 | China     | SSD                | 120 GB | 8D32E44A9ABC | 0     | 0     | 0.00   |
 | China     | SSD                | 128 GB | 47372F71E34C | 0     | 0     | 0.00   |
@@ -39235,6 +40937,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | 48696479A09D | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | CF44468958FD | 0     | 0     | 0.00   |
 | Crucial   | CT240BX500SSD1     | 240 GB | E2CCFF5155DE | 0     | 0     | 0.00   |
+| Crucial   | CT240BX500SSD1     | 240 GB | ECEAE44446A9 | 0     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 1BBB96E704FA | 0     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 74D0C8D6C9A1 | 0     | 0     | 0.00   |
 | Crucial   | CT250MX500SSD1     | 250 GB | 9BDB7DE83579 | 0     | 0     | 0.00   |
@@ -39249,6 +40952,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX500SSD1     | 500 GB | EAF482F81047 | 0     | 0     | 0.00   |
 | DOGGO     | DQ-60G             | 64 GB  | 036507CF288A | 0     | 0     | 0.00   |
 | DOGGO     | DQ-60G             | 64 GB  | D70D9A476680 | 0     | 0     | 0.00   |
+| Dogfish   | SSD                | 128 GB | B7409127182C | 0     | 0     | 0.00   |
 | EMTEC     | X150               | 240 GB | 4B3218125CC5 | 0     | 0     | 0.00   |
 | FORESEE   | 256GB SSD          | 256 GB | B0784186BCF7 | 0     | 0     | 0.00   |
 | Foxline   | FLSSD128X5         | 128 GB | CD52CAA3A45A | 0     | 0     | 0.00   |
@@ -39257,6 +40961,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 9005C683D139 | 0     | 0     | 0.00   |
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 165C6081FDBE | 0     | 0     | 0.00   |
 | Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 803178DB905E | 0     | 0     | 0.00   |
+| Hikvision | HS-SSD-C100 120G   | 120 GB | CAF12699156E | 0     | 0     | 0.00   |
 | Hikvision | HS-SSD-C100 240G   | 240 GB | 9E60B522F456 | 0     | 0     | 0.00   |
 | Hikvision | HS-SSD-E100N 1024G | 1 TB   | B2B7CF6FD5FB | 0     | 0     | 0.00   |
 | Hoodisk   | SSD                | 16 GB  | FCBBD52CA905 | 0     | 0     | 0.00   |
@@ -39285,6 +40990,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37240G       | 240 GB | 340D0A7012F2 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 3D7C70870631 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 58BC06C82844 | 0     | 0     | 0.00   |
+| Kingston  | SA400S37240G       | 240 GB | 708CE6A5B70F | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 8C3A34A81522 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | 9F4496473024 | 0     | 0     | 0.00   |
 | Kingston  | SA400S37240G       | 240 GB | B4C3DD5378A4 | 0     | 0     | 0.00   |
@@ -39314,6 +41020,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV8-8E256-11 SATA  | 256 GB | 85F858F37C81 | 0     | 0     | 0.00   |
 | Netac     | S535N8-256GYN      | 256 GB | AB508DFD9332 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 256 GB | 50729C01E8CA | 0     | 0     | 0.00   |
+| Netac     | SSD                | 256 GB | E11430328715 | 0     | 0     | 0.00   |
 | Netac     | SSD                | 512 GB | 1DDF4FAC266D | 0     | 0     | 0.00   |
 | Netac     | Secureye SSD       | 128 GB | 378FBC851F12 | 0     | 0     | 0.00   |
 | ORTIAL    | SSD                | 128 GB | 4F58CD814BD6 | 0     | 0     | 0.00   |
@@ -39369,6 +41076,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD U100           | 32 GB  | 9270BB9A2221 | 0     | 0     | 0.00   |
 | SanDisk   | SSD U100           | 64 GB  | 70CFD140AAD6 | 0     | 0     | 0.00   |
 | SanDisk   | WD Blue SA510 2.5  | 1 TB   | 43AE4B68901C | 0     | 0     | 0.00   |
+| SanDisk   | WD Blue SA510 2.5  | 500 GB | E3AB43BA0405 | 0     | 0     | 0.00   |
 | SanDisk   | WD Green 2.5       | 240 GB | D736B6D4FE85 | 0     | 0     | 0.00   |
 | SanDisk   | pSSD               | 128 GB | 02E6189AFB9D | 0     | 0     | 0.00   |
 | SanDisk   | pSSD               | 128 GB | 0D4475E140E2 | 0     | 0     | 0.00   |
@@ -39389,6 +41097,7 @@ MTBF - avg. MTBF in years per sample.
 | UMAX      | 2242               | 512 GB | 7C53280992B1 | 0     | 0     | 0.00   |
 | Verbatim  | Vi550 S3 SSD       | 128 GB | 6ACF8F8CC764 | 0     | 0     | 0.00   |
 | WDC       | WDBNCE0010PNC      | 1 TB   | D8FCD33344CF | 0     | 0     | 0.00   |
+| WDC       | WDS100T1R0B-68A4Z0 | 1 TB   | E30B7C41EF63 | 0     | 0     | 0.00   |
 | WDC       | WDS100T2B0B        | 1 TB   | 0828C9617664 | 0     | 0     | 0.00   |
 | WDC       | WDS120G2G0A-00JH30 | 120 GB | 54BD15039333 | 0     | 0     | 0.00   |
 | WDC       | WDS120G2G0B-00EPW0 | 120 GB | 9377BF9A8BB5 | 0     | 0     | 0.00   |
@@ -39418,6 +41127,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | C400-MTFDDAT128MAM | 128 GB | C3F0C9CE8789 | 76    | 2067  | 0.00   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 879F9CAF78C4 | 13    | 366   | 0.00   |
 | KingSpec  | NT-256             | 256 GB | 387DD89F7600 | 36    | 1009  | 0.00   |
+| Intel     | SSDSC2KW010X6      | 1 TB   | 443B536F333F | 3     | 92    | 0.00   |
 | Apacer    | AS350              | 120 GB | 6B90DE8E8B6A | 0     | 6     | 0.00   |
 | KingSpec  | Q-180              | 180 GB | 74C42F08C592 | 33    | 940   | 0.00   |
 | XrayDisk  | 512GB SSD          | 512 GB | A9DDCD97ED9D | 35    | 1012  | 0.00   |
@@ -39426,6 +41136,7 @@ MTBF - avg. MTBF in years per sample.
 | XrayDisk  | SSD                | 256 GB | B6369C6057CF | 2     | 67    | 0.00   |
 | Micron    | MTFDDAT128MAM-1J2  | 128 GB | 9BB4E8C871D6 | 35    | 1058  | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | 9EE4129DEDA4 | 34    | 1007  | 0.00   |
+| Micron    | MTFDDAK256MAM-1K12 | 256 GB | 8053350FECB6 | 34    | 1018  | 0.00   |
 | Crucial   | CT275MX300SSD1     | 275 GB | 7844D754E8C5 | 47    | 1421  | 0.00   |
 | Plextor   | PX-256M6S          | 256 GB | DFBF6CF00E10 | 33    | 1013  | 0.00   |
 | SanDisk   | SDSSDXPS240G       | 240 GB | CA7FD47900F5 | 33    | 1034  | 0.00   |
@@ -39438,8 +41149,11 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP900NS38          | 256 GB | C0C78B6DF8F9 | 31    | 1018  | 0.00   |
 | SPCC      | SSD                | 240 GB | B3DC2B16C7F3 | 31    | 1015  | 0.00   |
 | SK hynix  | HFS250G32TND-N1A2A | 250 GB | 5900071C78EF | 62    | 2057  | 0.00   |
+| Netac     | SSD                | 256 GB | 94838246E9CE | 0     | 6     | 0.00   |
 | Lite-On   | IT SCS-128L9S      | 128 GB | 3853966D4880 | 35    | 1203  | 0.00   |
+| KingSpec  | P3-64              | 64 GB  | 87277AB096C0 | 2     | 82    | 0.00   |
 | ADATA     | SU630              | 240 GB | C23872A73B63 | 75    | 2596  | 0.00   |
+| China     | SSD-128G           | 128 GB | 257F18CEA712 | 0     | 9     | 0.00   |
 | PNY       | SSD2SC240GE2DH1... | 240 GB | FD86FED28B06 | 29    | 1016  | 0.00   |
 | Platinet  | SSD                | 120 GB | 59BD288FD825 | 2     | 90    | 0.00   |
 | tecmiyo   | SATA SSD           | 256 GB | 7C2C09DA8745 | 0     | 14    | 0.00   |
@@ -39447,6 +41161,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | CSSD-F240GB2       | 240 GB | EC72711B1B62 | 27    | 1009  | 0.00   |
 | Micron    | 1100_MTFDDAV512TBN | 512 GB | 195A05CFC44E | 68    | 2551  | 0.00   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 1D5E41682E9B | 27    | 1030  | 0.00   |
+| China     | SSD                | 256 GB | 77C2535CD90F | 0     | 10    | 0.00   |
 | Intenso   | SSD Sata III       | 120 GB | 917FE8D06CEA | 22    | 852   | 0.00   |
 | Intenso   | SSD Sata III       | 256 GB | 2E59E0C541CB | 13    | 505   | 0.00   |
 | SanDisk   | pSSD               | 128 GB | FEFD1472A610 | 0     | 4     | 0.00   |
@@ -39465,6 +41180,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 2575C5C11366 | 25    | 1118  | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | BF947F46E5B1 | 22    | 1007  | 0.00   |
 | KingDian  | S280-240GB         | 240 GB | 60283811124A | 48    | 2186  | 0.00   |
+| Kingston  | SNS4151S316GD      | 16 GB  | 093354CA7A04 | 22    | 1022  | 0.00   |
 | Samsung   | MZMPA128HMFU-000H1 | 128 GB | A322055339E4 | 44    | 2046  | 0.00   |
 | Kingston  | SHFS37A120G        | 120 GB | BB6018BCE45F | 21    | 1016  | 0.00   |
 | Apacer    | 16GB SATA Flash... | 16 GB  | A54A72A5936F | 2     | 100   | 0.00   |
@@ -39498,6 +41214,8 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV8-8E128-HP       | 128 GB | 66A37EA81423 | 16    | 1007  | 0.00   |
 | AMD       | R5S120GBSF         | 120 GB | F949F54876D3 | 15    | 1016  | 0.00   |
 | JIAWEI    | SSD                | 240 GB | C01B07EE5979 | 47    | 3057  | 0.00   |
+| Intel     | SSDSC2CW060A3      | 64 GB  | 6DE71D576177 | 15    | 1016  | 0.00   |
+| ACOS      | AS-512             | 512 GB | E3B43F841B4A | 15    | 1012  | 0.00   |
 | China     | SSD                | 120 GB | DD85A936D9F8 | 15    | 1012  | 0.00   |
 | Micron    | MTFDDAV256TDL-1... | 256 GB | 1D3C88C4D1A1 | 15    | 1008  | 0.00   |
 | SanDisk   | SD9SN8W-256G-1006  | 256 GB | F8653DCF8E58 | 14    | 998   | 0.00   |
@@ -39507,16 +41225,21 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LCH-256V2S-11 2... | 256 GB | C5A9C09E70AB | 0     | 2     | 0.00   |
 | Lite-On   | LMH-256V2M-11 M... | 256 GB | 3DBC96267279 | 0     | 2     | 0.00   |
 | ADATA     | SU630              | 480 GB | 0886C8516EC9 | 16    | 1195  | 0.00   |
+| Intel     | SSDSCKKW240H6      | 240 GB | 8915F1F98E47 | 27    | 2012  | 0.00   |
 | Neo Forza | NFS011SA356-600... | 256 GB | 7FD701CE02C7 | 41    | 3130  | 0.00   |
+| Zebronics | ZEB-SD24           | 240 GB | A1A067C5AD14 | 13    | 1012  | 0.00   |
 | WDC       | PC SA530 SDASN8... | 256 GB | 209C91364658 | 12    | 998   | 0.00   |
 | Intel     | SSDSCKKW010X6      | 1 TB   | D07BC93E168B | 7     | 580   | 0.00   |
 | Kingston  | SNS4151S316G       | 16 GB  | 045D80A5DE3D | 12    | 1022  | 0.00   |
+| Patriot   | Burst Elite        | 120 GB | B979DEA377FA | 11    | 1015  | 0.00   |
 | Kingston  | SHFS37A120G        | 120 GB | 5CA853E2F565 | 11    | 1016  | 0.00   |
 | Kingston  | SHFS37A120G        | 120 GB | F86547948B21 | 11    | 1016  | 0.00   |
+| WDC       | PC SA530 SDASN8... | 256 GB | 548B4F36A428 | 10    | 994   | 0.00   |
 | Crucial   | CT525MX300SSD1     | 528 GB | E32520F49AE1 | 14    | 1357  | 0.00   |
 | Intel     | SSDSA2BW160G3      | 160 GB | E43A1B9B9E82 | 12    | 1204  | 0.00   |
 | Intel     | SSDSC2KW240H6      | 240 GB | 85BFAA98825D | 9     | 924   | 0.00   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 151E8F521FF6 | 6     | 641   | 0.00   |
+| Intel     | SSDSC2KW010X6      | 1 TB   | 5A3210F0361E | 3     | 361   | 0.00   |
 | OCZ       | VERTEX450          | 128 GB | 79CC3FF31B69 | 17    | 2044  | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | 630AC0E2EC08 | 8     | 1007  | 0.00   |
 | LEQIXIANG | SSD                | 256 GB | 84CEFDF2EDA8 | 0     | 4     | 0.00   |
@@ -39535,8 +41258,12 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP900NS38          | 256 GB | 85F511E43E1E | 7     | 1017  | 0.00   |
 | Neo Forza | NFS121SA312-600... | 120 GB | 50BF61BFF894 | 7     | 1012  | 0.00   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | D74F9B14F924 | 10    | 1459  | 0.00   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | FDDAF89C8914 | 7     | 1007  | 0.00   |
+| 2-Power   | SSD2042B           | 256 GB | 73CA9410E696 | 0     | 5     | 0.00   |
 | Digma     | 256GB RUN S9       | 256 GB | 18C717FA6F42 | 0     | 5     | 0.00   |
 | Micron    | MTFDDAV256TDL-1... | 256 GB | 6E5505AE3F2B | 6     | 1008  | 0.00   |
+| Intel     | SSDSC2KW010X6      | 1 TB   | 200E9628C774 | 3     | 508   | 0.00   |
+| Intel     | SSDSC2KW010X6      | 1 TB   | 01C7AA527E2F | 3     | 514   | 0.00   |
 | SSSTC     | CVB-8D128-HP       | 128 GB | 7AE8ED1DE758 | 6     | 1008  | 0.00   |
 | Lite-On   | IT LST-16S9G-HP    | 16 GB  | 28A6C6BFE2CA | 6     | 1021  | 0.00   |
 | Intel     | SSDSC2CW060A3      | 64 GB  | 1489D1DFDC2A | 5     | 1016  | 0.00   |
@@ -39585,14 +41312,18 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV8-8E128-HP       | 128 GB | B477AF98DF5C | 2     | 1007  | 0.00   |
 | SanDisk   | SD9SN8W-128G-1006  | 128 GB | 5B09B9494BF2 | 1     | 1000  | 0.00   |
 | SanDisk   | sandisk120         | 120 GB | 8F2FA8C476CA | 0     | 21    | 0.00   |
+| China     | SSD                | 512 GB | 5B199C6C64D0 | 6     | 3469  | 0.00   |
 | Micron    | MTFDDAV256TDL-1... | 256 GB | 20FB8EDF13BB | 1     | 1008  | 0.00   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | EFB2BDF76A7B | 3     | 2410  | 0.00   |
+| Lite-On   | CV8-8E128-HP       | 128 GB | 2FAF19F3A68F | 1     | 1007  | 0.00   |
+| Wibtek    | W800S              | 128 GB | DD1972B0BB0B | 0     | 106   | 0.00   |
 | KingDian  | S280-120GB         | 120 GB | E4DDD0BE5C20 | 2     | 2029  | 0.00   |
 | Kingston  | EK60HYXTFY176 V100 | 64 GB  | 6982EE00AAF8 | 1     | 1130  | 0.00   |
 | SK hynix  | HFS256G39TNH-73A0A | 256 GB | DA6996342EBE | 2     | 1782  | 0.00   |
 | Kingston  | SNS4151S332GD      | 32 GB  | 79B95EAC2989 | 1     | 1022  | 0.00   |
 | Intel     | SSDSC2BX400G4R     | 400 GB | 91BE7A650C36 | 1     | 1025  | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | FFA9444CA9B0 | 1     | 1007  | 0.00   |
+| Teclast   | 240GB SSD          | 240 GB | 29749233E1DC | 1     | 1012  | 0.00   |
 | Lite-On   | L8T-128L6G-HP      | 128 GB | AD30992D0929 | 1     | 1279  | 0.00   |
 | DEPO      | SM3DT-120          | 120 GB | 3271A5387EC2 | 0     | 215   | 0.00   |
 | Kingston  | SNS4151S332GD      | 32 GB  | E5DF3C6688B9 | 0     | 1022  | 0.00   |

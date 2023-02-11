@@ -17,24 +17,25 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Crucial   | CT1000P1SSD8       | 1 TB   | 210     | 232   | 20    | 0.60   |
-| Crucial   | CT500P1SSD8        | 500 GB | 107     | 197   | 6     | 0.52   |
+| Crucial   | CT1000P1SSD8       | 1 TB   | 219     | 232   | 24    | 0.60   |
+| Crucial   | CT500P1SSD8        | 500 GB | 111     | 208   | 6     | 0.55   |
 | Crucial   | CT1000X8SSD8       | 1 TB   | 1       | 187   | 0     | 0.51   |
 | Crucial   | CT2000P1SSD8       | 2 TB   | 3       | 146   | 0     | 0.40   |
-| Crucial   | CT1000P2SSD8       | 1 TB   | 105     | 79    | 0     | 0.22   |
-| Crucial   | CT500P2SSD8        | 500 GB | 110     | 74    | 0     | 0.20   |
-| Crucial   | CT2000P2SSD8       | 2 TB   | 22      | 60    | 0     | 0.17   |
-| Crucial   | CT250P2SSD8        | 250 GB | 20      | 59    | 0     | 0.16   |
-| Crucial   | CT500P5SSD8        | 500 GB | 43      | 52    | 0     | 0.14   |
+| Crucial   | CT1000P2SSD8       | 1 TB   | 112     | 78    | 0     | 0.22   |
+| Crucial   | CT500P2SSD8        | 500 GB | 119     | 76    | 0     | 0.21   |
+| Crucial   | CT2000P2SSD8       | 2 TB   | 25      | 66    | 0     | 0.18   |
+| Crucial   | CT250P2SSD8        | 250 GB | 23      | 53    | 0     | 0.15   |
+| Crucial   | CT500P5SSD8        | 500 GB | 46      | 50    | 0     | 0.14   |
 | Crucial   | CT1000P5SSD8       | 1 TB   | 44      | 34    | 0     | 0.09   |
-| Crucial   | CT500P3PSSD8       | 500 GB | 2       | 19    | 0     | 0.05   |
-| Crucial   | CT2000P5SSD8       | 2 TB   | 14      | 17    | 0     | 0.05   |
+| Crucial   | CT1000P3PSSD8      | 1 TB   | 4       | 20    | 0     | 0.05   |
 | Crucial   | CT250P5SSD8        | 250 GB | 6       | 16    | 0     | 0.05   |
-| Crucial   | CT500P5PSSD8       | 500 GB | 9       | 5     | 0     | 0.02   |
-| Crucial   | CT2000P5PSSD8      | 2 TB   | 5       | 4     | 0     | 0.01   |
-| Crucial   | CT1000P3SSD8       | 1 TB   | 3       | 4     | 0     | 0.01   |
-| Crucial   | CT1000P5PSSD8      | 1 TB   | 28      | 4     | 0     | 0.01   |
-| Crucial   | CT4000P3SSD8       | 4 TB   | 2       | 2     | 0     | 0.01   |
-| Crucial   | CT500P3SSD8        | 500 GB | 2       | 0     | 0     | 0.00   |
-| Crucial   | CT1000P3PSSD8      | 1 TB   | 1       | 0     | 0     | 0.00   |
-| Crucial   | CT2000P3SSD8       | 2 TB   | 1       | 0     | 0     | 0.00   |
+| Crucial   | CT2000P5SSD8       | 2 TB   | 15      | 16    | 0     | 0.05   |
+| Crucial   | CT500P3PSSD8       | 500 GB | 3       | 13    | 0     | 0.04   |
+| Crucial   | CT1000P3SSD8       | 1 TB   | 10      | 8     | 0     | 0.02   |
+| Crucial   | CT2000P3SSD8       | 2 TB   | 2       | 7     | 0     | 0.02   |
+| Crucial   | CT500P3SSD8        | 500 GB | 7       | 7     | 0     | 0.02   |
+| Crucial   | CT500P5PSSD8       | 500 GB | 12      | 7     | 0     | 0.02   |
+| Crucial   | CT1000P5PSSD8      | 1 TB   | 33      | 4     | 0     | 0.01   |
+| Crucial   | CT2000P5PSSD8      | 2 TB   | 6       | 4     | 0     | 0.01   |
+| Crucial   | CT4000P3PSSD8      | 4 TB   | 1       | 2     | 0     | 0.01   |
+| Crucial   | CT4000P3SSD8       | 4 TB   | 3       | 2     | 0     | 0.01   |

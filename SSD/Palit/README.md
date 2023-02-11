@@ -21,7 +21,7 @@ MTBF - avg. MTBF in years per sample.
 | Palit     | UVS                | 240 GB | 2       | 417   | 0     | 1.14   |
 | Palit     | PSP120 SSD         | 120 GB | 3       | 379   | 0     | 1.04   |
 | Palit     | UVSE               | 120 GB | 1       | 293   | 0     | 0.80   |
+| Palit     | UVSE               | 240 GB | 2       | 288   | 0     | 0.79   |
 | Palit     | PH120 SSD          | 120 GB | 1       | 207   | 0     | 0.57   |
 | Palit     | UVS                | 120 GB | 3       | 112   | 0     | 0.31   |
 | Palit     | PSP720 SSD         | 720 GB | 1       | 107   | 0     | 0.30   |
-| Palit     | UVSE               | 240 GB | 1       | 0     | 0     | 0.00   |

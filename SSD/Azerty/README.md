@@ -18,3 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Azerty    | SSD                | 256 GB | 2       | 17    | 0     | 0.05   |
+| Azerty    | M500               | 512 GB | 1       | 1     | 0     | 0.01   |

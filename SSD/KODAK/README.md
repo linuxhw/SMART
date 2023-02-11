@@ -17,6 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| KODAK     | SSD X120 120G      | 120 GB | 1       | 18    | 0     | 0.05   |
 | KODAK     | SSD X100           | 120 GB | 1       | 4     | 0     | 0.01   |
 | KODAK     | X150               | 480 GB | 1       | 2     | 0     | 0.01   |
 | KODAK     | SSD X100           | 120 GB | 1       | 2     | 0     | 0.01   |

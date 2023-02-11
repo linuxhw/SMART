@@ -20,5 +20,5 @@ MTBF - avg. MTBF in years per sample.
 | WALRAM    | SSD 240G           | 240 GB | 3       | 68    | 0     | 0.19   |
 | WALRAM    | SSD 128G           | 128 GB | 6       | 15    | 0     | 0.04   |
 | WALRAM    | SSD                | 256 GB | 3       | 14    | 6     | 0.04   |
-| WALRAM    | SSD 120G           | 120 GB | 3       | 20    | 24    | 0.03   |
+| WALRAM    | SSD 120G           | 120 GB | 4       | 17    | 18    | 0.03   |
 | WALRAM    | SSD                | 1 TB   | 1       | 1     | 0     | 0.00   |

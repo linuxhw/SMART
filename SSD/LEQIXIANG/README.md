@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| LEQIXIANG | SSD                | 256 GB | 1       | 0     | 4     | 0.00   |
+| LEQIXIANG | SSD                | 256 GB | 3       | 1     | 2     | 0.00   |
