@@ -8,7 +8,7 @@ User Capacity:    500,106,780,160 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Tue Jul  6 08:18:28 2021 UTC
+Local Time is:    Tue Jul  6 11:51:57 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -64,7 +64,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         -OSR--   100   100   000    -    0
   8 Seek_Time_Performance   --S--K   100   100   000    -    11387
-  9 Power_On_Hours          -O--CK   095   095   000    -    27521
+  9 Power_On_Hours          -O--CK   095   095   000    -    27522
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
  12 Power_Cycle_Count       -O--CK   095   095   000    -    4877
@@ -73,9 +73,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    73
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   077   049   000    -    23 (Min/Max 16/23)
-194 Temperature_Celsius     -O---K   071   049   000    -    29 (Min/Max 16/30)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    19385
+190 Airflow_Temperature_Cel -O---K   072   049   000    -    28 (Min/Max 16/28)
+194 Temperature_Celsius     -O---K   068   049   000    -    32 (Min/Max 16/33)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    99949
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    1
@@ -266,8 +266,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     --/30 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     --/33 Celsius
 Lifetime    Min/Max Temperature:     --/52 Celsius
 
 SCT Temperature History Version:     2
@@ -275,7 +275,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (35)
+Temperature History Size (Index):    128 (24)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -287,7 +287,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
@@ -296,7 +296,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           17  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

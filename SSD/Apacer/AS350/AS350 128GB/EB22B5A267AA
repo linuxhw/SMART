@@ -9,13 +9,13 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Sep 15 12:09:55 2020 CEST
+Local Time is:    Tue Sep 15 12:43:14 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
@@ -56,8 +56,8 @@ recommended polling time: 	 (   6) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--CK   100   100   000    -    382
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    380
+  9 Power_On_Hours          -O--CK   100   100   000    -    383
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    382
 163 Unknown_Attribute       -O--CK   100   100   000    -    33
 164 Unknown_Attribute       -O--CK   100   100   000    -    9
 166 Unknown_Attribute       -O--CK   100   100   000    -    0
@@ -69,7 +69,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    15
 194 Temperature_Celsius     -O---K   067   067   058    -    33 (Min/Max 33/33)
 231 Temperature_Celsius     -O--C-   100   100   000    -    99
-241 Total_LBAs_Written      -O--CK   100   100   000    -    1745275496
+241 Total_LBAs_Written      -O--CK   100   100   000    -    1761223448
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,10 +116,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             380  ---  Lifetime Power-On Resets
-0x01  0x010  4             382  ---  Power-on Hours
-0x01  0x018  6      1745275496  ---  Logical Sectors Written
-0x01  0x028  6      2809957204  ---  Logical Sectors Read
+0x01  0x008  4             382  ---  Lifetime Power-On Resets
+0x01  0x010  4             383  ---  Power-on Hours
+0x01  0x018  6      1761223448  ---  Logical Sectors Written
+0x01  0x028  6      2813360646  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -127,7 +127,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1678  ---  Number of Hardware Resets
+0x06  0x008  4            1689  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -145,7 +145,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

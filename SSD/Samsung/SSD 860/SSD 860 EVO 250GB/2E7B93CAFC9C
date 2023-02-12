@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Mar 17 18:13:24 2021 CET
+Local Time is:    Wed Mar 17 22:21:15 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,9 +19,8 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Read SCT Status failed: scsi error badly formed scsi parameters
-Wt Cache Reorder: Unknown (SCT Feature Control command failed)
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,19 +61,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    11
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    20
+  9 Power_On_Hours          -O--CK   099   099   000    -    15
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    28
 177 Wear_Leveling_Count     PO--C-   099   099   000    -    1
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   079   054   000    -    21
+190 Airflow_Temperature_Cel -O--CK   068   054   000    -    32
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    11
-241 Total_LBAs_Written      -O--CK   099   099   000    -    199750276
+235 POR_Recovery_Count      -O--C-   099   099   000    -    13
+241 Total_LBAs_Written      -O--CK   099   099   000    -    224561985
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -122,31 +121,47 @@ Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
 
-Read SCT Status failed: scsi error badly formed scsi parameters
+SCT Status Version:                  3
+SCT Version (vendor specific):       256 (0x0100)
+Device State:                        Active (0)
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     32/40 Celsius
+Lifetime    Min/Max Temperature:     19/46 Celsius
+Specified Max Operating Temperature:    70 Celsius
+Under/Over Temperature Limit Count:   0/0
+SMART Status:                        0xc24f (PASSED)
 
-Read SCT Status failed: scsi error badly formed scsi parameters
-SCT (Get) Error Recovery Control command failed
+SCT Temperature History Version:     2
+Temperature Sampling Period:         10 minutes
+Temperature Logging Interval:        10 minutes
+Min/Max recommended Temperature:      0/70 Celsius
+Min/Max Temperature Limit:            0/70 Celsius
+Temperature History Size (Index):    128 (11)
+
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              20  ---  Lifetime Power-On Resets
-0x01  0x010  4              11  ---  Power-on Hours
-0x01  0x018  6       199750276  ---  Logical Sectors Written
-0x01  0x020  6         3947582  ---  Number of Write Commands
-0x01  0x028  6        52751362  ---  Logical Sectors Read
-0x01  0x030  6          922414  ---  Number of Read Commands
-0x01  0x038  6          828000  ---  Date and Time TimeStamp
+0x01  0x008  4              28  ---  Lifetime Power-On Resets
+0x01  0x010  4              15  ---  Power-on Hours
+0x01  0x018  6       224561985  ---  Logical Sectors Written
+0x01  0x020  6         4014074  ---  Number of Write Commands
+0x01  0x028  6        70499996  ---  Logical Sectors Read
+0x01  0x030  6         1114582  ---  Number of Read Commands
+0x01  0x038  6          352000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              21  ---  Current Temperature
+0x05  0x008  1              32  ---  Current Temperature
 0x05  0x020  1              46  ---  Highest Temperature
 0x05  0x028  1              19  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             163  ---  Number of Hardware Resets
+0x06  0x008  4             219  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
@@ -167,8 +182,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

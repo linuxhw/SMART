@@ -9,7 +9,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jun 11 07:37:43 2021 UTC
+Local Time is:    Sun Jun 13 00:16:31 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -56,21 +56,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    5667
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1399
+  9 Power_On_Hours          -O--CK   100   100   000    -    5685
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1409
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
 173 Unknown_Attribute       -O--CK   100   100   005    -    102
-174 Unknown_Attribute       -O--CK   100   100   000    -    533
+174 Unknown_Attribute       -O--CK   100   100   000    -    540
 176 Erase_Fail_Count_Chip   -O---K   100   100   000    -    100
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 194 Temperature_Celsius     -O---K   100   100   000    -    47
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    10789
-242 Total_LBAs_Read         -O--CK   100   100   000    -    20308
-243 Unknown_Attribute       -O--CK   100   100   000    -    11689
+241 Total_LBAs_Written      -O--CK   100   100   000    -    10825
+242 Total_LBAs_Read         -O--CK   100   100   000    -    20445
+243 Unknown_Attribute       -O--CK   100   100   000    -    11726
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -136,7 +136,7 @@ Error 7 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 40 00  Error: ABRT
+  04 -- 51 00 00 00 00 00 00 00 00 00 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
@@ -168,12 +168,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1399  ---  Lifetime Power-On Resets
-0x01  0x010  4            5667  ---  Power-on Hours
-0x01  0x018  6      1152865091  ---  Logical Sectors Written
-0x01  0x020  6               0  ---  Number of Write Commands
-0x01  0x028  6      3934275190  ---  Logical Sectors Read
-0x01  0x030  6             397  ---  Number of Read Commands
+0x01  0x008  4            1409  ---  Lifetime Power-On Resets
+0x01  0x010  4            5685  ---  Power-on Hours
+0x01  0x018  6      1227709565  ---  Logical Sectors Written
+0x01  0x020  6           36174  ---  Number of Write Commands
+0x01  0x028  6      4222092251  ---  Logical Sectors Read
+0x01  0x030  6          132173  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -186,6 +186,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            1  R_ERR response for non-data FIS
+0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
 

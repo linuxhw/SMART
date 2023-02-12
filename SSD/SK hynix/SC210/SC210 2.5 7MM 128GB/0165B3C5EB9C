@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Sep 20 19:04:30 2020 CEST
+Local Time is:    Mon Jan 25 11:35:30 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,15 +57,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Retired_Block_Count     -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   074   074   000    -    23529
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    609
-100 Total_Erase_Count       -O--CK   100   100   000    -    6563274
+  9 Power_On_Hours          -O--CK   073   073   000    -    24161
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    786
+100 Total_Erase_Count       -O--CK   100   100   000    -    6761558
 171 Program_Fail_Count      -O--CK   253   253   000    -    0
 172 Erase_Fail_Count        -O--CK   253   253   000    -    0
 174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    113
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Unused_Rsvd_Blk_Cnt_Tot -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   094   094   000    -    201
+177 Wear_Leveling_Count     -O--CK   094   094   000    -    207
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    26
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    67
 180 Erase_Fail_Count        -O--CK   100   100   000    -    1933
@@ -75,14 +75,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    4
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   030   000   000    -    30 (Min/Max 19/43)
+194 Temperature_Celsius     -O----   028   000   000    -    28 (Min/Max 19/43)
 195 Hardware_ECC_Recovered  -O--CK   001   001   000    -    4294967295
 201 Percent_Lifetime_Remain -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 SSD_Life_Left           PO--CK   253   253   ---    -    1
-234 Unknown_SK_hynix_Attrib -O--CK   100   100   ---    -    25454
-241 Total_Writes_GiB        -O--CK   100   100   ---    -    18944
-242 Total_Reads_GiB         -O--CK   100   100   ---    -    27868
+234 Unknown_SK_hynix_Attrib -O--CK   100   100   ---    -    26229
+241 Total_Writes_GiB        -O--CK   100   100   ---    -    19615
+242 Total_Reads_GiB         -O--CK   100   100   ---    -    28435
 250 Read_Retry_Count        -O--CK   100   100   ---    -    3
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -122,7 +122,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [19] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65535 [11] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -133,13 +133,13 @@ Error 65535 [19] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 d1 db 01 f8 00 00 00 c2 4f 00 00 00     03:11:28.720  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 d0 d1 01 01 00 00 00 c2 4f 01 00 00     03:11:28.720  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 da d0 00 01 c2 4f 00 c2 4f 00 00 00     03:11:28.720  SMART READ DATA
-  b0 d2 da 00 00 e7 c2 af c2 4f 00 00 00     03:11:28.720  SMART RETURN STATUS
-  b0 d8 d2 00 f1 e7 c2 af c2 4f 00 00 00     03:11:28.720  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 01 db 00 f8 fc 00 00 c2 4f 00 00 00     00:57:31.430  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  b0 01 d1 00 01 fc 00 00 c2 4f 01 00 00     00:57:31.400  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 01 d0 00 01 80 00 00 c2 4f 00 00 00     00:57:31.390  SMART READ DATA
+  b0 01 da 00 00 40 00 00 c2 4f 00 00 00     00:57:31.390  SMART RETURN STATUS
+  b0 01 d2 00 f1 fc 00 00 c2 4f 00 00 00     00:57:31.330  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 65534 [18] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65534 [10] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -150,13 +150,13 @@ Error 65534 [18] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     03:11:26.310  NOP [Abort queued commands]
-  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     03:11:26.310  NOP [Abort queued commands]
-  25 00 20 00 01 00 00 00 00 00 00 e0 e0     03:11:21.880  READ DMA EXT
-  f5 03 00 0c 45 00 00 00 01 00 00 e0 e0     03:11:04.470  SECURITY FREEZE LOCK
-  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     03:10:54.680  IDLE
+  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     00:55:39.930  NOP [Abort queued commands]
+  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     00:55:39.930  NOP [Abort queued commands]
+  25 00 20 00 01 00 00 00 00 00 00 e0 e0     00:55:28.410  READ DMA EXT
+  f5 03 00 0c 45 00 00 00 01 00 00 e0 e0     00:54:54.890  SECURITY FREEZE LOCK
+  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     00:54:45.120  IDLE
 
-Error 65533 [17] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65533 [9] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -167,13 +167,13 @@ Error 65533 [17] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 e0     03:11:21.880  READ DMA EXT
-  f5 03 00 0c 45 00 00 00 01 00 00 e0 e0     03:11:04.470  SECURITY FREEZE LOCK
-  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     03:10:54.680  IDLE
-  c8 03 20 00 01 00 00 00 00 00 01 a0 a0     03:10:54.680  READ DMA
-  ef 03 03 0c 45 00 00 00 c2 4f 00 a0 a0     03:10:54.680  SET FEATURES [Set transfer mode]
+  25 00 20 00 01 00 00 00 00 00 00 e0 e0     00:55:28.410  READ DMA EXT
+  f5 03 00 0c 45 00 00 00 01 00 00 e0 e0     00:54:54.890  SECURITY FREEZE LOCK
+  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     00:54:45.120  IDLE
+  c8 03 20 00 01 00 00 00 00 00 01 a0 a0     00:54:45.120  READ DMA
+  ef 03 03 0c 45 00 00 00 c2 4f 00 a0 a0     00:54:45.120  SET FEATURES [Set transfer mode]
 
-Error 65532 [16] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65532 [8] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -184,13 +184,13 @@ Error 65532 [16] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     03:10:53.990  READ DMA
-  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     03:10:53.990  READ DMA
-  c8 00 00 00 08 72 20 0b 12 3b 50 e0 e0     03:10:45.750  READ DMA
-  c8 00 00 00 02 12 3b 5f 72 20 0a e0 e0     03:10:45.750  READ DMA
-  c8 00 00 00 08 72 20 0b 12 3b 58 e0 e0     03:10:45.750  READ DMA
+  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     00:54:44.440  READ DMA
+  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     00:54:44.440  READ DMA
+  c8 00 00 00 08 72 20 0b 12 3b 50 e0 e0     00:54:34.620  READ DMA
+  c8 00 00 00 02 12 3b 5f 72 20 0a e0 e0     00:54:34.620  READ DMA
+  c8 00 00 00 08 72 20 0b 12 3b 58 e0 e0     00:54:34.620  READ DMA
 
-Error 65531 [15] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65531 [7] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -201,13 +201,13 @@ Error 65531 [15] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     03:10:42.410  NOP [Abort queued commands]
-  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     03:10:42.410  NOP [Abort queued commands]
-  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     03:10:01.830  IDLE
-  c8 03 20 00 01 00 00 00 00 00 01 a0 a0     03:10:01.830  READ DMA
-  ef 03 03 0c 45 00 00 00 c2 4f 00 a0 a0     03:10:01.830  SET FEATURES [Set transfer mode]
+  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     00:54:31.290  NOP [Abort queued commands]
+  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     00:54:31.290  NOP [Abort queued commands]
+  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     00:53:48.200  IDLE
+  c8 03 20 00 01 00 00 00 00 00 01 a0 a0     00:53:48.200  READ DMA
+  ef 03 03 0c 45 00 00 00 c2 4f 00 a0 a0     00:53:48.200  SET FEATURES [Set transfer mode]
 
-Error 65530 [14] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65530 [6] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -218,13 +218,13 @@ Error 65530 [14] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     03:10:01.830  IDLE
-  c8 03 20 00 01 00 00 00 00 00 01 a0 a0     03:10:01.830  READ DMA
-  ef 03 03 0c 45 00 00 00 c2 4f 00 a0 a0     03:10:01.830  SET FEATURES [Set transfer mode]
-  ef da 03 10 0c 00 00 00 c2 4f 00 a0 a0     03:10:01.830  SET FEATURES [Set transfer mode]
-  c6 d2 da 3f 10 00 00 00 c2 4f 00 a0 a0     03:10:01.830  SET MULTIPLE MODE
+  e3 03 20 00 00 00 00 00 00 00 00 a0 a0     00:53:48.200  IDLE
+  c8 03 20 00 01 00 00 00 00 00 01 a0 a0     00:53:48.200  READ DMA
+  ef 03 03 0c 45 00 00 00 c2 4f 00 a0 a0     00:53:48.200  SET FEATURES [Set transfer mode]
+  ef da 03 10 0c 00 00 00 c2 4f 00 a0 a0     00:53:48.200  SET FEATURES [Set transfer mode]
+  c6 d2 da 3f 10 00 00 00 c2 4f 00 a0 a0     00:53:48.200  SET MULTIPLE MODE
 
-Error 65529 [13] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65529 [5] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -235,13 +235,13 @@ Error 65529 [13] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     03:10:01.150  READ DMA
-  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     03:10:01.150  READ DMA
-  c8 00 00 00 08 72 20 0b 12 3b 50 e0 e0     03:09:52.790  READ DMA
-  c8 00 00 00 02 12 3b 5f 72 20 0a e0 e0     03:09:52.790  READ DMA
-  c8 00 00 00 08 72 20 0b 12 3b 58 e0 e0     03:09:52.790  READ DMA
+  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     00:53:47.520  READ DMA
+  c8 00 00 00 00 72 20 0b 12 3b 57 a0 a0     00:53:47.520  READ DMA
+  c8 00 00 00 08 72 20 0b 12 3b 50 e0 e0     00:53:37.630  READ DMA
+  c8 00 00 00 02 12 3b 5f 72 20 0a e0 e0     00:53:37.630  READ DMA
+  c8 00 00 00 08 72 20 0b 12 3b 58 e0 e0     00:53:37.630  READ DMA
 
-Error 65528 [12] occurred at disk power-on lifetime: 23529 hours (980 days + 9 hours)
+Error 65528 [4] occurred at disk power-on lifetime: 24161 hours (1006 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -252,11 +252,11 @@ Error 65528 [12] occurred at disk power-on lifetime: 23529 hours (980 days + 9 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     03:09:49.450  NOP [Abort queued commands]
-  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     03:09:49.450  NOP [Abort queued commands]
-  e7 00 00 00 00 00 00 00 00 60 00 a0 a0     03:09:45.260  FLUSH CACHE
-  b0 d0 da 01 00 00 00 00 c2 4f 00 00 00     03:09:21.580  SMART RETURN STATUS
-  b0 d1 d0 01 01 00 00 00 c2 4f 00 00 00     03:09:21.580  SMART READ DATA
+  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     00:53:34.270  NOP [Abort queued commands]
+  00 ff 00 aa 55 00 00 55 00 00 aa a0 a0     00:53:34.270  NOP [Abort queued commands]
+  c8 00 00 00 20 59 91 9f 59 91 60 e0 e0     00:53:30.210  READ DMA
+  c8 00 00 00 20 59 91 af 59 91 80 e0 e0     00:53:30.210  READ DMA
+  c8 00 00 00 20 00 00 00 59 91 90 e0 e0     00:53:30.210  READ DMA
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -283,5 +283,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 

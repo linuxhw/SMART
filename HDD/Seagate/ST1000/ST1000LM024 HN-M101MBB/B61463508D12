@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.9.6-arch1-1] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.4-arch1-1] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Samsung SpinPoint M8 (AF)
@@ -11,10 +11,10 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Nov 10 21:56:14 2020 IST
+Local Time is:    Wed Apr 27 22:25:29 2022 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -62,34 +62,34 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    125
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    330
   2 Throughput_Performance  POS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   092   085   025    -    2529
-  4 Start_Stop_Count        -O--CK   001   001   000    -    102636
+  3 Spin_Up_Time            PO---K   092   085   025    -    2554
+  4 Start_Stop_Count        -O--CK   001   001   000    -    105924
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    9022
+  9 Power_On_Hours          -O--CK   100   100   000    -    14555
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    426
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4918
-181 Program_Fail_Cnt_Total  -O---K   096   096   000    -    88346722
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    509
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    6060
+181 Program_Fail_Cnt_Total  -O---K   096   096   000    -    91029712
 183 Runtime_Bad_Block       -O--CK   252   252   010    -    0
 184 End-to-End_Error        PO--CK   252   252   048    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   252   252   000    -    0
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   067   052   040    -    33 (Min/Max 14/48)
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    1476
-192 Power-Off_Retract_Count -O---K   100   100   000    -    125
-193 Load_Cycle_Count        -O--CK   067   067   000    -    343419
-194 Temperature_Celsius     -O----   064   052   000    -    33 (Min/Max 14/48)
+190 Airflow_Temperature_Cel -O----   062   052   040    -    38 (Min/Max 14/48)
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    3061
+192 Power-Off_Retract_Count -O---K   100   100   000    -    158
+193 Load_Cycle_Count        -O--CK   059   059   000    -    416054
+194 Temperature_Celsius     -O----   062   052   000    -    38 (Min/Max 14/48)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    26250
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    85744
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -145,8 +145,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     24/34 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     31/43 Celsius
 Lifetime    Min/Max Temperature:     14/48 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -156,7 +156,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (34)
+Temperature History Size (Index):    128 (31)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -176,8 +176,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           26  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           21  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,7 +1,8 @@
-smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-51-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-72-generic] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Western Digital Blue
 Device Model:     WDC WD10SPZX-60Z10T0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
@@ -10,16 +11,17 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Jun 24 08:41:18 2020 CEST
+Local Time is:    Fri Apr 23 07:38:43 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     127 (intermediate level with standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -34,7 +36,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 7560) seconds.
+data collection: 		(  240) seconds.
 Offline data collection
 capabilities: 			 (0x5b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -52,7 +54,7 @@ Error logging capability:        (0x01)	Error logging supported.
 Short self-test routine 
 recommended polling time: 	 (   2) minutes.
 Extended self-test routine
-recommended polling time: 	 ( 200) minutes.
+recommended polling time: 	 ( 183) minutes.
 SCT capabilities: 	       (0x303d)	SCT Status supported.
 					SCT Error Recovery Control supported.
 					SCT Feature Control supported.
@@ -62,28 +64,28 @@ SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   054   053   021    -    1541
-  4 Start_Stop_Count        -O--CK   100   100   000    -    3426
+  3 Spin_Up_Time            POS--K   054   051   021    -    1541
+  4 Start_Stop_Count        -O--CK   100   100   000    -    5646
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR-K   100   100   030    -    54150
-  9 Power_On_Hours          -O--CK   100   100   000    -    7785
+  7 Seek_Error_Rate         POSR-K   100   100   030    -    55266
+  9 Power_On_Hours          -O--CK   100   100   000    -    14649
  10 Spin_Retry_Count        PO--CK   100   100   050    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3236
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    5188
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    2
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    1850
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1267015352615
-193 Load_Cycle_Count        -O--CK   062   062   000    -    76605
-194 Temperature_Celsius     -O---K   030   049   000    -    30 (Min/Max 25/30)
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    2843
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    2044404433372
+193 Load_Cycle_Count        -O--CK   019   019   000    -    163433
+194 Temperature_Celsius     -O---K   030   049   000    -    30 (Min/Max 27/30)
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
-240 Head_Flying_Hours       -O--CK   100   100   000    -    969303
-243 Unknown_Attribute       -O--CK   100   100   000    -    3813690
+240 Head_Flying_Hours       -O--CK   100   100   000    -    1433191
+243 Unknown_Attribute       -O--CK   100   100   000    -    7538212
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x24       GPL     R/O    288  Current Device Internal Status Data log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
@@ -135,10 +137,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     25/30 Celsius
+Power Cycle Min/Max Temperature:     27/30 Celsius
 Lifetime    Min/Max Temperature:     10/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -150,13 +151,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (101)
+Temperature History Size (Index):    128 (104)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
           Write:     85 (8.5 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -174,5 +177,5 @@ ID      Size     Value  Description
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         8330  Vendor specific
+0x8000  4         5513  Vendor specific
 

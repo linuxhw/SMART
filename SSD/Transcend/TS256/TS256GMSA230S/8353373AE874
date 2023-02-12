@@ -1,7 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-88-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-43-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Silicon Motion based SSDs
 Device Model:     TS256GMSA230S
 Serial Number:    --
 LU WWN Device Id: 5 7c3548 ...
@@ -9,10 +10,11 @@ Firmware Version: 02J0T4GB
 User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Nov 16 13:42:07 2021 CET
+Local Time is:    Wed Aug 10 03:14:38 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,34 +63,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    1521
- 12 Power_Cycle_Count       ------   100   100   000    -    668
-148 Unknown_Attribute       ------   100   100   000    -    15909
-149 Unknown_Attribute       ------   100   100   000    -    216
-150 Unknown_Attribute       ------   100   100   000    -    19
-151 Unknown_Attribute       ------   100   100   000    -    167
-164 Unknown_Attribute       ------   100   100   000    -    9121
-165 Unknown_Attribute       ------   100   100   000    -    17
-166 Unknown_Attribute       ------   100   100   000    -    1
-167 Unknown_Attribute       ------   100   100   000    -    4
-159 Unknown_Attribute       ------   100   100   000    -    0
-160 Unknown_Attribute       ------   100   100   000    -    0
-161 Unknown_Attribute       ------   100   100   000    -    134
-163 Unknown_Attribute       ------   100   100   000    -    17
-168 Unknown_Attribute       ------   100   100   000    -    3000
-169 Unknown_Attribute       ------   100   100   000    -    100
-177 Wear_Leveling_Count     ------   100   100   050    -    14
+  9 Power_On_Hours          ------   100   100   000    -    2741
+ 12 Power_Cycle_Count       ------   100   100   000    -    1304
+148 Total_SLC_Erase_Ct      ------   100   100   000    -    24851
+149 Max_SLC_Erase_Ct        ------   100   100   000    -    305
+150 Min_SLC_Erase_Ct        ------   100   100   000    -    139
+151 Average_SLC_Erase_Ct    ------   100   100   000    -    261
+164 Total_Erase_Count       ------   100   100   000    -    12731
+165 Max_Erase_Count         ------   100   100   000    -    24
+166 Min_Erase_Count         ------   100   100   000    -    1
+167 Average_Erase_Count     ------   100   100   000    -    6
+159 DRAM_1_Bit_Error_Count  ------   100   100   000    -    0
+160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
+161 Valid_Spare_Block_Cnt   ------   100   100   000    -    134
+163 Initial_Bad_Block_Count ------   100   100   000    -    17
+168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
+169 Remaining_Lifetime_Perc ------   100   100   000    -    100
+177 Wear_Leveling_Count     ------   100   100   050    -    18
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    26
-194 Temperature_Celsius     ------   100   100   000    -    41 (Min/Max 18/88)
+192 Power-Off_Retract_Count ------   100   100   000    -    57
+194 Temperature_Celsius     ------   100   100   000    -    42 (Min/Max 18/88)
 195 Hardware_ECC_Recovered  ------   100   100   000    -    0
 196 Reallocated_Event_Count ------   100   100   016    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Total_LBAs_Written      ------   100   100   000    -    41107
-242 Total_LBAs_Read         ------   100   100   000    -    41224
-245 Unknown_Attribute       ------   100   100   000    -    64908
+241 Host_Writes_32MiB       ------   100   100   000    -    57968
+242 Host_Reads_32MiB        ------   100   100   000    -    64009
+245 TLC_Writes_32MiB        ------   100   100   000    -    94566
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,17 +139,17 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             668  ---  Lifetime Power-On Resets
-0x01  0x010  4            1521  ---  Power-on Hours
-0x01  0x018  6      2693995980  ---  Logical Sectors Written
-0x01  0x020  6        22495265  ---  Number of Write Commands
-0x01  0x028  6      2701679185  ---  Logical Sectors Read
-0x01  0x030  6        30396069  ---  Number of Read Commands
+0x01  0x008  4            1304  ---  Lifetime Power-On Resets
+0x01  0x010  4            2741  ---  Power-on Hours
+0x01  0x018  6      3799036252  ---  Logical Sectors Written
+0x01  0x020  6        33908964  ---  Number of Write Commands
+0x01  0x028  6      4194923090  ---  Logical Sectors Read
+0x01  0x030  6        49219052  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              26  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              57  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            9436  ---  Number of Hardware Resets
+0x06  0x008  4           18835  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

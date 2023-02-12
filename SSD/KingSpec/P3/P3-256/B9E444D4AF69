@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.1-268-tkg-pds] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.0-58-generic] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Sat Aug 13 12:10:48 2022 -03
+Local Time is:    Thu Jan 26 19:01:08 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,34 +61,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    729
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    65
+  9 Power_On_Hours          -O--CK   100   100   050    -    2852
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    145
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       -O--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    0
-164 Unknown_Attribute       -O--CK   100   100   050    -    121
-165 Unknown_Attribute       -O--CK   100   100   050    -    225
-166 Unknown_Attribute       -O--CK   100   100   050    -    93
-167 Unknown_Attribute       -O--CK   100   100   050    -    129
+164 Unknown_Attribute       -O--CK   100   100   050    -    951
+165 Unknown_Attribute       -O--CK   100   100   050    -    581
+166 Unknown_Attribute       -O--CK   100   100   050    -    200
+167 Unknown_Attribute       -O--CK   100   100   050    -    258
 168 Unknown_Attribute       -O--CK   100   100   050    -    0
-169 Unknown_Attribute       -O--CK   100   100   050    -    98
+169 Unknown_Attribute       -O--CK   100   100   050    -    96
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
-176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    7069584
-177 Wear_Leveling_Count     -O--CK   100   100   050    -    4702448
+176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    10312607
+177 Wear_Leveling_Count     -O--CK   100   100   050    -    15368356
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    57
-194 Temperature_Celsius     -O--CK   100   100   050    -    40
-195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    4200
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    136
+194 Temperature_Celsius     -O--CK   100   100   050    -    45
+195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    30014
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    718
+199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    896
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      -O--CK   100   100   050    -    43967
-242 Total_LBAs_Read         -O--CK   100   100   050    -    35203
-245 Unknown_Attribute       -O--CK   100   100   050    -    516745
+241 Total_LBAs_Written      -O--CK   100   100   050    -    171226
+242 Total_LBAs_Read         -O--CK   100   100   050    -    130381
+245 Unknown_Attribute       -O--CK   100   100   050    -    1403352
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,7 +120,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 625 (device log contains only the most recent five errors)
+ATA Error Count: 786 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -135,7 +135,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 625 occurred at disk power-on lifetime: 257 hours (10 days + 17 hours)
+Error 786 occurred at disk power-on lifetime: 1935 hours (80 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -146,66 +146,86 @@ Error 625 occurred at disk power-on lifetime: 257 hours (10 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ec 00 00 00 00 00 a0 00      00:00:07.300  IDENTIFY DEVICE
-  51 04 01 01 00 00 00 ff      00:00:07.280  CONFIGURE STREAM
+  ec 00 00 00 00 00 a0 00      00:01:09.990  IDENTIFY DEVICE
+  51 04 01 01 00 00 00 ff      00:01:09.960  CONFIGURE STREAM
 
-Error 624 occurred at disk power-on lifetime: 257 hours (10 days + 17 hours)
+Error 785 occurred at disk power-on lifetime: 1935 hours (80 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 a2 48 7b fd de 51  Device Fault 72 sectors at LBA = 0x01defd7b = 31391099
+  04 00 01 01 00 00 51
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  2a 1b 48 7b fd de a2 ff      00:00:00.450  READ STREAM DMA
+  51 04 01 01 00 00 00 ff      00:01:03.140  CONFIGURE STREAM
 
-Error 623 occurred at disk power-on lifetime: 257 hours (10 days + 17 hours)
+Error 784 occurred at disk power-on lifetime: 1935 hours (80 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 a2 48 7b fd de 51  Device Fault 72 sectors at LBA = 0x01defd7b = 31391099
+  04 00 01 01 00 00 51
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  2a 1b 48 7b fd de a2 ff      00:00:00.450  READ STREAM DMA
+  51 04 01 01 00 00 00 ff      00:01:03.140  CONFIGURE STREAM
 
-Error 622 occurred at disk power-on lifetime: 257 hours (10 days + 17 hours)
+Error 783 occurred at disk power-on lifetime: 1935 hours (80 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 a2 48 7b fd de 51  Device Fault 72 sectors at LBA = 0x01defd7b = 31391099
+  04 00 01 01 00 00 51
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  2a 1b 48 7b fd de a2 ff      00:00:00.450  READ STREAM DMA
+  51 04 01 01 00 00 00 ff      00:01:03.140  CONFIGURE STREAM
 
-Error 621 occurred at disk power-on lifetime: 257 hours (10 days + 17 hours)
+Error 782 occurred at disk power-on lifetime: 1935 hours (80 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 a2 48 7b fd de 51  Device Fault 72 sectors at LBA = 0x01defd7b = 31391099
+  04 00 01 01 00 00 51
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  2a 1b 48 7b fd de a2 ff      00:00:00.450  READ STREAM DMA
+  51 04 01 01 00 00 00 ff      00:00:56.310  CONFIGURE STREAM
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
-SMART Self-test log structure revision number 0
-Warning: ATA Specification requires self-test log structure revision number = 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Offline             Self-test routine in progress 50%      1521         -
+# 2  Offline             Self-test routine in progress 50%      1521         -
+# 3  Offline             Self-test routine in progress 50%      1521         -
+# 4  Offline             Self-test routine in progress 50%      1521         -
+# 5  Offline             Self-test routine in progress 50%      1521         -
+# 6  Offline             Self-test routine in progress 50%      1521         -
+# 7  Offline             Self-test routine in progress 50%      1521         -
+# 8  Offline             Self-test routine in progress 50%      1521         -
+# 9  Offline             Self-test routine in progress 50%      1521         -
+#10  Offline             Self-test routine in progress 50%      1521         -
+#11  Offline             Self-test routine in progress 50%      1521         -
+#12  Offline             Self-test routine in progress 50%      1521         -
+#13  Offline             Self-test routine in progress 50%      1521         -
+#14  Offline             Self-test routine in progress 50%      1521         -
+#15  Offline             Self-test routine in progress 50%      1521         -
+#16  Offline             Self-test routine in progress 50%      1521         -
+#17  Offline             Self-test routine in progress 50%      1521         -
+#18  Offline             Self-test routine in progress 50%      1521         -
+#19  Offline             Self-test routine in progress 50%      1521         -
+#20  Offline             Self-test routine in progress 50%      1521         -
+#21  Offline             Self-test routine in progress 50%      1521         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -230,4 +250,6 @@ Pending Defects log (GP Log 0x0c) not supported
 
 ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
 Read SATA Phy Event Counters failed
+
+
 

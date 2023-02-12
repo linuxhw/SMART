@@ -8,7 +8,7 @@ User Capacity:    200,049,647,616 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sun Jan 17 15:31:35 2021 UTC
+Local Time is:    Sun Jan  1 17:44:36 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -57,30 +57,30 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
-  3 Spin_Up_Time            POS---   253   253   025    -    4416
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6331
-  5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
+  1 Raw_Read_Error_Rate     POSR--   253   099   051    -    1
+  3 Spin_Up_Time            POS---   253   253   025    -    4352
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6679
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    4
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    7513
+  9 Power_On_Hours          -O--CK   100   100   000    -    7690
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3206
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    4638
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3372
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    449987
 184 End-to-End_Error        PO--CK   253   253   099    -    0
-187 Reported_Uncorrect      -O--CK   253   253   000    -    0
+187 Reported_Uncorrect      -O--CK   253   253   000    -    524288
 188 Command_Timeout         -O--CK   253   253   000    -    0
-190 Airflow_Temperature_Cel -O---K   187   127   000    -    17 (Min/Max 7/37)
-194 Temperature_Celsius     -O---K   178   124   000    -    20 (Min/Max 7/38)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    4638
-196 Reallocated_Event_Count -O--CK   253   253   000    -    0
+190 Airflow_Temperature_Cel -O---K   154   127   000    -    28 (Min/Max 7/37)
+194 Temperature_Celsius     -O---K   154   124   000    -    28 (Min/Max 7/38)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    449987
+196 Reallocated_Event_Count -O--CK   100   100   000    -    4
 197 Current_Pending_Sector  -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2
 200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   100   000    -    0
-202 Data_Address_Mark_Errs  -O--CK   253   253   000    -    0
+202 Data_Address_Mark_Errs  -O--CK   100   100   000    -    7
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 32 (device log contains only the most recent 8 errors)
+Device Error Count: 48 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,75 +119,75 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 32 [7] occurred at disk power-on lifetime: 9866 hours (411 days + 2 hours)
+Error 48 [7] occurred at disk power-on lifetime: 8600 hours (358 days + 8 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 2a 01 e0 25 d4 00 00 00 25 00
+  90 -- 00 58 11 40 0c d7 00 00 02 61 40   at LBA = 0x400cd7000002 = 70423890886658
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  87 00 20 00 c2 25 00 00 e0 25 bf 00 00     00:00:00.061  CFA TRANSLATE SECTOR [VS IF NO CFA]
-  87 00 08 00 80 25 00 00 e0 40 ba 00 00     00:00:00.061  CFA TRANSLATE SECTOR [VS IF NO CFA]
-  87 00 08 00 08 25 00 00 e0 b4 df 00 00     00:00:00.061  CFA TRANSLATE SECTOR [VS IF NO CFA]
-  48 00 c0 01 b2 25 00 00 e0 9d d3 00 00     00:00:00.061  [RESERVED]
-  00 00 10 01 00 00 00 20 c0 00 20 01 a1     00:00:06.645  NOP [Reserved subcommand] [OBS-ACS-2]
+  cc 0e 78 02 80 61 00 00 40 0c d6 00 08  1d+13:16:57.729  WRITE DMA QUEUED [OBS-ACS-2]
+  cc 0e 78 02 80 61 00 00 40 0c d6 00 08  1d+13:16:57.729  WRITE DMA QUEUED [OBS-ACS-2]
+  cc 0e 78 02 80 61 00 00 40 0c d6 00 08  1d+13:16:57.729  WRITE DMA QUEUED [OBS-ACS-2]
+  cc 0d 68 02 d0 61 00 00 40 0c d3 00 08  1d+13:16:57.729  WRITE DMA QUEUED [OBS-ACS-2]
+  00 00 10 01 00 00 00 20 c0 00 20 01 a1  1d+13:17:05.350  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 31 [6] occurred at disk power-on lifetime: 8299 hours (345 days + 19 hours)
+Error 47 [6] occurred at disk power-on lifetime: 8590 hours (357 days + 22 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 90 01 e0 ce f7 00 00 01 25 00
+  a0 -- 00 f0 13 40 87 75 00 00 01 60 40
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  df 01 00 01 90 25 00 00 e0 ce f6 00 00     00:00:00.001  MEDIA UNLOCK [OBS-8]
-  df 01 00 01 90 25 00 00 e0 ce f5 00 00     00:00:00.001  MEDIA UNLOCK [OBS-8]
-  df 01 00 01 90 25 00 00 e0 ce f4 00 00     00:00:00.001  MEDIA UNLOCK [OBS-8]
-  df 01 00 01 90 25 00 00 e0 ce f3 00 00     00:00:00.001  MEDIA UNLOCK [OBS-8]
-  00 00 10 18 00 00 00 00 a8 01 fd 00 a1     00:00:06.576  NOP [Reserved subcommand] [OBS-ACS-2]
+  4a 12 98 00 32 60 00 00 40 46 63 00 40  6d+05:07:50.913  [RESERVED]
+  0b 10 88 00 68 60 00 00 40 61 9c 00 0f  9d+07:41:46.369  REQUEST SENSE DATA EXT
+  0b 0e 80 00 f2 60 00 00 40 a6 9f 00 20  1d+13:16:57.729  REQUEST SENSE DATA EXT
+  0b 0e 80 00 f2 60 00 00 40 a6 9f 00 20  2d+21:54:18.241  REQUEST SENSE DATA EXT
+  00 00 10 01 00 00 00 20 c0 00 20 06 a1  2d+21:54:25.858  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 30 [5] occurred at disk power-on lifetime: 9855 hours (410 days + 15 hours)
+Error 46 [5] occurred at disk power-on lifetime: 8840 hours (368 days + 8 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  08 -- 00 28 00 e0 b7 0e 00 00 00 35 00
+  e8 -- 00 4a 1d 40 e6 18 00 00 01 60 3a
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b7 00 08 00 08 35 00 00 e0 b7 0e 00 00     00:00:00.162  [RESERVED FOR COMPACTFLASH ASSOCIATION]
-  b7 00 18 00 e8 35 00 00 e0 b7 0d 00 00     00:00:00.162  [RESERVED FOR COMPACTFLASH ASSOCIATION]
-  b7 00 18 00 c8 35 00 00 e0 b7 0d 00 00     00:00:00.162  [RESERVED FOR COMPACTFLASH ASSOCIATION]
-  b7 00 08 00 b8 35 00 00 e0 b7 0d 00 00     00:00:00.162  [RESERVED FOR COMPACTFLASH ASSOCIATION]
-  00 00 10 01 00 00 00 20 c0 00 20 03 a1     00:00:06.561  NOP [Reserved subcommand] [OBS-ACS-2]
+  83 1c e0 00 a2 60 00 00 40 bc 1e 00 08 12d+10:15:41.828  [VENDOR SPECIFIC]
+  83 1b d8 00 90 61 00 00 40 13 f5 00 08 11d+06:17:58.532  [VENDOR SPECIFIC]
+  83 1a d0 01 70 60 00 00 40 b2 d0 00 10  1d+13:16:57.732  [VENDOR SPECIFIC]
+  45 18 c8 02 90 60 00 00 40 2d 87 00 40  1d+13:16:57.732  WRITE UNCORRECTABLE EXT
+  00 00 10 01 00 00 00 20 c0 00 20 05 a1  3d+02:34:03.074  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 29 [4] occurred at disk power-on lifetime: 8060 hours (335 days + 20 hours)
+Error 45 [4] occurred at disk power-on lifetime: 8578 hours (357 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 70 01 e0 47 d7 00 00 01 25 00
+  68 -- 00 a0 0c 40 20 66 00 00 02 60 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ae 01 00 01 70 25 00 00 e0 47 d6 00 00     00:00:00.009  [RESERVED]
-  ae 00 01 01 70 25 00 00 e0 47 d6 00 00     00:00:00.009  [RESERVED]
-  ae 00 98 00 a8 25 00 00 e0 fc bb 00 00     00:00:00.009  [RESERVED]
-  ae 01 00 00 a8 25 00 00 e0 fc ba 00 00     00:00:00.009  [RESERVED]
-  00 11 89 11 91 00 00 11 00 c9 b1 04 11     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  13 0c 68 02 a0 60 00 00 40 20 66 00 00     00:00:00.003  RECALIBRATE [RET-4]
+  13 0a 58 02 a0 60 00 00 40 20 65 00 10     00:00:00.003  RECALIBRATE [RET-4]
+  13 0a 58 02 a0 60 00 00 40 20 65 00 10     00:00:00.003  RECALIBRATE [RET-4]
+  d5 0a 58 02 a0 60 00 00 40 20 65 00 10     00:00:00.003  [RESERVED]
+  00 11 89 11 91 00 00 11 00 c9 b1 00 11     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 28 [3] occurred at disk power-on lifetime: 12722 hours (530 days + 2 hours)
+Error 44 [3] occurred at disk power-on lifetime: 12722 hours (530 days + 2 hours)
   When the command that caused the error occurred, the device was in a reserved state.
 
   After command completion occurred, registers were:
@@ -199,9 +199,9 @@ Error 28 [3] occurred at disk power-on lifetime: 12722 hours (530 days + 2 hours
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
-Error 27 [2] log entry is empty
-Error 26 [1] log entry is empty
-Error 25 [0] log entry is empty
+Error 43 [2] log entry is empty
+Error 42 [1] log entry is empty
+Error 41 [0] log entry is empty
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -222,8 +222,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    20 Celsius
-Power Cycle Min/Max Temperature:     16/19 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     20/28 Celsius
 Lifetime    Min/Max Temperature:      6/38 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -232,7 +232,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (91)
+Temperature History Size (Index):    128 (51)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -252,8 +252,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           18  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           36  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

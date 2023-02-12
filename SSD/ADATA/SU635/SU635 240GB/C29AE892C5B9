@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.32-generic-2rosa-x86_64] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Aug  8 14:02:29 2021 MSK
+Local Time is:    Sun Jul  3 12:38:21 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,21 +63,21 @@ SCT capabilities: 	       (0x0031)	SCT Status supported.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    6380
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    3635
+  9 Power_On_Hours          -O--C-   100   100   000    -    11337
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    4848
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    65535
 169 Unknown_Attribute       PO--C-   098   098   010    -    1048584
-173 Unknown_Attribute       -O--C-   200   200   000    -    695801413823
+173 Unknown_Attribute       -O--C-   200   200   000    -    1052288614685
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    1178
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    1222
-194 Temperature_Celsius     -O---K   051   051   030    -    49 (Min/Max 0/54)
-231 Temperature_Celsius     PO--CK   088   088   005    -    12
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    138681161856
-234 Unknown_Attribute       -O--CK   100   100   000    -    77113498240
-241 Total_LBAs_Written      -O--CK   100   100   000    -    45641153988
-242 Total_LBAs_Read         -O--CK   100   100   000    -    58761695127
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    1948
+194 Temperature_Celsius     -O---K   052   052   030    -    48 (Min/Max 0/49)
+231 Temperature_Celsius     PO--CK   081   081   005    -    19
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    250421681280
+234 Unknown_Attribute       -O--CK   100   100   000    -    138561108352
+241 Total_LBAs_Written      -O--CK   100   100   000    -    81381588505
+242 Total_LBAs_Read         -O--CK   100   100   000    -    84148676505
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,160 +120,163 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [194] occurred at disk power-on lifetime: 5868 hours (244 days + 12 hours)
+Error 65535 [209] occurred at disk power-on lifetime: 11329 hours (472 days + 1 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 38 00 00 1b 66 0b d0 40 00
+  84 -- 41 00 58 00 00 00 66 8e 00 40 08
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:19:54.200  FLUSH CACHE EXT
-  06 00 01 00 01 00 00 00 00 00 00 e0 80     00:19:54.200  DATA SET MANAGEMENT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:19:54.200  FLUSH CACHE EXT
-  06 00 01 00 01 00 00 00 00 00 00 e0 80     00:19:54.200  DATA SET MANAGEMENT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:19:54.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:09:21.400  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:09:21.100  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:09:16.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:09:16.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:09:11.700  FLUSH CACHE EXT
 
-Error 65534 [193] occurred at disk power-on lifetime: 5868 hours (244 days + 12 hours)
+Error 65534 [208] occurred at disk power-on lifetime: 10423 hours (434 days + 7 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 38 00 00 1b 5b cb 50 40 00
+  84 -- 41 00 c0 00 00 04 5a 2b 60 40 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:50:06.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:50:06.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:50:06.400  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:50:06.400  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:50:06.400  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 00 80     00:01:06.800  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 00 80     00:01:06.800  FLUSH CACHE EXT
+  25 00 00 00 08 00 00 00 52 7a 20 40 80     00:01:05.700  READ DMA EXT
+  ef 00 10 00 03 00 00 00 00 00 00 00 80     00:01:05.700  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 00 80     00:01:05.700  SET FEATURES [Enable SATA feature]
 
-Error 65533 [192] occurred at disk power-on lifetime: 5868 hours (244 days + 12 hours)
+Error 65533 [207] occurred at disk power-on lifetime: 10395 hours (433 days + 3 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 70 00 00 1a 32 ed 40 40 00
+  84 -- 41 00 a8 00 00 00 f2 19 08 40 00  Error: ICRC, ABRT 168 sectors at LBA = 0x00f21908 = 15866120
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     03:20:40.700  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     03:20:40.700  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     03:20:40.200  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     03:20:40.200  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     03:20:40.100  FLUSH CACHE EXT
+  25 00 00 00 08 00 00 00 52 3c 10 40 80     00:33:48.400  READ DMA EXT
+  ef 00 10 00 03 00 00 00 00 00 00 00 80     00:33:48.400  SET FEATURES [Enable SATA feature]
+  ef 00 10 00 02 00 00 00 00 00 00 00 80     00:33:48.400  SET FEATURES [Enable SATA feature]
+  ef 00 02 00 00 00 00 00 00 00 00 00 80     00:33:48.400  SET FEATURES [Enable write cache]
+  ef 00 aa 00 00 00 00 00 00 00 00 00 80     00:33:48.400  SET FEATURES [Enable read look-ahead]
 
-Error 65532 [191] occurred at disk power-on lifetime: 5864 hours (244 days + 8 hours)
+Error 65532 [206] occurred at disk power-on lifetime: 10335 hours (430 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 58 00 00 1b 5e c5 50 40 00
+  84 -- 41 00 f8 00 00 07 15 ad a8 40 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 00 01 00 00 00 00 00 00 e0 80     00:10:19.800  DATA SET MANAGEMENT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:10:14.800  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:10:09.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:10:09.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:10:04.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:13.600  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:13.600  FLUSH CACHE EXT
+  06 00 01 00 01 00 00 00 00 00 00 e0 80     00:05:11.900  DATA SET MANAGEMENT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:11.700  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:05:10.800  FLUSH CACHE EXT
 
-Error 65531 [190] occurred at disk power-on lifetime: 5864 hours (244 days + 8 hours)
+Error 65531 [205] occurred at disk power-on lifetime: 10335 hours (430 days + 15 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 c0 00 00 1b 98 ff 08 40 00
+  84 -- 41 00 70 00 00 1b 4b 8b 18 40 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     17:58:53.100  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     17:58:53.000  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     17:58:32.300  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     17:58:29.700  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 a0 80     17:58:10.200  FLUSH CACHE EXT
+  06 00 01 00 01 00 00 00 00 00 00 e0 80     00:08:11.400  DATA SET MANAGEMENT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:08:06.400  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:08:04.800  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:08:01.800  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:08:01.800  FLUSH CACHE EXT
 
-Error 65530 [189] occurred at disk power-on lifetime: 4859 hours (202 days + 11 hours)
+Error 65530 [204] occurred at disk power-on lifetime: 10242 hours (426 days + 18 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 08 00 00 19 2d bb f8 40 00
+  10 -- 51 00 01 00 00 ff ff ff ff 40 00  Error: IDNF 1 sectors at LBA = 0xffffffff = 4294967295
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     00:27:12.900  FLUSH CACHE EXT
-  06 00 01 00 01 00 00 00 00 00 00 40 80     00:27:10.900  DATA SET MANAGEMENT
-  06 00 01 00 01 00 00 00 00 00 00 40 80     00:27:10.900  DATA SET MANAGEMENT
-  06 00 01 00 01 00 00 00 00 00 00 40 80     00:27:10.800  DATA SET MANAGEMENT
-  06 00 01 00 01 00 00 00 00 00 00 40 80     00:27:10.800  DATA SET MANAGEMENT
+  25 00 d5 00 01 00 00 ff ff ff ff 40 80     00:02:15.800  READ DMA EXT
+  25 00 d5 00 01 00 00 1b f2 44 af 40 80     00:02:15.800  READ DMA EXT
+  b0 00 d5 00 01 00 00 00 c2 4f 88 00 80     00:02:15.800  SMART READ LOG
+  b0 00 d5 00 01 00 00 00 c2 4f 00 00 80     00:02:15.800  SMART READ LOG
+  ef 00 03 00 46 00 00 00 61 c2 d0 00 80     00:02:15.800  SET FEATURES [Set transfer mode]
 
-Error 65529 [188] occurred at disk power-on lifetime: 4859 hours (202 days + 11 hours)
+Error 65529 [203] occurred at disk power-on lifetime: 10242 hours (426 days + 18 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 00 00 00 06 c6 c6 30 40 00
+  10 -- 41 00 01 00 00 ff ff ff ff 40 00  Error: IDNF at LBA = 0xffffffff = 4294967295
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     01:54:17.200  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     01:54:15.900  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     01:54:12.000  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     01:54:11.700  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     01:54:11.500  FLUSH CACHE EXT
+  60 00 01 00 10 00 00 ff ff ff ff 40 80     00:01:08.800  READ FPDMA QUEUED
+  e7 00 08 00 10 00 00 00 61 c2 d0 00 80     00:01:04.700  FLUSH CACHE
+  e7 00 08 00 10 00 00 00 61 c2 d0 00 80     00:00:59.600  FLUSH CACHE
+  e7 00 08 00 10 00 00 00 63 a8 40 00 80     00:00:55.600  FLUSH CACHE
+  e7 00 08 00 10 00 00 00 63 a8 40 00 80     00:00:49.500  FLUSH CACHE
 
-Error 65528 [187] occurred at disk power-on lifetime: 4858 hours (202 days + 10 hours)
+Error 65528 [202] occurred at disk power-on lifetime: 10024 hours (417 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 20 00 00 13 c9 f4 f8 40 00
+  84 -- 41 00 08 00 00 1b 44 68 f0 40 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     13:18:20.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     13:18:20.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     13:18:20.200  FLUSH CACHE EXT
-  ea 00 00 00 00 00 00 00 00 00 00 00 80     13:18:20.200  FLUSH CACHE EXT
-  06 00 01 00 01 00 00 00 00 00 00 40 80     13:18:20.200  DATA SET MANAGEMENT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     13:40:59.900  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     13:40:58.300  FLUSH CACHE EXT
+  06 00 01 00 01 00 00 00 00 00 00 e0 80     13:40:43.800  DATA SET MANAGEMENT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     13:40:43.400  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     13:40:42.000  FLUSH CACHE EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      6258         -
-# 2  Short offline       Aborted by host               00%      5158         -
-# 3  Extended offline    Completed without error       00%      5158         -
-# 4  Short offline       Completed without error       00%      5158         -
-# 5  Short offline       Completed without error       00%      3607         -
-# 6  Extended offline    Completed without error       00%      2624         -
-# 7  Extended offline    Completed without error       00%      1449         -
-# 8  Short offline       Completed without error       00%      1449         -
-# 9  Short offline       Aborted by host               00%      1230         -
-#10  Extended offline    Aborted by host               00%      1228         -
-#11  Short offline       Aborted by host               00%       884         -
-#12  Short offline       Aborted by host               00%        38         -
-#13  Short offline       Aborted by host               00%         4         -
-#14  Short offline       Aborted by host               00%         2         -
-#15  Extended offline    Aborted by host               00%         2         -
-#16  Extended offline    Aborted by host               00%         2         -
+# 1  Extended offline    Completed without error       00%     10852         -
+# 2  Extended offline    Completed without error       00%     10334         -
+# 3  Extended offline    Completed without error       00%      9018         -
+# 4  Extended offline    Interrupted (host reset)      00%      6778         -
+# 5  Short offline       Completed without error       00%      6258         -
+# 6  Short offline       Aborted by host               00%      5158         -
+# 7  Extended offline    Completed without error       00%      5158         -
+# 8  Short offline       Completed without error       00%      5158         -
+# 9  Short offline       Completed without error       00%      3607         -
+#10  Extended offline    Completed without error       00%      2624         -
+#11  Extended offline    Completed without error       00%      1449         -
+#12  Short offline       Completed without error       00%      1449         -
+#13  Short offline       Aborted by host               00%      1230         -
+#14  Extended offline    Aborted by host               00%      1228         -
+#15  Short offline       Aborted by host               00%       884         -
+#16  Short offline       Aborted by host               00%        38         -
+#17  Short offline       Aborted by host               00%         4         -
+#18  Short offline       Aborted by host               00%         2         -
+#19  Extended offline    Aborted by host               00%         2         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -289,8 +292,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    49 Celsius
-Power Cycle Min/Max Temperature:      ?/54 Celsius
+Current Temperature:                    48 Celsius
+Power Cycle Min/Max Temperature:      ?/49 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -299,22 +302,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (427)
+Temperature History Size (Index):    478 (471)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3635  ---  Lifetime Power-On Resets
-0x01  0x010  4            6380  ---  Power-on Hours
-0x01  0x018  6     45641153988  ---  Logical Sectors Written
-0x01  0x020  6       510677511  ---  Number of Write Commands
-0x01  0x028  6     58761695127  ---  Logical Sectors Read
-0x01  0x030  6       705244464  ---  Number of Read Commands
-0x01  0x038  6   5881305934444  ---  Date and Time TimeStamp
+0x01  0x008  4            4848  ---  Lifetime Power-On Resets
+0x01  0x010  4           11337  ---  Power-on Hours
+0x01  0x018  6     81381588505  ---  Logical Sectors Written
+0x01  0x020  6       871595612  ---  Number of Write Commands
+0x01  0x028  6     84148676505  ---  Logical Sectors Read
+0x01  0x030  6      1019929929  ---  Number of Read Commands
+0x01  0x038  6  10447522506308  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              34  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              44  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -330,7 +333,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

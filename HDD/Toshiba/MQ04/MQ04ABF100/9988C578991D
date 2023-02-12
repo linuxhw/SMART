@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.11.0-41-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.13.0-30-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 13 03:26:05 2021 CET
+Local Time is:    Sun Feb 27 18:53:47 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,16 +62,16 @@ SMART Attributes Data Structure revision number: 128
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1429
+  3 Spin_Up_Time            POS--K   100   100   001    -    1382
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   086   086   000    -    5938
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    576
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    36
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    69
-193 Load_Cycle_Count        -O--CK   097   097   000    -    38736
-194 Temperature_Celsius     -O---K   100   100   000    -    43 (Min/Max 10/48)
+  9 Power_On_Hours          -O--CK   084   084   000    -    6622
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    707
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    163
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    123
+193 Load_Cycle_Count        -O--CK   097   097   000    -    39865
+194 Temperature_Celsius     -O---K   100   100   000    -    46 (Min/Max 6/50)
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
-240 Head_Flying_Hours       -O--CK   095   095   000    -    2056
+240 Head_Flying_Hours       -O--CK   094   094   000    -    2646
 241 Total_LBAs_Written      -O--CK   100   100   000    -    21367512794
 242 Total_LBAs_Read         -O--CK   100   100   000    -    26096551215
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 258 (device log contains only the most recent 256 errors)
+Device Error Count: 352 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,7 +120,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 258 [1] occurred at disk power-on lifetime: 5917 hours (246 days + 13 hours)
+Error 352 [95] occurred at disk power-on lifetime: 6621 hours (275 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -131,13 +131,13 @@ Error 258 [1] occurred at disk power-on lifetime: 5917 hours (246 days + 13 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:01:12.882  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:01:12.881  IDENTIFY DEVICE
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:01:06.159  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:01:06.158  IDENTIFY DEVICE
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:00:57.914  SECURITY UNLOCK
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:09:57.881  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:09:57.881  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:09:50.711  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:09:50.710  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:09:41.942  SECURITY UNLOCK
 
-Error 257 [0] occurred at disk power-on lifetime: 5917 hours (246 days + 13 hours)
+Error 351 [94] occurred at disk power-on lifetime: 6621 hours (275 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -148,13 +148,13 @@ Error 257 [0] occurred at disk power-on lifetime: 5917 hours (246 days + 13 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:01:06.159  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:01:06.158  IDENTIFY DEVICE
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:00:57.914  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:57.912  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:31.923  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:09:50.711  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:09:50.710  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:09:41.942  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:09:41.941  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:09:27.322  IDENTIFY DEVICE
 
-Error 256 [255] occurred at disk power-on lifetime: 5917 hours (246 days + 13 hours)
+Error 350 [93] occurred at disk power-on lifetime: 6583 hours (274 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -165,13 +165,13 @@ Error 256 [255] occurred at disk power-on lifetime: 5917 hours (246 days + 13 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:00:57.914  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:57.912  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:31.923  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:31.922  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:30.875  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:05:28.841  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:05:28.841  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:05:17.703  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:05:17.702  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:05:14.392  SECURITY UNLOCK
 
-Error 255 [254] occurred at disk power-on lifetime: 5915 hours (246 days + 11 hours)
+Error 349 [92] occurred at disk power-on lifetime: 6583 hours (274 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -182,13 +182,13 @@ Error 255 [254] occurred at disk power-on lifetime: 5915 hours (246 days + 11 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:07:38.825  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:38.824  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:36.822  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:36.821  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:28.555  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:05:17.703  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:05:17.702  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:05:14.392  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:05:14.391  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:05:07.248  IDENTIFY DEVICE
 
-Error 254 [253] occurred at disk power-on lifetime: 5915 hours (246 days + 11 hours)
+Error 348 [91] occurred at disk power-on lifetime: 6582 hours (274 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -199,13 +199,13 @@ Error 254 [253] occurred at disk power-on lifetime: 5915 hours (246 days + 11 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:07:23.557  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:23.556  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:21.555  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:21.553  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:10.318  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:03:06.877  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:03:06.877  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:03:04.876  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:03:04.874  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:57.209  IDENTIFY DEVICE
 
-Error 253 [252] occurred at disk power-on lifetime: 5915 hours (246 days + 11 hours)
+Error 347 [90] occurred at disk power-on lifetime: 6582 hours (274 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -216,13 +216,13 @@ Error 253 [252] occurred at disk power-on lifetime: 5915 hours (246 days + 11 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:07:04.366  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:04.366  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:02.365  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:02.363  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:49.003  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:02:52.779  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:52.778  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:50.777  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:50.775  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:45.271  IDENTIFY DEVICE
 
-Error 252 [251] occurred at disk power-on lifetime: 5915 hours (246 days + 11 hours)
+Error 346 [89] occurred at disk power-on lifetime: 6582 hours (274 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -233,13 +233,13 @@ Error 252 [251] occurred at disk power-on lifetime: 5915 hours (246 days + 11 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:06:45.125  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:45.124  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:45.123  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:45.122  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:30.615  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:02:41.112  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:41.111  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:41.111  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:41.109  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:24.863  IDENTIFY DEVICE
 
-Error 251 [250] occurred at disk power-on lifetime: 5915 hours (246 days + 11 hours)
+Error 345 [88] occurred at disk power-on lifetime: 6582 hours (274 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -250,33 +250,33 @@ Error 251 [250] occurred at disk power-on lifetime: 5915 hours (246 days + 11 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:06:26.629  SECURITY UNLOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:26.628  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:26.627  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:26.626  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:06:15.733  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 00 00     00:02:19.901  SECURITY UNLOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:19.900  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:19.900  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:19.898  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:11.954  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               90%      5868         -
-# 2  Short offline       Completed without error       00%      5534         -
-# 3  Short offline       Aborted by host               90%      5534         -
-# 4  Short offline       Aborted by host               90%      5534         -
-# 5  Short offline       Aborted by host               90%      5534         -
-# 6  Short offline       Aborted by host               90%      5526         -
-# 7  Short offline       Aborted by host               90%      5483         -
-# 8  Short offline       Aborted by host               70%      5461         -
-# 9  Short offline       Aborted by host               90%      5461         -
-#10  Short offline       Aborted by host               80%      5461         -
-#11  Short offline       Aborted by host               90%      5461         -
-#12  Short offline       Aborted by host               90%      5460         -
-#13  Short offline       Aborted by host               90%      5092         -
-#14  Short offline       Aborted by host               90%      5092         -
-#15  Short offline       Aborted by host               90%      5085         -
-#16  Short offline       Aborted by host               90%      5083         -
-#17  Extended offline    Aborted by host               90%      4780         -
-#18  Short offline       Completed without error       00%      4780         -
-#19  Short offline       Aborted by host               90%      4646         -
+# 1  Short offline       Aborted by host               90%      6605         -
+# 2  Short offline       Completed without error       00%      6587         -
+# 3  Short offline       Aborted by host               90%      6585         -
+# 4  Short offline       Completed without error       00%      6491         -
+# 5  Short offline       Aborted by host               80%      6491         -
+# 6  Short offline       Completed without error       00%      6491         -
+# 7  Short offline       Aborted by host               80%      6491         -
+# 8  Short offline       Aborted by host               90%      6491         -
+# 9  Short offline       Aborted by host               80%      6488         -
+#10  Short offline       Aborted by host               90%      6109         -
+#11  Short offline       Aborted by host               80%      6105         -
+#12  Short offline       Aborted by host               90%      6101         -
+#13  Short offline       Aborted by host               90%      6101         -
+#14  Short offline       Aborted by host               90%      6101         -
+#15  Short offline       Aborted by host               90%      6101         -
+#16  Short offline       Completed without error       00%      6101         -
+#17  Short offline       Aborted by host               90%      5868         -
+#18  Short offline       Completed without error       00%      5534         -
+#19  Short offline       Aborted by host               90%      5534         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -294,44 +294,44 @@ SCT Commands not supported if ATA Security is LOCKED
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             576  ---  Lifetime Power-On Resets
-0x01  0x010  4            5938  ---  Power-on Hours
+0x01  0x008  4             707  ---  Lifetime Power-On Resets
+0x01  0x010  4            6622  ---  Power-on Hours
 0x01  0x018  6     21367512794  ---  Logical Sectors Written
-0x01  0x020  6        99330129  ---  Number of Write Commands
+0x01  0x020  6        99335904  ---  Number of Write Commands
 0x01  0x028  6     26096551215  ---  Logical Sectors Read
-0x01  0x030  6       151764962  ---  Number of Read Commands
-0x01  0x038  6     21377766529  ---  Date and Time TimeStamp
+0x01  0x030  6       152206010  ---  Number of Read Commands
+0x01  0x038  6     23840298170  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4              36  ---  Overlimit Shock Events
+0x02  0x010  4             163  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            3919  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            2056  ---  Head Flying Hours
-0x03  0x018  4           38736  ---  Head Load Events
+0x03  0x008  4            4521  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2646  ---  Head Flying Hours
+0x03  0x018  4           39865  ---  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
-0x03  0x028  4            1633  ---  Read Recovery Attempts
+0x03  0x028  4           70265  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4              69  ---  Number of High Priority Unload Events
+0x03  0x040  4             123  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               4  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              43  ---  Current Temperature
-0x05  0x010  1              40  N--  Average Short Term Temperature
-0x05  0x018  1              33  N--  Average Long Term Temperature
-0x05  0x020  1              48  ---  Highest Temperature
-0x05  0x028  1              10  ---  Lowest Temperature
+0x05  0x008  1              46  ---  Current Temperature
+0x05  0x010  1              38  N--  Average Short Term Temperature
+0x05  0x018  1              39  N--  Average Long Term Temperature
+0x05  0x020  1              50  ---  Highest Temperature
+0x05  0x028  1               6  ---  Lowest Temperature
 0x05  0x030  1              44  N--  Highest Average Short Term Temperature
 0x05  0x038  1              19  N--  Lowest Average Short Term Temperature
-0x05  0x040  1              33  N--  Highest Average Long Term Temperature
+0x05  0x040  1              39  N--  Highest Average Long Term Temperature
 0x05  0x048  1              26  N--  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           14762  ---  Number of Hardware Resets
-0x06  0x010  4            1188  ---  Number of ASR Events
+0x06  0x008  4           15221  ---  Number of Hardware Resets
+0x06  0x010  4            1444  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -350,8 +350,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           33  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           33  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           13  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.71-generic-1rosa2021.1-x86_64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Oct 16 10:06:19 2021 MSK
+Local Time is:    Wed Feb 16 17:24:16 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -64,26 +64,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1
   2 Throughput_Performance  -OS--K   056   053   000    -    4377
-  3 Spin_Up_Time            PO---K   081   078   025    -    5869
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10675
+  3 Spin_Up_Time            PO---K   083   078   025    -    5267
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10900
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    29185
+  9 Power_On_Hours          -O--CK   100   100   000    -    29842
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   090   090   000    -    10464
+ 12 Power_Cycle_Count       -O--CK   090   090   000    -    10721
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    31
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   051   000    -    31 (Min/Max -2/49)
+194 Temperature_Celsius     -O----   064   051   000    -    30 (Min/Max -2/49)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   057   001   000    -    22878
-200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    41390
+199 UDMA_CRC_Error_Count    -OS-CK   057   001   000    -    22890
+200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    41392
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   099   099   000    -    10836
+225 Load_Cycle_Count        -O--CK   099   099   000    -    11100
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 22884 (device log contains only the most recent 8 errors)
+Device Error Count: 22896 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,141 +125,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 22884 [3] occurred at disk power-on lifetime: 23064 hours (961 days + 0 hours)
+Error 22896 [7] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 5e c0 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 24256 sectors at LBA = 0x00000000 = 0
+  84 -- 51 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 0a 00 00 00 02 47 54 c0 e0 08     00:00:37.222  WRITE DMA EXT
-  35 00 00 09 98 00 00 02 47 4b 28 e0 08     00:00:37.222  WRITE DMA EXT
-  35 00 00 06 00 00 00 02 47 45 28 e0 08     00:00:37.222  WRITE DMA EXT
-  35 00 00 0a 00 00 00 02 47 3b 28 e0 08     00:00:37.222  WRITE DMA EXT
-  ca 00 00 00 70 00 00 00 47 3a b8 e2 08     00:00:37.222  WRITE DMA
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.425  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 08     00:00:00.425  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.419  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 08     00:00:00.419  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.414  IDENTIFY PACKET DEVICE
 
-Error 22883 [2] occurred at disk power-on lifetime: 22116 hours (921 days + 12 hours)
+Error 22895 [6] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 70 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 28672 sectors at LBA = 0x00000000 = 0
+  84 -- 51 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 04 00 00 00 1e 91 6c 00 e0 08     00:00:13.611  WRITE DMA EXT
-  35 00 00 04 00 00 00 1e 91 68 00 e0 08     00:00:13.611  WRITE DMA EXT
-  35 00 00 04 00 00 00 1e 91 64 00 e0 08     00:00:13.610  WRITE DMA EXT
-  35 00 00 04 00 00 00 1e 91 60 00 e0 08     00:00:13.610  WRITE DMA EXT
-  35 00 00 04 00 00 00 1e 91 5c 00 e0 08     00:00:13.610  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.414  IDENTIFY DEVICE
+  ef 00 03 00 42 00 00 00 00 00 00 a0 08     00:00:00.414  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.414  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.414  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 08     00:00:00.414  NOP [Abort queued commands]
 
-Error 22882 [1] occurred at disk power-on lifetime: 21578 hours (899 days + 2 hours)
+Error 22894 [5] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 11 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 4352 sectors at LBA = 0x00000000 = 0
+  84 -- 51 55 80 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 04 00 00 00 21 fd 0d 00 e0 08     00:00:19.753  WRITE DMA EXT
-  35 00 00 00 50 00 00 1e 82 54 80 e0 08     00:00:19.753  WRITE DMA EXT
-  35 00 00 04 00 00 00 21 fd 09 00 e0 08     00:00:19.753  WRITE DMA EXT
-  c8 00 00 00 58 00 00 00 1f ea 00 e0 08     00:00:19.750  READ DMA
-  c8 00 00 00 00 00 00 00 26 dc 30 e0 08     00:00:19.750  READ DMA
+  ca 00 00 00 20 00 00 00 2b 55 60 e2 08     00:00:00.414  WRITE DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.414  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.414  IDENTIFY DEVICE
+  ef 00 03 00 42 00 00 00 00 00 00 a0 08     00:00:00.414  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.414  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 22881 [0] occurred at disk power-on lifetime: 21322 hours (888 days + 10 hours)
+Error 22893 [4] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 5b 30 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 48 08 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 18440 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ca 00 00 00 08 00 00 00 05 5b 28 e1 08     00:00:02.467  WRITE DMA
-  ea 00 00 00 00 00 00 01 05 5b 27 e0 08     00:00:02.467  FLUSH CACHE EXT
-  ca 00 00 00 58 00 00 00 05 5a d0 e1 08     00:00:02.467  WRITE DMA
-  ca 00 00 00 10 00 00 00 d6 51 40 e1 08     00:00:02.467  WRITE DMA
-  ea 00 00 00 00 00 00 01 05 5a cf e0 08     00:00:02.467  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 1f 2b 48 00 e0 08     00:00:00.414  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.414  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.414  IDENTIFY DEVICE
+  ef 00 03 00 42 00 00 00 00 00 00 a0 08     00:00:00.414  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.414  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 22880 [7] occurred at disk power-on lifetime: 20673 hours (861 days + 9 hours)
+Error 22892 [3] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 a5 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 42240 sectors at LBA = 0x00000000 = 0
+  84 -- 51 55 80 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 04 00 00 00 06 bd a1 00 e0 08     00:00:44.486  WRITE DMA EXT
-  35 00 00 04 00 00 00 06 bd 9d 00 e0 08     00:00:44.486  WRITE DMA EXT
-  35 00 00 04 00 00 00 06 bd 99 00 e0 08     00:00:44.486  WRITE DMA EXT
-  35 00 00 04 00 00 00 06 bd 95 00 e0 08     00:00:44.486  WRITE DMA EXT
-  35 00 00 04 00 00 00 06 bd 91 00 e0 08     00:00:44.486  WRITE DMA EXT
+  ca 00 00 00 20 00 00 00 2b 55 60 e2 08     00:00:00.414  WRITE DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.414  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.414  IDENTIFY DEVICE
+  ef 00 03 00 42 00 00 00 00 00 00 a0 08     00:00:00.414  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.414  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 22879 [6] occurred at disk power-on lifetime: 19822 hours (825 days + 22 hours)
+Error 22891 [2] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 e9 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 59648 sectors at LBA = 0x00000000 = 0
+  84 -- 51 48 08 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 18440 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 04 00 00 00 25 3d e5 00 e0 08     00:00:00.100  WRITE DMA EXT
-  35 00 00 04 00 00 00 25 3d e1 00 e0 08     00:00:00.100  WRITE DMA EXT
-  35 00 00 04 00 00 00 25 3d dd 00 e0 08     00:00:00.100  WRITE DMA EXT
-  35 00 00 04 00 00 00 25 3d d9 00 e0 08     00:00:00.100  WRITE DMA EXT
-  35 00 00 04 00 00 00 25 3d d5 00 e0 08     00:00:00.098  WRITE DMA EXT
+  35 00 00 00 08 00 00 1f 2b 48 00 e0 08     00:00:00.413  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.413  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.413  IDENTIFY DEVICE
+  ef 00 03 00 42 00 00 00 00 00 00 a0 08     00:00:00.413  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.413  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 22878 [5] occurred at disk power-on lifetime: 13566 hours (565 days + 6 hours)
+Error 22890 [1] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 d4 00 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 54272 sectors at LBA = 0x00000000 = 0
+  84 -- 51 5c a8 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 23720 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 14 00 00 00 09 cf c0 00 e0 08     00:00:01.066  WRITE DMA EXT
-  35 00 00 04 00 00 00 09 cf bc 00 e0 08     00:00:01.066  WRITE DMA EXT
-  35 00 00 18 00 00 00 09 cf a4 00 e0 08     00:00:01.066  WRITE DMA EXT
-  35 00 00 0c 00 00 00 09 cf 98 00 e0 08     00:00:01.066  WRITE DMA EXT
-  35 00 00 04 00 00 00 09 cf 94 00 e0 08     00:00:01.066  WRITE DMA EXT
+  35 00 00 00 88 00 00 1f 2b 5c 20 e0 08     00:00:00.413  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.413  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.413  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:00:00.413  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.413  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 22877 [4] occurred at disk power-on lifetime: 13508 hours (562 days + 20 hours)
+Error 22889 [0] occurred at disk power-on lifetime: 29336 hours (1222 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 c0 10 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 49168 sectors at LBA = 0x00000000 = 0
+  84 -- 51 5c a8 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 23720 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 08 00 00 20 00 c0 08 e0 08     00:00:00.653  WRITE DMA EXT
-  ea 00 00 00 00 00 00 20 00 c0 07 e0 08     00:00:00.653  FLUSH CACHE EXT
-  35 00 00 00 60 00 00 20 00 bf a8 e0 08     00:00:00.653  WRITE DMA EXT
-  ea 00 00 00 00 00 00 02 84 0f b7 e0 08     00:00:00.652  FLUSH CACHE EXT
-  ca 00 00 00 08 00 00 00 84 0f b0 e2 08     00:00:00.652  WRITE DMA
+  35 00 00 00 88 00 00 1f 2b 5c 20 e0 08     00:00:00.413  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.413  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.413  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:00:00.413  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.413  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -300,8 +300,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     20/32 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     22/29 Celsius
 Lifetime    Min/Max Temperature:      6/60 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -311,7 +311,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (86)
+Temperature History Size (Index):    128 (73)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -331,8 +331,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

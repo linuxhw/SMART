@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-25-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.18-300.fc37.x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     OCZ/Toshiba Trion SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Apr  6 11:17:05 2022 PDT
+Local Time is:    Tue Jan 24 13:06:00 2023 PST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,15 +62,15 @@ recommended polling time: 	 (   3) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    18566
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    671
+  9 Power_On_Hours          -O--C-   100   100   000    -    20292
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1014
 167 SSD_Protect_Mode        -O---K   100   100   000    -    0
 168 SATA_PHY_Error_Count    -O--C-   100   100   000    -    0
 169 Bad_Block_Count         PO----   100   100   010    -    0
-173 Erase_Count             -O--C-   188   188   000    -    0
-192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    200
-194 Temperature_Celsius     PO---K   071   056   020    -    29 (Min/Max 15/44)
-241 Host_Writes             -O--CK   100   100   000    -    106513
+173 Erase_Count             -O--C-   187   187   000    -    0
+192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    236
+194 Temperature_Celsius     PO---K   076   056   020    -    24 (Min/Max 15/44)
+241 Host_Writes             -O--CK   100   100   000    -    132870
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -118,13 +118,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             671  ---  Lifetime Power-On Resets
-0x01  0x010  4           18566  ---  Power-on Hours
-0x01  0x018  6      6980455409  ---  Logical Sectors Written
-0x01  0x020  6        46796738  ---  Number of Write Commands
-0x01  0x028  6      2575388383  ---  Logical Sectors Read
-0x01  0x030  6        22891856  ---  Number of Read Commands
-0x01  0x038  6     66837858776  ---  Date and Time TimeStamp
+0x01  0x008  4            1014  ---  Lifetime Power-On Resets
+0x01  0x010  4           20292  ---  Power-on Hours
+0x01  0x018  6      8707803880  ---  Logical Sectors Written
+0x01  0x020  6        63379272  ---  Number of Write Commands
+0x01  0x028  6      2920995618  ---  Logical Sectors Read
+0x01  0x030  6        26601846  ---  Number of Read Commands
+0x01  0x038  6     73053448947  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
@@ -143,10 +143,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           17658  ---  Number of Hardware Resets
+0x06  0x008  4           49120  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              12  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              13  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -161,10 +161,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4       184002  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4         5983  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

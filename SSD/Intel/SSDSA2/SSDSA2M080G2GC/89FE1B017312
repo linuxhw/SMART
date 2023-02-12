@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.0-26-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.0-53-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -6,19 +6,14 @@ Model Family:     Intel X18-M/X25-M/X25-V G2 SSDs
 Device Model:     INTEL SSDSA2M080G2GC
 Serial Number:    --
 LU WWN Device Id: 5 001517 ...
-Firmware Version: 2CV102HA
+Firmware Version: 2CV102M3
 User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Nov  3 07:51:36 2020 CET
-
-==> WARNING: This drive may require a firmware update to
-fix possible drive hangs when reading SMART self-test log:
-https://downloadcenter.intel.com/download/26491
-
+Local Time is:    Sun May 16 21:44:55 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -26,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -42,9 +37,9 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 Total time to complete Offline 
 data collection: 		(    1) seconds.
 Offline data collection
-capabilities: 			 (0x75) SMART execute Offline immediate.
+capabilities: 			 (0x71) SMART execute Offline immediate.
 					No Auto Offline data collection support.
-					Abort Offline collection upon new
+					Suspend Offline collection upon new
 					command.
 					No Offline surface scan supported.
 					Self-test supported.
@@ -68,16 +63,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    63999
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    657
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    149
-225 Host_Writes_32MiB       ----CK   200   200   000    -    109716
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    4768
+  9 Power_On_Hours          -O--CK   100   100   000    -    66538
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    941
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    233
+225 Host_Writes_32MiB       ----CK   100   100   000    -    116560
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    4601022
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
-228 Workload_Minutes        -O--CK   100   100   000    -    3713721739
+228 Workload_Minutes        -O--CK   100   100   000    -    3096628460
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   097   097   000    -    0
-184 End-to-End_Error        PO--CK   100   100   099    -    0
+233 Media_Wearout_Indicator -O--CK   099   099   000    -    0
+184 End-to-End_Error        PO--CK   100   100   090    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -129,12 +124,14 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  4            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  4            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  4            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

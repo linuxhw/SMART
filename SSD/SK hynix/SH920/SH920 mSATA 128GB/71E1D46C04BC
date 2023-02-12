@@ -8,13 +8,13 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Sep  1 14:53:11 2020 CEST
+Local Time is:    Tue Sep  1 14:06:03 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     1 (minimum power consumption with standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
@@ -55,15 +55,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    558
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    608
-100 Unknown_Attribute       -O--CK   100   100   000    -    1287774
+  9 Power_On_Hours          -O--CK   100   100   000    -    559
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    618
+100 Unknown_Attribute       -O--CK   100   100   000    -    1290558
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   100   000    -    0
-174 Unknown_Attribute       ----CK   100   100   000    -    36
+174 Unknown_Attribute       ----CK   100   100   000    -    37
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   100   100   000    -    1133024
+177 Wear_Leveling_Count     -O--CK   100   100   000    -    1135808
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    2
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    5
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    2491
@@ -73,15 +73,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   027   000   000    -    27 (Min/Max 11/41)
+194 Temperature_Celsius     -O----   033   000   000    -    33 (Min/Max 11/41)
 195 Hardware_ECC_Recovered  -O--CK   253   253   000    -    0
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 Temperature_Celsius     PO--CK   253   253   ---    -    0
-234 Unknown_Attribute       -O--CK   100   100   ---    -    4455
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    2860
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    3260
-250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    857
+234 Unknown_Attribute       -O--CK   100   100   ---    -    4466
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    2869
+242 Total_LBAs_Read         -O--CK   100   100   ---    -    3270
+250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    885
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 5415 (device log contains only the most recent 20 errors)
+Device Error Count: 5448 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,58 +120,41 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 5415 [14] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
+Error 5448 [7] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 c2 4f 00 e0 00  Error: ABRT
+  04 -- 51 00 09 00 00 00 c2 4f 00 e0 08  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:00:00.020  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 00 d1 00 01 00 00 00 c2 4f 01 00 00     00:00:00.020  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     00:00:00.020  SMART READ DATA
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     00:00:00.020  SMART RETURN STATUS
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:00:00.020  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 00     00:01:27.580  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  b0 00 d1 00 01 00 00 00 c2 4f 01 00 00     00:01:27.580  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00     00:01:27.580  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00     00:01:27.580  SMART RETURN STATUS
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:01:27.580  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 5414 [13] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
+Error 5447 [6] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 fe 00 00 00 00 00 00 40 08  Error: ABRT
+  04 -- 51 00 00 00 00 00 00 00 00 40 08  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 42 00 fe 00 00 00 00 00 00 40 40     00:01:01.330  SET FEATURES [Enable AAM] [OBS-ACS-2]
-  ef 00 05 00 01 00 00 00 00 00 00 40 40     00:01:01.320  SET FEATURES [Enable APM]
-  60 00 08 00 c0 00 00 0d 63 78 00 40 40     00:00:59.030  READ FPDMA QUEUED
-  60 00 68 00 b8 00 00 0d e7 bf 88 40 40     00:00:59.030  READ FPDMA QUEUED
-  60 00 80 00 b0 00 00 0d e7 bf 00 40 40     00:00:59.030  READ FPDMA QUEUED
+  ef 00 c2 00 00 00 00 00 00 00 00 40 40     00:00:58.050  SET FEATURES [Disable AAM] [OBS-ACS-2]
+  ef 00 05 00 fe 00 00 00 00 00 00 40 40     00:00:58.050  SET FEATURES [Enable APM]
+  60 00 08 00 b0 00 00 00 8c 58 00 40 40     00:00:55.700  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 0c f2 28 00 40 40     00:00:55.700  READ FPDMA QUEUED
+  60 00 68 00 a0 00 00 0c e9 7d 98 40 40     00:00:55.700  READ FPDMA QUEUED
 
-Error 5413 [12] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.090  IDENTIFY DEVICE
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:17.090  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.090  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:16.910  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:16.880  IDENTIFY DEVICE
-
-Error 5412 [11] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
+Error 5446 [5] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -182,13 +165,13 @@ Error 5412 [11] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.090  IDENTIFY DEVICE
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:17.090  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.090  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:16.910  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:16.880  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.490  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:15.490  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.490  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.310  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.280  IDENTIFY DEVICE
 
-Error 5411 [10] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
+Error 5445 [4] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -199,10 +182,39 @@ Error 5411 [10] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:07.620  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:07.620  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.490  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:15.490  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.490  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.310  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.280  IDENTIFY DEVICE
 
-Error 5410 [9] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
+Error 5444 [3] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:08.800  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:08.800  IDENTIFY DEVICE
+
+Error 5443 [2] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+
+Error 5442 [1] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -213,13 +225,13 @@ Error 5410 [9] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:01:28.720  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:01:28.700  SECURITY FREEZE LOCK
-  ef 00 10 00 06 00 00 00 00 00 00 00 00     00:01:28.680  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:01:28.630  IDENTIFY DEVICE
-  60 00 80 00 00 00 00 0b 0c 26 e8 40 40     00:01:27.990  READ FPDMA QUEUED
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:13.370  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:13.340  SECURITY FREEZE LOCK
+  ef 00 10 00 06 00 00 00 00 00 00 00 00     00:00:13.320  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:13.270  IDENTIFY DEVICE
+  60 00 80 00 00 00 00 0b af cc 28 40 40     00:00:12.620  READ FPDMA QUEUED
 
-Error 5409 [8] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
+Error 5441 [0] occurred at disk power-on lifetime: 559 hours (23 days + 7 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -230,28 +242,11 @@ Error 5409 [8] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:01:26.180  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:01:26.180  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:01:26.170  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:01:26.150  IDENTIFY DEVICE
-  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:01:26.150  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-
-Error 5408 [7] occurred at disk power-on lifetime: 558 hours (23 days + 6 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:01:25.580  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:01:25.580  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:43.460  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:43.460  IDENTIFY DEVICE
-  25 00 00 00 20 00 00 00 00 00 02 40 40     00:00:43.460  READ DMA EXT
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:10.080  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:10.080  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:10.070  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:10.050  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 00     00:00:10.050  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -279,5 +274,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 

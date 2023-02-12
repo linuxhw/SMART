@@ -1,17 +1,21 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Samsung based SSDs
 Device Model:     Samsung SSD 860 EVO 500GB
 Serial Number:    --
 LU WWN Device Id: 5 002538 ...
-Firmware Version: RVT02B6Q
+Firmware Version: RVT04B6Q
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Sep  3 15:19:40 2020 UTC
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Thu Mar 17 11:43:31 2022 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,19 +65,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    2915
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1361
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    14
+  9 Power_On_Hours          -O--CK   098   098   000    -    5659
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    2927
+177 Wear_Leveling_Count     PO--C-   098   098   000    -    18
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   070   052   000    -    30
+190 Airflow_Temperature_Cel -O--CK   075   052   000    -    25
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    232
-241 Total_LBAs_Written      -O--CK   099   099   000    -    7796253572
+235 POR_Recovery_Count      -O--C-   099   099   000    -    536
+241 Total_LBAs_Written      -O--CK   099   099   000    -    10446095998
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa1           SL  VS      16  Device vendor specific log
 0xa5           SL  VS      16  Device vendor specific log
-0xce-0xcf      SL  VS      16  Device vendor specific log
+0xce           SL  VS      16  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
@@ -108,25 +112,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      2880         -
-# 2  Extended offline    Interrupted (host reset)      80%      2817         -
-# 3  Short offline       Completed without error       00%      2752         -
-# 4  Extended offline    Interrupted (host reset)      70%      2683         -
-# 5  Short offline       Completed without error       00%      2612         -
-# 6  Offline             Completed without error       00%      2547         -
-# 7  Short offline       Completed without error       00%      2473         -
-# 8  Short offline       Completed without error       00%      2380         -
-# 9  Extended offline    Interrupted (host reset)      60%      2291         -
-#10  Short offline       Completed without error       00%      2217         -
-#11  Extended offline    Interrupted (host reset)      80%      2143         -
-#12  Short offline       Completed without error       00%      2065         -
-#13  Extended offline    Interrupted (host reset)      70%      1989         -
-#14  Short offline       Completed without error       00%      1912         -
-#15  Extended offline    Interrupted (host reset)      70%      1837         -
-#16  Short offline       Completed without error       00%      1769         -
-#17  Extended offline    Interrupted (host reset)      40%      1701         -
-#18  Short offline       Completed without error       00%      1394         -
-#19  Extended offline    Interrupted (host reset)      70%      1326         -
+# 1  Extended offline    Completed without error       00%      5630         -
+# 2  Short offline       Completed without error       00%      5562         -
+# 3  Extended offline    Completed without error       00%      5501         -
+# 4  Short offline       Completed without error       00%      5451         -
+# 5  Short offline       Completed without error       00%      5400         -
+# 6  Extended offline    Completed without error       00%      5400         -
+# 7  Short offline       Completed without error       00%      5329         -
+# 8  Extended offline    Completed without error       00%      5270         -
+# 9  Short offline       Completed without error       00%      5206         -
+#10  Extended offline    Completed without error       00%      5142         -
+#11  Short offline       Completed without error       00%      5085         -
+#12  Short offline       Completed without error       00%      5028         -
+#13  Extended offline    Completed without error       00%      4963         -
+#14  Short offline       Completed without error       00%      4887         -
+#15  Short offline       Completed without error       00%      4886         -
+#16  Extended offline    Interrupted (host reset)      70%      4822         -
+#17  Short offline       Completed without error       00%      4757         -
+#18  Extended offline    Interrupted (host reset)      20%      4687         -
+#19  Short offline       Completed without error       00%      4465         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -142,9 +146,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     28/40 Celsius
-Lifetime    Min/Max Temperature:     18/48 Celsius
+Current Temperature:                    25 Celsius
+Power Cycle Min/Max Temperature:     24/40 Celsius
+Lifetime    Min/Max Temperature:     14/48 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 SMART Status:                        0xc24f (PASSED)
@@ -154,7 +158,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (78)
+Temperature History Size (Index):    128 (91)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -163,27 +167,27 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1361  ---  Lifetime Power-On Resets
-0x01  0x010  4            2915  ---  Power-on Hours
-0x01  0x018  6      7796253572  ---  Logical Sectors Written
-0x01  0x020  6        89217939  ---  Number of Write Commands
-0x01  0x028  6      7112715059  ---  Logical Sectors Read
-0x01  0x030  6       104940511  ---  Number of Read Commands
-0x01  0x038  6          588000  ---  Date and Time TimeStamp
+0x01  0x008  4            2927  ---  Lifetime Power-On Resets
+0x01  0x010  4            5659  ---  Power-on Hours
+0x01  0x018  6     10446095998  ---  Logical Sectors Written
+0x01  0x020  6       104584002  ---  Number of Write Commands
+0x01  0x028  6      9705071297  ---  Logical Sectors Read
+0x01  0x030  6       153720633  ---  Number of Read Commands
+0x01  0x038  6         3573000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4             227  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
+0x05  0x008  1              25  ---  Current Temperature
 0x05  0x020  1              48  ---  Highest Temperature
-0x05  0x028  1              18  ---  Lowest Temperature
+0x05  0x028  1              14  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6588  ---  Number of Hardware Resets
+0x06  0x008  4           14891  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -200,8 +204,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

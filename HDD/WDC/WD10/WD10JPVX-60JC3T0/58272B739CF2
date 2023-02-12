@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-80-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-90-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,11 +13,11 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Aug  6 10:49:19 2021 +01
+Local Time is:    Sat Nov 20 10:58:30 2021 +01
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -31,7 +31,7 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 113)	The previous self-test completed having
+Self-test execution status:      ( 121)	The previous self-test completed having
 					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(18480) seconds.
@@ -61,24 +61,24 @@ SCT capabilities: 	       (0x703d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    8605
-  3 Spin_Up_Time            POS--K   200   181   021    -    991
-  4 Start_Stop_Count        -O--CK   084   084   000    -    16909
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    8620
+  3 Spin_Up_Time            POS--K   186   181   021    -    1700
+  4 Start_Stop_Count        -O--CK   083   083   000    -    17291
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   090   090   000    -    7478
+  9 Power_On_Hours          -O--CK   090   090   000    -    7753
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4943
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5178
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   092   001   000    -    5970
-188 Command_Timeout         -O--CK   092   001   000    -    4295103862
-190 Airflow_Temperature_Cel -O---K   073   043   040    -    27 (Min/Max 27/27)
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    499
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    759
-193 Load_Cycle_Count        -O--CK   173   173   000    -    81658
-194 Temperature_Celsius     -O---K   120   090   000    -    27
+187 Reported_Uncorrect      -O--CK   096   001   000    -    5985
+188 Command_Timeout         -O--CK   096   001   000    -    4295103877
+190 Airflow_Temperature_Cel -O---K   079   043   040    -    21 (Min/Max 17/21)
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    500
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    862
+193 Load_Cycle_Count        -O--CK   173   173   000    -    83079
+194 Temperature_Celsius     -O---K   126   090   000    -    21
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    1
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -114,7 +114,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 5970 (device log contains only the most recent 24 errors)
+Device Error Count: 5985 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -130,7 +130,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 5970 [17] occurred at disk power-on lifetime: 7477 hours (311 days + 13 hours)
+Error 5985 [8] occurred at disk power-on lifetime: 7684 hours (320 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -141,13 +141,13 @@ Error 5970 [17] occurred at disk power-on lifetime: 7477 hours (311 days + 13 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 88 00 28 00 00 00 7c ae 10 40 08     00:10:52.583  READ FPDMA QUEUED
-  60 01 00 00 20 00 00 00 7c 68 00 40 08     00:10:52.572  READ FPDMA QUEUED
-  60 01 00 00 68 00 00 00 fb a6 20 40 08     00:10:52.571  READ FPDMA QUEUED
-  60 01 00 00 f8 00 00 00 fd 58 68 40 08     00:10:52.558  READ FPDMA QUEUED
-  60 01 00 00 b8 00 00 00 fd 15 c8 40 08     00:10:52.553  READ FPDMA QUEUED
+  60 00 08 00 88 00 00 00 7c ae 38 40 08     00:05:08.660  READ FPDMA QUEUED
+  61 00 88 00 50 00 00 05 d3 52 40 40 08     00:05:08.660  WRITE FPDMA QUEUED
+  61 00 28 00 48 00 00 09 dc e9 d0 40 08     00:05:08.660  WRITE FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:05:08.660  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:05:08.659  IDENTIFY DEVICE
 
-Error 5969 [16] occurred at disk power-on lifetime: 7477 hours (311 days + 13 hours)
+Error 5984 [7] occurred at disk power-on lifetime: 7684 hours (320 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -158,13 +158,13 @@ Error 5969 [16] occurred at disk power-on lifetime: 7477 hours (311 days + 13 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 88 00 b8 00 00 00 7c ae 10 40 08     00:04:54.811  READ FPDMA QUEUED
-  60 01 00 00 b0 00 00 00 7c 68 00 40 08     00:04:54.794  READ FPDMA QUEUED
-  60 01 00 00 a8 00 00 00 fb a6 20 40 08     00:04:54.793  READ FPDMA QUEUED
-  60 01 00 00 68 00 00 00 fd 58 68 40 08     00:04:54.780  READ FPDMA QUEUED
-  60 00 f8 00 60 00 00 00 fd 31 50 40 08     00:04:54.760  READ FPDMA QUEUED
+  60 00 08 00 30 00 00 00 7c ae 38 40 08     00:05:05.178  READ FPDMA QUEUED
+  60 00 08 00 28 00 00 00 7c ae 30 40 08     00:05:05.166  READ FPDMA QUEUED
+  60 00 08 00 20 00 00 00 7c ae 28 40 08     00:05:05.166  READ FPDMA QUEUED
+  60 00 08 00 18 00 00 00 7c ae 20 40 08     00:05:05.166  READ FPDMA QUEUED
+  60 00 08 00 f8 00 00 00 7c ae 18 40 08     00:05:05.166  READ FPDMA QUEUED
 
-Error 5968 [15] occurred at disk power-on lifetime: 7476 hours (311 days + 12 hours)
+Error 5983 [6] occurred at disk power-on lifetime: 7684 hours (320 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -175,13 +175,13 @@ Error 5968 [15] occurred at disk power-on lifetime: 7476 hours (311 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 88 00 a0 00 00 00 7c ae 10 40 08     00:02:42.004  READ FPDMA QUEUED
-  60 01 00 00 b0 00 00 00 7c 68 00 40 08     00:02:41.996  READ FPDMA QUEUED
-  60 01 00 00 98 00 00 00 fb a6 20 40 08     00:02:41.965  READ FPDMA QUEUED
-  60 01 00 00 90 00 00 00 fd 58 68 40 08     00:02:41.959  READ FPDMA QUEUED
-  60 00 f8 00 88 00 00 00 fd 31 50 40 08     00:02:41.946  READ FPDMA QUEUED
+  60 01 00 00 90 00 00 02 22 60 88 40 08     00:02:41.613  READ FPDMA QUEUED
+  60 01 00 00 c8 00 00 02 39 cc a0 40 08     00:02:41.594  READ FPDMA QUEUED
+  60 01 00 00 20 00 00 02 22 35 58 40 08     00:02:41.592  READ FPDMA QUEUED
+  60 00 88 00 18 00 00 00 7c ae 10 40 08     00:02:41.592  READ FPDMA QUEUED
+  60 01 40 00 10 00 00 02 37 71 10 40 08     00:02:41.584  READ FPDMA QUEUED
 
-Error 5967 [14] occurred at disk power-on lifetime: 7476 hours (311 days + 12 hours)
+Error 5982 [5] occurred at disk power-on lifetime: 7674 hours (319 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -192,13 +192,13 @@ Error 5967 [14] occurred at disk power-on lifetime: 7476 hours (311 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 b8 00 00 00 7c ae 38 40 08     00:42:33.452  READ FPDMA QUEUED
-  61 00 20 00 b0 00 00 01 da 4d a0 40 08     00:42:33.452  WRITE FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:42:33.452  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:42:33.451  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:42:33.451  SET FEATURES [Set transfer mode]
+  60 00 88 00 20 00 00 00 7c ae 10 40 08     00:50:19.722  READ FPDMA QUEUED
+  60 01 00 00 18 00 00 00 7c 68 00 40 08     00:50:19.712  READ FPDMA QUEUED
+  60 01 00 00 c8 00 00 02 21 12 48 40 08     00:50:19.698  READ FPDMA QUEUED
+  60 00 e8 00 c0 00 00 02 0b 2b b8 40 08     00:50:19.689  READ FPDMA QUEUED
+  60 00 38 00 b8 00 00 02 37 76 88 40 08     00:50:19.679  READ FPDMA QUEUED
 
-Error 5966 [13] occurred at disk power-on lifetime: 7476 hours (311 days + 12 hours)
+Error 5981 [4] occurred at disk power-on lifetime: 7621 hours (317 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -209,13 +209,13 @@ Error 5966 [13] occurred at disk power-on lifetime: 7476 hours (311 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 98 00 00 00 7c ae 38 40 08     00:42:29.968  READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:42:29.962  FLUSH CACHE EXT
-  60 01 00 00 78 00 00 00 ff 7f a0 40 08     00:42:29.946  READ FPDMA QUEUED
-  61 00 08 00 70 00 00 05 dd f5 d0 40 08     00:42:29.946  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:42:29.939  FLUSH CACHE EXT
+  60 00 88 00 20 00 00 00 7c ae 10 40 08     01:17:10.302  READ FPDMA QUEUED
+  60 01 00 00 18 00 00 00 7c 68 00 40 08     01:17:10.290  READ FPDMA QUEUED
+  60 00 08 00 10 00 00 04 82 e8 48 40 08     01:17:10.237  READ FPDMA QUEUED
+  60 00 08 00 08 00 00 04 82 e8 50 40 08     01:17:10.237  READ FPDMA QUEUED
+  60 00 08 00 f8 00 00 04 82 e8 40 40 08     01:17:10.227  READ FPDMA QUEUED
 
-Error 5965 [12] occurred at disk power-on lifetime: 7476 hours (311 days + 12 hours)
+Error 5980 [3] occurred at disk power-on lifetime: 7620 hours (317 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -226,13 +226,13 @@ Error 5965 [12] occurred at disk power-on lifetime: 7476 hours (311 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 a0 00 00 00 7c ae 38 40 08     00:41:29.911  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:41:29.911  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:41:29.911  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:41:29.911  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:41:29.911  SET FEATURES [Enable SATA feature]
+  60 00 08 00 c8 00 00 00 7c ae 38 40 08     00:19:51.036  READ FPDMA QUEUED
+  61 00 28 00 c0 00 00 09 e5 62 68 40 08     00:19:51.015  WRITE FPDMA QUEUED
+  61 04 08 00 b8 00 00 00 63 60 00 40 08     00:19:51.013  WRITE FPDMA QUEUED
+  61 00 48 00 b0 00 00 02 5c 12 a8 40 08     00:19:51.013  WRITE FPDMA QUEUED
+  61 00 08 00 a8 00 00 02 5c 08 48 40 08     00:19:51.013  WRITE FPDMA QUEUED
 
-Error 5964 [11] occurred at disk power-on lifetime: 7476 hours (311 days + 12 hours)
+Error 5979 [2] occurred at disk power-on lifetime: 7620 hours (317 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -243,13 +243,13 @@ Error 5964 [11] occurred at disk power-on lifetime: 7476 hours (311 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 58 00 00 00 7c ae 38 40 08     00:41:26.414  READ FPDMA QUEUED
-  60 00 08 00 50 00 00 00 7c ae 30 40 08     00:41:26.403  READ FPDMA QUEUED
-  60 00 08 00 48 00 00 00 7c ae 28 40 08     00:41:26.403  READ FPDMA QUEUED
-  60 00 08 00 40 00 00 00 7c ae 20 40 08     00:41:26.403  READ FPDMA QUEUED
-  60 00 08 00 38 00 00 00 7c ae 18 40 08     00:41:26.402  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 7c ae 38 40 08     00:19:47.521  READ FPDMA QUEUED
+  60 00 08 00 70 00 00 00 7c ae 30 40 08     00:19:47.510  READ FPDMA QUEUED
+  60 00 08 00 68 00 00 00 7c ae 28 40 08     00:19:47.510  READ FPDMA QUEUED
+  60 00 08 00 60 00 00 00 7c ae 20 40 08     00:19:47.509  READ FPDMA QUEUED
+  60 00 08 00 50 00 00 00 7c ae 18 40 08     00:19:47.509  READ FPDMA QUEUED
 
-Error 5963 [10] occurred at disk power-on lifetime: 7476 hours (311 days + 12 hours)
+Error 5978 [1] occurred at disk power-on lifetime: 7619 hours (317 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -260,32 +260,32 @@ Error 5963 [10] occurred at disk power-on lifetime: 7476 hours (311 days + 12 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 88 00 18 00 00 00 7c ae 10 40 08     00:40:57.304  READ FPDMA QUEUED
-  60 01 00 00 10 00 00 00 7c 68 00 40 08     00:40:57.292  READ FPDMA QUEUED
-  60 00 e0 00 28 00 00 00 fb 3d b0 40 08     00:40:57.267  READ FPDMA QUEUED
-  60 01 00 00 08 00 00 00 fd d3 60 40 08     00:40:57.253  READ FPDMA QUEUED
-  60 01 00 00 00 00 00 00 fd 30 50 40 08     00:40:57.240  READ FPDMA QUEUED
+  60 00 88 00 78 00 00 00 7c ae 10 40 08     00:09:20.493  READ FPDMA QUEUED
+  60 01 00 00 70 00 00 00 7c 68 00 40 08     00:09:20.478  READ FPDMA QUEUED
+  60 01 00 00 78 00 00 02 62 65 18 40 08     00:09:20.477  READ FPDMA QUEUED
+  60 00 98 00 88 00 00 02 65 68 98 40 08     00:09:20.450  READ FPDMA QUEUED
+  60 01 00 00 68 00 00 02 63 d1 80 40 08     00:09:20.445  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: read failure       10%      7423         8171064
-# 2  Short offline       Completed: read failure       20%      7390         8171064
-# 3  Short offline       Completed: read failure       20%      7369         8171064
-# 4  Short offline       Completed: read failure       30%      7336         5669456
-# 5  Short offline       Completed without error       00%      7275         -
-# 6  Short offline       Completed without error       00%      7222         -
-# 7  Short offline       Completed without error       00%      7196         -
-# 8  Short offline       Completed without error       00%      7155         -
-# 9  Short offline       Completed: read failure       10%      7139         5669456
-#10  Short offline       Completed: read failure       20%      7133         8171064
-#11  Short offline       Completed: read failure       20%      7112         8171064
-#12  Short offline       Completed: read failure       90%      7081         8171064
-#13  Short offline       Completed: read failure       90%      7069         8171064
-#14  Short offline       Completed: read failure       90%      6975         8171064
-#15  Short offline       Completed: read failure       90%      6930         8171064
-#16  Short offline       Completed: read failure       90%      2416         9744648
-#17  Short offline       Completed: read failure       90%      2416         9744648
-#18  Short offline       Completed: read failure       90%      2416         9744648
+# 1  Short offline       Completed: read failure       90%      7736         8171064
+# 2  Short offline       Completed: read failure       90%      7728         8171064
+# 3  Short offline       Completed: read failure       90%      7728         8171064
+# 4  Short offline       Completed: read failure       90%      7725         8171064
+# 5  Short offline       Completed: read failure       90%      7625         8171064
+# 6  Short offline       Completed: read failure       90%      7598         8171064
+# 7  Short offline       Completed: read failure       90%      7576         8171064
+# 8  Short offline       Completed: read failure       90%      7576         8171064
+# 9  Short offline       Completed: read failure       90%      7551         8171064
+#10  Short offline       Completed: read failure       90%      7481         8171064
+#11  Short offline       Completed: read failure       10%      7423         8171064
+#12  Short offline       Completed: read failure       20%      7390         8171064
+#13  Short offline       Completed: read failure       20%      7369         8171064
+#14  Short offline       Completed: read failure       30%      7336         5669456
+#15  Short offline       Completed without error       00%      7275         -
+#16  Short offline       Completed without error       00%      7222         -
+#17  Short offline       Completed without error       00%      7196         -
+#18  Short offline       Completed without error       00%      7155         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -301,8 +301,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     27/27 Celsius
+Current Temperature:                    21 Celsius
+Power Cycle Min/Max Temperature:     17/21 Celsius
 Lifetime    Min/Max Temperature:      4/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -314,7 +314,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (5)
+Temperature History Size (Index):    128 (102)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -334,10 +334,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           42  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           26  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          103  Vendor specific
+0x8000  4          544  Vendor specific
 

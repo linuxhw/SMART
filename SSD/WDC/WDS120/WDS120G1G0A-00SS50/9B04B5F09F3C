@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-desktop-17.1rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.14.xm1-1.klp-xanmod-rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     WD Blue and Green SSDs
+Model Family:     WD Blue / Red / Green SSDs
 Device Model:     WDC WDS120G1G0A-00SS50
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -11,10 +11,11 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Mar 25 14:34:01 2020 +07
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sat Jul 30 11:44:24 2022 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +23,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -60,28 +61,28 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   000   100   000    -    7237
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2088
-165 Block_Erase_Count       -O--CK   100   100   000    -    7430454249797
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   000    -    17
+  9 Power_On_Hours          -O--CK   000   100   000    -    14753
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4572
+165 Block_Erase_Count       -O--CK   100   100   000    -    15990445576348
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   000    -    63
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   000    -    0
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   000    -    114
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   000    -    133
 169 Total_Bad_Blocks        -O--CK   100   100   000    -    0
 170 Grown_Bad_Blocks        -O--CK   100   100   000    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    53
-174 Unexpected_Power_Loss   -O--CK   100   100   000    -    49
+173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    84
+174 Unexpected_Power_Loss   -O--CK   100   100   000    -    178
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   064   038   000    -    36 (Min/Max 0/62)
+194 Temperature_Celsius     -O---K   054   038   000    -    46 (Min/Max 0/62)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    15
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x031702f90317
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x058904b90589
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   000    -    6340
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    11115
-241 Host_Writes_GiB         ----CK   253   253   000    -    5994
-242 Host_Reads_GiB          ----CK   253   253   000    -    3982
+233 NAND_GB_Written_TLC     -O--CK   100   100   000    -    10075
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    19911
+241 Host_Writes_GiB         ----CK   253   253   000    -    12218
+242 Host_Reads_GiB          ----CK   253   253   000    -    9558
 244 Temp_Throttle_Status    -O--CK   000   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -107,19 +108,72 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Invalid Error Log index = 0x0000 (reserved = 0x00)
+Device Error Count: 16 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 16 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
+Error 15 [3] log entry is empty
+Error 14 [2] log entry is empty
+Error 13 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      70%      6164         -
-# 2  Extended offline    Completed without error       00%      6114         -
-# 3  Extended offline    Completed without error       00%      6044         -
-# 4  Extended offline    Completed without error       00%      5991         -
-# 5  Extended offline    Completed without error       00%      5932         -
-# 6  Extended offline    Completed without error       00%      5875         -
-# 7  Extended offline    Completed without error       00%      5830         -
-# 8  Extended offline    Completed without error       00%      5727         -
-# 9  Extended offline    Completed without error       00%      5684         -
-#10  Extended offline    Completed without error       00%      5610         -
+# 1  Extended offline    Completed without error       00%      9172         -
+# 2  Extended offline    Completed without error       00%      8021         -
+# 3  Extended offline    Interrupted (host reset)      70%      6164         -
+# 4  Extended offline    Completed without error       00%      6114         -
+# 5  Extended offline    Completed without error       00%      6044         -
+# 6  Extended offline    Completed without error       00%      5991         -
+# 7  Extended offline    Completed without error       00%      5932         -
+# 8  Extended offline    Completed without error       00%      5875         -
+# 9  Extended offline    Completed without error       00%      5830         -
+#10  Extended offline    Completed without error       00%      5727         -
+#11  Extended offline    Completed without error       00%      5684         -
+#12  Extended offline    Completed without error       00%      5610         -
 
 Selective Self-tests/Logging not supported
 
@@ -128,14 +182,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            2088  ---  Lifetime Power-On Resets
-0x01  0x010  4            7237  ---  Power-on Hours
-0x01  0x018  6      3982256748  ---  Logical Sectors Written
-0x01  0x020  6        94855779  ---  Number of Write Commands
-0x01  0x028  6      4057915714  ---  Logical Sectors Read
-0x01  0x030  6       135505452  ---  Number of Read Commands
+0x01  0x008  4            4572  ---  Lifetime Power-On Resets
+0x01  0x010  4           14753  ---  Power-on Hours
+0x01  0x018  6      4149836413  ---  Logical Sectors Written
+0x01  0x020  6       239691016  ---  Number of Write Commands
+0x01  0x028  6      2865844659  ---  Logical Sectors Read
+0x01  0x030  6       280743282  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -147,7 +201,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 
 
 

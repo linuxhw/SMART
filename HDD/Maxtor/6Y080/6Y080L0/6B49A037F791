@@ -7,7 +7,7 @@ User Capacity:    81,964,302,336 bytes [81.9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Wed Jun  2 18:10:29 2021 CEST
+Local Time is:    Fri Apr 15 16:32:17 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -52,28 +52,28 @@ recommended polling time: 	 (  37) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   226   225   063    -    10747
-  4 Start_Stop_Count        -O--CK   248   248   000    -    10594
-  5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    6
+  3 Spin_Up_Time            POS--K   226   225   063    -    10167
+  4 Start_Stop_Count        -O--CK   248   248   000    -    10640
+  5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    5
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   250   232   187    -    55179
-  9 Power_On_Minutes        -O--CK   176   176   000    -    452h+06m
+  8 Seek_Time_Performance   POS--K   248   232   187    -    41513
+  9 Power_On_Minutes        -O--CK   170   170   000    -    362h+24m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   223   223   000    -    12125
+ 12 Power_Cycle_Count       -O--CK   222   222   000    -    12608
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    42
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    868
+194 Temperature_Celsius     -O--CK   253   253   000    -    36
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1421
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
-197 Current_Pending_Sector  ---R--   253   253   000    -    1
+197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   251   251   000    -    2
-199 UDMA_CRC_Error_Count    ---R--   146   001   000    -    1861
+199 UDMA_CRC_Error_Count    ---R--   150   001   000    -    2191
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   251   000    -    7
+201 Soft_Read_Error_Rate    -O-R--   253   251   000    -    22
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    1
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
@@ -96,9 +96,7 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 2708 inconsistent with error log pointer 5
-
-ATA Error Count: 2708 (device log contains only the most recent five errors)
+ATA Error Count: 3110 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -113,90 +111,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2708 occurred at disk power-on lifetime: 24998 hours (1041 days + 14 hours)
+Error 3110 occurred at disk power-on lifetime: 26708 hours (1112 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 3c 80 53 01 f0  Error: UNC 60 sectors at LBA = 0x00015380 = 86912
+  84 51 00 b8 7c 24 e0  Error: ICRC, ABRT at LBA = 0x00247cb8 = 2391224
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 80 53 01 f0 00      00:54:17.600  READ DMA
-  c8 00 d5 58 37 3d f0 00      00:54:17.600  READ DMA
-  c8 00 80 00 53 01 f0 00      00:54:17.584  READ DMA
-  c8 00 80 80 52 01 f0 00      00:54:17.584  READ DMA
-  c8 00 80 00 52 01 f0 00      00:54:17.584  READ DMA
+  c8 00 00 b8 7c 24 e0 00      00:46:50.896  READ DMA
+  c8 00 00 b8 7b 24 e0 00      00:46:50.896  READ DMA
+  c8 00 00 b8 7a 24 e0 00      00:46:50.896  READ DMA
+  c8 00 00 b8 79 24 e0 00      00:46:50.880  READ DMA
+  c8 00 00 b8 78 24 e0 00      00:46:50.880  READ DMA
 
-Error 2707 occurred at disk power-on lifetime: 24457 hours (1019 days + 1 hours)
+Error 3109 occurred at disk power-on lifetime: 26645 hours (1110 days + 5 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 5f 26 4a f1  Error: ICRC, ABRT at LBA = 0x014a265f = 21636703
+  84 51 00 fa 18 4e e2  Error: ICRC, ABRT at LBA = 0x024e18fa = 38672634
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 5f 26 4a f1 00      00:22:19.504  READ DMA
-  c8 00 00 5f 25 4a f1 00      00:22:19.504  READ DMA
-  c8 00 00 5f 24 4a f1 00      00:22:19.504  READ DMA
-  c8 00 00 5f 23 4a f1 00      00:22:19.504  READ DMA
-  c8 00 00 5f 22 4a f1 00      00:22:19.504  READ DMA
+  c8 00 30 fa 18 4e e2 00      00:21:25.824  READ DMA
+  c8 00 80 a0 47 2a e1 00      00:21:25.824  READ DMA
+  c8 00 08 a0 b8 6d e0 00      00:21:25.808  READ DMA
+  c8 00 80 78 a6 3e e5 00      00:21:25.808  READ DMA
+  c8 00 08 90 5a 34 e5 00      00:21:25.792  READ DMA
 
-Error 2706 occurred at disk power-on lifetime: 24457 hours (1019 days + 1 hours)
+Error 3108 occurred at disk power-on lifetime: 26645 hours (1110 days + 5 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 5f 0e 4a f1  Error: ICRC, ABRT at LBA = 0x014a0e5f = 21630559
+  84 51 00 d8 a6 95 e2  Error: ICRC, ABRT at LBA = 0x0295a6d8 = 43362008
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 5f 0e 4a f1 00      00:22:19.376  READ DMA
-  c8 00 00 5f 0d 4a f1 00      00:22:19.376  READ DMA
-  c8 00 00 5f 0c 4a f1 00      00:22:19.360  READ DMA
-  c8 00 00 5f 0b 4a f1 00      00:22:19.360  READ DMA
-  c8 00 00 5f 0a 4a f1 00      00:22:19.360  READ DMA
+  c8 00 40 d8 a6 95 e2 00      00:21:25.136  READ DMA
+  c8 00 28 02 60 4e e2 00      00:21:25.120  READ DMA
+  c8 00 08 f0 10 31 e1 00      00:21:25.104  READ DMA
+  c8 00 08 f8 84 1c e1 00      00:21:25.104  READ DMA
+  c8 00 08 60 b4 6d e0 00      00:21:25.088  READ DMA
 
-Error 2705 occurred at disk power-on lifetime: 24457 hours (1019 days + 1 hours)
+Error 3107 occurred at disk power-on lifetime: 26645 hours (1110 days + 5 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 5f 02 48 f1  Error: ICRC, ABRT at LBA = 0x0148025f = 21496415
+  84 51 00 60 2f 95 e2  Error: ICRC, ABRT at LBA = 0x02952f60 = 43331424
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 5f 02 48 f1 00      00:22:18.368  READ DMA
-  c8 00 00 5f 01 48 f1 00      00:22:18.368  READ DMA
-  c8 00 00 5f 00 48 f1 00      00:22:18.368  READ DMA
-  c8 00 00 5f ff 47 f1 00      00:22:18.368  READ DMA
-  c8 00 00 5f fe 47 f1 00      00:22:18.368  READ DMA
+  c8 00 38 60 2f 95 e2 00      00:21:24.784  READ DMA
+  c8 00 40 7a da 4e e2 00      00:21:24.736  READ DMA
+  c8 00 08 18 73 35 e2 00      00:21:24.720  READ DMA
+  c8 00 10 98 3c 00 e2 00      00:21:24.720  READ DMA
+  c8 00 08 f0 e0 1f e1 00      00:21:24.704  READ DMA
 
-Error 2704 occurred at disk power-on lifetime: 24457 hours (1019 days + 1 hours)
+Error 3106 occurred at disk power-on lifetime: 26645 hours (1110 days + 5 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 5f 4f 47 f1  Error: ICRC, ABRT at LBA = 0x01474f5f = 21450591
+  84 51 00 7a da 4e e2  Error: ICRC, ABRT at LBA = 0x024eda7a = 38722170
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 5f 4f 47 f1 00      00:22:17.968  READ DMA
-  c8 00 00 5f 4e 47 f1 00      00:22:17.968  READ DMA
-  c8 00 00 5f 4d 47 f1 00      00:22:17.968  READ DMA
-  c8 00 00 5f 4c 47 f1 00      00:22:17.968  READ DMA
-  c8 00 00 5f 4b 47 f1 00      00:22:17.952  READ DMA
+  c8 00 40 7a da 4e e2 00      00:21:24.736  READ DMA
+  c8 00 08 18 73 35 e2 00      00:21:24.720  READ DMA
+  c8 00 10 98 3c 00 e2 00      00:21:24.720  READ DMA
+  c8 00 08 f0 e0 1f e1 00      00:21:24.704  READ DMA
+  c8 00 08 98 36 6e e0 00      00:21:24.704  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.18.xm1-1-xanmod-rosa2021.1-x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.11-generic-2rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Sep 10 20:29:20 2022 MSK
+Local Time is:    Wed Sep 28 05:59:55 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,27 +64,27 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    0
-  2 Throughput_Performance  -OS--K   055   055   000    -    11489
-  3 Spin_Up_Time            PO---K   092   088   025    -    2474
-  4 Start_Stop_Count        -O--CK   100   100   000    -    146
+  2 Throughput_Performance  -OS--K   055   055   000    -    11476
+  3 Spin_Up_Time            PO---K   092   088   025    -    2477
+  4 Start_Stop_Count        -O--CK   100   100   000    -    164
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1786
+  9 Power_On_Hours          -O--CK   100   100   000    -    2122
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    6
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    149
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    13
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    7
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    168
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    14
 192 Power-Off_Retract_Count -O---K   100   100   000    -    24
-194 Temperature_Celsius     -O----   064   055   000    -    32 (Min/Max 16/45)
+194 Temperature_Celsius     -O----   064   054   000    -    32 (Min/Max 16/46)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    2
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    303
-223 Load_Retry_Count        -O--CK   100   100   000    -    6
-225 Load_Cycle_Count        -O--CK   099   099   000    -    17954
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    4
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    306
+223 Load_Retry_Count        -O--CK   100   100   000    -    7
+225 Load_Cycle_Count        -O--CK   099   099   000    -    18418
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,7 +111,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 2
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,6 +126,40 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 1827 hours (76 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 70 00 00 74 70 6a 40 40 00  Error: ICRC, ABRT at LBA = 0x74706a40 = 1953524288
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 90 00 88 00 00 74 70 6a 48 40 00     00:00:00.023  READ FPDMA QUEUED
+  60 00 90 00 98 00 00 74 70 6b 68 40 00     00:00:00.024  READ FPDMA QUEUED
+  60 00 00 00 50 00 00 74 70 6b 10 40 00     00:00:00.024  READ FPDMA QUEUED
+  60 00 00 00 30 00 00 74 70 6a d8 40 00     00:00:00.024  READ FPDMA QUEUED
+  60 00 00 00 a8 00 00 74 70 6a 28 40 08     00:00:00.024  READ FPDMA QUEUED
+
+Error 3 [2] occurred at disk power-on lifetime: 1827 hours (76 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 20 00 00 00 00 00 02 40 00  Error: ICRC, ABRT 32 sectors at LBA = 0x00000002 = 2
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 20 00 00 00 00 00 02 40 00     00:00:00.121  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 01 40 00     00:00:00.121  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 40 00     00:00:00.120  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 40 00     00:00:00.120  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 40 00     00:00:00.120  READ DMA EXT
 
 Error 2 [1] occurred at disk power-on lifetime: 1690 hours (70 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -163,18 +197,20 @@ Error 1 [0] occurred at disk power-on lifetime: 1640 hours (68 days + 8 hours)
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      1772         -
-# 2  Extended offline    Interrupted (host reset)      90%      1626         -
-# 3  Extended offline    Interrupted (host reset)      90%      1625         -
-# 4  Extended offline    Completed without error       00%      1492         -
-# 5  Extended offline    Completed without error       00%      1243         -
-# 6  Extended offline    Completed without error       00%      1076         -
-# 7  Extended offline    Interrupted (host reset)      30%       944         -
-# 8  Extended offline    Interrupted (host reset)      30%       805         -
-# 9  Extended offline    Completed without error       00%       682         -
-#10  Extended offline    Completed without error       00%       515         -
-#11  Extended offline    Completed without error       00%       229         -
-#12  Short offline       Aborted by host               90%         3         -
+# 1  Extended offline    Completed without error       00%      2046         -
+# 2  Extended offline    Completed without error       00%      1919         -
+# 3  Extended offline    Completed without error       00%      1772         -
+# 4  Extended offline    Interrupted (host reset)      90%      1626         -
+# 5  Extended offline    Interrupted (host reset)      90%      1625         -
+# 6  Extended offline    Completed without error       00%      1492         -
+# 7  Extended offline    Completed without error       00%      1243         -
+# 8  Extended offline    Completed without error       00%      1076         -
+# 9  Extended offline    Interrupted (host reset)      30%       944         -
+#10  Extended offline    Interrupted (host reset)      30%       805         -
+#11  Extended offline    Completed without error       00%       682         -
+#12  Extended offline    Completed without error       00%       515         -
+#13  Extended offline    Completed without error       00%       229         -
+#14  Short offline       Aborted by host               90%         3         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -192,8 +228,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     19/40 Celsius
-Lifetime    Min/Max Temperature:     16/45 Celsius
+Power Cycle Min/Max Temperature:     19/44 Celsius
+Lifetime    Min/Max Temperature:     16/46 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -202,7 +238,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (107)
+Temperature History Size (Index):    128 (117)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -215,15 +251,15 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x0002  4           26  R_ERR response for data FIS
-0x0003  4           26  R_ERR response for device-to-host data FIS
+0x0002  4            0  R_ERR response for data FIS
+0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           59  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           57  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
@@ -231,23 +267,23 @@ ID      Size     Value  Description
 0x0012  4            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  4            0  R_ERR response for host-to-device non-data FIS, non-CRC
 0x8e00  4            0  Vendor specific
-0x8e01  4           26  Vendor specific
+0x8e01  4            0  Vendor specific
 0x8e02  4            0  Vendor specific
 0x8e03  4            0  Vendor specific
 0x8e04  4            0  Vendor specific
 0x8e05  4            0  Vendor specific
-0x8e06  4        59500  Vendor specific
-0x8e07  4     32215263  Vendor specific
-0x8e08  4       114407  Vendor specific
-0x8e09  4     35234626  Vendor specific
-0x8e0a  4     43075100  Vendor specific
-0x8e0b  4   3210143744  Vendor specific
-0x8e0c  4     28812109  Vendor specific
-0x8e0d  4     35234626  Vendor specific
-0x8e0e  4      2740723  Vendor specific
-0x8e0f  4    692627456  Vendor specific
-0x8e10  4     10962892  Vendor specific
-0x8e11  4           31  Vendor specific
+0x8e06  4            0  Vendor specific
+0x8e07  4            0  Vendor specific
+0x8e08  4            0  Vendor specific
+0x8e09  4            0  Vendor specific
+0x8e0a  4            0  Vendor specific
+0x8e0b  4            0  Vendor specific
+0x8e0c  4            0  Vendor specific
+0x8e0d  4            0  Vendor specific
+0x8e0e  4            0  Vendor specific
+0x8e0f  4            0  Vendor specific
+0x8e10  4            0  Vendor specific
+0x8e11  4            0  Vendor specific
 
 
 

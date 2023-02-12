@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-42-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.18.0-4mx-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     TOSHIBA THNSNK256GCS8 SATA 256GB
@@ -10,18 +10,19 @@ User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Aug 30 15:52:52 2020 CEST
+Local Time is:    Thu Dec  8 05:26:18 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -63,28 +64,28 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    100
-  9 Power_On_Hours          -O--C-   100   100   000    -    3321
- 12 Power_Cycle_Count       PO--CK   100   100   000    -    3726
+  9 Power_On_Hours          -O--C-   100   100   000    -    6270
+ 12 Power_Cycle_Count       PO--CK   100   100   000    -    8653
 166 Unknown_Attribute       -O--C-   100   100   000    -    0
 167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    38
-173 Unknown_Attribute       -O--C-   189   189   000    -    0
+168 Unknown_Attribute       -O--C-   100   100   000    -    66
+173 Unknown_Attribute       -O--C-   179   179   000    -    0
 175 Program_Fail_Count_Chip PO--CK   100   100   010    -    0
 176 Erase_Fail_Count_Chip   PO--CK   100   100   010    -    0
-177 Wear_Leveling_Count     PO--CK   089   089   010    -    0
+177 Wear_Leveling_Count     PO--CK   079   079   010    -    0
 178 Used_Rsvd_Blk_Cnt_Chip  PO--CK   100   100   010    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    100
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   010    -    100
 181 Program_Fail_Cnt_Total  PO--CK   100   100   010    -    100
 182 Erase_Fail_Count_Total  PO--CK   100   100   010    -    100
 187 Reported_Uncorrect      PO--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    284
-194 Temperature_Celsius     -O---K   070   053   000    -    30 (Min/Max 16/47)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    557
+194 Temperature_Celsius     -O---K   072   053   000    -    28 (Min/Max 16/47)
 195 Hardware_ECC_Recovered  PO-R-K   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--C-   100   100   000    -    0
-238 Unknown_Attribute       -O--CK   089   089   010    -    0
-241 Total_LBAs_Written      PO--C-   100   100   000    -    487518
-242 Total_LBAs_Read         PO--C-   100   100   000    -    481571
+238 Unknown_Attribute       -O--CK   079   079   010    -    0
+241 Total_LBAs_Written      PO--C-   100   100   000    -    1106735
+242 Total_LBAs_Read         PO--C-   100   100   000    -    979818
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -113,7 +114,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 38
+Device Error Count: 66
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -129,7 +130,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 38 [37] occurred at disk power-on lifetime: 3168 hours (132 days + 0 hours)
+Error 66 [65] occurred at disk power-on lifetime: 6239 hours (259 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -140,13 +141,13 @@ Error 38 [37] occurred at disk power-on lifetime: 3168 hours (132 days + 0 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:49:55.662  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:49:55.662  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:49:55.611  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:49:55.591  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:49:55.590  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.658  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:12.657  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:12.606  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.586  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.586  IDENTIFY DEVICE
 
-Error 37 [36] occurred at disk power-on lifetime: 3091 hours (128 days + 19 hours)
+Error 65 [64] occurred at disk power-on lifetime: 6239 hours (259 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -157,13 +158,13 @@ Error 37 [36] occurred at disk power-on lifetime: 3091 hours (128 days + 19 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:13.055  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:13.055  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:13.004  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.984  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.983  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:43.977  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:43.976  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:43.925  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:43.905  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:43.905  IDENTIFY DEVICE
 
-Error 36 [35] occurred at disk power-on lifetime: 3060 hours (127 days + 12 hours)
+Error 64 [63] occurred at disk power-on lifetime: 6238 hours (259 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -174,13 +175,13 @@ Error 36 [35] occurred at disk power-on lifetime: 3060 hours (127 days + 12 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:14:54.772  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:14:54.771  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:14:54.720  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:14:54.700  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:14:54.385  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:44:39.263  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:44:39.263  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:44:39.211  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:44:39.191  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:44:39.191  IDENTIFY DEVICE
 
-Error 35 [34] occurred at disk power-on lifetime: 2944 hours (122 days + 16 hours)
+Error 63 [62] occurred at disk power-on lifetime: 6220 hours (259 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -191,13 +192,13 @@ Error 35 [34] occurred at disk power-on lifetime: 2944 hours (122 days + 16 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.166  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:26.166  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:26.115  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.095  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:25.878  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.063  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:17.063  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:17.012  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:16.992  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:16.991  IDENTIFY DEVICE
 
-Error 34 [33] occurred at disk power-on lifetime: 2807 hours (116 days + 23 hours)
+Error 62 [61] occurred at disk power-on lifetime: 5649 hours (235 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -208,13 +209,13 @@ Error 34 [33] occurred at disk power-on lifetime: 2807 hours (116 days + 23 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:32.007  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:32.007  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:31.956  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:31.936  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:31.837  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:41.307  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:41.307  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:41.256  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:41.236  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:41.235  IDENTIFY DEVICE
 
-Error 33 [32] occurred at disk power-on lifetime: 2732 hours (113 days + 20 hours)
+Error 61 [60] occurred at disk power-on lifetime: 5648 hours (235 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -225,13 +226,13 @@ Error 33 [32] occurred at disk power-on lifetime: 2732 hours (113 days + 20 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:23.107  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:23.107  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:23.056  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:23.036  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:22.702  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:24.186  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:24.185  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:24.134  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:24.114  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:24.114  IDENTIFY DEVICE
 
-Error 32 [31] occurred at disk power-on lifetime: 2728 hours (113 days + 16 hours)
+Error 60 [59] occurred at disk power-on lifetime: 5483 hours (228 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -242,13 +243,13 @@ Error 32 [31] occurred at disk power-on lifetime: 2728 hours (113 days + 16 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:58.815  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:07:58.815  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:07:58.764  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:58.744  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:07:58.415  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:31:43.186  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     01:31:43.185  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     01:31:43.134  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:31:43.114  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     01:31:43.114  IDENTIFY DEVICE
 
-Error 31 [30] occurred at disk power-on lifetime: 2727 hours (113 days + 15 hours)
+Error 59 [58] occurred at disk power-on lifetime: 5431 hours (226 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -259,33 +260,33 @@ Error 31 [30] occurred at disk power-on lifetime: 2727 hours (113 days + 15 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:10:55.639  IDENTIFY DEVICE
-  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:10:55.639  [VENDOR SPECIFIC]
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:10:55.588  SET FEATURES [Disable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:10:55.568  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:10:55.242  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:28.096  IDENTIFY DEVICE
+  ff ff ff ff ff ff ff ff ff ff ff ff ff     00:00:28.095  [VENDOR SPECIFIC]
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:28.044  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:28.024  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:28.024  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3196         -
-# 2  Short offline       Completed without error       00%      3119         -
-# 3  Short offline       Completed without error       00%      3094         -
-# 4  Short offline       Completed without error       00%      3092         -
-# 5  Short offline       Completed without error       00%      3067         -
-# 6  Short offline       Interrupted (host reset)      00%      3032         -
-# 7  Short offline       Interrupted (host reset)      00%      2806         -
-# 8  Short offline       Aborted by host               00%      2728         -
-# 9  Short offline       Completed without error       00%      2722         -
-#10  Short offline       Interrupted (host reset)      00%      2680         -
-#11  Short offline       Completed without error       00%      2629         -
-#12  Short offline       Completed without error       00%      2599         -
-#13  Short offline       Completed without error       00%      2535         -
-#14  Short offline       Completed without error       00%      2478         -
-#15  Short offline       Aborted by host               00%      2417         -
-#16  Short offline       Interrupted (host reset)      00%      2352         -
-#17  Short offline       Completed without error       00%      2293         -
-#18  Short offline       Interrupted (host reset)      00%      2262         -
-#19  Short offline       Aborted by host               00%      2259         -
+# 1  Short offline       Completed without error       00%      6245         -
+# 2  Short offline       Completed without error       00%      6241         -
+# 3  Short offline       Completed without error       00%      6241         -
+# 4  Short offline       Aborted by host               00%      6239         -
+# 5  Short offline       Aborted by host               00%      6239         -
+# 6  Short offline       Interrupted (host reset)      00%      6238         -
+# 7  Short offline       Interrupted (host reset)      00%      6238         -
+# 8  Short offline       Interrupted (host reset)      00%      6238         -
+# 9  Short offline       Completed without error       00%      6227         -
+#10  Short offline       Completed without error       00%      6190         -
+#11  Short offline       Completed without error       00%      6145         -
+#12  Short offline       Completed without error       00%      6059         -
+#13  Short offline       Completed without error       00%      6058         -
+#14  Short offline       Completed without error       00%      5978         -
+#15  Short offline       Completed without error       00%      5849         -
+#16  Short offline       Interrupted (host reset)      00%      5627         -
+#17  Short offline       Interrupted (host reset)      00%      5541         -
+#18  Short offline       Interrupted (host reset)      00%      5518         -
+#19  Short offline       Completed without error       00%      5508         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -301,20 +302,20 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       3 (0x0003)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     26/30 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     21/37 Celsius
 Lifetime    Min/Max Temperature:     16/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 b4 00 04 00 01 01 00 05 05 00 00 00 00 12 54 80
-00 01 00 00 2c 79 b6 00 01 00 00 00 00 00 00 08
+00 01 00 00 0f 6e 58 01 10 00 00 00 00 00 00 08
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/80 Celsius
-Temperature History Size (Index):    128 (123)
+Temperature History Size (Index):    128 (60)
 
 SCT Error Recovery Control:
            Read:    600 (60.0 seconds)
@@ -323,33 +324,33 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            3726  ---  Lifetime Power-On Resets
-0x01  0x018  6     31950040644  ---  Logical Sectors Written
-0x01  0x020  6       255580914  ---  Number of Write Commands
-0x01  0x028  6     31560287355  ---  Logical Sectors Read
-0x01  0x030  6       284059689  ---  Number of Read Commands
+0x01  0x008  4            8653  ---  Lifetime Power-On Resets
+0x01  0x018  6     72531007442  ---  Logical Sectors Written
+0x01  0x020  6       469902502  ---  Number of Write Commands
+0x01  0x028  6     64213387585  ---  Logical Sectors Read
+0x01  0x030  6       614620063  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               5  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
+0x05  0x008  1              28  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              41  ---  Highest Temperature
-0x05  0x028  1              24  ---  Lowest Temperature
+0x05  0x028  1              22  ---  Lowest Temperature
 0x05  0x030  1               -  ---  Highest Average Short Term Temperature
 0x05  0x038  1               -  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
 0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
-0x05  0x050  4            1170  ---  Time in Over-Temperature
+0x05  0x050  4            1240  ---  Time in Over-Temperature
 0x05  0x058  1              40  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           20878  ---  Number of Hardware Resets
-0x06  0x018  4              38  ---  Number of Interface CRC Errors
+0x06  0x008  4           57677  ---  Number of Hardware Resets
+0x06  0x018  4              66  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              16  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              25  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -366,8 +367,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4        16709  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  4       139498  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.12
 Device Model:     ST31000528AS
@@ -10,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Aug 17 16:51:35 2020 WEST
+Local Time is:    Fri Jan 14 03:38:02 2022 MSK
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -24,14 +27,12 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
-SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: FAILED!
 Drive failure expected in less than 24 hours. SAVE ALL DATA.
-Warning: This result is based on an Attribute check.
 See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
@@ -71,28 +72,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   090   006    -    125567150
+  1 Raw_Read_Error_Rate     POSR--   114   090   006    -    225299489
   3 Spin_Up_Time            PO----   095   093   000    -    0
-  4 Start_Stop_Count        -O--CK   090   090   020    -    10508
+  4 Start_Stop_Count        -O--CK   088   088   020    -    12893
   5 Reallocated_Sector_Ct   PO--CK   003   003   036    NOW  3998
-  7 Seek_Error_Rate         POSR--   070   060   030    -    12086545
-  9 Power_On_Hours          -O--CK   089   089   000    -    10005
+  7 Seek_Error_Rate         POSR--   072   060   030    -    20709111
+  9 Power_On_Hours          -O--CK   082   082   000    -    16566
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5931
-183 Runtime_Bad_Block       -O--CK   001   001   000    -    23244
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    7118
+183 Runtime_Bad_Block       -O--CK   001   001   000    -    23762
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   085   085   000    -    15
-188 Command_Timeout         -O--CK   100   072   000    -    137444786539
+187 Reported_Uncorrect      -O--CK   078   078   000    -    22
+188 Command_Timeout         -O--CK   100   072   000    -    171805049214
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   048   046   045    -    52 (Min/Max 46/52)
-194 Temperature_Celsius     -O---K   052   054   000    -    52 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   042   023   000    -    125567150
+190 Airflow_Temperature_Cel -O---K   066   042   045    Past 34 (1 214 35 34 0)
+194 Temperature_Celsius     -O---K   034   058   000    -    34 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   044   023   000    -    225299489
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   189   000    -    852
-240 Head_Flying_Hours       ------   100   253   000    -    17073 (192 35 0)
-241 Total_LBAs_Written      ------   100   253   000    -    186172383
-242 Total_LBAs_Read         ------   100   253   000    -    4165614982
+199 UDMA_CRC_Error_Count    -OSRCK   200   189   000    -    1390
+240 Head_Flying_Hours       ------   100   253   000    -    25379 (27 137 0)
+241 Total_LBAs_Written      ------   100   253   000    -    1061824726
+242 Total_LBAs_Read         ------   100   253   000    -    1410632352
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -127,7 +128,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 363 (device log contains only the most recent 20 errors)
+Device Error Count: 1159 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -143,163 +144,163 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 363 [2] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1159 [18] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00  Device Fault; Error: ABRT
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:33:26.436  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:33:26.435  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:33:26.276  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:33:25.957  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:31:50.065  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:14.693  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:14.693  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:14.538  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:13.830  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:13.773  IDENTIFY PACKET DEVICE
 
-Error 362 [1] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1158 [17] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:33:26.435  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:33:26.276  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:33:25.957  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:31:50.065  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:31:48.689  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:14.693  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:14.538  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:13.830  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:13.773  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:13.773  IDENTIFY DEVICE
 
-Error 361 [0] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1157 [16] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 04 00 00 00 00 32 91 a0 00     01:31:34.108  IDENTIFY DEVICE
-  a1 00 00 00 01 00 00 00 00 00 01 a0 00     01:31:33.706  IDENTIFY PACKET DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:23.863  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:23.614  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.564  IDENTIFY PACKET DEVICE
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:13.773  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:13.773  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:13.618  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:12.897  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:12.840  IDENTIFY PACKET DEVICE
 
-Error 360 [19] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1156 [15] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00  Device Fault; Error: ABRT
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 01 00 00 00 00 00 01 a0 00     01:31:33.706  IDENTIFY PACKET DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:23.863  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:23.614  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.564  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.563  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:13.773  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:13.618  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:12.897  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:12.840  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:12.840  IDENTIFY DEVICE
 
-Error 359 [18] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1155 [14] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00  Device Fault; Error: ABRT
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.564  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.563  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:31:13.404  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:13.088  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.064  IDENTIFY PACKET DEVICE
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:12.840  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:12.840  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:12.685  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:11.965  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:11.906  IDENTIFY PACKET DEVICE
 
-Error 358 [17] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1154 [13] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.563  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:31:13.404  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:13.088  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.064  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.063  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:12.840  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:12.685  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:11.965  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:11.906  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:11.906  IDENTIFY DEVICE
 
-Error 357 [16] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1153 [12] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00  Device Fault; Error: ABRT
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.064  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.063  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:31:12.904  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:12.589  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:12.564  IDENTIFY PACKET DEVICE
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:11.906  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:11.906  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:11.752  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:11.041  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:10.983  IDENTIFY PACKET DEVICE
 
-Error 356 [15] occurred at disk power-on lifetime: 5552 hours (231 days + 8 hours)
+Error 1152 [11] occurred at disk power-on lifetime: 16563 hours (690 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 71 00 04 00 00 00 00 32 91 e0 00
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:13.063  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     01:31:12.904  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     01:31:12.589  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:12.564  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:31:12.563  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:11.906  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     12:39:11.752  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:39:11.041  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:10.983  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     12:39:10.983  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: unknown failure    90%      9621         0
-# 2  Extended offline    Completed: unknown failure    90%      9352         0
-# 3  Short offline       Completed: unknown failure    90%      8818         0
-# 4  Extended offline    Completed: unknown failure    90%      8655         0
-# 5  Short offline       Completed: unknown failure    90%      8614         0
-# 6  Short offline       Completed: unknown failure    90%      7468         0
-# 7  Short offline       Completed: unknown failure    90%      6834         0
-# 8  Short offline       Completed: unknown failure    90%      6680         0
-# 9  Short offline       Completed: unknown failure    90%      6661         0
-#10  Short offline       Completed: unknown failure    90%      6650         0
-#11  Short offline       Completed: unknown failure    90%      6621         0
-#12  Short offline       Completed: unknown failure    90%      6608         0
-#13  Short offline       Completed: unknown failure    90%      6563         0
-#14  Short offline       Completed: unknown failure    90%      6537         0
-#15  Short offline       Completed: unknown failure    90%      6496         0
-#16  Short offline       Completed: unknown failure    90%      6451         0
-#17  Short offline       Completed: unknown failure    90%      6435         0
-#18  Extended offline    Completed: unknown failure    90%      6417         0
-#19  Short offline       Completed: unknown failure    90%      6380         0
+# 1  Extended offline    Completed: unknown failure    90%     16523         0
+# 2  Short offline       Completed: unknown failure    90%     16323         0
+# 3  Short offline       Completed: unknown failure    90%     15968         0
+# 4  Extended offline    Completed: unknown failure    90%     15950         0
+# 5  Short offline       Completed: unknown failure    90%     15870         0
+# 6  Short offline       Completed: unknown failure    90%     15833         0
+# 7  Short offline       Completed: unknown failure    90%     15769         0
+# 8  Short offline       Completed: unknown failure    90%     15754         0
+# 9  Short offline       Completed: unknown failure    90%     15693         0
+#10  Short offline       Completed: unknown failure    90%     15651         0
+#11  Short offline       Completed: unknown failure    90%     15617         0
+#12  Short offline       Completed: unknown failure    90%     15585         0
+#13  Short offline       Completed: unknown failure    90%     15532         0
+#14  Extended offline    Completed: unknown failure    90%     15531         0
+#15  Short offline       Completed: unknown failure    90%     15530         0
+#16  Short offline       Completed: unknown failure    90%     15485         0
+#17  Short offline       Completed: unknown failure    90%     15345         0
+#18  Short offline       Completed: unknown failure    90%     14470         0
+#19  Short offline       Completed: unknown failure    90%     13936         0
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -315,9 +316,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    52 Celsius
-Power Cycle Min/Max Temperature:     46/52 Celsius
-Lifetime    Min/Max Temperature:     17/54 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     34/35 Celsius
+Lifetime    Min/Max Temperature:     17/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -325,10 +326,11 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (80)
+Temperature History Size (Index):    128 (90)
 
-SMART WRITE LOG does not return COUNT and LBA_LOW register
-SCT (Get) Error Recovery Control command failed
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -336,7 +338,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

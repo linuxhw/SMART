@@ -1,6 +1,3 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.118-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
-
 === START OF INFORMATION SECTION ===
 Device Model:     SSDPR-CX400-512-G2
 Serial Number:    --
@@ -10,11 +7,10 @@ User Capacity:    512,110,190,592 bytes [512 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Aug  8 12:00:18 2022 +07
+Local Time is:    Fri Aug 19 15:03:14 2022 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +18,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,22 +61,22 @@ SMART Attributes Data Structure revision number: 20
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    1741
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    295
-164 Unknown_Attribute       -O--C-   200   200   000    -    16987
-165 Unknown_Attribute       -O--CK   200   200   000    -    82
+  9 Power_On_Hours          -O--C-   100   100   000    -    1827
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    318
+164 Unknown_Attribute       -O--C-   200   200   000    -    17585
+165 Unknown_Attribute       -O--CK   200   200   000    -    85
 166 Unknown_Attribute       -O--CK   200   200   000    -    8
-167 Unknown_Attribute       -O--CK   200   200   000    -    38
+167 Unknown_Attribute       -O--CK   200   200   000    -    39
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 190 Airflow_Temperature_Cel -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   028   028   000    -    28 (Min/Max 14/48)
+194 Temperature_Celsius     -O---K   040   040   000    -    40 (Min/Max 14/48)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--C-   100   100   000    -    0
 232 Available_Reservd_Space -O--CK   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    175456
-242 Total_LBAs_Read         -O--CK   100   100   000    -    334246
+241 Total_LBAs_Written      -O--CK   100   100   000    -    184151
+242 Total_LBAs_Read         -O--CK   100   100   000    -    348270
 245 Unknown_Attribute       -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -278,8 +274,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:      ?/26 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:      ?/43 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -288,20 +284,20 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (417)
+Temperature History Size (Index):    478 (406)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             295  ---  Lifetime Power-On Resets
-0x01  0x010  4            1741  ---  Power-on Hours
-0x01  0x018  6     11498689543  ---  Logical Sectors Written
-0x01  0x020  6       200134230  ---  Number of Write Commands
-0x01  0x028  6     21905185112  ---  Logical Sectors Read
-0x01  0x030  6       332245254  ---  Number of Read Commands
-0x01  0x038  6   1603995498712  ---  Date and Time TimeStamp
+0x01  0x008  4             318  ---  Lifetime Power-On Resets
+0x01  0x010  4            1827  ---  Power-on Hours
+0x01  0x018  6     12068556633  ---  Logical Sectors Written
+0x01  0x020  6       210403996  ---  Number of Write Commands
+0x01  0x028  6     22824241261  ---  Logical Sectors Read
+0x01  0x030  6       348507140  ---  Number of Read Commands
+0x01  0x038  6   1681598971540  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               3  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -319,7 +315,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

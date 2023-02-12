@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jan 22 09:09:00 2023 CET
+Local Time is:    Tue Jan 24 09:06:03 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,9 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  32)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(65535) seconds.
 Offline data collection
@@ -57,8 +56,8 @@ recommended polling time: 	 (   6) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--CK   100   100   000    -    565
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1551
+  9 Power_On_Hours          -O--CK   100   100   000    -    574
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1583
 163 Unknown_Attribute       -O--CK   100   100   000    -    9
 164 Unknown_Attribute       -O--CK   100   100   000    -    4
 166 Unknown_Attribute       -O--CK   100   100   000    -    0
@@ -67,10 +66,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
 175 Program_Fail_Count_Chip -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    109
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    130
 194 Temperature_Celsius     -O---K   067   067   058    -    33 (Min/Max 33/33)
 231 Temperature_Celsius     -O--C-   100   100   000    -    99
-241 Total_LBAs_Written      -O--CK   100   100   000    -    4264971021
+241 Total_LBAs_Written      -O--CK   100   100   000    -    4416501214
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,16 +98,19 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       553         -
-# 2  Short offline       Completed without error       00%       526         -
-# 3  Short offline       Aborted by host               00%       480         -
-# 4  Short offline       Completed without error       00%       462         -
-# 5  Short offline       Completed without error       00%       439         -
-# 6  Short offline       Completed without error       00%       423         -
-# 7  Short offline       Completed without error       00%       410         -
-# 8  Short offline       Completed without error       00%       400         -
-# 9  Short offline       Completed without error       00%       348         -
-#10  Short offline       Completed without error       00%       295         -
+# 1  Short offline       Interrupted (host reset)      00%       573         -
+# 2  Short offline       Completed without error       00%       571         -
+# 3  Short offline       Completed without error       00%       566         -
+# 4  Short offline       Completed without error       00%       553         -
+# 5  Short offline       Completed without error       00%       526         -
+# 6  Short offline       Aborted by host               00%       480         -
+# 7  Short offline       Completed without error       00%       462         -
+# 8  Short offline       Completed without error       00%       439         -
+# 9  Short offline       Completed without error       00%       423         -
+#10  Short offline       Completed without error       00%       410         -
+#11  Short offline       Completed without error       00%       400         -
+#12  Short offline       Completed without error       00%       348         -
+#13  Short offline       Completed without error       00%       295         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -127,10 +129,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1551  ---  Lifetime Power-On Resets
-0x01  0x010  4             565  ---  Power-on Hours
-0x01  0x018  6      4264971021  ---  Logical Sectors Written
-0x01  0x028  6      7487827819  ---  Logical Sectors Read
+0x01  0x008  4            1583  ---  Lifetime Power-On Resets
+0x01  0x010  4             574  ---  Power-on Hours
+0x01  0x018  6      4416501214  ---  Logical Sectors Written
+0x01  0x028  6      7510111890  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -138,7 +140,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6236  ---  Number of Hardware Resets
+0x06  0x008  4            6341  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -156,7 +158,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            9  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4            8  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

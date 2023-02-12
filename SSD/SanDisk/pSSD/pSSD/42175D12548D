@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.11-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SanDisk based SSDs
@@ -11,10 +11,11 @@ User Capacity:    62,742,792,192 bytes [62.7 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      1.8 inches
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 2d
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Jul 29 21:24:52 2021 +05
+Local Time is:    Thu Nov  3 23:24:45 2022 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,18 +61,18 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    516
- 12 Power_Cycle_Count       -O----   100   100   000    -    751
+  9 Power_On_Hours          -O----   100   100   000    -    982
+ 12 Power_Cycle_Count       -O----   100   100   000    -    2454
 171 Program_Fail_Count      -O----   100   100   000    -    0
 172 Erase_Fail_Count        -O----   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O----   100   100   000    -    1
-174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    57
+173 Avg_Write/Erase_Count   -O----   100   100   000    -    2
+174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    93
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-230 Perc_Write/Erase_Count  -O----   100   100   000    -    3
+230 Perc_Write/Erase_Count  -O----   100   100   000    -    6
 232 Perc_Avail_Resrvd_Space PO----   100   100   005    -    0
 234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    7
-241 Total_LBAs_Written      -O----   100   100   000    -    219869398
-242 Total_LBAs_Read         -O----   100   100   000    -    124445091
+241 Total_LBAs_Written      -O----   100   100   000    -    404350182
+242 Total_LBAs_Read         -O----   100   100   000    -    382678789
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -104,7 +105,8 @@ No Errors Logged
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       90%       537         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -126,7 +128,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              63  ---  Highest Temperature
-0x05  0x028  1              48  ---  Lowest Temperature
+0x05  0x028  1              47  ---  Lowest Temperature
 0x05  0x030  1              52  ---  Highest Average Short Term Temperature
 0x05  0x038  1              52  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -154,6 +156,4 @@ ID      Size     Value  Description
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error
-
-
 

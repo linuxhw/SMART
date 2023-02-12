@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.18-1-MANJARO] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.4.95-1-MANJARO] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar SE16 Serial ATA
@@ -10,7 +10,7 @@ User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Nov 20 10:58:08 2020 MSK
+Local Time is:    Thu Feb 18 17:25:02 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -26,8 +26,8 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -63,16 +63,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   198   178   021    -    5066
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8702
+  3 Spin_Up_Time            PO----   196   178   021    -    5158
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8842
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   044   044   000    -    41031
+  9 Power_On_Hours          -O--CK   043   043   000    -    42040
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6937
-190 Airflow_Temperature_Cel -O---K   062   045   045    Past 38
-194 Temperature_Celsius     -O---K   112   095   000    -    38
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7072
+190 Airflow_Temperature_Cel -O---K   065   045   045    Past 35
+194 Temperature_Celsius     -O---K   115   095   000    -    35
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -170,10 +170,11 @@ Error 1 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     34860         -
-# 2  Conveyance offline  Completed without error       00%      6687         -
-# 3  Short offline       Completed without error       00%      4303         -
-# 4  Extended offline    Aborted by host               90%      4303         -
+# 1  Short offline       Completed without error       00%     41958         -
+# 2  Short offline       Completed without error       00%     34860         -
+# 3  Conveyance offline  Completed without error       00%      6687         -
+# 4  Short offline       Completed without error       00%      4303         -
+# 5  Extended offline    Aborted by host               90%      4303         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -188,9 +189,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     --/38 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     --/36 Celsius
 Lifetime    Min/Max Temperature:     --/59 Celsius
 
 SCT Temperature History Version:     2
@@ -198,7 +199,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (5)
+Temperature History Size (Index):    128 (49)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -211,8 +212,8 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         2343  Vendor specific
+0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        27639  Vendor specific
 
 
 

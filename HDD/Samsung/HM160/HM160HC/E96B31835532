@@ -1,5 +1,5 @@
-smartctl 6.6 2016-05-31 r4324 [x86_64-linux-4.15.0-192-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-47-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint M5
@@ -12,14 +12,15 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 0
 Transport Type:   Parallel, Unknown (0x00f)
-Local Time is:    Sun Sep 18 11:49:57 2022 EDT
+Local Time is:    Mon Sep 19 13:15:48 2022 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
+AAM level is:     254 (maximum performance), recommended: 254
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  ENABLED, PW level MAX, not locked, frozen [SEC6]
+DSN feature is:   Unavailable
+ATA Security is:  ENABLED, PW level HIGH, not locked, frozen [SEC6]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -60,19 +61,19 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    3
-  3 Spin_Up_Time            POS---   252   252   025    -    2125
-  4 Start_Stop_Count        -O--CK   100   100   000    -    759
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    1
+  3 Spin_Up_Time            POS---   252   252   025    -    2062
+  4 Start_Stop_Count        -O--CK   100   100   000    -    772
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    5
   7 Seek_Error_Rate         -OSR--   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   086   086   000    -    7645
+  9 Power_On_Hours          -O--CK   085   085   000    -    7669
  10 Spin_Retry_Count        -O--CK   100   100   051    -    1
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    475
-191 G-Sense_Error_Rate      -O--CK   091   091   000    -    99384
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    190
-194 Temperature_Celsius     -O---K   127   094   000    -    37 (Min/Max 14/51)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    44
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    488
+191 G-Sense_Error_Rate      -O--CK   089   089   000    -    119899
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    203
+194 Temperature_Celsius     -O---K   130   094   000    -    36 (Min/Max 14/51)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    22
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--C-   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
@@ -80,7 +81,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    18
 201 Soft_Read_Error_Rate    -O--CK   252   252   000    -    0
 223 Load_Retry_Count        -O--CK   100   100   000    -    21
-225 Load_Cycle_Count        -O--CK   100   100   000    -    720
+225 Load_Cycle_Count        -O--CK   100   100   000    -    757
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -242,10 +243,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     22/37 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     35/38 Celsius
 Lifetime    Min/Max Temperature:     15/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -254,13 +254,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     15/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (125)
+Temperature History Size (Index):    128 (35)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

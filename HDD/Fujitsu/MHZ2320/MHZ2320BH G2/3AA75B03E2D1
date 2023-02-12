@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Wed Sep 22 15:12:09 2021 EEST
+Local Time is:    Sat Sep 25 11:38:50 2021 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -20,7 +20,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -30,8 +30,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 246)	Self-test routine in progress...
-					60% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		( 1298) seconds.
 Offline data collection
@@ -60,35 +61,35 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    256317
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    41686
   2 Throughput_Performance  P-S---   100   100   030    -    60096512
   3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   099   099   000    -    3963
+  4 Start_Stop_Count        -O--CK   099   099   000    -    3972
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  7 Seek_Error_Rate         POSR--   100   100   047    -    1351
+  7 Seek_Error_Rate         POSR--   100   100   047    -    2193
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Hours          -O--CK   077   077   000    -    11870
+  9 Power_On_Hours          -O--CK   077   077   000    -    11883
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
  11 Calibration_Retry_Count -O--CK   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3804
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3813
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   253   253   097    -    0
-185 Unknown_Attribute       ----C-   253   253   000    -    0
+185 Unknown_Attribute       ----C-   100   100   000    -    4
 186 Unknown_Attribute       -O--CK   253   253   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    781684047872
 188 Command_Timeout         -O--CK   100   099   000    -    6
-189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   053   033   000    -    47 (Min/Max 20/48 #546)
+189 High_Fly_Writes         -O-RCK   253   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   067   033   000    -    33 (2 34 33 22 0)
 191 G-Sense_Error_Rate      -O--CK   253   253   000    -    16580608
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1966110
-193 Load_Cycle_Count        -O--CK   096   096   000    -    92083
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    777
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    2162721
+193 Load_Cycle_Count        -O--CK   096   096   000    -    92092
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    120
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 6091)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   253   000    -    0
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    29952
-203 Run_Out_Cancel          -O----   100   100   000    -    3728068115755
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    13704
+203 Run_Out_Cancel          -O----   100   100   000    -    1533258433375
 240 Head_Flying_Hours       -OSRCK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -118,7 +119,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     11858         -
+# 1  Extended offline    Completed without error       00%     11872         -
+# 2  Short offline       Completed without error       00%     11858         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -133,9 +135,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
-Device State:                        DST executing in background (3)
-Current Temperature:                    50 Celsius
-Power Cycle Min/Max Temperature:     22/50 Celsius
+Device State:                        Active (0)
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     24/35 Celsius
 Lifetime    Min/Max Temperature:      9/72 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -144,7 +146,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (58)
+Temperature History Size (Index):    478 (378)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -163,7 +165,7 @@ ID      Size     Value  Description
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4        14004  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4          741  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS

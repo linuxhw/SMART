@@ -7,13 +7,14 @@ User Capacity:    40,981,069,312 bytes [40.9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 0
-Local Time is:    Fri May  7 21:40:54 2021 CEST
+Local Time is:    Thu Oct 21 17:03:14 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     192 (intermediate), recommended: 192
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Disabled
+DSN feature is:   Unavailable
 ATA Security is:  Unavailable
 Wt Cache Reorder: Unavailable
 
@@ -24,9 +25,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  34)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(   30) seconds.
 Offline data collection
@@ -51,28 +51,28 @@ recommended polling time: 	 (  27) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   234   232   063    -    4098
-  4 Start_Stop_Count        -O--CK   252   252   000    -    3103
-  5 Reallocated_Sector_Ct   PO--CK   241   240   063    -    32
+  3 Spin_Up_Time            POS--K   235   232   063    -    4562
+  4 Start_Stop_Count        -O--CK   252   252   000    -    3112
+  5 Reallocated_Sector_Ct   PO--CK   191   191   063    -    157
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   247   226   187    -    50992
-  9 Power_On_Minutes        -O--CK   232   232   000    -    999h+46m
+  8 Seek_Time_Performance   POS--K   252   226   187    -    37350
+  9 Power_On_Minutes        -O--CK   229   229   000    -    978h+07m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   231   231   000    -    8993
+ 12 Power_Cycle_Count       -O--CK   229   229   000    -    9572
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    276
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    134
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   252   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   130   001   000    -    3719
+199 UDMA_CRC_Error_Count    ---R--   001   001   000    -    3719
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    23
-202 Data_Address_Mark_Errs  -O-R--   253   217   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    2
+201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    101
+202 Data_Address_Mark_Errs  -O-R--   253   159   000    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    0
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
@@ -95,7 +95,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 32295 (device log contains only the most recent five errors)
+Warning: ATA error count 34437 inconsistent with error log pointer 5
+
+ATA Error Count: 34437 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -110,7 +112,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 32295 occurred at disk power-on lifetime: 7081 hours (295 days + 1 hours)
+Error 34437 occurred at disk power-on lifetime: 8084 hours (336 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -121,64 +123,13 @@ Error 32295 occurred at disk power-on lifetime: 7081 hours (295 days + 1 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 10 08      00:07:33.728  SMART READ LOG
-  b0 da 00 00 4f c2 10 08      00:07:33.680  SMART RETURN STATUS
-  b0 d1 01 01 4f c2 10 08      00:07:33.664  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 d0 01 00 4f c2 10 08      00:07:33.616  SMART READ DATA
-  ec 00 01 00 00 00 10 08      00:07:33.616  IDENTIFY DEVICE
+  b0 d5 01 00 4f c2 10 08      00:09:31.776  SMART READ LOG
+  b0 da 00 00 4f c2 10 08      00:09:31.744  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 10 08      00:09:31.712  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 d0 01 00 4f c2 10 08      00:09:31.664  SMART READ DATA
+  ec 00 01 00 00 00 10 08      00:09:31.648  IDENTIFY DEVICE
 
-Error 32294 occurred at disk power-on lifetime: 7081 hours (295 days + 1 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 0b 4f c2 b0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 4f c2 b0 08      00:02:20.400  SMART DISABLE OPERATIONS
-  ec 20 3f 01 00 00 b0 08      00:02:20.400  IDENTIFY DEVICE
-  10 20 3f 01 00 01 b0 08      00:02:20.384  RECALIBRATE [OBS-4]
-  91 20 3f 01 00 01 bf 08      00:02:20.384  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 03 44 01 00 01 b0 00      00:02:20.384  IDENTIFY DEVICE
-
-Error 32293 occurred at disk power-on lifetime: 7081 hours (295 days + 1 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 0b 4f c2 b0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 4f c2 b0 08      00:03:24.816  SMART DISABLE OPERATIONS
-  ec 20 3f 01 00 00 b0 08      00:03:24.816  IDENTIFY DEVICE
-  10 20 3f 01 00 01 b0 08      00:03:24.800  RECALIBRATE [OBS-4]
-  91 20 3f 01 00 01 bf 08      00:03:24.800  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 03 44 01 00 01 b0 00      00:03:24.784  IDENTIFY DEVICE
-
-Error 32292 occurred at disk power-on lifetime: 7081 hours (295 days + 1 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 0b 4f c2 b0  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 4f c2 b0 08      00:02:18.512  SMART DISABLE OPERATIONS
-  ec 20 3f 01 00 00 b0 08      00:02:18.512  IDENTIFY DEVICE
-  10 20 3f 01 00 01 b0 08      00:02:18.496  RECALIBRATE [OBS-4]
-  91 20 3f 01 00 01 bf 08      00:02:18.496  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 03 44 01 00 01 b0 00      00:02:18.496  IDENTIFY DEVICE
-
-Error 32291 occurred at disk power-on lifetime: 7081 hours (295 days + 1 hours)
+Error 34436 occurred at disk power-on lifetime: 8084 hours (336 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -189,11 +140,62 @@ Error 32291 occurred at disk power-on lifetime: 7081 hours (295 days + 1 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  2f 00 01 25 00 00 b0 00      00:04:42.960  READ LOG EXT
-  ef 02 00 00 00 00 b0 00      00:04:42.960  SET FEATURES [Enable write cache]
-  f5 00 00 00 00 00 b0 00      00:04:42.944  SECURITY FREEZE LOCK
-  ef 66 00 00 00 00 b0 00      00:04:42.944  SET FEATURES [Disable revert defaults]
-  f5 00 00 00 00 00 b0 00      00:04:42.896  SECURITY FREEZE LOCK
+  2f 00 01 25 00 00 b0 00      00:02:23.888  READ LOG EXT
+  ef 02 00 00 00 00 b0 00      00:02:23.888  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 b0 00      00:02:23.872  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 b0 00      00:02:23.872  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 b0 00      00:02:23.840  SECURITY FREEZE LOCK
+
+Error 34435 occurred at disk power-on lifetime: 8084 hours (336 days + 20 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 00 00 00 00 b0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  f5 00 00 00 00 00 b0 00      00:02:23.872  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 b0 00      00:02:23.872  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 b0 00      00:02:23.840  SECURITY FREEZE LOCK
+  c6 00 10 00 00 00 b0 00      00:02:23.520  SET MULTIPLE MODE
+  ef 03 45 00 00 00 b0 00      00:02:23.520  SET FEATURES [Set transfer mode]
+
+Error 34434 occurred at disk power-on lifetime: 8084 hours (336 days + 20 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 00 00 00 00 b0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  f5 00 00 00 00 00 b0 00      00:02:23.840  SECURITY FREEZE LOCK
+  c6 00 10 00 00 00 b0 00      00:02:23.520  SET MULTIPLE MODE
+  ef 03 45 00 00 00 b0 00      00:02:23.520  SET FEATURES [Set transfer mode]
+  ef 03 0c 00 00 00 b0 00      00:02:23.520  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 b0 00      00:02:23.504  IDENTIFY DEVICE
+
+Error 34433 occurred at disk power-on lifetime: 8084 hours (336 days + 20 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 25 00 00 b0  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  2f 00 01 25 00 00 b0 00      00:02:25.632  READ LOG EXT
+  ef 02 00 00 00 00 b0 00      00:02:25.632  SET FEATURES [Enable write cache]
+  f5 00 00 00 00 00 b0 00      00:02:25.616  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 b0 00      00:02:25.616  SET FEATURES [Disable revert defaults]
+  f5 00 00 00 00 00 b0 00      00:02:25.584  SECURITY FREEZE LOCK
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -211,6 +213,8 @@ Selective Self-tests/Logging not supported
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

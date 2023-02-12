@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.118-generic-2rosa2021.1-x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.155-generic-1rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Jul 30 22:32:24 2022 MSK
+Local Time is:    Sun Dec 11 04:32:44 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -33,9 +33,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  16)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
@@ -65,19 +64,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    5
-  9 Power_On_Hours          -O--CK   098   098   000    -    5865
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    979
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    25
+  9 Power_On_Hours          -O--CK   098   098   000    -    6270
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1044
+177 Wear_Leveling_Count     PO--C-   099   099   000    -    28
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   099   099   010    -    5
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   099   099   010    -    5
 187 Uncorrectable_Error_Cnt -O--CK   099   099   000    -    22
-190 Airflow_Temperature_Cel -O--CK   065   057   000    -    35
+190 Airflow_Temperature_Cel -O--CK   071   057   000    -    29
 195 ECC_Error_Rate          -O-RC-   199   199   000    -    22
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    31
-241 Total_LBAs_Written      -O--CK   099   099   000    -    6142587233
+235 POR_Recovery_Count      -O--C-   099   099   000    -    32
+241 Total_LBAs_Written      -O--CK   099   099   000    -    6591952665
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,16 +111,19 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      5860         -
-# 2  Extended offline    Completed: read failure       00%      4647         1830424
-# 3  Extended offline    Completed: read failure       00%      3838         18819608
-# 4  Extended offline    Completed: read failure       00%      2666         18819608
-# 5  Extended offline    Completed: read failure       00%      1919         18819608
-# 6  Extended offline    Completed: read failure       00%      1847         18819608
-# 7  Extended offline    Completed without error       00%      1669         -
-# 8  Extended offline    Completed without error       00%      1365         -
-# 9  Extended offline    Completed without error       00%       469         -
-5 of 5 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Aborted by host               00%      6243         -
+# 2  Extended offline    Completed without error       00%      6210         -
+# 3  Extended offline    Completed without error       00%      5997         -
+# 4  Extended offline    Completed without error       00%      5860         -
+# 5  Extended offline    Completed: read failure       00%      4647         1830424
+# 6  Extended offline    Completed: read failure       00%      3838         18819608
+# 7  Extended offline    Completed: read failure       00%      2666         18819608
+# 8  Extended offline    Completed: read failure       00%      1919         18819608
+# 9  Extended offline    Completed: read failure       00%      1847         18819608
+#10  Extended offline    Completed without error       00%      1669         -
+#11  Extended offline    Completed without error       00%      1365         -
+#12  Extended offline    Completed without error       00%       469         -
+5 of 5 failed self-tests are outdated by newer successful extended offline self-test # 2
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -137,17 +139,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
+Current Temperature:                    29 Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
-Under/Over Temperature Limit Count:   0/34742
+Under/Over Temperature Limit Count:   0/37150
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    128 (18)
+Temperature History Size (Index):    128 (59)
 
 SCT Error Recovery Control:
            Read: Disabled

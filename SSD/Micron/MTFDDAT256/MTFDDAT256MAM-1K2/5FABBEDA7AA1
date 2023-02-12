@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.10.2-051002-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.0-051200rc5-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     MTFDDAT256MAM-1K2
@@ -10,10 +10,11 @@ User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      < 1.8 inches
+TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Jan  2 18:15:04 2021 CET
+Local Time is:    Fri Apr  9 17:02:15 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,17 +67,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    8192
-  9 Power_On_Hours          -O--CK   100   100   000    -    40077
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2650
+  9 Power_On_Hours          -O--CK   100   100   000    -    40508
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2708
 170 Unknown_Attribute       PO--CK   100   100   010    -    2
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    1
-173 Unknown_Attribute       PO--CK   092   092   010    -    240
-174 Unknown_Attribute       -O--CK   100   100   000    -    274
-181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    721555488921
+173 Unknown_Attribute       PO--CK   091   091   010    -    295
+174 Unknown_Attribute       -O--CK   100   100   000    -    301
+181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    725850456218
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    4
+187 Reported_Uncorrect      -O--CK   100   100   000    -    40
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 Unknown_SSD_Attribute   -OSR--   100   100   000    -    81
 194 Temperature_Celsius     -O---K   100   100   000    -    0
@@ -85,7 +86,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    0
-202 Unknown_SSD_Attribute   ---RC-   092   092   000    -    8
+202 Unknown_SSD_Attribute   ---RC-   091   091   000    -    9
 206 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -120,14 +121,20 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     40000         -
-# 2  Short offline       Completed without error       00%     26245         -
-# 3  Conveyance offline  Completed without error       00%     19426         -
-# 4  Short offline       Completed without error       00%     10709         -
-# 5  Short offline       Completed without error       00%      7907         -
-# 6  Extended offline    Completed without error       00%      4922         -
-# 7  Short offline       Completed without error       00%      4922         -
-# 8  Extended offline    Completed without error       00%      1265         -
+# 1  Conveyance offline  Completed without error       00%     40245         -
+# 2  Conveyance offline  Aborted by host               00%     40245         -
+# 3  Extended offline    Aborted by host               00%     40245         -
+# 4  Short offline       Completed without error       00%     40245         -
+# 5  Extended offline    Completed: read failure       80%     40245         72192328
+# 6  Extended offline    Completed: read failure       80%     40245         72192328
+# 7  Extended offline    Completed without error       00%     40000         -
+# 8  Short offline       Completed without error       00%     26245         -
+# 9  Conveyance offline  Completed without error       00%     19426         -
+#10  Short offline       Completed without error       00%     10709         -
+#11  Short offline       Completed without error       00%      7907         -
+#12  Extended offline    Completed without error       00%      4922         -
+#13  Short offline       Completed without error       00%      4922         -
+#14  Extended offline    Completed without error       00%      1265         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -152,7 +159,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (264)
+Temperature History Size (Index):    478 (334)
 
 SCT Error Recovery Control:
            Read:     40 (4.0 seconds)
@@ -161,14 +168,14 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2650  ---  Lifetime Power-On Resets
-0x01  0x010  4           40077  ---  Power-on Hours
-0x01  0x018  6     73334051689  ---  Logical Sectors Written
-0x01  0x020  6      1980462652  ---  Number of Write Commands
-0x01  0x028  6    138165004887  ---  Logical Sectors Read
-0x01  0x030  6      4606291168  ---  Number of Read Commands
+0x01  0x008  4            2708  ---  Lifetime Power-On Resets
+0x01  0x010  4           40508  ---  Power-on Hours
+0x01  0x018  6     95026909063  ---  Logical Sectors Written
+0x01  0x020  6      2714446287  ---  Number of Write Commands
+0x01  0x028  6    158826876118  ---  Logical Sectors Read
+0x01  0x030  6      6031615752  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               4  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4              40  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1               0  ---  Current Temperature
@@ -199,5 +206,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+
+
 

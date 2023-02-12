@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.8.0-50-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.0-19-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun May 16 01:55:18 2021 AWST
+Local Time is:    Sun Oct 17 03:51:30 2021 AWST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -36,7 +36,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(14160) seconds.
+data collection: 		(14100) seconds.
 Offline data collection
 capabilities: 			 (0x71) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -54,9 +54,9 @@ Error logging capability:        (0x01)	Error logging supported.
 Short self-test routine 
 recommended polling time: 	 (   2) minutes.
 Extended self-test routine
-recommended polling time: 	 ( 265) minutes.
+recommended polling time: 	 ( 263) minutes.
 Conveyance self-test routine
-recommended polling time: 	 (   2) minutes.
+recommended polling time: 	 (   3) minutes.
 SCT capabilities: 	       (0x3035)	SCT Status supported.
 					SCT Feature Control supported.
 					SCT Data Table supported.
@@ -65,18 +65,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   225   215   021    -    1716
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1896
+  3 Spin_Up_Time            POS--K   222   215   021    -    1866
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1996
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    2
-  9 Power_On_Hours          -O--CK   097   097   000    -    2684
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   092   092   000    -    5954
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    955
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    4016
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    195
-193 Load_Cycle_Count        -O--CK   193   193   000    -    22991
-194 Temperature_Celsius     -O---K   107   095   000    -    40
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1021
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    4033
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    230
+193 Load_Cycle_Count        -O--CK   193   193   000    -    23095
+194 Temperature_Celsius     -O---K   109   095   000    -    38
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -119,15 +119,16 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      1217         -
-# 2  Conveyance offline  Completed without error       00%      1202         -
-# 3  Short offline       Completed without error       00%      1009         -
-# 4  Short offline       Aborted by host               70%      1009         -
-# 5  Short offline       Completed without error       00%       152         -
-# 6  Short offline       Aborted by host               90%       152         -
+# 1  Short offline       Completed without error       00%      3494         -
+# 2  Short offline       Completed without error       00%      1217         -
+# 3  Conveyance offline  Completed without error       00%      1202         -
+# 4  Short offline       Completed without error       00%      1009         -
+# 5  Short offline       Aborted by host               70%      1009         -
+# 6  Short offline       Completed without error       00%       152         -
 # 7  Short offline       Aborted by host               90%       152         -
-# 8  Conveyance offline  Completed without error       00%        63         -
-# 9  Extended offline    Aborted by host               90%        63         -
+# 8  Short offline       Aborted by host               90%       152         -
+# 9  Conveyance offline  Completed without error       00%        63         -
+#10  Extended offline    Aborted by host               90%        63         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -143,8 +144,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     39/41 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     37/38 Celsius
 Lifetime    Min/Max Temperature:     19/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -156,7 +157,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (64)
+Temperature History Size (Index):    128 (8)
 
 SCT Error Recovery Control command not supported
 
@@ -174,11 +175,11 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           23  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           25  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        43866  Vendor specific
+0x8000  4         1448  Vendor specific
 

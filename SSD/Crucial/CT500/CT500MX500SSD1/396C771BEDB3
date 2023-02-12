@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-94.1rosa-x86_64] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Apr 29 13:03:07 2020 CEST
+Local Time is:    Tue Feb 16 10:06:26 2021 CET
 
 ==> WARNING: This firmware returns bogus raw values in attribute 197
 
@@ -33,8 +33,8 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -70,17 +70,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    312
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    512
+  9 Power_On_Hours          -O--CK   100   100   000    -    676
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1199
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   000    -    6
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    77
+173 Ave_Block-Erase_Count   -O--CK   100   100   000    -    10
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    279
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    34
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   062   037   000    -    38 (Min/Max 0/63)
+194 Temperature_Celsius     -O---K   057   037   000    -    43 (Min/Max 0/63)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Bogus_Current_Pend_Sect -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -88,9 +88,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    1845910067
-247 Host_Program_Page_Count -O--CK   100   100   000    -    31980846
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    23008010
+246 Total_LBAs_Written      -O--CK   100   100   000    -    2834557869
+247 Host_Program_Page_Count -O--CK   100   100   000    -    49028599
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    43227419
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -122,7 +122,11 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       527         -
+# 2  Extended offline    Completed without error       00%       500         -
+# 3  Extended offline    Completed without error       00%       499         -
+# 4  Extended offline    Completed without error       00%       320         -
 
 Read SMART Selective Self-test Log failed: scsi error badly formed scsi parameters
 
@@ -133,33 +137,33 @@ SCT Error Recovery Control command not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             512  ---  Lifetime Power-On Resets
-0x01  0x010  4             312  ---  Power-on Hours
-0x01  0x018  6      1845910067  ---  Logical Sectors Written
-0x01  0x020  6        20869691  ---  Number of Write Commands
-0x01  0x028  6      2186792040  ---  Logical Sectors Read
-0x01  0x030  6        33223896  ---  Number of Read Commands
+0x01  0x008  4            1199  ---  Lifetime Power-On Resets
+0x01  0x010  4             676  ---  Power-on Hours
+0x01  0x018  6      2834557869  ---  Logical Sectors Written
+0x01  0x020  6        36538370  ---  Number of Write Commands
+0x01  0x028  6       459015145  ---  Logical Sectors Read
+0x01  0x030  6        73791001  ---  Number of Read Commands
 0x01  0x038  6      4294967296  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              77  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             279  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              38  ---  Current Temperature
-0x05  0x010  1              41  ---  Average Short Term Temperature
-0x05  0x018  1              40  ---  Average Long Term Temperature
+0x05  0x008  1              43  ---  Current Temperature
+0x05  0x010  1              37  ---  Average Short Term Temperature
+0x05  0x018  1              37  ---  Average Long Term Temperature
 0x05  0x020  1              63  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
 0x05  0x030  1              45  ---  Highest Average Short Term Temperature
 0x05  0x038  1               0  ---  Lowest Average Short Term Temperature
-0x05  0x040  1              40  ---  Highest Average Long Term Temperature
+0x05  0x040  1              41  ---  Highest Average Long Term Temperature
 0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1130  ---  Number of Hardware Resets
-0x06  0x010  4             703  ---  Number of ASR Events
+0x06  0x008  4            2327  ---  Number of Hardware Resets
+0x06  0x010  4            1429  ---  Number of ASR Events
 0x06  0x018  4               3  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

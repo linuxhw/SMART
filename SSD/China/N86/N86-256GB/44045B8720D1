@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Jul 23 11:37:13 2022 WAT
+Local Time is:    Wed Jul 27 17:24:10 2022 WAT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -31,8 +31,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  32)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(65535) seconds.
 Offline data collection
@@ -61,8 +62,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    49
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    48
+  9 Power_On_Hours          -O--C-   100   100   000    -    56
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    52
 161 Unknown_Attribute       -O--C-   100   100   000    -    204
 163 Unknown_Attribute       PO----   100   100   050    -    19
 165 Unknown_Attribute       ------   100   100   000    -    2
@@ -70,13 +71,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 167 Unknown_Attribute       ------   100   100   000    -    1
 172 Unknown_Attribute       -O--C-   100   100   000    -    0
 173 Unknown_Attribute       -O---K   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    24
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    26
 194 Temperature_Celsius     PO---K   060   060   000    -    40 (Min/Max 33/40)
 196 Reallocated_Event_Count ------   100   100   000    -    0
 198 Offline_Uncorrectable   -O--C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    129
-242 Total_LBAs_Read         -O--C-   100   100   000    -    52
+241 Total_LBAs_Written      -O--C-   100   100   000    -    132
+242 Total_LBAs_Read         -O--C-   100   100   000    -    57
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,11 +106,11 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      00%        46         -
-# 2  Short offline       Completed without error       00%        39         -
-# 3  Short offline       Completed without error       00%        27         -
-# 4  Short offline       Completed without error       00%        15         -
-# 5  Extended offline    Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%        49         -
+# 2  Extended offline    Interrupted (host reset)      00%        46         -
+# 3  Short offline       Completed without error       00%        39         -
+# 4  Short offline       Completed without error       00%        27         -
+# 5  Short offline       Completed without error       00%        15         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -128,10 +129,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              48  ---  Lifetime Power-On Resets
-0x01  0x010  4              49  ---  Power-on Hours
-0x01  0x018  6       272567792  ---  Logical Sectors Written
-0x01  0x028  6       110371136  ---  Logical Sectors Read
+0x01  0x008  4              52  ---  Lifetime Power-On Resets
+0x01  0x010  4              56  ---  Power-on Hours
+0x01  0x018  6       277669082  ---  Logical Sectors Written
+0x01  0x028  6       121041723  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -139,7 +140,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             125  ---  Number of Hardware Resets
+0x06  0x008  4             142  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

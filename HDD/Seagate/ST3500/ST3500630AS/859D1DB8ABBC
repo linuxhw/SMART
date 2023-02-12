@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.11.0-27-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.15.0-46-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Aug 23 00:49:26 2022 UTC
+Local Time is:    Sat Sep 10 10:56:03 2022 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,7 +19,8 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Unavailable
-Unexpected SCT status 0xffff (action_code=4, function_code=2)
+Another SCT command is executing, abort Feature Control
+(SCT ext_status_code 0xffff, action_code=4, function_code=2)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
@@ -60,19 +61,19 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            -O----   095   092   000    -    0
-  4 Start_Stop_Count        PO--CK   098   098   020    -    2080
+  3 Spin_Up_Time            -O----   094   092   000    -    0
+  4 Start_Stop_Count        PO--CK   098   098   020    -    2081
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    249340416
-  9 Power_On_Hours          -O--CK   076   076   000    -    21250
+  7 Seek_Error_Rate         POSR--   084   060   030    -    249469488
+  9 Power_On_Hours          -O--CK   076   076   000    -    21251
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       PO--CK   098   098   020    -    2060
+ 12 Power_Cycle_Count       PO--CK   098   098   020    -    2061
 184 End-to-End_Error        PO--CK   100   253   097    -    0
 187 Reported_Uncorrect      -O-RCK   100   100   000    -    0
 189 High_Fly_Writes         -O---K   100   100   000    -    0
-190 Airflow_Temperature_Cel -O-RC-   062   052   000    -    38 (Min/Max 23/38)
-194 Temperature_Celsius     ------   038   048   000    -    38 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O--CK   066   060   000    -    217412808
+190 Airflow_Temperature_Cel -O-RC-   065   052   000    -    35 (Min/Max 23/35)
+194 Temperature_Celsius     ------   035   048   000    -    35 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O--CK   065   060   000    -    108635124
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
@@ -133,8 +134,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     --/38 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     --/35 Celsius
 Lifetime    Min/Max Temperature:     --/49 Celsius
 
 Another SCT command is executing, abort Read Data Table
@@ -149,7 +150,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

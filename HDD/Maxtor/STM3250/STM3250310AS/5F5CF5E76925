@@ -7,7 +7,7 @@ User Capacity:    250 059 350 016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Dec 24 17:28:01 2015 GMT-5
+Local Time is:    Wed May 18 18:09:01 2016 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,19 +51,19 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   094   006    -    181102607
+  1 Raw_Read_Error_Rate     POSR--   117   090   006    -    144358954
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   094   094   020    -    6620
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6865
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    7
-  7 Seek_Error_Rate         POSR--   084   060   030    -    329466649
-  9 Power_On_Hours          -O--CK   090   090   000    -    9313
+  7 Seek_Error_Rate         POSR--   085   060   030    -    364292609
+  9 Power_On_Hours          -O--CK   089   089   000    -    10191
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6600
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6844
 187 Reported_Uncorrect      -O--CK   001   001   000    -    3246
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   064   051   045    -    36 (Min/Max 28/36)
-194 Temperature_Celsius     -O---K   036   049   000    -    36 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   059   000    -    197568524
+190 Airflow_Temperature_Cel -O---K   066   051   045    -    34 (Min/Max 23/34)
+194 Temperature_Celsius     -O---K   034   049   000    -    34
+195 Hardware_ECC_Recovered  -O-RC-   082   059   000    -    176483695
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -86,8 +86,8 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -164,11 +164,11 @@ Error 3300 [19] occurred at disk power-on lifetime: 6538 hours (272 days + 10 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:03:58.571  READ DMA EXT
-  25 00 00 00 40 00 01 da 00 17 c2 e0 00     00:03:58.561  READ DMA EXT
-  25 00 00 00 08 00 00 e7 00 64 f0 e0 00     00:04:02.772  READ DMA EXT
-  35 00 00 00 08 00 00 1f 00 5f e0 e0 00     00:04:02.759  WRITE DMA EXT
-  35 00 00 00 07 00 00 6e 00 1f 18 e0 00     00:04:02.753  WRITE DMA EXT
+  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:02:55.728  READ DMA EXT
+  25 00 00 00 01 00 00 47 00 67 9e e0 00     00:02:55.728  READ DMA EXT
+  35 00 00 00 08 00 00 b2 00 64 20 e0 00     00:02:55.728  WRITE DMA EXT
+  35 00 00 00 08 00 00 1f 00 63 e0 e0 00     00:02:55.717  WRITE DMA EXT
+  25 00 00 00 10 00 00 4e 00 61 a8 e0 00     00:02:55.717  READ DMA EXT
 
 Error 3299 [18] occurred at disk power-on lifetime: 6538 hours (272 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -181,11 +181,11 @@ Error 3299 [18] occurred at disk power-on lifetime: 6538 hours (272 days + 10 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:03:58.571  READ DMA EXT
-  25 00 00 00 40 00 01 da 00 17 7a e0 00     00:03:58.561  READ DMA EXT
-  25 00 00 00 08 00 00 7e 00 65 a8 e0 00     00:03:58.555  READ DMA EXT
-  35 00 00 00 18 00 00 c6 00 64 40 e0 00     00:03:58.535  WRITE DMA EXT
-  35 00 00 00 08 00 00 1f 00 5f f8 e0 00     00:03:54.388  WRITE DMA EXT
+  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:02:51.546  READ DMA EXT
+  35 00 00 01 00 00 01 21 00 2a e0 e0 00     00:02:51.536  WRITE DMA EXT
+  35 00 00 01 00 00 01 20 00 2a e0 e0 00     00:02:51.536  WRITE DMA EXT
+  25 00 00 00 02 00 00 47 00 67 22 e0 00     00:02:51.514  READ DMA EXT
+  25 00 00 00 1d 00 00 50 00 61 5a e0 00     00:02:51.514  READ DMA EXT
 
 Error 3298 [17] occurred at disk power-on lifetime: 6538 hours (272 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -198,11 +198,11 @@ Error 3298 [17] occurred at disk power-on lifetime: 6538 hours (272 days + 10 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:03:50.181  READ DMA EXT
-  35 00 00 01 00 00 01 23 00 2a e0 e0 00     00:03:50.167  WRITE DMA EXT
-  35 00 00 01 00 00 01 22 00 2a e0 e0 00     00:03:50.167  WRITE DMA EXT
-  25 00 00 00 40 00 01 d9 00 17 52 e0 00     00:03:50.167  READ DMA EXT
-  35 00 00 00 08 00 00 c3 00 64 e0 e0 00     00:03:54.388  WRITE DMA EXT
+  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:04:11.025  READ DMA EXT
+  25 00 00 00 08 00 01 da 00 17 72 e0 00     00:04:11.014  READ DMA EXT
+  25 00 00 00 08 00 00 43 00 8d e8 e0 00     00:04:11.008  READ DMA EXT
+  35 00 00 00 03 00 00 fe 00 81 a8 e0 00     00:04:11.008  WRITE DMA EXT
+  35 00 00 00 08 00 00 b6 00 5f 08 e0 00     00:04:10.992  WRITE DMA EXT
 
 Error 3297 [16] occurred at disk power-on lifetime: 6538 hours (272 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -215,11 +215,11 @@ Error 3297 [16] occurred at disk power-on lifetime: 6538 hours (272 days + 10 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:03:50.181  READ DMA EXT
-  25 00 00 00 40 00 01 d9 00 17 92 e0 00     00:03:50.167  READ DMA EXT
-  35 00 00 00 08 00 00 c3 00 64 d0 e0 00     00:03:50.167  WRITE DMA EXT
-  35 00 00 00 08 00 00 b5 00 5f f8 e0 00     00:03:50.167  WRITE DMA EXT
-  35 00 00 00 08 00 00 44 00 5c 38 e0 00     00:03:50.167  WRITE DMA EXT
+  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:04:06.896  READ DMA EXT
+  25 00 00 00 40 00 01 d9 00 17 f2 e0 00     00:04:06.895  READ DMA EXT
+  25 00 00 00 08 00 00 43 00 8d 90 e0 00     00:04:02.772  READ DMA EXT
+  25 00 00 00 78 00 00 71 00 4c d8 e0 00     00:04:02.759  READ DMA EXT
+  25 00 00 00 2b 00 00 76 00 2d 80 e0 00     00:04:02.753  READ DMA EXT
 
 Error 3296 [15] occurred at disk power-on lifetime: 6538 hours (272 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -232,11 +232,11 @@ Error 3296 [15] occurred at disk power-on lifetime: 6538 hours (272 days + 10 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:03:45.994  READ DMA EXT
-  35 00 00 00 08 00 00 c2 00 64 c0 e0 00     00:03:45.987  WRITE DMA EXT
-  25 00 00 00 16 00 00 da 00 4b d0 e0 00     00:03:45.970  READ DMA EXT
-  25 00 00 00 10 00 00 64 00 15 80 e0 00     00:03:41.862  READ DMA EXT
-  25 00 00 00 02 00 00 0f 00 07 c8 e0 00     00:03:41.853  READ DMA EXT
+  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:02:55.728  READ DMA EXT
+  25 00 00 00 01 00 00 47 00 67 9e e0 00     00:02:55.728  READ DMA EXT
+  35 00 00 00 08 00 00 b2 00 64 20 e0 00     00:02:55.728  WRITE DMA EXT
+  35 00 00 00 08 00 00 1f 00 63 e0 e0 00     00:02:55.717  WRITE DMA EXT
+  25 00 00 00 10 00 00 4e 00 61 a8 e0 00     00:02:55.717  READ DMA EXT
 
 Error 3295 [14] occurred at disk power-on lifetime: 6538 hours (272 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -249,13 +249,15 @@ Error 3295 [14] occurred at disk power-on lifetime: 6538 hours (272 days + 10 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:03:37.623  READ DMA EXT
-  25 00 00 00 28 00 01 d8 00 17 ca e0 00     00:03:37.623  READ DMA EXT
-  35 00 00 00 08 00 00 77 00 65 60 e0 00     00:03:37.619  WRITE DMA EXT
-  35 00 00 00 08 00 00 c2 00 64 60 e0 00     00:03:41.862  WRITE DMA EXT
-  25 00 00 00 18 00 00 da 00 4b 38 e0 00     00:03:41.853  READ DMA EXT
+  25 00 00 00 08 00 01 74 00 eb c8 e0 00     00:02:51.546  READ DMA EXT
+  35 00 00 01 00 00 01 21 00 2a e0 e0 00     00:02:51.536  WRITE DMA EXT
+  35 00 00 01 00 00 01 20 00 2a e0 e0 00     00:02:51.536  WRITE DMA EXT
+  25 00 00 00 02 00 00 47 00 67 22 e0 00     00:02:51.514  READ DMA EXT
+  25 00 00 00 1d 00 00 50 00 61 5a e0 00     00:02:51.514  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      9933         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -270,7 +272,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -282,7 +284,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            0  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
 
 

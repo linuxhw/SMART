@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-68.5rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Apr 11 14:56:38 2020 +07
+Local Time is:    Sat Oct  8 10:09:53 2022 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -63,30 +63,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    176816896
+  1 Raw_Read_Error_Rate     POSR--   112   099   006    -    43713024
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5792
+  4 Start_Stop_Count        -O--CK   094   094   020    -    7086
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   079   060   030    -    26313136592
-  9 Power_On_Hours          -O--CK   067   067   000    -    29337
+  7 Seek_Error_Rate         POSR--   079   060   030    -    26373813669
+  9 Power_On_Hours          -O--CK   054   054   000    -    40803
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4684
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    6012
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   001   001   099    NOW  18912
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   099   000    -    1 1 53
 189 High_Fly_Writes         -O-RCK   099   099   000    -    1
-190 Airflow_Temperature_Cel -O---K   065   052   045    -    35 (Min/Max 32/35)
+190 Airflow_Temperature_Cel -O---K   066   052   045    -    34 (Min/Max 22/35)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    2002
-193 Load_Cycle_Count        -O--CK   070   070   000    -    61765
-194 Temperature_Celsius     -O---K   035   048   000    -    35 (0 13 0 0 0)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    2401
+193 Load_Cycle_Count        -O--CK   038   038   000    -    124132
+194 Temperature_Celsius     -O---K   034   048   000    -    34 (0 11 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    29200h+22m+59.427s
-241 Total_LBAs_Written      ------   100   253   000    -    61539588582
-242 Total_LBAs_Read         ------   100   253   000    -    92473799570
+240 Head_Flying_Hours       ------   100   253   000    -    36632h+15m+05.598s
+241 Total_LBAs_Written      ------   100   253   000    -    70713136052
+242 Total_LBAs_Read         ------   100   253   000    -    98964700413
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -277,12 +277,25 @@ Error 6031 [10] occurred at disk power-on lifetime: 10053 hours (418 days + 21 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     29112         -
-# 2  Extended offline    Interrupted (host reset)      00%     28366         -
-# 3  Extended offline    Interrupted (host reset)      00%     28150         -
-# 4  Extended offline    Completed without error       00%     20684         -
-# 5  Extended offline    Completed without error       00%     20211         -
-# 6  Extended offline    Completed without error       00%     20045         -
+# 1  Extended offline    Completed without error       00%     39350         -
+# 2  Extended offline    Completed without error       00%     39096         -
+# 3  Extended offline    Completed without error       00%     38701         -
+# 4  Extended offline    Completed without error       00%     38373         -
+# 5  Extended offline    Completed without error       00%     38211         -
+# 6  Extended offline    Completed without error       00%     38049         -
+# 7  Extended offline    Completed without error       00%     37549         -
+# 8  Extended offline    Completed without error       00%     37101         -
+# 9  Extended offline    Completed without error       00%     35917         -
+#10  Extended offline    Completed without error       00%     35624         -
+#11  Extended offline    Completed without error       00%     35125         -
+#12  Extended offline    Completed without error       00%     33556         -
+#13  Extended offline    Completed without error       00%     33330         -
+#14  Extended offline    Completed without error       00%     31872         -
+#15  Extended offline    Interrupted (host reset)      00%     30633         -
+#16  Extended offline    Interrupted (host reset)      00%     30415         -
+#17  Extended offline    Completed without error       00%     29112         -
+#18  Extended offline    Interrupted (host reset)      00%     28366         -
+#19  Extended offline    Interrupted (host reset)      00%     28150         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -299,8 +312,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
 Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     32/35 Celsius
-Lifetime    Min/Max Temperature:     13/48 Celsius
+Power Cycle Min/Max Temperature:     22/35 Celsius
+Lifetime    Min/Max Temperature:     11/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -313,10 +326,12 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Sep  8 19:26:12 2020 CEST
+Local Time is:    Wed Jan 27 12:50:59 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,11 +19,14 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Write SCT (Get) Feature Control Command failed: scsi error medium or hardware error (serious)
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
@@ -61,20 +64,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   198   198   040    -    136
-  3 Spin_Up_Time            POS---   201   201   033    -    1
-  4 Start_Stop_Count        -O--C-   092   092   000    -    13748
+  2 Throughput_Performance  P-S---   198   198   040    -    135
+  3 Spin_Up_Time            POS---   204   204   033    -    1
+  4 Start_Stop_Count        -O--C-   091   091   000    -    14429
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   112   112   040    -    35
-  9 Power_On_Hours          -O--C-   047   047   000    -    23393
+  7 Seek_Error_Rate         PO-R--   097   097   067    -    196608
+  8 Seek_Time_Performance   P-S---   120   120   040    -    32
+  9 Power_On_Hours          -O--C-   046   046   000    -    24045
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    8318
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    8583
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    410
-193 Load_Cycle_Count        -O--C-   064   064   000    -    367909
-194 Temperature_Celsius     -O----   130   130   000    -    46 (Min/Max 12/62)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    447
+193 Load_Cycle_Count        -O--C-   063   063   000    -    376508
+194 Temperature_Celsius     -O----   250   250   000    -    24 (Min/Max 12/62)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
@@ -104,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 44227 (device log contains only the most recent 4 errors)
+Device Error Count: 44235 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,73 +123,73 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 44227 [2] occurred at disk power-on lifetime: 23304 hours (971 days + 0 hours)
+Error 44235 [2] occurred at disk power-on lifetime: 23843 hours (993 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 78 00 00 0c 42 d1 08 0c 00  Error: IDNF 120 sectors at LBA = 0x0c42d108 = 205705480
+  10 -- 51 00 60 00 00 43 c6 f0 e0 03 00  Error: IDNF 96 sectors at LBA = 0x43c6f0e0 = 1137111264
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 00 0c 42 d1 00 4c 00     01:44:31.622  READ DMA EXT
-  25 00 00 00 10 00 00 0c 42 d0 f0 4c 00     01:44:30.685  READ DMA EXT
-  25 00 00 00 70 00 00 0c 42 d0 80 4c 00     01:44:30.683  READ DMA EXT
-  25 00 00 00 80 00 00 0c 42 d0 00 4c 00     01:44:30.681  READ DMA EXT
-  35 00 00 00 01 00 00 0b ae 07 00 4b 00     01:44:29.838  WRITE DMA EXT
+  25 00 00 00 80 00 00 43 c6 f0 c0 43 00     04:23:34.395  READ DMA EXT
+  35 00 00 00 01 00 00 31 ce a1 c8 41 00     04:23:29.347  WRITE DMA EXT
+  35 00 00 00 01 00 00 31 ce a1 c8 41 00     04:23:12.176  WRITE DMA EXT
+  35 00 00 00 01 00 00 31 ce a1 8a 41 00     04:23:12.175  WRITE DMA EXT
+  35 00 00 00 01 00 00 28 c6 62 c3 48 00     04:23:12.174  WRITE DMA EXT
 
-Error 44226 [1] occurred at disk power-on lifetime: 23298 hours (970 days + 18 hours)
+Error 44234 [1] occurred at disk power-on lifetime: 23633 hours (984 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 03 00 00 00 25 60 88 00 00  Error: IDNF 3 sectors at LBA = 0x00256088 = 2449544
+  10 -- 51 00 08 00 00 57 54 5f f0 07 00  Error: IDNF 8 sectors at LBA = 0x57545ff0 = 1465147376
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 2b 23 00 40 04     01:15:16.867  READ DMA EXT
-  25 00 00 00 08 00 00 00 2b 23 00 40 00     01:15:05.707  READ DMA EXT
-  35 00 00 00 05 00 00 00 28 09 c0 40 00     01:15:05.483  WRITE DMA EXT
-  35 00 00 00 05 00 00 00 25 60 86 40 00     01:15:05.481  WRITE DMA EXT
-  25 00 00 00 20 00 00 00 2b 23 20 40 04     01:15:04.790  READ DMA EXT
+  25 00 00 00 08 00 00 57 54 5f f0 47 00     00:00:23.235  READ DMA EXT
+  25 00 00 00 08 00 00 28 c3 77 80 48 00     00:00:23.126  READ DMA EXT
+  25 00 00 00 08 00 00 57 54 5f 80 47 00     00:00:23.118  READ DMA EXT
+  25 00 00 00 10 00 00 57 54 65 f0 47 00     00:00:23.029  READ DMA EXT
+  25 00 00 00 08 00 00 57 54 65 e0 47 00     00:00:23.028  READ DMA EXT
 
-Error 44225 [0] occurred at disk power-on lifetime: 23298 hours (970 days + 18 hours)
+Error 44233 [0] occurred at disk power-on lifetime: 23587 hours (982 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 08 00 00 00 09 51 b8 00 00  Error: IDNF 8 sectors at LBA = 0x000951b8 = 610744
+  10 -- 51 00 08 00 00 00 00 00 20 00 00  Error: IDNF 8 sectors at LBA = 0x00000020 = 32
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 10 00 00 00 09 51 b0 40 00     01:09:05.819  READ DMA EXT
-  25 00 00 00 80 00 00 00 09 50 c0 40 04     01:09:05.208  READ DMA EXT
-  25 00 00 00 80 00 00 00 09 50 c0 40 00     01:08:42.887  READ DMA EXT
-  25 00 00 00 10 00 00 00 09 50 b0 40 00     01:08:42.886  READ DMA EXT
-  25 00 00 00 70 00 00 00 09 50 40 40 00     01:08:42.884  READ DMA EXT
+  25 00 00 00 08 00 00 00 00 00 20 40 00     00:00:31.999  READ DMA EXT
+  25 00 00 00 01 00 00 57 54 66 e7 47 00     00:00:31.998  READ DMA EXT
+  25 00 00 00 01 00 00 57 54 66 e6 47 00     00:00:31.997  READ DMA EXT
+  25 00 00 00 06 00 00 57 54 66 e0 47 00     00:00:31.989  READ DMA EXT
+  25 00 00 00 08 00 00 57 54 5a d8 47 00     00:00:31.978  READ DMA EXT
 
-Error 44224 [3] occurred at disk power-on lifetime: 23297 hours (970 days + 17 hours)
+Error 44232 [3] occurred at disk power-on lifetime: 23587 hours (982 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 08 00 00 0a ad 7f 90 0a 00  Error: IDNF 8 sectors at LBA = 0x0aad7f90 = 179142544
+  10 -- 51 00 02 00 00 00 00 00 00 00 00  Error: IDNF 2 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 0a ad 7f 90 4a 00     01:07:03.182  READ DMA EXT
-  25 00 00 00 08 00 00 0a ad 7f 88 4a 00     01:07:02.326  READ DMA EXT
-  25 00 00 00 08 00 00 0a ad 7f 80 4a 00     01:07:02.071  READ DMA EXT
-  25 00 00 00 08 00 00 0a ad 7f 78 4a 00     01:06:59.571  READ DMA EXT
-  25 00 00 00 08 00 00 0a ad 7f 70 4a 00     01:06:57.682  READ DMA EXT
+  25 00 00 00 02 00 00 00 00 00 00 40 00     00:00:25.967  READ DMA EXT
+  25 00 00 00 02 00 00 00 00 00 00 00 04     00:00:25.932  READ DMA EXT
+  25 00 00 00 02 00 00 00 00 00 00 40 00     00:00:23.763  READ DMA EXT
+  25 00 00 00 02 00 00 00 00 00 00 00 04     00:00:23.726  READ DMA EXT
+  25 00 00 00 02 00 00 00 00 00 00 40 00     00:00:18.813  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -205,46 +208,41 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    46 Celsius
-Power Cycle Min/Max Temperature:     46/46 Celsius
+Current Temperature:                    24 Celsius
+Power Cycle Min/Max Temperature:     23/24 Celsius
 Lifetime    Min/Max Temperature:     12/62 Celsius
 Specified Max Operating Temperature:    38 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         1 minute
-Temperature Logging Interval:        1 minute
-Min/Max recommended Temperature:      0/60 Celsius
-Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (87)
+Write SCT Data Table failed: scsi error medium or hardware error (serious)
+Read SCT Temperature History failed
 
-SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+Write SCT (Get) Error Recovery Control Command failed: scsi error medium or hardware error (serious)
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            8318  ---  Lifetime Power-On Resets
-0x01  0x010  4           23393  ---  Power-on Hours
-0x01  0x018  6     69240889928  ---  Logical Sectors Written
-0x01  0x020  6       881573927  ---  Number of Write Commands
-0x01  0x028  6     68509788330  ---  Logical Sectors Read
-0x01  0x030  6      1130398677  ---  Number of Read Commands
+0x01  0x008  4            8583  ---  Lifetime Power-On Resets
+0x01  0x010  4           24046  ---  Power-on Hours
+0x01  0x018  6     70578323108  ---  Logical Sectors Written
+0x01  0x020  6       893353029  ---  Number of Write Commands
+0x01  0x028  6     69825930647  ---  Logical Sectors Read
+0x01  0x030  6      1146391673  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           18977  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           18949  ---  Head Flying Hours
-0x03  0x018  4          367909  ---  Head Load Events
-0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4           15716  ---  Read Recovery Attempts
+0x03  0x008  4           19025  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           18997  ---  Head Flying Hours
+0x03  0x018  4          376508  ---  Head Load Events
+0x03  0x020  4               1  ---  Number of Reallocated Logical Sectors
+0x03  0x028  4           16262  ---  Read Recovery Attempts
 0x03  0x030  4               2  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4           10341  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4           24230  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x008  4           10345  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4           24480  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              46  ---  Current Temperature
-0x05  0x010  1              40  N--  Average Short Term Temperature
-0x05  0x018  1              31  N--  Average Long Term Temperature
+0x05  0x008  1              25  ---  Current Temperature
+0x05  0x010  1              24  N--  Average Short Term Temperature
+0x05  0x018  1              24  N--  Average Long Term Temperature
 0x05  0x020  1              62  ---  Highest Temperature
 0x05  0x028  1              12  ---  Lowest Temperature
 0x05  0x030  1              50  N--  Highest Average Short Term Temperature
@@ -256,8 +254,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           61380  ---  Number of Hardware Resets
-0x06  0x010  4           16798  ---  Number of ASR Events
+0x06  0x008  4           61755  ---  Number of Hardware Resets
+0x06  0x010  4           17022  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -274,8 +272,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

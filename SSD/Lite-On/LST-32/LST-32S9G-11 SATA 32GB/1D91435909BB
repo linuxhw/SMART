@@ -10,7 +10,7 @@ Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Nov 24 01:25:01 2020 MSK
+Local Time is:    Sat Dec 19 12:25:08 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -26,14 +26,13 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x03)	Offline data collection activity
+					is in progress.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 249)	Self-test routine in progress...
+					90% of test remaining.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(  600) seconds.
 Offline data collection
 capabilities: 			 (0x11) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -62,10 +61,10 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
   9 Power_On_Hours          -O----   100   100   000    -    87
- 12 Power_Cycle_Count       PO----   100   100   000    -    1186
+ 12 Power_Cycle_Count       PO----   100   100   000    -    1319
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
-177 Wear_Leveling_Count     PO----   100   100   000    -    72
+177 Wear_Leveling_Count     PO----   100   100   000    -    73
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO----   100   100   000    -    75
@@ -76,8 +75,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 238 Unknown_Attribute       PO----   098   098   010    -    98
-241 Total_LBAs_Written      PO----   100   100   000    -    40740
-242 Total_LBAs_Read         PO----   100   100   000    -    42342
+241 Total_LBAs_Written      PO----   100   100   000    -    41793
+242 Total_LBAs_Read         PO----   100   100   000    -    42803
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,16 +108,17 @@ No Errors Logged
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Completed without error       00%        87         -
-# 2  Extended offline    Interrupted (host reset)      90%        87         -
-# 3  Extended offline    Completed without error       00%        87         -
+# 2  Extended offline    Completed without error       00%        87         -
+# 3  Extended offline    Interrupted (host reset)      90%        87         -
 # 4  Extended offline    Completed without error       00%        87         -
-# 5  Short offline       Completed without error       00%        65         -
-# 6  Short offline       Interrupted (host reset)      90%        65         -
-# 7  Short offline       Completed without error       00%        65         -
-# 8  Short offline       Interrupted (host reset)      90%        65         -
-# 9  Short offline       Completed without error       00%        18         -
+# 5  Extended offline    Completed without error       00%        87         -
+# 6  Short offline       Completed without error       00%        65         -
+# 7  Short offline       Interrupted (host reset)      90%        65         -
+# 8  Short offline       Completed without error       00%        65         -
+# 9  Short offline       Interrupted (host reset)      90%        65         -
 #10  Short offline       Completed without error       00%        18         -
-#11  Short offline       Completed without error       00%         0         -
+#11  Short offline       Completed without error       00%        18         -
+#12  Short offline       Completed without error       00%         0         -
 
 Selective Self-tests/Logging not supported
 
@@ -144,21 +144,21 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1186  ---  Lifetime Power-On Resets
+0x01  0x008  4            1319  ---  Lifetime Power-On Resets
 0x01  0x010  4              87  ---  Power-on Hours
-0x01  0x018  6      2669986127  ---  Logical Sectors Written
-0x01  0x020  6        77989298  ---  Number of Write Commands
-0x01  0x028  6      2774936139  ---  Logical Sectors Read
-0x01  0x030  6        82810050  ---  Number of Read Commands
+0x01  0x018  6      2738985235  ---  Logical Sectors Written
+0x01  0x020  6        79090799  ---  Number of Write Commands
+0x01  0x028  6      2805150700  ---  Logical Sectors Read
+0x01  0x030  6        84237497  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             158  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             159  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              55  ---  Current Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            5101  ---  Number of Hardware Resets
+0x06  0x008  4            5842  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
@@ -179,7 +179,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

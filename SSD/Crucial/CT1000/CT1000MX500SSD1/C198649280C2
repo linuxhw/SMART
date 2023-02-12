@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 27 23:22:47 2020 IDT
+Local Time is:    Fri Aug 28 01:19:44 2020 IDT
 
 ==> WARNING: This firmware returns bogus raw values in attribute 197
 
@@ -32,8 +32,8 @@ Wt Cache Reorder: Unknown
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -69,7 +69,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    442
+  9 Power_On_Hours          -O--CK   100   100   000    -    444
  12 Power_Cycle_Count       -O--CK   100   100   000    -    112
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
@@ -79,7 +79,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   069   042   000    -    31 (Min/Max 0/58)
+194 Temperature_Celsius     -O---K   072   042   000    -    28 (Min/Max 0/58)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Bogus_Current_Pend_Sect -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -89,7 +89,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
 246 Total_LBAs_Written      -O--CK   100   100   000    -    3498790464
 247 Host_Program_Page_Count -O--CK   100   100   000    -    56802860
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    92313035
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    92330141
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,7 +121,8 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       443         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,7 +130,7 @@ SMART Selective self-test log data structure revision number 1
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
-    5        0        0  Completed [00% left] (0-65535)
+    5        0        0  Not_testing
 Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
@@ -137,8 +138,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     23/38 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     23/45 Celsius
 Lifetime    Min/Max Temperature:      0/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -147,7 +148,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (51)
+Temperature History Size (Index):    128 (75)
 
 SCT Error Recovery Control command not supported
 
@@ -155,7 +156,7 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4             112  ---  Lifetime Power-On Resets
-0x01  0x010  4             442  ---  Power-on Hours
+0x01  0x010  4             444  ---  Power-on Hours
 0x01  0x018  6      3498790464  ---  Logical Sectors Written
 0x01  0x020  6         8267357  ---  Number of Write Commands
 0x01  0x028  6       786512071  ---  Logical Sectors Read
@@ -165,7 +166,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  ---  Current Temperature
+0x05  0x008  1              30  ---  Current Temperature
 0x05  0x010  1              27  ---  Average Short Term Temperature
 0x05  0x018  1              27  ---  Average Long Term Temperature
 0x05  0x020  1              58  ---  Highest Temperature

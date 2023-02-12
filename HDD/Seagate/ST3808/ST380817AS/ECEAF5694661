@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-19-amd64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-20-amd64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    80,025,280,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Wed Nov 16 11:44:12 2022 MSK
+Local Time is:    Wed Dec 28 01:21:45 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -54,18 +54,18 @@ recommended polling time: 	 (  47) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   057   049   006    -    127713983
-  3 Spin_Up_Time            PO----   099   098   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1289
+  1 Raw_Read_Error_Rate     POSR--   058   049   006    -    242769165
+  3 Spin_Up_Time            PO----   098   098   000    -    0
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1352
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   077   060   030    -    50451892
-  9 Power_On_Hours          -O--CK   059   059   000    -    36653
+  7 Seek_Error_Rate         POSR--   078   060   030    -    65371811
+  9 Power_On_Hours          -O--CK   058   058   000    -    37108
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1343
-194 Temperature_Celsius     -O---K   039   061   000    -    39 (0 1 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   057   049   000    -    127713983
-197 Current_Pending_Sector  -O--C-   100   100   000    -    18
-198 Offline_Uncorrectable   ----C-   100   100   000    -    18
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1441
+194 Temperature_Celsius     -O---K   044   061   000    -    44 (0 1 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   058   049   000    -    242769165
+197 Current_Pending_Sector  -O--C-   100   100   000    -    16
+198 Offline_Uncorrectable   ----C-   100   100   000    -    16
 199 UDMA_CRC_Error_Count    -OSRCK   200   198   000    -    2
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 595 (device log contains only the most recent five errors)
+ATA Error Count: 2429 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -118,7 +118,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 595 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
+Error 2429 occurred at disk power-on lifetime: 37107 hours (1546 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -129,13 +129,13 @@ Error 595 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 50 80 80 e3 00      06:03:37.423  READ DMA
-  c8 00 08 90 83 53 e1 00      06:03:37.423  READ DMA
-  27 00 00 00 00 00 e0 00      06:03:37.423  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 a0 00      06:03:37.422  IDENTIFY DEVICE
-  ef 03 46 00 00 00 a0 00      06:03:41.231  SET FEATURES [Set transfer mode]
+  c8 00 08 50 80 80 e3 00      09:09:45.161  READ DMA
+  ca 00 08 68 30 00 e3 00      09:09:45.161  WRITE DMA
+  c8 00 20 b0 a6 54 e3 00      09:09:49.030  READ DMA
+  27 00 00 00 00 00 e0 00      09:09:49.029  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      09:09:49.008  IDENTIFY DEVICE
 
-Error 594 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
+Error 2428 occurred at disk power-on lifetime: 37107 hours (1546 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -146,13 +146,30 @@ Error 594 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 50 80 80 e3 00      06:03:37.423  READ DMA
-  ca 00 08 20 cc 78 e2 00      06:03:37.423  WRITE DMA
-  c8 00 08 88 83 53 e1 00      06:03:37.423  READ DMA
-  27 00 00 00 00 00 e0 00      06:03:37.422  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 a0 00      06:03:33.654  IDENTIFY DEVICE
+  c8 00 08 50 80 80 e3 00      09:09:45.161  READ DMA
+  35 00 b0 18 51 ee e0 00      09:09:45.161  WRITE DMA EXT
+  c8 00 08 c0 19 51 e3 00      09:09:45.160  READ DMA
+  27 00 00 00 00 00 e0 00      09:09:41.351  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      09:09:41.309  IDENTIFY DEVICE
 
-Error 593 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
+Error 2427 occurred at disk power-on lifetime: 37107 hours (1546 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 06 56 80 80 e3  Error: UNC 6 sectors at LBA = 0x03808056 = 58753110
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 50 80 80 e3 00      09:09:41.248  READ DMA
+  e7 00 00 00 00 00 a0 00      09:09:41.183  FLUSH CACHE
+  c8 00 08 48 80 80 e3 00      09:09:41.183  READ DMA
+  ca 00 08 a0 c1 1e e0 00      09:09:41.351  WRITE DMA
+  c8 00 08 40 80 80 e3 00      09:09:41.309  READ DMA
+
+Error 2426 occurred at disk power-on lifetime: 37107 hours (1546 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -163,13 +180,13 @@ Error 593 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 30 75 80 e3 00      06:03:29.768  READ DMA
-  c8 00 08 70 83 53 e1 00      06:03:29.767  READ DMA
-  ca 00 08 08 a8 94 e8 00      06:03:29.767  WRITE DMA
-  27 00 00 00 00 00 e0 00      06:03:29.767  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 a0 00      06:03:33.654  IDENTIFY DEVICE
+  c8 00 08 30 75 80 e3 00      09:09:29.988  READ DMA
+  ca 00 08 40 59 ef e3 00      09:09:29.988  WRITE DMA
+  c8 00 20 10 b3 57 e5 00      09:09:29.988  READ DMA
+  27 00 00 00 00 00 e0 00      09:09:29.978  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      09:09:33.848  IDENTIFY DEVICE
 
-Error 592 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
+Error 2425 occurred at disk power-on lifetime: 37107 hours (1546 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -180,28 +197,11 @@ Error 592 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 30 75 80 e3 00      06:03:29.768  READ DMA
-  c8 00 08 68 83 53 e1 00      06:03:29.767  READ DMA
-  35 00 c0 40 40 96 e0 00      06:03:29.767  WRITE DMA EXT
-  ca 00 08 60 0d f7 e6 00      06:03:29.767  WRITE DMA
-  ca 00 c8 20 09 90 e0 00      06:03:29.766  WRITE DMA
-
-Error 591 occurred at disk power-on lifetime: 36647 hours (1526 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 07 c7 73 80 e3  Error: UNC 7 sectors at LBA = 0x038073c7 = 58749895
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 c0 73 80 e3 00      06:03:25.948  READ DMA
-  ca 00 08 80 0c f7 e6 00      06:03:25.947  WRITE DMA
-  ca 00 10 40 67 50 e0 00      06:03:22.147  WRITE DMA
-  27 00 00 00 00 00 e0 00      06:03:22.137  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 a0 00      06:03:22.119  IDENTIFY DEVICE
+  c8 00 08 30 75 80 e3 00      09:09:29.988  READ DMA
+  c8 00 08 f0 b2 57 e5 00      09:09:29.988  READ DMA
+  c8 00 08 28 75 80 e3 00      09:09:29.988  READ DMA
+  ca 00 08 18 a8 81 e8 00      09:09:29.978  WRITE DMA
+  c8 00 08 20 75 80 e3 00      09:09:29.965  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -230,6 +230,4 @@ Device Statistics (GP/SMART Log 0x04) not supported
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 
