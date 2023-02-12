@@ -26,7 +26,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD                | 64 GB  | 1       | 2588  | 0     | 7.09   |
 | Intenso   | SATA3 512GB SSD    | 512 GB | 1       | 570   | 0     | 1.56   |
 | Intenso   | SSD Sata III       | 480 GB | 2       | 518   | 0     | 1.42   |
-| Intenso   | SSD Sata III       | 960 GB | 2       | 376   | 0     | 1.03   |
+| Intenso   | SSD Sata III       | 960 GB | 2       | 402   | 0     | 1.10   |
 | Intenso   | SSD M.2 HIGH       | 120 GB | 1       | 341   | 0     | 0.93   |
 | Intenso   | SATA III SSD       | 120 GB | 29      | 308   | 1     | 0.83   |
 | Intenso   | SSD                | 512 GB | 18      | 300   | 0     | 0.82   |
@@ -36,18 +36,18 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD Sata III       | 240 GB | 8       | 188   | 0     | 0.52   |
 | Intenso   | SSD                | 128 GB | 51      | 145   | 1     | 0.38   |
 | Intenso   | 1TB SATA SSD       | 1 TB   | 1       | 108   | 0     | 0.30   |
+| Intenso   | SSD                | 480 GB | 5       | 106   | 0     | 0.29   |
 | Intenso   | lntenso SSD Sat... | 960 GB | 4       | 140   | 6     | 0.27   |
 | Intenso   | SSD SATA III       | 240 GB | 1       | 99    | 0     | 0.27   |
 | Intenso   | SSD Sata III       | 1 TB   | 4       | 99    | 0     | 0.27   |
 | Intenso   | SDVPSA1910256      | 256 GB | 1       | 92    | 0     | 0.25   |
-| Intenso   | SSD                | 480 GB | 5       | 87    | 0     | 0.24   |
 | Intenso   | SSD Sata III       | 120 GB | 30      | 114   | 83    | 0.23   |
 | Intenso   | SSD Sata III       | 500 GB | 1       | 79    | 0     | 0.22   |
-| Intenso   | SSD                | 120 GB | 26      | 92    | 80    | 0.21   |
+| Intenso   | SSD                | 120 GB | 26      | 93    | 80    | 0.21   |
 | Intenso   | Memory Ghost SSD   | 512 GB | 1       | 66    | 0     | 0.18   |
 | Intenso   | SATA3 1TB SSD      | 1 TB   | 2       | 219   | 12    | 0.18   |
 | Intenso   | Morebeck-V602      | 120 GB | 1       | 64    | 0     | 0.18   |
-| Intenso   | SSD SATAIII        | 240 GB | 60      | 65    | 1     | 0.17   |
+| Intenso   | SSD SATAIII        | 240 GB | 60      | 66    | 1     | 0.17   |
 | Intenso   | JAJM600M1024C      | 1 TB   | 1       | 59    | 0     | 0.16   |
 | Intenso   | C500               | 256 GB | 2       | 59    | 0     | 0.16   |
 | Intenso   | SSD256M2S80        | 256 GB | 1       | 51    | 0     | 0.14   |
@@ -99,5 +99,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Intenso   | Phison Driven OEM SSDs | 4      | 124     | 215   | 1     | 0.58   |
-| Intenso   | Silicon Motion base... | 8      | 113     | 93    | 46    | 0.22   |
+| Intenso   | Silicon Motion base... | 8      | 113     | 94    | 46    | 0.22   |
 | Intenso   | Unknown                | 49     | 158     | 86    | 41    | 0.22   |

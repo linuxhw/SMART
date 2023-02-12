@@ -19,4 +19,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Star D... | SATA SSD           | 960 GB | 1       | 132   | 0     | 0.36   |
 | Star D... | SATA SSD           | 240 GB | 4       | 23    | 0     | 0.07   |
-| Star D... | SATA SSD           | 480 GB | 1       | 1     | 0     | 0.00   |
+| Star D... | SATA SSD           | 480 GB | 1       | 4     | 0     | 0.01   |

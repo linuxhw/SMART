@@ -50,16 +50,16 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS512GSSD370       | 512 GB | 5       | 181   | 0     | 0.50   |
 | Transcend | TS128GMSA740       | 128 GB | 1       | 180   | 0     | 0.50   |
 | Transcend | TS256GSSD370       | 256 GB | 4       | 177   | 0     | 0.49   |
+| Transcend | TS480GSSD220S      | 480 GB | 13      | 205   | 236   | 0.45   |
 | Transcend | TS120GSSD220S      | 120 GB | 29      | 167   | 1     | 0.44   |
-| Transcend | TS480GSSD220S      | 480 GB | 13      | 201   | 236   | 0.44   |
 | Transcend | TS120GMTS820S      | 120 GB | 6       | 159   | 0     | 0.44   |
 | Transcend | TS256GSSD230S      | 256 GB | 17      | 164   | 62    | 0.40   |
 | Transcend | TS512GSSD370S      | 512 GB | 6       | 165   | 2     | 0.39   |
 | Transcend | TS128GSSD360S      | 128 GB | 10      | 140   | 0     | 0.39   |
 | Transcend | TS128GMSA230S      | 128 GB | 3       | 139   | 0     | 0.38   |
+| Transcend | TS1TSSD230S        | 1 TB   | 7       | 131   | 0     | 0.36   |
 | Transcend | TS256GMTS400       | 256 GB | 9       | 129   | 0     | 0.36   |
 | Transcend | TS128GMTS430S      | 128 GB | 7       | 116   | 0     | 0.32   |
-| Transcend | TS1TSSD230S        | 1 TB   | 7       | 116   | 0     | 0.32   |
 | Transcend | TS256GSSD360S      | 256 GB | 3       | 104   | 0     | 0.29   |
 | Transcend | TS256GSSD370S      | 256 GB | 22      | 104   | 0     | 0.29   |
 | Transcend | TS128GSSD370S      | 128 GB | 32      | 103   | 0     | 0.28   |
@@ -72,16 +72,16 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS64GSSD360S       | 64 GB  | 1       | 75    | 0     | 0.21   |
 | Transcend | TS256GMTS400S      | 256 GB | 3       | 66    | 0     | 0.18   |
 | Transcend | TS480GMTS420S      | 480 GB | 3       | 66    | 0     | 0.18   |
-| Transcend | TS512GMTS430S      | 512 GB | 20      | 65    | 0     | 0.18   |
+| Transcend | TS512GMTS430S      | 512 GB | 20      | 66    | 0     | 0.18   |
 | Transcend | TS128GMSA370       | 128 GB | 7       | 64    | 0     | 0.18   |
 | Transcend | TS256GMTS430S      | 256 GB | 18      | 62    | 0     | 0.17   |
 | Transcend | TS960GMTS820S      | 960 GB | 1       | 60    | 0     | 0.17   |
 | Transcend | TS64GMTS800S       | 64 GB  | 1       | 53    | 0     | 0.15   |
 | Transcend | TS128GSSD230S      | 128 GB | 19      | 50    | 0     | 0.14   |
+| Transcend | TS240GMTS420S      | 240 GB | 19      | 62    | 80    | 0.14   |
 | Transcend | TS512GMTS800       | 512 GB | 5       | 84    | 204   | 0.13   |
 | Transcend | TS32GMSA370        | 32 GB  | 5       | 47    | 0     | 0.13   |
 | Transcend | TS120GMTS420S      | 120 GB | 27      | 46    | 1     | 0.13   |
-| Transcend | TS240GMTS420S      | 240 GB | 19      | 57    | 80    | 0.12   |
 | Transcend | TS128GMTS800       | 128 GB | 12      | 44    | 0     | 0.12   |
 | Transcend | TS128GMTS400       | 128 GB | 7       | 44    | 0     | 0.12   |
 | Transcend | TS64GMSA370        | 64 GB  | 3       | 43    | 0     | 0.12   |
@@ -113,8 +113,8 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS64GHSD370KI      | 64 GB  | 1       | 3     | 0     | 0.01   |
 | Transcend | TS240GJDM520       | 240 GB | 1       | 3     | 0     | 0.01   |
 | Transcend | TS64GMSA452T2      | 64 GB  | 1       | 2     | 0     | 0.01   |
-| Transcend | TS128XBTMT3D58G    | 128 GB | 1       | 138   | 101   | 0.00   |
 | Transcend | TS1TSSD370         | 1 TB   | 1       | 1     | 0     | 0.00   |
+| Transcend | TS128XBTMT3D58G    | 128 GB | 1       | 138   | 101   | 0.00   |
 | Transcend | TS256ASTMM1600X    | 256 GB | 1       | 0     | 0     | 0.00   |
 | Transcend | TS8GHSD630         | 8 GB   | 1       | 682   | 2044  | 0.00   |
 | Transcend | TS128GSSD420K      | 128 GB | 1       | 0     | 0     | 0.00   |
@@ -141,6 +141,6 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | JMicron based SSDs     | 7      | 22      | 453   | 46    | 1.21   |
 | Transcend | SandForce Driven SSDs  | 6      | 15      | 544   | 12    | 1.16   |
 | Transcend | JMicron/Maxiotek ba... | 5      | 9       | 218   | 112   | 0.57   |
-| Transcend | Silicon Motion base... | 50     | 425     | 110   | 16    | 0.29   |
+| Transcend | Silicon Motion base... | 50     | 425     | 111   | 16    | 0.29   |
 | Transcend | Indilinx Barefoot b... | 1      | 1       | 309   | 2     | 0.28   |
 | Transcend | SiliconMotion based... | 2      | 2       | 26    | 0     | 0.07   |

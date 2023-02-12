@@ -25,15 +25,15 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | KingDian  | N400               | 240 GB | 1       | 871   | 0     | 2.39   |
 | KingDian  | N480-240GB         | 240 GB | 1       | 351   | 0     | 0.96   |
-| KingDian  | S280               | 1 TB   | 7       | 292   | 0     | 0.80   |
+| KingDian  | S280               | 1 TB   | 7       | 310   | 0     | 0.85   |
 | KingDian  | S370               | 128 GB | 1       | 178   | 0     | 0.49   |
 | KingDian  | S400 XT            | 240 GB | 1       | 177   | 0     | 0.49   |
 | KingDian  | S280-240GB         | 240 GB | 16      | 194   | 232   | 0.46   |
-| KingDian  | S400               | 120 GB | 18      | 168   | 0     | 0.46   |
+| KingDian  | S400               | 120 GB | 18      | 169   | 0     | 0.46   |
 | KingDian  | S280               | 480 GB | 9       | 160   | 0     | 0.44   |
 | KingDian  | S400               | 240 GB | 1       | 154   | 0     | 0.42   |
+| KingDian  | S280               | 240 GB | 19      | 136   | 0     | 0.37   |
 | KingDian  | S400               | 480 GB | 3       | 136   | 0     | 0.37   |
-| KingDian  | S280               | 240 GB | 19      | 135   | 0     | 0.37   |
 | KingDian  | S180               | 64 GB  | 18      | 133   | 63    | 0.36   |
 | KingDian  | S200               | 64 GB  | 11      | 129   | 12    | 0.29   |
 | KingDian  | S280-120GB         | 120 GB | 10      | 117   | 396   | 0.29   |
@@ -65,5 +65,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| KingDian  | Silicon Motion base... | 10     | 88      | 144   | 2     | 0.39   |
+| KingDian  | Silicon Motion base... | 10     | 88      | 146   | 2     | 0.39   |
 | KingDian  | Unknown                | 18     | 62      | 146   | 143   | 0.37   |

@@ -30,31 +30,31 @@ MTBF - avg. MTBF in years per sample.
 | China     | MTG-480GB          | 480 GB | 1       | 732   | 0     | 2.01   |
 | China     | ZSS11DA02C         | 512 GB | 2       | 551   | 0     | 1.51   |
 | China     | ESA3SMH2MSM1BT1... | 120 GB | 1       | 483   | 0     | 1.32   |
-| China     | SH00R480GB         | 480 GB | 6       | 394   | 0     | 1.08   |
+| China     | SH00R480GB         | 480 GB | 6       | 401   | 0     | 1.10   |
 | China     | 512GB PCS 2.5" SSD | 512 GB | 1       | 370   | 0     | 1.01   |
+| China     | SATA SSD           | 16 GB  | 5       | 406   | 11    | 1.00   |
 | China     | 240GB SSD          | 240 GB | 8       | 356   | 0     | 0.98   |
-| China     | SATA SSD           | 16 GB  | 5       | 395   | 11    | 0.97   |
 | China     | SATA SSD           | 480 GB | 28      | 330   | 0     | 0.91   |
 | China     | T240               | 240 GB | 1       | 311   | 0     | 0.85   |
 | China     | SSD                | 64 GB  | 11      | 355   | 1     | 0.84   |
 | China     | SATA SSD           | 20 GB  | 17      | 300   | 1     | 0.77   |
+| China     | SSD                | 960 GB | 2       | 278   | 0     | 0.76   |
 | China     | LS 256G M300       | 256 GB | 1       | 252   | 0     | 0.69   |
 | China     | 256GB SATA SSD     | 256 GB | 2       | 252   | 0     | 0.69   |
 | China     | SATA SSD           | 1 TB   | 15      | 236   | 0     | 0.65   |
-| China     | 120GB SSD          | 120 GB | 61      | 227   | 0     | 0.62   |
+| China     | 120GB SSD          | 120 GB | 61      | 228   | 0     | 0.63   |
 | China     | M.2 2280 SATA SSD  | 256 GB | 4       | 213   | 0     | 0.58   |
-| China     | SSD                | 960 GB | 2       | 202   | 0     | 0.55   |
 | China     | L06B B0KB          | 960 GB | 1       | 202   | 0     | 0.55   |
 | China     | PSX-NGFF256G       | 256 GB | 1       | 199   | 0     | 0.55   |
-| China     | SATA SSD           | 128 GB | 25      | 194   | 0     | 0.53   |
-| China     | SATA SSD           | 120 GB | 101     | 196   | 1     | 0.53   |
+| China     | SATA SSD           | 128 GB | 25      | 196   | 0     | 0.54   |
+| China     | 256GB PCS 2.5" SSD | 256 GB | 3       | 196   | 0     | 0.54   |
+| China     | SATA SSD           | 120 GB | 101     | 197   | 1     | 0.53   |
 | China     | mSATA              | 128 GB | 1       | 192   | 0     | 0.53   |
-| China     | SATA3 512GB SSD    | 512 GB | 2       | 191   | 0     | 0.53   |
 | China     | SATA SSD           | 240 GB | 73      | 198   | 1     | 0.53   |
+| China     | SATA3 512GB SSD    | 512 GB | 2       | 191   | 0     | 0.53   |
 | China     | 1TB QLC SATA SSD   | 1 TB   | 2       | 189   | 0     | 0.52   |
 | China     | SH00R1TB           | 1 TB   | 1       | 189   | 0     | 0.52   |
-| China     | SATA SSD           | 64 GB  | 25      | 185   | 0     | 0.51   |
-| China     | 256GB PCS 2.5" SSD | 256 GB | 3       | 175   | 0     | 0.48   |
+| China     | SATA SSD           | 64 GB  | 26      | 179   | 0     | 0.49   |
 | China     | SV9SAT6B480GLM21DR | 480 GB | 1       | 169   | 0     | 0.47   |
 | China     | SATA SSD           | 32 GB  | 5       | 164   | 0     | 0.45   |
 | China     | 128GB SSD          | 128 GB | 22      | 161   | 0     | 0.44   |
@@ -65,25 +65,25 @@ MTBF - avg. MTBF in years per sample.
 | China     | GM128              | 128 GB | 1       | 129   | 0     | 0.36   |
 | China     | ASS-120            | 120 GB | 1       | 124   | 0     | 0.34   |
 | China     | SSD-128GB          | 128 GB | 1       | 117   | 0     | 0.32   |
+| China     | SATA3 256GB SSD    | 256 GB | 8       | 117   | 0     | 0.32   |
 | China     | HS1TBQE            | 1 TB   | 1       | 116   | 0     | 0.32   |
 | China     | SSD 120G           | 120 GB | 3       | 114   | 0     | 0.31   |
-| China     | SATA3 256GB SSD    | 256 GB | 8       | 114   | 0     | 0.31   |
 | China     | SSD512M2S80        | 512 GB | 1       | 113   | 0     | 0.31   |
 | China     | SATA SSD           | 512 GB | 9       | 112   | 0     | 0.31   |
 | China     | SIC-1TB            | 1 TB   | 1       | 112   | 0     | 0.31   |
+| China     | SSD                | 480 GB | 18      | 112   | 0     | 0.31   |
 | China     | SATA3 240GB SSD    | 240 GB | 8       | 129   | 1     | 0.31   |
-| China     | SSD                | 480 GB | 18      | 110   | 0     | 0.30   |
 | China     | SSD                | 1 TB   | 29      | 109   | 0     | 0.30   |
 | China     | NGFF 2242 240GB... | 240 GB | 1       | 107   | 0     | 0.30   |
 | China     | SATA3 1TB SSD      | 1 TB   | 10      | 104   | 0     | 0.29   |
-| China     | SSD                | 120 GB | 66      | 127   | 19    | 0.29   |
+| China     | SSD                | 120 GB | 66      | 128   | 19    | 0.29   |
 | China     | NGFF 2280 1TB SSD  | 1 TB   | 1       | 103   | 0     | 0.28   |
 | China     | ESA3ASA2HTH2BT1... | 120 GB | 1       | 94    | 0     | 0.26   |
 | China     | ESA3SMH2ISN3BT0... | 64 GB  | 1       | 91    | 0     | 0.25   |
 | China     | SSD128GBS800       | 128 GB | 3       | 90    | 0     | 0.25   |
 | China     | SATA SSD           | 256 GB | 21      | 89    | 1     | 0.24   |
 | China     | SATA3 128GB SSD    | 128 GB | 7       | 88    | 0     | 0.24   |
-| China     | SSD                | 512 GB | 29      | 98    | 130   | 0.24   |
+| China     | SSD                | 512 GB | 29      | 99    | 130   | 0.24   |
 | China     | 64GB SSD           | 64 GB  | 12      | 83    | 0     | 0.23   |
 | China     | MS06               | 512 GB | 1       | 83    | 0     | 0.23   |
 | China     | MSATA 480GB SSD    | 480 GB | 2       | 81    | 0     | 0.22   |
@@ -93,7 +93,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 128 GB | 89      | 75    | 2     | 0.20   |
 | China     | NGFF 2280          | 512 GB | 1       | 73    | 0     | 0.20   |
 | China     | SATA3 480GB SSD    | 480 GB | 7       | 99    | 41    | 0.20   |
-| China     | SSD                | 256 GB | 61      | 76    | 1     | 0.19   |
+| China     | SSD                | 256 GB | 61      | 77    | 1     | 0.19   |
 | China     | SATA3 120GB SSD    | 120 GB | 10      | 67    | 0     | 0.18   |
 | China     | ESA3SMH2ISN2BT1... | 120 GB | 1       | 62    | 0     | 0.17   |
 | China     | SCCTS-603-128G SSD | 128 GB | 1       | 62    | 0     | 0.17   |
@@ -101,7 +101,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 240 GB | 40      | 94    | 54    | 0.17   |
 | China     | NGFF 2242 512GB... | 512 GB | 3       | 60    | 0     | 0.17   |
 | China     | 512GB SSD          | 512 GB | 5       | 59    | 0     | 0.16   |
-| China     | 256GB SSD          | 256 GB | 11      | 56    | 0     | 0.15   |
+| China     | 256GB SSD          | 256 GB | 11      | 57    | 0     | 0.16   |
 | China     | JOYSSD512          | 512 GB | 1       | 55    | 0     | 0.15   |
 | China     | GM1TB              | 1 TB   | 1       | 55    | 0     | 0.15   |
 | China     | SSD                | 64 GB  | 9       | 60    | 4     | 0.15   |
@@ -232,5 +232,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| China     | Phison Driven OEM SSDs | 11     | 312     | 201   | 1     | 0.55   |
-| China     | Unknown                | 184    | 836     | 114   | 21    | 0.28   |
+| China     | Phison Driven OEM SSDs | 11     | 313     | 202   | 1     | 0.55   |
+| China     | Unknown                | 184    | 836     | 115   | 21    | 0.28   |

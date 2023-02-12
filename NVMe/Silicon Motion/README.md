@@ -54,9 +54,9 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | EX-512 PRO         | 512 GB | 2       | 48    | 0     | 0.13   |
 | Silico... | PCIe-8 SSD         | 1 TB   | 2       | 47    | 0     | 0.13   |
 | Silico... | NVME SSD           | 128 GB | 10      | 46    | 0     | 0.13   |
+| Silico... | GV1TB              | 1 TB   | 1       | 46    | 0     | 0.13   |
 | Silico... | PCIe-8 SSD         | 256 GB | 5       | 45    | 0     | 0.12   |
 | Silico... | FPI1TBMWR7         | 1 TB   | 1       | 45    | 0     | 0.12   |
-| Silico... | GV1TB              | 1 TB   | 1       | 41    | 0     | 0.11   |
 | Silico... | MS10               | 1 TB   | 4       | 39    | 0     | 0.11   |
 | Silico... | 1TB                | 1 TB   | 1       | 38    | 0     | 0.11   |
 | Silico... | KLLISRE            | 128 GB | 1       | 34    | 0     | 0.10   |

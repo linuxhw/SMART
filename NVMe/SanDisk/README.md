@@ -33,8 +33,8 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD_BLACK SN850     | 500 GB | 3       | 43    | 0     | 0.12   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 60      | 41    | 0     | 0.11   |
 | SanDisk   | WD Blue SN570 5... | 500 GB | 3       | 35    | 0     | 0.10   |
-| SanDisk   | Extreme Pro        | 2 TB   | 2       | 33    | 0     | 0.09   |
-| SanDisk   | WD Blue SN570      | 500 GB | 42      | 32    | 0     | 0.09   |
+| SanDisk   | WD Blue SN570      | 500 GB | 42      | 35    | 0     | 0.10   |
+| SanDisk   | Extreme Pro        | 2 TB   | 2       | 34    | 0     | 0.09   |
 | SanDisk   | WD_BLACK SN850 ... | 1 TB   | 1       | 32    | 0     | 0.09   |
 | SanDisk   | WD_BLACK SN750 SE  | 250 GB | 6       | 31    | 0     | 0.09   |
 | SanDisk   | WD Blue SN570 1... | 1 TB   | 6       | 29    | 0     | 0.08   |

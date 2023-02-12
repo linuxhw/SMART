@@ -23,7 +23,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SPCC      | SSD                | 480 GB | 7       | 774   | 0     | 2.12   |
+| SPCC      | SSD                | 480 GB | 7       | 775   | 0     | 2.12   |
 | SPCC      | SSD110             | 120 GB | 7       | 653   | 146   | 1.62   |
 | SPCC      | 2.5" SSD           | 1 TB   | 1       | 402   | 0     | 1.10   |
 | SPCC      | SSD110             | 64 GB  | 5       | 595   | 4     | 1.08   |
@@ -35,10 +35,10 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD B29            | 32 GB  | 1       | 204   | 0     | 0.56   |
 | SPCC      | SSD A20            | 64 GB  | 2       | 177   | 0     | 0.49   |
 | SPCC      | SSD162             | 120 GB | 9       | 454   | 569   | 0.46   |
+| SPCC      | SSD                | 512 GB | 82      | 186   | 44    | 0.43   |
 | SPCC      | SSD                | 55 GB  | 12      | 391   | 424   | 0.42   |
-| SPCC      | SSD                | 512 GB | 82      | 184   | 44    | 0.42   |
-| SPCC      | SSD                | 1 TB   | 49      | 152   | 1     | 0.40   |
-| SPCC      | SSD                | 256 GB | 113     | 144   | 1     | 0.39   |
+| SPCC      | SSD                | 1 TB   | 49      | 159   | 1     | 0.42   |
+| SPCC      | SSD                | 256 GB | 113     | 145   | 1     | 0.39   |
 | SPCC      | SPCCSolidStateDisk | 512 GB | 2       | 128   | 0     | 0.35   |
 | SPCC      | M.2 Disk           | 256 GB | 1       | 119   | 0     | 0.33   |
 | SPCC      | SSD                | 128 GB | 121     | 120   | 1     | 0.32   |
@@ -74,6 +74,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| SPCC      | Phison Driven OEM SSDs | 8      | 712     | 229   | 47    | 0.56   |
+| SPCC      | Phison Driven OEM SSDs | 8      | 712     | 230   | 47    | 0.56   |
 | SPCC      | Unknown                | 28     | 80      | 330   | 231   | 0.48   |
 | SPCC      | Silicon Motion base... | 1      | 3       | 30    | 904   | 0.08   |

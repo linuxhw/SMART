@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Microtech | SSD 60G            | 64 GB  | 1       | 12    | 0     | 0.04   |
+| Microtech | SSD 60G            | 64 GB  | 1       | 13    | 0     | 0.04   |
 | Microtech | SSD480M2S80        | 480 GB | 1       | 9     | 0     | 0.03   |

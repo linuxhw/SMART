@@ -32,20 +32,20 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force 3 SSD        | 180 GB | 5       | 1832  | 1     | 4.15   |
 | Corsair   | Force GS           | 360 GB | 1       | 1291  | 0     | 3.54   |
 | Corsair   | Force SSD          | 120 GB | 1       | 1271  | 0     | 3.48   |
+| Corsair   | Force 3 SSD        | 240 GB | 12      | 1344  | 88    | 3.32   |
 | Corsair   | Force GT           | 180 GB | 3       | 1205  | 0     | 3.30   |
-| Corsair   | Force 3 SSD        | 240 GB | 12      | 1335  | 88    | 3.30   |
 | Corsair   | Force LS SSD       | 960 GB | 1       | 1129  | 0     | 3.09   |
 | Corsair   | Force GS           | 480 GB | 3       | 1884  | 15    | 3.02   |
 | Corsair   | Force GS           | 180 GB | 3       | 1087  | 0     | 2.98   |
 | Corsair   | CMFSSD-128GBG2D    | 128 GB | 1       | 954   | 0     | 2.62   |
-| Corsair   | Force GT           | 120 GB | 21      | 1106  | 2     | 2.47   |
+| Corsair   | Force GT           | 120 GB | 21      | 1111  | 2     | 2.48   |
 | Corsair   | Force 3 SSD        | 120 GB | 43      | 961   | 61    | 2.34   |
 | Corsair   | Force 3 SSD        | 64 GB  | 20      | 863   | 1     | 2.28   |
 | Corsair   | Neutron SSD        | 256 GB | 2       | 801   | 0     | 2.20   |
 | Corsair   | Force GT           | 64 GB  | 8       | 948   | 4     | 2.17   |
 | Corsair   | CSSD-F115GB2-A     | 115 GB | 1       | 781   | 0     | 2.14   |
 | Corsair   | Force GS           | 90 GB  | 1       | 776   | 0     | 2.13   |
-| Corsair   | CSSD-F60GB2        | 64 GB  | 7       | 1341  | 286   | 1.96   |
+| Corsair   | CSSD-F60GB2        | 64 GB  | 7       | 1342  | 286   | 1.96   |
 | Corsair   | Force LE SSD       | 240 GB | 4       | 709   | 0     | 1.94   |
 | Corsair   | Force GS           | 128 GB | 24      | 640   | 0     | 1.75   |
 | Corsair   | Force 3 SSD        | 480 GB | 1       | 598   | 0     | 1.64   |
@@ -99,7 +99,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Corsair   | SandForce Driven SSDs  | 31     | 241     | 875   | 95    | 1.94   |
+| Corsair   | SandForce Driven SSDs  | 31     | 241     | 876   | 95    | 1.94   |
 | Corsair   | Unknown                | 25     | 60      | 669   | 92    | 0.91   |
 | Corsair   | Indilinx Barefoot b... | 4      | 5       | 372   | 1     | 0.83   |
 | Corsair   | Phison Driven SSDs     | 2      | 18      | 315   | 4     | 0.75   |

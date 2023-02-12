@@ -23,7 +23,7 @@ MTBF - avg. MTBF in years per sample.
 | Netac     | SSD                | 512 GB | 22      | 62    | 0     | 0.17   |
 | Netac     | W800S 512GB SSD    | 512 GB | 1       | 62    | 0     | 0.17   |
 | Netac     | SSD                | 1 TB   | 18      | 79    | 1     | 0.17   |
-| Netac     | SSD                | 240 GB | 33      | 59    | 1     | 0.15   |
+| Netac     | SSD                | 240 GB | 33      | 64    | 1     | 0.17   |
 | Netac     | N600               | 128 GB | 1       | 52    | 0     | 0.14   |
 | Netac     | SSD                | 2 TB   | 1       | 48    | 0     | 0.13   |
 | Netac     | SSD0128S00         | 128 GB | 1       | 34    | 0     | 0.09   |
@@ -31,7 +31,7 @@ MTBF - avg. MTBF in years per sample.
 | Netac     | SSD                | 64 GB  | 2       | 26    | 0     | 0.07   |
 | Netac     | SSD                | 256 GB | 64      | 29    | 3     | 0.07   |
 | Netac     | S535N8-256GYN      | 256 GB | 13      | 18    | 0     | 0.05   |
-| Netac     | SSD                | 128 GB | 33      | 13    | 1     | 0.03   |
+| Netac     | SSD                | 128 GB | 33      | 16    | 1     | 0.04   |
 | Netac     | SSD 120G           | 120 GB | 2       | 11    | 0     | 0.03   |
 | Netac     | SATA3 120GB SSD    | 120 GB | 1       | 8     | 0     | 0.02   |
 | Netac     | M.2 2280-128GB SSD | 128 GB | 1       | 3     | 0     | 0.01   |

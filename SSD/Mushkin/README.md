@@ -26,7 +26,7 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDCR120GB      | 120 GB | 8       | 1306  | 4     | 2.91   |
 | Mushkin   | MKNSSDCR60GB-7     | 64 GB  | 3       | 865   | 2     | 2.27   |
 | Mushkin   | MKNSSDAT60GB-DX    | 64 GB  | 1       | 728   | 0     | 2.00   |
-| Mushkin   | MKNSSDCR240GB-7    | 240 GB | 1       | 613   | 0     | 1.68   |
+| Mushkin   | MKNSSDCR240GB-7    | 240 GB | 1       | 651   | 0     | 1.78   |
 | Mushkin   | MKNSSDCR240GB      | 240 GB | 4       | 1034  | 522   | 1.34   |
 | Mushkin   | MKNSSDTR128GB-3DL  | 128 GB | 1       | 464   | 0     | 1.27   |
 | Mushkin   | MKNSSDEC240GB      | 240 GB | 3       | 456   | 0     | 1.25   |
@@ -50,8 +50,8 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDAT60GB-V     | 64 GB  | 1       | 106   | 0     | 0.29   |
 | Mushkin   | MKNSSDCR480GB      | 480 GB | 1       | 55    | 0     | 0.15   |
 | Mushkin   | MKNSSDRE2TB        | 2 TB   | 2       | 45    | 0     | 0.13   |
+| Mushkin   | MKNSSDS21TB        | 1 TB   | 12      | 35    | 26    | 0.09   |
 | Mushkin   | MKNSSDRE512GB      | 512 GB | 1       | 31    | 0     | 0.09   |
-| Mushkin   | MKNSSDS21TB        | 1 TB   | 12      | 32    | 26    | 0.08   |
 | Mushkin   | MKNSSDTR240GB      | 240 GB | 2       | 20    | 0     | 0.05   |
 | Mushkin   | MKNSSDE3480GB      | 480 GB | 4       | 17    | 0     | 0.05   |
 | Mushkin   | MKNSSDRW1TB        | 1 TB   | 1       | 9     | 0     | 0.03   |
@@ -81,6 +81,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Mushkin   | SandForce Driven SSDs  | 16     | 35      | 691   | 177   | 1.41   |
+| Mushkin   | SandForce Driven SSDs  | 16     | 35      | 692   | 177   | 1.42   |
 | Mushkin   | Silicon Motion base... | 6      | 13      | 120   | 0     | 0.33   |
-| Mushkin   | Unknown                | 22     | 42      | 163   | 104   | 0.30   |
+| Mushkin   | Unknown                | 22     | 42      | 164   | 104   | 0.30   |
