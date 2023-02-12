@@ -9,13 +9,13 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Mar 11 18:47:25 2020 CET
+Local Time is:    Wed Apr  8 07:37:01 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Unexpected SCT status 0x0002 (action_code=4, function_code=2)
@@ -63,22 +63,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1043
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    243
+  9 Power_On_Hours          -O--CK   100   100   000    -    1250
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    342
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    18
-225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    248928
-226 Unknown_SSD_Attribute   -O--CK   100   100   000    -    65535
-227 Unknown_SSD_Attribute   -O--CK   100   100   000    -    65535
-228 Power-off_Retract_Count -O--CK   100   100   000    -    65535
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    21
+225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    268248
+226 Unknown_SSD_Attribute   -O--CK   100   100   000    -    10744072
+227 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
+228 Power-off_Retract_Count -O--CK   100   100   000    -    1075913980
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   099   099   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    248928
-242 Total_LBAs_Read         -O--CK   100   100   000    -    349815
+241 Total_LBAs_Written      -O--CK   100   100   000    -    268248
+242 Total_LBAs_Read         -O--CK   100   100   000    -    365648
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -139,18 +139,18 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             243  ---  Lifetime Power-On Resets
-0x01  0x010  4            1043  ---  Power-on Hours
-0x01  0x018  6     16313755084  ---  Logical Sectors Written
-0x01  0x020  6       308347645  ---  Number of Write Commands
-0x01  0x028  6     22925495743  ---  Logical Sectors Read
-0x01  0x030  6       440090817  ---  Number of Read Commands
+0x01  0x008  4             342  ---  Lifetime Power-On Resets
+0x01  0x010  4            1250  ---  Power-on Hours
+0x01  0x018  6     17579904390  ---  Logical Sectors Written
+0x01  0x020  6       321767713  ---  Number of Write Commands
+0x01  0x028  6     23963156574  ---  Logical Sectors Read
+0x01  0x030  6       455464152  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3504  ---  Number of Hardware Resets
-0x06  0x010  4        30779421  ---  Number of ASR Events
+0x06  0x008  4            3986  ---  Number of Hardware Resets
+0x06  0x010  4        30808004  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
@@ -166,8 +166,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4         6578  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           22  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           13  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           23  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb  2 20:27:57 2020 CET
+Local Time is:    Sat May 23 18:36:00 2020 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,21 +61,21 @@ SCT capabilities: 	       (0x0039)	SCT Status supported.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    2165
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    5485
+  9 Power_On_Hours          -O--C-   100   100   000    -    2191
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    5690
 167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    2
+168 Unknown_Attribute       -O--C-   100   100   000    -    1
 169 Unknown_Attribute       PO--C-   099   099   010    -    65536
-173 Unknown_Attribute       -O--C-   200   200   000    -    455278395535
+173 Unknown_Attribute       -O--C-   200   200   000    -    485343297682
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    455
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    584
-194 Temperature_Celsius     -O---K   071   071   030    -    29 (Min/Max 23/40)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    606
+194 Temperature_Celsius     -O---K   067   067   030    -    33 (Min/Max 33/40)
 231 Temperature_Celsius     PO--CK   096   096   005    -    4
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    20415938432
-234 Unknown_Attribute       -O--CK   100   100   000    -    6569229336576
-241 Total_LBAs_Written      -O--CK   100   100   000    -    18004580629
-242 Total_LBAs_Read         -O--CK   100   100   000    -    10727092352
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    21117608320
+234 Unknown_Attribute       -O--CK   100   100   000    -    6834876088320
+241 Total_LBAs_Written      -O--CK   100   100   000    -    18643694840
+242 Total_LBAs_Read         -O--CK   100   100   000    -    11220897225
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 1045 (device log contains only the most recent 256 errors)
+Device Error Count: 1093 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,141 +117,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1045 [20] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1093 [68] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 a0 00
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:05.600  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:01:05.500  NOP [Abort queued commands]
-  ec 00 00 00 01 00 00 00 00 00 00 00 ff     00:01:05.200  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:59.800  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:59.800  NOP [Abort queued commands]
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:11:54.200  DATA SET MANAGEMENT
+  ca 00 00 00 20 00 00 00 fc a8 30 e6 00     00:11:54.200  WRITE DMA
+  c8 00 00 00 40 00 00 00 54 af d2 e4 00     00:11:54.200  READ DMA
+  c8 00 00 00 18 00 00 00 76 8c 4a e3 00     00:11:54.200  READ DMA
+  c8 00 00 00 40 00 00 00 60 64 d4 e3 00     00:11:54.200  READ DMA
 
-Error 1044 [19] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1092 [67] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 58 00 00 00 00 00 00 00 00 a0 00
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:05.600  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:01:05.500  NOP [Abort queued commands]
-  ec 00 00 00 01 00 00 00 00 00 00 00 ff     00:01:05.200  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:59.800  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:59.800  NOP [Abort queued commands]
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:11:42.200  DATA SET MANAGEMENT
+  c8 00 00 00 19 00 00 00 1f f7 38 e0 00     00:11:42.200  READ DMA
+  ca 00 00 00 08 00 00 00 10 42 e0 e0 00     00:11:42.200  WRITE DMA
+  ca 00 00 00 08 00 00 00 10 42 78 e0 00     00:11:42.200  WRITE DMA
+  ca 00 00 00 08 00 00 00 10 41 c0 e0 00     00:11:42.200  WRITE DMA
 
-Error 1043 [18] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1091 [66] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 a0 00
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:59.800  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:59.800  NOP [Abort queued commands]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 ff     00:00:59.600  IDENTIFY DEVICE
-  60 01 00 00 20 00 00 00 00 01 02 40 08     00:00:59.400  READ FPDMA QUEUED
-  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:00:59.200  IDENTIFY DEVICE
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:11:30.200  DATA SET MANAGEMENT
+  c8 00 00 00 40 00 00 00 54 86 d2 e4 00     00:11:30.200  READ DMA
+  ca 00 00 00 08 00 00 00 01 16 68 e4 00     00:11:30.200  WRITE DMA
+  c8 00 00 00 40 00 00 00 76 6a 82 e3 00     00:11:30.200  READ DMA
+  ca 00 00 00 08 00 00 00 fc a8 90 e6 00     00:11:30.200  WRITE DMA
 
-Error 1042 [17] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1090 [65] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 58 00 00 00 00 00 00 00 00 a0 00
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:59.800  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:59.800  NOP [Abort queued commands]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 ff     00:00:59.600  IDENTIFY DEVICE
-  60 01 00 00 20 00 00 00 00 01 02 40 08     00:00:59.400  READ FPDMA QUEUED
-  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:00:59.200  IDENTIFY DEVICE
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:11:18.500  DATA SET MANAGEMENT
+  ca 00 00 00 08 00 00 00 fc a8 00 e6 00     00:11:18.500  WRITE DMA
+  c8 00 00 00 08 00 00 00 15 cc b0 e3 00     00:11:18.500  READ DMA
+  e7 00 00 00 00 00 00 00 00 00 00 a0 00     00:11:18.500  FLUSH CACHE
+  ca 00 00 00 08 00 00 00 fc a8 10 e6 00     00:11:18.500  WRITE DMA
 
-Error 1041 [16] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1089 [64] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 00 00 00 00 00 00 00 00 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 20 00 00 00 00 01 02 40 08     00:00:59.400  READ FPDMA QUEUED
-  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:00:59.200  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:00:47.500  IDENTIFY DEVICE
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:37.500  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:37.500  IDENTIFY DEVICE
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:11:01.200  DATA SET MANAGEMENT
+  ca 00 00 00 08 00 00 00 fc a8 08 e6 00     00:11:01.200  WRITE DMA
+  c8 00 00 00 10 00 00 00 de 7f 30 e3 00     00:11:01.200  READ DMA
+  c8 00 00 00 40 00 00 00 6a 80 c2 e3 00     00:11:01.200  READ DMA
+  e7 00 00 00 00 00 00 00 00 00 00 a0 00     00:11:01.100  FLUSH CACHE
 
-Error 1040 [15] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1088 [63] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 58 00 20 00 00 00 00 01 02 40 08   at LBA = 0x00000102 = 258
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 20 00 00 00 00 01 02 40 08     00:00:59.400  READ FPDMA QUEUED
-  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:00:59.200  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:00:47.500  IDENTIFY DEVICE
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:37.500  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:37.500  IDENTIFY DEVICE
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:10:49.100  DATA SET MANAGEMENT
+  ca 00 00 00 50 00 00 00 fc a8 98 e6 00     00:10:49.100  WRITE DMA
+  c8 00 00 00 80 00 00 00 88 71 18 e4 00     00:10:49.100  READ DMA
+  c8 00 00 00 70 00 00 00 88 70 a8 e4 00     00:10:49.100  READ DMA
+  c8 00 00 00 60 00 00 00 61 95 60 e4 00     00:10:49.100  READ DMA
 
-Error 1039 [14] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1087 [62] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 00 00 00 00 00 00 00 00 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 02 00 28 00 00 0d f9 43 1a 40 08     00:00:37.100  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:37.000  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:37.000  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:37.000  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:37.000  SET FEATURES [Enable SATA feature]
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:10:38.100  DATA SET MANAGEMENT
+  ca 00 00 00 08 00 00 00 fc a8 00 e6 00     00:10:38.100  WRITE DMA
+  e7 00 00 00 00 00 00 00 00 00 00 a0 00     00:10:38.100  FLUSH CACHE
+  ca 00 00 00 08 00 00 00 fc a8 90 e6 00     00:10:38.100  WRITE DMA
+  ca 00 00 00 b8 00 00 00 fc da 88 e6 00     00:10:38.100  WRITE DMA
 
-Error 1038 [13] occurred at disk power-on lifetime: 1973 hours (82 days + 5 hours)
+Error 1086 [61] occurred at disk power-on lifetime: 2175 hours (90 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 50 00 40 00 00 0d f9 43 20 40 08   at LBA = 0x0df94320 = 234439456
+  84 -- 51 00 01 00 00 00 00 00 00 e0 04
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 02 00 28 00 00 0d f9 43 1a 40 08     00:00:37.100  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:37.000  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:37.000  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:37.000  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:37.000  SET FEATURES [Enable SATA feature]
+  06 00 01 00 01 00 00 00 00 00 00 e0 00     00:10:22.400  DATA SET MANAGEMENT
+  ca 00 00 00 01 00 00 00 63 92 98 e4 00     00:10:22.400  WRITE DMA
+  c8 00 00 00 40 00 00 00 6e 80 9a e3 00     00:10:22.400  READ DMA
+  c8 00 00 00 40 00 00 00 00 68 62 e1 00     00:10:22.400  READ DMA
+  ca 00 00 00 40 00 00 00 fc a8 10 e6 00     00:10:22.400  WRITE DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -284,7 +284,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (465)
+Temperature History Size (Index):    478 (200)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -296,14 +296,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            2  Command failed due to ICRC error
+0x0001  2            1  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

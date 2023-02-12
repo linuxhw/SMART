@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.0-26-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 6.6 2017-11-05 r4594 [x86_64-linux-4.19.0-18-amd64] (local build)
+Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     LITEONIT LSS-32L6G-HP
@@ -12,7 +12,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Nov  8 18:38:08 2020 MST
+Local Time is:    Sat Jan  8 23:10:04 2022 MST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -30,9 +30,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  33)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(   10) seconds.
 Offline data collection
@@ -63,18 +62,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   070    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10759
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    5443
-170 Unknown_Attribute       PO--CK   100   100   000    -    0
+  9 Power_On_Hours          -O--CK   100   100   000    -    11215
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    9603
+170 Unknown_Attribute       PO--CK   100   100   000    -    1
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       PO--CK   100   100   000    -    1479875
-174 Unknown_Attribute       -O--CK   100   100   000    -    493
+173 Unknown_Attribute       PO--CK   100   100   000    -    1927169
+174 Unknown_Attribute       -O--CK   100   100   000    -    2680
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
-184 End-to-End_Error        PO--CK   100   100   097    -    655360
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+184 End-to-End_Error        PO--CK   099   099   097    -    655361
+187 Reported_Uncorrect      -O--CK   100   100   000    -    1
 188 Command_Timeout         -O--CK   100   100   000    -    1
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -99,16 +98,36 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log Version: 0
+SMART Error Log Version: 1
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     19754         -
+# 2  Short offline       Completed without error       00%     13611         -
+# 3  Short offline       Completed without error       00%     12587         -
+# 4  Short offline       Completed without error       00%     12587         -
+# 5  Short offline       Completed without error       00%     12587         -
+# 6  Extended offline    Completed without error       00%     12587         -
+# 7  Short offline       Completed without error       00%     12331         -
+# 8  Short offline       Completed without error       00%     12075         -
+# 9  Short offline       Completed without error       00%     11819         -
+#10  Short offline       Completed without error       00%     11563         -
+#11  Short offline       Completed without error       00%     11563         -
+#12  Short offline       Completed without error       00%     11563         -
+#13  Short offline       Completed without error       00%     11307         -
+#14  Extended offline    Completed without error       00%     55594         -
+#15  Extended offline    Aborted by host               90%     55594         -
+#16  Short offline       Completed without error       00%     54058         -
+#17  Short offline       Completed without error       00%     47146         -
+#18  Extended offline    Completed without error       00%     43818         -
+#19  Short offline       Completed without error       00%     41002         -
 
 Selective Self-tests/Logging not supported
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
+SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                     ? Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
@@ -141,7 +160,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

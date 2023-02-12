@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.18-300.fc37.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-58-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     Micron C400 RealSSD 2.5" 7mm 512GB
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jan 15 10:20:48 2023 CST
+Local Time is:    Wed Jan 25 11:46:55 2023 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,7 +66,7 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
- 12 Power_Cycle_Count       PO--CK   100   100   001    -    895
+ 12 Power_Cycle_Count       PO--CK   100   100   001    -    908
 175 Program_Fail_Count_Chip PO--CK   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO--CK   100   100   000    -    0
 177 Wear_Leveling_Count     PO--CK   100   100   010    -    17
@@ -77,8 +77,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count_Total  PO--CK   100   100   001    -    0
 187 Reported_Uncorrect      PO--CK   100   100   001    -    0
 195 Hardware_ECC_Recovered  POSR-K   100   100   050    -    0
-241 Total_LBAs_Written      PO--CK   100   100   000    -    14861955262
-242 Total_LBAs_Read         PO--CK   100   100   000    -    14419691706
+241 Total_LBAs_Written      PO--CK   100   100   000    -    15026875519
+242 Total_LBAs_Read         PO--CK   100   100   000    -    14491073842
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,8 +131,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     19/33 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     28/35 Celsius
 Lifetime    Min/Max Temperature:     17/55 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -141,7 +141,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (457)
+Temperature History Size (Index):    478 (472)
 
 SCT Error Recovery Control:
            Read:     40 (4.0 seconds)
@@ -150,23 +150,23 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             895  ---  Lifetime Power-On Resets
-0x01  0x010  4           10469  ---  Power-on Hours
-0x01  0x018  6     14861955262  ---  Logical Sectors Written
-0x01  0x020  6       244663963  ---  Number of Write Commands
-0x01  0x028  6     14419691706  ---  Logical Sectors Read
-0x01  0x030  6       484092081  ---  Number of Read Commands
+0x01  0x008  4             908  ---  Lifetime Power-On Resets
+0x01  0x010  4           10604  ---  Power-on Hours
+0x01  0x018  6     15026875519  ---  Logical Sectors Written
+0x01  0x020  6       245520447  ---  Number of Write Commands
+0x01  0x028  6     14491073842  ---  Logical Sectors Read
+0x01  0x030  6       484954236  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              33  ---  Current Temperature
-0x05  0x010  1              31  ---  Average Short Term Temperature
+0x05  0x008  1              35  ---  Current Temperature
+0x05  0x010  1              27  ---  Average Short Term Temperature
 0x05  0x018  1              31  ---  Average Long Term Temperature
 0x05  0x020  1              56  ---  Highest Temperature
 0x05  0x028  1              11  ---  Lowest Temperature
 0x05  0x030  1              41  ---  Highest Average Short Term Temperature
-0x05  0x038  1              28  ---  Lowest Average Short Term Temperature
+0x05  0x038  1              26  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              39  ---  Highest Average Long Term Temperature
 0x05  0x048  1              31  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               -  ---  Time in Over-Temperature
@@ -188,7 +188,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 
 
 

@@ -9,18 +9,17 @@ Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4, ATA8-ACS T13/1699-D revision 6
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Mon Mar  9 09:29:28 2020 CET
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Mon Mar 16 20:54:59 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     0 (reserved)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Disabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Write SCT (Get) Feature Control Command failed: Read of ATA output registers not implemented [JMicron]
-Wt Cache Reorder: Unknown (SCT Feature Control command failed)
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,36 +61,36 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 48
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    1064358
+  1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    1064368
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    3563
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1905
-100 Unknown_Attribute       -O--CK   100   100   000    -    1643400
-101 Unknown_Attribute       -O--CK   100   100   000    -    242240
+  9 Power_On_Hours          -O--CK   100   100   000    -    3575
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1928
+100 Unknown_Attribute       -O--CK   100   100   000    -    1691064
+101 Unknown_Attribute       -O--CK   100   100   000    -    255624
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-174 Unknown_Attribute       -O--CK   100   100   000    -    59
+174 Unknown_Attribute       -O--CK   100   100   000    -    74
 175 Program_Fail_Count_Chip -O--CK   100   100   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   000    -    0
-177 Wear_Leveling_Count     -O--CK   092   092   000    -    2308
+177 Wear_Leveling_Count     -O--CK   092   092   000    -    2375
 178 Used_Rsvd_Blk_Cnt_Chip  -O----   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O----   100   100   000    -    275
-183 Runtime_Bad_Block       -O--CK   096   096   000    -    22
+183 Runtime_Bad_Block       -O--CK   096   096   000    -    23
 187 Reported_Uncorrect      PO--CK   100   100   000    -    0
 194 Temperature_Celsius     -O---K   035   100   000    -    35 (Min/Max 10/56)
-195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    1064358
+195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    1064368
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--C-   100   100   000    -    0
 201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
-204 Soft_ECC_Correction     -O--CK   100   100   000    -    1064358
+204 Soft_ECC_Correction     -O--CK   100   100   000    -    1064368
 231 Temperature_Celsius     -O--CK   092   092   000    -    8
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    5783
-234 Unknown_Attribute       -O--CK   100   100   000    -    2796
-241 Total_LBAs_Written      -O--CK   100   100   000    -    3971
-242 Total_LBAs_Read         -O--CK   100   100   000    -    7244
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    1065636
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    5959
+234 Unknown_Attribute       -O--CK   100   100   000    -    2948
+241 Total_LBAs_Written      -O--CK   100   100   000    -    4127
+242 Total_LBAs_Read         -O--CK   100   100   000    -    7300
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    1065646
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,33 +98,31 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
-Read GP Log Directory failed
-
-SMART Log Directory Version 1 [multi-sector log support]
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00           SL  R/O      1  Log Directory
+0x00       GPL,SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
 0x02           SL  R/O      1  Comprehensive SMART error log
-0x04           SL  R/O      8  Device Statistics log
+0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
+0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
-0x07           SL  R/O      1  Extended self-test log
+0x07       GPL,SL  R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x80-0x9f      SL  R/W     16  Host vendor specific log
+0x0a       GPL     R/W      5  Device Statistics Notification
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x30       GPL     R/O      9  IDENTIFY DEVICE data log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa1           SL  VS       9  Device vendor specific log
 0xab           SL  VS       1  Device vendor specific log
-0xe0           SL  R/W      1  SCT Command/Status
-0xe1           SL  R/W      1  SCT Data Transfer
+0xe0       GPL,SL  R/W      1  SCT Command/Status
+0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
-SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
-
-SMART Error Log Version: 0
+SMART Extended Comprehensive Error Log Version: 0 (1 sectors)
 No Errors Logged
 
-SMART Extended Self-test Log (GP Log 0x07) not supported
-
-SMART Self-test log structure revision number 0
-Warning: ATA Specification requires self-test log structure revision number = 1
+SMART Extended Self-test Log Version: 0 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 0
@@ -144,7 +141,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     30/35 Celsius
+Power Cycle Min/Max Temperature:     35/36 Celsius
 Lifetime    Min/Max Temperature:     10/56 Celsius
 Under/Over Temperature Limit Count:   0/0
 SMART Status:                        0xc24f (PASSED)
@@ -154,18 +151,54 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (22)
+Temperature History Size (Index):    478 (21)
 
-Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
-SCT (Get) Error Recovery Control command failed
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
 
-Device Statistics (SMART Log 0x04)
+Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
-ATA_SMART_READ_LOG failed: Multi-sector ATA commands not implemented [JMicron]
-Read Device Statistics pages 0x00-0x07 failed
+0x01  =====  =               =  ===  == General Statistics (rev 1) ==
+0x01  0x008  4            1928  ---  Lifetime Power-On Resets
+0x01  0x010  4            3575  ---  Power-on Hours
+0x01  0x018  6      8656515189  ---  Logical Sectors Written
+0x01  0x020  6       162747168  ---  Number of Write Commands
+0x01  0x028  6     15310175259  ---  Logical Sectors Read
+0x01  0x030  6       213926724  ---  Number of Read Commands
+0x01  0x038  6     12870738120  ---  Date and Time TimeStamp
+0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
+0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4            9183  ---  Resets Between Cmd Acceptance and Completion
+0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
+0x05  0x008  1              35  -D-  Current Temperature
+0x05  0x010  1               -  -D-  Average Short Term Temperature
+0x05  0x018  1               0  -D-  Average Long Term Temperature
+0x05  0x020  1              56  ---  Highest Temperature
+0x05  0x028  1              10  ---  Lowest Temperature
+0x05  0x030  1               -  -D-  Highest Average Short Term Temperature
+0x05  0x038  1               -  -D-  Lowest Average Short Term Temperature
+0x05  0x040  1               -  -D-  Highest Average Long Term Temperature
+0x05  0x048  1               -  -D-  Lowest Average Long Term Temperature
+0x05  0x050  4               0  -D-  Time in Over-Temperature
+0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
+0x05  0x060  4               0  -D-  Time in Under-Temperature
+0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4            9183  ---  Number of Hardware Resets
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 Pending Defects log (GP Log 0x0c) not supported
 
-ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
-Read SATA Phy Event Counters failed
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  4            0  Command failed due to ICRC error
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 

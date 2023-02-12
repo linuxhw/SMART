@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.76-un-def-alt1] (ALT Sisyphus 7.2-alt1)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Mar 10 21:05:31 2022 +05
+Local Time is:    Fri Nov 11 13:23:32 2022 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,29 +61,29 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    702
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    375
-165 Block_Erase_Count       -O--CK   100   100   ---    -    7471186
+  9 Power_On_Hours          -O--CK   100   100   ---    -    1669
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    712
+165 Block_Erase_Count       -O--CK   100   100   ---    -    12189835
 166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    1
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    46
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    3
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    4
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    626
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    1
-174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    13
+173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    2
+174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    19
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   074   041   ---    -    26 (Min/Max 21/41)
+188 Command_Timeout         -O--CK   100   100   ---    -    1
+194 Temperature_Celsius     -O---K   073   044   ---    -    27 (Min/Max 21/44)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x0010000a0010
+230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x001b0014001b
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    1760
-234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    1978
-241 Host_Writes_GiB         ----CK   253   253   ---    -    1920
-242 Host_Reads_GiB          ----CK   253   253   ---    -    1077
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    2999
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    3328
+241 Host_Writes_GiB         ----CK   253   253   ---    -    3240
+242 Host_Reads_GiB          ----CK   253   253   ---    -    2029
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -114,7 +114,17 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%         0         -
+# 2  Short offline       Completed without error       00%      1477         -
+# 3  Short offline       Completed without error       00%      1462         -
+# 4  Short offline       Completed without error       00%      1459         -
+# 5  Short offline       Completed without error       00%      1453         -
+# 6  Short offline       Completed without error       00%      1446         -
+# 7  Short offline       Completed without error       00%      1441         -
+# 8  Short offline       Completed without error       00%      1437         -
+# 9  Short offline       Completed without error       00%      1388         -
+#10  Short offline       Completed without error       00%      1387         -
 
 Selective Self-tests/Logging not supported
 
@@ -123,12 +133,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             375  ---  Lifetime Power-On Resets
-0x01  0x010  4             702  ---  Power-on Hours
-0x01  0x018  6      4026609310  ---  Logical Sectors Written
-0x01  0x020  6        15989643  ---  Number of Write Commands
-0x01  0x028  6      2259079710  ---  Logical Sectors Read
-0x01  0x030  6    150335819974  ---  Number of Read Commands
+0x01  0x008  4             712  ---  Lifetime Power-On Resets
+0x01  0x010  4            1669  ---  Power-on Hours
+0x01  0x018  6      6795704679  ---  Logical Sectors Written
+0x01  0x020  6        28852235  ---  Number of Write Commands
+0x01  0x028  6      4256459694  ---  Logical Sectors Read
+0x01  0x030  6    399455133100  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -142,7 +152,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           53  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           14  Device-to-host register FISes sent due to a COMRESET
 
 
 

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.4-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint F1 DT
 Device Model:     SAMSUNG HD322HJ
@@ -8,13 +11,14 @@ User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sun Apr 15 12:09:01 2018 -03
+Local Time is:    Fri Jun 25 10:25:40 2021 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
-APM feature is:   Disabled
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -59,29 +63,29 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   093   093   011    -    2920
-  4 Start_Stop_Count        -O--CK   085   085   000    -    15606
+  3 Spin_Up_Time            POS---   094   094   011    -    2860
+  4 Start_Stop_Count        -O--CK   080   080   000    -    20632
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    9533
-  9 Power_On_Hours          -O--CK   091   091   000    -    47942
+  9 Power_On_Hours          -O--CK   087   087   000    -    66490
  10 Spin_Retry_Count        PO--CK   100   100   051    -    1
- 11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   087   087   000    -    12796
+ 11 Calibration_Retry_Count -O--C-   100   100   000    -    1
+ 12 Power_Cycle_Count       -O--CK   083   083   000    -    17327
  13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   072   057   000    -    28 (Min/Max 18/28)
-194 Temperature_Celsius     -O---K   071   055   000    -    29 (Min/Max 18/31)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1993800
+190 Airflow_Temperature_Cel -O---K   075   057   000    -    25 (Min/Max 25/25)
+194 Temperature_Celsius     -O---K   075   055   000    -    25 (Min/Max 25/25)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    48895
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    303
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -100,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      2  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      2  Write stream error log
 0x22       GPL     R/O      2  Read stream error log
@@ -278,18 +282,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 29 Celsius
-Power Cycle Max Temperature:         31 Celsius
-Lifetime    Max Temperature:         48 Celsius
+Current Temperature:                    25 Celsius
+Power Cycle Min/Max Temperature:     --/25 Celsius
+Lifetime    Min/Max Temperature:     --/48 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (102)
+Temperature History Size (Index):    128 (28)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -298,9 +301,11 @@ SCT Error Recovery Control:
 ATA_READ_LOG_EXT (addr=0x04:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
 Read Device Statistics page 0x00 failed
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
@@ -309,7 +314,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2          429  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

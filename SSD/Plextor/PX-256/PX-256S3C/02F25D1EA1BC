@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.11-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     PLEXTOR PX-256S3C
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jul 21 15:37:56 2022 MSK
+Local Time is:    Tue Sep 27 03:23:49 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,14 +29,14 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(    2) seconds.
 Offline data collection
 capabilities: 			 (0x11) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -65,13 +65,13 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    13006
- 12 Power_Cycle_Count       PO----   100   100   000    -    5843
+  9 Power_On_Hours          -O----   100   100   000    -    13895
+ 12 Power_Cycle_Count       PO----   100   100   000    -    5994
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       PO----   100   100   000    -    0
 172 Unknown_Attribute       PO----   100   100   000    -    0
-173 Unknown_Attribute       PO----   100   100   000    -    44
-174 Unknown_Attribute       PO----   100   100   000    -    129
+173 Unknown_Attribute       PO----   100   100   000    -    56
+174 Unknown_Attribute       PO----   100   100   000    -    130
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
@@ -83,9 +83,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    100
-233 Media_Wearout_Indicator PO----   100   100   000    -    13983
-241 Total_LBAs_Written      PO----   100   100   000    -    275918
-242 Total_LBAs_Read         PO----   100   100   000    -    409107
+233 Media_Wearout_Indicator PO----   100   100   000    -    17213
+241 Total_LBAs_Written      PO----   100   100   000    -    369999
+242 Total_LBAs_Read         PO----   100   100   000    -    415898
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,8 +114,15 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
-SMART Extended Self-test Log Version: 0 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     13726         -
+# 2  Extended offline    Completed without error       00%     13683         -
+# 3  Extended offline    Completed without error       00%     13577         -
+# 4  Extended offline    Completed without error       00%     13519         -
+# 5  Extended offline    Completed without error       00%     13360         -
+# 6  Extended offline    Completed without error       00%     13117         -
+# 7  Extended offline    Completed without error       00%     13017         -
 
 Selective Self-tests/Logging not supported
 
@@ -124,7 +131,7 @@ SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                    45 Celsius
 Power Cycle Min/Max Temperature:     -1/ 0 Celsius
-Lifetime    Min/Max Temperature:      0/ 0 Celsius
+Lifetime    Min/Max Temperature:      0/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -132,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (72)
+Temperature History Size (Index):    128 (108)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -141,20 +148,20 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            5843  ---  Lifetime Power-On Resets
-0x01  0x010  4           13006  ---  Power-on Hours
-0x01  0x018  6       902748086  ---  Logical Sectors Written
-0x01  0x020  6       230195679  ---  Number of Write Commands
-0x01  0x028  6      1041453974  ---  Logical Sectors Read
-0x01  0x030  6       340759592  ---  Number of Read Commands
+0x01  0x008  4            5994  ---  Lifetime Power-On Resets
+0x01  0x010  4           13895  ---  Power-on Hours
+0x01  0x018  6      2773457794  ---  Logical Sectors Written
+0x01  0x020  6       260549617  ---  Number of Write Commands
+0x01  0x028  6      1486537616  ---  Logical Sectors Read
+0x01  0x030  6       346164868  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4        22911131  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4        22924495  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           22493  ---  Number of Hardware Resets
+0x06  0x008  4           23814  ---  Number of Hardware Resets
 0x06  0x018  4               9  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -172,7 +179,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           16  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

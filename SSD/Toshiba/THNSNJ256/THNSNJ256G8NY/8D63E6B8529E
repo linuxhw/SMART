@@ -1,4 +1,4 @@
-smartctl 6.6 2017-11-05 r4594 [x86_64-linux-4.19.152-antix.1-amd64-smp] (local build)
+smartctl 6.6 2017-11-05 r4594 [x86_64-linux-5.10.27-antix.1-amd64-smp] (local build)
 Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,11 +13,11 @@ Form Factor:      < 1.8 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri May 21 13:35:58 2021 CEST
+Local Time is:    Fri May 21 16:42:35 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -68,7 +68,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    7080
+  9 Power_On_Hours          -O--C-   100   100   000    -    7083
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
  12 Power_Cycle_Count       -O--C-   100   100   000    -    1558
 167 Unknown_Attribute       -O---K   100   100   000    -    0
@@ -78,7 +78,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 173 Unknown_Attribute       -O--C-   186   186   000    -    0
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    590
-194 Temperature_Celsius     PO---K   058   031   020    -    42 (Min/Max 15/69)
+194 Temperature_Celsius     PO---K   054   031   020    -    46 (Min/Max 15/69)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -127,20 +127,20 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       3 (0x0003)
 SCT Support Level:                   0
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     18/46 Celsius
+Current Temperature:                    46 Celsius
+Power Cycle Min/Max Temperature:     18/50 Celsius
 Lifetime    Min/Max Temperature:     15/69 Celsius
-Under/Over Temperature Limit Count:   0/244
+Under/Over Temperature Limit Count:   0/430
 Vendor specific:
 00 00 04 00 05 01 00 05 05 00 00 00 00 00 00 00
-00 01 00 00 1e ef 84 01 02 02 00 00 00 00 00 06
+00 01 00 00 db 1a 85 01 01 01 00 00 00 00 00 06
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/80 Celsius
-Temperature History Size (Index):    128 (17)
+Temperature History Size (Index):    128 (75)
 
 SCT Error Recovery Control:
            Read:    600 (60.0 seconds)
@@ -150,15 +150,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            1558  ---  Lifetime Power-On Resets
-0x01  0x018  6     15060983457  ---  Logical Sectors Written
-0x01  0x020  6       493830040  ---  Number of Write Commands
-0x01  0x028  6     11929322090  ---  Logical Sectors Read
-0x01  0x030  6       182119790  ---  Number of Read Commands
+0x01  0x018  6     15072823833  ---  Logical Sectors Written
+0x01  0x020  6       494749785  ---  Number of Write Commands
+0x01  0x028  6     11933870357  ---  Logical Sectors Read
+0x01  0x030  6       182313932  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              42  ---  Current Temperature
+0x05  0x008  1              46  ---  Current Temperature
 0x05  0x010  1              41  ---  Average Short Term Temperature
 0x05  0x018  1              42  ---  Average Long Term Temperature
 0x05  0x020  1              65  ---  Highest Temperature
@@ -167,12 +167,12 @@ Page  Offset Size        Value Flags Description
 0x05  0x038  1              37  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              51  ---  Highest Average Long Term Temperature
 0x05  0x048  1              42  ---  Lowest Average Long Term Temperature
-0x05  0x050  4          356450  ---  Time in Over-Temperature
+0x05  0x050  4          356640  ---  Time in Over-Temperature
 0x05  0x058  1              40  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            4455  ---  Number of Hardware Resets
+0x06  0x008  4            4458  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              14  N--  Percentage Used Endurance Indicator
@@ -192,8 +192,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4        83332  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4       127779  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

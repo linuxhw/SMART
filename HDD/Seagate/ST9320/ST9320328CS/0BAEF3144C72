@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.32-generic-5rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.118-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     ST9320328CS
@@ -9,10 +9,10 @@ Firmware Version: SC1A
 User Capacity:    320,039,378,432 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Apr  7 12:34:49 2022 MSK
+Local Time is:    Thu Sep 15 23:18:09 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,24 +64,24 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    204381432
+  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    180762153
   3 Spin_Up_Time            PO----   099   098   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5492
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5917
   5 Reallocated_Sector_Ct   PO--CK   098   098   036    -    54
-  7 Seek_Error_Rate         POSR--   075   060   030    -    17326978608
-  9 Power_On_Hours          -O--CK   080   080   000    -    17728
+  7 Seek_Error_Rate         POSR--   075   060   030    -    17337297768
+  9 Power_On_Hours          -O--CK   080   080   000    -    18279
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    876
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1275
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   034   034   000    -    66
-188 Command_Timeout         -O--CK   100   096   000    -    2851901801180
+188 Command_Timeout         -O--CK   100   096   000    -    2894852129510
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   068   034   045    Past 32 (32 172 32 22 0)
+190 Airflow_Temperature_Cel -O---K   066   034   045    Past 34 (32 172 34 30 0)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    19
-193 Load_Cycle_Count        -O--CK   100   100   000    -    940
-194 Temperature_Celsius     -O---K   032   066   000    -    32 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   059   048   000    -    204381432
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    5
+193 Load_Cycle_Count        -O--CK   100   100   000    -    1340
+194 Temperature_Celsius     -O---K   034   066   000    -    34 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   058   046   000    -    180762153
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    25
@@ -271,19 +271,24 @@ Error 56 [15] occurred at disk power-on lifetime: 17642 hours (735 days + 2 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     17711         -
-# 2  Extended offline    Completed without error       00%     17676         -
-# 3  Conveyance offline  Completed without error       00%     17675         -
-# 4  Extended offline    Aborted by host               90%     17670         -
-# 5  Conveyance offline  Aborted by host               80%     17670         -
-# 6  Extended offline    Interrupted (host reset)      00%     17668         -
-# 7  Short offline       Completed without error       00%     17631         -
-# 8  Short offline       Completed without error       00%     17630         -
-# 9  Short offline       Interrupted (host reset)      90%     17628         -
-#10  Short offline       Completed without error       00%     17628         -
-#11  Extended offline    Completed: read failure       10%     17628         565673234
-#12  Conveyance offline  Completed without error       00%     17627         -
-1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 2
+# 1  Short offline       Completed without error       00%     18078         -
+# 2  Extended offline    Interrupted (host reset)      00%     18017         -
+# 3  Extended offline    Interrupted (host reset)      00%     17877         -
+# 4  Short offline       Completed without error       00%     17780         -
+# 5  Extended offline    Interrupted (host reset)      00%     17753         -
+# 6  Short offline       Completed without error       00%     17711         -
+# 7  Extended offline    Completed without error       00%     17676         -
+# 8  Conveyance offline  Completed without error       00%     17675         -
+# 9  Extended offline    Aborted by host               90%     17670         -
+#10  Conveyance offline  Aborted by host               80%     17670         -
+#11  Extended offline    Interrupted (host reset)      00%     17668         -
+#12  Short offline       Completed without error       00%     17631         -
+#13  Short offline       Completed without error       00%     17630         -
+#14  Short offline       Interrupted (host reset)      90%     17628         -
+#15  Short offline       Completed without error       00%     17628         -
+#16  Extended offline    Completed: read failure       10%     17628         565673234
+#17  Conveyance offline  Completed without error       00%     17627         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 7
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -299,8 +304,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     22/32 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     30/34 Celsius
 Lifetime    Min/Max Temperature:     10/66 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -309,7 +314,7 @@ Temperature Sampling Period:         2 minutes
 Temperature Logging Interval:        94 minutes
 Min/Max recommended Temperature:      1/61 Celsius
 Min/Max Temperature Limit:            2/60 Celsius
-Temperature History Size (Index):    432 (44)
+Temperature History Size (Index):    432 (335)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -321,7 +326,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

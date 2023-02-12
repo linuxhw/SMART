@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.6-201.fc32.x86_64] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-58-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Sep 10 10:53:30 2020 WIB
+Local Time is:    Sat Dec 12 20:05:17 2020 WIB
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,33 +60,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    1
-  9 Power_On_Hours          -O--CK   100   100   050    -    3786
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    1367
+  9 Power_On_Hours          -O--CK   100   100   050    -    4619
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    3608
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    99
 163 Max_Erase_Count         -O--CK   100   100   050    -    80
-164 Average_Erase_Count     -O--CK   100   100   050    -    295464
-165 Unknown_Attribute       -O--CK   100   100   050    -    2063
-166 Later_Bad_Block_Count   -O--CK   100   100   050    -    55
-167 SSD_Protect_Mode        -O--CK   100   100   050    -    211
+164 Average_Erase_Count     -O--CK   100   100   050    -    936653
+165 Unknown_Attribute       -O--CK   100   100   050    -    3246
+166 Later_Bad_Block_Count   -O--CK   100   100   050    -    455
+167 SSD_Protect_Mode        -O--CK   100   100   050    -    670
 168 SATA_PHY_Error_Count    -O--CK   100   100   050    -    5050
-169 Unknown_Attribute       -O--CK   100   100   050    -    96
+169 Unknown_Attribute       -O--CK   100   100   050    -    87
 175 Bad_Cluster_Table_Count -O--CK   100   100   050    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   050    -    0
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    1
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    182
+192 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    2102
 194 Temperature_Celsius     -O---K   100   100   050    -    40
 195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    0
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    1
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    99
-241 Total_LBAs_Written      ----CK   100   100   050    -    397004
-242 Total_LBAs_Read         ----CK   100   100   050    -    149906
-245 Unknown_Attribute       -O--CK   100   100   050    -    381761
+241 Total_LBAs_Written      ----CK   100   100   050    -    587396
+242 Total_LBAs_Read         ----CK   100   100   050    -    202083
+245 Unknown_Attribute       -O--CK   100   100   050    -    556682
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,8 +111,23 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 1 [0] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -123,14 +138,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1367  ---  Lifetime Power-On Resets
-0x01  0x010  4            3786  ---  Power-on Hours
-0x01  0x018  6       248308172  ---  Logical Sectors Written
-0x01  0x020  6           24683  ---  Number of Write Commands
-0x01  0x028  6      1234367634  ---  Logical Sectors Read
-0x01  0x030  6            2352  ---  Number of Read Commands
+0x01  0x008  4            3608  ---  Lifetime Power-On Resets
+0x01  0x010  4            4619  ---  Power-on Hours
+0x01  0x018  6      4135896174  ---  Logical Sectors Written
+0x01  0x020  6           16649  ---  Number of Write Commands
+0x01  0x028  6       358869978  ---  Logical Sectors Read
+0x01  0x030  6            3607  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              13  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -142,5 +157,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           12  Device-to-host register FISes sent due to a COMRESET
 

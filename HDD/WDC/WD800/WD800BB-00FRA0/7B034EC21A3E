@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [i686-linux-4.15.0-desktop-122.124.1rosa-i586] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar
 Device Model:     WDC WD800BB-00FRA0
@@ -7,7 +10,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Wed Jan  6 23:07:31 2021 +08
+Local Time is:    Wed Feb 17 12:48:30 2021 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,8 +25,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -56,14 +59,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   200   200   051    -    0
   3 Spin_Up_Time            POS---   083   081   021    -    2358
-  4 Start_Stop_Count        -O--CK   096   096   040    -    4121
+  4 Start_Stop_Count        -O--CK   096   096   040    -    4220
   5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    1
-  7 Seek_Error_Rate         PO-R--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   083   083   000    -    12663
+  7 Seek_Error_Rate         PO-R--   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   083   083   000    -    12814
  10 Spin_Retry_Count        PO--C-   100   096   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3855
-194 Temperature_Celsius     -O---K   108   253   000    -    35
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3948
+194 Temperature_Celsius     -O---K   104   253   000    -    39
 196 Reallocated_Event_Count -O--CK   199   199   000    -    1
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   -O--C-   200   200   000    -    0
@@ -135,7 +138,9 @@ Error 1 occurred at disk power-on lifetime: 779 hours (32 days + 11 hours)
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       678         -
+# 2  Extended offline    Interrupted (host reset)      30%       677         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -155,6 +160,4 @@ Device Statistics (GP/SMART Log 0x04) not supported
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 

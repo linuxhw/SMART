@@ -11,15 +11,15 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Mar 18 20:49:50 2021 CET
+Local Time is:    Fri Mar 19 11:15:27 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -58,15 +58,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   091   091   000    -    8058
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    3968
-100 Unknown_Attribute       -O--CK   100   100   000    -    6247005
+  9 Power_On_Hours          -O--CK   091   091   000    -    8061
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    3969
+100 Unknown_Attribute       -O--CK   100   100   000    -    6248793
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   253   000    -    0
 174 Unknown_Attribute       ----CK   100   100   000    -    343
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   100   100   000    -    5529408
+177 Wear_Leveling_Count     -O--CK   100   100   000    -    5531200
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    16
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    107
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    5205
@@ -76,13 +76,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    669
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   044   000   000    -    44 (Min/Max -24/69)
-195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    46936986
+194 Temperature_Celsius     -O----   034   000   000    -    34 (Min/Max -24/69)
+195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    46938228
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 Temperature_Celsius     PO--CK   253   253   ---    -    0
-234 Unknown_Attribute       -O--CK   100   100   ---    -    21259
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    7255
+234 Unknown_Attribute       -O--CK   100   100   ---    -    21264
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    7256
 242 Total_LBAs_Read         -O--CK   100   100   ---    -    14973
 250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    12109
                             ||||||_ K auto-keep
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 12819 (device log contains only the most recent 20 errors)
+Device Error Count: 12821 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +122,30 @@ Device Error Count: 12819 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12821 [0] occurred at disk power-on lifetime: 8058 hours (335 days + 18 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+
+Error 12820 [19] occurred at disk power-on lifetime: 8058 hours (335 days + 18 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
 Error 12819 [18] occurred at disk power-on lifetime: 8057 hours (335 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -210,30 +234,6 @@ Error 12814 [13] occurred at disk power-on lifetime: 8056 hours (335 days + 16 h
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
-Error 12813 [12] occurred at disk power-on lifetime: 8055 hours (335 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-
-Error 12812 [11] occurred at disk power-on lifetime: 8055 hours (335 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-
 Warning! SMART Extended Self-test Log Structure (1/2) error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -283,5 +283,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 

@@ -8,7 +8,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3b
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Fri Dec 11 11:50:53 2020 CET
+Local Time is:    Thu Dec 31 07:48:27 2020 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -57,22 +57,22 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 18
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
+  1 Raw_Read_Error_Rate     POSR--   252   100   051    -    0
   3 Spin_Up_Time            POS---   073   073   011    -    4000
-  4 Start_Stop_Count        -O--CK   097   097   000    -    2244
+  4 Start_Stop_Count        -O--CK   097   097   000    -    2256
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR--   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    1494984
+  9 Power_On_Hours          -O--CK   097   097   000    -    1495235
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--C-   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1162
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1168
 184 End-to-End_Error        -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   099   099   000    -    1
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O---K   157   106   000    -    32
-194 Temperature_Celsius     -O---K   157   106   000    -    32
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   169   106   000    -    28
+194 Temperature_Celsius     -O---K   169   106   000    -    28
+195 Hardware_ECC_Recovered  -O-RC-   252   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--C-   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 1
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,57 @@ Device Error Count: 1
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 12460 hours (519 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 c2 4f 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d9 00 00 00 00 00 c2 4f 00 a0 00     00:00:09.000  SMART DISABLE OPERATIONS
+  ec 00 20 00 3f 00 00 00 00 01 00 a0 04     00:00:09.000  IDENTIFY DEVICE
+  10 00 20 00 3f 00 00 00 00 00 01 a0 00     00:00:09.000  RECALIBRATE [OBS-4]
+  91 00 20 00 3f 00 00 0f 00 00 01 af 00     00:00:09.000  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:09.000  IDENTIFY DEVICE
+
+Error 3 [2] occurred at disk power-on lifetime: 12460 hours (519 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 c2 4f 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d9 00 00 00 00 00 c2 4f 00 a0 00     00:05:15.000  SMART DISABLE OPERATIONS
+  ec 00 20 00 3f 00 00 00 00 01 00 a0 04     00:05:15.000  IDENTIFY DEVICE
+  10 00 20 00 3f 00 00 00 00 00 01 a0 ff     00:05:15.000  RECALIBRATE [OBS-4]
+  91 00 20 00 3f 00 00 0f 00 00 01 af ff     00:05:15.000  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:05:15.000  IDENTIFY DEVICE
+
+Error 2 [1] occurred at disk power-on lifetime: 12460 hours (519 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 c2 4f 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d9 00 00 00 00 00 c2 4f 00 a0 00     00:00:09.000  SMART DISABLE OPERATIONS
+  ec 00 20 00 3f 00 00 00 00 01 00 a0 04     00:00:09.000  IDENTIFY DEVICE
+  10 00 20 00 3f 00 00 00 00 00 01 a0 00     00:00:09.000  RECALIBRATE [OBS-4]
+  91 00 20 00 3f 00 00 0f 00 00 01 af 00     00:00:09.000  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:09.000  IDENTIFY DEVICE
 
 Error 1 [0] occurred at disk power-on lifetime: 11503 hours (479 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -154,16 +205,16 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     --/32 Celsius
-Lifetime    Min/Max Temperature:     --/32 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     --/28 Celsius
+Lifetime    Min/Max Temperature:     --/35 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/105 Celsius
 Min/Max Temperature Limit:            5/110 Celsius
-Temperature History Size (Index):    128 (60)
+Temperature History Size (Index):    128 (72)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -183,8 +234,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

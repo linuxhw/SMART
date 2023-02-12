@@ -1,18 +1,22 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.9.155-nrj-desktop-1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     SAMSUNG SP40A2H
 Serial Number:    --
 Firmware Version: RR100-06
-User Capacity:    40 060 403 712 bytes [40,0 GB]
+User Capacity:    40,060,403,712 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 1
-Local Time is:    Tue Apr  9 00:26:08 2019 MSK
+Local Time is:    Thu Jul 23 23:29:31 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -20,12 +24,11 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 248)	Self-test routine in progress...
+					80% of test remaining.
 Total time to complete Offline 
 data collection: 		( 1800) seconds.
 Offline data collection
@@ -50,14 +53,14 @@ recommended polling time: 	 (  30) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    21
-  4 Start_Stop_Count        -O--CK   096   096   000    -    4299
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    23
+  4 Start_Stop_Count        -O--CK   093   093   000    -    8030
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    2
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
-  8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    1328270
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2334
-194 Temperature_Celsius     -O---K   127   097   000    -    37
+  8 Seek_Time_Performance   --S--K   091   091   000    -    9331
+  9 Power_On_Hours          -O--CK   098   098   000    -    1522519
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4222
+194 Temperature_Celsius     -O---K   199   097   000    -    13
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   253   253   010    -    0
 199 UDMA_CRC_Error_Count    -O-R--   100   100   000    -    0
@@ -83,9 +86,9 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 12572 inconsistent with error log pointer 5
+Warning: ATA error count 23068 inconsistent with error log pointer 5
 
-ATA Error Count: 12572 (device log contains only the most recent five errors)
+ATA Error Count: 23068 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -100,90 +103,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 12572 occurred at disk power-on lifetime: 43050 hours (1793 days + 18 hours)
+Error 23068 occurred at disk power-on lifetime: 35887 hours (1495 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 00 00 00 00 a0  Error: ABRT
+  04 51 00 00 00 00 b0  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 00 00 00 00 a0 00  10d+22:02:27.200  IDENTIFY PACKET DEVICE
-  c8 20 01 01 00 00 e0 00  20d+05:35:29.280  READ DMA
-  c8 20 01 00 00 00 e0 00  20d+05:35:29.280  READ DMA
-  c8 20 01 00 00 00 e0 00  17d+04:55:08.800  READ DMA
-  c8 20 01 00 00 00 e0 00   6d+06:35:35.040  READ DMA
+  a1 00 00 00 00 00 b0 00   6d+06:33:02.720  IDENTIFY PACKET DEVICE
+  c8 20 01 01 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  e3 20 00 01 00 00 b0 00   7d+19:03:02.400  IDLE
 
-Error 12571 occurred at disk power-on lifetime: 22314 hours (929 days + 18 hours)
+Error 23067 occurred at disk power-on lifetime: 35887 hours (1495 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 00 00 00 00 a0  Error: ABRT
+  04 51 00 00 00 00 b0  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 00 00 00 00 a0 00  38d+20:58:40.000  IDENTIFY PACKET DEVICE
-  ca 20 01 b7 56 0d e2 00  43d+12:45:11.040  WRITE DMA
-  c8 20 01 b7 56 0d e2 00  43d+12:45:11.040  READ DMA
-  c8 20 01 b7 56 0d e2 00  43d+12:45:11.040  READ DMA
-  ca 20 01 b7 56 0d e2 00  43d+12:45:11.040  WRITE DMA
+  a1 00 00 00 00 00 b0 00   1d+14:46:31.680  IDENTIFY PACKET DEVICE
+  c8 20 01 01 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  e3 20 00 01 00 00 b0 00   7d+19:03:02.400  IDLE
 
-Error 12570 occurred at disk power-on lifetime: 21546 hours (897 days + 18 hours)
+Error 23066 occurred at disk power-on lifetime: 35887 hours (1495 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 00 01 c2 4f a0  Error: ABRT
+  04 51 00 00 00 00 b0  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 c2 4f a0 00  31d+02:13:16.160  SMART DISABLE OPERATIONS
-  ec 20 3f 01 00 00 a0 00  31d+02:13:16.160  IDENTIFY DEVICE
-  10 20 3f 01 00 00 a0 00  31d+02:13:16.160  RECALIBRATE [OBS-4]
-  91 20 3f 01 00 00 af 00  31d+02:13:16.160  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 01 01 00 00 a0 00  31d+02:13:16.160  IDENTIFY DEVICE
+  a1 00 00 00 00 00 b0 00   1d+14:46:31.680  IDENTIFY PACKET DEVICE
+  c8 20 01 01 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  e3 20 00 01 00 00 b0 00   7d+19:03:02.400  IDLE
 
-Error 12569 occurred at disk power-on lifetime: 21290 hours (887 days + 2 hours)
+Error 23065 occurred at disk power-on lifetime: 35887 hours (1495 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 00 00 00 00 a0  Error: ABRT
+  04 51 00 00 00 00 b0  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 00 00 00 00 a0 00   7d+19:34:47.040  IDENTIFY PACKET DEVICE
-  ca 00 08 07 14 37 e0 00  12d+11:21:18.080  WRITE DMA
-  ca 00 08 47 5e 00 e0 00  12d+11:21:18.080  WRITE DMA
-  ca 00 08 3f 5e 00 e0 00  12d+11:21:18.080  WRITE DMA
-  ca 00 08 df 5f 07 e0 00  12d+11:21:18.080  WRITE DMA
+  a1 00 00 00 00 00 b0 00   1d+14:46:31.680  IDENTIFY PACKET DEVICE
+  c8 20 01 01 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  c8 20 01 00 00 00 f0 00   7d+19:03:02.400  READ DMA
+  e3 20 00 01 00 00 b0 00   7d+19:03:02.400  IDLE
 
-Error 12568 occurred at disk power-on lifetime: 21290 hours (887 days + 2 hours)
+Error 23064 occurred at disk power-on lifetime: 6700 hours (279 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 00 00 00 00 a0  Error: ABRT
+  04 51 fe 00 00 00 50  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 00 00 00 00 a0 00  45d+04:36:12.160  IDENTIFY PACKET DEVICE
-  c8 20 08 5f 04 27 e0 00      03:21:01.440  READ DMA
-  c8 20 08 87 54 c6 e2 00      03:21:01.440  READ DMA
-  c8 20 08 87 54 c6 e2 00      03:21:01.440  READ DMA
-  c8 20 02 77 60 00 e0 00      03:21:01.440  READ DMA
+  ef 05 fe 00 00 00 50 00  43d+14:48:37.120  SET FEATURES [Enable APM]
+  c8 00 08 00 00 10 f0 00  43d+14:48:37.120  READ DMA
+  c8 00 08 00 00 02 f0 00  43d+14:48:37.120  READ DMA
+  c8 00 08 f8 00 03 f0 00  43d+14:48:37.120  READ DMA
+  c8 00 08 f0 00 03 f0 00  43d+14:48:37.120  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -196,5 +199,9 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11) not supported
+
+
 

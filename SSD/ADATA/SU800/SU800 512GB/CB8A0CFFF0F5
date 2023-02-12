@@ -10,7 +10,7 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Nov  5 18:01:06 2020 UTC
+Local Time is:    Thu Nov  5 13:08:31 2020 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -67,7 +67,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    42
 163 Initial_Bad_Block_Count ------   100   100   000    -    13
-164 Total_Erase_Count       ------   100   100   000    -    7879
+164 Total_Erase_Count       ------   100   100   000    -    7908
 165 Max_Erase_Count         ------   100   100   000    -    15
 166 Min_Erase_Count         ------   100   100   000    -    2
 167 Average_Erase_Count     ------   100   100   000    -    5
@@ -80,16 +80,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 192 Power-Off_Retract_Count ------   100   100   000    -    42
-194 Temperature_Celsius     ------   100   100   000    -    31
+194 Temperature_Celsius     ------   100   100   000    -    43
 195 Hardware_ECC_Recovered  ------   100   100   000    -    0
 196 Reallocated_Event_Count ------   100   100   016    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    71257
-242 Host_Reads_32MiB        ------   100   100   000    -    38376
-245 TLC_Writes_32MiB        ------   100   100   000    -    63032
+241 Host_Writes_32MiB       ------   100   100   000    -    71612
+242 Host_Reads_32MiB        ------   100   100   000    -    38397
+245 TLC_Writes_32MiB        ------   100   100   000    -    63264
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -138,8 +138,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                     0 Celsius
-Power Cycle Min/Max Temperature:     -1/ 0 Celsius
-Lifetime    Min/Max Temperature:      0/ 0 Celsius
+Power Cycle Min/Max Temperature:     31/43 Celsius
+Lifetime    Min/Max Temperature:      0/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -147,7 +147,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (0)
+Temperature History Size (Index):    128 (6)
 
 SCT Error Recovery Control command not supported
 
@@ -156,15 +156,15 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              54  ---  Lifetime Power-On Resets
 0x01  0x010  4              27  ---  Power-on Hours
-0x01  0x018  6       374945242  ---  Logical Sectors Written
-0x01  0x020  6        18975606  ---  Number of Write Commands
-0x01  0x028  6      2515064506  ---  Logical Sectors Read
-0x01  0x030  6        10798377  ---  Number of Read Commands
+0x01  0x018  6       398216081  ---  Logical Sectors Written
+0x01  0x020  6        18998256  ---  Number of Write Commands
+0x01  0x028  6      2516422543  ---  Logical Sectors Read
+0x01  0x030  6        10823837  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              42  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              91  ---  Number of Hardware Resets
+0x06  0x008  4              96  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -185,7 +185,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

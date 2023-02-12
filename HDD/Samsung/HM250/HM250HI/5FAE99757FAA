@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.12-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jun  9 15:53:19 2021 UTC
+Local Time is:    Tue Feb 15 22:52:50 2022 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -63,26 +63,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    0
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   093   093   025    -    2310
-  4 Start_Stop_Count        -O--CK   100   100   000    -    35
+  3 Spin_Up_Time            PO---K   093   093   025    -    2320
+  4 Start_Stop_Count        -O--CK   100   100   000    -    101
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    25
+  9 Power_On_Hours          -O--CK   100   100   000    -    53
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    1
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    30
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    2
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    2
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    70
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    8
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   061   000    -    36 (Min/Max 19/39)
+194 Temperature_Celsius     -O----   064   061   000    -    29 (Min/Max 19/40)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    1
-223 Load_Retry_Count        -O--CK   100   100   000    -    1
-225 Load_Cycle_Count        -O--CK   100   100   000    -    1194
+223 Load_Retry_Count        -O--CK   100   100   000    -    2
+225 Load_Cycle_Count        -O--CK   100   100   000    -    2859
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 14 (device log contains only the most recent 8 errors)
+Device Error Count: 57 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,7 +125,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 14 [5] occurred at disk power-on lifetime: 24 hours (1 days + 0 hours)
+Error 57 [0] occurred at disk power-on lifetime: 53 hours (2 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -136,13 +136,81 @@ Error 14 [5] occurred at disk power-on lifetime: 24 hours (1 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.007  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:00.007  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.007  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.007  READ DMA EXT
+  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.009  SEEK [OBS-7]
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.009  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.009  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.009  READ DMA EXT
   f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.004  SECURITY FREEZE LOCK
 
-Error 13 [4] occurred at disk power-on lifetime: 24 hours (1 days + 0 hours)
+Error 56 [7] occurred at disk power-on lifetime: 52 hours (2 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 00 00 00 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.327  SEEK [OBS-7]
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.327  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.327  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.327  READ DMA EXT
+  f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.324  SECURITY FREEZE LOCK
+
+Error 55 [6] occurred at disk power-on lifetime: 52 hours (2 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 00 00 00 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.130  SEEK [OBS-7]
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.130  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.130  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.130  READ DMA EXT
+  f5 00 da 00 fe 00 00 00 c2 4f 6f a0 00     00:00:00.127  SECURITY FREEZE LOCK
+
+Error 54 [5] occurred at disk power-on lifetime: 52 hours (2 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 00 00 00 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.089  SEEK [OBS-7]
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.089  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.089  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.088  READ DMA EXT
+  f5 00 da 00 fe 00 00 00 c2 4f 00 a0 00     00:00:00.086  SECURITY FREEZE LOCK
+
+Error 53 [4] occurred at disk power-on lifetime: 52 hours (2 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 00 00 00 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.044  SEEK [OBS-7]
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.044  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.044  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.044  READ DMA EXT
+  f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.041  SECURITY FREEZE LOCK
+
+Error 52 [3] occurred at disk power-on lifetime: 52 hours (2 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -154,12 +222,12 @@ Error 13 [4] occurred at disk power-on lifetime: 24 hours (1 days + 0 hours)
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
   70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.008  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:00.008  READ DMA EXT
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.008  READ DMA EXT
   25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.008  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.007  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.008  READ DMA EXT
   f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.004  SECURITY FREEZE LOCK
 
-Error 12 [3] occurred at disk power-on lifetime: 21 hours (0 days + 21 hours)
+Error 51 [2] occurred at disk power-on lifetime: 51 hours (2 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -170,30 +238,13 @@ Error 12 [3] occurred at disk power-on lifetime: 21 hours (0 days + 21 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.012  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:00.012  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.012  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.011  READ DMA EXT
+  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.008  SEEK [OBS-7]
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.008  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.008  READ DMA EXT
+  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.008  READ DMA EXT
   f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.004  SECURITY FREEZE LOCK
 
-Error 11 [2] occurred at disk power-on lifetime: 20 hours (0 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 ff 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:02.290  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:02.290  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:02.290  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:02.289  READ DMA EXT
-  f5 00 da 00 ff 00 00 00 c2 4f 00 a0 00     00:00:02.282  SECURITY FREEZE LOCK
-
-Error 10 [1] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
+Error 50 [1] occurred at disk power-on lifetime: 51 hours (2 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -205,58 +256,7 @@ Error 10 [1] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
   70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.007  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:00.007  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.007  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.007  READ DMA EXT
-  f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.004  SECURITY FREEZE LOCK
-
-Error 9 [0] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.012  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:00.012  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.012  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.011  READ DMA EXT
-  f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.004  SECURITY FREEZE LOCK
-
-Error 8 [7] occurred at disk power-on lifetime: 18 hours (0 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.012  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:00.012  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.012  READ DMA EXT
-  25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.011  READ DMA EXT
-  f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.004  SECURITY FREEZE LOCK
-
-Error 7 [6] occurred at disk power-on lifetime: 17 hours (0 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  70 00 ff 00 00 00 00 00 00 00 00 a0 00     00:00:00.007  SEEK [OBS-7]
-  25 03 da 00 6b 00 00 00 00 00 02 40 00     00:00:00.007  READ DMA EXT
+  25 03 da 00 65 00 00 00 00 00 02 40 00     00:00:00.007  READ DMA EXT
   25 03 da 00 01 00 00 00 00 00 01 40 00     00:00:00.007  READ DMA EXT
   25 03 da 00 01 00 00 00 00 00 00 40 00     00:00:00.007  READ DMA EXT
   f5 00 da 00 00 00 00 00 c2 4f 00 a0 00     00:00:00.004  SECURITY FREEZE LOCK
@@ -281,9 +281,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     35/36 Celsius
-Lifetime    Min/Max Temperature:     22/39 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     28/28 Celsius
+Lifetime    Min/Max Temperature:     22/40 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -292,7 +292,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (83)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -312,8 +312,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            8  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

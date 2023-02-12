@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Feb 23 09:32:17 2022 MSK
+Local Time is:    Mon Apr 11 23:33:15 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -64,25 +64,25 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   116   088   006    -    106443540
+  1 Raw_Read_Error_Rate     POSR--   117   088   006    -    123027684
   3 Spin_Up_Time            -O----   098   097   000    -    0
-  4 Start_Stop_Count        PO--CK   088   088   000    -    13114
+  4 Start_Stop_Count        PO--CK   088   088   000    -    13241
   5 Reallocated_Sector_Ct   PO--CK   099   099   036    -    26
-  7 Seek_Error_Rate         POSR--   088   060   030    -    695741004
-  9 Power_On_Hours          -O--CK   072   072   000    -    25126
+  7 Seek_Error_Rate         POSR--   088   060   030    -    697804384
+  9 Power_On_Hours          -O--CK   072   072   000    -    25258
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       PO--CK   088   088   020    -    13046
+ 12 Power_Cycle_Count       PO--CK   088   088   020    -    13173
 183 Runtime_Bad_Block       -O--CK   100   253   000    -    13
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    25693
-188 Command_Timeout         -O--CK   100   084   000    -    90195690206
+187 Reported_Uncorrect      -O--CK   001   001   000    -    25697
+188 Command_Timeout         -O--CK   100   084   000    -    90195690236
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   060   037   045    Past 40 (Min/Max 22/40 #481)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    173
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    778
-193 Load_Cycle_Count        -O--CK   006   006   000    -    188757
-194 Temperature_Celsius     -O---K   040   063   000    -    40 (243 52 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   047   033   000    -    106443540
+190 Airflow_Temperature_Cel -O---K   065   037   045    Past 35 (1 225 35 21 0)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    174
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    775
+193 Load_Cycle_Count        -O--CK   005   005   000    -    190899
+194 Temperature_Celsius     -O---K   035   063   000    -    35 (243 52 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   047   033   000    -    123027684
 196 Reallocated_Event_Count PO--CK   099   099   036    -    26
 197 Current_Pending_Sector  -O--C-   100   100   000    -    73
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
@@ -273,21 +273,25 @@ Error 20726 [5] occurred at disk power-on lifetime: 23570 hours (982 days + 2 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       90%     25074         756253957
-# 2  Extended offline    Completed: read failure       90%     23634         6357362
-# 3  Extended offline    Completed: read failure       90%     23567         6357362
-# 4  Short offline       Completed: read failure       90%     23567         6357362
-# 5  Short offline       Completed: read failure       90%     23567         6357362
-# 6  Short offline       Completed: read failure       90%     23567         6357362
-# 7  Short offline       Completed: read failure       90%     12355         4899167
-# 8  Short offline       Completed: read failure       90%     12355         4899167
-# 9  Short offline       Completed without error       00%     12355         -
-#10  Short offline       Completed: read failure       80%     12355         4899167
-#11  Short offline       Completed: read failure       80%     12352         4899167
-#12  Short offline       Completed: read failure       80%      9958         4837526
-#13  Short offline       Aborted by host               90%      5864         -
-#14  Short offline       Interrupted (host reset)      90%       953         -
-#15  Short offline       Completed without error       00%       953         -
+# 1  Extended offline    Completed: read failure       90%     25250         756253957
+# 2  Extended offline    Completed: read failure       90%     25212         756253957
+# 3  Extended offline    Completed: read failure       90%     25167         756253957
+# 4  Extended offline    Completed: read failure       90%     25130         756253957
+# 5  Extended offline    Completed: read failure       90%     25074         756253957
+# 6  Extended offline    Completed: read failure       90%     23634         6357362
+# 7  Extended offline    Completed: read failure       90%     23567         6357362
+# 8  Short offline       Completed: read failure       90%     23567         6357362
+# 9  Short offline       Completed: read failure       90%     23567         6357362
+#10  Short offline       Completed: read failure       90%     23567         6357362
+#11  Short offline       Completed: read failure       90%     12355         4899167
+#12  Short offline       Completed: read failure       90%     12355         4899167
+#13  Short offline       Completed without error       00%     12355         -
+#14  Short offline       Completed: read failure       80%     12355         4899167
+#15  Short offline       Completed: read failure       80%     12352         4899167
+#16  Short offline       Completed: read failure       80%      9958         4837526
+#17  Short offline       Aborted by host               90%      5864         -
+#18  Short offline       Interrupted (host reset)      90%       953         -
+#19  Short offline       Completed without error       00%       953         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -303,17 +307,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     22/40 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     22/35 Celsius
 Lifetime    Min/Max Temperature:      5/63 Celsius
-Under/Over Temperature Limit Count:   0/44
+Under/Over Temperature Limit Count:   0/15
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (90)
+Temperature History Size (Index):    128 (77)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -325,7 +329,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

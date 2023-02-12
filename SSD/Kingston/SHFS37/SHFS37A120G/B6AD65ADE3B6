@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.74-1-lts] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.5-arch1-1] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Oct 29 15:47:56 2022 CEST
+Local Time is:    Sat Oct 29 15:54:21 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,7 +65,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0/0
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   078   078   000    -    19479h+43m+38.960s
+  9 Power_On_Hours_and_Msec -O--CK   078   078   000    -    19479h+50m+04.050s
  12 Power_Cycle_Count       -O--CK   098   098   000    -    3008
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
@@ -74,8 +74,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O-R--   100   100   000    -    0
 182 Erase_Fail_Count        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   040   053   000    -    40 (Min/Max 8/53)
-194 Temperature_Celsius     -O---K   040   053   000    -    40 (Min/Max 8/53)
+189 Airflow_Temperature_Cel ------   041   053   000    -    41 (Min/Max 8/53)
+194 Temperature_Celsius     -O---K   041   053   000    -    41 (Min/Max 8/53)
 195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/0
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
 201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/0
@@ -133,7 +133,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
+Current Temperature:                    41 Celsius
 Power Cycle Min/Max Temperature:      8/53 Celsius
 Lifetime    Min/Max Temperature:      8/53 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -143,7 +143,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (126)
+Temperature History Size (Index):    478 (127)
 
 SCT Error Recovery Control command not supported
 
@@ -153,12 +153,12 @@ Page  Offset Size        Value Flags Description
 0x01  0x008  4            3008  ---  Lifetime Power-On Resets
 0x01  0x010  4           19479  ---  Power-on Hours
 0x01  0x018  6     21648068094  ---  Logical Sectors Written
-0x01  0x028  6     11739643092  ---  Logical Sectors Read
+0x01  0x028  6     11739650837  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              40  ---  Current Temperature
+0x05  0x008  1              41  ---  Current Temperature
 0x05  0x010  1              41  ---  Average Short Term Temperature
 0x05  0x018  1              39  ---  Average Long Term Temperature
 0x05  0x020  1              53  ---  Highest Temperature
@@ -173,7 +173,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4               0  ---  Number of Hardware Resets
-0x06  0x010  4            4820  ---  Number of ASR Events
+0x06  0x010  4            4823  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
@@ -191,8 +191,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

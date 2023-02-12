@@ -1,21 +1,27 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.4-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
+Model Family:     Samsung based SSDs
 Device Model:     SAMSUNG MZNLF128HCHP-00000
 Serial Number:    --
 LU WWN Device Id: 5 002538 ...
 Firmware Version: FXT2101Q
-User Capacity:    128.035.676.160 bytes [128 GB]
+User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Jan  4 10:32:47 2021 CET
+Local Time is:    Thu May 27 21:16:12 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -54,23 +60,23 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   095   095   000    -    22048
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    6485
-170 Unknown_Attribute       -O--CK   100   100   010    -    0
-171 Unknown_Attribute       -O--CK   100   100   010    -    0
-172 Unknown_Attribute       -O--CK   100   100   010    -    0
-173 Unknown_Attribute       PO--CK   076   076   005    -    498
-174 Unknown_Attribute       -O--CK   099   099   000    -    563
+  9 Power_On_Hours          -O--CK   095   095   000    -    24330
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7014
+170 Unused_Rsvd_Blk_Ct_Chip -O--CK   100   100   010    -    0
+171 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
+172 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
+173 Wear_Leveling_Count     PO--CK   072   072   005    -    577
+174 Unexpect_Power_Loss_Ct  -O--CK   099   099   000    -    623
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    1071
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O--CK   056   036   000    -    44
-199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
-233 Media_Wearout_Indicator PO--C-   075   075   000    -    12599688
-241 Total_LBAs_Written      -O--CK   099   099   000    -    47790
-242 Total_LBAs_Read         -O--CK   099   099   000    -    54021
-249 Unknown_Attribute       -O--CK   099   099   000    -    63744
+187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
+194 Temperature_Celsius     -O--CK   054   036   000    -    46
+199 CRC_Error_Count         -OSRCK   100   100   000    -    0
+233 Media_Wearout_Indicator PO--C-   071   071   000    -    11936988
+241 Total_LBAs_Written      -O--CK   099   099   000    -    55987
+242 Total_LBAs_Read         -O--CK   099   099   000    -    62387
+249 NAND_Writes_1GiB        -O--CK   099   099   000    -    73856
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -88,7 +94,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x13       GPL     R/O      1  SATA NCQ Send and Receive log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
@@ -102,18 +108,24 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     21609         -
-# 2  Short offline       Aborted by host               20%     21190         -
-# 3  Short offline       Completed without error       00%     21026         -
-# 4  Short offline       Completed without error       00%     21026         -
-# 5  Short offline       Completed without error       00%     13668         -
-# 6  Short offline       Completed without error       00%     11550         -
-# 7  Offline             Completed without error       00%     11491         -
-# 8  Short offline       Completed without error       00%     11491         -
-# 9  Offline             Completed without error       00%     11490         -
-#10  Offline             Completed without error       00%     11490         -
-#11  Offline             Completed without error       00%     11490         -
-#12  Short offline       Completed without error       00%     11490         -
+# 1  Short offline       Completed without error       00%     22942         -
+# 2  Short offline       Completed without error       00%     22941         -
+# 3  Short offline       Completed without error       00%     22571         -
+# 4  Short offline       Completed without error       00%     22544         -
+# 5  Short offline       Completed without error       00%     22544         -
+# 6  Short offline       Completed without error       00%     22541         -
+# 7  Short offline       Completed without error       00%     21609         -
+# 8  Short offline       Aborted by host               20%     21190         -
+# 9  Short offline       Completed without error       00%     21026         -
+#10  Short offline       Completed without error       00%     21026         -
+#11  Short offline       Completed without error       00%     13668         -
+#12  Short offline       Completed without error       00%     11550         -
+#13  Offline             Completed without error       00%     11491         -
+#14  Short offline       Completed without error       00%     11491         -
+#15  Offline             Completed without error       00%     11490         -
+#16  Offline             Completed without error       00%     11490         -
+#17  Offline             Completed without error       00%     11490         -
+#18  Short offline       Completed without error       00%     11490         -
 
 Warning! SMART Selective Self-Test Log Structure error: invalid SMART checksum.
 SMART Selective self-test log data structure revision number 1
@@ -132,6 +144,8 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
@@ -142,8 +156,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

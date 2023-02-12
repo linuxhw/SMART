@@ -15,15 +15,15 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed May 11 23:50:56 2022 +09
+Local Time is:    Sun Jun  5 05:48:47 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -60,29 +60,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    13577
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1806
-165 Block_Erase_Count       -O--CK   100   100   000    -    5543
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    31
+  9 Power_On_Hours          -O--CK   100   100   000    -    13800
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1849
+165 Block_Erase_Count       -O--CK   100   100   000    -    5757
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    34
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    0
 168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    53
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    80
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    31
-174 Unexpected_Power_Loss   -O--CK   100   100   000    -    77
+173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    34
+174 Unexpected_Power_Loss   -O--CK   100   100   000    -    78
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   062   058   000    -    38 (Min/Max 14/58)
+194 Temperature_Celsius     -O---K   061   058   000    -    39 (Min/Max 14/58)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x0f5306140f53
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x102c0650102c
 232 Available_Reservd_Space PO--CK   100   100   005    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    3742
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    30834
-241 Host_Writes_GiB         ----CK   100   100   000    -    11149
-242 Host_Reads_GiB          ----CK   100   100   000    -    9656
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    4070
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    32027
+241 Host_Writes_GiB         ----CK   100   100   000    -    11696
+242 Host_Reads_GiB          ----CK   100   100   000    -    9868
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -233,7 +233,12 @@ Error 1 [59] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hou
   00 00 00 00 00 00 00 00 00 00 00 00 41  3d+07:32:11.153  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     13676         -
+# 2  Short offline       Completed without error       00%     13670         -
+# 3  Short offline       Completed without error       00%     13655         -
+# 4  Short offline       Completed without error       00%     13640         -
+# 5  Short offline       Completed without error       00%     13634         -
 
 Selective Self-tests/Logging not supported
 
@@ -242,13 +247,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1806  ---  Lifetime Power-On Resets
-0x01  0x010  4           13577  ---  Power-on Hours
-0x01  0x018  6     23381478889  ---  Logical Sectors Written
-0x01  0x028  6     20251782419  ---  Logical Sectors Read
-0x01  0x038  6           13577  ---  Date and Time TimeStamp
+0x01  0x008  4            1849  ---  Lifetime Power-On Resets
+0x01  0x010  4           13800  ---  Power-on Hours
+0x01  0x018  6     24529287558  ---  Logical Sectors Written
+0x01  0x028  6     20695078954  ---  Logical Sectors Read
+0x01  0x038  6           13800  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              38  ---  Current Temperature
+0x05  0x008  1              39  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              58  ---  Highest Temperature
@@ -275,8 +280,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2         6951  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

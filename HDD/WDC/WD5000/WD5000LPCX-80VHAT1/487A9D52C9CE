@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Jan 29 22:56:19 2023 UTC
+Local Time is:    Mon Jan 30 00:35:18 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,20 +62,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   146   142   021    -    1675
+  3 Spin_Up_Time            POS--K   147   142   021    -    1650
   4 Start_Stop_Count        -O--CK   100   100   000    -    613
-  5 Reallocated_Sector_Ct   PO--CK   190   190   140    -    434
-  7 Seek_Error_Rate         -OSR-K   140   140   000    -    739
+  5 Reallocated_Sector_Ct   PO--CK   186   186   140    -    622
+  7 Seek_Error_Rate         -OSR-K   181   181   000    -    236
   9 Power_On_Hours          -O--CK   096   096   000    -    3434
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    608
 191 G-Sense_Error_Rate      -O--CK   001   001   000    -    315
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    28
-193 Load_Cycle_Count        -O--CK   180   180   000    -    61843
+193 Load_Cycle_Count        -O--CK   180   180   000    -    61845
 194 Temperature_Celsius     -O---K   119   102   000    -    24
-196 Reallocated_Event_Count -O--CK   001   001   000    -    434
-197 Current_Pending_Sector  -O--CK   001   001   000    -    65338
+196 Reallocated_Event_Count -O--CK   001   001   000    -    622
+197 Current_Pending_Sector  -O--CK   001   001   000    -    65154
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
@@ -137,11 +137,11 @@ Error 1 [0] occurred at disk power-on lifetime: 3434 hours (143 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 db 00 f8 00 00 00 c2 4f 00 00 08     00:08:58.765  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 00 d1 00 01 00 00 00 c2 4f 01 00 08     00:08:56.553  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08     00:08:54.429  SMART READ DATA
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 08     00:08:52.878  SMART RETURN STATUS
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 08     00:08:52.878  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 08     00:10:40.005  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  60 02 00 00 78 00 00 3a 38 54 00 40 08     00:10:39.988  READ FPDMA QUEUED
+  60 02 00 00 70 00 00 00 0f a4 00 40 08     00:10:39.988  READ FPDMA QUEUED
+  b0 00 d1 00 01 00 00 00 c2 4f 01 00 08     00:10:39.984  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ec 00 00 00 01 00 00 00 00 00 00 00 08     00:10:29.449  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -161,7 +161,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     23/24 Celsius
+Power Cycle Min/Max Temperature:     24/24 Celsius
 Lifetime    Min/Max Temperature:     17/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -191,10 +191,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          571  Vendor specific
+0x8000  4          693  Vendor specific
 

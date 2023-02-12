@@ -10,7 +10,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Feb 24 01:37:57 2016 MSK
+Local Time is:    Mon Jul  4 12:37:46 2016 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  20)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -57,19 +58,19 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3898
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3941
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    566199078
-  9 Power_On_Hours          -O--CK   085   085   000    -    13357
+  7 Seek_Error_Rate         POSR--   087   060   030    -    568676306
+  9 Power_On_Hours          -O--CK   085   085   000    -    13424
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3755
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3802
 187 Reported_Uncorrect      -O--CK   001   001   000    -    7078
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   060   039   045    Past 40 (Min/Max 26/40 #19)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1577
-193 Load_Cycle_Count        -O--CK   044   044   000    -    112030
+190 Airflow_Temperature_Cel -O---K   060   039   045    Past 40 (Min/Max 29/40 #19)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1608
+193 Load_Cycle_Count        -O--CK   042   042   000    -    116648
 194 Temperature_Celsius     -O---K   040   061   000    -    40 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   070   057   000    -    16094127
+195 Hardware_ECC_Recovered  -O-RC-   067   057   000    -    49465395
 197 Current_Pending_Sector  -O--C-   100   069   000    -    0
 198 Offline_Uncorrectable   ----C-   100   069   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
@@ -82,190 +83,143 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory Version 1
-SMART           Log Directory Version 1 [multi-sector log support]
-Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
-0x01       GPL,SL  R/O      1  Summary SMART error log
-0x02       GPL,SL  R/O      5  Comprehensive SMART error log
-0x03       GPL,SL  R/O      5  Ext. Comprehensive SMART error log
-0x06       GPL,SL  R/O      1  SMART self-test log
-0x07       GPL,SL  R/O      1  Extended self-test log
-0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
-0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
-0x21       GPL,SL  R/O      1  Write stream error log
-0x22       GPL,SL  R/O      1  Read stream error log
-0x23       GPL,SL  R/O      1  Delayed sector log [OBS-8]
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
-0xa0       GPL,SL  VS       1  Device vendor specific log
-0xa1       GPL,SL  VS      20  Device vendor specific log
-0xa2       GPL,SL  VS     101  Device vendor specific log
-0xa8       GPL,SL  VS      20  Device vendor specific log
-0xa9       GPL,SL  VS       1  Device vendor specific log
-0xe0       GPL,SL  R/W      1  SCT Command/Status
-0xe1       GPL,SL  R/W      1  SCT Data Transfer
-0xff       GPL     -    23040  Reserved
+General Purpose Log Directory not supported
 
-SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 7211 (device log contains only the most recent 20 errors)
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      5  Comprehensive SMART error log
+0x03           SL  R/O      5  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07           SL  R/O      1  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x10           SL  R/O      1  SATA NCQ Queued Error log
+0x11           SL  R/O      1  SATA Phy Event Counters log
+0x20           SL  R/O      1  Streaming performance log [OBS-8]
+0x21           SL  R/O      1  Write stream error log
+0x22           SL  R/O      1  Read stream error log
+0x23           SL  R/O      1  Delayed sector log [OBS-8]
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa0           SL  VS       1  Device vendor specific log
+0xa1           SL  VS      20  Device vendor specific log
+0xa2           SL  VS     101  Device vendor specific log
+0xa8           SL  VS      20  Device vendor specific log
+0xa9           SL  VS       1  Device vendor specific log
+0xe0           SL  R/W      1  SCT Command/Status
+0xe1           SL  R/W      1  SCT Data Transfer
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 7214 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 7211 [10] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
+Error 7214 occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 e0 00 20 a8 40 00  Error: UNC at LBA = 0xe00020a8 = 3758104744
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 a8 e0 20 40  Error: UNC at LBA = 0x0020e0a8 = 2154664
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:48.615  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 38 00 00 00 00 00 00 40 00     01:39:46.139  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:46.116  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 20 00 00 00 00 00 00 40 00     01:39:43.629  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:41.153  READ VERIFY SECTOR(S) EXT
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  42 00 01 a8 e0 20 40 00      01:39:48.615  READ VERIFY SECTOR(S) EXT
+  60 01 38 00 00 00 40 00      01:39:46.139  READ FPDMA QUEUED
+  42 00 01 a8 e0 20 40 00      01:39:46.116  READ VERIFY SECTOR(S) EXT
+  60 01 20 00 00 00 40 00      01:39:43.629  READ FPDMA QUEUED
+  42 00 01 a8 e0 20 40 00      01:39:41.153  READ VERIFY SECTOR(S) EXT
 
-Error 7210 [9] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
+Error 7213 occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 e0 00 20 a8 40 00  Error: UNC at LBA = 0xe00020a8 = 3758104744
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 a8 e0 20 40  Error: UNC at LBA = 0x0020e0a8 = 2154664
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:48.615  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 20 00 00 00 00 00 00 40 00     01:39:46.139  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:46.116  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:43.629  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:41.153  READ VERIFY SECTOR(S) EXT
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  42 00 01 a8 e0 20 40 00      01:39:48.615  READ VERIFY SECTOR(S) EXT
+  60 01 20 00 00 00 40 00      01:39:46.139  READ FPDMA QUEUED
+  42 00 01 a8 e0 20 40 00      01:39:46.116  READ VERIFY SECTOR(S) EXT
+  42 00 01 a8 e0 20 40 00      01:39:43.629  READ VERIFY SECTOR(S) EXT
+  42 00 01 a8 e0 20 40 00      01:39:41.153  READ VERIFY SECTOR(S) EXT
 
-Error 7209 [8] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
+Error 7212 occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 e0 00 20 a8 40 00  Error: UNC at LBA = 0xe00020a8 = 3758104744
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 a8 e0 20 40  Error: UNC at LBA = 0x0020e0a8 = 2154664
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:48.615  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:46.139  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:46.116  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 f0 00 06 3b 00 ca f3 40 00     01:39:43.629  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:41.153  READ VERIFY SECTOR(S) EXT
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  42 00 01 a8 e0 20 40 00      01:39:48.615  READ VERIFY SECTOR(S) EXT
+  42 00 01 a8 e0 20 40 00      01:39:46.139  READ VERIFY SECTOR(S) EXT
+  42 00 01 a8 e0 20 40 00      01:39:46.116  READ VERIFY SECTOR(S) EXT
+  60 01 f0 f3 3b ca 40 00      01:39:43.629  READ FPDMA QUEUED
+  42 00 01 a7 e0 20 40 00      01:39:41.153  READ VERIFY SECTOR(S) EXT
 
-Error 7208 [7] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
+Error 7211 occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 e0 00 20 a8 40 00  Error: UNC at LBA = 0xe00020a8 = 3758104744
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 a8 e0 20 40  Error: UNC at LBA = 0x0020e0a8 = 2154664
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:48.615  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:46.139  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 f0 00 06 3b 00 ca f3 40 00     01:39:46.116  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:43.629  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 d8 00 00 00 00 00 00 40 00     01:39:41.153  READ FPDMA QUEUED
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  42 00 01 a8 e0 20 40 00      01:39:48.615  READ VERIFY SECTOR(S) EXT
+  42 00 01 a8 e0 20 40 00      01:39:46.139  READ VERIFY SECTOR(S) EXT
+  60 01 f0 f3 3b ca 40 00      01:39:46.116  READ FPDMA QUEUED
+  42 00 01 a7 e0 20 40 00      01:39:43.629  READ VERIFY SECTOR(S) EXT
+  60 01 d8 00 00 00 40 00      01:39:41.153  READ FPDMA QUEUED
 
-Error 7207 [6] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
+Error 7210 occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 e0 00 20 a8 40 00  Error: IDNF at LBA = 0xe00020a8 = 3758104744
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  10 51 00 a8 e0 20 40  Error: IDNF at LBA = 0x0020e0a8 = 2154664
 
   Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a8 40 00     01:39:48.615  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 f0 00 06 3b 00 ca f3 40 00     01:39:46.139  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:46.116  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 d8 00 00 00 00 00 00 40 00     01:39:43.629  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:41.153  READ VERIFY SECTOR(S) EXT
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  42 00 01 a8 e0 20 40 00      01:39:48.615  READ VERIFY SECTOR(S) EXT
+  60 01 f0 f3 3b ca 40 00      01:39:46.139  READ FPDMA QUEUED
+  42 00 01 a7 e0 20 40 00      01:39:46.116  READ VERIFY SECTOR(S) EXT
+  60 01 d8 00 00 00 40 00      01:39:43.629  READ FPDMA QUEUED
+  42 00 01 a7 e0 20 40 00      01:39:41.153  READ VERIFY SECTOR(S) EXT
 
-Error 7206 [5] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
+SMART Extended Self-test Log (GP Log 0x07) not supported
 
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 e0 00 20 a7 40 00  Error: UNC at LBA = 0xe00020a7 = 3758104743
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:26.148  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 d8 00 00 00 00 00 00 40 00     01:39:46.139  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:46.116  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:43.629  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 b0 00 00 00 00 00 00 40 00     01:39:41.153  READ FPDMA QUEUED
-
-Error 7205 [4] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 e0 00 20 a7 40 00  Error: UNC at LBA = 0xe00020a7 = 3758104743
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:26.148  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:23.328  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 b0 00 00 00 00 00 00 40 00     01:39:23.305  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:43.629  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 98 00 00 00 00 00 00 40 00     01:39:41.153  READ FPDMA QUEUED
-
-Error 7204 [3] occurred at disk power-on lifetime: 8724 hours (363 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 e0 00 20 a7 40 00  Error: UNC at LBA = 0xe00020a7 = 3758104743
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:26.148  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 b0 00 00 00 00 00 00 40 00     01:39:23.328  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:23.305  READ VERIFY SECTOR(S) EXT
-  60 00 01 00 98 00 00 00 00 00 00 40 00     01:39:20.929  READ FPDMA QUEUED
-  42 00 00 00 01 00 00 e0 00 20 a7 40 00     01:39:41.153  READ VERIFY SECTOR(S) EXT
-
-SMART Extended Self-test Log Version: 1 (1 sectors)
+SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               40%     13291         -
-# 2  Extended offline    Aborted by host               80%     13217         -
-# 3  Extended offline    Interrupted (host reset)      70%     13188         -
+# 1  Extended offline    Completed without error       00%     13380         -
+# 2  Extended offline    Aborted by host               40%     13291         -
+# 3  Extended offline    Aborted by host               80%     13217         -
+# 4  Extended offline    Interrupted (host reset)      70%     13188         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -290,11 +244,11 @@ SCT Data Table command not supported
 
 SCT Error Recovery Control command not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
@@ -302,6 +256,6 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            2  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
 

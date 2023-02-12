@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SandForce Driven SSDs
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Feb 16 00:36:30 2021 MSK
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Tue Feb  7 22:53:30 2023 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,21 +62,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0/0
   5 Retired_Block_Count     PO--C-   100   100   050    -    0
   9 Power_On_Hours_and_Msec -O--C-   100   100   000    -    20000h+00m+00.000s
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    14054
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    15915
 162 Unknown_SandForce_Attr  PO----   100   100   000    -    77
 170 Reserve_Block_Count     -O----   100   100   010    -    226
 172 Erase_Fail_Count        -O--C-   100   100   000    -    0
-173 Unknown_SandForce_Attr  -O--C-   100   100   000    -    23593368
-174 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    810
+173 Unknown_SandForce_Attr  -O--C-   100   100   000    -    26345906
+174 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    1002
 181 Program_Fail_Count      -O--C-   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    810
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    1002
 194 Temperature_Celsius     PO---K   100   100   020    -    30
-196 Reallocated_Event_Count -O----   100   100   000    -    10778
+196 Reallocated_Event_Count -O----   100   100   000    -    12714
 218 Unknown_SandForce_Attr  PO-R--   100   100   050    -    4
-231 SSD_Life_Left           PO--C-   100   100   000    -    88
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    24827
-242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    17407
+231 SSD_Life_Left           PO--C-   100   100   000    -    86
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    29901
+242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    19104
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +101,20 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%         0         -
+# 2  Short offline       Completed without error       00%         0         -
+# 3  Short offline       Completed without error       00%         2         -
+# 4  Short offline       Completed without error       00%        40         -
+# 5  Short offline       Completed without error       00%         3         -
+# 6  Short offline       Completed without error       00%        15         -
+# 7  Extended offline    Completed without error       00%         4         -
+# 8  Short offline       Completed without error       00%         1         -
+# 9  Short offline       Completed without error       00%         5         -
+#10  Short offline       Completed without error       00%         0         -
+#11  Short offline       Completed without error       00%         8         -
+#12  Short offline       Completed without error       00%         2         -
+#13  Short offline       Completed without error       00%         2         -
 
 Selective Self-tests/Logging not supported
 
@@ -119,10 +132,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           23  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           24  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

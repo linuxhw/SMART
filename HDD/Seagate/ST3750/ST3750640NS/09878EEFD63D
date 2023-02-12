@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-45.1rosa-x86_64] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    750,156,374,016 bytes [750 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Apr 20 12:39:16 2021 -03
+Local Time is:    Wed Sep  1 17:14:13 2021 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -30,9 +30,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -63,17 +62,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   117   092   006    -    0
   3 Spin_Up_Time            PO----   094   092   000    -    0
-  4 Start_Stop_Count        -O--CK   090   090   020    -    11133
+  4 Start_Stop_Count        -O--CK   089   089   020    -    11288
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   068   060   030    -    258115174018
-  9 Power_On_Hours          -O--CK   034   034   000    -    58533
+  7 Seek_Error_Rate         POSR--   068   060   030    -    258123168699
+  9 Power_On_Hours          -O--CK   032   032   000    -    60257
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   020    -    9598
+ 12 Power_Cycle_Count       -O--CK   091   091   020    -    9753
 187 Reported_Uncorrect      -O--CK   047   047   000    -    53
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   039   034   045    NOW  61 (Min/Max 58/65 #8278)
-194 Temperature_Celsius     -O---K   061   066   000    -    61 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   055   053   000    -    167593675
+190 Airflow_Temperature_Cel -O---K   042   034   045    NOW  58 (Min/Max 22/58 #10812)
+194 Temperature_Celsius     -O---K   058   066   000    -    58 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   078   053   000    -    97445600
 197 Current_Pending_Sector  -O--C-   100   100   000    -    2
 198 Offline_Uncorrectable   ----C-   100   100   000    -    2
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2
@@ -267,18 +266,19 @@ Error 51 [10] occurred at disk power-on lifetime: 39594 hours (1649 days + 18 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     54614         -
-# 2  Short offline       Completed without error       00%     52624         -
-# 3  Short offline       Completed without error       00%     43956         -
-# 4  Short captive       Completed without error       00%     40887         -
-# 5  Short captive       Completed without error       00%     40884         -
-# 6  Short offline       Completed: read failure       90%     39594         246265325424
-# 7  Short offline       Completed without error       00%     38356         -
-# 8  Short offline       Completed without error       00%     37003         -
-# 9  Short offline       Completed without error       00%     33561         -
-#10  Short offline       Completed without error       00%     33522         -
-#11  Short offline       Completed without error       00%     33521         -
-#12  Short offline       Completed without error       00%      6712         -
+# 1  Extended offline    Interrupted (host reset)      90%     58748         -
+# 2  Short offline       Completed without error       00%     54614         -
+# 3  Short offline       Completed without error       00%     52624         -
+# 4  Short offline       Completed without error       00%     43956         -
+# 5  Short captive       Completed without error       00%     40887         -
+# 6  Short captive       Completed without error       00%     40884         -
+# 7  Short offline       Completed: read failure       90%     39594         246265325424
+# 8  Short offline       Completed without error       00%     38356         -
+# 9  Short offline       Completed without error       00%     37003         -
+#10  Short offline       Completed without error       00%     33561         -
+#11  Short offline       Completed without error       00%     33522         -
+#12  Short offline       Completed without error       00%     33521         -
+#13  Short offline       Completed without error       00%      6712         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -294,8 +294,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    61 Celsius
-Power Cycle Min/Max Temperature:     --/64 Celsius
+Current Temperature:                    58 Celsius
+Power Cycle Min/Max Temperature:     --/58 Celsius
 Lifetime    Min/Max Temperature:     --/66 Celsius
 
 Another SCT command is executing, abort Read Data Table
@@ -312,7 +312,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           63  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           21  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

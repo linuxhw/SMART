@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.6.14-arch1-1] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.12-arch1-1] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     HP SSD S700 250GB
@@ -9,10 +9,11 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat May 23 05:07:10 2020 CDT
+Local Time is:    Fri Dec 16 18:54:39 2022 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,21 +60,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    4052
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    259
+  9 Power_On_Hours          -O--CK   100   100   000    -    24692
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    643
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       -O--CK   100   100   005    -    46
-174 Unknown_Attribute       -O--CK   100   100   000    -    44
+173 Unknown_Attribute       -O--CK   100   100   005    -    207
+174 Unknown_Attribute       -O--CK   100   100   000    -    175
 176 Erase_Fail_Count_Chip   -O---K   100   100   000    -    100
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    1
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   100   100   000    -    54
+194 Temperature_Celsius     -O---K   100   100   000    -    53
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    2364
-242 Total_LBAs_Read         -O--CK   100   100   000    -    26335
-243 Unknown_Attribute       -O--CK   100   100   000    -    3900
+241 Total_LBAs_Written      -O--CK   100   100   000    -    12099
+242 Total_LBAs_Read         -O--CK   100   100   000    -    27274
+243 Unknown_Attribute       -O--CK   100   100   000    -    13192
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,23 +99,7 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 1
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
-Powered_Up_Time is measured from power on, and printed as
-DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
-SS=sec, and sss=millisec. It "wraps" after 49.710 days.
-
-Error 1 [0] log entry is empty
+Invalid Error Log index = 0x0000 (reserved = 0x00)
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -136,14 +121,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             259  ---  Lifetime Power-On Resets
-0x01  0x010  4            4052  ---  Power-on Hours
-0x01  0x018  6       663513112  ---  Logical Sectors Written
-0x01  0x020  6          131139  ---  Number of Write Commands
-0x01  0x028  6      3690389080  ---  Logical Sectors Read
-0x01  0x030  6           62303  ---  Number of Read Commands
+0x01  0x008  4             643  ---  Lifetime Power-On Resets
+0x01  0x010  4           24692  ---  Power-on Hours
+0x01  0x018  6      3899191056  ---  Logical Sectors Written
+0x01  0x020  6               0  ---  Number of Write Commands
+0x01  0x028  6      1364932862  ---  Logical Sectors Read
+0x01  0x030  6           15650  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -155,7 +140,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           83  Device-to-host register FISes sent due to a COMRESET
 
 
 

@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.16.16-arch1-1] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.0-arch1-1] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Mar 29 03:01:23 2022 EDT
+Local Time is:    Mon May 30 23:20:03 2022 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,8 +60,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    100
-  9 Power_On_Hours          -O--CK   100   100   000    -    17325
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    434
+  9 Power_On_Hours          -O--CK   100   100   000    -    18586
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    473
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -73,18 +73,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    135
-194 Temperature_Celsius     -O---K   031   054   000    -    31 (Min/Max 8/54)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    138
+194 Temperature_Celsius     -O---K   040   054   000    -    40 (Min/Max 8/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
 231 SSD_Life_Left           ------   084   084   000    -    84
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    16731
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    8121
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    8264
-244 Average_Erase_Count     ------   100   100   000    -    164
-245 Max_Erase_Count         ------   100   100   000    -    187
-246 Total_Erase_Count       ------   100   100   000    -    70595
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    17338
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    8559
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    8601
+244 Average_Erase_Count     ------   100   100   000    -    167
+245 Max_Erase_Count         ------   100   100   000    -    191
+246 Total_Erase_Count       ------   100   100   000    -    71947
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 1
+Device Error Count: 3
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 3 [2] log entry is empty
+Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
 Error 1 [0] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -137,12 +155,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             434  ---  Lifetime Power-On Resets
-0x01  0x010  4           17325  ---  Power-on Hours
-0x01  0x018  6      4147585140  ---  Logical Sectors Written
-0x01  0x020  6          748961  ---  Number of Write Commands
-0x01  0x028  6       151254359  ---  Logical Sectors Read
-0x01  0x030  6          281707  ---  Number of Read Commands
+0x01  0x008  4             473  ---  Lifetime Power-On Resets
+0x01  0x010  4           18586  ---  Power-on Hours
+0x01  0x018  6       770336760  ---  Logical Sectors Written
+0x01  0x020  6          414071  ---  Number of Write Commands
+0x01  0x028  6       857885835  ---  Logical Sectors Read
+0x01  0x030  6           58092  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              19  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -156,5 +174,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+
+
 

@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Oct  4 11:08:28 2020 UTC
+Local Time is:    Sun Oct  4 13:44:58 2020 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -61,18 +61,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    94
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   090   088   025    -    3040
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5342
+  3 Spin_Up_Time            PO---K   090   088   025    -    3050
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5353
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11173
+  9 Power_On_Hours          -O--CK   100   100   000    -    11175
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   097   097   000    -    3258
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5330
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    9921
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5344
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    9923
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   046   000    -    25 (Min/Max 15/56)
+194 Temperature_Celsius     -O----   064   046   000    -    27 (Min/Max 15/56)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
@@ -80,7 +80,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    3
 200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    363006
 223 Load_Retry_Count        -O--CK   097   097   000    -    3258
-225 Load_Cycle_Count        -O--CK   001   001   000    -    19720698
+225 Load_Cycle_Count        -O--CK   001   001   000    -    19722001
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 11 (device log contains only the most recent 8 errors)
+Device Error Count: 16 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +122,91 @@ Device Error Count: 11 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 16 [7] occurred at disk power-on lifetime: 11174 hours (465 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.139  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.139  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.139  IDENTIFY DEVICE
+  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.139  IDENTIFY PACKET DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.139  NOP [Abort queued commands]
+
+Error 15 [6] occurred at disk power-on lifetime: 11174 hours (465 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.070  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.070  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.070  IDENTIFY DEVICE
+  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.070  IDENTIFY PACKET DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.070  NOP [Abort queued commands]
+
+Error 14 [5] occurred at disk power-on lifetime: 11174 hours (465 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 c2 4f 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.212  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.212  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.212  IDENTIFY DEVICE
+  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.212  IDENTIFY PACKET DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.212  NOP [Abort queued commands]
+
+Error 13 [4] occurred at disk power-on lifetime: 11174 hours (465 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 c2 4f 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:02.265  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:02.265  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:02.264  IDENTIFY DEVICE
+  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:02.264  IDENTIFY PACKET DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:02.264  NOP [Abort queued commands]
+
+Error 12 [3] occurred at disk power-on lifetime: 11173 hours (465 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.869  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.869  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.869  IDENTIFY DEVICE
+  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.869  IDENTIFY PACKET DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.869  NOP [Abort queued commands]
 
 Error 11 [2] occurred at disk power-on lifetime: 11172 hours (465 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -174,91 +259,6 @@ Error 9 [0] occurred at disk power-on lifetime: 11172 hours (465 days + 12 hours
   a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.256  IDENTIFY PACKET DEVICE
   00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.256  NOP [Abort queued commands]
 
-Error 8 [7] occurred at disk power-on lifetime: 11172 hours (465 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.791  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.791  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.791  IDENTIFY DEVICE
-  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.791  IDENTIFY PACKET DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.791  NOP [Abort queued commands]
-
-Error 7 [6] occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:01.735  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:01.735  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:01.735  IDENTIFY DEVICE
-  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:01.735  IDENTIFY PACKET DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:01.735  NOP [Abort queued commands]
-
-Error 6 [5] occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.273  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.273  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.273  IDENTIFY DEVICE
-  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.273  IDENTIFY PACKET DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.272  NOP [Abort queued commands]
-
-Error 5 [4] occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.240  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.240  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.240  IDENTIFY DEVICE
-  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.240  IDENTIFY PACKET DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.240  NOP [Abort queued commands]
-
-Error 4 [3] occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 ff 00 00 01 00 00 25 42 ea af e0 00     00:00:00.058  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 ff 00 00 00 00 00 00 00 00 01 e0 00     00:00:00.058  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.058  IDENTIFY DEVICE
-  a1 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.058  IDENTIFY PACKET DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.058  NOP [Abort queued commands]
-
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -288,7 +288,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (57)
+Temperature History Size (Index):    128 (63)
 
 SCT Error Recovery Control:
            Read: Disabled

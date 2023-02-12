@@ -11,7 +11,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Aug 11 05:59:59 2021 UTC
+Local Time is:    Sun Aug 22 07:29:21 2021 UTC
 
 ==> WARNING: Using smartmontools or hdparm with this
 drive may result in data loss due to a firmware bug.
@@ -28,7 +28,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -68,29 +68,29 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    7340
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    7350
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   066   061   025    -    10356
-  4 Start_Stop_Count        -O--CK   088   088   000    -    12371
+  3 Spin_Up_Time            PO---K   066   061   025    -    10401
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12380
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    37692
+  9 Power_On_Hours          -O--CK   100   100   000    -    37748
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4067
-181 Program_Fail_Cnt_Total  -O---K   096   096   000    -    90554975
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    3245
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4074
+181 Program_Fail_Cnt_Total  -O---K   096   096   000    -    90649632
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    3249
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   040   000    -    28 (Min/Max 6/60)
+194 Temperature_Celsius     -O----   054   040   000    -    46 (Min/Max 6/60)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    1
-198 Offline_Uncorrectable   ----CK   252   252   000    -    0
+198 Offline_Uncorrectable   ----CK   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    49
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    2399
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   099   099   000    -    12377
+225 Load_Cycle_Count        -O--CK   099   099   000    -    12386
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,7 +116,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 7197 (device log contains only the most recent 8 errors)
+Device Error Count: 7206 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -132,7 +132,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 7197 [4] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7206 [5] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -143,13 +143,13 @@ Error 7197 [4] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba ef e0 00     00:00:37.402  READ DMA EXT
-  25 00 00 00 08 00 00 00 2d 75 88 e0 00     00:00:37.402  READ DMA EXT
-  35 00 00 00 18 00 00 00 00 0d c8 e0 00     00:00:37.402  WRITE DMA EXT
-  ea 00 00 00 00 70 44 f7 00 00 00 e0 00     00:00:37.402  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 74 70 44 f0 e0 00     00:00:37.402  WRITE DMA EXT
+  25 00 00 00 01 00 00 00 30 ba ef e0 00     00:00:02.353  READ DMA EXT
+  35 00 00 00 08 00 00 00 5e 07 f0 e0 00     00:00:02.353  WRITE DMA EXT
+  25 00 00 00 40 00 00 00 2a cc 6a e0 00     00:00:02.353  READ DMA EXT
+  25 00 00 00 10 00 00 00 1f ec 70 e0 00     00:00:02.353  READ DMA EXT
+  25 00 00 00 80 00 00 55 03 10 88 e0 00     00:00:02.353  READ DMA EXT
 
-Error 7196 [3] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7205 [4] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -160,13 +160,13 @@ Error 7196 [3] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba ee e0 00     00:00:37.397  READ DMA EXT
-  25 00 00 00 18 00 00 00 2d 75 08 e0 00     00:00:37.397  READ DMA EXT
-  35 00 00 00 08 00 00 00 07 78 98 e0 00     00:00:37.397  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 00 0d c0 e0 00     00:00:37.397  WRITE DMA EXT
-  25 00 00 00 80 00 00 55 52 c7 98 e0 00     00:00:37.397  READ DMA EXT
+  25 00 00 00 01 00 00 00 30 ba ee e0 00     00:00:02.348  READ DMA EXT
+  ea 00 00 00 00 5e 08 87 00 00 00 e0 00     00:00:02.348  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 00 5e 08 80 e0 00     00:00:02.348  WRITE DMA EXT
+  35 00 00 00 28 00 00 00 5e 4b 70 e0 00     00:00:02.348  WRITE DMA EXT
+  25 00 00 00 40 00 00 00 2a cf 02 e0 00     00:00:02.348  READ DMA EXT
 
-Error 7195 [2] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7204 [3] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -177,13 +177,13 @@ Error 7195 [2] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba ed e0 00     00:00:37.392  READ DMA EXT
-  25 00 00 00 10 00 00 00 2d 73 e8 e0 00     00:00:37.392  READ DMA EXT
-  35 00 00 00 08 00 00 00 0d 33 80 e0 00     00:00:37.392  WRITE DMA EXT
-  ea 00 00 00 00 6c 2b 37 00 00 00 e0 00     00:00:37.392  FLUSH CACHE EXT
-  25 00 00 00 80 00 00 55 6c 2a b8 e0 00     00:00:37.392  READ DMA EXT
+  25 00 00 00 01 00 00 00 30 ba ed e0 00     00:00:02.343  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:02.343  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 00 16 73 18 e0 00     00:00:02.343  READ DMA EXT
+  35 00 00 00 08 00 00 00 04 98 d8 e0 00     00:00:02.343  WRITE DMA EXT
+  25 00 00 00 40 00 00 4e 80 e0 b8 e0 00     00:00:02.343  READ DMA EXT
 
-Error 7194 [1] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7203 [2] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -194,13 +194,13 @@ Error 7194 [1] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba ec e0 00     00:00:37.387  READ DMA EXT
-  25 00 00 00 08 00 00 00 2d 73 e8 e0 00     00:00:37.387  READ DMA EXT
-  25 00 00 00 80 00 00 55 68 07 10 e0 00     00:00:37.387  READ DMA EXT
-  25 00 00 00 08 00 00 55 5e cd d8 e0 00     00:00:37.387  READ DMA EXT
-  25 00 00 00 08 00 00 55 4e e3 08 e0 00     00:00:37.387  READ DMA EXT
+  25 00 00 00 01 00 00 00 30 ba ec e0 00     00:00:02.338  READ DMA EXT
+  25 00 00 00 10 00 00 00 0e da e8 e0 00     00:00:02.338  READ DMA EXT
+  25 00 00 00 18 00 00 00 0e da e0 e0 00     00:00:02.338  READ DMA EXT
+  25 00 00 00 10 00 00 00 0e da d8 e0 00     00:00:02.338  READ DMA EXT
+  25 00 00 00 10 00 00 00 0e da d0 e0 00     00:00:02.338  READ DMA EXT
 
-Error 7193 [0] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7202 [1] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -211,13 +211,13 @@ Error 7193 [0] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba eb e0 00     00:00:37.382  READ DMA EXT
-  ea 00 00 00 00 6c 2b b7 00 00 00 e0 00     00:00:37.382  FLUSH CACHE EXT
-  25 00 00 00 80 00 00 55 6c 2b 38 e0 00     00:00:37.382  READ DMA EXT
-  25 00 00 00 58 00 00 55 08 a6 e0 e0 00     00:00:37.382  READ DMA EXT
-  25 00 00 00 80 00 00 54 f9 b5 08 e0 00     00:00:37.382  READ DMA EXT
+  25 00 00 00 01 00 00 00 30 ba eb e0 00     00:00:02.333  READ DMA EXT
+  25 00 00 00 10 00 00 00 2d 75 98 e0 00     00:00:02.333  READ DMA EXT
+  25 00 00 00 a0 00 00 00 1e 21 00 e0 00     00:00:02.333  READ DMA EXT
+  25 00 00 01 00 00 00 00 1e 20 00 e0 00     00:00:02.333  READ DMA EXT
+  25 00 00 01 00 00 00 00 1e 1f 00 e0 00     00:00:02.333  READ DMA EXT
 
-Error 7192 [7] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7201 [0] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -228,13 +228,13 @@ Error 7192 [7] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba ea e0 00     00:00:37.377  READ DMA EXT
-  25 00 00 00 38 00 00 00 0b c3 78 e0 00     00:00:37.377  READ DMA EXT
-  25 00 00 00 30 00 00 5a 05 56 a2 e0 00     00:00:37.377  READ DMA EXT
-  25 00 00 00 80 00 00 55 0b c4 b8 e0 00     00:00:37.377  READ DMA EXT
-  25 00 00 00 01 00 00 00 30 ba e9 e0 00     00:00:37.372  READ DMA EXT
+  25 00 00 00 01 00 00 00 30 ba ea e0 00     00:00:02.328  READ DMA EXT
+  35 00 00 00 08 00 00 0e 2a 5f 18 e0 00     00:00:02.328  WRITE DMA EXT
+  25 00 00 00 20 00 00 0a f3 1c e0 e0 00     00:00:02.328  READ DMA EXT
+  25 00 00 00 10 00 00 00 2d 75 88 e0 00     00:00:02.328  READ DMA EXT
+  25 00 00 00 40 00 00 00 2a ca 3a e0 00     00:00:02.328  READ DMA EXT
 
-Error 7191 [6] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7200 [7] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -245,13 +245,13 @@ Error 7191 [6] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba e9 e0 00     00:00:37.372  READ DMA EXT
-  35 00 00 00 50 00 00 00 0d 33 80 e0 00     00:00:37.372  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 07 63 f8 e0 00     00:00:37.372  WRITE DMA EXT
-  25 00 00 00 20 00 00 55 69 d8 70 e0 00     00:00:37.372  READ DMA EXT
-  25 00 00 00 08 00 00 55 48 44 80 e0 00     00:00:37.372  READ DMA EXT
+  25 00 00 00 01 00 00 00 30 ba e9 e0 00     00:00:02.323  READ DMA EXT
+  25 00 00 00 18 00 00 00 2d 75 a0 e0 00     00:00:02.323  READ DMA EXT
+  25 00 00 00 20 00 00 0a f3 1c c0 e0 00     00:00:02.323  READ DMA EXT
+  25 00 00 00 b0 00 00 00 2f 4b d0 e0 00     00:00:02.323  READ DMA EXT
+  25 00 00 01 00 00 00 00 2f 4a d0 e0 00     00:00:02.323  READ DMA EXT
 
-Error 7190 [5] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 hours)
+Error 7199 [6] occurred at disk power-on lifetime: 37711 hours (1571 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -262,11 +262,11 @@ Error 7190 [5] occurred at disk power-on lifetime: 37689 hours (1570 days + 9 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 30 ba e8 e0 00     00:00:37.367  READ DMA EXT
-  25 00 00 00 01 00 00 00 30 ba e7 e0 00     00:00:37.367  READ DMA EXT
-  25 00 00 00 01 00 00 00 30 ba e6 e0 00     00:00:37.367  READ DMA EXT
-  25 00 00 00 01 00 00 00 30 ba e5 e0 00     00:00:37.367  READ DMA EXT
-  25 00 00 00 01 00 00 00 30 ba e4 e0 00     00:00:37.367  READ DMA EXT
+  25 00 00 00 01 00 00 00 30 ba e8 e0 00     00:00:02.318  READ DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:02.318  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 30 ba e7 e0 00     00:00:02.318  READ DMA EXT
+  35 00 00 00 10 00 00 74 70 65 d8 e0 00     00:00:02.318  WRITE DMA EXT
+  25 00 00 00 01 00 00 00 10 f6 e0 e0 00     00:00:02.318  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -288,8 +288,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     26/28 Celsius
+Current Temperature:                    46 Celsius
+Power Cycle Min/Max Temperature:     23/46 Celsius
 Lifetime    Min/Max Temperature:      5/61 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -299,7 +299,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (61)
+Temperature History Size (Index):    128 (69)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -319,8 +319,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            9  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           25  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           21  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

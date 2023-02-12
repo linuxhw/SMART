@@ -13,15 +13,15 @@ Form Factor:      M.2
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Oct 22 17:11:35 2021 CEST
+Local Time is:    Tue Nov  2 12:45:47 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -59,25 +59,25 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    1
-  9 Power_On_Hours          -O--CK   056   100   000    -    568
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    4619
-166 Unknown_Attribute       -O--CK   100   100   000    -    321
+  9 Power_On_Hours          -O--CK   062   100   000    -    574
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4646
+166 Unknown_Attribute       -O--CK   100   100   000    -    331
 167 Unknown_Attribute       -O--CK   100   100   000    -    1
-168 Unknown_Attribute       -O--CK   100   100   000    -    372
+168 Unknown_Attribute       -O--CK   100   100   000    -    383
 169 Unknown_Attribute       -O--CK   100   100   000    -    229
 170 Unknown_Attribute       -O--CK   100   100   000    -    1
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       -O--CK   100   100   ---    -    388
-174 Unknown_Attribute       -O--CK   100   100   000    -    87
+173 Unknown_Attribute       -O--CK   100   100   ---    -    402
+174 Unknown_Attribute       -O--CK   100   100   000    -    88
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   072   100   000    -    28 (Min/Max 0/48)
+194 Temperature_Celsius     -O---K   078   100   000    -    22 (Min/Max 0/48)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    18
-230 Unknown_SSD_Attribute   -O--CK   100   100   000    -    3587
+230 Unknown_SSD_Attribute   -O--CK   100   100   000    -    3635
 232 Available_Reservd_Space PO--CK   100   100   004    -    99
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    70211
-241 Total_LBAs_Written      ----CK   253   253   000    -    14655
-242 Total_LBAs_Read         ----CK   253   253   000    -    22337
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    72619
+241 Total_LBAs_Written      ----CK   253   253   000    -    14778
+242 Total_LBAs_Read         ----CK   253   253   000    -    22407
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -113,13 +113,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            4619  ---  Lifetime Power-On Resets
+0x01  0x008  4            4646  ---  Lifetime Power-On Resets
 0x01  0x018  6               0  ---  Logical Sectors Written
 0x01  0x020  6               0  ---  Number of Write Commands
 0x01  0x028  6               0  ---  Logical Sectors Read
 0x01  0x030  6               0  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              12  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              13  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -131,5 +131,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 

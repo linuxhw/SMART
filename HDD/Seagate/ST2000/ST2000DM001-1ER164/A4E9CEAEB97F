@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.66-1-lts] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.4-arch1-1] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -11,14 +11,14 @@ User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Sep 18 10:02:12 2021 CDT
+Local Time is:    Sun Apr 24 17:16:58 2022 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -29,20 +29,20 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
 data collection: 		(   89) seconds.
 Offline data collection
-capabilities: 			 (0x53) SMART execute Offline immediate.
+capabilities: 			 (0x5b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					No Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -63,28 +63,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   111   099   006    -    39659376
+  1 Raw_Read_Error_Rate     POSR-K   114   096   006    -    69477304
   3 Spin_Up_Time            PO---K   096   096   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1967
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    8
-  7 Seek_Error_Rate         POSR-K   083   060   030    -    210106179
-  9 Power_On_Hours          -O--CK   076   076   000    -    21869
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2184
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1040
+  7 Seek_Error_Rate         POSR-K   084   060   030    -    236080808
+  9 Power_On_Hours          -O--CK   072   072   000    -    25034
  10 Spin_Retry_Count        PO--CK   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1966
-180 Unknown_HDD_Attribute   -O-R-K   100   100   000    -    2038088700
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2183
+180 Unknown_HDD_Attribute   -O-R-K   100   100   000    -    400762085
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+187 Reported_Uncorrect      -O--CK   001   001   000    -    140
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   066   059   045    -    34 (Min/Max 23/34)
+190 Airflow_Temperature_Cel -O---K   065   059   045    -    35 (Min/Max 23/37)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    159
-193 Load_Cycle_Count        -O--CK   094   094   000    -    13549
-194 Temperature_Celsius     -O---K   034   041   000    -    34 (0 13 0 0 0)
-196 Reallocated_Event_Count -O--CK   100   100   036    -    8
-197 Current_Pending_Sector  -O--CK   100   100   000    -    0
-198 Offline_Uncorrectable   ----CK   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    0
+193 Load_Cycle_Count        -O--CK   084   084   000    -    33145
+194 Temperature_Celsius     -O---K   035   041   000    -    35 (0 13 0 0 0)
+196 Reallocated_Event_Count -O--CK   100   100   036    -    1040
+197 Current_Pending_Sector  -O--CK   099   098   000    -    288
+198 Offline_Uncorrectable   ----CK   100   100   000    -    128
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -123,7 +123,157 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 140 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 140 [19] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 01 4a 38 00 00  Error: WP at LBA = 0xa3014a38 = 2734770744
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 18 00 00 bc 1f 70 38 40 00  1d+01:09:33.060  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 d5 df d5 60 40 00  1d+01:09:33.059  WRITE FPDMA QUEUED
+  60 00 00 01 00 00 00 a3 01 63 d8 40 00  1d+01:09:33.059  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 a3 01 49 58 40 00  1d+01:09:33.059  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 a3 01 77 38 40 00  1d+01:09:33.040  READ FPDMA QUEUED
+
+Error 139 [18] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 37 77 e8 00 00  Error: WP at LBA = 0xa33777e8 = 2738321384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 08 00 00 bc 1f 7e f0 40 00  1d+01:08:23.442  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 8f 5b 70 38 40 00  1d+01:08:23.441  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 d5 e5 a0 38 40 00  1d+01:08:23.441  WRITE FPDMA QUEUED
+  60 00 00 00 08 00 00 a3 37 77 e8 40 00  1d+01:08:23.440  READ FPDMA QUEUED
+  61 00 00 00 08 00 00 d5 e5 90 18 40 00  1d+01:08:23.440  WRITE FPDMA QUEUED
+
+Error 138 [17] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 37 77 e8 00 00  Error: WP at LBA = 0xa33777e8 = 2738321384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 08 00 00 d5 e5 90 18 40 00  1d+01:08:22.123  WRITE FPDMA QUEUED
+  60 00 00 00 08 00 00 a3 37 77 e8 40 00  1d+01:08:19.810  READ FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+01:08:17.748  FLUSH CACHE EXT
+  61 00 00 00 08 00 00 bc 1f 7e e8 40 00  1d+01:08:17.748  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+01:08:17.701  FLUSH CACHE EXT
+
+Error 137 [16] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 37 77 e8 00 00  Error: WP at LBA = 0xa33777e8 = 2738321384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 08 00 00 bc 1f 7d 80 40 00  1d+01:08:13.793  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 95 d7 22 d0 40 00  1d+01:08:13.793  WRITE FPDMA QUEUED
+  60 00 00 00 08 00 00 a3 37 77 e8 40 00  1d+01:08:13.791  READ FPDMA QUEUED
+  61 00 00 00 08 00 00 8f 5b 70 08 40 00  1d+01:08:13.791  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 8f 5b 72 68 40 00  1d+01:08:13.791  WRITE FPDMA QUEUED
+
+Error 136 [15] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 37 77 e8 00 00  Error: WP at LBA = 0xa33777e8 = 2738321384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 08 00 00 e8 5b 70 40 40 00  1d+01:08:10.419  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 e8 1b 86 a0 40 00  1d+01:08:10.419  WRITE FPDMA QUEUED
+  61 00 00 00 10 00 00 db 9c 7d 28 40 00  1d+01:08:10.419  WRITE FPDMA QUEUED
+  61 00 00 00 10 00 00 db 9b 78 90 40 00  1d+01:08:10.419  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 db 9b 71 00 40 00  1d+01:08:10.419  WRITE FPDMA QUEUED
+
+Error 135 [14] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 37 77 e8 00 00  Error: WP at LBA = 0xa33777e8 = 2738321384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 18 00 00 d5 e5 a0 00 40 00  1d+01:08:01.419  WRITE FPDMA QUEUED
+  60 00 00 00 08 00 00 a3 37 77 e8 40 00  1d+01:08:01.419  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 bf cd 1f 88 40 00  1d+01:08:01.418  READ FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+01:08:01.418  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00  1d+01:08:01.417  SET FEATURES [Enable SATA feature]
+
+Error 134 [13] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 37 77 e8 00 00  Error: UNC at LBA = 0xa33777e8 = 2738321384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 a3 37 77 e8 40 00  1d+01:07:57.710  READ FPDMA QUEUED
+  61 00 00 00 08 00 00 bc 1f 7a f8 40 00  1d+01:07:57.709  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+01:07:57.701  FLUSH CACHE EXT
+  60 00 00 00 08 00 00 a3 37 77 e0 40 00  1d+01:07:57.701  READ FPDMA QUEUED
+  61 00 00 00 48 00 00 bc 1f 7a b0 40 00  1d+01:07:57.701  WRITE FPDMA QUEUED
+
+Error 133 [12] occurred at disk power-on lifetime: 24246 hours (1010 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 a3 37 77 e8 00 00  Error: UNC at LBA = 0xa33777e8 = 2738321384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 01 00 00 00 a3 37 76 60 40 00  1d+01:07:53.658  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 a4 ac a5 f8 40 00  1d+01:07:53.658  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 a3 37 75 60 40 00  1d+01:07:53.658  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 a4 ac a4 f8 40 00  1d+01:07:53.646  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 a3 37 74 60 40 00  1d+01:07:53.632  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -145,8 +295,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     24/34 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     24/37 Celsius
 Lifetime    Min/Max Temperature:     13/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -155,7 +305,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (31)
+Temperature History Size (Index):    128 (81)
 
 SCT Error Recovery Control:
            Read: Disabled

@@ -1,7 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-66-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-56-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Phison Driven SSDs
 Device Model:     PNY CS900 240GB SSD
 Serial Number:    --
 LU WWN Device Id: 5 f8db4c ...
@@ -10,10 +11,11 @@ User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Feb 28 11:34:44 2021 CET
+Local Time is:    Fri Dec 30 11:28:05 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,16 +63,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    2882
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    976
-168 Unknown_Attribute       -O--C-   100   100   000    -    0
-170 Unknown_Attribute       PO----   255   255   010    -    119
-173 Unknown_Attribute       -O--C-   100   100   000    -    3670102
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    385
+  9 Power_On_Hours          -O--C-   100   100   000    -    6872
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3308
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+170 Bad_Blk_Ct_Erl/Lat      PO----   255   255   010    -    0/119
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    129 (Average 111)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    1866
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
-218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Temperature_Celsius     PO--C-   100   100   000    -    94
-241 Total_LBAs_Written      -O--C-   100   100   000    -    3456
+218 CRC_Error_Count         PO-R--   100   100   050    -    0
+231 SSD_Life_Left           PO--C-   100   100   000    -    88
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    6959
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,10 +119,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             976  ---  Lifetime Power-On Resets
-0x01  0x010  4            2882  ---  Power-on Hours
-0x01  0x018  6      7248220877  ---  Logical Sectors Written
-0x01  0x028  6      5878388320  ---  Logical Sectors Read
+0x01  0x008  4            3308  ---  Lifetime Power-On Resets
+0x01  0x010  4            6872  ---  Power-on Hours
+0x01  0x018  6     14594154597  ---  Logical Sectors Written
+0x01  0x028  6     14539306976  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -130,7 +132,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              11  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -145,7 +147,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

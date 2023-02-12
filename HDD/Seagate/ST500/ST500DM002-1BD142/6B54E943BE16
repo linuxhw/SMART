@@ -1,5 +1,5 @@
-smartctl 6.4 2014-10-07 r4002 [ppc64-linux-4.1.42-rivoreo-powerpc64] (local build)
-Copyright (C) 2002-14, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 6.6 2017-11-05 r4594 [powerpc-unknown-linux-gnu Linux 4.1.42-rivoreo-powerpc64] (local build)
+Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -13,13 +13,14 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Aug 23 00:22:38 2021 CST
+Local Time is:    Fri Nov  4 22:32:29 2022 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -61,23 +62,23 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   105   099   006    -    8268984
+  1 Raw_Read_Error_Rate     POSR-K   111   099   006    -    40168176
   3 Spin_Up_Time            PO---K   100   097   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3525
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3538
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR-K   077   060   030    -    8693631912
-  9 Power_On_Hours          -O--CK   091   091   000    -    8160
+  7 Seek_Error_Rate         POSR-K   077   060   030    -    8695722765
+  9 Power_On_Hours          -O--CK   083   083   000    -    15417
  10 Spin_Retry_Count        PO--CK   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1085
-180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    64006
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1098
+180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    725771162
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   056   045    -    36 (Min/Max 34/39)
-194 Temperature_Celsius     -O---K   036   044   000    -    36 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RCK   039   036   000    -    8268984
+190 Airflow_Temperature_Cel -O---K   070   056   045    -    30 (Min/Max 17/30)
+194 Temperature_Celsius     -O---K   030   044   000    -    30 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RCK   055   035   000    -    40168176
 196 Reallocated_Event_Count -O--CK   100   100   036    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -99,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -115,7 +116,6 @@ Address    Access  R/W   Size  Description
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
-Warning! SMART Extended Comprehensive Error Log Structure (4/5) error: invalid SMART checksum.
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
@@ -138,8 +138,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     34/39 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     17/30 Celsius
 Lifetime    Min/Max Temperature:     14/44 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -148,17 +148,19 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (121)
+Temperature History Size (Index):    128 (93)
 
 SCT Error Recovery Control:
-           Read:      1 (0.1 seconds)
-          Write:      1 (0.1 seconds)
+           Read: Disabled
+          Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

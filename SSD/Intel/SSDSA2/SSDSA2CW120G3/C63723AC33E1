@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.0-21-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.11.0-40-generic] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Intel 320 Series SSDs
@@ -10,11 +10,10 @@ Firmware Version: 4PC10382
 User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Nov 20 10:31:56 2021 EST
+Local Time is:    Tue Nov 23 12:08:22 2021 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Unexpected SCT status 0x0002 (action_code=4, function_code=2)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
@@ -33,8 +32,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  17)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(    1) seconds.
 Offline data collection
@@ -68,25 +68,25 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    64963
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    254
+  9 Power_On_Hours          -O--CK   100   100   000    -    65008
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    290
 170 Reserve_Block_Count     PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 183 SATA_Downshift_Count    -O--CK   100   100   010    -    10
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    196
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    210
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 CRC_Error_Count         -O--CK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    752867
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    5646
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    27
-228 Workload_Minutes        -O--CK   100   100   000    -    3897790
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    771330
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    5748
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
+228 Workload_Minutes        -O--CK   100   100   000    -    4180063
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   095   095   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    752867
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    291320
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    771330
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    294137
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,21 +131,21 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             254  ---  Lifetime Power-On Resets
-0x01  0x010  4           64963  ---  Power-on Hours
-0x01  0x018  6     49339918695  ---  Logical Sectors Written
-0x01  0x020  6       847194776  ---  Number of Write Commands
-0x01  0x028  6     19091982522  ---  Logical Sectors Read
-0x01  0x030  6       203793554  ---  Number of Read Commands
+0x01  0x008  4             290  ---  Lifetime Power-On Resets
+0x01  0x010  4           65008  ---  Power-on Hours
+0x01  0x018  6     50549913454  ---  Logical Sectors Written
+0x01  0x020  6       899422855  ---  Number of Write Commands
+0x01  0x028  6     19276611892  ---  Logical Sectors Read
+0x01  0x030  6       206296015  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             921  ---  Number of Hardware Resets
-0x06  0x010  4             266  ---  Number of ASR Events
+0x06  0x008  4            1047  ---  Number of Hardware Resets
+0x06  0x010  4             301  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -158,8 +158,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

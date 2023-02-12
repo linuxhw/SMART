@@ -1,5 +1,5 @@
-smartctl 6.6 2017-11-05 r4594 [x86_64-linux-4.12.14-lp151.28.44-default] (SUSE RPM)
-Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.12.14-lp151.28.48-default] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     JMicron based SSDs
@@ -14,7 +14,7 @@ Form Factor:      < 1.8 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Apr  9 23:25:09 2020 -03
+Local Time is:    Thu May 14 00:03:21 2020 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -69,17 +69,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_JMF_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_JMF_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    28337
+  9 Power_On_Hours          -O--C-   100   100   000    -    28881
  10 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    2438
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2506
 167 Unknown_JMF_Attribute   -O---K   100   100   000    -    0
-168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    1773
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    1963
 169 Unknown_JMF_Attribute   PO--C-   100   100   010    -    0
 170 Bad_Block_Count         PO--C-   100   100   010    -    0 0 0
-173 Erase_Count             -O--C-   143   143   000    -    1284 1415 221
+173 Erase_Count             -O--C-   142   142   000    -    1287 1429 224
 175 Bad_Cluster_Table_Count PO--C-   100   100   010    -    0
-192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    707
-194 Temperature_Celsius     -O---K   063   063   030    -    37 (Min/Max 27/40)
+192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    775
+194 Temperature_Celsius     -O---K   064   064   030    -    36 (Min/Max 30/40)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -262,19 +262,25 @@ Error 259 [2] occurred at disk power-on lifetime: 2940 hours (122 days + 12 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     28324         -
-# 2  Short offline       Completed without error       00%     28311         -
-# 3  Short offline       Completed without error       00%     28297         -
-# 4  Short offline       Completed without error       00%     28277         -
-# 5  Short offline       Completed without error       00%     28264         -
-# 6  Extended offline    Completed without error       00%     28262         -
-# 7  Short offline       Completed without error       00%     28250         -
-# 8  Short offline       Completed without error       00%     28235         -
-# 9  Short offline       Completed without error       00%     28218         -
-#10  Short offline       Completed without error       00%     23066         -
-#11  Short offline       Completed without error       00%      9470         -
-#12  Short offline       Completed without error       00%      7492         -
-#13  Extended offline    Completed without error       00%      7491         -
+# 1  Short offline       Completed without error       00%     28869         -
+# 2  Short offline       Completed without error       00%     28854         -
+# 3  Short offline       Completed without error       00%     28843         -
+# 4  Short offline       Completed without error       00%     28827         -
+# 5  Short offline       Completed without error       00%     28810         -
+# 6  Short offline       Completed without error       00%     28793         -
+# 7  Short offline       Completed without error       00%     28557         -
+# 8  Short offline       Completed without error       00%     28341         -
+# 9  Short offline       Completed without error       00%     28324         -
+#10  Short offline       Completed without error       00%     28311         -
+#11  Short offline       Completed without error       00%     28297         -
+#12  Short offline       Completed without error       00%     28277         -
+#13  Short offline       Completed without error       00%     28264         -
+#14  Extended offline    Completed without error       00%     28262         -
+#15  Short offline       Completed without error       00%     28250         -
+#16  Short offline       Completed without error       00%     28235         -
+#17  Short offline       Completed without error       00%     28218         -
+#18  Short offline       Completed without error       00%     23066         -
+#19  Short offline       Completed without error       00%      9470         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -289,18 +295,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   0
 Device State:                        Active (0)
-Current Temperature:                  0 Celsius
-Power Cycle Max Temperature:          0 Celsius
-Lifetime    Max Temperature:          0 Celsius
+Current Temperature:                     0 Celsius
+Power Cycle Min/Max Temperature:     --/ 0 Celsius
+Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (49)
+Temperature History Size (Index):    478 (142)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -309,14 +314,14 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2438  ---  Lifetime Power-On Resets
-0x01  0x018  6     21763810672  ---  Logical Sectors Written
-0x01  0x020  6       421576404  ---  Number of Write Commands
-0x01  0x028  6     16348450469  ---  Logical Sectors Read
-0x01  0x030  6       235963468  ---  Number of Read Commands
-0x01  0x038  6    102013200000  ---  Date and Time TimeStamp
+0x01  0x008  4            2506  ---  Lifetime Power-On Resets
+0x01  0x018  6     21954813191  ---  Logical Sectors Written
+0x01  0x020  6       422547868  ---  Number of Write Commands
+0x01  0x028  6     16494977096  ---  Logical Sectors Read
+0x01  0x030  6       237590444  ---  Number of Read Commands
+0x01  0x038  6    103971600000  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              56  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              57  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -325,14 +330,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2          237  Command failed due to ICRC error
+0x0001  2          171  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  4          239  Device-to-host register FISes sent due to a COMRESET
 0x000f  2           21  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

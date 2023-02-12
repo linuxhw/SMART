@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 12 10:41:18 2021 MSK
+Local Time is:    Thu Aug 12 12:35:17 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,8 +62,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    4785
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    2366
+  9 Power_On_Hours          -O--CK   100   100   050    -    4786
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    2367
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
 173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    180
@@ -72,7 +72,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    0
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   060   029   050    Past 40 (Min/Max 21/71)
+194 Temperature_Celsius     -O---K   058   029   050    Past 42 (Min/Max 21/71)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
@@ -80,9 +80,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   088   088   001    -    88
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    29135219150
-247 Host_Program_Page_Count -O--CK   100   100   050    -    910475598
-248 FTL_Program_Page_Count  -O--CK   100   100   050    -    1029417008
+246 Total_LBAs_Written      -O--CK   100   100   050    -    29143943151
+247 Host_Program_Page_Count -O--CK   100   100   050    -    910748223
+248 FTL_Program_Page_Count  -O--CK   100   100   050    -    1029748784
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -133,16 +133,16 @@ Error 4 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+  04 -- 51 00 00 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 20 00 c8 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 20 00 c8 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 20 00 c8 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 20 00 c8 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 20 00 c8 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
+  2f 00 00 01 01 00 00 00 00 00 00 e0 08     00:00:00.000  READ LOG EXT
+  ec 00 00 01 01 00 00 00 00 00 00 40 08     00:00:00.000  IDENTIFY DEVICE
+  ec 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  IDENTIFY DEVICE
+  ec 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  IDENTIFY DEVICE
+  2f 00 00 01 01 00 00 08 00 00 30 e0 08     00:00:00.000  READ LOG EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -157,12 +157,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            2366  ---  Lifetime Power-On Resets
-0x01  0x010  4            4785  ---  Power-on Hours
-0x01  0x018  6      3365415374  ---  Logical Sectors Written
-0x01  0x020  6       424883219  ---  Number of Write Commands
-0x01  0x028  6      3636375592  ---  Logical Sectors Read
-0x01  0x030  6       767645850  ---  Number of Read Commands
+0x01  0x008  4            2367  ---  Lifetime Power-On Resets
+0x01  0x010  4            4786  ---  Power-on Hours
+0x01  0x018  6      3374139375  ---  Logical Sectors Written
+0x01  0x020  6       425273285  ---  Number of Write Commands
+0x01  0x028  6      3696241026  ---  Logical Sectors Read
+0x01  0x030  6       768521179  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              17  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -176,7 +176,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 
 
 

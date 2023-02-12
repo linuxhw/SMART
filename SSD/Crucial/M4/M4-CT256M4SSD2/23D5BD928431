@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-arch1-1] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.3-arch1-1] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Nov  6 13:04:15 2021 CET
+Local Time is:    Sat Nov 20 21:01:00 2021 CET
 
 ==> WARNING: This drive may hang after 5184 hours of power-on time:
 https://www.tomshardware.com/news/Crucial-m4-Firmware-BSOD,14544.html
@@ -36,14 +36,14 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 1190) seconds.
+data collection: 		(10235) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -74,14 +74,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   001    -    71151
+  9 Power_On_Hours          -O--CK   100   100   001    -    71495
  12 Power_Cycle_Count       -O--CK   100   100   001    -    1541
 170 Grown_Failing_Block_Ct  PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   001    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Wear_Leveling_Count     PO--CK   068   068   010    -    974
+173 Wear_Leveling_Count     PO--CK   068   068   010    -    977
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   001    -    454
-181 Non4k_Aligned_Access    -O---K   100   100   001    -    3513 954 2559
+181 Non4k_Aligned_Access    -O---K   100   100   001    -    3514 954 2559
 183 SATA_Iface_Downshift    -O--CK   100   100   001    -    1
 184 End-to-End_Error        PO--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   001    -    0
@@ -131,15 +131,16 @@ SMART Extended Self-test Log size 3449 not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%     60469         -
-# 2  Vendor (0xff)       Completed without error       00%     57506         -
-# 3  Vendor (0xff)       Completed without error       00%     54806         -
-# 4  Vendor (0xff)       Completed without error       00%     54736         -
-# 5  Vendor (0xff)       Completed without error       00%     54686         -
-# 6  Vendor (0xff)       Completed without error       00%     54636         -
-# 7  Vendor (0xff)       Completed without error       00%     54589         -
-# 8  Vendor (0xff)       Completed without error       00%     50764         -
-# 9  Vendor (0xff)       Completed without error       00%     50488         -
+# 1  Vendor (0xff)       Completed without error       00%      5639         -
+# 2  Vendor (0xff)       Completed without error       00%     60469         -
+# 3  Vendor (0xff)       Completed without error       00%     57506         -
+# 4  Vendor (0xff)       Completed without error       00%     54806         -
+# 5  Vendor (0xff)       Completed without error       00%     54736         -
+# 6  Vendor (0xff)       Completed without error       00%     54686         -
+# 7  Vendor (0xff)       Completed without error       00%     54636         -
+# 8  Vendor (0xff)       Completed without error       00%     54589         -
+# 9  Vendor (0xff)       Completed without error       00%     50764         -
+#10  Vendor (0xff)       Completed without error       00%     50488         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -154,7 +155,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        Active (0)
+Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                     0 Celsius
 Power Cycle Min/Max Temperature:     --/ 0 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
@@ -164,7 +165,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (450)
+Temperature History Size (Index):    478 (49)
 
 SCT Error Recovery Control:
            Read:     40 (4.0 seconds)
@@ -174,11 +175,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            1541  ---  Lifetime Power-On Resets
-0x01  0x010  4           71151  ---  Power-on Hours
-0x01  0x018  6    212963777299  ---  Logical Sectors Written
-0x01  0x020  6      2354682514  ---  Number of Write Commands
-0x01  0x028  6    121012083150  ---  Logical Sectors Read
-0x01  0x030  6      1793287607  ---  Number of Read Commands
+0x01  0x010  4           71495  ---  Power-on Hours
+0x01  0x018  6    213579498469  ---  Logical Sectors Written
+0x01  0x020  6      2365741560  ---  Number of Write Commands
+0x01  0x028  6    121383134217  ---  Logical Sectors Read
+0x01  0x030  6      1801042646  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -211,7 +212,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4          264  Device-to-host register FISes sent due to a COMRESET
+0x000a  4          552  Device-to-host register FISes sent due to a COMRESET
 
 
 

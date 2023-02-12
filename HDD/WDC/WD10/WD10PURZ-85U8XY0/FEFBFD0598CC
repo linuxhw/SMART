@@ -12,7 +12,7 @@ Rotation Rate:    5400 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct 10 05:46:32 2021 +05
+Local Time is:    Sun Oct 10 06:05:57 2021 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -68,13 +68,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   098   098   000    -    2738
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   091   091   000    -    7004
+  9 Power_On_Hours          -O--CK   091   091   000    -    7005
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
  12 Power_Cycle_Count       -O--CK   098   098   000    -    2705
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    128
 193 Load_Cycle_Count        -O--CK   200   200   000    -    2612
-194 Temperature_Celsius     -O---K   113   098   000    -    30
+194 Temperature_Celsius     -O---K   111   098   000    -    32
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -281,8 +281,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     23/30 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     23/32 Celsius
 Lifetime    Min/Max Temperature:      0/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -294,7 +294,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (89)
+Temperature History Size (Index):    478 (109)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -304,14 +304,14 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            2705  ---  Lifetime Power-On Resets
-0x01  0x010  4            7004  ---  Power-on Hours
-0x01  0x018  6     33668446384  ---  Logical Sectors Written
-0x01  0x020  6       475840645  ---  Number of Write Commands
-0x01  0x028  6     58602180088  ---  Logical Sectors Read
-0x01  0x030  6       671467779  ---  Number of Read Commands
+0x01  0x010  4            7005  ---  Power-on Hours
+0x01  0x018  6     33673399012  ---  Logical Sectors Written
+0x01  0x020  6       475960124  ---  Number of Write Commands
+0x01  0x028  6     58602812295  ---  Logical Sectors Read
+0x01  0x030  6       671475500  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4            6975  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            6952  ---  Head Flying Hours
+0x03  0x010  4            6953  ---  Head Flying Hours
 0x03  0x018  4            2741  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               2  ---  Read Recovery Attempts
@@ -320,7 +320,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4            2437  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
+0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              33  ---  Average Short Term Temperature
 0x05  0x018  1              32  ---  Average Long Term Temperature
 0x05  0x020  1              45  ---  Highest Temperature
@@ -358,5 +358,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         1558  Vendor specific
+0x8000  4         2722  Vendor specific
 

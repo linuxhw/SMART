@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.3.0-40-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.3.0-42-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,8 +13,8 @@ Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Sun Mar  1 07:32:01 2020 EST
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sun Apr  5 01:50:03 2020 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -63,23 +63,23 @@ SCT capabilities: 	       (0x1081)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   099   006    -    85285264
+  1 Raw_Read_Error_Rate     POSR--   108   099   006    -    15949784
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    918
+  4 Start_Stop_Count        -O--CK   100   100   020    -    921
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   067   059   030    -    55913004195
-  9 Power_On_Hours          -O--CK   090   090   000    -    9163
+  7 Seek_Error_Rate         POSR--   067   059   030    -    55917052826
+  9 Power_On_Hours          -O--CK   089   089   000    -    9700
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    909
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    913
 184 End-to-End_Error        -O--CK   099   099   099    NOW  1
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   097   000    -    25770197005
 189 High_Fly_Writes         -O-RCK   063   063   000    -    37
-190 Airflow_Temperature_Cel -O---K   052   035   045    Past 48 (Min/Max 47/53 #25637)
+190 Airflow_Temperature_Cel -O---K   068   035   045    Past 32 (100 111 32 27 0)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    349
-193 Load_Cycle_Count        -O--CK   071   071   000    -    59567
-194 Temperature_Celsius     -O---K   048   065   000    -    48 (128 0 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    351
+193 Load_Cycle_Count        -O--CK   071   071   000    -    59570
+194 Temperature_Celsius     -O---K   032   065   000    -    32 (128 0 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
@@ -174,10 +174,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    48 Celsius
-Power Cycle Min/Max Temperature:     25/53 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     25/30 Celsius
 Lifetime    Min/Max Temperature:     14/64 Celsius
-Under/Over Temperature Limit Count:   0/23
+Under/Over Temperature Limit Count:   0/2
 
 SCT Data Table command not supported
 
@@ -189,12 +189,10 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-
-
 

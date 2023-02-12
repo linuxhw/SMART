@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [i686-linux-5.4.32-generic-2rosa-i586] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint P80 SD
 Device Model:     SAMSUNG HD080HJ
@@ -7,10 +10,10 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Sat Aug 10 14:20:35 2019 MSK
+Local Time is:    Thu Sep  2 03:29:25 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
+AAM level is:     128 (quiet), recommended: 254
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -58,18 +61,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   100   100   025    -    3904
-  4 Start_Stop_Count        -O--CK   086   086   000    -    14154
+  4 Start_Stop_Count        -O--CK   083   083   000    -    17190
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11549
+  9 Power_On_Hours          -O--CK   100   100   000    -    13784
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7993
+ 12 Power_Cycle_Count       -O--CK   091   091   000    -    9660
 187 Reported_Uncorrect      -O--CK   001   001   000    -    65708
 190 Airflow_Temperature_Cel -O---K   118   073   000    -    40
 194 Temperature_Celsius     -O---K   118   073   000    -    40
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    668798
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    433403
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   253   100   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -97,8 +100,8 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x03) instead
-Device Error Count: 20507 (device log contains only the most recent 8 errors)
+Invalid Error Log index = 0x0000, trying reserved byte (0x04) instead
+Device Error Count: 20508 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -113,6 +116,23 @@ Device Error Count: 20507 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 20508 [3] occurred at disk power-on lifetime: 11769 hours (490 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 e1 c8 00 d8 e2 00  Error: ABRT at LBA = 0xe3c800d8 = 3821535448
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 00 00 00 00 e1 c8 d8 e2 00     04:13:03.750  WRITE DMA
+  ca 00 00 00 00 00 00 00 e1 c7 d8 e2 00     04:13:03.750  WRITE DMA
+  ca 00 00 00 00 00 00 00 e1 c6 d8 e2 00     04:13:03.750  WRITE DMA
+  ca 00 00 00 00 00 00 00 e1 c5 d8 e2 00     04:13:03.750  WRITE DMA
+  ca 00 00 00 00 00 00 00 e1 c4 d8 e2 00     04:13:03.750  WRITE DMA
 
 Error 20507 [2] occurred at disk power-on lifetime: 11161 hours (465 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -223,25 +243,12 @@ Error 20501 [4] occurred at disk power-on lifetime: 11161 hours (465 days + 1 ho
   25 20 20 00 7f 00 00 00 34 26 5e ef 00     00:02:46.438  READ DMA EXT
   25 20 20 00 7f 00 00 00 34 25 df ef 00     00:02:46.438  READ DMA EXT
 
-Error 20500 [3] occurred at disk power-on lifetime: 11161 hours (465 days + 1 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 7f 00 00 00 34 26 dd ef 00  Error: UNC 127 sectors at LBA = 0x0f3426dd = 255076061
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 7f 00 00 00 34 26 dd ef 00     00:02:46.375  READ DMA EXT
-  25 20 20 00 7f 00 00 00 34 26 5e ef 00     00:02:44.688  READ DMA EXT
-  25 20 20 00 7f 00 00 00 34 25 df ef 00     00:02:44.688  READ DMA EXT
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     11553         -
+# 2  Short offline       Completed without error       00%     11553         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -257,18 +264,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 40 Celsius
-Power Cycle Max Temperature:         41 Celsius
-Lifetime    Max Temperature:         57 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     --/41 Celsius
+Lifetime    Min/Max Temperature:     --/57 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/55 Celsius
 Min/Max Temperature Limit:            5/60 Celsius
-Temperature History Size (Index):    128 (30)
+Temperature History Size (Index):    128 (72)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -281,7 +287,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

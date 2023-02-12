@@ -7,7 +7,7 @@ User Capacity:    81,964,302,336 bytes [81.9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sun Dec 27 15:22:37 2020 UTC
+Local Time is:    Wed Jun  2 18:10:29 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -54,22 +54,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            POS--K   226   225   063    -    10747
   4 Start_Stop_Count        -O--CK   248   248   000    -    10594
-  5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    5
+  5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    6
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   249   232   187    -    59287
-  9 Power_On_Minutes        -O--CK   177   177   000    -    228h+44m
+  8 Seek_Time_Performance   POS--K   250   232   187    -    55179
+  9 Power_On_Minutes        -O--CK   176   176   000    -    452h+06m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   224   224   000    -    11726
+ 12 Power_Cycle_Count       -O--CK   223   223   000    -    12125
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    37
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1567
+194 Temperature_Celsius     -O--CK   253   253   000    -    42
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    868
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
-197 Current_Pending_Sector  ---R--   253   253   000    -    0
+197 Current_Pending_Sector  ---R--   253   253   000    -    1
 198 Offline_Uncorrectable   ---R--   251   251   000    -    2
-199 UDMA_CRC_Error_Count    ---R--   001   001   000    -    1861
+199 UDMA_CRC_Error_Count    ---R--   146   001   000    -    1861
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   251   000    -    7
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
@@ -96,9 +96,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 2707 inconsistent with error log pointer 5
+Warning: ATA error count 2708 inconsistent with error log pointer 5
 
-ATA Error Count: 2707 (device log contains only the most recent five errors)
+ATA Error Count: 2708 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -112,6 +112,23 @@ ATA Error Count: 2707 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2708 occurred at disk power-on lifetime: 24998 hours (1041 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 3c 80 53 01 f0  Error: UNC 60 sectors at LBA = 0x00015380 = 86912
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 80 80 53 01 f0 00      00:54:17.600  READ DMA
+  c8 00 d5 58 37 3d f0 00      00:54:17.600  READ DMA
+  c8 00 80 00 53 01 f0 00      00:54:17.584  READ DMA
+  c8 00 80 80 52 01 f0 00      00:54:17.584  READ DMA
+  c8 00 80 00 52 01 f0 00      00:54:17.584  READ DMA
 
 Error 2707 occurred at disk power-on lifetime: 24457 hours (1019 days + 1 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -180,23 +197,6 @@ Error 2704 occurred at disk power-on lifetime: 24457 hours (1019 days + 1 hours)
   c8 00 00 5f 4d 47 f1 00      00:22:17.968  READ DMA
   c8 00 00 5f 4c 47 f1 00      00:22:17.968  READ DMA
   c8 00 00 5f 4b 47 f1 00      00:22:17.952  READ DMA
-
-Error 2703 occurred at disk power-on lifetime: 24457 hours (1019 days + 1 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 00 5f 08 47 f1  Error: ICRC, ABRT at LBA = 0x0147085f = 21432415
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 5f 08 47 f1 00      00:22:17.744  READ DMA
-  c8 00 00 5f 07 47 f1 00      00:22:17.744  READ DMA
-  c8 00 00 5f 06 47 f1 00      00:22:17.744  READ DMA
-  c8 00 00 5f 05 47 f1 00      00:22:17.744  READ DMA
-  c8 00 00 5f 04 47 f1 00      00:22:17.728  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

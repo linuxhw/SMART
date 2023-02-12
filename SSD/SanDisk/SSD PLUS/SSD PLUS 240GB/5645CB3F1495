@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.12-desktop-3omv4090] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Marvell based SanDisk SSDs
@@ -11,10 +11,11 @@ User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic
+Device is:        In smartctl database
 ATA Version is:   ACS-3, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Dec 23 21:40:34 2020 MSK
+Local Time is:    Sun Nov 13 20:30:56 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,29 +61,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    1
-  9 Power_On_Hours          -O--CK   100   100   000    -    700
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    421
-165 Total_Write/Erase_Count -O--CK   100   100   000    -    780
-166 Min_W/E_Cycle           -O--CK   100   100   ---    -    7
+  9 Power_On_Hours          -O--CK   100   100   000    -    2211
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2513
+165 Total_Write/Erase_Count -O--CK   100   100   000    -    4777
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    47
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    12
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    13
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    59
 169 Total_Bad_Block         -O--CK   100   100   ---    -    124
-170 Unknown_Attribute       -O--CK   100   100   ---    -    1
+170 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    1
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    7
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    111
+173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    47
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    800
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   068   057   000    -    32 (Min/Max 16/57)
+194 Temperature_Celsius     -O---K   059   057   000    -    41 (Min/Max 16/57)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    534 296 534
+230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    3392 2344 3392
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   005    -    98
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    1920
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    6216
-241 Total_Writes_GiB        ----CK   100   100   000    -    2327
-242 Total_Reads_GiB         ----CK   100   100   000    -    4353
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    11732
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    38069
+241 Total_Writes_GiB        ----CK   100   100   000    -    13108
+242 Total_Reads_GiB         ----CK   100   100   000    -    20164
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -116,7 +117,9 @@ SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      1354         -
+# 2  Short offline       Completed without error       00%      1350         -
 
 Selective Self-tests/Logging not supported
 
@@ -125,17 +128,17 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             421  ---  Lifetime Power-On Resets
-0x01  0x010  4             700  ---  Power-on Hours
-0x01  0x018  6      4881346065  ---  Logical Sectors Written
-0x01  0x028  6      9130889042  ---  Logical Sectors Read
-0x01  0x038  6             700  ---  Date and Time TimeStamp
+0x01  0x008  4            2513  ---  Lifetime Power-On Resets
+0x01  0x010  4            2211  ---  Power-on Hours
+0x01  0x018  6     27490245214  ---  Logical Sectors Written
+0x01  0x028  6     42287085189  ---  Logical Sectors Read
+0x01  0x038  6            2211  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              32  ---  Current Temperature
+0x05  0x008  1              41  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              56  ---  Highest Temperature
-0x05  0x028  1              27  ---  Lowest Temperature
+0x05  0x028  1              26  ---  Lowest Temperature
 0x05  0x030  1              42  ---  Highest Average Short Term Temperature
 0x05  0x038  1              42  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -145,7 +148,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -158,8 +161,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2        32565  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           35  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

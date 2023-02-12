@@ -8,7 +8,7 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sat May 23 16:08:49 2020 MSK
+Local Time is:    Sat May 23 17:49:14 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -63,17 +63,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    43512
+  9 Power_On_Hours          -O--CK   100   100   000    -    43514
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
  12 Power_Cycle_Count       -O--CK   093   093   000    -    7191
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    16089392
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    22937964
 184 End-to-End_Error        PO--CK   253   253   099    -    0
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   253   253   000    -    0
 190 Airflow_Temperature_Cel -O---K   163   001   000    -    25 (Min/Max 0/37)
-194 Temperature_Celsius     -O---K   163   001   000    -    25 (Min/Max 0/38)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    16089392
+194 Temperature_Celsius     -O---K   160   001   000    -    26 (Min/Max 0/38)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    22937964
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -151,7 +151,7 @@ Error 13 [4] occurred at disk power-on lifetime: 7058 hours (294 days + 2 hours)
   29 00 74 05 2a 35 00 00 e0 1d 12 00 00     00:00:00.004  READ MULTIPLE EXT
   29 00 74 05 b6 35 00 00 e0 1d 11 00 00     00:00:00.004  READ MULTIPLE EXT
   ea 00 74 05 43 35 00 00 e0 1d 11 00 00     00:00:00.004  FLUSH CACHE EXT
-  00 11 89 11 91 00 00 11 06 c9 b1 02 11     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 11 89 11 91 00 00 11 06 c9 b1 01 11     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
 
 Error 12 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
   When the command that caused the error occurred, the device was in a reserved state.
@@ -233,7 +233,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (112)
+Temperature History Size (Index):    128 (122)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -253,8 +253,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

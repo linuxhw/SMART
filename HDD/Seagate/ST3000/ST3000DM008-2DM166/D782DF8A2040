@@ -1,4 +1,8 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.33-generic-3rosa2019.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
+Model Family:     Seagate BarraCuda 3.5
 Device Model:     ST3000DM008-2DM166
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
@@ -7,16 +11,17 @@ User Capacity:    3,000,592,982,016 bytes [3.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar 17 21:02:20 2018 MSK
+Local Time is:    Fri Apr 30 23:04:14 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -57,30 +62,30 @@ SCT capabilities: 	       (0x1085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   099   006    -    99725056
+  1 Raw_Read_Error_Rate     POSR--   112   099   006    -    49135488
   3 Spin_Up_Time            PO----   094   094   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    317
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1785
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   064   060   030    -    2871889
-  9 Power_On_Hours          -O--CK   100   100   000    -    775
+  7 Seek_Error_Rate         POSR--   072   060   030    -    14792220
+  9 Power_On_Hours          -O--CK   092   092   000    -    7203
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    228
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1658
+183 Runtime_Bad_Block       -O--CK   097   097   000    -    3
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    65537
-189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   073   063   045    -    27 (Min/Max 21/27)
+188 Command_Timeout         -O--CK   100   099   000    -    1 2 3
+189 High_Fly_Writes         -O-RCK   097   097   000    -    3
+190 Airflow_Temperature_Cel -O---K   068   063   045    -    32 (Min/Max 22/33)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    97
-193 Load_Cycle_Count        -O--CK   099   099   000    -    3541
-194 Temperature_Celsius     -O---K   027   040   000    -    27 (0 16 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1169
+193 Load_Cycle_Count        -O--CK   094   094   000    -    12908
+194 Temperature_Celsius     -O---K   032   040   000    -    32 (0 14 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    476 (179 13 0)
-241 Total_LBAs_Written      ------   100   253   000    -    2731728875
-242 Total_LBAs_Read         ------   100   253   000    -    544930258
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
+240 Head_Flying_Hours       ------   100   253   000    -    6336h+32m+10.078s
+241 Total_LBAs_Written      ------   100   253   000    -    12988335709
+242 Total_LBAs_Read         ------   100   253   000    -    74849132243
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -136,11 +141,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     20/27 Celsius
-Lifetime    Min/Max Temperature:     16/37 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     22/32 Celsius
+Lifetime    Min/Max Temperature:     14/37 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -149,14 +153,14 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           33  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           24  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-
-
 

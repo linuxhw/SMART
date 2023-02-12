@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Scorpio Black
 Device Model:     WDC WD3200BEKT-60F3T1
@@ -10,15 +13,15 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sat Sep  7 08:32:19 2019 MSK
+Local Time is:    Sun Feb 13 10:11:26 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     1 (minimum power consumption with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -59,23 +62,23 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   199   199   051    -    16923
-  3 Spin_Up_Time            POS--K   180   173   021    -    2000
-  4 Start_Stop_Count        -O--CK   085   085   000    -    15700
+  1 Raw_Read_Error_Rate     POSR-K   200   199   051    -    0
+  3 Spin_Up_Time            POS--K   181   173   021    -    1950
+  4 Start_Stop_Count        -O--CK   077   077   000    -    23670
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   087   087   000    -    9594
+  9 Power_On_Hours          -O--CK   087   087   000    -    10124
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3627
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6769
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   001   000    -    9551
 188 Command_Timeout         -O--CK   100   091   000    -    81605623835
-190 Airflow_Temperature_Cel -O---K   074   043   040    -    26
-191 G-Sense_Error_Rate      -O--CK   012   012   000    -    88
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    485
-193 Load_Cycle_Count        -O--CK   184   184   000    -    48198
-194 Temperature_Celsius     -O---K   121   090   000    -    26
+190 Airflow_Temperature_Cel -O---K   067   043   040    -    33
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    101
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    498
+193 Load_Cycle_Count        -O--CK   182   182   000    -    56556
+194 Temperature_Celsius     -O---K   114   090   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   172   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -263,25 +266,24 @@ Error 314 [1] occurred at disk power-on lifetime: 7875 hours (328 days + 3 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       70%      9594         193938157
-# 2  Extended offline    Completed: read failure       70%      9593         193938157
-# 3  Extended offline    Completed: read failure       70%      9593         193938131
-# 4  Extended offline    Completed: read failure       70%      9585         193938133
-# 5  Extended offline    Completed: read failure       70%      9584         193938133
-# 6  Extended offline    Completed: read failure       70%      9584         193938131
-# 7  Extended offline    Completed: read failure       70%      9582         193938089
-# 8  Extended offline    Completed: read failure       70%      9581         193938157
-# 9  Extended offline    Completed: read failure       70%      9577         193938099
-#10  Extended offline    Completed: read failure       70%      9575         193938133
-#11  Extended offline    Completed without error       00%      9575         -
-#12  Extended offline    Completed: read failure       70%      9573         193938089
-#13  Extended offline    Completed: read failure       70%      9572         193938157
-#14  Extended offline    Completed: read failure       70%      9534         193938133
-#15  Extended offline    Completed: read failure       70%      9527         193938089
-#16  Extended offline    Completed without error       00%      9509         -
-#17  Extended offline    Completed: read failure       70%      9461         193938133
-#18  Extended offline    Completed: read failure       70%      9447         193938131
-6 of 16 failed self-tests are outdated by newer successful extended offline self-test #11
+# 1  Extended offline    Completed without error       00%     10034         -
+# 2  Extended offline    Completed without error       00%     10008         -
+# 3  Extended offline    Completed without error       00%      9990         -
+# 4  Extended offline    Completed without error       00%      9989         -
+# 5  Extended offline    Completed without error       00%      9987         -
+# 6  Extended offline    Completed without error       00%      9983         -
+# 7  Extended offline    Completed without error       00%      9978         -
+# 8  Extended offline    Completed without error       00%      9976         -
+# 9  Extended offline    Completed without error       00%      9974         -
+#10  Extended offline    Completed without error       00%      9973         -
+#11  Extended offline    Completed without error       00%      9970         -
+#12  Extended offline    Completed without error       00%      9968         -
+#13  Extended offline    Completed without error       00%      9945         -
+#14  Extended offline    Completed without error       00%      9941         -
+#15  Extended offline    Completed without error       00%      9937         -
+#16  Extended offline    Completed without error       00%      9931         -
+#17  Extended offline    Completed without error       00%      9923         -
+#18  Extended offline    Completed without error       00%      9919         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -296,10 +298,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
-Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     24/26 Celsius
+Device State:                        Stand-by (1)
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     24/43 Celsius
 Lifetime    Min/Max Temperature:     25/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -311,7 +312,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (22)
+Temperature History Size (Index):    128 (24)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -330,6 +331,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          204  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         3398  Vendor specific
 

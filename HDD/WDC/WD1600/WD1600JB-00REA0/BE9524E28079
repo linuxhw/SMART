@@ -10,13 +10,13 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Apr  6 16:40:57 2021 
+Local Time is:    Wed Apr 21 12:37:38 2021 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
@@ -27,8 +27,8 @@ Drive failure expected in less than 24 hours. SAVE ALL DATA.
 See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,14 +64,14 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   180   026   021    -    3958
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2662
+  3 Spin_Up_Time            PO----   183   026   021    -    3808
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2695
   5 Reallocated_Sector_Ct   PO--CK   104   104   140    NOW  764
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   078   078   000    -    16164
+  9 Power_On_Hours          -O--CK   078   078   000    -    16215
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2578
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2611
 194 Temperature_Celsius     -O---K   115   083   000    -    32
 196 Reallocated_Event_Count -O--CK   001   001   000    -    403
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
@@ -251,7 +251,8 @@ Error 19245 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   58 20 00 00 dd 10 2e 02 80 25 00 00 58     00:00:56.608  [RESERVED]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: unknown failure    90%     16195         4294967295
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -266,9 +267,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        SMART Off-line Data Collection executing in background (4)
+Device State:                        Active (0)
 Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     --/35 Celsius
+Power Cycle Min/Max Temperature:     --/32 Celsius
 Lifetime    Min/Max Temperature:     --/68 Celsius
 
 SCT Temperature History Version:     2
@@ -276,7 +277,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (112)
+Temperature History Size (Index):    128 (127)
 
 SCT Error Recovery Control:
            Read: Disabled

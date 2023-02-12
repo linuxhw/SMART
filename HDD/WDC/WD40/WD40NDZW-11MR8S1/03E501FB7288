@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-122-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.19.0-051900-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     WDC WD40NDZW-11MR8S1
@@ -10,10 +10,11 @@ User Capacity:    4,000,753,475,584 bytes [4.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Aug  5 21:10:56 2022 UTC
+Local Time is:    Thu Sep 22 05:50:32 2022 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -35,7 +36,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 1200) seconds.
+data collection: 		( 6780) seconds.
 Offline data collection
 capabilities: 			 (0x1b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -53,7 +54,7 @@ Error logging capability:        (0x01)	Error logging supported.
 Short self-test routine 
 recommended polling time: 	 (   2) minutes.
 Extended self-test routine
-recommended polling time: 	 (  23) minutes.
+recommended polling time: 	 ( 113) minutes.
 SCT capabilities: 	       (0x30b5)	SCT Status supported.
 					SCT Feature Control supported.
 					SCT Data Table supported.
@@ -62,17 +63,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   253   253   021    -    4708
-  4 Start_Stop_Count        -O--CK   100   100   000    -    50
+  3 Spin_Up_Time            POS--K   253   253   021    -    1750
+  4 Start_Stop_Count        -O--CK   100   100   000    -    825
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1246
- 10 Spin_Retry_Count        -O--CK   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   098   098   000    -    2045
+ 10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    11
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    6
-193 Load_Cycle_Count        -O--CK   200   200   000    -    276
-194 Temperature_Celsius     -O---K   115   101   000    -    37
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    92
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    86
+193 Load_Cycle_Count        -O--CK   200   200   000    -    2050
+194 Temperature_Celsius     -O---K   118   100   000    -    34
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -122,10 +123,10 @@ Selective Self-tests/Logging not supported
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     23/37 Celsius
-Lifetime    Min/Max Temperature:     19/51 Celsius
-Specified Max Operating Temperature:    27 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     34/34 Celsius
+Lifetime    Min/Max Temperature:     19/52 Celsius
+Specified Max Operating Temperature:    34 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -136,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (123)
+Temperature History Size (Index):    128 (58)
 
 SCT Error Recovery Control command not supported
 
@@ -154,13 +155,13 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        92671  Vendor specific
+0x8000  4         2114  Vendor specific
 
 
 

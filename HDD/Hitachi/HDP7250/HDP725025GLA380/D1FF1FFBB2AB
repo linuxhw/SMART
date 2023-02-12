@@ -1,22 +1,26 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Deskstar P7K500
-Device Model:     Hitachi HDP725025GLA380
+Device Model:     HDP725025GLA380
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: GM2OA52A
-User Capacity:    250 058 268 160 bytes [250 GB]
+User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon May 30 18:58:27 2016 MSK
+Local Time is:    Fri Oct  1 18:49:49 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -60,21 +64,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   100   100   054    -    0
-  3 Spin_Up_Time            POS---   110   110   024    -    185 (Average 185)
-  4 Start_Stop_Count        -O--C-   099   099   000    -    5201
+  3 Spin_Up_Time            POS---   111   111   024    -    183 (Average 186)
+  4 Start_Stop_Count        -O--C-   098   098   000    -    11033
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   100   100   020    -    143
-  9 Power_On_Hours          -O--C-   100   100   000    -    6230
+  8 Seek_Time_Performance   P-S---   100   100   020    -    0
+  9 Power_On_Hours          -O--C-   098   098   000    -    15317
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    5194
-192 Power-Off_Retract_Count -O--CK   096   096   000    -    5202
-193 Load_Cycle_Count        -O--C-   096   096   000    -    5202
-194 Temperature_Celsius     -O----   176   176   000    -    34 (Min/Max 14/45)
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    11026
+192 Power-Off_Retract_Count -O--CK   091   091   000    -    11035
+193 Load_Cycle_Count        -O--C-   091   091   000    -    11035
+194 Temperature_Celsius     -O----   187   187   000    -    32 (Min/Max 14/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    155
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    708
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -91,7 +95,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x20       GPL     R/O      1  Streaming performance log [OBS-8]
 0x21       GPL     R/O      1  Write stream error log
@@ -101,7 +105,89 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 509 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 509 [0] occurred at disk power-on lifetime: 15298 hours (637 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 18 00 00 05 7a 84 b0 45 00  Error: ICRC, ABRT at LBA = 0x057a84b0 = 91915440
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 20 00 40 00 00 1b 53 c2 68 40 08     00:09:45.100  WRITE FPDMA QUEUED
+  61 00 08 00 38 00 00 1b 53 c2 48 40 08     00:09:45.100  WRITE FPDMA QUEUED
+  61 00 10 00 48 00 00 0f cc f8 60 40 08     00:09:45.100  WRITE FPDMA QUEUED
+  61 00 08 00 28 00 00 0f cc f8 58 40 08     00:09:45.100  WRITE FPDMA QUEUED
+  61 00 20 00 20 00 00 0f dd 0f 60 40 08     00:09:45.100  WRITE FPDMA QUEUED
+
+Error 508 [3] occurred at disk power-on lifetime: 15261 hours (635 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 80 00 00 0f f3 92 d8 4f 00  Error: ICRC, ABRT at LBA = 0x0ff392d8 = 267621080
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 10 00 d8 00 00 0f cd 1e 78 40 08     00:07:03.500  WRITE FPDMA QUEUED
+  61 00 10 00 d0 00 00 0f e2 89 80 40 08     00:07:03.500  WRITE FPDMA QUEUED
+  61 00 10 00 c8 00 00 0f cd 1d 40 40 08     00:07:03.500  WRITE FPDMA QUEUED
+  61 00 10 00 c0 00 00 0f cd 1c 60 40 08     00:07:03.500  WRITE FPDMA QUEUED
+  61 00 10 00 b8 00 00 0f dc 65 e8 40 08     00:07:03.500  WRITE FPDMA QUEUED
+
+Error 507 [2] occurred at disk power-on lifetime: 15261 hours (635 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 28 00 00 0f e7 73 e8 4f 00  Error: ICRC, ABRT at LBA = 0x0fe773e8 = 266826728
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 18 00 00 00 00 0f fe df 88 40 08     00:07:02.800  WRITE FPDMA QUEUED
+  61 00 c8 00 e0 00 00 0f e7 73 48 40 08     00:07:02.800  WRITE FPDMA QUEUED
+  61 00 10 00 28 00 00 0f dc 7f 18 40 08     00:07:02.800  WRITE FPDMA QUEUED
+  61 00 10 00 20 00 00 0f ce 20 f8 40 08     00:07:02.800  WRITE FPDMA QUEUED
+  61 00 08 00 18 00 00 0f dc 7e 98 40 08     00:07:02.800  WRITE FPDMA QUEUED
+
+Error 506 [1] occurred at disk power-on lifetime: 15261 hours (635 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 04 88 00 00 05 79 08 40 45 00  Error: ICRC, ABRT at LBA = 0x05790840 = 91818048
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 60 00 00 0f bd 10 58 40 08     00:06:51.100  READ FPDMA QUEUED
+  61 00 10 00 08 00 00 0f c3 73 c0 40 08     00:06:51.100  WRITE FPDMA QUEUED
+  61 00 08 00 00 00 00 09 13 31 40 40 08     00:06:51.100  WRITE FPDMA QUEUED
+  61 00 08 00 e0 00 00 09 13 d1 70 40 08     00:06:51.100  WRITE FPDMA QUEUED
+  61 00 08 00 d8 00 00 09 13 d1 08 40 08     00:06:51.100  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -119,11 +205,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     31/34 Celsius
-Lifetime    Min/Max Temperature:     14/45 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     21/32 Celsius
+Lifetime    Min/Max Temperature:     14/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -131,13 +216,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (73)
+Temperature History Size (Index):    128 (16)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

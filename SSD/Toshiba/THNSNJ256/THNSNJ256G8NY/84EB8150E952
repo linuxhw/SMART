@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-kali2-amd64] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.9.0-kali1-amd64] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Form Factor:      < 1.8 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Nov 12 20:58:40 2020 UTC
+Local Time is:    Wed Nov 18 21:25:00 2020 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -68,17 +68,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    5784
+  9 Power_On_Hours          -O--C-   100   100   000    -    5916
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    622
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    652
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    1
 169 Unknown_Attribute       PO--C-   100   100   010    -    100
 170 Unknown_Attribute       PO--C-   100   100   010    -    0
 173 Unknown_Attribute       -O--C-   193   193   000    -    0
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    168
-194 Temperature_Celsius     PO---K   054   041   020    -    46 (Min/Max 15/59)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    193
+194 Temperature_Celsius     PO---K   053   041   020    -    47 (Min/Max 15/59)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -157,20 +157,20 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       3 (0x0003)
 Device State:                        Active (0)
-Current Temperature:                    46 Celsius
-Power Cycle Min/Max Temperature:     36/59 Celsius
+Current Temperature:                    47 Celsius
+Power Cycle Min/Max Temperature:     46/47 Celsius
 Lifetime    Min/Max Temperature:     15/59 Celsius
-Under/Over Temperature Limit Count:   0/6471
+Under/Over Temperature Limit Count:   0/3
 Vendor specific:
-00 00 04 00 05 01 00 05 05 00 00 00 00 00 00 00
-00 01 00 00 66 bd 3d 01 02 02 00 00 00 00 00 06
+00 00 04 00 01 01 00 05 05 00 00 00 00 00 00 00
+00 01 00 00 ed fb 44 01 02 02 00 00 00 00 00 06
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/80 Celsius
-Temperature History Size (Index):    128 (58)
+Temperature History Size (Index):    128 (22)
 
 SCT Error Recovery Control:
            Read:    600 (60.0 seconds)
@@ -179,30 +179,30 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             622  ---  Lifetime Power-On Resets
-0x01  0x018  6      4450328425  ---  Logical Sectors Written
-0x01  0x020  6        99158041  ---  Number of Write Commands
-0x01  0x028  6      4959557717  ---  Logical Sectors Read
-0x01  0x030  6        55500631  ---  Number of Read Commands
+0x01  0x008  4             652  ---  Lifetime Power-On Resets
+0x01  0x018  6      4490967885  ---  Logical Sectors Written
+0x01  0x020  6        99679033  ---  Number of Write Commands
+0x01  0x028  6      4969376891  ---  Logical Sectors Read
+0x01  0x030  6        55669391  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              46  ---  Current Temperature
+0x05  0x008  1              47  ---  Current Temperature
 0x05  0x010  1              41  ---  Average Short Term Temperature
-0x05  0x018  1              37  ---  Average Long Term Temperature
+0x05  0x018  1              39  ---  Average Long Term Temperature
 0x05  0x020  1              51  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x030  1              47  ---  Highest Average Short Term Temperature
 0x05  0x038  1              22  ---  Lowest Average Short Term Temperature
-0x05  0x040  1              37  ---  Highest Average Long Term Temperature
+0x05  0x040  1              39  ---  Highest Average Long Term Temperature
 0x05  0x048  1              28  ---  Lowest Average Long Term Temperature
-0x05  0x050  4           26450  ---  Time in Over-Temperature
+0x05  0x050  4           33630  ---  Time in Over-Temperature
 0x05  0x058  1              40  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1424  ---  Number of Hardware Resets
+0x06  0x008  4            1453  ---  Number of Hardware Resets
 0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               7  N--  Percentage Used Endurance Indicator
@@ -222,8 +222,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           20  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           20  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.61-gentooaeon] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.0-rc2aeon] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,7 +12,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 6.0 Gb/s
-Local Time is:    Fri Oct  8 14:53:49 2021 MSK
+Local Time is:    Wed Nov 24 07:05:55 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,19 +59,19 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR-K   166   030   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   098   098   036    -    231
-  9 Power_On_Hours          -O--CK   022   022   000    -    69792
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    949
+  9 Power_On_Hours          -O--CK   020   020   000    -    70912
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    959
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    1
 181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    1
-194 Temperature_Celsius     -O----   042   000   000    -    42 (Min/Max 18/54)
+194 Temperature_Celsius     -O----   043   000   000    -    43 (Min/Max 18/54)
 201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
 204 Soft_ECC_Correction     -O--CK   100   100   000    -    0
 231 Unknown_SSD_Attribute   -O--CK   089   089   000    -    12
-234 Unknown_Attribute       -O--CK   100   100   000    -    289034
-241 Total_LBAs_Written      -O--CK   100   100   000    -    89445
-242 Total_LBAs_Read         -O--CK   100   100   000    -    78735
+234 Unknown_Attribute       -O--CK   100   100   000    -    289672
+241 Total_LBAs_Written      -O--CK   100   100   000    -    90067
+242 Total_LBAs_Read         -O--CK   100   100   000    -    79165
 250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    140103
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -92,6 +92,8 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
+Warning: ATA error count 65535 inconsistent with error log pointer 1
+
 ATA Error Count: 65535 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
@@ -107,24 +109,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 occurred at disk power-on lifetime: 4256 hours (177 days + 8 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  10 51 02 00 4f c2 e0  Error: IDNF
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 06 4f c2 00 00   1d+13:47:22.750  SMART READ LOG
-  b0 d5 01 01 4f c2 00 00   1d+13:47:22.750  SMART READ LOG
-  b0 d5 01 00 4f c2 00 00   1d+13:47:22.750  SMART READ LOG
-  b0 da 00 00 4f c2 00 00   1d+13:47:22.750  SMART RETURN STATUS
-  b0 d1 01 01 4f c2 00 00   1d+13:47:22.750  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-
-Error 65534 occurred at disk power-on lifetime: 4256 hours (177 days + 8 hours)
+Error 65535 occurred at disk power-on lifetime: 5360 hours (223 days + 8 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -135,13 +120,13 @@ Error 65534 occurred at disk power-on lifetime: 4256 hours (177 days + 8 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  00 00 00 00 00 00 a0 a0   1d+13:29:37.320  NOP [Abort queued commands]
-  00 00 00 00 00 00 a0 a0   1d+13:29:37.320  NOP [Abort queued commands]
-  25 00 40 00 08 00 40 40   1d+13:29:35.570  READ DMA EXT
-  25 00 40 00 00 00 40 40   1d+13:29:35.570  READ DMA EXT
-  ec 00 00 00 00 00 00 00   1d+13:29:33.900  IDENTIFY DEVICE
+  00 00 00 00 00 00 a0 a0   2d+10:42:31.250  NOP [Abort queued commands]
+  00 00 00 00 00 00 a0 a0   2d+10:42:31.250  NOP [Abort queued commands]
+  25 00 40 00 08 00 40 40   2d+10:42:29.700  READ DMA EXT
+  25 00 40 00 00 00 40 40   2d+10:42:29.700  READ DMA EXT
+  ec 00 00 00 00 00 00 00   2d+10:42:27.160  IDENTIFY DEVICE
 
-Error 65533 occurred at disk power-on lifetime: 4256 hours (177 days + 8 hours)
+Error 65534 occurred at disk power-on lifetime: 5360 hours (223 days + 8 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -152,45 +137,62 @@ Error 65533 occurred at disk power-on lifetime: 4256 hours (177 days + 8 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 40 00 08 00 40 40   1d+13:29:35.570  READ DMA EXT
-  25 00 40 00 00 00 40 40   1d+13:29:35.570  READ DMA EXT
-  ec 00 00 00 00 00 00 00   1d+13:29:33.900  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00   1d+13:29:33.710  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00   1d+13:29:29.660  IDENTIFY DEVICE
+  25 00 40 00 08 00 40 40   2d+10:42:29.700  READ DMA EXT
+  25 00 40 00 00 00 40 40   2d+10:42:29.700  READ DMA EXT
+  ec 00 00 00 00 00 00 00   2d+10:42:27.160  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00   2d+10:42:26.990  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00   2d+10:42:22.930  IDENTIFY DEVICE
 
-Error 65532 occurred at disk power-on lifetime: 4256 hours (177 days + 8 hours)
+Error 65533 occurred at disk power-on lifetime: 5360 hours (223 days + 8 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 00 00 00 00 00 00
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.950  FLUSH CACHE EXT
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.590  FLUSH CACHE EXT
-  61 02 58 84 26 f9 40 40   1d+13:29:17.590  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.590  FLUSH CACHE EXT
+  60 80 98 60 0c 00 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 40 90 20 0c 00 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 20 88 00 0c 00 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 08 80 c0 7c 8d 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 08 78 00 63 09 40 40   2d+05:31:26.950  READ FPDMA QUEUED
 
-Error 65531 occurred at disk power-on lifetime: 4256 hours (177 days + 8 hours)
+Error 65532 occurred at disk power-on lifetime: 5360 hours (223 days + 8 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 00 00 00 00 00 00
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.950  FLUSH CACHE EXT
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.600  FLUSH CACHE EXT
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.590  FLUSH CACHE EXT
-  61 02 58 84 26 f9 40 40   1d+13:29:17.590  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 a0 a0   1d+13:29:17.590  FLUSH CACHE EXT
+  60 80 98 60 0c 00 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 40 90 20 0c 00 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 20 88 00 0c 00 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 08 80 c0 7c 8d 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+  60 08 78 00 63 09 40 40   2d+05:31:26.950  READ FPDMA QUEUED
+
+Error 65531 occurred at disk power-on lifetime: 5355 hours (223 days + 3 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  01 50 01 01 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  00 00 00 00 00 00 a0 a0   2d+05:31:24.360  NOP [Abort queued commands]
+  00 00 00 00 00 00 a0 a0   2d+05:31:24.360  NOP [Abort queued commands]
+  25 00 40 00 08 00 40 40   2d+05:31:22.800  READ DMA EXT
+  25 00 40 00 00 00 40 40   2d+05:31:22.800  READ DMA EXT
+  ec 00 00 00 00 00 00 00   2d+05:31:17.720  IDENTIFY DEVICE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -215,7 +217,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2         1825  Device-to-host register FISes sent due to a COMRESET
+0x000a  2         1258  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

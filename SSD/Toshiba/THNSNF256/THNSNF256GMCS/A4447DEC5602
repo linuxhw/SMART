@@ -1,3 +1,6 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.118-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     TOSHIBA THNSNF256GMCS
 Serial Number:    --
@@ -6,10 +9,11 @@ User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      < 1.8 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jul  7 13:00:26 2019 MSK
+Local Time is:    Tue Oct 11 09:31:03 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -17,7 +21,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -27,8 +31,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  16)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -63,17 +68,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    675
+  9 Power_On_Hours          -O--C-   100   100   000    -    3590
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    521
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2501
 167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    0
+168 Unknown_Attribute       -O--C-   100   100   000    -    4
 169 Unknown_Attribute       PO--C-   100   100   010    -    100
 170 Unknown_Attribute       PO--C-   100   100   010    -    0
-173 Unknown_Attribute       -O--C-   199   199   000    -    0
+173 Unknown_Attribute       -O--C-   195   195   000    -    0
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    240
-194 Temperature_Celsius     -O---K   058   029   000    -    42 (Min/Max 17/71)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    417
+194 Temperature_Celsius     -O---K   074   026   000    -    26 (Min/Max 16/74)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -100,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 2
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -115,6 +120,40 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 2641 hours (110 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 40 00 00 00 17 90 00 40 00  Error: ICRC, ABRT 64 sectors at LBA = 0x00179000 = 1544192
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 00 17 90 00 40 00     00:00:25.318  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 8f c0 40 00     00:00:25.318  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 8f 80 40 00     00:00:25.318  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 8f 40 40 00     00:00:25.317  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 8f 00 40 00     00:00:25.317  READ DMA EXT
+
+Error 3 [2] occurred at disk power-on lifetime: 2641 hours (110 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 40 00 00 00 17 dd 40 40 00  Error: ICRC, ABRT 64 sectors at LBA = 0x0017dd40 = 1563968
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 00 17 dd 40 40 00     00:00:24.449  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 dd 00 40 00     00:00:24.448  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 dc c0 40 00     00:00:24.448  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 dc 80 40 00     00:00:24.448  READ DMA EXT
+  25 00 00 00 40 00 00 00 17 dc 40 40 00     00:00:24.447  READ DMA EXT
 
 Error 2 [1] occurred at disk power-on lifetime: 664 hours (27 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -152,12 +191,15 @@ Error 1 [0] occurred at disk power-on lifetime: 55 hours (2 days + 7 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               00%       665         -
-# 2  Short offline       Completed without error       00%       665         -
-# 3  Short offline       Completed without error       00%        82         -
-# 4  Short offline       Completed without error       00%        81         -
-# 5  Short offline       Completed without error       00%        80         -
-# 6  Short offline       Completed without error       00%        62         -
+# 1  Short offline       Completed without error       00%      3407         -
+# 2  Short offline       Completed without error       00%      3264         -
+# 3  Short offline       Completed without error       00%       690         -
+# 4  Short offline       Aborted by host               00%       665         -
+# 5  Short offline       Completed without error       00%       665         -
+# 6  Short offline       Completed without error       00%        82         -
+# 7  Short offline       Completed without error       00%        81         -
+# 8  Short offline       Completed without error       00%        80         -
+# 9  Short offline       Completed without error       00%        62         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -172,23 +214,22 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       3 (0x0003)
-SCT Support Level:                   0
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     24/42 Celsius
-Lifetime    Min/Max Temperature:     17/71 Celsius
-Lifetime    Average Temperature:        17 Celsius
-Under/Over Temperature Limit Count:   0/1
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     24/26 Celsius
+Lifetime    Min/Max Temperature:     16/74 Celsius
+Specified Max Operating Temperature:    16 Celsius
+Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 04 00 01 01 00 05 05 00 00 00 00 00 00 00
-00 01 00 00 8d 19 25 00 02 02 00 00 00 00 00 05
+00 01 00 00 95 34 c5 00 02 02 00 00 00 00 00 05
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/80 Celsius
-Temperature History Size (Index):    128 (15)
+Temperature History Size (Index):    128 (42)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -208,8 +249,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           56  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

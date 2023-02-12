@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 27 13:32:19 2021 UTC
+Local Time is:    Mon Dec 27 14:22:20 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,29 +62,29 @@ SCT capabilities: 	       (0x10b5)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   115   099   006    -    92316224
+  1 Raw_Read_Error_Rate     POSR--   115   099   006    -    99224264
   3 Spin_Up_Time            PO----   098   098   085    -    0
   4 Start_Stop_Count        -O--CK   065   065   020    -    35980
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    8879742384
-  9 Power_On_Hours          -O--CK   089   089   000    -    9798
+  7 Seek_Error_Rate         POSR--   081   060   030    -    8879754549
+  9 Power_On_Hours          -O--CK   089   089   000    -    9799
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   095   095   020    -    5619
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   096   000    -    111670853710
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   030   045    Past 38 (1 174 39 38 0)
+190 Airflow_Temperature_Cel -O---K   063   030   045    Past 37 (Min/Max 36/41 #430)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    383
-193 Load_Cycle_Count        -O--CK   067   067   000    -    67413
-194 Temperature_Celsius     -O---K   038   070   000    -    38 (255 253 0 0 0)
+193 Load_Cycle_Count        -O--CK   067   067   000    -    67416
+194 Temperature_Celsius     -O---K   037   070   000    -    37 (255 253 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    13039 (56 106 0)
-241 Total_LBAs_Written      ------   100   253   000    -    36888566558
-242 Total_LBAs_Read         ------   100   253   000    -    964132003431
+240 Head_Flying_Hours       ------   100   253   000    -    13040 (13 73 0)
+241 Total_LBAs_Written      ------   100   253   000    -    36906814990
+242 Total_LBAs_Read         ------   100   253   000    -    964134275878
 254 Free_Fall_Sensor        -O--CK   001   001   000    -    174
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -173,16 +173,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            5619  ---  Lifetime Power-On Resets
-0x01  0x010  4            9798  ---  Power-on Hours
-0x01  0x018  6     30902974539  ---  Logical Sectors Written
-0x01  0x020  6       572135507  ---  Number of Write Commands
-0x01  0x028  6     67695604697  ---  Logical Sectors Read
-0x01  0x030  6       990788891  ---  Number of Read Commands
+0x01  0x010  4            9799  ---  Power-on Hours
+0x01  0x018  6     30921883059  ---  Logical Sectors Written
+0x01  0x020  6       572160576  ---  Number of Write Commands
+0x01  0x028  6     67697934299  ---  Logical Sectors Read
+0x01  0x030  6       990820390  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4              76  ---  Spindle Motor Power-on Hours
+0x03  0x008  4              77  ---  Spindle Motor Power-on Hours
 0x03  0x010  4               3  ---  Head Flying Hours
-0x03  0x018  4           67413  ---  Head Load Events
+0x03  0x018  4           67416  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -199,10 +199,12 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

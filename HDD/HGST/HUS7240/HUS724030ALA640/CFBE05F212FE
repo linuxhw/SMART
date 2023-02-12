@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-42-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-73-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,8 +13,8 @@ Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Fri Aug 21 22:07:41 2020 BST
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Mon May 31 21:51:57 2021 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,19 +22,19 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Write SCT (Get) Feature Control Command failed: Read of ATA output registers not implemented [JMicron]
-Wt Cache Reorder: Unknown (SCT Feature Control command failed)
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 246)	Self-test routine in progress...
-					60% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(   24) seconds.
 Offline data collection
@@ -65,21 +65,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   137   137   054    -    79
-  3 Spin_Up_Time            POS---   150   150   024    -    423 (Average 406)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    38
+  3 Spin_Up_Time            POS---   143   143   024    -    495 (Average 377)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    64
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   140   140   020    -    26
-  9 Power_On_Hours          -O--C-   093   093   000    -    50306
+  8 Seek_Time_Performance   P-S---   142   142   020    -    25
+  9 Power_On_Hours          -O--C-   092   092   000    -    57078
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    35
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1259
-193 Load_Cycle_Count        -O--C-   099   099   000    -    1259
-194 Temperature_Celsius     -O----   142   142   000    -    42 (Min/Max 20/43)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    59
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1486
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1486
+194 Temperature_Celsius     -O----   166   166   000    -    36 (Min/Max 20/53)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    2
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -87,28 +87,98 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
-Read GP Log Directory failed
-
-SMART Log Directory Version 1 [multi-sector log support]
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00           SL  R/O      1  Log Directory
+0x00       GPL,SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
+0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
+0x04       GPL     R/O      7  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x80-0x9f      SL  R/W     16  Host vendor specific log
-0xe0           SL  R/W      1  SCT Command/Status
-0xe1           SL  R/W      1  SCT Data Transfer
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x20       GPL     R/O      1  Streaming performance log [OBS-8]
+0x21       GPL     R/O      1  Write stream error log
+0x22       GPL     R/O      1  Read stream error log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xe0       GPL,SL  R/W      1  SCT Command/Status
+0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
-SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-SMART Error Log Version: 1
-No Errors Logged
+Error 2 [1] occurred at disk power-on lifetime: 57002 hours (2375 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
-SMART Extended Self-test Log (GP Log 0x07) not supported
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 03 61 00 00 8f 26 b9 1f 0f 00  Error: ICRC, ABRT at LBA = 0x8f26b91f = 2401679647
 
-SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 68 00 28 00 00 6c 10 01 00 40 08  6d+00:13:08.321  WRITE FPDMA QUEUED
+  61 00 80 00 20 00 00 6c 10 00 80 40 08  6d+00:13:08.321  WRITE FPDMA QUEUED
+  60 01 00 00 18 00 00 8f 26 d3 80 40 08  6d+00:13:08.321  READ FPDMA QUEUED
+  60 05 00 00 f0 00 00 8f 26 ce 80 40 08  6d+00:13:08.321  READ FPDMA QUEUED
+  60 05 00 00 e8 00 00 8f 26 c9 80 40 08  6d+00:13:08.320  READ FPDMA QUEUED
+
+Error 1 [0] occurred at disk power-on lifetime: 50306 hours (2096 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 02 40 00 00 05 55 dd 40 05 00  Error: ICRC, ABRT at LBA = 0x0555dd40 = 89513280
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 05 00 00 f0 00 00 05 55 da 80 40 08     00:11:13.423  WRITE FPDMA QUEUED
+  61 05 00 00 e8 00 00 05 55 d5 80 40 08     00:11:13.420  WRITE FPDMA QUEUED
+  61 05 00 00 e0 00 00 05 55 d0 80 40 08     00:11:13.416  WRITE FPDMA QUEUED
+  61 00 80 00 d8 00 00 05 55 d0 00 40 08     00:11:13.413  WRITE FPDMA QUEUED
+  61 05 00 00 d0 00 00 05 55 cb 00 40 08     00:11:13.412  WRITE FPDMA QUEUED
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     57065         -
+# 2  Extended offline    Completed without error       00%     56897         -
+# 3  Extended offline    Completed without error       00%     56729         -
+# 4  Extended offline    Completed without error       00%     56565         -
+# 5  Extended offline    Interrupted (host reset)      90%     56538         -
+# 6  Extended offline    Completed without error       00%     56412         -
+# 7  Extended offline    Completed without error       00%     56239         -
+# 8  Extended offline    Completed without error       00%     56071         -
+# 9  Extended offline    Completed without error       00%     55904         -
+#10  Extended offline    Completed without error       00%     55735         -
+#11  Extended offline    Completed without error       00%     55568         -
+#12  Extended offline    Completed without error       00%     55403         -
+#13  Extended offline    Completed without error       00%     55234         -
+#14  Extended offline    Completed without error       00%     55068         -
+#15  Extended offline    Completed without error       00%     54900         -
+#16  Extended offline    Completed without error       00%     54732         -
+#17  Extended offline    Completed without error       00%     54561         -
+#18  Extended offline    Completed without error       00%     54397         -
+#19  Extended offline    Completed without error       00%     54229         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -123,10 +193,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        DST executing in background (3)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     25/42 Celsius
-Lifetime    Min/Max Temperature:     20/43 Celsius
+Device State:                        Active (0)
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     34/40 Celsius
+Lifetime    Min/Max Temperature:     20/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -134,15 +204,67 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (85)
+Temperature History Size (Index):    128 (114)
 
-Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
-SCT (Get) Error Recovery Control command failed
+SCT Error Recovery Control:
+           Read: Disabled
+          Write: Disabled
 
-Device Statistics (GP/SMART Log 0x04) not supported
+Device Statistics (GP Log 0x04)
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 2) ==
+0x01  0x008  4              59  ---  Lifetime Power-On Resets
+0x01  0x018  6    159444447470  ---  Logical Sectors Written
+0x01  0x020  6      2464242684  ---  Number of Write Commands
+0x01  0x028  6    328162205762  ---  Logical Sectors Read
+0x01  0x030  6      4495255358  ---  Number of Read Commands
+0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
+0x03  0x008  4           57065  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           57065  ---  Head Flying Hours
+0x03  0x018  4            1486  ---  Head Load Events
+0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
+0x03  0x028  4               2  ---  Read Recovery Attempts
+0x03  0x030  4               0  ---  Number of Mechanical Start Failures
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
+0x05  0x008  1              36  ---  Current Temperature
+0x05  0x010  1              35  N--  Average Short Term Temperature
+0x05  0x018  1              34  N--  Average Long Term Temperature
+0x05  0x020  1              53  ---  Highest Temperature
+0x05  0x028  1              20  ---  Lowest Temperature
+0x05  0x030  1              49  N--  Highest Average Short Term Temperature
+0x05  0x038  1              21  N--  Lowest Average Short Term Temperature
+0x05  0x040  1              34  N--  Highest Average Long Term Temperature
+0x05  0x048  1              25  N--  Lowest Average Long Term Temperature
+0x05  0x050  4               0  ---  Time in Over-Temperature
+0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
+0x05  0x060  4               0  ---  Time in Under-Temperature
+0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4             261  ---  Number of Hardware Resets
+0x06  0x010  4             241  ---  Number of ASR Events
+0x06  0x018  4               2  ---  Number of Interface CRC Errors
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
 
 Pending Defects log (GP Log 0x0c) not supported
 
-ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
-Read SATA Phy Event Counters failed
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

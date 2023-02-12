@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.3.0-51-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.13.0-22-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu May 14 02:33:38 2020 CEST
+Local Time is:    Sun Dec 26 04:56:01 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,20 +65,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   252   252   002    -    0
   5 Reallocated_Sector_Ct   PO--CK   252   252   005    -    0
-  9 Power_On_Hours          -O--CK   081   081   ---    -    8334
- 12 Power_Cycle_Count       -O--CK   252   252   ---    -    898
+  9 Power_On_Hours          -O--CK   065   065   ---    -    15428
+ 12 Power_Cycle_Count       -O--CK   252   252   ---    -    1487
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
 171 Unknown_Attribute       -O---K   100   100   ---    -    0
 172 Unknown_Attribute       -O--CK   100   100   ---    -    0
-173 Unknown_Attribute       PO--CK   096   096   005    -    562656706562
-174 Unknown_Attribute       -O--CK   252   252   ---    -    90
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
+173 Unknown_Attribute       PO--CK   093   093   005    -    1013636202627
+174 Unknown_Attribute       -O--CK   252   252   ---    -    217
+183 Runtime_Bad_Block       -O--CK   078   078   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-190 Airflow_Temperature_Cel -O---K   069   033   045    Past 31
+190 Airflow_Temperature_Cel -O---K   072   033   045    Past 28
 196 Reallocated_Event_Count -O--CK   252   252   ---    -    0
-199 UDMA_CRC_Error_Count    -O---K   100   100   ---    -    0
+199 UDMA_CRC_Error_Count    -O---K   100   100   ---    -    9
 244 Unknown_Attribute       -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -112,7 +112,10 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         1         -
+# 1  Short offline       Completed without error       00%     14987         -
+# 2  Short offline       Completed without error       00%      9392         -
+# 3  Short offline       Completed without error       00%      8398         -
+# 4  Short offline       Completed without error       00%         1         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -128,10 +131,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       257 (0x0101)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     28/32 Celsius
-Lifetime    Min/Max Temperature:     28/32 Celsius
-Specified Max Operating Temperature:    31 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     29/42 Celsius
+Lifetime    Min/Max Temperature:     29/42 Celsius
+Specified Max Operating Temperature:    29 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -142,7 +145,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -10/70 Celsius
 Min/Max Temperature Limit:           -15/90 Celsius
-Temperature History Size (Index):    256 (4)
+Temperature History Size (Index):    256 (0)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -151,13 +154,13 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             898  ---  Lifetime Power-On Resets
-0x01  0x018  6   1817836057945  ---  Logical Sectors Written
-0x01  0x020  6        41746268  ---  Number of Write Commands
-0x01  0x028  6   3655124756134  ---  Logical Sectors Read
-0x01  0x030  6       195714787  ---  Number of Read Commands
+0x01  0x008  4            1487  ---  Lifetime Power-On Resets
+0x01  0x018  6   5193753165209  ---  Logical Sectors Written
+0x01  0x020  6        83764003  ---  Number of Write Commands
+0x01  0x028  6   8831392605544  ---  Logical Sectors Read
+0x01  0x030  6       224518818  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -169,5 +172,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 

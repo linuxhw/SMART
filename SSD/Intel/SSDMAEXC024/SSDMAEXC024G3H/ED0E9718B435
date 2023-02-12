@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-74-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.0-4-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Intel 311/313 Series SSDs
@@ -10,10 +10,11 @@ Firmware Version: 9CV10379
 User Capacity:    24,015,495,168 bytes [24.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
+TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Jun 14 02:04:16 2021 CEST
+Local Time is:    Thu Nov 25 10:05:55 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -68,8 +69,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8441
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2105
+  9 Power_On_Hours          -O--CK   100   100   000    -    9444
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2583
 170 Reserve_Block_Count     PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
@@ -85,7 +86,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   099   099   000    -    0
 241 Host_Writes_32MiB       -O--CK   100   100   000    -    124194
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    419815
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    419902
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -146,18 +147,18 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2105  ---  Lifetime Power-On Resets
-0x01  0x010  4            8441  ---  Power-on Hours
-0x01  0x018  6      8139222557  ---  Logical Sectors Written
-0x01  0x020  6       634163561  ---  Number of Write Commands
-0x01  0x028  6     27513043358  ---  Logical Sectors Read
-0x01  0x030  6      1886022417  ---  Number of Read Commands
+0x01  0x008  4            2583  ---  Lifetime Power-On Resets
+0x01  0x010  4            9444  ---  Power-on Hours
+0x01  0x018  6      8139222734  ---  Logical Sectors Written
+0x01  0x020  6       634163568  ---  Number of Write Commands
+0x01  0x028  6     27518760701  ---  Logical Sectors Read
+0x01  0x030  6      1886104734  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           27383  ---  Number of Hardware Resets
-0x06  0x010  4        31312550  ---  Number of ASR Events
+0x06  0x008  4           69081  ---  Number of Hardware Resets
+0x06  0x010  4        31335817  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
@@ -173,8 +174,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          620  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4          484  Device-to-host register FISes sent due to a COMRESET
+0x0009  4          319  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4          221  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

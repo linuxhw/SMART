@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.14-2-MANJARO] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.5.10-pclos1] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Jan 30 18:10:36 2020 CET
+Local Time is:    Sat Apr 18 19:39:45 2020 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -65,25 +65,25 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    0
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   091   091   025    -    2866
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7963
+  3 Spin_Up_Time            PO---K   091   091   025    -    2859
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8100
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    14934
+  9 Power_On_Hours          -O--CK   100   100   000    -    15995
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    8067
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    642
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8230
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    654
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   052   000    -    30 (Min/Max 13/48)
+194 Temperature_Celsius     -O----   064   051   000    -    34 (Min/Max 13/49)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    92008
-223 Load_Retry_Count        -O--CK   100   100   000    -    451
-225 Load_Cycle_Count        -O--CK   080   080   000    -    205233
+200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    100807
+223 Load_Retry_Count        -O--CK   100   100   000    -    478
+225 Load_Cycle_Count        -O--CK   078   078   000    -    227637
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,9 +114,14 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0x50)       Completed without error       00%     11744         -
-# 2  Short offline       Completed without error       00%     11744         -
-# 3  Short offline       Completed without error       00%     11724         -
+# 1  Short offline       Completed without error       00%     15955         -
+# 2  Short offline       Aborted by host               90%     15955         -
+# 3  Short offline       Aborted by host               30%     15829         -
+# 4  Vendor (0x50)       Completed without error       00%     15684         -
+# 5  Short offline       Completed without error       00%     15684         -
+# 6  Vendor (0x50)       Completed without error       00%     11744         -
+# 7  Short offline       Completed without error       00%     11744         -
+# 8  Short offline       Completed without error       00%     11724         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -133,8 +138,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     30/31 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     29/34 Celsius
 Lifetime    Min/Max Temperature:     13/48 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -144,7 +149,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (123)
+Temperature History Size (Index):    128 (98)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -164,8 +169,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          808  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           17  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           15  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

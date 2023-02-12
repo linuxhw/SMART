@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.12-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -11,7 +11,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3b
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Fri Jul 16 12:16:38 2021 UTC
+Local Time is:    Sun Jul 18 10:33:42 2021 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -62,19 +62,19 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   073   073   011    -    4000
-  4 Start_Stop_Count        -O--CK   095   095   000    -    4045
+  4 Start_Stop_Count        -O--CK   095   095   000    -    4057
   5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    1
   7 Seek_Error_Rate         POSR--   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    1263514
+  9 Power_On_Hours          -O--CK   097   097   000    -    1265421
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--C-   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    2138
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    2145
 184 End-to-End_Error        -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   001   001   000    -    230
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O---K   160   103   000    -    31
-194 Temperature_Celsius     -O---K   160   103   000    -    31
+190 Airflow_Temperature_Cel -O---K   172   103   000    -    27
+194 Temperature_Celsius     -O---K   172   103   000    -    27
 195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   099   099   000    -    1
 197 Current_Pending_Sector  -O--C-   252   099   000    -    0
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 55332 (device log contains only the most recent 8 errors)
+Device Error Count: 55335 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,6 +121,57 @@ Device Error Count: 55332 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 55335 [6] occurred at disk power-on lifetime: 10483 hours (436 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 0a 00 00 00 00 00 12 48 e0 00  Error: ICRC, ABRT 2560 sectors at LBA = 0x00001248 = 4680
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 0a 00 00 00 00 00 12 48 e0 00     00:05:24.000  READ DMA EXT
+  25 00 00 02 d8 00 00 00 00 0f 70 e0 04     00:05:24.000  READ DMA EXT
+  25 00 00 05 68 00 00 00 00 0a 08 e0 00     00:05:24.000  READ DMA EXT
+  c8 00 00 00 f8 00 00 00 00 09 08 e0 00     00:05:24.000  READ DMA
+  c8 00 00 00 78 00 00 00 00 08 88 e0 00     00:05:24.000  READ DMA
+
+Error 55334 [5] occurred at disk power-on lifetime: 10483 hours (436 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 f8 00 00 12 a1 8e 00 e0 00  Error: ICRC, ABRT 248 sectors at LBA = 0x12a18e00 = 312577536
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 f8 00 00 12 a1 8e 00 e0 04     00:01:21.000  READ DMA EXT
+  25 00 00 00 08 00 00 12 a1 8d f8 e0 00     00:01:21.000  READ DMA EXT
+  25 00 00 00 08 00 00 12 a1 8d f0 e0 00     00:01:21.000  READ DMA EXT
+  25 00 00 00 08 00 00 12 a1 8d e8 e0 00     00:01:21.000  READ DMA EXT
+  25 00 00 00 08 00 00 12 a1 8d e0 e0 00     00:01:21.000  READ DMA EXT
+
+Error 55333 [4] occurred at disk power-on lifetime: 10483 hours (436 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 02 00 00 00 12 a1 8c 00 e0 00  Error: ICRC, ABRT 512 sectors at LBA = 0x12a18c00 = 312577024
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 02 00 00 00 12 a1 8c 00 e0 00     00:01:20.000  READ DMA EXT
+  25 00 00 01 f8 00 00 00 00 0a 08 e0 00     00:01:20.000  READ DMA EXT
+  c8 00 00 00 f8 00 00 00 00 09 08 e0 00     00:01:20.000  READ DMA
+  c8 00 00 00 78 00 00 00 00 08 88 e0 00     00:01:20.000  READ DMA
+  c8 00 00 00 30 00 00 00 00 08 48 e0 04     00:01:20.000  READ DMA
 
 Error 55332 [3] occurred at disk power-on lifetime: 10527 hours (438 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -207,57 +258,6 @@ Error 55328 [7] occurred at disk power-on lifetime: 10527 hours (438 days + 15 h
   f5 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:57.000  SECURITY FREEZE LOCK
   c6 00 00 00 10 00 00 00 00 00 00 a0 00     00:00:39.000  SET MULTIPLE MODE
 
-Error 55327 [6] occurred at disk power-on lifetime: 10483 hours (436 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 0a 00 00 00 00 00 12 48 e0 00  Error: ICRC, ABRT 2560 sectors at LBA = 0x00001248 = 4680
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 0a 00 00 00 00 00 12 48 e0 00     00:05:24.000  READ DMA EXT
-  25 00 00 02 d8 00 00 00 00 0f 70 e0 04     00:05:24.000  READ DMA EXT
-  25 00 00 05 68 00 00 00 00 0a 08 e0 00     00:05:24.000  READ DMA EXT
-  c8 00 00 00 f8 00 00 00 00 09 08 e0 00     00:05:24.000  READ DMA
-  c8 00 00 00 78 00 00 00 00 08 88 e0 00     00:05:24.000  READ DMA
-
-Error 55326 [5] occurred at disk power-on lifetime: 10483 hours (436 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 f8 00 00 12 a1 8e 00 e0 00  Error: ICRC, ABRT 248 sectors at LBA = 0x12a18e00 = 312577536
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 f8 00 00 12 a1 8e 00 e0 04     00:01:21.000  READ DMA EXT
-  25 00 00 00 08 00 00 12 a1 8d f8 e0 00     00:01:21.000  READ DMA EXT
-  25 00 00 00 08 00 00 12 a1 8d f0 e0 00     00:01:21.000  READ DMA EXT
-  25 00 00 00 08 00 00 12 a1 8d e8 e0 00     00:01:21.000  READ DMA EXT
-  25 00 00 00 08 00 00 12 a1 8d e0 e0 00     00:01:21.000  READ DMA EXT
-
-Error 55325 [4] occurred at disk power-on lifetime: 10483 hours (436 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 02 00 00 00 12 a1 8c 00 e0 00  Error: ICRC, ABRT 512 sectors at LBA = 0x12a18c00 = 312577024
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 02 00 00 00 12 a1 8c 00 e0 00     00:01:20.000  READ DMA EXT
-  25 00 00 01 f8 00 00 00 00 0a 08 e0 00     00:01:20.000  READ DMA EXT
-  c8 00 00 00 f8 00 00 00 00 09 08 e0 00     00:01:20.000  READ DMA
-  c8 00 00 00 78 00 00 00 00 08 88 e0 00     00:01:20.000  READ DMA
-  c8 00 00 00 30 00 00 00 00 08 48 e0 04     00:01:20.000  READ DMA
-
 SMART Extended Self-test Log Version: 0 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -276,16 +276,16 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     --/32 Celsius
-Lifetime    Min/Max Temperature:     --/32 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     --/27 Celsius
+Lifetime    Min/Max Temperature:     --/35 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/105 Celsius
 Min/Max Temperature Limit:            5/110 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (2)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -305,8 +305,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

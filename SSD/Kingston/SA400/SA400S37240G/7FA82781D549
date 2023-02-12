@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.7.12-24-tkg-pds] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.19-191-tkg-muqss] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven SSDs
@@ -10,10 +10,11 @@ Firmware Version: SBFKB1D2
 User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
+TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Aug  7 11:58:11 2020 MSK
+Local Time is:    Mon Aug 16 23:08:27 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,8 +60,8 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10470
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1197
+  9 Power_On_Hours          -O--CK   100   100   000    -    17875
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1616
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -68,22 +69,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 169 Bad_Block_Rate          ------   100   100   000    -    11
 170 Bad_Blk_Ct_Erl/Lat      ------   100   100   010    -    0/8
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    111 (Average 83)
+173 MaxAvgErase_Ct          ------   100   100   000    -    244 (Average 216)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    77
-194 Temperature_Celsius     -O---K   063   058   000    -    37 (Min/Max 18/42)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    131
+194 Temperature_Celsius     -O---K   067   053   000    -    33 (Min/Max 17/47)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   009   009   000    -    91
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    14043
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    6294
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    10382
-244 Average_Erase_Count     ------   100   100   000    -    83
-245 Max_Erase_Count         ------   100   100   000    -    111
-246 Total_Erase_Count       ------   100   100   000    -    643264
+231 SSD_Life_Left           ------   022   022   000    -    78
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    37733
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    16680
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    57877
+244 Average_Erase_Count     ------   100   100   000    -    216
+245 Max_Erase_Count         ------   100   100   000    -    244
+246 Total_Erase_Count       ------   100   100   000    -    1673232
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,8 +113,9 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3729         -
+# 1  Extended offline    Completed without error       00%     12567         -
 # 2  Short offline       Completed without error       00%      3729         -
+# 3  Short offline       Completed without error       00%      3729         -
 
 Selective Self-tests/Logging not supported
 
@@ -122,20 +124,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1197  ---  Lifetime Power-On Resets
-0x01  0x010  4           10470  ---  Power-on Hours
-0x01  0x018  6     13199582275  ---  Logical Sectors Written
-0x01  0x028  6     21773721766  ---  Logical Sectors Read
+0x01  0x008  4            1616  ---  Lifetime Power-On Resets
+0x01  0x010  4           17875  ---  Power-on Hours
+0x01  0x018  6     34981566583  ---  Logical Sectors Written
+0x01  0x028  6    121378689966  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              37  ---  Current Temperature
-0x05  0x020  1              42  ---  Highest Temperature
-0x05  0x028  1              18  ---  Lowest Temperature
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x020  1              47  ---  Highest Temperature
+0x05  0x028  1              17  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              21  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -150,8 +152,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

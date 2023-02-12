@@ -7,7 +7,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Fri Mar  5 15:37:52 2021 UTC
+Local Time is:    Sun Apr 11 06:15:21 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,21 +57,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
   3 Spin_Up_Time            POS---   253   253   025    -    4352
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7955
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7969
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    23115
+  9 Power_On_Hours          -O--CK   100   100   000    -    23125
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4733
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    4429
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4742
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    2795
 184 End-to-End_Error        PO--CK   253   253   099    -    0
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    1
-190 Airflow_Temperature_Cel -O---K   084   051   045    -    16 (Min/Max 7/49)
-194 Temperature_Celsius     -O---K   082   050   000    -    18 (Min/Max 7/50)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    4429
+190 Airflow_Temperature_Cel -O---K   080   051   045    -    20 (Min/Max 7/49)
+194 Temperature_Celsius     -O---K   079   050   000    -    21 (Min/Max 7/50)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2795
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 26 (device log contains only the most recent 8 errors)
+Device Error Count: 28 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,40 +117,53 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 28 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+
+Error 27 [2] log entry is empty
 Error 26 [1] log entry is empty
 Error 25 [0] log entry is empty
-Error 24 [7] occurred at disk power-on lifetime: 9341 hours (389 days + 5 hours)
-  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+Error 24 [7] occurred at disk power-on lifetime: 9387 hours (391 days + 3 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 00 3a 01 40 89 79 00 00 04 61 80
+  30 -- 00 00 05 40 c0 08 00 00 01 61 48   at LBA = 0x40c009000001 = 71193528893441
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  fc 01 10 04 3a 61 00 00 40 89 79 00 80 17d+02:06:35.196  [VENDOR SPECIFIC]
-  fc 01 10 04 3a 61 00 00 40 89 79 00 80 17d+02:06:35.196  [VENDOR SPECIFIC]
-  fc 1f 00 04 f2 61 00 00 40 89 77 00 08 17d+02:06:35.196  [VENDOR SPECIFIC]
-  fc 17 f8 04 9a 61 00 00 40 89 77 00 08  4d+15:50:53.372  [VENDOR SPECIFIC]
-  00 00 16 ce 89 00 00 00 cc 00 bb 00 a1  6d+05:08:13.704  NOP [Reserved subcommand] [OBS-ACS-2]
+  cb 05 30 01 00 61 00 00 40 c0 08 00 48  1d+13:16:57.728  WRITE DMA (w/o retry) [OBS-5]
+  cb 05 30 01 00 61 00 00 40 c0 08 00 48  1d+13:16:57.728  WRITE DMA (w/o retry) [OBS-5]
+  cb 05 30 01 00 61 00 00 40 c0 08 00 48  1d+13:16:57.728  WRITE DMA (w/o retry) [OBS-5]
+  cb 00 08 01 80 61 00 00 40 00 08 00 48  1d+13:16:57.728  WRITE DMA (w/o retry) [OBS-5]
+  00 00 16 ff 8f 00 02 00 2e 00 88 00 a1  1d+13:17:20.850  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 23 [6] occurred at disk power-on lifetime: 9607 hours (400 days + 7 hours)
-  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+Error 23 [6] occurred at disk power-on lifetime: 9060 hours (377 days + 12 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  08 -- 00 fa 00 40 89 6c 00 00 04 61 a8
+  b8 -- 00 a0 16 40 81 2d 00 00 05 61 10
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  15 00 08 04 fa 61 00 00 40 89 6c 00 a8  1d+13:16:57.871  RECALIBRATE [RET-4]
-  15 00 08 04 fa 61 00 00 40 89 6c 00 a8  1d+13:16:57.871  RECALIBRATE [RET-4]
-  15 00 08 04 fa 61 00 00 40 89 6c 00 a8  1d+13:16:57.871  RECALIBRATE [RET-4]
-  15 00 08 04 fa 61 00 00 40 89 6c 00 a8  1d+13:16:57.871  RECALIBRATE [RET-4]
+  bd 16 b8 05 a0 61 00 00 40 81 2d 00 10  1d+13:16:57.728  [RESERVED]
+  bd 15 b0 05 88 61 00 00 40 81 2d 00 08  1d+13:16:57.728  [RESERVED]
+  bd 14 a8 05 50 61 00 00 40 81 2d 00 08  1d+13:16:57.728  [RESERVED]
+  bd 13 a0 05 18 61 00 00 40 81 2d 00 10  3d+02:33:55.456  [RESERVED]
   00 00 16 01 8a 00 00 60 c0 00 20 01 a1  1d+13:17:20.786  NOP [Reserved subcommand] [OBS-ACS-2]
 
 Error 22 [5] occurred at disk power-on lifetime: 9637 hours (401 days + 13 hours)
@@ -185,21 +198,8 @@ Error 21 [4] occurred at disk power-on lifetime: 7803 hours (325 days + 3 hours)
   6e 15 a8 07 c0 60 00 00 40 d7 a5 00 08     00:00:00.134  [RESERVED]
   6e 14 a0 07 d0 60 00 00 40 c1 1c 00 e0  6d+05:07:51.046  [RESERVED]
   6e 12 98 07 30 60 00 00 40 e1 a7 00 88  1d+13:16:57.862  [RESERVED]
-  00 11 89 11 91 00 00 11 02 c9 b1 04 11 43d+11:54:56.384  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 11 89 11 91 00 00 11 04 c9 b1 02 11 43d+11:54:56.384  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 20 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
-  When the command that caused the error occurred, the device was in a reserved state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-
-Error 19 [2] log entry is empty
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -233,8 +233,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    18 Celsius
-Power Cycle Min/Max Temperature:     16/17 Celsius
+Current Temperature:                    21 Celsius
+Power Cycle Min/Max Temperature:     20/20 Celsius
 Lifetime    Min/Max Temperature:      8/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -243,7 +243,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (28)
+Temperature History Size (Index):    128 (70)
 
 SCT Error Recovery Control:
            Read:     75 (7.5 seconds)
@@ -264,7 +264,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

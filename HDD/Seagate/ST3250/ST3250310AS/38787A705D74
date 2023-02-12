@@ -1,19 +1,23 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250310AS
 Serial Number:    --
 Firmware Version: 3.AAF
-User Capacity:    250 058 268 160 bytes [250 GB]
+User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Oct  6 07:58:24 2018 MSK
+Local Time is:    Sat Oct 16 06:57:17 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -54,18 +58,18 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   099   097   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    6059
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   087   060   030    -    490637537
-  9 Power_On_Hours          -O--CK   059   059   000    -    36423
+  3 Spin_Up_Time            PO----   098   097   000    -    0
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6959
+  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    2
+  7 Seek_Error_Rate         POSR--   087   060   030    -    522097415
+  9 Power_On_Hours          -O--CK   050   050   000    -    44402
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5907
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6789
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   067   045   045    Past 33 (Min/Max 13/55)
-194 Temperature_Celsius     -O---K   033   055   000    -    33 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   073   056   000    -    141550860
+190 Airflow_Temperature_Cel -O---K   063   045   045    Past 37 (Min/Max 13/55)
+194 Temperature_Celsius     -O---K   037   055   000    -    37 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   083   056   000    -    148346532
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -88,7 +92,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -272,11 +276,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 33 Celsius
-Power Cycle Max Temperature:          0 Celsius
-Lifetime    Max Temperature:          0 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     --/ 0 Celsius
+Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
 SCT Data Table command not supported
 
@@ -284,16 +287,20 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           36  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2          279  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2           11  Vendor specific
+0x8003  2          354  Vendor specific
 0x8004  2            0  Vendor specific
+
+
 

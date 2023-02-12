@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.12-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Mar  9 10:52:49 2021 +08
+Local Time is:    Sat Sep  4 11:44:45 2021 +08
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,11 +23,13 @@ APM feature is:   Unavailable
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -62,34 +64,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    16
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    106
+  9 Power_On_Hours          -O--CK   100   100   000    -    49
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    362
 160 Uncorrectable_Error_Cnt -O--CK   100   100   050    -    0
 161 Valid_Spare_Block_Cnt   -O--CK   100   100   050    -    100
 163 Initial_Bad_Block_Count -O--CK   100   100   000    -    51
-164 Total_Erase_Count       -O--CK   100   100   000    -    775
-165 Max_Erase_Count         -O--CK   100   100   000    -    6
+164 Total_Erase_Count       -O--CK   100   100   000    -    2439
+165 Max_Erase_Count         -O--CK   100   100   000    -    9
 166 Min_Erase_Count         -O--CK   100   100   000    -    0
-167 Average_Erase_Count     -O--CK   100   100   000    -    0
-148 Total_SLC_Erase_Ct      -O--CK   100   100   000    -    2325
-149 Max_SLC_Erase_Ct        -O--CK   100   100   000    -    18
-150 Min_SLC_Erase_Ct        -O--CK   100   100   000    -    0
-151 Average_SLC_Erase_Ct    -O--CK   100   100   000    -    2
+167 Average_Erase_Count     -O--CK   100   100   000    -    2
+148 Total_SLC_Erase_Ct      -O--CK   100   100   000    -    7318
+149 Max_SLC_Erase_Ct        -O--CK   100   100   000    -    28
+150 Min_SLC_Erase_Ct        -O--CK   100   100   000    -    1
+151 Average_SLC_Erase_Ct    -O--CK   100   100   000    -    7
 159 DRAM_1_Bit_Error_Count  -O--CK   100   100   000    -    0
-168 Max_Erase_Count_of_Spec -O--CK   100   100   000    -    18
+168 Max_Erase_Count_of_Spec -O--CK   100   100   000    -    28
 169 Remaining_Lifetime_Perc -O--CK   100   100   000    -    100
 177 Wear_Leveling_Count     -O--CK   100   100   000    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    21
-194 Temperature_Celsius     -O--CK   100   100   000    -    48
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    88
+194 Temperature_Celsius     -O--CK   100   100   000    -    43
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 232 Available_Reservd_Space -O--CK   100   100   000    -    100
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    7876
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    5148
-245 TLC_Writes_32MiB        -O--CK   100   100   000    -    9640
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    19784
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    12443
+245 TLC_Writes_32MiB        -O--CK   100   100   000    -    26517
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,7 +121,8 @@ SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      90%        31         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -138,18 +141,18 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             106  ---  Lifetime Power-On Resets
-0x01  0x010  4              16  ---  Power-on Hours
-0x01  0x018  6       516207023  ---  Logical Sectors Written
-0x01  0x020  6         4672557  ---  Number of Write Commands
-0x01  0x028  6       337437122  ---  Logical Sectors Read
-0x01  0x030  6         3638294  ---  Number of Read Commands
-0x01  0x038  6        58764085  ---  Date and Time TimeStamp
+0x01  0x008  4             362  ---  Lifetime Power-On Resets
+0x01  0x010  4              49  ---  Power-on Hours
+0x01  0x018  6      1296578303  ---  Logical Sectors Written
+0x01  0x020  6        11557050  ---  Number of Write Commands
+0x01  0x028  6       815526328  ---  Logical Sectors Read
+0x01  0x030  6        10053661  ---  Number of Read Commands
+0x01  0x038  6       178643095  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             135  ---  Number of Hardware Resets
+0x06  0x008  4             444  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -162,5 +165,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

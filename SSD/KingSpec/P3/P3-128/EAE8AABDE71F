@@ -1,3 +1,6 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-1-MANJARO] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     P3-128
 Serial Number:    --
@@ -7,10 +10,11 @@ User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Sep 16 11:55:47 2019 EEST
+Local Time is:    Mon Jan  2 18:49:05 2023 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,21 +63,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    6
-  9 Power_On_Hours          -O--CK   100   100   000    -    10296
- 12 Power_Cycle_Count       ------   100   100   000    -    167
+  9 Power_On_Hours          -O--CK   100   100   000    -    14573
+ 12 Power_Cycle_Count       ------   100   100   000    -    339
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       ------   100   100   000    -    0
 163 Unknown_Attribute       ------   100   100   000    -    0
-164 Unknown_Attribute       ------   100   100   000    -    57667
-165 Unknown_Attribute       ------   100   100   000    -    173
+164 Unknown_Attribute       ------   100   100   000    -    66117
+165 Unknown_Attribute       ------   100   100   000    -    181
 166 Unknown_Attribute       ------   100   100   000    -    46
-167 Unknown_Attribute       ------   100   100   000    -    125
-192 Power-Off_Retract_Count ------   100   100   000    -    110
+167 Unknown_Attribute       ------   100   100   000    -    144
+192 Power-Off_Retract_Count ------   100   100   000    -    200
 194 Temperature_Celsius     ------   100   100   000    -    33
-195 Hardware_ECC_Recovered  ------   100   100   000    -    293396809
+195 Hardware_ECC_Recovered  ------   100   100   000    -    361029749
 196 Reallocated_Event_Count ------   100   100   000    -    19
-241 Total_LBAs_Written      ------   100   100   000    -    188994
-242 Total_LBAs_Read         ------   100   100   000    -    144599
+241 Total_LBAs_Written      ------   100   100   000    -    217864
+242 Total_LBAs_Read         ------   100   100   000    -    720022
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -102,9 +106,11 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3340         -
-# 2  Extended offline    Aborted by host               00%         0         -
-# 3  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     13261         -
+# 2  Short offline       Completed without error       00%     13257         -
+# 3  Short offline       Completed without error       00%      3340         -
+# 4  Extended offline    Aborted by host               00%         0         -
+# 5  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -123,10 +129,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             167  ---  Lifetime Power-On Resets
-0x01  0x010  4           10296  ---  Power-on Hours
-0x01  0x018  6     12385952986  ---  Logical Sectors Written
-0x01  0x028  6      9476489362  ---  Logical Sectors Read
+0x01  0x008  4             339  ---  Lifetime Power-On Resets
+0x01  0x010  4           14573  ---  Power-on Hours
+0x01  0x018  6     14277963384  ---  Logical Sectors Written
+0x01  0x028  6     47187378690  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -136,7 +142,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              12  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              14  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -151,10 +157,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          110  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           36  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           37  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

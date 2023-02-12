@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.14-arch1-1] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.15-arch1-1] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Jul  3 08:39:49 2021 +07
+Local Time is:    Mon Jul 19 11:30:25 2021 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -30,8 +30,8 @@ Wt Cache Reorder: Unknown
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -67,17 +67,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    3063
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    5487
+  9 Power_On_Hours          -O--CK   100   100   000    -    3217
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    5586
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   085   085   000    -    232
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    25
+173 Ave_Block-Erase_Count   -O--CK   085   085   000    -    233
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    26
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    30
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   062   017   000    -    38 (Min/Max 0/83)
+194 Temperature_Celsius     -O---K   060   017   000    -    40 (Min/Max 0/83)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -85,9 +85,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   085   085   001    -    15
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    24142725966
-247 Host_Program_Page_Count -O--CK   100   100   000    -    432232151
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    887845965
+246 Total_LBAs_Written      -O--CK   100   100   000    -    24264129202
+247 Host_Program_Page_Count -O--CK   100   100   000    -    434311442
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    888594171
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,7 +120,7 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      2812         -
+# 1  Short offline       Completed without error       00%      3212         -
 # 2  Short offline       Completed without error       00%      2811         -
 # 3  Short offline       Completed without error       00%      2721         -
 # 4  Short offline       Completed without error       00%      2561         -
@@ -136,7 +136,7 @@ SMART Selective self-test log data structure revision number 1
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
-    5        0        0  Completed [00% left] (0-65535)
+    5        0        0  Not_testing
 Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
@@ -144,8 +144,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     35/38 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     35/40 Celsius
 Lifetime    Min/Max Temperature:      0/83 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -154,27 +154,27 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (82)
+Temperature History Size (Index):    128 (34)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            5487  ---  Lifetime Power-On Resets
-0x01  0x010  4            3063  ---  Power-on Hours
-0x01  0x018  6      2667889486  ---  Logical Sectors Written
-0x01  0x020  6       428074586  ---  Number of Write Commands
-0x01  0x028  6       670197151  ---  Logical Sectors Read
-0x01  0x030  6       501972059  ---  Number of Read Commands
+0x01  0x008  4            5586  ---  Lifetime Power-On Resets
+0x01  0x010  4            3217  ---  Power-on Hours
+0x01  0x018  6      2789292722  ---  Logical Sectors Written
+0x01  0x020  6       429221469  ---  Number of Write Commands
+0x01  0x028  6       744974721  ---  Logical Sectors Read
+0x01  0x030  6       503010433  ---  Number of Read Commands
 0x01  0x038  6      4294967296  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              25  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              26  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              40  ---  Current Temperature
-0x05  0x010  1              43  ---  Average Short Term Temperature
-0x05  0x018  1              45  ---  Average Long Term Temperature
+0x05  0x010  1              37  ---  Average Short Term Temperature
+0x05  0x018  1              37  ---  Average Long Term Temperature
 0x05  0x020  1              83  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
 0x05  0x030  1              58  ---  Highest Average Short Term Temperature
@@ -186,8 +186,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           20113  ---  Number of Hardware Resets
-0x06  0x010  4            3473  ---  Number of ASR Events
+0x06  0x008  4           20498  ---  Number of Hardware Resets
+0x06  0x010  4            3499  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              15  ---  Percentage Used Endurance Indicator

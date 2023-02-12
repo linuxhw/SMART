@@ -1,9 +1,12 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.9.14-200.fc33.x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Samsung based SSDs
 Device Model:     Samsung SSD 860 EVO 500GB
 Serial Number:    --
 LU WWN Device Id: 5 002538 ...
-Firmware Version: RVT03B6Q
+Firmware Version: RVT04B6Q
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
@@ -11,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Oct 28 20:19:54 2019 CET
+Local Time is:    Thu Dec 17 09:13:00 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,19 +64,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    5695
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    677
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    4
+  9 Power_On_Hours          -O--CK   097   097   000    -    10380
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1404
+177 Wear_Leveling_Count     PO--C-   099   099   000    -    12
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   075   050   000    -    25
+190 Airflow_Temperature_Cel -O--CK   073   050   000    -    27
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
-199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    200
-241 Total_LBAs_Written      -O--CK   099   099   000    -    3055972182
+199 CRC_Error_Count         -OSRCK   099   099   000    -    1
+235 POR_Recovery_Count      -O--C-   099   099   000    -    378
+241 Total_LBAs_Written      -O--CK   099   099   000    -    11110626344
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -123,9 +126,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     25/40 Celsius
-Lifetime    Min/Max Temperature:     17/47 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     24/40 Celsius
+Lifetime    Min/Max Temperature:     16/47 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 SMART Status:                        0xc24f (PASSED)
@@ -135,7 +138,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (11)
+Temperature History Size (Index):    128 (121)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -144,25 +147,25 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             677  ---  Lifetime Power-On Resets
-0x01  0x010  4            5695  ---  Power-on Hours
-0x01  0x018  6      3055972182  ---  Logical Sectors Written
-0x01  0x020  6        16730611  ---  Number of Write Commands
-0x01  0x028  6     17340987979  ---  Logical Sectors Read
-0x01  0x030  6        96315330  ---  Number of Read Commands
-0x01  0x038  6          458000  ---  Date and Time TimeStamp
+0x01  0x008  4            1404  ---  Lifetime Power-On Resets
+0x01  0x010  4           10380  ---  Power-on Hours
+0x01  0x018  6     11110626344  ---  Logical Sectors Written
+0x01  0x020  6        67449427  ---  Number of Write Commands
+0x01  0x028  6     19879841660  ---  Logical Sectors Read
+0x01  0x030  6       119801222  ---  Number of Read Commands
+0x01  0x038  6         2450000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              25  ---  Current Temperature
+0x05  0x008  1              27  ---  Current Temperature
 0x05  0x020  1              47  ---  Highest Temperature
-0x05  0x028  1              17  ---  Lowest Temperature
+0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3156  ---  Number of Hardware Resets
+0x06  0x008  4            6582  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

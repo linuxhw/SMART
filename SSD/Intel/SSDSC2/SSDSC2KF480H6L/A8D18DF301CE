@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.12.13-300.fc34.x86_64] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.13.1-300.fc34.x86_64] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Jul  8 15:24:21 2021 WITA
+Local Time is:    Thu Jul  8 18:04:19 2021 WITA
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Write SCT (Get) Feature Control Command failed: scsi error badly formed scsi parameters
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
@@ -74,20 +74,20 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    11
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    1
-190 Airflow_Temperature_Cel -O--CK   040   060   000    -    40 (Min/Max 26/60)
+190 Airflow_Temperature_Cel -O--CK   042   060   000    -    42 (Min/Max 26/60)
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    621
-194 Temperature_Celsius     -O--CK   040   060   000    -    40 (Min/Max 26/60)
+194 Temperature_Celsius     -O--CK   042   060   000    -    42 (Min/Max 26/60)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    36537
+225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    36554
 226 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
 227 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
 228 Power-off_Retract_Count -O--CK   100   100   000    -    0
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator PO--CK   086   086   001    -    0
 236 Unknown_Attribute       PO--CK   086   086   001    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    36537
-242 Total_LBAs_Read         -O--CK   100   100   000    -    48276
-249 Unknown_Attribute       -O--CK   100   100   000    -    27857
+241 Total_LBAs_Written      -O--CK   100   100   000    -    36554
+242 Total_LBAs_Read         -O--CK   100   100   000    -    48286
+249 Unknown_Attribute       -O--CK   100   100   000    -    27873
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,8 +137,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    48 Celsius
-Power Cycle Min/Max Temperature:     40/51 Celsius
+Current Temperature:                    51 Celsius
+Power Cycle Min/Max Temperature:     40/56 Celsius
 Lifetime    Min/Max Temperature:     33/70 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -147,7 +147,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (117)
+Temperature History Size (Index):    128 (22)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -158,17 +158,17 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            7888  ---  Lifetime Power-On Resets
 0x01  0x010  4            1978  ---  Power-on Hours
-0x01  0x018  6     76623681749  ---  Logical Sectors Written
-0x01  0x020  6      1204666819  ---  Number of Write Commands
-0x01  0x028  6    101243813921  ---  Logical Sectors Read
-0x01  0x030  6      2296395642  ---  Number of Read Commands
+0x01  0x018  6     76660158813  ---  Logical Sectors Written
+0x01  0x020  6      1204850090  ---  Number of Write Commands
+0x01  0x028  6    101265028177  ---  Logical Sectors Read
+0x01  0x030  6      2296848870  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4             621  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              48  ---  Current Temperature
+0x05  0x008  1              51  ---  Current Temperature
 0x05  0x010  1              56  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              79  ---  Highest Temperature
@@ -182,7 +182,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           44561  ---  Number of Hardware Resets
+0x06  0x008  4           44577  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
@@ -195,6 +195,6 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0005  2            0  R_ERR response for non-data FIS
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0005  2            4  R_ERR response for non-data FIS
+0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
 

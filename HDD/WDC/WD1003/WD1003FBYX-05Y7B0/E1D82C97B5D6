@@ -1,5 +1,5 @@
-smartctl 6.6 2017-11-05 r4594 [x86_64-linux-5.0.0-13-generic] (local build)
-Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-54-generic] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital RE4
@@ -13,21 +13,19 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Jul 30 08:28:07 2019 UTC
+Local Time is:    Wed Nov 18 16:34:10 2020 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Unknown
+Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
-SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
-Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
@@ -67,17 +65,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   173   171   021    -    4325
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6684
+  3 Spin_Up_Time            POS--K   174   171   021    -    4283
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7597
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   075   075   000    -    18855
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   067   067   000    -    24734
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    563
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    286
-193 Load_Cycle_Count        -O--CK   198   198   000    -    6397
-194 Temperature_Celsius     -O---K   109   097   000    -    38
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    951
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    322
+193 Load_Cycle_Count        -O--CK   198   198   000    -    7289
+194 Temperature_Celsius     -O---K   102   094   000    -    45
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -90,115 +88,86 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error unsupported scsi opcode
-Read GP Log Directory failed
-
-SMART Log Directory Version 1 [multi-sector log support]
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00           SL  R/O      1  Log Directory
+0x00       GPL,SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
 0x02           SL  R/O      5  Comprehensive SMART error log
+0x03       GPL     R/O      6  Ext. Comprehensive SMART error log
 0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x80           SL  R/W    255  Host vendor specific log
-0x81-0x9f      SL  R/W     16  Host vendor specific log
-0xa0-0xa7      SL  VS      16  Device vendor specific log
-0xa8-0xb5      SL  VS       1  Device vendor specific log
-0xb7           SL  VS       1  Device vendor specific log
-0xbd           SL  VS       1  Device vendor specific log
-0xc0           SL  VS       1  Device vendor specific log
-0xe0           SL  R/W      1  SCT Command/Status
-0xe1           SL  R/W      1  SCT Data Transfer
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80       GPL     R/W  65535  Host vendor specific log
+0x80       SL      R/W    255  Host vendor specific log
+0x81-0x9f  GPL,SL  R/W     16  Host vendor specific log
+0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
+0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
+0xb6       GPL     VS       1  Device vendor specific log
+0xb7       GPL,SL  VS       1  Device vendor specific log
+0xbd       GPL,SL  VS       1  Device vendor specific log
+0xc0       GPL,SL  VS       1  Device vendor specific log
+0xc1       GPL     VS      24  Device vendor specific log
+0xe0       GPL,SL  R/W      1  SCT Command/Status
+0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
-SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
-
-SMART Error Log Version: 1
-ATA Error Count: 3
-	CR = Command Register [HEX]
-	FR = Features Register [HEX]
-	SC = Sector Count Register [HEX]
-	SN = Sector Number Register [HEX]
-	CL = Cylinder Low Register [HEX]
-	CH = Cylinder High Register [HEX]
-	DH = Device/Head Register [HEX]
-	DC = Device Command Register [HEX]
-	ER = Error register [HEX]
-	ST = Status register [HEX]
+SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 3 occurred at disk power-on lifetime: 29939 hours (1247 days + 11 hours)
+Error 1 [0] occurred at disk power-on lifetime: 21352 hours (889 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 00 00 00 00  Error: ABRT
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 00 00 08 10 a0 00  Error: IDNF at LBA = 0x00000810 = 2064
 
   Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d6 01 e0 4f c2 00 00      00:06:54.697  SMART WRITE LOG
-  b0 d5 01 e0 4f c2 00 00      00:06:54.696  SMART READ LOG
-  b0 d5 01 e0 4f c2 00 00      00:06:54.696  SMART READ LOG
-  b0 d5 01 e1 4f c2 00 00      00:06:54.639  SMART READ LOG
-  b0 d6 01 e0 4f c2 00 00      00:06:54.582  SMART WRITE LOG
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 78 00 00 00 00 08 10 40 00     05:33:38.329  WRITE FPDMA QUEUED
+  60 00 08 00 70 00 00 00 61 a2 a0 40 00     05:33:38.329  READ FPDMA QUEUED
+  60 00 10 00 68 00 00 00 00 08 00 40 00     05:33:37.675  READ FPDMA QUEUED
+  60 00 10 00 60 00 00 00 00 08 00 40 00     05:33:37.549  READ FPDMA QUEUED
+  ec 00 00 00 01 00 00 00 00 00 00 e0 00     05:33:22.014  IDENTIFY DEVICE
 
-Error 2 occurred at disk power-on lifetime: 29939 hours (1247 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 00 00 00 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 e1 4f c2 00 00      00:06:54.639  SMART READ LOG
-  b0 d6 01 e0 4f c2 00 00      00:06:54.582  SMART WRITE LOG
-  b0 d5 01 e0 4f c2 00 00      00:06:54.582  SMART READ LOG
-  b0 d5 01 09 4f c2 00 00      00:06:54.581  SMART READ LOG
-  b0 d5 01 06 4f c2 00 00      00:06:54.580  SMART READ LOG
-
-Error 1 occurred at disk power-on lifetime: 29939 hours (1247 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 01 00 00 00 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d6 01 e0 4f c2 00 00      00:06:54.582  SMART WRITE LOG
-  b0 d5 01 e0 4f c2 00 00      00:06:54.582  SMART READ LOG
-  b0 d5 01 09 4f c2 00 00      00:06:54.581  SMART READ LOG
-  b0 d5 01 06 4f c2 00 00      00:06:54.580  SMART READ LOG
-
-SMART Extended Self-test Log (GP Log 0x07) not supported
-
-SMART Self-test log structure revision number 1
+SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     18817         -
-# 2  Short offline       Completed without error       00%     18816         -
-# 3  Short offline       Completed without error       00%     18718         -
-# 4  Short offline       Completed without error       00%     18650         -
-# 5  Short offline       Completed without error       00%     18648         -
-# 6  Short offline       Completed without error       00%     18561         -
-# 7  Short offline       Completed without error       00%     18558         -
-# 8  Short offline       Completed without error       00%     14927         -
-# 9  Short offline       Completed without error       00%      8983         -
-#10  Short offline       Completed without error       00%      8766         -
-#11  Short offline       Completed without error       00%      8618         -
-#12  Short offline       Completed without error       00%      8618         -
-#13  Short offline       Completed without error       00%      8617         -
-#14  Short offline       Completed without error       00%      8581         -
-#15  Short offline       Completed without error       00%      8572         -
-#16  Short offline       Completed without error       00%      8569         -
-#17  Short offline       Completed without error       00%      7118         -
+# 1  Short offline       Completed without error       00%     24512         -
+# 2  Short offline       Completed without error       00%     24485         -
+# 3  Short offline       Completed without error       00%     24302         -
+# 4  Short offline       Completed without error       00%     23787         -
+# 5  Short offline       Completed without error       00%     23627         -
+# 6  Short offline       Completed without error       00%     23604         -
+# 7  Short offline       Completed without error       00%     23132         -
+# 8  Short offline       Completed without error       00%     23027         -
+# 9  Short offline       Completed without error       00%     22921         -
+#10  Short offline       Completed without error       00%     22921         -
+#11  Short offline       Completed without error       00%     22474         -
+#12  Short offline       Completed without error       00%     22177         -
+#13  Short offline       Completed without error       00%     21935         -
+#14  Short offline       Completed without error       00%     21845         -
+#15  Short offline       Aborted by host               90%     21845         -
+#16  Short offline       Completed without error       00%     21510         -
+#17  Short offline       Completed without error       00%     21332         -
+#18  Short offline       Completed without error       00%     21229         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -213,11 +182,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     26/43 Celsius
-Lifetime    Min/Max Temperature:      0/50 Celsius
+Current Temperature:                    45 Celsius
+Power Cycle Min/Max Temperature:     26/45 Celsius
+Lifetime    Min/Max Temperature:      0/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -225,17 +193,30 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (141)
+Temperature History Size (Index):    478 (465)
 
-SMART WRITE LOG does not return COUNT and LBA_LOW register
-SCT (Get) Error Recovery Control command failed
+SCT Error Recovery Control:
+           Read:     70 (7.0 seconds)
+          Write:     70 (7.0 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
 Pending Defects log (GP Log 0x0c) not supported
 
-ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: scsi error unsupported scsi opcode
-Read SATA Phy Event Counters failed
-
-
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x8000  4        11644  Vendor specific
 

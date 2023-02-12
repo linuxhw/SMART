@@ -14,11 +14,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jun 18 22:13:44 2021 CDT
+Local Time is:    Sat Jun 19 00:23:41 2021 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -66,11 +66,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    19
   2 Throughput_Performance  -OS--K   252   252   000    -    0
   3 Spin_Up_Time            PO---K   090   081   025    -    3067
-  4 Start_Stop_Count        -O--CK   064   064   000    -    37191
+  4 Start_Stop_Count        -O--CK   064   064   000    -    37193
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    28581
+  9 Power_On_Hours          -O--CK   100   100   000    -    28583
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    509
  12 Power_Cycle_Count       -O--CK   096   096   000    -    4787
@@ -78,7 +78,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Cnt_Total  -O---K   097   097   000    -    73256704
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    739
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-193 Load_Cycle_Count        -O--CK   041   041   000    -    600779
+193 Load_Cycle_Count        -O--CK   041   041   000    -    600789
 194 Temperature_Celsius     -O----   060   051   000    -    40 (Min/Max 10/50)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
@@ -86,9 +86,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    8671
-240 Head_Flying_Hours       -O--CK   100   100   000    -    23745
-241 Total_LBAs_Written      -O--CK   096   090   000    -    6268568
-242 Total_LBAs_Read         -O--CK   089   088   000    -    15769470
+240 Head_Flying_Hours       -O--CK   100   100   000    -    23747
+241 Total_LBAs_Written      -O--CK   096   090   000    -    6350224
+242 Total_LBAs_Read         -O--CK   094   088   000    -    9174240
 254 Free_Fall_Sensor        -O--CK   252   252   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -148,7 +148,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     28/40 Celsius
+Power Cycle Min/Max Temperature:     28/42 Celsius
 Lifetime    Min/Max Temperature:     10/50 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -158,7 +158,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (95)
+Temperature History Size (Index):    128 (110)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -178,8 +178,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           16  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

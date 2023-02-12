@@ -1,22 +1,27 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     SSD 120G
 Serial Number:    --
 LU WWN Device Id: 0 000000 ...
 Firmware Version: P0527A
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Oct 27 16:51:48 2017 MSK
+Local Time is:    Sat Mar 19 13:59:57 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -56,25 +61,25 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    0
-  9 Power_On_Hours          ------   100   100   050    -    45
- 12 Power_Cycle_Count       ------   100   100   050    -    28
+  9 Power_On_Hours          ------   100   100   050    -    2476
+ 12 Power_Cycle_Count       ------   100   100   050    -    2639
 160 Unknown_Attribute       ------   100   100   050    -    0
 161 Unknown_Attribute       ------   100   100   050    -    284
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    11
-164 Unknown_Attribute       ------   100   100   050    -    11733
-165 Unknown_Attribute       ------   100   100   050    -    7
-166 Unknown_Attribute       ------   100   100   050    -    3
-167 Unknown_Attribute       ------   100   100   050    -    5
+164 Unknown_Attribute       ------   100   100   050    -    3450414
+165 Unknown_Attribute       ------   100   100   050    -    1672
+166 Unknown_Attribute       ------   100   100   050    -    1625
+167 Unknown_Attribute       ------   100   100   050    -    1658
 168 Unknown_Attribute       ------   100   100   050    -    3000
-192 Power-Off_Retract_Count ------   100   100   050    -    10
-194 Temperature_Celsius     ------   100   100   050    -    68
-195 Hardware_ECC_Recovered  ------   100   100   050    -    9
+192 Power-Off_Retract_Count ------   100   100   050    -    287
+194 Temperature_Celsius     ------   100   100   050    -    76
+195 Hardware_ECC_Recovered  ------   100   100   050    -    876
 196 Reallocated_Event_Count ------   100   100   050    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
-241 Total_LBAs_Written      ------   100   100   050    -    20994
-242 Total_LBAs_Read         ------   100   100   050    -    15010
-245 Unknown_Attribute       ------   100   100   050    -    22515
+241 Total_LBAs_Written      ------   100   100   050    -    287168
+242 Total_LBAs_Read         ------   100   100   050    -    156765
+245 Unknown_Attribute       ------   100   100   050    -    5270678
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -93,7 +98,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -104,7 +109,25 @@ No Errors Logged
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%        12         -
+# 1  Short offline       Completed without error       00%      1886         -
+# 2  Short offline       Completed without error       00%      1886         -
+# 3  Reserved (0x0d)     Completed without error       00%      1886         -
+# 4  Vendor (0x4b)       Self-test routine in progress 90%      1885         -
+# 5  Short offline       Unknown status (0xb)          10%      1884         -
+# 6  Short offline       Completed without error       00%      1884         -
+# 7  Short offline       Completed without error       00%      1875         -
+# 8  Short offline       Completed without error       00%      1875         -
+# 9  Short offline       Completed without error       00%      1871         -
+#10  Reserved (0x0d)     Completed without error       00%      1864         -
+#11  Vendor (0x4b)       Self-test routine in progress 90%      1805         -
+#12  Short offline       Unknown status (0xb)          10%     63819         -
+#13  Short offline       Completed without error       00%     45370         -
+#14  Extended offline    Completed without error       00%      1849         -
+#15  Short offline       Completed without error       00%      1847         -
+#16  Short offline       Completed without error       00%      1846         -
+#17  Short offline       Completed without error       00%      1845         -
+#18  Short offline       Completed without error       00%      1844         -
+#19  Extended offline    Completed without error       00%      1685         -
 
 Selective Self-tests/Logging not supported
 
@@ -113,37 +136,39 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              28  ---  Lifetime Power-On Resets
-0x01  0x010  4              45  ---  Power-on Hours
-0x01  0x018  6      1375902268  ---  Logical Sectors Written
-0x01  0x020  6         9795391  ---  Number of Write Commands
-0x01  0x028  6       983696039  ---  Logical Sectors Read
-0x01  0x030  6         8144869  ---  Number of Read Commands
+0x01  0x008  4            2639  ---  Lifetime Power-On Resets
+0x01  0x010  4            2476  ---  Power-on Hours
+0x01  0x018  6      1640005413  ---  Logical Sectors Written
+0x01  0x020  6       226958019  ---  Number of Write Commands
+0x01  0x028  6      1683827902  ---  Logical Sectors Read
+0x01  0x030  6       108008347  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4          222824  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              68  ---  Current Temperature
-0x05  0x010  1            -105  ---  Average Short Term Temperature
-0x05  0x018  1            -101  ---  Average Long Term Temperature
-0x05  0x020  1              79  ---  Highest Temperature
-0x05  0x028  1              48  ---  Lowest Temperature
-0x05  0x030  1            -105  ---  Highest Average Short Term Temperature
-0x05  0x038  1               1  ---  Lowest Average Short Term Temperature
+0x05  0x008  1              76  ---  Current Temperature
+0x05  0x010  1             -35  ---  Average Short Term Temperature
+0x05  0x018  1             -93  ---  Average Long Term Temperature
+0x05  0x020  1              90  ---  Highest Temperature
+0x05  0x028  1              45  ---  Lowest Temperature
+0x05  0x030  1              -1  ---  Highest Average Short Term Temperature
+0x05  0x038  1               0  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              -1  ---  Highest Average Long Term Temperature
-0x05  0x048  1               1  ---  Lowest Average Long Term Temperature
+0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1             100  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             341  ---  Number of Hardware Resets
+0x06  0x008  4           14463  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              55  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -156,7 +181,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

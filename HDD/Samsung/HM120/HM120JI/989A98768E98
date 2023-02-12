@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.4-1-default] (SUSE RPM)
+smartctl 7.2 2020-12-30 r5155 [i686-linux-5.12.9-1.gf17eb01-default] (SUSE RPM)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sun May 30 13:35:00 2021 CEST
+Local Time is:    Thu Jun  3 18:43:54 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -18,7 +18,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -59,27 +59,27 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
-  3 Spin_Up_Time            POS---   100   100   025    -    2752
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6062
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
+  3 Spin_Up_Time            POS---   100   100   025    -    2304
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6351
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         -OSR--   253   253   000    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Half_Minutes   -O--CK   099   099   000    -    7532h+24m
+  9 Power_On_Half_Minutes   -O--CK   099   099   000    -    7554h+51m
  10 Spin_Retry_Count        -O--CK   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3476
-191 G-Sense_Error_Rate      -O--C-   082   082   000    -    185886
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3540
+191 G-Sense_Error_Rate      -O--C-   082   082   000    -    186219
 192 Power-Off_Retract_Count -O--C-   253   253   000    -    0
-194 Temperature_Celsius     -O---K   136   064   000    -    34
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    8956
+194 Temperature_Celsius     -O---K   109   064   000    -    43
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    211787
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
-197 Current_Pending_Sector  -O--C-   100   100   000    -    2
+197 Current_Pending_Sector  -O--C-   253   100   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O--C-   253   253   000    -    0
 223 Load_Retry_Count        -O--C-   100   100   000    -    5
-225 Load_Cycle_Count        -O--C-   046   046   000    -    552697
+225 Load_Cycle_Count        -O--C-   046   046   000    -    553158
 255 Unknown_Attribute       -O-R--   253   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -258,7 +258,8 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      7531         -
+# 1  Short offline       Completed without error       00%      7539         -
+# 2  Short offline       Completed without error       00%      7531         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -275,8 +276,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     --/34 Celsius
+Current Temperature:                    43 Celsius
+Power Cycle Min/Max Temperature:     --/44 Celsius
 Lifetime    Min/Max Temperature:     --/59 Celsius
 
 Read SCT Status failed: scsi error badly formed scsi parameters
@@ -293,7 +294,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            1  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

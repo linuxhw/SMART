@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Dec  7 15:43:59 2022 PST
+Local Time is:    Thu Dec  8 12:57:20 2022 PST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Unexpected SCT status 0x0002 (action_code=4, function_code=2)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
@@ -69,24 +69,24 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8602
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3646
+  9 Power_On_Hours          -O--CK   100   100   000    -    8622
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3650
 170 Reserve_Block_Count     PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 183 SATA_Downshift_Count    ----CK   100   100   000    -    288
 184 End-to-End_Error        -O--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    1131
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    1134
 199 CRC_Error_Count         ----CK   100   100   000    -    180
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    432816
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    2091
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    433206
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    2094
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    54
-228 Workload_Minutes        -O--CK   100   100   000    -    516121
+228 Workload_Minutes        -O--CK   100   100   000    -    517287
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   098   098   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    432816
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    521689
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    433206
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    521714
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,18 +131,18 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            3646  ---  Lifetime Power-On Resets
-0x01  0x010  4            8602  ---  Power-on Hours
-0x01  0x018  6     28365049611  ---  Logical Sectors Written
-0x01  0x020  6       363521782  ---  Number of Write Commands
-0x01  0x028  6     34189429133  ---  Logical Sectors Read
-0x01  0x030  6       711343461  ---  Number of Read Commands
+0x01  0x008  4            3650  ---  Lifetime Power-On Resets
+0x01  0x010  4            8622  ---  Power-on Hours
+0x01  0x018  6     28390627251  ---  Logical Sectors Written
+0x01  0x020  6       364480452  ---  Number of Write Commands
+0x01  0x028  6     34191110336  ---  Logical Sectors Read
+0x01  0x030  6       711364712  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4             379  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           49396  ---  Number of Hardware Resets
-0x06  0x010  4         7373759  ---  Number of ASR Events
+0x06  0x008  4           49415  ---  Number of Hardware Resets
+0x06  0x010  4         7373762  ---  Number of ASR Events
 0x06  0x018  4             180  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
@@ -158,8 +158,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           19  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -8,7 +8,7 @@ User Capacity:    200,048,565,760 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sat Oct  3 19:42:29 2020 UTC
+Local Time is:    Sun Oct  4 23:26:49 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,21 +59,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
   3 Spin_Up_Time            POS---   253   253   025    -    4416
-  4 Start_Stop_Count        -O--CK   081   081   000    -    19916
+  4 Start_Stop_Count        -O--CK   081   081   000    -    19938
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    35225
+  9 Power_On_Hours          -O--CK   100   100   000    -    35232
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5231
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    156
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5248
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    3906
 184 End-to-End_Error        PO--CK   253   253   099    -    0
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   253   253   000    -    0
-190 Airflow_Temperature_Cel -O---K   148   121   000    -    30 (Min/Max 3/39)
-194 Temperature_Celsius     -O---K   148   118   000    -    30 (Min/Max 3/40)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    156
+190 Airflow_Temperature_Cel -O---K   151   121   000    -    29 (Min/Max 3/39)
+194 Temperature_Celsius     -O---K   151   118   000    -    29 (Min/Max 3/40)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    3906
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   253   253   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
@@ -134,7 +134,7 @@ Error 2757 [4] occurred at disk power-on lifetime: 7311 hours (304 days + 15 hou
   db 0a 58 09 60 61 00 00 40 24 a8 00 10 42d+07:57:13.095  ACKNOWLEDGE MEDIA CHANGE [RET-4]
   5e 0a 58 09 60 61 00 00 40 24 a8 00 10  6d+05:07:50.919  TRUSTED SEND
   20 0a 58 09 60 61 00 00 40 24 a8 00 10  6d+05:07:50.919  READ SECTOR(S)
-  0a 11 89 11 91 00 00 11 05 c9 b1 04 11  6d+05:07:50.912  [RESERVED]
+  0a 11 89 11 91 00 00 11 05 c9 b1 02 11  6d+05:07:50.912  [RESERVED]
 
 Error 2756 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
   When the command that caused the error occurred, the device was in a reserved state.
@@ -222,8 +222,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     30/30 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     28/29 Celsius
 Lifetime    Min/Max Temperature:      4/42 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -232,7 +232,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (17)
+Temperature History Size (Index):    128 (44)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -253,7 +253,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
@@ -261,4 +261,6 @@ ID      Size     Value  Description
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
 0x8001  2            0  Vendor specific
+
+
 

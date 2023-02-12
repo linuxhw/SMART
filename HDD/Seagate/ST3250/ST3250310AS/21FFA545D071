@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250310AS
@@ -7,7 +10,7 @@ User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Dec  8 19:18:56 2019 +05
+Local Time is:    Tue May 10 13:56:12 2022 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -15,7 +18,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -26,9 +29,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -55,18 +57,18 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7328
+  3 Spin_Up_Time            PO----   099   097   000    -    0
+  4 Start_Stop_Count        -O--CK   088   088   020    -    12873
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    11
-  7 Seek_Error_Rate         POSR--   085   060   030    -    342048100
-  9 Power_On_Hours          -O--CK   080   080   000    -    18105
+  7 Seek_Error_Rate         POSR--   085   060   030    -    369622022
+  9 Power_On_Hours          -O--CK   072   072   000    -    24881
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7873
+ 12 Power_Cycle_Count       -O--CK   084   084   020    -    16736
 187 Reported_Uncorrect      -O--CK   064   064   000    -    36
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   045   045    Past 36 (Min/Max 13/55)
-194 Temperature_Celsius     -O---K   036   055   000    -    36 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   063   053   000    -    77511165
+190 Airflow_Temperature_Cel -O---K   058   045   045    Past 42 (Min/Max 12/55)
+194 Temperature_Celsius     -O---K   042   055   000    -    42 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   072   050   000    -    155248861
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   152   000    -    2060
@@ -260,25 +262,25 @@ Error 30 [9] occurred at disk power-on lifetime: 4569 hours (190 days + 9 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     18082         -
-# 2  Extended offline    Interrupted (host reset)      20%     18000         -
-# 3  Extended offline    Completed without error       00%     17959         -
-# 4  Extended offline    Aborted by host               80%     17913         -
-# 5  Extended offline    Completed without error       00%     17882         -
-# 6  Extended offline    Completed without error       00%     17815         -
-# 7  Extended offline    Aborted by host               50%     17783         -
-# 8  Extended offline    Completed without error       00%     17735         -
-# 9  Extended offline    Completed without error       00%     17694         -
-#10  Extended offline    Completed without error       00%     17654         -
-#11  Extended offline    Completed without error       00%     17621         -
-#12  Extended offline    Completed without error       00%     17591         -
-#13  Extended offline    Aborted by host               60%     17540         -
-#14  Extended offline    Completed without error       00%     17500         -
-#15  Extended offline    Aborted by host               90%     17465         -
-#16  Extended offline    Completed without error       00%     17377         -
-#17  Extended offline    Completed without error       00%     17334         -
-#18  Extended offline    Completed without error       00%     17308         -
-#19  Extended offline    Completed without error       00%     17281         -
+# 1  Extended offline    Interrupted (host reset)      90%     24865         -
+# 2  Extended offline    Interrupted (host reset)      90%     24789         -
+# 3  Extended offline    Interrupted (host reset)      90%     24742         -
+# 4  Extended offline    Interrupted (host reset)      90%     24670         -
+# 5  Extended offline    Interrupted (host reset)      90%     24592         -
+# 6  Extended offline    Interrupted (host reset)      90%     24513         -
+# 7  Extended offline    Interrupted (host reset)      90%     24456         -
+# 8  Extended offline    Interrupted (host reset)      90%     24388         -
+# 9  Extended offline    Interrupted (host reset)      90%     24333         -
+#10  Extended offline    Interrupted (host reset)      90%     24332         -
+#11  Extended offline    Aborted by host               40%     24266         -
+#12  Extended offline    Interrupted (host reset)      90%     24195         -
+#13  Extended offline    Interrupted (host reset)      90%     24132         -
+#14  Extended offline    Interrupted (host reset)      90%     24077         -
+#15  Extended offline    Completed without error       00%     24023         -
+#16  Extended offline    Completed without error       00%     23967         -
+#17  Extended offline    Interrupted (host reset)      30%     23901         -
+#18  Extended offline    Completed without error       00%     23892         -
+#19  Extended offline    Completed without error       00%     23843         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -293,11 +295,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 36 Celsius
-Power Cycle Max Temperature:          0 Celsius
-Lifetime    Max Temperature:          0 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     --/ 0 Celsius
+Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
 SCT Data Table command not supported
 
@@ -309,15 +310,15 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           40  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           41  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2           11  Vendor specific
+0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific
 
 

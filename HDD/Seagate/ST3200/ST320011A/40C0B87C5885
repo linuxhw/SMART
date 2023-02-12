@@ -10,7 +10,7 @@ User Capacity:    20,020,396,032 bytes [20.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-5 (minor revision not indicated)
-Local Time is:    Sun Jan 31 20:48:57 2021 MSK
+Local Time is:    Thu Feb 18 20:56:48 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -55,19 +55,19 @@ recommended polling time: 	 (  18) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   081   062   034    -    125997520
+  1 Raw_Read_Error_Rate     POSR--   081   062   034    -    23017999
   3 Spin_Up_Time            PO----   090   088   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    546
+  4 Start_Stop_Count        -O--CK   100   100   020    -    590
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   078   060   030    -    81755524
-  9 Power_On_Hours          -O--CK   098   098   000    -    2122
+  7 Seek_Error_Rate         POSR--   078   060   030    -    83357423
+  9 Power_On_Hours          -O--CK   098   098   000    -    2167
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2464
-194 Temperature_Celsius     -O---K   039   052   000    -    39
-195 Hardware_ECC_Recovered  -O-RC-   081   062   000    -    125997520
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2544
+194 Temperature_Celsius     -O---K   038   052   000    -    38
+195 Hardware_ECC_Recovered  -O-RC-   081   062   000    -    23017999
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    1
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   099   252   000    -    1
                             ||||||_ K auto-keep
@@ -95,7 +95,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 54 (device log contains only the most recent five errors)
+ATA Error Count: 56 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -109,6 +109,40 @@ ATA Error Count: 54 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 56 occurred at disk power-on lifetime: 2159 hours (89 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 20 01 01 00 00 a0 00      00:00:26.175  READ DMA
+  ef 03 45 01 4f c2 a0 00      00:00:26.168  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 4f c2 a0 00      00:00:26.167  SET FEATURES [Set transfer mode]
+  c6 d9 10 01 4f c2 a0 00      00:00:26.167  SET MULTIPLE MODE
+  b0 d9 00 01 4f c2 a0 00      00:00:26.122  SMART DISABLE OPERATIONS
+
+Error 55 occurred at disk power-on lifetime: 2156 hours (89 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 a0 33 68 e1  Error: ICRC, ABRT at LBA = 0x016833a0 = 23606176
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 a0 33 68 e1 00      00:11:43.713  READ DMA
+  ca 00 08 48 03 5c e0 00      00:08:12.315  WRITE DMA
+  ca 00 08 50 03 5c e0 00      00:08:12.315  WRITE DMA
+  ca 00 08 f8 07 60 e0 00      00:08:07.155  WRITE DMA
+  ca 00 08 40 03 5c e0 00      00:08:01.895  WRITE DMA
 
 Error 54 occurred at disk power-on lifetime: 498 hours (20 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -160,40 +194,6 @@ Error 52 occurred at disk power-on lifetime: 498 hours (20 days + 18 hours)
   ca 00 10 ff 1c 44 e1 00      00:03:42.978  WRITE DMA
   ca 00 08 b7 46 60 e0 00      00:03:42.977  WRITE DMA
   ca 00 80 57 b0 27 e0 00      00:03:42.976  WRITE DMA
-
-Error 51 occurred at disk power-on lifetime: 498 hours (20 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 51 10 18 e2  Error: UNC at LBA = 0x02181051 = 35131473
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 4f 10 18 e2 00      00:03:39.381  READ DMA
-  ca 00 08 6f 46 60 e0 00      00:03:39.381  WRITE DMA
-  e7 00 00 00 00 00 a0 00      00:03:39.301  FLUSH CACHE
-  ca 00 08 4f 46 60 e0 00      00:03:39.300  WRITE DMA
-  ca 00 08 2f e5 02 e0 00      00:03:39.300  WRITE DMA
-
-Error 50 occurred at disk power-on lifetime: 498 hours (20 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 51 10 18 e2  Error: UNC at LBA = 0x02181051 = 35131473
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 4f 10 18 e2 00      00:03:35.703  READ DMA
-  ca 00 08 47 00 5e e0 00      00:03:35.703  WRITE DMA
-  e7 00 00 00 00 00 a0 00      00:03:35.703  FLUSH CACHE
-  c8 00 80 6f 11 18 e2 00      00:03:35.687  READ DMA
-  c8 00 08 4f 10 18 e2 00      00:03:32.124  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

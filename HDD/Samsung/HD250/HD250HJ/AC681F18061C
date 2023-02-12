@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.16.19-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint S250
@@ -9,9 +9,9 @@ LU WWN Device Id: 5 0000f0 ...
 Firmware Version: FH100-06
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Mon Feb 14 22:15:49 2022 MSK
+Local Time is:    Tue Jun 28 19:41:56 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -61,24 +61,24 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
-  3 Spin_Up_Time            POS---   253   253   025    -    4544
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6123
+  3 Spin_Up_Time            POS---   253   253   025    -    4608
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6688
   5 Reallocated_Sector_Ct   PO--CK   253   100   010    -    0
   7 Seek_Error_Rate         POSR--   253   253   051    -    0
   8 Seek_Time_Performance   P-S--K   253   253   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    17362
+  9 Power_On_Hours          -O--CK   100   100   000    -    18281
  10 Spin_Retry_Count        PO--CK   253   253   051    -    0
  11 Calibration_Retry_Count -O--C-   253   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3310
- 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    4505
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3623
+ 13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    3933
 184 End-to-End_Error        PO--CK   253   253   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    721566
+187 Reported_Uncorrect      -O--CK   001   001   000    -    3015388
 188 Command_Timeout         -O--CK   253   253   000    -    0
-190 Airflow_Temperature_Cel -O---K   121   091   000    -    39 (Min/Max 5/49)
-194 Temperature_Celsius     -O---K   121   088   000    -    39 (Min/Max 5/50)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    4505
+190 Airflow_Temperature_Cel -O---K   109   091   000    -    43 (Min/Max 5/49)
+194 Temperature_Celsius     -O---K   109   088   000    -    43 (Min/Max 5/50)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    3933
 196 Reallocated_Event_Count -O--CK   253   100   000    -    0
-197 Current_Pending_Sector  -O--C-   253   089   000    -    0
+197 Current_Pending_Sector  -O--C-   096   089   000    -    41
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 4756 (device log contains only the most recent 8 errors)
+Device Error Count: 4818 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,7 +122,77 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4756 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
+Error 4818 [1] log entry is empty
+Error 4817 [0] log entry is empty
+Error 4816 [7] occurred at disk power-on lifetime: 9174 hours (382 days + 6 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  80 -- 00 48 00 e0 11 21 00 00 01 25 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  62 00 b8 00 d0 25 00 00 e0 ce 3f 00 00     00:00:00.011  [RESERVED FOR SERIAL ATA]
+  62 01 00 02 60 25 00 00 e0 bb c8 00 00     00:00:00.011  [RESERVED FOR SERIAL ATA]
+  62 01 00 02 60 25 00 00 e0 bb c7 00 00     00:00:00.011  [RESERVED FOR SERIAL ATA]
+  62 01 00 02 60 25 00 00 e0 bb c6 00 00     00:00:00.011  [RESERVED FOR SERIAL ATA]
+  00 00 18 26 80 00 07 00 71 00 14 00 a0     00:00:18.043  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 4815 [6] occurred at disk power-on lifetime: 9170 hours (382 days + 2 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  08 -- 00 40 00 e0 11 21 00 00 01 25 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e0 00 08 00 c8 25 00 00 e0 ce 3f 00 00     00:00:00.011  STANDBY IMMEDIATE
+  e0 01 00 02 60 25 00 00 e0 bb b8 00 00     00:00:00.011  STANDBY IMMEDIATE
+  a2 01 00 02 60 25 00 00 e0 bb b7 00 00     00:00:00.011  SERVICE [OBS-ACS-2]
+  a2 01 00 02 60 25 00 00 e0 bb b6 00 00     00:00:00.011  SERVICE [OBS-ACS-2]
+  00 00 17 26 80 00 07 00 a9 00 14 00 a0     00:00:18.043  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 4814 [5] occurred at disk power-on lifetime: 9429 hours (392 days + 21 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  08 -- 00 78 00 e0 11 21 00 00 01 25 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e4 00 08 00 90 25 00 00 e0 ce 41 00 00     00:00:00.012  READ BUFFER
+  e4 01 00 02 60 25 00 00 e0 bc 28 00 00     00:00:00.012  READ BUFFER
+  e4 01 00 02 60 25 00 00 e0 bc 27 00 00     00:00:00.012  READ BUFFER
+  e4 01 00 02 60 25 00 00 e0 bc 26 00 00     00:00:00.012  READ BUFFER
+  00 00 17 26 80 00 07 00 a2 00 14 00 a0     00:00:18.043  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 4813 [4] occurred at disk power-on lifetime: 9431 hours (392 days + 23 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  08 -- 00 70 00 e0 11 21 00 00 01 25 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  62 00 08 00 88 25 00 00 e0 ce 41 00 00     00:00:00.012  [RESERVED FOR SERIAL ATA]
+  62 01 00 02 60 25 00 00 e0 bc 18 00 00     00:00:00.012  [RESERVED FOR SERIAL ATA]
+  62 01 00 02 60 25 00 00 e0 bc 17 00 00     00:00:00.012  [RESERVED FOR SERIAL ATA]
+  62 01 00 02 60 25 00 00 e0 bc 16 00 00     00:00:00.012  [RESERVED FOR SERIAL ATA]
+  12 11 89 11 91 00 00 11 02 c9 b1 01 11     00:00:00.000  RECALIBRATE [RET-4]
+
+Error 4812 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 hours)
   When the command that caused the error occurred, the device was in a reserved state.
 
   After command completion occurred, registers were:
@@ -134,77 +204,7 @@ Error 4756 [3] occurred at disk power-on lifetime: 25408 hours (1058 days + 16 h
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
-Error 4755 [2] log entry is empty
-Error 4754 [1] log entry is empty
-Error 4753 [0] log entry is empty
-Error 4752 [7] occurred at disk power-on lifetime: 10650 hours (443 days + 18 hours)
-  When the command that caused the error occurred, the device was in a vendor specific state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  e0 -- 00 00 1c 40 00 81 00 00 00 60 02
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  bd 1b d8 00 6a 60 00 00 40 60 83 00 02     00:00:00.013  [RESERVED]
-  bd 1a d0 00 6a 61 00 00 40 60 83 00 02     09:19:14.445  [RESERVED]
-  bd 19 c8 00 4e 60 00 00 40 60 83 00 02     09:19:14.445  [RESERVED]
-  bd 18 c0 00 4e 61 00 00 40 60 83 00 10     09:19:14.445  [RESERVED]
-  00 00 18 00 80 00 03 00 c3 00 55 00 a0     09:19:31.218  NOP [Reserved subcommand] [OBS-ACS-2]
-
-Error 4751 [6] occurred at disk power-on lifetime: 10653 hours (443 days + 21 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  80 -- 00 00 10 40 00 81 00 00 00 60 02   16 sectors at LBA = 0x400081000000 = 70370908438528
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  3b 0f 78 00 4e 60 00 00 40 60 83 00 02     00:00:00.013  WRITE STREAM
-  3b 0e 70 00 4e 61 00 00 40 60 83 00 02     09:19:14.445  WRITE STREAM
-  3b 0d 68 00 0e 60 00 00 40 60 83 00 02     09:19:14.445  WRITE STREAM
-  3b 0c 60 00 0e 61 00 00 40 60 83 00 10     09:19:14.445  WRITE STREAM
-  00 00 18 00 80 00 03 00 c3 00 55 00 a0     09:19:31.218  NOP [Reserved subcommand] [OBS-ACS-2]
-
-Error 4750 [5] occurred at disk power-on lifetime: 10650 hours (443 days + 18 hours)
-  When the command that caused the error occurred, the device was in a vendor specific state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  20 -- 00 00 04 40 00 81 00 00 00 60 02   4 sectors at LBA = 0x400081000000 = 70370908438528
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2a 03 18 00 0e 60 00 00 40 60 83 00 02     00:00:00.012  READ STREAM DMA
-  2a 02 10 00 0e 61 00 00 40 60 83 00 02     09:19:14.444  READ STREAM DMA
-  2a 01 08 00 28 60 00 00 40 60 82 00 02     09:19:14.444  READ STREAM DMA
-  2a 1f f8 00 28 61 00 00 40 60 82 00 10     09:19:14.444  READ STREAM DMA
-  00 00 18 00 80 00 03 00 c3 00 55 00 a0     09:19:31.218  NOP [Reserved subcommand] [OBS-ACS-2]
-
-Error 4749 [4] occurred at disk power-on lifetime: 10657 hours (444 days + 1 hours)
-  When the command that caused the error occurred, the device was in a vendor specific state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  a8 -- 00 00 15 40 00 81 00 00 00 60 02   21 sectors at LBA = 0x400081000000 = 70370908438528
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 14 a0 00 28 60 00 00 40 60 82 00 02     00:00:00.012  READ DMA
-  c8 13 98 00 28 61 00 00 40 60 82 00 02     09:19:14.444  READ DMA
-  c8 12 90 00 dc 60 00 00 40 60 81 00 02     09:19:14.444  READ DMA
-  c8 11 88 00 dc 61 00 00 40 60 81 00 10     09:19:14.444  READ DMA
-  12 11 89 11 91 00 00 11 04 c9 b1 02 11     09:19:14.432  RECALIBRATE [RET-4]
-
+Error 4811 [2] log entry is empty
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -225,8 +225,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     39/40 Celsius
+Current Temperature:                    43 Celsius
+Power Cycle Min/Max Temperature:     43/43 Celsius
 Lifetime    Min/Max Temperature:      6/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -235,7 +235,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (87)
+Temperature History Size (Index):    128 (89)
 
 SCT Error Recovery Control:
            Read: Disabled

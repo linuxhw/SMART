@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Momentus 7200.4
 Device Model:     ST9160412AS
@@ -10,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Jan  6 11:11:43 2020 CET
+Local Time is:    Fri Mar  5 10:16:56 2021 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,7 +21,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -61,25 +64,25 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   114   099   034    -    60874013
+  1 Raw_Read_Error_Rate     POSR--   120   099   034    -    1634789
   3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3967
+  4 Start_Stop_Count        -O--CK   094   094   020    -    6144
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   079   060   030    -    4385515286
-  9 Power_On_Hours          -O--CK   094   094   000    -    5904 (141 202 0)
+  7 Seek_Error_Rate         POSR--   076   060   030    -    8682702095
+  9 Power_On_Hours          -O--CK   093   093   000    -    6424 (192 184 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3911
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5923
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   090   090   000    -    10
-188 Command_Timeout         -O--CK   100   085   000    -    115968704785
+188 Command_Timeout         -O--CK   100   085   000    -    115968770455
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   075   046   045    -    25 (Min/Max 22/25)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    66
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    2727
-193 Load_Cycle_Count        -O--CK   053   053   000    -    94461
-194 Temperature_Celsius     -O---K   025   054   000    -    25 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   051   046   000    -    60874013
-196 Reallocated_Event_Count POSR--   095   095   030    -    4912 (9495 0)
+190 Airflow_Temperature_Cel -O---K   071   046   045    -    29 (Min/Max 29/29)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    67
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    3264
+193 Load_Cycle_Count        -O--CK   048   048   000    -    104804
+194 Temperature_Celsius     -O---K   029   054   000    -    29 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   042   040   000    -    1634789
+196 Reallocated_Event_Count POSR--   095   095   030    -    5061 (21602 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   164   000    -    678
@@ -270,10 +273,25 @@ Error 2 [1] occurred at disk power-on lifetime: 4566 hours (190 days + 6 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               90%      4932         -
-# 2  Short offline       Completed without error       00%      4932         -
-# 3  Short offline       Completed without error       00%      4402         -
-# 4  Vendor (0x50)       Completed without error       00%         1         -
+# 1  Short offline       Completed without error       00%      6389         -
+# 2  Short offline       Completed without error       00%      6379         -
+# 3  Extended offline    Completed without error       00%      6379         -
+# 4  Extended offline    Completed without error       00%      6305         -
+# 5  Extended offline    Completed without error       00%      6265         -
+# 6  Short offline       Completed without error       00%      6230         -
+# 7  Extended offline    Completed without error       00%      6159         -
+# 8  Short offline       Completed without error       00%      6137         -
+# 9  Short offline       Completed without error       00%      6122         -
+#10  Short offline       Completed without error       00%      6103         -
+#11  Short offline       Aborted by host               90%      6025         -
+#12  Short offline       Aborted by host               90%      6023         -
+#13  Short offline       Aborted by host               90%      6023         -
+#14  Extended offline    Completed without error       00%      5989         -
+#15  Short offline       Completed without error       00%      5986         -
+#16  Short offline       Completed without error       00%      5983         -
+#17  Short offline       Completed without error       00%      5978         -
+#18  Extended offline    Aborted by host               90%      4932         -
+#19  Short offline       Completed without error       00%      4932         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -288,10 +306,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    22 Celsius
-Power Cycle Min/Max Temperature:     22/22 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     29/29 Celsius
 Lifetime    Min/Max Temperature:     12/54 Celsius
 Under/Over Temperature Limit Count:   0/1
 Vendor specific:
@@ -303,7 +320,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        11 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (23)
+Temperature History Size (Index):    128 (122)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -321,4 +338,6 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

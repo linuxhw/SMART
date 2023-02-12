@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Aug  2 10:33:34 2018 +05
+Local Time is:    Sat Aug 22 15:32:50 2020 +06
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,9 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  40)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(12720) seconds.
 Offline data collection
@@ -59,28 +60,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    39
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    58
   2 Throughput_Performance  -OS--K   055   055   000    -    11640
-  3 Spin_Up_Time            PO---K   089   075   025    -    3453
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5925
+  3 Spin_Up_Time            PO---K   089   075   025    -    3465
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7688
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10277
+  9 Power_On_Hours          -O--CK   100   100   000    -    14681
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    403
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5839
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    411
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    424
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7620
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    436
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   056   035   000    -    44 (Min/Max 6/65)
+194 Temperature_Celsius     -O----   056   035   000    -    44 (Min/Max -8/65)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    50125
-223 Load_Retry_Count        -O--CK   100   100   000    -    403
-225 Load_Cycle_Count        -O--CK   078   078   000    -    225812
+200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    62147
+223 Load_Retry_Count        -O--CK   100   100   000    -    424
+225 Load_Cycle_Count        -O--CK   072   072   000    -    283423
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,36 +108,186 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-No Errors Logged
+Device Error Count: 12 (device log contains only the most recent 8 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12 [3] occurred at disk power-on lifetime: 13606 hours (566 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.045  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.045  DATA SET MANAGEMENT
+  60 00 00 00 0a 00 00 00 19 e2 3d 40 00     00:00:00.045  READ FPDMA QUEUED
+  60 00 00 00 1c 00 00 00 18 c0 84 40 00     00:00:00.045  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:00.045  IDENTIFY DEVICE
+
+Error 11 [2] occurred at disk power-on lifetime: 13606 hours (566 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.045  DATA SET MANAGEMENT
+  60 00 00 00 0a 00 00 00 19 e2 3d 40 00     00:00:00.045  READ FPDMA QUEUED
+  60 00 00 00 1c 00 00 00 18 c0 84 40 00     00:00:00.045  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:00.045  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:00.045  IDENTIFY DEVICE
+
+Error 10 [1] occurred at disk power-on lifetime: 13596 hours (566 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:11.080  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:11.080  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:11.080  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:11.080  IDENTIFY DEVICE
+  60 00 00 00 04 00 00 01 5e cc b8 40 00     00:00:11.080  READ FPDMA QUEUED
+
+Error 9 [0] occurred at disk power-on lifetime: 13596 hours (566 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:11.080  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:11.080  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:11.080  IDENTIFY DEVICE
+  60 00 00 00 04 00 00 01 5e cc b8 40 00     00:00:11.080  READ FPDMA QUEUED
+  60 00 00 00 04 00 00 00 a7 f5 d8 40 00     00:00:11.080  READ FPDMA QUEUED
+
+Error 8 [7] occurred at disk power-on lifetime: 13589 hours (566 days + 5 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.554  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.554  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:00.554  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:00.554  IDENTIFY DEVICE
+  60 00 00 00 20 00 00 02 a4 84 f2 40 00     00:00:00.554  READ FPDMA QUEUED
+
+Error 7 [6] occurred at disk power-on lifetime: 13589 hours (566 days + 5 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:00.554  DATA SET MANAGEMENT
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:00.554  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:00.554  IDENTIFY DEVICE
+  60 00 00 00 20 00 00 02 a4 84 f2 40 00     00:00:00.554  READ FPDMA QUEUED
+  60 00 00 00 20 00 00 02 a4 84 f2 40 00     00:00:00.554  READ FPDMA QUEUED
+
+Error 6 [5] occurred at disk power-on lifetime: 13588 hours (566 days + 4 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:07.835  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:07.835  DATA SET MANAGEMENT
+  60 00 00 00 08 00 00 03 9e 2d 78 40 00     00:00:07.835  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:07.835  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:07.835  IDENTIFY DEVICE
+
+Error 5 [4] occurred at disk power-on lifetime: 13588 hours (566 days + 4 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:07.835  DATA SET MANAGEMENT
+  06 00 01 00 01 00 00 00 00 00 00 40 00     00:00:07.835  DATA SET MANAGEMENT
+  60 00 00 00 08 00 00 03 9e 2d 78 40 00     00:00:07.835  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:07.835  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 40 00     00:00:07.835  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      80%      9670         -
-# 2  Vendor (0x50)       Completed without error       00%      9585         -
-# 3  Short offline       Completed without error       00%      9585         -
-# 4  Vendor (0x50)       Completed without error       00%      9260         -
-# 5  Short offline       Completed without error       00%      9260         -
-# 6  Short offline       Aborted by host               50%      9076         -
-# 7  Short offline       Completed without error       00%      9075         -
-# 8  Vendor (0x50)       Completed without error       00%      8925         -
-# 9  Short offline       Completed without error       00%      8925         -
-#10  Vendor (0x50)       Completed without error       00%      8867         -
-#11  Short offline       Completed without error       00%      8867         -
-#12  Vendor (0x50)       Completed without error       00%      8719         -
-#13  Short offline       Completed without error       00%      8719         -
-#14  Vendor (0x50)       Completed without error       00%      8569         -
-#15  Short offline       Completed without error       00%      8569         -
-#16  Vendor (0x50)       Completed without error       00%      8550         -
-#17  Short offline       Completed without error       00%      8550         -
-#18  Vendor (0x50)       Completed without error       00%      8321         -
-#19  Short offline       Completed without error       00%      8321         -
-#20  Vendor (0x50)       Completed without error       00%      8034         -
-#21  Short offline       Completed without error       00%      8034         -
+# 1  Vendor (0x50)       Completed without error       00%     13208         -
+# 2  Short offline       Completed without error       00%     13208         -
+# 3  Vendor (0x50)       Completed without error       00%     12941         -
+# 4  Short offline       Completed without error       00%     12941         -
+# 5  Vendor (0x50)       Completed without error       00%     12565         -
+# 6  Short offline       Completed without error       00%     12565         -
+# 7  Vendor (0x50)       Completed without error       00%     11455         -
+# 8  Short offline       Completed without error       00%     11455         -
+# 9  Vendor (0x50)       Completed without error       00%     11163         -
+#10  Short offline       Completed without error       00%     11163         -
+#11  Vendor (0x50)       Completed without error       00%     11163         -
+#12  Short offline       Completed without error       00%     11163         -
+#13  Vendor (0x50)       Completed without error       00%     11006         -
+#14  Short offline       Completed without error       00%     11006         -
+#15  Vendor (0x50)       Completed without error       00%     10940         -
+#16  Short offline       Completed without error       00%     10940         -
+#17  Vendor (0x50)       Completed without error       00%     10282         -
+#18  Short offline       Completed without error       00%     10282         -
+#19  Extended offline    Interrupted (host reset)      80%      9670         -
+#20  Vendor (0x50)       Completed without error       00%      9585         -
+#21  Short offline       Completed without error       00%      9585         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Interrupted [80% left] (0-65535)
+    1        0        0  Completed [00% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -147,11 +298,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     26/45 Celsius
-Lifetime    Min/Max Temperature:      6/66 Celsius
+Power Cycle Min/Max Temperature:     44/46 Celsius
+Lifetime    Min/Max Temperature:     -4/66 Celsius
+Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -159,7 +310,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (20)
+Temperature History Size (Index):    128 (29)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -179,8 +330,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4        88448  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

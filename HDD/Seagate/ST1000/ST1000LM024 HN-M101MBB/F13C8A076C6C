@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.7.14-1-MANJARO] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.16.18-200.fc35.x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Samsung SpinPoint M8 (AF)
@@ -11,10 +11,10 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Sep  4 19:06:43 2020 CEST
+Local Time is:    Wed Apr 13 14:42:01 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,7 +22,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,25 +65,25 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    11
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   092   090   025    -    2508
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3425
+  3 Spin_Up_Time            PO---K   092   090   025    -    2529
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3994
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    9950
+  9 Power_On_Hours          -O--CK   100   100   000    -    11163
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1372
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1959
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    57
-192 Power-Off_Retract_Count -O---K   100   100   000    -    168
-194 Temperature_Celsius     -O----   064   054   000    -    32 (Min/Max 14/46)
+192 Power-Off_Retract_Count -O---K   100   100   000    -    171
+194 Temperature_Celsius     -O----   064   047   000    -    26 (Min/Max 11/53)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    659
-223 Load_Retry_Count        -O--CK   100   100   000    -    292
-225 Load_Cycle_Count        -O--CK   045   045   000    -    556409
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    686
+223 Load_Retry_Count        -O--CK   100   100   000    -    302
+225 Load_Cycle_Count        -O--CK   041   041   000    -    598158
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,9 +131,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     22/33 Celsius
-Lifetime    Min/Max Temperature:     13/45 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     20/26 Celsius
+Lifetime    Min/Max Temperature:     11/53 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -142,7 +142,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (110)
+Temperature History Size (Index):    128 (111)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -163,7 +163,7 @@ ID      Size     Value  Description
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
 0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

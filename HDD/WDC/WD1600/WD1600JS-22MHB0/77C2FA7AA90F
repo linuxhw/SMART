@@ -10,7 +10,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Sep  1 11:12:42 2022 CEST
+Local Time is:    Thu Sep  1 11:26:59 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 2
+Device Error Count: 3
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,6 +120,22 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 00 00 0d 00 53 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 d8 b0 66 f7 00 00 00 00 00 02 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 d5 00 e0 66 d7 00 f7 b0 00 02 00     00:00:57.345  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 c5 ec 66 f7 00 01 00 00 00 02 00 00     11:11:42.534  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 00 00 00 66 46 00 f7 ec 00 02 00     00:00:00.001  NOP [Abort queued commands]
 
 Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -179,7 +195,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (68)
+Temperature History Size (Index):    128 (82)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -193,5 +209,5 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        39445  Vendor specific
+0x8000  4        40302  Vendor specific
 

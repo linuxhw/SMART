@@ -15,11 +15,11 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Nov 12 19:30:05 2021 CST
+Local Time is:    Thu Nov 18 22:13:37 2021 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -61,9 +61,9 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    26407
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    170
-165 Total_Write/Erase_Count -O--CK   100   100   ---    -    1254309824937
+  9 Power_On_Hours          -O--CK   100   100   ---    -    26455
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    177
+165 Total_Write/Erase_Count -O--CK   100   100   ---    -    1271490218419
 166 Min_W/E_Cycle           -O--CK   100   100   ---    -    21
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    28
 168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    72
@@ -72,18 +72,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
 173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    39
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    158
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    159
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   064   057   ---    -    36 (Min/Max 21/57)
+194 Temperature_Celsius     -O---K   066   057   ---    -    34 (Min/Max 18/57)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    1798 1337 1798
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    1801 1337 1801
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    40447
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   ---    -    47625
-241 Total_Writes_GiB        ----CK   253   253   ---    -    27111
-242 Total_Reads_GiB         ----CK   253   253   ---    -    651436
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    40587
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   ---    -    47812
+241 Total_Writes_GiB        ----CK   253   253   ---    -    27281
+242 Total_Reads_GiB         ----CK   253   253   ---    -    651503
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -121,12 +121,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             170  ---  Lifetime Power-On Resets
-0x01  0x010  4               9  ---  Power-on Hours
-0x01  0x018  6     56856502673  ---  Logical Sectors Written
-0x01  0x020  6        12098379  ---  Number of Write Commands
-0x01  0x028  6   1366162274132  ---  Logical Sectors Read
-0x01  0x030  6         7147551  ---  Number of Read Commands
+0x01  0x008  4             177  ---  Lifetime Power-On Resets
+0x01  0x010  4              10  ---  Power-on Hours
+0x01  0x018  6     57213978745  ---  Logical Sectors Written
+0x01  0x020  6        13397606  ---  Number of Write Commands
+0x01  0x028  6   1366301434690  ---  Logical Sectors Read
+0x01  0x030  6        12162935  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               5  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -140,5 +140,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           25  Device-to-host register FISes sent due to a COMRESET
+
+
 

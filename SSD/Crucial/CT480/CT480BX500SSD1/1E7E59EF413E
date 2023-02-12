@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon May 24 22:26:27 2021 BST
+Local Time is:    Tue May 25 00:12:25 2021 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,7 +62,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   000   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10368
+  9 Power_On_Hours          -O--CK   100   100   000    -    10370
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1192
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
@@ -138,11 +138,11 @@ Error 36 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 a8 00 00 08 00 00 10 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 78 00 00 10 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 78 00 00 10 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 78 00 00 10 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 78 00 00 10 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
+  61 00 ff 00 f8 00 00 ff 00 ff ff 00 00     00:00:00.000  WRITE FPDMA QUEUED
+  60 00 08 00 38 00 00 08 00 00 40 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 00 38 00 00 08 00 00 40 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 00 38 00 00 08 00 00 40 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 00 38 00 00 08 00 00 40 00 00     00:00:00.000  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -158,11 +158,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            1192  ---  Lifetime Power-On Resets
-0x01  0x010  4           10368  ---  Power-on Hours
+0x01  0x010  4           10370  ---  Power-on Hours
 0x01  0x018  6      3752260999  ---  Logical Sectors Written
 0x01  0x020  6       917133884  ---  Number of Write Commands
-0x01  0x028  6      1847838467  ---  Logical Sectors Read
-0x01  0x030  6       476631664  ---  Number of Read Commands
+0x01  0x028  6      1847844480  ---  Logical Sectors Read
+0x01  0x030  6       476631791  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -176,5 +176,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
 

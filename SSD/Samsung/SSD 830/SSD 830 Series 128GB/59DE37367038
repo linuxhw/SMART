@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.0-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 2
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Feb 13 16:09:56 2021 UTC
+Local Time is:    Fri Feb  4 00:44:59 2022 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -32,9 +32,8 @@ General SMART Values:
 Offline data collection status:  (0x83)	Offline data collection activity
 					is in a Reserved state.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  23)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  540) seconds.
 Offline data collection
@@ -59,20 +58,20 @@ recommended polling time: 	 (   9) minutes.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    14079
- 12 Power_Cycle_Count       -O--CK   091   091   000    -    8355
-177 Wear_Leveling_Count     PO--C-   055   055   000    -    1633
-179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
+  5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    4096
+  9 Power_On_Hours          -O--CK   097   097   000    -    15125
+ 12 Power_Cycle_Count       -O--CK   089   089   000    -    10356
+177 Wear_Leveling_Count     PO--C-   030   030   000    -    2531
+179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   099   099   010    -    2
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
-182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
-183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
+182 Erase_Fail_Count_Total  -O--CK   099   099   010    -    1
+183 Runtime_Bad_Block       PO--C-   099   099   010    -    1
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   057   046   000    -    43
+190 Airflow_Temperature_Cel -O--CK   069   046   000    -    31
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
-199 CRC_Error_Count         -OSRCK   001   001   000    -    415865
-235 POR_Recovery_Count      -O--C-   099   099   000    -    819
-241 Total_LBAs_Written      -O--CK   099   099   000    -    38066665527
+199 CRC_Error_Count         -OSRCK   001   001   000    -    415961
+235 POR_Recovery_Count      -O--C-   099   099   000    -    1419
+241 Total_LBAs_Written      -O--CK   099   099   000    -    44030836616
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +98,19 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     13325         -
+# 1  Short offline       Aborted by host               70%     15099         -
+# 2  Extended offline    Completed without error       00%     15049         -
+# 3  Extended offline    Aborted by host               10%     14975         -
+# 4  Extended offline    Aborted by host               10%     14862         -
+# 5  Extended offline    Aborted by host               10%     14660         -
+# 6  Extended offline    Aborted by host               10%     14577         -
+# 7  Extended offline    Aborted by host               10%     14469         -
+# 8  Short offline       Aborted by host               10%     14449         -
+# 9  Short offline       Completed without error       00%     14417         -
+#10  Extended offline    Aborted by host               10%     14360         -
+#11  Extended offline    Completed without error       00%     14334         -
+#12  Short offline       Completed without error       00%     14213         -
+#13  Extended offline    Completed without error       00%     13325         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -120,7 +131,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2        22649  Command failed due to ICRC error
+0x0001  2        22745  Command failed due to ICRC error
 0x0002  2        49152  R_ERR response for data FIS
 0x0003  2        53248  R_ERR response for device-to-host data FIS
 0x0004  2        57344  R_ERR response for host-to-device data FIS
@@ -129,7 +140,7 @@ ID      Size     Value  Description
 0x0007  2         4096  R_ERR response for host-to-device non-data FIS
 0x0008  2         7952  Device-to-host non-data FIS retries
 0x0009  2         7953  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2        29171  Device-to-host register FISes sent due to a COMRESET
+0x000a  2        32642  Device-to-host register FISes sent due to a COMRESET
 0x000b  2         6145  CRC errors within host-to-device FIS
 0x000d  2         7953  Non-CRC errors within host-to-device FIS
 0x000f  2         8176  R_ERR response for host-to-device data FIS, CRC

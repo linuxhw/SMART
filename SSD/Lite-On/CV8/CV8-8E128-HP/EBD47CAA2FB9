@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-52-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.4.91-1-lts] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     LITEON CV8-8E128-HP
@@ -10,14 +10,15 @@ User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
+TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Oct 29 20:13:50 2020 MST
+Local Time is:    Tue Jan 26 14:04:08 2021 MST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Disabled
@@ -28,14 +29,14 @@ Wt Cache Reorder: Unknown
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(    2) seconds.
 Offline data collection
 capabilities: 			 (0x5b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -64,25 +65,25 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    575
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    768
+  9 Power_On_Hours          -O--CK   100   100   000    -    1011
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1271
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       -O--CK   097   097   005    -    64
-174 Unknown_Attribute       -O--CK   100   100   000    -    76
+173 Unknown_Attribute       -O--CK   096   096   005    -    81
+174 Unknown_Attribute       -O--CK   100   100   000    -    159
 176 Erase_Fail_Count_Chip   -O---K   100   100   000    -    86
-181 Program_Fail_Cnt_Total  -O---K   001   001   000    -    2
+181 Program_Fail_Cnt_Total  -O---K   001   001   000    -    4654
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   034   057   000    -    34 (Min/Max 25/38)
+194 Temperature_Celsius     -O---K   034   065   000    -    34 (Min/Max 25/40)
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-201 Unknown_SSD_Attribute   PO---K   097   097   005    -    1936
-241 Total_LBAs_Written      -O--CK   100   100   000    -    234272
-242 Total_LBAs_Read         -O--CK   100   100   000    -    353627
-243 Unknown_Attribute       -O--CK   100   100   000    -    537728
+201 Unknown_SSD_Attribute   PO---K   096   096   005    -    1919
+241 Total_LBAs_Written      -O--CK   100   100   000    -    302034
+242 Total_LBAs_Read         -O--CK   100   100   000    -    398929
+243 Unknown_Attribute       -O--CK   100   100   000    -    687790
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,14 +113,16 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
-SMART Extended Self-test Log Version: 0 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       816         -
+# 2  Short offline       Completed without error       00%       814         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
     2        0        0  Not_testing
-    3        0        0  Not_testing
+    3        0        0  Completed [00% left] (0-65535)
     4        0        0  Not_testing
     5        0        0  Not_testing
 Selective self-test flags (0x0):
@@ -130,8 +133,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     25/38 Celsius
-Lifetime    Min/Max Temperature:      0/57 Celsius
+Power Cycle Min/Max Temperature:     25/40 Celsius
+Lifetime    Min/Max Temperature:      0/65 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -139,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (123)
+Temperature History Size (Index):    128 (49)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -148,25 +151,25 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             768  ---  Lifetime Power-On Resets
-0x01  0x010  4             575  ---  Power-on Hours
-0x01  0x018  6          234272  ---  Logical Sectors Written
-0x01  0x020  6          234272  ---  Number of Write Commands
-0x01  0x028  6          353627  ---  Logical Sectors Read
-0x01  0x030  6          537728  ---  Number of Read Commands
+0x01  0x008  4            1271  ---  Lifetime Power-On Resets
+0x01  0x010  4            1011  ---  Power-on Hours
+0x01  0x018  6          302034  ---  Logical Sectors Written
+0x01  0x020  6          302034  ---  Number of Write Commands
+0x01  0x028  6          398929  ---  Logical Sectors Read
+0x01  0x030  6          687790  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              76  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             159  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              34  ---  Current Temperature
-0x05  0x020  1              38  ---  Highest Temperature
+0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              25  ---  Lowest Temperature
 0x05  0x058  1             100  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4          103479  ---  Number of Hardware Resets
+0x06  0x008  4          167753  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              97  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              96  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -191,4 +194,6 @@ ID      Size     Value  Description
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

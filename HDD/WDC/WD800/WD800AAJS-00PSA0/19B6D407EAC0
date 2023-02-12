@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [i686-linux-4.15.0-desktop-122.124.1rosa-i586] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Blue Serial ATA
 Device Model:     WDC WD800AAJS-00PSA0
@@ -8,7 +11,7 @@ User Capacity:    80,025,280,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Jul  2 19:51:42 2020 MSK
+Local Time is:    Fri Mar  5 14:21:03 2021 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -60,21 +63,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   159   156   021    -    3050
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1526
+  3 Spin_Up_Time            PO----   157   156   021    -    3116
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1547
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    2799
+  9 Power_On_Hours          -O--CK   097   097   000    -    2811
  10 Spin_Retry_Count        -O--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1404
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    394
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1528
-194 Temperature_Celsius     -O---K   101   098   000    -    42
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1425
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    406
+193 Load_Cycle_Count        -O--CK   200   200   000    -    1549
+194 Temperature_Celsius     -O---K   116   098   000    -    27
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    27
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    31
 200 Multi_Zone_Error_Rate   ---R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -104,7 +107,37 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 e1 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 d9 c8 00 96 00 00 00 00 00 00 00 01     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 00 00 c0 00 d9 01 96 c8 00 00 00     00:00:51.232  NOP [Abort queued commands]
+  01 d2 c8 00 96 00 20 00 98 00 00 00 01     00:00:38.616  [RESERVED]
+  00 20 00 00 e8 00 d2 01 96 c8 00 00 00     00:00:36.872  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -122,11 +155,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     37/42 Celsius
-Lifetime    Min/Max Temperature:     31/45 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     19/27 Celsius
+Lifetime    Min/Max Temperature:     21/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -134,7 +166,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:            1/85 Celsius
-Temperature History Size (Index):    128 (1)
+Temperature History Size (Index):    128 (78)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -153,6 +185,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         3128  Vendor specific
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          477  Vendor specific
 

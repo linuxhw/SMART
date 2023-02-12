@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Thu Oct 21 13:46:08 2021 UTC
+Local Time is:    Thu Oct 21 14:29:25 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,18 +63,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   9 Power_On_Hours          -O--C-   100   100   000    -    3782
  12 Power_Cycle_Count       -O--C-   100   100   000    -    1401
 167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    1
+168 Unknown_Attribute       -O--C-   100   100   000    -    3
 169 Unknown_Attribute       PO--C-   100   100   010    -    0
 173 Unknown_Attribute       -O--C-   200   200   000    -    11982406140
 175 Program_Fail_Count_Chip PO--C-   099   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    456
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    0
-194 Temperature_Celsius     -O---K   070   070   030    -    30 (Min/Max 29/40)
+194 Temperature_Celsius     -O---K   069   069   030    -    31 (Min/Max 29/40)
 231 Temperature_Celsius     PO--CK   084   084   005    -    16
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    13307785984
-234 Unknown_Attribute       -O--CK   100   100   000    -    11718101024768
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    13307788800
+234 Unknown_Attribute       -O--CK   100   100   000    -    11718106726400
 241 Total_LBAs_Written      -O--CK   100   100   000    -    11148666842
-242 Total_LBAs_Read         -O--CK   100   100   000    -    21649136352
+242 Total_LBAs_Read         -O--CK   100   100   000    -    21649143954
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,141 +116,139 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [87] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
+Error 65535 [87] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 2b 03 00 08 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 ee 00 e1 d1 00 03 f8 00 95 c8 40 08 15d+21:35:53.838  DEVICE RESET
+  f8 03 95 00 00 e1 aa 08 cf e0 00 c8 f8     00:00:00.003  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  08 b0 d0 e1 cc 00 03 f8 00 95 c8 00 08 39d+00:10:42.542  DEVICE RESET
+
+Error 65534 [86] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ee e1 d1 f8 c8 08 00 03 40 00 95 06 ee     00:00:20.961  IDENTIFY DEVICE DMA [OBS-4]
+  03 00 00 08 00 f8 e1 b0 c8 cc d0 95 03     00:08:44.288  CFA REQUEST EXTENDED ERROR
+  6d e1 d1 f8 c8 08 00 03 00 00 95 f0 ee 29d+02:55:09.537  [RESERVED]
+  03 00 08 08 00 f8 e1 6d c8 cf 58 95 2b     00:08:44.288  CFA REQUEST EXTENDED ERROR
+  00 00 00 00 00 00 00 00 00 00 00 00 00     13:58:51.648  NOP [Abort queued commands]
+
+Error 65533 [85] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was sleeping.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 58 08 95 c8 cf f8 e1 6d 03 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e1 f8 c8 03 95 a3 08 00 f0 00 00 cc e1     00:03:55.000  IDLE IMMEDIATE
+  00 00 00 f4 00 03 f8 e1 95 c8 d1 00 00 40d+18:28:14.680  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 00  1d+14:03:56.544  NOP [Abort queued commands]
+  e1 f8 c8 03 95 ee 00 00 06 40 00 d1 e1     00:00:00.000  IDLE IMMEDIATE
+  00 08 00 6c a0 03 f8 e1 95 c8 cf 00 00 40d+18:20:35.712  NOP [Abort queued commands]
+
+Error 65532 [84] occurred at disk power-on lifetime: 3 hours (0 days + 3 hours)
+  When the command that caused the error occurred, the device was in a reserved state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  18 -- 00 cc a3 00 95 c8 03 f8 e1 00 08
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 00     00:00:02.091  NOP [Abort queued commands]
+  00 03 95 00 00 e1 ee 08 d1 06 40 51 94     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 fb 88 e1 cf 00 03 94 00 95 c8 00 08 39d+00:10:42.542  DEVICE RESET
+  94 03 95 00 00 e1 ee 08 d1 00 00 c8 94     00:00:00.003  STANDBY IMMEDIATE [RET-4]
+  08 b1 08 e1 cc 00 03 94 00 95 c8 00 08 39d+00:10:42.071  DEVICE RESET
+
+Error 65531 [83] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 2c 03 7c 08 00 00 00 00 00 18 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 ee 00 e1 d1 00 03 40 00 a3 c8 40 00 15d+21:35:53.838  NOP [Abort queued commands]
+  40 03 a3 00 00 e0 70 08 74 b8 00 c8 40     00:00:00.003  READ VERIFY SECTOR(S)
+  40 0f b8 e9 75 00 03 40 00 a3 c8 00 40 39d+00:17:05.458  READ VERIFY SECTOR(S)
+
+Error 65530 [82] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ee e1 d1 58 c8 08 00 03 40 00 9f 06 ee     00:00:20.961  IDENTIFY DEVICE DMA [OBS-4]
+  03 00 00 08 00 58 e1 ee c8 d1 00 9f 03     00:08:44.288  CFA REQUEST EXTENDED ERROR
+  00 a0 00 58 e7 00 00 03 00 00 9f 00 00 30d+22:36:43.808  NOP [Abort queued commands]
+  03 00 08 10 00 58 e0 14 ca 6f d8 9f 2c     00:00:00.000  CFA REQUEST EXTENDED ERROR
+  00 00 00 00 00 00 00 00 00 00 00 00 00     13:58:51.648  NOP [Abort queued commands]
+
+Error 65529 [81] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was sleeping.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 08 a3 c8 d1 40 e1 ee 03 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e1 40 c8 03 a3 ee 08 00 00 00 00 d1 e1     00:03:58.400  IDLE IMMEDIATE
+  00 00 00 f4 00 03 40 e1 a3 c8 d1 00 00 40d+18:28:14.680  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 00  1d+14:05:02.080  NOP [Abort queued commands]
+  e1 40 c8 03 a3 ee 08 00 06 40 00 d1 e1     00:00:00.000  IDLE IMMEDIATE
+  00 08 00 ee 00 03 40 e1 a3 c8 d1 00 00 40d+18:20:35.720  NOP [Abort queued commands]
+
+Error 65528 [80] occurred at disk power-on lifetime: 3 hours (0 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
+  00 -- 00 d1 f3 00 a3 c8 03 40 e1 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:30.200  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:30.200  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:30.100  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:30.100  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:30.000  READ DMA EXT
-
-Error 65534 [86] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:30.100  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:30.100  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:30.000  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:30.000  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.900  READ DMA EXT
-
-Error 65533 [85] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:30.000  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:30.000  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.900  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.900  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.800  READ DMA EXT
-
-Error 65532 [84] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.900  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.900  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.800  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.800  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.700  READ DMA EXT
-
-Error 65531 [83] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.800  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.800  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.700  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.700  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.600  READ DMA EXT
-
-Error 65530 [82] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.700  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.700  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.600  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.600  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.500  READ DMA EXT
-
-Error 65529 [81] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.600  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.600  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.500  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.500  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.400  READ DMA EXT
-
-Error 65528 [80] occurred at disk power-on lifetime: 3772 hours (157 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 00 65 3e b0 40 00  Error: UNC 8 sectors at LBA = 0x00653eb0 = 6635184
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.500  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.500  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.400  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 ff     00:01:29.400  READ DMA EXT
-  25 00 03 00 08 00 00 00 65 3e b0 40 00     00:01:29.300  READ DMA EXT
+  00 00 00 00 00 00 00 00 00 00 00 00 00     00:00:02.092  NOP [Abort queued commands]
+  00 03 a3 00 00 e1 ee 08 d1 06 40 51 40     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 f5 00 e1 d1 00 03 40 00 a3 c8 00 d8 39d+00:10:42.542  DEVICE RESET
+  40 03 a3 00 00 e1 f4 00 d1 00 00 c8 40     00:00:00.003  READ VERIFY SECTOR(S)
+  00 f2 00 e1 d1 00 03 40 00 a3 c8 00 00 39d+00:10:42.547  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -292,14 +290,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            1  Command failed due to ICRC error
+0x0001  2            3  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

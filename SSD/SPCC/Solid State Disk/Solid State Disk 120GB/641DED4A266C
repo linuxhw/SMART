@@ -1,4 +1,8 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
+Model Family:     Phison Driven OEM SSDs
 Device Model:     SPCC Solid State Disk
 Serial Number:    --
 Firmware Version: S8FM06.9
@@ -6,10 +10,10 @@ User Capacity:    120,033,041,920 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Aug 11 13:49:47 2018 MSK
+Local Time is:    Sun Oct  3 11:27:57 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,14 +59,14 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    18640
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    2803
-168 Unknown_Attribute       -O--C-   100   100   000    -    3
-170 Unknown_Attribute       PO----   100   100   010    -    145
-173 Unknown_Attribute       -O--C-   100   100   000    -    25952755
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    187
-218 Unknown_Attribute       PO-R--   100   100   050    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    18300
+  9 Power_On_Hours          -O--C-   100   100   000    -    20000
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    5292
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+170 Bad_Blk_Ct_Erl/Lat      PO----   100   100   010    -    0/145
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    661 (Average 570)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    317
+218 CRC_Error_Count         PO-R--   100   100   050    -    0
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    27587
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -87,7 +91,9 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%         1         -
+# 2  Short offline       Completed without error       00%         4         -
 
 Selective Self-tests/Logging not supported
 
@@ -105,8 +111,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

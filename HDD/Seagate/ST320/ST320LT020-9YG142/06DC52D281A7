@@ -9,7 +9,7 @@ Rotation Rate:    5455 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Mar 31 13:19:32 2020 MSK
+Local Time is:    Sat Apr 18 22:58:33 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -17,7 +17,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -60,31 +60,31 @@ SCT capabilities: 	       (0x303b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   034    -    159121648
+  1 Raw_Read_Error_Rate     POSR--   119   099   034    -    232403728
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2389
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2796
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   084   060   030    -    243589744
-  9 Power_On_Hours          -O--CK   095   095   000    -    4587 (133 236 0)
+  7 Seek_Error_Rate         POSR--   084   060   030    -    248207604
+  9 Power_On_Hours          -O--CK   095   095   000    -    4704 (1 73 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2383
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2790
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   098   000    -    162
+187 Reported_Uncorrect      -O--CK   098   098   000    -    2
+188 Command_Timeout         -O--CK   100   098   000    -    163
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   046   045    -    36 (Min/Max 28/36)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    47
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    369
-193 Load_Cycle_Count        -O--CK   072   072   000    -    57458
-194 Temperature_Celsius     -O---K   036   054   000    -    36 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   051   033   000    -    159121648
-196 Reallocated_Event_Count POSR--   096   096   030    -    4255 (49576 0)
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   058   046   045    -    42 (Min/Max 25/42)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    48
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    638
+193 Load_Cycle_Count        -O--CK   070   070   000    -    61225
+194 Temperature_Celsius     -O---K   042   054   000    -    42 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   053   033   000    -    232403728
+196 Reallocated_Event_Count POSR--   096   096   030    -    4353 (5753 0)
+197 Current_Pending_Sector  -O--C-   100   100   000    -    8
+198 Offline_Uncorrectable   ----C-   100   100   000    -    8
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
-250 Read_Error_Retry_Rate   ------   100   001   000    -    1085
-251 Unknown_Attribute       ------   100   001   000    -    37
-252 Unknown_Attribute       ------   100   001   000    -    0
+250 Read_Error_Retry_Rate   ------   001   001   000    -    33082
+251 Unknown_Attribute       ------   100   001   000    -    306
+252 Unknown_Attribute       ------   100   001   000    -    1
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -120,7 +120,55 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 4689 hours (195 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 b8 9e 58 00 00  Error: UNC at LBA = 0x00b89e58 = 12099160
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 00 b8 9e 58 40 00     00:22:53.066  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 b8 9e 50 40 00     00:22:53.065  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 b8 9e 48 40 00     00:22:53.064  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 b8 9e 08 40 00     00:22:53.062  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 b8 9e 00 40 00     00:22:52.965  READ FPDMA QUEUED
+
+Error 1 [0] occurred at disk power-on lifetime: 4689 hours (195 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 b8 9e 58 00 00  Error: UNC at LBA = 0x00b89e58 = 12099160
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 02 00 00 00 00 af 72 00 40 00     00:22:45.861  READ FPDMA QUEUED
+  60 00 00 02 00 00 00 00 af 70 00 40 00     00:22:45.848  READ FPDMA QUEUED
+  60 00 00 02 00 00 00 00 9f 82 00 40 00     00:22:40.177  READ FPDMA QUEUED
+  60 00 00 02 00 00 00 00 9f 80 00 40 00     00:22:40.162  READ FPDMA QUEUED
+  60 00 00 02 00 00 00 00 8f 90 00 40 00     00:22:34.549  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -140,10 +188,10 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     28/34 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     25/42 Celsius
 Lifetime    Min/Max Temperature:     10/54 Celsius
-Under/Over Temperature Limit Count:   0/1
+Under/Over Temperature Limit Count:   0/17
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -153,7 +201,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        11 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (70)
+Temperature History Size (Index):    128 (28)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -165,7 +213,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

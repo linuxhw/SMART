@@ -1,19 +1,23 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.4-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Maxtor DiamondMax 10 (ATA/133 and SATA/150)
 Device Model:     Maxtor 6B250S0
 Serial Number:    --
 Firmware Version: BANC1G10
-User Capacity:    250 999 111 168 bytes [250 GB]
+User Capacity:    250,999,111,168 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Thu May 11 20:03:47 2017 CEST
+Local Time is:    Fri May 28 23:23:26 2021 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
-APM feature is:   Disabled
+AAM level is:     192 (intermediate), recommended: 192
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -53,23 +57,23 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   170   163   063    -    31638
-  4 Start_Stop_Count        -O--CK   248   248   000    -    9979
+  3 Spin_Up_Time            POS--K   180   163   063    -    27043
+  4 Start_Stop_Count        -O--CK   246   246   000    -    15527
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   250   244   187    -    43005
-  9 Power_On_Minutes        -O--CK   199   199   000    -    162h+41m
+  8 Seek_Time_Performance   POS--K   247   231   187    -    56210
+  9 Power_On_Minutes        -O--CK   173   173   000    -    545h+51m
  10 Spin_Retry_Count        PO-R-K   253   205   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   233   233   000    -    8185
+ 12 Power_Cycle_Count       -O--CK   225   225   000    -    11236
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   034   253   000    -    49
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1164
+194 Temperature_Celsius     -O--CK   037   253   000    -    49
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    2344
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
-198 Offline_Uncorrectable   ---R--   253   253   000    -    0
+198 Offline_Uncorrectable   ---R--   253   252   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   199   199   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    0
@@ -99,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x03       GPL,SL  R/O      4  Ext. Comprehensive SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -176,7 +180,15 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     10730         -
+# 1  Short offline       Completed without error       00%     27811         -
+# 2  Short offline       Completed without error       00%     27799         -
+# 3  Short offline       Completed without error       00%     27798         -
+# 4  Short offline       Completed without error       00%     27764         -
+# 5  Short offline       Completed without error       00%     27665         -
+# 6  Short offline       Completed: read failure       60%     26296         453913011
+# 7  Short offline       Completed: read failure       60%     26261         453913011
+# 8  Extended offline    Completed without error       00%     21243         -
+# 9  Short offline       Completed without error       00%     10730         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -191,11 +203,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 49 Celsius
-Power Cycle Max Temperature:         49 Celsius
-Lifetime    Max Temperature:         65 Celsius
+Current Temperature:                    49 Celsius
+Power Cycle Min/Max Temperature:     --/49 Celsius
+Lifetime    Min/Max Temperature:     --/65 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
@@ -207,6 +218,8 @@ Temperature History Size (Index):    478 (477)
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

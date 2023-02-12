@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.4.0-100-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.4.0-100-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MQ01ABD...
@@ -14,14 +14,13 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb 27 21:12:24 2022 CET
+Local Time is:    Sun Feb 27 21:32:08 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -82,7 +81,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   079   079   000    -    8508
+222 Loaded_Hours            -O--CK   079   079   000    -    8509
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
 226 Load-in_Time            -OS--K   100   100   000    -    259
@@ -105,7 +104,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -289,6 +288,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
+SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    27 Celsius
 Power Cycle Min/Max Temperature:     27/32 Celsius
@@ -300,7 +300,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (103)
+Temperature History Size (Index):    478 (123)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -311,15 +311,15 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            5370  ---  Lifetime Power-On Resets
 0x01  0x010  4           11107  ---  Power-on Hours
-0x01  0x018  6    108192983469  ---  Logical Sectors Written
-0x01  0x020  6       380530561  ---  Number of Write Commands
-0x01  0x028  6    111624912095  ---  Logical Sectors Read
-0x01  0x030  6      1038003493  ---  Number of Read Commands
+0x01  0x018  6    108193865621  ---  Logical Sectors Written
+0x01  0x020  6       380533567  ---  Number of Write Commands
+0x01  0x028  6    111625751743  ---  Logical Sectors Read
+0x01  0x030  6      1038009831  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4             115  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4            2209  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            8508  ---  Head Flying Hours
+0x03  0x010  4            8509  ---  Head Flying Hours
 0x03  0x018  4           67426  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
@@ -349,8 +349,6 @@ Page  Offset Size        Value Flags Description
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
-
-Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

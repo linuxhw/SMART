@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-52-lowlatency] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-56-lowlatency] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Nov  2 10:00:03 2022 -03
+Local Time is:    Fri Dec 16 22:00:04 2022 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -66,17 +66,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1
   2 Throughput_Performance  -OS--K   252   252   000    -    0
   3 Spin_Up_Time            PO---K   086   086   025    -    4463
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2977
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2986
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1280
+  9 Power_On_Hours          -O--CK   100   100   000    -    1284
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    43
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2620
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2626
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    14
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   048   000    -    29 (Min/Max 16/53)
+194 Temperature_Celsius     -O----   064   048   000    -    33 (Min/Max 16/53)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
@@ -84,7 +84,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    2
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    593
 223 Load_Retry_Count        -O--CK   100   100   000    -    43
-225 Load_Cycle_Count        -O--CK   098   098   000    -    26266
+225 Load_Cycle_Count        -O--CK   098   098   000    -    26563
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -167,22 +167,25 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 # 1  Short offline       Completed without error       00%       684         -
 # 2  Short offline       Completed without error       00%        69         -
 # 3  Short offline       Completed without error       00%         0         -
-# 4  Vendor (0x67)       Completed without error       00%       115         -
-# 5  Reserved (0x0e)     Completed without error       00%        70         -
-# 6  Vendor (0xd4)       Completed without error       10%         0         -
-# 7  Vendor (0xab)       Unknown status (0xa)          00%       468         -
-# 8  Reserved (0x05)     Completed without error       00%         0         -
-# 9  Vendor (0x74)       Completed without error       00%       101         -
-#10  Offline             Completed without error       00%        32         -
-#11  Vendor (0xab)       Unknown status (0xa)          00%       468         -
-#12  Reserved (0x05)     Completed without error       00%         0         -
-#13  Vendor (0x69)       Completed without error       00%       110         -
-#14  Vendor (0x79)       Completed without error       00%       112         -
-#15  Offline             Completed without error       00%         0         -
-#16  Vendor (0xd0)       Aborted by host               70%     41131         -
-#17  Short offline       Completed without error       00%         0         -
-#18  Offline             Completed without error       00%      1024         -
-#19  Offline             Completed without error       00%         0         -
+# 4  Vendor (0xfb)       Interrupted (host reset)      20%     46777         -
+# 5  Vendor (0x92)       Completed: electrical failure 60%     63081         196512421734503
+# 6  Vendor (0xfb)       Unknown status (0xa)          140%     60198         -
+# 7  Vendor (0xd6)       Unknown status (0xd)          100%     21238         -
+# 8  Vendor (0xbe)       Self-test routine in progress 120%     56916         -
+# 9  Vendor (0x69)       Unknown status (0xc)          10%      6072         -
+#10  Vendor (0xb3)       Unknown status (0xb)          70%     23353         -
+#11  Vendor (0x77)       Completed: read failure       70%      3500         44214469011084
+#12  Vendor (0x48)       Fatal or unknown error        70%     43242         9320668911832
+#13  Reserved (0x89)     Completed: electrical failure 150%     45079         145470844562998
+#14  Vendor (0x7a)       Completed: unknown failure    140%     23100         162837905124497
+#15  Vendor (0x70)       Unknown status (0xe)          100%     15625         -
+#16  Vendor (0xed)       Unknown status (0xa)          100%     39656         -
+#17  Vendor (0xb2)       Completed: handling damage??  50%     37628         158251827637598
+#18  Vendor (0xbb)       Completed: unknown failure    30%     57430         158962607649681
+#19  Reserved (0x35)     Interrupted (host reset)      100%     26137         -
+#20  Offline             Unknown status (0xd)          50%     27218         -
+#21  Vendor (0xbe)       Unknown status (0xe)          40%     20977         -
+#22  Vendor (0xaf)       Self-test routine in progress 60%     20991         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run

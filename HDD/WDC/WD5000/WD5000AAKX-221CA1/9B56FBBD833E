@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Nov  2 09:33:20 2021 -04
+Local Time is:    Tue Nov  2 09:49:08 2021 -04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -30,8 +30,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 241)	Self-test routine in progress...
-					10% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		( 8160) seconds.
 Offline data collection
@@ -262,7 +263,8 @@ Error 8 [7] occurred at disk power-on lifetime: 11287 hours (470 days + 7 hours)
   27 00 00 00 00 00 00 00 00 00 00 e0 08     00:06:01.815  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     14328         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -277,7 +279,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        DST executing in background (3)
+Device State:                        Active (0)
 Current Temperature:                    38 Celsius
 Power Cycle Min/Max Temperature:     24/38 Celsius
 Lifetime    Min/Max Temperature:      0/44 Celsius
@@ -288,7 +290,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (291)
+Temperature History Size (Index):    478 (307)
 
 SCT Error Recovery Control command not supported
 
@@ -307,5 +309,5 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         2998  Vendor specific
+0x8000  4         3942  Vendor specific
 

@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Nov 12 10:54:29 2020 CET
+Local Time is:    Sun Feb  7 14:50:55 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,27 +59,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    705
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    544
+  9 Power_On_Hours          -O--CK   100   100   050    -    1156
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    767
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    45
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    6
+173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    70
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    14
 180 Unused_Reserve_NAND_Blk -O--CK   100   100   050    -    100
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    4
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   060   041   050    Past 40 (Min/Max 22/59)
+194 Temperature_Celsius     -O---K   062   032   050    Past 38 (Min/Max 22/68)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    7
-202 Percent_Lifetime_Remain ----CK   097   097   001    -    97
+202 Percent_Lifetime_Remain ----CK   096   096   001    -    96
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    3054259430
-247 Host_Program_Page_Count -O--CK   100   100   050    -    95445607
-248 FTL_Program_Page_Count  -O--CK   100   100   050    -    129133008
+246 Total_LBAs_Written      -O--CK   100   100   050    -    4330819132
+247 Host_Program_Page_Count -O--CK   100   100   050    -    135338097
+248 FTL_Program_Page_Count  -O--CK   100   100   050    -    193497552
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -130,16 +130,16 @@ Error 35 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 40 00  Error: ABRT
+  04 -- 51 00 00 00 00 00 00 00 00 40 00  Error: ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
-  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
-  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
-  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
-  60 00 48 78 78 00 1b 43 00 f2 b8 40 08     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 00 48 00 00 44 00 f2 a0 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 48 00 00 44 00 f2 a0 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 48 00 00 44 00 f2 a0 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 48 00 00 44 00 f2 a0 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 78 48 00 1b 44 00 f2 a0 00 00     00:00:00.000  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -151,14 +151,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             544  ---  Lifetime Power-On Resets
-0x01  0x010  4             705  ---  Power-on Hours
-0x01  0x018  6      3054259430  ---  Logical Sectors Written
-0x01  0x020  6        49825902  ---  Number of Write Commands
-0x01  0x028  6      3512442006  ---  Logical Sectors Read
-0x01  0x030  6        51150839  ---  Number of Read Commands
+0x01  0x008  4             767  ---  Lifetime Power-On Resets
+0x01  0x010  4            1156  ---  Power-on Hours
+0x01  0x018  6        35851836  ---  Logical Sectors Written
+0x01  0x020  6        76716286  ---  Number of Write Commands
+0x01  0x028  6      1066548091  ---  Logical Sectors Read
+0x01  0x030  6        79341359  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

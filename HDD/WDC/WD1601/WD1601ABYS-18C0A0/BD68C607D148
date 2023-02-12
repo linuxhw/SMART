@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sun Sep 27 22:32:19 2020 PDT
+Local Time is:    Tue Oct 20 17:28:04 2020 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -67,14 +67,14 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   156   151   021    -    3200
-  4 Start_Stop_Count        -O--CK   100   100   000    -    887
+  3 Spin_Up_Time            PO----   155   151   021    -    3216
+  4 Start_Stop_Count        -O--CK   100   100   000    -    888
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR--   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   033   033   000    -    48950
+  9 Power_On_Hours          -O--CK   033   033   000    -    49496
  10 Spin_Retry_Count        -O--C-   100   100   000    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    878
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    879
 194 Temperature_Celsius     -O---K   108   099   000    -    35
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    1
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 222 (device log contains only the most recent 24 errors)
+Device Error Count: 225 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,6 +124,57 @@ Device Error Count: 222 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 225 [8] occurred at disk power-on lifetime: 49427 hours (2059 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 60 a0 00 40 00  Error: UNC at LBA = 0x0060a000 = 6332416
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 10 00 00 00 00 60 a0 00 40 00     04:11:04.201  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 90 00 40 00     04:11:04.176  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 80 00 40 00     04:11:04.150  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 70 00 40 00     04:11:04.124  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 60 00 40 00     04:11:04.099  READ VERIFY SECTOR(S) EXT
+
+Error 224 [7] occurred at disk power-on lifetime: 49267 hours (2052 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 60 a0 00 40 00  Error: UNC at LBA = 0x0060a000 = 6332416
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 10 00 00 00 00 60 a0 00 40 00 19d+15:19:15.559  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 90 00 40 00 19d+15:19:15.534  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 80 00 40 00 19d+15:19:15.508  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 70 00 40 00 19d+15:19:15.482  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 60 00 40 00 19d+15:19:15.456  READ VERIFY SECTOR(S) EXT
+
+Error 223 [6] occurred at disk power-on lifetime: 49099 hours (2045 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 60 a0 00 40 00  Error: UNC at LBA = 0x0060a000 = 6332416
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  42 00 00 10 00 00 00 00 60 a0 00 40 00 12d+15:28:15.116  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 90 00 40 00 12d+15:28:15.092  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 80 00 40 00 12d+15:28:15.066  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 70 00 40 00 12d+15:28:15.040  READ VERIFY SECTOR(S) EXT
+  42 00 00 10 00 00 00 00 60 60 00 40 00 12d+15:28:15.014  READ VERIFY SECTOR(S) EXT
 
 Error 222 [5] occurred at disk power-on lifetime: 48938 hours (2039 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -210,77 +261,26 @@ Error 218 [1] occurred at disk power-on lifetime: 48287 hours (2011 days + 23 ho
   42 00 00 10 00 00 00 00 60 70 00 40 00 21d+05:08:47.703  READ VERIFY SECTOR(S) EXT
   42 00 00 10 00 00 00 00 60 60 00 40 00 21d+05:08:47.678  READ VERIFY SECTOR(S) EXT
 
-Error 217 [0] occurred at disk power-on lifetime: 48119 hours (2004 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 60 a0 00 40 00  Error: UNC at LBA = 0x0060a000 = 6332416
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 10 00 00 00 00 60 a0 00 40 00 14d+05:18:09.672  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 90 00 40 00 14d+05:18:09.647  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 80 00 40 00 14d+05:18:09.621  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 70 00 40 00 14d+05:18:09.595  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 60 00 40 00 14d+05:18:09.569  READ VERIFY SECTOR(S) EXT
-
-Error 216 [23] occurred at disk power-on lifetime: 47951 hours (1997 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 60 a0 00 40 00  Error: UNC at LBA = 0x0060a000 = 6332416
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 10 00 00 00 00 60 a0 00 40 00  7d+05:27:23.596  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 90 00 40 00  7d+05:27:23.571  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 80 00 40 00  7d+05:27:23.545  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 70 00 40 00  7d+05:27:23.520  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 60 00 40 00  7d+05:27:23.494  READ VERIFY SECTOR(S) EXT
-
-Error 215 [22] occurred at disk power-on lifetime: 47766 hours (1990 days + 6 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 60 a0 00 40 00  Error: UNC at LBA = 0x0060a000 = 6332416
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 10 00 00 00 00 60 a0 00 40 00     22:08:58.100  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 90 00 40 00     22:08:58.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 80 00 40 00     22:08:58.049  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 70 00 40 00     22:08:58.023  READ VERIFY SECTOR(S) EXT
-  42 00 00 10 00 00 00 00 60 60 00 40 00     22:08:57.998  READ VERIFY SECTOR(S) EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: read failure       90%     48930         6334440
-# 2  Short offline       Completed: read failure       90%     48906         6334440
-# 3  Short offline       Completed: read failure       90%     48882         6334440
-# 4  Short offline       Completed: read failure       90%     48859         6334440
-# 5  Short offline       Completed: read failure       90%     48835         6334440
-# 6  Short offline       Completed: read failure       90%     48811         6334440
-# 7  Short offline       Completed: read failure       90%     48793         6334440
-# 8  Short offline       Completed: read failure       90%     48769         6334440
-# 9  Short offline       Completed: read failure       90%     48745         6334440
-#10  Extended offline    Completed: read failure       90%     48734         6334440
-#11  Short offline       Completed: read failure       90%     48723         6334440
-#12  Short offline       Completed: read failure       90%     48713         6334440
-#13  Short offline       Completed: read failure       90%     48704         6334440
-#14  Short offline       Completed: read failure       90%     48696         6334440
-#15  Short offline       Completed: read failure       10%     48687         6334440
-#16  Short offline       Completed: read failure       90%     48671         6334440
-#17  Short offline       Completed: read failure       90%     48647         6334440
-#18  Short offline       Completed: read failure       90%     48623         6334440
+# 1  Short offline       Completed: read failure       90%     49482         6334440
+# 2  Short offline       Completed: read failure       90%     49458         6334440
+# 3  Short offline       Completed: read failure       90%     49434         6334440
+# 4  Short offline       Completed: read failure       90%     49410         6334440
+# 5  Short offline       Completed: read failure       90%     49386         6334440
+# 6  Short offline       Completed: read failure       90%     49362         6334440
+# 7  Short offline       Completed: read failure       90%     49338         6334440
+# 8  Short offline       Completed: read failure       90%     49314         6334440
+# 9  Short offline       Completed: read failure       90%     49290         6334440
+#10  Short offline       Completed: read failure       90%     49266         6334440
+#11  Short offline       Completed: read failure       90%     49242         6334440
+#12  Short offline       Completed: read failure       90%     49218         6334440
+#13  Short offline       Completed: read failure       90%     49194         6334440
+#14  Short offline       Completed: read failure       90%     49170         6334440
+#15  Short offline       Completed: read failure       90%     49146         6334440
+#16  Short offline       Completed: read failure       90%     49122         6334440
+#17  Short offline       Completed: read failure       90%     49098         6334440
+#18  Extended offline    Completed: read failure       90%     49096         6334440
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -297,8 +297,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     23/37 Celsius
-Lifetime    Min/Max Temperature:     34/44 Celsius
+Power Cycle Min/Max Temperature:     33/39 Celsius
+Lifetime    Min/Max Temperature:      0/44 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 Write SCT Data Table failed: SMART WRITE LOG SECTOR may cause problems, try with -T permissive to force
@@ -320,8 +320,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4       554592  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4       260907  Vendor specific
 
 
 

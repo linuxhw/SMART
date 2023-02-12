@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.11-generic-2rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sat Jul 23 12:21:11 2022 +07
+Local Time is:    Sat Nov  5 15:55:58 2022 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    47
-  3 Spin_Up_Time            PO----   188   169   021    -    5575
-  4 Start_Stop_Count        -O--CK   088   088   000    -    12227
+  3 Spin_Up_Time            PO----   201   169   021    -    4908
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12504
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   070   070   000    -    22320
+  7 Seek_Error_Rate         -OSR--   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   069   069   000    -    23332
  10 Spin_Retry_Count        -O--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7630
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1207
-193 Load_Cycle_Count        -O--CK   196   196   000    -    12228
-194 Temperature_Celsius     -O---K   106   085   000    -    44
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7710
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1211
+193 Load_Cycle_Count        -O--CK   196   196   000    -    12505
+194 Temperature_Celsius     -O---K   100   085   000    -    50
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -254,11 +254,15 @@ Error 554 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     22152         -
-# 2  Extended offline    Aborted by host               90%     17565         -
-# 3  Short offline       Aborted by host               90%     12337         -
-# 4  Extended offline    Completed: read failure       50%      1721         67551402
-# 5  Conveyance offline  Completed: read failure       10%      1720         1053493
+# 1  Extended offline    Completed without error       00%     22859         -
+# 2  Extended offline    Completed without error       00%     22647         -
+# 3  Extended offline    Completed without error       00%     22519         -
+# 4  Extended offline    Completed without error       00%     22412         -
+# 5  Extended offline    Completed without error       00%     22152         -
+# 6  Extended offline    Aborted by host               90%     17565         -
+# 7  Short offline       Aborted by host               90%     12337         -
+# 8  Extended offline    Completed: read failure       50%      1721         67551402
+# 9  Conveyance offline  Completed: read failure       10%      1720         1053493
 2 of 2 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
@@ -275,9 +279,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     24/44 Celsius
-Lifetime    Min/Max Temperature:     44/65 Celsius
+Current Temperature:                    50 Celsius
+Power Cycle Min/Max Temperature:     25/56 Celsius
+Lifetime    Min/Max Temperature:     24/65 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -285,7 +289,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            1/85 Celsius
-Temperature History Size (Index):    128 (85)
+Temperature History Size (Index):    128 (88)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -304,8 +308,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         7519  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        12568  Vendor specific
 
 
 

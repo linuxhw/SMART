@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.5-300.fc35.x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.17-200.fc36.x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Travelstar 5K500.B
@@ -11,10 +11,10 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Sun Sep 19 11:55:09 2021 IST
+Local Time is:    Thu Aug 18 22:20:16 2022 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,7 +22,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,26 +65,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
-  3 Spin_Up_Time            POS---   204   204   033    -    1
-  4 Start_Stop_Count        -O--C-   093   093   000    -    11835
+  3 Spin_Up_Time            POS---   200   200   033    -    1
+  4 Start_Stop_Count        -O--C-   092   092   000    -    12954
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    3
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   065   065   000    -    15644
+  9 Power_On_Hours          -O--C-   063   063   000    -    16531
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    11403
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    12522
 160 Unknown_Attribute       -O--CK   100   100   000    -    0
-191 G-Sense_Error_Rate      -O-R--   100   100   000    -    1507533520896
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    141841465534
-193 Load_Cycle_Count        -O--C-   001   001   000    -    1076962
-194 Temperature_Celsius     -O----   157   157   000    -    35 (Min/Max 2/47)
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    1679332212736
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    180502593774
+193 Load_Cycle_Count        -O--C-   001   001   000    -    1106129
+194 Temperature_Celsius     -O----   141   141   000    -    39 (Min/Max 2/47)
 195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    2
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
-223 Load_Retry_Count        -O-R--   099   099   000    -    1
-254 Free_Fall_Sensor        -O--CK   056   056   000    -    4294978593
+223 Load_Retry_Count        -O-R--   100   100   000    -    0
+254 Free_Fall_Sensor        -O--CK   052   052   000    -    4294979712
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -129,8 +129,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     34/36 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     37/39 Celsius
 Lifetime    Min/Max Temperature:      2/47 Celsius
 Specified Max Operating Temperature:    30 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -140,7 +140,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (333)
+Temperature History Size (Index):    478 (81)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -155,8 +155,8 @@ ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0005  2            0  R_ERR response for non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Jun 12 15:48:17 2020 UTC
+Local Time is:    Fri Jun 12 18:02:19 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,7 +59,7 @@ SCT capabilities: 	       (0x3035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   118   105   051    -    58946
+  1 Raw_Read_Error_Rate     POSR-K   118   105   051    -    58949
   3 Spin_Up_Time            POS--K   253   170   021    -    950
   4 Start_Stop_Count        -O--CK   097   097   000    -    3696
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
@@ -69,8 +69,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    208
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    112
-193 Load_Cycle_Count        -O--CK   171   171   000    -    87272
-194 Temperature_Celsius     -O---K   117   091   000    -    33
+193 Load_Cycle_Count        -O--CK   171   171   000    -    87276
+194 Temperature_Celsius     -O---K   116   091   000    -    34
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   196   196   000    -    1463
 198 Offline_Uncorrectable   ----CK   196   196   000    -    1457
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 16728 (device log contains only the most recent 24 errors)
+Device Error Count: 16729 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,6 +119,23 @@ Device Error Count: 16728 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 16729 [16] occurred at disk power-on lifetime: 24702 hours (1029 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 00 74 0c 7d a0 40 00  Error: UNC at LBA = 0x740c7da0 = 1946975648
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 d8 00 80 00 00 74 0c 7e 18 40 08     00:14:17.811  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 74 0c 7e 10 40 08     00:14:17.811  READ FPDMA QUEUED
+  60 00 08 00 70 00 00 74 0c 7e 08 40 08     00:14:17.811  READ FPDMA QUEUED
+  60 00 08 00 68 00 00 74 0c 7e 00 40 08     00:14:17.811  READ FPDMA QUEUED
+  60 00 08 00 60 00 00 74 0c 7d f8 40 08     00:14:17.811  READ FPDMA QUEUED
 
 Error 16728 [15] occurred at disk power-on lifetime: 24702 hours (1029 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -239,23 +256,6 @@ Error 16722 [9] occurred at disk power-on lifetime: 24702 hours (1029 days + 6 h
   61 00 08 00 a8 00 00 73 c0 09 70 40 08     00:00:43.947  WRITE FPDMA QUEUED
   60 00 58 00 48 00 00 74 0c 7c e8 40 08     00:00:43.945  READ FPDMA QUEUED
 
-Error 16721 [8] occurred at disk power-on lifetime: 24702 hours (1029 days + 6 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 01 00 00 74 0c 76 e0 40 00  Error: UNC at LBA = 0x740c76e0 = 1946973920
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 68 00 58 00 00 74 0c 76 d8 40 08     00:00:40.136  READ FPDMA QUEUED
-  60 00 50 00 50 00 00 74 0c 76 60 40 08     00:00:40.136  READ FPDMA QUEUED
-  60 00 50 00 48 00 00 74 0c 75 e8 40 08     00:00:40.123  READ FPDMA QUEUED
-  60 00 80 00 40 00 00 74 0c 75 40 40 08     00:00:40.123  READ FPDMA QUEUED
-  60 01 00 00 38 00 00 74 0c 74 40 40 08     00:00:40.108  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -283,7 +283,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (376)
+Temperature History Size (Index):    478 (388)
 
 SCT Error Recovery Control command not supported
 
@@ -297,10 +297,10 @@ ID      Size     Value  Description
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2            0  R_ERR response for non-data FIS
-0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0005  2           10  R_ERR response for non-data FIS
+0x0006  2           10  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4          694  Vendor specific
+0x8000  4         1534  Vendor specific
 

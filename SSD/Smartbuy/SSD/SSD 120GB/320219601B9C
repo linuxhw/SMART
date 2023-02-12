@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Apr  2 21:02:08 2021 MSK
+Local Time is:    Mon Aug  2 16:41:52 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    1769
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    423
+  9 Power_On_Hours          -O--C-   100   100   000    -    2372
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    591
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
 170 Bad_Blk_Ct_Erl/Lat      PO----   100   100   000    -    2/43
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    50 (Average 41)
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    85
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    71 (Average 61)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    92
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 CRC_Error_Count         PO-R--   100   100   050    -    0
-231 SSD_Life_Left           PO--C-   100   100   000    -    98
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    4607
+231 SSD_Life_Left           PO--C-   100   100   000    -    97
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    6667
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,7 +98,8 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      2351         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -117,10 +118,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             423  ---  Lifetime Power-On Resets
-0x01  0x010  4            1769  ---  Power-on Hours
-0x01  0x018  6      9662158282  ---  Logical Sectors Written
-0x01  0x028  6      6616044008  ---  Logical Sectors Read
+0x01  0x008  4             591  ---  Lifetime Power-On Resets
+0x01  0x010  4            2372  ---  Power-on Hours
+0x01  0x018  6     13981743652  ---  Logical Sectors Written
+0x01  0x028  6      9223999295  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -128,10 +129,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6009  ---  Number of Hardware Resets
+0x06  0x008  4            8022  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

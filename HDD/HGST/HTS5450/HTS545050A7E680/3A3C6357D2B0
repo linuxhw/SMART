@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Mon Sep 12 15:28:21 2022 EEST
+Local Time is:    Mon Sep 12 16:07:49 2022 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -27,14 +27,12 @@ Write SCT (Get) Feature Control Command failed: Read of ATA output registers not
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
-SMART Status command failed: Connection timed out
 SMART overall-health self-assessment test result: PASSED
-Warning: This result is based on an Attribute check.
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
+Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
-					Auto Offline Data Collection: Disabled.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
@@ -66,25 +64,25 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   ---    -    0
-  2 Throughput_Performance  P-S---   100   100   ---    -    0
-  3 Spin_Up_Time            POS---   253   253   ---    -    1
-  4 Start_Stop_Count        -O--C-   072   072   ---    -    45411
-  5 Reallocated_Sector_Ct   PO--CK   100   100   ---    -    0
-  7 Seek_Error_Rate         PO-R--   100   100   ---    -    0
-  8 Seek_Time_Performance   P-S---   100   100   ---    -    0
-  9 Power_On_Hours          -O--C-   079   079   ---    -    9211
- 10 Spin_Retry_Count        PO--C-   100   100   ---    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   ---    -    3682
-191 G-Sense_Error_Rate      -O-R--   100   100   ---    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   ---    -    107
-193 Load_Cycle_Count        -O--C-   053   053   ---    -    476314
-194 Temperature_Celsius     -O----   253   253   ---    -    21 (Min/Max 8/47)
-196 Reallocated_Event_Count -O--CK   100   100   ---    -    0
-197 Current_Pending_Sector  -O---K   100   100   ---    -    8
-198 Offline_Uncorrectable   ---R--   100   100   ---    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   ---    -    0
-223 Load_Retry_Count        -O-R--   100   100   ---    -    0
+  1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
+  2 Throughput_Performance  P-S---   100   100   040    -    0
+  3 Spin_Up_Time            POS---   253   253   033    -    0
+  4 Start_Stop_Count        -O--C-   072   072   000    -    45419
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   100   100   040    -    0
+  9 Power_On_Hours          -O--C-   079   079   000    -    9212
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    3683
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    107
+193 Load_Cycle_Count        -O--C-   053   053   000    -    476324
+194 Temperature_Celsius     -O----   181   181   000    -    33 (Min/Max 8/47)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+197 Current_Pending_Sector  -O---K   100   100   000    -    8
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -95,20 +93,126 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
 Read GP Log Directory failed
 
-SMART Log Directory Version 0
+SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
 0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      1  Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xe0           SL  R/W      1  SCT Command/Status
+0xe1           SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log not supported
+SMART Error Log Version: 1
+ATA Error Count: 763 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 763 occurred at disk power-on lifetime: 9209 hours (383 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 a8 90 1d 01  Error: UNC at LBA = 0x011d90a8 = 18714792
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 08 80 12 31 27 40 00      00:02:05.056  READ FPDMA QUEUED
+  60 08 78 a0 02 9d 40 00      00:02:04.676  READ FPDMA QUEUED
+  60 40 70 52 fd 9c 40 00      00:02:04.657  READ FPDMA QUEUED
+  60 08 68 a8 90 1d 40 00      00:02:04.630  READ FPDMA QUEUED
+  60 03 60 54 0b 0a 40 00      00:02:04.624  READ FPDMA QUEUED
+
+Error 762 occurred at disk power-on lifetime: 9209 hours (383 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 a8 90 1d 01  Error: UNC at LBA = 0x011d90a8 = 18714792
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 08 18 20 a5 17 40 00      00:02:00.854  READ FPDMA QUEUED
+  60 08 10 5a 18 e4 40 00      00:02:00.854  READ FPDMA QUEUED
+  60 08 08 16 23 2b 40 00      00:02:00.853  READ FPDMA QUEUED
+  60 10 f8 48 cc 40 40 00      00:02:00.853  READ FPDMA QUEUED
+  60 08 f0 1a b3 3e 40 00      00:02:00.853  READ FPDMA QUEUED
+
+Error 761 occurred at disk power-on lifetime: 9209 hours (383 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 a8 90 1d 01  Error: UNC at LBA = 0x011d90a8 = 18714792
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 00 38 60 b6 4a 40 00      00:01:57.179  READ FPDMA QUEUED
+  60 00 30 60 b5 4a 40 00      00:01:57.179  READ FPDMA QUEUED
+  60 00 28 60 b4 4a 40 00      00:01:57.179  READ FPDMA QUEUED
+  60 00 20 60 b3 4a 40 00      00:01:57.179  READ FPDMA QUEUED
+  60 00 18 60 b2 4a 40 00      00:01:57.179  READ FPDMA QUEUED
+
+Error 760 occurred at disk power-on lifetime: 9209 hours (383 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 40 a8 90 1d 01  Error: UNC at LBA = 0x011d90a8 = 18714792
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 00 70 60 5a 4a 40 00      00:01:53.439  READ FPDMA QUEUED
+  60 00 60 60 59 4a 40 00      00:01:53.439  READ FPDMA QUEUED
+  60 00 58 60 58 4a 40 00      00:01:53.439  READ FPDMA QUEUED
+  60 00 50 60 57 4a 40 00      00:01:53.439  READ FPDMA QUEUED
+  60 00 48 60 56 4a 40 00      00:01:53.439  READ FPDMA QUEUED
+
+Error 759 occurred at disk power-on lifetime: 9209 hours (383 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 a8 90 1d 01  Error: UNC at LBA = 0x011d90a8 = 18714792
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  60 10 18 4e a7 ab 40 00      00:01:49.699  READ FPDMA QUEUED
+  60 3c 10 6a 22 2b 40 00      00:01:49.624  READ FPDMA QUEUED
+  60 40 08 da 8a 06 40 00      00:01:49.603  READ FPDMA QUEUED
+  60 a3 f8 00 45 d9 40 00      00:01:49.587  READ FPDMA QUEUED
+  60 00 f0 00 44 d9 40 00      00:01:49.587  READ FPDMA QUEUED
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
-SMART Self-test Log not supported
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
-SMART Selective self-test log data structure revision number 0
-Note: revision number not 1 implies that no selective self-test has ever been run
+SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
     2        0        0  Not_testing
@@ -119,9 +223,23 @@ Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
 
-Unknown SCT Status format version 0, should be 2 or 3.
+SCT Status Version:                  3
+SCT Version (vendor specific):       256 (0x0100)
+Device State:                        Active (0)
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     28/33 Celsius
+Lifetime    Min/Max Temperature:      8/47 Celsius
+Specified Max Operating Temperature:    31 Celsius
+Under/Over Temperature Limit Count:   0/0
 
-Unknown SCT Status format version 0, should be 2 or 3.
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        1 minute
+Min/Max recommended Temperature:      0/60 Celsius
+Min/Max Temperature Limit:           -40/65 Celsius
+Temperature History Size (Index):    128 (46)
+
+Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
 SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported

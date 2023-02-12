@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.1-arch1-1] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.0-arch2-1] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     Crucial/Micron BX/MX1/2/3/500, M5/600, 1100 SSDs
+Model Family:     Crucial/Micron Client SSDs
 Device Model:     CT120BX500SSD1
 Serial Number:    --
 LU WWN Device Id: 0 000000 ...
@@ -11,10 +11,11 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Aug 16 18:00:56 2020 MSK
+Local Time is:    Sun Feb 21 16:18:58 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,27 +63,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    1267
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    46
+  9 Power_On_Hours          -O--CK   100   100   050    -    5824
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    58
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    1
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    21
+173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    6
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    26
 180 Unused_Reserve_NAND_Blk -O--CK   100   100   050    -    100
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    0
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   060   045   050    Past 40 (Min/Max 31/55)
+194 Temperature_Celsius     -O---K   063   043   050    Past 37 (Min/Max 31/57)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
-197 Current_Pending_Sector  -O--CK   100   100   050    -    0
+197 Current_Pending_ECC_Cnt -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    100
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    158765322
-247 Host_Program_Page_Count -O--CK   100   100   050    -    4961416
-248 FTL_Program_Page_Count  -O--CK   100   100   050    -    516096
+246 Total_LBAs_Written      -O--CK   100   100   050    -    436778949
+247 Host_Program_Page_Count -O--CK   100   100   050    -    13649342
+248 FTL_Program_Page_Count  -O--CK   100   100   050    -    10543104
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,12 +121,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              46  ---  Lifetime Power-On Resets
-0x01  0x010  4            1267  ---  Power-on Hours
-0x01  0x018  6       158765322  ---  Logical Sectors Written
-0x01  0x020  6         2164094  ---  Number of Write Commands
-0x01  0x028  6       142029438  ---  Logical Sectors Read
-0x01  0x030  6         1818273  ---  Number of Read Commands
+0x01  0x008  4              58  ---  Lifetime Power-On Resets
+0x01  0x010  4            5824  ---  Power-on Hours
+0x01  0x018  6       436778949  ---  Logical Sectors Written
+0x01  0x020  6         8462460  ---  Number of Write Commands
+0x01  0x028  6       471403102  ---  Logical Sectors Read
+0x01  0x030  6         5590991  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -139,7 +140,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           19  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           23  Device-to-host register FISes sent due to a COMRESET
 
 
 

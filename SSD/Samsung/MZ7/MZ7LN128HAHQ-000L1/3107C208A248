@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Samsung based SSDs
 Device Model:     SAMSUNG MZ7LN128HAHQ-000L1
@@ -11,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Feb 11 13:14:43 2020 MSK
+Local Time is:    Mon Dec 21 13:37:33 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,24 +64,24 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    572
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1476
+  9 Power_On_Hours          -O--CK   099   099   000    -    1332
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2018
 170 Unused_Rsvd_Blk_Ct_Chip -O--CK   100   100   010    -    0
 171 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
 172 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
-173 Wear_Leveling_Count     PO--CK   099   099   005    -    8
-174 Unexpect_Power_Loss_Ct  -O--CK   099   099   000    -    52
+173 Wear_Leveling_Count     PO--CK   098   098   005    -    18
+174 Unexpect_Power_Loss_Ct  -O--CK   099   099   000    -    90
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    317
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O--CK   070   055   000    -    30 (Min/Max 16/45)
+194 Temperature_Celsius     -O--CK   069   055   000    -    31 (Min/Max 14/45)
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-233 Media_Wearout_Indicator PO--C-   099   099   001    -    16665366
+233 Media_Wearout_Indicator PO--C-   098   098   001    -    16525556
 234 Unknown_Samsung_Attr    -O--CK   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   099   099   000    -    1416
-242 Total_LBAs_Read         -O--CK   099   099   000    -    1734
-249 Unknown_Samsung_Attr    -O--CK   099   099   000    -    2213
+241 Total_LBAs_Written      -O--CK   099   099   000    -    2733
+242 Total_LBAs_Read         -O--CK   099   099   000    -    3584
+249 Unknown_Samsung_Attr    -O--CK   099   099   000    -    4671
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,8 +114,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               70%       537         -
-# 2  Short offline       Completed without error       00%         0         -
+# 1  Extended offline    Aborted by host               20%      1325         -
+# 2  Extended offline    Completed without error       00%      1299         -
+# 3  Short offline       Aborted by host               70%      1289         -
+# 4  Offline             Completed without error       00%      1265         -
+# 5  Extended offline    Completed without error       00%      1250         -
+# 6  Extended offline    Completed without error       00%      1207         -
+# 7  Extended offline    Completed without error       00%      1141         -
+# 8  Extended offline    Completed without error       00%      1081         -
+# 9  Extended offline    Aborted by host               70%      1078         -
+#10  Extended offline    Aborted by host               90%      1060         -
+#11  Extended offline    Completed without error       00%      1025         -
+#12  Offline             Completed without error       00%       985         -
+#13  Extended offline    Aborted by host               80%       984         -
+#14  Extended offline    Aborted by host               40%       970         -
+#15  Short offline       Aborted by host               10%       956         -
+#16  Extended offline    Aborted by host               90%       924         -
+#17  Extended offline    Aborted by host               60%       764         -
+#18  Short offline       Aborted by host               70%       537         -
+#19  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -128,10 +148,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     30/30 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:      ?/31 Celsius
 Lifetime    Min/Max Temperature:     22/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -140,7 +159,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (87)
+Temperature History Size (Index):    128 (112)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -149,26 +168,26 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1476  ---  Lifetime Power-On Resets
-0x01  0x010  4             572  ---  Power-on Hours
-0x01  0x018  6      2969744022  ---  Logical Sectors Written
+0x01  0x008  4            2018  ---  Lifetime Power-On Resets
+0x01  0x010  4            1332  ---  Power-on Hours
+0x01  0x018  6      5732368373  ---  Logical Sectors Written
 0x01  0x020  6               0  ---  Number of Write Commands
-0x01  0x028  6      3637657881  ---  Logical Sectors Read
+0x01  0x028  6      7517788994  ---  Logical Sectors Read
 0x01  0x030  6               0  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             500  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             584  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
+0x05  0x008  1              31  ---  Current Temperature
 0x05  0x020  1              43  ---  Highest Temperature
 0x05  0x028  1              22  ---  Lowest Temperature
 0x05  0x058  1              55  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           18171  ---  Number of Hardware Resets
+0x06  0x008  4           19534  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -193,4 +212,6 @@ ID      Size     Value  Description
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

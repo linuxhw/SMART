@@ -14,7 +14,7 @@ Form Factor:      M.2
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Dec 30 13:26:55 2021 CET
+Local Time is:    Thu Dec 30 14:26:37 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -64,7 +64,7 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   095   095   000    -    21267
+  9 Power_On_Hours          -O--CK   095   095   000    -    21268
  12 Power_Cycle_Count       -O--CK   098   098   000    -    1585
 170 Unused_Rsvd_Blk_Ct_Chip -O--CK   100   100   010    -    0
 171 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
@@ -75,12 +75,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    1802
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O--CK   064   032   000    -    36 (Min/Max 5/68)
+194 Temperature_Celsius     -O--CK   068   032   000    -    32 (Min/Max 5/68)
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 233 Media_Wearout_Indicator PO--C-   095   095   001    -    16064183
-241 Total_LBAs_Written      -O--CK   099   099   000    -    8753
-242 Total_LBAs_Read         -O--CK   099   099   000    -    17360
-249 Unknown_Samsung_Attr    -O--CK   099   099   000    -    8753
+241 Total_LBAs_Written      -O--CK   099   099   000    -    8766
+242 Total_LBAs_Read         -O--CK   099   099   000    -    17374
+249 Unknown_Samsung_Attr    -O--CK   099   099   000    -    8766
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -128,8 +128,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     30/35 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     30/45 Celsius
 Lifetime    Min/Max Temperature:     22/68 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -138,7 +138,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (57)
+Temperature History Size (Index):    128 (63)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -159,7 +159,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

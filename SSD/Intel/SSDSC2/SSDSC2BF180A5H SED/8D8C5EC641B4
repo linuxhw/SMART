@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [i686-linux-5.4.32-generic-2rosa-i586] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.71-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     INTEL SSDSC2BF180A5H SED
@@ -9,10 +9,11 @@ Firmware Version: LTRi
 User Capacity:    180,045,766,656 bytes [180 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
+TRIM Command:     Available, deterministic
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 (minor revision not indicated)
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Sun Nov  1 15:21:17 2020 CET
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Fri Mar 18 11:34:32 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,31 +62,31 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   120   100   002    -    0
+  1 Raw_Read_Error_Rate     POSR-K   104   100   002    -    8135251
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    39
-  9 Power_On_Hours          -O--CK   100   100   000    -    10028
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1315
+  9 Power_On_Hours          -O--CK   100   100   000    -    10823
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2909
 170 Unknown_Attribute       PO--CK   094   100   010    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-174 Unknown_Attribute       -O--CK   100   100   000    -    80
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    78
+174 Unknown_Attribute       -O--CK   100   100   000    -    91
+183 Runtime_Bad_Block       -O--CK   100   100   000    -    502
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    4
-190 Airflow_Temperature_Cel -O--CK   028   100   000    -    28 (Min/Max 13/52)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    80
+190 Airflow_Temperature_Cel -O--CK   022   100   000    -    22 (Min/Max 11/52)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    91
 196 Reallocated_Event_Count -O--CK   100   100   000    -    39
 198 Offline_Uncorrectable   -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    227520
+225 Unknown_SSD_Attribute   -O--CK   100   100   000    -    323978
 226 Unknown_SSD_Attribute   -O--CK   100   100   000    -    65535
-227 Unknown_SSD_Attribute   -O--CK   100   100   000    -    60
+227 Unknown_SSD_Attribute   -O--CK   100   100   000    -    56
 228 Power-off_Retract_Count -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   094   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   051   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    227520
-242 Total_LBAs_Read         -O--CK   100   100   000    -    355626
-249 Unknown_Attribute       -O--CK   100   100   000    -    127549
+233 Media_Wearout_Indicator -O--CK   049   100   000    -    0
+241 Total_LBAs_Written      -O--CK   100   100   000    -    323978
+242 Total_LBAs_Read         -O--CK   100   100   000    -    422922
+249 Unknown_Attribute       -O--CK   100   100   000    -    132777
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,9 +122,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     13/52 Celsius
-Lifetime    Min/Max Temperature:     13/74 Celsius
+Current Temperature:                    22 Celsius
+Power Cycle Min/Max Temperature:     11/52 Celsius
+Lifetime    Min/Max Temperature:     11/74 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     0 (Unknown, should be 2)
@@ -131,7 +132,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    0 (348)
+Temperature History Size (Index):    0 (171)
 Temperature History is empty
 
 SCT Error Recovery Control command not supported
@@ -148,8 +149,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

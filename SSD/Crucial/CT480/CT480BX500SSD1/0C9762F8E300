@@ -1,4 +1,8 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
+Model Family:     Crucial/Micron Client SSDs
 Device Model:     CT480BX500SSD1
 Serial Number:    --
 LU WWN Device Id: 0 000000 ...
@@ -7,17 +11,19 @@ User Capacity:    480,103,981,056 bytes [480 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Feb 24 09:40:02 2021 -03
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Fri Jul 29 14:04:02 2022 -04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -55,28 +61,28 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   000   100   000    -    0
-  5 Reallocated_Sector_Ct   -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    4107
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3985
-171 Unknown_Attribute       -O--CK   100   100   000    -    0
-172 Unknown_Attribute       -O--CK   000   000   000    -    0
-173 Unknown_Attribute       -O--CK   008   008   000    -    177
-174 Unknown_Attribute       -O--CK   100   100   000    -    83
-180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    223
-183 Runtime_Bad_Block       -O--CK   100   100   000    -    2
-184 End-to-End_Error        -O--CK   100   100   000    -    0
+  5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
+  9 Power_On_Hours          -O--CK   100   100   000    -    8717
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    6443
+171 Program_Fail_Count      -O--CK   100   100   000    -    0
+172 Erase_Fail_Count        -O--CK   000   000   000    -    0
+173 Ave_Block-Erase_Count   -O--CK   018   018   000    -    366
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    296
+180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    223
+183 SATA_Interfac_Downshift -O--CK   100   100   000    -    2
+184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   063   023   000    -    37 (Min/Max 1/77)
+194 Temperature_Celsius     -O---K   062   023   000    -    38 (Min/Max 3/77)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-197 Current_Pending_Sector  -O--CK   100   100   000    -    0
+197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    2
-202 Unknown_SSD_Attribute   ----CK   092   092   001    -    8
-206 Unknown_SSD_Attribute   -OSR--   000   000   000    -    0
-210 Unknown_Attribute       -O--CK   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    37325871414
-247 Unknown_Attribute       -O--CK   100   100   000    -    1166433481
-248 Unknown_Attribute       -O--CK   100   100   000    -    1119215200
+202 Percent_Lifetime_Remain ----CK   082   082   001    -    18
+206 Write_Error_Rate        -OSR--   000   000   000    -    0
+210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
+246 Total_LBAs_Written      -O--CK   100   100   000    -    71313529622
+247 Host_Program_Page_Count -O--CK   100   100   000    -    2228547800
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    3441315264
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -94,7 +100,7 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x24       GPL     R/O     88  Current Device Internal Status Data log
 0x25       GPL     R/O     32  Saved Device Internal Status Data log
@@ -122,19 +128,20 @@ Error 2 [1] log entry is empty
 Error 1 [0] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3019         -
-# 2  Short offline       Completed without error       00%      2994         -
-# 3  Short offline       Interrupted (host reset)      90%      2969         -
-# 4  Extended offline    Completed without error       00%      2967         -
-# 5  Short offline       Completed without error       00%      2945         -
-# 6  Short offline       Completed without error       00%      1503         -
-# 7  Short offline       Completed without error       00%      1491         -
-# 8  Short offline       Completed without error       00%      1484         -
-# 9  Short offline       Completed without error       00%      1471         -
-#10  Short offline       Interrupted (host reset)      90%      1461         -
-#11  Short offline       Completed without error       00%      1449         -
-#12  Short offline       Completed without error       00%      1445         -
-#13  Extended offline    Completed without error       00%      1444         -
+# 1  Short offline       Completed without error       00%      5807         -
+# 2  Short offline       Completed without error       00%      3019         -
+# 3  Short offline       Completed without error       00%      2994         -
+# 4  Short offline       Interrupted (host reset)      90%      2969         -
+# 5  Extended offline    Completed without error       00%      2967         -
+# 6  Short offline       Completed without error       00%      2945         -
+# 7  Short offline       Completed without error       00%      1503         -
+# 8  Short offline       Completed without error       00%      1491         -
+# 9  Short offline       Completed without error       00%      1484         -
+#10  Short offline       Completed without error       00%      1471         -
+#11  Short offline       Interrupted (host reset)      90%      1461         -
+#12  Short offline       Completed without error       00%      1449         -
+#13  Short offline       Completed without error       00%      1445         -
+#14  Extended offline    Completed without error       00%      1444         -
 
 Selective Self-tests/Logging not supported
 
@@ -143,22 +150,24 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3985  ---  Lifetime Power-On Resets
-0x01  0x010  4            4107  ---  Power-on Hours
-0x01  0x018  6      2966133046  ---  Logical Sectors Written
-0x01  0x020  6       331753609  ---  Number of Write Commands
-0x01  0x028  6      1162641437  ---  Logical Sectors Read
-0x01  0x030  6       177879611  ---  Number of Read Commands
+0x01  0x008  4            6443  ---  Lifetime Power-On Resets
+0x01  0x010  4            8717  ---  Power-on Hours
+0x01  0x018  6      2594052886  ---  Logical Sectors Written
+0x01  0x020  6       512412264  ---  Number of Write Commands
+0x01  0x028  6      2493893742  ---  Logical Sectors Read
+0x01  0x030  6       310933986  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              18  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 

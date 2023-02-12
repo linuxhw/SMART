@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-18-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.0-43-generic] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Blue (SATA)
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.03E01
 User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Tue Jan 25 18:56:40 2022 CST
+Local Time is:    Fri Sep 16 17:30:45 2022 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -63,19 +63,19 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   137   132   021    -    4108
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1899
+  3 Spin_Up_Time            POS--K   137   132   021    -    4125
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2360
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   071   071   000    -    21540
+  9 Power_On_Hours          -O--CK   071   071   000    -    21679
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1444
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    560
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1899
-194 Temperature_Celsius     -O---K   108   089   000    -    35
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1905
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    994
+193 Load_Cycle_Count        -O--CK   200   200   000    -    2360
+194 Temperature_Celsius     -O---K   103   089   000    -    40
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    0
+197 Current_Pending_Sector  -O--CK   200   200   000    -    1
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    1773
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
@@ -108,7 +108,72 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 3
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 21583 hours (899 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 03 41 00 c6 ec e3 00  Error: UNC 8 sectors at LBA = 0x34300c6ec = 14009026284
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 03 41 00 c6 e8 e3 08     00:03:44.827  READ DMA
+  ea 00 00 00 00 00 12 eb 00 a4 b7 e0 08     00:03:44.819  FLUSH CACHE EXT
+  35 00 00 00 08 00 12 eb 00 a4 b0 e0 08     00:03:44.819  WRITE DMA EXT
+  ea 00 00 00 00 00 12 eb 00 a4 af e0 08     00:03:44.786  FLUSH CACHE EXT
+  35 00 00 00 48 00 12 eb 00 a4 68 e0 08     00:03:44.783  WRITE DMA EXT
+
+Error 2 [1] occurred at disk power-on lifetime: 21583 hours (899 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 03 41 00 c6 ec e3 00  Error: UNC 8 sectors at LBA = 0x34300c6ec = 14009026284
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 03 41 00 c6 e8 e3 08     00:03:42.396  READ DMA
+  c8 00 00 00 08 00 03 41 00 c6 e0 e3 08     00:03:42.396  READ DMA
+  c8 00 00 00 08 00 03 41 00 c6 d8 e3 08     00:03:42.395  READ DMA
+  c8 00 00 00 08 00 03 41 00 c6 d0 e3 08     00:03:42.395  READ DMA
+  c8 00 00 00 08 00 03 41 00 c6 c8 e3 08     00:03:42.395  READ DMA
+
+Error 1 [0] occurred at disk power-on lifetime: 21583 hours (899 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 06 00 00 03 3c 00 c6 00 e0 00  Error: UNC 1536 sectors at LBA = 0x33c00c600 = 13891585536
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 06 00 00 03 3c 00 c6 00 e0 08     00:03:39.432  READ DMA EXT
+  25 00 00 0a 00 00 03 32 00 c6 00 e0 08     00:03:39.403  READ DMA EXT
+  ea 00 00 00 00 00 12 e7 00 a4 97 e0 08     00:03:39.390  FLUSH CACHE EXT
+  35 00 00 00 08 00 12 e7 00 a4 90 e0 08     00:03:39.390  WRITE DMA EXT
+  ea 00 00 00 00 00 12 e7 00 a4 8f e0 08     00:03:39.362  FLUSH CACHE EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -127,9 +192,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     27/35 Celsius
-Lifetime    Min/Max Temperature:     33/54 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     30/42 Celsius
+Lifetime    Min/Max Temperature:     39/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -137,7 +202,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (168)
+Temperature History Size (Index):    478 (321)
 
 SCT Error Recovery Control command not supported
 
@@ -154,8 +219,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         1124  Vendor specific
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         7025  Vendor specific
 
 
 

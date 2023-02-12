@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [i686-linux-4.9.0-279-antix.1-486-smp] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Travelstar 7K100
 Device Model:     HTS721060G9AT00
@@ -7,13 +10,14 @@ User Capacity:    60,011,642,880 bytes [60.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 3a
-Local Time is:    Fri Jan  1 18:51:12 2016 MSK
+Local Time is:    Mon Dec  6 10:22:57 2021 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -53,18 +57,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
-  3 Spin_Up_Time            POS---   100   100   033    -    2
-  4 Start_Stop_Count        -O--C-   100   100   000    -    5
+  3 Spin_Up_Time            POS---   191   191   033    -    2
+  4 Start_Stop_Count        -O--C-   100   100   000    -    42
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    1
+  9 Power_On_Hours          -O--C-   100   100   000    -    12
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    5
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    42
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    28442625
-193 Load_Cycle_Count        -O--C-   100   100   000    -    19
-194 Temperature_Celsius     -O----   137   137   000    -    40 (Min/Max 25/45)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    28442637
+193 Load_Cycle_Count        -O--C-   100   100   000    -    775
+194 Temperature_Celsius     -O----   177   177   000    -    31 (Min/Max 22/45)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    37
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -76,8 +80,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error aborted command
-Read GP Log Directory failed
+General Purpose Log Directory not supported
 
 SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
@@ -210,7 +213,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

@@ -9,7 +9,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Dec 17 20:10:53 2021 UTC
+Local Time is:    Wed Dec 29 13:46:44 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,11 +59,11 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--CK   099   099   000    -    4377
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1196
+  9 Power_On_Hours          -O--CK   099   099   000    -    4518
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1279
 175 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
-177 Wear_Leveling_Count     PO--C-   095   095   005    -    60
+177 Wear_Leveling_Count     PO--C-   094   094   005    -    61
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   100   100   010    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    2207
@@ -72,15 +72,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   075   065   000    -    25
+190 Airflow_Temperature_Cel -O--CK   075   063   000    -    25
 195 Hardware_ECC_Recovered  -O-RC-   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
-233 Media_Wearout_Indicator -O-RCK   200   199   000    -    0
+233 Media_Wearout_Indicator -O-RCK   199   199   000    -    5
 234 Unknown_Attribute       -O--C-   100   100   000    -    0
-235 Unknown_Attribute       -O--C-   099   099   000    -    34
-236 Unknown_Attribute       -O--C-   099   099   000    -    31
-237 Unknown_Attribute       -O--C-   099   099   000    -    60
+235 Unknown_Attribute       -O--C-   099   099   000    -    73
+236 Unknown_Attribute       -O--C-   099   099   000    -    36
+237 Unknown_Attribute       -O--C-   099   099   000    -    61
 238 Unknown_Attribute       -O--C-   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -112,12 +112,15 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         2         -
-# 2  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%         3         -
+# 2  Short offline       Completed without error       00%         2         -
 # 3  Short offline       Completed without error       00%         1         -
-# 4  Short offline       Completed without error       00%         6         -
-# 5  Short offline       Completed without error       00%         6         -
+# 4  Short offline       Completed without error       00%         2         -
+# 5  Short offline       Completed without error       00%         0         -
 # 6  Short offline       Completed without error       00%         1         -
+# 7  Short offline       Completed without error       00%         6         -
+# 8  Short offline       Completed without error       00%         6         -
+# 9  Short offline       Completed without error       00%         1         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -136,14 +139,14 @@ Device State:                        Active (0)
 Current Temperature:                    25 Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
-Under/Over Temperature Limit Count:   0/26193
+Under/Over Temperature Limit Count:   0/27048
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    128 (0)
+Temperature History Size (Index):    128 (9)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -163,8 +166,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

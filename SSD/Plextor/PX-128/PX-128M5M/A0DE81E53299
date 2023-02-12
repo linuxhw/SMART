@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.32-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Plextor M3/M5/M6 Series SSDs
 Device Model:     PLEXTOR PX-128M5M
@@ -5,19 +8,20 @@ Serial Number:    --
 LU WWN Device Id: 5 002303 ...
 Add. Product Id:  DM702070
 Firmware Version: 1.06
-User Capacity:    128 035 676 160 bytes [128 GB]
+User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed May 24 19:42:41 2017 +04
+Local Time is:    Thu Apr  8 19:06:33 2021 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -61,20 +65,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO----   100   100   070    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    1166
- 12 Power_Cycle_Count       -O----   100   100   000    -    3171
-177 Wear_Leveling_Count     PO----   100   100   000    -    90350
+  9 Power_On_Hours          -O----   100   100   000    -    1568
+ 12 Power_Cycle_Count       -O----   100   100   000    -    4688
+177 Wear_Leveling_Count     PO----   100   100   000    -    151052
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 181 Program_Fail_Cnt_Total  PO----   100   100   000    -    0
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    0
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-192 Power-Off_Retract_Count PO----   100   100   000    -    290
+192 Power-Off_Retract_Count PO----   100   100   000    -    409
 196 Reallocated_Event_Count PO----   100   100   000    -    0
 198 Offline_Uncorrectable   PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    0
-241 Host_Writes_32MiB       PO----   100   100   000    -    273047
-242 Host_Reads_32MiB        PO----   100   100   000    -    325338
+241 Host_Writes_32MiB       PO----   100   100   000    -    419362
+242 Host_Reads_32MiB        PO----   100   100   000    -    534575
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,7 +93,7 @@ Address    Access  R/W   Size  Description
 0x01       GPL,SL  R/O      1  Summary SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W      1  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -97,26 +101,26 @@ Address    Access  R/W   Size  Description
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Error Log Version: 0
+SMART Error Log Version: 1
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     60161         -
-# 2  Short offline       Completed without error       00%      3585         -
-# 3  Short offline       Completed without error       00%     47616         -
-# 4  Short offline       Completed without error       00%     41728         -
-# 5  Short offline       Completed without error       00%     33792         -
-# 6  Short offline       Completed without error       00%     22528         -
-# 7  Short offline       Completed without error       00%     12800         -
-# 8  Short offline       Completed without error       00%      6656         -
-# 9  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     24325         -
+# 2  Short offline       Completed without error       00%     60161         -
+# 3  Short offline       Completed without error       00%      3585         -
+# 4  Short offline       Completed without error       00%     47616         -
+# 5  Short offline       Completed without error       00%     41728         -
+# 6  Short offline       Completed without error       00%     33792         -
+# 7  Short offline       Completed without error       00%     22528         -
+# 8  Short offline       Completed without error       00%     12800         -
+# 9  Short offline       Completed without error       00%      6656         -
+#10  Short offline       Completed without error       00%         0         -
 
 Selective Self-tests/Logging not supported
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                     ? Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
@@ -131,10 +135,12 @@ Min/Max Temperature Limit:            ?/ ? Celsius
 Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
-           Read:      2 (0,2 seconds)
-          Write:      2 (0,2 seconds)
+           Read:      2 (0.2 seconds)
+          Write:      2 (0.2 seconds)
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -147,7 +153,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           29  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

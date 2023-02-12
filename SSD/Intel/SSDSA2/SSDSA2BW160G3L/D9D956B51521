@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-7-amd64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.0-2-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Intel 320 Series SSDs
@@ -11,10 +11,10 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Aug 30 12:33:54 2021 MSK
+Local Time is:    Mon Jan 16 17:28:45 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -69,24 +69,24 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    29200
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    79
+  9 Power_On_Hours          -O--CK   100   100   000    -    40064
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    155
 170 Reserve_Block_Count     PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    106
-183 SATA_Downshift_Count    ----CK   100   100   000    -    0
+183 SATA_Downshift_Count    ----CK   100   100   000    -    2
 184 End-to-End_Error        -O--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    31
-199 CRC_Error_Count         ----CK   100   100   000    -    1
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    275007
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    1814
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    73
-228 Workload_Minutes        -O--CK   100   100   000    -    1752001
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    66
+199 CRC_Error_Count         ----CK   100   100   000    -    2
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    371166
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    2368
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    68
+228 Workload_Minutes        -O--CK   100   100   000    -    2403830
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   099   099   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    275007
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    742250
+233 Media_Wearout_Indicator -O--CK   098   098   000    -    0
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    371166
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    807768
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,21 +132,21 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              79  ---  Lifetime Power-On Resets
-0x01  0x010  4           29200  ---  Power-on Hours
-0x01  0x018  6     18022865228  ---  Logical Sectors Written
-0x01  0x020  6       473723928  ---  Number of Write Commands
-0x01  0x028  6     48644135055  ---  Logical Sectors Read
-0x01  0x030  6       603849016  ---  Number of Read Commands
+0x01  0x008  4             155  ---  Lifetime Power-On Resets
+0x01  0x010  4           40064  ---  Power-on Hours
+0x01  0x018  6     24324794085  ---  Logical Sectors Written
+0x01  0x020  6       625166492  ---  Number of Write Commands
+0x01  0x028  6     52937889605  ---  Logical Sectors Read
+0x01  0x030  6       684929269  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               8  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               9  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             610  ---  Number of Hardware Resets
-0x06  0x010  4          120279  ---  Number of ASR Events
-0x06  0x018  4               1  ---  Number of Interface CRC Errors
+0x06  0x008  4             945  ---  Number of Hardware Resets
+0x06  0x010  4          120325  ---  Number of ASR Events
+0x06  0x018  4               2  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -159,8 +159,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-11-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint M7E (AF)
 Device Model:     SAMSUNG HM321HI
@@ -11,11 +14,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Feb 16 22:12:52 2019 MSK
+Local Time is:    Mon Jan 31 16:33:06 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -26,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -62,26 +65,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    43
   2 Throughput_Performance  -OS--K   056   056   000    -    4516
-  3 Spin_Up_Time            PO---K   089   084   025    -    3406
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7993
+  3 Spin_Up_Time            PO---K   089   083   025    -    3410
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9298
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    7725
+  9 Power_On_Hours          -O--CK   100   100   000    -    9007
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   092   092   000    -    8404
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6655
-191 G-Sense_Error_Rate      -O---K   079   079   000    -    213515
+ 11 Calibration_Retry_Count -O--CK   090   090   000    -    10509
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7886
+191 G-Sense_Error_Rate      -O---K   079   079   000    -    213607
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   052   000    -    29 (Min/Max 8/49)
+194 Temperature_Celsius     -O----   064   052   000    -    31 (Min/Max 8/49)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    8339
-223 Load_Retry_Count        -O--CK   092   092   000    -    8404
-225 Load_Cycle_Count        -O--CK   086   086   000    -    149602
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    1
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    8901
+223 Load_Retry_Count        -O--CK   090   090   000    -    10509
+225 Load_Cycle_Count        -O--CK   084   084   000    -    169750
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 22 (device log contains only the most recent 8 errors)
+Device Error Count: 29 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,6 +125,125 @@ Device Error Count: 22 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 29 [4] occurred at disk power-on lifetime: 8697 hours (362 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 09 08 00 00 01 19 63 c8 e0 00  Error: ICRC, ABRT 2312 sectors at LBA = 0x011963c8 = 18441160
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 0a 00 00 00 01 19 62 d0 e0 08     00:00:01.110  WRITE DMA EXT
+  35 00 00 0a 00 00 00 01 19 58 d0 e0 08     00:00:01.110  WRITE DMA EXT
+  35 00 00 0a 00 00 00 01 19 4e d0 e0 08     00:00:01.110  WRITE DMA EXT
+  ca 00 00 00 18 00 00 00 66 cb 10 e0 08     00:00:01.110  WRITE DMA
+  35 00 00 07 38 00 00 01 19 47 98 e0 08     00:00:01.110  WRITE DMA EXT
+
+Error 28 [3] occurred at disk power-on lifetime: 8327 hours (346 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 25 43 15 81 e0 00  Error: IDNF 1 sectors at LBA = 0x25431581 = 625153409
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:13.335  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:13.335  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:13.335  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:13.335  NOP [Abort queued commands]
+
+Error 27 [2] occurred at disk power-on lifetime: 8327 hours (346 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 25 43 15 81 e0 00  Error: IDNF 1 sectors at LBA = 0x25431581 = 625153409
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  25 00 00 00 01 00 00 24 c8 e0 07 e0 08     00:00:13.335  READ DMA EXT
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:13.335  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:13.335  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 26 [1] occurred at disk power-on lifetime: 8327 hours (346 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 25 43 15 81 e0 00  Error: IDNF 1 sectors at LBA = 0x25431581 = 625153409
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:13.335  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:13.335  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:13.335  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:13.335  NOP [Abort queued commands]
+
+Error 25 [0] occurred at disk power-on lifetime: 8327 hours (346 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 25 43 15 81 e0 00  Error: IDNF 1 sectors at LBA = 0x25431581 = 625153409
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  25 00 00 00 01 00 00 24 c8 df fe e0 08     00:00:13.335  READ DMA EXT
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:13.335  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:13.335  INITIALIZE DEVICE PARAMETERS [OBS-6]
+
+Error 24 [7] occurred at disk power-on lifetime: 8327 hours (346 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 25 43 15 81 e0 00  Error: IDNF 1 sectors at LBA = 0x25431581 = 625153409
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  c6 00 00 00 10 00 00 00 00 00 00 e0 08     00:00:13.335  SET MULTIPLE MODE
+  91 00 00 00 3f 00 00 00 00 00 00 ef 08     00:00:13.335  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:13.335  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 01 40 08     00:00:13.335  NOP [Abort queued commands]
+
+Error 23 [6] occurred at disk power-on lifetime: 8327 hours (346 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 01 00 00 25 43 15 81 e0 00  Error: IDNF 1 sectors at LBA = 0x25431581 = 625153409
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 25 43 15 81 e0 08     00:00:13.335  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 02 e0 08     00:00:13.335  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 08     00:00:13.335  READ DMA EXT
+  25 00 00 00 01 00 00 00 fb 03 ff e0 08     00:00:13.333  READ DMA EXT
+  25 00 00 00 01 00 00 24 c8 df fe e0 08     00:00:13.333  READ DMA EXT
 
 Error 22 [5] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -139,125 +261,6 @@ Error 22 [5] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
   00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.197  NOP [Abort queued commands]
   35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.197  WRITE DMA EXT
   35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.197  WRITE DMA EXT
-
-Error 21 [4] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 25 42 fa 31 e0 00  Error: IDNF 1 sectors at LBA = 0x2542fa31 = 625146417
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.197  WRITE DMA EXT
-  35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.197  WRITE DMA EXT
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.197  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.197  NOP [Abort queued commands]
-  35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.196  WRITE DMA EXT
-
-Error 20 [3] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 25 42 fa 31 e0 00  Error: IDNF 1 sectors at LBA = 0x2542fa31 = 625146417
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.197  WRITE DMA EXT
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.197  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.197  NOP [Abort queued commands]
-  35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.196  WRITE DMA EXT
-  25 00 00 00 01 00 00 08 c2 db 2d e0 00     00:00:03.196  READ DMA EXT
-
-Error 19 [2] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 25 42 fa 31 e0 00  Error: IDNF 1 sectors at LBA = 0x2542fa31 = 625146417
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 01 00 00 25 42 fa 31 e0 00     00:00:03.196  WRITE DMA EXT
-  25 00 00 00 01 00 00 08 c2 db 2d e0 00     00:00:03.196  READ DMA EXT
-  35 00 00 00 01 00 00 08 c2 db 2d e0 00     00:00:03.196  WRITE DMA EXT
-  25 00 00 00 01 00 00 08 c2 db 2d e0 00     00:00:03.196  READ DMA EXT
-  35 00 00 00 08 00 00 09 22 db 25 e0 00     00:00:03.196  WRITE DMA EXT
-
-Error 18 [1] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 25 42 fa 14 e0 00  Error: IDNF 1 sectors at LBA = 0x2542fa14 = 625146388
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 01 00 00 25 42 fa 14 e0 00     00:00:03.181  WRITE DMA EXT
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.181  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.181  NOP [Abort queued commands]
-  35 00 00 00 01 00 00 25 42 fa 14 e0 00     00:00:03.181  WRITE DMA EXT
-  35 00 00 00 01 00 00 25 42 fa 13 e0 00     00:00:03.181  WRITE DMA EXT
-
-Error 17 [0] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 25 42 fa 14 e0 00  Error: IDNF 1 sectors at LBA = 0x2542fa14 = 625146388
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 01 00 00 25 42 fa 14 e0 00     00:00:03.181  WRITE DMA EXT
-  35 00 00 00 01 00 00 25 42 fa 13 e0 00     00:00:03.181  WRITE DMA EXT
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.181  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.181  NOP [Abort queued commands]
-  35 00 00 00 01 00 00 25 42 fa 13 e0 00     00:00:03.180  WRITE DMA EXT
-
-Error 16 [7] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 25 42 fa 13 e0 00  Error: IDNF 1 sectors at LBA = 0x2542fa13 = 625146387
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 01 00 00 25 42 fa 13 e0 00     00:00:03.181  WRITE DMA EXT
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.181  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.181  NOP [Abort queued commands]
-  35 00 00 00 01 00 00 25 42 fa 13 e0 00     00:00:03.180  WRITE DMA EXT
-  35 00 00 00 01 00 00 25 42 fa 12 e0 00     00:00:03.180  WRITE DMA EXT
-
-Error 15 [6] occurred at disk power-on lifetime: 90 hours (3 days + 18 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 01 00 00 25 42 fa 13 e0 00  Error: IDNF 1 sectors at LBA = 0x2542fa13 = 625146387
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 00 01 00 00 25 42 fa 13 e0 00     00:00:03.180  WRITE DMA EXT
-  35 00 00 00 01 00 00 25 42 fa 12 e0 00     00:00:03.180  WRITE DMA EXT
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.180  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:03.180  NOP [Abort queued commands]
-  35 00 00 00 01 00 00 25 42 fa 12 e0 00     00:00:03.180  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -278,11 +281,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     22/29 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     21/31 Celsius
 Lifetime    Min/Max Temperature:      8/61 Celsius
+Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -290,7 +293,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (87)
+Temperature History Size (Index):    128 (89)
 
 SCT Error Recovery Control:
            Read: Disabled

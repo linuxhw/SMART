@@ -1,31 +1,36 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.5-desktop-1omv4090] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Scorpio Blue Serial ATA
 Device Model:     WDC WD5000BEVT-22A0RT0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01A01
-User Capacity:    500 107 862 016 bytes [500 GB]
+User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jul  5 01:33:00 2017 MSK
+Local Time is:    Tue Sep  6 20:15:25 2022 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM level is:     96 (intermediate level with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -59,24 +64,24 @@ SCT capabilities: 	       (0x7037)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    5
-  3 Spin_Up_Time            POS--K   187   153   021    -    1608
-  4 Start_Stop_Count        -O--CK   001   001   000    -    236696
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    873
+  3 Spin_Up_Time            POS--K   165   150   021    -    2708
+  4 Start_Stop_Count        -O--CK   001   001   000    -    311507
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   074   074   000    -    19567
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   041   041   000    -    43225
  10 Spin_Retry_Count        -O--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7236
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    842
-192 Power-Off_Retract_Count -O--CK   197   197   000    -    2345
-193 Load_Cycle_Count        -O--CK   001   001   000    -    3227922
-194 Temperature_Celsius     -O---K   113   091   000    -    34
+ 12 Power_Cycle_Count       -O--CK   087   087   000    -    13043
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    2022
+192 Power-Off_Retract_Count -O--CK   194   194   000    -    5017
+193 Load_Cycle_Count        -O--CK   001   001   000    -    5261996
+194 Temperature_Celsius     -O---K   109   091   000    -    38
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    0
-198 Offline_Uncorrectable   ----CK   100   253   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    405
-200 Multi_Zone_Error_Rate   ---R--   100   253   051    -    0
+197 Current_Pending_Sector  -O--CK   200   198   000    -    0
+198 Offline_Uncorrectable   ----CK   200   199   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    1716
+200 Multi_Zone_Error_Rate   ---R--   200   036   051    Past 13
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -94,7 +99,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
@@ -106,7 +111,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 26 (device log contains only the most recent 24 errors)
+Device Error Count: 230 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,146 +127,146 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 26 [1] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 230 [13] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:46.463  READ DMA EXT
-  35 00 00 00 08 00 00 01 88 0a 18 e0 00     00:01:46.463  WRITE DMA EXT
-  35 00 00 00 30 00 00 01 87 64 e8 e0 00     00:01:46.462  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 87 63 e8 e0 00     00:01:46.462  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 87 62 e8 e0 00     00:01:46.461  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:20.487  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:20.485  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:20.272  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:20.270  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:20.063  SMART WRITE LOG
 
-Error 25 [0] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 229 [12] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:44.122  READ DMA EXT
-  35 00 00 00 08 00 00 01 88 09 f8 e0 00     00:01:44.122  WRITE DMA EXT
-  35 00 00 00 30 00 00 01 87 35 70 e0 00     00:01:44.121  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 87 34 70 e0 00     00:01:44.121  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 87 33 70 e0 00     00:01:44.120  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:20.272  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:20.270  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:20.063  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:20.061  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.848  SMART WRITE LOG
 
-Error 24 [23] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 228 [11] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:41.747  READ DMA EXT
-  35 00 00 00 08 00 00 01 88 09 e8 e0 00     00:01:41.747  WRITE DMA EXT
-  35 00 00 00 30 00 00 01 87 2b e0 e0 00     00:01:41.747  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 87 2a e0 e0 00     00:01:41.746  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 87 29 e0 e0 00     00:01:41.746  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:20.063  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:20.061  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.848  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.846  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.616  SMART WRITE LOG
 
-Error 23 [22] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 227 [10] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:39.384  READ DMA EXT
-  35 00 00 00 08 00 00 01 88 09 c8 e0 00     00:01:39.383  WRITE DMA EXT
-  25 00 00 00 80 00 00 01 1f d6 40 e0 00     00:01:39.367  READ DMA EXT
-  25 00 00 00 20 00 00 00 bc f4 16 e0 00     00:01:39.367  READ DMA EXT
-  35 00 00 00 08 00 00 00 6b 79 a8 e0 00     00:01:39.366  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.848  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.846  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.616  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.614  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.392  SMART WRITE LOG
 
-Error 22 [21] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 226 [9] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:36.899  READ DMA EXT
-  35 00 00 01 00 00 00 01 8d 36 f0 e0 00     00:01:36.898  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 8d 35 f0 e0 00     00:01:36.898  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 8d 34 f0 e0 00     00:01:36.897  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 8d 33 f0 e0 00     00:01:36.896  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.616  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.614  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.392  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.390  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.136  SMART WRITE LOG
 
-Error 21 [20] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 225 [8] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:34.264  READ DMA EXT
-  35 00 00 00 10 00 00 01 88 09 90 e0 00     00:01:34.264  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 86 32 e8 e0 00     00:01:34.264  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 86 31 e8 e0 00     00:01:34.263  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 86 30 e8 e0 00     00:01:34.262  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.392  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.390  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.136  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.134  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:18.850  SMART WRITE LOG
 
-Error 20 [19] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 224 [7] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:31.908  READ DMA EXT
-  35 00 00 00 08 00 00 01 87 6e 38 e0 00     00:01:31.907  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 85 6a 68 e0 00     00:01:31.907  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 85 69 68 e0 00     00:01:31.906  WRITE DMA EXT
-  35 00 00 01 00 00 00 01 85 68 68 e0 00     00:01:31.905  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:19.136  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:19.134  IDENTIFY DEVICE
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:18.850  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:18.847  IDENTIFY DEVICE
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 00     02:33:18.705  SMART READ DATA
 
-Error 19 [18] occurred at disk power-on lifetime: 17855 hours (743 days + 23 hours)
+Error 223 [6] occurred at disk power-on lifetime: 40746 hours (1697 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 01 8e 2f f0 e0 00  Error: UNC 8 sectors at LBA = 0x018e2ff0 = 26095600
+  04 -- 51 00 01 00 00 00 00 00 00 a0 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:29.580  READ DMA EXT
-  35 00 00 00 08 00 00 01 87 6e 28 e0 00     00:01:29.580  WRITE DMA EXT
-  25 00 00 00 08 00 00 01 8e 2f f0 e0 00     00:01:27.246  READ DMA EXT
-  25 00 00 00 08 00 00 01 8e 2f e8 e0 00     00:01:27.246  READ DMA EXT
-  35 00 00 00 08 00 00 01 87 6e 08 e0 00     00:01:27.246  WRITE DMA EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:18.850  SMART WRITE LOG
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:33:18.847  IDENTIFY DEVICE
+  b0 00 d0 00 00 00 00 00 c2 4f 00 a0 00     02:33:18.705  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 a0 00     02:33:18.573  SMART RETURN STATUS
+  b0 00 d6 00 01 00 00 00 c2 4f e0 a0 00     02:33:18.417  SMART WRITE LOG
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               90%       633         -
-# 2  Short offline       Aborted by host               90%       630         -
+# 1  Short offline       Completed without error       00%     38643         -
+# 2  Short offline       Aborted by host               90%       633         -
 # 3  Short offline       Aborted by host               90%       630         -
 # 4  Short offline       Aborted by host               90%       630         -
 # 5  Short offline       Aborted by host               90%       630         -
@@ -272,6 +277,7 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 #10  Short offline       Aborted by host               90%       630         -
 #11  Short offline       Aborted by host               90%       630         -
 #12  Short offline       Aborted by host               90%       630         -
+#13  Short offline       Aborted by host               90%       630         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -286,11 +292,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     31/36 Celsius
-Lifetime    Min/Max Temperature:     31/56 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     29/38 Celsius
+Lifetime    Min/Max Temperature:     24/56 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -301,11 +306,13 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (50)
+Temperature History Size (Index):    128 (47)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -316,7 +323,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        10847  Vendor specific
+0x8000  4        27013  Vendor specific
+
+
 

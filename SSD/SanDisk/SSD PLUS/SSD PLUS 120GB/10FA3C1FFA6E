@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Aug 15 08:08:52 2020 UTC
+Local Time is:    Sat Aug 15 10:17:10 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,10 +58,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
   9 Power_On_Hours          -O--CK   100   100   000    -    1134
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1108
-165 Total_Write/Erase_Count -O--CK   100   100   000    -    1889
+165 Total_Write/Erase_Count -O--CK   100   100   000    -    1892
 166 Min_W/E_Cycle           -O--CK   100   100   ---    -    35
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    0
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    38
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    39
 169 Total_Bad_Block         -O--CK   100   100   ---    -    111
 170 Unknown_Attribute       -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
@@ -71,13 +71,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   072   046   000    -    28 (Min/Max 0/46)
+194 Temperature_Celsius     -O---K   063   046   000    -    37 (Min/Max 0/46)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    1319 1792 1319
+230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    1320 1792 1320
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   005    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    4160
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    10514
-241 Total_Writes_GiB        ----CK   100   100   000    -    4319
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    4165
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    10529
+241 Total_Writes_GiB        ----CK   100   100   000    -    4326
 242 Total_Reads_GiB         ----CK   100   100   000    -    2272
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
@@ -126,11 +126,11 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            1108  ---  Lifetime Power-On Resets
 0x01  0x010  4            1134  ---  Power-on Hours
-0x01  0x018  6      9058885094  ---  Logical Sectors Written
-0x01  0x028  6      4764957938  ---  Logical Sectors Read
+0x01  0x018  6      9073685619  ---  Logical Sectors Written
+0x01  0x028  6      4766613767  ---  Logical Sectors Read
 0x01  0x038  6            1134  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
+0x05  0x008  1              37  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              44  ---  Highest Temperature
@@ -157,8 +157,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

@@ -13,15 +13,15 @@ Rotation Rate:    5900 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Aug 28 08:34:47 2022 BST
+Local Time is:    Sun Aug 28 09:25:25 2022 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     192 (intermediate level without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -29,20 +29,20 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
 data collection: 		(  623) seconds.
 Offline data collection
-capabilities: 			 (0x73) SMART execute Offline immediate.
+capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -65,21 +65,21 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    147262985
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    165377202
   3 Spin_Up_Time            PO----   097   097   000    -    0
   4 Start_Stop_Count        -O--CK   085   085   020    -    15892
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   077   060   030    -    50898131
-  9 Power_On_Hours          -O--CK   084   084   000    -    14640
+  7 Seek_Error_Rate         POSR--   077   060   030    -    50926054
+  9 Power_On_Hours          -O--CK   084   084   000    -    14641
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   093   093   020    -    7914
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   068   045   045    Past 32 (Min/Max 27/32)
-194 Temperature_Celsius     -O---K   032   055   000    -    32 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   057   044   000    -    147262985
+190 Airflow_Temperature_Cel -O---K   069   045   045    Past 31 (Min/Max 27/32)
+194 Temperature_Celsius     -O---K   031   055   000    -    31 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   056   044   000    -    165377202
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -145,7 +145,7 @@ Temperature Sampling Period:         2 minutes
 Temperature Logging Interval:        94 minutes
 Min/Max recommended Temperature:      1/61 Celsius
 Min/Max Temperature Limit:            2/60 Celsius
-Temperature History Size (Index):    128 (98)
+Temperature History Size (Index):    128 (99)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -157,7 +157,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

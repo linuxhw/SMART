@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-94.1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     SPK-SF12-M120
 Serial Number:    --
@@ -9,7 +12,7 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Oct 19 19:22:43 2018 MSK
+Local Time is:    Thu Jun 18 01:49:51 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -17,8 +20,9 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Unknown (0x100)
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Write SCT (Get) Feature Control Command failed: scsi error badly formed scsi parameters
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,11 +66,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   120   120   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   003    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11250 (209 168 0)
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1586
+  9 Power_On_Hours          -O--CK   100   100   000    -    13153 (10 230 0)
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1818
 171 Unknown_Attribute       -O--CK   000   000   000    -    1
 172 Unknown_Attribute       -O--CK   000   000   000    -    0
-174 Unknown_Attribute       ----CK   000   000   000    -    261
+174 Unknown_Attribute       ----CK   000   000   000    -    275
 177 Wear_Leveling_Count     ------   000   000   000    -    1
 181 Program_Fail_Cnt_Total  -O--CK   000   000   000    -    1
 182 Erase_Fail_Count_Total  -O--CK   000   000   000    -    0
@@ -78,7 +82,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 233 Media_Wearout_Indicator ------   000   000   000    -    896
 234 Unknown_Attribute       -O--CK   000   000   000    -    1088
 241 Total_LBAs_Written      -O--CK   000   000   000    -    1088
-242 Total_LBAs_Read         -O--CK   000   000   000    -    4672
+242 Total_LBAs_Read         -O--CK   000   000   000    -    4928
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,16 +110,18 @@ SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Self-test routine in progress 90%     10787         -
-# 2  Extended offline    Self-test routine in progress 90%      9807         -
-# 3  Extended offline    Self-test routine in progress 90%      9046         -
-# 4  Extended offline    Self-test routine in progress 90%      8835         -
-# 5  Extended offline    Self-test routine in progress 90%      8757         -
-# 6  Extended offline    Self-test routine in progress 90%      8514         -
-# 7  Extended offline    Self-test routine in progress 90%      8296         -
-# 8  Extended offline    Self-test routine in progress 90%      8212         -
-# 9  Extended offline    Self-test routine in progress 90%      8131         -
-#10  Extended offline    Self-test routine in progress 90%      7701         -
+# 1  Extended offline    Self-test routine in progress 90%     12469         -
+# 2  Extended offline    Self-test routine in progress 90%     12298         -
+# 3  Extended offline    Self-test routine in progress 90%     10787         -
+# 4  Extended offline    Self-test routine in progress 90%      9807         -
+# 5  Extended offline    Self-test routine in progress 90%      9046         -
+# 6  Extended offline    Self-test routine in progress 90%      8835         -
+# 7  Extended offline    Self-test routine in progress 90%      8757         -
+# 8  Extended offline    Self-test routine in progress 90%      8514         -
+# 9  Extended offline    Self-test routine in progress 90%      8296         -
+#10  Extended offline    Self-test routine in progress 90%      8212         -
+#11  Extended offline    Self-test routine in progress 90%      8131         -
+#12  Extended offline    Self-test routine in progress 90%      7701         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -130,19 +136,14 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                     ? Celsius
 Power Cycle Min/Max Temperature:     127/-127 Celsius
 Lifetime    Min/Max Temperature:     127/-127 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         1 minute
-Temperature Logging Interval:        1 minute
-Min/Max recommended Temperature:      ?/ ? Celsius
-Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    478 (1)
+Write SCT Data Table failed: scsi error badly formed scsi parameters
+Read SCT Temperature History failed
 
 SCT Error Recovery Control:
            Read:    256 (25.6 seconds)
@@ -155,5 +156,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           27  Device-to-host register FISes sent due to a COMRESET
 

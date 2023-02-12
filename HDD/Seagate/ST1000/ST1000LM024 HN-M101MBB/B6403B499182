@@ -1,5 +1,5 @@
-smartctl 6.6 2016-05-31 r4324 [x86_64-linux-4.9.0-13-amd64] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 6.6 2017-11-05 r4594 [x86_64-linux-4.19.0-13-amd64] (local build)
+Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Samsung SpinPoint M8 (AF)
@@ -14,13 +14,14 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Dec  1 11:33:56 2020 CET
+Local Time is:    Mon Dec  7 22:18:59 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
@@ -64,18 +65,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    35
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   086   083   025    -    4459
-  4 Start_Stop_Count        -O--CK   076   076   000    -    24561
+  3 Spin_Up_Time            PO---K   086   083   025    -    4457
+  4 Start_Stop_Count        -O--CK   075   075   000    -    25445
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    14060
+  9 Power_On_Hours          -O--CK   100   100   000    -    14164
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    32
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    542
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    546
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    7
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   052   000    -    34 (Min/Max 15/48)
+194 Temperature_Celsius     -O----   064   052   000    -    36 (Min/Max 15/48)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   100   000    -    0
@@ -83,7 +84,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    21
 223 Load_Retry_Count        -O--CK   100   100   000    -    32
-225 Load_Cycle_Count        -O--CK   071   071   000    -    297763
+225 Load_Cycle_Count        -O--CK   071   071   000    -    300899
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -102,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      2  Extended self-test log
 0x08       GPL     R/O      2  Power Conditions log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xc0-0xdf  GPL,SL  VS      16  Device vendor specific log
@@ -247,8 +248,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     26/37 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     29/39 Celsius
 Lifetime    Min/Max Temperature:     13/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -257,13 +258,15 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (26)
+Temperature History Size (Index):    128 (96)
 
 SCT Error Recovery Control:
            Read: Disabled
           Write: Disabled
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -301,4 +304,6 @@ ID      Size     Value  Description
 0x8e0f  4            0  Vendor specific
 0x8e10  4            0  Vendor specific
 0x8e11  4            0  Vendor specific
+
+
 

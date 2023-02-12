@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [i686-linux-4.15.0-desktop-122.124.1rosa-i586] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MK..59GSXP (AF)
 Device Model:     TOSHIBA MK3259GSXP
@@ -11,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Dec  3 05:25:01 2019 MSK
+Local Time is:    Sun Jul 25 12:54:08 2021 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -26,12 +29,11 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  24)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -62,27 +64,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1218
-  4 Start_Stop_Count        -O--CK   100   100   000    -    10058
-  5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    6336
+  3 Spin_Up_Time            POS--K   100   100   001    -    1207
+  4 Start_Stop_Count        -O--CK   100   100   000    -    11650
+  5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    6448
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   037   037   000    -    25513
+  9 Power_On_Hours          -O--CK   025   025   000    -    30091
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    8437
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    5098
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    102
-193 Load_Cycle_Count        -O--CK   087   087   000    -    136224
-194 Temperature_Celsius     -O---K   100   100   000    -    21 (Min/Max -7/58)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    204
-197 Current_Pending_Sector  -O--CK   100   100   000    -    0
-198 Offline_Uncorrectable   ----CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    10029
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    14351
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    295
+193 Load_Cycle_Count        -O--CK   064   064   000    -    369147
+194 Temperature_Celsius     -O---K   100   100   000    -    33 (Min/Max -7/58)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    211
+197 Current_Pending_Sector  -O--CK   100   100   000    -    8
+198 Offline_Uncorrectable   ----CK   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    1
 220 Disk_Shift              -O----   100   100   000    -    62
-222 Loaded_Hours            -O--CK   060   060   000    -    16134
+222 Loaded_Hours            -O--CK   053   053   000    -    19167
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    321
+226 Load-in_Time            -OS--K   100   100   000    -    233
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -261,7 +263,26 @@ Error 118 [117] occurred at disk power-on lifetime: 20852 hours (868 days + 20 h
   60 00 01 00 08 00 00 00 00 3e c1 40 00     00:12:55.227  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Aborted by host               80%     30079         -
+# 2  Extended offline    Aborted by host               60%     29975         -
+# 3  Extended offline    Completed: read failure       00%     29906         622670464
+# 4  Extended offline    Completed: read failure       00%     29811         622670464
+# 5  Extended offline    Completed: read failure       00%     29738         622670464
+# 6  Extended offline    Aborted by host               60%     29677         -
+# 7  Extended offline    Completed: read failure       00%     29626         622670464
+# 8  Extended offline    Aborted by host               40%     29583         -
+# 9  Extended offline    Completed: read failure       00%     29524         622670464
+#10  Extended offline    Aborted by host               60%     29449         -
+#11  Extended offline    Completed: read failure       00%     29414         622670464
+#12  Extended offline    Completed: read failure       00%     29383         622670464
+#13  Extended offline    Aborted by host               60%     29352         -
+#14  Extended offline    Aborted by host               60%     29270         -
+#15  Extended offline    Completed: read failure       00%     29224         622670464
+#16  Extended offline    Aborted by host               40%     29181         -
+#17  Extended offline    Aborted by host               20%     29144         -
+#18  Extended offline    Aborted by host               30%     29108         -
+#19  Extended offline    Aborted by host               50%     29059         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -276,19 +297,18 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    21 Celsius
-Power Cycle Min/Max Temperature:     17/21 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     25/33 Celsius
 Lifetime    Min/Max Temperature:     -7/58 Celsius
-Under/Over Temperature Limit Count:   6/214
+Under/Over Temperature Limit Count:   8/214
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (208)
+Temperature History Size (Index):    478 (359)
 
 SCT Error Recovery Control:
            Read: Disabled

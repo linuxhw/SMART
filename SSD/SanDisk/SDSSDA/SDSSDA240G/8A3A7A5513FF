@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-1-MANJARO] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.5-xanmod1-tt-1] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Oct 21 14:02:05 2021 CDT
+Local Time is:    Wed Dec  1 10:46:38 2021 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,28 +61,28 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   100   000    -    10784h+00m+00.000s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1442
-165 Unknown_Attribute       -O--CK   100   100   000    -    747359568359
-166 Unknown_Attribute       -O--CK   100   100   000    -    4
+  9 Power_On_Hours_and_Msec -O--CK   000   100   000    -    11504h+00m+00.000s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1475
+165 Unknown_Attribute       -O--CK   100   100   000    -    1314345387162
+166 Unknown_Attribute       -O--CK   100   100   000    -    7
 167 Unknown_Attribute       -O--CK   100   100   000    -    0
-168 Unknown_Attribute       -O--CK   100   100   000    -    12
+168 Unknown_Attribute       -O--CK   100   100   000    -    64
 169 Unknown_Attribute       -O--CK   100   100   000    -    0
 170 Reserve_Block_Count     -O--CK   100   100   000    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Unknown_SandForce_Attr  -O--CK   100   100   000    -    7
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    407
+173 Unknown_SandForce_Attr  -O--CK   100   100   000    -    23
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    416
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   067   047   000    -    33 (Min/Max 0/53)
-199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    53
-230 Life_Curve_Status       -O--CK   100   100   000    -    695791780002
+194 Temperature_Celsius     -O---K   071   041   000    -    29 (Min/Max 0/59)
+199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    54
+230 Life_Curve_Status       -O--CK   100   100   000    -    1683649200520
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 SandForce_Internal      -O--CK   100   100   000    -    1817
-234 SandForce_Internal      -O--CK   100   100   000    -    4512
-241 Lifetime_Writes_GiB     ----CK   253   253   000    -    3202
-242 Lifetime_Reads_GiB      ----CK   253   253   000    -    816
+233 SandForce_Internal      -O--CK   100   100   000    -    5651
+234 SandForce_Internal      -O--CK   100   100   000    -    10980
+241 Lifetime_Writes_GiB     ----CK   253   253   000    -    6367
+242 Lifetime_Reads_GiB      ----CK   253   253   000    -    11579
 244 Unknown_Attribute       -O--CK   000   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -108,42 +108,7 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 62 (device log contains only the most recent 4 errors)
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
-Powered_Up_Time is measured from power on, and printed as
-DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
-SS=sec, and sss=millisec. It "wraps" after 49.710 days.
-
-Error 62 [1] log entry is empty
-Error 61 [0] log entry is empty
-Error 60 [3] log entry is empty
-Error 59 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 00 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
-  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
-  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
-  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
-
+Invalid Error Log index = 0x0000 (reserved = 0x00)
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -154,12 +119,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1442  ---  Lifetime Power-On Resets
-0x01  0x010  4           10784  ---  Power-on Hours
-0x01  0x018  6      2421713070  ---  Logical Sectors Written
-0x01  0x020  6        72629422  ---  Number of Write Commands
-0x01  0x028  6      1711397550  ---  Logical Sectors Read
-0x01  0x030  6        16126632  ---  Number of Read Commands
+0x01  0x008  4            1475  ---  Lifetime Power-On Resets
+0x01  0x010  4           11504  ---  Power-on Hours
+0x01  0x018  6       469676915  ---  Logical Sectors Written
+0x01  0x020  6       130397154  ---  Number of Write Commands
+0x01  0x028  6      2808550881  ---  Logical Sectors Read
+0x01  0x030  6        67747692  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -173,7 +138,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 
 
 

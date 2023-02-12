@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.32-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     SAMSUNG SV0411N
 Serial Number:    --
@@ -6,7 +9,7 @@ User Capacity:    40,060,403,712 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Dec  2 21:48:41 2019 CET
+Local Time is:    Mon May 11 23:25:06 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -50,23 +53,23 @@ recommended polling time: 	 (  20) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    616
-  3 Spin_Up_Time            POS---   067   025   000    -    5760
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3236
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    830
+  3 Spin_Up_Time            POS---   078   025   000    -    4224
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3271
   5 Reallocated_Sector_Ct   PO--CK   092   092   010    -    19
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   086   086   000    -    11604
-  9 Power_On_Hours          -O--CK   099   099   000    -    1126886
+  9 Power_On_Hours          -O--CK   099   099   000    -    1131452
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1834
-194 Temperature_Celsius     -O---K   166   103   000    -    24
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    188993719
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1855
+194 Temperature_Celsius     -O---K   160   103   000    -    26
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    256235125
 196 Reallocated_Event_Count -O--C-   073   073   000    -    60
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   077   077   010    -    51
 199 UDMA_CRC_Error_Count    PO-R--   100   100   051    -    31
 200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
-201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    26
+201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    29
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -102,90 +105,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 occurred at disk power-on lifetime: 9300 hours (387 days + 12 hours)
+Error 65535 occurred at disk power-on lifetime: 9425 hours (392 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 fe 00 00 00 40  Error: ABRT
+  40 51 08 a8 d6 ef e2  Error: UNC at LBA = 0x02efd6a8 = 49272488
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 05 fe 00 00 00 40 00      01:25:29.625  SET FEATURES [Enable APM]
-  ec 00 01 00 00 00 00 00      01:25:28.813  IDENTIFY DEVICE
-  c8 00 08 00 00 00 e0 00      01:25:28.375  READ DMA
-  c8 00 08 00 00 10 e0 00      01:25:25.938  READ DMA
-  c8 00 08 20 00 00 e0 00      01:25:25.875  READ DMA
+  c4 00 08 a8 d6 ef e2 00      00:38:41.750  READ MULTIPLE
+  ec 00 00 00 00 00 a0 00      00:38:41.750  IDENTIFY DEVICE
+  ef 03 0c 00 00 00 a0 00      00:38:41.750  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 a0 00      00:38:41.750  IDENTIFY DEVICE
+  00 00 01 01 00 00 a0 00      00:38:41.563  NOP [Abort queued commands]
 
-Error 65534 occurred at disk power-on lifetime: 9299 hours (387 days + 11 hours)
+Error 65534 occurred at disk power-on lifetime: 9425 hours (392 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 51 00 01 c2 4f a0  Error: ABRT
+  40 51 08 a8 d6 ef e2  Error: UNC 8 sectors at LBA = 0x02efd6a8 = 49272488
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d9 00 01 c2 4f a0 00      01:23:23.250  SMART DISABLE OPERATIONS
-  ec 00 ff 01 00 00 a0 00      01:23:23.250  IDENTIFY DEVICE
-  10 00 ff 01 00 00 a0 00      01:23:23.250  RECALIBRATE [OBS-4]
-  91 00 ff 01 00 00 af 00      01:23:23.250  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 ff 01 00 00 a0 00      01:23:22.938  IDENTIFY DEVICE
+  c8 00 08 a8 d6 ef e2 00      00:38:40.125  READ DMA
+  ec 00 00 00 00 00 a0 00      00:38:40.125  IDENTIFY DEVICE
+  ef 03 42 00 00 00 a0 00      00:38:40.125  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 a0 00      00:38:40.125  IDENTIFY DEVICE
+  00 00 01 01 00 00 a0 00      00:38:39.938  NOP [Abort queued commands]
 
-Error 65533 occurred at disk power-on lifetime: 9299 hours (387 days + 11 hours)
+Error 65533 occurred at disk power-on lifetime: 9425 hours (392 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 a8 ab 18 e2  Error: UNC at LBA = 0x0218aba8 = 35171240
+  40 51 08 a8 d6 ef e2  Error: UNC 8 sectors at LBA = 0x02efd6a8 = 49272488
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c4 00 08 a8 ab 18 e2 00      01:11:38.375  READ MULTIPLE
-  ec 00 00 00 00 00 a0 00      01:11:38.313  IDENTIFY DEVICE
-  ef 03 08 00 00 00 a0 00      01:11:38.313  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 00      01:11:38.313  IDENTIFY DEVICE
-  00 00 01 01 00 00 a0 00      01:11:38.188  NOP [Abort queued commands]
+  c8 00 08 a8 d6 ef e2 00      00:38:38.500  READ DMA
+  ec 00 00 00 00 00 a0 00      00:38:38.500  IDENTIFY DEVICE
+  ef 03 42 00 00 00 a0 00      00:38:38.500  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 a0 00      00:38:38.438  IDENTIFY DEVICE
+  00 00 01 01 00 00 a0 00      00:38:38.313  NOP [Abort queued commands]
 
-Error 65532 occurred at disk power-on lifetime: 9299 hours (387 days + 11 hours)
+Error 65532 occurred at disk power-on lifetime: 9425 hours (392 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 a8 ab 18 e2  Error: UNC at LBA = 0x0218aba8 = 35171240
+  40 51 08 a8 d6 ef e2  Error: UNC 8 sectors at LBA = 0x02efd6a8 = 49272488
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c4 00 08 a8 ab 18 e2 00      01:11:36.688  READ MULTIPLE
-  ec 00 00 00 00 00 a0 00      01:11:36.625  IDENTIFY DEVICE
-  ef 03 08 00 00 00 a0 00      01:11:36.625  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 00      01:11:36.625  IDENTIFY DEVICE
-  00 00 01 01 00 00 a0 00      01:11:36.500  NOP [Abort queued commands]
+  c8 00 08 a8 d6 ef e2 00      00:38:36.875  READ DMA
+  ec 00 00 00 00 00 a0 00      00:38:36.813  IDENTIFY DEVICE
+  ef 03 42 00 00 00 a0 00      00:38:36.813  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 a0 00      00:38:36.813  IDENTIFY DEVICE
+  00 00 01 01 00 00 a0 00      00:38:36.688  NOP [Abort queued commands]
 
-Error 65531 occurred at disk power-on lifetime: 9299 hours (387 days + 11 hours)
+Error 65531 occurred at disk power-on lifetime: 9425 hours (392 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 a8 ab 18 e2  Error: UNC at LBA = 0x0218aba8 = 35171240
+  40 51 08 a8 d6 ef e2  Error: UNC 8 sectors at LBA = 0x02efd6a8 = 49272488
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c4 00 08 a8 ab 18 e2 00      01:11:35.000  READ MULTIPLE
-  ec 00 00 00 00 00 a0 00      01:11:35.000  IDENTIFY DEVICE
-  ef 03 08 00 00 00 a0 00      01:11:35.000  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 00      01:11:34.938  IDENTIFY DEVICE
-  00 00 01 01 00 00 a0 00      01:11:34.813  NOP [Abort queued commands]
+  c8 00 08 a8 d6 ef e2 00      00:38:35.188  READ DMA
+  ec 00 00 00 00 00 a0 00      00:38:35.188  IDENTIFY DEVICE
+  ef 03 42 00 00 00 a0 00      00:38:35.188  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 a0 00      00:38:35.188  IDENTIFY DEVICE
+  00 00 01 01 00 00 a0 00      00:38:35.063  NOP [Abort queued commands]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

@@ -1,33 +1,38 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250620AS
 Serial Number:    --
 Firmware Version: 3.AAD
-User Capacity:    250 058 268 160 bytes [250 GB]
+User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun May  7 20:34:49 2017 MSK
+Local Time is:    Fri Jan  1 18:05:18 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: PASSED
-See vendor-specific Attribute list for marginal Attributes.
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
+See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  73)	The previous self-test completed having
+					a test element that failed and the test
+					element that failed is not known.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -52,21 +57,21 @@ recommended polling time: 	 (  92) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   072   006    -    179241049
-  3 Spin_Up_Time            PO----   094   089   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5210
-  5 Reallocated_Sector_Ct   PO--CK   099   099   036    -    64
-  7 Seek_Error_Rate         POSR--   078   055   030    -    66526606
-  9 Power_On_Hours          -O--CK   069   069   000    -    27514
+  1 Raw_Read_Error_Rate     POSR--   119   069   006    -    216904693
+  3 Spin_Up_Time            PO----   090   089   000    -    0
+  4 Start_Stop_Count        -O--CK   094   094   020    -    7113
+  5 Reallocated_Sector_Ct   PO--CK   001   001   036    NOW  14702
+  7 Seek_Error_Rate         POSR--   087   055   030    -    590787295
+  9 Power_On_Hours          -O--CK   052   052   000    -    42648
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   086   086   020    -    15234
-187 Reported_Uncorrect      -O--CK   001   001   000    -    6383
+ 12 Power_Cycle_Count       -O--CK   085   085   020    -    16220
+187 Reported_Uncorrect      -O--CK   001   001   000    -    65535
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   056   037   045    Past 44 (Min/Max 44/44 #4889)
-194 Temperature_Celsius     -O---K   044   063   000    -    44 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   093   046   000    -    153084841
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   051   037   045    Past 49 (Min/Max 40/51 #5074)
+194 Temperature_Celsius     -O---K   049   063   000    -    49 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   068   045   000    -    104354347
+197 Current_Pending_Sector  -O--C-   100   098   000    -    20
+198 Offline_Uncorrectable   ----C-   100   098   000    -    20
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -87,7 +92,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -258,22 +263,25 @@ Error 7274 [13] occurred at disk power-on lifetime: 20524 hours (855 days + 4 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     27369         -
-# 2  Extended offline    Completed without error       00%     27219         -
-# 3  Extended offline    Completed without error       00%     26669         -
-# 4  Extended offline    Completed without error       00%     25169         -
-# 5  Extended offline    Completed without error       00%     24887         -
-# 6  Extended offline    Completed without error       00%     21984         -
-# 7  Extended offline    Completed without error       00%     21922         -
-# 8  Extended offline    Completed without error       00%     21582         -
-# 9  Extended offline    Completed without error       00%     21471         -
-#10  Extended offline    Completed without error       00%     21367         -
-#11  Extended offline    Completed without error       00%     21250         -
-#12  Extended offline    Completed without error       00%     21222         -
-#13  Extended offline    Completed without error       00%     20976         -
-#14  Short offline       Completed without error       00%     20561         -
-#15  Short offline       Completed without error       00%     20531         -
-#16  Short offline       Completed without error       00%     20392         -
+# 1  Extended offline    Completed: unknown failure    90%     42473         23450939441183
+# 2  Extended offline    Completed: unknown failure    90%     42103         23450725683724
+# 3  Extended offline    Completed: unknown failure    90%     41831         23450623091436
+# 4  Extended offline    Completed: unknown failure    90%     40970         23450816431009
+# 5  Extended offline    Completed: unknown failure    90%     40124         23450654897921
+# 6  Extended offline    Completed: unknown failure    90%     39894         23450904684503
+# 7  Extended offline    Completed: unknown failure    90%     39679         23450528528132
+# 8  Extended offline    Completed: unknown failure    90%     39296         23450705853615
+# 9  Extended offline    Completed: unknown failure    90%     39077         23450687010798
+#10  Extended offline    Completed: unknown failure    90%     38848         23450648587941
+#11  Extended offline    Completed: unknown failure    90%     38573         23450625165651
+#12  Extended offline    Completed: unknown failure    90%     38432         23450600844514
+#13  Extended offline    Completed: unknown failure    90%     38312         23446459078259
+#14  Extended offline    Completed: unknown failure    90%     38019         23450795220575
+#15  Extended offline    Completed: unknown failure    90%     37908         23450949718252
+#16  Extended offline    Completed: unknown failure    90%     37816         23450771520618
+#17  Extended offline    Completed: unknown failure    90%     37415         23450982256951
+#18  Extended offline    Completed: unknown failure    90%     37282         23451007806228
+#19  Extended offline    Completed: unknown failure    90%     37136         23450901857150
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -290,9 +298,11 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           51  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

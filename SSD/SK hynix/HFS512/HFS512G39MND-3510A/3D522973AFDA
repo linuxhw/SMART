@@ -1,17 +1,19 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.11.0-27-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.0-1-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     SK hynix SATA SSDs
 Device Model:     HFS512G39MND-3510A
 Serial Number:    --
 Firmware Version: 20400P00
 User Capacity:    512,110,190,592 bytes [512 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Aug 30 13:56:13 2021 AEST
+Local Time is:    Wed Nov  3 14:55:22 2021 AEDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,34 +59,34 @@ SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
-  5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   072   072   000    -    25315
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    2837
-100 Unknown_Attribute       -O--CK   100   100   000    -    40078972
-170 Unknown_Attribute       -O--CK   100   100   000    -    341
-171 Unknown_Attribute       -O--CK   253   253   000    -    0
-172 Unknown_Attribute       -O--CK   253   253   000    -    0
-174 Unknown_Attribute       ----CK   100   100   000    -    738
+  5 Retired_Block_Count     -O--CK   253   253   036    -    0
+  9 Power_On_Hours          -O--CK   070   070   000    -    26709
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    2963
+100 Total_Erase_Count       -O--CK   099   099   000    -    42190367
+170 Unknown_SK_hynix_Attrib -O--CK   100   100   000    -    341
+171 Program_Fail_Count      -O--CK   253   253   000    -    0
+172 Erase_Fail_Count        -O--CK   253   253   000    -    0
+174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    763
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
-176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   090   090   000    -    305
+176 Unused_Rsvd_Blk_Cnt_Tot -O--CK   253   253   000    -    0
+177 Wear_Leveling_Count     -O--CK   090   090   000    -    322
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    71
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    341
-180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    8491
-183 Runtime_Bad_Block       -O--CK   253   253   000    -    0
+180 Erase_Fail_Count        -O--CK   100   100   000    -    8491
+183 SATA_Downshift_Count    -O--CK   253   253   000    -    0
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   023   000   000    -    23 (Min/Max 13/75)
+194 Temperature_Celsius     -O----   030   000   000    -    30 (Min/Max 13/75)
 195 Hardware_ECC_Recovered  -O--CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   253   253   000    -    0
-201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
+201 Percent_Lifetime_Remain -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
-212 Unknown_Attribute       -O--CK   100   100   ---    -    16271544
-231 Temperature_Celsius     PO--CK   099   099   ---    -    2
-234 Unknown_Attribute       -O--CK   100   100   ---    -    154601
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    36240
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    93629
-250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    4100
+212 Phy_Error_Count         -O--CK   100   100   ---    -    17104934
+231 SSD_Life_Left           PO--CK   099   099   ---    -    2
+234 Unknown_SK_hynix_Attrib -O--CK   100   100   ---    -    162812
+241 Total_Writes_GiB        -O--CK   100   100   ---    -    38789
+242 Total_Reads_GiB         -O--CK   100   100   ---    -    96832
+250 Read_Retry_Count        -O--CK   100   100   ---    -    4118
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -147,7 +149,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 
 
 

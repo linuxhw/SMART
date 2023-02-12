@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.11.0-7620-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.11-76051511-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SK hynix SATA SSDs
@@ -10,18 +10,19 @@ User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      mSATA
+TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Jul 22 12:17:20 2021 EDT
+Local Time is:    Sat Jan 22 15:54:17 2022 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -35,7 +36,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    7) seconds.
+data collection: 		(    5) seconds.
 Offline data collection
 capabilities: 			 (0x19) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -60,15 +61,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Retired_Block_Count     -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   085   085   000    -    13901
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    1190
-100 Total_Erase_Count       -O--CK   100   100   000    -    5026317
+  9 Power_On_Hours          -O--CK   084   084   000    -    14173
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    1363
+100 Total_Erase_Count       -O--CK   100   100   000    -    5120454
 171 Program_Fail_Count      -O--CK   253   253   000    -    0
 172 Erase_Fail_Count        -O--CK   253   253   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    237
+174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    320
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Unused_Rsvd_Blk_Cnt_Tot -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   098   098   000    -    76
+177 Wear_Leveling_Count     -O--CK   098   098   000    -    78
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    19
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    165
 180 Erase_Fail_Count        -O--CK   100   100   000    -    4187
@@ -78,14 +79,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    178
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   049   000   000    -    49 (Min/Max 14/65)
-195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    130757888
+194 Temperature_Celsius     -O----   044   000   000    -    44 (Min/Max 14/65)
+195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    133411719
 201 Percent_Lifetime_Remain -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 SSD_Life_Left           PO--CK   253   253   ---    -    0
-234 Unknown_SK_hynix_Attrib -O--CK   100   100   ---    -    19126
-241 Total_Writes_GiB        -O--CK   100   100   ---    -    12846
-242 Total_Reads_GiB         -O--CK   100   100   ---    -    11098
+234 Unknown_SK_hynix_Attrib -O--CK   100   100   ---    -    19505
+241 Total_Writes_GiB        -O--CK   100   100   ---    -    13165
+242 Total_Reads_GiB         -O--CK   100   100   ---    -    11323
 250 Read_Retry_Count        -O--CK   100   100   ---    -    585
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -111,34 +112,33 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
-Warning! SMART Extended Self-test Log Structure (1/2) error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     13351         -
-# 2  Short offline       Completed without error       00%     13251         -
-# 3  Short offline       Completed without error       00%     13207         -
-# 4  Short offline       Completed without error       00%     13052         -
-# 5  Short offline       Completed without error       00%     12926         -
-# 6  Short offline       Completed without error       00%     12663         -
-# 7  Short offline       Completed without error       00%     12097         -
-# 8  Short offline       Completed without error       00%     12096         -
-# 9  Short offline       Completed without error       00%     10638         -
-#10  Short offline       Completed without error       00%      9717         -
-#11  Short offline       Completed without error       00%      7763         -
-#12  Short offline       Completed without error       00%      6372         -
-#13  Short offline       Completed without error       00%      5072         -
-#14  Short offline       Completed without error       00%      5071         -
-#15  Short offline       Completed without error       00%      4375         -
-#16  Short offline       Completed without error       00%      4374         -
-#17  Short offline       Completed without error       00%      3792         -
-#18  Short offline       Completed without error       00%      3769         -
-#19  Short offline       Completed without error       00%      3742         -
-#20  Short offline       Completed without error       00%      3602         -
-#21  Short offline       Completed without error       00%      3445         -
-#22  Short offline       Completed without error       00%      3410         -
-#23  Short offline       Completed without error       00%      3383         -
-#24  Short offline       Completed without error       00%      3253         -
-#25  Short offline       Completed without error       00%      3199         -
+# 1  Short offline       Completed without error       00%     14167         -
+# 2  Extended offline    Completed without error       00%     14086         -
+# 3  Short offline       Completed without error       00%     14086         -
+# 4  Short offline       Completed without error       00%     14050         -
+# 5  Short offline       Completed without error       00%     14042         -
+# 6  Short offline       Completed without error       00%     14015         -
+# 7  Extended offline    Completed without error       00%     13902         -
+# 8  Short offline       Completed without error       00%     13902         -
+# 9  Short offline       Completed without error       00%     13351         -
+#10  Short offline       Completed without error       00%     13251         -
+#11  Short offline       Completed without error       00%     13207         -
+#12  Short offline       Completed without error       00%     13052         -
+#13  Short offline       Completed without error       00%     12926         -
+#14  Short offline       Completed without error       00%     12663         -
+#15  Short offline       Completed without error       00%     12097         -
+#16  Short offline       Completed without error       00%     12096         -
+#17  Short offline       Completed without error       00%     10638         -
+#18  Short offline       Completed without error       00%      9717         -
+#19  Short offline       Completed without error       00%      7763         -
+#20  Short offline       Completed without error       00%      6372         -
+#21  Short offline       Completed without error       00%      5072         -
+#22  Short offline       Completed without error       00%      5071         -
+#23  Short offline       Completed without error       00%      4375         -
+#24  Short offline       Completed without error       00%      4374         -
+#25  Short offline       Completed without error       00%      3792         -
 
 Selective Self-tests/Logging not supported
 
@@ -160,5 +160,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 

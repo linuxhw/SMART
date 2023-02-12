@@ -10,7 +10,7 @@ User Capacity:    200,048,565,760 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Dec 24 19:56:57 2020 +07
+Local Time is:    Sat Feb 27 16:47:39 2021 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -63,16 +63,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   196   183   021    -    5200
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5730
+  3 Spin_Up_Time            PO----   236   183   021    -    3158
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5945
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   063   063   000    -    27286
+  9 Power_On_Hours          -O--CK   063   063   000    -    27519
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5521
-190 Airflow_Temperature_Cel -O---K   068   043   045    Past 32
-194 Temperature_Celsius     -O---K   118   093   000    -    32
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5689
+190 Airflow_Temperature_Cel -O---K   066   043   045    Past 34
+194 Temperature_Celsius     -O---K   116   093   000    -    34
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -251,7 +251,8 @@ Error 37 [12] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     15218         -
+# 1  Extended offline    Completed without error       00%     27516         -
+# 2  Short offline       Completed without error       00%     15218         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -267,8 +268,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     --/36 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     --/34 Celsius
 Lifetime    Min/Max Temperature:     --/57 Celsius
 
 SCT Temperature History Version:     2
@@ -276,7 +277,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (85)
+Temperature History Size (Index):    128 (37)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -289,6 +290,8 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         4679  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          134  Vendor specific
+
+
 

@@ -1,22 +1,26 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     ST1000UM000-1EK164
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
 Firmware Version: DEP3
-User Capacity:    1.000.204.886.016 bytes [1,00 TB]
+User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Mar 15 18:28:45 2017 CET
+Local Time is:    Sat Feb 13 09:59:39 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -57,29 +61,29 @@ SCT capabilities: 	       (0x1081)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   120   099   006    -    236085104
+  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    64677016
   3 Spin_Up_Time            PO----   097   097   085    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    3020
+  4 Start_Stop_Count        -O--CK   090   090   020    -    10767
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   073   055   030    -    17271366629
-  9 Power_On_Hours          -O--CK   098   098   000    -    2262
+  7 Seek_Error_Rate         POSR--   078   055   030    -    17439953100
+  9 Power_On_Hours          -O--CK   092   092   000    -    7438
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    3049
+ 12 Power_Cycle_Count       -O--CK   090   090   020    -    10956
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    20
+188 Command_Timeout         -O--CK   100   098   000    -    131180
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   065   052   045    -    35 (Min/Max 21/35)
+190 Airflow_Temperature_Cel -O---K   058   052   045    -    42 (Min/Max 23/43)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    156
-193 Load_Cycle_Count        -O--CK   093   093   000    -    15496
-194 Temperature_Celsius     -O---K   035   048   000    -    35 (0 18 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    358
+193 Load_Cycle_Count        -O--CK   086   086   000    -    29808
+194 Temperature_Celsius     -O---K   042   048   000    -    42 (0 18 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    10783 (79 232 0)
-241 Total_LBAs_Written      ------   100   253   000    -    21449947094
-242 Total_LBAs_Read         ------   100   253   000    -    33875011751
+240 Head_Flying_Hours       ------   100   253   000    -    38049 (122 47 0)
+241 Total_LBAs_Written      ------   100   253   000    -    55854551505
+242 Total_LBAs_Read         ------   100   253   000    -    92819174489
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -98,10 +102,10 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
-0x12       GPL     R/O      1  SATA NCQ NON-DATA log
-0x14       GPL     R/O      1  SATA Hybrid Information log
+0x12       GPL     R/O      1  SATA NCQ Non-Data log
+0x14       GPL     R/O      1  Hybrid Information log
 0x19       GPL     R/O      1  LBA Status log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -128,19 +132,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               10%      1315         -
-# 2  Extended offline    Interrupted (host reset)      90%      1199         -
-# 3  Short offline       Aborted by host               40%       996         -
-# 4  Short offline       Completed without error       00%       812         -
-# 5  Short offline       Completed without error       00%       698         -
-# 6  Short offline       Completed without error       00%       446         -
-# 7  Short offline       Aborted by host               50%       446         -
-# 8  Short offline       Completed without error       00%       292         -
-# 9  Short offline       Completed without error       00%       202         -
-#10  Short offline       Completed without error       00%       157         -
-#11  Short offline       Aborted by host               10%       123         -
-#12  Short offline       Completed without error       00%         3         -
-#13  Short offline       Completed without error       00%         3         -
+# 1  Short offline       Completed without error       00%      7429         -
+# 2  Short offline       Completed without error       00%      7261         -
+# 3  Short offline       Completed without error       00%      7184         -
+# 4  Short offline       Completed without error       00%      7092         -
+# 5  Short offline       Completed without error       00%      7007         -
+# 6  Short offline       Completed without error       00%      6717         -
+# 7  Short offline       Completed without error       00%      6404         -
+# 8  Short offline       Completed without error       00%      5910         -
+# 9  Extended offline    Aborted by host               90%      4145         -
+#10  Short offline       Aborted by host               10%      1315         -
+#11  Extended offline    Interrupted (host reset)      90%      1199         -
+#12  Short offline       Aborted by host               40%       996         -
+#13  Short offline       Completed without error       00%       812         -
+#14  Short offline       Completed without error       00%       698         -
+#15  Short offline       Completed without error       00%       446         -
+#16  Short offline       Aborted by host               50%       446         -
+#17  Short offline       Completed without error       00%       292         -
+#18  Short offline       Completed without error       00%       202         -
+#19  Short offline       Completed without error       00%       157         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -155,12 +165,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     21/34 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     23/42 Celsius
 Lifetime    Min/Max Temperature:     18/48 Celsius
-Lifetime    Average Temperature:        35 Celsius
+Specified Max Operating Temperature:    34 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -169,12 +178,16 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

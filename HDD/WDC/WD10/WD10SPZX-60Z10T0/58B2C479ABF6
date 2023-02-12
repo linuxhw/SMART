@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.0-20-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.15-ext73-94.15-intelstandard] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,11 +15,11 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov  3 20:56:20 2021 CET
+Local Time is:    Tue Nov  9 21:21:51 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     160 (intermediate level without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -37,7 +37,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 1500) seconds.
+data collection: 		( 1320) seconds.
 Offline data collection
 capabilities: 			 (0x5b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -55,7 +55,7 @@ Error logging capability:        (0x01)	Error logging supported.
 Short self-test routine 
 recommended polling time: 	 (   2) minutes.
 Extended self-test routine
-recommended polling time: 	 ( 199) minutes.
+recommended polling time: 	 ( 201) minutes.
 SCT capabilities: 	       (0x303d)	SCT Status supported.
 					SCT Error Recovery Control supported.
 					SCT Feature Control supported.
@@ -65,13 +65,13 @@ SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   057   054   021    -    1225
-  4 Start_Stop_Count        -O--CK   100   100   000    -    862
+  3 Spin_Up_Time            POS--K   057   054   021    -    1233
+  4 Start_Stop_Count        -O--CK   100   100   000    -    872
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR-K   100   100   030    -    52707
-  9 Power_On_Hours          -O--CK   100   100   000    -    106
+  7 Seek_Error_Rate         POSR-K   100   100   030    -    8297
+  9 Power_On_Hours          -O--CK   100   100   000    -    110
  10 Spin_Retry_Count        PO--CK   100   100   050    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    260
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    269
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
@@ -79,14 +79,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
 191 G-Sense_Error_Rate      -O--CK   081   081   000    -    19
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    279172874305
-193 Load_Cycle_Count        -O--CK   099   099   000    -    2583
-194 Temperature_Celsius     -O---K   035   043   000    -    35 (Min/Max 26/36)
+193 Load_Cycle_Count        -O--CK   099   099   000    -    2649
+194 Temperature_Celsius     -O---K   035   043   000    -    35 (Min/Max 26/35)
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
-240 Head_Flying_Hours       -O--CK   100   100   000    -    17063
-243 Unknown_Attribute       -O--CK   100   100   000    -    29865
+240 Head_Flying_Hours       -O--CK   100   100   000    -    17096
+243 Unknown_Attribute       -O--CK   100   100   000    -    30146
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,7 +120,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 268 (device log contains only the most recent 24 errors)
+Device Error Count: 283 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -136,7 +136,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 268 [3] occurred at disk power-on lifetime: 106 hours (4 days + 10 hours)
+Error 283 [18] occurred at disk power-on lifetime: 110 hours (4 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -147,13 +147,13 @@ Error 268 [3] occurred at disk power-on lifetime: 106 hours (4 days + 10 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:51:43.656  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:51:43.655  SECURITY FREEZE LOCK
-  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:51:43.537  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:51:43.536  IDENTIFY DEVICE
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:51:43.529  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:52:22.163  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:52:22.163  SECURITY FREEZE LOCK
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:52:22.044  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:52:22.043  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:52:22.036  READ DMA EXT
 
-Error 267 [2] occurred at disk power-on lifetime: 105 hours (4 days + 9 hours)
+Error 282 [17] occurred at disk power-on lifetime: 110 hours (4 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -164,13 +164,13 @@ Error 267 [2] occurred at disk power-on lifetime: 105 hours (4 days + 9 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:03:22.077  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:03:22.077  SECURITY FREEZE LOCK
-  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:03:21.971  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:03:21.970  IDENTIFY DEVICE
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:03:21.963  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:48:41.049  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:48:41.049  SECURITY FREEZE LOCK
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:48:40.930  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:48:40.929  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:48:40.922  READ DMA EXT
 
-Error 266 [1] occurred at disk power-on lifetime: 105 hours (4 days + 9 hours)
+Error 281 [16] occurred at disk power-on lifetime: 109 hours (4 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -181,13 +181,13 @@ Error 266 [1] occurred at disk power-on lifetime: 105 hours (4 days + 9 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.721  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.721  SECURITY FREEZE LOCK
-  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.614  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.613  IDENTIFY DEVICE
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.606  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.731  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.731  SECURITY FREEZE LOCK
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.625  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.624  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.617  READ DMA EXT
 
-Error 265 [0] occurred at disk power-on lifetime: 104 hours (4 days + 8 hours)
+Error 280 [15] occurred at disk power-on lifetime: 109 hours (4 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -200,11 +200,11 @@ Error 265 [0] occurred at disk power-on lifetime: 104 hours (4 days + 8 hours)
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
   b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.730  SANITIZE DEVICE
   f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.730  SECURITY FREEZE LOCK
-  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.624  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.624  IDENTIFY DEVICE
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.617  READ DMA EXT
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.623  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.623  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.616  READ DMA EXT
 
-Error 264 [23] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
+Error 279 [14] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -215,13 +215,13 @@ Error 264 [23] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.787  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.787  SECURITY FREEZE LOCK
-  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.680  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.680  IDENTIFY DEVICE
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.673  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.853  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.852  SECURITY FREEZE LOCK
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.746  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.745  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.738  READ DMA EXT
 
-Error 263 [22] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
+Error 278 [13] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -232,13 +232,13 @@ Error 263 [22] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.678  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.678  SECURITY FREEZE LOCK
-  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.580  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.580  IDENTIFY DEVICE
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.572  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.720  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.719  SECURITY FREEZE LOCK
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.613  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.613  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.606  READ DMA EXT
 
-Error 262 [21] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
+Error 277 [12] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -249,13 +249,13 @@ Error 262 [21] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:28.673  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:28.673  SECURITY FREEZE LOCK
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:17.808  READ DMA EXT
-  25 00 00 00 20 00 00 00 00 00 02 e0 00     00:00:17.808  READ DMA EXT
-  25 00 00 00 01 00 00 74 70 6d ae e0 00     00:00:17.808  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:02.710  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:02.710  SECURITY FREEZE LOCK
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.602  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.602  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.595  READ DMA EXT
 
-Error 261 [20] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
+Error 276 [11] occurred at disk power-on lifetime: 108 hours (4 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -266,11 +266,11 @@ Error 261 [20] occurred at disk power-on lifetime: 103 hours (4 days + 7 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:25.169  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:25.169  SECURITY FREEZE LOCK
-  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:15.078  READ DMA EXT
-  25 00 00 00 20 00 00 00 00 00 02 e0 00     00:00:15.078  READ DMA EXT
-  25 00 00 00 01 00 00 74 70 6d ae e0 00     00:00:15.077  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.023  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.023  SECURITY FREEZE LOCK
+  ef 00 10 00 03 00 00 00 00 00 00 f0 00     00:00:02.735  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 f0 00     00:00:02.734  IDENTIFY DEVICE
+  25 00 00 00 20 00 00 74 70 6d 8f e0 00     00:00:02.727  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -291,7 +291,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     26/36 Celsius
+Power Cycle Min/Max Temperature:     26/35 Celsius
 Lifetime    Min/Max Temperature:     15/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -303,7 +303,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (13)
+Temperature History Size (Index):    128 (22)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -323,11 +323,11 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         3417  Vendor specific
+0x8000  4         3779  Vendor specific
 

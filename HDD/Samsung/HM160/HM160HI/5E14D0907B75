@@ -1,4 +1,4 @@
-smartctl 7.2 2021-01-17 r5171 [x86_64-linux-5.11.19-300.fc34.x86_64] (local build)
+smartctl 7.2 2021-01-17 r5171 [x86_64-linux-5.12.12-300.fc34.x86_64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 0
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Sat May 15 01:33:40 2021 AEST
+Local Time is:    Sat Jun 26 13:45:20 2021 AEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -60,19 +60,19 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    2
-  3 Spin_Up_Time            POS---   252   252   025    -    1750
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2876
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    3
+  3 Spin_Up_Time            POS---   252   252   025    -    2500
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2886
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR--   252   252   051    -    309002240
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   001   001   000    -    10827746
+  9 Power_On_Hours          -O--CK   001   001   000    -    10827793
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 12 Power_Cycle_Count       -O--CK   252   100   000    -    1382
+ 12 Power_Cycle_Count       -O--CK   252   100   000    -    1389
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    674
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    237
-194 Temperature_Celsius     -O---K   130   085   000    -    36 (Min/Max 14/51)
-195 Hardware_ECC_Recovered  -O-RC-   100   001   000    -    15363
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    241
+194 Temperature_Celsius     -O---K   136   085   000    -    34 (Min/Max 14/51)
+195 Hardware_ECC_Recovered  -O-RC-   100   001   000    -    8997
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--C-   252   089   000    -    103
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
@@ -126,28 +126,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     11120         -
-# 2  Short offline       Completed without error       00%     11119         -
-# 3  Extended offline    Completed without error       00%     11100         -
-# 4  Extended offline    Aborted by host               150%     11095         -
-# 5  Extended offline    Aborted by host               150%     10612         -
-# 6  Extended offline    Completed without error       00%     10545         -
-# 7  Extended offline    Completed without error       00%      2131         -
-# 8  Extended offline    Completed without error       00%       869         -
-# 9  Offline             Completed without error       00%     65387         -
-#10  Extended offline    Completed without error       00%     65386         -
-#11  Offline             Interrupted (host reset)      00%     65385         -
-#12  Offline             Interrupted (host reset)      00%     65385         -
-#13  Offline             Interrupted (host reset)      00%     65385         -
-#14  Offline             Interrupted (host reset)      00%     65385         -
-#15  Offline             Interrupted (host reset)      00%     18193         -
-#16  Extended offline    Completed without error       00%     24176         -
-#17  Extended offline    Completed without error       00%     14521         -
-#18  Extended offline    Completed without error       00%     14199         -
-#19  Extended offline    Completed without error       00%     14110         -
-#20  Extended offline    Completed: read failure       00%     14108         42563333
-#21  Vendor (0x4d)       Completed: electrical failure 110%     16832         811498809
-2 of 2 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed without error       00%     14325         -
+# 2  Extended offline    Completed without error       00%     14321         -
+# 3  Short offline       Completed without error       00%     14319         -
+# 4  Extended offline    Completed without error       00%     14310         -
+# 5  Short offline       Completed without error       00%     14309         -
+# 6  Extended offline    Completed without error       00%     11120         -
+# 7  Short offline       Completed without error       00%     11119         -
+# 8  Extended offline    Completed without error       00%     11100         -
+# 9  Extended offline    Aborted by host               150%     11095         -
+#10  Extended offline    Aborted by host               150%     10612         -
+#11  Extended offline    Completed without error       00%     10545         -
+#12  Extended offline    Completed without error       00%      2131         -
+#13  Extended offline    Completed without error       00%       869         -
+#14  Offline             Completed without error       00%     65387         -
+#15  Extended offline    Completed without error       00%     65386         -
+#16  Offline             Interrupted (host reset)      00%     65385         -
+#17  Offline             Interrupted (host reset)      00%     65385         -
+#18  Offline             Interrupted (host reset)      00%     65385         -
+#19  Offline             Interrupted (host reset)      00%     65385         -
+#20  Offline             Interrupted (host reset)      00%     18193         -
+#21  Extended offline    Completed without error       00%     24176         -
 
 SMART Selective self-test log data structure revision number 4884
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -164,8 +163,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     33/40 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     21/35 Celsius
 Lifetime    Min/Max Temperature:     14/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -174,7 +173,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     15/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (95)
+Temperature History Size (Index):    128 (116)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -187,7 +186,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           26  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

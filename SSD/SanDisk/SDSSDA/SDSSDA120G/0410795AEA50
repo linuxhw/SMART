@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.42-generic-1rosa2019.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     SandForce Driven SSDs
 Device Model:     SanDisk SDSSDA120G
@@ -8,10 +11,11 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Jul 10 19:21:07 2019 MSK
+Local Time is:    Sat Jun 12 07:55:50 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,28 +61,28 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   100   000    -    636h+00m+00.000s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    288
-165 Unknown_Attribute       -O--CK   100   100   000    -    1017928614201
-166 Unknown_Attribute       -O--CK   100   100   000    -    2
+  9 Power_On_Hours_and_Msec -O--CK   000   100   000    -    1463h+00m+00.000s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    461
+165 Unknown_Attribute       -O--CK   100   100   000    -    1288525840898
+166 Unknown_Attribute       -O--CK   100   100   000    -    4
 167 Unknown_Attribute       -O--CK   100   100   000    -    0
-168 Unknown_Attribute       -O--CK   100   100   000    -    11
+168 Unknown_Attribute       -O--CK   100   100   000    -    14
 169 Unknown_Attribute       -O--CK   100   100   000    -    0
 170 Reserve_Block_Count     -O--CK   100   100   000    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Unknown_SandForce_Attr  -O--CK   100   100   000    -    7
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    58
+173 Unknown_SandForce_Attr  -O--CK   100   100   000    -    10
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    59
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   051   033   000    -    49 (Min/Max 0/67)
+194 Temperature_Celsius     -O---K   064   033   000    -    36 (Min/Max 0/67)
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
-230 Life_Curve_Status       -O--CK   100   100   000    -    446683414632
+230 Life_Curve_Status       -O--CK   100   100   000    -    734448976043
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 SandForce_Internal      -O--CK   100   100   000    -    873
-234 SandForce_Internal      -O--CK   100   100   000    -    1461
-241 Lifetime_Writes_GiB     ----CK   253   253   000    -    1199
-242 Lifetime_Reads_GiB      ----CK   253   253   000    -    3444
+233 SandForce_Internal      -O--CK   100   100   000    -    1226
+234 SandForce_Internal      -O--CK   100   100   000    -    2402
+241 Lifetime_Writes_GiB     ----CK   253   253   000    -    1838
+242 Lifetime_Reads_GiB      ----CK   253   253   000    -    4207
 244 Unknown_Attribute       -O--CK   000   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -125,7 +129,12 @@ Error 2 [1] log entry is empty
 Error 1 [0] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%       604         -
+# 1  Extended offline    Completed without error       00%      1459         -
+# 2  Extended offline    Completed without error       00%      1133         -
+# 3  Extended offline    Completed without error       00%       928         -
+# 4  Extended offline    Completed without error       00%       773         -
+# 5  Extended offline    Completed without error       00%       711         -
+# 6  Extended offline    Completed without error       00%       604         -
 
 Selective Self-tests/Logging not supported
 
@@ -134,12 +143,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             288  ---  Lifetime Power-On Resets
-0x01  0x010  4             636  ---  Power-on Hours
-0x01  0x018  6      2516523872  ---  Logical Sectors Written
-0x01  0x020  6        41571374  ---  Number of Write Commands
-0x01  0x028  6      2927703644  ---  Logical Sectors Read
-0x01  0x030  6       134707192  ---  Number of Read Commands
+0x01  0x008  4             461  ---  Lifetime Power-On Resets
+0x01  0x010  4            1463  ---  Power-on Hours
+0x01  0x018  6      3855816686  ---  Logical Sectors Written
+0x01  0x020  6        59862654  ---  Number of Write Commands
+0x01  0x028  6       233711504  ---  Logical Sectors Read
+0x01  0x030  6       159760147  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -152,6 +161,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            2  R_ERR response for non-data FIS
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            5  R_ERR response for non-data FIS
+0x000a  4           20  Device-to-host register FISes sent due to a COMRESET
 

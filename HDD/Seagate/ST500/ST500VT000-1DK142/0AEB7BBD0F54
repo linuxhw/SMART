@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.9.155-nrj-desktop-1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     ST500VT000-1DK142
 Serial Number:    --
@@ -9,8 +12,8 @@ Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Dec 27 22:39:06 2019 CET
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 1.5 Gb/s)
+Local Time is:    Wed Feb 10 12:08:16 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,11 +21,12 @@ APM level is:     192 (intermediate level without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -60,25 +64,25 @@ SCT capabilities: 	       (0x10b1)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   104   099   006    -    6582040
+  1 Raw_Read_Error_Rate     POSR--   073   073   006    -    1962048
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    215
+  4 Start_Stop_Count        -O--CK   100   100   020    -    464
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   072   060   030    -    4309698237
-  9 Power_On_Hours          -O--CK   098   098   000    -    2451
+  7 Seek_Error_Rate         POSR--   076   060   030    -    8675392798
+  9 Power_On_Hours          -O--CK   090   090   000    -    9026
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    212
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    446
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    0
+187 Reported_Uncorrect      -O--CK   001   001   000    -    59018
+188 Command_Timeout         -O--CK   100   097   000    -    131080
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   054   046   045    -    46 (Min/Max 41/48)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    62
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    9
-193 Load_Cycle_Count        -O--CK   100   100   000    -    221
-194 Temperature_Celsius     -O---K   046   054   000    -    46 (0 17 0 0 0)
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   052   042   045    Past 48 (Min/Max 22/52 #35)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    229
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    38
+193 Load_Cycle_Count        -O--CK   100   100   000    -    471
+194 Temperature_Celsius     -O---K   048   058   000    -    48 (0 17 0 0 0)
+197 Current_Pending_Sector  -O--C-   100   100   000    -    8
+198 Offline_Uncorrectable   ----C-   100   100   000    -    8
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -117,29 +121,179 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 59023 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 59023 [2] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:50.242  READ DMA EXT
+  35 00 00 01 60 00 00 32 12 49 d0 e0 00  1d+22:13:50.240  WRITE DMA EXT
+  ca 00 00 00 20 00 00 05 c4 49 c0 e5 00  1d+22:13:50.239  WRITE DMA
+  c8 00 00 00 10 00 00 08 84 71 50 e8 00  1d+22:13:50.216  READ DMA
+  35 00 00 00 28 00 00 24 06 02 60 e0 00  1d+22:13:50.215  WRITE DMA EXT
+
+Error 59022 [1] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:47.491  READ DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:47.490  FLUSH CACHE EXT
+  b0 00 d5 00 01 00 00 00 c2 4f 00 00 00  1d+22:13:47.490  SMART READ LOG
+  27 00 00 00 00 00 00 00 00 00 00 e0 00  1d+22:13:47.464  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:47.463  IDENTIFY DEVICE
+
+Error 59021 [0] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:44.851  READ DMA EXT
+  25 00 00 00 08 00 00 30 04 1b 80 e0 00  1d+22:13:44.840  READ DMA EXT
+  35 00 00 00 08 00 00 24 06 02 58 e0 00  1d+22:13:44.839  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:44.839  FLUSH CACHE EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00  1d+22:13:44.750  SMART RETURN STATUS
+
+Error 59020 [19] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:42.104  READ DMA EXT
+  ca 00 00 00 08 00 00 08 0d 31 48 e8 00  1d+22:13:42.103  WRITE DMA
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:42.088  FLUSH CACHE EXT
+  35 00 00 00 d8 00 00 24 06 01 80 e0 00  1d+22:13:42.087  WRITE DMA EXT
+  b0 00 d1 00 01 00 00 00 c2 4f 01 00 00  1d+22:13:42.042  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+
+Error 59019 [18] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:39.402  READ DMA EXT
+  c8 00 00 00 68 00 00 0f 94 d9 80 ef 00  1d+22:13:39.401  READ DMA
+  c8 00 00 00 08 00 00 0f 94 d9 68 ef 00  1d+22:13:39.381  READ DMA
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:39.285  FLUSH CACHE EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00  1d+22:13:39.201  SMART READ DATA
+
+Error 59018 [17] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:36.596  READ DMA EXT
+  35 00 00 00 08 00 00 24 06 01 78 e0 00  1d+22:13:36.595  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:36.594  FLUSH CACHE EXT
+  b0 00 d5 00 01 00 00 00 c2 4f e0 00 00  1d+22:13:36.594  SMART READ LOG
+  27 00 00 00 00 00 00 00 00 00 00 e0 00  1d+22:13:36.568  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 59017 [16] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:33.929  READ DMA EXT
+  ca 00 00 00 08 00 00 08 0d 31 28 e8 00  1d+22:13:33.928  WRITE DMA
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:33.928  FLUSH CACHE EXT
+  b0 00 d6 00 01 00 00 00 c2 4f e0 00 00  1d+22:13:33.738  SMART WRITE LOG
+  35 00 00 00 08 00 00 32 00 3e f0 e0 00  1d+22:13:33.738  WRITE DMA EXT
+
+Error 59016 [15] occurred at disk power-on lifetime: 9026 hours (376 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 32 01 3b 68 00 00  Error: UNC at LBA = 0x32013b68 = 838941544
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 32 01 3b 68 e0 00  1d+22:13:30.894  READ DMA EXT
+  ca 00 00 00 08 00 00 08 0d 30 e8 e8 00  1d+22:13:30.893  WRITE DMA
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00  1d+22:13:30.892  FLUSH CACHE EXT
+  ec 00 00 00 01 00 00 00 00 00 00 00 00  1d+22:13:30.817  IDENTIFY DEVICE
+  27 00 00 00 00 00 00 00 00 00 00 e0 00  1d+22:13:30.790  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      2327         -
-# 2  Extended offline    Completed without error       00%      2236         -
-# 3  Extended offline    Completed without error       00%      2177         -
-# 4  Extended offline    Interrupted (host reset)      00%      2152         -
-# 5  Extended offline    Completed without error       00%      2108         -
-# 6  Extended offline    Completed without error       00%      2036         -
-# 7  Extended offline    Interrupted (host reset)      00%      1980         -
-# 8  Extended offline    Interrupted (host reset)      00%      1903         -
-# 9  Extended offline    Completed without error       00%      1846         -
-#10  Extended offline    Completed without error       00%      1776         -
-#11  Extended offline    Interrupted (host reset)      00%      1755         -
-#12  Extended offline    Completed without error       00%      1745         -
-#13  Extended offline    Interrupted (host reset)      00%      1741         -
-#14  Extended offline    Interrupted (host reset)      00%      1726         -
-#15  Extended offline    Interrupted (host reset)      00%      1723         -
-#16  Extended offline    Interrupted (host reset)      90%      1689         -
-#17  Extended offline    Completed without error       00%      1668         -
-#18  Extended offline    Completed without error       00%      1656         -
-#19  Extended offline    Completed without error       00%      1621         -
+# 1  Extended offline    Completed without error       00%      8937         -
+# 2  Extended offline    Completed without error       00%      8770         -
+# 3  Extended offline    Completed without error       00%      8613         -
+# 4  Extended offline    Completed without error       00%      8454         -
+# 5  Extended offline    Completed without error       00%      8315         -
+# 6  Extended offline    Completed without error       00%      8155         -
+# 7  Extended offline    Completed without error       00%      8006         -
+# 8  Extended offline    Completed without error       00%      7853         -
+# 9  Extended offline    Completed without error       00%      7705         -
+#10  Extended offline    Interrupted (host reset)      00%      7588         -
+#11  Extended offline    Completed without error       00%      7435         -
+#12  Extended offline    Completed without error       00%      7291         -
+#13  Extended offline    Completed without error       00%      7154         -
+#14  Extended offline    Completed without error       00%      7002         -
+#15  Extended offline    Completed without error       00%      6843         -
+#16  Extended offline    Completed without error       00%      6686         -
+#17  Extended offline    Completed without error       00%      6538         -
+#18  Extended offline    Completed without error       00%      6371         -
+#19  Extended offline    Completed without error       00%      6212         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -154,11 +308,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
-Power Cycle Min/Max Temperature:     43/48 Celsius
-Lifetime    Min/Max Temperature:     17/48 Celsius
+Current Temperature:                    47 Celsius
+Power Cycle Min/Max Temperature:     22/50 Celsius
+Lifetime    Min/Max Temperature:     17/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -166,7 +319,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        300 minutes
 Min/Max recommended Temperature:      1/61 Celsius
 Min/Max Temperature Limit:            2/60 Celsius
-Temperature History Size (Index):    432 (18)
+Temperature History Size (Index):    432 (105)
 
 SCT Error Recovery Control command not supported
 
@@ -176,9 +329,9 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
-0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0003  2            1  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS

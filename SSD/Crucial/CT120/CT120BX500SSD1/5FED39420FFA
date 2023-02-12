@@ -3,20 +3,21 @@ Device Model:     CT120BX500SSD1
 Serial Number:    --
 LU WWN Device Id: 0 000000 ...
 Firmware Version: M6CR013
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun May 24 11:00:31 2020 +05
+Local Time is:    Wed Jun  3 00:27:19 2020 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -57,17 +58,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    1
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    12
+  9 Power_On_Hours          -O--CK   100   100   050    -    76
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    77
 171 Unknown_Attribute       -O--CK   100   100   050    -    0
 172 Unknown_Attribute       -O--CK   100   100   050    -    0
-173 Unknown_Attribute       -O--CK   100   100   050    -    0
-174 Unknown_Attribute       -O--CK   100   100   050    -    10
+173 Unknown_Attribute       -O--CK   100   100   050    -    11
+174 Unknown_Attribute       -O--CK   100   100   050    -    50
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   050    -    100
 183 Runtime_Bad_Block       -O--CK   100   100   050    -    0
 184 End-to-End_Error        -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   058   049   050    Past 42 (Min/Max 31/51)
+194 Temperature_Celsius     -O---K   060   016   050    Past 40 (Min/Max 29/84)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
@@ -75,9 +76,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Unknown_SSD_Attribute   ----CK   100   100   001    -    100
 206 Unknown_SSD_Attribute   -OSR-K   100   100   050    -    0
 210 Unknown_Attribute       -O--CK   100   100   050    -    0
-246 Unknown_Attribute       -O--CK   100   100   050    -    41235016
-247 Unknown_Attribute       -O--CK   100   100   050    -    1288594
-248 Unknown_Attribute       -O--CK   100   100   050    -    0
+246 Unknown_Attribute       -O--CK   100   100   050    -    846627213
+247 Unknown_Attribute       -O--CK   100   100   050    -    26457100
+248 Unknown_Attribute       -O--CK   100   100   050    -    13775032
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -95,7 +96,7 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x24       GPL     R/O     88  Current Device Internal Status Data log
 0x25       GPL     R/O     32  Saved Device Internal Status Data log
@@ -106,7 +107,8 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%        27         -
 
 Selective Self-tests/Logging not supported
 
@@ -115,17 +117,19 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              12  ---  Lifetime Power-On Resets
-0x01  0x010  4               1  ---  Power-on Hours
-0x01  0x018  6        41235016  ---  Logical Sectors Written
-0x01  0x020  6          130092  ---  Number of Write Commands
-0x01  0x028  6        26131156  ---  Logical Sectors Read
-0x01  0x030  6          581800  ---  Number of Read Commands
+0x01  0x008  4              77  ---  Lifetime Power-On Resets
+0x01  0x010  4              76  ---  Power-on Hours
+0x01  0x018  6       846627213  ---  Logical Sectors Written
+0x01  0x020  6         6714999  ---  Number of Write Commands
+0x01  0x028  6       490055023  ---  Logical Sectors Read
+0x01  0x030  6         7214732  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

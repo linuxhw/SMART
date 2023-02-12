@@ -11,11 +11,11 @@ Form Factor:      M.2
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Aug  2 11:49:03 2020 UTC
+Local Time is:    Mon Aug 10 18:35:36 2020 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -56,29 +56,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6375
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    612
-165 Block_Erase_Count       -O--CK   100   100   000    -    6832
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    56
+  9 Power_On_Hours          -O--CK   100   100   000    -    6460
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    619
+165 Block_Erase_Count       -O--CK   100   100   000    -    6947
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    57
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    0
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    123
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    124
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    71
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    56
+173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    57
 174 Unexpected_Power_Loss   -O--CK   100   100   000    -    77
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   053   056   000    -    47 (Min/Max 20/56)
+194 Temperature_Celsius     -O---K   063   056   000    -    37 (Min/Max 20/56)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x13340b141334
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x13540b281354
 232 Available_Reservd_Space PO--CK   100   100   005    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    6671
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    38006
-241 Host_Writes_GiB         ----CK   100   100   000    -    11461
-242 Host_Reads_GiB          ----CK   100   100   000    -    10016
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    6822
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    38646
+241 Host_Writes_GiB         ----CK   100   100   000    -    11658
+242 Host_Reads_GiB          ----CK   100   100   000    -    10249
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -271,13 +271,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             612  ---  Lifetime Power-On Resets
-0x01  0x010  4            6375  ---  Power-on Hours
-0x01  0x018  6     24036440623  ---  Logical Sectors Written
-0x01  0x028  6     21005733067  ---  Logical Sectors Read
-0x01  0x038  6            6375  ---  Date and Time TimeStamp
+0x01  0x008  4             619  ---  Lifetime Power-On Resets
+0x01  0x010  4            6460  ---  Power-on Hours
+0x01  0x018  6     24450343640  ---  Logical Sectors Written
+0x01  0x028  6     21494033166  ---  Logical Sectors Read
+0x01  0x038  6            6460  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              47  ---  Current Temperature
+0x05  0x008  1              37  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              55  ---  Highest Temperature
@@ -304,8 +304,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.13-2-MANJARO] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.15-1-MANJARO] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Feb  9 22:27:05 2021 -03
+Local Time is:    Thu Feb 11 08:57:44 2021 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -63,19 +63,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    532
- 12 Power_Cycle_Count       PO----   100   100   000    -    1488
+  9 Power_On_Hours          -O----   100   100   000    -    533
+ 12 Power_Cycle_Count       PO----   100   100   000    -    1493
 177 Wear_Leveling_Count     PO----   100   100   000    -    52
 179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   010    -    118
 181 Program_Fail_Cnt_Total  PO----   100   100   000    -    0
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    0
 183 Runtime_Bad_Block       PO----   100   100   000    -    0
 187 Reported_Uncorrect      PO----   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   100   100   000    -    41
+190 Airflow_Temperature_Cel -O---K   100   100   000    -    34
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 235 Unknown_Attribute       PO----   100   100   000    -    28
-241 Total_LBAs_Written      PO----   100   100   000    -    159394
-242 Total_LBAs_Read         PO----   100   100   000    -    221566
+241 Total_LBAs_Written      PO----   100   100   000    -    159467
+242 Total_LBAs_Read         PO----   100   100   000    -    221780
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,8 +112,8 @@ Selective Self-tests/Logging not supported
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     25/44 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     25/33 Celsius
 Lifetime    Min/Max Temperature:      0/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -122,7 +122,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (124)
+Temperature History Size (Index):    128 (41)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -131,22 +131,22 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1488  ---  Lifetime Power-On Resets
-0x01  0x010  4             532  ---  Power-on Hours
-0x01  0x018  6      1856170531  ---  Logical Sectors Written
-0x01  0x020  6       215624478  ---  Number of Write Commands
-0x01  0x028  6      1635668945  ---  Logical Sectors Read
-0x01  0x030  6       124797543  ---  Number of Read Commands
+0x01  0x008  4            1493  ---  Lifetime Power-On Resets
+0x01  0x010  4             533  ---  Power-on Hours
+0x01  0x018  6      1860947302  ---  Logical Sectors Written
+0x01  0x020  6       215691772  ---  Number of Write Commands
+0x01  0x028  6      1649676909  ---  Logical Sectors Read
+0x01  0x030  6       124990254  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              29  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              41  ---  Current Temperature
-0x05  0x020  1              44  ---  Highest Temperature
+0x05  0x008  1              34  ---  Current Temperature
+0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              25  ---  Lowest Temperature
 0x05  0x058  1             100  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6602  ---  Number of Hardware Resets
+0x06  0x008  4            6628  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
@@ -167,7 +167,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.10-300.fc35.x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.14.10-300.fc35.x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate BarraCuda 3.5 (SMR)
@@ -12,10 +12,10 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.2/5224
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Apr 20 12:40:33 2022 EDT
+Local Time is:    Wed Apr 20 23:58:21 2022 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,12 +64,12 @@ SCT capabilities: 	       (0x30a5)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   084   059   006    -    229846350
+  1 Raw_Read_Error_Rate     POSR--   084   059   006    -    236499256
   3 Spin_Up_Time            PO----   098   096   000    -    0
   4 Start_Stop_Count        -O--CK   099   099   020    -    1281
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    192
-  7 Seek_Error_Rate         POSR--   081   060   045    -    113403717
-  9 Power_On_Hours          -O--CK   088   088   000    -    11254 (254 101 0)
+  7 Seek_Error_Rate         POSR--   081   060   045    -    113422042
+  9 Power_On_Hours          -O--CK   088   088   000    -    11265 (80 219 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   099   099   020    -    1030
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
@@ -77,18 +77,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   001   001   000    -    117
 188 Command_Timeout         -O--CK   100   099   000    -    0 1 3
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   042   040    -    33 (Min/Max 19/41)
+190 Airflow_Temperature_Cel -O---K   063   042   040    -    37 (Min/Max 19/42)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    250
-193 Load_Cycle_Count        -O--CK   067   067   000    -    66422
-194 Temperature_Celsius     -O---K   033   058   000    -    33 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   084   064   000    -    229846350
+193 Load_Cycle_Count        -O--CK   067   067   000    -    66561
+194 Temperature_Celsius     -O---K   037   058   000    -    37 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   084   064   000    -    236499256
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    5215h+26m+36.907s
-241 Total_LBAs_Written      ------   100   253   000    -    39673423773
-242 Total_LBAs_Read         ------   100   253   000    -    87004368943
+240 Head_Flying_Hours       ------   100   253   000    -    5217h+35m+27.160s
+241 Total_LBAs_Written      ------   100   253   000    -    39675063589
+242 Total_LBAs_Read         ------   100   253   000    -    87009382033
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -174,7 +174,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
+Current Temperature:                    38 Celsius
 Power Cycle Min/Max Temperature:     19/42 Celsius
 Lifetime    Min/Max Temperature:     17/58 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -184,7 +184,7 @@ Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (57)
+Temperature History Size (Index):    128 (68)
 
 SCT Error Recovery Control command not supported
 
@@ -192,16 +192,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            1030  ---  Lifetime Power-On Resets
-0x01  0x010  4           11254  ---  Power-on Hours
-0x01  0x018  6     39658710259  ---  Logical Sectors Written
-0x01  0x020  6       247232962  ---  Number of Write Commands
-0x01  0x028  6     87162844849  ---  Logical Sectors Read
-0x01  0x030  6       503327466  ---  Number of Read Commands
-0x01  0x038  6   1650472833025  ---  Date and Time TimeStamp
+0x01  0x010  4           11265  ---  Power-on Hours
+0x01  0x018  6     39660350075  ---  Logical Sectors Written
+0x01  0x020  6       247246264  ---  Number of Write Commands
+0x01  0x028  6     87167857939  ---  Logical Sectors Read
+0x01  0x030  6       503366423  ---  Number of Read Commands
+0x01  0x038  6   1650513499815  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           11145  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            5176  ---  Head Flying Hours
-0x03  0x018  4           66422  ---  Head Load Events
+0x03  0x008  4           11156  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            5179  ---  Head Flying Hours
+0x03  0x018  4           66561  ---  Head Load Events
 0x03  0x020  4             192  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4              78  ---  Number of Mechanical Start Failures
@@ -211,8 +211,8 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4             383  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              34  ---  Current Temperature
-0x05  0x010  1              32  ---  Average Short Term Temperature
+0x05  0x008  1              38  ---  Current Temperature
+0x05  0x010  1              35  ---  Average Short Term Temperature
 0x05  0x018  1              33  ---  Average Long Term Temperature
 0x05  0x020  1              57  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
@@ -225,8 +225,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6192  ---  Number of Hardware Resets
-0x06  0x010  4            2191  ---  Number of ASR Events
+0x06  0x008  4            6212  ---  Number of Hardware Resets
+0x06  0x010  4            2199  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -237,7 +237,7 @@ No Defects Logged
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           33  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

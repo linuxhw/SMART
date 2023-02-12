@@ -1,21 +1,26 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
-Model Family:     SiliconMotion based SSDs
+Model Family:     Silicon Motion based SSDs
 Device Model:     TS128GSSD370S
 Serial Number:    --
 Firmware Version: O1225G
 User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
+TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jan  5 14:25:11 2018 +08
+Local Time is:    Sun Feb 14 07:11:19 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -23,14 +28,14 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(   57) seconds.
 Offline data collection
 capabilities: 			 (0x71) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -57,34 +62,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    168
- 12 Power_Cycle_Count       ------   100   100   000    -    1308
+  9 Power_On_Hours          ------   100   100   000    -    565
+ 12 Power_Cycle_Count       ------   100   100   000    -    3934
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    144
 163 Initial_Bad_Block_Count ------   100   100   000    -    21
-164 Total_Erase_Count       ------   100   100   000    -    97340
-165 Max_Erase_Count         ------   100   100   000    -    125
-166 Min_Erase_Count         ------   100   100   000    -    3
-167 Average_Erase_Count     ------   100   100   000    -    46
+164 Total_Erase_Count       ------   100   100   000    -    336191
+165 Max_Erase_Count         ------   100   100   000    -    294
+166 Min_Erase_Count         ------   100   100   000    -    94
+167 Average_Erase_Count     ------   100   100   000    -    161
 168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
-169 Remaining_Lifetime_Perc ------   100   100   000    -    99
+169 Remaining_Lifetime_Perc ------   100   100   000    -    95
 175 Program_Fail_Count_Chip ------   100   100   000    -    0
 176 Erase_Fail_Count_Chip   ------   100   100   000    -    0
-177 Wear_Leveling_Count     ------   100   100   050    -    0
+177 Wear_Leveling_Count     ------   100   100   050    -    114
 178 Runtime_Invalid_Blk_Cnt ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    199
+192 Power-Off_Retract_Count ------   100   100   000    -    642
 194 Temperature_Celsius     ------   100   100   000    -    32
-195 Hardware_ECC_Recovered  ------   100   100   000    -    5674
+195 Hardware_ECC_Recovered  ------   100   100   000    -    15848
 196 Reallocated_Event_Count ------   100   100   016    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
-199 UDMA_CRC_Error_Count    ------   100   100   050    -    3
+199 UDMA_CRC_Error_Count    ------   100   100   050    -    160
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    82685
-242 Host_Reads_32MiB        ------   100   100   000    -    65532
-245 TLC_Writes_32MiB        ------   100   100   000    -    194680
+241 Host_Writes_32MiB       ------   100   100   000    -    306032
+242 Host_Reads_32MiB        ------   100   100   000    -    263875
+245 TLC_Writes_32MiB        ------   100   100   000    -    672382
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +108,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
@@ -111,7 +116,24 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       558         -
+# 2  Short offline       Completed without error       00%       557         -
+# 3  Short offline       Completed without error       00%       550         -
+# 4  Short offline       Completed without error       00%       547         -
+# 5  Short offline       Completed without error       00%       546         -
+# 6  Short offline       Completed without error       00%       544         -
+# 7  Short offline       Completed without error       00%       542         -
+# 8  Short offline       Completed without error       00%       541         -
+# 9  Short offline       Completed without error       00%       541         -
+#10  Short offline       Completed without error       00%       539         -
+#11  Short offline       Completed without error       00%       536         -
+#12  Short offline       Completed without error       00%       535         -
+#13  Short offline       Completed without error       00%       533         -
+#14  Short offline       Completed without error       00%       531         -
+#15  Short offline       Completed without error       00%       529         -
+#16  Short offline       Completed without error       00%       269         -
+#17  Short offline       Completed without error       00%       216         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -120,7 +142,7 @@ SMART Selective self-test log data structure revision number 1
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
-    6        0    65535  Read_scanning was never started
+    7        0    65535  Read_scanning was completed without error
 Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
@@ -130,26 +152,28 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1308  ---  Lifetime Power-On Resets
-0x01  0x010  4             168  ---  Power-on Hours
-0x01  0x018  6      5418895093  ---  Logical Sectors Written
-0x01  0x020  6        42367933  ---  Number of Write Commands
-0x01  0x028  6      4294706592  ---  Logical Sectors Read
-0x01  0x030  6        74518375  ---  Number of Read Commands
+0x01  0x008  4            3934  ---  Lifetime Power-On Resets
+0x01  0x010  4             565  ---  Power-on Hours
+0x01  0x018  6     20056149715  ---  Logical Sectors Written
+0x01  0x020  6       162236609  ---  Number of Write Commands
+0x01  0x028  6     17293366196  ---  Logical Sectors Read
+0x01  0x030  6       274472390  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             200  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             644  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (empty) ==
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4          237128  ---  Number of Hardware Resets
-0x06  0x018  4               3  ---  Number of Interface CRC Errors
+0x06  0x008  4          386604  ---  Number of Hardware Resets
+0x06  0x018  4             160  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

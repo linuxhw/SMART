@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.77] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.15] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.7 and 7200.7 Plus
@@ -10,7 +10,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Thu May  6 17:46:55 2021 CDT
+Local Time is:    Sun Jan  9 18:46:15 2022 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,21 +55,21 @@ recommended polling time: 	 (  58) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   052   047   006    -    169251665
+  1 Raw_Read_Error_Rate     POSR--   052   047   006    -    227379367
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    132
-  5 Reallocated_Sector_Ct   PO--CK   092   092   036    -    322
-  7 Seek_Error_Rate         POSR--   087   060   030    -    566755073
-  9 Power_On_Hours          -O--CK   018   018   000    -    72335
+  4 Start_Stop_Count        -O--CK   100   100   020    -    134
+  5 Reallocated_Sector_Ct   PO--CK   089   089   036    -    458
+  7 Seek_Error_Rate         POSR--   089   060   030    -    828487184
+  9 Power_On_Hours          -O--CK   012   012   000    -    77787
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   083   083   020    -    18060
-194 Temperature_Celsius     -O---K   037   058   000    -    37
-195 Hardware_ECC_Recovered  -O-RC-   052   047   000    -    169251665
+ 12 Power_Cycle_Count       -O--CK   083   083   020    -    18210
+194 Temperature_Celsius     -O---K   026   058   000    -    26
+195 Hardware_ECC_Recovered  -O-RC-   052   047   000    -    227379367
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    65
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
-202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
+202 Data_Address_Mark_Errs  -O--CK   099   252   000    -    1
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 60 (device log contains only the most recent five errors)
+ATA Error Count: 69 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -118,90 +118,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 60 occurred at disk power-on lifetime: 4920 hours (205 days + 0 hours)
+Error 69 occurred at disk power-on lifetime: 12178 hours (507 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 28 80 40 e1  Error: UNC at LBA = 0x01408028 = 21004328
+  40 51 08 60 08 40 e2  Error: UNC 8 sectors at LBA = 0x02400860 = 37750880
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 48 08 80 40 e1 00      01:14:54.663  READ DMA
-  c8 00 88 68 97 7a e1 00      01:14:54.663  READ DMA
-  c8 00 00 e8 0c 84 e2 00      01:14:54.653  READ DMA
-  c8 00 20 d0 8c 7a e1 00      01:14:54.638  READ DMA
-  c8 00 00 00 6a 40 e1 00      01:14:54.628  READ DMA
+  c8 00 08 60 08 40 e2 00      07:55:21.728  READ DMA
+  c8 00 30 80 08 c0 e5 00      07:55:21.718  READ DMA
+  c8 00 28 08 08 c0 e5 00      07:55:21.707  READ DMA
+  c8 00 38 80 08 80 e5 00      07:55:21.698  READ DMA
+  c8 00 08 10 08 80 e5 00      07:55:21.696  READ DMA
 
-Error 59 occurred at disk power-on lifetime: 3904 hours (162 days + 16 hours)
+Error 68 occurred at disk power-on lifetime: 12178 hours (507 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 07 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000007 = 7
+  40 51 08 60 08 40 e2  Error: UNC 8 sectors at LBA = 0x02400860 = 37750880
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 00 00 00 e0 00      00:01:28.339  READ DMA
-  ec 00 00 00 00 00 a0 02      00:01:33.576  IDENTIFY DEVICE
-  ef 03 41 00 00 00 a0 02      00:01:33.552  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 02      00:01:33.549  IDENTIFY DEVICE
-  00 00 08 00 00 00 00 06      00:01:33.533  NOP [Abort queued commands]
+  c8 00 08 60 08 40 e2 00      07:54:03.773  READ DMA
+  c8 00 08 00 09 c0 e4 00      07:54:03.759  READ DMA
+  c8 00 00 08 09 c0 e4 00      07:54:03.753  READ DMA
+  c8 00 08 68 08 40 e2 00      07:54:03.742  READ DMA
+  c8 00 a8 78 ce 84 e4 00      07:54:03.728  READ DMA
 
-Error 58 occurred at disk power-on lifetime: 3904 hours (162 days + 16 hours)
+Error 67 occurred at disk power-on lifetime: 12178 hours (507 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 07 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000007 = 7
+  40 51 00 60 08 40 e2  Error: UNC at LBA = 0x02400860 = 37750880
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 00 00 00 e0 00      00:01:28.339  READ DMA
-  ec 00 00 00 00 00 a0 02      00:00:07.625  IDENTIFY DEVICE
-  ef 03 42 00 00 00 a0 02      00:00:07.343  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 02      00:00:05.159  IDENTIFY DEVICE
-  00 00 08 00 00 00 00 06      00:00:00.000  NOP [Abort queued commands]
+  c8 00 70 10 08 40 e2 00      07:53:58.173  READ DMA
+  c8 00 08 00 08 40 e2 00      07:53:58.367  READ DMA
+  c8 00 58 28 08 00 e2 00      07:53:58.358  READ DMA
+  c8 00 b0 08 0b 44 e2 00      07:53:58.347  READ DMA
+  c8 00 18 00 08 00 e2 00      07:53:58.331  READ DMA
 
-Error 57 occurred at disk power-on lifetime: 3904 hours (162 days + 16 hours)
+Error 66 occurred at disk power-on lifetime: 12095 hours (503 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 07 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000007 = 7
+  40 51 00 72 0a 40 e0  Error: UNC at LBA = 0x00400a72 = 4196978
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 00 00 00 e0 00      00:01:28.339  READ DMA
-  ec 00 00 00 00 00 a0 02      00:00:07.625  IDENTIFY DEVICE
-  ef 03 42 00 00 00 a0 02      00:00:07.343  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 02      00:00:05.159  IDENTIFY DEVICE
-  00 00 01 00 00 00 00 06      00:00:00.000  NOP [Abort queued commands]
+  c8 00 58 70 0a 40 e0 00      07:18:53.677  READ DMA
+  c8 00 30 20 08 40 e1 00      07:18:53.661  READ DMA
+  c8 00 10 00 08 40 e1 00      07:18:53.650  READ DMA
+  c8 00 60 20 08 00 e1 00      07:18:53.634  READ DMA
+  c8 00 08 c0 90 c5 e4 00      07:18:53.622  READ DMA
 
-Error 56 occurred at disk power-on lifetime: 3904 hours (162 days + 16 hours)
+Error 65 occurred at disk power-on lifetime: 12095 hours (503 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 07 00 00 e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000007 = 7
+  40 51 00 72 0a 40 e0  Error: UNC at LBA = 0x00400a72 = 4196978
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 00 00 00 e0 00      00:03:53.132  READ DMA
-  ec 00 00 00 00 00 a0 02      00:03:53.123  IDENTIFY DEVICE
-  ef 03 41 00 00 00 a0 02      00:03:52.950  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 02      00:03:52.167  IDENTIFY DEVICE
-  00 00 08 00 00 00 00 06      00:03:52.143  NOP [Abort queued commands]
+  c8 00 00 08 0a 40 e0 00      07:18:48.956  READ DMA
+  c8 00 08 40 3f 41 e0 00      07:18:49.079  READ DMA
+  c8 00 08 00 09 41 e5 00      07:18:49.061  READ DMA
+  c8 00 08 00 09 40 e5 00      07:18:49.058  READ DMA
+  c8 00 00 08 09 40 e5 00      07:18:49.058  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

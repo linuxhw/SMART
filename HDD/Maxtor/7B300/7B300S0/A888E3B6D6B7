@@ -9,11 +9,11 @@ User Capacity:    300,090,728,448 bytes [300 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Feb  8 03:37:17 2021 EST
+Local Time is:    Fri Dec 31 22:37:36 2021 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -53,22 +53,22 @@ recommended polling time: 	 ( 118) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   183   173   063    -    27312
-  4 Start_Stop_Count        -O--CK   253   253   000    -    1195
-  5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    2
+  3 Spin_Up_Time            POS--K   183   173   063    -    24307
+  4 Start_Stop_Count        -O--CK   253   253   000    -    1234
+  5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    3
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   241   234   187    -    60413
-  9 Power_On_Hours          -O--CK   111   111   000    -    5872
- 10 Spin_Retry_Count        PO-R-K   252   234   157    -    1
+  8 Seek_Time_Performance   POS--K   250   234   187    -    47220
+  9 Power_On_Hours          -O--CK   090   090   000    -    58115
+ 10 Spin_Retry_Count        PO-R-K   253   234   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   250   250   000    -    1251
+ 12 Power_Cycle_Count       -O--CK   250   250   000    -    1306
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   046   253   000    -    42
-195 Hardware_ECC_Recovered  -O-R--   253   251   000    -    39546
-196 Reallocated_Event_Count ---R--   225   225   000    -    28
-197 Current_Pending_Sector  ---R--   253   253   000    -    0
+194 Temperature_Celsius     -O--CK   046   253   000    -    46
+195 Hardware_ECC_Recovered  -O-R--   252   250   000    -    41352
+196 Reallocated_Event_Count ---R--   212   212   000    -    41
+197 Current_Pending_Sector  ---R--   253   253   000    -    1
 198 Offline_Uncorrectable   ---R--   252   245   000    -    1
 199 UDMA_CRC_Error_Count    ---R--   199   199   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
@@ -77,7 +77,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 203 Run_Out_Cancel          PO-R--   253   252   180    -    0
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
-207 Spin_High_Current       -O-R-K   252   234   000    -    1
+207 Spin_High_Current       -O-R-K   253   234   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
 209 Offline_Seek_Performnce --S--K   234   234   000    -    236
 210 Unknown_Attribute       -O--CK   253   252   000    -    0
@@ -172,27 +172,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       30%     49073         178364831
-# 2  Extended offline    Completed: read failure       40%     48857         47300644
-# 3  Extended offline    Completed: read failure       40%     48523         47300644
-# 4  Extended offline    Completed: read failure       40%     48382         47300644
-# 5  Short offline       Completed: read failure       60%     48382         47300644
-# 6  Extended offline    Completed: read failure       40%     48189         47300644
-# 7  Extended offline    Completed: read failure       40%     47855         47300644
-# 8  Extended offline    Completed: read failure       40%     47019         47300644
-# 9  Extended offline    Completed: read failure       40%     46686         47301753
-#10  Extended offline    Completed: read failure       40%     46367         47301753
-#11  Extended offline    Completed: read failure       40%     46365         47300644
-#12  Extended offline    Completed: read failure       40%     46216         47301753
-#13  Short offline       Completed: read failure       60%     46215         47301753
-#14  Short offline       Completed: read failure       60%     46215         47301753
-#15  Extended offline    Completed: read failure       40%     46121         47300644
-#16  Extended offline    Completed: read failure       30%     45780         178364831
-#17  Short offline       Completed: read failure       60%     45779         549327568
-#18  Short offline       Completed: read failure       60%     45779         549327568
-#19  Extended offline    Completed: read failure       10%     45759         549093553
-#20  Short offline       Completed without error       00%     44986         -
-#21  Extended offline    Completed: read failure       10%     44665         479185909
+# 1  Extended offline    Completed: read failure       30%     56512         178364831
+# 2  Extended offline    Aborted by host               20%     51704         -
+# 3  Extended offline    Completed: read failure       30%     51369         178364831
+# 4  Extended offline    Completed: read failure       30%     50868         178364831
+# 5  Extended offline    Completed: read failure       30%     50535         178364831
+# 6  Extended offline    Completed: read failure       30%     50367         178364831
+# 7  Extended offline    Completed: read failure       20%     49701         361409708
+# 8  Extended offline    Completed: read failure       30%     49073         178364831
+# 9  Extended offline    Completed: read failure       40%     48857         47300644
+#10  Extended offline    Completed: read failure       40%     48523         47300644
+#11  Extended offline    Completed: read failure       40%     48382         47300644
+#12  Short offline       Completed: read failure       60%     48382         47300644
+#13  Extended offline    Completed: read failure       40%     48189         47300644
+#14  Extended offline    Completed: read failure       40%     47855         47300644
+#15  Extended offline    Completed: read failure       40%     47019         47300644
+#16  Extended offline    Completed: read failure       40%     46686         47301753
+#17  Extended offline    Completed: read failure       40%     46367         47301753
+#18  Extended offline    Completed: read failure       40%     46365         47300644
+#19  Extended offline    Completed: read failure       40%     46216         47301753
+#20  Short offline       Completed: read failure       60%     46215         47301753
+#21  Short offline       Completed: read failure       60%     46215         47301753
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -212,4 +212,6 @@ Device Statistics (GP/SMART Log 0x04) not supported
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
+
+
 

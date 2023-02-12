@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.8.0-44-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.0-27-generic] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Marvell based SanDisk SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-3, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Feb 24 11:46:03 2021 +03
+Local Time is:    Wed May 11 23:22:34 2022 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -61,29 +61,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    205
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    80
-165 Total_Write/Erase_Count -O--CK   100   100   000    -    82
-166 Min_W/E_Cycle           -O--CK   100   100   ---    -    0
+  9 Power_On_Hours          -O--CK   100   100   000    -    2000
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1806
+165 Total_Write/Erase_Count -O--CK   100   100   000    -    1754
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    12
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    16
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    2
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    17
 169 Total_Bad_Block         -O--CK   100   100   ---    -    200
 170 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1
+173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    12
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    128
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   072   053   000    -    28 (Min/Max 13/53)
+194 Temperature_Celsius     -O---K   066   058   000    -    34 (Min/Max 8/58)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    23 0 23
+230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    1281 552 1281
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   005    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    271
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    1018
-241 Total_Writes_GiB        ----CK   100   100   000    -    404
-242 Total_Reads_GiB         ----CK   100   100   000    -    306
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    5966
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    21707
+241 Total_Writes_GiB        ----CK   100   100   000    -    8567
+242 Total_Reads_GiB         ----CK   100   100   000    -    6687
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -117,7 +117,26 @@ SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      1986         -
+# 2  Short offline       Completed without error       00%      1880         -
+# 3  Short offline       Self-test routine in progress 10%      1880         -
+# 4  Short offline       Self-test routine in progress 20%      1880         -
+# 5  Short offline       Completed without error       00%      1865         -
+# 6  Short offline       Self-test routine in progress 40%      1865         -
+# 7  Short offline       Completed without error       00%      1865         -
+# 8  Extended offline    Completed without error       00%      1777         -
+# 9  Extended offline    Self-test routine in progress 10%      1777         -
+#10  Extended offline    Self-test routine in progress 10%      1777         -
+#11  Extended offline    Self-test routine in progress 30%      1777         -
+#12  Extended offline    Self-test routine in progress 30%      1777         -
+#13  Extended offline    Self-test routine in progress 40%      1777         -
+#14  Extended offline    Self-test routine in progress 50%      1776         -
+#15  Extended offline    Self-test routine in progress 50%      1776         -
+#16  Extended offline    Self-test routine in progress 70%      1776         -
+#17  Extended offline    Self-test routine in progress 90%      1775         -
+#18  Extended offline    Self-test routine in progress 90%      1775         -
+#19  Short offline       Completed without error       00%      1756         -
 
 Selective Self-tests/Logging not supported
 
@@ -126,17 +145,17 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              80  ---  Lifetime Power-On Resets
-0x01  0x010  4             205  ---  Power-on Hours
-0x01  0x018  6       847438607  ---  Logical Sectors Written
-0x01  0x028  6       642102813  ---  Logical Sectors Read
-0x01  0x038  6             205  ---  Date and Time TimeStamp
+0x01  0x008  4            1806  ---  Lifetime Power-On Resets
+0x01  0x010  4            2000  ---  Power-on Hours
+0x01  0x018  6     17968117235  ---  Logical Sectors Written
+0x01  0x028  6     14023875678  ---  Logical Sectors Read
+0x01  0x038  6            2000  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
+0x05  0x008  1              34  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
-0x05  0x020  1              47  ---  Highest Temperature
-0x05  0x028  1              26  ---  Lowest Temperature
+0x05  0x020  1              58  ---  Highest Temperature
+0x05  0x028  1              23  ---  Lowest Temperature
 0x05  0x030  1               -  ---  Highest Average Short Term Temperature
 0x05  0x038  1               -  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -146,7 +165,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -159,8 +178,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2         1869  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2        13031  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

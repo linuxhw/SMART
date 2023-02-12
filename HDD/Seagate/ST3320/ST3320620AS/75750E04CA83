@@ -1,32 +1,36 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.11-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3320620AS
 Serial Number:    --
 Firmware Version: 3.AAK
-User Capacity:    320 071 851 520 bytes [320 GB]
+User Capacity:    320,071,851,520 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Oct 22 16:32:33 2016 MSK
+Local Time is:    Sat Jun  4 19:36:49 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  22)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +55,19 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   112   098   006    -    48868223
+  1 Raw_Read_Error_Rate     POSR--   103   098   006    -    5388558
   3 Spin_Up_Time            PO----   096   095   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    8501
+  4 Start_Stop_Count        -O--CK   089   089   020    -    12211
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   058   043   030    -    5790493909421
-  9 Power_On_Hours          -O--CK   070   070   000    -    26855
+  7 Seek_Error_Rate         POSR--   081   043   030    -    135617637
+  9 Power_On_Hours          -O--CK   061   061   000    -    34165
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   020    -    8288
+ 12 Power_Cycle_Count       -O--CK   089   089   020    -    11992
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   056   047   045    -    44 (Min/Max 32/44)
-194 Temperature_Celsius     -O---K   044   053   000    -    44 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   063   054   000    -    17999056
+190 Airflow_Temperature_Cel -O---K   066   039   045    Past 34 (Min/Max 34/34)
+194 Temperature_Celsius     -O---K   034   061   000    -    34 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   061   054   000    -    84065277
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
@@ -86,7 +90,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -256,6 +260,8 @@ Error 1002 [1] occurred at disk power-on lifetime: 19797 hours (824 days + 21 ho
   29 00 00 00 01 00 25 ea 00 42 af e0 00     01:23:57.469  READ MULTIPLE EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Aborted by host               60%     34071         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -272,12 +278,16 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2          102  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           41  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

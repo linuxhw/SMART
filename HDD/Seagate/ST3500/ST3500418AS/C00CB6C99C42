@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.19.0-13-amd64] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.19.0-14-amd64] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Jan 14 17:29:26 2021 CET
+Local Time is:    Tue Feb 23 17:20:57 2021 CET
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -72,28 +72,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   101   089   006    -    236879319
+  1 Raw_Read_Error_Rate     POSR--   108   089   006    -    147019662
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5822
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5833
   5 Reallocated_Sector_Ct   PO--CK   002   002   036    NOW  4035
-  7 Seek_Error_Rate         POSR--   077   060   030    -    51772747
-  9 Power_On_Hours          -O--CK   091   091   000    -    8408
+  7 Seek_Error_Rate         POSR--   077   060   030    -    52023398
+  9 Power_On_Hours          -O--CK   091   091   000    -    8413
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1556
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1563
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   090   090   000    -    10
-188 Command_Timeout         -O--CK   100   095   000    -    68720590878
+187 Reported_Uncorrect      -O--CK   089   089   000    -    11
+188 Command_Timeout         -O--CK   100   095   000    -    68720590896
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   060   045    -    33 (Min/Max 32/34)
-194 Temperature_Celsius     -O---K   033   040   000    -    33 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   042   021   000    -    236879319
+190 Airflow_Temperature_Cel -O---K   071   060   045    -    29 (Min/Max 22/29)
+194 Temperature_Celsius     -O---K   029   040   000    -    29 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   041   021   000    -    147019662
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    14500 (109 41 0)
-241 Total_LBAs_Written      ------   100   253   000    -    2674194884
-242 Total_LBAs_Read         ------   100   253   000    -    487598346
+240 Head_Flying_Hours       ------   100   253   000    -    14521 (160 87 0)
+241 Total_LBAs_Written      ------   100   253   000    -    3588222129
+242 Total_LBAs_Read         ------   100   253   000    -    1703373934
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -128,7 +128,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 102 (device log contains only the most recent 20 errors)
+Device Error Count: 111 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -144,7 +144,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 102 [1] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 111 [10] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -155,13 +155,13 @@ Error 102 [1] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:30.861  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:30.861  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:06:30.709  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:06:30.398  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:25.181  IDENTIFY PACKET DEVICE
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:03:04.137  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:03:04.137  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:03:03.978  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:03:03.662  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.505  IDENTIFY PACKET DEVICE
 
-Error 101 [0] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 110 [9] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -172,13 +172,13 @@ Error 101 [0] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:30.861  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:06:30.709  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:06:30.398  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:25.181  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:25.181  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:03:04.137  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:03:03.978  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:03:03.662  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.505  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.505  IDENTIFY DEVICE
 
-Error 100 [19] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 109 [8] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -189,13 +189,13 @@ Error 100 [19] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:25.181  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:25.181  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:06:25.028  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:06:24.720  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:24.694  IDENTIFY PACKET DEVICE
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.505  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.505  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:02:58.345  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:02:58.029  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.003  IDENTIFY PACKET DEVICE
 
-Error 99 [18] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 108 [7] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -206,13 +206,13 @@ Error 99 [18] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:25.181  IDENTIFY DEVICE
-  00 00 00 00 00 00 00 00 00 00 00 00 04     00:06:25.028  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:06:24.720  NOP [Abort queued commands]
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:24.694  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:24.669  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.505  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:02:58.345  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:02:58.029  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.003  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:57.978  IDENTIFY DEVICE
 
-Error 98 [17] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 107 [6] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -223,13 +223,13 @@ Error 98 [17] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:24.694  IDENTIFY PACKET DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:24.669  IDENTIFY DEVICE
-  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:06:24.644  READ LOG EXT
-  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:06:24.629  READ LOG DMA EXT
-  60 00 00 00 f0 00 36 f2 00 ec 08 40 00     00:06:19.434  READ FPDMA QUEUED
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:58.003  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:57.978  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:57.953  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:57.945  READ LOG DMA EXT
+  60 00 00 0a 00 00 32 f1 00 2c 00 40 00     00:02:47.349  READ FPDMA QUEUED
 
-Error 97 [16] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 106 [5] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -240,13 +240,13 @@ Error 97 [16] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:24.669  IDENTIFY DEVICE
-  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:06:24.644  READ LOG EXT
-  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:06:24.629  READ LOG DMA EXT
-  60 00 00 00 f0 00 36 f2 00 ec 08 40 00     00:06:19.434  READ FPDMA QUEUED
-  60 00 00 00 08 00 2f f6 00 2d 38 40 00     00:06:19.426  READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:02:57.978  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:57.953  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:57.945  READ LOG DMA EXT
+  60 00 00 0a 00 00 32 f1 00 2c 00 40 00     00:02:47.349  READ FPDMA QUEUED
+  60 00 00 04 18 00 31 42 00 ed 80 40 00     00:02:47.349  READ FPDMA QUEUED
 
-Error 96 [15] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 105 [4] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -257,13 +257,13 @@ Error 96 [15] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:06:24.644  READ LOG EXT
-  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:06:24.629  READ LOG DMA EXT
-  60 00 00 00 f0 00 36 f2 00 ec 08 40 00     00:06:19.434  READ FPDMA QUEUED
-  60 00 00 00 08 00 2f f6 00 2d 38 40 00     00:06:19.426  READ FPDMA QUEUED
-  60 00 00 00 08 00 34 fa 00 ed 88 40 00     00:06:19.425  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:57.953  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:57.945  READ LOG DMA EXT
+  60 00 00 0a 00 00 32 f1 00 2c 00 40 00     00:02:47.349  READ FPDMA QUEUED
+  60 00 00 04 18 00 31 42 00 ed 80 40 00     00:02:47.349  READ FPDMA QUEUED
+  60 00 00 01 00 00 31 41 00 ed 80 40 00     00:02:47.349  READ FPDMA QUEUED
 
-Error 95 [14] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hours)
+Error 104 [3] occurred at disk power-on lifetime: 8409 hours (350 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -274,11 +274,11 @@ Error 95 [14] occurred at disk power-on lifetime: 8390 hours (349 days + 14 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:06:24.629  READ LOG DMA EXT
-  60 00 00 00 f0 00 36 f2 00 ec 08 40 00     00:06:19.434  READ FPDMA QUEUED
-  60 00 00 00 08 00 2f f6 00 2d 38 40 00     00:06:19.426  READ FPDMA QUEUED
-  60 00 00 00 08 00 34 fa 00 ed 88 40 00     00:06:19.425  READ FPDMA QUEUED
-  60 00 00 00 08 00 34 fa 00 ed 80 40 00     00:06:19.413  READ FPDMA QUEUED
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:02:57.945  READ LOG DMA EXT
+  60 00 00 0a 00 00 32 f1 00 2c 00 40 00     00:02:47.349  READ FPDMA QUEUED
+  60 00 00 04 18 00 31 42 00 ed 80 40 00     00:02:47.349  READ FPDMA QUEUED
+  60 00 00 01 00 00 31 41 00 ed 80 40 00     00:02:47.349  READ FPDMA QUEUED
+  60 00 00 00 08 00 31 00 00 ee 70 40 00     00:02:47.344  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -298,8 +298,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     32/34 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     22/28 Celsius
 Lifetime    Min/Max Temperature:     15/39 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -308,7 +308,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (93)
+Temperature History Size (Index):    128 (111)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -320,7 +320,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

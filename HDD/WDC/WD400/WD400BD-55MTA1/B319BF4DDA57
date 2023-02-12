@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [i686-linux-4.15.0-desktop-68.5rosa-i586] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [i686-linux-5.10.118-generic-2rosa2021.1-i586] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Serial ATA
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 10.01E01
 User Capacity:    40,020,664,320 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Mar  2 22:27:23 2020 MSK
+Local Time is:    Mon Aug 29 21:37:01 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -26,8 +26,8 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -62,21 +62,21 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   161   159   021    -    2925
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1100
+  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    49
+  3 Spin_Up_Time            PO----   160   159   021    -    2966
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1480
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   091   091   000    -    7213
+  7 Seek_Error_Rate         POSR--   100   253   051    -    0
+  9 Power_On_Hours          -O--CK   090   090   000    -    7524
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1077
-190 Airflow_Temperature_Cel -O---K   067   044   045    Past 33
-194 Temperature_Celsius     -O---K   110   087   000    -    33
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1454
+190 Airflow_Temperature_Cel -O---K   061   044   045    Past 39
+194 Temperature_Celsius     -O---K   104   087   000    -    39
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    120
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1501
 200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -105,13 +105,125 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 6
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6 [5] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 73 60 0d 8b 00 00 00 00 00 00 00 01     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 20 50 00 b0 0d 72 00 8b 61 00 00 08     00:00:04.144  DEVICE RESET
+  00 11 60 0d 80 00 00 00 00 00 00 00 01     00:14:47.644  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 d0 c8 00 e0 0d 11 00 80 61 00 00 08     00:00:08.408  DEVICE RESET
+
+Error 5 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 cf 60 0d 6e 00 00 00 00 00 00 00 01     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 b0 c0 00 d8 0d ce 00 6e 61 00 00 08     00:00:08.232  DEVICE RESET
+  01 6a 61 0d 66 00 20 08 98 08 00 00 00     00:14:38.213  [RESERVED]
+  08 02 10 00 00 0d 6a 00 66 ef 00 00 00     00:00:32.792  DEVICE RESET
+
+Error 4 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 27 60 0d 55 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 08 58 00 28 0d 26 00 55 61 00 00 08     00:00:55.312  DEVICE RESET
+  00 1c 61 0d 55 00 00 08 a0 88 00 00 00     00:14:33.756  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 e8 08 00 38 0d 1c 00 55 61 00 00 08     00:00:20.720  DEVICE RESET
+
+Error 3 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 88 60 0d 3b 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 b8 40 00 20 0d 71 00 3b 61 00 00 08     00:00:36.992  DEVICE RESET
+  00 71 27 0d 3b 00 02 00 00 10 00 00 00     00:14:27.185  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 00 00 00 0d 70 00 3b ec 00 00 00     00:00:00.000  NOP [Abort queued commands]
+
+Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 c5 60 0d 2e 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 a8 08 00 18 0d c5 00 2e 61 00 00 08     00:00:37.040  DEVICE RESET
+  00 af 61 0d 2e 00 a0 08 b8 30 00 00 00     00:14:23.941  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 90 58 00 00 0d 99 00 2e 61 00 00 08     00:00:00.152  DEVICE RESET
+
+Error 1 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 34 60 0c da 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 40 08 00 c0 0c 33 00 da 61 00 00 08     00:00:16.440  DEVICE RESET
+  00 33 61 0c da 00 30 08 b0 08 00 00 00     00:14:02.291  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 20 10 00 58 0c 33 00 da 61 00 00 08     00:00:38.952  DEVICE RESET
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      7178         -
-# 2  Short offline       Completed without error       00%      7160         -
-# 3  Short offline       Completed without error       00%      7159         -
+# 1  Short offline       Completed without error       00%      7496         -
+# 2  Short offline       Completed without error       00%      7494         -
+# 3  Short offline       Completed without error       00%      7178         -
+# 4  Short offline       Completed without error       00%      7160         -
+# 5  Short offline       Completed without error       00%      7159         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -126,9 +238,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     --/36 Celsius
+Device State:                        Active (0)
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     --/40 Celsius
 Lifetime    Min/Max Temperature:     --/56 Celsius
 
 SCT Temperature History Version:     2
@@ -136,7 +248,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (79)
+Temperature History Size (Index):    128 (85)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -149,6 +261,6 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         8816  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         4655  Vendor specific
 

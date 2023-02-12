@@ -8,7 +8,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Oct 21 16:06:12 2020 CEST
+Local Time is:    Wed Oct 21 16:48:13 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -26,9 +26,8 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		( 3780) seconds.
 Offline data collection
@@ -64,13 +63,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   095   095   000    -    5034
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   076   076   000    -    18155
+  9 Power_On_Hours          -O--CK   076   076   000    -    18156
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
  12 Power_Cycle_Count       -O--CK   095   095   000    -    5001
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    533
 193 Load_Cycle_Count        -O--CK   069   069   000    -    395181
-194 Temperature_Celsius     -O---K   106   086   000    -    37
+194 Temperature_Celsius     -O---K   096   086   000    -    47
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   100   253   000    -    0
@@ -106,7 +105,8 @@ SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      90%     18155         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -150,6 +150,6 @@ ID      Size     Value  Description
 0x0005  2            1  R_ERR response for non-data FIS
 0x0006  2            1  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          823  Vendor specific
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         3341  Vendor specific
 

@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-7634-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.102-1-MANJARO] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     TOSHIBA MQ04ABF100
@@ -10,14 +10,15 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
+Zoned Device:     Device managed zones
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jun 11 18:05:01 2020 CEST
+Local Time is:    Wed Mar  9 13:45:43 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     127 (intermediate level with standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Disabled
@@ -63,18 +64,18 @@ SMART Attributes Data Structure revision number: 128
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1324
+  3 Spin_Up_Time            POS--K   100   100   001    -    1283
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    1237
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    571
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    594
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    41
-193 Load_Cycle_Count        -O--CK   100   100   000    -    7427
-194 Temperature_Celsius     -O---K   100   100   000    -    31 (Min/Max 18/40)
+  9 Power_On_Hours          -O--CK   091   091   000    -    3799
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1488
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1060
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    84
+193 Load_Cycle_Count        -O--CK   098   098   000    -    28193
+194 Temperature_Celsius     -O---K   100   100   000    -    31 (Min/Max 14/40)
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
-240 Head_Flying_Hours       -O--CK   099   099   000    -    467
-241 Total_LBAs_Written      -O--CK   100   100   000    -    3408237879
-242 Total_LBAs_Read         -O--CK   100   100   000    -    372411638
+240 Head_Flying_Hours       -O--CK   094   094   000    -    2580
+241 Total_LBAs_Written      -O--CK   100   100   000    -    5904809755
+242 Total_LBAs_Read         -O--CK   100   100   000    -    1354040280
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    3
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -144,8 +145,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     31/31 Celsius
-Lifetime    Min/Max Temperature:     18/40 Celsius
+Power Cycle Min/Max Temperature:     20/34 Celsius
+Lifetime    Min/Max Temperature:     14/40 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -153,7 +154,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (330)
+Temperature History Size (Index):    478 (129)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -162,44 +163,44 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             571  ---  Lifetime Power-On Resets
-0x01  0x010  4            1237  ---  Power-on Hours
-0x01  0x018  6      3408237879  ---  Logical Sectors Written
-0x01  0x020  6         9546437  ---  Number of Write Commands
-0x01  0x028  6       372411638  ---  Logical Sectors Read
-0x01  0x030  6         3523239  ---  Number of Read Commands
-0x01  0x038  6      4454445721  ---  Date and Time TimeStamp
+0x01  0x008  4            1488  ---  Lifetime Power-On Resets
+0x01  0x010  4            3799  ---  Power-on Hours
+0x01  0x018  6      5904809755  ---  Logical Sectors Written
+0x01  0x020  6        40688888  ---  Number of Write Commands
+0x01  0x028  6      1354040280  ---  Logical Sectors Read
+0x01  0x030  6        17028288  ---  Number of Read Commands
+0x01  0x038  6     13679868067  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4             594  ---  Overlimit Shock Events
+0x02  0x010  4            1060  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4             554  ---  Spindle Motor Power-on Hours
-0x03  0x010  4             467  ---  Head Flying Hours
-0x03  0x018  4            7427  ---  Head Load Events
+0x03  0x008  4            2771  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2580  ---  Head Flying Hours
+0x03  0x018  4           28193  ---  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
-0x03  0x028  4              33  ---  Read Recovery Attempts
+0x03  0x028  4              85  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4              41  ---  Number of High Priority Unload Events
+0x03  0x040  4              84  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              31  ---  Current Temperature
-0x05  0x010  1              27  N--  Average Short Term Temperature
-0x05  0x018  1              26  N--  Average Long Term Temperature
+0x05  0x010  1              32  N--  Average Short Term Temperature
+0x05  0x018  1              32  N--  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
-0x05  0x028  1              18  ---  Lowest Temperature
-0x05  0x030  1              35  N--  Highest Average Short Term Temperature
+0x05  0x028  1              14  ---  Lowest Temperature
+0x05  0x030  1              36  N--  Highest Average Short Term Temperature
 0x05  0x038  1              22  N--  Lowest Average Short Term Temperature
-0x05  0x040  1              28  N--  Highest Average Long Term Temperature
+0x05  0x040  1              32  N--  Highest Average Long Term Temperature
 0x05  0x048  1              26  N--  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1343  ---  Number of Hardware Resets
-0x06  0x010  4             676  ---  Number of ASR Events
+0x06  0x008  4            3444  ---  Number of Hardware Resets
+0x06  0x010  4            1655  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -218,8 +219,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          131  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  4        32859  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

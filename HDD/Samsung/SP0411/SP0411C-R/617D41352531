@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.79-1-lts] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.80-2-lts] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -9,7 +9,7 @@ User Capacity:    40,020,664,320 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sun Nov 29 18:23:38 2020 GMT
+Local Time is:    Thu Dec  3 12:37:13 2020 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,17 +55,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   100   100   025    -    4544
-  4 Start_Stop_Count        -O--CK   086   086   000    -    15075
+  3 Spin_Up_Time            POS---   100   100   025    -    4480
+  4 Start_Stop_Count        -O--CK   086   086   000    -    15082
   5 Reallocated_Sector_Ct   PO--CK   100   100   011    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    4047315
+  9 Power_On_Hours          -O--CK   094   094   000    -    4055352
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    223
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7590
-194 Temperature_Celsius     -O---K   142   067   000    -    32
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    3026
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7593
+194 Temperature_Celsius     -O---K   139   067   000    -    33
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    7814
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -187,7 +187,9 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     33753         -
+# 2  Abort offline test  Aborted by host               90%     33753         -
+# 3  Extended offline    Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run

@@ -1,4 +1,4 @@
-smartctl 7.2 2021-01-17 r5171 [x86_64-linux-5.11.19-300.fc34.x86_64] (local build)
+smartctl 7.2 2021-01-17 r5171 [x86_64-linux-5.12.12-300.fc34.x86_64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat May 15 01:33:40 2021 AEST
+Local Time is:    Sat Jun 26 13:45:20 2021 AEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,19 +66,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    9384
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    993
+  9 Power_On_Hours          -O--CK   098   098   000    -    9434
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1000
 177 Wear_Leveling_Count     PO--C-   093   093   000    -    79
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   001   010    Past 0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   064   045   000    -    36
+190 Airflow_Temperature_Cel -O--CK   068   045   000    -    32
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   099   099   000    -    2
-235 POR_Recovery_Count      -O--C-   099   099   000    -    141
-241 Total_LBAs_Written      -O--CK   099   099   000    -    18561819682
+235 POR_Recovery_Count      -O--C-   099   099   000    -    145
+241 Total_LBAs_Written      -O--CK   099   099   000    -    18568646635
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,8 +112,10 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%         1         -
-# 2  Extended offline    Completed without error       00%         3         -
+# 1  Short offline       Completed without error       00%         8         -
+# 2  Short offline       Completed without error       00%         7         -
+# 3  Extended offline    Completed without error       00%         1         -
+# 4  Extended offline    Completed without error       00%         3         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,17 +131,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
-Under/Over Temperature Limit Count:   0/56195
+Under/Over Temperature Limit Count:   0/56513
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    128 (20)
+Temperature History Size (Index):    128 (4)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -159,8 +161,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           31  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           31  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           12  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,5 +1,5 @@
-smartctl 6.5 2016-05-07 r4318 [x86_64-linux-4.4.261] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-8-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Ultrastar A7K1000
@@ -10,13 +10,14 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Thu May 20 10:29:19 2021 BST
+Local Time is:    Sun Jul 25 19:57:33 2021 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Disabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -59,18 +60,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   100   100   054    -    0
-  3 Spin_Up_Time            POS---   101   101   024    -    691 (Average 689)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    1302
+  2 Throughput_Performance  P-S---   130   130   054    -    151
+  3 Spin_Up_Time            POS---   104   104   024    -    685 (Average 652)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    1371
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   136   136   020    -    31
-  9 Power_On_Hours          -O--C-   098   098   000    -    16877
+  8 Seek_Time_Performance   P-S---   134   134   020    -    32
+  9 Power_On_Hours          -O--C-   098   098   000    -    17857
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1302
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1302
-193 Load_Cycle_Count        -O--C-   099   099   000    -    1302
-194 Temperature_Celsius     -O----   125   125   000    -    48 (Min/Max 12/54)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1371
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1371
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1371
+194 Temperature_Celsius     -O----   117   117   000    -    51 (Min/Max 12/56)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -91,7 +92,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x24       GPL     R/O     60  Current Device Internal Status Data log
 0x80       GPL     R/W     60  Host vendor specific log
@@ -122,18 +123,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                 48 Celsius
-Power Cycle Max Temperature:         48 Celsius
-Lifetime    Max Temperature:         54 Celsius
+Current Temperature:                    51 Celsius
+Power Cycle Min/Max Temperature:     --/56 Celsius
+Lifetime    Min/Max Temperature:     --/56 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (66)
+Temperature History Size (Index):    128 (20)
 
 SCT Error Recovery Control:
            Read:    250 (25.0 seconds)
@@ -141,11 +141,13 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           30  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

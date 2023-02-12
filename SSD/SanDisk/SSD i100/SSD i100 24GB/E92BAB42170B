@@ -1,23 +1,27 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.16.18-nrj-laptop-1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     SanDisk based SSDs
 Device Model:     SanDisk SSD i100 24GB
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
 Firmware Version: 11.56.02
-User Capacity:    24 015 495 168 bytes [24,0 GB]
+User Capacity:    24,015,495,168 bytes [24.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      1.8 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Mar  9 23:25:47 2017 MSK
+Local Time is:    Sat Sep 19 01:01:48 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -56,18 +60,18 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    3704
- 12 Power_Cycle_Count       -O----   100   100   000    -    2007
+  9 Power_On_Hours          -O----   100   100   000    -    7181
+ 12 Power_Cycle_Count       -O----   100   100   000    -    4016
 171 Program_Fail_Count      -O----   100   100   000    -    0
 172 Erase_Fail_Count        -O----   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O----   100   100   000    -    184
-174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    46
+173 Avg_Write/Erase_Count   -O----   100   100   000    -    187
+174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    83
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-230 Perc_Write/Erase_Count  -O----   100   100   000    -    613
+230 Perc_Write/Erase_Count  -O----   100   100   000    -    623
 232 Perc_Avail_Resrvd_Space PO----   100   100   005    -    0
-234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    379
-241 Total_LBAs_Written      -O----   100   100   000    -    130734194
-242 Total_LBAs_Read         -O----   100   100   000    -    72950189
+234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    384
+241 Total_LBAs_Written      -O----   100   100   000    -    53530348
+242 Total_LBAs_Read         -O----   100   100   000    -    41218252
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -83,7 +87,7 @@ Address    Access  R/W   Size  Description
 0x03       GPL,SL  R/O     16  Ext. Comprehensive SMART error log
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06       GPL,SL  R/O      1  SMART self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -181,14 +185,27 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 Warning! SMART Self-Test Log Structure error: invalid SMART checksum.
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      3694         -
-# 2  Extended offline    Completed without error       00%      3671         -
-# 3  Extended offline    Aborted by host               90%      3637         -
-# 4  Extended offline    Completed without error       00%      3608         -
-# 5  Extended offline    Completed without error       00%      3573         -
-# 6  Extended offline    Aborted by host               60%      3549         -
-# 7  Extended offline    Completed without error       00%      3532         -
-# 8  Extended offline    Completed without error       00%      3510         -
+# 1  Extended offline    Aborted by host               90%      7167         -
+# 2  Extended offline    Completed without error       00%      7150         -
+# 3  Extended offline    Aborted by host               40%      7138         -
+# 4  Extended offline    Completed without error       00%      7128         -
+# 5  Extended offline    Aborted by host               20%      7114         -
+# 6  Extended offline    Completed without error       00%      7099         -
+# 7  Extended offline    Completed without error       00%      7079         -
+# 8  Extended offline    Aborted by host               60%      7064         -
+# 9  Extended offline    Completed without error       00%      7055         -
+#10  Extended offline    Completed without error       00%      7053         -
+#11  Extended offline    Completed without error       00%      7043         -
+#12  Extended offline    Aborted by host               50%      7034         -
+#13  Extended offline    Aborted by host               60%      7027         -
+#14  Extended offline    Completed without error       00%      7013         -
+#15  Extended offline    Completed without error       00%      6996         -
+#16  Extended offline    Completed without error       00%      6971         -
+#17  Extended offline    Completed without error       00%      6945         -
+#18  Extended offline    Completed without error       00%      6933         -
+#19  Extended offline    Completed without error       00%      6925         -
+#20  Extended offline    Completed without error       00%      6921         -
+#21  Extended offline    Completed without error       00%      6908         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -206,7 +223,7 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              47  ---  Current Temperature
+0x05  0x008  1              61  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              65  ---  Highest Temperature
@@ -224,6 +241,8 @@ Page  Offset Size        Value Flags Description
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

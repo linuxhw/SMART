@@ -6,7 +6,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Wed Jan  6 11:35:41 2021 CET
+Local Time is:    Wed Jan  6 12:02:15 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -54,24 +54,24 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   253   100   051    -    0
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
   3 Spin_Up_Time            POS---   100   100   025    -    2816
   4 Start_Stop_Count        -O--CK   094   094   000    -    6253
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         -OSR--   253   253   000    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    748183
+  9 Power_On_Hours          -O--CK   099   099   000    -    748232
  10 Spin_Retry_Count        -O--CK   253   253   000    -    0
  12 Power_Cycle_Count       -O--CK   097   097   000    -    3284
-191 G-Sense_Error_Rate      -O--C-   089   089   000    -    112438
+191 G-Sense_Error_Rate      -O--C-   089   089   000    -    112465
 192 Power-Off_Retract_Count -O--C-   253   253   000    -    0
-194 Temperature_Celsius     -O---K   127   070   000    -    37
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    369
+194 Temperature_Celsius     -O---K   112   070   000    -    42
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    36469
 196 Reallocated_Event_Count -O--CK   253   253   000    -    0
 197 Current_Pending_Sector  -O--C-   253   100   000    -    0
 198 Offline_Uncorrectable   ----CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R--   253   100   000    -    0
+200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O--C-   253   253   000    -    0
 223 Load_Retry_Count        -O--C-   100   100   000    -    7
 225 Load_Cycle_Count        -O--C-   070   070   000    -    311724
@@ -96,8 +96,8 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Invalid Error Log index = 0x0000, trying reserved byte (0x01) instead
-Device Error Count: 17 (device log contains only the most recent 8 errors)
+Invalid Error Log index = 0x0000, trying reserved byte (0x02) instead
+Device Error Count: 18 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -112,6 +112,23 @@ Device Error Count: 17 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 18 [1] occurred at disk power-on lifetime: 6234 hours (259 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 c2 4f 00 e0 00 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 d5 d5 00 01 00 00 00 c2 4f e0 00 00     00:07:01.000  SMART READ LOG
+  b0 d6 d5 00 01 00 00 00 c2 4f e1 00 00     00:07:00.938  SMART READ LOG
+  b0 d5 d6 00 01 00 00 00 c2 4f e0 00 00     00:07:00.938  SMART WRITE LOG
+  b0 d5 d5 00 01 00 00 00 c2 4f e0 00 00     00:07:00.938  SMART READ LOG
+  b0 d5 d5 00 01 00 00 00 c2 4f 09 00 00     00:07:00.875  SMART READ LOG
 
 Error 17 [0] occurred at disk power-on lifetime: 6077 hours (253 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -164,18 +181,22 @@ Error 15 [6] occurred at disk power-on lifetime: 5961 hours (248 days + 9 hours)
   ca 00 00 00 80 00 00 00 30 a3 00 e0 00     00:07:29.750  WRITE DMA
   c8 00 00 00 20 00 00 00 10 26 c0 e0 00     00:07:29.750  READ DMA
 
-Error 14 [5] occurred at disk power-on lifetime: 5961 hours (248 days + 9 hours)
+Error 14 [5] occurred at disk power-on lifetime: 6234 hours (259 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 e8 e9 00 28 e2 00  Error: UNC 8 sectors at LBA = 0xeae90028 = 3941138472
+  04 -- 51 00 01 00 00 c2 4f 00 e0 00 00  Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 e8 e9 28 e2 00     00:07:27.313  READ DMA
+  b0 d5 d5 00 01 00 00 00 c2 4f e0 00 00     00:07:01.000  SMART READ LOG
+  b0 d6 d5 00 01 00 00 00 c2 4f e1 00 00     00:07:00.938  SMART READ LOG
+  b0 d5 d6 00 01 00 00 00 c2 4f e0 00 00     00:07:00.938  SMART WRITE LOG
+  b0 d5 d5 00 01 00 00 00 c2 4f e0 00 00     00:07:00.938  SMART READ LOG
+  b0 d5 d5 00 01 00 00 00 c2 4f 09 00 00     00:07:00.875  SMART READ LOG
 
 Error 13 [4] occurred at disk power-on lifetime: 6077 hours (253 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -228,19 +249,6 @@ Error 11 [2] occurred at disk power-on lifetime: 5961 hours (248 days + 9 hours)
   ca 00 00 00 80 00 00 00 30 a3 00 e0 00     00:07:29.750  WRITE DMA
   c8 00 00 00 20 00 00 00 10 26 c0 e0 00     00:07:29.750  READ DMA
 
-Error 10 [1] occurred at disk power-on lifetime: 5961 hours (248 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 e8 e9 00 28 e2 00  Error: UNC 8 sectors at LBA = 0xeae90028 = 3941138472
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 e8 e9 28 e2 00     00:07:27.313  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -270,8 +278,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     --/37 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     --/42 Celsius
 Lifetime    Min/Max Temperature:     --/56 Celsius
 
 Read SCT Status failed: scsi error badly formed scsi parameters
@@ -287,8 +295,8 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            1  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0001  2            2  Command failed due to ICRC error
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS

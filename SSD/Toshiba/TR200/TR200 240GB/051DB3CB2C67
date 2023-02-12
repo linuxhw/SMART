@@ -1,22 +1,26 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.9.155-nrj-desktop-1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     TOSHIBA-TR200
 Serial Number:    --
 LU WWN Device Id: 5 00080d ...
 Firmware Version: SBFA12.5
-User Capacity:    240 057 409 536 bytes [240 GB]
+User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
-ATA Version is:   Unknown(0x0ff8) (minor revision not indicated)
+ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Apr  9 15:47:54 2020 MSK
+Local Time is:    Sun Apr 12 19:53:52 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -40,15 +44,15 @@ Error logging capability:        (0x01)	Error logging supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    1311
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    362
+  9 Power_On_Hours          -O--C-   100   100   000    -    1366
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    373
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 169 Unknown_Attribute       PO----   100   100   010    -    0
 173 Unknown_Attribute       -O--C-   193   193   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    143
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    147
 194 Temperature_Celsius     PO---K   069   063   020    -    31 (Min/Max 23/37)
-241 Total_LBAs_Written      -O--CK   100   100   000    -    149646
+241 Total_LBAs_Written      -O--CK   100   100   000    -    156930
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -67,7 +71,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -85,10 +89,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             362  ---  Lifetime Power-On Resets
-0x01  0x010  4            1311  ---  Power-on Hours
-0x01  0x018  6      9807239746  ---  Logical Sectors Written
-0x01  0x028  6      7329629338  ---  Logical Sectors Read
+0x01  0x008  4             373  ---  Lifetime Power-On Resets
+0x01  0x010  4            1366  ---  Power-on Hours
+0x01  0x018  6     10284565847  ---  Logical Sectors Written
+0x01  0x028  6      7528903124  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -98,10 +102,12 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -111,12 +117,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            8  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           17  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           18  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
-
-
 

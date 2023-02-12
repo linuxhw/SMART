@@ -1,19 +1,20 @@
 === START OF INFORMATION SECTION ===
-Device Model:     Hitachi HTS541610J9SA00
+Device Model:     HTS541610J9SA00
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: SBCOC7DP
-User Capacity:    100 030 242 816 bytes [100 GB]
+User Capacity:    100,030,242,816 bytes [100 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Thu Mar 24 01:15:27 2016 MSK
+Local Time is:    Mon Nov  9 22:20:48 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     254 (maximum performance), recommended: 128
+AAM level is:     128 (quiet), recommended: 128
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -52,20 +53,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   106   106   040    -    4525
-  3 Spin_Up_Time            POS---   236   236   033    -    1
-  4 Start_Stop_Count        -O--C-   097   097   000    -    5079
+  2 Throughput_Performance  P-S---   106   106   040    -    4524
+  3 Spin_Up_Time            POS---   240   240   033    -    1
+  4 Start_Stop_Count        -O--C-   097   097   000    -    5501
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   126   126   040    -    37
-  9 Power_On_Hours          -O--C-   082   082   000    -    8258
+  8 Seek_Time_Performance   P-S---   122   122   040    -    39
+  9 Power_On_Hours          -O--C-   078   078   000    -    9736
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1710
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    2130
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    58
-193 Load_Cycle_Count        -O--C-   063   063   000    -    371762
-194 Temperature_Celsius     -O----   152   152   000    -    36 (Min/Max 15/56)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    94
+193 Load_Cycle_Count        -O--C-   045   045   000    -    555297
+194 Temperature_Celsius     -O----   137   137   000    -    40 (Min/Max 15/56)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    5
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    0
@@ -88,17 +89,51 @@ Address    Access  R/W   Size  Description
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
 0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters
+0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 8553 hours (356 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 16 00 00 08 62 9d 4a e8 00  Error: UNC 22 sectors at LBA = 0x08629d4a = 140680522
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 38 62 9c 3f 62 9d 28 e8 08     00:00:37.300  READ DMA
+  c8 00 00 00 48 62 9b cf 62 9b f8 e8 08     00:00:37.300  READ DMA
+  c8 00 00 00 80 62 9b 27 62 9b 50 e8 08     00:00:37.300  READ DMA
+  c8 00 00 00 18 62 9a e7 62 9b 10 e8 08     00:00:37.300  READ DMA
+  c8 00 00 00 28 62 9a bf 62 9a c0 e8 08     00:00:37.300  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      4437         -
-# 2  Extended offline    Completed without error       00%      4401         -
-# 3  Extended offline    Completed without error       00%      4336         -
+# 1  Short offline       Completed without error       00%      8981         -
+# 2  Short offline       Completed without error       00%      8461         -
+# 3  Short offline       Completed without error       00%      8461         -
+# 4  Extended offline    Completed without error       00%      4437         -
+# 5  Extended offline    Completed without error       00%      4401         -
+# 6  Extended offline    Completed without error       00%      4336         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -113,7 +148,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

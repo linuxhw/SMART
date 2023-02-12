@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.17.0-1016-oem] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.0-52-generic] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Silicon Motion based SSDs
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      mSATA
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Sep  4 05:57:39 2022 EDT
+Local Time is:    Tue Nov 15 14:54:17 2022 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -65,11 +65,11 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    192
- 12 Power_Cycle_Count       PO----   100   100   000    -    2565
+  9 Power_On_Hours          -O----   100   100   000    -    202
+ 12 Power_Cycle_Count       PO----   100   100   000    -    2931
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
-177 Wear_Leveling_Count     PO----   100   100   000    -    38
+177 Wear_Leveling_Count     PO----   100   100   000    -    40
 178 Runtime_Invalid_Blk_Cnt PO----   100   100   000    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO----   100   100   000    -    132
@@ -77,8 +77,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    0
 187 Reported_Uncorrect      PO----   100   100   000    -    0
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
-241 Host_Writes_32MiB       PO----   100   100   000    -    207608
-242 Host_Reads_32MiB        PO----   100   100   000    -    344155
+241 Host_Writes_32MiB       PO----   100   100   000    -    220086
+242 Host_Reads_32MiB        PO----   100   100   000    -    382251
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,22 +137,22 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2565  ---  Lifetime Power-On Resets
-0x01  0x010  4             192  ---  Power-on Hours
-0x01  0x018  6       720905480  ---  Logical Sectors Written
-0x01  0x020  6       374564650  ---  Number of Write Commands
-0x01  0x028  6      1079727130  ---  Logical Sectors Read
-0x01  0x030  6       472508254  ---  Number of Read Commands
+0x01  0x008  4            2931  ---  Lifetime Power-On Resets
+0x01  0x010  4             202  ---  Power-on Hours
+0x01  0x018  6      1538679842  ---  Logical Sectors Written
+0x01  0x020  6       391384498  ---  Number of Write Commands
+0x01  0x028  6      3576385750  ---  Logical Sectors Read
+0x01  0x030  6       499179071  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              92  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             180  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              55  ---  Current Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            4139  ---  Number of Hardware Resets
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4            5170  ---  Number of Hardware Resets
+0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

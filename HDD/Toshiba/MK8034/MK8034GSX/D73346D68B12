@@ -7,13 +7,13 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Aug  5 20:32:41 2021 CEST
+Local Time is:    Thu Aug  5 20:50:13 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     1 (minimum power consumption with standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
@@ -56,18 +56,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1759
-  4 Start_Stop_Count        -O--CK   100   100   000    -    6006
+  3 Spin_Up_Time            POS--K   100   100   001    -    1773
+  4 Start_Stop_Count        -O--CK   100   100   000    -    6009
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   089   089   000    -    4772
+  9 Power_On_Hours          -O--CK   089   089   000    -    4773
  10 Spin_Retry_Count        PO--CK   220   100   030    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    5859
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1311
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    112
-193 Load_Cycle_Count        -O--CK   090   090   000    -    100885
-194 Temperature_Celsius     -O---K   100   100   000    -    29 (Min/Max 6/49)
+193 Load_Cycle_Count        -O--CK   090   090   000    -    100889
+194 Temperature_Celsius     -O---K   100   100   000    -    39 (Min/Max 6/49)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -76,7 +76,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 222 Loaded_Hours            -O--CK   091   091   000    -    3685
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    374
+226 Load-in_Time            -OS--K   100   100   000    -    312
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -213,8 +213,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            9  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.71-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
 Device Model:     WDC WD10EZEX-00BN5A0
@@ -10,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Oct 25 18:29:51 2018 +05
+Local Time is:    Thu Nov 18 19:39:32 2021 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,8 +28,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -61,21 +64,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    96
-  3 Spin_Up_Time            POS--K   172   167   021    -    2383
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1575
+  3 Spin_Up_Time            POS--K   176   165   021    -    2191
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3926
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   090   090   000    -    7544
+  9 Power_On_Hours          -O--CK   070   070   000    -    22515
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1567
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    503
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1073
-194 Temperature_Celsius     -O---K   115   099   000    -    28
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3739
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    757
+193 Load_Cycle_Count        -O--CK   199   199   000    -    3188
+194 Temperature_Celsius     -O---K   119   099   000    -    24
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   199   000    -    485
+199 UDMA_CRC_Error_Count    -O--CK   200   184   000    -    25281
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -106,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 172 (device log contains only the most recent 24 errors)
+Device Error Count: 580 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,141 +125,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 172 [3] occurred at disk power-on lifetime: 1191 hours (49 days + 15 hours)
+Error 580 [3] occurred at disk power-on lifetime: 18240 hours (760 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 10 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  04 -- 51 00 00 00 00 00 00 08 01 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 10 00 00 00 00 00 00 a0 00     00:16:16.781  SET MULTIPLE MODE
-  ef 00 03 00 0c 17 87 00 00 00 00 a0 00     00:16:16.780  SET FEATURES [Set transfer mode]
-  35 00 00 00 40 00 00 3c 32 66 20 e0 00     00:14:11.275  WRITE DMA EXT
-  35 00 00 00 10 00 00 3c 17 98 c0 e0 00     00:14:11.275  WRITE DMA EXT
-  35 00 00 00 08 00 00 3c 11 45 b8 e0 00     00:14:11.275  WRITE DMA EXT
+  e3 00 20 00 00 00 00 00 00 08 01 a0 00     00:15:31.978  IDLE
+  25 20 20 00 01 00 00 00 00 08 00 e0 00     00:15:31.973  READ DMA EXT
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     00:15:31.970  READ DMA
+  ef 00 03 00 46 00 00 00 c2 4f 51 a0 00     00:15:31.962  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 c2 4f 51 a0 00     00:15:29.942  SET FEATURES [Set transfer mode]
 
-Error 171 [2] occurred at disk power-on lifetime: 1191 hours (49 days + 15 hours)
+Error 579 [2] occurred at disk power-on lifetime: 18240 hours (760 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 0c 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  04 -- 61 00 00 00 00 00 c2 4f 01 a0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 03 00 0c 17 87 00 00 00 00 a0 00     00:16:16.780  SET FEATURES [Set transfer mode]
-  35 00 00 00 40 00 00 3c 32 66 20 e0 00     00:14:11.275  WRITE DMA EXT
-  35 00 00 00 10 00 00 3c 17 98 c0 e0 00     00:14:11.275  WRITE DMA EXT
-  35 00 00 00 08 00 00 3c 11 45 b8 e0 00     00:14:11.275  WRITE DMA EXT
-  35 00 00 00 10 00 00 3c d7 e8 18 e0 00     00:13:59.982  WRITE DMA EXT
+  b0 00 d8 00 00 00 00 00 c2 4f 01 a0 00     00:15:27.570  SMART ENABLE OPERATIONS
+  ec 00 20 00 3f 00 00 00 00 00 01 a0 00     00:15:27.569  IDENTIFY DEVICE
+  10 00 20 00 3f 00 00 00 00 00 01 a0 00     00:15:27.564  RECALIBRATE [OBS-4]
+  91 00 20 00 3f 00 00 0f 00 00 01 af 00     00:15:27.564  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:15:27.562  IDENTIFY DEVICE
 
-Error 170 [1] occurred at disk power-on lifetime: 1133 hours (47 days + 5 hours)
+Error 578 [1] occurred at disk power-on lifetime: 18240 hours (760 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 3f 00 00 0f 00 00 01 af 00
+  04 -- 51 00 00 00 00 00 00 08 01 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  91 00 20 00 3f 00 00 0f 00 00 01 af 08     00:34:59.552  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:59.550  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:59.532  IDENTIFY DEVICE
-  91 00 20 00 3f 00 00 0f 00 00 01 af 08     00:34:43.142  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:43.141  IDENTIFY DEVICE
+  e3 00 20 00 00 00 00 00 00 08 01 a0 00     00:03:19.190  IDLE
+  25 20 20 00 01 00 00 00 00 08 00 e0 00     00:03:19.185  READ DMA EXT
+  c8 00 20 00 01 00 00 00 00 00 01 a0 00     00:03:19.179  READ DMA
+  ef 00 03 00 46 00 00 00 c2 4f 51 a0 00     00:03:19.179  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 c2 4f 51 a0 00     00:03:19.179  SET FEATURES [Set transfer mode]
 
-Error 169 [0] occurred at disk power-on lifetime: 1133 hours (47 days + 5 hours)
+Error 577 [0] occurred at disk power-on lifetime: 18240 hours (760 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 3f 00 00 0f 00 00 01 af 00
+  04 -- 61 00 00 00 00 00 c2 4f 01 a0 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  91 00 20 00 3f 00 00 0f 00 00 01 af 08     00:34:43.142  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:43.141  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:43.122  IDENTIFY DEVICE
-  91 00 20 00 3f 00 00 0f 00 00 01 af 08     00:34:31.660  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:31.659  IDENTIFY DEVICE
+  b0 00 d8 00 00 00 00 00 c2 4f 01 a0 00     00:02:41.004  SMART ENABLE OPERATIONS
+  ec 00 20 00 3f 00 00 00 00 00 01 a0 00     00:02:41.003  IDENTIFY DEVICE
+  10 00 20 00 3f 00 00 00 00 00 01 a0 00     00:02:41.000  RECALIBRATE [OBS-4]
+  91 00 20 00 3f 00 00 0f 00 00 01 af 00     00:02:40.998  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:02:03.752  IDENTIFY DEVICE
 
-Error 168 [23] occurred at disk power-on lifetime: 1133 hours (47 days + 5 hours)
+Error 576 [23] occurred at disk power-on lifetime: 17705 hours (737 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 3f 00 00 0f 00 00 01 af 00
+  04 -- 61 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  91 00 20 00 3f 00 00 0f 00 00 01 af 08     00:34:31.660  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:31.659  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:34:31.640  IDENTIFY DEVICE
-  30 00 00 00 08 00 00 00 f9 27 60 e0 00     00:34:22.698  WRITE SECTOR(S)
-  2f 00 00 00 01 00 00 00 00 00 00 e0 00     00:34:22.697  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:14:15.267  FLUSH CACHE EXT
+  c8 00 00 00 08 00 00 00 00 00 00 e0 08     00:14:15.267  READ DMA
+  25 00 00 00 08 00 00 74 70 56 f8 e0 08     00:14:15.267  READ DMA EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:14:15.267  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:14:15.261  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 167 [22] occurred at disk power-on lifetime: 1133 hours (47 days + 5 hours)
-  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 08 00 00 00 f9 27 60 e0 00  Device Fault; Error: ABRT at LBA = 0x00f92760 = 16328544
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  30 00 00 00 08 00 00 00 f9 27 60 e0 00     00:34:22.698  WRITE SECTOR(S)
-  2f 00 00 00 01 00 00 00 00 00 00 e0 00     00:34:22.697  READ LOG EXT
-  c6 00 00 00 10 00 00 00 00 00 00 a0 00     00:34:22.697  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 a0 00     00:34:22.697  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:34:22.675  IDENTIFY DEVICE
-
-Error 166 [21] occurred at disk power-on lifetime: 1133 hours (47 days + 5 hours)
+Error 575 [22] occurred at disk power-on lifetime: 17705 hours (737 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  04 -- 61 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 00 e0 00     00:34:22.697  READ LOG EXT
-  c6 00 00 00 10 00 00 00 00 00 00 a0 00     00:34:22.697  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 a0 00     00:34:22.697  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:34:22.675  IDENTIFY DEVICE
-  25 00 00 00 08 00 00 3e f9 a2 08 e0 00     00:34:19.841  READ DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:14:08.700  FLUSH CACHE EXT
+  c8 00 00 00 08 00 00 00 00 18 00 e0 08     00:14:08.700  READ DMA
+  25 00 00 00 08 00 00 74 70 57 f8 e0 08     00:14:08.700  READ DMA EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:14:08.700  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:14:08.694  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 165 [20] occurred at disk power-on lifetime: 1133 hours (47 days + 5 hours)
+Error 574 [21] occurred at disk power-on lifetime: 17705 hours (737 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 10 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  04 -- 61 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c6 00 00 00 10 00 00 00 00 00 00 a0 00     00:34:22.697  SET MULTIPLE MODE
-  ef 00 03 00 0c 00 00 00 00 00 00 a0 00     00:34:22.697  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:34:22.675  IDENTIFY DEVICE
-  25 00 00 00 08 00 00 3e f9 a2 08 e0 00     00:34:19.841  READ DMA EXT
-  25 00 00 00 08 00 00 3e f9 75 18 e0 00     00:34:19.817  READ DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:14:04.309  FLUSH CACHE EXT
+  25 00 00 02 00 00 00 02 7f fe 00 e0 08     00:14:04.307  READ DMA EXT
+  c8 00 00 00 08 00 00 02 fd 08 08 e2 08     00:14:04.307  READ DMA
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:14:04.306  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:14:04.306  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 573 [20] occurred at disk power-on lifetime: 17705 hours (737 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:13:57.735  FLUSH CACHE EXT
+  c8 00 00 00 08 00 00 02 fd 08 00 e2 08     00:13:57.735  READ DMA
+  25 00 00 02 00 00 00 02 7f fc 00 e0 08     00:13:57.732  READ DMA EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:13:57.732  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:13:57.732  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -275,11 +278,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     20/29 Celsius
-Lifetime    Min/Max Temperature:     13/44 Celsius
+Current Temperature:                    24 Celsius
+Power Cycle Min/Max Temperature:     24/24 Celsius
+Lifetime    Min/Max Temperature:      5/44 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -290,7 +292,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (33)
+Temperature History Size (Index):    478 (13)
 
 SCT Error Recovery Control command not supported
 
@@ -308,12 +310,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        37868  Vendor specific
-
-
+0x8000  4         6342  Vendor specific
 

@@ -11,11 +11,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Jan  3 16:36:25 2021 UTC
+Local Time is:    Sun May 30 09:42:40 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -62,26 +62,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    4205
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   094   073   025    -    2063
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10531
+  3 Spin_Up_Time            PO---K   095   073   025    -    1654
+  4 Start_Stop_Count        -O--CK   089   089   000    -    11197
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    14039
+  9 Power_On_Hours          -O--CK   100   100   000    -    14496
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    46
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3608
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3740
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    36
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   056   000    -    28 (Min/Max 10/46)
+194 Temperature_Celsius     -O----   064   056   000    -    30 (Min/Max 10/46)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   099   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    27548
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    27579
 223 Load_Retry_Count        -O--CK   100   100   000    -    46
-225 Load_Cycle_Count        -O--CK   062   062   000    -    384148
+225 Load_Cycle_Count        -O--CK   062   062   000    -    389946
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -262,11 +262,15 @@ Error 3617 [0] occurred at disk power-on lifetime: 3454 hours (143 days + 22 hou
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     10567         -
-# 2  Short offline       Completed without error       00%     10557         -
-# 3  Short offline       Completed without error       00%     10542         -
-# 4  Short offline       Completed without error       00%     10539         -
-# 5  Short offline       Completed without error       00%     10535         -
+# 1  Short offline       Completed without error       00%     14136         -
+# 2  Short offline       Completed without error       00%     14132         -
+# 3  Short offline       Completed without error       00%     14123         -
+# 4  Short offline       Completed without error       00%     14109         -
+# 5  Short offline       Completed without error       00%     10567         -
+# 6  Short offline       Completed without error       00%     10557         -
+# 7  Short offline       Completed without error       00%     10542         -
+# 8  Short offline       Completed without error       00%     10539         -
+# 9  Short offline       Completed without error       00%     10535         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -283,8 +287,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     22/34 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     29/30 Celsius
 Lifetime    Min/Max Temperature:      9/46 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -294,7 +298,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (11)
+Temperature History Size (Index):    128 (16)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -314,8 +318,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           19  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           15  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           17  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           16  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
@@ -340,6 +344,4 @@ ID      Size     Value  Description
 0x8e0f  4            0  Vendor specific
 0x8e10  4            0  Vendor specific
 0x8e11  4            0  Vendor specific
-
-
 

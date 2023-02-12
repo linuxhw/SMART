@@ -1,3 +1,6 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.155-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Intel 520 Series SSDs
 Device Model:     INTEL SSDSC2CW240A3
@@ -7,10 +10,11 @@ Firmware Version: 400i
 User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Jan  2 13:47:44 2019 MSK
+Local Time is:    Wed Dec 21 21:10:34 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,24 +64,24 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    910358h+51m+07.100s
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5678
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    915385h+19m+39.250s
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7650
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1973
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    2499
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1973
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    364901
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    2499
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    451632
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    52
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    55
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   100   100   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    364901
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    405406
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    9161
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    451632
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    553417
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    11397
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,7 +124,6 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:     30/30 Celsius
@@ -140,17 +143,17 @@ SCT Error Recovery Control command not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            5683  ---  Lifetime Power-On Resets
-0x01  0x010  4           15564  ---  Power-on Hours
-0x01  0x018  6     24121731476  ---  Logical Sectors Written
-0x01  0x028  6     26753457327  ---  Logical Sectors Read
+0x01  0x008  4            7655  ---  Lifetime Power-On Resets
+0x01  0x010  4           20591  ---  Power-on Hours
+0x01  0x018  6     29805672291  ---  Logical Sectors Written
+0x01  0x028  6     36453552175  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4           49541  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4           64856  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           49541  ---  Number of Hardware Resets
-0x06  0x010  4           36445  ---  Number of ASR Events
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4           64856  ---  Number of Hardware Resets
+0x06  0x010  4           48612  ---  Number of ASR Events
+0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -167,8 +170,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

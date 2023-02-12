@@ -8,11 +8,11 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sun Jan 26 11:54:53 2020 EET
+Local Time is:    Thu Aug 19 08:26:47 2021 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -63,27 +63,27 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   093   093   011    -    2990
-  4 Start_Stop_Count        -O--CK   083   083   000    -    17487
+  3 Spin_Up_Time            POS---   094   094   011    -    2890
+  4 Start_Stop_Count        -O--CK   080   080   000    -    20032
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    28539
+  9 Power_On_Hours          -O--CK   094   094   000    -    32290
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   083   083   000    -    17400
+ 12 Power_Cycle_Count       -O--CK   080   080   000    -    19942
  13 Read_Soft_Error_Rate    -OSR--   100   100   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   001   001   099    NOW  150
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   085   064   000    -    15 (Min/Max 12/15)
-194 Temperature_Celsius     -O---K   080   062   000    -    20 (Min/Max 12/20)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    71393
+190 Airflow_Temperature_Cel -O---K   082   064   000    -    18 (Min/Max 18/18)
+194 Temperature_Celsius     -O---K   076   062   000    -    24 (Min/Max 18/24)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    61087
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    2
+199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    4
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
                             ||||||_ K auto-keep
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 2
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,40 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 30190 hours (1257 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 bf 00 00 0f 6d a5 d9 ef 00  Error: ICRC, ABRT 191 sectors at LBA = 0x0f6da5d9 = 258844121
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 00 00 00 00 6d a5 98 ef 0a     00:01:05.910  READ DMA
+  25 00 00 00 08 00 00 10 b2 94 d8 e0 0a     00:01:05.910  READ DMA EXT
+  c8 00 00 00 00 00 00 00 67 cf 20 ef 0a     00:01:05.910  READ DMA
+  25 00 00 00 08 00 00 10 b2 94 d0 e0 0a     00:01:05.910  READ DMA EXT
+  25 00 00 00 08 00 00 10 7b 62 b0 e0 0a     00:01:05.910  READ DMA EXT
+
+Error 3 [2] occurred at disk power-on lifetime: 30190 hours (1257 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 3f 00 00 0f c6 e3 f1 ef 00  Error: ICRC, ABRT 63 sectors at LBA = 0x0fc6e3f1 = 264692721
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 00 00 00 00 c6 e3 30 ef 0a     00:00:59.950  READ DMA
+  c8 00 00 00 00 00 00 00 65 67 e0 ef 0a     00:00:59.940  READ DMA
+  25 00 00 00 08 00 00 10 32 50 e0 e0 0a     00:00:59.940  READ DMA EXT
+  25 00 00 00 08 00 00 10 32 50 d8 e0 0a     00:00:59.940  READ DMA EXT
+  25 00 00 00 08 00 00 12 37 56 80 e0 0a     00:00:59.940  READ DMA EXT
 
 Error 2 [1] occurred at disk power-on lifetime: 9720 hours (405 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -162,13 +196,27 @@ Error 1 [0] occurred at disk power-on lifetime: 7690 hours (320 days + 10 hours)
 
 SMART Extended Self-test Log Version: 0 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: handling damage??  90%     28530         0
-# 2  Extended offline    Aborted by host               90%     28381         -
-# 3  Extended offline    Aborted by host               90%     28326         -
-# 4  Extended offline    Aborted by host               90%     28274         -
-# 5  Short offline       Aborted by host               90%      8513         -
-# 6  Short offline       Aborted by host               90%      5878         -
-# 7  Short offline       Aborted by host               90%      5872         -
+# 1  Extended offline    Completed: handling damage??  90%     30270         0
+# 2  Extended offline    Aborted by host               90%     30227         -
+# 3  Short offline       Aborted by host               90%     30227         -
+# 4  Extended offline    Aborted by host               90%     30156         -
+# 5  Extended offline    Aborted by host               90%     29928         -
+# 6  Extended offline    Aborted by host               90%     29880         -
+# 7  Extended offline    Aborted by host               90%     29835         -
+# 8  Extended offline    Aborted by host               90%     29745         -
+# 9  Extended offline    Aborted by host               90%     29699         -
+#10  Extended offline    Aborted by host               90%     29397         -
+#11  Extended offline    Aborted by host               90%     29344         -
+#12  Extended offline    Aborted by host               90%     29294         -
+#13  Extended offline    Aborted by host               90%     29240         -
+#14  Extended offline    Aborted by host               90%     29192         -
+#15  Extended offline    Aborted by host               90%     29040         -
+#16  Extended offline    Aborted by host               90%     28992         -
+#17  Extended offline    Aborted by host               90%     28913         -
+#18  Extended offline    Aborted by host               90%     28868         -
+#19  Extended offline    Aborted by host               90%     28818         -
+#20  Extended offline    Aborted by host               90%     28721         -
+#21  Extended offline    Aborted by host               90%     28580         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -186,8 +234,8 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 20 Celsius
-Power Cycle Max Temperature:         20 Celsius
+Current Temperature:                 24 Celsius
+Power Cycle Max Temperature:         24 Celsius
 Lifetime    Max Temperature:         54 Celsius
 
 SCT Temperature History Version:     2
@@ -195,7 +243,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (116)
+Temperature History Size (Index):    128 (44)
 
 SCT Error Recovery Control:
            Read: Disabled

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.12
 Device Model:     ST3500413AS
@@ -10,13 +13,14 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Sep  1 19:09:17 2017 CEST
+Local Time is:    Sun Mar 21 16:07:11 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
@@ -60,28 +64,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    187168857
+  1 Raw_Read_Error_Rate     POSR--   120   099   006    -    238392852
   3 Spin_Up_Time            PO----   100   100   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2497
+  4 Start_Stop_Count        -O--CK   097   097   020    -    4049
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   075   060   030    -    40637876
-  9 Power_On_Hours          -O--CK   085   085   000    -    13404
+  7 Seek_Error_Rate         POSR--   076   060   030    -    46548820
+  9 Power_On_Hours          -O--CK   078   078   000    -    19449
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2416
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3923
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    7
+188 Command_Timeout         -O--CK   100   099   000    -    8
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   052   045    -    37 (Min/Max 37/37)
-194 Temperature_Celsius     -O---K   037   048   000    -    37 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   030   026   000    -    187168857
+190 Airflow_Temperature_Cel -O---K   069   052   045    -    31 (Min/Max 19/32)
+194 Temperature_Celsius     -O---K   031   048   000    -    31 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   037   026   000    -    238392852
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    20154 (77 40 0)
-241 Total_LBAs_Written      ------   100   253   000    -    3222895839
-242 Total_LBAs_Read         ------   100   253   000    -    1808482713
+240 Head_Flying_Hours       ------   100   253   000    -    30440 (226 200 0)
+241 Total_LBAs_Written      ------   100   253   000    -    3495203885
+242 Total_LBAs_Read         ------   100   253   000    -    1063123017
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -134,10 +138,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     37/38 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     19/32 Celsius
 Lifetime    Min/Max Temperature:     16/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -146,7 +149,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (73)
+Temperature History Size (Index):    128 (68)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -154,9 +157,11 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           63  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

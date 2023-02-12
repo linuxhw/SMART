@@ -1,19 +1,23 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.6.xm1-1.klp-xanmod-rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3160815AS
 Serial Number:    --
 Firmware Version: 3.AAD
-User Capacity:    160 041 885 696 bytes [160 GB]
+User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Sep 16 13:33:39 2015 YEKT
+Local Time is:    Mon Oct 31 14:10:54 2022 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -51,19 +55,19 @@ recommended polling time: 	 (  54) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   088   006    -    160569884
-  3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    374
+  1 Raw_Read_Error_Rate     POSR--   119   087   006    -    216718021
+  3 Spin_Up_Time            PO----   098   097   000    -    0
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1194
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   085   060   030    -    376956023
-  9 Power_On_Hours          -O--CK   037   037   000    -    55972
+  7 Seek_Error_Rate         POSR--   087   060   030    -    648732441
+  9 Power_On_Hours          -O--CK   006   006   000    -    83034
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    374
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1194
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   051   045    -    38 (Min/Max 37/39)
-194 Temperature_Celsius     -O---K   038   049   000    -    38 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   072   055   000    -    673119
+190 Airflow_Temperature_Cel -O---K   060   051   045    -    40 (Min/Max 22/40)
+194 Temperature_Celsius     -O---K   040   049   000    -    40 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   067   055   000    -    155971265
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -87,7 +91,7 @@ Address    Access  R/W   Size  Description
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x11       GPL,SL  R/O      1  SATA Phy Event Counters
+0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
@@ -106,6 +110,26 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     17360         -
+# 2  Extended offline    Completed without error       00%     17134         -
+# 3  Extended offline    Completed without error       00%     16967         -
+# 4  Extended offline    Completed without error       00%     16800         -
+# 5  Extended offline    Completed without error       00%     16526         -
+# 6  Extended offline    Completed without error       00%     15486         -
+# 7  Extended offline    Completed without error       00%     15379         -
+# 8  Extended offline    Completed without error       00%     15270         -
+# 9  Extended offline    Completed without error       00%     15027         -
+#10  Extended offline    Completed without error       00%     14200         -
+#11  Extended offline    Completed without error       00%     13823         -
+#12  Extended offline    Completed without error       00%     11826         -
+#13  Extended offline    Completed without error       00%     11658         -
+#14  Extended offline    Completed without error       00%     11309         -
+#15  Extended offline    Completed without error       00%     11142         -
+#16  Extended offline    Completed without error       00%     10871         -
+#17  Extended offline    Completed without error       00%     10704         -
+#18  Extended offline    Completed without error       00%     10528         -
+#19  Extended offline    Completed without error       00%     10361         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -120,11 +144,13 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Commands not supported
 
-Device Statistics (GP Log 0x04) not supported
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

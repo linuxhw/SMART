@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.0-7642-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.15-76051515-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     WD Blue and Green SSDs
+Model Family:     WD Blue / Red / Green SSDs
 Device Model:     WDC  WDS100T2B0A-00SM50
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -11,10 +11,11 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Mar 28 15:47:10 2021 EDT
+Local Time is:    Sat Feb  5 12:56:19 2022 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,29 +61,29 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    536
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    72
-165 Block_Erase_Count       -O--CK   100   100   ---    -    8192088
+  9 Power_On_Hours          -O--CK   100   100   ---    -    1131
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    138
+165 Block_Erase_Count       -O--CK   100   100   ---    -    15794365
 166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    1
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    186
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    3
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    7
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    952
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    1
-174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    0
+173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    2
+174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    1
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   074   033   ---    -    26 (Min/Max 14/33)
+194 Temperature_Celsius     -O---K   077   042   ---    -    23 (Min/Max 14/42)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x0011000a0011
+230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x002500140025
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    1206
-234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    1322
-241 Host_Writes_GiB         ----CK   253   253   ---    -    1231
-242 Host_Reads_GiB          ----CK   253   253   ---    -    670
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    2580
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    2832
+241 Host_Writes_GiB         ----CK   253   253   ---    -    2587
+242 Host_Reads_GiB          ----CK   253   253   ---    -    1583
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -122,12 +123,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              72  ---  Lifetime Power-On Resets
-0x01  0x010  4             536  ---  Power-on Hours
-0x01  0x018  6      2582623443  ---  Logical Sectors Written
-0x01  0x020  6        14362497  ---  Number of Write Commands
-0x01  0x028  6      1405650945  ---  Logical Sectors Read
-0x01  0x030  6        15411572  ---  Number of Read Commands
+0x01  0x008  4             138  ---  Lifetime Power-On Resets
+0x01  0x010  4            1131  ---  Power-on Hours
+0x01  0x018  6      5426515750  ---  Logical Sectors Written
+0x01  0x020  6        30210432  ---  Number of Write Commands
+0x01  0x028  6      3321737711  ---  Logical Sectors Read
+0x01  0x030  6        33097006  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -141,5 +142,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

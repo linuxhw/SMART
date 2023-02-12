@@ -1,19 +1,23 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.7 and 7200.7 Plus
 Device Model:     ST3120827AS
 Serial Number:    --
 Firmware Version: 3.42
-User Capacity:    120 034 123 776 bytes [120 GB]
+User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Sun Jan 22 21:44:30 2017 MSK
+Local Time is:    Sun Jul 31 13:24:16 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -51,16 +55,16 @@ recommended polling time: 	 (  71) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   061   048   006    -    27500669
-  3 Spin_Up_Time            PO----   096   096   000    -    0
-  4 Start_Stop_Count        -O--CK   096   096   020    -    4833
+  1 Raw_Read_Error_Rate     POSR--   063   043   006    -    165683998
+  3 Spin_Up_Time            PO----   097   096   000    -    0
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7559
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   089   060   030    -    825531348
-  9 Power_On_Hours          -O--CK   086   086   000    -    12419
+  7 Seek_Error_Rate         POSR--   076   060   030    -    46355904
+  9 Power_On_Hours          -O--CK   081   081   000    -    17509
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4847
-194 Temperature_Celsius     -O---K   039   046   000    -    39 (0 9 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   060   047   000    -    27500669
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7658
+194 Temperature_Celsius     -O---K   042   047   000    -    42 (0 4 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   063   043   000    -    165683998
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -100,12 +104,97 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 3
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 occurred at disk power-on lifetime: 14277 hours (594 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  10 51 40 80 4b f9 ed  Error: IDNF 64 sectors at LBA = 0x0df94b80 = 234441600
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 80 4b f9 ed 00      01:39:58.371  READ DMA
+  c8 00 08 d8 5b 65 e0 00      01:39:58.349  READ DMA
+  c8 00 08 50 87 63 e0 00      01:39:58.327  READ DMA
+  c8 00 40 40 4b f9 ed 00      01:39:58.306  READ DMA
+  c8 00 08 b8 90 29 e1 00      01:39:58.306  READ DMA
+
+Error 2 occurred at disk power-on lifetime: 14275 hours (594 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  10 51 40 80 4b f9 ed  Error: IDNF 64 sectors at LBA = 0x0df94b80 = 234441600
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 80 4b f9 ed 00      00:26:21.036  READ DMA
+  c8 00 40 40 4b f9 ed 00      00:26:21.030  READ DMA
+  c8 00 40 00 4b f9 ed 00      00:26:21.020  READ DMA
+  c8 00 14 80 b1 71 e0 00      00:26:20.997  READ DMA
+  c8 00 40 c0 4a f9 ed 00      00:26:20.976  READ DMA
+
+Error 1 occurred at disk power-on lifetime: 14275 hours (594 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  10 51 40 80 4b f9 ed  Error: IDNF 64 sectors at LBA = 0x0df94b80 = 234441600
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 80 4b f9 ed 00      00:19:57.450  READ DMA
+  c8 00 50 30 ac 6e e2 00      00:19:57.425  READ DMA
+  c8 00 08 b8 5e 2c e1 00      00:19:57.424  READ DMA
+  c8 00 40 40 4b f9 ed 00      00:19:57.424  READ DMA
+  c8 00 70 b0 ab 6e e2 00      00:19:57.423  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     17323         -
+# 2  Short offline       Completed without error       00%     17321         -
+# 3  Extended offline    Completed without error       00%     17316         -
+# 4  Extended offline    Interrupted (host reset)      30%     17157         -
+# 5  Short offline       Completed without error       00%     17117         -
+# 6  Short offline       Completed without error       00%     17107         -
+# 7  Short offline       Completed without error       00%     17079         -
+# 8  Short offline       Completed without error       00%     17078         -
+# 9  Extended offline    Interrupted (host reset)      80%     17073         -
+#10  Short offline       Completed without error       00%     17071         -
+#11  Short offline       Completed without error       00%     17064         -
+#12  Short offline       Completed without error       00%     17056         -
+#13  Extended offline    Interrupted (host reset)      90%     17050         -
+#14  Short offline       Completed without error       00%     17049         -
+#15  Short offline       Completed without error       00%     17045         -
+#16  Short offline       Completed without error       00%     17043         -
+#17  Short offline       Completed without error       00%     17043         -
+#18  Extended offline    Completed without error       00%     17039         -
+#19  Short offline       Completed without error       00%     17032         -
+#20  Short offline       Completed without error       00%     16950         -
+#21  Short offline       Completed without error       00%     16431         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -121,6 +210,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 

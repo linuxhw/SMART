@@ -1,21 +1,26 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     SAMSUNG MZRPA128HMCD-000SO
 Serial Number:    --
 LU WWN Device Id: 5 0000f0 ...
 Firmware Version: AXM0BS1Q
-User Capacity:    64 023 257 088 bytes [64,0 GB]
+User Capacity:    64,023,257,088 bytes [64.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
+TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 1
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Nov  2 01:10:47 2018 MSK
+Local Time is:    Sat Mar 12 23:07:08 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -53,8 +58,8 @@ recommended polling time: 	 (   7) minutes.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--CK   099   099   ---    -    183
- 12 Power_Cycle_Count       -O--CK   099   099   ---    -    329
+  9 Power_On_Hours          -O--CK   099   099   ---    -    909
+ 12 Power_Cycle_Count       -O--CK   098   098   ---    -    1192
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   076   076   ---    -    238
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   077   077   ---    -    466
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   077   077   ---    -    1550
@@ -76,7 +81,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W      1  Host vendor specific log
 
@@ -167,6 +172,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

@@ -1,4 +1,4 @@
-smartctl 7.0 2018-12-30 r4883 [x86_64-linux-5.3.0-42-generic] (local build)
+smartctl 7.0 2018-12-30 r4883 [x86_64-linux-5.12.14-arch1-1] (local build)
 Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,11 +13,11 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Apr  1 00:53:34 2020 UTC
+Local Time is:    Mon Jul  5 11:58:31 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -65,18 +65,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   252   252   002    -    0
   5 Reallocated_Sector_Ct   PO--CK   252   252   005    -    0
-  9 Power_On_Hours          -O--CK   071   071   ---    -    12812
- 12 Power_Cycle_Count       -O--CK   252   252   ---    -    1934
+  9 Power_On_Hours          -O--CK   058   058   ---    -    18745
+ 12 Power_Cycle_Count       -O--CK   252   252   ---    -    2533
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
 171 Unknown_Attribute       -O---K   100   100   ---    -    0
 172 Unknown_Attribute       -O--CK   100   100   ---    -    0
-173 Unknown_Attribute       PO--CK   094   094   005    -    820359004161
-174 Unknown_Attribute       -O--CK   252   252   ---    -    148
+173 Unknown_Attribute       PO--CK   094   094   005    -    837539332097
+174 Unknown_Attribute       -O--CK   252   252   ---    -    154
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   083   ---    -    8050
-190 Airflow_Temperature_Cel -O---K   071   027   045    Past 29
+188 Command_Timeout         -O--CK   097   061   ---    -    25939
+190 Airflow_Temperature_Cel -O---K   066   027   045    Past 34
 196 Reallocated_Event_Count -O--CK   252   252   ---    -    0
 199 UDMA_CRC_Error_Count    -O---K   100   100   ---    -    0
 244 Unknown_Attribute       -O--CK   000   100   ---    -    0
@@ -141,7 +141,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -10/70 Celsius
 Min/Max Temperature Limit:           -15/90 Celsius
-Temperature History Size (Index):    256 (249)
+Temperature History Size (Index):    256 (182)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -150,11 +150,11 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1934  ---  Lifetime Power-On Resets
-0x01  0x018  6  45744204499108  ---  Logical Sectors Written
-0x01  0x020  6        63619053  ---  Number of Write Commands
-0x01  0x028  6   3380865298654  ---  Logical Sectors Read
-0x01  0x030  6        29082059  ---  Number of Read Commands
+0x01  0x008  4            2533  ---  Lifetime Power-On Resets
+0x01  0x018  6  62548204266676  ---  Logical Sectors Written
+0x01  0x020  6        73104033  ---  Number of Write Commands
+0x01  0x028  6   4607711094785  ---  Logical Sectors Read
+0x01  0x030  6        43247173  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -168,7 +168,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 
 
 

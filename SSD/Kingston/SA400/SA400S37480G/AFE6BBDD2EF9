@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Jan 30 17:52:08 2023 UTC
+Local Time is:    Tue Jan 31 15:57:17 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,8 +63,8 @@ SMART Attributes Data Structure revision number: 5
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    35
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    12
+  9 Power_On_Hours          -O--CK   100   100   000    -    48
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    13
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -77,17 +77,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    1
-194 Temperature_Celsius     -O---K   029   030   000    -    29 (Min/Max 26/30)
+194 Temperature_Celsius     -O---K   030   032   000    -    30 (Min/Max 25/32)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
-218 CRC_Error_Count         -O--CK   100   100   000    -    0
+218 CRC_Error_Count         -O--CK   100   100   000    -    2
 231 SSD_Life_Left           ------   100   100   000    -    100
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    248
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    202
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    42
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    275
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    222
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    49
 244 Average_Erase_Count     ------   100   100   000    -    0
 245 Max_Erase_Count         ------   100   100   000    -    1
-246 Total_Erase_Count       ------   100   100   000    -    634
+246 Total_Erase_Count       ------   100   100   000    -    697
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,7 +111,8 @@ SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       20%         0         -
 
 Selective Self-tests/Logging not supported
 
@@ -124,5 +125,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           28  Device-to-host register FISes sent due to a COMRESET
 

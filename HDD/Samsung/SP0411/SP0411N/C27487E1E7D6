@@ -9,7 +9,7 @@ User Capacity:    40,060,403,712 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Jan 25 13:01:26 2021 
+Local Time is:    Tue Feb  2 13:17:42 2021 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -56,15 +56,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    19
   3 Spin_Up_Time            POS---   071   060   000    -    5184
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2623
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2637
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         PO-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    1283105
+  9 Power_On_Hours          -O--CK   098   098   000    -    1287440
  10 Spin_Retry_Count        PO--C-   253   253   049    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1477
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1484
 194 Temperature_Celsius     -O---K   172   100   000    -    22
-195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    36822604
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    37525509
 196 Reallocated_Event_Count -O--C-   253   253   000    -    0
 197 Current_Pending_Sector  PO--CK   253   253   010    -    0
 198 Offline_Uncorrectable   P---CK   253   253   010    -    0
@@ -106,7 +106,73 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 occurred at disk power-on lifetime: 10526 hours (438 days + 14 hours)
+Error 65535 occurred at disk power-on lifetime: 10720 hours (446 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:16:37.063  SET FEATURES [Enable APM]
+  b0 da 00 00 c2 4f 00 00      00:15:30.375  SMART RETURN STATUS
+  b0 d0 01 00 c2 4f 00 00      00:15:30.313  SMART READ DATA
+  b0 d1 01 00 c2 4f 00 00      00:15:30.313  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  ec 00 01 00 00 00 00 00      00:15:30.313  IDENTIFY DEVICE
+
+Error 65534 occurred at disk power-on lifetime: 10720 hours (446 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:04:16.813  SET FEATURES [Enable APM]
+  b0 d5 01 01 c2 4f 00 00      00:04:02.313  SMART READ LOG
+  b0 d5 01 06 c2 4f 00 00      00:04:02.313  SMART READ LOG
+  b0 d0 01 00 c2 4f 00 00      00:04:02.250  SMART READ DATA
+  b0 da 00 00 c2 4f 00 00      00:04:02.250  SMART RETURN STATUS
+
+Error 65533 occurred at disk power-on lifetime: 10720 hours (446 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:03:30.125  SET FEATURES [Enable APM]
+  e3 00 f4 00 00 00 40 00      00:03:24.000  IDLE
+  ec 00 01 00 00 00 40 00      00:03:18.438  IDENTIFY DEVICE
+
+Error 65532 occurred at disk power-on lifetime: 10720 hours (446 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:03:18.375  SET FEATURES [Enable APM]
+  c8 00 08 00 80 18 e2 00      00:03:09.938  READ DMA
+  c8 00 08 00 e0 08 e2 00      00:03:09.938  READ DMA
+  c8 00 68 88 a9 cf e4 00      00:03:09.938  READ DMA
+  c8 00 80 00 a9 cf e4 00      00:03:09.938  READ DMA
+
+Error 65531 occurred at disk power-on lifetime: 10526 hours (438 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -118,58 +184,6 @@ Error 65535 occurred at disk power-on lifetime: 10526 hours (438 days + 14 hours
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
   ca 00 80 c0 74 0d f4 00      08:51:42.250  WRITE DMA
-
-Error 65534 occurred at disk power-on lifetime: 10526 hours (438 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  10 51 80 40 74 0d f4  Error: IDNF at LBA = 0x040d7440 = 67990592
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 80 40 74 0d f4 00      08:51:42.250  WRITE DMA
-
-Error 65533 occurred at disk power-on lifetime: 10526 hours (438 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  10 51 80 c0 74 0c f4  Error: IDNF at LBA = 0x040c74c0 = 67925184
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 80 c0 74 0c f4 00      08:51:42.188  WRITE DMA
-
-Error 65532 occurred at disk power-on lifetime: 10526 hours (438 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  10 51 80 40 74 0c f4  Error: IDNF at LBA = 0x040c7440 = 67925056
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 80 40 74 0c f4 00      08:51:42.188  WRITE DMA
-
-Error 65531 occurred at disk power-on lifetime: 10526 hours (438 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  10 51 80 c0 74 0b f4  Error: IDNF at LBA = 0x040b74c0 = 67859648
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 80 c0 74 0b f4 00      08:51:42.188  WRITE DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

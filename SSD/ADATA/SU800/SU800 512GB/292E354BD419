@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-7-amd64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.0-2-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Silicon Motion based SSDs
@@ -11,10 +11,10 @@ User Capacity:    512,110,190,592 bytes [512 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Jan 11 14:08:33 2022 MSK
+Local Time is:    Mon Feb  6 08:33:35 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,24 +66,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    333
- 12 Power_Cycle_Count       ------   100   100   000    -    77
+  9 Power_On_Hours          ------   100   100   000    -    1838
+ 12 Power_Cycle_Count       ------   100   100   000    -    211
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    50
 163 Initial_Bad_Block_Count ------   100   100   000    -    5
-164 Total_Erase_Count       ------   100   100   000    -    2450
-165 Max_Erase_Count         ------   100   100   000    -    13
-166 Min_Erase_Count         ------   100   100   000    -    1
-167 Average_Erase_Count     ------   100   100   000    -    1
+164 Total_Erase_Count       ------   100   100   000    -    12145
+165 Max_Erase_Count         ------   100   100   000    -    18
+166 Min_Erase_Count         ------   100   100   000    -    2
+167 Average_Erase_Count     ------   100   100   000    -    9
 168 Max_Erase_Count_of_Spec ------   100   100   000    -    1000
 169 Remaining_Lifetime_Perc ------   100   100   000    -    100
 175 Program_Fail_Count_Chip ------   100   100   000    -    0
 176 Erase_Fail_Count_Chip   ------   100   100   000    -    0
-177 Wear_Leveling_Count     ------   100   100   050    -    0
+177 Wear_Leveling_Count     ------   100   100   050    -    1
 178 Runtime_Invalid_Blk_Cnt ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    11
+192 Power-Off_Retract_Count ------   100   100   000    -    31
 194 Temperature_Celsius     ------   100   100   000    -    44
 195 Hardware_ECC_Recovered  ------   100   100   000    -    0
 196 Reallocated_Event_Count ------   100   100   016    -    0
@@ -91,9 +91,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    3
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    15733
-242 Host_Reads_32MiB        ------   100   100   000    -    13404
-245 TLC_Writes_32MiB        ------   100   100   000    -    19600
+241 Host_Writes_32MiB       ------   100   100   000    -    56464
+242 Host_Reads_32MiB        ------   100   100   000    -    45732
+245 TLC_Writes_32MiB        ------   100   100   000    -    97160
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -143,7 +143,7 @@ SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                     0 Celsius
 Power Cycle Min/Max Temperature:     -1/ 0 Celsius
-Lifetime    Min/Max Temperature:      0/ 0 Celsius
+Lifetime    Min/Max Temperature:      0/44 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -151,24 +151,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (1)
+Temperature History Size (Index):    128 (3)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              77  ---  Lifetime Power-On Resets
-0x01  0x010  4             333  ---  Power-on Hours
-0x01  0x018  6      1031135398  ---  Logical Sectors Written
-0x01  0x020  6        11775112  ---  Number of Write Commands
-0x01  0x028  6       878466193  ---  Logical Sectors Read
-0x01  0x030  6        12334551  ---  Number of Read Commands
+0x01  0x008  4             211  ---  Lifetime Power-On Resets
+0x01  0x010  4            1838  ---  Power-on Hours
+0x01  0x018  6      3700489937  ---  Logical Sectors Written
+0x01  0x020  6        58991003  ---  Number of Write Commands
+0x01  0x028  6      2997139124  ---  Logical Sectors Read
+0x01  0x030  6        46846618  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              14  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              34  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             244  ---  Number of Hardware Resets
+0x06  0x008  4             672  ---  Number of Hardware Resets
 0x06  0x018  4               3  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

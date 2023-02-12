@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Jan 23 15:43:30 2022 CET
+Local Time is:    Sat Mar  5 11:13:08 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,8 +63,8 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1250
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    600
+  9 Power_On_Hours          -O--CK   100   100   000    -    1451
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    763
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -72,22 +72,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 169 Bad_Block_Rate          ------   100   100   000    -    14
 170 Bad_Blk_Ct_Erl/Lat      ------   100   100   010    -    0/10
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    19 (Average 16)
+173 MaxAvgErase_Ct          ------   100   100   000    -    21 (Average 17)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    181
-194 Temperature_Celsius     -O---K   075   069   000    -    25 (Min/Max 18/31)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    182
+194 Temperature_Celsius     -O---K   075   069   000    -    25 (Min/Max 16/31)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
 231 SSD_Life_Left           ------   002   002   000    -    98
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    1090
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    731
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    600
-244 Average_Erase_Count     ------   100   100   000    -    16
-245 Max_Erase_Count         ------   100   100   000    -    19
-246 Total_Erase_Count       ------   100   100   000    -    64096
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    1131
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    755
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    632
+244 Average_Erase_Count     ------   100   100   000    -    17
+245 Max_Erase_Count         ------   100   100   000    -    21
+246 Total_Erase_Count       ------   100   100   000    -    66472
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,7 +115,8 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      1321         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -134,16 +135,16 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             600  ---  Lifetime Power-On Resets
-0x01  0x010  4            1250  ---  Power-on Hours
-0x01  0x018  6      1533435021  ---  Logical Sectors Written
-0x01  0x028  6      1259791495  ---  Logical Sectors Read
+0x01  0x008  4             763  ---  Lifetime Power-On Resets
+0x01  0x010  4            1451  ---  Power-on Hours
+0x01  0x018  6      1583909797  ---  Logical Sectors Written
+0x01  0x028  6      1327376597  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              25  ---  Current Temperature
 0x05  0x020  1              31  ---  Highest Temperature
-0x05  0x028  1              18  ---  Lowest Temperature
+0x05  0x028  1              16  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==

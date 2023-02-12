@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.9.8-2-MANJARO] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.9.10-1-MANJARO] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      M.2
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Nov 22 20:32:40 2020 CET
+Local Time is:    Sun Nov 22 20:50:39 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -72,18 +72,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 173 Wear_Leveling_Count     -O--CK   092   092   005    -    96
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    113
 176 Erase_Fail_Count_Chip   -O---K   100   100   000    -    635
-181 Program_Fail_Cnt_Total  -O---K   099   001   000    -    1101947
+181 Program_Fail_Cnt_Total  -O---K   099   001   000    -    1102111
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   032   069   000    -    32 (Min/Max 14/40)
+194 Temperature_Celsius     -O---K   028   069   000    -    28 (Min/Max 14/40)
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 CRC_Error_Count         -O--CK   100   100   000    -    0
 201 Supercap_Status         PO---K   100   100   005    -    100
-241 Total_LBAs_Written      -O--CK   100   100   000    -    2954534
-242 Total_LBAs_Read         -O--CK   100   100   000    -    1692705
-243 SATA_Downshift_Ct       -O--CK   100   100   000    -    2954534
+241 Total_LBAs_Written      -O--CK   100   100   000    -    2954597
+242 Total_LBAs_Read         -O--CK   100   100   000    -    1692969
+243 SATA_Downshift_Ct       -O--CK   100   100   000    -    2954597
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -136,7 +136,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
+Current Temperature:                    27 Celsius
 Power Cycle Min/Max Temperature:     18/34 Celsius
 Lifetime    Min/Max Temperature:     13/70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -146,7 +146,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (8)
+Temperature History Size (Index):    128 (10)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -157,20 +157,20 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            1170  -D-  Lifetime Power-On Resets
 0x01  0x010  4            9944  -D-  Power-on Hours
-0x01  0x018  6     96814180253  -D-  Logical Sectors Written
-0x01  0x020  6      8201145811  -D-  Number of Write Commands
-0x01  0x028  6     55466579871  -D-  Logical Sectors Read
-0x01  0x030  6       934580804  -D-  Number of Read Commands
+0x01  0x018  6     96816250292  -D-  Logical Sectors Written
+0x01  0x020  6      8201179355  -D-  Number of Write Commands
+0x01  0x028  6     55475226691  -D-  Logical Sectors Read
+0x01  0x030  6       934736951  -D-  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  -D-  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  -D-  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              24  -D-  Current Temperature
+0x05  0x008  1              27  -D-  Current Temperature
 0x05  0x020  1              70  -D-  Highest Temperature
 0x05  0x028  1              13  -D-  Lowest Temperature
 0x05  0x058  1              55  -D-  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           10894  -D-  Number of Hardware Resets
+0x06  0x008  4           10905  -D-  Number of Hardware Resets
 0x06  0x010  4               0  -D-  Number of ASR Events
 0x06  0x018  4               0  -D-  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
@@ -192,8 +192,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2        26704  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x0009  2        28310  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.9
 Device Model:     ST3200827AS
@@ -7,13 +10,14 @@ User Capacity:    200,048,565,760 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Mar 30 22:05:35 2018 +04
+Local Time is:    Tue Mar  8 21:37:51 2022 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -52,22 +56,22 @@ recommended polling time: 	 (  70) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   099   086   006    -    29828459
-  3 Spin_Up_Time            PO----   099   098   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5788
+  1 Raw_Read_Error_Rate     POSR--   102   080   006    -    49117213
+  3 Spin_Up_Time            PO----   099   097   000    -    0
+  4 Start_Stop_Count        -O--CK   083   083   020    -    17600
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   087   060   030    -    518620597
-  9 Power_On_Hours          -O--CK   085   085   000    -    13155
- 10 Spin_Retry_Count        PO--C-   100   098   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5893
+  7 Seek_Error_Rate         POSR--   080   060   030    -    107395615
+  9 Power_On_Hours          -O--CK   061   061   000    -    34814
+ 10 Spin_Retry_Count        PO--C-   100   097   097    Past 0
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7888
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   052   035   045    Past 48 (Min/Max 43/48)
-194 Temperature_Celsius     -O---K   048   065   000    -    48 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   054   045   000    -    144434012
+190 Airflow_Temperature_Cel -O---K   056   035   045    Past 44 (Min/Max 44/49)
+194 Temperature_Celsius     -O---K   044   065   000    -    44 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   050   045   000    -    175843213
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    2
+199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    3
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -87,7 +91,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -104,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    23040  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 245 (device log contains only the most recent 20 errors)
+Device Error Count: 246 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,6 +123,23 @@ Device Error Count: 245 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 246 [5] occurred at disk power-on lifetime: 11124 hours (463 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 01 01 00 00 00 00 00 00 e7 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  37 00 ff 01 01 00 17 e9 00 49 6e e7 00     03:47:36.108  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 00 00 00 17 e9 00 49 6e e0 00     03:47:33.996  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 00 00 00 17 e9 00 49 6e e7 00     03:47:33.936  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  27 00 ff 01 01 00 17 e9 00 49 6e e0 00     03:47:33.716  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  37 00 ff 01 01 00 17 e9 00 49 6e e7 00     03:47:33.654  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 Error 245 [4] occurred at disk power-on lifetime: 11124 hours (463 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -239,25 +260,14 @@ Error 239 [18] occurred at disk power-on lifetime: 11124 hours (463 days + 12 ho
   27 00 ff 00 01 00 17 f1 00 49 af e0 00     04:04:25.998  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
   29 00 00 00 01 00 17 f1 00 49 af e0 00     04:04:25.998  READ MULTIPLE EXT
 
-Error 238 [17] occurred at disk power-on lifetime: 11124 hours (463 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 01 01 00 00 00 00 00 00 e7 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  37 00 ff 01 01 00 17 e9 00 49 6e e7 00     03:47:36.108  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 00 00 00 17 e9 00 49 6e e0 00     03:47:33.996  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 00 00 00 17 e9 00 49 6e e7 00     03:47:33.936  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  27 00 ff 01 01 00 17 e9 00 49 6e e0 00     03:47:33.716  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  37 00 ff 01 01 00 17 e9 00 49 6e e7 00     03:47:33.654  SET NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     32242         -
+# 2  Short offline       Completed without error       00%     25822         -
+# 3  Extended offline    Completed without error       00%     17388         -
+# 4  Short offline       Completed without error       00%     16967         -
+# 5  Extended offline    Completed: read failure       10%     13161         1946009408149
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 3
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -274,9 +284,11 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Momentus 5400.4
 Device Model:     ST9250827AS
@@ -10,7 +13,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Jul 18 06:47:28 2019 +10
+Local Time is:    Sat Jan  9 00:22:36 2021 +10
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,22 +62,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    8000
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    12
-  7 Seek_Error_Rate         POSR--   085   060   030    -    391337949
-  9 Power_On_Hours          -O--CK   076   076   000    -    21247
+  4 Start_Stop_Count        -O--CK   090   090   020    -    10312
+  5 Reallocated_Sector_Ct   PO--CK   090   090   036    -    420
+  7 Seek_Error_Rate         POSR--   086   060   030    -    413919579
+  9 Power_On_Hours          -O--CK   074   074   000    -    22785
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7675
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   092   092   020    -    9056
+187 Reported_Uncorrect      -O--CK   097   097   000    -    3
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   035   045    Past 38 (Min/Max 12/65 #451)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    227
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    5587
-193 Load_Cycle_Count        -O---K   001   001   000    -    877503
-194 Temperature_Celsius     -O-RC-   038   065   000    -    38 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   070   042   000    -    28673980
-197 Current_Pending_Sector  ----C-   100   100   000    -    0
-198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   063   035   045    Past 37 (Min/Max 12/65 #461)
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    243695
+192 Power-Off_Retract_Count -O--CK   097   097   000    -    6553
+193 Load_Cycle_Count        -O---K   001   001   000    -    905433
+194 Temperature_Celsius     -O-RC-   037   065   000    -    37 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   052   042   000    -    153296047
+197 Current_Pending_Sector  ----C-   099   098   000    -    30
+198 Offline_Uncorrectable   -OSRCK   099   098   000    -    30
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O--CK   100   253   000    -    0
 202 Data_Address_Mark_Errs  ------   100   253   000    -    0
@@ -114,12 +117,78 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 3
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 occurred at disk power-on lifetime: 21512 hours (896 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 f8 4c 1c e0  Error: UNC at LBA = 0x001c4cf8 = 1854712
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 00 00 4c 1c e0 00      00:03:27.119  READ DMA EXT
+  ec 00 00 00 00 00 a0 00      00:03:27.119  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 00      00:03:26.814  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 a0 00      00:04:31.236  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 ff      00:04:31.235  NOP [Abort queued commands]
+
+Error 2 occurred at disk power-on lifetime: 21495 hours (895 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 65 59 1c e0  Error: UNC at LBA = 0x001c5965 = 1857893
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 60 59 1c e0 00      00:04:38.028  READ DMA EXT
+  25 00 08 80 58 1c e0 00      00:04:38.027  READ DMA EXT
+  ec 00 01 00 00 00 00 00      00:04:38.016  IDENTIFY DEVICE
+  c8 00 08 00 68 c6 e6 00      00:04:38.016  READ DMA
+  c8 00 08 08 68 c6 e6 00      00:04:38.015  READ DMA
+
+Error 1 occurred at disk power-on lifetime: 21495 hours (895 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 4d 4c 1c e0  Error: UNC at LBA = 0x001c4c4d = 1854541
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 00 00 4c 1c e0 00      00:04:21.273  READ DMA EXT
+  c8 00 f8 00 66 c6 e6 00      00:04:21.254  READ DMA
+  c8 00 80 00 67 c6 e6 00      00:04:21.253  READ DMA
+  c8 00 68 88 67 c6 e6 00      00:04:21.253  READ DMA
+  c8 00 08 a8 12 01 e0 00      00:04:21.252  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     21360         -
+# 2  Extended offline    Interrupted (host reset)      80%     21358         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -134,11 +203,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 38 Celsius
-Power Cycle Max Temperature:          0 Celsius
-Lifetime    Max Temperature:          0 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     --/ 0 Celsius
+Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
 SCT Data Table command not supported
 
@@ -150,16 +218,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           97  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           96  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            4  Vendor specific
+0x8003  2          103  Vendor specific
 0x8004  2            0  Vendor specific
-
-
 

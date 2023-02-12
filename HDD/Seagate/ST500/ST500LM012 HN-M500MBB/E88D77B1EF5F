@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.32-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Samsung SpinPoint M8 (AF)
@@ -14,11 +14,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Mar 14 09:04:03 2021 UTC
+Local Time is:    Fri Oct  1 07:57:11 2021 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
-APM level is:     254 (maximum performance)
+AAM level is:     128 (quiet), recommended: 254
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,26 +65,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    10
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   091   083   025    -    2865
-  4 Start_Stop_Count        -O--CK   089   089   000    -    11545
+  3 Spin_Up_Time            PO---K   091   083   025    -    2858
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12579
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    17409
+  9 Power_On_Hours          -O--CK   100   100   000    -    19544
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   098   098   000    -    2549
- 12 Power_Cycle_Count       -O--CK   090   090   000    -    10625
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    2640
+ 11 Calibration_Retry_Count -O--CK   098   098   000    -    2596
+ 12 Power_Cycle_Count       -O--CK   089   089   000    -    11662
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    2644
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   059   041   000    -    41 (Min/Max 13/59)
+194 Temperature_Celsius     -O----   060   041   000    -    40 (Min/Max 13/59)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
-197 Current_Pending_Sector  -O--CK   252   252   000    -    0
-198 Offline_Uncorrectable   ----CK   252   252   000    -    0
+197 Current_Pending_Sector  -O--CK   252   100   000    -    0
+198 Offline_Uncorrectable   ----CK   252   100   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    1
-200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    96554
-223 Load_Retry_Count        -O--CK   098   098   000    -    2549
-225 Load_Cycle_Count        -O--CK   087   087   000    -    131661
+200 Multi_Zone_Error_Rate   -O-R-K   001   001   000    -    100981
+223 Load_Retry_Count        -O--CK   098   098   000    -    2596
+225 Load_Cycle_Count        -O--CK   082   082   000    -    182703
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -265,7 +265,8 @@ Error 73 [0] occurred at disk power-on lifetime: 10547 hours (439 days + 11 hour
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       902         -
+# 1  Short offline       Completed without error       00%     18540         -
+# 2  Short offline       Completed without error       00%       902         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -282,8 +283,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     23/43 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     40/40 Celsius
 Lifetime    Min/Max Temperature:     13/59 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -293,7 +294,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (34)
+Temperature History Size (Index):    128 (96)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -313,8 +314,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4       102833  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4        22682  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.18_1] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     ADATA SU700
 Serial Number:    --
@@ -10,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 23 15:22:49 2019 EET
+Local Time is:    Fri Nov 20 13:09:34 2020 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,21 +64,21 @@ SCT capabilities: 	       (0x0039)	SCT Status supported.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    455
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1106
+  9 Power_On_Hours          -O--C-   100   100   000    -    669
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1487
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    1
 169 Unknown_Attribute       PO--C-   100   100   010    -    0
-173 Unknown_Attribute       -O--C-   200   200   000    -    8593276950
-175 Program_Fail_Count_Chip PO--C-   092   100   010    -    0
+173 Unknown_Attribute       -O--C-   200   200   000    -    12890800161
+175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    256
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    0
-194 Temperature_Celsius     -O---K   063   063   030    -    37 (Min/Max 23/40)
-231 Temperature_Celsius     PO--CK   100   100   005    -    0
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    5463424512
-234 Unknown_Attribute       -O--CK   100   100   000    -    3701697871872
-241 Total_LBAs_Written      -O--CK   100   100   000    -    3234606680
-242 Total_LBAs_Read         -O--CK   100   100   000    -    2845275061
+194 Temperature_Celsius     -O---K   058   058   030    -    42 (Min/Max 22/42)
+231 Temperature_Celsius     PO--CK   099   099   005    -    1
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    8057253376
+234 Unknown_Attribute       -O--CK   100   100   000    -    5166627520512
+241 Total_LBAs_Written      -O--CK   100   100   000    -    5017337642
+242 Total_LBAs_Read         -O--CK   100   100   000    -    3923425389
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 2385 (device log contains only the most recent 256 errors)
+Device Error Count: 2561 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,14 +120,46 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2385 [80] log entry is empty
-Error 2384 [79] log entry is empty
-Error 2383 [78] log entry is empty
-Error 2382 [77] log entry is empty
-Error 2381 [76] log entry is empty
-Error 2380 [75] log entry is empty
-Error 2379 [74] log entry is empty
-Error 2378 [73] log entry is empty
+Error 2561 [0] occurred at disk power-on lifetime: 599 hours (24 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 c0 00 00 00 03 64 d0 40 08  Error: UNC at LBA = 0x000364d0 = 222416
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 c0 00 00 00 03 64 d0 40 08     00:01:50.800  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:01:50.700  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:50.700  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:01:50.700  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:01:50.700  SET FEATURES [Enable SATA feature]
+
+Error 2560 [255] log entry is empty
+Error 2559 [254] log entry is empty
+Error 2558 [253] log entry is empty
+Error 2557 [252] occurred at disk power-on lifetime: 599 hours (24 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 80 00 00 00 03 6a 00 40 08  Error: UNC at LBA = 0x00036a00 = 223744
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 0a 00 00 78 00 00 00 03 64 d0 40 08     00:01:45.100  READ FPDMA QUEUED
+  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:40.600  FLUSH CACHE
+  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:40.600  FLUSH CACHE
+  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:37.600  FLUSH CACHE
+  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:37.600  FLUSH CACHE
+
+Error 2556 [251] log entry is empty
+Error 2555 [250] log entry is empty
+Error 2554 [249] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -142,8 +177,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:      ?/36 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:      ?/42 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -152,7 +187,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (339)
+Temperature History Size (Index):    478 (462)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -176,4 +211,6 @@ ID      Size     Value  Description
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

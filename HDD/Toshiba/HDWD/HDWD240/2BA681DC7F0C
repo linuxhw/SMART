@@ -13,7 +13,7 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb 21 23:08:35 2021 MSK
+Local Time is:    Fri Jun  4 23:58:55 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,27 +64,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    5501
-  4 Start_Stop_Count        -O--CK   100   100   000    -    25
+  3 Spin_Up_Time            POS--K   100   100   001    -    5311
+  4 Start_Stop_Count        -O--CK   100   100   000    -    30
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    222
+  9 Power_On_Hours          -O--CK   094   094   000    -    2694
  10 Spin_Retry_Count        PO--CK   100   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    25
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    30
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    5
-193 Load_Cycle_Count        -O--CK   100   100   000    -    93
-194 Temperature_Celsius     -O---K   100   100   000    -    30 (Min/Max 18/31)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    9
+193 Load_Cycle_Count        -O--CK   100   100   000    -    306
+194 Temperature_Celsius     -O---K   100   100   000    -    32 (Min/Max 18/36)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   100   100   000    -    219
+222 Loaded_Hours            -O--CK   094   094   000    -    2684
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    757
+226 Load-in_Time            -OS--K   100   100   000    -    854
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -134,9 +134,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     28/31 Celsius
-Lifetime    Min/Max Temperature:     18/31 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     28/36 Celsius
+Lifetime    Min/Max Temperature:     18/36 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -144,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (171)
+Temperature History Size (Index):    478 (43)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -153,44 +153,44 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              25  ---  Lifetime Power-On Resets
-0x01  0x010  4             222  ---  Power-on Hours
-0x01  0x018  6      7732405743  ---  Logical Sectors Written
-0x01  0x020  6        42748614  ---  Number of Write Commands
-0x01  0x028  6       571386851  ---  Logical Sectors Read
-0x01  0x030  6        17281687  ---  Number of Read Commands
-0x01  0x038  6       799815458  ---  Date and Time TimeStamp
+0x01  0x008  4              30  ---  Lifetime Power-On Resets
+0x01  0x010  4            2694  ---  Power-on Hours
+0x01  0x018  6     45749099143  ---  Logical Sectors Written
+0x01  0x020  6       390254325  ---  Number of Write Commands
+0x01  0x028  6     15340716772  ---  Logical Sectors Read
+0x01  0x030  6        42674767  ---  Number of Read Commands
+0x01  0x038  6      9700140324  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4               0  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4             222  ---  Spindle Motor Power-on Hours
-0x03  0x010  4             219  ---  Head Flying Hours
-0x03  0x018  4              93  ---  Head Load Events
+0x03  0x008  4            2694  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2684  ---  Head Flying Hours
+0x03  0x018  4             306  ---  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
-0x03  0x028  4               6  ---  Read Recovery Attempts
+0x03  0x028  4             123  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4               5  ---  Number of High Priority Unload Events
+0x03  0x040  4               9  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              28  N--  Average Short Term Temperature
-0x05  0x018  1               -  N--  Average Long Term Temperature
-0x05  0x020  1              31  ---  Highest Temperature
+0x05  0x008  1              32  ---  Current Temperature
+0x05  0x010  1              32  N--  Average Short Term Temperature
+0x05  0x018  1              31  N--  Average Long Term Temperature
+0x05  0x020  1              36  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
-0x05  0x030  1              29  N--  Highest Average Short Term Temperature
-0x05  0x038  1              27  N--  Lowest Average Short Term Temperature
-0x05  0x040  1               -  N--  Highest Average Long Term Temperature
-0x05  0x048  1               -  N--  Lowest Average Long Term Temperature
+0x05  0x030  1              35  N--  Highest Average Short Term Temperature
+0x05  0x038  1              25  N--  Lowest Average Short Term Temperature
+0x05  0x040  1              33  N--  Highest Average Long Term Temperature
+0x05  0x048  1              29  N--  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              77  ---  Number of Hardware Resets
-0x06  0x010  4              31  ---  Number of ASR Events
+0x06  0x008  4              92  ---  Number of Hardware Resets
+0x06  0x010  4              36  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met

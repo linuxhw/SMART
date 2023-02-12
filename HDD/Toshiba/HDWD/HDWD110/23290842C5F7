@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Jul 28 18:55:52 2020 -04
+Local Time is:    Tue Jul 28 20:10:46 2020 -04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,18 +64,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   100   100   054    -    0
+  2 Throughput_Performance  P-S---   142   142   054    -    71
   3 Spin_Up_Time            POS---   111   111   024    -    220 (Average 194)
   4 Start_Stop_Count        -O--C-   100   100   000    -    23
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   100   100   020    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    62
+  8 Seek_Time_Performance   P-S---   115   115   020    -    34
+  9 Power_On_Hours          -O--C-   100   100   000    -    63
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    23
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    23
 193 Load_Cycle_Count        -O--C-   100   100   000    -    23
-194 Temperature_Celsius     -O----   176   176   000    -    34 (Min/Max 10/38)
+194 Temperature_Celsius     -O----   187   187   000    -    32 (Min/Max 10/38)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -127,7 +127,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    34 Celsius
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:     11/34 Celsius
 Lifetime    Min/Max Temperature:     10/38 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -137,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (55)
+Temperature History Size (Index):    128 (2)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -147,14 +147,14 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              23  ---  Lifetime Power-On Resets
-0x01  0x010  4              62  ---  Power-on Hours
-0x01  0x018  6      1156696327  ---  Logical Sectors Written
-0x01  0x020  6         2839911  ---  Number of Write Commands
-0x01  0x028  6       162680603  ---  Logical Sectors Read
-0x01  0x030  6         2402530  ---  Number of Read Commands
+0x01  0x010  4              63  ---  Power-on Hours
+0x01  0x018  6      1156906503  ---  Logical Sectors Written
+0x01  0x020  6         2844973  ---  Number of Write Commands
+0x01  0x028  6       178376203  ---  Logical Sectors Read
+0x01  0x030  6         2406143  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4              62  ---  Spindle Motor Power-on Hours
-0x03  0x010  4              62  ---  Head Flying Hours
+0x03  0x008  4              63  ---  Spindle Motor Power-on Hours
+0x03  0x010  4              63  ---  Head Flying Hours
 0x03  0x018  4              23  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
@@ -163,7 +163,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              34  ---  Current Temperature
+0x05  0x008  1              33  ---  Current Temperature
 0x05  0x010  1              31  N--  Average Short Term Temperature
 0x05  0x018  1               -  N--  Average Long Term Temperature
 0x05  0x020  1              38  ---  Highest Temperature

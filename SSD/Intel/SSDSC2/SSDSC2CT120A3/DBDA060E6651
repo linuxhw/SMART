@@ -1,3 +1,6 @@
+smartctl 7.2 2021-01-17 r5171 [x86_64-linux-5.12.13-300.fc34.x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Intel 330/335 Series SSDs
 Device Model:     INTEL SSDSC2CT120A3
@@ -7,17 +10,19 @@ Firmware Version: 300i
 User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
+TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Mar  6 23:41:23 2020 AEDT
+Local Time is:    Tue Jul  6 14:54:10 2021 AEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -58,18 +63,18 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    3
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    948819h+24m+38.810s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    86
-181 Program_Fail_Cnt_Total  -O--CK   000   000   000    -    3
+  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    5
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    955030h+49m+30.000s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    138
+181 Program_Fail_Cnt_Total  -O--CK   000   000   000    -    5
 182 Erase_Fail_Count_Total  -O--CK   000   000   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    83
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    2222455
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    135
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    2280181
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   093   093   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    2222455
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    819235
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    66722
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    2280181
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    870897
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    69219
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -84,7 +89,7 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      1  Device Statistics log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xb7       GPL,SL  VS      16  Device vendor specific log
@@ -131,42 +136,43 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                     ? Celsius
 Power Cycle Min/Max Temperature:     127/-127 Celsius
 Lifetime    Min/Max Temperature:      0/ 0 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     0 (Unknown, should be 2)
+SCT Temperature History Version:     10 (Unknown, should be 2)
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
-Min/Max recommended Temperature:      0/ 0 Celsius
-Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    0 (379)
-Temperature History is empty
+Min/Max recommended Temperature:      0/100 Celsius
+Min/Max Temperature Limit:            0/ 4 Celsius
+Temperature History Size (Index):    28260 (445)
+Invalid Temperature History Size or Index
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              99  ---  Lifetime Power-On Resets
-0x01  0x010  4           54025  ---  Power-on Hours
-0x01  0x018  6    146851862102  ---  Logical Sectors Written
-0x01  0x028  6     55098721333  ---  Logical Sectors Read
+0x01  0x008  4             151  ---  Lifetime Power-On Resets
+0x01  0x010  4           60236  ---  Power-on Hours
+0x01  0x018  6    150635037547  ---  Logical Sectors Written
+0x01  0x028  6     58484475121  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            2019  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            2504  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            2019  ---  Number of Hardware Resets
-0x06  0x010  4            2002  ---  Number of ASR Events
+0x06  0x008  4            2504  ---  Number of Hardware Resets
+0x06  0x010  4            2263  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -176,8 +182,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

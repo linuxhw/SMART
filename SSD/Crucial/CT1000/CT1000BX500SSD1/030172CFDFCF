@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.27-1-lts] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.67-1-lts] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Apr  4 13:56:25 2021 CEST
+Local Time is:    Thu Sep 23 13:09:31 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,17 +62,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    20
+  9 Power_On_Hours          -O--CK   100   100   000    -    677
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    822
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   000    -    2
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    9
+173 Ave_Block-Erase_Count   -O--CK   100   100   000    -    8
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    24
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    13
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   067   061   000    -    33 (Min/Max 24/39)
+194 Temperature_Celsius     -O---K   069   054   000    -    31 (Min/Max 24/46)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -80,16 +80,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    592915320
-247 Host_Program_Page_Count -O--CK   100   100   000    -    18528603
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    12238848
+246 Total_LBAs_Written      -O--CK   100   100   000    -    5050199282
+247 Host_Program_Page_Count -O--CK   100   100   000    -    157818727
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    190365696
 249 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    2854
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    184207
 251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
 252 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-253 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    12
-223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
+253 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    20
+254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    352
+223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    29
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,12 +126,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              20  ---  Lifetime Power-On Resets
-0x01  0x010  4              11  ---  Power-on Hours
-0x01  0x018  6       592915320  ---  Logical Sectors Written
-0x01  0x020  6          223467  ---  Number of Write Commands
-0x01  0x028  6       121034103  ---  Logical Sectors Read
-0x01  0x030  6          246905  ---  Number of Read Commands
+0x01  0x008  4             822  ---  Lifetime Power-On Resets
+0x01  0x010  4             677  ---  Power-on Hours
+0x01  0x018  6       755231986  ---  Logical Sectors Written
+0x01  0x020  6           46251  ---  Number of Write Commands
+0x01  0x028  6      3860160495  ---  Logical Sectors Read
+0x01  0x030  6           56651  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

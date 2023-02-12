@@ -6,7 +6,7 @@ User Capacity:    40,020,664,320 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sat May 30 17:52:41 2020 CEST
+Local Time is:    Sat May 30 20:40:49 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -53,21 +53,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   100   001   025    Past 5376
-  4 Start_Stop_Count        -O--CK   085   085   000    -    15367
+  3 Spin_Up_Time            POS---   100   001   025    Past 4800
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15372
   5 Reallocated_Sector_Ct   PO--CK   090   090   011    -    23
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1050638
+  9 Power_On_Hours          -O--CK   099   099   000    -    1050828
  10 Spin_Retry_Count        PO--CK   099   099   051    -    559
  11 Calibration_Retry_Count -O--C-   097   097   000    -    2350
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7859
-194 Temperature_Celsius     -O---K   142   094   000    -    32
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    105376
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7862
+194 Temperature_Celsius     -O---K   154   094   000    -    28
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    291155
 196 Reallocated_Event_Count -O--CK   091   091   000    -    21
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    330
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    165
 200 Multi_Zone_Error_Rate   -O-R--   100   100   051    -    0
 201 Soft_Read_Error_Rate    -O-R--   100   100   051    -    0
                             ||||||_ K auto-keep
@@ -90,7 +90,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 7406 (device log contains only the most recent five errors)
+ATA Error Count: 7408 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -104,6 +104,40 @@ ATA Error Count: 7406 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 7408 occurred at disk power-on lifetime: 8755 hours (364 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 00 00 00 00 a0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  f5 00 00 00 00 00 a0 00      00:28:37.563  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 a0 00      00:28:37.563  SET FEATURES [Disable revert defaults]
+  ec 00 00 00 00 00 a0 00      00:28:37.375  IDENTIFY DEVICE
+  00 00 01 01 00 00 a0 00      00:28:37.375  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00      00:28:29.125  IDENTIFY DEVICE
+
+Error 7407 occurred at disk power-on lifetime: 8755 hours (364 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 00 00 00 00 a0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  f5 00 00 00 00 00 a0 00      00:11:35.063  SECURITY FREEZE LOCK
+  ef 66 00 00 00 00 a0 00      00:11:35.063  SET FEATURES [Disable revert defaults]
+  ec 00 00 00 00 00 a0 00      00:11:34.875  IDENTIFY DEVICE
+  00 00 01 01 00 00 a0 00      00:11:34.813  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00      00:11:26.625  IDENTIFY DEVICE
 
 Error 7406 occurred at disk power-on lifetime: 8755 hours (364 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -155,40 +189,6 @@ Error 7404 occurred at disk power-on lifetime: 8750 hours (364 days + 14 hours)
   ef 66 00 00 00 00 a0 00      00:00:27.375  SET FEATURES [Disable revert defaults]
   c8 00 80 38 70 6a e1 00      00:00:26.375  READ DMA
   c8 00 80 b8 6f 6a e1 00      00:00:26.375  READ DMA
-
-Error 7403 occurred at disk power-on lifetime: 8750 hours (364 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 00 00 00 a0
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  f5 00 00 00 00 00 a0 00      00:00:30.438  SECURITY FREEZE LOCK
-  ef 66 00 00 00 00 a0 00      00:00:30.438  SET FEATURES [Disable revert defaults]
-  ef 66 00 00 00 00 a0 00      00:00:30.438  SET FEATURES [Disable revert defaults]
-  c8 00 80 38 7f 65 e1 00      00:00:29.438  READ DMA
-  c8 00 80 b8 7e 65 e1 00      00:00:29.438  READ DMA
-
-Error 7402 occurred at disk power-on lifetime: 8749 hours (364 days + 13 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 00 00 00 a0
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  f5 00 00 00 00 00 a0 00      00:18:33.688  SECURITY FREEZE LOCK
-  ef 66 00 00 00 00 a0 00      00:18:33.688  SET FEATURES [Disable revert defaults]
-  ec 00 00 00 00 00 a0 00      00:18:33.438  IDENTIFY DEVICE
-  00 00 01 01 00 00 a0 00      00:18:33.375  NOP [Abort queued commands]
-  ec 00 00 00 00 00 00 00      00:18:18.813  IDENTIFY DEVICE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

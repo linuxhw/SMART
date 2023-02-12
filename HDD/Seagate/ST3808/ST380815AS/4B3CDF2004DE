@@ -7,13 +7,14 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Jan 26 23:34:36 2018 MSK
+Local Time is:    Mon Mar 18 02:15:53 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -24,9 +25,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  17)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -51,19 +51,19 @@ recommended polling time: 	 (  27) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   108   093   006    -    195020123
+  1 Raw_Read_Error_Rate     POSR--   112   093   006    -    199628850
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    8443
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8902
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   085   060   030    -    391771020
-  9 Power_On_Hours          -O--CK   074   074   000    -    23014
+  7 Seek_Error_Rate         POSR--   087   060   030    -    545248315
+  9 Power_On_Hours          -O--CK   070   070   000    -    26740
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   020    -    8898
+ 12 Power_Cycle_Count       -O--CK   091   091   020    -    9358
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   054   045    -    41 (Min/Max 26/42)
-194 Temperature_Celsius     -O---K   041   046   000    -    41 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   079   067   000    -    192379611
+190 Airflow_Temperature_Cel -O---K   058   052   045    -    42 (Min/Max 26/44)
+194 Temperature_Celsius     -O---K   042   048   000    -    42 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   080   067   000    -    77474464
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    35
@@ -86,7 +86,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -257,25 +257,25 @@ Error 23 [2] occurred at disk power-on lifetime: 6424 hours (267 days + 16 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     22875         -
-# 2  Extended offline    Completed without error       00%     22797         -
-# 3  Extended offline    Completed without error       00%     22555         -
-# 4  Extended offline    Completed without error       00%     22337         -
-# 5  Extended offline    Completed without error       00%     22254         -
-# 6  Extended offline    Completed without error       00%     22173         -
-# 7  Extended offline    Completed without error       00%     21379         -
-# 8  Extended offline    Aborted by host               60%     20630         -
-# 9  Extended offline    Completed without error       00%     20098         -
-#10  Extended offline    Completed without error       00%     19967         -
-#11  Extended offline    Completed without error       00%     19046         -
-#12  Extended offline    Completed without error       00%     18488         -
-#13  Extended offline    Completed without error       00%     17733         -
-#14  Extended offline    Completed without error       00%     17220         -
-#15  Extended offline    Completed without error       00%     17153         -
-#16  Extended offline    Completed without error       00%     17084         -
-#17  Extended offline    Completed without error       00%     16941         -
-#18  Extended offline    Completed without error       00%     16717         -
-#19  Extended offline    Completed without error       00%     16243         -
+# 1  Extended offline    Aborted by host               10%     26710         -
+# 2  Extended offline    Completed without error       00%     26403         -
+# 3  Extended offline    Completed without error       00%     24823         -
+# 4  Extended offline    Completed without error       00%     24065         -
+# 5  Extended offline    Completed without error       00%     23844         -
+# 6  Extended offline    Completed without error       00%     23085         -
+# 7  Extended offline    Completed without error       00%     22875         -
+# 8  Extended offline    Completed without error       00%     22797         -
+# 9  Extended offline    Completed without error       00%     22555         -
+#10  Extended offline    Completed without error       00%     22337         -
+#11  Extended offline    Completed without error       00%     22254         -
+#12  Extended offline    Completed without error       00%     22173         -
+#13  Extended offline    Completed without error       00%     21379         -
+#14  Extended offline    Aborted by host               60%     20630         -
+#15  Extended offline    Completed without error       00%     20098         -
+#16  Extended offline    Completed without error       00%     19967         -
+#17  Extended offline    Completed without error       00%     19046         -
+#18  Extended offline    Completed without error       00%     18488         -
+#19  Extended offline    Completed without error       00%     17733         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -292,9 +292,11 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           37  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

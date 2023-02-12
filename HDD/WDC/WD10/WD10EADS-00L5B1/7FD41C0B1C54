@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Fri Mar 11 00:05:06 2022 MSK
+Local Time is:    Mon Mar 14 02:32:01 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    573
-  3 Spin_Up_Time            POS--K   161   155   021    -    6941
-  4 Start_Stop_Count        -O--CK   086   086   000    -    14877
+  3 Spin_Up_Time            POS--K   165   155   021    -    6716
+  4 Start_Stop_Count        -O--CK   086   086   000    -    14894
   5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    1
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   023   023   000    -    56295
+  9 Power_On_Hours          -O--CK   023   023   000    -    56356
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   088   088   000    -    12603
-192 Power-Off_Retract_Count -O--CK   195   195   000    -    4443
-193 Load_Cycle_Count        -O--CK   196   196   000    -    14811
-194 Temperature_Celsius     -O---K   119   090   000    -    31
+ 12 Power_Cycle_Count       -O--CK   088   088   000    -    12620
+192 Power-Off_Retract_Count -O--CK   195   195   000    -    4447
+193 Load_Cycle_Count        -O--CK   196   196   000    -    14828
+194 Temperature_Celsius     -O---K   120   090   000    -    30
 196 Reallocated_Event_Count -O--CK   199   199   000    -    1
 197 Current_Pending_Sector  -O--CK   200   199   000    -    0
 198 Offline_Uncorrectable   ----CK   200   199   000    -    0
@@ -262,7 +262,8 @@ Error 44743 [6] occurred at disk power-on lifetime: 55524 hours (2313 days + 12 
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Conveyance offline  Completed without error       00%     20212         -
+# 1  Extended offline    Completed without error       00%     56326         -
+# 2  Conveyance offline  Completed without error       00%     20212         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -278,9 +279,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     13/33 Celsius
-Lifetime    Min/Max Temperature:     13/60 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     14/33 Celsius
+Lifetime    Min/Max Temperature:      ?/60 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -288,7 +289,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (373)
+Temperature History Size (Index):    478 (107)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -301,14 +302,14 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0002  2            0  R_ERR response for data FIS
+0x0002  2         8478  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2            0  R_ERR response for non-data FIS
+0x0004  2         8478  R_ERR response for host-to-device data FIS
+0x0005  2          358  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
-0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        96727  Vendor specific
+0x0007  2          358  R_ERR response for host-to-device non-data FIS
+0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        26521  Vendor specific
 
 
 

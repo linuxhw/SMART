@@ -10,7 +10,7 @@ User Capacity:    35,891,174,912 bytes [35.8 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 3a
-Local Time is:    Tue Nov 17 11:37:23 2020 CET
+Local Time is:    Thu Nov 19 00:12:30 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -55,22 +55,22 @@ recommended polling time: 	 (  30) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   099   099   062    -    131073
+  1 Raw_Read_Error_Rate     PO-R--   097   097   062    -    131076
   2 Throughput_Performance  P-S---   106   106   040    -    4549
   3 Spin_Up_Time            POS---   212   212   033    -    1
   4 Start_Stop_Count        -O--C-   099   099   000    -    2073
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   120   120   040    -    40
-  9 Power_On_Hours          -O--C-   086   086   000    -    6241
+  9 Power_On_Hours          -O--C-   086   086   000    -    6278
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   099   099   000    -    1870
-191 G-Sense_Error_Rate      -O-R--   099   099   000    -    2
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    47
-193 Load_Cycle_Count        -O--C-   085   085   000    -    159363
-194 Temperature_Celsius     -O----   183   183   000    -    30 (Min/Max 6/49)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    2
-197 Current_Pending_Sector  -O---K   100   100   000    -    0
+193 Load_Cycle_Count        -O--C-   085   085   000    -    159373
+194 Temperature_Celsius     -O----   166   166   000    -    33 (Min/Max 6/49)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    3
+197 Current_Pending_Sector  -O---K   100   100   000    -    1
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
@@ -92,7 +92,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 2
+ATA Error Count: 5
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -106,6 +106,57 @@ ATA Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 5 occurred at disk power-on lifetime: 6260 hours (260 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  01 51 05 9b a0 ad e1  Error: AMNF 5 sectors at LBA = 0x01ada09b = 28156059
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 98 a0 ad e1 00      19:05:54.200  READ DMA
+  ca 00 08 00 36 1a e0 00      19:05:54.200  WRITE DMA
+  ca 00 00 00 35 1a e0 00      19:05:54.200  WRITE DMA
+  ca 00 00 00 34 1a e0 00      19:05:54.200  WRITE DMA
+  ca 00 38 d0 35 c7 e1 00      19:05:54.200  WRITE DMA
+
+Error 4 occurred at disk power-on lifetime: 6260 hours (260 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  01 51 05 9b a0 ad e1  Error: AMNF 5 sectors at LBA = 0x01ada09b = 28156059
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 98 a0 ad e1 00      19:05:50.400  READ DMA
+  c8 00 08 90 a0 ad e1 00      19:05:50.400  READ DMA
+  c8 00 08 70 0d 81 e2 00      19:05:50.400  READ DMA
+  c8 00 08 40 0d 81 e2 00      19:05:50.400  READ DMA
+  c8 00 08 28 13 81 e2 00      19:05:50.400  READ DMA
+
+Error 3 occurred at disk power-on lifetime: 6260 hours (260 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  01 51 05 9b a0 ad e1  Error: AMNF 5 sectors at LBA = 0x01ada09b = 28156059
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 a0 9f ad e1 00      19:05:45.300  READ DMA
+  c8 00 08 30 29 81 e1 00      19:05:45.300  READ DMA
+  c8 00 08 28 29 81 e1 00      19:05:45.300  READ DMA
+  c8 00 08 18 29 81 e1 00      19:05:45.300  READ DMA
+  c8 00 08 d0 31 41 e1 00      19:05:45.300  READ DMA
 
 Error 2 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.

@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Mar  6 07:57:33 2022 MSK
+Local Time is:    Thu Mar 10 11:15:23 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -20,7 +20,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -62,26 +62,26 @@ SCT capabilities: 	       (0x3037)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    30
-  3 Spin_Up_Time            POS--K   194   137   021    -    1258
-  4 Start_Stop_Count        -O--CK   096   096   000    -    4975
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    34
+  3 Spin_Up_Time            POS--K   186   137   021    -    1683
+  4 Start_Stop_Count        -O--CK   095   095   000    -    5065
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   088   088   000    -    9317
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   088   088   000    -    9389
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4970
-192 Power-Off_Retract_Count -O--CK   196   196   000    -    3525
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5060
+192 Power-Off_Retract_Count -O--CK   196   196   000    -    3615
 193 Load_Cycle_Count        -O--CK   200   200   000    -    1449
-194 Temperature_Celsius     -O---K   100   091   000    -    43
+194 Temperature_Celsius     -O---K   101   091   000    -    42
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    6
+197 Current_Pending_Sector  -O--CK   200   200   000    -    3
 198 Offline_Uncorrectable   ----CK   200   200   000    -    22
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    42
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    44
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    20
-240 Head_Flying_Hours       -O--CK   088   088   000    -    8808
-241 Total_LBAs_Written      -O--CK   200   200   000    -    19146461819
-242 Total_LBAs_Read         -O--CK   200   200   000    -    52357447472
+240 Head_Flying_Hours       -O--CK   088   088   000    -    8880
+241 Total_LBAs_Written      -O--CK   200   200   000    -    19331815297
+242 Total_LBAs_Read         -O--CK   200   200   000    -    52386486272
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -113,7 +113,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 320 (device log contains only the most recent 24 errors)
+Device Error Count: 538 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -129,141 +129,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 320 [7] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 538 [9] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 08 00 00 00 00 01 53 e0 00  Error: UNC 8 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:59.652  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:59.651  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:00:59.649  IDENTIFY DEVICE
-  ef 00 03 00 42 00 00 00 00 00 00 a0 0a     00:00:59.649  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:59.649  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 01 50 e0 0a     20:49:11.239  READ DMA
+  c8 00 00 00 20 00 00 00 00 08 00 e0 0a     20:49:11.239  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 0a     20:49:11.238  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     20:49:11.235  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 0a     20:49:11.235  SET FEATURES [Set transfer mode]
 
-Error 319 [6] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 537 [8] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 08 00 00 00 00 01 53 e0 00  Error: UNC 8 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:57.856  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:57.802  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:00:57.798  IDENTIFY DEVICE
-  ef 00 03 00 42 00 00 00 00 00 00 a0 0a     00:00:57.798  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:57.798  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 01 50 e0 0a     20:49:09.578  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 48 e0 0a     20:49:09.577  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 40 e0 0a     20:49:09.577  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 38 e0 0a     20:49:09.577  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 30 e0 0a     20:49:09.577  READ DMA
 
-Error 318 [5] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 536 [7] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 f8 00 00 00 00 01 53 e0 00  Error: UNC 248 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:56.011  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:56.011  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:00:56.008  IDENTIFY DEVICE
-  ef 00 03 00 42 00 00 00 00 00 00 a0 0a     00:00:56.008  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:56.008  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 f8 00 00 00 00 01 08 e0 0a     20:49:07.735  READ DMA
+  c8 00 00 00 78 00 00 00 00 00 88 e0 0a     20:49:07.735  READ DMA
+  c8 00 00 00 30 00 00 00 00 00 48 e0 0a     20:49:07.735  READ DMA
+  c8 00 00 00 10 00 00 00 00 00 28 e0 0a     20:49:07.735  READ DMA
+  c8 00 00 00 08 00 00 00 00 00 10 e0 0a     20:49:07.735  READ DMA
 
-Error 317 [4] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 535 [6] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 08 00 00 00 00 01 53 e0 00  Error: UNC 8 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:54.220  READ DMA
-  c8 00 00 00 08 00 00 02 97 72 d0 e2 0a     00:00:54.219  READ DMA
-  c8 00 00 00 08 00 00 02 97 72 c8 e2 0a     00:00:54.219  READ DMA
-  c8 00 00 00 08 00 00 02 97 72 c0 e2 0a     00:00:54.219  READ DMA
-  c8 00 00 00 08 00 00 02 97 72 b8 e2 0a     00:00:54.219  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 50 e0 0a     20:49:05.931  READ DMA
+  c8 00 00 00 80 00 00 00 00 00 88 e0 0a     20:49:05.931  READ DMA
+  c8 00 00 00 38 00 00 00 00 00 48 e0 0a     20:49:05.930  READ DMA
+  c8 00 00 00 28 00 00 00 00 00 18 e0 0a     20:49:05.930  READ DMA
+  c8 00 00 00 10 00 00 00 00 00 00 e0 0a     20:49:05.930  READ DMA
 
-Error 316 [3] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 534 [5] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 08 00 00 00 00 01 53 e0 00  Error: UNC 8 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:52.384  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:52.382  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:00:52.380  IDENTIFY DEVICE
-  ef 00 03 00 42 00 00 00 00 00 00 a0 0a     00:00:52.380  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:52.380  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 01 50 e0 0a     20:49:04.128  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 48 e0 0a     20:49:04.128  READ DMA
+  ea 00 00 00 00 00 00 00 00 01 47 e0 0a     20:49:04.127  FLUSH CACHE EXT
+  c8 00 00 00 08 00 00 00 00 01 40 e0 0a     20:49:04.127  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 38 e0 0a     20:49:04.127  READ DMA
 
-Error 315 [2] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 533 [4] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 f8 00 00 00 00 01 53 e0 00  Error: UNC 248 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:50.587  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:50.586  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:00:50.584  IDENTIFY DEVICE
-  ef 00 03 00 42 00 00 00 00 00 00 a0 0a     00:00:50.582  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:50.582  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 f8 00 00 00 00 01 08 e0 0a     20:49:02.441  READ DMA
+  c8 00 00 00 10 00 00 00 00 00 f0 e0 0a     20:49:02.441  READ DMA
+  c8 00 00 00 08 00 00 00 00 20 00 e0 0a     20:49:02.441  READ DMA
+  c8 00 00 00 08 00 00 00 00 10 00 e0 0a     20:49:02.441  READ DMA
+  c8 00 00 00 08 00 00 00 00 04 00 e0 0a     20:49:02.441  READ DMA
 
-Error 314 [1] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 532 [3] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 08 00 00 00 00 01 53 e0 00  Error: UNC 8 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:48.787  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:48.787  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:00:48.784  IDENTIFY DEVICE
-  ef 00 03 00 42 00 00 00 00 00 00 a0 0a     00:00:48.784  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:00:48.784  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 00 01 50 e0 0a     20:48:59.344  READ DMA
+  25 00 00 02 00 00 00 25 42 e6 00 e0 0a     20:48:59.343  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 0a     20:48:59.343  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     20:48:59.340  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 0a     20:48:59.340  SET FEATURES [Set transfer mode]
 
-Error 313 [0] occurred at disk power-on lifetime: 9317 hours (388 days + 5 hours)
+Error 531 [2] occurred at disk power-on lifetime: 9389 hours (391 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 02 97 70 fa e2 00  Error: UNC 8 sectors at LBA = 0x029770fa = 43479290
+  40 -- 51 00 08 00 00 00 00 01 53 e0 00  Error: UNC 8 sectors at LBA = 0x00000153 = 339
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 97 70 f8 e2 0a     00:00:47.087  READ DMA
-  c8 00 00 00 08 00 00 02 97 70 f0 e2 0a     00:00:47.087  READ DMA
-  c8 00 00 00 08 00 00 02 97 70 e8 e2 0a     00:00:47.086  READ DMA
-  c8 00 00 00 08 00 00 02 97 70 e0 e2 0a     00:00:47.086  READ DMA
-  c8 00 00 00 08 00 00 02 97 70 d8 e2 0a     00:00:47.086  READ DMA
+  c8 00 00 00 08 00 00 00 00 01 50 e0 0a     20:48:57.545  READ DMA
+  25 00 00 01 f8 00 00 0c 80 12 08 e0 0a     20:48:57.544  READ DMA EXT
+  c8 00 00 00 f8 00 00 0c 80 11 08 ec 0a     20:48:57.543  READ DMA
+  c8 00 00 00 78 00 00 0c 80 10 88 ec 0a     20:48:57.542  READ DMA
+  c8 00 00 00 30 00 00 0c 80 10 48 ec 0a     20:48:57.542  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -282,8 +282,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    43 Celsius
-Power Cycle Min/Max Temperature:     43/43 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     29/42 Celsius
 Lifetime    Min/Max Temperature:      0/52 Celsius
 Specified Max Operating Temperature:    40 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -293,7 +293,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (417)
+Temperature History Size (Index):    478 (411)
 
 SCT Error Recovery Control command not supported
 
@@ -303,14 +303,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            1  Command failed due to ICRC error
+0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4           88  Vendor specific
+0x8000  4        76835  Vendor specific
 

@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.0-17-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.0-41-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,8 +13,8 @@ Rotation Rate:    Solid State Device
 TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4c
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jun  6 03:14:31 2021 EDT
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Mon Jan  3 05:46:41 2022 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,7 +22,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -61,14 +61,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-RC-   200   200   000    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    11961
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    6987
+  9 Power_On_Hours          -O--CK   097   097   000    -    14047
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    7316
 169 Unknown_Apple_Attrib    PO--C-   253   253   010    -    1546716715264
-173 Wear_Leveling_Count     -O--CK   186   186   100    -    777416999234
-192 Power-Off_Retract_Count -O--C-   099   099   000    -    3979
-194 Temperature_Celsius     -O---K   059   022   000    -    41 (Min/Max 19/78)
+173 Wear_Leveling_Count     -O--CK   186   186   100    -    833252622672
+192 Power-Off_Retract_Count -O--C-   099   099   000    -    4152
+194 Temperature_Celsius     -O---K   069   022   000    -    31 (Min/Max 19/78)
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-RC-   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-RC-   198   198   000    -    3396
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,7 +115,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2           47  Command failed due to ICRC error
+0x0001  2         2037  Command failed due to ICRC error
 0x0002  2        49152  R_ERR response for data FIS
 0x0003  2        53248  R_ERR response for device-to-host data FIS
 0x0004  2        57344  R_ERR response for host-to-device data FIS
@@ -124,7 +124,7 @@ ID      Size     Value  Description
 0x0007  2         4096  R_ERR response for host-to-device non-data FIS
 0x0008  2         7952  Device-to-host non-data FIS retries
 0x0009  2         7953  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2        10233  Device-to-host register FISes sent due to a COMRESET
+0x000a  2        14998  Device-to-host register FISes sent due to a COMRESET
 0x000b  2         6145  CRC errors within host-to-device FIS
 0x000d  2         7953  Non-CRC errors within host-to-device FIS
 0x000f  2         8176  R_ERR response for host-to-device data FIS, CRC

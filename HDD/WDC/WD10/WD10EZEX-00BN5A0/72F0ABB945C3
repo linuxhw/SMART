@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
 Device Model:     WDC WD10EZEX-00BN5A0
@@ -10,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Oct 25 18:57:33 2019 +05
+Local Time is:    Wed Mar 31 02:14:52 2021 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,16 +65,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    1318
   3 Spin_Up_Time            POS--K   176   174   021    -    2200
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7478
+  4 Start_Stop_Count        -O--CK   083   083   000    -    17653
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   076   076   000    -    18047
+  9 Power_On_Hours          -O--CK   063   063   000    -    27070
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5960
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    742
-193 Load_Cycle_Count        -O--CK   198   198   000    -    6736
-194 Temperature_Celsius     -O---K   114   096   000    -    29
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6783
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    863
+193 Load_Cycle_Count        -O--CK   195   195   000    -    16790
+194 Temperature_Celsius     -O---K   105   096   000    -    38
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -259,7 +262,13 @@ Error 1316 [19] occurred at disk power-on lifetime: 12733 hours (530 days + 13 h
   60 00 01 00 e8 00 00 00 06 5b 02 40 00     00:26:45.098  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     25789         -
+# 2  Short offline       Completed without error       00%     25783         -
+# 3  Short offline       Completed without error       00%     25753         -
+# 4  Short offline       Completed without error       00%     25738         -
+# 5  Short offline       Completed without error       00%     25712         -
+# 6  Extended offline    Interrupted (host reset)      90%     25568         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -274,10 +283,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     25/29 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     24/39 Celsius
 Lifetime    Min/Max Temperature:      0/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -289,7 +297,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (412)
+Temperature History Size (Index):    478 (466)
 
 SCT Error Recovery Control command not supported
 
@@ -307,12 +315,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          441  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           32  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          891  Vendor specific
+0x8000  4        55045  Vendor specific
 
 
 

@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.10-300.fc35.x86_64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.0-7620-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Nov 13 09:13:08 2021 EST
+Local Time is:    Sat Nov 13 14:53:45 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,21 +65,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   9 Power_On_Hours          -O--CK   099   099   000    -    4194
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    4196
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    4199
 170 Unused_Rsvd_Blk_Ct_Chip -O--CK   100   100   010    -    0
 171 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
 172 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
 173 Wear_Leveling_Count     PO--CK   095   095   005    -    95
-174 Unexpect_Power_Loss_Ct  -O--CK   099   099   000    -    102
+174 Unexpect_Power_Loss_Ct  -O--CK   099   099   000    -    103
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    783
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O--CK   068   045   000    -    32
+194 Temperature_Celsius     -O--CK   067   045   000    -    33
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 233 Media_Wearout_Indicator PO--C-   095   095   000    -    15980297
 241 Total_LBAs_Written      -O--CK   099   099   000    -    11399
-242 Total_LBAs_Read         -O--CK   099   099   000    -    13561
+242 Total_LBAs_Read         -O--CK   099   099   000    -    13563
 249 NAND_Writes_1GiB        -O--CK   099   099   000    -    24320
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -129,8 +129,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SCT command executing in background (5)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     31/40 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     40/40 Celsius
 Lifetime    Min/Max Temperature:      0/70 Celsius
 Under/Over Temperature Limit Count:  4294967295/4294901760
 SMART Status:                        0xffff (Reserved)
@@ -140,7 +140,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (1)
+Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -160,8 +160,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           29  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -9,13 +9,13 @@ Rotation Rate:    5400 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Aug 16 06:51:33 2020 UTC
+Local Time is:    Thu Aug 20 08:49:16 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     1 (minimum power consumption with standby)
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
@@ -60,18 +60,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   186   177   021    -    1683
-  4 Start_Stop_Count        -O--CK   084   084   000    -    16102
+  3 Spin_Up_Time            POS--K   182   177   021    -    1883
+  4 Start_Stop_Count        -O--CK   084   084   000    -    16276
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   091   091   000    -    7130
+  9 Power_On_Hours          -O--CK   091   091   000    -    7150
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2249
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2295
 191 G-Sense_Error_Rate      -O--CK   001   001   000    -    304
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    680
-193 Load_Cycle_Count        -O--CK   178   178   000    -    66324
-194 Temperature_Celsius     -O---K   111   101   000    -    36
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    694
+193 Load_Cycle_Count        -O--CK   178   178   000    -    66662
+194 Temperature_Celsius     -O---K   114   101   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -126,8 +126,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     36/36 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     33/36 Celsius
 Lifetime    Min/Max Temperature:     10/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -139,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (66)
+Temperature History Size (Index):    128 (1)
 
 SCT Error Recovery Control command not supported
 
@@ -157,10 +157,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2         1707  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4           98  Vendor specific
+0x8000  4          132  Vendor specific
 

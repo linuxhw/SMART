@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.12-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Apr 14 23:42:12 2021 CEST
+Local Time is:    Wed Jul 21 21:43:20 2021 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,28 +65,28 @@ SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   056   056   021    -    1366
-  4 Start_Stop_Count        -O--CK   100   100   000    -    22
+  3 Spin_Up_Time            POS--K   055   054   021    -    1475
+  4 Start_Stop_Count        -O--CK   100   100   000    -    107
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR-K   100   100   030    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    7
+  9 Power_On_Hours          -O--CK   100   100   000    -    185
  10 Spin_Retry_Count        PO--CK   100   100   050    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    21
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    106
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    21474836485
-193 Load_Cycle_Count        -O--CK   100   100   000    -    53
-194 Temperature_Celsius     -O---K   031   038   000    -    31 (Min/Max 31/31)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    51539607564
+193 Load_Cycle_Count        -O--CK   100   100   000    -    272
+194 Temperature_Celsius     -O---K   026   038   000    -    26 (Min/Max 22/26)
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
-240 Head_Flying_Hours       -O--CK   100   100   000    -    1
-243 Unknown_Attribute       -O--CK   100   100   000    -    6
+240 Head_Flying_Hours       -O--CK   100   100   000    -    150
+243 Unknown_Attribute       -O--CK   100   100   000    -    180
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,7 +120,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 22
+Device Error Count: 85 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -136,7 +136,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 22 [21] occurred at disk power-on lifetime: 7 hours (0 days + 7 hours)
+Error 85 [12] occurred at disk power-on lifetime: 185 hours (7 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -147,13 +147,13 @@ Error 22 [21] occurred at disk power-on lifetime: 7 hours (0 days + 7 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:11.142  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:11.142  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:05.753  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:05.753  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:05.752  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.325  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.325  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.186  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.186  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.185  READ DMA EXT
 
-Error 21 [20] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
+Error 84 [11] occurred at disk power-on lifetime: 178 hours (7 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -164,13 +164,13 @@ Error 21 [20] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:12.128  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:12.128  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 21 e0 00     00:00:06.866  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 20 e0 00     00:00:06.866  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 1f e0 00     00:00:06.866  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.348  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.348  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.212  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.212  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.211  READ DMA EXT
 
-Error 20 [19] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
+Error 83 [10] occurred at disk power-on lifetime: 176 hours (7 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -181,13 +181,13 @@ Error 20 [19] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:04.961  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:04.961  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 21 e0 00     00:00:04.870  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 20 e0 00     00:00:04.870  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 1f e0 00     00:00:04.870  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.369  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.369  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.232  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.232  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.232  READ DMA EXT
 
-Error 19 [18] occurred at disk power-on lifetime: 5 hours (0 days + 5 hours)
+Error 82 [9] occurred at disk power-on lifetime: 173 hours (7 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -198,13 +198,13 @@ Error 19 [18] occurred at disk power-on lifetime: 5 hours (0 days + 5 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:04.719  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:04.719  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 21 e0 00     00:00:04.594  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 20 e0 00     00:00:04.594  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 1f e0 00     00:00:04.594  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:05.361  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:05.361  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:05.225  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:05.224  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:05.224  READ DMA EXT
 
-Error 18 [17] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
+Error 81 [8] occurred at disk power-on lifetime: 171 hours (7 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -215,13 +215,13 @@ Error 18 [17] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:04.655  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:04.655  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 21 e0 00     00:00:04.561  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 20 e0 00     00:00:04.561  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 1f e0 00     00:00:04.560  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.336  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.336  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.199  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.198  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.198  READ DMA EXT
 
-Error 17 [16] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
+Error 80 [7] occurred at disk power-on lifetime: 168 hours (7 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -232,13 +232,13 @@ Error 17 [16] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:03:05.670  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:03:05.670  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 21 e0 00     00:03:05.558  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 20 e0 00     00:03:05.557  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 1f e0 00     00:03:05.557  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.360  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.360  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.223  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.223  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.222  READ DMA EXT
 
-Error 16 [15] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
+Error 79 [6] occurred at disk power-on lifetime: 166 hours (6 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -249,13 +249,13 @@ Error 16 [15] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:27.791  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:27.791  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 21 e0 00     00:00:27.675  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 20 e0 00     00:00:27.675  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 1f e0 00     00:00:27.675  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.347  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.347  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.210  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.210  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.210  READ DMA EXT
 
-Error 15 [14] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
+Error 78 [5] occurred at disk power-on lifetime: 165 hours (6 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -266,11 +266,11 @@ Error 15 [14] occurred at disk power-on lifetime: 2 hours (0 days + 2 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:04.649  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:04.649  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 21 e0 00     00:00:04.511  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 20 e0 00     00:00:04.511  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 1f e0 00     00:00:04.510  READ DMA EXT
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     00:00:06.336  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:06.336  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.198  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.198  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 08 00 e0 00     00:00:06.198  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -290,9 +290,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     31/31 Celsius
-Lifetime    Min/Max Temperature:     21/38 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     22/26 Celsius
+Lifetime    Min/Max Temperature:     17/38 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -303,7 +303,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (114)
+Temperature History Size (Index):    128 (100)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -324,10 +324,10 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          447  Vendor specific
+0x8000  4          469  Vendor specific
 

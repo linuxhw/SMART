@@ -1,6 +1,6 @@
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Deskstar 7K1000.B
-Device Model:     Hitachi HDT721010SLA360
+Device Model:     HDT721010SLA360
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: ST6OA3AA
@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Feb 22 12:43:51 2020 CET
+Local Time is:    Sat May  2 16:39:31 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -25,12 +25,11 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(14090) seconds.
 Offline data collection
@@ -60,21 +59,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   100   100   054    -    286
-  3 Spin_Up_Time            POS---   122   122   024    -    459 (Average 483)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    833
+  2 Throughput_Performance  P-S---   132   132   054    -    112
+  3 Spin_Up_Time            POS---   128   128   024    -    414 (Average 481)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    862
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   125   125   020    -    33
-  9 Power_On_Hours          -O--C-   099   099   000    -    7912
+  8 Seek_Time_Performance   P-S---   123   123   020    -    34
+  9 Power_On_Hours          -O--C-   099   099   000    -    8181
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    826
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    905
-193 Load_Cycle_Count        -O--C-   100   100   000    -    905
-194 Temperature_Celsius     -O----   214   214   000    -    28 (Min/Max 17/46)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    853
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    943
+193 Load_Cycle_Count        -O--C-   100   100   000    -    943
+194 Temperature_Celsius     -O----   150   150   000    -    40 (Min/Max 17/46)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    1
-198 Offline_Uncorrectable   ---R--   100   100   000    -    2
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -187,7 +186,8 @@ Error 37 [0] occurred at disk power-on lifetime: 7486 hours (311 days + 22 hours
   35 00 00 00 20 00 00 06 67 2f 00 e0 00  1d+15:25:26.100  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: read failure       90%      8168         108901473
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -203,8 +203,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     26/28 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     27/43 Celsius
 Lifetime    Min/Max Temperature:     17/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -213,7 +213,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (60)
+Temperature History Size (Index):    128 (79)
 
 SCT Error Recovery Control:
            Read: Disabled

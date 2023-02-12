@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-91-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-97-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Dec 30 22:37:21 2021 +03
+Local Time is:    Thu Feb  3 23:24:25 2022 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,15 +65,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    2
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   091   081   025    -    2901
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7991
+  3 Spin_Up_Time            PO---K   091   081   025    -    2974
+  4 Start_Stop_Count        -O--CK   093   093   000    -    8015
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    7000
+  9 Power_On_Hours          -O--CK   100   100   000    -    7186
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    965
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5102
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5126
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    193
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
 194 Temperature_Celsius     -O----   058   046   000    -    42 (Min/Max 8/54)
@@ -84,7 +84,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    318
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    612
 223 Load_Retry_Count        -O--CK   100   100   000    -    965
-225 Load_Cycle_Count        -O--CK   077   077   000    -    237687
+225 Load_Cycle_Count        -O--CK   077   077   000    -    237763
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -284,7 +284,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     26/42 Celsius
+Power Cycle Min/Max Temperature:     27/44 Celsius
 Lifetime    Min/Max Temperature:     11/55 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -294,7 +294,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (59)
+Temperature History Size (Index):    128 (97)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -314,8 +314,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4        30564  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
+0x0009  4        30312  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

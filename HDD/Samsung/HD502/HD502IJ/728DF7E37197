@@ -11,7 +11,7 @@ User Capacity:    499,971,544,064 bytes [499 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Sun Jan  9 19:17:29 2022 CET
+Local Time is:    Mon Jan 10 16:04:17 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -64,29 +64,29 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   099   051    -    0
-  3 Spin_Up_Time            POS---   086   086   011    -    5100
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7341
+  3 Spin_Up_Time            POS---   085   085   011    -    5280
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7342
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
-  8 Seek_Time_Performance   P-S--K   100   100   015    -    9883
-  9 Power_On_Hours          -O--CK   097   097   000    -    12850
+  8 Seek_Time_Performance   P-S--K   100   100   015    -    9700
+  9 Power_On_Hours          -O--CK   097   097   000    -    12864
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7183
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7184
  13 Read_Soft_Error_Rate    -OSR--   100   099   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    3
 184 End-to-End_Error        PO--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    2
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   060   000    -    36 (Min/Max 36/36)
-194 Temperature_Celsius     -O---K   064   060   000    -    36 (Min/Max 36/36)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   065   060   000    -    35 (Min/Max 18/35)
+194 Temperature_Celsius     -O---K   064   060   000    -    36 (Min/Max 18/39)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   099   000    -    7
 200 Multi_Zone_Error_Rate   -O-R--   100   100   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,7 +117,11 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Offline             Completed without error       00%     12849         -
+# 1  Extended offline    Completed without error       00%     12855         -
+# 2  Extended offline    Aborted by host               90%     12853         -
+# 3  Extended offline    Aborted by host               90%     12853         -
+# 4  Offline             Completed without error       00%     12853         -
+# 5  Offline             Completed without error       00%     12849         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -134,7 +138,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     --/36 Celsius
+Power Cycle Min/Max Temperature:     --/39 Celsius
 Lifetime    Min/Max Temperature:     --/51 Celsius
 
 SCT Temperature History Version:     2
@@ -142,7 +146,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (101)
 
 Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
 SCT (Get) Error Recovery Control command failed

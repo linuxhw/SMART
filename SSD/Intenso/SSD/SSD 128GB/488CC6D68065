@@ -1,4 +1,8 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-20-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
+Model Family:     Phison Driven OEM SSDs
 Device Model:     INTENSO
 Serial Number:    --
 Firmware Version: S9FM02.0
@@ -6,14 +10,15 @@ User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Jul  4 20:44:43 2020 CEST
+Local Time is:    Thu Dec 29 12:57:48 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -57,16 +62,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    6258
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    6024
-168 Unknown_Attribute       -O--C-   100   100   000    -    0
-170 Unknown_Attribute       PO--C-   100   100   010    -    1
-173 Unknown_Attribute       ------   100   100   000    -    43516175
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    239
+  9 Power_On_Hours          -O--C-   100   100   000    -    8377
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    8182
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+170 Bad_Blk_Ct_Erl/Lat      PO--C-   100   100   010    -    0/1
+173 MaxAvgErase_Ct          ------   100   100   000    -    355 (Average 1004)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    301
 194 Temperature_Celsius     PO---K   070   070   000    -    30
-196 Reallocated_Event_Count ------   100   100   000    -    0
-218 Unknown_Attribute       ------   100   100   000    -    6
-241 Total_LBAs_Written      -O--C-   100   100   000    -    19759849
+196 Not_In_Use              ------   100   100   000    -    0
+218 CRC_Error_Count         ------   100   100   000    -    6
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    24998191
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -94,25 +99,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      5767         -
-# 2  Short offline       Completed without error       00%      5419         -
-# 3  Short offline       Completed without error       00%      5412         -
-# 4  Short offline       Completed without error       00%      5026         -
-# 5  Short offline       Completed without error       00%      5014         -
-# 6  Short offline       Completed without error       00%      4668         -
-# 7  Short offline       Completed without error       00%      4562         -
-# 8  Short offline       Completed without error       00%      4504         -
-# 9  Short offline       Completed without error       00%      4494         -
-#10  Short offline       Completed without error       00%      4484         -
-#11  Short offline       Completed without error       00%      4479         -
-#12  Extended offline    Completed without error       00%      4478         -
-#13  Short offline       Completed without error       00%      4477         -
-#14  Short offline       Completed without error       00%      4127         -
-#15  Short offline       Completed without error       00%      4050         -
-#16  Short offline       Completed without error       00%      4044         -
-#17  Short offline       Completed without error       00%      4042         -
-#18  Short offline       Completed without error       00%      4041         -
-#19  Extended offline    Completed without error       00%      4032         -
+# 1  Short offline       Completed without error       00%      7992         -
+# 2  Short offline       Completed without error       00%      7992         -
+# 3  Short offline       Completed without error       00%      7985         -
+# 4  Extended offline    Completed without error       00%      7982         -
+# 5  Short offline       Completed without error       00%      7982         -
+# 6  Short offline       Completed without error       00%      7982         -
+# 7  Short offline       Completed without error       00%      5767         -
+# 8  Short offline       Completed without error       00%      5419         -
+# 9  Short offline       Completed without error       00%      5412         -
+#10  Short offline       Completed without error       00%      5026         -
+#11  Short offline       Completed without error       00%      5014         -
+#12  Short offline       Completed without error       00%      4668         -
+#13  Short offline       Completed without error       00%      4562         -
+#14  Short offline       Completed without error       00%      4504         -
+#15  Short offline       Completed without error       00%      4494         -
+#16  Short offline       Completed without error       00%      4484         -
+#17  Short offline       Completed without error       00%      4479         -
+#18  Extended offline    Completed without error       00%      4478         -
+#19  Short offline       Completed without error       00%      4477         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -131,7 +136,7 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              11  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -146,10 +151,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4          188  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           19  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

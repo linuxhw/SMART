@@ -10,7 +10,7 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-5 (minor revision not indicated)
-Local Time is:    Sun Aug 30 21:31:05 2020 CEST
+Local Time is:    Sat Nov 21 21:31:29 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -55,19 +55,19 @@ recommended polling time: 	 (  57) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   073   069   034    -    88920947
-  3 Spin_Up_Time            PO----   083   081   000    -    0
+  1 Raw_Read_Error_Rate     POSR--   077   069   034    -    67142937
+  3 Spin_Up_Time            PO----   084   081   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    19
-  5 Reallocated_Sector_Ct   PO--CK   097   097   036    -    128
-  7 Seek_Error_Rate         POSR--   078   060   030    -    62873049
-  9 Power_On_Hours          -O--CK   061   061   000    -    34776
+  5 Reallocated_Sector_Ct   PO--CK   097   097   036    -    134
+  7 Seek_Error_Rate         POSR--   078   060   030    -    68168644
+  9 Power_On_Hours          -O--CK   061   061   000    -    34965
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   020    -    1522
-194 Temperature_Celsius     -O---K   043   055   000    -    43
-195 Hardware_ECC_Recovered  -O-RC-   073   069   000    -    88920947
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    1
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1616
+194 Temperature_Celsius     -O---K   040   055   000    -    40
+195 Hardware_ECC_Recovered  -O-RC-   077   069   000    -    67142937
+197 Current_Pending_Sector  -O--C-   100   100   000    -    2
+198 Offline_Uncorrectable   ----C-   100   100   000    -    2
+199 UDMA_CRC_Error_Count    -OSRCK   200   199   000    -    7
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   077   230   000    -    23
                             ||||||_ K auto-keep
@@ -95,7 +95,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 65535 inconsistent with error log pointer 3
+Warning: ATA error count 65535 inconsistent with error log pointer 4
 
 ATA Error Count: 65535 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
@@ -112,95 +112,97 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 occurred at disk power-on lifetime: 15404 hours (641 days + 20 hours)
+Error 65535 occurred at disk power-on lifetime: 34831 hours (1451 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 67 b5 08 e0  Error: UNC at LBA = 0x0008b567 = 570727
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 27 b5 08 e0 00      05:14:41.170  READ DMA
-  c8 00 08 c7 ca da e7 00      05:14:41.170  READ DMA
-  ca 00 80 bf c5 59 e4 00      05:14:41.077  WRITE DMA
-  c8 00 80 2f 24 d3 e4 00      05:14:40.978  READ DMA
-  c8 00 08 1f ca da e7 00      05:14:40.965  READ DMA
+  c8 20 01 01 00 00 a0 00      00:06:23.714  READ DMA
+  ef 03 45 01 4f c2 a0 00      00:06:23.714  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 4f c2 a0 00      00:06:23.714  SET FEATURES [Set transfer mode]
+  c6 da 10 01 4f c2 a0 00      00:06:23.713  SET MULTIPLE MODE
+  b0 da 00 01 4f c2 a0 00      00:06:23.622  SMART RETURN STATUS
 
-Error 65534 occurred at disk power-on lifetime: 15404 hours (641 days + 20 hours)
+Error 65534 occurred at disk power-on lifetime: 34831 hours (1451 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 e8 a0 60 e0  Error: UNC at LBA = 0x0060a0e8 = 6332648
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 e7 a0 60 e0 00      05:08:52.196  READ DMA
-  ca 00 08 47 00 5e e0 00      05:08:52.196  WRITE DMA
-  e7 00 00 00 00 00 a0 00      05:08:52.143  FLUSH CACHE
-  ca 00 08 1f 56 a8 e4 00      05:08:52.143  WRITE DMA
-  ca 00 08 5f 15 bf e3 00      05:08:52.143  WRITE DMA
+  c8 20 01 01 00 00 a0 00      00:03:37.606  READ DMA
+  ef 03 45 01 4f c2 a0 00      00:03:37.606  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 4f c2 a0 00      00:03:37.606  SET FEATURES [Set transfer mode]
+  c6 da 10 01 4f c2 a0 00      00:03:37.605  SET MULTIPLE MODE
+  b0 da 00 01 4f c2 a0 00      00:03:37.513  SMART RETURN STATUS
 
-Error 65533 occurred at disk power-on lifetime: 15404 hours (641 days + 20 hours)
+Error 65533 occurred at disk power-on lifetime: 34831 hours (1451 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 e8 a0 60 e0  Error: UNC at LBA = 0x0060a0e8 = 6332648
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 e7 a0 60 e0 00      05:08:48.468  READ DMA
-  c8 00 01 00 00 00 e0 00      05:08:48.456  READ DMA
-  c8 00 01 00 00 00 e0 00      05:08:48.456  READ DMA
-  ca 00 08 47 41 e8 e3 00      05:08:48.456  WRITE DMA
-  ca 00 08 8f af 40 e0 00      05:08:48.456  WRITE DMA
+  c8 20 01 01 00 00 a0 00      00:03:08.691  READ DMA
+  ef 03 45 01 4f c2 a0 00      00:03:08.691  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 4f c2 a0 00      00:03:08.691  SET FEATURES [Set transfer mode]
+  c6 da 10 01 4f c2 a0 00      00:03:08.690  SET MULTIPLE MODE
+  b0 da 00 01 4f c2 a0 00      00:03:08.604  SMART RETURN STATUS
 
-Error 65532 occurred at disk power-on lifetime: 15404 hours (641 days + 20 hours)
+Error 65532 occurred at disk power-on lifetime: 34831 hours (1451 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 e8 a0 60 e0  Error: UNC at LBA = 0x0060a0e8 = 6332648
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 e7 a0 60 e0 00      05:08:44.845  READ DMA
-  ca 00 08 47 00 5e e0 00      05:08:44.845  WRITE DMA
-  c8 00 80 17 b6 3c e0 00      05:08:44.832  READ DMA
-  e7 00 00 00 00 00 a0 00      05:08:44.737  FLUSH CACHE
-  ca 00 10 b7 ec 3a e3 00      05:08:44.737  WRITE DMA
+  c8 20 01 01 00 00 a0 00      00:02:40.318  READ DMA
+  ef 03 45 01 4f c2 a0 00      00:02:40.317  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 4f c2 a0 00      00:02:40.317  SET FEATURES [Set transfer mode]
+  c6 da 10 01 4f c2 a0 00      00:02:40.317  SET MULTIPLE MODE
+  b0 da 00 01 4f c2 a0 00      00:02:40.224  SMART RETURN STATUS
 
-Error 65531 occurred at disk power-on lifetime: 15404 hours (641 days + 20 hours)
+Error 65531 occurred at disk power-on lifetime: 34831 hours (1451 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 00 e8 a0 60 e0  Error: UNC at LBA = 0x0060a0e8 = 6332648
+  84 51 00 01 00 00 a0  Error: ICRC, ABRT at LBA = 0x00000001 = 1
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 e7 a0 60 e0 00      05:08:41.100  READ DMA
-  ca 00 28 5f a9 5f e0 00      05:08:41.100  WRITE DMA
-  c8 00 80 9f 04 2c e0 00      05:08:41.073  READ DMA
-  ca 00 08 47 89 0c e0 00      05:08:41.072  WRITE DMA
-  e7 00 00 00 00 00 a0 00      05:08:41.020  FLUSH CACHE
+  c8 20 01 01 00 00 a0 00      00:00:12.009  READ DMA
+  ef 03 45 01 4f c2 a0 00      00:00:12.009  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 4f c2 a0 00      00:00:12.008  SET FEATURES [Set transfer mode]
+  c6 da 10 01 4f c2 a0 00      00:00:12.008  SET MULTIPLE MODE
+  b0 da 00 01 4f c2 a0 00      00:00:11.934  SMART RETURN STATUS
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     34957         -
+# 2  Short offline       Completed without error       00%     34900         -
 
 Selective Self-tests/Logging not supported
 
@@ -211,4 +213,6 @@ Device Statistics (GP/SMART Log 0x04) not supported
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
+
+
 

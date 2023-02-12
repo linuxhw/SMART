@@ -1,8 +1,8 @@
-smartctl 6.4 2014-10-07 r4002 [ppc64-linux-4.1.42-rivoreo-powerpc64] (local build)
-Copyright (C) 2002-14, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 5.41 2011-06-09 r3365 [ppc64-linux-4.1.42-rivoreo-powerpc64] (local build)
+Copyright (C) 2002-11 by Bruce Allen, http://smartmontools.sourceforge.net
 
 === START OF INFORMATION SECTION ===
-Model Family:     Western Digital Caviar Blue (SATA 6Gb/s)
+Model Family:     Western Digital Caviar Blue Serial ATA
 Device Model:     WDC WD5000AAKX-001CA0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
@@ -10,17 +10,11 @@ Firmware Version: 15.01H15
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
-ATA Version is:   ATA8-ACS (minor revision not indicated)
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Aug 23 00:22:37 2021 CST
+ATA Version is:   8
+ATA Standard is:  Exact ATA specification draft version not indicated
+Local Time is:    Sun Apr  3 19:56:02 2022 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
-APM feature is:   Unavailable
-Rd look-ahead is: Enabled
-Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
-Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -62,21 +56,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   167   143   021    -    2616
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1195
+  3 Spin_Up_Time            POS--K   145   143   021    -    3741
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1207
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   093   093   000    -    5143
+  9 Power_On_Hours          -O--CK   086   086   000    -    10503
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    592
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    19
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    604
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    31
 193 Load_Cycle_Count        -O--CK   200   200   000    -    1175
-194 Temperature_Celsius     -O---K   106   099   000    -    37
+194 Temperature_Celsius     -O---K   107   099   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    6
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -87,25 +81,75 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 
 General Purpose Log Directory Version 1
 SMART           Log Directory Version 1 [multi-sector log support]
-Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
-0x01           SL  R/O      1  Summary SMART error log
-0x02           SL  R/O      5  Comprehensive SMART error log
-0x03       GPL     R/O      6  Ext. Comprehensive SMART error log
-0x06           SL  R/O      1  SMART self-test log
-0x07       GPL     R/O      1  Extended self-test log
-0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters log
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
-0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
-0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
-0xb6       GPL     VS       1  Device vendor specific log
-0xb7       GPL,SL  VS       1  Device vendor specific log
-0xc0       GPL,SL  VS       1  Device vendor specific log
-0xc1       GPL     VS      24  Device vendor specific log
-0xe0       GPL,SL  R/W      1  SCT Command/Status
-0xe1       GPL,SL  R/W      1  SCT Data Transfer
+GP/S  Log at address 0x00 has    1 sectors [Log Directory]
+SMART Log at address 0x01 has    1 sectors [Summary SMART error log]
+SMART Log at address 0x02 has    5 sectors [Comprehensive SMART error log]
+GP    Log at address 0x03 has    6 sectors [Ext. Comprehensive SMART error log]
+SMART Log at address 0x06 has    1 sectors [SMART self-test log]
+GP    Log at address 0x07 has    1 sectors [Extended self-test log]
+SMART Log at address 0x09 has    1 sectors [Selective self-test log]
+GP    Log at address 0x10 has    1 sectors [NCQ Command Error]
+GP    Log at address 0x11 has    1 sectors [SATA Phy Event Counters]
+GP/S  Log at address 0x80 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x81 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x82 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x83 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x84 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x85 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x86 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x87 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x88 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x89 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x8a has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x8b has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x8c has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x8d has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x8e has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x8f has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x90 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x91 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x92 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x93 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x94 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x95 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x96 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x97 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x98 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x99 has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x9a has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x9b has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x9c has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x9d has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x9e has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0x9f has   16 sectors [Host vendor specific log]
+GP/S  Log at address 0xa0 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa1 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa2 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa3 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa4 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa5 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa6 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa7 has   16 sectors [Device vendor specific log]
+GP/S  Log at address 0xa8 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xa9 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xaa has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xab has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xac has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xad has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xae has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xaf has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xb0 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xb1 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xb2 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xb3 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xb4 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xb5 has    1 sectors [Device vendor specific log]
+GP    Log at address 0xb6 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xb7 has    1 sectors [Device vendor specific log]
+GP/S  Log at address 0xc0 has    1 sectors [Device vendor specific log]
+GP    Log at address 0xc1 has   24 sectors [Device vendor specific log]
+GP/S  Log at address 0xe0 has    1 sectors [SCT Command/Status]
+GP/S  Log at address 0xe1 has    1 sectors [SCT Data Transfer]
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 No Errors Logged
@@ -128,22 +172,19 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     36/38 Celsius
-Lifetime    Min/Max Temperature:     34/44 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     35/36 Celsius
+Lifetime    Min/Max Temperature:     35/44 Celsius
 Under/Over Temperature Limit Count:   0/0
-
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (115)
+Temperature History Size (Index):    56833 (11265)
+Error invalid Temperature History Size or Index
 
-SCT Error Recovery Control command not supported
-
-Device Statistics (GP/SMART Log 0x04) not supported
-
+Warning: device does not support SCT Error Recovery Control command
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
@@ -153,9 +194,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        11914  Vendor specific
-
-
+0x8000  4          816  Vendor specific
 

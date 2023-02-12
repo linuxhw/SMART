@@ -7,15 +7,15 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Oct  2 17:45:29 2020 CEST
+Local Time is:    Sun Oct  4 10:03:58 2020 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -54,21 +54,21 @@ SCT capabilities: 	       (0x0001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   006    -    2987856
+  1 Raw_Read_Error_Rate     POSR--   104   100   006    -    13936986
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3643
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3653
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   087   060   030    -    579747147
-  9 Power_On_Hours          -O--CK   090   090   000    -    9369
+  7 Seek_Error_Rate         POSR--   087   060   030    -    579928493
+  9 Power_On_Hours          -O--CK   090   090   000    -    9373
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3630
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3640
 187 Reported_Uncorrect      -O--CK   001   001   000    -    7264
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   066   032   045    Past 34 (255 255 34 33 0)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1579
-193 Load_Cycle_Count        -O--CK   075   075   000    -    51408
-194 Temperature_Celsius     -O---K   034   068   000    -    34 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   054   000    -    200077189
+190 Airflow_Temperature_Cel -O---K   062   032   045    Past 38 (255 255 38 22 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1588
+193 Load_Cycle_Count        -O--CK   075   075   000    -    51463
+194 Temperature_Celsius     -O---K   038   068   000    -    38 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   073   054   000    -    235122033
 197 Current_Pending_Sector  -O--C-   100   100   000    -    1
 198 Offline_Uncorrectable   ----C-   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -230,7 +230,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
+Current Temperature:                    38 Celsius
 Power Cycle Min/Max Temperature:     --/ 0 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
@@ -242,6 +242,16 @@ Device Statistics (GP/SMART Log 0x04) not supported
 
 Pending Defects log (GP Log 0x0c) not supported
 
-ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: 48-bit ATA commands not implemented [JMicron]
-Read SATA Phy Event Counters failed
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0001  2            0  Command failed due to ICRC error
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
+0x8002  2            0  Vendor specific
+0x8003  2            3  Vendor specific
+0x8004  2            0  Vendor specific
 

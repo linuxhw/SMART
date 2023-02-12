@@ -14,7 +14,7 @@ Form Factor:      M.2
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Dec 26 20:51:37 2020 CET
+Local Time is:    Sat Dec 26 21:06:51 2020 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,7 +62,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
   9 Power_On_Hours          -O--CK   100   100   ---    -    4512
  12 Power_Cycle_Count       -O--CK   100   100   ---    -    2172
-165 Block_Erase_Count       -O--CK   100   100   ---    -    77356991062
+165 Block_Erase_Count       -O--CK   100   100   ---    -    77357056598
 166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    2
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    40
 168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    17
@@ -75,14 +75,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    119
-194 Temperature_Celsius     -O---K   069   061   ---    -    31 (Min/Max 11/61)
+194 Temperature_Celsius     -O---K   063   061   ---    -    37 (Min/Max 11/61)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    7
 230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x011300500113
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    8414
-234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    14161
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    8415
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    14162
 241 Host_Writes_GiB         ----CK   253   253   ---    -    10904
-242 Host_Reads_GiB          ----CK   253   253   ---    -    15948
+242 Host_Reads_GiB          ----CK   253   253   ---    -    15950
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -124,10 +124,10 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            2172  ---  Lifetime Power-On Resets
 0x01  0x010  4            4512  ---  Power-on Hours
-0x01  0x018  6     22868053457  ---  Logical Sectors Written
-0x01  0x020  6       470765875  ---  Number of Write Commands
-0x01  0x028  6     33446894689  ---  Logical Sectors Read
-0x01  0x030  6       416162921  ---  Number of Read Commands
+0x01  0x018  6     22868547758  ---  Logical Sectors Written
+0x01  0x020  6       470772621  ---  Number of Write Commands
+0x01  0x028  6     33451102421  ---  Logical Sectors Read
+0x01  0x030  6       416249597  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -141,5 +141,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 

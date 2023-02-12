@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.13.0-39-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-15-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Scorpio Blue Serial ATA
@@ -13,7 +13,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sat Apr 16 23:33:13 2022 CEST
+Local Time is:    Thu Jun 16 22:22:24 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -64,20 +64,20 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    1
-  3 Spin_Up_Time            POS--K   186   183   021    -    1675
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6877
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    907
+  3 Spin_Up_Time            POS--K   187   183   021    -    1650
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7439
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   088   088   000    -    8789
+  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   088   088   000    -    9244
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4672
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    774
-193 Load_Cycle_Count        -O--CK   143   143   000    -    172640
-194 Temperature_Celsius     -O---K   125   085   000    -    22
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4907
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    778
+193 Load_Cycle_Count        -O--CK   141   141   000    -    179452
+194 Temperature_Celsius     -O---K   114   085   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    0
+197 Current_Pending_Sector  -O--CK   200   200   000    -    47
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    16
 200 Multi_Zone_Error_Rate   P--R--   100   253   051    -    0
@@ -109,7 +109,149 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 766 (device log contains only the most recent 24 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 766 [21] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 d1 60 67 7a 00 00 00 00 00 00 00 1e     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 f8 08 00 d8 67 ce 1e 7a 60 00 00 00     00:00:55.304  NOP [Reserved subcommand] [OBS-ACS-2]
+  1b cd 60 67 7a 00 f0 00 48 08 00 00 1b     01:53:01.645  RECALIBRATE [RET-4]
+  00 e0 08 00 80 67 cd 1b 7a 60 00 00 00     00:00:47.336  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 765 [20] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 d7 60 35 7e 00 00 00 00 00 00 00 1e     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 a8 08 00 e7 35 d7 1e 7e 60 00 00 00     00:00:20.656  NOP [Reserved subcommand] [OBS-ACS-2]
+  1e b5 ea 35 7e 00 a0 00 1a 40 00 00 00     00:58:25.878  RECALIBRATE [RET-4]
+  00 90 08 00 0a 35 9e 1e 7e 60 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 764 [19] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 56 60 35 72 00 00 00 00 00 00 00 1e     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 60 80 00 50 35 4f 1e 72 60 00 00 00     00:00:12.904  NOP [Reserved subcommand] [OBS-ACS-2]
+  1a 43 60 35 72 00 58 00 e0 80 00 00 1a     00:58:22.670  RECALIBRATE [RET-4]
+  00 48 1d 00 9f 35 41 1e 72 60 00 00 00     00:00:24.656  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 763 [18] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 49 60 2d 34 00 00 00 00 00 00 00 1e     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 70 40 00 8a 2d 37 1e 34 60 00 00 00     00:00:20.600  NOP [Reserved subcommand] [OBS-ACS-2]
+  1e 28 60 2d 34 00 68 00 47 18 00 00 1e     00:49:22.482  RECALIBRATE [RET-4]
+  00 58 08 00 78 2d 28 00 34 61 00 00 00     00:00:55.904  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 762 [17] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 72 60 2d 27 00 00 00 00 00 00 00 1e     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 20 30 00 5a 2d 71 1e 27 60 00 00 00     00:00:02.600  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 71 60 2d 27 00 18 00 00 08 00 00 1e     00:49:19.217  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 1a 00 5f 2d 71 1e 27 60 00 00 00     00:00:20.496  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 761 [16] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 66 60 2d 1a 00 00 00 00 00 00 00 1e     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 c8 05 00 6f 2d 64 1e 1a 60 00 00 00     00:00:28.624  NOP [Reserved subcommand] [OBS-ACS-2]
+  1e 64 60 2d 1a 00 c0 00 67 08 00 00 1e     00:49:15.876  RECALIBRATE [RET-4]
+  00 b0 08 00 57 2d 63 1e 1a 60 00 00 00     00:00:24.504  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 760 [15] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 90 61 2d 0d 00 00 00 00 00 00 00 04     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 b0 20 00 87 2d 90 1e 0d 60 00 00 00     00:00:10.424  NOP [Reserved subcommand] [OBS-ACS-2]
+  1e 90 60 2d 0d 00 a8 00 50 80 00 00 1a     00:49:12.592  RECALIBRATE [RET-4]
+  00 00 00 00 00 2d 41 00 0b ea 00 00 00     00:00:57.504  NOP [Abort queued commands]
+
+Error 759 [14] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 00 01 00 00 51 00 00 40 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 d6 60 d9 fa 00 00 00 00 00 01 00 1e     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 01 00 00 10 d9 d6 00 fa 2f 00 01 00     00:00:08.440  NOP [Abort queued commands]
+  1e bb 60 d9 ee 00 f0 00 20 08 01 00 1e     08:37:39.643  RECALIBRATE [RET-4]
+  00 e0 08 00 78 d9 bb 1e ee 60 00 01 00     00:00:33.000  NOP [Reserved subcommand] [OBS-ACS-2]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -128,9 +270,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    21 Celsius
-Power Cycle Min/Max Temperature:     18/21 Celsius
-Lifetime    Min/Max Temperature:     18/64 Celsius
+Current Temperature:                     ? Celsius
+Power Cycle Min/Max Temperature:     33/34 Celsius
+Lifetime    Min/Max Temperature:     23/64 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -141,7 +283,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            1/85 Celsius
-Temperature History Size (Index):    128 (47)
+Temperature History Size (Index):    128 (115)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -160,6 +302,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          365  Vendor specific
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          856  Vendor specific
 

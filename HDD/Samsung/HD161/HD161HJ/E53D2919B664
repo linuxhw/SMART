@@ -11,7 +11,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3b
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sun Nov  1 19:56:39 2020 -03
+Local Time is:    Sun Nov  1 20:09:53 2020 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -66,7 +66,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR--   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   092   092   015    -    3880
-  9 Power_On_Hours          -O--CK   092   092   000    -    4568586
+  9 Power_On_Hours          -O--CK   092   092   000    -    4568611
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--C-   252   252   000    -    0
  12 Power_Cycle_Count       -O--CK   092   092   000    -    7259
@@ -122,7 +122,24 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [0] occurred at disk power-on lifetime: 38070 hours (1586 days + 6 hours)
+Error 65535 [1] occurred at disk power-on lifetime: 38071 hours (1586 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b1 00 c1 00 00 00 00 00 00 00 00 00 ff  2d+14:57:05.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:57:05.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+14:57:05.000  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+14:57:05.000  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:57:05.000  IDENTIFY DEVICE
+
+Error 65534 [0] occurred at disk power-on lifetime: 38070 hours (1586 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -139,7 +156,7 @@ Error 65535 [0] occurred at disk power-on lifetime: 38070 hours (1586 days + 6 h
   ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:06:46.000  IDENTIFY DEVICE
   ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:06:46.000  IDENTIFY DEVICE
 
-Error 65534 [7] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
+Error 65533 [7] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -156,7 +173,7 @@ Error 65534 [7] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 
   ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+03:25:55.000  IDENTIFY DEVICE
   ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+03:25:55.000  IDENTIFY DEVICE
 
-Error 65533 [6] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
+Error 65532 [6] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -173,7 +190,7 @@ Error 65533 [6] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 
   ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+03:10:30.000  IDENTIFY DEVICE
   ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+03:10:30.000  IDENTIFY DEVICE
 
-Error 65532 [5] occurred at disk power-on lifetime: 38059 hours (1585 days + 19 hours)
+Error 65531 [5] occurred at disk power-on lifetime: 38071 hours (1586 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -184,13 +201,13 @@ Error 65532 [5] occurred at disk power-on lifetime: 38059 hours (1585 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 ff  2d+02:42:12.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00  2d+02:42:12.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+02:42:12.000  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+02:42:12.000  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+02:42:12.000  IDENTIFY DEVICE
+  b1 00 c1 00 00 00 00 00 00 00 00 00 ff  2d+14:57:05.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:57:05.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+14:57:05.000  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+14:57:05.000  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:57:05.000  IDENTIFY DEVICE
 
-Error 65531 [4] occurred at disk power-on lifetime: 38070 hours (1586 days + 6 hours)
+Error 65530 [4] occurred at disk power-on lifetime: 38070 hours (1586 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -207,7 +224,7 @@ Error 65531 [4] occurred at disk power-on lifetime: 38070 hours (1586 days + 6 h
   ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:06:46.000  IDENTIFY DEVICE
   ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+14:06:46.000  IDENTIFY DEVICE
 
-Error 65530 [3] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
+Error 65529 [3] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -224,7 +241,7 @@ Error 65530 [3] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 
   ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+03:25:55.000  IDENTIFY DEVICE
   ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+03:25:55.000  IDENTIFY DEVICE
 
-Error 65529 [2] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
+Error 65528 [2] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -240,23 +257,6 @@ Error 65529 [2] occurred at disk power-on lifetime: 38060 hours (1585 days + 20 
   ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+03:10:30.000  IDENTIFY DEVICE
   ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+03:10:30.000  IDENTIFY DEVICE
   ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+03:10:30.000  IDENTIFY DEVICE
-
-Error 65528 [1] occurred at disk power-on lifetime: 38059 hours (1585 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b1 00 c1 00 00 00 00 00 00 00 00 00 ff  2d+02:42:12.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00 00 00 00 00 00  2d+02:42:12.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00  2d+02:42:12.000  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+02:42:12.000  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 ff  2d+02:42:12.000  IDENTIFY DEVICE
 
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 0 (1 sectors)
@@ -287,7 +287,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     10/105 Celsius
 Min/Max Temperature Limit:            5/110 Celsius
-Temperature History Size (Index):    128 (10)
+Temperature History Size (Index):    128 (23)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -308,7 +308,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           91  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           94  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

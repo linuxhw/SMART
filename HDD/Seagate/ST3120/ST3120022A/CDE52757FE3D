@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.7 and 7200.7 Plus
 Device Model:     ST3120022A
@@ -7,7 +10,7 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Sun Dec 22 05:36:15 2019 +07
+Local Time is:    Sun May 16 11:59:37 2021 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -52,19 +55,19 @@ recommended polling time: 	 (  85) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   058   048   006    -    226705297
-  3 Spin_Up_Time            PO----   096   096   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2760
+  1 Raw_Read_Error_Rate     POSR--   059   048   006    -    180792204
+  3 Spin_Up_Time            PO----   097   096   000    -    0
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2805
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    497937894
-  9 Power_On_Hours          -O--CK   064   064   000    -    31810
+  7 Seek_Error_Rate         POSR--   087   060   030    -    507284073
+  9 Power_On_Hours          -O--CK   064   064   000    -    31951
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7859
-194 Temperature_Celsius     -O---K   043   058   000    -    43
-195 Hardware_ECC_Recovered  -O-RC-   058   048   000    -    226705297
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7955
+194 Temperature_Celsius     -O---K   037   058   000    -    37
+195 Hardware_ECC_Recovered  -O-RC-   059   048   000    -    180792204
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   193   000    -    181
+199 UDMA_CRC_Error_Count    -OSRCK   200   182   000    -    201
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -99,7 +102,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 211 (device log contains only the most recent five errors)
+ATA Error Count: 490 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -114,95 +117,96 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 211 occurred at disk power-on lifetime: 31285 hours (1303 days + 13 hours)
+Error 490 occurred at disk power-on lifetime: 31923 hours (1330 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 48 0f 9f f6  Error: ICRC, ABRT at LBA = 0x069f0f48 = 111087432
+  84 51 00 08 a2 ba f3  Error: ICRC, ABRT at LBA = 0x03baa208 = 62562824
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 48 0f 9f f6 00      01:51:32.968  READ DMA
-  ca 00 08 10 47 e1 f4 00      01:51:32.968  WRITE DMA
-  ca 00 10 30 6e 60 f0 00      01:51:32.967  WRITE DMA
-  ca 00 00 10 55 cc f6 00      01:51:32.963  WRITE DMA
-  ca 00 00 10 54 cc f6 00      01:51:32.959  WRITE DMA
+  c8 00 00 08 a2 ba f3 00      05:47:23.812  READ DMA
+  c8 00 00 08 a1 ba f3 00      05:47:23.890  READ DMA
+  c8 00 00 08 a0 ba f3 00      05:47:23.886  READ DMA
+  c8 00 00 08 9f ba f3 00      05:47:23.884  READ DMA
+  c8 00 00 08 9e ba f3 00      05:47:23.882  READ DMA
 
-Error 210 occurred at disk power-on lifetime: 30054 hours (1252 days + 6 hours)
+Error 489 occurred at disk power-on lifetime: 31923 hours (1330 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 01 00 00 a0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+  84 51 00 10 b0 24 f0  Error: ICRC, ABRT at LBA = 0x0024b010 = 2404368
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 20 01 01 00 00 a0 00      00:00:08.886  READ DMA
-  ef 03 42 01 10 00 a0 00      00:00:08.830  SET FEATURES [Set transfer mode]
-  ef 03 0c 01 10 00 a0 00      00:00:08.384  SET FEATURES [Set transfer mode]
-  c6 d9 10 01 4f c2 a0 00      00:00:07.963  SET MULTIPLE MODE
-  b0 d9 00 01 4f c2 a0 00      00:00:00.000  SMART DISABLE OPERATIONS
+  c8 00 00 10 b0 24 f0 00      05:47:18.993  READ DMA
+  c8 00 00 10 af 24 f0 00      05:47:18.991  READ DMA
+  c8 00 00 10 ae 24 f0 00      05:47:18.989  READ DMA
+  c8 00 00 10 ad 24 f0 00      05:47:18.987  READ DMA
+  c8 00 00 10 ac 24 f0 00      05:47:18.977  READ DMA
 
-Error 209 occurred at disk power-on lifetime: 30054 hours (1252 days + 6 hours)
+Error 488 occurred at disk power-on lifetime: 31922 hours (1330 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 01 00 00 b0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+  84 51 01 37 62 78 f4  Error: ICRC, ABRT 1 sectors at LBA = 0x04786237 = 74998327
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 20 01 01 00 00 b0 00      00:00:09.414  READ DMA
-  ef 03 42 01 10 00 b0 00      00:00:09.367  SET FEATURES [Set transfer mode]
-  ef 03 0c 01 10 00 b0 00      00:00:08.978  SET FEATURES [Set transfer mode]
-  c6 d9 10 01 4f c2 b0 00      00:00:07.950  SET MULTIPLE MODE
-  b0 d9 00 01 4f c2 b0 00      00:00:00.000  SMART DISABLE OPERATIONS
+  c8 00 40 f8 61 78 f4 00      05:40:18.281  READ DMA
+  c8 00 20 ce aa 57 f4 00      05:40:18.281  READ DMA
+  c8 00 3b d2 24 30 f3 00      05:40:18.275  READ DMA
+  c8 00 0b 59 4a 08 f2 00      05:40:18.258  READ DMA
+  c8 00 40 b8 61 78 f4 00      05:40:18.246  READ DMA
 
-Error 208 occurred at disk power-on lifetime: 30054 hours (1252 days + 6 hours)
+Error 487 occurred at disk power-on lifetime: 31922 hours (1330 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 01 00 00 a0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+  84 51 01 f1 9e 35 f0  Error: ICRC, ABRT 1 sectors at LBA = 0x00359ef1 = 3514097
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 20 01 01 00 00 a0 00      00:00:08.876  READ DMA
-  ef 03 42 01 10 00 a0 00      00:00:08.822  SET FEATURES [Set transfer mode]
-  ef 03 0c 01 10 00 a0 00      00:00:08.429  SET FEATURES [Set transfer mode]
-  c6 d9 10 01 4f c2 a0 00      00:00:08.007  SET MULTIPLE MODE
-  b0 d9 00 01 4f c2 a0 00      00:00:00.000  SMART DISABLE OPERATIONS
+  c8 00 40 b2 9e 35 f0 00      05:40:04.558  READ DMA
+  c8 00 40 28 22 2e f0 00      05:40:04.544  READ DMA
+  c8 00 08 40 3e 17 f6 00      05:40:04.529  READ DMA
+  c8 00 40 8a 14 b6 f4 00      05:40:04.511  READ DMA
+  c8 00 40 38 e0 77 f4 00      05:40:04.676  READ DMA
 
-Error 207 occurred at disk power-on lifetime: 30054 hours (1252 days + 6 hours)
+Error 486 occurred at disk power-on lifetime: 31922 hours (1330 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 01 01 00 00 a0  Error: ICRC, ABRT 1 sectors at LBA = 0x00000001 = 1
+  84 51 01 b9 b3 c7 f0  Error: ICRC, ABRT 1 sectors at LBA = 0x00c7b3b9 = 13087673
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 20 01 01 00 00 a0 00      00:00:08.758  READ DMA
-  ef 03 42 01 10 00 a0 00      00:00:08.754  SET FEATURES [Set transfer mode]
-  ef 03 0c 01 10 00 a0 00      00:00:08.696  SET FEATURES [Set transfer mode]
-  c6 d9 10 01 4f c2 a0 00      00:00:07.976  SET MULTIPLE MODE
-  b0 d9 00 01 4f c2 a0 00      00:00:00.000  SMART DISABLE OPERATIONS
+  c8 00 40 7a b3 c7 f0 00      05:39:11.880  READ DMA
+  c8 00 03 50 61 be f0 00      05:39:11.869  READ DMA
+  c8 00 08 a0 4b 74 f0 00      05:39:11.863  READ DMA
+  ca 00 20 00 12 70 f0 00      05:39:11.987  WRITE DMA
+  c8 00 40 a0 24 2d f0 00      05:39:11.976  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     31932         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -222,4 +226,6 @@ Device Statistics (GP/SMART Log 0x04) not supported
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
+
+
 

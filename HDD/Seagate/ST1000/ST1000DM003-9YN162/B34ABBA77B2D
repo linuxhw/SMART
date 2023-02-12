@@ -1,5 +1,5 @@
-smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.15.0-67-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.0-16-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -12,8 +12,8 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Nov 20 20:53:58 2020 +05
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Sun Apr 18 12:36:22 2021 +05
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -26,7 +26,8 @@ AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -66,30 +67,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   112   099   006    -    44134088
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    155712912
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2458
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2639
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   069   060   030    -    8400753
-  9 Power_On_Hours          -O--CK   090   090   000    -    9375
+  7 Seek_Error_Rate         POSR--   069   060   030    -    9433085
+  9 Power_On_Hours          -O--CK   089   089   000    -    10111
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2459
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2640
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   091   091   000    -    9
-190 Airflow_Temperature_Cel -O---K   064   055   045    -    36 (Min/Max 25/38)
+190 Airflow_Temperature_Cel -O---K   067   054   045    -    33 (Min/Max 23/34)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    58
-193 Load_Cycle_Count        -O--CK   099   099   000    -    3622
-194 Temperature_Celsius     -O---K   036   045   000    -    36 (0 14 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    63
+193 Load_Cycle_Count        -O--CK   099   099   000    -    3933
+194 Temperature_Celsius     -O---K   033   046   000    -    33 (0 14 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    9385h+12m+26.755s
-241 Total_LBAs_Written      ------   100   253   000    -    61102773254335
-242 Total_LBAs_Read         ------   100   253   000    -    105518168781225
+240 Head_Flying_Hours       ------   100   253   000    -    10119h+25m+53.967s
+241 Total_LBAs_Written      ------   100   253   000    -    65933944399342
+242 Total_LBAs_Read         ------   100   253   000    -    136089333774596
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,7 +108,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -143,11 +144,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     25/38 Celsius
-Lifetime    Min/Max Temperature:     14/45 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     23/34 Celsius
+Lifetime    Min/Max Temperature:     14/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -156,14 +156,14 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-
-
 

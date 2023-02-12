@@ -1,7 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.0-7625-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-76051500-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Marvell based SanDisk SSDs
 Device Model:     SanDisk SSD G5 BICS4
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -10,10 +11,11 @@ User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Nov 19 18:24:08 2020 EET
+Local Time is:    Sat Nov 27 23:47:14 2021 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,30 +61,30 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    476
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    90
-165 Unknown_Attribute       -O--CK   100   100   ---    -    16515250
-166 Unknown_Attribute       -O--CK   100   100   ---    -    1
-167 Unknown_Attribute       -O--CK   100   100   ---    -    220
-168 Unknown_Attribute       -O--CK   100   100   ---    -    8
-169 Unknown_Attribute       -O--CK   100   100   ---    -    546
-170 Unknown_Attribute       -O--CK   100   100   ---    -    0
-171 Unknown_Attribute       -O--CK   100   100   ---    -    0
-172 Unknown_Attribute       -O--CK   100   100   ---    -    0
-173 Unknown_Attribute       -O--CK   100   100   ---    -    2
-174 Unknown_Attribute       -O--CK   100   100   ---    -    12
+  9 Power_On_Hours          -O--CK   100   100   ---    -    2133
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    631
+165 Total_Write/Erase_Count -O--CK   100   100   ---    -    4328653186
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    1
+167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    220
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    15
+169 Total_Bad_Block         -O--CK   100   100   ---    -    546
+170 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    0
+171 Program_Fail_Count      -O--CK   100   100   ---    -    0
+172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
+173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    4
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    18
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   075   042   ---    -    25 (Min/Max 22/42)
-199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Unknown_SSD_Attribute   -O--CK   001   001   ---    -    150325166115
-232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 Media_Wearout_Indicator -O--CK   100   100   ---    -    1248
-234 Unknown_Attribute       -O--CK   100   100   ---    -    1324
-241 Total_LBAs_Written      ----CK   253   253   ---    -    1227
-242 Total_LBAs_Read         ----CK   253   253   ---    -    2728
-244 Unknown_Attribute       -O--CK   000   100   ---    -    0
+194 Temperature_Celsius     -O---K   067   049   ---    -    33 (Min/Max 21/49)
+199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
+230 Perc_Write/Erase_Count  -O--CK   001   001   ---    -    77 40 77
+232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    2636
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   ---    -    2875
+241 Total_Writes_GiB        ----CK   253   253   ---    -    2533
+242 Total_Reads_GiB         ----CK   253   253   ---    -    6279
+244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,12 +123,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              90  ---  Lifetime Power-On Resets
-0x01  0x010  4             476  ---  Power-on Hours
-0x01  0x018  6      2573451185  ---  Logical Sectors Written
-0x01  0x020  6        12063639  ---  Number of Write Commands
-0x01  0x028  6      5721873945  ---  Logical Sectors Read
-0x01  0x030  6        34065173  ---  Number of Read Commands
+0x01  0x008  4             631  ---  Lifetime Power-On Resets
+0x01  0x010  4            2133  ---  Power-on Hours
+0x01  0x018  6      5313181677  ---  Logical Sectors Written
+0x01  0x020  6        26839990  ---  Number of Write Commands
+0x01  0x028  6     13169694742  ---  Logical Sectors Read
+0x01  0x030  6        73292172  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -140,5 +142,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+
+
 

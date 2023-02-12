@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Blue (SATA)
 Device Model:     WDC WD3200AAKS-00B3A0
@@ -9,15 +12,15 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Thu Jun 21 18:47:10 2018 CEST
+Local Time is:    Fri Feb 11 10:35:45 2022 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     128 (quiet), recommended: 128
+AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -60,18 +63,18 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    8460
-  3 Spin_Up_Time            POS--K   156   152   021    -    3175
-  4 Start_Stop_Count        -O--CK   088   088   000    -    12424
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    11682
+  3 Spin_Up_Time            POS--K   155   152   021    -    3208
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15834
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   072   072   000    -    20517
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   058   058   000    -    30915
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   089   089   000    -    11679
-192 Power-Off_Retract_Count -O--CK   191   191   000    -    7344
-193 Load_Cycle_Count        -O--CK   196   196   000    -    12424
-194 Temperature_Celsius     -O---K   118   092   000    -    25
+ 12 Power_Cycle_Count       -O--CK   086   086   000    -    14901
+192 Power-Off_Retract_Count -O--CK   189   189   000    -    8713
+193 Load_Cycle_Count        -O--CK   195   195   000    -    15834
+194 Temperature_Celsius     -O---K   106   090   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   198   000    -    0
 198 Offline_Uncorrectable   ----CK   200   198   000    -    0
@@ -259,9 +262,24 @@ Error 4342 [21] occurred at disk power-on lifetime: 14215 hours (592 days + 7 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       90%     18711         599630655
-# 2  Extended offline    Completed: read failure       90%     18451         599630655
-# 3  Extended offline    Completed: read failure       90%     18321         599630655
+# 1  Short offline       Completed without error       00%     29680         -
+# 2  Short offline       Completed without error       00%     29294         -
+# 3  Short offline       Completed without error       00%     28772         -
+# 4  Short offline       Completed without error       00%     28763         -
+# 5  Short offline       Completed without error       00%     28748         -
+# 6  Short offline       Completed without error       00%     28728         -
+# 7  Short offline       Completed without error       00%     28723         -
+# 8  Short offline       Completed without error       00%     27763         -
+# 9  Short offline       Completed without error       00%     27734         -
+#10  Short offline       Completed without error       00%     27706         -
+#11  Short offline       Completed without error       00%     27652         -
+#12  Extended offline    Completed without error       00%     27650         -
+#13  Short offline       Completed without error       00%     27602         -
+#14  Short offline       Completed without error       00%     27579         -
+#15  Short offline       Completed without error       00%     27534         -
+#16  Short offline       Completed without error       00%     27511         -
+#17  Short offline       Completed without error       00%     27473         -
+#18  Short offline       Completed without error       00%     27406         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -276,11 +294,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     24/25 Celsius
-Lifetime    Min/Max Temperature:     22/51 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     20/37 Celsius
+Lifetime    Min/Max Temperature:     21/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -288,7 +305,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (74)
+Temperature History Size (Index):    128 (26)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -307,8 +324,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          138  Vendor specific
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         8027  Vendor specific
 
 
 

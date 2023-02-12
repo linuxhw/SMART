@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Sep  6 06:27:09 2021 CDT
+Local Time is:    Mon Sep  6 06:51:24 2021 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,12 +63,12 @@ SCT capabilities: 	       (0x30a5)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   084   064   006    -    235575715
+  1 Raw_Read_Error_Rate     POSR--   084   064   006    -    235577251
   3 Spin_Up_Time            PO----   097   092   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    162
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   077   060   045    -    47329130
-  9 Power_On_Hours          -O--CK   100   100   000    -    750 (30 110 0)
+  7 Seek_Error_Rate         POSR--   077   060   045    -    47329312
+  9 Power_On_Hours          -O--CK   100   100   000    -    750 (83 69 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    86
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
@@ -76,18 +76,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   065   060   040    -    35 (Min/Max 35/38)
+190 Airflow_Temperature_Cel -O---K   066   060   040    -    34 (Min/Max 34/38)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    64
-193 Load_Cycle_Count        -O--CK   100   100   000    -    936
-194 Temperature_Celsius     -O---K   035   040   000    -    35 (0 22 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   084   064   000    -    235575715
+193 Load_Cycle_Count        -O--CK   100   100   000    -    937
+194 Temperature_Celsius     -O---K   034   040   000    -    34 (0 22 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   084   064   000    -    235577251
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    537h+08m+42.418s
+240 Head_Flying_Hours       ------   100   253   000    -    537h+32m+57.478s
 241 Total_LBAs_Written      ------   100   253   000    -    9117600584
-242 Total_LBAs_Read         ------   100   253   000    -    3169506207
+242 Total_LBAs_Read         ------   100   253   000    -    3169507743
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -152,8 +152,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     35/38 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     34/38 Celsius
 Lifetime    Min/Max Temperature:     22/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -173,13 +173,13 @@ Page  Offset Size        Value Flags Description
 0x01  0x010  4             750  ---  Power-on Hours
 0x01  0x018  6      9132723736  ---  Logical Sectors Written
 0x01  0x020  6        48150131  ---  Number of Write Commands
-0x01  0x028  6      3168586983  ---  Logical Sectors Read
-0x01  0x030  6        25056235  ---  Number of Read Commands
+0x01  0x028  6      3168588519  ---  Logical Sectors Read
+0x01  0x030  6        25056241  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4             682  ---  Spindle Motor Power-on Hours
-0x03  0x010  4             533  ---  Head Flying Hours
-0x03  0x018  4             936  ---  Head Load Events
+0x03  0x008  4             683  ---  Spindle Motor Power-on Hours
+0x03  0x010  4             534  ---  Head Flying Hours
+0x03  0x018  4             937  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -189,7 +189,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               2  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              35  ---  Current Temperature
+0x05  0x008  1              34  ---  Current Temperature
 0x05  0x010  1              37  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              41  ---  Highest Temperature

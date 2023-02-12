@@ -1,5 +1,5 @@
-smartctl 7.0 2018-12-30 r4883 [x86_64-linux-3.10.0-1127.19.1.el7.x86_64] (local build)
-Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 6.6 2017-11-05 r4594 [x86_64-linux-4.18.0-193.14.2.el8_2.x86_64] (local build)
+Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     KINGSTON SKC6001024G
@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Aug 26 15:17:10 2020 EEST
+Local Time is:    Wed Aug 26 17:20:06 2020 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,8 @@ Wt Cache Reorder: Unknown
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,8 +65,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    414
- 12 Power_Cycle_Count       ------   100   100   000    -    128
+  9 Power_On_Hours          ------   100   100   000    -    415
+ 12 Power_Cycle_Count       ------   100   100   000    -    137
 148 Unknown_Attribute       ------   100   100   000    -    11
 149 Unknown_Attribute       ------   100   100   000    -    3
 150 Unknown_Attribute       ------   100   100   000    -    0
@@ -84,14 +84,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 177 Wear_Leveling_Count     ------   100   100   050    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    77
+192 Power-Off_Retract_Count ------   100   100   000    -    79
 194 Temperature_Celsius     ------   100   100   000    -    33
 195 Hardware_ECC_Recovered  ------   100   100   000    -    0
 196 Reallocated_Event_Count ------   100   100   016    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
 241 Total_LBAs_Written      ------   100   100   000    -    38822
-242 Total_LBAs_Read         ------   100   100   000    -    2549
+242 Total_LBAs_Read         ------   100   100   000    -    2551
 245 Unknown_Attribute       ------   100   100   000    -    156330
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -126,7 +126,8 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       415         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -134,16 +135,17 @@ SMART Selective self-test log data structure revision number 1
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
-    5        0        0  Completed [00% left] (0-65535)
+    5        0        0  Not_testing
 Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
+SCT Support Level:                   0
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     29/33 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     30/35 Celsius
 Lifetime    Min/Max Temperature:     23/86 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -152,25 +154,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (124)
+Temperature History Size (Index):    128 (18)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             128  ---  Lifetime Power-On Resets
-0x01  0x010  4             414  ---  Power-on Hours
-0x01  0x018  6      2544243556  ---  Logical Sectors Written
-0x01  0x020  6        11707134  ---  Number of Write Commands
-0x01  0x028  6       167090973  ---  Logical Sectors Read
-0x01  0x030  6          600435  ---  Number of Read Commands
-0x01  0x038  6      1492485376  ---  Date and Time TimeStamp
+0x01  0x008  4             137  ---  Lifetime Power-On Resets
+0x01  0x010  4             415  ---  Power-on Hours
+0x01  0x018  6      2544247668  ---  Logical Sectors Written
+0x01  0x020  6        11707139  ---  Number of Write Commands
+0x01  0x028  6       167237034  ---  Logical Sectors Read
+0x01  0x030  6          602597  ---  Number of Read Commands
+0x01  0x038  6      1497086639  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              77  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              79  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              32  ---  Current Temperature
+0x05  0x008  1              35  ---  Current Temperature
 0x05  0x010  1              32  ---  Average Short Term Temperature
 0x05  0x018  1              32  ---  Average Long Term Temperature
 0x05  0x020  1              86  ---  Highest Temperature
@@ -184,8 +186,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4              49  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             636  ---  Number of Hardware Resets
-0x06  0x010  4              84  ---  Number of ASR Events
+0x06  0x008  4             669  ---  Number of Hardware Resets
+0x06  0x010  4              90  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -206,7 +208,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

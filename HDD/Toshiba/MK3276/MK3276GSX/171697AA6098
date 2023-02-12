@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [i686-linux-4.15.0-desktop-122.124.1rosa-i586] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MK..76GSX
 Device Model:     TOSHIBA MK3276GSX
@@ -11,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Aug 25 19:22:29 2019 EEST
+Local Time is:    Fri Dec 31 19:32:49 2021 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,24 +65,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   2 Throughput_Performance  POS--K   100   100   050    -    0
-  3 Spin_Up_Time            PO---K   100   100   002    -    729
-  4 Start_Stop_Count        -O--CK   100   100   000    -    15931
+  3 Spin_Up_Time            PO---K   100   100   002    -    733
+  4 Start_Stop_Count        -O--CK   100   100   000    -    20932
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR-K   100   100   050    -    0
   8 Seek_Time_Performance   P-S--K   100   100   050    -    0
-  9 Power_On_Minutes        -O--CK   045   045   000    -    367h+01m
+  9 Power_On_Minutes        -O--CK   032   032   000    -    459h+31m
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    15275
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    20201
 183 Runtime_Bad_Block       -O--CK   100   100   001    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 185 Unknown_Attribute       -O--CK   100   100   001    -    65535
-187 Reported_Uncorrect      -O--CK   001   001   000    -    205
-188 Command_Timeout         -O--CK   100   098   000    -    203
+187 Reported_Uncorrect      -O--CK   001   001   000    -    251
+188 Command_Timeout         -O--CK   100   098   000    -    223
 189 High_Fly_Writes         -O-RCK   100   100   001    -    0
-190 Airflow_Temperature_Cel -O---K   061   049   040    -    39 (Min/Max 38/40)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    207
-192 Power-Off_Retract_Count -O---K   095   095   000    -    164956629
-193 Load_Cycle_Count        -O--CK   085   085   000    -    158906
+190 Airflow_Temperature_Cel -O---K   063   049   040    -    37 (Min/Max 37/38)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    217
+192 Power-Off_Retract_Count -O---K   093   093   000    -    243535492
+193 Load_Cycle_Count        -O--CK   080   080   000    -    206716
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
@@ -107,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 256
+Device Error Count: 681 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -123,141 +126,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 256 [255] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 681 [168] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 5a 00 00 01 9d 04 d3 61 00  Error: UNC at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 52 00 00 01 04 3e 56 61 00  Error: WP at LBA = 0x01043e56 = 17055318
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 80 00 00 00 73 2e a8 40 00     00:13:09.075  READ FPDMA QUEUED
-  61 00 08 00 78 00 00 00 6e e6 20 40 00     00:13:09.075  WRITE FPDMA QUEUED
-  60 00 08 00 70 00 00 01 1d 7d 30 40 00     00:13:09.075  READ FPDMA QUEUED
-  60 00 08 00 68 00 00 00 76 de e8 40 00     00:13:09.075  READ FPDMA QUEUED
-  61 00 78 00 60 00 00 00 6f 23 28 40 00     00:13:09.074  WRITE FPDMA QUEUED
+  61 00 08 00 58 00 00 00 66 ad 90 40 00     00:13:27.922  WRITE FPDMA QUEUED
+  61 00 01 00 78 00 00 00 f1 e0 c8 40 00     00:13:27.900  WRITE FPDMA QUEUED
+  60 00 08 00 70 00 00 00 1b e3 a8 40 00     00:13:27.900  READ FPDMA QUEUED
+  60 00 30 00 68 00 00 00 a0 4e f2 40 00     00:13:27.900  READ FPDMA QUEUED
+  60 00 08 00 60 00 00 00 6b 8a d0 40 00     00:13:27.900  READ FPDMA QUEUED
 
-Error 255 [254] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 680 [167] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 e2 00 00 01 9d 04 d3 61 00  Error: WP at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 0a 00 00 01 04 37 64 61 00  Error: WP at LBA = 0x01043764 = 17053540
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 10 00 e8 00 00 00 6e e6 68 40 00     00:13:04.867  WRITE FPDMA QUEUED
-  60 00 08 00 e0 00 00 01 9d 04 d0 40 00     00:13:04.867  READ FPDMA QUEUED
-  61 00 08 00 d8 00 00 00 71 35 50 40 00     00:13:04.866  WRITE FPDMA QUEUED
-  60 00 08 00 d0 00 00 01 1d 7d 20 40 00     00:13:04.859  READ FPDMA QUEUED
-  61 00 01 00 c8 00 00 02 40 7d 2a 40 00     00:13:04.854  WRITE FPDMA QUEUED
+  61 00 08 00 50 00 00 00 66 ad 98 40 00     00:13:23.800  WRITE FPDMA QUEUED
+  61 00 08 00 68 00 00 00 f1 e0 e8 40 00     00:13:23.782  WRITE FPDMA QUEUED
+  61 00 08 00 60 00 00 00 f1 e0 e0 40 00     00:13:23.782  WRITE FPDMA QUEUED
+  60 00 20 00 58 00 00 01 04 3e 4f 40 00     00:13:23.782  READ FPDMA QUEUED
+  61 00 08 00 50 00 00 00 f1 e0 d0 40 00     00:13:23.782  WRITE FPDMA QUEUED
 
-Error 254 [253] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 679 [166] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 82 00 00 01 9d 04 d3 61 00  Error: UNC at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 2a 00 00 01 04 3e 56 61 00  Error: WP at LBA = 0x01043e56 = 17055318
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 40 00 90 00 00 00 16 02 08 40 00     00:13:00.663  READ FPDMA QUEUED
-  61 00 08 00 88 00 00 00 6e e5 e8 40 00     00:13:00.662  WRITE FPDMA QUEUED
-  60 00 08 00 80 00 00 01 9d 04 d0 40 00     00:13:00.662  READ FPDMA QUEUED
-  60 00 38 00 78 00 00 01 eb 3d ba 40 00     00:13:00.662  READ FPDMA QUEUED
-  61 00 38 00 70 00 00 00 6e e6 38 40 00     00:13:00.655  WRITE FPDMA QUEUED
+  61 00 08 00 58 00 00 00 66 ad 90 40 00     00:13:19.633  WRITE FPDMA QUEUED
+  61 00 01 00 58 00 00 00 f1 e0 c8 40 00     00:13:19.633  WRITE FPDMA QUEUED
+  61 00 08 00 58 00 00 00 66 ad 98 40 00     00:13:19.617  WRITE FPDMA QUEUED
+  60 00 38 00 50 00 00 00 a0 01 22 40 00     00:13:19.617  READ FPDMA QUEUED
+  60 00 08 00 48 00 00 00 a2 fa d0 40 00     00:13:19.617  READ FPDMA QUEUED
 
-Error 253 [252] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 678 [165] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 4a 00 00 01 9d 04 d3 61 00  Error: UNC at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 4a 00 00 01 04 3e 56 61 00  Error: WP at LBA = 0x01043e56 = 17055318
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 40 00 48 00 00 01 9d 04 d0 40 00     00:12:56.499  READ FPDMA QUEUED
-  61 00 f8 00 40 00 00 01 39 ba 98 40 00     00:12:56.445  WRITE FPDMA QUEUED
-  61 00 01 00 38 00 00 02 ad ef 80 40 00     00:12:56.444  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:12:56.430  FLUSH CACHE EXT
-  61 00 08 00 28 00 00 00 6e e5 b8 40 00     00:12:56.407  WRITE FPDMA QUEUED
+  61 00 08 00 58 00 00 00 66 ad 90 40 00     00:13:15.468  WRITE FPDMA QUEUED
+  60 00 08 00 50 00 00 01 04 37 60 40 00     00:13:15.468  READ FPDMA QUEUED
+  60 00 20 00 48 00 00 01 04 3e 4f 40 00     00:13:15.468  READ FPDMA QUEUED
+  60 00 3a 00 40 00 00 00 8f b6 98 40 00     00:13:15.468  READ FPDMA QUEUED
+  60 00 40 00 38 00 00 00 93 f8 e8 40 00     00:13:15.468  READ FPDMA QUEUED
 
-Error 252 [251] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 677 [164] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 1a 00 00 01 9d 04 d3 61 00  Error: WP at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 0a 00 00 01 04 37 64 61 00  Error: WP at LBA = 0x01043764 = 17053540
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 08 00 20 00 00 00 6e e5 a0 40 00     00:12:51.752  WRITE FPDMA QUEUED
-  60 00 06 00 18 00 00 01 9d 04 d2 40 00     00:12:51.751  READ FPDMA QUEUED
-  61 00 38 00 10 00 00 00 6f 22 60 40 00     00:12:51.751  WRITE FPDMA QUEUED
-  60 00 40 00 08 00 00 00 aa fb 28 40 00     00:12:51.749  READ FPDMA QUEUED
-  60 00 40 00 f8 00 00 00 2d 50 38 40 00     00:12:51.742  READ FPDMA QUEUED
+  61 00 08 00 48 00 00 00 66 ad 98 40 00     00:13:11.358  WRITE FPDMA QUEUED
+  61 00 08 00 48 00 00 00 f2 77 0a 40 00     00:13:11.357  WRITE FPDMA QUEUED
+  61 00 02 00 50 00 00 00 f2 77 08 40 00     00:13:11.357  WRITE FPDMA QUEUED
+  61 00 06 00 48 00 00 00 f1 dc c2 40 00     00:13:11.357  WRITE FPDMA QUEUED
+  61 00 08 00 48 00 00 00 f1 dc ba 40 00     00:13:11.356  WRITE FPDMA QUEUED
 
-Error 251 [250] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 676 [163] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 a2 00 00 01 9d 04 d3 61 00  Error: WP at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 12 00 00 01 04 3e 56 61 00  Error: UNC at LBA = 0x01043e56 = 17055318
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 10 00 b0 00 00 00 6e e6 38 40 00     00:12:47.587  WRITE FPDMA QUEUED
-  60 00 40 00 a8 00 00 00 6e e0 f2 40 00     00:12:47.586  READ FPDMA QUEUED
-  60 00 08 00 a0 00 00 01 9d 04 d2 40 00     00:12:47.586  READ FPDMA QUEUED
-  61 00 18 00 98 00 00 01 3c e5 88 40 00     00:12:47.586  WRITE FPDMA QUEUED
-  60 00 40 00 90 00 00 00 aa fc a8 40 00     00:12:47.573  READ FPDMA QUEUED
+  60 00 08 00 40 00 00 00 aa 6a 2a 40 00     00:13:07.227  READ FPDMA QUEUED
+  60 00 40 00 50 00 00 00 a3 d3 1a 40 00     00:13:07.214  READ FPDMA QUEUED
+  61 00 08 00 50 00 00 00 66 ad 88 40 00     00:13:07.178  WRITE FPDMA QUEUED
+  61 00 08 00 50 00 00 00 66 ad 90 40 00     00:13:07.177  WRITE FPDMA QUEUED
+  60 00 08 00 58 00 00 01 04 37 60 40 00     00:13:07.154  READ FPDMA QUEUED
 
-Error 250 [249] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 675 [162] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 4a 00 00 01 9d 04 d3 61 00  Error: WP at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 62 00 00 01 04 37 64 61 00  Error: WP at LBA = 0x01043764 = 17053540
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 08 00 50 00 00 01 86 24 00 40 00     00:12:43.426  WRITE FPDMA QUEUED
-  60 00 08 00 48 00 00 01 9d 04 d2 40 00     00:12:43.426  READ FPDMA QUEUED
-  60 00 28 00 40 00 00 01 a0 4a fa 40 00     00:12:43.422  READ FPDMA QUEUED
-  61 00 08 00 38 00 00 00 72 d0 88 40 00     00:12:43.422  WRITE FPDMA QUEUED
-  60 00 40 00 30 00 00 01 a0 4f f2 40 00     00:12:43.417  READ FPDMA QUEUED
+  61 00 08 00 50 00 00 00 6c ed 28 40 00     00:13:03.055  WRITE FPDMA QUEUED
+  61 00 08 00 58 00 00 00 6c ec a8 40 00     00:13:03.055  WRITE FPDMA QUEUED
+  61 00 08 00 50 00 00 00 f7 e0 50 40 00     00:13:03.055  WRITE FPDMA QUEUED
+  60 00 08 00 60 00 00 01 04 37 60 40 00     00:13:03.036  READ FPDMA QUEUED
+  61 00 08 00 58 00 00 00 6c ec 30 40 00     00:13:03.036  WRITE FPDMA QUEUED
 
-Error 249 [248] occurred at disk power-on lifetime: 20654 hours (860 days + 14 hours)
+Error 674 [161] occurred at disk power-on lifetime: 26498 hours (1104 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 aa 00 00 01 9d 04 d3 61 00  Error: WP at LBA = 0x019d04d3 = 27067603
+  40 -- 41 00 1a 00 00 01 04 37 64 61 00  Error: UNC at LBA = 0x01043764 = 17053540
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 80 00 d0 00 00 01 86 70 e0 40 00     00:12:38.546  WRITE FPDMA QUEUED
-  61 00 18 00 c8 00 00 00 6e e5 a8 40 00     00:12:38.546  WRITE FPDMA QUEUED
-  61 00 08 00 c0 00 00 00 6e e5 90 40 00     00:12:38.544  WRITE FPDMA QUEUED
-  60 00 08 00 b8 00 00 00 6e e2 e5 40 00     00:12:38.544  READ FPDMA QUEUED
-  60 00 08 00 b0 00 00 01 93 d5 fa 40 00     00:12:38.544  READ FPDMA QUEUED
+  60 00 40 00 48 00 00 00 aa 71 aa 40 00     00:12:58.958  READ FPDMA QUEUED
+  61 00 08 00 48 00 00 00 66 ad 80 40 00     00:12:58.922  WRITE FPDMA QUEUED
+  61 00 08 00 48 00 00 00 66 ad 98 40 00     00:12:58.921  WRITE FPDMA QUEUED
+  60 00 08 00 78 00 00 01 04 37 60 40 00     00:12:58.902  READ FPDMA QUEUED
+  60 00 10 00 58 00 00 00 9f d9 7a 40 00     00:12:58.902  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -276,10 +279,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     38/40 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     37/38 Celsius
 Lifetime    Min/Max Temperature:      7/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -288,7 +290,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (251)
+Temperature History Size (Index):    478 (358)
 
 SCT Error Recovery Control:
            Read: Disabled

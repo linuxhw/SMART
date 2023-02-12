@@ -4,14 +4,14 @@ Device Model:     M4-CT128M4SSD2
 Serial Number:    --
 LU WWN Device Id: 5 00a075 ...
 Firmware Version: 010G
-User Capacity:    128,035,676,160 bytes [128 GB]
+User Capacity:    128 035 676 160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat May 30 01:06:56 2020 +05
+Local Time is:    Thu Jun  4 23:36:52 2020 +05
 
 ==> WARNING: This drive may hang after 5184 hours of power-on time:
 http://www.tomshardware.com/news/Crucial-m4-Firmware-BSOD,14544.html
@@ -25,7 +25,6 @@ AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -71,14 +70,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   001    -    12634
- 12 Power_Cycle_Count       -O--CK   100   100   001    -    3373
+  9 Power_On_Hours          -O--CK   100   100   001    -    12658
+ 12 Power_Cycle_Count       -O--CK   100   100   001    -    3386
 170 Grown_Failing_Block_Ct  PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   001    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Wear_Leveling_Count     PO--CK   095   095   010    -    165
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   001    -    197
-181 Non4k_Aligned_Access    -O---K   100   100   001    -    3515 465 3049
+173 Wear_Leveling_Count     PO--CK   095   095   010    -    167
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   001    -    198
+181 Non4k_Aligned_Access    -O---K   100   100   001    -    3529 468 3061
 183 SATA_Iface_Downshift    -O--CK   100   100   001    -    0
 184 End-to-End_Error        PO--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   001    -    0
@@ -110,7 +109,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O   3449  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
+0x10       GPL     R/O      1  SATA NCQ Queued Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0       GPL     VS    2000  Device vendor specific log
@@ -153,21 +152,21 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (36)
+Temperature History Size (Index):    478 (51)
 
 SCT Error Recovery Control:
-           Read:     40 (4.0 seconds)
-          Write:     40 (4.0 seconds)
+           Read:     40 (4,0 seconds)
+          Write:     40 (4,0 seconds)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            3373  ---  Lifetime Power-On Resets
-0x01  0x010  4           12634  ---  Power-on Hours
-0x01  0x018  6     24887564243  ---  Logical Sectors Written
-0x01  0x020  6       453569744  ---  Number of Write Commands
-0x01  0x028  6     50141497205  ---  Logical Sectors Read
-0x01  0x030  6       880276998  ---  Number of Read Commands
+0x01  0x008  4            3386  ---  Lifetime Power-On Resets
+0x01  0x010  4           12658  ---  Power-on Hours
+0x01  0x018  6     24997863261  ---  Logical Sectors Written
+0x01  0x020  6       456021454  ---  Number of Write Commands
+0x01  0x028  6     50381449914  ---  Logical Sectors Read
+0x01  0x030  6       884400515  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -195,12 +194,10 @@ Page  Offset Size        Value Flags Description
                                 ||__ D supports DSN
                                 |___ N normalized value
 
-Pending Defects log (GP Log 0x0c) not supported
-
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           39  Device-to-host register FISes sent due to a COMRESET
 
 
 

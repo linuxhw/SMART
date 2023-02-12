@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.32-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
 Device Model:     WDC WD5000LPVX-60V0TT0
@@ -11,11 +14,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed May 27 06:55:53 2020 +03
+Local Time is:    Thu Jan 21 18:43:53 2021 +03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -61,28 +64,28 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   150   146   021    -    1475
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7114
+  3 Spin_Up_Time            POS--K   151   145   021    -    1416
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7780
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   067   067   000    -    24454
+  9 Power_On_Hours          -O--CK   066   066   000    -    24890
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5818
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6479
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   099   000    -    1
 188 Command_Timeout         -O--CK   100   099   000    -    4295032833
-190 Airflow_Temperature_Cel -O---K   073   044   040    -    27 (Min/Max 21/27)
+190 Airflow_Temperature_Cel -O---K   072   044   040    -    28 (Min/Max 23/28)
 191 G-Sense_Error_Rate      -O--CK   037   037   000    -    63
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    900
-193 Load_Cycle_Count        -O--CK   001   001   000    -    622236
-194 Temperature_Celsius     -O---K   116   087   000    -    27
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    969
+193 Load_Cycle_Count        -O--CK   001   001   000    -    631221
+194 Temperature_Celsius     -O---K   115   087   000    -    28
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   P--R--   100   253   051    -    0
+200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -148,7 +151,18 @@ Error 1 [0] occurred at disk power-on lifetime: 15156 hours (631 days + 12 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         3         -
+# 1  Short offline       Completed without error       00%     24888         -
+# 2  Short offline       Completed without error       00%     24881         -
+# 3  Short offline       Completed without error       00%     24879         -
+# 4  Short offline       Completed without error       00%     24875         -
+# 5  Short offline       Completed without error       00%     24874         -
+# 6  Extended offline    Completed without error       00%     24872         -
+# 7  Short offline       Completed without error       00%     24866         -
+# 8  Short offline       Completed without error       00%     24865         -
+# 9  Short offline       Completed without error       00%     24860         -
+#10  Short offline       Completed without error       00%     24859         -
+#11  Short offline       Completed without error       00%     24855         -
+#12  Short offline       Completed without error       00%         3         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -165,7 +179,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     21/27 Celsius
+Power Cycle Min/Max Temperature:     23/27 Celsius
 Lifetime    Min/Max Temperature:     13/56 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -177,7 +191,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (112)
+Temperature History Size (Index):    128 (36)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -197,10 +211,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           35  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          646  Vendor specific
+0x8000  4          431  Vendor specific
 

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Samsung SpinPoint M8 (AF)
 Device Model:     ST1000LM024 HN-M101MBB
@@ -11,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Nov 10 22:23:21 2018 MSK
+Local Time is:    Mon Mar  1 22:24:40 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,15 +22,15 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,28 +63,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    353
-  2 Throughput_Performance  -OS--K   055   054   000    -    11584
-  3 Spin_Up_Time            PO---K   090   089   025    -    3061
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8435
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    1613
+  2 Throughput_Performance  -OS--K   056   054   000    -    11547
+  3 Spin_Up_Time            PO---K   090   080   025    -    3061
+  4 Start_Stop_Count        -O--CK   001   001   000    -    117526
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10075
+  9 Power_On_Hours          -O--CK   100   100   000    -    17672
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    244
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5413
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    289
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    405
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8680
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    655
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   055   000    -    30 (Min/Max 7/45)
+194 Temperature_Celsius     -O----   064   051   000    -    33 (Min/Max -3/49)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
-197 Current_Pending_Sector  -O--CK   252   252   000    -    0
-198 Offline_Uncorrectable   ----CK   252   252   000    -    0
+197 Current_Pending_Sector  -O--CK   100   100   000    -    12
+198 Offline_Uncorrectable   ----CK   100   100   000    -    12
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    6422
-223 Load_Retry_Count        -O--CK   100   100   000    -    244
-225 Load_Cycle_Count        -O--CK   083   083   000    -    177469
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    24957
+223 Load_Retry_Count        -O--CK   100   100   000    -    405
+225 Load_Cycle_Count        -O--CK   046   046   000    -    552817
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,19 +111,172 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-No Errors Logged
+Device Error Count: 1049 (device log contains only the most recent 8 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1049 [0] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 3f 32 2e a0 e0 00  Error: UNC 8 sectors at LBA = 0x3f322ea0 = 1060253344
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 3f 32 2e a0 e0 00     00:00:00.661  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:00.661  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:00.661  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:00.661  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:00.661  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 1048 [7] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 3f 32 2e a0 e0 00  Error: UNC 8 sectors at LBA = 0x3f322ea0 = 1060253344
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 3f 32 2e a0 e0 00     00:00:00.659  READ DMA EXT
+  25 00 00 00 08 00 00 3f 32 2e 98 e0 00     00:00:00.659  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:00.659  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:00.659  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:00.659  SET FEATURES [Set transfer mode]
+
+Error 1047 [6] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 b8 00 00 3f 32 2e a0 e0 00  Error: UNC 184 sectors at LBA = 0x3f322ea0 = 1060253344
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 c0 00 00 3f 32 2e 98 e0 00     00:00:00.657  READ DMA EXT
+  25 00 00 00 20 00 00 3f 32 2e 78 e0 00     00:00:00.657  READ DMA EXT
+  25 00 00 00 08 00 00 3f 32 2e 70 e0 00     00:00:00.657  READ DMA EXT
+  25 00 00 00 20 00 00 3f 32 2d f8 e0 00     00:00:00.657  READ DMA EXT
+  25 00 00 00 08 00 00 3f 32 2d f0 e0 00     00:00:00.657  READ DMA EXT
+
+Error 1046 [5] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 3f 32 2e c8 e0 00  Error: UNC 8 sectors at LBA = 0x3f322ec8 = 1060253384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 3f 32 2e c8 e0 00     00:00:00.628  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:00.628  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:00.628  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     00:00:00.628  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:00.628  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 1045 [4] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 3f 32 2e c0 e0 00  Error: UNC 8 sectors at LBA = 0x3f322ec0 = 1060253376
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 3f 32 2e c0 e0 00     00:00:00.626  READ DMA EXT
+  c8 00 00 00 08 00 00 00 01 97 80 e0 00     00:00:00.626  READ DMA
+  ec 00 00 00 01 00 00 00 00 00 00 00 00     00:00:00.626  IDENTIFY DEVICE
+  ef 00 90 00 03 00 00 00 00 00 00 a0 00     00:00:00.626  SET FEATURES [Disable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:00.626  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 1044 [3] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 08 00 00 3f 32 2e c8 40 00  Error: UNC at LBA = 0x3f322ec8 = 1060253384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 00 00 8d 58 40 08     00:00:00.597  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e c8 40 08     00:00:00.587  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e c0 40 08     00:00:00.595  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e c8 40 08     00:00:00.595  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 00 08 10 40 08     00:00:00.595  READ FPDMA QUEUED
+
+Error 1043 [2] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 08 00 00 3f 32 2e b8 40 00  Error: UNC at LBA = 0x3f322eb8 = 1060253368
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 3f 32 2e b8 40 08     00:00:00.556  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 00 08 10 40 08     00:00:00.593  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e c8 40 08     00:00:00.593  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e c0 40 08     00:00:00.593  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e b8 40 08     00:00:00.593  READ FPDMA QUEUED
+
+Error 1042 [1] occurred at disk power-on lifetime: 17664 hours (736 days + 0 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 08 00 00 3f 32 2e b0 40 00  Error: UNC at LBA = 0x3f322eb0 = 1060253360
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 3f 32 2e b0 40 08     00:00:00.556  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e b0 40 08     00:00:00.591  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e e0 40 08     00:00:00.591  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e e8 40 08     00:00:00.591  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 3f 32 2e f0 40 08     00:00:00.591  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      8639         -
-# 2  Extended offline    Aborted by host               70%      8455         -
-# 3  Extended offline    Interrupted (host reset)      70%      8073         -
-# 4  Extended offline    Completed without error       00%      7814         -
-# 5  Extended offline    Aborted by host               70%      7648         -
-# 6  Extended offline    Aborted by host               40%      7475         -
-# 7  Extended offline    Aborted by host               70%      7381         -
-# 8  Extended offline    Aborted by host               70%      7344         -
-# 9  Extended offline    Aborted by host               80%      7303         -
+# 1  Extended offline    Completed without error       00%     12075         -
+# 2  Extended offline    Interrupted (host reset)      80%     10494         -
+# 3  Extended offline    Aborted by host               90%     10307         -
+# 4  Extended offline    Completed without error       00%      8639         -
+# 5  Extended offline    Aborted by host               70%      8455         -
+# 6  Extended offline    Interrupted (host reset)      70%      8073         -
+# 7  Extended offline    Completed without error       00%      7814         -
+# 8  Extended offline    Aborted by host               70%      7648         -
+# 9  Extended offline    Aborted by host               40%      7475         -
+#10  Extended offline    Aborted by host               70%      7381         -
+#11  Extended offline    Aborted by host               70%      7344         -
+#12  Extended offline    Aborted by host               80%      7303         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -136,11 +292,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     27/30 Celsius
-Lifetime    Min/Max Temperature:      6/45 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     32/33 Celsius
+Lifetime    Min/Max Temperature:     -2/49 Celsius
+Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -148,7 +304,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (87)
+Temperature History Size (Index):    128 (122)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -168,8 +324,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

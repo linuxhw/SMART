@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.13.0-27-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.0-48-generic] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     WDC HGST Ultrastar He10
+Model Family:     Western Digital Ultrastar He10/12
 Device Model:     WDC WD80EZAZ-11TDBA0
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
@@ -11,10 +11,10 @@ User Capacity:    8,001,563,222,016 bytes [8.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      3.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jan 21 17:41:12 2022 CET
+Local Time is:    Mon Sep 26 01:41:24 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,21 +65,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  --S---   128   128   054    -    116
-  3 Spin_Up_Time            POS---   150   150   024    -    436 (Average 438)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    507
+  3 Spin_Up_Time            POS---   149   149   024    -    441 (Average 441)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    945
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    13
   7 Seek_Error_Rate         -O-R--   100   100   067    -    0
   8 Seek_Time_Performance   --S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   100   100   000    -    864
+  9 Power_On_Hours          -O--C-   100   100   000    -    1183
  10 Spin_Retry_Count        -O--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    500
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    937
  22 Helium_Level            PO---K   100   100   025    -    100
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    665
-193 Load_Cycle_Count        -O--C-   100   100   000    -    665
-194 Temperature_Celsius     -O----   141   141   000    -    46 (Min/Max 24/63)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1104
+193 Load_Cycle_Count        -O--C-   100   100   000    -    1104
+194 Temperature_Celsius     -O----   196   196   000    -    33 (Min/Max 24/68)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    13
-197 Current_Pending_Sector  -O---K   100   100   000    -    64
-198 Offline_Uncorrectable   ---R--   100   100   000    -    7
+197 Current_Pending_Sector  -O---K   100   100   000    -    208
+198 Offline_Uncorrectable   ---R--   100   100   000    -    23
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -220,9 +220,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    46 Celsius
-Power Cycle Min/Max Temperature:     46/46 Celsius
-Lifetime    Min/Max Temperature:     24/63 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     33/33 Celsius
+Lifetime    Min/Max Temperature:     24/68 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -230,7 +230,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (94)
+Temperature History Size (Index):    128 (63)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -239,34 +239,34 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             500  ---  Lifetime Power-On Resets
-0x01  0x010  4             864  ---  Power-on Hours
-0x01  0x018  6     43322278307  ---  Logical Sectors Written
-0x01  0x020  6        25628666  ---  Number of Write Commands
-0x01  0x028  6     34361662252  ---  Logical Sectors Read
-0x01  0x030  6       158784475  ---  Number of Read Commands
-0x01  0x038  6      3112640450  ---  Date and Time TimeStamp
+0x01  0x008  4             937  ---  Lifetime Power-On Resets
+0x01  0x010  4            1183  ---  Power-on Hours
+0x01  0x018  6     51611588819  ---  Logical Sectors Written
+0x01  0x020  6        30449836  ---  Number of Write Commands
+0x01  0x028  6     39422852330  ---  Logical Sectors Read
+0x01  0x030  6       166686581  ---  Number of Read Commands
+0x01  0x038  6      4260345800  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4             815  ---  Spindle Motor Power-on Hours
-0x03  0x010  4             815  ---  Head Flying Hours
-0x03  0x018  4             665  ---  Head Load Events
+0x03  0x008  4            1130  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            1130  ---  Head Flying Hours
+0x03  0x018  4            1104  ---  Head Load Events
 0x03  0x020  4              13  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             103  ---  Read Recovery Attempts
+0x03  0x028  4             115  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4              26  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             537  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              46  ---  Current Temperature
-0x05  0x010  1              48  N--  Average Short Term Temperature
-0x05  0x018  1              48  N--  Average Long Term Temperature
-0x05  0x020  1              63  ---  Highest Temperature
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x010  1              46  N--  Average Short Term Temperature
+0x05  0x018  1              39  N--  Average Long Term Temperature
+0x05  0x020  1              68  ---  Highest Temperature
 0x05  0x028  1              24  ---  Lowest Temperature
 0x05  0x030  1              61  N--  Highest Average Short Term Temperature
 0x05  0x038  1              25  N--  Lowest Average Short Term Temperature
 0x05  0x040  1              55  N--  Highest Average Long Term Temperature
 0x05  0x048  1              25  N--  Lowest Average Long Term Temperature
-0x05  0x050  4               0  ---  Time in Over-Temperature
+0x05  0x050  4              44  ---  Time in Over-Temperature
 0x05  0x058  1              65  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
@@ -281,38 +281,38 @@ Page  Offset Size        Value Flags Description
 
 Pending Defects log (GP Log 0x0c)
 Index                LBA    Hours
-    0          129205736        -
-    1          129205737        -
-    2          129205738        -
-    3          129205739        -
-    4          129205740        -
-    5          129205741        -
-    6          129205742        -
-    7          129205743        -
-    8          130250472        -
-    9          130250473        -
-   10          130250474        -
-   11          130250475        -
-   12          130250476        -
-   13          130250477        -
-   14          130250478        -
-   15          130250479        -
-   16          147341792        -
-   17          147341793        -
-   18          147341794        -
-   19          147341795        -
-   20          147341796        -
-   21          147341797        -
-   22          147341798        -
-   23          147341799        -
-   24          147418088        -
-   25          147418089        -
-   26          147418090        -
-   27          147418091        -
-   28          147418092        -
-   29          147418093        -
-   30          147418094        -
-... (33 entries not shown)
+    0           92681432        -
+    1           92681433        -
+    2           92681434        -
+    3           92681435        -
+    4           92681436        -
+    5           92681437        -
+    6           92681438        -
+    7           92681439        -
+    8           92685232        -
+    9           92685233        -
+   10           92685234        -
+   11           92685235        -
+   12           92685236        -
+   13           92685237        -
+   14           92685238        -
+   15           92685239        -
+   16           92689040        -
+   17           92689041        -
+   18           92689042        -
+   19           92689043        -
+   20           92689044        -
+   21           92689045        -
+   22           92689046        -
+   23           92689047        -
+   24           92692848        -
+   25           92692849        -
+   26           92692850        -
+   27           92692851        -
+   28           92692852        -
+   29           92692853        -
+   30           92692854        -
+... (177 entries not shown)
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -328,4 +328,6 @@ ID      Size     Value  Description
 0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

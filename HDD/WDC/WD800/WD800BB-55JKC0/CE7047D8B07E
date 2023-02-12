@@ -3,17 +3,18 @@ Model Family:     Western Digital Caviar
 Device Model:     WDC WD800BB-55JKC0
 Serial Number:    --
 Firmware Version: 05.01C05
-User Capacity:    80 025 280 000 bytes [80,0 GB]
+User Capacity:    80,025,280,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Tue Jul 28 22:38:02 2020 MSK
+Local Time is:    Wed Sep 16 21:30:44 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Disabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Unknown SCT Status format version 1, should be 2 or 3.
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
@@ -24,8 +25,8 @@ Drive failure expected in less than 24 hours. SAVE ALL DATA.
 See vendor-specific Attribute list for failed Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,21 +61,21 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   165   159   021    -    2716
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3556
+  1 Raw_Read_Error_Rate     POSR--   200   200   051    -    13
+  3 Spin_Up_Time            PO----   167   159   021    -    2608
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3854
   5 Reallocated_Sector_Ct   PO--CK   117   117   140    NOW  661
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   085   085   000    -    11265
+  9 Power_On_Hours          -O--CK   084   084   000    -    11731
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2823
-194 Temperature_Celsius     -O---K   101   078   000    -    42
-196 Reallocated_Event_Count -O--CK   069   069   000    -    131
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3120
+194 Temperature_Celsius     -O---K   104   078   000    -    39
+196 Reallocated_Event_Count -O--CK   040   040   000    -    160
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    31
-200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
+200 Multi_Zone_Error_Rate   P--R--   138   134   051    -    2011
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -89,7 +90,7 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 152 (device log contains only the most recent five errors)
+ATA Error Count: 1424 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -104,95 +105,98 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 152 occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
+Error 1424 occurred at disk power-on lifetime: 11724 hours (488 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 61 01 1d 64 40 f9  Device Fault; Error: ABRT at LBA = 0x0940641d = 155214877
+  10 51 08 88 9c 03 f0  Error: IDNF 8 sectors at LBA = 0x00039c88 = 236680
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 00 a8 64 40 09 59      05:21:43.525  WRITE DMA
-  ca 00 00 a8 63 40 09 59      05:21:43.415  WRITE DMA
-  ca 00 00 a8 62 40 09 59      05:21:43.400  WRITE DMA
-  ca 00 00 a8 61 40 09 59      05:21:43.390  WRITE DMA
-  ca 00 00 a8 60 40 09 59      05:21:43.370  WRITE DMA
+  c8 00 08 88 9c 03 00 59      00:24:01.265  READ DMA
+  f8 00 00 00 00 00 00 59      00:24:01.265  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 00 59      00:24:01.260  IDENTIFY DEVICE
+  ef 03 45 00 00 00 00 59      00:24:01.260  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 00 59      00:24:01.240  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
-Error 151 occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
+Error 1423 occurred at disk power-on lifetime: 11724 hours (488 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 61 01 82 de 3f f9  Device Fault; Error: ABRT at LBA = 0x093fde82 = 155180674
+  10 51 08 88 9c 03 f0  Error: IDNF 8 sectors at LBA = 0x00039c88 = 236680
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 00 a8 de 3f 09 59      05:21:39.945  WRITE DMA
-  ca 00 00 a8 dd 3f 09 59      05:21:39.305  WRITE DMA
-  ca 00 00 a8 dc 3f 09 59      05:21:39.290  WRITE DMA
-  ca 00 00 a8 db 3f 09 59      05:21:39.280  WRITE DMA
-  ca 00 00 a8 da 3f 09 59      05:21:39.265  WRITE DMA
+  c8 00 08 88 9c 03 00 59      00:23:59.470  READ DMA
+  f8 00 00 00 00 00 00 59      00:23:59.470  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 00 59      00:23:59.470  IDENTIFY DEVICE
+  ef 03 45 00 00 00 00 59      00:23:59.470  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 00 59      00:23:59.450  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
-Error 150 occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
+Error 1422 occurred at disk power-on lifetime: 11724 hours (488 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 61 01 89 d3 3e f9  Device Fault; Error: ABRT at LBA = 0x093ed389 = 155112329
+  10 51 08 88 9c 03 f0  Error: IDNF 8 sectors at LBA = 0x00039c88 = 236680
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 00 a8 d3 3e 09 59      05:21:34.730  WRITE DMA
-  ca 00 00 a8 d2 3e 09 59      05:21:34.630  WRITE DMA
-  ca 00 00 a8 d1 3e 09 59      05:21:34.615  WRITE DMA
-  ca 00 00 a8 d0 3e 09 59      05:21:34.595  WRITE DMA
-  ca 00 00 a8 cf 3e 09 59      05:21:34.585  WRITE DMA
+  c8 00 08 88 9c 03 00 59      00:23:57.680  READ DMA
+  f8 00 00 00 00 00 00 59      00:23:57.680  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 00 59      00:23:57.675  IDENTIFY DEVICE
+  ef 03 45 00 00 00 00 59      00:23:57.675  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 00 59      00:23:57.650  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
-Error 149 occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
+Error 1421 occurred at disk power-on lifetime: 11724 hours (488 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 61 01 c5 a9 3e f9  Device Fault; Error: ABRT at LBA = 0x093ea9c5 = 155101637
+  10 51 08 88 9c 03 f0  Error: IDNF 8 sectors at LBA = 0x00039c88 = 236680
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 00 a8 aa 3e 09 59      05:21:32.735  WRITE DMA
-  ca 00 00 a8 a9 3e 09 59      05:21:32.625  WRITE DMA
-  ca 00 00 a8 a8 3e 09 59      05:21:32.615  WRITE DMA
-  ca 00 00 a8 a7 3e 09 59      05:21:32.585  WRITE DMA
-  ca 00 00 a8 a6 3e 09 59      05:21:32.565  WRITE DMA
+  c8 00 08 88 9c 03 00 59      00:23:55.885  READ DMA
+  f8 00 00 00 00 00 00 59      00:23:55.885  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 00 59      00:23:55.885  IDENTIFY DEVICE
+  ef 03 45 00 00 00 00 59      00:23:55.885  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 00 59      00:23:55.860  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
-Error 148 occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
+Error 1420 occurred at disk power-on lifetime: 11724 hours (488 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  04 61 01 8b 67 3c f9  Device Fault; Error: ABRT at LBA = 0x093c678b = 154953611
+  10 51 08 88 9c 03 f0  Error: IDNF 8 sectors at LBA = 0x00039c88 = 236680
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ca 00 00 a8 67 3c 09 59      05:21:23.175  WRITE DMA
-  ca 00 00 a8 66 3c 09 59      05:21:23.080  WRITE DMA
-  ca 00 00 a8 65 3c 09 59      05:21:23.070  WRITE DMA
-  ca 00 00 a8 64 3c 09 59      05:21:22.940  WRITE DMA
-  ca 00 00 a8 63 3c 09 59      05:21:22.925  WRITE DMA
+  c8 00 08 88 9c 03 00 59      00:23:54.100  READ DMA
+  f8 00 00 00 00 00 00 59      00:23:54.100  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 00 59      00:23:54.095  IDENTIFY DEVICE
+  ef 03 45 00 00 00 00 59      00:23:54.095  SET FEATURES [Set transfer mode]
+  f8 00 00 00 00 00 00 59      00:23:54.075  READ NATIVE MAX ADDRESS [OBS-ACS-3]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed: unknown failure    90%     11671         -
+# 2  Extended offline    Completed: unknown failure    90%     11374         -
+# 3  Extended offline    Completed: unknown failure    90%     11304         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -211,6 +215,8 @@ Unknown SCT Status format version 1, should be 2 or 3.
 SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
 
