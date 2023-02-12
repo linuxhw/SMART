@@ -24,11 +24,11 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | PNY       | CS2211 240GB SSD   | 240 GB | 1       | 1102  | 0     | 3.02   |
-| PNY       | CS1311 960GB SSD   | 960 GB | 4       | 1025  | 0     | 2.81   |
+| PNY       | CS1311 960GB SSD   | 960 GB | 4       | 1074  | 0     | 2.94   |
 | PNY       | EU SSD CS1311      | 240 GB | 1       | 746   | 0     | 2.05   |
-| PNY       | CS1311 240GB SSD   | 240 GB | 26      | 715   | 0     | 1.96   |
+| PNY       | CS1311 240GB SSD   | 240 GB | 26      | 737   | 0     | 2.02   |
+| PNY       | CS1311 480GB SSD   | 480 GB | 9       | 588   | 0     | 1.61   |
 | PNY       | SSD2SC480G1CS27... | 480 GB | 4       | 566   | 0     | 1.55   |
-| PNY       | CS1311 480GB SSD   | 480 GB | 9       | 528   | 0     | 1.45   |
 | PNY       | SSD2SC240G3SA75... | 240 GB | 1       | 432   | 0     | 1.18   |
 | PNY       | SSD2SC480G1CS27... | 480 GB | 1       | 415   | 0     | 1.14   |
 | PNY       | CS1311 120GB SSD   | 120 GB | 7       | 398   | 0     | 1.09   |
@@ -39,16 +39,17 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 960GB SSD    | 960 GB | 17      | 230   | 0     | 0.63   |
 | PNY       | CS900 480GB SSD    | 480 GB | 35      | 228   | 0     | 0.63   |
 | PNY       | SSD2SC240G5SA75... | 240 GB | 2       | 209   | 0     | 0.57   |
-| PNY       | CS900 240GB SSD    | 240 GB | 114     | 195   | 0     | 0.54   |
+| PNY       | CS900 240GB SSD    | 240 GB | 114     | 202   | 0     | 0.56   |
 | PNY       | SSD2SC240G1CS17... | 240 GB | 5       | 164   | 0     | 0.45   |
 | PNY       | SSD2SC240G1CS11... | 240 GB | 1       | 158   | 0     | 0.43   |
 | PNY       | EU SSD CS1311      | 120 GB | 1       | 150   | 0     | 0.41   |
 | PNY       | CS2040 128GB SSD   | 128 GB | 1       | 150   | 0     | 0.41   |
-| PNY       | CS900 120GB SSD    | 120 GB | 125     | 133   | 0     | 0.37   |
+| PNY       | CS900 120GB SSD    | 120 GB | 126     | 134   | 0     | 0.37   |
+| PNY       | SSD2SC120G3LC72... | 120 GB | 1       | 127   | 0     | 0.35   |
 | PNY       | CS900 1TB SSD      | 1 TB   | 15      | 126   | 0     | 0.35   |
 | PNY       | CS1211 240GB SS... | 240 GB | 1       | 124   | 0     | 0.34   |
 | PNY       | SSD2SC240G5LC72... | 240 GB | 1       | 106   | 0     | 0.29   |
-| PNY       | CS900 500GB SSD    | 500 GB | 47      | 99    | 0     | 0.27   |
+| PNY       | CS900 500GB SSD    | 500 GB | 47      | 101   | 0     | 0.28   |
 | PNY       | SSD2SC480G1CS17... | 480 GB | 2       | 90    | 0     | 0.25   |
 | PNY       | SSD2SC120G1CS17... | 120 GB | 1       | 79    | 0     | 0.22   |
 | PNY       | CS900 250GB SSD    | 250 GB | 13      | 68    | 0     | 0.19   |
@@ -75,14 +76,13 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | 120GB SATA SSD     | 120 GB | 2       | 7     | 0     | 0.02   |
 | PNY       | 1TB SATA SSD       | 1 TB   | 4       | 5     | 0     | 0.01   |
 | PNY       | CS900 SSD          | 120 GB | 1       | 4     | 0     | 0.01   |
-| PNY       | 240GB SATA SSD     | 240 GB | 1       | 3     | 0     | 0.01   |
+| PNY       | 240GB SATA SSD     | 240 GB | 2       | 2     | 0     | 0.01   |
 | PNY       | SSD2SC120GB1DA1... | 120 GB | 1       | 2248  | 1081  | 0.01   |
 | PNY       | SSD9SC240GCDA      | 240 GB | 1       | 1804  | 1015  | 0.00   |
 | PNY       | CS900 M.2 250GB... | 250 GB | 1       | 0     | 0     | 0.00   |
 | PNY       | 69D03094-T         | 40 GB  | 1       | 403   | 1016  | 0.00   |
 | PNY       | SSD2SC120GE2DA0... | 120 GB | 1       | 373   | 1018  | 0.00   |
 | PNY       | SSD2SC240G3LC70... | 240 GB | 1       | 141   | 1017  | 0.00   |
-| PNY       | SSD2SC120G3LC72... | 120 GB | 1       | 125   | 1016  | 0.00   |
 | PNY       | SSD2SC240GC2DH1... | 240 GB | 1       | 85    | 1023  | 0.00   |
 | PNY       | SSD2SC240GE2DH1... | 240 GB | 1       | 29    | 1016  | 0.00   |
 
@@ -99,5 +99,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| PNY       | Phison Driven SSDs     | 10     | 339     | 243   | 0     | 0.67   |
-| PNY       | Unknown                | 52     | 154     | 146   | 61    | 0.30   |
+| PNY       | Phison Driven SSDs     | 10     | 340     | 249   | 0     | 0.68   |
+| PNY       | Unknown                | 52     | 155     | 146   | 54    | 0.30   |

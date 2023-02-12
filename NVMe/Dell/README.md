@@ -21,6 +21,6 @@ MTBF - avg. MTBF in years per sample.
 | Dell      | Ent NVMe AGN MU... | 1.6 TB | 1       | 190   | 0     | 0.52   |
 | Dell      | Ent NVMe v2 AGN... | 1.6 TB | 2       | 160   | 0     | 0.44   |
 | Dell      | Ent NVMe v2 AGN... | 1.9 TB | 3       | 157   | 0     | 0.43   |
-| Dell      | Ent NVMe AGN MU... | 1.6 TB | 2       | 50    | 0     | 0.14   |
+| Dell      | Ent NVMe AGN MU... | 1.6 TB | 2       | 77    | 0     | 0.21   |
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | 1       | 35    | 0     | 0.10   |
 | Dell      | Ent NVMe CM6 MU... | 6.4 TB | 4       | 2     | 0     | 0.01   |

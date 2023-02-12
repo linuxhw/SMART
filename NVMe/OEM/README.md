@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| OEM       | Genuine            | 1 TB   | 3       | 1     | 0     | 0.00   |
+| OEM       | Genuine            | 1 TB   | 3       | 13    | 0     | 0.04   |

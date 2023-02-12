@@ -38,10 +38,10 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | PH4-CE240          | 240 GB | 2       | 235   | 0     | 0.64   |
 | Lite-On   | LAT-128M2S         | 128 GB | 2       | 369   | 4     | 0.59   |
 | Lite-On   | LMT-128L9M-11 M... | 128 GB | 1       | 207   | 0     | 0.57   |
-| Lite-On   | L8H-256V2G-HP      | 256 GB | 14      | 179   | 0     | 0.49   |
+| Lite-On   | CV1-CC128-11 2.... | 128 GB | 1       | 183   | 0     | 0.50   |
+| Lite-On   | L8H-256V2G-HP      | 256 GB | 14      | 180   | 0     | 0.49   |
 | Lite-On   | CV3-8D256-41 SA... | 256 GB | 4       | 171   | 0     | 0.47   |
 | Lite-On   | CV3-CE256-11 SATA  | 256 GB | 5       | 161   | 0     | 0.44   |
-| Lite-On   | CV1-CC128-11 2.... | 128 GB | 1       | 157   | 0     | 0.43   |
 | Lite-On   | CV3-CE128-HP       | 128 GB | 1       | 154   | 0     | 0.42   |
 | Lite-On   | CV3-CE256          | 256 GB | 2       | 273   | 2     | 0.38   |
 | Lite-On   | IT LMT-256L9M      | 256 GB | 2       | 137   | 0     | 0.38   |
@@ -53,19 +53,19 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV8-8E128          | 128 GB | 1       | 116   | 0     | 0.32   |
 | Lite-On   | CV3-8D128-11 SATA  | 128 GB | 17      | 109   | 0     | 0.30   |
 | Lite-On   | LCS-256M6S         | 256 GB | 9       | 124   | 117   | 0.30   |
-| Lite-On   | LCH-256V2S         | 256 GB | 10      | 104   | 1     | 0.28   |
+| Lite-On   | LCH-256V2S         | 256 GB | 10      | 106   | 1     | 0.28   |
 | Lite-On   | CV8-CE128-11 SATA  | 128 GB | 1       | 102   | 0     | 0.28   |
 | Lite-On   | LCH-128V2S-11 2... | 128 GB | 10      | 98    | 0     | 0.27   |
 | Lite-On   | LCS-128M6S         | 128 GB | 11      | 98    | 6     | 0.26   |
 | Lite-On   | CV3-DE128          | 128 GB | 4       | 92    | 0     | 0.25   |
 | Lite-On   | PH2-CJ120          | 120 GB | 1       | 92    | 0     | 0.25   |
 | Lite-On   | L8H-128V2G-HP      | 128 GB | 4       | 90    | 0     | 0.25   |
+| Lite-On   | CV3-8D512-11 SATA  | 512 GB | 3       | 182   | 2     | 0.24   |
 | Lite-On   | CV6-CQ128          | 128 GB | 1       | 88    | 0     | 0.24   |
 | Lite-On   | S920 256           | 256 GB | 1       | 88    | 0     | 0.24   |
 | Lite-On   | CV8-8E128-11 SATA  | 128 GB | 28      | 87    | 0     | 0.24   |
-| Lite-On   | CV3-8D512-11 SATA  | 512 GB | 3       | 179   | 2     | 0.23   |
-| Lite-On   | CV5-8Q256-HP       | 256 GB | 1       | 83    | 0     | 0.23   |
 | Lite-On   | CV3-8D256          | 256 GB | 10      | 83    | 0     | 0.23   |
+| Lite-On   | CV5-8Q256-HP       | 256 GB | 1       | 83    | 0     | 0.23   |
 | Lite-On   | CV4-8Q128-HP       | 128 GB | 1       | 82    | 0     | 0.23   |
 | Lite-On   | LCH-512V2S         | 512 GB | 5       | 82    | 1     | 0.22   |
 | Lite-On   | LAT-256M2S         | 256 GB | 1       | 239   | 2     | 0.22   |

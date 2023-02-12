@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Imation   | M.2 SATA3 256GB... | 256 GB | 1       | 265   | 0     | 0.73   |
+| Imation   | M.2 SATA3 256GB... | 256 GB | 1       | 306   | 0     | 0.84   |
 | Imation   | 2.5" SATA3 240G... | 240 GB | 1       | 30    | 0     | 0.08   |

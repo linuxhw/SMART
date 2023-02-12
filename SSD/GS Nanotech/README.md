@@ -18,6 +18,6 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | GS Nan... | 256-16 GSPTA256... | 256 GB | 2       | 111   | 0     | 0.31   |
+| GS Nan... | GS SSD 256-16 STR  | 256 GB | 1       | 24    | 0     | 0.07   |
+| GS Nan... | GS SSD 256-16      | 240 GB | 1       | 17    | 0     | 0.05   |
 | GS Nan... | GSPMA512M16STF     | 512 GB | 1       | 6     | 0     | 0.02   |
-| GS Nan... | GS SSD 256-16 STR  | 256 GB | 1       | 3     | 0     | 0.01   |
-| GS Nan... | GS SSD 256-16      | 240 GB | 1       | 2     | 0     | 0.01   |

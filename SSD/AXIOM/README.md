@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| AXIOM     | SSD                | 120 GB | 1       | 83    | 0     | 0.23   |
+| AXIOM     | SSD                | 120 GB | 1       | 87    | 0     | 0.24   |

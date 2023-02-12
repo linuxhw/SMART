@@ -18,6 +18,6 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Londisk   | SSD                | 960 GB | 1       | 192   | 0     | 0.53   |
-| Londisk   | SSD                | 120 GB | 10      | 154   | 0     | 0.42   |
+| Londisk   | SSD                | 120 GB | 10      | 156   | 0     | 0.43   |
 | Londisk   | SSD                | 480 GB | 4       | 84    | 0     | 0.23   |
 | Londisk   | SSD                | 240 GB | 4       | 62    | 0     | 0.17   |

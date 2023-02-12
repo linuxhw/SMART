@@ -53,8 +53,8 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | S11-128G-PHISON... | 128 GB | 6       | 25    | 0     | 0.07   |
 | Phison    | SSO256GTLC9-SBC-2  | 256 GB | 1       | 12    | 0     | 0.03   |
 | Phison    | 128GB SSD          | 128 GB | 1       | 8     | 0     | 0.02   |
+| Phison    | M.2 128GB SSO12... | 128 GB | 1       | 7     | 0     | 0.02   |
 | Phison    | SSBP064GTB3C0-S11  | 64 GB  | 1       | 6     | 0     | 0.02   |
-| Phison    | M.2 128GB SSO12... | 128 GB | 1       | 4     | 0     | 0.01   |
 | Phison    | S11-256G-PHISON... | 256 GB | 1       | 0     | 0     | 0.00   |
 
 SSD by Family

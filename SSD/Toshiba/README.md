@@ -33,7 +33,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ120PCSZ      | 120 GB | 2       | 1255  | 0     | 3.44   |
 | Toshiba   | THNSFC256GAMJ      | 256 GB | 2       | 1189  | 0     | 3.26   |
 | Toshiba   | THNSNC128GMMJ      | 128 GB | 5       | 1148  | 0     | 3.15   |
-| Toshiba   | TL100              | 120 GB | 5       | 1042  | 0     | 2.86   |
+| Toshiba   | TL100              | 120 GB | 5       | 1054  | 0     | 2.89   |
 | Toshiba   | THNSNJ512GDNU      | 512 GB | 2       | 1021  | 0     | 2.80   |
 | Toshiba   | THNSNH256GMCT      | 256 GB | 4       | 991   | 0     | 2.72   |
 | Toshiba   | THNS064GG2BNAA     | 64 GB  | 7       | 872   | 0     | 2.39   |
@@ -43,13 +43,13 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ256G8NU      | 256 GB | 7       | 731   | 0     | 2.01   |
 | Toshiba   | THNS128GG4BBAA     | 128 GB | 3       | 698   | 0     | 1.91   |
 | Toshiba   | THNSNH256GCST      | 256 GB | 2       | 651   | 0     | 1.78   |
+| Toshiba   | THNSNJ128GMCU      | 128 GB | 9       | 649   | 0     | 1.78   |
 | Toshiba   | Q300 Pro           | 128 GB | 3       | 641   | 0     | 1.76   |
 | Toshiba   | THNSNF512GCSS      | 512 GB | 1       | 631   | 0     | 1.73   |
 | Toshiba   | TR150              | 960 GB | 3       | 620   | 0     | 1.70   |
-| Toshiba   | THNSNJ128GMCU      | 128 GB | 9       | 605   | 0     | 1.66   |
 | Toshiba   | THNSNJ256GCST      | 256 GB | 4       | 603   | 0     | 1.65   |
 | Toshiba   | THNSFJ256GDNU A    | 256 GB | 8       | 596   | 0     | 1.64   |
-| Toshiba   | THNSFJ256GCSU      | 256 GB | 21      | 590   | 1     | 1.60   |
+| Toshiba   | THNSFJ256GCSU      | 256 GB | 21      | 602   | 1     | 1.63   |
 | Toshiba   | Q300               | 480 GB | 12      | 576   | 0     | 1.58   |
 | Toshiba   | THNSNJ512GCSU      | 512 GB | 6       | 568   | 0     | 1.56   |
 | Toshiba   | TR150              | 120 GB | 11      | 558   | 0     | 1.53   |
@@ -63,18 +63,19 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | Q300               | 240 GB | 15      | 635   | 2     | 1.36   |
 | Toshiba   | FujiFilm           | 128 GB | 1       | 492   | 0     | 1.35   |
 | Toshiba   | THNSFC128GBSJ      | 128 GB | 2       | 486   | 0     | 1.33   |
-| Toshiba   | TR150              | 480 GB | 10      | 539   | 1     | 1.31   |
+| Toshiba   | TR150              | 480 GB | 10      | 540   | 1     | 1.31   |
 | Toshiba   | Q300 Pro           | 256 GB | 2       | 478   | 0     | 1.31   |
 | Toshiba   | THNSNH060GCST      | 64 GB  | 1       | 467   | 0     | 1.28   |
-| Toshiba   | THNSNH128GCST      | 128 GB | 10      | 484   | 1     | 1.28   |
+| Toshiba   | THNSNH128GCST      | 128 GB | 10      | 485   | 1     | 1.28   |
 | Toshiba   | TL100              | 240 GB | 13      | 452   | 0     | 1.24   |
 | Toshiba   | THNSNJ128G8NY      | 128 GB | 7       | 443   | 0     | 1.21   |
-| Toshiba   | THNSNF256GMCS      | 256 GB | 6       | 429   | 0     | 1.18   |
+| Toshiba   | THNSNF256GMCS      | 256 GB | 6       | 430   | 0     | 1.18   |
 | Toshiba   | Q300 Pro           | 512 GB | 2       | 429   | 0     | 1.18   |
+| Toshiba   | VX500              | 256 GB | 1       | 428   | 0     | 1.17   |
 | Toshiba   | THNSNX032GMCT      | 32 GB  | 2       | 425   | 0     | 1.17   |
 | Toshiba   | THNSNJ256GVNU      | 256 GB | 2       | 423   | 0     | 1.16   |
 | Toshiba   | THNSNF128GCSS      | 128 GB | 11      | 505   | 1     | 1.15   |
-| Toshiba   | THNSNF128GMCS      | 128 GB | 9       | 413   | 0     | 1.13   |
+| Toshiba   | THNSNF128GMCS      | 128 GB | 9       | 414   | 0     | 1.13   |
 | Toshiba   | THNSNJ256GCSU      | 256 GB | 11      | 409   | 0     | 1.12   |
 | Toshiba   | THNSNJ128GCST      | 128 GB | 4       | 409   | 0     | 1.12   |
 | Toshiba   | THNSNH060GBST      | 64 GB  | 2       | 400   | 0     | 1.10   |
@@ -94,21 +95,20 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ512G8NY      | 512 GB | 1       | 315   | 0     | 0.86   |
 | Toshiba   | THNSNJ128GMCT      | 128 GB | 1       | 306   | 0     | 0.84   |
 | Toshiba   | THNSNH060GMCT      | 64 GB  | 1       | 292   | 0     | 0.80   |
-| Toshiba   | Q300               | 120 GB | 9       | 291   | 0     | 0.80   |
+| Toshiba   | Q300               | 120 GB | 9       | 292   | 0     | 0.80   |
 | Toshiba   | THNSNC128GMLJ      | 128 GB | 2       | 284   | 0     | 0.78   |
+| Toshiba   | THNSFJ256GMCT      | 256 GB | 1       | 275   | 0     | 0.75   |
 | Toshiba   | A100               | 240 GB | 11      | 265   | 0     | 0.73   |
 | Toshiba   | THNSNJ256GMCU      | 256 GB | 8       | 256   | 0     | 0.70   |
-| Toshiba   | THNSFJ256GMCT      | 256 GB | 1       | 252   | 0     | 0.69   |
-| Toshiba   | THNSNH128GMCT      | 128 GB | 6       | 224   | 0     | 0.62   |
+| Toshiba   | THNSNH128GMCT      | 128 GB | 6       | 225   | 0     | 0.62   |
+| Toshiba   | TR200              | 480 GB | 22      | 223   | 0     | 0.61   |
+| Toshiba   | A100               | 120 GB | 8       | 219   | 0     | 0.60   |
 | Toshiba   | THNSNJ128GVNU      | 128 GB | 3       | 219   | 0     | 0.60   |
 | Toshiba   | TR200              | 240 GB | 66      | 218   | 0     | 0.60   |
-| Toshiba   | TR200              | 480 GB | 22      | 218   | 0     | 0.60   |
-| Toshiba   | A100               | 120 GB | 8       | 207   | 0     | 0.57   |
 | Toshiba   | KSG60ZSE256G SATA  | 256 GB | 3       | 435   | 67    | 0.49   |
-| Toshiba   | VX500              | 256 GB | 1       | 178   | 0     | 0.49   |
-| Toshiba   | THNSNK128GVN8      | 128 GB | 11      | 168   | 0     | 0.46   |
+| Toshiba   | THNSNK128GVN8      | 128 GB | 11      | 171   | 0     | 0.47   |
+| Toshiba   | KSG60ZMV512G M.... | 512 GB | 9       | 162   | 0     | 0.45   |
 | Toshiba   | VT180              | 240 GB | 1       | 161   | 0     | 0.44   |
-| Toshiba   | KSG60ZMV512G M.... | 512 GB | 9       | 160   | 0     | 0.44   |
 | Toshiba   | Q300               | 960 GB | 1       | 153   | 0     | 0.42   |
 | Toshiba   | THNSNJ512GACU      | 512 GB | 1       | 148   | 0     | 0.41   |
 | Toshiba   | THNSNW032GMCP      | 32 GB  | 1       | 142   | 0     | 0.39   |
@@ -135,12 +135,12 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNS060GBSP      | 64 GB  | 1       | 22    | 0     | 0.06   |
 | Toshiba   | THNSNS064GMCP      | 64 GB  | 1       | 20    | 0     | 0.06   |
 | Toshiba   | THNSNJ256GMCT      | 256 GB | 1       | 17    | 0     | 0.05   |
-| Toshiba   | THNSNK256GCS8 SATA | 256 GB | 6       | 203   | 100   | 0.01   |
+| Toshiba   | THNSNK256GCS8 SATA | 256 GB | 6       | 223   | 100   | 0.01   |
 | Toshiba   | THNSNK256GVN8 M... | 256 GB | 11      | 203   | 102   | 0.01   |
 | Toshiba   | THNSNK512GCS8 SATA | 512 GB | 1       | 190   | 100   | 0.01   |
-| Toshiba   | THNSNK128GVN8 M... | 128 GB | 4       | 146   | 100   | 0.00   |
+| Toshiba   | THNSNK128GVN8 M... | 128 GB | 4       | 157   | 100   | 0.00   |
 | Toshiba   | KSG60ZSE512G SATA  | 512 GB | 2       | 97    | 100   | 0.00   |
-| Toshiba   | THNSNK128GCS8 SATA | 128 GB | 3       | 280   | 438   | 0.00   |
+| Toshiba   | THNSNK128GCS8 SATA | 128 GB | 3       | 281   | 438   | 0.00   |
 | Toshiba   | THNSF81Q92CSE      | 1.9 TB | 1       | 0     | 0     | 0.00   |
 
 SSD by Family
@@ -160,12 +160,12 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | HG2 Series             | 2      | 9       | 760   | 0     | 2.08   |
 | Toshiba   | JMicron/Maxiotek ba... | 1      | 3       | 698   | 0     | 1.91   |
 | Toshiba   | HG3 Series             | 3      | 7       | 658   | 0     | 1.80   |
-| Toshiba   | OCZ                    | 6      | 24      | 586   | 1     | 1.53   |
-| Toshiba   | HG6 Series SSD         | 20     | 122     | 510   | 1     | 1.40   |
+| Toshiba   | OCZ                    | 6      | 24      | 598   | 1     | 1.57   |
+| Toshiba   | HG6 Series SSD         | 20     | 122     | 516   | 1     | 1.41   |
 | Toshiba   | OCZ/Toshiba Trion SSDs | 7      | 81      | 477   | 1     | 1.22   |
 | Toshiba   | HG6 Series             | 1      | 7       | 443   | 0     | 1.21   |
-| Toshiba   | HG5 Series             | 1      | 9       | 413   | 0     | 1.13   |
+| Toshiba   | HG5 Series             | 1      | 9       | 414   | 0     | 1.13   |
 | Toshiba   | HG5d Series            | 8      | 32      | 456   | 21    | 1.11   |
-| Toshiba   | Unknown                | 66     | 325     | 320   | 16    | 0.80   |
+| Toshiba   | Unknown                | 66     | 325     | 321   | 16    | 0.80   |
 | Toshiba   | JMicron based SSDs     | 1      | 2       | 284   | 0     | 0.78   |
 | Toshiba   | SG2 Series             | 1      | 1       | 32    | 0     | 0.09   |

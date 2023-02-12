@@ -27,11 +27,11 @@ MTBF - avg. MTBF in years per sample.
 | Lexar     | SSD                | 120 GB | 2       | 182   | 0     | 0.50   |
 | Lexar     | 120GB SSD          | 120 GB | 2       | 181   | 0     | 0.50   |
 | Lexar     | SSD                | 128 GB | 11      | 170   | 0     | 0.47   |
+| Lexar     | SSD                | 480 GB | 3       | 96    | 0     | 0.26   |
 | Lexar     | 1TB SSD            | 1 TB   | 11      | 98    | 1     | 0.26   |
-| Lexar     | 256GB SSD          | 256 GB | 32      | 92    | 0     | 0.25   |
-| Lexar     | SSD                | 480 GB | 3       | 92    | 0     | 0.25   |
+| Lexar     | 256GB SSD          | 256 GB | 32      | 93    | 0     | 0.26   |
+| Lexar     | 128GB SSD          | 128 GB | 30      | 79    | 0     | 0.22   |
 | Lexar     | 240GB SSD          | 240 GB | 8       | 78    | 0     | 0.21   |
-| Lexar     | 128GB SSD          | 128 GB | 30      | 72    | 0     | 0.20   |
 | Lexar     | 512GB SSD          | 512 GB | 10      | 56    | 0     | 0.15   |
 | Lexar     | SSD                | 240 GB | 4       | 39    | 0     | 0.11   |
 | Lexar     | 960GB SSD          | 960 GB | 1       | 38    | 0     | 0.10   |
@@ -50,4 +50,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Lexar     | Unknown                | 11     | 86      | 101   | 1     | 0.28   |
-| Lexar     | 128GB SSD              | 1      | 30      | 72    | 0     | 0.20   |
+| Lexar     | 128GB SSD              | 1      | 30      | 79    | 0     | 0.22   |

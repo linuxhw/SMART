@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ShanDi... | SSD                | 512 GB | 4       | 123   | 0     | 0.34   |
+| ShanDi... | SSD                | 512 GB | 4       | 137   | 0     | 0.38   |
 | ShanDi... | SSD                | 256 GB | 3       | 70    | 0     | 0.19   |
 | ShanDi... | SSD                | 128 GB | 2       | 12    | 0     | 0.04   |

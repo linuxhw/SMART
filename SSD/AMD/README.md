@@ -24,14 +24,14 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | AMD       | R5M256G8           | 256 GB | 1       | 342   | 0     | 0.94   |
-| AMD       | R3SL240G           | 240 GB | 11      | 313   | 24    | 0.64   |
+| AMD       | R3SL240G           | 240 GB | 11      | 316   | 24    | 0.65   |
 | AMD       | R5S120GBSF         | 120 GB | 2       | 158   | 508   | 0.41   |
 | AMD       | R5M120G8           | 120 GB | 4       | 126   | 0     | 0.35   |
-| AMD       | R5SL240G           | 240 GB | 26      | 115   | 1     | 0.28   |
-| AMD       | R3SL120G           | 120 GB | 35      | 102   | 1     | 0.28   |
+| AMD       | R5SL240G           | 240 GB | 26      | 116   | 1     | 0.29   |
+| AMD       | R3SL120G           | 120 GB | 35      | 104   | 1     | 0.29   |
 | AMD       | R5SL480G           | 480 GB | 5       | 174   | 29    | 0.27   |
 | AMD       | R3SL480G           | 480 GB | 1       | 98    | 0     | 0.27   |
-| AMD       | R5SL120G           | 120 GB | 36      | 68    | 1     | 0.17   |
+| AMD       | R5SL120G           | 120 GB | 36      | 71    | 1     | 0.18   |
 | AMD       | R3SL60G            | 64 GB  | 5       | 156   | 87    | 0.11   |
 | AMD       | R5S240GBSF         | 240 GB | 1       | 33    | 0     | 0.09   |
 | AMD       | R5SL128G           | 128 GB | 7       | 19    | 0     | 0.05   |
@@ -53,5 +53,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| AMD       | Silicon Motion base... | 3      | 47      | 151   | 6     | 0.36   |
-| AMD       | Unknown                | 13     | 96      | 90    | 18    | 0.20   |
+| AMD       | Silicon Motion base... | 3      | 47      | 154   | 6     | 0.37   |
+| AMD       | Unknown                | 13     | 96      | 91    | 18    | 0.21   |

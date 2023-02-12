@@ -22,4 +22,4 @@ MTBF - avg. MTBF in years per sample.
 | MaxDig... | MD4000GSA6472DVR 1 | 4 TB   | 1       | 121   | 0     | 0.33   |
 | MaxDig... | MDT MD5000AAKS-... | 500 GB | 1       | 116   | 0     | 0.32   |
 | MaxDig... | MD3000GSA3257DVR 0 | 3 TB   | 1       | 11    | 0     | 0.03   |
-| MaxDig... | MDT MD2000KS-00... | 200 GB | 1       | 577   | 75    | 0.02   |
+| MaxDig... | MDT MD2000KS-00... | 200 GB | 1       | 579   | 75    | 0.02   |

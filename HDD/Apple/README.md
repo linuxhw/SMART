@@ -24,12 +24,12 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Apple     | HDD ST2000LM003    | 2 TB   | 1       | 1200  | 0     | 3.29   |
-| Apple     | HDD ST3000DM001    | 3 TB   | 2       | 1001  | 0     | 2.74   |
+| Apple     | HDD ST3000DM001    | 3 TB   | 2       | 1034  | 0     | 2.84   |
 | Apple     | HDD HTS727575A9... | 752 GB | 4       | 960   | 0     | 2.63   |
 | Apple     | HDD HTS541075A9... | 752 GB | 1       | 792   | 0     | 2.17   |
 | Apple     | HDD HTS541010A9... | 1 TB   | 54      | 877   | 101   | 1.70   |
 | Apple     | HDD WDC WD10EAL... | 1 TB   | 1       | 594   | 0     | 1.63   |
-| Apple     | HDD ST1000DM003    | 1 TB   | 32      | 543   | 0     | 1.49   |
+| Apple     | HDD ST1000DM003    | 1 TB   | 32      | 545   | 0     | 1.50   |
 | Apple     | HDD ST750LM022     | 752 GB | 3       | 523   | 0     | 1.43   |
 | Apple     | HDD ST500LM012     | 500 GB | 5       | 515   | 0     | 1.41   |
 | Apple     | HDD HTS545050A7... | 500 GB | 55      | 542   | 26    | 1.37   |
@@ -56,10 +56,10 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Apple     | Unknown                | 1      | 1       | 1200  | 0     | 3.29   |
-| Apple     | Seagate Barracuda 7... | 1      | 2       | 1001  | 0     | 2.74   |
+| Apple     | Seagate Barracuda 7... | 1      | 2       | 1034  | 0     | 2.84   |
 | Apple     | Travelstar 7K750       | 1      | 4       | 960   | 0     | 2.63   |
 | Apple     | Western Digital Blue   | 1      | 1       | 594   | 0     | 1.63   |
-| Apple     | Barracuda              | 1      | 32      | 543   | 0     | 1.49   |
+| Apple     | Barracuda              | 1      | 32      | 545   | 0     | 1.50   |
 | Apple     | Travelstar 5K1000      | 4      | 84      | 733   | 68    | 1.48   |
 | Apple     | SpinPoint              | 1      | 3       | 523   | 0     | 1.43   |
 | Apple     | Seagate Samsung Spi... | 1      | 5       | 515   | 0     | 1.41   |

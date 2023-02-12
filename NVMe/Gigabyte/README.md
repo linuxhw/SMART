@@ -22,15 +22,15 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | GP-ASM2NE6200TTTD  | 2 TB   | 3       | 206   | 0     | 0.57   |
 | Gigabyte  | GP-AG70S2TB        | 2 TB   | 1       | 204   | 0     | 0.56   |
 | Gigabyte  | GP-ASM2NE6100TTTD  | 1 TB   | 6       | 191   | 0     | 0.52   |
-| Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 8       | 182   | 0     | 0.50   |
+| Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 8       | 184   | 0     | 0.51   |
 | Gigabyte  | GP-GSM2NE8256GNTD  | 256 GB | 2       | 150   | 0     | 0.41   |
 | Gigabyte  | GP-AG41TB          | 1 TB   | 12      | 131   | 0     | 0.36   |
+| Gigabyte  | GP-GSM2NE3512GNTD  | 512 GB | 6       | 99    | 0     | 0.27   |
 | Gigabyte  | GP-AG4500G         | 500 GB | 4       | 95    | 0     | 0.26   |
 | Gigabyte  | GP-AG70S1TB        | 1 TB   | 4       | 86    | 0     | 0.24   |
-| Gigabyte  | GP-GSM2NE3512GNTD  | 512 GB | 6       | 83    | 0     | 0.23   |
 | Gigabyte  | GP-ASM2NE6500GTTD  | 500 GB | 3       | 57    | 0     | 0.16   |
-| Gigabyte  | GP-GSM2NE3128GNTD  | 128 GB | 4       | 47    | 0     | 0.13   |
+| Gigabyte  | GP-GSM2NE3128GNTD  | 128 GB | 4       | 50    | 0     | 0.14   |
 | Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 18      | 22    | 0     | 0.06   |
 | Gigabyte  | AG4512G-SI B10     | 512 GB | 3       | 13    | 0     | 0.04   |
 | Gigabyte  | AG470S1TB-SI B10   | 1 TB   | 3       | 2     | 0     | 0.01   |
-| Gigabyte  | GP-GM30512G-G      | 512 GB | 1       | 27    | 1011  | 0.00   |
+| Gigabyte  | GP-GM30512G-G      | 512 GB | 1       | 47    | 1011  | 0.00   |
