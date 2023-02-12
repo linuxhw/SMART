@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Reeioon   | FR120GB R2S3       | 120 GB | 1       | 226   | 377   | 0.00   |
+| Reeioon   | FR120GB R2S3       | 120 GB | 1       | 232   | 377   | 0.00   |

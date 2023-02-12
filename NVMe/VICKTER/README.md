@@ -1,7 +1,7 @@
-tigo NVMe Drives
-================
+VICKTER NVMe Drives
+===================
 
-This is a list of all tested tigo NVMe drive models and their MTBFs. See more
+This is a list of all tested VICKTER NVMe drive models and their MTBFs. See more
 info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 NVME by Model
@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| tigo      | SSD                | 512 GB | 1       | 313   | 0     | 0.86   |
+| VICKTER   | NVME SSD           | 512 GB | 2       | 8     | 0     | 0.02   |

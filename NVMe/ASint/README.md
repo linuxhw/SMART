@@ -1,7 +1,7 @@
-tigo NVMe Drives
-================
+ASint NVMe Drives
+=================
 
-This is a list of all tested tigo NVMe drive models and their MTBFs. See more
+This is a list of all tested ASint NVMe drive models and their MTBFs. See more
 info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 NVME by Model
@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| tigo      | SSD                | 512 GB | 1       | 313   | 0     | 0.86   |
+| ASint     | AS806              | 128 GB | 1       | 106   | 0     | 0.29   |

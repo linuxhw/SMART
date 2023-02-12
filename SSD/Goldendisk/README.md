@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Golden... | GDSA25-120MS       | 120 GB | 1       | 10    | 0     | 0.03   |
+| Golden... | GDSA25-120MS       | 120 GB | 1       | 16    | 0     | 0.04   |

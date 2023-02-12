@@ -19,4 +19,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Varro     | bulldozer-240GB    | 240 GB | 1       | 140   | 0     | 0.38   |
 | Varro     | BULLDOZER-240GB    | 240 GB | 1       | 41    | 0     | 0.11   |
-| Varro     | BULLDOZER-120GB    | 120 GB | 1       | 12    | 0     | 0.03   |
+| Varro     | BULLDOZER-120GB    | 120 GB | 1       | 31    | 0     | 0.09   |

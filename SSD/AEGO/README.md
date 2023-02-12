@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| AEGO      | SSD                | 240 GB | 3       | 16    | 0     | 0.04   |
+| AEGO      | SSD                | 240 GB | 3       | 33    | 0     | 0.09   |

@@ -30,7 +30,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SM280128GPTC15T... | 128 GB | 1       | 535   | 0     | 1.47   |
 | Phison    | SSDS30256XQC800... | 240 GB | 1       | 433   | 0     | 1.19   |
 | Phison    | S10C-512G-PHISO... | 512 GB | 1       | 406   | 0     | 1.11   |
-| Phison    | 128GB PS3110-S10C  | 128 GB | 2       | 308   | 0     | 0.84   |
+| Phison    | 128GB PS3110-S10C  | 128 GB | 2       | 315   | 0     | 0.86   |
 | Phison    | 256GB PS3110-S10C  | 256 GB | 3       | 283   | 0     | 0.78   |
 | Phison    | SATA SSD           | 64 GB  | 4       | 241   | 0     | 0.66   |
 | Phison    | SATA SSD           | 128 GB | 8       | 237   | 0     | 0.65   |
@@ -46,11 +46,11 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SATA SSD           | 256 GB | 8       | 90    | 0     | 0.25   |
 | Phison    | SSE064GPTC0-S81    | 64 GB  | 1       | 55    | 0     | 0.15   |
 | Phison    | SATA SSD           | 960 GB | 3       | 52    | 0     | 0.14   |
+| Phison    | S11-512G-PHISON... | 512 GB | 6       | 42    | 0     | 0.12   |
 | Phison    | SSEP128GTMC0-S10C  | 128 GB | 1       | 41    | 0     | 0.11   |
-| Phison    | S11-512G-PHISON... | 512 GB | 6       | 40    | 0     | 0.11   |
 | Phison    | S11-256G-PHISON... | 256 GB | 3       | 40    | 0     | 0.11   |
 | Phison    | SSEP064GTMC0-S91   | 64 GB  | 1       | 32    | 0     | 0.09   |
-| Phison    | S11-128G-PHISON... | 128 GB | 6       | 22    | 0     | 0.06   |
+| Phison    | S11-128G-PHISON... | 128 GB | 6       | 25    | 0     | 0.07   |
 | Phison    | SSO256GTLC9-SBC-2  | 256 GB | 1       | 12    | 0     | 0.03   |
 | Phison    | 128GB SSD          | 128 GB | 1       | 8     | 0     | 0.02   |
 | Phison    | SSBP064GTB3C0-S11  | 64 GB  | 1       | 6     | 0     | 0.02   |
@@ -72,4 +72,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Phison    | Phison Driven SSDs     | 4      | 6       | 328   | 0     | 0.90   |
 | Phison    | Driven OEM SSDs        | 10     | 105     | 182   | 0     | 0.50   |
-| Phison    | Unknown                | 19     | 35      | 136   | 1     | 0.37   |
+| Phison    | Unknown                | 19     | 35      | 137   | 1     | 0.37   |

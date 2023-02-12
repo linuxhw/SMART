@@ -18,5 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | GALAX     | GXTA1B0120A        | 120 GB | 2       | 525   | 0     | 1.44   |
-| GALAX     | TA1D0120A          | 120 GB | 6       | 203   | 0     | 0.56   |
+| GALAX     | TA1D0120A          | 120 GB | 6       | 206   | 0     | 0.57   |
 | GALAX     | TA1D0240A          | 240 GB | 2       | 47    | 0     | 0.13   |

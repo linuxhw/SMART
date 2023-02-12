@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Getrich   | 120G SSD           | 120 GB | 1       | 8     | 0     | 0.02   |
+| Getrich   | 120G SSD           | 120 GB | 1       | 12    | 0     | 0.04   |

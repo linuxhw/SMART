@@ -19,7 +19,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | T-FORCE   | TM8FP8001T         | 1 TB   | 2       | 243   | 0     | 0.67   |
 | T-FORCE   | TM8FP7001T         | 1 TB   | 3       | 218   | 0     | 0.60   |
-| T-FORCE   | TM8FP5001T         | 1 TB   | 3       | 191   | 0     | 0.52   |
+| T-FORCE   | TM8FP5001T         | 1 TB   | 3       | 211   | 0     | 0.58   |
 | T-FORCE   | TM8FP8002T         | 2 TB   | 1       | 56    | 0     | 0.16   |
 | T-FORCE   | TM8FPZ001T         | 1 TB   | 3       | 39    | 0     | 0.11   |
 | T-FORCE   | TM8FPL1000G        | 1 TB   | 1       | 14    | 0     | 0.04   |

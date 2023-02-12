@@ -27,7 +27,7 @@ MTBF - avg. MTBF in years per sample.
 | Innodisk  | DES25-64GM41BC1... | 64 GB  | 1       | 821   | 0     | 2.25   |
 | Innodisk  | Corp. DRPS-02GJ... | 2 GB   | 3       | 664   | 0     | 1.82   |
 | Innodisk  | 2.5" SATA SSD 3ME3 | 128 GB | 3       | 290   | 0     | 0.80   |
-| Innodisk  | 2.5" SATA SSD 3ME4 | 128 GB | 3       | 196   | 0     | 0.54   |
+| Innodisk  | 2.5" SATA SSD 3ME4 | 128 GB | 3       | 240   | 0     | 0.66   |
 | Innodisk  | Corp. - mSATA 3ME  | 64 GB  | 1       | 150   | 0     | 0.41   |
 | Innodisk  | mSATA mini 3ME ... | 32 GB  | 1       | 140   | 0     | 0.39   |
 | Innodisk  | DEM24-16GM41BC1... | 16 GB  | 2       | 121   | 0     | 0.33   |
@@ -53,7 +53,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Innodisk  | 3IE3/3ME3/3ME4 SSDs    | 4      | 9       | 411   | 11    | 0.77   |
+| Innodisk  | 3IE3/3ME3/3ME4 SSDs    | 4      | 9       | 425   | 11    | 0.81   |
 | Innodisk  | Unknown                | 9      | 14      | 232   | 1     | 0.64   |
 | Innodisk  | 1ME3/3ME/3SE SSDs      | 1      | 1       | 150   | 0     | 0.41   |
 | Innodisk  | 3IE2/3ME2/3MG2/3SE2... | 2      | 6       | 40    | 505   | 0.04   |

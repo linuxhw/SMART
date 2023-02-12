@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EZCOOL    | S280               | 240 GB | 1       | 70    | 0     | 0.19   |
-| EZCOOL    | S400               | 120 GB | 1       | 56    | 0     | 0.15   |
+| EZCOOL    | S400               | 120 GB | 1       | 119   | 0     | 0.33   |
+| EZCOOL    | S280               | 240 GB | 1       | 71    | 0     | 0.19   |

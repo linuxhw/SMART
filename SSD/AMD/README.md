@@ -27,17 +27,17 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R3SL240G           | 240 GB | 11      | 313   | 24    | 0.64   |
 | AMD       | R5S120GBSF         | 120 GB | 2       | 158   | 508   | 0.41   |
 | AMD       | R5M120G8           | 120 GB | 4       | 126   | 0     | 0.35   |
-| AMD       | R5SL240G           | 240 GB | 26      | 111   | 1     | 0.27   |
+| AMD       | R5SL240G           | 240 GB | 26      | 115   | 1     | 0.28   |
+| AMD       | R3SL120G           | 120 GB | 35      | 102   | 1     | 0.28   |
+| AMD       | R5SL480G           | 480 GB | 5       | 174   | 29    | 0.27   |
 | AMD       | R3SL480G           | 480 GB | 1       | 98    | 0     | 0.27   |
-| AMD       | R3SL120G           | 120 GB | 35      | 94    | 1     | 0.26   |
-| AMD       | R5SL480G           | 480 GB | 5       | 165   | 29    | 0.24   |
-| AMD       | R5SL120G           | 120 GB | 36      | 66    | 1     | 0.17   |
+| AMD       | R5SL120G           | 120 GB | 36      | 68    | 1     | 0.17   |
 | AMD       | R3SL60G            | 64 GB  | 5       | 156   | 87    | 0.11   |
 | AMD       | R5S240GBSF         | 240 GB | 1       | 33    | 0     | 0.09   |
 | AMD       | R5SL128G           | 128 GB | 7       | 19    | 0     | 0.05   |
 | AMD       | R3S60GBSM          | 64 GB  | 2       | 17    | 0     | 0.05   |
 | AMD       | R5SL256G           | 256 GB | 5       | 18    | 5     | 0.04   |
-| AMD       | R5SL960G           | 960 GB | 1       | 61    | 4     | 0.03   |
+| AMD       | R5SL960G           | 960 GB | 1       | 71    | 4     | 0.04   |
 | AMD       | R5SL512G           | 512 GB | 1       | 1     | 0     | 0.00   |
 
 SSD by Family
@@ -53,5 +53,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| AMD       | Silicon Motion base... | 3      | 47      | 146   | 6     | 0.35   |
-| AMD       | Unknown                | 13     | 96      | 87    | 18    | 0.20   |
+| AMD       | Silicon Motion base... | 3      | 47      | 151   | 6     | 0.36   |
+| AMD       | Unknown                | 13     | 96      | 90    | 18    | 0.20   |

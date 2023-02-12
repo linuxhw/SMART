@@ -20,7 +20,7 @@ MTBF - avg. MTBF in years per sample.
 | Pioneer   | APS-SL3N-128       | 128 GB | 1       | 750   | 0     | 2.06   |
 | Pioneer   | APS-SL3N-1T        | 1 TB   | 2       | 436   | 0     | 1.20   |
 | Pioneer   | APS-SL3N-512       | 512 GB | 5       | 246   | 0     | 0.67   |
+| Pioneer   | APS-SL3N-256       | 256 GB | 3       | 218   | 0     | 0.60   |
 | Pioneer   | APS-SL3N-240       | 240 GB | 2       | 93    | 0     | 0.26   |
-| Pioneer   | APS-SL3N-256       | 256 GB | 3       | 76    | 0     | 0.21   |
 | Pioneer   | APS-SL3N-120       | 120 GB | 6       | 68    | 0     | 0.19   |
 | Pioneer   | APS-SL3N 120       | 120 GB | 1       | 26    | 0     | 0.07   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Nfortec   | ALCYON             | 512 GB | 1       | 81    | 0     | 0.22   |
+| Nfortec   | ALCYON             | 512 GB | 1       | 82    | 0     | 0.22   |

@@ -19,13 +19,13 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Mushkin   | MKNSSDHL250GB-D8   | 250 GB | 5       | 467   | 202   | 1.22   |
 | Mushkin   | MKNSSDPL2TB-D8     | 2 TB   | 1       | 238   | 0     | 0.65   |
+| Mushkin   | MKNSSDPL1TB-D8     | 1 TB   | 1       | 227   | 0     | 0.62   |
+| Mushkin   | MKNSSDPE2TB-D8     | 2 TB   | 14      | 192   | 0     | 0.53   |
 | Mushkin   | MKNSSDHL500GB-D8   | 500 GB | 1       | 189   | 0     | 0.52   |
-| Mushkin   | MKNSSDPE2TB-D8     | 2 TB   | 14      | 181   | 0     | 0.50   |
 | Mushkin   | MKNSSDPL500GB-D8   | 500 GB | 2       | 163   | 0     | 0.45   |
 | Mushkin   | MKNSSDVT1TB-D8     | 1 TB   | 1       | 143   | 0     | 0.39   |
-| Mushkin   | MKNSSDPL1TB-D8     | 1 TB   | 1       | 121   | 0     | 0.33   |
 | Mushkin   | MKNSSDPE1TB-D8     | 1 TB   | 5       | 74    | 0     | 0.20   |
-| Mushkin   | MKNSSDHL1TB-D8     | 1 TB   | 7       | 85    | 11    | 0.18   |
+| Mushkin   | MKNSSDHL1TB-D8     | 1 TB   | 7       | 89    | 11    | 0.19   |
 | Mushkin   | MKNSSDPE500GB-D8   | 500 GB | 1       | 54    | 0     | 0.15   |
 | Mushkin   | MKNSSDTS2TB-D8     | 2 TB   | 1       | 1     | 0     | 0.00   |
 | Mushkin   | MKNSSDVT2TB-D8     | 2 TB   | 1       | 0     | 0     | 0.00   |

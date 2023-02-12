@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KINGBANK  | KP230              | 512 GB | 2       | 190   | 0     | 0.52   |
+| KINGBANK  | KP230              | 512 GB | 2       | 202   | 0     | 0.56   |

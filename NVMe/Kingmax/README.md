@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Kingmax   | PCIe SSD           | 256 GB | 1       | 8     | 0     | 0.02   |
+| Kingmax   | PCIe SSD           | 256 GB | 1       | 12    | 0     | 0.03   |

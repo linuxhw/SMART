@@ -23,60 +23,60 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| WDC       | WD1001X06X-00SJVT0 | 1.1 TB | 2       | 1341  | 0     | 3.68   |
-| WDC       | WDBNCE2500PNC-WRSN | 250 GB | 3       | 847   | 0     | 2.32   |
+| WDC       | WD1001X06X-00SJVT0 | 1.1 TB | 2       | 1381  | 0     | 3.79   |
+| WDC       | WDBNCE2500PNC-WRSN | 250 GB | 3       | 849   | 0     | 2.33   |
 | WDC       | WDBNCE0010PNC-WRSN | 1 TB   | 2       | 821   | 0     | 2.25   |
-| WDC       | WDS250G1B0B-00AS40 | 250 GB | 10      | 507   | 0     | 1.39   |
+| WDC       | WDS250G1B0B-00AS40 | 250 GB | 10      | 508   | 0     | 1.39   |
 | WDC       | WDS500G1B0B-00AS40 | 500 GB | 9       | 482   | 0     | 1.32   |
-| WDC       | WDS200T2B0A        | 2 TB   | 3       | 476   | 0     | 1.31   |
+| WDC       | WDS200T2B0A        | 2 TB   | 3       | 482   | 0     | 1.32   |
+| WDC       | WDS250G1B0A-00H9H0 | 250 GB | 30      | 457   | 34    | 1.17   |
 | WDC       | WDS100T1B0A-00H9H0 | 1 TB   | 18      | 408   | 0     | 1.12   |
 | WDC       | WDBNCE5000PNC-WRSN | 500 GB | 2       | 398   | 0     | 1.09   |
-| WDC       | WDS250G1B0A-00H9H0 | 250 GB | 30      | 412   | 34    | 1.05   |
-| WDC       | WDS240G1G0A-00SS50 | 240 GB | 37      | 368   | 0     | 1.01   |
-| WDC       | WDS500G1B0A-00H9H0 | 500 GB | 25      | 365   | 1     | 0.97   |
-| WDC       | WDS250G2B0B-00YS70 | 250 GB | 41      | 338   | 0     | 0.93   |
+| WDC       | WDS240G1G0A-00SS50 | 240 GB | 37      | 370   | 0     | 1.02   |
+| WDC       | WDS250G2B0B-00YS70 | 250 GB | 41      | 365   | 0     | 1.00   |
+| WDC       | WDS500G1B0A-00H9H0 | 500 GB | 25      | 373   | 1     | 0.99   |
 | WDC       | WDS200T2B0B        | 2 TB   | 4       | 335   | 0     | 0.92   |
-| WDC       | WDBNCE2500PNC      | 250 GB | 16      | 312   | 0     | 0.86   |
+| WDC       | WDBNCE2500PNC      | 250 GB | 16      | 313   | 0     | 0.86   |
 | WDC       | WDBNCE0020PNC      | 2 TB   | 1       | 310   | 0     | 0.85   |
 | WDC       | WDS120G1G0B-00RC30 | 120 GB | 24      | 300   | 0     | 0.82   |
 | WDC       | WDS100T1B0B-00AS40 | 1 TB   | 4       | 279   | 0     | 0.77   |
 | WDC       | WDS240G1G0B-00RC30 | 240 GB | 8       | 270   | 0     | 0.74   |
-| WDC       | WDS500G2B0A        | 500 GB | 47      | 259   | 0     | 0.71   |
-| WDC       | WDS100T2B0A        | 1 TB   | 9       | 251   | 1     | 0.67   |
+| WDC       | WDS500G2B0A        | 500 GB | 48      | 267   | 0     | 0.73   |
+| WDC       | WDS200T2B0B-00YS70 | 2 TB   | 25      | 253   | 0     | 0.70   |
+| WDC       | WDS100T2B0A        | 1 TB   | 9       | 257   | 1     | 0.69   |
+| WDC       | WDS120G1G0A-00SS50 | 120 GB | 47      | 242   | 0     | 0.67   |
 | WDC       | WDS200T2G0A-00JH30 | 2 TB   | 3       | 359   | 1     | 0.66   |
-| WDC       | WDS200T2B0B-00YS70 | 2 TB   | 25      | 238   | 0     | 0.65   |
-| WDC       | WDS120G1G0A-00SS50 | 120 GB | 47      | 230   | 0     | 0.63   |
 | WDC       | WDS500G2B0B        | 500 GB | 12      | 218   | 0     | 0.60   |
-| WDC       | WDS200T2B0A-00SM50 | 2 TB   | 26      | 234   | 39    | 0.57   |
-| WDC       | WDS250G2B0A-00SM50 | 250 GB | 102     | 204   | 0     | 0.56   |
+| WDC       | WDS200T2B0A-00SM50 | 2 TB   | 26      | 242   | 39    | 0.59   |
+| WDC       | WDS250G2B0A-00SM50 | 250 GB | 102     | 214   | 0     | 0.59   |
 | WDC       | PC SA530 SDASB8... | 512 GB | 1       | 203   | 0     | 0.56   |
+| WDC       | WDS500G2B0A-00SM50 | 500 GB | 316     | 201   | 1     | 0.55   |
+| WDC       | WDS100T2B0B-00YS70 | 1 TB   | 66      | 206   | 1     | 0.54   |
+| WDC       | WDS500G2B0B-00YS70 | 500 GB | 126     | 205   | 9     | 0.54   |
 | WDC       | WDS100T1R0A-68A4W0 | 1 TB   | 8       | 193   | 0     | 0.53   |
-| WDC       | WDS500G2B0A-00SM50 | 500 GB | 316     | 193   | 1     | 0.53   |
-| WDC       | WDS500G2B0B-00YS70 | 500 GB | 126     | 200   | 9     | 0.53   |
-| WDC       | PC SA530 SDASB8... | 1 TB   | 3       | 187   | 0     | 0.51   |
-| WDC       | WDS100T2B0A-00SM50 | 1 TB   | 200     | 186   | 1     | 0.50   |
-| WDC       | WDS100T2B0B-00YS70 | 1 TB   | 65      | 190   | 1     | 0.50   |
-| WDC       | WDBNCE5000PNC      | 500 GB | 51      | 155   | 0     | 0.43   |
-| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 187     | 173   | 1     | 0.43   |
-| WDC       | WDS120G2G0B-00EPW0 | 120 GB | 83      | 153   | 1     | 0.39   |
-| WDC       | WDBNCE0010PNC      | 1 TB   | 26      | 140   | 0     | 0.39   |
-| WDC       | WDS500G1R0B-68A4Z0 | 500 GB | 6       | 140   | 0     | 0.38   |
+| WDC       | WDS100T2B0A-00SM50 | 1 TB   | 201     | 195   | 1     | 0.53   |
+| WDC       | PC SA530 SDASB8... | 1 TB   | 3       | 190   | 0     | 0.52   |
+| WDC       | WDS100T2B0B        | 1 TB   | 8       | 170   | 0     | 0.47   |
+| WDC       | WDS240G2G0B-00EPW0 | 240 GB | 188     | 178   | 1     | 0.44   |
+| WDC       | WDS500G1R0B-68A4Z0 | 500 GB | 6       | 159   | 0     | 0.44   |
+| WDC       | WDBNCE5000PNC      | 500 GB | 51      | 158   | 0     | 0.44   |
+| WDC       | WDS120G2G0A-00JH30 | 120 GB | 248     | 164   | 5     | 0.40   |
+| WDC       | WDS120G2G0B-00EPW0 | 120 GB | 83      | 156   | 1     | 0.40   |
+| WDC       | WDBNCE0010PNC      | 1 TB   | 26      | 143   | 0     | 0.39   |
 | WDC       | WDS480G2G0B-00EPW0 | 480 GB | 29      | 148   | 1     | 0.38   |
-| WDC       | WDS120G2G0A-00JH30 | 120 GB | 247     | 157   | 5     | 0.38   |
+| WDC       | WDS500G1R0A-68A4W0 | 500 GB | 10      | 139   | 0     | 0.38   |
+| WDC       | WDS400T2B0A-00SM50 | 4 TB   | 6       | 138   | 0     | 0.38   |
 | WDC       | PC SA530 SDATB8... | 1 TB   | 1       | 136   | 0     | 0.37   |
-| WDC       | WDS100T2B0B        | 1 TB   | 8       | 130   | 0     | 0.36   |
-| WDC       | WDS500G1R0A-68A4W0 | 500 GB | 10      | 125   | 0     | 0.35   |
-| WDC       | WDS240G2G0A-00JH30 | 240 GB | 412     | 146   | 2     | 0.33   |
-| WDC       | WDS400T2B0A-00SM50 | 4 TB   | 6       | 121   | 0     | 0.33   |
-| WDC       | WDS250G2B0A        | 250 GB | 14      | 120   | 0     | 0.33   |
-| WDC       | WDS480G2G0A-00JH30 | 480 GB | 81      | 139   | 5     | 0.29   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 413     | 155   | 2     | 0.35   |
+| WDC       | WDS250G2B0A        | 250 GB | 14      | 128   | 0     | 0.35   |
+| WDC       | WDS480G2G0A-00JH30 | 480 GB | 81      | 145   | 5     | 0.31   |
 | WDC       | WDS250G2B0B        | 250 GB | 9       | 104   | 0     | 0.29   |
-| WDC       | WDS100T2G0A-00JH30 | 1 TB   | 41      | 100   | 27    | 0.26   |
+| WDC       | WDS100T2G0A-00JH30 | 1 TB   | 41      | 107   | 27    | 0.28   |
 | WDC       | WDBNCE0040PNC      | 4 TB   | 1       | 88    | 0     | 0.24   |
 | WDC       | WDS100T1R0B-68A4Z0 | 1 TB   | 2       | 3     | 0     | 0.01   |
 | WDC       | WD A3              | 128 GB | 2       | 1     | 0     | 0.00   |
 | WDC       | PC SA530 SDATN8... | 256 GB | 1       | 344   | 971   | 0.00   |
-| WDC       | PC SA530 SDASN8... | 256 GB | 4       | 49    | 993   | 0.00   |
+| WDC       | PC SA530 SDASN8... | 256 GB | 4       | 51    | 992   | 0.00   |
 
 SSD by Family
 -------------
@@ -91,6 +91,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| WDC       | Blue and Green SSDs    | 6      | 93      | 305   | 1     | 0.82   |
-| WDC       | Unknown                | 8      | 20      | 243   | 248   | 0.59   |
-| WDC       | Blue / Red / Green ... | 40     | 2337    | 189   | 3     | 0.49   |
+| WDC       | Blue and Green SSDs    | 6      | 93      | 307   | 1     | 0.83   |
+| WDC       | Unknown                | 8      | 20      | 252   | 247   | 0.62   |
+| WDC       | Blue / Red / Green ... | 40     | 2343    | 197   | 3     | 0.51   |

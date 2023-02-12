@@ -20,12 +20,12 @@ MTBF - avg. MTBF in years per sample.
 | INNOVA... | SSD                | 1 TB   | 3       | 171   | 0     | 0.47   |
 | INNOVA... | SSD_M.2_512GB_I... | 512 GB | 1       | 159   | 0     | 0.44   |
 | INNOVA... | SSD                | 240 GB | 3       | 152   | 0     | 0.42   |
-| INNOVA... | SSD                | 256 GB | 4       | 96    | 0     | 0.26   |
+| INNOVA... | SSD                | 256 GB | 4       | 100   | 0     | 0.28   |
 | INNOVA... | SSD                | 480 GB | 2       | 92    | 0     | 0.25   |
 | INNOVA... | SSD                | 120 GB | 1       | 76    | 0     | 0.21   |
-| INNOVA... | SSD                | 512 GB | 5       | 91    | 6     | 0.18   |
 | INNOVA... | SSD_2.5"_TLC_24... | 240 GB | 3       | 60    | 0     | 0.16   |
 | INNOVA... | SSD_M.2_512GB_I... | 512 GB | 1       | 56    | 0     | 0.15   |
+| INNOVA... | SSD                | 512 GB | 6       | 75    | 5     | 0.15   |
 | INNOVA... | SSD_2.5"_TLC_51... | 512 GB | 3       | 53    | 0     | 0.15   |
 | INNOVA... | SSD_M.2_1TB_Inn... | 1 TB   | 1       | 45    | 0     | 0.13   |
 | INNOVA... | SSD_2.5"_TLC_25... | 256 GB | 3       | 20    | 0     | 0.06   |

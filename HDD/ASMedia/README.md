@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ASMedia   | ASMT106x_ V0Safe   | 320 GB | 1       | 103   | 0     | 0.28   |
+| ASMedia   | ASMT106x_ V0Safe   | 320 GB | 1       | 172   | 0     | 0.47   |

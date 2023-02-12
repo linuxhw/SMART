@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| BRAVEE... | SSD                | 240 GB | 1       | 316   | 0     | 0.87   |
 | BRAVEE... | SSD                | 1 TB   | 1       | 131   | 0     | 0.36   |
-| BRAVEE... | SSD                | 240 GB | 1       | 125   | 0     | 0.34   |
 | BRAVEE... | SSD                | 120 GB | 1       | 5     | 0     | 0.02   |

@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Teutons   | SSD                | 256 GB | 1       | 0     | 0     | 0.00   |
+| Teutons   | SSD                | 256 GB | 1       | 20    | 0     | 0.06   |
 | Teutons   | Platinum SSD       | 256 GB | 1       | 0     | 0     | 0.00   |

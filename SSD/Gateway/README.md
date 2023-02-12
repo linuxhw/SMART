@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Gateway   | W800SH 256GB SSD   | 256 GB | 1       | 49    | 0     | 0.14   |
-| Gateway   | W800SH 512GB SSD   | 512 GB | 2       | 18    | 0     | 0.05   |
+| Gateway   | W800SH 512GB SSD   | 512 GB | 3       | 16    | 0     | 0.04   |

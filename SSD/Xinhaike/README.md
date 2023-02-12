@@ -1,10 +1,10 @@
-tigo NVMe Drives
-================
+Xinhaike Solid State Drives
+===========================
 
-This is a list of all tested tigo NVMe drive models and their MTBFs. See more
-info on reliability test in the [README](https://github.com/linuxhw/SMART).
+This is a list of all tested Xinhaike solid state drive models and their MTBFs. See
+more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-NVME by Model
+SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| tigo      | SSD                | 512 GB | 1       | 313   | 0     | 0.86   |
+| Xinhaike  | SSD                | 120 GB | 2       | 1     | 0     | 0.00   |

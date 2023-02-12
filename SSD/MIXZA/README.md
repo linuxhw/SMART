@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MIXZA     | SSD                | 120 GB | 1       | 11    | 0     | 0.03   |
+| MIXZA     | SSD                | 120 GB | 2       | 8     | 0     | 0.02   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Hajaan    | SSD 256G           | 256 GB | 2       | 151   | 0     | 0.42   |
+| Hajaan    | SSD 256G           | 256 GB | 2       | 341   | 0     | 0.94   |

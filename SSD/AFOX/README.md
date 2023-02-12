@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| AFOX      | SSD                | 120 GB | 3       | 327   | 0     | 0.90   |
+| AFOX      | SSD                | 120 GB | 3       | 333   | 0     | 0.91   |
 | AFOX      | SSD SD250-1000GB   | 1 TB   | 1       | 21    | 0     | 0.06   |
-| AFOX      | SSD                | 500 GB | 1       | 15    | 0     | 0.04   |
+| AFOX      | SSD                | 500 GB | 1       | 17    | 0     | 0.05   |

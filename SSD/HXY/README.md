@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| HXY       | SSD 120G           | 120 GB | 1       | 96    | 0     | 0.26   |
+| HXY       | SSD 120G           | 120 GB | 1       | 115   | 0     | 0.32   |

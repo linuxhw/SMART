@@ -31,19 +31,19 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | STT_FTM64GX25H     | 64 GB  | 1       | 378   | 0     | 1.04   |
 | Seagate   | IronWolf ZA2000... | 2 TB   | 1       | 338   | 0     | 0.93   |
 | Seagate   | SSD                | 250 GB | 5       | 310   | 0     | 0.85   |
-| Seagate   | BarraCuda SSD Z... | 250 GB | 11      | 255   | 0     | 0.70   |
+| Seagate   | BarraCuda SSD Z... | 250 GB | 11      | 291   | 0     | 0.80   |
 | Seagate   | SSD                | 1 TB   | 4       | 247   | 0     | 0.68   |
+| Seagate   | ZA480NM10001       | 480 GB | 1       | 239   | 0     | 0.66   |
+| Seagate   | SSD                | 500 GB | 2       | 218   | 0     | 0.60   |
 | Seagate   | ST240HM000         | 240 GB | 1       | 206   | 0     | 0.56   |
-| Seagate   | BarraCuda SSD Z... | 1 TB   | 7       | 186   | 0     | 0.51   |
-| Seagate   | BarraCuda 120 S... | 500 GB | 17      | 185   | 0     | 0.51   |
-| Seagate   | BarraCuda 120 S... | 1 TB   | 12      | 185   | 0     | 0.51   |
-| Seagate   | SSD                | 500 GB | 2       | 178   | 0     | 0.49   |
+| Seagate   | BarraCuda 120 S... | 500 GB | 17      | 199   | 0     | 0.55   |
+| Seagate   | BarraCuda SSD Z... | 1 TB   | 7       | 193   | 0     | 0.53   |
+| Seagate   | BarraCuda SSD Z... | 2 TB   | 3       | 192   | 0     | 0.53   |
+| Seagate   | BarraCuda 120 S... | 1 TB   | 13      | 182   | 0     | 0.50   |
+| Seagate   | BarraCuda SSD Z... | 500 GB | 12      | 176   | 0     | 0.48   |
 | Seagate   | BarraCuda Q1 SS... | 480 GB | 3       | 171   | 0     | 0.47   |
-| Seagate   | BarraCuda SSD Z... | 2 TB   | 3       | 147   | 0     | 0.41   |
 | Seagate   | BarraCuda 120 S... | 2 TB   | 2       | 138   | 0     | 0.38   |
-| Seagate   | ZA480NM10001       | 480 GB | 1       | 126   | 0     | 0.35   |
 | Seagate   | IronWolf ZA500N... | 500 GB | 2       | 115   | 0     | 0.32   |
-| Seagate   | BarraCuda SSD Z... | 500 GB | 12      | 114   | 0     | 0.31   |
 | Seagate   | BarraCuda 120 S... | 250 GB | 14      | 111   | 0     | 0.31   |
 | Seagate   | XA480ME10063       | 480 GB | 4       | 104   | 0     | 0.29   |
 | Seagate   | ZA240NM10001       | 240 GB | 1       | 88    | 0     | 0.24   |
@@ -74,7 +74,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | Nytro XF1230 SATA SSD  | 1      | 2       | 1236  | 0     | 3.39   |
 | Seagate   | 600 Series             | 1      | 2       | 429   | 0     | 1.18   |
 | Seagate   | Indilinx Barefoot b... | 1      | 1       | 378   | 0     | 1.04   |
-| Seagate   | Unknown                | 24     | 113     | 252   | 37    | 0.58   |
-| Seagate   | IronWolf 110 SATA SSD  | 3      | 6       | 69    | 0     | 0.19   |
+| Seagate   | Unknown                | 24     | 114     | 265   | 36    | 0.62   |
+| Seagate   | IronWolf 110 SATA SSD  | 3      | 6       | 88    | 0     | 0.24   |
 | Seagate   | Nytro SATA SSD         | 3      | 10      | 65    | 0     | 0.18   |
 | Seagate   | 600 Pro Series         | 1      | 1       | 14    | 0     | 0.04   |

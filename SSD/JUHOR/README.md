@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| JUHOR     | Z500               | 240 GB | 1       | 24    | 0     | 0.07   |
+| JUHOR     | Z500               | 240 GB | 1       | 52    | 0     | 0.14   |

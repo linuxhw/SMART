@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Synology  | HAT5300-16T        | 16 TB  | 7       | 32    | 0     | 0.09   |
+| Synology  | HAT5300-16T        | 16 TB  | 7       | 39    | 0     | 0.11   |

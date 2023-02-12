@@ -23,41 +23,41 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Patriot   | Pyro SE            | 64 GB  | 1       | 3094  | 0     | 8.48   |
+| Patriot   | Pyro SE            | 64 GB  | 1       | 3150  | 0     | 8.63   |
 | Patriot   | Inferno 60GB SSD   | 64 GB  | 1       | 2979  | 0     | 8.16   |
-| Patriot   | Blast              | 480 GB | 2       | 1015  | 0     | 2.78   |
+| Patriot   | Blast              | 480 GB | 2       | 1050  | 0     | 2.88   |
 | Patriot   | Ignite             | 960 GB | 1       | 901   | 0     | 2.47   |
 | Patriot   | Blaze SSD ATA D... | 240 GB | 1       | 833   | 0     | 2.28   |
 | Patriot   | Flare              | 120 GB | 1       | 753   | 0     | 2.06   |
-| Patriot   | Blast              | 240 GB | 11      | 595   | 0     | 1.63   |
+| Patriot   | Blast              | 240 GB | 11      | 600   | 0     | 1.64   |
+| Patriot   | Ignite             | 480 GB | 3       | 598   | 0     | 1.64   |
 | Patriot   | Blaze              | 240 GB | 5       | 592   | 0     | 1.62   |
-| Patriot   | Ignite             | 480 GB | 3       | 592   | 0     | 1.62   |
 | Patriot   | Torch LE           | 240 GB | 1       | 558   | 0     | 1.53   |
 | Patriot   | Flare              | 64 GB  | 6       | 493   | 0     | 1.35   |
 | Patriot   | Spark              | 256 GB | 3       | 465   | 0     | 1.28   |
 | Patriot   | Blast              | 120 GB | 13      | 416   | 0     | 1.14   |
-| Patriot   | Pyro SSD           | 120 GB | 2       | 383   | 0     | 1.05   |
-| Patriot   | Blaze              | 64 GB  | 7       | 286   | 0     | 0.79   |
-| Patriot   | Spark              | 128 GB | 9       | 233   | 0     | 0.64   |
-| Patriot   | Burst              | 480 GB | 44      | 231   | 1     | 0.63   |
+| Patriot   | Pyro SSD           | 120 GB | 2       | 384   | 0     | 1.05   |
+| Patriot   | Blaze              | 64 GB  | 7       | 291   | 0     | 0.80   |
+| Patriot   | Burst              | 480 GB | 44      | 254   | 1     | 0.67   |
+| Patriot   | Spark              | 128 GB | 9       | 234   | 0     | 0.64   |
 | Patriot   | Blaze              | 120 GB | 8       | 208   | 0     | 0.57   |
-| Patriot   | Burst              | 240 GB | 99      | 186   | 0     | 0.51   |
-| Patriot   | Burst              | 120 GB | 105     | 175   | 0     | 0.48   |
-| Patriot   | Burst              | 960 GB | 12      | 161   | 0     | 0.44   |
+| Patriot   | Burst              | 240 GB | 99      | 194   | 0     | 0.53   |
+| Patriot   | Burst              | 120 GB | 107     | 176   | 0     | 0.48   |
+| Patriot   | Burst              | 960 GB | 12      | 168   | 0     | 0.46   |
 | Patriot   | P200               | 2 TB   | 3       | 226   | 16    | 0.34   |
 | Patriot   | Burst Elite        | 960 GB | 2       | 120   | 0     | 0.33   |
-| Patriot   | P210               | 1 TB   | 5       | 124   | 1     | 0.32   |
+| Patriot   | P210               | 1 TB   | 5       | 128   | 1     | 0.32   |
 | Patriot   | P200               | 512 GB | 5       | 125   | 86    | 0.27   |
 | Patriot   | P210               | 512 GB | 10      | 80    | 0     | 0.22   |
 | Patriot   | P200               | 256 GB | 8       | 197   | 26    | 0.20   |
 | Patriot   | P200               | 1 TB   | 5       | 80    | 9     | 0.17   |
-| Patriot   | P210               | 128 GB | 14      | 58    | 0     | 0.16   |
-| Patriot   | P210               | 256 GB | 19      | 67    | 1     | 0.13   |
-| Patriot   | Burst Elite        | 120 GB | 20      | 45    | 51    | 0.12   |
+| Patriot   | P210               | 128 GB | 14      | 59    | 0     | 0.16   |
+| Patriot   | P210               | 256 GB | 20      | 76    | 1     | 0.16   |
+| Patriot   | Burst Elite        | 120 GB | 20      | 46    | 51    | 0.13   |
 | Patriot   | SDVPSA1910128      | 128 GB | 1       | 29    | 0     | 0.08   |
 | Patriot   | P210               | 1 TB   | 2       | 27    | 0     | 0.07   |
 | Patriot   | P210               | 2 TB   | 1       | 23    | 0     | 0.07   |
-| Patriot   | Memory 32GB PAT... | 32 GB  | 1       | 18    | 0     | 0.05   |
+| Patriot   | Memory 32GB PAT... | 32 GB  | 1       | 22    | 0     | 0.06   |
 | Patriot   | Burst Elite 192... | 2 TB   | 1       | 13    | 0     | 0.04   |
 | Patriot   | Burst Elite        | 480 GB | 5       | 13    | 1     | 0.04   |
 | Patriot   | Ignite             | 240 GB | 1       | 6     | 0     | 0.02   |
@@ -84,6 +84,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Patriot   | Phison Driven SSDs     | 11     | 312     | 232   | 1     | 0.64   |
-| Patriot   | Unknown                | 32     | 125     | 195   | 33    | 0.43   |
+| Patriot   | Phison Driven SSDs     | 11     | 314     | 238   | 1     | 0.65   |
+| Patriot   | Unknown                | 32     | 126     | 197   | 33    | 0.44   |
 | Patriot   | Silicon Motion base... | 4      | 21      | 156   | 35    | 0.23   |
