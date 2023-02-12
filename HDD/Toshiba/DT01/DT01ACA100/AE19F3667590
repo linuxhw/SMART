@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Dec 16 06:05:40 2021 EET
+Local Time is:    Thu Dec 16 09:42:05 2021 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -70,7 +70,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   115   115   020    -    34
-  9 Power_On_Hours          -O--C-   092   092   000    -    56979
+  9 Power_On_Hours          -O--C-   092   092   000    -    56982
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1154
 192 Power-Off_Retract_Count -O--CK   099   099   000    -    1584
@@ -194,12 +194,13 @@ Error 65532 [2] occurred at disk power-on lifetime: 37246 hours (1551 days + 22 
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     47740         -
-# 2  Short offline       Completed without error       00%     43613         -
-# 3  Extended offline    Completed without error       00%     43612         -
-# 4  Short offline       Completed without error       00%     40721         -
+# 1  Extended offline    Completed without error       00%     56982         -
+# 2  Short offline       Completed without error       00%     47740         -
+# 3  Short offline       Completed without error       00%     43613         -
+# 4  Extended offline    Completed without error       00%     43612         -
 # 5  Short offline       Completed without error       00%     40721         -
-# 6  Short offline       Completed without error       00%     38794         -
+# 6  Short offline       Completed without error       00%     40721         -
+# 7  Short offline       Completed without error       00%     38794         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -214,9 +215,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        SMART Off-line Data Collection executing in background (4)
+Device State:                        Active (0)
 Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     32/33 Celsius
+Power Cycle Min/Max Temperature:     32/34 Celsius
 Lifetime    Min/Max Temperature:     15/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -225,7 +226,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (85)
+Temperature History Size (Index):    128 (45)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -235,14 +236,14 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            1154  ---  Lifetime Power-On Resets
-0x01  0x010  4           56979  ---  Power-on Hours
-0x01  0x018  6    238827386362  ---  Logical Sectors Written
-0x01  0x020  6      3463721495  ---  Number of Write Commands
-0x01  0x028  6    611756492930  ---  Logical Sectors Read
-0x01  0x030  6      3352754366  ---  Number of Read Commands
+0x01  0x010  4           56982  ---  Power-on Hours
+0x01  0x018  6    238891174908  ---  Logical Sectors Written
+0x01  0x020  6      3463880201  ---  Number of Write Commands
+0x01  0x028  6    613720370736  ---  Logical Sectors Read
+0x01  0x030  6      3353163639  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           55949  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           55949  ---  Head Flying Hours
+0x03  0x008  4           55953  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           55953  ---  Head Flying Hours
 0x03  0x018  4            1584  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4             176  ---  Read Recovery Attempts

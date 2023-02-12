@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SAMSUNG HS12UHE
@@ -11,7 +11,7 @@ Sector Sizes:     512 bytes logical, 1024 bytes physical
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Mon Jan  3 09:15:44 2022 MSK
+Local Time is:    Wed Feb 23 16:44:55 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,20 +59,20 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    956
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    960
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   100   100   025    -    204
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10518
+  3 Spin_Up_Time            PO---K   100   100   025    -    228
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10617
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    3676
+  9 Power_On_Hours          -O--CK   100   100   000    -    3731
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   088   088   000    -    9345
- 12 Power_Cycle_Count       -O--CK   091   091   000    -    9365
-191 G-Sense_Error_Rate      -O---K   087   087   000    -    136368
+ 11 Calibration_Retry_Count -O--CK   088   088   000    -    9488
+ 12 Power_Cycle_Count       -O--CK   091   091   000    -    9464
+191 G-Sense_Error_Rate      -O---K   087   087   000    -    136385
 192 Power-Off_Retract_Count -O---K   100   100   000    -    363
-194 Temperature_Celsius     -O----   064   052   000    -    36 (Min/Max 12/48)
+194 Temperature_Celsius     -O----   063   052   000    -    37 (Min/Max 12/48)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    3
@@ -81,7 +81,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    8705
 202 Data_Address_Mark_Errs  -O--CK   100   100   000    -    3
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   050   050   000    -    510441
+225 Load_Cycle_Count        -O--CK   050   050   000    -    512732
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 731 (device log contains only the most recent 8 errors)
+Device Error Count: 733 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -123,6 +123,40 @@ Device Error Count: 731 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 733 [4] occurred at disk power-on lifetime: 45232 hours (1884 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 01 00 00 00 00 00 50 5b 40 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  58 e5 9f f0 5c e5 9f e5 f0 5c 9f 5c 9f     10:42:04.641  [RESERVED]
+  61 00 00 00 08 00 00 00 6b 18 08 40 08     00:00:35.654  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 00 00 6b 17 c8 40 08     00:00:35.654  WRITE FPDMA QUEUED
+  61 00 d5 00 08 00 00 00 6b 17 10 40 08     00:00:35.654  WRITE FPDMA QUEUED
+  61 00 d5 00 08 00 00 00 6b 14 c0 40 08     00:00:35.654  WRITE FPDMA QUEUED
+
+Error 732 [3] occurred at disk power-on lifetime: 45225 hours (1884 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 01 00 00 00 00 00 50 5b 40 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  58 e5 9f f0 5c e5 9f e5 f0 5c 9f 5c 9f     10:42:04.641  [RESERVED]
+  60 00 00 00 18 00 00 00 27 97 c8 40 08     00:00:35.648  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 6a 80 d0 40 08     00:00:35.648  READ FPDMA QUEUED
+  60 00 da 00 08 00 00 00 57 0c 70 40 08     00:00:35.648  READ FPDMA QUEUED
+  60 00 d0 00 08 00 00 00 24 da d8 40 08     00:00:35.648  READ FPDMA QUEUED
 
 Error 731 [2] occurred at disk power-on lifetime: 48386 hours (2016 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -226,40 +260,6 @@ Error 726 [5] occurred at disk power-on lifetime: 62213 hours (2592 days + 5 hou
   ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.993  IDENTIFY DEVICE
   ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.993  SET FEATURES [Set transfer mode]
 
-Error 725 [4] occurred at disk power-on lifetime: 62213 hours (2592 days + 5 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 01 00 00 00 00 00 06 9d d8 40 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  58 e5 9f f0 5c e5 9f e5 f0 5c 9f 5c 9f     10:42:04.641  [RESERVED]
-  60 00 00 00 08 00 00 00 06 9d d8 40 08     00:00:00.991  READ FPDMA QUEUED
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.991  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.991  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.991  SET FEATURES [Set transfer mode]
-
-Error 724 [3] occurred at disk power-on lifetime: 62210 hours (2592 days + 2 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 01 00 00 00 00 00 06 9d d8 40 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  58 e5 9f f0 5c e5 9f e5 f0 5c 9f 5c 9f     10:42:04.641  [RESERVED]
-  60 00 00 00 08 00 00 00 06 9d d8 40 08     00:00:00.990  READ FPDMA QUEUED
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.990  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.990  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:00.990  SET FEATURES [Set transfer mode]
-
 SMART Extended Self-test Log Version: 0 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed: read failure       80%      3622         433608
@@ -287,7 +287,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
+Current Temperature:                    37 Celsius
 Power Cycle Min/Max Temperature:     -5/80 Celsius
 Lifetime    Min/Max Temperature:      0/61 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -297,7 +297,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (67)
+Temperature History Size (Index):    128 (54)
 
 SCT Error Recovery Control:
            Read: Disabled

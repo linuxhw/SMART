@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.5-100.fc34.x86_64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.20-100.fc34.x86_64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Dec  1 09:31:03 2021 CET
+Local Time is:    Mon May 30 10:24:54 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,20 +64,20 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1753
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    470
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    3
-179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
+  5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    4
+  9 Power_On_Hours          -O--CK   099   099   000    -    3966
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    738
+177 Wear_Leveling_Count     PO--C-   099   099   000    -    4
+179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   099   099   010    -    4
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
-183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
-187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   073   052   000    -    27
-195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
+183 Runtime_Bad_Block       PO--C-   099   099   010    -    4
+187 Uncorrectable_Error_Cnt -O--CK   099   099   000    -    297
+190 Airflow_Temperature_Cel -O--CK   078   052   000    -    22
+195 ECC_Error_Rate          -O-RC-   199   199   000    -    297
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    350
-241 Total_LBAs_Written      -O--CK   099   099   000    -    4562782610
+235 POR_Recovery_Count      -O--C-   099   099   000    -    463
+241 Total_LBAs_Written      -O--CK   099   099   000    -    6110033669
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,7 +108,89 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 297 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 297 [0] occurred at disk power-on lifetime: 3374 hours (140 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 e0 00 00 1f 67 ee a0 40 00  Error: UNC at LBA = 0x1f67eea0 = 526904992
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 e0 00 00 1f 67 ee a0 40 1c     03:29:15.779  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 1b     03:29:15.779  READ LOG EXT
+  60 00 08 00 d8 00 00 1f 67 ee a0 40 1b     03:29:15.779  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 1a     03:29:15.779  READ LOG EXT
+  60 00 08 00 d0 00 00 1f 67 ee a0 40 1a     03:29:15.779  READ FPDMA QUEUED
+
+Error 296 [3] occurred at disk power-on lifetime: 3374 hours (140 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 d8 00 00 1f 67 ee a0 40 00  Error: UNC at LBA = 0x1f67eea0 = 526904992
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 d8 00 00 1f 67 ee a0 40 1b     03:29:15.625  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 1a     03:29:15.625  READ LOG EXT
+  60 00 08 00 d0 00 00 1f 67 ee a0 40 1a     03:29:15.625  READ FPDMA QUEUED
+  60 00 08 00 c8 00 00 1f 67 ee c8 40 19     03:29:15.625  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 1f 67 ee c0 40 18     03:29:15.625  READ FPDMA QUEUED
+
+Error 295 [2] occurred at disk power-on lifetime: 3374 hours (140 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 d0 00 00 1f 67 ee a0 40 00  Error: UNC at LBA = 0x1f67eea0 = 526904992
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 d0 00 00 1f 67 ee a0 40 1a     03:29:15.471  READ FPDMA QUEUED
+  60 00 08 00 c8 00 00 1f 67 ee c8 40 19     03:29:15.471  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 1f 67 ee c0 40 18     03:29:15.471  READ FPDMA QUEUED
+  60 00 08 00 b8 00 00 1f 67 ee b8 40 17     03:29:15.471  READ FPDMA QUEUED
+  60 00 08 00 b0 00 00 1f 67 ee b0 40 16     03:29:15.471  READ FPDMA QUEUED
+
+Error 294 [1] occurred at disk power-on lifetime: 3374 hours (140 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 a0 00 00 1f 67 ee a0 40 00  Error: UNC at LBA = 0x1f67eea0 = 526904992
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 a0 00 00 1f 67 ee a0 40 14     03:29:15.317  READ FPDMA QUEUED
+  60 00 08 00 98 00 00 1f 67 ee 98 40 13     03:29:15.317  READ FPDMA QUEUED
+  60 00 08 00 90 00 00 1f 67 ee 90 40 12     03:29:15.317  READ FPDMA QUEUED
+  60 00 08 00 88 00 00 1f 67 ee 88 40 11     03:29:15.317  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 1f 67 ee 80 40 10     03:29:15.317  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -128,9 +210,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     24/26 Celsius
-Lifetime    Min/Max Temperature:     21/48 Celsius
+Current Temperature:                    22 Celsius
+Power Cycle Min/Max Temperature:     21/22 Celsius
+Lifetime    Min/Max Temperature:     20/48 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 SMART Status:                        0xc24f (PASSED)
@@ -140,7 +222,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (0)
+Temperature History Size (Index):    128 (98)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -149,23 +231,23 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             470  ---  Lifetime Power-On Resets
-0x01  0x010  4            1753  ---  Power-on Hours
-0x01  0x018  6      4562782610  ---  Logical Sectors Written
-0x01  0x020  6        25702614  ---  Number of Write Commands
-0x01  0x028  6      6517840858  ---  Logical Sectors Read
-0x01  0x030  6        43789611  ---  Number of Read Commands
-0x01  0x038  6          275000  ---  Date and Time TimeStamp
+0x01  0x008  4             738  ---  Lifetime Power-On Resets
+0x01  0x010  4            3966  ---  Power-on Hours
+0x01  0x018  6      6110033669  ---  Logical Sectors Written
+0x01  0x020  6        34616331  ---  Number of Write Commands
+0x01  0x028  6     10226540028  ---  Logical Sectors Read
+0x01  0x030  6        81342890  ---  Number of Read Commands
+0x01  0x038  6          667000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4             297  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              27  ---  Current Temperature
+0x05  0x008  1              22  ---  Current Temperature
 0x05  0x020  1              48  ---  Highest Temperature
-0x05  0x028  1              21  ---  Lowest Temperature
+0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             701  ---  Number of Hardware Resets
+0x06  0x008  4            2007  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
@@ -186,8 +268,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           15  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

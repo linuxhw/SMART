@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.10.16-desktop-1.mga8] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.0-16-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     ST320LT020-9YG142
@@ -12,11 +12,11 @@ Rotation Rate:    5455 rpm
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Apr 15 13:15:26 2021 EDT
+Local Time is:    Sat Jul 10 14:03:22 2021 WIB
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -25,22 +25,23 @@ Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
-capabilities: 			 (0x73) SMART execute Offline immediate.
+capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -63,30 +64,30 @@ SCT capabilities: 	       (0x303b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   116   099   034    -    114310072
+  1 Raw_Read_Error_Rate     POSR--   109   099   034    -    24231160
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   073   073   020    -    27820
+  4 Start_Stop_Count        -O--CK   067   067   020    -    34195
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   083   060   030    -    229362524
-  9 Power_On_Hours          -O--CK   086   086   000    -    12826 (233 93 0)
+  7 Seek_Error_Rate         POSR--   083   060   030    -    232819552
+  9 Power_On_Hours          -O--CK   085   085   000    -    13502 (86 218 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   020    -    8470
+ 12 Power_Cycle_Count       -O--CK   092   092   020    -    8913
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   089   000    -    134
+188 Command_Timeout         -O--CK   100   089   000    -    157
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   063   046   045    -    37 (Min/Max 37/39)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    316
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    18
-193 Load_Cycle_Count        -O--CK   003   003   000    -    195134
-194 Temperature_Celsius     -O---K   037   054   000    -    37 (0 9 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   053   043   000    -    114310072
-196 Reallocated_Event_Count POSR--   087   087   030    -    11788 (60190 0)
+190 Airflow_Temperature_Cel -O---K   053   045   045    Past 47 (Min/Max 45/48)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    318
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    5
+193 Load_Cycle_Count        -O--CK   001   001   000    -    199162
+194 Temperature_Celsius     -O---K   047   055   000    -    47 (0 9 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   052   043   000    -    24231160
+196 Reallocated_Event_Count POSR--   086   086   030    -    12347 (16131 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-250 Read_Error_Retry_Rate   ------   100   001   000    -    137
-251 Unknown_Attribute       ------   100   001   000    -    23
+250 Read_Error_Retry_Rate   ------   100   001   000    -    1321
+251 Unknown_Attribute       ------   100   001   000    -    207
 252 Unknown_Attribute       ------   100   001   000    -    0
 254 Free_Fall_Sensor        -O--CK   001   001   000    -    5
                             ||||||_ K auto-keep
@@ -143,10 +144,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     37/39 Celsius
-Lifetime    Min/Max Temperature:      9/54 Celsius
-Under/Over Temperature Limit Count:   0/7
+Current Temperature:                    47 Celsius
+Power Cycle Min/Max Temperature:     45/48 Celsius
+Lifetime    Min/Max Temperature:      9/55 Celsius
+Under/Over Temperature Limit Count:   0/8
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -156,7 +157,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        11 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (116)
+Temperature History Size (Index):    128 (93)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -168,7 +169,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           37  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

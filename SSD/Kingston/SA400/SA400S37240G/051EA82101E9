@@ -9,12 +9,12 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Nov 14 19:14:48 2020 CET
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Sun Jan 29 18:18:32 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -56,8 +56,8 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    439
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    489
+  9 Power_On_Hours          -O--CK   100   100   000    -    1791
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1548
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -65,22 +65,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 169 Bad_Block_Rate          ------   100   100   000    -    16
 170 Bad_Blk_Ct_Erl/Lat      ------   100   100   010    -    0/11
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    76 (Average 29)
+173 MaxAvgErase_Ct          ------   100   100   000    -    114 (Average 74)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    91
-194 Temperature_Celsius     -O---K   058   051   000    -    42 (Min/Max 21/49)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    510
+194 Temperature_Celsius     -O---K   075   051   000    -    25 (Min/Max 16/49)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
-218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   003   003   000    -    97
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    4036
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    2877
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    864
-244 Average_Erase_Count     ------   100   100   000    -    29
-245 Max_Erase_Count         ------   100   100   000    -    76
-246 Total_Erase_Count       ------   100   100   000    -    224624
+218 CRC_Error_Count         -O--CK   100   100   000    -    2040
+231 SSD_Life_Left           ------   008   008   000    -    92
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    10106
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    7766
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    2340
+244 Average_Erase_Count     ------   100   100   000    -    74
+245 Max_Erase_Count         ------   100   100   000    -    114
+246 Total_Erase_Count       ------   100   100   000    -    568016
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,7 +105,157 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 2035 (device log contains only the most recent 256 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2035 [242] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 40 24 d4 58 24 d8 58 e0 08  Error: ICRC, ABRT at LBA = 0x24d45824d858 = 40494430476376
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 00 40 24 d4 58 24 d8 58 e0 08     00:00:00.000  WRITE DMA
+  35 00 00 04 00 00 00 00 24 d4 58 e0 08     00:00:00.000  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 42 00 00 00 00 00 00 00 a0 08     00:00:00.000  IDENTIFY DEVICE
+  ef 00 03 00 42 f2 44 af 00 00 00 a0 08     00:00:00.000  SET FEATURES [Set transfer mode]
+
+Error 2034 [241] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 04 00 00 00 00 24 d4 58 e0 08  Error: ICRC, ABRT 1024 sectors at LBA = 0x0024d458 = 2413656
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 00 00 00 00 24 d4 58 e0 08     00:00:00.000  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 42 00 00 00 00 00 00 00 a0 08     00:00:00.000  IDENTIFY DEVICE
+  ef 00 03 00 42 f2 44 af 00 00 00 a0 08     00:00:00.000  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 2033 [240] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 04 00 00 00 00 24 d4 58 e0 08  Error: ICRC, ABRT 1024 sectors at LBA = 0x0024d458 = 2413656
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 00 00 00 00 24 d4 58 e0 08     00:00:00.000  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 42 00 00 00 00 00 00 00 a0 08     00:00:00.000  IDENTIFY DEVICE
+  ef 00 03 00 42 f2 44 af 00 00 00 a0 08     00:00:00.000  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 2032 [239] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 04 00 00 00 00 24 d4 58 e0 08  Error: ICRC, ABRT 1024 sectors at LBA = 0x0024d458 = 2413656
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 00 00 00 00 24 d4 58 e0 08     00:00:00.000  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 42 00 00 00 00 00 00 00 a0 08     00:00:00.000  IDENTIFY DEVICE
+  ef 00 03 00 42 f2 44 af 00 00 00 a0 08     00:00:00.000  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 2031 [238] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 04 00 00 00 00 24 d4 58 e0 08  Error: ICRC, ABRT 1024 sectors at LBA = 0x0024d458 = 2413656
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 00 00 00 00 24 d4 58 e0 08     00:00:00.000  WRITE DMA EXT
+  ca 00 00 00 28 00 00 00 24 d4 30 e0 08     00:00:00.000  WRITE DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 42 00 00 00 00 00 00 00 a0 08     00:00:00.000  IDENTIFY DEVICE
+  ef 00 03 00 42 f2 44 af 00 00 00 a0 08     00:00:00.000  SET FEATURES [Set transfer mode]
+
+Error 2030 [237] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 04 00 00 00 00 24 d4 58 e0 08  Error: ICRC, ABRT 1024 sectors at LBA = 0x0024d458 = 2413656
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 00 00 00 00 24 d4 58 e0 08     00:00:00.000  WRITE DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 03 00 42 00 00 00 00 00 00 00 a0 08     00:00:00.000  IDENTIFY DEVICE
+  ef 00 03 00 42 f2 44 af 00 00 00 a0 08     00:00:00.000  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:00.000  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 2029 [236] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 10 28 24 d4 20 24 d4 30 e0 08  Error: ICRC, ABRT at LBA = 0x24d42024d430 = 40493490951216
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 10 28 24 d4 20 24 d4 30 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 10 10 24 d4 10 24 d4 20 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 10 10 24 d4 00 24 d4 10 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 08 10 24 d3 f8 24 d4 00 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 08 08 24 d3 f0 24 d3 f8 e0 08     00:00:00.000  WRITE DMA
+
+Error 2028 [235] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 18 26 d1 38 26 d1 60 e0 08  Error: ICRC, ABRT at LBA = 0x26d13826d160 = 42680032088416
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 08 18 26 d1 38 26 d1 60 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 20 08 26 d1 40 26 d1 38 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 10 20 26 d0 90 26 d1 40 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 08 10 26 d2 a8 26 d0 90 e0 08     00:00:00.000  WRITE DMA
+  ca 00 00 00 08 00 08 00 26 d2 a8 e0 08     00:00:00.000  WRITE DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -117,20 +267,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             489  ---  Lifetime Power-On Resets
-0x01  0x010  4             439  ---  Power-on Hours
-0x01  0x018  6      6035236729  ---  Logical Sectors Written
-0x01  0x028  6      1813068620  ---  Logical Sectors Read
+0x01  0x008  4            1548  ---  Lifetime Power-On Resets
+0x01  0x010  4            1791  ---  Power-on Hours
+0x01  0x018  6     16286910538  ---  Logical Sectors Written
+0x01  0x028  6      4907852761  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              42  ---  Current Temperature
+0x05  0x008  1              25  ---  Current Temperature
 0x05  0x020  1              49  ---  Highest Temperature
-0x05  0x028  1              21  ---  Lowest Temperature
+0x05  0x028  1              16  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x018  4            2040  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -145,8 +295,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          179  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           11  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

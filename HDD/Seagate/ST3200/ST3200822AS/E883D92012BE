@@ -7,7 +7,7 @@ User Capacity:    200,048,565,760 bytes [200 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Mon May 11 19:11:32 2020 MSK
+Local Time is:    Mon May 18 17:50:03 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -51,18 +51,18 @@ recommended polling time: 	 ( 111) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   057   047   006    -    126186632
+  1 Raw_Read_Error_Rate     POSR--   055   047   006    -    41896615
   3 Spin_Up_Time            PO----   097   096   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    6103
+  4 Start_Stop_Count        -O--CK   095   095   020    -    6123
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    26
-  7 Seek_Error_Rate         POSR--   085   060   030    -    375795938
-  9 Power_On_Hours          -O--CK   074   074   000    -    23013
+  7 Seek_Error_Rate         POSR--   085   060   030    -    381400948
+  9 Power_On_Hours          -O--CK   074   074   000    -    23081
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7484
-194 Temperature_Celsius     -O---K   045   061   000    -    45
-195 Hardware_ECC_Recovered  -O-RC-   057   047   000    -    126186632
-197 Current_Pending_Sector  -O--C-   100   100   000    -    12
-198 Offline_Uncorrectable   ----C-   100   100   000    -    12
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7504
+194 Temperature_Celsius     -O---K   043   061   000    -    43
+195 Hardware_ECC_Recovered  -O-RC-   055   047   000    -    41896615
+197 Current_Pending_Sector  -O--C-   100   100   000    -    2
+198 Offline_Uncorrectable   ----C-   100   100   000    -    2
 199 UDMA_CRC_Error_Count    -OSRCK   200   165   000    -    125
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 2134 (device log contains only the most recent five errors)
+ATA Error Count: 2187 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -116,41 +116,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2134 occurred at disk power-on lifetime: 23008 hours (958 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 03 b3 bc 04 ea  Error: UNC 3 sectors at LBA = 0x0a04bcb3 = 168082611
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 b0 bc 04 ea 00      05:10:11.061  READ DMA
-  c8 00 18 00 43 89 ef 00      05:10:11.050  READ DMA
-  27 00 00 00 00 00 e0 00      05:10:11.047  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 a0 00      05:10:11.026  IDENTIFY DEVICE
-  ef 03 46 00 00 00 a0 00      05:10:11.023  SET FEATURES [Set transfer mode]
-
-Error 2133 occurred at disk power-on lifetime: 23008 hours (958 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 03 b3 bc 04 ea  Error: UNC 3 sectors at LBA = 0x0a04bcb3 = 168082611
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 20 b0 bc 04 ea 00      05:10:07.179  READ DMA
-  25 00 08 f8 a7 1f e0 00      05:10:07.176  READ DMA EXT
-  c8 00 10 60 08 04 ef 00      05:10:07.174  READ DMA
-  25 00 08 18 f3 66 e0 00      05:10:07.167  READ DMA EXT
-  25 00 08 f8 e6 84 e0 00      05:10:07.162  READ DMA EXT
-
-Error 2132 occurred at disk power-on lifetime: 23007 hours (958 days + 15 hours)
+Error 2187 occurred at disk power-on lifetime: 23072 hours (961 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -161,30 +127,47 @@ Error 2132 occurred at disk power-on lifetime: 23007 hours (958 days + 15 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 10 15 05 ea 00      04:35:21.834  READ DMA
-  25 00 08 08 ab 44 e0 00      04:35:21.830  READ DMA EXT
-  c8 00 08 08 15 05 ea 00      04:35:21.823  READ DMA
-  25 00 10 d0 55 45 e0 00      04:35:25.721  READ DMA EXT
-  c8 00 08 00 15 05 ea 00      04:35:25.711  READ DMA
+  c8 00 08 10 15 05 ea 00      07:26:43.888  READ DMA
+  27 00 00 00 00 00 e0 00      07:27:15.463  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      07:27:15.440  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 00      07:27:15.419  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 e0 00      07:27:15.416  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 2131 occurred at disk power-on lifetime: 23007 hours (958 days + 15 hours)
+Error 2186 occurred at disk power-on lifetime: 23072 hours (961 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 13 13 15 05 ea  Error: UNC 19 sectors at LBA = 0x0a051513 = 168105235
+  40 51 03 13 15 05 ea  Error: UNC 3 sectors at LBA = 0x0a051513 = 168105235
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 78 00 15 05 ea 00      04:35:21.834  READ DMA
-  c8 00 80 80 31 48 ea 00      04:35:21.830  READ DMA
-  25 00 08 40 7c 49 e0 00      04:35:21.823  READ DMA EXT
-  25 00 10 e0 7a 49 e0 00      04:35:21.820  READ DMA EXT
-  25 00 08 f8 8a 49 e0 00      04:35:21.815  READ DMA EXT
+  c8 00 08 10 15 05 ea 00      07:26:43.888  READ DMA
+  27 00 00 00 00 00 e0 00      07:26:43.885  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      07:26:43.885  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 00      07:26:43.864  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 e0 00      07:26:40.125  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 2130 occurred at disk power-on lifetime: 23004 hours (958 days + 12 hours)
+Error 2185 occurred at disk power-on lifetime: 23072 hours (961 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 03 13 15 05 ea  Error: UNC 3 sectors at LBA = 0x0a051513 = 168105235
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 10 15 05 ea 00      07:26:43.888  READ DMA
+  27 00 00 00 00 00 e0 00      07:26:43.885  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      07:26:43.885  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 00      07:26:43.864  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 e0 00      07:26:40.125  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 2184 occurred at disk power-on lifetime: 23072 hours (961 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -195,11 +178,28 @@ Error 2130 occurred at disk power-on lifetime: 23004 hours (958 days + 12 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 b0 bc 04 ea 00      00:59:19.611  READ DMA
-  c8 00 00 b0 e9 88 eb 00      00:59:19.610  READ DMA
-  c8 00 78 e0 c3 48 ec 00      00:59:19.602  READ DMA
-  c8 00 98 18 97 51 ec 00      00:59:19.602  READ DMA
-  c8 00 90 60 f6 51 ec 00      00:59:22.584  READ DMA
+  c8 00 08 b0 bc 04 ea 00      07:26:35.835  READ DMA
+  27 00 00 00 00 00 e0 00      07:26:32.103  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      07:08:44.119  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 00      07:08:43.664  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 e0 00      07:26:40.125  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 2183 occurred at disk power-on lifetime: 23072 hours (961 days + 8 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 03 b3 bc 04 ea  Error: UNC 3 sectors at LBA = 0x0a04bcb3 = 168082611
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 b0 bc 04 ea 00      07:26:35.835  READ DMA
+  27 00 00 00 00 00 e0 00      07:26:32.103  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 a0 00      07:08:44.119  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 00      07:08:43.664  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 e0 00      07:08:43.607  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

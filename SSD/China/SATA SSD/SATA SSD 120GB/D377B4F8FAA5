@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.79-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven OEM SSDs
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Apr 15 18:40:26 2022 MSK
+Local Time is:    Mon Dec  5 21:34:17 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,16 +62,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    4391
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    6407
+  9 Power_On_Hours          -O--C-   100   100   000    -    5422
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    8012
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
 170 Bad_Blk_Ct_Erl/Lat      PO----   051   051   000    -    1/530
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    284 (Average 277)
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    3395
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    337 (Average 323)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    4491
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 CRC_Error_Count         PO-R--   100   100   050    -    0
-231 SSD_Life_Left           PO--C-   100   100   000    -    90
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    22083
+231 SSD_Life_Left           PO--C-   100   100   000    -    89
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    27026
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +99,8 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      4716         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -118,10 +119,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            6407  ---  Lifetime Power-On Resets
-0x01  0x010  4            4391  ---  Power-on Hours
-0x01  0x018  6     46311983834  ---  Logical Sectors Written
-0x01  0x028  6     43687261849  ---  Logical Sectors Read
+0x01  0x008  4            8012  ---  Lifetime Power-On Resets
+0x01  0x010  4            5422  ---  Power-on Hours
+0x01  0x018  6     56679211545  ---  Logical Sectors Written
+0x01  0x028  6     51123125179  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -131,7 +132,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              10  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

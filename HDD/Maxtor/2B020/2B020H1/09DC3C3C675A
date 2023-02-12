@@ -7,7 +7,7 @@ User Capacity:    20,490,559,488 bytes [20.4 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Oct 29 02:42:35 2018 CET
+Local Time is:    Mon Apr 18 02:48:59 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -25,8 +25,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 116)	The previous self-test completed having
-					the read element of the test failed.
+Self-test execution status:      (  39)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(   30) seconds.
 Offline data collection
@@ -51,28 +51,28 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   234   233   063    -    4150
-  4 Start_Stop_Count        -O--CK   253   253   000    -    802
+  3 Spin_Up_Time            POS--K   234   233   063    -    5289
+  4 Start_Stop_Count        -O--CK   253   253   000    -    1217
   5 Reallocated_Sector_Ct   PO--CK   250   249   063    -    20
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   251   244   187    -    37136
-  9 Power_On_Minutes        -O--CK   246   246   000    -    471h+22m
+  8 Seek_Time_Performance   POS--K   247   244   187    -    56639
+  9 Power_On_Minutes        -O--CK   246   246   000    -    513h+37m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   236   236   000    -    7048
-192 Power-Off_Retract_Count -O--CK   253   253   000    -    80
-193 Load_Cycle_Count        -O--CK   253   253   000    -    1952
+ 12 Power_Cycle_Count       -O--CK   234   234   000    -    7519
+192 Power-Off_Retract_Count -O--CK   253   253   000    -    277
+193 Load_Cycle_Count        -O--CK   253   253   000    -    3250
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    43
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    188
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   252   245   000    -    1
-198 Offline_Uncorrectable   ---R--   252   252   000    -    1
+198 Offline_Uncorrectable   ---R--   253   252   000    -    0
 199 UDMA_CRC_Error_Count    ---R--   199   199   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    5
+201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    4
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    1
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
@@ -95,7 +95,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 1715 (device log contains only the most recent five errors)
+Warning: ATA error count 1767 inconsistent with error log pointer 5
+
+ATA Error Count: 1767 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -110,7 +112,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1715 occurred at disk power-on lifetime: 2489 hours (103 days + 17 hours)
+Error 1767 occurred at disk power-on lifetime: 2529 hours (105 days + 9 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -121,30 +123,13 @@ Error 1715 occurred at disk power-on lifetime: 2489 hours (103 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b0 d5 01 00 4f c2 10 08      01:36:15.600  SMART READ LOG
-  b0 da 00 00 4f c2 10 08      01:36:15.568  SMART RETURN STATUS
-  b0 d1 01 01 4f c2 10 08      01:36:15.552  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 d0 01 00 4f c2 10 08      01:36:15.520  SMART READ DATA
-  ec 00 01 00 00 00 10 08      01:36:15.520  IDENTIFY DEVICE
+  b0 d5 01 00 4f c2 10 08      00:47:24.464  SMART READ LOG
+  b0 da 00 00 4f c2 10 08      00:47:24.432  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 10 08      00:47:24.416  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 d0 01 00 4f c2 10 08      00:47:24.368  SMART READ DATA
+  ec 00 01 00 00 00 10 08      00:47:24.336  IDENTIFY DEVICE
 
-Error 1714 occurred at disk power-on lifetime: 2489 hours (103 days + 17 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 3c 00 04 00 f0  Error: UNC 60 sectors at LBA = 0x00000400 = 1024
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 00 04 00 f0 08      02:28:49.376  READ DMA
-  c8 00 00 00 fe 5f f2 08      02:28:49.360  READ DMA
-  c8 00 00 00 ff 5f f2 08      02:28:49.344  READ DMA
-  c8 00 c0 40 fc 5f f2 08      02:28:49.344  READ DMA
-  c8 00 40 00 fc 5f f2 08      02:28:49.344  READ DMA
-
-Error 1713 occurred at disk power-on lifetime: 2489 hours (103 days + 17 hours)
+Error 1766 occurred at disk power-on lifetime: 2516 hours (104 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -155,56 +140,88 @@ Error 1713 occurred at disk power-on lifetime: 2489 hours (103 days + 17 hours)
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 08 04 00 f0 08      02:09:49.232  READ DMA EXT
-  c8 00 e0 20 03 00 f0 08      02:09:49.216  READ DMA
-  c8 00 08 85 3b da f1 08      02:09:49.216  READ DMA
-  25 00 18 08 02 00 f0 08      02:09:49.200  READ DMA EXT
-  c8 00 f8 08 01 00 f0 08      02:09:49.184  READ DMA
+  25 00 08 08 04 00 f0 08      00:39:25.616  READ DMA EXT
+  c8 00 e0 20 03 00 f0 08      00:39:25.600  READ DMA
+  25 00 18 08 02 00 f0 08      00:39:25.600  READ DMA EXT
+  c8 00 f8 08 01 00 f0 08      00:39:25.600  READ DMA
+  c8 00 10 f0 00 00 f0 08      00:39:25.600  READ DMA
 
-Error 1712 occurred at disk power-on lifetime: 2489 hours (103 days + 17 hours)
+Error 1765 occurred at disk power-on lifetime: 2515 hours (104 days + 19 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 5c 08 04 00 f0  Error: UNC 92 sectors at LBA = 0x00000408 = 1032
+  40 51 4c 08 04 00 f0  Error: UNC 76 sectors at LBA = 0x00000408 = 1032
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 18 08 04 00 f0 08      01:13:14.528  READ DMA EXT
-  c8 00 60 a0 03 00 f0 08      01:13:14.528  READ DMA
-  25 00 98 08 02 00 f0 08      01:13:14.512  READ DMA EXT
-  c8 00 f8 08 01 00 f0 08      01:13:14.512  READ DMA
-  c8 00 20 e0 00 00 f0 08      01:13:14.512  READ DMA
+  25 00 08 08 04 00 f0 08      01:35:18.256  READ DMA EXT
+  c8 00 e0 20 03 00 f0 08      01:35:18.256  READ DMA
+  25 00 18 08 02 00 f0 08      01:35:18.240  READ DMA EXT
+  c8 00 f8 08 01 00 f0 08      01:35:18.240  READ DMA
+  c8 00 10 f0 00 00 f0 08      01:35:18.240  READ DMA
 
-Error 1711 occurred at disk power-on lifetime: 2489 hours (103 days + 17 hours)
+Error 1764 occurred at disk power-on lifetime: 2515 hours (104 days + 19 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 3c 00 04 00 f0  Error: UNC 60 sectors at LBA = 0x00000400 = 1024
+  01 51 4c 08 04 00 f0  Error: AMNF 76 sectors at LBA = 0x00000408 = 1032
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 00 04 00 f0 08      01:13:11.056  READ DMA
-  c8 00 00 00 fe 5f f2 08      01:13:11.040  READ DMA
-  c8 00 00 00 ff 5f f2 08      01:13:11.024  READ DMA
-  c8 00 c0 40 fc 5f f2 08      01:13:11.024  READ DMA
-  c8 00 40 00 fc 5f f2 08      01:13:11.008  READ DMA
+  25 00 08 08 04 00 f0 08      00:43:18.368  READ DMA EXT
+  c8 00 e0 20 03 00 f0 08      00:43:18.368  READ DMA
+  25 00 18 08 02 00 f0 08      00:43:18.352  READ DMA EXT
+  c8 00 f8 08 01 00 f0 08      00:43:18.352  READ DMA
+  c8 00 10 f0 00 00 f0 08      00:43:18.352  READ DMA
+
+Error 1763 occurred at disk power-on lifetime: 2515 hours (104 days + 19 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 4c 08 04 00 f0  Error: UNC 76 sectors at LBA = 0x00000408 = 1032
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 08 04 00 f0 08      00:42:17.616  READ DMA EXT
+  c8 00 e0 20 03 00 f0 08      00:42:17.616  READ DMA
+  25 00 18 08 02 00 f0 08      00:42:17.616  READ DMA EXT
+  c8 00 f8 08 01 00 f0 08      00:42:17.616  READ DMA
+  c8 00 10 f0 00 00 f0 08      00:42:17.616  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       40%      2489         1220
-# 2  Extended offline    Completed: read failure       40%      2489         1220
-# 3  Extended offline    Completed: read failure       40%      2489         1220
-# 4  Extended offline    Completed: read failure       40%      2482         1220
-# 5  Extended offline    Completed: read failure       40%      2482         1220
-# 6  Extended offline    Completed: read failure       40%      2471         1219
+# 1  Extended offline    Completed: read failure       40%      2528         1220
+# 2  Extended offline    Completed: read failure       40%      2528         1220
+# 3  Extended offline    Completed: read failure       40%      2527         1220
+# 4  Extended offline    Completed: read failure       40%      2527         1220
+# 5  Extended offline    Completed: read failure       40%      2525         1220
+# 6  Extended offline    Completed: read failure       40%      2525         1220
+# 7  Extended offline    Completed: read failure       40%      2524         1220
+# 8  Extended offline    Completed: read failure       40%      2523         1220
+# 9  Extended offline    Completed: read failure       40%      2523         1220
+#10  Extended offline    Completed: read failure       40%      2522         1220
+#11  Extended offline    Completed: read failure       40%      2522         1220
+#12  Extended offline    Completed: read failure       40%      2521         1220
+#13  Extended offline    Completed: read failure       40%      2520         1220
+#14  Extended offline    Completed: read failure       40%      2519         1220
+#15  Extended offline    Completed: read failure       40%      2518         1220
+#16  Extended offline    Completed: read failure       40%      2518         1220
+#17  Extended offline    Completed: read failure       40%      2518         1220
+#18  Extended offline    Completed: read failure       40%      2518         1220
+#19  Extended offline    Completed: read failure       40%      2518         1220
+#20  Extended offline    Completed: read failure       40%      2518         1220
+#21  Extended offline    Completed: read failure       40%      2518         1220
 
 Selective Self-tests/Logging not supported
 

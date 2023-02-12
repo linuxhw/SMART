@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven OEM SSDs
@@ -10,11 +10,10 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Apr 27 11:13:29 2021 UTC
+Local Time is:    Tue Feb 22 23:47:34 2022 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +21,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -32,8 +31,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  32)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(   30) seconds.
 Offline data collection
@@ -61,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    5781
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    5658
+  9 Power_On_Hours          -O--C-   100   100   000    -    6908
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    7088
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    12857899
 170 Bad_Blk_Ct_Erl/Lat      PO----   100   100   010    -    0/111
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    111 (Average 79)
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    804
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    143 (Average 109)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    1227
 194 Temperature_Celsius     PO---K   070   070   030    -    30 (Min/Max 30/30)
 218 CRC_Error_Count         PO-R--   100   100   050    -    0
-231 SSD_Life_Left           PO--C-   100   100   000    -    21
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    11859
+231 SSD_Life_Left           PO--C-   100   100   000    -    0
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    16082
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,22 +101,24 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      00%      5764         -
-# 2  Short offline       Completed without error       00%      5763         -
-# 3  Extended offline    Completed without error       00%      4923         -
-# 4  Extended offline    Completed without error       00%      4823         -
-# 5  Short offline       Completed without error       00%      4415         -
-# 6  Short offline       Completed without error       00%      4415         -
-# 7  Extended offline    Interrupted (host reset)      00%      4031         -
-# 8  Extended offline    Completed without error       00%      4013         -
-# 9  Extended offline    Completed without error       00%      2892         -
-#10  Short offline       Completed without error       00%      2493         -
-#11  Short offline       Interrupted (host reset)      00%      2143         -
-#12  Short offline       Completed without error       00%      1956         -
-#13  Short offline       Completed without error       00%      1947         -
-#14  Short offline       Completed without error       00%      1817         -
-#15  Short offline       Completed without error       00%      1527         -
-#16  Short offline       Interrupted (host reset)      00%      1107         -
+# 1  Short offline       Completed without error       00%      5876         -
+# 2  Short offline       Completed without error       00%      5816         -
+# 3  Short offline       Interrupted (host reset)      00%      5764         -
+# 4  Short offline       Completed without error       00%      5763         -
+# 5  Extended offline    Completed without error       00%      4923         -
+# 6  Extended offline    Completed without error       00%      4823         -
+# 7  Short offline       Completed without error       00%      4415         -
+# 8  Short offline       Completed without error       00%      4415         -
+# 9  Extended offline    Interrupted (host reset)      00%      4031         -
+#10  Extended offline    Completed without error       00%      4013         -
+#11  Extended offline    Completed without error       00%      2892         -
+#12  Short offline       Completed without error       00%      2493         -
+#13  Short offline       Interrupted (host reset)      00%      2143         -
+#14  Short offline       Completed without error       00%      1956         -
+#15  Short offline       Completed without error       00%      1947         -
+#16  Short offline       Completed without error       00%      1817         -
+#17  Short offline       Completed without error       00%      1527         -
+#18  Short offline       Interrupted (host reset)      00%      1107         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -134,15 +136,15 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            5658  ---  Lifetime Power-On Resets
-0x01  0x010  4            5781  ---  Power-on Hours
-0x01  0x018  6     24870451469  ---  Logical Sectors Written
-0x01  0x020  6       241921889  ---  Number of Write Commands
-0x01  0x028  6     29327511086  ---  Logical Sectors Read
-0x01  0x030  6       412612898  ---  Number of Read Commands
+0x01  0x008  4            7088  ---  Lifetime Power-On Resets
+0x01  0x010  4            6908  ---  Power-on Hours
+0x01  0x018  6     33727189143  ---  Logical Sectors Written
+0x01  0x020  6       307704543  ---  Number of Write Commands
+0x01  0x028  6     35908371371  ---  Logical Sectors Read
+0x01  0x030  6       507465542  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              94  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             101  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              32  ---  Average Short Term Temperature
@@ -158,10 +160,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           29934  ---  Number of Hardware Resets
+0x06  0x008  4           40343  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1             111  ---  Percentage Used Endurance Indicator
+0x07  0x008  1             143  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -176,10 +178,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

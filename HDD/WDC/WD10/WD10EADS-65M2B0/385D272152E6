@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Aug 28 22:26:35 2021 MSK
+Local Time is:    Wed Oct 13 20:09:35 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -27,8 +27,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,22 +64,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   114   110   021    -    7258
-  4 Start_Stop_Count        -O--CK   076   076   000    -    24254
+  3 Spin_Up_Time            POS--K   112   110   021    -    7383
+  4 Start_Stop_Count        -O--CK   076   076   000    -    24324
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   065   065   000    -    25819
+  9 Power_On_Hours          -O--CK   065   065   000    -    26265
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   085   085   000    -    15233
-192 Power-Off_Retract_Count -O--CK   194   194   000    -    4629
-193 Load_Cycle_Count        -O--CK   173   173   000    -    83444
-194 Temperature_Celsius     -O---K   114   102   000    -    33
+ 12 Power_Cycle_Count       -O--CK   085   085   000    -    15301
+192 Power-Off_Retract_Count -O--CK   194   194   000    -    4630
+193 Load_Cycle_Count        -O--CK   171   171   000    -    87281
+194 Temperature_Celsius     -O---K   110   102   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   199   199   000    -    244
-198 Offline_Uncorrectable   ----CK   200   200   000    -    19
+197 Current_Pending_Sector  -O--CK   195   195   000    -    899
+198 Offline_Uncorrectable   ----CK   199   197   000    -    209
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    2653949
-200 Multi_Zone_Error_Rate   ---R--   198   123   000    -    500
+200 Multi_Zone_Error_Rate   ---R--   140   036   000    -    12128
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 2138 (device log contains only the most recent 24 errors)
+Device Error Count: 2147 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,7 +124,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2138 [1] occurred at disk power-on lifetime: 25805 hours (1075 days + 5 hours)
+Error 2147 [10] occurred at disk power-on lifetime: 26138 hours (1089 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -135,13 +135,13 @@ Error 2138 [1] occurred at disk power-on lifetime: 25805 hours (1075 days + 5 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     00:00:57.874  READ FPDMA QUEUED
-  60 00 02 00 90 00 00 00 2e c2 e9 40 00     00:00:57.874  READ FPDMA QUEUED
-  60 00 02 00 88 00 00 00 2e c2 e7 40 00     00:00:57.860  READ FPDMA QUEUED
-  60 00 08 00 80 00 00 05 02 ca 9f 40 00     00:00:57.860  READ FPDMA QUEUED
-  60 00 08 00 78 00 00 00 47 d0 b7 40 00     00:00:57.849  READ FPDMA QUEUED
+  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     00:13:04.938  READ FPDMA QUEUED
+  60 00 02 00 90 00 00 00 2e c2 e9 40 00     00:13:04.938  READ FPDMA QUEUED
+  60 00 02 00 88 00 00 00 2e c2 e7 40 00     00:13:04.924  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 05 02 ca 9f 40 00     00:13:04.924  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 47 d0 b7 40 00     00:13:04.912  READ FPDMA QUEUED
 
-Error 2137 [0] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+Error 2146 [9] occurred at disk power-on lifetime: 26138 hours (1089 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -152,13 +152,30 @@ Error 2137 [0] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     03:39:51.748  READ FPDMA QUEUED
-  60 00 02 00 90 00 00 00 2e c2 e9 40 00     03:39:51.748  READ FPDMA QUEUED
-  60 00 02 00 88 00 00 00 2e c2 e7 40 00     03:39:51.735  READ FPDMA QUEUED
-  60 00 08 00 80 00 00 05 02 ca 9f 40 00     03:39:51.735  READ FPDMA QUEUED
-  60 00 08 00 78 00 00 00 47 d0 b7 40 00     03:39:51.712  READ FPDMA QUEUED
+  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     00:09:19.577  READ FPDMA QUEUED
+  60 00 02 00 90 00 00 00 2e c2 e9 40 00     00:09:19.576  READ FPDMA QUEUED
+  60 00 02 00 88 00 00 00 2e c2 e7 40 00     00:09:19.552  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 05 02 ca 9f 40 00     00:09:19.552  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 47 d0 b7 40 00     00:09:19.539  READ FPDMA QUEUED
 
-Error 2136 [23] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+Error 2145 [8] occurred at disk power-on lifetime: 26138 hours (1089 days + 2 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 3d 00 00 00 2e c2 fc 40 00  Error: UNC at LBA = 0x002ec2fc = 3064572
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 3d 00 c0 00 00 00 2e c2 eb 40 00     00:00:55.828  READ FPDMA QUEUED
+  60 00 02 00 b8 00 00 00 2e c2 e9 40 00     00:00:55.828  READ FPDMA QUEUED
+  60 00 02 00 b0 00 00 00 2e c2 e7 40 00     00:00:55.815  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 05 02 ca 9f 40 00     00:00:55.814  READ FPDMA QUEUED
+  60 00 08 00 a0 00 00 00 47 d0 b7 40 00     00:00:55.802  READ FPDMA QUEUED
+
+Error 2144 [7] occurred at disk power-on lifetime: 26084 hours (1086 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -169,13 +186,13 @@ Error 2136 [23] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 3d 00 08 00 00 00 2e c2 eb 40 00     03:38:18.425  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:18.425  SET FEATURES [Enable write cache]
-  60 00 3d 00 08 00 00 00 2e c2 eb 40 00     03:38:15.776  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:15.776  SET FEATURES [Enable write cache]
-  60 00 3d 00 10 00 00 00 2e c2 eb 40 00     03:38:13.126  READ FPDMA QUEUED
+  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     00:00:54.383  READ FPDMA QUEUED
+  60 00 02 00 90 00 00 00 2e c2 e9 40 00     00:00:54.383  READ FPDMA QUEUED
+  60 00 02 00 88 00 00 00 2e c2 e7 40 00     00:00:54.369  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 05 02 ca 9f 40 00     00:00:54.369  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 47 d0 b7 40 00     00:00:54.357  READ FPDMA QUEUED
 
-Error 2135 [22] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+Error 2143 [6] occurred at disk power-on lifetime: 25835 hours (1076 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -186,13 +203,13 @@ Error 2135 [22] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 3d 00 08 00 00 00 2e c2 eb 40 00     03:38:15.776  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:15.776  SET FEATURES [Enable write cache]
-  60 00 3d 00 10 00 00 00 2e c2 eb 40 00     03:38:13.126  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:13.126  SET FEATURES [Enable write cache]
-  61 00 08 00 08 00 00 00 00 01 d7 40 00     03:38:10.477  WRITE FPDMA QUEUED
+  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     01:16:30.689  READ FPDMA QUEUED
+  60 00 02 00 90 00 00 00 2e c2 e9 40 00     01:16:30.689  READ FPDMA QUEUED
+  60 00 02 00 88 00 00 00 2e c2 e7 40 00     01:16:30.676  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 05 02 ca 9f 40 00     01:16:30.675  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 47 d0 b7 40 00     01:16:30.663  READ FPDMA QUEUED
 
-Error 2134 [21] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+Error 2142 [5] occurred at disk power-on lifetime: 25834 hours (1076 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -203,30 +220,13 @@ Error 2134 [21] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 3d 00 10 00 00 00 2e c2 eb 40 00     03:38:13.126  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:13.126  SET FEATURES [Enable write cache]
-  61 00 08 00 08 00 00 00 00 01 d7 40 00     03:38:10.477  WRITE FPDMA QUEUED
-  60 00 3d 00 10 00 00 00 2e c2 eb 40 00     03:38:10.477  READ FPDMA QUEUED
-  61 00 08 00 08 00 00 00 00 01 df 40 00     03:38:10.477  WRITE FPDMA QUEUED
+  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     00:23:46.777  READ FPDMA QUEUED
+  60 00 02 00 90 00 00 00 2e c2 e9 40 00     00:23:46.776  READ FPDMA QUEUED
+  60 00 02 00 88 00 00 00 2e c2 e7 40 00     00:23:46.751  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 05 02 ca 9f 40 00     00:23:46.751  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 47 d0 b7 40 00     00:23:46.740  READ FPDMA QUEUED
 
-Error 2133 [20] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 3d 00 00 00 2e c2 fc 40 00  Error: WP at LBA = 0x002ec2fc = 3064572
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 08 00 08 00 00 00 00 01 d7 40 00     03:38:10.477  WRITE FPDMA QUEUED
-  60 00 3d 00 10 00 00 00 2e c2 eb 40 00     03:38:10.477  READ FPDMA QUEUED
-  61 00 08 00 08 00 00 00 00 01 df 40 00     03:38:10.477  WRITE FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:10.477  SET FEATURES [Enable write cache]
-  60 00 3d 00 08 00 00 00 2e c2 eb 40 00     03:38:07.859  READ FPDMA QUEUED
-
-Error 2132 [19] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+Error 2141 [4] occurred at disk power-on lifetime: 25834 hours (1076 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -237,28 +237,28 @@ Error 2132 [19] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 3d 00 08 00 00 00 2e c2 eb 40 00     03:38:07.859  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:07.859  SET FEATURES [Enable write cache]
-  61 00 08 00 10 00 00 00 2e ed ef 40 00     03:38:04.929  WRITE FPDMA QUEUED
-  60 00 3d 00 08 00 00 00 2e c2 eb 40 00     03:38:04.929  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:04.929  SET FEATURES [Enable write cache]
+  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     00:11:03.390  READ FPDMA QUEUED
+  60 00 02 00 90 00 00 00 2e c2 e9 40 00     00:11:03.390  READ FPDMA QUEUED
+  60 00 02 00 88 00 00 00 2e c2 e7 40 00     00:11:03.377  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 05 02 ca 9f 40 00     00:11:03.376  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 47 d0 b7 40 00     00:11:03.365  READ FPDMA QUEUED
 
-Error 2131 [18] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+Error 2140 [3] occurred at disk power-on lifetime: 25834 hours (1076 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 3d 00 00 00 2e c2 fc 40 00  Error: WP at LBA = 0x002ec2fc = 3064572
+  40 -- 51 00 3d 00 00 00 2e c2 fc 40 00  Error: UNC at LBA = 0x002ec2fc = 3064572
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 08 00 10 00 00 00 2e ed ef 40 00     03:38:04.929  WRITE FPDMA QUEUED
-  60 00 3d 00 08 00 00 00 2e c2 eb 40 00     03:38:04.929  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:04.929  SET FEATURES [Enable write cache]
-  60 00 3d 00 18 00 00 00 2e c2 eb 40 00     03:38:02.280  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     03:38:02.280  SET FEATURES [Enable write cache]
+  60 00 3d 00 98 00 00 00 2e c2 eb 40 00     00:07:10.203  READ FPDMA QUEUED
+  60 00 02 00 90 00 00 00 2e c2 e9 40 00     00:07:10.203  READ FPDMA QUEUED
+  60 00 02 00 88 00 00 00 2e c2 e7 40 00     00:07:10.189  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 05 02 ca 9f 40 00     00:07:10.189  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 00 47 d0 b7 40 00     00:07:10.177  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -280,10 +280,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     25/37 Celsius
-Lifetime    Min/Max Temperature:     32/45 Celsius
+Device State:                        Unknown (16)
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     23/37 Celsius
+Lifetime    Min/Max Temperature:      ?/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -291,7 +291,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (326)
+Temperature History Size (Index):    478 (240)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -312,5 +312,5 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        21778  Vendor specific
+0x8000  4        22283  Vendor specific
 

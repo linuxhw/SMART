@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.4.83-generic-2rosa2019.1-x86_64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jan 29 21:29:38 2021 CET
+Local Time is:    Wed Feb  9 19:48:32 2022 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,8 +60,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    100
-  9 Power_On_Hours          -O--CK   100   100   000    -    500
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    995
+  9 Power_On_Hours          -O--CK   100   100   000    -    996
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1837
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -73,18 +73,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    270
-194 Temperature_Celsius     -O---K   042   064   000    -    42 (Min/Max 22/64)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    420
+194 Temperature_Celsius     -O---K   040   064   000    -    40 (Min/Max 20/64)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   094   094   000    -    94
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    2566
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    3845
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    1601
-244 Average_Erase_Count     ------   100   100   000    -    60
-245 Max_Erase_Count         ------   100   100   000    -    113
-246 Total_Erase_Count       ------   100   100   000    -    29440
+231 SSD_Life_Left           ------   090   090   000    -    90
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    5962
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    7259
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    2805
+244 Average_Erase_Count     ------   100   100   000    -    109
+245 Max_Erase_Count         ------   100   100   000    -    154
+246 Total_Erase_Count       ------   100   100   000    -    46689
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +112,14 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%       994         -
+# 2  Short offline       Completed without error       00%       994         -
+# 3  Extended offline    Aborted by host               40%       991         -
+# 4  Extended offline    Completed without error       00%       611         -
+# 5  Extended offline    Aborted by host               90%       589         -
+# 6  Extended offline    Completed without error       00%       569         -
+# 7  Extended offline    Completed without error       00%       526         -
 
 Selective Self-tests/Logging not supported
 
@@ -121,14 +128,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             995  ---  Lifetime Power-On Resets
-0x01  0x010  4             500  ---  Power-on Hours
-0x01  0x018  6      3770312522  ---  Logical Sectors Written
-0x01  0x020  6           53518  ---  Number of Write Commands
-0x01  0x028  6      3357977927  ---  Logical Sectors Read
-0x01  0x030  6           66338  ---  Number of Read Commands
+0x01  0x008  4            1837  ---  Lifetime Power-On Resets
+0x01  0x010  4             996  ---  Power-on Hours
+0x01  0x018  6      2340224133  ---  Logical Sectors Written
+0x01  0x020  6          150485  ---  Number of Write Commands
+0x01  0x028  6      1589330326  ---  Logical Sectors Read
+0x01  0x030  6           49630  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              11  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -140,5 +147,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 

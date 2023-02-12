@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-41-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-56-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Thu Jul 28 10:22:59 2022 MSK
+Local Time is:    Sat Dec 24 17:18:36 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -56,21 +56,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
-  3 Spin_Up_Time            POS---   100   100   025    -    5824
-  4 Start_Stop_Count        -O--CK   091   091   000    -    9593
+  3 Spin_Up_Time            POS---   100   100   025    -    5504
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10166
   5 Reallocated_Sector_Ct   PO--CK   100   100   011    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Half_Minutes   -O--CK   091   091   000    -    45930h+18m
+  9 Power_On_Half_Minutes   -O--CK   091   091   000    -    46890h+19m
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    2
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4879
-194 Temperature_Celsius     -O---K   103   055   000    -    45
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    3368723
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5185
+194 Temperature_Celsius     -O---K   115   055   000    -    41
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    13227
 196 Reallocated_Event_Count -O--CK   087   087   000    -    29
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Total_Offl_Uncorrectabl ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   100   100   051    -    0
 201 Soft_Read_Error_Rate    -O-R--   100   100   051    -    0
                             ||||||_ K auto-keep
@@ -93,7 +93,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 1977 (device log contains only the most recent five errors)
+ATA Error Count: 1982 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -108,7 +108,41 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1977 occurred at disk power-on lifetime: 45929 hours (1913 days + 17 hours)
+Error 1982 occurred at disk power-on lifetime: 46889 hours (1953 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:00:35.750  SET FEATURES [Enable APM]
+  c8 00 f8 08 01 00 e0 00      00:00:35.500  READ DMA
+  c8 00 78 88 00 00 e0 00      00:00:35.500  READ DMA
+  c8 00 30 48 00 00 e0 00      00:00:35.500  READ DMA
+  c8 00 10 28 00 00 e0 00      00:00:35.500  READ DMA
+
+Error 1981 occurred at disk power-on lifetime: 46889 hours (1953 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:26:21.625  SET FEATURES [Enable APM]
+  c8 00 f8 08 01 00 e0 00      00:26:21.500  READ DMA
+  c8 00 78 88 00 00 e0 00      00:26:21.500  READ DMA
+  c8 00 30 48 00 00 e0 00      00:26:21.500  READ DMA
+  c8 00 10 28 00 00 e0 00      00:26:21.500  READ DMA
+
+Error 1980 occurred at disk power-on lifetime: 46889 hours (1953 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -119,13 +153,30 @@ Error 1977 occurred at disk power-on lifetime: 45929 hours (1913 days + 17 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      19:35:02.438  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      19:35:02.438  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      19:35:02.438  IDENTIFY DEVICE
-  b0 da 00 00 4f c2 00 00      19:35:02.375  SMART RETURN STATUS
-  b0 d2 f1 00 4f c2 00 00      19:35:02.375  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b1 c1 00 00 00 00 00 00      00:26:05.938  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00      00:26:05.938  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00      00:26:05.875  IDENTIFY DEVICE
+  b0 da 00 00 4f c2 00 00      00:26:05.875  SMART RETURN STATUS
+  b0 d2 f1 00 4f c2 00 00      00:26:05.875  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
-Error 1976 occurred at disk power-on lifetime: 45595 hours (1899 days + 19 hours)
+Error 1979 occurred at disk power-on lifetime: 46889 hours (1953 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:01:22.438  SET FEATURES [Enable APM]
+  c8 00 08 00 10 00 e0 00      00:01:22.438  READ DMA
+  c8 00 08 00 0c 00 e0 00      00:01:22.375  READ DMA
+  c8 00 08 00 0a 00 e0 00      00:01:22.375  READ DMA
+  c8 00 08 00 09 00 e0 00      00:01:22.375  READ DMA
+
+Error 1978 occurred at disk power-on lifetime: 46889 hours (1953 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -136,62 +187,11 @@ Error 1976 occurred at disk power-on lifetime: 45595 hours (1899 days + 19 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      03:35:11.438  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      03:35:11.438  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      03:35:11.438  IDENTIFY DEVICE
-  b0 da 00 00 4f c2 00 00      03:35:11.313  SMART RETURN STATUS
-  b0 d2 f1 00 4f c2 00 00      03:35:11.313  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-
-Error 1975 occurred at disk power-on lifetime: 45595 hours (1899 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      03:12:41.375  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      03:12:41.375  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      03:12:41.375  IDENTIFY DEVICE
-  b0 da 00 00 4f c2 00 00      03:12:41.313  SMART RETURN STATUS
-  b0 d2 f1 00 4f c2 00 00      03:12:41.313  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-
-Error 1974 occurred at disk power-on lifetime: 45593 hours (1899 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 08 08 09 01 e6  Error: ICRC, ABRT 8 sectors at LBA = 0x06010908 = 100731144
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 08 09 01 e6 00      01:18:28.750  READ DMA
-  c8 00 08 70 16 c1 e7 00      01:18:28.750  READ DMA
-  c8 00 08 d8 16 c1 e2 00      01:18:28.750  READ DMA
-  c8 00 08 10 1c 81 e2 00      01:18:28.750  READ DMA
-  c8 00 08 00 09 01 e2 00      01:18:28.688  READ DMA
-
-Error 1973 occurred at disk power-on lifetime: 42020 hours (1750 days + 20 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  04 51 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      00:56:21.625  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      00:56:21.625  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      00:56:21.625  IDENTIFY DEVICE
-  b0 da 00 00 4f c2 00 00      00:56:21.563  SMART RETURN STATUS
-  b0 d2 f1 00 4f c2 00 00      00:56:21.563  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b1 c1 00 00 00 00 00 00      00:24:29.813  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00      00:24:29.813  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00      00:24:29.813  IDENTIFY DEVICE
+  b0 da 00 00 4f c2 00 00      00:24:29.750  SMART RETURN STATUS
+  b0 d2 f1 00 4f c2 00 00      00:24:29.750  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -207,6 +207,4 @@ Device Statistics (GP/SMART Log 0x04) not supported
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 

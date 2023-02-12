@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Aug 21 19:51:27 2021 CEST
+Local Time is:    Thu Dec 23 18:28:02 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  32)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (  16)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(   33) seconds.
 Offline data collection
@@ -60,25 +60,25 @@ SCT capabilities: 	       (0x0039)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--CK   100   100   000    -    1614
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    901
+  9 Power_On_Hours          -O--CK   100   100   000    -    1621
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    937
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--CK   100   100   000    -    2
 169 Unknown_Attribute       -O--CK   100   100   010    -    0
 171 Unknown_Attribute       -O--CK   000   000   000    -    0
 172 Unknown_Attribute       -O--CK   000   000   000    -    0
-173 Unknown_Attribute       -O--CK   200   200   000    -    42955046952
+173 Unknown_Attribute       -O--CK   200   200   000    -    42955112489
 175 Program_Fail_Count_Chip -O---K   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    140
 187 Reported_Uncorrect      -O--CK   100   000   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    0
 206 Unknown_SSD_Attribute   -O--CK   200   200   000    -    10
-207 Unknown_SSD_Attribute   -O--CK   200   200   000    -    82
-208 Unknown_SSD_Attribute   -O--CK   200   200   000    -    40
+207 Unknown_SSD_Attribute   -O--CK   200   200   000    -    83
+208 Unknown_SSD_Attribute   -O--CK   200   200   000    -    41
 231 Temperature_Celsius     PO---K   099   099   005    -    1
-241 Total_LBAs_Written      -O--CK   100   100   000    -    4946568098
-242 Total_LBAs_Read         -O--CK   100   100   000    -    5238589271
-245 Unknown_Attribute       -O--CK   100   100   000    -    75561407
+241 Total_LBAs_Written      -O--CK   100   100   000    -    5035817414
+242 Total_LBAs_Read         -O--CK   100   100   000    -    5292559748
+245 Unknown_Attribute       -O--CK   100   100   000    -    76196193
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,9 +108,15 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      00%      1130         -
-# 2  Short offline       Interrupted (host reset)      00%      1130         -
-# 3  Short offline       Interrupted (host reset)      00%      1130         -
+# 1  Short offline       Aborted by host               00%      1618         -
+# 2  Short offline       Aborted by host               00%      1618         -
+# 3  Short offline       Interrupted (host reset)      00%      1618         -
+# 4  Short offline       Aborted by host               00%      1618         -
+# 5  Short offline       Completed without error       00%      1618         -
+# 6  Extended offline    Aborted by host               00%      1618         -
+# 7  Short offline       Interrupted (host reset)      00%      1130         -
+# 8  Short offline       Interrupted (host reset)      00%      1130         -
+# 9  Short offline       Interrupted (host reset)      00%      1130         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -136,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (348)
+Temperature History Size (Index):    478 (41)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -155,7 +161,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            8  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

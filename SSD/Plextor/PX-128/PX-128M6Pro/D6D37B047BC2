@@ -10,13 +10,14 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Apr 10 22:27:56 2018 +05
+Local Time is:    Sun Nov 18 15:52:06 2018 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -60,16 +61,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    642
- 12 Power_Cycle_Count       PO----   100   100   000    -    1948
+  9 Power_On_Hours          -O----   100   100   000    -    652
+ 12 Power_Cycle_Count       PO----   100   100   000    -    2258
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       PO----   100   100   000    -    0
 172 Unknown_Attribute       PO----   100   100   000    -    0
-173 Unknown_Attribute       PO----   100   100   000    -    111
-174 Unknown_Attribute       PO----   100   100   000    -    551
+173 Unknown_Attribute       PO----   100   100   000    -    125
+174 Unknown_Attribute       PO----   100   100   000    -    566
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
-177 Wear_Leveling_Count     PO----   100   100   000    -    114047
+177 Wear_Leveling_Count     PO----   100   100   000    -    128391
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    608
@@ -79,15 +80,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO--CK   100   100   000    -    0
 187 Reported_Uncorrect      PO----   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    2
-192 Power-Off_Retract_Count PO----   100   100   000    -    551
+192 Power-Off_Retract_Count PO----   100   100   000    -    566
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
 196 Reallocated_Event_Count PO----   100   100   000    -    0
 198 Offline_Uncorrectable   PO----   100   100   000    -    0
-199 UDMA_CRC_Error_Count    PO----   100   100   000    -    19
+199 UDMA_CRC_Error_Count    PO----   100   100   000    -    32
 232 Available_Reservd_Space PO----   100   100   010    -    0
-233 Media_Wearout_Indicator PO----   100   100   000    -    4264
-241 Total_LBAs_Written      PO----   100   100   000    -    68225
-242 Total_LBAs_Read         PO----   100   100   000    -    101759
+233 Media_Wearout_Indicator PO----   100   100   000    -    6297
+241 Total_LBAs_Written      PO----   100   100   000    -    100760
+242 Total_LBAs_Read         PO----   100   100   000    -    134763
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -102,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x01       GPL,SL  R/O      1  Summary SMART error log
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      2  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W      1  Host vendor specific log
@@ -140,6 +141,8 @@ SCT Error Recovery Control:
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
@@ -151,7 +154,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

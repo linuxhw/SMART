@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.75-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi/HGST Travelstar Z5K500
@@ -11,14 +11,14 @@ User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Apr  5 04:40:37 2022 MSK
+Local Time is:    Tue Dec  6 14:32:41 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -38,11 +38,11 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 Total time to complete Offline 
 data collection: 		(   45) seconds.
 Offline data collection
-capabilities: 			 (0x5b) SMART execute Offline immediate.
-					Auto Offline data collection on/off support.
+capabilities: 			 (0x51) SMART execute Offline immediate.
+					No Auto Offline data collection support.
 					Suspend Offline collection upon new
 					command.
-					Offline surface scan supported.
+					No Offline surface scan supported.
 					Self-test supported.
 					No Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -64,24 +64,24 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   086   062    -    0
-  2 Throughput_Performance  P-S--K   100   100   040    -    0
-  3 Spin_Up_Time            PO---K   253   100   033    -    0
-  4 Start_Stop_Count        -O--CK   094   094   000    -    9778
-  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    48 (0 5)
+  2 Throughput_Performance  P-S--K   198   100   040    -    120
+  3 Spin_Up_Time            PO---K   253   100   033    -    1
+  4 Start_Stop_Count        -O--CK   093   093   000    -    12089
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    56 (0 6)
   7 Seek_Error_Rate         POSR-K   100   100   067    -    0
-  8 Seek_Time_Performance   P-S--K   100   100   040    -    0
-  9 Power_On_Hours          -O--CK   037   037   000    -    27857
+  8 Seek_Time_Performance   P-S--K   107   098   040    -    37
+  9 Power_On_Hours          -O--CK   026   026   000    -    32550
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    9551
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    11849
 183 Runtime_Bad_Block       -O--CK   098   098   000    -    2
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   001   000    -    13623771267906
+187 Reported_Uncorrect      -O--CK   100   001   000    -    13636668359490
 188 Command_Timeout         -O--CK   100   091   000    -    382270505067
-190 Airflow_Temperature_Cel -O---K   059   052   045    -    41 (Min/Max 34/41)
-191 G-Sense_Error_Rate      -O--CK   085   085   000    -    4054
-192 Power-Off_Retract_Count -O--CK   082   082   000    -    245108380
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1007434
-196 Reallocated_Event_Count -O--CK   100   100   000    -    5
+190 Airflow_Temperature_Cel -O---K   069   052   045    -    31 (Min/Max 26/36)
+191 G-Sense_Error_Rate      -O--CK   080   080   000    -    5139
+192 Power-Off_Retract_Count -O--CK   081   081   000    -    260902797
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1256714
+196 Reallocated_Event_Count -O--CK   100   100   000    -    6
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    120
@@ -196,7 +196,8 @@ Error 231 [2] occurred at disk power-on lifetime: 19880 hours (828 days + 8 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      80%      6148         -
+# 1  Short offline       Aborted by host               80%     30496         -
+# 2  Extended offline    Interrupted (host reset)      80%      6148         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -212,10 +213,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     34/41 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     26/36 Celsius
 Lifetime    Min/Max Temperature:     -3/48 Celsius
-Specified Max Operating Temperature:    32 Celsius
+Specified Max Operating Temperature:    31 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -223,7 +224,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (49)
+Temperature History Size (Index):    128 (42)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -242,8 +243,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2        55265  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

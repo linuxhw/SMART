@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.32-generic-6rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.11-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Samsung SpinPoint M9T
@@ -11,10 +11,10 @@ User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu May 12 22:27:25 2022 MSK
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Fri Jul  1 22:09:44 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,19 +22,20 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  22)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(21600) seconds.
 Offline data collection
@@ -65,33 +66,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    8
   2 Throughput_Performance  POS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   091   090   025    -    3030
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8635
+  3 Spin_Up_Time            PO---K   090   090   025    -    3249
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8757
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         POSR-K   252   252   051    -    0
   8 Seek_Time_Performance   P-S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    17426
+  9 Power_On_Hours          -O--CK   100   100   000    -    17969
  10 Spin_Retry_Count        PO--CK   252   252   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2633
-181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    8753564
-183 Runtime_Bad_Block       -O--CK   100   100   010    -    1719
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2678
+181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    8871830
+183 Runtime_Bad_Block       -O--CK   100   100   010    -    1725
 184 End-to-End_Error        PO--CK   252   252   097    -    0
 186 Unknown_Attribute       -O--CK   252   252   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    1
 188 Command_Timeout         -O--CK   252   252   000    -    0
-190 Airflow_Temperature_Cel -O----   065   051   040    -    35 (Min/Max 17/49)
+190 Airflow_Temperature_Cel -O----   064   051   040    -    36 (Min/Max 17/49)
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    1173
-192 Power-Off_Retract_Count -O---K   100   100   000    -    67
-193 Load_Cycle_Count        -O--CK   044   044   000    -    571134
-194 Temperature_Celsius     -O----   064   051   000    -    35 (Min/Max 17/49)
+192 Power-Off_Retract_Count -O---K   100   100   000    -    68
+193 Load_Cycle_Count        -O--CK   043   043   000    -    583299
+194 Temperature_Celsius     -O----   064   051   000    -    36 (Min/Max 17/49)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    1
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    198
-241 Total_LBAs_Written      -O--CK   100   094   000    -    901355
-242 Total_LBAs_Read         -O--CK   098   094   000    -    3516951
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    199
+241 Total_LBAs_Written      -O--CK   095   094   000    -    6958372
+242 Total_LBAs_Read         -O--CK   096   094   000    -    5789284
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -153,12 +154,14 @@ Error 1 [0] occurred at disk power-on lifetime: 3982 hours (165 days + 22 hours)
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         0         -
+# 1  Extended offline    Aborted by host               60%     17932         -
+# 2  Extended offline    Aborted by host               80%     17764         -
+# 3  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Completed [00% left] (0-65535)
+    1        0        0  Aborted_by_host [60% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -170,8 +173,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     25/40 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     28/40 Celsius
 Lifetime    Min/Max Temperature:     17/48 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -181,11 +184,10 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (19)
+Temperature History Size (Index):    128 (89)
 
-SCT Error Recovery Control:
-           Read:     85 (8.5 seconds)
-          Write:     85 (8.5 seconds)
+SMART WRITE LOG does not return COUNT and LBA_LOW register
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -197,34 +199,34 @@ ID      Size     Value  Description
 0x0002  4            0  R_ERR response for data FIS
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
-0x0005  4            3  R_ERR response for non-data FIS
+0x0005  4          128  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x0007  4            3  R_ERR response for host-to-device non-data FIS
+0x0007  4          128  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           42  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           59  Device-to-host register FISes sent due to a COMRESET
-0x000b  4            3  CRC errors within host-to-device FIS
+0x0009  4          132  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           63  Device-to-host register FISes sent due to a COMRESET
+0x000b  4          128  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  4            0  R_ERR response for host-to-device data FIS, non-CRC
-0x0012  4            3  R_ERR response for host-to-device non-data FIS, CRC
+0x0012  4          128  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  4            0  R_ERR response for host-to-device non-data FIS, non-CRC
 0x8e00  4            0  Vendor specific
 0x8e01  4            0  Vendor specific
 0x8e02  4            0  Vendor specific
-0x8e03  4            5  Vendor specific
+0x8e03  4          128  Vendor specific
 0x8e04  4            0  Vendor specific
 0x8e05  4            0  Vendor specific
-0x8e06  4        57474  Vendor specific
-0x8e07  4        35483  Vendor specific
-0x8e08  4          295  Vendor specific
-0x8e09  4     54247995  Vendor specific
-0x8e0a  4     55602700  Vendor specific
-0x8e0b  4     52210176  Vendor specific
-0x8e0c  4      4968130  Vendor specific
-0x8e0d  4     54678282  Vendor specific
-0x8e0e  4       453304  Vendor specific
-0x8e0f  4    246538240  Vendor specific
-0x8e10  4      1813216  Vendor specific
-0x8e11  4            3  Vendor specific
+0x8e06  4            0  Vendor specific
+0x8e07  4        24413  Vendor specific
+0x8e08  4          211  Vendor specific
+0x8e09  4           76  Vendor specific
+0x8e0a  4        14462  Vendor specific
+0x8e0b  4     39177216  Vendor specific
+0x8e0c  4        57544  Vendor specific
+0x8e0d  4           76  Vendor specific
+0x8e0e  4        14331  Vendor specific
+0x8e0f  4        92160  Vendor specific
+0x8e10  4        57324  Vendor specific
+0x8e11  4          128  Vendor specific
 

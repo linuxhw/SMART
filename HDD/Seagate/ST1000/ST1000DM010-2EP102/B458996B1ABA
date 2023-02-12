@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 3.5
 Device Model:     ST1000DM010-2EP102
@@ -11,11 +14,11 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Sep 10 20:51:54 2020 +12
+Local Time is:    Thu Jan 14 12:03:53 2021 +12
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -26,20 +29,20 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
-capabilities: 			 (0x73) SMART execute Offline immediate.
+capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -59,29 +62,29 @@ SCT capabilities: 	       (0x1085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   076   063   006    -    44015602
+  1 Raw_Read_Error_Rate     POSR--   082   063   006    -    200427845
   3 Spin_Up_Time            PO----   097   096   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    857
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1069
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   079   060   045    -    89394610
-  9 Power_On_Hours          -O--CK   092   092   000    -    7411
+  7 Seek_Error_Rate         POSR--   080   060   045    -    112856838
+  9 Power_On_Hours          -O--CK   089   089   000    -    9742
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    836
+ 12 Power_Cycle_Count       -O--CK   099   099   020    -    1048
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    0 0 2
+188 Command_Timeout         -O--CK   100   099   000    -    0 0 3
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   058   046   040    -    42 (Min/Max 21/45)
-193 Load_Cycle_Count        -O--CK   100   100   000    -    990
-194 Temperature_Celsius     -O---K   042   018   000    -    42 (0 18 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   004   001   000    -    44015602
+190 Airflow_Temperature_Cel -O---K   059   046   040    -    41 (Min/Max 38/44)
+193 Load_Cycle_Count        -O--CK   100   100   000    -    1274
+194 Temperature_Celsius     -O---K   041   018   000    -    41 (0 18 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   004   001   000    -    200427845
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    7394h+14m+02.368s
-241 Total_LBAs_Written      ------   100   253   000    -    22644721253
-242 Total_LBAs_Read         ------   100   253   000    -    15334459927
+240 Head_Flying_Hours       ------   100   253   000    -    9717h+34m+38.661s
+241 Total_LBAs_Written      ------   100   253   000    -    28325719172
+242 Total_LBAs_Read         ------   100   253   000    -    19271984462
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -124,11 +127,18 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      2284         -
-# 2  Extended offline    Completed without error       00%      1061         -
-# 3  Extended offline    Completed without error       00%       971         -
-# 4  Extended offline    Completed without error       00%       688         -
-# 5  Extended offline    Completed without error       00%       514         -
+# 1  Extended offline    Completed without error       00%      9614         -
+# 2  Extended offline    Completed without error       00%      9447         -
+# 3  Extended offline    Interrupted (host reset)      90%      8853         -
+# 4  Extended offline    Completed without error       00%      8842         -
+# 5  Extended offline    Completed without error       00%      8735         -
+# 6  Extended offline    Completed without error       00%      8612         -
+# 7  Extended offline    Completed without error       00%      8265         -
+# 8  Extended offline    Completed without error       00%      2284         -
+# 9  Extended offline    Completed without error       00%      1061         -
+#10  Extended offline    Completed without error       00%       971         -
+#11  Extended offline    Completed without error       00%       688         -
+#12  Extended offline    Completed without error       00%       514         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -144,8 +154,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     21/45 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     38/44 Celsius
 Lifetime    Min/Max Temperature:     19/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -156,28 +166,28 @@ SCT Error Recovery Control command not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             836  ---  Lifetime Power-On Resets
-0x01  0x010  4            7411  ---  Power-on Hours
-0x01  0x018  6     22820742671  ---  Logical Sectors Written
-0x01  0x020  6       127912189  ---  Number of Write Commands
-0x01  0x028  6     15338762779  ---  Logical Sectors Read
-0x01  0x030  6       152837818  ---  Number of Read Commands
+0x01  0x008  4            1048  ---  Lifetime Power-On Resets
+0x01  0x010  4            9742  ---  Power-on Hours
+0x01  0x018  6     28502247235  ---  Logical Sectors Written
+0x01  0x020  6       159362266  ---  Number of Write Commands
+0x01  0x028  6     19276535217  ---  Logical Sectors Read
+0x01  0x030  6       184472874  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            7407  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            5289  ---  Head Flying Hours
-0x03  0x018  4             990  ---  Head Load Events
+0x03  0x008  4            9736  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            6429  ---  Head Flying Hours
+0x03  0x018  4            1274  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              42  ---  Current Temperature
-0x05  0x010  1              42  ---  Average Short Term Temperature
-0x05  0x018  1              40  ---  Average Long Term Temperature
+0x05  0x008  1              41  ---  Current Temperature
+0x05  0x010  1              40  ---  Average Short Term Temperature
+0x05  0x018  1              38  ---  Average Long Term Temperature
 0x05  0x020  1              54  ---  Highest Temperature
 0x05  0x028  1              26  ---  Lowest Temperature
 0x05  0x030  1              46  ---  Highest Average Short Term Temperature
@@ -196,7 +206,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           15  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           30  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Dec 20 11:53:30 2020 AEDT
+Local Time is:    Wed Feb 10 18:24:22 2021 AEDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,29 +60,29 @@ SCT capabilities: 	       (0x1081)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    68239888
+  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    70682704
   3 Spin_Up_Time            PO----   099   099   085    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    601
+  4 Start_Stop_Count        -O--CK   100   100   020    -    770
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   082   060   030    -    13355211252
-  9 Power_On_Hours          -O--CK   058   058   000    -    37579
+  7 Seek_Error_Rate         POSR--   082   060   030    -    13358735307
+  9 Power_On_Hours          -O--CK   057   057   000    -    38247
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    656
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    741
 184 End-to-End_Error        -O--CK   098   098   099    NOW  2
 187 Reported_Uncorrect      -O--CK   063   063   000    -    37
 188 Command_Timeout         -O--CK   100   099   000    -    17180852240
-189 High_Fly_Writes         -O-RCK   001   001   000    -    112
-190 Airflow_Temperature_Cel -O---K   062   054   045    -    38 (Min/Max 17/38)
+189 High_Fly_Writes         -O-RCK   001   001   000    -    124
+190 Airflow_Temperature_Cel -O---K   059   054   045    -    41 (Min/Max 25/45)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    118
-193 Load_Cycle_Count        -O--CK   001   001   000    -    231702
-194 Temperature_Celsius     -O---K   038   046   000    -    38 (0 13 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    143
+193 Load_Cycle_Count        -O--CK   001   001   000    -    232270
+194 Temperature_Celsius     -O---K   041   046   000    -    41 (0 13 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    29488 (221 189 0)
-241 Total_LBAs_Written      ------   100   253   000    -    40472005114
-242 Total_LBAs_Read         ------   100   253   000    -    247811740316
+240 Head_Flying_Hours       ------   100   253   000    -    30287 (73 217 0)
+241 Total_LBAs_Written      ------   100   253   000    -    42402645153
+242 Total_LBAs_Read         ------   100   253   000    -    248322168989
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -124,7 +124,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 58 (device log contains only the most recent 20 errors)
+Device Error Count: 59 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -139,6 +139,23 @@ Device Error Count: 58 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 59 [18] occurred at disk power-on lifetime: 37846 hours (1576 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 01 8c 40 00 00  Error: WP at LBA = 0x00018c40 = 101440
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 08 00 00 0b 8a 96 c0 40 00     03:11:28.877  WRITE FPDMA QUEUED
+  60 00 00 00 08 00 00 24 84 0c 58 40 00     03:11:28.877  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 1d 8e 3c 98 40 00     03:11:25.884  READ FPDMA QUEUED
+  60 00 00 00 40 00 00 00 01 8d 00 40 00     03:11:25.884  READ FPDMA QUEUED
+  60 00 00 00 b8 00 00 00 01 8c 40 40 00     03:11:25.884  READ FPDMA QUEUED
 
 Error 58 [17] occurred at disk power-on lifetime: 37161 hours (1548 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -259,27 +276,12 @@ Error 52 [11] occurred at disk power-on lifetime: 36960 hours (1540 days + 0 hou
   61 00 00 00 10 00 00 00 01 ab d8 40 00     00:45:37.376  WRITE FPDMA QUEUED
   61 00 00 00 08 00 00 1c 48 eb 00 40 00     00:45:37.376  WRITE FPDMA QUEUED
 
-Error 51 [10] occurred at disk power-on lifetime: 36960 hours (1540 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 06 88 0b 60 00 00  Error: WP at LBA = 0x06880b60 = 109579104
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 28 00 00 1d 04 40 20 40 00     00:45:15.449  WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 00 10 70 48 40 00     00:45:15.449  WRITE FPDMA QUEUED
-  61 00 00 00 10 00 00 00 10 6f f0 40 00     00:45:15.449  WRITE FPDMA QUEUED
-  61 00 00 00 18 00 00 00 10 70 28 40 00     00:45:15.448  WRITE FPDMA QUEUED
-  61 00 00 00 10 00 00 00 10 70 00 40 00     00:45:15.448  WRITE FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     34745         -
-# 2  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     37660         -
+# 2  Short offline       Completed without error       00%     37605         -
+# 3  Short offline       Completed without error       00%     34745         -
+# 4  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -295,10 +297,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     17/38 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     25/45 Celsius
 Lifetime    Min/Max Temperature:     13/46 Celsius
-Specified Max Operating Temperature:    29 Celsius
+Specified Max Operating Temperature:    30 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -311,7 +313,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           26  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           39  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

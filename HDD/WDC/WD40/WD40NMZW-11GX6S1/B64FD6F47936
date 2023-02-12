@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-16-amd64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.18.0-0.deb11.4-amd64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Jul 27 06:49:19 2022 AEST
+Local Time is:    Sun Sep 25 22:24:08 2022 AEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,7 +55,7 @@ Error logging capability:        (0x01)	Error logging supported.
 Short self-test routine 
 recommended polling time: 	 (   2) minutes.
 Extended self-test routine
-recommended polling time: 	 ( 484) minutes.
+recommended polling time: 	 ( 481) minutes.
 SCT capabilities: 	       (0x30b5)	SCT Status supported.
 					SCT Feature Control supported.
 					SCT Data Table supported.
@@ -63,10 +63,10 @@ SCT capabilities: 	       (0x30b5)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   195   170   051    -    949
-  3 Spin_Up_Time            POS--K   253   253   021    -    2258
+  1 Raw_Read_Error_Rate     POSR-K   195   170   051    -    878
+  3 Spin_Up_Time            POS--K   253   253   021    -    4491
   5 Reallocated_Sector_Ct   PO--CK   194   194   140    -    625
-194 Temperature_Celsius     -O---K   126   098   000    -    26
+194 Temperature_Celsius     -O---K   121   098   000    -    31
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -252,15 +252,16 @@ Error 2840 [7] occurred at disk power-on lifetime: 6924 hours (288 days + 12 hou
   b0 00 d6 00 01 00 00 00 c2 4f 98 00 00     00:15:31.968  SMART WRITE LOG
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed: read failure       90%      9341         7201888816
 
 Selective Self-tests/Logging not supported
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     19/26 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     27/39 Celsius
 Lifetime    Min/Max Temperature:     10/54 Celsius
 Specified Max Operating Temperature:    31 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -273,7 +274,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (125)
+Temperature History Size (Index):    128 (108)
 
 SCT Error Recovery Control command not supported
 
@@ -297,5 +298,5 @@ ID      Size     Value  Description
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          824  Vendor specific
+0x8000  4        13690  Vendor specific
 

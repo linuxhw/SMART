@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sat Jan 28 15:36:41 2017 MSK
+Local Time is:    Sun Sep 17 03:56:37 2017 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,21 +59,21 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    1848
-  3 Spin_Up_Time            POS--K   154   153   021    -    3300
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2456
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    1853
+  3 Spin_Up_Time            POS--K   152   152   021    -    3383
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2535
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   074   074   000    -    19446
+  9 Power_On_Hours          -O--CK   067   067   000    -    24261
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2277
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    660
-193 Load_Cycle_Count        -O--CK   200   200   000    -    2456
-194 Temperature_Celsius     -O---K   110   087   000    -    33
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2356
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    711
+193 Load_Cycle_Count        -O--CK   200   200   000    -    2535
+194 Temperature_Celsius     -O---K   102   087   000    -    41
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
-198 Offline_Uncorrectable   ----CK   200   200   000    -    1
+198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    1
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 1590 (device log contains only the most recent 24 errors)
+Device Error Count: 1611 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,163 +120,162 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1590 [5] occurred at disk power-on lifetime: 15876 hours (661 days + 12 hours)
+Error 1611 [2] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 3c f8 00 ec 00  Error: ABRT at LBA = 0x0c3cf800 = 205322240
+  04 -- 41 00 00 00 00 00 f7 08 c0 e4 00  Error: ABRT at LBA = 0x04f708c0 = 83298496
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 3c f8 00 ec 08  8d+14:08:37.184  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:08:37.184  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  8d+14:08:37.181  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  8d+14:08:37.181  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:08:37.181  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 10 00 00 00 f7 08 c0 e4 00 15d+23:43:14.644  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:43:14.644  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00 15d+23:43:14.640  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00 15d+23:43:14.640  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:43:14.640  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 1589 [4] occurred at disk power-on lifetime: 15876 hours (661 days + 12 hours)
+Error 1610 [1] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 3c f8 00 ec 00  Error: ABRT at LBA = 0x0c3cf800 = 205322240
+  04 -- 41 00 00 00 00 00 f7 08 c0 e4 00  Error: ABRT at LBA = 0x04f708c0 = 83298496
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 3c f8 00 ec 08  8d+14:08:20.554  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:08:20.554  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  8d+14:08:20.551  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  8d+14:08:20.551  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:08:20.551  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 10 00 00 00 f7 08 c0 e4 00 15d+23:42:58.248  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:58.248  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00 15d+23:42:58.244  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00 15d+23:42:58.244  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:58.244  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 1588 [3] occurred at disk power-on lifetime: 15876 hours (661 days + 12 hours)
+Error 1609 [0] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 3c f8 00 ec 00  Error: ABRT at LBA = 0x0c3cf800 = 205322240
+  04 -- 41 00 00 00 00 00 f7 08 c0 e4 00  Error: ABRT at LBA = 0x04f708c0 = 83298496
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 3c f8 00 ec 08  8d+14:08:03.666  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:08:03.666  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  8d+14:08:03.662  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  8d+14:08:03.662  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:08:03.662  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 10 00 00 00 f7 08 c0 e4 00 15d+23:42:42.390  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:42.390  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00 15d+23:42:42.387  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00 15d+23:42:42.387  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:42.386  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 1587 [2] occurred at disk power-on lifetime: 15876 hours (661 days + 12 hours)
+Error 1608 [23] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 3c f8 00 ec 00  Error: ABRT at LBA = 0x0c3cf800 = 205322240
+  04 -- 41 00 00 00 00 00 f7 08 c0 e4 00  Error: ABRT at LBA = 0x04f708c0 = 83298496
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 3c f8 00 ec 08  8d+14:07:47.144  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:07:47.144  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  8d+14:07:47.140  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  8d+14:07:47.140  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:07:47.140  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 10 00 00 00 f7 08 c0 e4 00 15d+23:42:26.588  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:26.588  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00 15d+23:42:26.585  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00 15d+23:42:26.585  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:26.585  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 1586 [1] occurred at disk power-on lifetime: 15876 hours (661 days + 12 hours)
+Error 1607 [22] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 3c f8 00 ec 00  Error: ABRT at LBA = 0x0c3cf800 = 205322240
+  04 -- 41 00 00 00 00 00 f7 08 c0 e4 00  Error: ABRT at LBA = 0x04f708c0 = 83298496
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 3c f8 00 ec 08  8d+14:07:29.176  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:07:29.176  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  8d+14:07:29.173  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  8d+14:07:29.173  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  8d+14:07:29.173  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 10 00 00 00 f7 08 c0 e4 00 15d+23:42:10.309  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:10.309  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00 15d+23:42:10.306  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00 15d+23:42:10.306  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 15d+23:42:10.306  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 1585 [0] occurred at disk power-on lifetime: 15876 hours (661 days + 12 hours)
+Error 1606 [21] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 3c f8 00 ec 00  Error: ABRT at LBA = 0x0c3cf800 = 205322240
+  04 -- 41 00 00 00 00 00 f7 08 c0 e4 00  Error: ABRT at LBA = 0x04f708c0 = 83298496
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 3c f8 00 ec 08  8d+14:07:12.061  READ DMA
-  c8 00 00 00 08 00 00 00 bc f8 18 eb 08  8d+14:07:12.061  READ DMA
-  c8 00 00 00 08 00 00 00 bc f8 10 eb 08  8d+14:07:12.061  READ DMA
-  c8 00 00 00 08 00 00 00 bc f8 08 eb 08  8d+14:07:12.060  READ DMA
-  c8 00 00 00 08 00 00 00 bc f8 00 eb 08  8d+14:07:12.047  READ DMA
+  c8 00 00 00 10 00 00 00 f7 08 c0 e4 00 15d+23:41:54.336  READ DMA
+  c8 00 00 00 08 00 00 00 c8 b8 b8 e5 00 15d+23:41:54.328  READ DMA
+  c8 00 00 00 08 00 00 00 c8 b8 48 e5 00 15d+23:41:54.322  READ DMA
+  c8 00 00 00 08 00 00 00 41 f5 10 e6 00 15d+23:41:54.321  READ DMA
+  c8 00 00 00 08 00 00 00 41 f4 f8 e6 00 15d+23:41:54.312  READ DMA
 
-Error 1584 [23] occurred at disk power-on lifetime: 15808 hours (658 days + 16 hours)
+Error 1605 [20] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 7c f9 00 ec 00  Error: ABRT at LBA = 0x0c7cf900 = 209516800
+  04 -- 41 00 00 00 00 00 f7 04 20 e4 00  Error: ABRT at LBA = 0x04f70420 = 83297312
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 7c f9 00 ec 08  5d+18:18:47.562  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  5d+18:18:47.562  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  5d+18:18:47.558  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  5d+18:18:47.558  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  5d+18:18:47.558  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 10 00 00 00 f7 04 20 e4 00 15d+23:41:35.942  READ DMA
+  ca 00 00 00 18 00 00 00 ec e3 68 e0 00 15d+23:41:35.942  WRITE DMA
+  ca 00 00 00 a8 00 00 00 e6 9e b0 e0 00 15d+23:41:35.941  WRITE DMA
+  ca 00 00 00 18 00 00 00 e6 9e 28 e0 00 15d+23:41:35.941  WRITE DMA
+  ca 00 00 00 10 00 00 00 e6 9e 08 e0 00 15d+23:41:35.941  WRITE DMA
 
-Error 1583 [22] occurred at disk power-on lifetime: 15808 hours (658 days + 16 hours)
+Error 1604 [19] occurred at disk power-on lifetime: 22148 hours (922 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 41 00 00 00 00 00 7c f9 00 ec 00  Error: ABRT at LBA = 0x0c7cf900 = 209516800
+  04 -- 41 00 00 00 00 00 4c 5b 10 e5 00  Error: ABRT at LBA = 0x054c5b10 = 88890128
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 00 7c f9 00 ec 08  5d+18:18:30.496  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  5d+18:18:30.496  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  5d+18:18:30.493  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  5d+18:18:30.493  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  5d+18:18:30.493  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  c8 00 00 00 08 00 00 00 4c 5b 10 e5 08 15d+23:39:18.184  READ DMA
+  27 00 00 00 00 00 00 00 00 00 00 e0 08 15d+23:39:18.184  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08 15d+23:39:18.181  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08 15d+23:39:18.181  SET FEATURES [Set transfer mode]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08 15d+23:39:18.181  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     19435         -
-# 2  Extended offline    Completed without error       00%     19267         -
-# 3  Extended offline    Completed without error       00%     19099         -
-# 4  Extended offline    Completed without error       00%     18931         -
-# 5  Extended offline    Completed without error       00%     18764         -
-# 6  Extended offline    Completed without error       00%     18596         -
-# 7  Extended offline    Completed without error       00%     18428         -
-# 8  Extended offline    Completed without error       00%     18260         -
-# 9  Extended offline    Completed without error       00%     18093         -
-#10  Extended offline    Completed without error       00%     17925         -
-#11  Extended offline    Completed without error       00%     17757         -
-#12  Extended offline    Completed without error       00%     17589         -
-#13  Extended offline    Completed without error       00%     17422         -
-#14  Extended offline    Completed: read failure       90%     17254         45531778
-#15  Extended offline    Completed: read failure       90%     17086         45531778
-#16  Extended offline    Completed without error       00%     16919         -
-#17  Extended offline    Completed without error       00%     16790         -
-#18  Extended offline    Completed without error       00%     16622         -
-2 of 2 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed without error       00%     24237         -
+# 2  Extended offline    Completed without error       00%     24070         -
+# 3  Extended offline    Completed without error       00%     23902         -
+# 4  Extended offline    Completed without error       00%     23734         -
+# 5  Extended offline    Completed without error       00%     23567         -
+# 6  Extended offline    Completed without error       00%     23399         -
+# 7  Extended offline    Completed without error       00%     23231         -
+# 8  Extended offline    Completed without error       00%     23079         -
+# 9  Extended offline    Completed without error       00%     22953         -
+#10  Extended offline    Completed without error       00%     22787         -
+#11  Extended offline    Completed without error       00%     22591         -
+#12  Extended offline    Completed without error       00%     22424         -
+#13  Extended offline    Completed without error       00%     22256         -
+#14  Extended offline    Completed without error       00%     22089         -
+#15  Extended offline    Completed without error       00%     21922         -
+#16  Extended offline    Completed without error       00%     21755         -
+#17  Extended offline    Completed without error       00%     21588         -
+#18  Extended offline    Completed without error       00%     21420         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -293,9 +292,9 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 SCT Support Level:                   1
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     27/33 Celsius
-Lifetime    Min/Max Temperature:     30/44 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     37/45 Celsius
+Lifetime    Min/Max Temperature:     41/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -303,7 +302,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (23)
+Temperature History Size (Index):    128 (81)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -320,6 +319,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
-0x8000  4       421805  Vendor specific
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x8000  4       723647  Vendor specific
 

@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.75-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 3.CHH
 User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat May  7 10:28:50 2022 MSK
+Local Time is:    Mon Nov  7 00:09:09 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  23)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  433) seconds.
 Offline data collection
@@ -60,18 +61,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            -O----   097   097   000    -    0
-  4 Start_Stop_Count        PO--CK   100   100   020    -    817
+  4 Start_Stop_Count        PO--CK   100   100   020    -    928
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   085   060   030    -    368067105
-  9 Power_On_Hours          -O--CK   078   078   000    -    19542
+  7 Seek_Error_Rate         POSR--   085   060   030    -    392718120
+  9 Power_On_Hours          -O--CK   078   078   000    -    19773
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       PO--CK   100   100   020    -    813
+ 12 Power_Cycle_Count       PO--CK   100   100   020    -    924
 184 End-to-End_Error        PO--CK   100   253   097    -    0
 187 Reported_Uncorrect      -O-RCK   100   100   000    -    0
 189 High_Fly_Writes         -O---K   098   098   000    -    2
-190 Airflow_Temperature_Cel -O-RC-   062   057   000    -    38 (Min/Max 20/39)
-194 Temperature_Celsius     ------   038   043   000    -    38 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O--CK   065   058   000    -    30008297
+190 Airflow_Temperature_Cel -O-RC-   066   056   000    -    34 (Min/Max 34/35)
+194 Temperature_Celsius     ------   034   044   000    -    34 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O--CK   066   058   000    -    16952520
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    4
@@ -113,8 +114,11 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               70%     19541         -
-# 2  Extended offline    Aborted by host               80%         0         -
+# 1  Extended offline    Completed without error       00%     19691         -
+# 2  Extended offline    Aborted by host               90%     19656         -
+# 3  Extended offline    Completed without error       00%     19550         -
+# 4  Extended offline    Aborted by host               70%     19541         -
+# 5  Extended offline    Aborted by host               80%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -130,9 +134,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     --/40 Celsius
-Lifetime    Min/Max Temperature:     --/43 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     --/35 Celsius
+Lifetime    Min/Max Temperature:     --/44 Celsius
 
 Another SCT command is executing, abort Read Data Table
 (SCT ext_status_code 0xffff, action_code=4, function_code=2)
@@ -146,7 +150,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
