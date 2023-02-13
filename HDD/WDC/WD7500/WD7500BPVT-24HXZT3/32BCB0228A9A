@@ -13,7 +13,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jan  6 17:17:23 2023 MSK
+Local Time is:    Sat Jan  7 05:26:21 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -31,9 +31,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 116)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(16380) seconds.
 Offline data collection
@@ -68,18 +67,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   093   093   000    -    7071
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   076   076   000    -    18159
+  9 Power_On_Hours          -O--CK   076   076   000    -    18172
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
  12 Power_Cycle_Count       -O--CK   094   094   000    -    6882
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    190
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1102776
-194 Temperature_Celsius     -O---K   108   083   000    -    39
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1102839
+194 Temperature_Celsius     -O---K   111   083   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    9
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    2
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -263,25 +262,25 @@ Error 13 [12] occurred at disk power-on lifetime: 17665 hours (736 days + 1 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     18075         -
-# 2  Extended offline    Completed without error       00%     17917         -
-# 3  Extended offline    Completed: read failure       90%     17882         919114052
-# 4  Extended offline    Completed: read failure       90%     17856         919114048
-# 5  Extended offline    Completed: read failure       90%     17832         919108889
-# 6  Extended offline    Completed: read failure       90%     17797         919108889
-# 7  Extended offline    Completed: read failure       90%     17783         919108888
-# 8  Extended offline    Completed: read failure       90%     17738         919108888
-# 9  Extended offline    Completed: read failure       90%     17706         919108888
-#10  Extended offline    Completed: read failure       90%     17692         919108888
-#11  Extended offline    Completed: read failure       90%     17659         919108888
-#12  Extended offline    Completed: read failure       90%     17553         919108888
-#13  Extended offline    Completed: read failure       90%     17430         919108888
-#14  Extended offline    Completed: read failure       90%     17330         919108888
-#15  Extended offline    Completed: read failure       90%     17258         919108888
-#16  Extended offline    Completed: read failure       90%     17124         919108888
-#17  Extended offline    Completed: read failure       90%     17021         919108888
-#18  Extended offline    Completed: read failure       90%     16904         919108888
-16 of 16 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed: read failure       40%     18171         920414416
+# 2  Extended offline    Completed without error       00%     18075         -
+# 3  Extended offline    Completed without error       00%     17917         -
+# 4  Extended offline    Completed: read failure       90%     17882         919114052
+# 5  Extended offline    Completed: read failure       90%     17856         919114048
+# 6  Extended offline    Completed: read failure       90%     17832         919108889
+# 7  Extended offline    Completed: read failure       90%     17797         919108889
+# 8  Extended offline    Completed: read failure       90%     17783         919108888
+# 9  Extended offline    Completed: read failure       90%     17738         919108888
+#10  Extended offline    Completed: read failure       90%     17706         919108888
+#11  Extended offline    Completed: read failure       90%     17692         919108888
+#12  Extended offline    Completed: read failure       90%     17659         919108888
+#13  Extended offline    Completed: read failure       90%     17553         919108888
+#14  Extended offline    Completed: read failure       90%     17430         919108888
+#15  Extended offline    Completed: read failure       90%     17330         919108888
+#16  Extended offline    Completed: read failure       90%     17258         919108888
+#17  Extended offline    Completed: read failure       90%     17124         919108888
+#18  Extended offline    Completed: read failure       90%     17021         919108888
+15 of 16 failed self-tests are outdated by newer successful extended offline self-test # 2
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -297,8 +296,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     25/39 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     25/47 Celsius
 Lifetime    Min/Max Temperature:      0/64 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -310,7 +309,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (123)
+Temperature History Size (Index):    128 (81)
 
 SCT Error Recovery Control command not supported
 
@@ -328,10 +327,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           22  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           32  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         3182  Vendor specific
+0x8000  4        46877  Vendor specific
 

@@ -14,7 +14,7 @@ Form Factor:      < 1.8 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jun 24 21:48:42 2021 MSK
+Local Time is:    Thu Jun 24 22:09:29 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,7 +63,7 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    1682
+  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    1684
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   9 Power_On_Hours          -O--CK   100   100   ---    -    11356
  12 Power_Cycle_Count       -O--CK   100   100   ---    -    4520
@@ -77,14 +77,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    1045
-194 Temperature_Celsius     -O---K   036   063   ---    -    36 (Min/Max 9/63)
+194 Temperature_Celsius     -O---K   038   063   ---    -    38 (Min/Max 9/63)
 198 Offline_Uncorrectable   ----CK   100   100   ---    -    0
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
 201 Lifetime_Remaining%     PO---K   093   093   005    -    30064771123
 230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    2401 2401 1820
-241 Total_Writes_GiB        -O--CK   100   100   ---    -    738135
-242 Total_Reads_GiB         -O--CK   100   100   ---    -    469027
-243 Unknown_Attribute       -O--CK   100   100   ---    -    1250387
+241 Total_Writes_GiB        -O--CK   100   100   ---    -    738213
+242 Total_Reads_GiB         -O--CK   100   100   ---    -    469137
+243 Unknown_Attribute       -O--CK   100   100   ---    -    1250474
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
 249 TLC_NAND_GB_Writes      -O--CK   100   100   ---    -    6063
                             ||||||_ K auto-keep
@@ -147,10 +147,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       257 (0x0101)
 Device State:                        Active (0)
-Current Temperature:                    43 Celsius
+Current Temperature:                    39 Celsius
 Power Cycle Min/Max Temperature:     31/43 Celsius
 Lifetime    Min/Max Temperature:     31/43 Celsius
-Specified Max Operating Temperature:    43 Celsius
+Specified Max Operating Temperature:    39 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -161,7 +161,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -15/90 Celsius
-Temperature History Size (Index):    256 (46)
+Temperature History Size (Index):    256 (49)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -173,8 +173,8 @@ Page  Offset Size        Value Flags Description
 0x01  0x008  4            4520  ---  Lifetime Power-On Resets
 0x01  0x010  4              28  ---  Power-on Hours
 0x01  0x018  6               0  ---  Logical Sectors Written
-0x01  0x020  6     24187239851  ---  Number of Write Commands
-0x01  0x028  6     15369090981  ---  Logical Sectors Read
+0x01  0x020  6     24189786190  ---  Number of Write Commands
+0x01  0x028  6     15372690001  ---  Logical Sectors Read
 0x01  0x030  6               0  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
@@ -187,7 +187,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           11210  ---  Number of Hardware Resets
+0x06  0x008  4           11214  ---  Number of Hardware Resets
 0x06  0x010  4              48  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
@@ -203,5 +203,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 

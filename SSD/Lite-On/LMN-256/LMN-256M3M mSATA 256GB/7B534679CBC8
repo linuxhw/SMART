@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-68.5rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     LITEONIT LMN-256M3M mSATA 256GB
 Serial Number:    --
@@ -9,10 +12,10 @@ Rotation Rate:    Solid State Device
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.0, 6.0 Gb/s
-Local Time is:    Thu Mar 28 09:06:30 2019 MSK
+Local Time is:    Fri Apr  3 09:19:46 2020 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
+AAM level is:     128 (quiet), recommended: 254
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -27,9 +30,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 241)	Self-test routine in progress...
+					10% of test remaining.
 Total time to complete Offline 
 data collection: 		(   10) seconds.
 Offline data collection
@@ -59,19 +61,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
- 12 Power_Cycle_Count       PO----   100   100   000    -    9189
+ 12 Power_Cycle_Count       PO----   100   100   000    -    10812
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
-177 Wear_Leveling_Count     PO----   100   100   000    -    440592
-178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    11
-179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   000    -    23
-180 Unused_Rsvd_Blk_Cnt_Tot PO----   087   087   005    -    2496
+177 Wear_Leveling_Count     PO----   100   100   000    -    591362
+178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    13
+179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   000    -    30
+180 Unused_Rsvd_Blk_Cnt_Tot PO----   085   085   005    -    2432
 181 Program_Fail_Cnt_Total  PO----   100   100   000    -    0
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    0
-187 Reported_Uncorrect      PO----   100   100   000    -    23
+187 Reported_Uncorrect      PO----   100   100   000    -    30
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
-241 Total_LBAs_Written      PO----   100   100   000    -    934787
-242 Total_LBAs_Read         PO----   100   100   000    -    2321370
+241 Total_LBAs_Written      PO----   100   100   000    -    1208034
+242 Total_LBAs_Read         PO----   100   100   000    -    2860658
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -193,36 +195,35 @@ Error -4 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   00 00 7a ad 04 00 00 00      00:00:00.000  NOP [Abort queued commands]
   00 00 78 ad 04 00 00 00      00:00:00.000  NOP [Abort queued commands]
   00 00 76 ad 04 00 00 00      00:00:00.000  NOP [Abort queued commands]
-  00 60 2b fb 00 00 00 00      00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 00 00 00 00 08 00  14d+15:03:53.200  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 06 29 03 00 00 00      00:00:00.000  NOP [Abort queued commands]
+  00 03 00 00 00 00 00 00      00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     47394         -
-# 2  Short offline       Completed without error       00%     44066         -
-# 3  Short offline       Completed without error       00%     35106         -
-# 4  Short offline       Completed without error       00%     31522         -
-# 5  Short offline       Completed without error       00%     31010         -
-# 6  Short offline       Completed without error       00%     62241         -
-# 7  Short offline       Completed without error       00%     57377         -
-# 8  Short offline       Completed without error       00%     57377         -
-# 9  Short offline       Completed without error       00%     52513         -
-#10  Short offline       Completed without error       00%     52513         -
-#11  Short offline       Completed without error       00%     50721         -
-#12  Extended offline    Completed without error       00%     50721         -
-#13  Short offline       Completed without error       00%     50721         -
-#14  Offline             Aborted by host               20%     50721         -
-#15  Short offline       Completed without error       00%     50721         -
-#16  Offline             Aborted by host               50%     50721         -
-#17  Short offline       Completed without error       00%     47648         -
-#18  Short offline       Completed without error       00%      8480         -
-#19  Short offline       Completed without error       00%      8480         -
+# 1  Short offline       Completed without error       00%     31010         -
+# 2  Short offline       Completed without error       00%     51495         -
+# 3  Short offline       Completed without error       00%     48678         -
+# 4  Short offline       Completed without error       00%     56612         -
+# 5  Short offline       Completed without error       00%     35876         -
+# 6  Short offline       Completed without error       00%     23587         -
+# 7  Short offline       Completed without error       00%     16675         -
+# 8  Short offline       Completed without error       00%     65058         -
+# 9  Short offline       Completed without error       00%     63778         -
+#10  Short offline       Completed without error       00%     55586         -
+#11  Short offline       Interrupted (host reset)      70%     55586         -
+#12  Short offline       Completed without error       00%     55586         -
+#13  Short offline       Completed without error       00%     55586         -
+#14  Short offline       Completed without error       00%     55586         -
+#15  Short offline       Completed without error       00%     55586         -
+#16  Short offline       Completed without error       00%     47394         -
+#17  Short offline       Completed without error       00%     44066         -
+#18  Short offline       Completed without error       00%     35106         -
+#19  Short offline       Completed without error       00%     31522         -
 
 Selective Self-tests/Logging not supported
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                     ? Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius

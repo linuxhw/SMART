@@ -10,8 +10,8 @@ Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 (minor revision not indicated)
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Feb 28 13:25:09 2021 CET
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Mon Apr 12 04:20:27 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,31 +59,31 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    5807
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3308
+  9 Power_On_Hours          -O--CK   100   100   000    -    9941
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2860
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
-169 Bad_Block_Rate          ------   100   100   000    -    8
-170 Bad_Blk_Ct_Erl/Lat      ------   100   100   000    -    0/9
+169 Bad_Block_Rate          ------   100   100   000    -    13
+170 Bad_Blk_Ct_Erl/Lat      ------   100   100   000    -    0/15
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    128 (Average 101)
+173 MaxAvgErase_Ct          ------   100   100   000    -    86 (Average 62)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    60
-194 Temperature_Celsius     -O---K   073   063   000    -    27 (Min/Max 14/37)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    684
+194 Temperature_Celsius     -O---K   073   048   000    -    27 (Min/Max 16/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   011   011   000    -    89
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    8987
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    7935
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    5264
-244 Average_Erase_Count     ------   100   100   000    -    101
-245 Max_Erase_Count         ------   100   100   000    -    128
-246 Total_Erase_Count       ------   100   100   000    -    593976
+231 SSD_Life_Left           ------   007   007   000    -    93
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    5763
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    4828
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    7770
+244 Average_Erase_Count     ------   100   100   000    -    62
+245 Max_Erase_Count         ------   100   100   000    -    86
+246 Total_Erase_Count       ------   100   100   000    -    361836
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,7 +111,9 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%       217         -
+# 2  Extended offline    Completed without error       00%        78         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -130,20 +132,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3308  ---  Lifetime Power-On Resets
-0x01  0x010  4            5807  ---  Power-on Hours
-0x01  0x018  6     16642934233  ---  Logical Sectors Written
-0x01  0x028  6     11040857705  ---  Logical Sectors Read
+0x01  0x008  4            2860  ---  Lifetime Power-On Resets
+0x01  0x010  4            9941  ---  Power-on Hours
+0x01  0x018  6     10125428515  ---  Logical Sectors Written
+0x01  0x028  6     16295037862  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              27  ---  Current Temperature
-0x05  0x020  1              37  ---  Highest Temperature
-0x05  0x028  1              14  ---  Lowest Temperature
+0x05  0x020  1              52  ---  Highest Temperature
+0x05  0x028  1              16  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              10  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -164,4 +166,6 @@ ID      Size     Value  Description
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

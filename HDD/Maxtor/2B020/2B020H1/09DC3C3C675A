@@ -7,7 +7,7 @@ User Capacity:    20,490,559,488 bytes [20.4 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Mon Apr 18 02:48:59 2022 CEST
+Local Time is:    Mon Oct 29 01:32:11 2018 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -51,20 +51,20 @@ recommended polling time: 	 (  13) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   234   233   063    -    5289
-  4 Start_Stop_Count        -O--CK   253   253   000    -    1217
+  3 Spin_Up_Time            POS--K   233   233   063    -    7046
+  4 Start_Stop_Count        -O--CK   253   253   000    -    1238
   5 Reallocated_Sector_Ct   PO--CK   250   249   063    -    20
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   247   244   187    -    56639
-  9 Power_On_Minutes        -O--CK   246   246   000    -    513h+37m
+  8 Seek_Time_Performance   POS--K   250   244   187    -    53608
+  9 Power_On_Minutes        -O--CK   246   246   000    -    515h+27m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   234   234   000    -    7519
-192 Power-Off_Retract_Count -O--CK   253   253   000    -    277
-193 Load_Cycle_Count        -O--CK   253   253   000    -    3250
+ 12 Power_Cycle_Count       -O--CK   234   234   000    -    7540
+192 Power-Off_Retract_Count -O--CK   253   253   000    -    297
+193 Load_Cycle_Count        -O--CK   253   253   000    -    3323
 194 Unknown_Attribute       -O--CK   253   253   000    -    0
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    188
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    128
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   252   245   000    -    1
 198 Offline_Uncorrectable   ---R--   253   252   000    -    0
@@ -77,7 +77,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   203   199   000    -    0
+209 Offline_Seek_Performnce --S--K   201   199   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -95,9 +95,7 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 1767 inconsistent with error log pointer 5
-
-ATA Error Count: 1767 (device log contains only the most recent five errors)
+ATA Error Count: 1770 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -111,6 +109,57 @@ ATA Error Count: 1767 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1770 occurred at disk power-on lifetime: 2531 hours (105 days + 11 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 01 0b 4f c2 10  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 00 4f c2 10 08      00:50:12.080  SMART READ LOG
+  b0 da 00 00 4f c2 10 08      00:50:12.048  SMART RETURN STATUS
+  b0 d1 01 01 4f c2 10 08      00:50:12.032  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 d0 01 00 4f c2 10 08      00:50:11.984  SMART READ DATA
+  ec 00 01 00 00 00 10 08      00:50:11.984  IDENTIFY DEVICE
+
+Error 1769 occurred at disk power-on lifetime: 2530 hours (105 days + 10 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 3c 00 04 00 f0  Error: UNC 60 sectors at LBA = 0x00000400 = 1024
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 00 04 00 f0 08      00:56:47.264  READ DMA
+  c8 00 00 00 fe 5f f2 08      00:56:47.248  READ DMA
+  c8 00 00 00 ff 5f f2 08      00:56:47.232  READ DMA
+  c8 00 c0 40 fc 5f f2 08      00:56:47.232  READ DMA
+  c8 00 40 00 fc 5f f2 08      00:56:47.232  READ DMA
+
+Error 1768 occurred at disk power-on lifetime: 2530 hours (105 days + 10 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 4c 08 04 00 f0  Error: UNC 76 sectors at LBA = 0x00000408 = 1032
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 08 04 00 f0 08      00:16:02.096  READ DMA EXT
+  c8 00 e0 20 03 00 f0 08      00:16:02.080  READ DMA
+  25 00 18 08 02 00 f0 08      00:16:02.080  READ DMA EXT
+  c8 00 f8 08 01 00 f0 08      00:16:02.080  READ DMA
+  c8 00 10 f0 00 00 f0 08      00:16:02.080  READ DMA
 
 Error 1767 occurred at disk power-on lifetime: 2529 hours (105 days + 9 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -145,57 +194,6 @@ Error 1766 occurred at disk power-on lifetime: 2516 hours (104 days + 20 hours)
   25 00 18 08 02 00 f0 08      00:39:25.600  READ DMA EXT
   c8 00 f8 08 01 00 f0 08      00:39:25.600  READ DMA
   c8 00 10 f0 00 00 f0 08      00:39:25.600  READ DMA
-
-Error 1765 occurred at disk power-on lifetime: 2515 hours (104 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 4c 08 04 00 f0  Error: UNC 76 sectors at LBA = 0x00000408 = 1032
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 08 04 00 f0 08      01:35:18.256  READ DMA EXT
-  c8 00 e0 20 03 00 f0 08      01:35:18.256  READ DMA
-  25 00 18 08 02 00 f0 08      01:35:18.240  READ DMA EXT
-  c8 00 f8 08 01 00 f0 08      01:35:18.240  READ DMA
-  c8 00 10 f0 00 00 f0 08      01:35:18.240  READ DMA
-
-Error 1764 occurred at disk power-on lifetime: 2515 hours (104 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  01 51 4c 08 04 00 f0  Error: AMNF 76 sectors at LBA = 0x00000408 = 1032
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 08 04 00 f0 08      00:43:18.368  READ DMA EXT
-  c8 00 e0 20 03 00 f0 08      00:43:18.368  READ DMA
-  25 00 18 08 02 00 f0 08      00:43:18.352  READ DMA EXT
-  c8 00 f8 08 01 00 f0 08      00:43:18.352  READ DMA
-  c8 00 10 f0 00 00 f0 08      00:43:18.352  READ DMA
-
-Error 1763 occurred at disk power-on lifetime: 2515 hours (104 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 4c 08 04 00 f0  Error: UNC 76 sectors at LBA = 0x00000408 = 1032
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 08 04 00 f0 08      00:42:17.616  READ DMA EXT
-  c8 00 e0 20 03 00 f0 08      00:42:17.616  READ DMA
-  25 00 18 08 02 00 f0 08      00:42:17.616  READ DMA EXT
-  c8 00 f8 08 01 00 f0 08      00:42:17.616  READ DMA
-  c8 00 10 f0 00 00 f0 08      00:42:17.616  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

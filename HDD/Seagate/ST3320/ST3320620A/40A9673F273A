@@ -10,7 +10,7 @@ User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Jan 20 16:15:34 2023 MSK
+Local Time is:    Sun Jan 22 12:36:05 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,7 +18,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -29,8 +29,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  39)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -55,19 +56,19 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   095   078   006    -    133842171
-  3 Spin_Up_Time            PO----   098   094   000    -    0
-  4 Start_Stop_Count        -O--CK   096   096   020    -    4473
+  1 Raw_Read_Error_Rate     POSR--   117   078   006    -    125685690
+  3 Spin_Up_Time            PO----   096   094   000    -    0
+  4 Start_Stop_Count        -O--CK   096   096   020    -    4488
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   057   033   030    -    3917589760770
-  9 Power_On_Hours          -O--CK   086   086   000    -    12345
+  7 Seek_Error_Rate         POSR--   057   033   030    -    3917590947925
+  9 Power_On_Hours          -O--CK   086   086   000    -    12367
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4531
+ 12 Power_Cycle_Count       -O--CK   096   096   020    -    4547
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   020   045    Past 38 (9 243 38 30 0)
-194 Temperature_Celsius     -O---K   038   080   000    -    38 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   070   055   000    -    192047763
+190 Airflow_Temperature_Cel -O---K   067   020   045    Past 33 (9 243 33 30 0)
+194 Temperature_Celsius     -O---K   033   080   000    -    33 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   109   055   000    -    158939638
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    40
@@ -259,7 +260,8 @@ Error 39 [18] occurred at disk power-on lifetime: 816 hours (34 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      70%     12273         -
+# 1  Extended offline    Completed without error       00%     12353         -
+# 2  Extended offline    Interrupted (host reset)      70%     12273         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

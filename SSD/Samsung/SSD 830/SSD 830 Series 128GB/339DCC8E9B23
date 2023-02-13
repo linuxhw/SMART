@@ -10,13 +10,13 @@ Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 2
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Feb  5 07:21:35 2021 CET
+Local Time is:    Tue Nov 23 15:07:11 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
@@ -28,8 +28,9 @@ General SMART Values:
 Offline data collection status:  (0x83)	Offline data collection activity
 					is in a Reserved state.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  38)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  540) seconds.
 Offline data collection
@@ -55,19 +56,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    14679
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    5323
-177 Wear_Leveling_Count     PO--C-   088   088   000    -    411
+  9 Power_On_Hours          -O--CK   097   097   000    -    14780
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    5610
+177 Wear_Leveling_Count     PO--C-   085   085   000    -    520
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   070   049   000    -    30
+190 Airflow_Temperature_Cel -O--CK   071   049   000    -    29
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   253   253   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    848
-241 Total_LBAs_Written      -O--CK   099   099   000    -    30362457058
+235 POR_Recovery_Count      -O--C-   099   099   000    -    935
+241 Total_LBAs_Written      -O--CK   099   099   000    -    33730698157
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -94,9 +95,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      60%     14332         -
-# 2  Short offline       Completed without error       00%     14111         -
-# 3  Short offline       Completed without error       00%      7792         -
+# 1  Short offline       Completed without error       00%     14769         -
+# 2  Short offline       Interrupted (host reset)      70%     14768         -
+# 3  Short offline       Completed without error       00%     14751         -
+# 4  Short offline       Interrupted (host reset)      60%     14332         -
+# 5  Short offline       Completed without error       00%     14111         -
+# 6  Short offline       Completed without error       00%      7792         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -126,7 +130,7 @@ ID      Size     Value  Description
 0x0007  2         4096  R_ERR response for host-to-device non-data FIS
 0x0008  2         7952  Device-to-host non-data FIS retries
 0x0009  2         7953  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2        42073  Device-to-host register FISes sent due to a COMRESET
+0x000a  2        44325  Device-to-host register FISes sent due to a COMRESET
 0x000b  2         6145  CRC errors within host-to-device FIS
 0x000d  2         7953  Non-CRC errors within host-to-device FIS
 0x000f  2         8176  R_ERR response for host-to-device data FIS, CRC

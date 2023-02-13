@@ -10,7 +10,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Oct 29 00:29:42 2018 UTC
+Local Time is:    Sun Jun  6 13:36:41 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,8 +25,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,21 +60,21 @@ SCT capabilities: 	       (0x3037)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    2
-  3 Spin_Up_Time            POS--K   139   138   021    -    4025
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2213
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    18
+  3 Spin_Up_Time            POS--K   140   138   021    -    3966
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2311
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   079   079   000    -    15796
+  9 Power_On_Hours          -O--CK   076   076   000    -    17650
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2206
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    811
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1403
-194 Temperature_Celsius     -O---K   119   094   000    -    24
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2304
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    851
+193 Load_Cycle_Count        -O--CK   200   200   000    -    1461
+194 Temperature_Celsius     -O---K   110   094   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    0
-198 Offline_Uncorrectable   ----CK   200   200   000    -    0
+197 Current_Pending_Sector  -O--CK   200   200   000    -    1
+198 Offline_Uncorrectable   ----CK   200   200   000    -    1
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 2
+Device Error Count: 18
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,61 +124,163 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 2 [1] occurred at disk power-on lifetime: 12737 hours (530 days + 17 hours)
+Error 18 [17] occurred at disk power-on lifetime: 17628 hours (734 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 14 eb b8 46 e0 00  Error: UNC 8 sectors at LBA = 0x14ebb846 = 350992454
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 14 eb b8 40 e0 08     00:01:01.963  READ DMA EXT
-  35 00 00 00 40 00 00 1c 84 0d d0 e0 08     00:01:01.963  WRITE DMA EXT
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:01:01.963  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:01.960  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:01:01.960  SET FEATURES [Set transfer mode]
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:00:52.207  READ DMA EXT
+  25 00 00 00 08 00 00 28 c1 0d 60 e0 08     00:00:52.188  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:52.188  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:52.184  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:52.184  SET FEATURES [Set transfer mode]
 
-Error 1 [0] occurred at disk power-on lifetime: 12737 hours (530 days + 17 hours)
+Error 17 [16] occurred at disk power-on lifetime: 17628 hours (734 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 14 eb b8 46 e0 00  Error: UNC 8 sectors at LBA = 0x14ebb846 = 350992454
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 14 eb b8 40 e0 08     00:01:00.038  READ DMA EXT
-  c8 00 00 00 20 00 00 0d 46 6e 80 ed 08     00:01:00.022  READ DMA
-  c8 00 00 00 20 00 00 0d 45 0c 40 ed 08     00:01:00.022  READ DMA
-  25 00 00 00 08 00 00 14 c4 ba 28 e0 08     00:01:00.011  READ DMA EXT
-  c8 00 00 00 50 00 00 0d 46 66 00 ed 08     00:01:00.011  READ DMA
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:00:50.387  READ DMA EXT
+  c8 00 00 00 18 00 00 00 42 59 60 e0 08     00:00:50.357  READ DMA
+  25 00 00 00 08 00 00 28 c4 49 58 e0 08     00:00:50.357  READ DMA EXT
+  25 00 00 00 08 00 00 3a 38 5a 28 e0 08     00:00:50.352  READ DMA EXT
+  25 00 00 00 08 00 00 3a 38 5c 28 e0 08     00:00:50.329  READ DMA EXT
+
+Error 16 [15] occurred at disk power-on lifetime: 17626 hours (734 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:00:46.730  READ DMA EXT
+  25 00 00 00 08 00 00 23 01 15 b0 e0 08     00:00:46.714  READ DMA EXT
+  ea 00 00 00 00 00 00 1c 84 09 3f e0 08     00:00:46.706  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 1c 84 09 38 e0 08     00:00:46.706  WRITE DMA EXT
+  ea 00 00 00 00 00 00 22 d1 21 1f e0 08     00:00:46.692  FLUSH CACHE EXT
+
+Error 15 [14] occurred at disk power-on lifetime: 17626 hours (734 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:00:44.872  READ DMA EXT
+  25 00 00 00 08 00 00 11 81 09 10 e0 08     00:00:44.872  READ DMA EXT
+  c8 00 00 00 18 00 00 00 42 59 60 e0 08     00:00:44.861  READ DMA
+  25 00 00 00 08 00 00 28 c4 49 58 e0 08     00:00:44.861  READ DMA EXT
+  25 00 00 00 08 00 00 11 81 09 00 e0 08     00:00:44.845  READ DMA EXT
+
+Error 14 [13] occurred at disk power-on lifetime: 17625 hours (734 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:22:25.238  READ DMA EXT
+  25 00 00 00 08 00 00 2b 81 17 30 e0 08     00:22:25.238  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:22:25.237  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:22:25.235  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:22:25.235  SET FEATURES [Set transfer mode]
+
+Error 13 [12] occurred at disk power-on lifetime: 17625 hours (734 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:22:23.436  READ DMA EXT
+  c8 00 00 00 18 00 00 00 42 59 60 e0 08     00:22:23.419  READ DMA
+  25 00 00 00 08 00 00 2b 81 18 d0 e0 08     00:22:23.418  READ DMA EXT
+  25 00 00 00 08 00 00 22 c1 0c 28 e0 08     00:22:23.402  READ DMA EXT
+  25 00 00 00 08 00 00 2b 81 18 c8 e0 08     00:22:23.395  READ DMA EXT
+
+Error 12 [11] occurred at disk power-on lifetime: 17625 hours (734 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:01:20.289  READ DMA EXT
+  25 00 00 00 30 00 00 28 c4 b3 c0 e0 08     00:01:20.289  READ DMA EXT
+  25 00 00 00 90 00 00 22 df ef f8 e0 08     00:01:20.273  READ DMA EXT
+  ea 00 00 00 00 00 00 22 df ef 7f e0 08     00:01:20.262  FLUSH CACHE EXT
+  25 00 00 00 20 00 00 22 df ef 60 e0 08     00:01:20.254  READ DMA EXT
+
+Error 11 [10] occurred at disk power-on lifetime: 17625 hours (734 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 28 cb 68 01 e0 00  Error: UNC 8 sectors at LBA = 0x28cb6801 = 684419073
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 28 cb 68 00 e0 08     00:00:47.924  READ DMA EXT
+  25 00 00 00 08 00 00 2b 81 16 a0 e0 08     00:00:47.924  READ DMA EXT
+  25 00 00 00 08 00 00 2b 81 12 d0 e0 08     00:00:47.922  READ DMA EXT
+  25 00 00 00 08 00 00 2b 81 18 70 e0 08     00:00:47.902  READ DMA EXT
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:47.902  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     15765         -
-# 2  Extended offline    Interrupted (host reset)      60%     15757         -
-# 3  Extended offline    Completed without error       00%     15718         -
-# 4  Extended offline    Completed without error       00%     15666         -
-# 5  Extended offline    Completed without error       00%     15649         -
-# 6  Extended offline    Completed without error       00%     15623         -
-# 7  Extended offline    Completed without error       00%     15525         -
-# 8  Extended offline    Completed without error       00%     15358         -
-# 9  Extended offline    Completed without error       00%     15202         -
-#10  Extended offline    Completed without error       00%     15166         -
-#11  Extended offline    Completed without error       00%     15046         -
-#12  Short offline       Completed: read failure       90%     14290         93558721
-#13  Extended offline    Completed: read failure       90%     12712         968564102
-#14  Extended offline    Completed: read failure       90%     12634         968564102
-#15  Extended offline    Completed: read failure       90%     12515         968564102
-#16  Extended offline    Completed: read failure       90%     12396         968564102
-#17  Extended offline    Completed: read failure       90%     12395         968564102
-#18  Extended offline    Completed: read failure       80%     12276         968564102
-7 of 7 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Extended offline    Completed without error       00%     17506         -
+# 2  Extended offline    Completed without error       00%     17500         -
+# 3  Extended offline    Completed without error       00%     17439         -
+# 4  Extended offline    Completed without error       00%     17364         -
+# 5  Extended offline    Completed without error       00%     17337         -
+# 6  Extended offline    Completed without error       00%     17325         -
+# 7  Extended offline    Completed without error       00%     17322         -
+# 8  Extended offline    Completed without error       00%     17254         -
+# 9  Extended offline    Completed without error       00%     17184         -
+#10  Extended offline    Completed without error       00%     17145         -
+#11  Extended offline    Completed without error       00%     17114         -
+#12  Extended offline    Completed: read failure       90%     17006         431503801
+#13  Extended offline    Completed: read failure       60%     16872         431503801
+#14  Extended offline    Completed without error       00%     16717         -
+#15  Extended offline    Completed without error       00%     16677         -
+#16  Extended offline    Completed without error       00%     16665         -
+#17  Extended offline    Completed without error       00%     16634         -
+#18  Extended offline    Completed without error       00%     16499         -
+2 of 2 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -194,8 +296,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     23/23 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     32/36 Celsius
 Lifetime    Min/Max Temperature:      0/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -204,7 +306,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (183)
+Temperature History Size (Index):    478 (64)
 
 SCT Error Recovery Control command not supported
 
@@ -221,7 +323,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4           80  Vendor specific
+0x8000  4        78586  Vendor specific
 

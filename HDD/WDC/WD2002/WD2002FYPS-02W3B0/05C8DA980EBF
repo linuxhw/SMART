@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-kali9-amd64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.12-arch1-1] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,11 +13,11 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Aug 11 02:23:20 2021 BST
+Local Time is:    Tue Aug 24 13:11:11 2021 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -65,17 +65,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   231   224   021    -    10425
-  4 Start_Stop_Count        -O--CK   100   100   000    -    686
+  3 Spin_Up_Time            POS--K   240   224   021    -    9958
+  4 Start_Stop_Count        -O--CK   100   100   000    -    698
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   074   074   000    -    19128
+  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   074   074   000    -    19249
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    446
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    152
-193 Load_Cycle_Count        -O--CK   200   200   000    -    533
-194 Temperature_Celsius     -O---K   118   090   000    -    34
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    457
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    155
+193 Load_Cycle_Count        -O--CK   200   200   000    -    542
+194 Temperature_Celsius     -O---K   120   090   000    -    32
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -215,8 +215,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     26/35 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     27/32 Celsius
 Lifetime    Min/Max Temperature:     26/62 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -225,7 +225,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (344)
+Temperature History Size (Index):    478 (405)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -244,9 +244,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        39667  Vendor specific
+0x8000  4         7132  Vendor specific
 
 
 

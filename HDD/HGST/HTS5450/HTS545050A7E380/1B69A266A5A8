@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi/HGST Travelstar Z5K500
 Device Model:     HGST HTS545050A7E380
@@ -11,11 +14,11 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Mar 27 15:53:10 2019 EET
+Local Time is:    Tue Dec 28 00:43:44 2021 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -61,23 +64,23 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  P-S---   198   198   040    -    117
-  3 Spin_Up_Time            POS---   201   201   033    -    1
-  4 Start_Stop_Count        -O--C-   098   098   000    -    4295
+  2 Throughput_Performance  P-S---   198   198   040    -    118
+  3 Spin_Up_Time            POS---   205   205   033    -    1
+  4 Start_Stop_Count        -O--C-   097   097   000    -    6108
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   112   112   040    -    35
-  9 Power_On_Hours          -O--C-   033   033   000    -    29384
+  9 Power_On_Hours          -O--C-   001   001   000    -    47900
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    4157
-191 G-Sense_Error_Rate      -O-R--   098   098   000    -    327680
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    149
-193 Load_Cycle_Count        -O--C-   001   001   000    -    2808049
-194 Temperature_Celsius     -O----   153   153   000    -    39 (Min/Max 10/57)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    5949
+191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    447
+193 Load_Cycle_Count        -O--C-   001   001   000    -    2915336
+194 Temperature_Celsius     -O----   157   157   000    -    38 (Min/Max 10/57)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    21
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    14
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,29 +106,110 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 14 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 14 [1] occurred at disk power-on lifetime: 45306 hours (1887 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:02.793  IDENTIFY DEVICE
+  00 1f bf 00 01 00 00 00 00 00 01 00 04     00:00:02.699  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 1f bf 00 01 00 00 00 00 00 01 a0 ff     22:28:59.842  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 1f bf 00 01 00 00 00 00 00 01 a0 ff     22:28:59.035  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 13 [0] occurred at disk power-on lifetime: 45234 hours (1884 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:02.282  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:02.264  IDENTIFY DEVICE
+  00 3f bf 00 01 00 00 00 00 00 01 00 04     00:00:02.171  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 3f bf 00 01 00 00 00 00 00 01 a0 ff  3d+22:41:08.385  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 3f bf 00 01 00 00 00 00 00 01 a0 ff  3d+22:41:07.579  NOP [Reserved subcommand] [OBS-ACS-2]
+
+Error 12 [3] occurred at disk power-on lifetime: 45234 hours (1884 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:06:24.151  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:06:24.133  IDENTIFY DEVICE
+  ef 00 90 00 01 00 00 00 00 00 01 00 04     00:06:24.040  SET FEATURES [Disable SATA feature]
+  ef 00 90 00 01 00 00 00 00 00 01 00 ff     00:06:20.426  SET FEATURES [Disable SATA feature]
+  ef 00 90 00 00 00 00 14 00 00 00 00 ff     00:06:19.574  SET FEATURES [Disable SATA feature]
+
+Error 11 [2] occurred at disk power-on lifetime: 45234 hours (1884 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 01 7a bc 2f 00 00 00 00 0a     00:03:59.784  IDENTIFY DEVICE
+  25 00 00 00 10 00 00 15 7a bc 20 e0 0a     00:03:59.778  READ DMA EXT
+  ec 00 00 00 01 77 2a 37 00 00 00 00 0a     00:03:59.766  IDENTIFY DEVICE
+  25 00 00 00 08 00 00 15 77 2a 30 e0 0a     00:03:59.757  READ DMA EXT
+  ea 00 00 00 00 00 00 14 ba 58 f7 a0 0a     00:03:59.746  FLUSH CACHE EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     29291         -
-# 2  Extended offline    Completed without error       00%     29021         -
-# 3  Extended offline    Completed without error       00%     28717         -
-# 4  Extended offline    Completed without error       00%     28562         -
-# 5  Extended offline    Completed without error       00%     28406         -
-# 6  Extended offline    Completed without error       00%     28238         -
-# 7  Extended offline    Completed without error       00%     28071         -
-# 8  Extended offline    Completed without error       00%     27907         -
-# 9  Extended offline    Completed without error       00%     27739         -
-#10  Extended offline    Completed without error       00%     27571         -
-#11  Extended offline    Completed without error       00%     27412         -
-#12  Extended offline    Completed without error       00%     27252         -
-#13  Extended offline    Completed without error       00%     27084         -
-#14  Extended offline    Completed without error       00%     26916         -
-#15  Extended offline    Completed without error       00%     26769         -
-#16  Extended offline    Completed without error       00%     26603         -
-#17  Extended offline    Completed without error       00%     26440         -
-#18  Extended offline    Completed without error       00%     25721         -
-#19  Extended offline    Completed without error       00%     24419         -
+# 1  Short offline       Completed without error       00%     44361         -
+# 2  Short offline       Completed without error       00%     44240         -
+# 3  Short offline       Completed without error       00%     42633         -
+# 4  Short offline       Completed without error       00%     38483         -
+# 5  Short offline       Completed without error       00%     38006         -
+# 6  Short offline       Completed without error       00%     31952         -
+# 7  Extended offline    Completed without error       00%     29886         -
+# 8  Extended offline    Completed without error       00%     29694         -
+# 9  Extended offline    Completed without error       00%     29445         -
+#10  Extended offline    Completed without error       00%     29291         -
+#11  Extended offline    Completed without error       00%     29021         -
+#12  Extended offline    Completed without error       00%     28717         -
+#13  Extended offline    Completed without error       00%     28562         -
+#14  Extended offline    Completed without error       00%     28406         -
+#15  Extended offline    Completed without error       00%     28238         -
+#16  Extended offline    Completed without error       00%     28071         -
+#17  Extended offline    Completed without error       00%     27907         -
+#18  Extended offline    Completed without error       00%     27739         -
+#19  Extended offline    Completed without error       00%     27571         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -140,12 +224,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     35/41 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     33/42 Celsius
 Lifetime    Min/Max Temperature:     10/57 Celsius
-Lifetime    Average Temperature:        37 Celsius
+Specified Max Operating Temperature:    37 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -153,7 +236,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (61)
+Temperature History Size (Index):    128 (105)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -172,8 +255,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.18-100.fc33.x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.7-200.fc36.x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Silicon Motion based SSDs
@@ -11,10 +11,10 @@ User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue May  3 22:15:08 2022 NZST
+Local Time is:    Sat Sep 17 07:39:25 2022 NZST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -67,30 +67,30 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    277
- 12 Power_Cycle_Count       ------   100   100   000    -    538
+  9 Power_On_Hours          ------   100   100   000    -    335
+ 12 Power_Cycle_Count       ------   100   100   000    -    603
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    32
 163 Initial_Bad_Block_Count ------   100   100   000    -    261
-148 Total_SLC_Erase_Ct      ------   100   100   000    -    41158
-149 Max_SLC_Erase_Ct        ------   100   100   000    -    582
-150 Min_SLC_Erase_Ct        ------   100   100   000    -    477
-151 Average_SLC_Erase_Ct    ------   100   100   000    -    556
-164 Total_Erase_Count       ------   100   100   000    -    10495
-165 Max_Erase_Count         ------   100   100   000    -    33
+148 Total_SLC_Erase_Ct      ------   100   100   000    -    42915
+149 Max_SLC_Erase_Ct        ------   100   100   000    -    591
+150 Min_SLC_Erase_Ct        ------   100   100   000    -    529
+151 Average_SLC_Erase_Ct    ------   100   100   000    -    580
+164 Total_Erase_Count       ------   100   100   000    -    11003
+165 Max_Erase_Count         ------   100   100   000    -    35
 166 Min_Erase_Count         ------   100   100   000    -    1
 167 Average_Erase_Count     ------   100   100   000    -    8
 169 Remaining_Lifetime_Perc ------   100   100   001    -    100
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    29
-194 Temperature_Celsius     ------   100   100   070    -    32 (41 39 40 41 0)
+192 Power-Off_Retract_Count ------   100   100   000    -    30
+194 Temperature_Celsius     ------   100   100   070    -    20 (30 26 28 30 0)
 199 UDMA_CRC_Error_Count    ------   100   100   000    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    42240
-242 Host_Reads_32MiB        ------   100   100   000    -    47228
-245 TLC_Writes_32MiB        ------   100   100   000    -    61986
-246 SLC_Writes_32MiB        ------   100   100   000    -    82316
+241 Host_Writes_32MiB       ------   100   100   000    -    43525
+242 Host_Reads_32MiB        ------   100   100   000    -    49136
+245 TLC_Writes_32MiB        ------   100   100   000    -    64986
+246 SLC_Writes_32MiB        ------   100   100   000    -    85830
 247 Raid_Recoverty_Ct       ------   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -122,8 +122,9 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
-SMART Extended Self-test Log Version: 0 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Offline             Completed without error       00%       304         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -149,24 +150,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (115)
+Temperature History Size (Index):    128 (87)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             538  ---  Lifetime Power-On Resets
-0x01  0x010  4             277  ---  Power-on Hours
-0x01  0x018  6      2768280522  ---  Logical Sectors Written
-0x01  0x020  6        42197715  ---  Number of Write Commands
-0x01  0x028  6      3095170602  ---  Logical Sectors Read
-0x01  0x030  6        50673789  ---  Number of Read Commands
+0x01  0x008  4             603  ---  Lifetime Power-On Resets
+0x01  0x010  4             335  ---  Power-on Hours
+0x01  0x018  6      2852457658  ---  Logical Sectors Written
+0x01  0x020  6        42941281  ---  Number of Write Commands
+0x01  0x028  6      3220236074  ---  Logical Sectors Read
+0x01  0x030  6        52356167  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4           25560  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4           25562  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1737  ---  Number of Hardware Resets
+0x06  0x008  4            2013  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator

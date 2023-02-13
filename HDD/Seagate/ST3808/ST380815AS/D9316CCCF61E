@@ -7,14 +7,13 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Jan  8 19:50:17 2021 CET
+Local Time is:    Sat Jan  9 12:35:07 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
-DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Unexpected SCT status 0xffff (action_code=4, function_code=2)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
@@ -57,18 +56,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            -O----   097   097   000    -    0
-  4 Start_Stop_Count        PO--CK   096   096   020    -    4242
+  4 Start_Stop_Count        PO--CK   096   096   020    -    4243
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    708895865
-  9 Power_On_Hours          -O--CK   064   064   000    -    31584
+  7 Seek_Error_Rate         POSR--   088   060   030    -    709153685
+  9 Power_On_Hours          -O--CK   064   064   000    -    31585
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       PO--CK   096   096   020    -    4240
+ 12 Power_Cycle_Count       PO--CK   096   096   020    -    4241
 184 End-to-End_Error        PO--CK   100   253   097    -    0
 187 Reported_Uncorrect      -O-RCK   100   100   000    -    0
 189 High_Fly_Writes         -O---K   100   100   000    -    0
-190 Airflow_Temperature_Cel -O-RC-   062   051   000    -    38 (Min/Max 37/38)
-194 Temperature_Celsius     ------   038   049   000    -    38 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O--CK   075   069   000    -    120853111
+190 Airflow_Temperature_Cel -O-RC-   066   051   000    -    34 (Min/Max 25/34)
+194 Temperature_Celsius     ------   034   049   000    -    34 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O--CK   074   069   000    -    78565791
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
@@ -89,7 +88,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  NCQ Command Error log
+0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -125,10 +124,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
+SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     --/38 Celsius
-Lifetime    Min/Max Temperature:     --/49 Celsius
+Current Temperature:                 34 Celsius
+Power Cycle Max Temperature:         34 Celsius
+Lifetime    Max Temperature:         49 Celsius
 
 Another SCT command is executing, abort Read Data Table
 (SCT ext_status_code 0xffff, action_code=4, function_code=2)
@@ -138,11 +138,9 @@ SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
-Pending Defects log (GP Log 0x0c) not supported
-
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
