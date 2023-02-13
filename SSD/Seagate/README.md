@@ -29,15 +29,15 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | 2E256-TU2-510B00   | 170 GB | 3       | 2072  | 1366  | 1.85   |
 | Seagate   | ST120HM000-1G5142  | 120 GB | 2       | 429   | 0     | 1.18   |
 | Seagate   | STT_FTM64GX25H     | 64 GB  | 1       | 378   | 0     | 1.04   |
-| Seagate   | SSD                | 500 GB | 2       | 348   | 0     | 0.95   |
+| Seagate   | SSD                | 500 GB | 2       | 364   | 0     | 1.00   |
 | Seagate   | IronWolf ZA2000... | 2 TB   | 1       | 338   | 0     | 0.93   |
 | Seagate   | SSD                | 250 GB | 5       | 310   | 0     | 0.85   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | 11      | 291   | 0     | 0.80   |
 | Seagate   | ZA480NM10001       | 480 GB | 1       | 261   | 0     | 0.72   |
 | Seagate   | SSD                | 1 TB   | 4       | 247   | 0     | 0.68   |
-| Seagate   | BarraCuda 120 S... | 500 GB | 17      | 216   | 0     | 0.59   |
+| Seagate   | BarraCuda 120 S... | 500 GB | 17      | 221   | 0     | 0.61   |
 | Seagate   | ST240HM000         | 240 GB | 1       | 206   | 0     | 0.56   |
-| Seagate   | BarraCuda 120 S... | 1 TB   | 13      | 199   | 0     | 0.55   |
+| Seagate   | BarraCuda 120 S... | 1 TB   | 13      | 200   | 0     | 0.55   |
 | Seagate   | BarraCuda SSD Z... | 1 TB   | 7       | 193   | 0     | 0.53   |
 | Seagate   | BarraCuda SSD Z... | 2 TB   | 3       | 192   | 0     | 0.53   |
 | Seagate   | BarraCuda SSD Z... | 500 GB | 12      | 179   | 0     | 0.49   |
@@ -74,7 +74,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | Nytro XF1230 SATA SSD  | 1      | 2       | 1236  | 0     | 3.39   |
 | Seagate   | 600 Series             | 1      | 2       | 429   | 0     | 1.18   |
 | Seagate   | Indilinx Barefoot b... | 1      | 1       | 378   | 0     | 1.04   |
-| Seagate   | Unknown                | 24     | 114     | 272   | 36    | 0.64   |
+| Seagate   | Unknown                | 24     | 114     | 273   | 36    | 0.64   |
 | Seagate   | IronWolf 110 SATA SSD  | 3      | 6       | 92    | 0     | 0.25   |
 | Seagate   | Nytro SATA SSD         | 3      | 10      | 65    | 0     | 0.18   |
 | Seagate   | 600 Pro Series         | 1      | 1       | 14    | 0     | 0.04   |

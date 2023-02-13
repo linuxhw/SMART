@@ -36,15 +36,15 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Flare              | 64 GB  | 6       | 493   | 0     | 1.35   |
 | Patriot   | Spark              | 256 GB | 3       | 465   | 0     | 1.28   |
 | Patriot   | Blast              | 120 GB | 13      | 432   | 0     | 1.19   |
-| Patriot   | Pyro SSD           | 120 GB | 2       | 385   | 0     | 1.06   |
+| Patriot   | Pyro SSD           | 120 GB | 2       | 386   | 0     | 1.06   |
 | Patriot   | Blaze              | 64 GB  | 7       | 291   | 0     | 0.80   |
-| Patriot   | Burst              | 480 GB | 44      | 263   | 1     | 0.69   |
-| Patriot   | Burst              | 960 GB | 12      | 238   | 0     | 0.65   |
+| Patriot   | Burst              | 480 GB | 44      | 264   | 1     | 0.70   |
+| Patriot   | Burst              | 960 GB | 12      | 239   | 0     | 0.66   |
 | Patriot   | Spark              | 128 GB | 9       | 234   | 0     | 0.64   |
 | Patriot   | Blaze              | 120 GB | 8       | 208   | 0     | 0.57   |
 | Patriot   | Burst              | 240 GB | 99      | 198   | 0     | 0.54   |
 | Patriot   | Burst              | 120 GB | 107     | 182   | 0     | 0.50   |
-| Patriot   | P200               | 2 TB   | 3       | 317   | 16    | 0.34   |
+| Patriot   | P200               | 2 TB   | 3       | 322   | 16    | 0.34   |
 | Patriot   | Burst Elite        | 960 GB | 2       | 120   | 0     | 0.33   |
 | Patriot   | P210               | 1 TB   | 5       | 129   | 1     | 0.32   |
 | Patriot   | P200               | 512 GB | 5       | 125   | 86    | 0.27   |
@@ -84,6 +84,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Patriot   | Phison Driven SSDs     | 11     | 314     | 246   | 1     | 0.67   |
+| Patriot   | Phison Driven SSDs     | 11     | 314     | 247   | 1     | 0.67   |
 | Patriot   | Unknown                | 32     | 126     | 199   | 33    | 0.44   |
-| Patriot   | Silicon Motion base... | 4      | 21      | 169   | 35    | 0.23   |
+| Patriot   | Silicon Motion base... | 4      | 21      | 170   | 35    | 0.23   |

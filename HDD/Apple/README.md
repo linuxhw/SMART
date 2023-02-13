@@ -36,7 +36,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | HDD HTS541010A9... | 1 TB   | 27      | 474   | 10    | 1.06   |
 | Apple     | HDD ST2000DM001    | 2 TB   | 8       | 546   | 302   | 1.05   |
 | Apple     | HDD HTS541075A9... | 752 GB | 2       | 323   | 0     | 0.89   |
-| Apple     | HDD ST1000LM024    | 1 TB   | 8       | 855   | 5     | 0.74   |
+| Apple     | HDD ST1000LM024    | 1 TB   | 8       | 860   | 5     | 0.75   |
 | Apple     | HDD HTS547550A9... | 500 GB | 12      | 376   | 18    | 0.66   |
 | Apple     | HDD TOSHIBA MK5... | 500 GB | 6       | 256   | 69    | 0.48   |
 | Apple     | HDD HTS547575A9... | 752 GB | 2       | 453   | 79    | 0.10   |
@@ -65,7 +65,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | Seagate Samsung Spi... | 1      | 5       | 515   | 0     | 1.41   |
 | Apple     | HGST Travelstar Z5K500 | 1      | 55      | 542   | 26    | 1.37   |
 | Apple     | Barracuda 7200.12      | 1      | 8       | 546   | 302   | 1.05   |
-| Apple     | Momentus               | 1      | 8       | 855   | 5     | 0.74   |
+| Apple     | Momentus               | 1      | 8       | 860   | 5     | 0.75   |
 | Apple     | HGST Travelstar 5K750  | 2      | 14      | 387   | 26    | 0.58   |
 | Apple     | MK..65GSXF             | 1      | 6       | 256   | 69    | 0.48   |
 | Apple     | Ultrastar A7K2000      | 1      | 2       | 176   | 110   | 0.00   |

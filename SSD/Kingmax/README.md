@@ -19,6 +19,6 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Kingmax   | SSD                | 512 GB | 1       | 349   | 0     | 0.96   |
 | Kingmax   | SSD                | 480 GB | 3       | 260   | 0     | 0.71   |
-| Kingmax   | SSD                | 120 GB | 33      | 292   | 249   | 0.43   |
-| Kingmax   | SSD                | 240 GB | 7       | 125   | 55    | 0.17   |
+| Kingmax   | SSD                | 120 GB | 33      | 297   | 249   | 0.43   |
+| Kingmax   | SSD                | 240 GB | 7       | 130   | 55    | 0.18   |
 | Kingmax   | SSD                | 64 GB  | 24      | 196   | 521   | 0.08   |

@@ -63,9 +63,9 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS128G39TND-N210A | 128 GB | 73      | 224   | 88    | 0.45   |
 | SK hynix  | HFS128G3BTND-N210A | 128 GB | 4       | 229   | 2     | 0.44   |
 | SK hynix  | HFS256G32TNF-N3A0A | 256 GB | 5       | 143   | 0     | 0.39   |
+| SK hynix  | HFS128G39MND-3310A | 128 GB | 2       | 141   | 0     | 0.39   |
 | SK hynix  | HFS128G32MND-3210A | 128 GB | 1       | 135   | 0     | 0.37   |
-| SK hynix  | SC308 SATA         | 128 GB | 13      | 238   | 122   | 0.35   |
-| SK hynix  | HFS128G39MND-3310A | 128 GB | 2       | 123   | 0     | 0.34   |
+| SK hynix  | SC308 SATA         | 128 GB | 13      | 240   | 122   | 0.35   |
 | SK hynix  | SHGS31-1000GS-2    | 1 TB   | 23      | 145   | 1     | 0.33   |
 | SK hynix  | HFS512G39TND-N210A | 512 GB | 11      | 355   | 525   | 0.32   |
 | SK hynix  | HFS256G32MND-2900A | 256 GB | 3       | 386   | 10    | 0.31   |
@@ -122,5 +122,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| SK hynix  | SATA SSDs              | 46     | 515     | 308   | 85    | 0.62   |
+| SK hynix  | SATA SSDs              | 46     | 515     | 309   | 85    | 0.62   |
 | SK hynix  | Unknown                | 39     | 130     | 294   | 135   | 0.36   |

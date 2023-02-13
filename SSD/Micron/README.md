@@ -96,8 +96,8 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5100_MTFDDAK240TCC | 240 GB | 2       | 676   | 5     | 0.30   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 113     | 112   | 105   | 0.29   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 29      | 116   | 41    | 0.28   |
+| Micron    | MTFDDAK256TDL      | 256 GB | 9       | 98    | 0     | 0.27   |
 | Micron    | 5100_MTFDDAK240TCB | 240 GB | 1       | 98    | 0     | 0.27   |
-| Micron    | MTFDDAK256TDL      | 256 GB | 9       | 97    | 0     | 0.27   |
 | Micron    | MTFDDAV256MBF-1... | 256 GB | 13      | 86    | 0     | 0.24   |
 | Micron    | MTFDDAK960TDN      | 960 GB | 2       | 84    | 0     | 0.23   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 14      | 84    | 1     | 0.23   |

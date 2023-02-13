@@ -31,8 +31,8 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | Sabrent            | 1 TB   | 155     | 238   | 0     | 0.65   |
 | Phison    | ESO256GMFCH-E3C-2  | 256 GB | 1       | 235   | 0     | 0.65   |
 | Phison    | ESR512GTLCG-EAC-4  | 512 GB | 4       | 203   | 0     | 0.56   |
-| Phison    | Sabrent Rocket 4.0 | 1 TB   | 81      | 196   | 0     | 0.54   |
-| Phison    | PCIe SSD           | 1 TB   | 97      | 174   | 0     | 0.48   |
+| Phison    | Sabrent Rocket 4.0 | 1 TB   | 81      | 197   | 0     | 0.54   |
+| Phison    | PCIe SSD           | 1 TB   | 97      | 176   | 0     | 0.48   |
 | Phison    | E12-512G-PHISON... | 512 GB | 4       | 171   | 0     | 0.47   |
 | Phison    | Viper M.2 VPN100   | 1 TB   | 23      | 168   | 0     | 0.46   |
 | Phison    | TurtleArmor T3000  | 2 TB   | 1       | 158   | 0     | 0.43   |
@@ -48,7 +48,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | ESR01TBTLCG-EAC-4  | 1 TB   | 3       | 114   | 0     | 0.31   |
 | Phison    | TerransForce PM... | 512 GB | 1       | 113   | 0     | 0.31   |
 | Phison    | SBXe               | 480 GB | 3       | 110   | 0     | 0.30   |
-| Phison    | Sabrent Rocket ... | 1 TB   | 27      | 106   | 0     | 0.29   |
+| Phison    | Sabrent Rocket ... | 1 TB   | 27      | 107   | 0     | 0.29   |
 | Phison    | M.2 PCIE G3x4 NVMe | 1 TB   | 3       | 102   | 0     | 0.28   |
 | Phison    | PM8128GPTCB3B-E82  | 128 GB | 1       | 100   | 0     | 0.28   |
 | Phison    | E12-1TB-PHISON-... | 1 TB   | 1       | 99    | 0     | 0.27   |
@@ -71,10 +71,10 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | MSI M480           | 1 TB   | 2       | 38    | 0     | 0.11   |
 | Phison    | C-E80T256G4-P3D... | 256 GB | 1       | 34    | 0     | 0.09   |
 | Phison    | Sabrent ROCKET-PRO | 512 GB | 1       | 33    | 0     | 0.09   |
+| Phison    | MSI M390           | 1 TB   | 4       | 32    | 0     | 0.09   |
 | Phison    | Sabrent Rocket ... | 8 TB   | 1       | 31    | 0     | 0.09   |
 | Phison    | APS-SE20G-1T       | 1 TB   | 1       | 31    | 0     | 0.09   |
 | Phison    | Reletech P400 SSD  | 512 GB | 3       | 28    | 0     | 0.08   |
-| Phison    | MSI M390           | 1 TB   | 4       | 28    | 0     | 0.08   |
 | Phison    | 512GB NVMe SSD     | 512 GB | 3       | 26    | 0     | 0.07   |
 | Phison    | E12-512G-PHISON... | 512 GB | 2       | 25    | 0     | 0.07   |
 | Phison    | NE-256             | 256 GB | 3       | 25    | 0     | 0.07   |

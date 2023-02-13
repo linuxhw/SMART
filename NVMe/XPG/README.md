@@ -26,7 +26,7 @@ MTBF - avg. MTBF in years per sample.
 | XPG       | GAMMIX S50 Lite    | 1 TB   | 12      | 74    | 0     | 0.20   |
 | XPG       | GAMMIX S7          | 512 GB | 1       | 64    | 0     | 0.18   |
 | XPG       | SX8200PNP-512GT    | 512 GB | 1       | 63    | 0     | 0.18   |
-| XPG       | SPECTRIX S40G      | 1 TB   | 25      | 78    | 82    | 0.17   |
+| XPG       | SPECTRIX S40G      | 1 TB   | 25      | 79    | 82    | 0.17   |
 | XPG       | GAMMIX S5          | 1 TB   | 28      | 60    | 13    | 0.16   |
 | XPG       | GAMMIX S70 BLADE   | 2 TB   | 15      | 33    | 0     | 0.09   |
 | XPG       | SX8200PNP-512GT-S  | 512 GB | 3       | 33    | 0     | 0.09   |

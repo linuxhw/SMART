@@ -55,7 +55,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | 7L320S0            | 323 GB | 1       | 299   | 0     | 0.82   |
 | Maxtor    | STM3250620A        | 250 GB | 1       | 295   | 0     | 0.81   |
 | Maxtor    | 6V320F0            | 320 GB | 3       | 649   | 2     | 0.80   |
-| Maxtor    | 6V250F0            | 250 GB | 4       | 477   | 1     | 0.70   |
+| Maxtor    | 6V250F0            | 250 GB | 4       | 481   | 1     | 0.71   |
 | Maxtor    | STM3802110A        | 80 GB  | 2       | 404   | 512   | 0.63   |
 | Maxtor    | STM3500630AS       | 500 GB | 2       | 243   | 73    | 0.57   |
 | Maxtor    | 6L040J2            | 40 GB  | 2       | 1365  | 6     | 0.56   |

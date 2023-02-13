@@ -29,7 +29,7 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R5M120G8           | 120 GB | 4       | 126   | 0     | 0.35   |
 | AMD       | R5SL240G           | 240 GB | 26      | 117   | 1     | 0.29   |
 | AMD       | R3SL120G           | 120 GB | 35      | 104   | 1     | 0.29   |
-| AMD       | R5SL480G           | 480 GB | 5       | 175   | 29    | 0.27   |
+| AMD       | R5SL480G           | 480 GB | 5       | 176   | 29    | 0.27   |
 | AMD       | R3SL480G           | 480 GB | 1       | 98    | 0     | 0.27   |
 | AMD       | R5SL120G           | 120 GB | 36      | 73    | 1     | 0.18   |
 | AMD       | R3SL60G            | 64 GB  | 5       | 156   | 87    | 0.11   |

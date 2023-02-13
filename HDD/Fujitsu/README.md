@@ -36,10 +36,10 @@ MTBF - avg. MTBF in years per sample.
 | Fujitsu   | MHV2080BH          | 80 GB  | 7       | 590   | 1     | 1.48   |
 | Fujitsu   | MPE3136AH          | 16 GB  | 1       | 494   | 0     | 1.35   |
 | Fujitsu   | MJA2250BH FFS G1   | 250 GB | 5       | 644   | 2     | 1.33   |
-| Fujitsu   | MHW2120BH          | 120 GB | 32      | 539   | 48    | 1.30   |
+| Fujitsu   | MHW2120BH          | 120 GB | 32      | 541   | 48    | 1.31   |
 | Fujitsu   | MHY2250BH          | 250 GB | 11      | 644   | 128   | 1.12   |
+| Fujitsu   | MHV2120AH          | 120 GB | 3       | 518   | 2     | 1.11   |
 | Fujitsu   | MHZ2160BH G1       | 160 GB | 15      | 529   | 4     | 1.10   |
-| Fujitsu   | MHV2120AH          | 120 GB | 3       | 505   | 2     | 1.08   |
 | Fujitsu   | MHV2100AT PL       | 100 GB | 4       | 381   | 0     | 1.05   |
 | Fujitsu   | MHV2040AH          | 40 GB  | 5       | 666   | 4     | 1.04   |
 | Fujitsu   | MHW2160BH          | 160 GB | 7       | 501   | 13    | 1.04   |
@@ -64,7 +64,7 @@ MTBF - avg. MTBF in years per sample.
 | Fujitsu   | MHV2100BH          | 100 GB | 6       | 611   | 19    | 0.79   |
 | Fujitsu   | MHW2100BH          | 100 GB | 1       | 279   | 0     | 0.76   |
 | Fujitsu   | MHZ2200BH G2       | 200 GB | 1       | 269   | 0     | 0.74   |
-| Fujitsu   | MHV2080AH          | 80 GB  | 9       | 490   | 9     | 0.73   |
+| Fujitsu   | MHV2080AH          | 80 GB  | 9       | 491   | 9     | 0.73   |
 | Fujitsu   | MHZ2320BH G2       | 320 GB | 25      | 492   | 317   | 0.72   |
 | Fujitsu   | MHT2060BH          | 64 GB  | 3       | 411   | 683   | 0.70   |
 | Fujitsu   | MJA2500BH FFS G1   | 500 GB | 1       | 246   | 0     | 0.67   |
@@ -141,7 +141,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Fujitsu   | MHZ BK                 | 1      | 1       | 2160  | 0     | 5.92   |
 | Fujitsu   | MPA..MPG               | 5      | 6       | 711   | 42    | 1.53   |
-| Fujitsu   | MHW BH                 | 11     | 89      | 508   | 68    | 1.00   |
+| Fujitsu   | MHW BH                 | 11     | 89      | 509   | 68    | 1.00   |
 | Fujitsu   | MHT                    | 10     | 20      | 604   | 123   | 0.79   |
 | Fujitsu   | MHZ BJ                 | 6      | 10      | 439   | 218   | 0.77   |
 | Fujitsu   | MHY BH                 | 6      | 130     | 451   | 150   | 0.71   |

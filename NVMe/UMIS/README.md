@@ -18,7 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | UMIS      | RPIRJ512VME2OWD    | 512 GB | 1       | 208   | 0     | 0.57   |
-| UMIS      | RPJTJ256MED1OWX    | 256 GB | 5       | 127   | 0     | 0.35   |
+| UMIS      | RPJTJ256MED1OWX    | 256 GB | 5       | 130   | 0     | 0.36   |
 | UMIS      | RPJTJ512MEE1OWX    | 512 GB | 40      | 93    | 0     | 0.26   |
 | UMIS      | RPEYJ512VMM2QWY    | 512 GB | 1       | 84    | 0     | 0.23   |
 | UMIS      | RPITJ512VME2OWD    | 512 GB | 6       | 78    | 0     | 0.22   |

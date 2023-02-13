@@ -50,15 +50,15 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253X1960G         | 960 GB | 3       | 141   | 0     | 0.39   |
 | Team      | TM4PS7256G         | 256 GB | 1       | 111   | 0     | 0.30   |
 | Team      | L7 EVO SSD         | 64 GB  | 2       | 109   | 0     | 0.30   |
+| Team      | TM8PS7256G         | 256 GB | 13      | 105   | 0     | 0.29   |
 | Team      | T253X1480G         | 480 GB | 12      | 101   | 0     | 0.28   |
 | Team      | TM8PS7001T         | 1 TB   | 6       | 97    | 0     | 0.27   |
-| Team      | TM8PS7256G         | 256 GB | 13      | 97    | 0     | 0.27   |
 | Team      | T253A3512G         | 512 GB | 3       | 95    | 0     | 0.26   |
 | Team      | T253E2002T         | 2 TB   | 1       | 93    | 0     | 0.26   |
 | Team      | TM8PS7512G         | 512 GB | 14      | 92    | 0     | 0.25   |
 | Team      | TEAMT2535T120G     | 120 GB | 1       | 85    | 0     | 0.23   |
 | Team      | T2535T120G         | 120 GB | 5       | 111   | 2     | 0.23   |
-| Team      | T253X2128G         | 128 GB | 5       | 80    | 0     | 0.22   |
+| Team      | T253X2128G         | 128 GB | 5       | 81    | 0     | 0.22   |
 | Team      | T253X2256G         | 256 GB | 7       | 69    | 0     | 0.19   |
 | Team      | T253LE120G         | 120 GB | 8       | 58    | 0     | 0.16   |
 | Team      | T2535T480G         | 480 GB | 4       | 808   | 104   | 0.12   |

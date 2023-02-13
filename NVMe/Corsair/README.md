@@ -22,17 +22,17 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force MP500        | 120 GB | 12      | 653   | 0     | 1.79   |
 | Corsair   | Force MP300        | 480 GB | 2       | 442   | 0     | 1.21   |
 | Corsair   | Force MP500        | 960 GB | 1       | 424   | 0     | 1.16   |
+| Corsair   | Force MP600        | 2 TB   | 18      | 295   | 0     | 0.81   |
 | Corsair   | Force MP300        | 240 GB | 3       | 289   | 0     | 0.79   |
-| Corsair   | Force MP600        | 2 TB   | 18      | 273   | 0     | 0.75   |
 | Corsair   | MP600 PRO XT       | 1 TB   | 1       | 261   | 0     | 0.72   |
-| Corsair   | Force MP510        | 960 GB | 33      | 258   | 0     | 0.71   |
+| Corsair   | Force MP510        | 960 GB | 33      | 259   | 0     | 0.71   |
 | Corsair   | Force MP510 1.9TB  | 1.9 TB | 11      | 258   | 0     | 0.71   |
-| Corsair   | Force MP600        | 500 GB | 16      | 240   | 0     | 0.66   |
+| Corsair   | Force MP600        | 500 GB | 16      | 241   | 0     | 0.66   |
 | Corsair   | Force MP600        | 1 TB   | 77      | 240   | 0     | 0.66   |
 | Corsair   | Force MP300        | 120 GB | 3       | 223   | 0     | 0.61   |
 | Corsair   | MP600 PRO          | 1 TB   | 4       | 171   | 0     | 0.47   |
-| Corsair   | Force MP510        | 240 GB | 44      | 170   | 0     | 0.47   |
-| Corsair   | Force MP510        | 480 GB | 38      | 169   | 0     | 0.46   |
+| Corsair   | Force MP510        | 240 GB | 44      | 171   | 0     | 0.47   |
+| Corsair   | Force MP510        | 480 GB | 38      | 170   | 0     | 0.47   |
 | Corsair   | MP400              | 4 TB   | 2       | 134   | 0     | 0.37   |
 | Corsair   | Force MP510        | 4 TB   | 3       | 115   | 0     | 0.32   |
 | Corsair   | MP400              | 2 TB   | 7       | 97    | 0     | 0.27   |

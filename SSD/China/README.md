@@ -30,7 +30,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | MTG-480GB          | 480 GB | 1       | 732   | 0     | 2.01   |
 | China     | ZSS11DA02C         | 512 GB | 2       | 551   | 0     | 1.51   |
 | China     | ESA3SMH2MSM1BT1... | 120 GB | 1       | 483   | 0     | 1.32   |
-| China     | SH00R480GB         | 480 GB | 6       | 401   | 0     | 1.10   |
+| China     | SH00R480GB         | 480 GB | 6       | 406   | 0     | 1.11   |
 | China     | 512GB PCS 2.5" SSD | 512 GB | 1       | 370   | 0     | 1.01   |
 | China     | SATA SSD           | 16 GB  | 5       | 406   | 11    | 1.00   |
 | China     | 240GB SSD          | 240 GB | 8       | 356   | 0     | 0.98   |
@@ -46,9 +46,9 @@ MTBF - avg. MTBF in years per sample.
 | China     | M.2 2280 SATA SSD  | 256 GB | 4       | 213   | 0     | 0.58   |
 | China     | L06B B0KB          | 960 GB | 1       | 202   | 0     | 0.55   |
 | China     | PSX-NGFF256G       | 256 GB | 1       | 199   | 0     | 0.55   |
-| China     | SATA SSD           | 128 GB | 25      | 196   | 0     | 0.54   |
 | China     | 256GB PCS 2.5" SSD | 256 GB | 3       | 196   | 0     | 0.54   |
-| China     | SATA SSD           | 120 GB | 101     | 197   | 1     | 0.53   |
+| China     | SATA SSD           | 128 GB | 25      | 196   | 0     | 0.54   |
+| China     | SATA SSD           | 120 GB | 101     | 197   | 1     | 0.54   |
 | China     | mSATA              | 128 GB | 1       | 192   | 0     | 0.53   |
 | China     | SATA SSD           | 240 GB | 73      | 198   | 1     | 0.53   |
 | China     | SATA3 512GB SSD    | 512 GB | 2       | 191   | 0     | 0.53   |
@@ -75,8 +75,8 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA3 240GB SSD    | 240 GB | 8       | 129   | 1     | 0.31   |
 | China     | SSD                | 1 TB   | 29      | 109   | 0     | 0.30   |
 | China     | NGFF 2242 240GB... | 240 GB | 1       | 107   | 0     | 0.30   |
-| China     | SATA3 1TB SSD      | 1 TB   | 10      | 104   | 0     | 0.29   |
 | China     | SSD                | 120 GB | 66      | 128   | 19    | 0.29   |
+| China     | SATA3 1TB SSD      | 1 TB   | 10      | 104   | 0     | 0.29   |
 | China     | NGFF 2280 1TB SSD  | 1 TB   | 1       | 103   | 0     | 0.28   |
 | China     | ESA3ASA2HTH2BT1... | 120 GB | 1       | 94    | 0     | 0.26   |
 | China     | ESA3SMH2ISN3BT0... | 64 GB  | 1       | 91    | 0     | 0.25   |
@@ -90,7 +90,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SH00R240GB         | 240 GB | 6       | 80    | 0     | 0.22   |
 | China     | 256GB QLC SATA SSD | 256 GB | 2       | 80    | 0     | 0.22   |
 | China     | SSDG2-240G         | 240 GB | 1       | 76    | 0     | 0.21   |
-| China     | SSD                | 128 GB | 89      | 75    | 2     | 0.20   |
+| China     | SSD                | 128 GB | 89      | 76    | 2     | 0.20   |
 | China     | NGFF 2280          | 512 GB | 1       | 73    | 0     | 0.20   |
 | China     | SATA3 480GB SSD    | 480 GB | 7       | 99    | 41    | 0.20   |
 | China     | SSD                | 256 GB | 61      | 77    | 1     | 0.19   |
@@ -101,7 +101,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SSD                | 240 GB | 40      | 94    | 54    | 0.17   |
 | China     | NGFF 2242 512GB... | 512 GB | 3       | 60    | 0     | 0.17   |
 | China     | 512GB SSD          | 512 GB | 5       | 59    | 0     | 0.16   |
-| China     | 256GB SSD          | 256 GB | 11      | 57    | 0     | 0.16   |
+| China     | 256GB SSD          | 256 GB | 11      | 58    | 0     | 0.16   |
 | China     | JOYSSD512          | 512 GB | 1       | 55    | 0     | 0.15   |
 | China     | GM1TB              | 1 TB   | 1       | 55    | 0     | 0.15   |
 | China     | SSD                | 64 GB  | 9       | 60    | 4     | 0.15   |
@@ -233,4 +233,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | China     | Phison Driven OEM SSDs | 11     | 313     | 202   | 1     | 0.55   |
-| China     | Unknown                | 184    | 836     | 115   | 21    | 0.28   |
+| China     | Unknown                | 184    | 836     | 115   | 21    | 0.29   |

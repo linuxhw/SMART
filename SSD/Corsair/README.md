@@ -38,7 +38,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force GS           | 480 GB | 3       | 1884  | 15    | 3.02   |
 | Corsair   | Force GS           | 180 GB | 3       | 1087  | 0     | 2.98   |
 | Corsair   | CMFSSD-128GBG2D    | 128 GB | 1       | 954   | 0     | 2.62   |
-| Corsair   | Force GT           | 120 GB | 21      | 1111  | 2     | 2.48   |
+| Corsair   | Force GT           | 120 GB | 21      | 1118  | 2     | 2.50   |
 | Corsair   | Force 3 SSD        | 120 GB | 43      | 961   | 61    | 2.34   |
 | Corsair   | Force 3 SSD        | 64 GB  | 20      | 863   | 1     | 2.28   |
 | Corsair   | Neutron SSD        | 256 GB | 2       | 801   | 0     | 2.20   |
@@ -99,7 +99,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Corsair   | SandForce Driven SSDs  | 31     | 241     | 876   | 95    | 1.94   |
+| Corsair   | SandForce Driven SSDs  | 31     | 241     | 877   | 95    | 1.94   |
 | Corsair   | Unknown                | 25     | 60      | 669   | 92    | 0.91   |
 | Corsair   | Indilinx Barefoot b... | 4      | 5       | 372   | 1     | 0.83   |
 | Corsair   | Phison Driven SSDs     | 2      | 18      | 315   | 4     | 0.75   |
