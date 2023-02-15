@@ -58,7 +58,7 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM8PS7512G         | 512 GB | 14      | 92    | 0     | 0.25   |
 | Team      | TEAMT2535T120G     | 120 GB | 1       | 85    | 0     | 0.23   |
 | Team      | T2535T120G         | 120 GB | 5       | 111   | 2     | 0.23   |
-| Team      | T253X2128G         | 128 GB | 5       | 81    | 0     | 0.22   |
+| Team      | T253X2128G         | 128 GB | 5       | 82    | 0     | 0.23   |
 | Team      | T253X2256G         | 256 GB | 7       | 69    | 0     | 0.19   |
 | Team      | T253LE120G         | 120 GB | 8       | 58    | 0     | 0.16   |
 | Team      | T2535T480G         | 480 GB | 4       | 808   | 104   | 0.12   |

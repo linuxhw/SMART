@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ZHITAI    | PC005 Active       | 1 TB   | 3       | 209   | 0     | 0.57   |
+| ZHITAI    | PC005 Active       | 1 TB   | 3       | 210   | 0     | 0.58   |
 | ZHITAI    | PC005 Active       | 512 GB | 1       | 50    | 0     | 0.14   |
 | ZHITAI    | TiPlus5000         | 1 TB   | 2       | 6     | 0     | 0.02   |
 | ZHITAI    | TiPro7000          | 1 TB   | 2       | 0     | 0     | 0.00   |

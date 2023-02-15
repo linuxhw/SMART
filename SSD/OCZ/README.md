@@ -55,7 +55,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | VERTEX3            | 120 GB | 83      | 863   | 31    | 1.71   |
 | OCZ       | VECTOR150          | 480 GB | 1       | 611   | 0     | 1.67   |
 | OCZ       | VERTEX2            | 115 GB | 5       | 595   | 0     | 1.63   |
-| OCZ       | VERTEX4            | 128 GB | 99      | 647   | 1     | 1.62   |
+| OCZ       | VERTEX4            | 128 GB | 99      | 648   | 1     | 1.62   |
 | OCZ       | DENCSTE351M16-0... | 240 GB | 1       | 585   | 0     | 1.60   |
 | OCZ       | D2RSTK251E19-0200  | 200 GB | 1       | 584   | 0     | 1.60   |
 | OCZ       | VERTEX PLUS R2     | 128 GB | 4       | 569   | 0     | 1.56   |
@@ -141,8 +141,8 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| OCZ       | SandForce Driven SSDs  | 48     | 453     | 859   | 40    | 1.85   |
-| OCZ       | Indilinx Barefoot_2... | 12     | 174     | 723   | 3     | 1.68   |
+| OCZ       | SandForce Driven SSDs  | 48     | 453     | 860   | 40    | 1.85   |
+| OCZ       | Indilinx Barefoot_2... | 12     | 174     | 724   | 3     | 1.68   |
 | OCZ       | Indilinx Barefoot b... | 6      | 14      | 691   | 1     | 1.60   |
 | OCZ       | OCZ/Toshiba Trion SSDs | 6      | 58      | 490   | 1     | 1.29   |
 | OCZ       | Indilinx Barefoot 3... | 18     | 118     | 495   | 20    | 1.14   |

@@ -29,7 +29,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | M.2 (P80) 3TG3-P   | 1 TB   | 1       | 146   | 0     | 0.40   |
 | Silico... | NE-256             | 256 GB | 26      | 125   | 0     | 0.34   |
 | Silico... | NE-1TB             | 1 TB   | 11      | 120   | 0     | 0.33   |
-| Silico... | NE-512             | 512 GB | 18      | 109   | 0     | 0.30   |
+| Silico... | NE-512             | 512 GB | 18      | 110   | 0     | 0.30   |
 | Silico... | ASint AS806        | 128 GB | 1       | 106   | 0     | 0.29   |
 | Silico... | Reletech P400 M... | 1 TB   | 1       | 100   | 0     | 0.28   |
 | Silico... | NVME SSD           | 256 GB | 8       | 96    | 0     | 0.27   |

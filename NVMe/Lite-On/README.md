@@ -28,11 +28,11 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | S980 256           | 256 GB | 1       | 170   | 0     | 0.47   |
 | Lite-On   | CX2-GB1024-Q11 ... | 1 TB   | 1       | 147   | 0     | 0.40   |
 | Lite-On   | CX2-8B512-Q11 NVMe | 512 GB | 4       | 129   | 0     | 0.36   |
+| Lite-On   | CA3-8D128-HP       | 128 GB | 4       | 122   | 0     | 0.34   |
 | Lite-On   | CA3-8D512-Q11 NVMe | 512 GB | 1       | 106   | 0     | 0.29   |
 | Lite-On   | CL1-4D256          | 256 GB | 5       | 101   | 0     | 0.28   |
 | Lite-On   | CA3-8D256          | 256 GB | 11      | 97    | 0     | 0.27   |
 | Lite-On   | NVMe CA5-8D512     | 512 GB | 3       | 94    | 0     | 0.26   |
-| Lite-On   | CA3-8D128-HP       | 128 GB | 4       | 88    | 0     | 0.24   |
 | Lite-On   | CB1-SD512          | 512 GB | 1       | 75    | 0     | 0.21   |
 | Lite-On   | CL1-8D512          | 512 GB | 9       | 74    | 0     | 0.20   |
 | Lite-On   | CA1-8D128          | 128 GB | 3       | 72    | 0     | 0.20   |

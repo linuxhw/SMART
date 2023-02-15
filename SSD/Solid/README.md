@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Solid     | SSD0240S00         | 240 GB | 3       | 74    | 0     | 0.20   |
+| Solid     | SSD0240S00         | 240 GB | 3       | 75    | 0     | 0.21   |
 | Solid     | SSD0256S00         | 256 GB | 2       | 13    | 2     | 0.02   |
 | Solid     | SSD0256S02         | 256 GB | 1       | 0     | 0     | 0.00   |

@@ -25,7 +25,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Transcend | 3E128-TS2-550B01   | 100 GB | 16      | 3197  | 1     | 7.88   |
 | Transcend | TS256GSSD340K      | 256 GB | 1       | 2255  | 0     | 6.18   |
-| Transcend | TS128GSSD320       | 128 GB | 3       | 742   | 0     | 2.03   |
+| Transcend | TS128GSSD320       | 128 GB | 3       | 743   | 0     | 2.04   |
 | Transcend | TS128GMSA720       | 128 GB | 1       | 663   | 0     | 1.82   |
 | Transcend | TS32GMTS400        | 32 GB  | 1       | 607   | 0     | 1.66   |
 | Transcend | TS64S37CA00IM3     | 64 GB  | 1       | 602   | 0     | 1.65   |
@@ -53,8 +53,8 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS480GSSD220S      | 480 GB | 13      | 206   | 236   | 0.45   |
 | Transcend | TS120GSSD220S      | 120 GB | 29      | 167   | 1     | 0.44   |
 | Transcend | TS120GMTS820S      | 120 GB | 6       | 159   | 0     | 0.44   |
+| Transcend | TS1TSSD230S        | 1 TB   | 7       | 145   | 0     | 0.40   |
 | Transcend | TS256GSSD230S      | 256 GB | 17      | 164   | 62    | 0.40   |
-| Transcend | TS1TSSD230S        | 1 TB   | 7       | 141   | 0     | 0.39   |
 | Transcend | TS512GSSD370S      | 512 GB | 6       | 165   | 2     | 0.39   |
 | Transcend | TS128GSSD360S      | 128 GB | 10      | 140   | 0     | 0.39   |
 | Transcend | TS128GMSA230S      | 128 GB | 3       | 139   | 0     | 0.38   |

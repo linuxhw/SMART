@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Kingch... | 512GB              | 512 GB | 1       | 205   | 0     | 0.56   |
+| Kingch... | 512GB              | 512 GB | 1       | 252   | 0     | 0.69   |
 | Kingch... | 128GB              | 128 GB | 1       | 180   | 0     | 0.49   |
 | Kingch... | 256GB              | 256 GB | 1       | 60    | 0     | 0.16   |

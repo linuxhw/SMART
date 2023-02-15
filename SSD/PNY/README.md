@@ -39,12 +39,12 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 960GB SSD    | 960 GB | 17      | 230   | 0     | 0.63   |
 | PNY       | CS900 480GB SSD    | 480 GB | 35      | 228   | 0     | 0.63   |
 | PNY       | SSD2SC240G5SA75... | 240 GB | 2       | 209   | 0     | 0.57   |
-| PNY       | CS900 240GB SSD    | 240 GB | 114     | 203   | 0     | 0.56   |
+| PNY       | CS900 240GB SSD    | 240 GB | 114     | 204   | 0     | 0.56   |
 | PNY       | SSD2SC240G1CS17... | 240 GB | 5       | 164   | 0     | 0.45   |
 | PNY       | SSD2SC240G1CS11... | 240 GB | 1       | 158   | 0     | 0.43   |
 | PNY       | EU SSD CS1311      | 120 GB | 1       | 150   | 0     | 0.41   |
 | PNY       | CS2040 128GB SSD   | 128 GB | 1       | 150   | 0     | 0.41   |
-| PNY       | CS900 120GB SSD    | 120 GB | 126     | 135   | 0     | 0.37   |
+| PNY       | CS900 120GB SSD    | 120 GB | 126     | 136   | 0     | 0.37   |
 | PNY       | SSD2SC120G3LC72... | 120 GB | 1       | 127   | 0     | 0.35   |
 | PNY       | CS900 1TB SSD      | 1 TB   | 15      | 126   | 0     | 0.35   |
 | PNY       | CS1211 240GB SS... | 240 GB | 1       | 124   | 0     | 0.34   |

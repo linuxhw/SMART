@@ -32,12 +32,12 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | ESO256GMFCH-E3C-2  | 256 GB | 1       | 235   | 0     | 0.65   |
 | Phison    | ESR512GTLCG-EAC-4  | 512 GB | 4       | 203   | 0     | 0.56   |
 | Phison    | Sabrent Rocket 4.0 | 1 TB   | 81      | 197   | 0     | 0.54   |
-| Phison    | PCIe SSD           | 1 TB   | 97      | 176   | 0     | 0.48   |
+| Phison    | PCIe SSD           | 1 TB   | 97      | 177   | 0     | 0.49   |
 | Phison    | E12-512G-PHISON... | 512 GB | 4       | 171   | 0     | 0.47   |
-| Phison    | Viper M.2 VPN100   | 1 TB   | 23      | 168   | 0     | 0.46   |
+| Phison    | Viper M.2 VPN100   | 1 TB   | 23      | 170   | 0     | 0.47   |
 | Phison    | TurtleArmor T3000  | 2 TB   | 1       | 158   | 0     | 0.43   |
+| Phison    | Sabrent Rocket 4.0 | 500 GB | 12      | 153   | 0     | 0.42   |
 | Phison    | PP3-8D256          | 256 GB | 1       | 150   | 0     | 0.41   |
-| Phison    | Sabrent Rocket 4.0 | 500 GB | 12      | 148   | 0     | 0.41   |
 | Phison    | Sabrent Rocket Q   | 1 TB   | 75      | 146   | 0     | 0.40   |
 | Phison    | Reletech P400Pr... | 500 GB | 1       | 135   | 0     | 0.37   |
 | Phison    | Viper M.2 VP4100   | 1 TB   | 7       | 128   | 0     | 0.35   |
@@ -48,7 +48,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | ESR01TBTLCG-EAC-4  | 1 TB   | 3       | 114   | 0     | 0.31   |
 | Phison    | TerransForce PM... | 512 GB | 1       | 113   | 0     | 0.31   |
 | Phison    | SBXe               | 480 GB | 3       | 110   | 0     | 0.30   |
-| Phison    | Sabrent Rocket ... | 1 TB   | 27      | 107   | 0     | 0.29   |
+| Phison    | Sabrent Rocket ... | 1 TB   | 27      | 108   | 0     | 0.30   |
 | Phison    | M.2 PCIE G3x4 NVMe | 1 TB   | 3       | 102   | 0     | 0.28   |
 | Phison    | PM8128GPTCB3B-E82  | 128 GB | 1       | 100   | 0     | 0.28   |
 | Phison    | E12-1TB-PHISON-... | 1 TB   | 1       | 99    | 0     | 0.27   |

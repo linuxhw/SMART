@@ -27,9 +27,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SNVS2000GB         | 2 TB   | 2       | 202   | 0     | 0.56   |
 | Kingston  | SA1000M8960G       | 960 GB | 1       | 182   | 0     | 0.50   |
 | Kingston  | OM8PCP3512F-A01    | 512 GB | 1       | 180   | 0     | 0.49   |
+| Kingston  | SA2000M8500G       | 500 GB | 141     | 173   | 0     | 0.47   |
 | Kingston  | SEDC1000BM8240G    | 240 GB | 3       | 173   | 0     | 0.47   |
-| Kingston  | SA2000M8500G       | 500 GB | 141     | 171   | 0     | 0.47   |
-| Kingston  | SA2000M8250G       | 250 GB | 107     | 164   | 0     | 0.45   |
+| Kingston  | SA2000M8250G       | 250 GB | 107     | 165   | 0     | 0.45   |
 | Kingston  | RBUSNS8154P3512GJ1 | 512 GB | 21      | 164   | 0     | 0.45   |
 | Kingston  | RBUSNS8154P3512GJ5 | 512 GB | 6       | 143   | 0     | 0.39   |
 | Kingston  | SA2000M81000G      | 1 TB   | 165     | 141   | 19    | 0.38   |
@@ -40,7 +40,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8PCP3512F-AB     | 512 GB | 60      | 104   | 0     | 0.29   |
 | Kingston  | OM3PDP3128B-AH     | 128 GB | 1       | 102   | 0     | 0.28   |
 | Kingston  | RBUSNS8154P3256GJ3 | 256 GB | 28      | 99    | 0     | 0.27   |
-| Kingston  | OM8PCP31024F-AI1   | 1 TB   | 9       | 96    | 0     | 0.26   |
+| Kingston  | OM8PCP31024F-AI1   | 1 TB   | 9       | 96    | 0     | 0.27   |
 | Kingston  | RBUSNS8154P3256GJ2 | 256 GB | 1       | 89    | 0     | 0.24   |
 | Kingston  | RBUSNS8154P3128GJ  | 128 GB | 24      | 86    | 0     | 0.24   |
 | Kingston  | SA1000M8240G       | 240 GB | 33      | 85    | 0     | 0.23   |
@@ -57,7 +57,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SNVS1000GB         | 1 TB   | 21      | 58    | 0     | 0.16   |
 | Kingston  | OM8PDP3256B-AI1    | 256 GB | 11      | 56    | 0     | 0.15   |
 | Kingston  | OM8PDP3512B-A01    | 512 GB | 25      | 55    | 0     | 0.15   |
-| Kingston  | OM8PCP3512F-AI1    | 512 GB | 68      | 51    | 0     | 0.14   |
+| Kingston  | OM8PCP3512F-AI1    | 512 GB | 68      | 52    | 0     | 0.14   |
 | Kingston  | OM8PCP3512F-AA     | 512 GB | 31      | 50    | 0     | 0.14   |
 | Kingston  | SNVS2000G          | 2 TB   | 25      | 50    | 0     | 0.14   |
 | Kingston  | RBUSNS8154P3128GJ3 | 128 GB | 3       | 47    | 0     | 0.13   |

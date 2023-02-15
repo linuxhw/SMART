@@ -21,7 +21,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLV256HCHP-000L1 | 256 GB | 1       | 1400  | 0     | 3.84   |
 | Samsung   | SSD 950 PRO        | 256 GB | 21      | 1083  | 0     | 2.97   |
 | Samsung   | SSD 983 DCT 1.92TB | 1.9 TB | 2       | 850   | 0     | 2.33   |
-| Samsung   | SSD 950 PRO        | 512 GB | 44      | 775   | 0     | 2.13   |
+| Samsung   | SSD 950 PRO        | 512 GB | 44      | 776   | 0     | 2.13   |
 | Samsung   | MZVLB1T0HALR-000H2 | 1 TB   | 3       | 751   | 0     | 2.06   |
 | Samsung   | MZWLL1T6HAJQ-00005 | 1.6 TB | 4       | 673   | 0     | 1.85   |
 | Samsung   | MZVPV256HDGL-00000 | 256 GB | 15      | 667   | 0     | 1.83   |
@@ -32,8 +32,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB960HAJR-00003 | 960 GB | 4       | 588   | 0     | 1.61   |
 | Samsung   | MZQLB7T6HMLA-00007 | 7.6 TB | 1       | 533   | 0     | 1.46   |
 | Samsung   | MZPLL1T6HAJQ-00005 | 1.6 TB | 1       | 527   | 0     | 1.45   |
+| Samsung   | MZVPV512HDGL-000H1 | 512 GB | 4       | 515   | 0     | 1.41   |
 | Samsung   | PM951 NVMe         | 512 GB | 11      | 488   | 0     | 1.34   |
-| Samsung   | MZVPV512HDGL-000H1 | 512 GB | 4       | 488   | 0     | 1.34   |
 | Samsung   | MZVLV128HCGR-00000 | 128 GB | 4       | 466   | 0     | 1.28   |
 | Samsung   | MZVPV128HDGM-00000 | 128 GB | 11      | 443   | 0     | 1.22   |
 | Samsung   | PM951 NVMe         | 1 TB   | 4       | 440   | 0     | 1.21   |
@@ -106,7 +106,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 1 TB   | 359     | 106   | 4     | 0.26   |
 | Samsung   | MZVLB512HAJQ-00007 | 512 GB | 1       | 94    | 0     | 0.26   |
 | Samsung   | MZPLL3T2HAJQ-00005 | 3.2 TB | 1       | 94    | 0     | 0.26   |
-| Samsung   | SSD 970 EVO        | 500 GB | 370     | 100   | 6     | 0.26   |
+| Samsung   | SSD 970 EVO        | 500 GB | 370     | 101   | 6     | 0.26   |
 | Samsung   | MZVLB2T0HMLB-000H1 | 2 TB   | 3       | 93    | 0     | 0.26   |
 | Samsung   | MZ9LQ1T0HALB-00000 | 1 TB   | 1       | 91    | 0     | 0.25   |
 | Samsung   | PM981 NVMe         | 2 TB   | 2       | 90    | 0     | 0.25   |
@@ -149,17 +149,17 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | 40      | 46    | 0     | 0.13   |
 | Samsung   | MZVLB2T0HALB-000L7 | 2 TB   | 9       | 45    | 0     | 0.12   |
 | Samsung   | MZVLQ256HAJD-00000 | 256 GB | 30      | 43    | 0     | 0.12   |
-| Samsung   | MZVLB512HBJQ-00000 | 512 GB | 49      | 43    | 0     | 0.12   |
 | Samsung   | MZVLB512HBJQ-000H1 | 512 GB | 90      | 43    | 0     | 0.12   |
+| Samsung   | MZVLB512HBJQ-00000 | 512 GB | 49      | 43    | 0     | 0.12   |
 | Samsung   | Portable SSD X5    | 500 GB | 1       | 41    | 0     | 0.11   |
-| Samsung   | KUS020203M-B000    | 128 GB | 5       | 38    | 0     | 0.11   |
+| Samsung   | KUS020203M-B000    | 128 GB | 5       | 39    | 0     | 0.11   |
 | Samsung   | PM981a NVMe        | 2 TB   | 23      | 38    | 0     | 0.11   |
-| Samsung   | SSD 970 EVO Plus   | 2 TB   | 285     | 38    | 1     | 0.10   |
+| Samsung   | SSD 970 EVO Plus   | 2 TB   | 285     | 39    | 1     | 0.10   |
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | 62      | 38    | 0     | 0.10   |
+| Samsung   | PM991 NVMe         | 512 GB | 17      | 37    | 0     | 0.10   |
 | Samsung   | MZVLQ256HAJD-000AC | 256 GB | 2       | 37    | 0     | 0.10   |
 | Samsung   | PM971 NVMe         | 256 GB | 1       | 37    | 0     | 0.10   |
 | Samsung   | MZVLQ1T0HALB-000H1 | 1 TB   | 22      | 36    | 0     | 0.10   |
-| Samsung   | PM991 NVMe         | 512 GB | 17      | 36    | 0     | 0.10   |
 | Samsung   | MZQL2960HCJR-00A07 | 960 GB | 4       | 36    | 0     | 0.10   |
 | Samsung   | PM981a NVMe        | 256 GB | 5       | 36    | 0     | 0.10   |
 | Samsung   | MZVLB256HBHQ-00000 | 256 GB | 35      | 35    | 0     | 0.10   |
@@ -175,10 +175,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVPW256HEGL-000L7 | 256 GB | 1       | 25    | 0     | 0.07   |
 | Samsung   | SSD 980 PRO        | 250 GB | 38      | 26    | 5     | 0.07   |
 | Samsung   | MZALQ256HAJD-000L1 | 256 GB | 39      | 25    | 0     | 0.07   |
-| Samsung   | MZVLB256HBHQ-000H1 | 256 GB | 11      | 25    | 0     | 0.07   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 120     | 25    | 0     | 0.07   |
+| Samsung   | MZVLB256HBHQ-000H1 | 256 GB | 11      | 25    | 0     | 0.07   |
 | Samsung   | MZVLQ256HAJD-000H1 | 256 GB | 84      | 25    | 0     | 0.07   |
-| Samsung   | MZVLQ1T0HALB-00000 | 1 TB   | 19      | 23    | 0     | 0.06   |
+| Samsung   | MZVLQ1T0HALB-00000 | 1 TB   | 19      | 23    | 0     | 0.07   |
 | Samsung   | MZVLQ512HALU-00000 | 512 GB | 90      | 23    | 0     | 0.06   |
 | Samsung   | MZVLB512HBJQ-00A00 | 512 GB | 7       | 23    | 0     | 0.06   |
 | Samsung   | PM981a NVMe        | 512 GB | 33      | 22    | 0     | 0.06   |
@@ -196,8 +196,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | 980 PRO with He... | 2 TB   | 7       | 19    | 0     | 0.05   |
 | Samsung   | MZVLB512HBJQ-00007 | 512 GB | 5       | 17    | 0     | 0.05   |
 | Samsung   | MZVL2512HCJQ-00BL7 | 512 GB | 19      | 16    | 0     | 0.05   |
-| Samsung   | MZALQ128HBHQ-000L2 | 128 GB | 33      | 16    | 0     | 0.04   |
 | Samsung   | MZALQ512HALU-000L1 | 512 GB | 80      | 16    | 0     | 0.04   |
+| Samsung   | MZALQ128HBHQ-000L2 | 128 GB | 33      | 16    | 0     | 0.04   |
 | Samsung   | PM991a NVMe        | 256 GB | 23      | 16    | 0     | 0.04   |
 | Samsung   | MZVL2512HCJQ-00BH1 | 512 GB | 10      | 15    | 0     | 0.04   |
 | Samsung   | MZVLB1T0HBLR-00A00 | 1 TB   | 9       | 15    | 0     | 0.04   |
@@ -234,8 +234,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVL21T0HCLR-00BL7 | 1 TB   | 56      | 6     | 0     | 0.02   |
 | Samsung   | MZVLQ256HBJD-00B   | 256 GB | 4       | 6     | 0     | 0.02   |
 | Samsung   | MZVL4512HBLU-00BH1 | 512 GB | 1       | 6     | 0     | 0.02   |
-| Samsung   | MZVLW256HEHP-000   | 256 GB | 2       | 6     | 0     | 0.02   |
 | Samsung   | MZ9LQ256HBJQ-00000 | 256 GB | 2       | 6     | 0     | 0.02   |
+| Samsung   | MZVLW256HEHP-000   | 256 GB | 2       | 6     | 0     | 0.02   |
 | Samsung   | MZ9LQ128HBHQ-000H1 | 128 GB | 2       | 6     | 0     | 0.02   |
 | Samsung   | MZVLQ128HBHQ-00000 | 128 GB | 2       | 6     | 0     | 0.02   |
 | Samsung   | MZ9LQ512HBLU-00B   | 512 GB | 9       | 6     | 0     | 0.02   |
@@ -244,8 +244,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVL22T0HBLB-00BL7 | 2 TB   | 12      | 6     | 0     | 0.02   |
 | Samsung   | MZVL2256HCHQ-00B00 | 256 GB | 6       | 6     | 0     | 0.02   |
 | Samsung   | SSD 980            | 250 GB | 22      | 5     | 0     | 0.02   |
-| Samsung   | PM981a NVMe SED    | 512 GB | 1       | 5     | 0     | 0.02   |
 | Samsung   | MZVLQ1T0HBLB-00B   | 1 TB   | 4       | 5     | 0     | 0.02   |
+| Samsung   | PM981a NVMe SED    | 512 GB | 1       | 5     | 0     | 0.02   |
 | Samsung   | MZALQ256HBJD-00BL2 | 256 GB | 29      | 5     | 0     | 0.01   |
 | Samsung   | MZVL2512HCJQ-00B00 | 512 GB | 40      | 5     | 3     | 0.01   |
 | Samsung   | MZ9LQ256HBJD-00B   | 256 GB | 4       | 4     | 0     | 0.01   |
