@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [i686-linux-4.19.0-17-686] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [i686-linux-6.0.0-5-686] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Fujitsu MHV
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 000000A0
 User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Sun Sep 12 11:26:21 2021 MSK
+Local Time is:    Tue Dec 13 20:01:44 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -25,9 +25,9 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
@@ -61,26 +61,26 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    258050
-  2 Throughput_Performance  P-S---   100   100   030    -    31260672
-  3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   099   099   000    -    2818
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    79535
+  2 Throughput_Performance  P-S---   100   100   030    -    26804682
+  3 Spin_Up_Time            PO----   100   100   025    -    0
+  4 Start_Stop_Count        -O--CK   099   099   000    -    4178
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  7 Seek_Error_Rate         POSR--   100   100   047    -    1823
+  7 Seek_Error_Rate         POSR--   100   100   047    -    1302
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Seconds        -O--CK   076   076   000    -    12090h+10m+35s
+  9 Power_On_Seconds        -O--CK   066   066   000    -    17041h+40m+26s
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2818
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    442
-193 Load_Cycle_Count        -O--CK   095   095   000    -    109964
-194 Temperature_Celsius     -O---K   100   100   000    -    44 (Min/Max 16/59)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    14411
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4178
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    525
+193 Load_Cycle_Count        -O--CK   095   095   000    -    111989
+194 Temperature_Celsius     -O---K   100   100   000    -    47 (Min/Max 16/59)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2381
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 6923)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    7620
-203 Run_Out_Cancel          -O----   100   100   000    -    1529050890029
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    25397
+203 Run_Out_Cancel          -O----   100   100   000    -    429531396904
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,11 +109,15 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      9365         -
-# 2  Short offline       Completed without error       00%      9364         -
-# 3  Extended offline    Aborted by host               60%      9364         -
-# 4  Extended offline    Completed without error       00%      1653         -
-# 5  Extended offline    Completed without error       00%       211         -
+# 1  Extended offline    Completed without error       00%     12105         -
+# 2  Extended offline    Interrupted (host reset)      70%     12103         -
+# 3  Conveyance offline  Completed without error       00%     12103         -
+# 4  Short offline       Completed without error       00%     12103         -
+# 5  Extended offline    Completed without error       00%      9365         -
+# 6  Short offline       Completed without error       00%      9364         -
+# 7  Extended offline    Aborted by host               60%      9364         -
+# 8  Extended offline    Completed without error       00%      1653         -
+# 9  Extended offline    Completed without error       00%       211         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,8 +133,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     --/45 Celsius
+Current Temperature:                    47 Celsius
+Power Cycle Min/Max Temperature:     --/49 Celsius
 Lifetime    Min/Max Temperature:     --/59 Celsius
 
 SCT Temperature History Version:     2
@@ -138,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (107)
+Temperature History Size (Index):    128 (111)
 
 SCT Error Recovery Control:
            Read: Disabled

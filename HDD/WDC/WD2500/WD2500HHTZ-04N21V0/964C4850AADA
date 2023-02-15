@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-33-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.13.0-20-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital VelociRaptor (AF)
@@ -13,7 +13,7 @@ Rotation Rate:    10000 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Jul 11 07:46:44 2020 EDT
+Local Time is:    Fri Nov  5 18:24:33 2021 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,21 +65,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   156   153   021    -    1175
-  4 Start_Stop_Count        -O--CK   100   100   000    -    675
+  3 Spin_Up_Time            POS--K   154   153   021    -    1275
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1079
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   086   086   000    -    10718
+  9 Power_On_Hours          -O--CK   080   080   000    -    14710
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    561
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    308
-193 Load_Cycle_Count        -O--CK   200   200   000    -    367
-194 Temperature_Celsius     -O---K   119   101   000    -    24
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    876
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    527
+193 Load_Cycle_Count        -O--CK   200   200   000    -    552
+194 Temperature_Celsius     -O---K   107   100   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   190   000    -    47
+199 UDMA_CRC_Error_Count    -O--CK   200   190   000    -    48
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -262,9 +262,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     21/23 Celsius
-Lifetime    Min/Max Temperature:      0/42 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     34/37 Celsius
+Lifetime    Min/Max Temperature:      0/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -275,7 +275,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (130)
+Temperature History Size (Index):    478 (266)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -295,10 +295,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          175  Vendor specific
+0x8000  4        14984  Vendor specific
 

@@ -1,3 +1,6 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Maxtor DiamondMax Plus 9
 Device Model:     Maxtor 6Y080M0
@@ -7,10 +10,10 @@ User Capacity:    80,000,000,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Tue Jun 23 17:19:14 2020 CEST
+Local Time is:    Wed Aug 24 08:01:55 2022 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     128 (quiet), recommended: 192
+AAM level is:     254 (maximum performance), recommended: 192
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -52,33 +55,33 @@ recommended polling time: 	 (  36) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   225   221   063    -    9911
-  4 Start_Stop_Count        -O--CK   250   250   000    -    5937
+  3 Spin_Up_Time            POS--K   225   221   063    -    10644
+  4 Start_Stop_Count        -O--CK   250   250   000    -    7543
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   250   000    -    0
-  8 Seek_Time_Performance   POS--K   252   242   187    -    63106
-  9 Power_On_Minutes        -O--CK   208   208   000    -    514h+25m
+  8 Seek_Time_Performance   POS--K   253   231   187    -    43607
+  9 Power_On_Minutes        -O--CK   206   206   000    -    146h+05m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   237   237   000    -    6505
+ 12 Power_Cycle_Count       -O--CK   232   232   000    -    8487
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    42
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    1394
+194 Temperature_Celsius     -O--CK   253   253   000    -    44
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    2973
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   001   001   000    -    5541
+199 UDMA_CRC_Error_Count    ---R--   001   001   000    -    6119
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    4
+201 Soft_Read_Error_Rate    -O-R--   253   249   000    -    6
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   252   180    -    0
+203 Run_Out_Cancel          PO-R--   253   252   180    -    1
 204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   193   193   000    -    0
+209 Offline_Seek_Performnce --S--K   193   149   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -96,9 +99,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 6314 inconsistent with error log pointer 5
+Warning: ATA error count 6326 inconsistent with error log pointer 5
 
-ATA Error Count: 6314 (device log contains only the most recent five errors)
+ATA Error Count: 6326 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -113,7 +116,58 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6314 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
+Error 6326 occurred at disk power-on lifetime: 15359 hours (639 days + 23 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 a8 c8 0c 00 e0  Error: ICRC, ABRT at LBA = 0x00000cc8 = 3272
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ca 00 a8 c8 0c 00 e0 00      00:11:11.760  WRITE DMA
+  27 00 00 00 00 00 e0 00      00:11:11.760  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ef 10 06 00 00 00 00 00      00:11:11.760  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 a0 00      00:11:11.744  IDENTIFY DEVICE
+  ef 03 42 00 00 00 a0 00      00:11:11.744  SET FEATURES [Set transfer mode]
+
+Error 6325 occurred at disk power-on lifetime: 15300 hours (637 days + 12 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 f0 1e 00 e0  Error: ICRC, ABRT at LBA = 0x00001ef0 = 7920
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 20 f0 1e 00 e0 00      00:14:03.520  READ DMA
+  c8 00 10 e0 1e 00 e0 00      00:14:02.752  READ DMA
+  c8 00 08 d8 1e 00 e0 00      00:14:02.000  READ DMA
+  c8 00 08 70 1f 00 e0 00      00:14:02.000  READ DMA
+  c8 00 08 40 1f 00 e0 00      00:14:02.000  READ DMA
+
+Error 6324 occurred at disk power-on lifetime: 14860 hours (619 days + 4 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 10 09 00 e0  Error: ICRC, ABRT at LBA = 0x00000910 = 2320
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ca 00 01 10 09 00 e0 00      00:10:20.032  WRITE DMA
+  ef 02 00 00 00 00 a0 00      00:10:19.680  SET FEATURES [Enable write cache]
+  ca 00 01 10 08 00 e0 00      00:10:19.664  WRITE DMA
+  c8 00 08 10 08 00 e0 00      00:10:19.648  READ DMA
+  ef 02 00 00 00 00 a0 00      00:10:19.296  SET FEATURES [Enable write cache]
+
+Error 6323 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -130,7 +184,7 @@ Error 6314 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
   ef 10 06 00 00 00 00 00      00:14:56.448  SET FEATURES [Enable SATA feature]
   ec 00 00 00 00 00 a0 00      00:14:56.448  IDENTIFY DEVICE
 
-Error 6313 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
+Error 6322 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -147,63 +201,31 @@ Error 6313 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
   ef 10 06 00 00 00 00 00      00:14:20.688  SET FEATURES [Enable SATA feature]
   ec 00 00 00 00 00 a0 00      00:14:20.688  IDENTIFY DEVICE
 
-Error 6312 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 c4 24 f9 b4 e0  Error: ICRC, ABRT 196 sectors at LBA = 0x00b4f924 = 11860260
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  35 00 00 e8 f7 b4 e0 00      00:14:18.944  WRITE DMA EXT
-  35 00 48 a0 f1 b4 e0 00      00:14:18.944  WRITE DMA EXT
-  35 00 00 a0 e9 b4 e0 00      00:14:18.928  WRITE DMA EXT
-  35 00 00 a0 e1 b4 e0 00      00:14:18.928  WRITE DMA EXT
-  27 00 00 00 00 00 e0 00      00:14:18.928  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-
-Error 6311 occurred at disk power-on lifetime: 14742 hours (614 days + 6 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 a1 2f c8 b4 e0  Error: ICRC, ABRT 161 sectors at LBA = 0x00b4c82f = 11847727
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  35 00 18 b8 c5 b4 e0 00      00:14:18.272  WRITE DMA EXT
-  35 00 38 80 be b4 e0 00      00:14:18.272  WRITE DMA EXT
-  35 00 a0 e0 b5 b4 e0 00      00:14:18.256  WRITE DMA EXT
-  27 00 00 00 00 00 e0 00      00:14:18.256  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ef 10 06 00 00 00 00 00      00:14:18.256  SET FEATURES [Enable SATA feature]
-
-Error 6310 occurred at disk power-on lifetime: 14396 hours (599 days + 20 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 00 09 29 01 e0  Error: ICRC, ABRT at LBA = 0x00012909 = 76041
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 c1 3f 09 29 01 e0 00      00:03:25.776  READ DMA
-  c8 c1 01 08 29 01 e0 00      00:03:25.776  READ DMA
-  c8 c1 3f 09 29 01 e0 00      00:03:25.776  READ DMA
-  c8 c1 01 08 29 01 e0 00      00:03:25.776  READ DMA
-  c8 c1 3f 09 29 01 e0 00      00:03:25.776  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     14490         -
-# 2  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     15479         -
+# 2  Short offline       Completed without error       00%     15474         -
+# 3  Short offline       Completed without error       00%     15471         -
+# 4  Short offline       Completed without error       00%     15468         -
+# 5  Short offline       Completed without error       00%     15465         -
+# 6  Short offline       Completed without error       00%     15462         -
+# 7  Extended offline    Interrupted (host reset)      30%     15460         -
+# 8  Short offline       Completed without error       00%     15451         -
+# 9  Extended offline    Aborted by host               40%     15446         -
+#10  Short offline       Completed without error       00%     15432         -
+#11  Extended offline    Aborted by host               30%     15428         -
+#12  Short offline       Completed without error       00%     15414         -
+#13  Extended offline    Completed without error       00%     15412         -
+#14  Extended offline    Aborted by host               30%     15351         -
+#15  Short offline       Completed without error       00%     15311         -
+#16  Extended offline    Interrupted (host reset)      40%     15295         -
+#17  Short offline       Completed without error       00%     15248         -
+#18  Extended offline    Aborted by host               90%     15241         -
+#19  Short offline       Completed without error       00%     15207         -
+#20  Extended offline    Aborted by host               40%     15188         -
+#21  Extended offline    Interrupted (host reset)      40%     15153         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

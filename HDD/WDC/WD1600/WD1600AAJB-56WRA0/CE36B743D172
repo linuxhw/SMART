@@ -9,7 +9,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 Transport Type:   Parallel, ATA8-APT
-Local Time is:    Fri Aug 27 20:02:28 2021 UTC
+Local Time is:    Thu Dec  2 13:46:00 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -61,22 +61,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    1516
-  3 Spin_Up_Time            PO----   152   148   021    -    3366
-  4 Start_Stop_Count        -O--CK   090   090   000    -    10569
+  3 Spin_Up_Time            PO----   151   148   021    -    3416
+  4 Start_Stop_Count        -O--CK   090   090   000    -    10876
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   068   068   000    -    23734
+  9 Power_On_Hours          -O--CK   067   067   000    -    24168
  10 Spin_Retry_Count        -O--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   000    -    8523
-192 Power-Off_Retract_Count -O--CK   197   197   000    -    2988
-193 Load_Cycle_Count        -O--CK   197   197   000    -    10665
-194 Temperature_Celsius     -O---K   105   076   000    -    38
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8828
+192 Power-Off_Retract_Count -O--CK   196   196   000    -    3035
+193 Load_Cycle_Count        -O--CK   197   197   000    -    10972
+194 Temperature_Celsius     -O---K   106   076   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
-198 Offline_Uncorrectable   ----C-   200   200   000    -    3
+198 Offline_Uncorrectable   ----C-   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   195   000    -    67
-200 Multi_Zone_Error_Rate   ---R--   200   200   051    -    3
+200 Multi_Zone_Error_Rate   ---R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -248,7 +248,9 @@ Error 1539 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   0a 00 00 00 00 07 9a 00 86 27 00 00 08     00:00:00.069  [RESERVED]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      60%     23999         -
+# 2  Extended offline    Completed without error       00%     23966         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -264,9 +266,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     39/39 Celsius
-Lifetime    Min/Max Temperature:      ?/58 Celsius
+Current Temperature:                    19 Celsius
+Power Cycle Min/Max Temperature:     19/19 Celsius
+Lifetime    Min/Max Temperature:     38/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -274,7 +276,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        255 minutes
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/85 Celsius
-Temperature History Size (Index):    128 (78)
+Temperature History Size (Index):    128 (64)
 
 SCT Error Recovery Control:
            Read: Disabled

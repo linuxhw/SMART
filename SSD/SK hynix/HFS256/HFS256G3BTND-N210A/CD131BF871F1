@@ -12,7 +12,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 27 23:22:47 2020 IDT
+Local Time is:    Fri Aug 28 01:19:44 2020 IDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -27,13 +27,13 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x06)	Offline data collection activity
+					was aborted by the device with a fatal error.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  32)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
-data collection: 		(  104) seconds.
+data collection: 		(  125) seconds.
 Offline data collection
 capabilities: 			 (0x19) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -58,9 +58,9 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   100   036    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    2189
+  9 Power_On_Hours          -O--CK   098   098   000    -    2191
  12 Power_Cycle_Count       -O--CK   100   100   020    -    948
-100 Unknown_Attribute       -O--CK   100   100   000    -    6082427
+100 Unknown_Attribute       -O--CK   100   100   000    -    6090216
 170 Unknown_Attribute       -O--CK   100   100   000    -    384
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   253   000    -    0
@@ -74,18 +74,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 Runtime_Bad_Block       -O--CK   253   253   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    1
 187 Reported_Uncorrect      -O--CK   100   100   000    -    1
-194 Temperature_Celsius     -O----   030   018   000    -    30 (Min/Max 17/43)
+194 Temperature_Celsius     -O----   029   018   000    -    29 (Min/Max 17/43)
 195 Hardware_ECC_Recovered  -O--CK   001   001   000    -    4294967295
 199 UDMA_CRC_Error_Count    -O--CK   253   253   000    -    0
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
-204 Soft_ECC_Correction     -OSR--   001   001   000    -    4737
+204 Soft_ECC_Correction     -OSR--   001   001   000    -    8536
 231 Temperature_Celsius     PO--CK   093   093   010    -    8
 233 Media_Wearout_Indicator -O--CK   092   092   001    -    92
-234 Unknown_Attribute       -O--CK   100   100   ---    -    25540
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    2816
+234 Unknown_Attribute       -O--CK   100   100   ---    -    25573
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    2818
 242 Total_LBAs_Read         -O--CK   100   100   ---    -    2875
-249 Unknown_Attribute       -O--CK   100   100   ---    -    25540
-250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    22694866
+249 Unknown_Attribute       -O--CK   100   100   ---    -    25573
+250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    22727001
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,7 +114,9 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       599         -
+# 1  Extended offline    Completed: read failure       90%      2190         12459696
+# 2  Short offline       Completed without error       00%      2189         -
+# 3  Short offline       Completed without error       00%       599         -
 
 Selective Self-tests/Logging not supported
 

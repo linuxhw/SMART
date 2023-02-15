@@ -11,7 +11,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Jun 22 15:09:12 2021 UTC
+Local Time is:    Sun Jul 11 21:47:23 2021 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -27,8 +27,8 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x86)	Offline data collection activity
+					was aborted by the device with a fatal error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -63,28 +63,28 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   2 Throughput_Performance  POS--K   100   100   050    -    0
-  3 Spin_Up_Time            PO---K   100   100   002    -    856
-  4 Start_Stop_Count        -O--CK   100   100   000    -    13458
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
+  3 Spin_Up_Time            PO---K   100   100   002    -    1323
+  4 Start_Stop_Count        -O--CK   100   100   000    -    13707
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    8
   7 Seek_Error_Rate         POSR-K   100   100   050    -    0
   8 Seek_Time_Performance   P-S--K   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   058   058   000    -    17015
+  9 Power_On_Hours          -O--CK   057   057   000    -    17415
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    13306
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    13550
 183 Runtime_Bad_Block       -O--CK   100   100   001    -    1
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 185 Unknown_Attribute       -O--CK   100   100   001    -    65535
 187 Reported_Uncorrect      -O--CK   067   067   000    -    33
-188 Command_Timeout         -O--CK   100   098   000    -    170
+188 Command_Timeout         -O--CK   100   098   000    -    176
 189 High_Fly_Writes         -O-RCK   100   100   001    -    0
-190 Airflow_Temperature_Cel -O---K   052   037   040    Past 48 (Min/Max 48/48 #57)
+190 Airflow_Temperature_Cel -O---K   065   037   040    Past 35 (1 14 35 34 0)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    125
-192 Power-Off_Retract_Count -O---K   096   096   000    -    151324933
-193 Load_Cycle_Count        -O--CK   089   089   000    -    117451
-194 Temperature_Celsius     -O---K   052   037   040    Past 48 (Min/Max 48/48 #57)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-197 Current_Pending_Sector  -O--CK   100   100   000    -    24
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    6
+192 Power-Off_Retract_Count -O---K   096   096   000    -    155978060
+193 Load_Cycle_Count        -O--CK   088   088   000    -    120321
+194 Temperature_Celsius     -O---K   065   037   040    Past 35 (1 14 35 34 0)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1
+197 Current_Pending_Sector  -O--CK   100   100   000    -    64
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    7
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 39
+Device Error Count: 40
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,23 @@ Device Error Count: 39
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 40 [39] occurred at disk power-on lifetime: 17053 hours (710 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 00 00 00 25 c4 f1 37 40 00  Error: ICRC, ABRT at LBA = 0x25c4f137 = 633663799
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 08 00 00 25 c4 f1 38 40 00     00:00:32.125  READ FPDMA QUEUED
+  60 00 40 00 00 00 00 25 c4 f0 f8 40 00     00:00:32.125  READ FPDMA QUEUED
+  60 00 20 00 f8 00 00 25 c4 f0 d8 40 00     00:00:32.115  READ FPDMA QUEUED
+  60 00 08 00 b8 00 00 25 c1 0c 68 40 00     00:00:32.115  READ FPDMA QUEUED
+  60 00 08 00 b0 00 00 25 c1 0b 20 40 00     00:00:32.115  READ FPDMA QUEUED
 
 Error 39 [38] occurred at disk power-on lifetime: 16843 hours (701 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -245,23 +262,6 @@ Error 33 [32] occurred at disk power-on lifetime: 9844 hours (410 days + 4 hours
   60 00 08 00 60 00 00 1d f4 16 50 40 00     00:01:18.631  READ FPDMA QUEUED
   60 00 08 00 58 00 00 1d f4 16 48 40 00     00:01:18.631  READ FPDMA QUEUED
 
-Error 32 [31] occurred at disk power-on lifetime: 9844 hours (410 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 41 00 b0 00 00 1d f4 15 78 40 00  Error: UNC at LBA = 0x1df41578 = 502535544
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 a8 00 00 1d f4 16 68 40 00     00:00:58.752  READ FPDMA QUEUED
-  60 00 08 00 a0 00 00 1d f4 16 60 40 00     00:00:58.752  READ FPDMA QUEUED
-  60 00 08 00 98 00 00 1d f4 16 58 40 00     00:00:58.752  READ FPDMA QUEUED
-  60 00 08 00 90 00 00 1d f4 16 50 40 00     00:00:58.752  READ FPDMA QUEUED
-  60 00 08 00 88 00 00 1d f4 16 48 40 00     00:00:58.752  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%     13497         -
@@ -297,17 +297,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    48 Celsius
-Power Cycle Min/Max Temperature:     48/48 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     34/35 Celsius
 Lifetime    Min/Max Temperature:     12/63 Celsius
-Under/Over Temperature Limit Count:   0/57
+Under/Over Temperature Limit Count:   0/270
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (7)
+Temperature History Size (Index):    478 (62)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -316,43 +316,43 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4           13306  ---  Lifetime Power-On Resets
-0x01  0x010  4           17015  ---  Power-on Hours
-0x01  0x018  6    103703208940  ---  Logical Sectors Written
-0x01  0x020  6       760723964  ---  Number of Write Commands
-0x01  0x028  6     54424237293  ---  Logical Sectors Read
-0x01  0x030  6       702642581  ---  Number of Read Commands
+0x01  0x008  4           13550  ---  Lifetime Power-On Resets
+0x01  0x010  4           17415  ---  Power-on Hours
+0x01  0x018  6    106838903397  ---  Logical Sectors Written
+0x01  0x020  6       772617939  ---  Number of Write Commands
+0x01  0x028  6     55421214707  ---  Logical Sectors Read
+0x01  0x030  6       714058814  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4             125  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           15602  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           15671  ---  Head Flying Hours
-0x03  0x018  4          117451  ---  Head Load Events
-0x03  0x020  4             328  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             301  ---  Read Recovery Attempts
+0x03  0x008  4           15971  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           16031  ---  Head Flying Hours
+0x03  0x018  4          120321  ---  Head Load Events
+0x03  0x020  4             408  ---  Number of Reallocated Logical Sectors
+0x03  0x028  4             945  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4              33  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             170  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             176  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              48  ---  Current Temperature
-0x05  0x010  1              48  N--  Average Short Term Temperature
-0x05  0x018  1              42  N--  Average Long Term Temperature
+0x05  0x008  1              35  ---  Current Temperature
+0x05  0x010  1              51  N--  Average Short Term Temperature
+0x05  0x018  1              46  N--  Average Long Term Temperature
 0x05  0x020  1              63  ---  Highest Temperature
 0x05  0x028  1              12  ---  Lowest Temperature
-0x05  0x030  1              51  N--  Highest Average Short Term Temperature
+0x05  0x030  1              54  N--  Highest Average Short Term Temperature
 0x05  0x038  1              29  N--  Lowest Average Short Term Temperature
-0x05  0x040  1              44  N--  Highest Average Long Term Temperature
+0x05  0x040  1              46  N--  Highest Average Long Term Temperature
 0x05  0x048  1              32  N--  Lowest Average Long Term Temperature
-0x05  0x050  4              60  ---  Time in Over-Temperature
+0x05  0x050  4             370  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           92595  ---  Number of Hardware Resets
-0x06  0x018  4               6  ---  Number of Interface CRC Errors
+0x06  0x008  4           95177  ---  Number of Hardware Resets
+0x06  0x018  4               7  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              28  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              29  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
