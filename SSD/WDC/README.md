@@ -29,8 +29,8 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G1B0B-00AS40 | 500 GB | 9       | 553   | 0     | 1.52   |
 | WDC       | WDS250G1B0B-00AS40 | 250 GB | 10      | 508   | 0     | 1.39   |
 | WDC       | WDS200T2B0A        | 2 TB   | 3       | 507   | 0     | 1.39   |
+| WDC       | WDS100T1B0A-00H9H0 | 1 TB   | 18      | 451   | 0     | 1.24   |
 | WDC       | WDS250G1B0A-00H9H0 | 250 GB | 30      | 477   | 34    | 1.23   |
-| WDC       | WDS100T1B0A-00H9H0 | 1 TB   | 18      | 442   | 0     | 1.21   |
 | WDC       | WDBNCE5000PNC-WRSN | 500 GB | 2       | 398   | 0     | 1.09   |
 | WDC       | WDS250G2B0B-00YS70 | 250 GB | 41      | 371   | 0     | 1.02   |
 | WDC       | WDS240G1G0A-00SS50 | 240 GB | 37      | 371   | 0     | 1.02   |
@@ -68,7 +68,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS480G2G0B-00EPW0 | 480 GB | 29      | 148   | 1     | 0.38   |
 | WDC       | WDS400T2B0A-00SM50 | 4 TB   | 6       | 138   | 0     | 0.38   |
 | WDC       | PC SA530 SDATB8... | 1 TB   | 1       | 136   | 0     | 0.37   |
-| WDC       | WDS240G2G0A-00JH30 | 240 GB | 413     | 158   | 2     | 0.36   |
+| WDC       | WDS240G2G0A-00JH30 | 240 GB | 413     | 159   | 2     | 0.37   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 81      | 149   | 5     | 0.32   |
 | WDC       | WDS250G2B0B        | 250 GB | 9       | 108   | 0     | 0.30   |
 | WDC       | WDS100T2G0A-00JH30 | 1 TB   | 41      | 107   | 27    | 0.28   |
@@ -91,6 +91,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| WDC       | Blue and Green SSDs    | 6      | 93      | 321   | 1     | 0.86   |
+| WDC       | Blue and Green SSDs    | 6      | 93      | 322   | 1     | 0.87   |
 | WDC       | Unknown                | 8      | 20      | 252   | 247   | 0.62   |
 | WDC       | Blue / Red / Green ... | 40     | 2344    | 202   | 3     | 0.52   |

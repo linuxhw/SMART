@@ -24,7 +24,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Toshiba   | MQ01AAD020C        | 200 GB | 1       | 4449  | 0     | 12.19  |
-| Toshiba   | MK2002TSKB         | 2 TB   | 9       | 2285  | 3     | 6.26   |
+| Toshiba   | MK2002TSKB         | 2 TB   | 9       | 2294  | 3     | 6.29   |
 | Toshiba   | Freecom            | 5 TB   | 1       | 1916  | 0     | 5.25   |
 | Toshiba   | MD04ACA50D         | 5 TB   | 1       | 1874  | 0     | 5.13   |
 | Toshiba   | MC04ACA200E        | 2 TB   | 2       | 1548  | 0     | 4.24   |
@@ -47,7 +47,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | DT01ABA200V        | 2 TB   | 4       | 1013  | 42    | 2.60   |
 | Toshiba   | MD04ABA400V        | 4 TB   | 3       | 936   | 0     | 2.57   |
 | Toshiba   | MK2561GSY          | 250 GB | 2       | 913   | 0     | 2.50   |
-| Toshiba   | DT01ABA200         | 2 TB   | 20      | 848   | 1     | 2.26   |
+| Toshiba   | DT01ABA200         | 2 TB   | 20      | 852   | 1     | 2.27   |
 | Toshiba   | MK1002TSKB         | 1 TB   | 2       | 1657  | 5     | 2.21   |
 | Toshiba   | MG04ACA400N        | 4 TB   | 1       | 808   | 0     | 2.21   |
 | Toshiba   | DT01ABA300         | 3 TB   | 15      | 820   | 1     | 2.21   |
@@ -55,7 +55,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MQ01ABD032V        | 320 GB | 2       | 790   | 303   | 2.16   |
 | Toshiba   | MQ01ABB200         | 2 TB   | 27      | 866   | 171   | 2.05   |
 | Toshiba   | MQ01ABD100R        | 1 TB   | 1       | 706   | 0     | 1.94   |
-| Toshiba   | HDWE150            | 5 TB   | 27      | 712   | 1     | 1.88   |
+| Toshiba   | HDWE150            | 5 TB   | 27      | 713   | 1     | 1.88   |
 | Toshiba   | MG04ACA600E        | 6 TB   | 3       | 675   | 0     | 1.85   |
 | Toshiba   | MK1265GSX H        | 120 GB | 1       | 649   | 0     | 1.78   |
 | Toshiba   | DT01ACA200         | 2 TB   | 316     | 696   | 38    | 1.77   |
@@ -80,7 +80,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MD03ACA300V        | 3 TB   | 1       | 450   | 0     | 1.23   |
 | Toshiba   | MK8032GSX          | 80 GB  | 12      | 564   | 131   | 1.22   |
 | Toshiba   | DT01ACA100         | 1 TB   | 691     | 507   | 47    | 1.18   |
-| Toshiba   | HDWE160            | 6 TB   | 31      | 506   | 4     | 1.14   |
+| Toshiba   | HDWE160            | 6 TB   | 31      | 507   | 4     | 1.15   |
 | Toshiba   | DT01ACA050         | 500 GB | 593     | 499   | 42    | 1.12   |
 | Toshiba   | MK1234GSX          | 120 GB | 18      | 757   | 15    | 1.10   |
 | Toshiba   | HDWD130            | 3 TB   | 154     | 424   | 7     | 1.10   |
@@ -91,7 +91,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MN07ACA12T         | 12 TB  | 1       | 376   | 0     | 1.03   |
 | Toshiba   | HDWN180            | 8 TB   | 14      | 375   | 0     | 1.03   |
 | Toshiba   | MQ01ABD100V -63    | 1 TB   | 2       | 367   | 0     | 1.01   |
-| Toshiba   | HDWD120            | 2 TB   | 162     | 375   | 7     | 1.00   |
+| Toshiba   | HDWD120            | 2 TB   | 162     | 376   | 7     | 1.00   |
 | Toshiba   | MK5075GSX          | 500 GB | 47      | 539   | 277   | 1.00   |
 | Toshiba   | MG07ACA14TE        | 14 TB  | 7       | 363   | 0     | 1.00   |
 | Toshiba   | MG04ACA400EY       | 4 TB   | 2       | 360   | 0     | 0.99   |
@@ -123,7 +123,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | DT01ACA050 LENOVO  | 500 GB | 4       | 282   | 0     | 0.78   |
 | Toshiba   | MG06ACA800E        | 8 TB   | 11      | 274   | 0     | 0.75   |
 | Toshiba   | MG08ACA16TEY       | 16 TB  | 14      | 272   | 0     | 0.75   |
-| Toshiba   | MQ01ABD100         | 1 TB   | 800     | 384   | 114   | 0.74   |
+| Toshiba   | MQ01ABD100         | 1 TB   | 800     | 384   | 114   | 0.75   |
 | Toshiba   | MK6459GSXP         | 640 GB | 16      | 638   | 544   | 0.71   |
 | Toshiba   | MQ01ABD100M        | 1 TB   | 18      | 294   | 13    | 0.71   |
 | Toshiba   | HDWD110            | 1 TB   | 427     | 273   | 3     | 0.69   |
@@ -155,7 +155,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MK2555GSXF         | 250 GB | 12      | 205   | 0     | 0.56   |
 | Toshiba   | MK2552GSX          | 250 GB | 30      | 782   | 227   | 0.56   |
 | Toshiba   | MK6006GAH          | 64 GB  | 2       | 203   | 0     | 0.56   |
-| Toshiba   | HDWR160            | 6 TB   | 7       | 201   | 0     | 0.55   |
+| Toshiba   | HDWR160            | 6 TB   | 7       | 202   | 0     | 0.55   |
 | Toshiba   | HDWD105            | 500 GB | 118     | 235   | 20    | 0.55   |
 | Toshiba   | MK6034GAX          | 64 GB  | 4       | 663   | 352   | 0.55   |
 | Toshiba   | MK6034GSX          | 64 GB  | 4       | 423   | 18    | 0.53   |
@@ -173,7 +173,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MK2035GSS          | 200 GB | 24      | 517   | 32    | 0.49   |
 | Toshiba   | HDWD260            | 6 TB   | 9       | 189   | 1     | 0.49   |
 | Toshiba   | MG08ADA600E        | 6 TB   | 3       | 177   | 0     | 0.49   |
-| Toshiba   | MK8009GAH          | 80 GB  | 5       | 520   | 21    | 0.48   |
+| Toshiba   | MK8009GAH          | 80 GB  | 5       | 521   | 21    | 0.48   |
 | Toshiba   | MK2576GSX          | 250 GB | 8       | 272   | 2     | 0.48   |
 | Toshiba   | MK3259GSXP         | 320 GB | 69      | 431   | 250   | 0.48   |
 | Toshiba   | MK1629GSG          | 160 GB | 4       | 372   | 26    | 0.47   |
@@ -217,7 +217,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | DT01ACA200V        | 2 TB   | 1       | 124   | 0     | 0.34   |
 | Toshiba   | MK1031GAS          | 100 GB | 7       | 301   | 11    | 0.34   |
 | Toshiba   | MK6461GSYG         | 640 GB | 1       | 1971  | 15    | 0.34   |
-| Toshiba   | MK7559GSXP         | 752 GB | 33      | 488   | 599   | 0.34   |
+| Toshiba   | MK7559GSXP         | 752 GB | 33      | 490   | 599   | 0.34   |
 | Toshiba   | MK2555GSX          | 250 GB | 55      | 492   | 87    | 0.33   |
 | Toshiba   | MK3265GSXF         | 320 GB | 6       | 344   | 18    | 0.33   |
 | Toshiba   | MG06ACA600E        | 6 TB   | 2       | 119   | 0     | 0.33   |
@@ -325,14 +325,14 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Toshiba   | 3.5" HDD MK.002TSKB    | 2      | 11      | 2171  | 3     | 5.53   |
+| Toshiba   | 3.5" HDD MK.002TSKB    | 2      | 11      | 2178  | 3     | 5.55   |
 | Toshiba   | Toshiba Client HDD     | 1      | 1       | 1874  | 0     | 5.13   |
 | Toshiba   | 3.5" HDD               | 1      | 2       | 1548  | 0     | 4.24   |
 | Toshiba   | 1.8" HDD MK..17GSG     | 1      | 1       | 1162  | 0     | 3.18   |
 | Toshiba   | Low spin               | 1      | 3       | 936   | 0     | 2.57   |
 | Toshiba   | 3.5" MD04ACA Enterp... | 2      | 40      | 1065  | 189   | 2.41   |
 | Toshiba   | 3.5" MG03ACAxxx(Y) ... | 4      | 42      | 966   | 12    | 2.22   |
-| Toshiba   | 3.5" DT01ABA Deskto... | 3      | 36      | 819   | 1     | 2.19   |
+| Toshiba   | 3.5" DT01ABA Deskto... | 3      | 36      | 820   | 1     | 2.20   |
 | Toshiba   | 3.5" HDD E300          | 2      | 14      | 883   | 2     | 2.16   |
 | Toshiba   | 3.5" MG04ACA Enterp... | 5      | 25      | 755   | 1     | 2.07   |
 | Toshiba   | 2.5" HDD MQ01ABB       | 1      | 27      | 866   | 171   | 2.05   |
@@ -359,7 +359,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MG06ACA Enterprise ... | 4      | 21      | 294   | 0     | 0.81   |
 | Toshiba   | S300                   | 2      | 4       | 292   | 0     | 0.80   |
 | Toshiba   | 2.5" HDD MQ01ACF       | 3      | 128     | 370   | 46    | 0.78   |
-| Toshiba   | P300                   | 7      | 946     | 295   | 7     | 0.76   |
+| Toshiba   | P300                   | 7      | 946     | 296   | 7     | 0.76   |
 | Toshiba   | 2.5" HDD MQ01ABD       | 8      | 1378    | 396   | 141   | 0.72   |
 | Toshiba   | 2.5" HDD               | 18     | 93      | 492   | 56    | 0.70   |
 | Toshiba   | N300 NAS HDD           | 4      | 22      | 316   | 8     | 0.69   |
@@ -393,7 +393,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 2.5" HDD MK..46GSX     | 4      | 60      | 536   | 137   | 0.41   |
 | Toshiba   | 2.5" HDD MQ04ABF       | 2      | 531     | 168   | 54    | 0.41   |
 | Toshiba   | 2.5" HDD MK..63GSX     | 2      | 26      | 624   | 69    | 0.39   |
-| Toshiba   | 1.8" HDD               | 5      | 15      | 373   | 11    | 0.39   |
+| Toshiba   | 1.8" HDD               | 5      | 15      | 374   | 11    | 0.39   |
 | Toshiba   | 2.5" HDD MK..65GSX     | 13     | 329     | 494   | 279   | 0.39   |
 | Toshiba   | 2.5" HDD MK..55GSX     | 10     | 177     | 358   | 68    | 0.36   |
 | Toshiba   | V300                   | 1      | 1       | 129   | 0     | 0.36   |

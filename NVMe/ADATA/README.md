@@ -64,7 +64,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | IM2P32A8-128GCTB5  | 128 GB | 1       | 17    | 0     | 0.05   |
 | ADATA     | IM2P33F8BR2-512GB  | 512 GB | 6       | 16    | 0     | 0.05   |
 | ADATA     | SX8200PNP-512GT    | 512 GB | 1       | 12    | 0     | 0.03   |
-| ADATA     | IM2P33F3 NVMe      | 128 GB | 1       | 10    | 0     | 0.03   |
+| ADATA     | IM2P33F3 NVMe      | 128 GB | 1       | 11    | 0     | 0.03   |
 | ADATA     | IM2P33F3A NVMe     | 256 GB | 39      | 15    | 48    | 0.03   |
 | ADATA     | IM2P33F8BR1-128GB  | 128 GB | 5       | 9     | 0     | 0.03   |
 | ADATA     | IM2P33F8A-512GD    | 512 GB | 8       | 9     | 0     | 0.03   |

@@ -42,8 +42,8 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD Sata III       | 1 TB   | 4       | 99    | 0     | 0.27   |
 | Intenso   | SDVPSA1910256      | 256 GB | 1       | 92    | 0     | 0.25   |
 | Intenso   | SSD Sata III       | 120 GB | 30      | 114   | 83    | 0.23   |
+| Intenso   | SSD                | 120 GB | 26      | 101   | 80    | 0.23   |
 | Intenso   | SSD Sata III       | 500 GB | 1       | 79    | 0     | 0.22   |
-| Intenso   | SSD                | 120 GB | 26      | 95    | 80    | 0.21   |
 | Intenso   | Memory Ghost SSD   | 512 GB | 1       | 66    | 0     | 0.18   |
 | Intenso   | SATA3 1TB SSD      | 1 TB   | 2       | 219   | 12    | 0.18   |
 | Intenso   | Morebeck-V602      | 120 GB | 1       | 64    | 0     | 0.18   |
@@ -98,6 +98,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Intenso   | Phison Driven OEM SSDs | 4      | 124     | 215   | 1     | 0.58   |
-| Intenso   | Silicon Motion base... | 8      | 113     | 94    | 46    | 0.22   |
+| Intenso   | Phison Driven OEM SSDs | 4      | 124     | 216   | 1     | 0.58   |
+| Intenso   | Silicon Motion base... | 8      | 113     | 95    | 46    | 0.23   |
 | Intenso   | Unknown                | 49     | 158     | 86    | 41    | 0.22   |

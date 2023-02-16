@@ -29,7 +29,7 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 20      | 163   | 0     | 0.45   |
 | Gigabyte  | GP-GSTFS31256GTND  | 256 GB | 3       | 131   | 0     | 0.36   |
 | Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 8       | 59    | 0     | 0.16   |
-| Gigabyte  | GP-GSTFS31960GN... | 960 GB | 2       | 42    | 0     | 0.12   |
+| Gigabyte  | GP-GSTFS31960GN... | 960 GB | 2       | 45    | 0     | 0.12   |
 
 SSD by Family
 -------------

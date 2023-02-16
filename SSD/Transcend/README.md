@@ -50,7 +50,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS512GSSD370       | 512 GB | 5       | 181   | 0     | 0.50   |
 | Transcend | TS128GMSA740       | 128 GB | 1       | 180   | 0     | 0.50   |
 | Transcend | TS256GSSD370       | 256 GB | 4       | 177   | 0     | 0.49   |
-| Transcend | TS480GSSD220S      | 480 GB | 13      | 206   | 236   | 0.45   |
+| Transcend | TS480GSSD220S      | 480 GB | 13      | 207   | 236   | 0.46   |
 | Transcend | TS120GSSD220S      | 120 GB | 29      | 167   | 1     | 0.44   |
 | Transcend | TS120GMTS820S      | 120 GB | 6       | 159   | 0     | 0.44   |
 | Transcend | TS1TSSD230S        | 1 TB   | 7       | 145   | 0     | 0.40   |
@@ -141,6 +141,6 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | JMicron based SSDs     | 7      | 22      | 453   | 46    | 1.21   |
 | Transcend | SandForce Driven SSDs  | 6      | 15      | 544   | 12    | 1.16   |
 | Transcend | JMicron/Maxiotek ba... | 5      | 9       | 218   | 112   | 0.57   |
-| Transcend | Silicon Motion base... | 50     | 425     | 111   | 16    | 0.29   |
+| Transcend | Silicon Motion base... | 50     | 425     | 112   | 16    | 0.29   |
 | Transcend | Indilinx Barefoot b... | 1      | 1       | 309   | 2     | 0.28   |
 | Transcend | SiliconMotion based... | 2      | 2       | 26    | 0     | 0.07   |

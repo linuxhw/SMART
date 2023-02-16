@@ -154,7 +154,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CS1-SP32-11 M.2... | 32 GB  | 2       | 0     | 2     | 0.00   |
 | Lite-On   | LMT-256M6M-HP      | 256 GB | 2       | 79    | 649   | 0.00   |
 | Lite-On   | CV8-CE256-HP       | 256 GB | 1       | 135   | 1007  | 0.00   |
-| Lite-On   | CV8-8E128-HP       | 128 GB | 31      | 54    | 1007  | 0.00   |
+| Lite-On   | CV8-8E128-HP       | 128 GB | 31      | 55    | 1007  | 0.00   |
 | Lite-On   | LMT-128M3M         | 128 GB | 1       | 44    | 1009  | 0.00   |
 | Lite-On   | CV8-8E256-HP       | 256 GB | 2       | 40    | 1007  | 0.00   |
 | Lite-On   | IT SCS-128L9S      | 128 GB | 1       | 35    | 1203  | 0.00   |

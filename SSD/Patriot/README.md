@@ -38,7 +38,7 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Blast              | 120 GB | 13      | 432   | 0     | 1.19   |
 | Patriot   | Pyro SSD           | 120 GB | 2       | 386   | 0     | 1.06   |
 | Patriot   | Blaze              | 64 GB  | 7       | 291   | 0     | 0.80   |
-| Patriot   | Burst              | 480 GB | 44      | 265   | 1     | 0.70   |
+| Patriot   | Burst              | 480 GB | 44      | 266   | 1     | 0.70   |
 | Patriot   | Burst              | 960 GB | 12      | 239   | 0     | 0.66   |
 | Patriot   | Spark              | 128 GB | 9       | 234   | 0     | 0.64   |
 | Patriot   | Blaze              | 120 GB | 8       | 208   | 0     | 0.57   |

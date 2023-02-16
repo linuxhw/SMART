@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| T-FORCE   | SSD                | 250 GB | 3       | 151   | 0     | 0.42   |
+| T-FORCE   | SSD                | 250 GB | 3       | 156   | 0     | 0.43   |
 | T-FORCE   | SSD                | 500 GB | 4       | 121   | 0     | 0.33   |
 | T-FORCE   | SSD                | 512 GB | 7       | 104   | 3     | 0.28   |
 | T-FORCE   | SSD                | 1 TB   | 16      | 91    | 0     | 0.25   |

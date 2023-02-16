@@ -46,10 +46,10 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT128M550SSD4      | 128 GB | 1       | 532   | 0     | 1.46   |
 | Crucial   | CT256MX100SSD1     | 256 GB | 76      | 560   | 7     | 1.41   |
 | Crucial   | CT240M500SSD3      | 240 GB | 7       | 541   | 5     | 1.36   |
-| Crucial   | CT960M500SSD1      | 960 GB | 14      | 762   | 80    | 1.22   |
-| Crucial   | CT240M500SSD1      | 240 GB | 63      | 700   | 89    | 1.19   |
+| Crucial   | CT960M500SSD1      | 960 GB | 14      | 763   | 80    | 1.22   |
+| Crucial   | CT240M500SSD1      | 240 GB | 63      | 701   | 89    | 1.19   |
 | Crucial   | CT120BX300SSD1     | 120 GB | 19      | 430   | 0     | 1.18   |
-| Crucial   | CT750MX300SSD1     | 752 GB | 21      | 428   | 1     | 1.16   |
+| Crucial   | CT750MX300SSD1     | 752 GB | 21      | 429   | 1     | 1.16   |
 | Crucial   | CT500MX200SSD1     | 500 GB | 33      | 418   | 1     | 1.10   |
 | Crucial   | CT120M500SSD1      | 120 GB | 46      | 737   | 58    | 1.10   |
 | Crucial   | CT1050MX300SSD4    | 1 TB   | 11      | 490   | 7     | 1.09   |
@@ -94,8 +94,8 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT240BX500SSD1     | 240 GB | 450     | 126   | 1     | 0.34   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 323     | 124   | 1     | 0.33   |
 | Crucial   | CT4000MX500SSD1    | 4 TB   | 3       | 110   | 0     | 0.30   |
+| Crucial   | CT1000BX500SSD1    | 1 TB   | 116     | 105   | 1     | 0.29   |
 | Crucial   | CT480BX200SSD1     | 480 GB | 8       | 104   | 0     | 0.29   |
-| Crucial   | CT1000BX500SSD1    | 1 TB   | 116     | 103   | 1     | 0.28   |
 | Crucial   | CT256M550SSD3      | 256 GB | 3       | 573   | 11    | 0.27   |
 | Crucial   | CT256M550SSD1      | 256 GB | 12      | 1064  | 100   | 0.26   |
 | Crucial   | CT500BX100SSD1     | 500 GB | 20      | 92    | 1     | 0.25   |

@@ -59,7 +59,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HDT721075SLA380    | 752 GB | 1       | 1205  | 0     | 3.30   |
 | Hitachi   | HDS723020BLE640    | 2 TB   | 12      | 1196  | 0     | 3.28   |
 | Hitachi   | HCS5C1010CLA382    | 1 TB   | 6       | 1195  | 0     | 3.28   |
-| Hitachi   | HDS722020ALA330    | 2 TB   | 56      | 1901  | 109   | 3.27   |
+| Hitachi   | HDS722020ALA330    | 2 TB   | 56      | 1902  | 109   | 3.27   |
 | Hitachi   | HDS721075KLA330    | 752 GB | 10      | 1380  | 10    | 3.24   |
 | Hitachi   | HDS728040PLA320    | 40 GB  | 4       | 1548  | 4     | 3.22   |
 | Hitachi   | HCS5C2020ALA632    | 2 TB   | 3       | 1986  | 4     | 3.22   |
@@ -93,7 +93,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HCS5C3232SLA380    | 320 GB | 4       | 903   | 1     | 2.29   |
 | Hitachi   | HTS722020K9SA00... | 200 GB | 1       | 835   | 0     | 2.29   |
 | Hitachi   | HUA723020ALA641    | 2 TB   | 60      | 1045  | 41    | 2.27   |
-| Hitachi   | HUS724030ALE641    | 3 TB   | 38      | 922   | 87    | 2.26   |
+| Hitachi   | HUS724030ALE641    | 3 TB   | 38      | 923   | 87    | 2.26   |
 | Hitachi   | HDS728040PLAT20    | 41 GB  | 5       | 979   | 1     | 2.25   |
 | Hitachi   | HDS722580VLSA80    | 82 GB  | 5       | 1092  | 403   | 2.25   |
 | Hitachi   | HCC543225A7A380    | 250 GB | 4       | 1159  | 1     | 2.21   |
@@ -213,7 +213,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS542516K9A300    | 160 GB | 9       | 723   | 154   | 0.59   |
 | Hitachi   | HTS721080G9SA00    | 80 GB  | 9       | 437   | 30    | 0.59   |
 | Hitachi   | HDS721050DLE630    | 500 GB | 64      | 538   | 443   | 0.59   |
-| Hitachi   | HTS542516K9SA00    | 160 GB | 85      | 655   | 195   | 0.58   |
+| Hitachi   | HTS542516K9SA00    | 160 GB | 85      | 656   | 195   | 0.58   |
 | Hitachi   | HTS541660J9SA00    | 64 GB  | 7       | 427   | 4     | 0.57   |
 | Hitachi   | HTS722010K9SA00    | 100 GB | 8       | 713   | 9     | 0.57   |
 | Hitachi   | HTS547564A9E384    | 640 GB | 74      | 512   | 455   | 0.56   |
@@ -352,7 +352,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | Deskstar 7K250 (SUN... | 1      | 1       | 5248  | 2     | 4.79   |
 | Hitachi   | Ultrastar A7K1000      | 6      | 29      | 2138  | 69    | 4.49   |
 | Hitachi   | Deskstar 7K3000        | 8      | 134     | 1538  | 75    | 3.64   |
-| Hitachi   | Deskstar 7K2000        | 2      | 58      | 1911  | 106   | 3.36   |
+| Hitachi   | Deskstar 7K2000        | 2      | 58      | 1912  | 106   | 3.36   |
 | Hitachi   | Ultrastar A7K2000      | 11     | 103     | 1678  | 60    | 3.22   |
 | Hitachi   | CinemaStar 5K2000      | 1      | 3       | 1986  | 4     | 3.22   |
 | Hitachi   | CinemaStar C5K500      | 2      | 4       | 1167  | 0     | 3.20   |

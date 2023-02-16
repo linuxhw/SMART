@@ -33,7 +33,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ120PCSZ      | 120 GB | 2       | 1255  | 0     | 3.44   |
 | Toshiba   | THNSFC256GAMJ      | 256 GB | 2       | 1189  | 0     | 3.26   |
 | Toshiba   | THNSNC128GMMJ      | 128 GB | 5       | 1148  | 0     | 3.15   |
-| Toshiba   | TL100              | 120 GB | 5       | 1089  | 0     | 2.99   |
+| Toshiba   | TL100              | 120 GB | 5       | 1094  | 0     | 3.00   |
 | Toshiba   | THNSNJ512GDNU      | 512 GB | 2       | 1021  | 0     | 2.80   |
 | Toshiba   | THNSNH256GMCT      | 256 GB | 4       | 991   | 0     | 2.72   |
 | Toshiba   | THNS064GG2BNAA     | 64 GB  | 7       | 872   | 0     | 2.39   |
@@ -98,8 +98,8 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | Q300               | 120 GB | 9       | 292   | 0     | 0.80   |
 | Toshiba   | THNSNC128GMLJ      | 128 GB | 2       | 284   | 0     | 0.78   |
 | Toshiba   | THNSFJ256GMCT      | 256 GB | 1       | 275   | 0     | 0.75   |
+| Toshiba   | TR200              | 480 GB | 22      | 267   | 0     | 0.73   |
 | Toshiba   | A100               | 240 GB | 11      | 265   | 0     | 0.73   |
-| Toshiba   | TR200              | 480 GB | 22      | 262   | 0     | 0.72   |
 | Toshiba   | THNSNJ256GMCU      | 256 GB | 8       | 256   | 0     | 0.70   |
 | Toshiba   | THNSNH128GMCT      | 128 GB | 6       | 225   | 0     | 0.62   |
 | Toshiba   | A100               | 120 GB | 8       | 219   | 0     | 0.60   |
@@ -160,7 +160,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | HG2 Series             | 2      | 9       | 760   | 0     | 2.08   |
 | Toshiba   | JMicron/Maxiotek ba... | 1      | 3       | 698   | 0     | 1.91   |
 | Toshiba   | HG3 Series             | 3      | 7       | 658   | 0     | 1.80   |
-| Toshiba   | OCZ                    | 6      | 24      | 606   | 1     | 1.59   |
+| Toshiba   | OCZ                    | 6      | 24      | 607   | 1     | 1.59   |
 | Toshiba   | HG6 Series SSD         | 20     | 122     | 516   | 1     | 1.41   |
 | Toshiba   | OCZ/Toshiba Trion SSDs | 7      | 81      | 477   | 1     | 1.22   |
 | Toshiba   | HG6 Series             | 1      | 7       | 443   | 0     | 1.21   |

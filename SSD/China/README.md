@@ -42,7 +42,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | LS 256G M300       | 256 GB | 1       | 252   | 0     | 0.69   |
 | China     | 256GB SATA SSD     | 256 GB | 2       | 252   | 0     | 0.69   |
 | China     | SATA SSD           | 1 TB   | 15      | 236   | 0     | 0.65   |
-| China     | 120GB SSD          | 120 GB | 61      | 228   | 0     | 0.63   |
+| China     | 120GB SSD          | 120 GB | 61      | 229   | 0     | 0.63   |
 | China     | M.2 2280 SATA SSD  | 256 GB | 4       | 213   | 0     | 0.58   |
 | China     | L06B B0KB          | 960 GB | 1       | 202   | 0     | 0.55   |
 | China     | PSX-NGFF256G       | 256 GB | 1       | 199   | 0     | 0.55   |
@@ -57,7 +57,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 64 GB  | 26      | 179   | 0     | 0.49   |
 | China     | SV9SAT6B480GLM21DR | 480 GB | 1       | 169   | 0     | 0.47   |
 | China     | SATA SSD           | 32 GB  | 5       | 164   | 0     | 0.45   |
-| China     | 128GB SSD          | 128 GB | 22      | 161   | 0     | 0.44   |
+| China     | 128GB SSD          | 128 GB | 22      | 163   | 0     | 0.45   |
 | China     | SATA3 2TB SSD      | 2 TB   | 4       | 156   | 0     | 0.43   |
 | China     | SATA SSD           | 960 GB | 5       | 148   | 0     | 0.41   |
 | China     | ESA3SMH2MSPB120GB  | 120 GB | 2       | 145   | 0     | 0.40   |
@@ -99,8 +99,8 @@ MTBF - avg. MTBF in years per sample.
 | China     | SCCTS-603-128G SSD | 128 GB | 1       | 62    | 0     | 0.17   |
 | China     | SH00N256GB         | 256 GB | 2       | 62    | 0     | 0.17   |
 | China     | SSD                | 240 GB | 40      | 94    | 54    | 0.17   |
+| China     | 256GB SSD          | 256 GB | 11      | 61    | 0     | 0.17   |
 | China     | NGFF 2242 512GB... | 512 GB | 3       | 60    | 0     | 0.17   |
-| China     | 256GB SSD          | 256 GB | 11      | 59    | 0     | 0.16   |
 | China     | 512GB SSD          | 512 GB | 5       | 59    | 0     | 0.16   |
 | China     | JOYSSD512          | 512 GB | 1       | 55    | 0     | 0.15   |
 | China     | GM1TB              | 1 TB   | 1       | 55    | 0     | 0.15   |
