@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-109-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-16-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     Microtech SSD 60G
@@ -10,14 +10,15 @@ User Capacity:    60,022,480,896 bytes [60.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
+TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Apr 19 15:51:18 2022 CEST
+Local Time is:    Wed Jul 27 17:08:37 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Disabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -60,26 +61,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O----   100   100   050    -    0
-  9 Power_On_Hours          ------   100   100   050    -    345
- 12 Power_Cycle_Count       ------   100   100   050    -    1943
+  9 Power_On_Hours          ------   100   100   050    -    367
+ 12 Power_Cycle_Count       ------   100   100   050    -    2228
 160 Unknown_Attribute       ------   100   100   050    -    0
 161 Unknown_Attribute       ------   100   100   050    -    250
 162 Unknown_Attribute       ------   100   100   050    -    1
 163 Unknown_Attribute       ------   100   100   050    -    1
-164 Unknown_Attribute       ------   100   100   050    -    353024
-165 Unknown_Attribute       ------   100   100   050    -    186
-166 Unknown_Attribute       ------   100   100   050    -    139
-167 Unknown_Attribute       ------   100   100   050    -    172
+164 Unknown_Attribute       ------   100   100   050    -    377461
+165 Unknown_Attribute       ------   100   100   050    -    199
+166 Unknown_Attribute       ------   100   100   050    -    148
+167 Unknown_Attribute       ------   100   100   050    -    184
 168 Unknown_Attribute       ------   100   100   050    -    3000
-169 Unknown_Attribute       ------   095   095   050    -    95
-192 Power-Off_Retract_Count ------   100   100   050    -    401
+169 Unknown_Attribute       ------   094   094   050    -    94
+192 Power-Off_Retract_Count ------   100   100   050    -    424
 194 Temperature_Celsius     ------   100   100   050    -    45
 195 Hardware_ECC_Recovered  ------   100   100   050    -    1
 196 Reallocated_Event_Count ------   100   100   050    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
-241 Total_LBAs_Written      ------   100   100   050    -    92263
-242 Total_LBAs_Read         ------   100   100   050    -    121674
-245 Unknown_Attribute       ------   100   100   050    -    298406
+241 Total_LBAs_Written      ------   100   100   050    -    101836
+242 Total_LBAs_Read         ------   100   100   050    -    132302
+245 Unknown_Attribute       ------   100   100   050    -    320589
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,19 +118,19 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1943  ---  Lifetime Power-On Resets
-0x01  0x010  4             345  ---  Power-on Hours
-0x01  0x018  6      1751619260  ---  Logical Sectors Written
-0x01  0x020  6        87259682  ---  Number of Write Commands
-0x01  0x028  6      3679060844  ---  Logical Sectors Read
-0x01  0x030  6        90457535  ---  Number of Read Commands
+0x01  0x008  4            2228  ---  Lifetime Power-On Resets
+0x01  0x010  4             367  ---  Power-on Hours
+0x01  0x018  6      2379001340  ---  Logical Sectors Written
+0x01  0x020  6        91338861  ---  Number of Write Commands
+0x01  0x028  6        80637132  ---  Logical Sectors Read
+0x01  0x030  6        96258112  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              45  ---  Current Temperature
-0x05  0x010  1             -64  ---  Average Short Term Temperature
-0x05  0x018  1              43  ---  Average Long Term Temperature
+0x05  0x010  1             105  ---  Average Short Term Temperature
+0x05  0x018  1              26  ---  Average Long Term Temperature
 0x05  0x020  1              45  ---  Highest Temperature
 0x05  0x028  1              45  ---  Lowest Temperature
 0x05  0x030  1              -1  ---  Highest Average Short Term Temperature
@@ -141,10 +142,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            7000  ---  Number of Hardware Resets
+0x06  0x008  4            8237  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

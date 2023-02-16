@@ -10,14 +10,14 @@ Firmware Version: 0001SDM1
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
-Device is:        In smartctl database 7.3/5387
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Jun 23 19:13:36 2022 SAST
+Local Time is:    Mon Jul 18 08:31:20 2022 SAST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     127 (intermediate level with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -64,24 +64,24 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   090   006    -    148275406
+  1 Raw_Read_Error_Rate     POSR--   110   090   006    -    215400439
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3357
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3423
   5 Reallocated_Sector_Ct   PO--CK   092   092   036    -    167
-  7 Seek_Error_Rate         POSR--   088   060   030    -    686667006
-  9 Power_On_Hours          -O--CK   073   073   000    -    23681
+  7 Seek_Error_Rate         POSR--   088   060   030    -    689116543
+  9 Power_On_Hours          -O--CK   073   073   000    -    23772
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   020    -    3165
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3210
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    600
+187 Reported_Uncorrect      -O--CK   001   001   000    -    605
 188 Command_Timeout         -O--CK   100   085   000    -    51540394022
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   051   045    -    33 (Min/Max 32/37)
+190 Airflow_Temperature_Cel -O---K   069   051   045    -    31 (Min/Max 31/33)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    222
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    17
-193 Load_Cycle_Count        -O--CK   001   001   000    -    335914
-194 Temperature_Celsius     -O---K   033   049   000    -    33 (0 4 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   045   040   000    -    148275406
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    26
+193 Load_Cycle_Count        -O--CK   001   001   000    -    337943
+194 Temperature_Celsius     -O---K   031   049   000    -    31 (0 4 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   046   040   000    -    215400439
 197 Current_Pending_Sector  -O--C-   100   100   000    -    55
 198 Offline_Uncorrectable   ----C-   100   100   000    -    55
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -272,25 +272,25 @@ Error 573 [12] occurred at disk power-on lifetime: 23668 hours (986 days + 4 hou
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: read failure       90%     23669         929213958
-# 2  Extended offline    Completed: read failure       90%     23664         925188701
-# 3  Short offline       Completed: read failure       90%     23664         925188701
-# 4  Short offline       Completed: read failure       90%     23662         894478389
-# 5  Extended offline    Completed: read failure       90%     23662         894478389
-# 6  Conveyance offline  Completed: read failure       90%     23662         894478389
-# 7  Short offline       Completed: read failure       90%     23547         923347340
-# 8  Short offline       Completed: read failure       90%     23547         923347340
-# 9  Short offline       Completed: read failure       90%     23547         923347340
-#10  Conveyance offline  Completed: read failure       90%     23546         923347340
-#11  Short offline       Completed: read failure       90%     23486         923347340
-#12  Short offline       Completed: read failure       90%     23479         923347340
-#13  Extended offline    Completed: read failure       90%     23478         923347340
-#14  Conveyance offline  Completed: read failure       90%     23478         923347340
-#15  Conveyance captive  Completed: read failure       90%     23474         923347340
-#16  Conveyance offline  Completed: read failure       90%     23474         923347340
-#17  Short offline       Completed: read failure       90%     23474         923347340
-#18  Extended offline    Completed: read failure       90%     23474         923347340
-#19  Short offline       Completed without error       00%     21435         -
+# 1  Extended offline    Completed: read failure       90%     23771         929213958
+# 2  Short offline       Completed: read failure       90%     23769         929213958
+# 3  Short offline       Aborted by host               90%     23748         -
+# 4  Short offline       Completed: read failure       90%     23747         929213958
+# 5  Short offline       Completed: read failure       90%     23747         929213958
+# 6  Short offline       Completed: read failure       90%     23747         929213958
+# 7  Short offline       Completed: read failure       90%     23669         929213958
+# 8  Extended offline    Completed: read failure       90%     23664         925188701
+# 9  Short offline       Completed: read failure       90%     23664         925188701
+#10  Short offline       Completed: read failure       90%     23662         894478389
+#11  Extended offline    Completed: read failure       90%     23662         894478389
+#12  Conveyance offline  Completed: read failure       90%     23662         894478389
+#13  Short offline       Completed: read failure       90%     23547         923347340
+#14  Short offline       Completed: read failure       90%     23547         923347340
+#15  Short offline       Completed: read failure       90%     23547         923347340
+#16  Conveyance offline  Completed: read failure       90%     23546         923347340
+#17  Short offline       Completed: read failure       90%     23486         923347340
+#18  Short offline       Completed: read failure       90%     23479         923347340
+#19  Extended offline    Completed: read failure       90%     23478         923347340
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -306,17 +306,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     32/37 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     30/33 Celsius
 Lifetime    Min/Max Temperature:      4/50 Celsius
-Under/Over Temperature Limit Count:   0/213
+Under/Over Temperature Limit Count:   0/60
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (105)
+Temperature History Size (Index):    128 (16)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -328,7 +328,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           41  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
