@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Mar 28 17:06:01 2022 +05
+Local Time is:    Sat Sep  3 13:39:05 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    6837
-  3 Spin_Up_Time            POS--K   141   139   021    -    3916
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6594
+  3 Spin_Up_Time            POS--K   142   139   021    -    3891
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7022
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   057   057   000    -    31588
+  9 Power_On_Hours          -O--CK   056   056   000    -    32748
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6497
-192 Power-Off_Retract_Count -O--CK   197   197   000    -    2498
-193 Load_Cycle_Count        -O--CK   199   199   000    -    4095
-194 Temperature_Celsius     -O---K   111   095   000    -    32
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6925
+192 Power-Off_Retract_Count -O--CK   197   197   000    -    2762
+193 Load_Cycle_Count        -O--CK   199   199   000    -    4259
+194 Temperature_Celsius     -O---K   110   095   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -111,7 +111,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 9793 (device log contains only the most recent 24 errors)
+Device Error Count: 9795 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,6 +126,40 @@ Device Error Count: 9793 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 9795 [2] occurred at disk power-on lifetime: 32711 hours (1362 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 00 5f 7a f4 e0 00  Error: UNC 8 sectors at LBA = 0x005f7af4 = 6257396
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 00 5f 7a f0 e0 00     00:02:11.071  READ DMA EXT
+  25 00 00 00 08 00 00 00 00 8d 98 e0 00     00:02:11.060  READ DMA EXT
+  25 00 00 00 08 00 00 00 5f 7a f0 e0 00     00:02:09.300  READ DMA EXT
+  25 00 00 00 08 00 00 00 5f 7a e0 e0 00     00:02:09.300  READ DMA EXT
+  25 00 00 00 08 00 00 00 5f 7a d8 e0 00     00:02:09.298  READ DMA EXT
+
+Error 9794 [1] occurred at disk power-on lifetime: 32711 hours (1362 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 00 5f 7a f4 e0 00  Error: UNC 8 sectors at LBA = 0x005f7af4 = 6257396
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 00 5f 7a f0 e0 00     00:02:09.300  READ DMA EXT
+  25 00 00 00 08 00 00 00 5f 7a e0 e0 00     00:02:09.300  READ DMA EXT
+  25 00 00 00 08 00 00 00 5f 7a d8 e0 00     00:02:09.298  READ DMA EXT
+  25 00 00 00 08 00 00 00 01 98 10 e0 00     00:02:09.297  READ DMA EXT
+  25 00 00 00 08 00 00 00 61 98 00 e0 00     00:02:09.282  READ DMA EXT
 
 Error 9793 [0] occurred at disk power-on lifetime: 13589 hours (566 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -229,60 +263,26 @@ Error 9788 [19] occurred at disk power-on lifetime: 13479 hours (561 days + 15 h
   35 00 00 00 20 00 00 1d 33 0f 00 e0 00     00:04:43.338  WRITE DMA EXT
   25 00 00 00 20 00 00 00 61 b9 00 e0 00     00:04:43.331  READ DMA EXT
 
-Error 9787 [18] occurred at disk power-on lifetime: 13456 hours (560 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 01 00 00 00 61 b9 3b e0 00  Error: UNC 1 sectors at LBA = 0x0061b93b = 6404411
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 61 b9 3b e0 00     00:47:11.387  READ DMA EXT
-  25 00 00 00 01 00 00 00 61 b9 3a e0 00     00:47:11.387  READ DMA EXT
-  25 00 00 00 01 00 00 00 61 b9 39 e0 00     00:47:11.387  READ DMA EXT
-  25 00 00 00 01 00 00 00 61 b9 38 e0 00     00:47:11.387  READ DMA EXT
-  25 00 00 00 01 00 00 00 61 b9 37 e0 00     00:47:11.387  READ DMA EXT
-
-Error 9786 [17] occurred at disk power-on lifetime: 13456 hours (560 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 20 00 00 00 61 b9 3b e0 00  Error: UNC 32 sectors at LBA = 0x0061b93b = 6404411
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 20 00 00 00 61 b9 20 e0 00     00:47:09.718  READ DMA EXT
-  25 00 00 01 00 00 00 07 02 9b 40 e0 00     00:47:09.717  READ DMA EXT
-  25 00 00 01 00 00 00 07 02 9a 40 e0 00     00:47:09.686  READ DMA EXT
-  25 00 00 01 00 00 00 07 02 99 40 e0 00     00:47:09.685  READ DMA EXT
-  25 00 00 01 00 00 00 07 02 98 40 e0 00     00:47:09.685  READ DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     31529         -
-# 2  Extended offline    Completed without error       00%     31298         -
-# 3  Extended offline    Completed without error       00%     31226         -
-# 4  Extended offline    Completed without error       00%     31030         -
-# 5  Extended offline    Completed without error       00%     30862         -
-# 6  Extended offline    Completed without error       00%     30712         -
-# 7  Extended offline    Completed without error       00%     30547         -
-# 8  Extended offline    Completed without error       00%     30386         -
-# 9  Extended offline    Completed without error       00%     30221         -
-#10  Extended offline    Completed without error       00%     30053         -
-#11  Extended offline    Completed without error       00%     29893         -
-#12  Extended offline    Completed without error       00%     29730         -
-#13  Extended offline    Completed without error       00%     29570         -
-#14  Extended offline    Completed without error       00%     29404         -
-#15  Extended offline    Completed without error       00%     29237         -
-#16  Extended offline    Completed without error       00%     29070         -
-#17  Extended offline    Completed without error       00%     28926         -
-#18  Extended offline    Interrupted (host reset)      90%     28803         -
+# 1  Short offline       Completed without error       00%     32741         -
+# 2  Extended offline    Completed without error       00%     32647         -
+# 3  Extended offline    Completed without error       00%     32485         -
+# 4  Extended offline    Completed without error       00%     32353         -
+# 5  Extended offline    Completed without error       00%     32172         -
+# 6  Extended offline    Completed without error       00%     32014         -
+# 7  Extended offline    Completed without error       00%     31850         -
+# 8  Extended offline    Completed without error       00%     31698         -
+# 9  Extended offline    Completed without error       00%     31529         -
+#10  Extended offline    Completed without error       00%     31298         -
+#11  Extended offline    Completed without error       00%     31226         -
+#12  Extended offline    Completed without error       00%     31030         -
+#13  Extended offline    Completed without error       00%     30862         -
+#14  Extended offline    Completed without error       00%     30712         -
+#15  Extended offline    Completed without error       00%     30547         -
+#16  Extended offline    Completed without error       00%     30386         -
+#17  Extended offline    Completed without error       00%     30221         -
+#18  Extended offline    Completed without error       00%     30053         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -298,8 +298,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     32/33 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     27/33 Celsius
 Lifetime    Min/Max Temperature:      0/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -308,7 +308,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (323)
+Temperature History Size (Index):    478 (462)
 
 SCT Error Recovery Control command not supported
 
@@ -325,7 +325,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        12671  Vendor specific
+0x8000  4         6383  Vendor specific
 

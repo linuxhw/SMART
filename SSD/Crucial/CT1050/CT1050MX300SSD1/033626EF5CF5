@@ -1,4 +1,4 @@
-smartctl 7.2 2021-01-17 r5171 [x86_64-linux-5.11.7-200.fc33.x86_64] (local build)
+smartctl 7.2 2021-01-17 r5171 [x86_64-linux-5.12.7-300.fc34.x86_64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar 20 20:09:32 2021 EDT
+Local Time is:    Sat May 29 18:20:36 2021 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -67,12 +67,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    2
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    6
-  9 Power_On_Hours          -O--CK   100   100   000    -    866
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1993
+  9 Power_On_Hours          -O--CK   100   100   000    -    873
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2076
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 173 Ave_Block-Erase_Count   -O--CK   098   098   000    -    30
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    119
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    123
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    111
@@ -83,9 +83,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 202 Percent_Lifetime_Remain ----CK   098   098   001    -    2
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    30419281018
-247 Host_Program_Page_Count -O--CK   100   100   000    -    952777559
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    292777581
+246 Total_LBAs_Written      -O--CK   100   100   000    -    30889621966
+247 Host_Program_Page_Count -O--CK   100   100   000    -    967524847
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    297628398
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    4425
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -282,25 +282,25 @@ Error 104 [103] occurred at disk power-on lifetime: 336 hours (14 days + 0 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Conveyance offline  Completed without error       00%       863         -
-# 2  Extended offline    Completed without error       00%       863         -
-# 3  Short offline       Completed without error       00%       862         -
-# 4  Offline             Completed without error       00%       858         -
-# 5  Conveyance offline  Completed without error       00%       857         -
-# 6  Extended offline    Completed without error       00%       857         -
-# 7  Short offline       Completed without error       00%       857         -
-# 8  Short offline       Completed without error       00%       849         -
-# 9  Offline             Completed without error       00%       849         -
-#10  Offline             Completed without error       00%       848         -
-#11  Offline             Completed without error       00%       848         -
-#12  Short offline       Completed without error       00%       848         -
-#13  Short offline       Completed without error       00%       848         -
-#14  Offline             Completed without error       00%       847         -
-#15  Offline             Completed without error       00%       847         -
-#16  Offline             Completed without error       00%       847         -
+# 1  Short offline       Completed without error       00%       873         -
+# 2  Short offline       Completed without error       00%       873         -
+# 3  Short offline       Completed without error       00%       866         -
+# 4  Conveyance offline  Completed without error       00%       863         -
+# 5  Extended offline    Completed without error       00%       863         -
+# 6  Short offline       Completed without error       00%       862         -
+# 7  Offline             Completed without error       00%       858         -
+# 8  Conveyance offline  Completed without error       00%       857         -
+# 9  Extended offline    Completed without error       00%       857         -
+#10  Short offline       Completed without error       00%       857         -
+#11  Short offline       Completed without error       00%       849         -
+#12  Offline             Completed without error       00%       849         -
+#13  Offline             Completed without error       00%       848         -
+#14  Offline             Completed without error       00%       848         -
+#15  Short offline       Completed without error       00%       848         -
+#16  Short offline       Completed without error       00%       848         -
 #17  Offline             Completed without error       00%       847         -
-#18  Extended offline    Completed without error       00%       847         -
-#19  Conveyance offline  Completed without error       00%       847         -
+#18  Offline             Completed without error       00%       847         -
+#19  Offline             Completed without error       00%       847         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -317,7 +317,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     27/30 Celsius
+Power Cycle Min/Max Temperature:     19/27 Celsius
 Lifetime    Min/Max Temperature:      1/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -326,22 +326,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (5)
+Temperature History Size (Index):    478 (357)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1993  ---  Lifetime Power-On Resets
-0x01  0x010  4             866  ---  Power-on Hours
-0x01  0x018  6     30419281018  ---  Logical Sectors Written
-0x01  0x020  6       471717912  ---  Number of Write Commands
-0x01  0x028  6     42288659363  ---  Logical Sectors Read
-0x01  0x030  6       534561684  ---  Number of Read Commands
+0x01  0x008  4            2076  ---  Lifetime Power-On Resets
+0x01  0x010  4             873  ---  Power-on Hours
+0x01  0x018  6     30889621966  ---  Logical Sectors Written
+0x01  0x020  6       479317102  ---  Number of Write Commands
+0x01  0x028  6     42816155087  ---  Logical Sectors Read
+0x01  0x030  6       544335277  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4             111  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            2304  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            2427  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              27  ---  Current Temperature
 0x05  0x010  1              30  ---  Average Short Term Temperature
@@ -357,8 +357,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            7741  ---  Number of Hardware Resets
-0x06  0x010  4             462  ---  Number of ASR Events
+0x06  0x008  4            8199  ---  Number of Hardware Resets
+0x06  0x010  4             518  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
@@ -371,7 +371,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 
 
 
