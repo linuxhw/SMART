@@ -148,7 +148,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA400S37120G       | 120 GB | 874     | 188   | 1     | 0.48   |
 | Kingston  | RBU-SNS4151S316GD1 | 16 GB  | 1       | 172   | 0     | 0.47   |
 | Kingston  | SUV500MS480G       | 480 GB | 15      | 166   | 0     | 0.46   |
-| Kingston  | SA400S37240G       | 240 GB | 1269    | 172   | 1     | 0.44   |
+| Kingston  | SA400S37240G       | 240 GB | 1269    | 172   | 1     | 0.45   |
 | Kingston  | SV100S2128G        | 128 GB | 4       | 512   | 3     | 0.44   |
 | Kingston  | OM8P0S3512F-00     | 512 GB | 3       | 159   | 0     | 0.44   |
 | Kingston  | RBUSC180S37256GJ   | 256 GB | 5       | 157   | 0     | 0.43   |
@@ -193,10 +193,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SHPM2280P2-240G    | 240 GB | 1       | 1557  | 28    | 0.15   |
 | Kingston  | RBUSNS8180S3256GJ  | 256 GB | 6       | 52    | 0     | 0.14   |
 | Kingston  | SKC6001024G        | 1 TB   | 12      | 49    | 0     | 0.14   |
+| Kingston  | SKC600512G         | 512 GB | 21      | 49    | 0     | 0.14   |
 | Kingston  | KF-S42240-4R       | 240 GB | 1       | 47    | 0     | 0.13   |
 | Kingston  | SKC600256G         | 256 GB | 46      | 46    | 0     | 0.13   |
 | Kingston  | RBU-SC152S37128GG2 | 128 GB | 1       | 45    | 0     | 0.12   |
-| Kingston  | SKC600512G         | 512 GB | 21      | 44    | 0     | 0.12   |
 | Kingston  | SKC6002048G        | 2 TB   | 6       | 52    | 11    | 0.12   |
 | Kingston  | SH103S3480G        | 480 GB | 1       | 40    | 0     | 0.11   |
 | Kingston  | OM8P0S3512B-A0     | 512 GB | 1       | 29    | 0     | 0.08   |
@@ -268,4 +268,4 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SSDNow UV400/500       | 13     | 570     | 339   | 58    | 0.83   |
 | Kingston  | Unknown                | 121    | 367     | 258   | 80    | 0.59   |
 | Kingston  | Phison Driven SSDs     | 27     | 3215    | 201   | 1     | 0.52   |
-| Kingston  | Silicon Motion base... | 4      | 85      | 46    | 1     | 0.13   |
+| Kingston  | Silicon Motion base... | 4      | 85      | 48    | 1     | 0.13   |

@@ -65,7 +65,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | REVODRIVE3         | 64 GB  | 4       | 564   | 0     | 1.55   |
 | OCZ       | VERTEX2 3.5        | 120 GB | 3       | 734   | 1     | 1.52   |
 | OCZ       | AGILITY3           | 240 GB | 18      | 703   | 12    | 1.48   |
-| OCZ       | VERTEX3 MI         | 120 GB | 23      | 784   | 132   | 1.38   |
+| OCZ       | VERTEX3 MI         | 120 GB | 23      | 785   | 132   | 1.38   |
 | OCZ       | D2RSTK251E14-0400  | 400 GB | 1       | 502   | 0     | 1.38   |
 | OCZ       | VERTEX460A         | 240 GB | 3       | 494   | 0     | 1.35   |
 | OCZ       | ARC100             | 240 GB | 20      | 508   | 1     | 1.33   |

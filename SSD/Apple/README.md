@@ -66,7 +66,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Apple     | JMicron based SSDs     | 3      | 21      | 538   | 1     | 1.40   |
-| Apple     | SD/SM/TS E/F/G SSDs    | 18     | 332     | 422   | 2     | 1.13   |
+| Apple     | SD/SM/TS E/F/G SSDs    | 18     | 332     | 423   | 2     | 1.14   |
 | Apple     | Unknown                | 4      | 12      | 358   | 245   | 0.47   |
 | Apple     | JMicron/Maxiotek ba... | 1      | 1       | 79    | 0     | 0.22   |
 | Apple     | MacBook Air SSD        | 2      | 10      | 87    | 20    | 0.12   |

@@ -80,8 +80,8 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT250MX500SSD1     | 250 GB | 213     | 177   | 10    | 0.48   |
 | Crucial   | CT500MX500SSD4N    | 500 GB | 3       | 172   | 0     | 0.47   |
 | Crucial   | CT2000BX500SSD1    | 2 TB   | 27      | 170   | 0     | 0.47   |
-| Crucial   | CT500MX500SSD1     | 500 GB | 518     | 161   | 1     | 0.44   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 501     | 161   | 3     | 0.44   |
+| Crucial   | CT500MX500SSD1     | 500 GB | 518     | 162   | 1     | 0.44   |
 | Crucial   | CT3500SC 8         | 500 GB | 2       | 279   | 7     | 0.43   |
 | Crucial   | FCCT512MX100SSD1   | 512 GB | 1       | 151   | 0     | 0.41   |
 | Crucial   | FCCT480M500SSD1    | 480 GB | 1       | 150   | 0     | 0.41   |

@@ -45,7 +45,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force GT           | 64 GB  | 8       | 948   | 4     | 2.17   |
 | Corsair   | CSSD-F115GB2-A     | 115 GB | 1       | 781   | 0     | 2.14   |
 | Corsair   | Force GS           | 90 GB  | 1       | 776   | 0     | 2.13   |
-| Corsair   | CSSD-F60GB2        | 64 GB  | 7       | 1343  | 286   | 1.96   |
+| Corsair   | CSSD-F60GB2        | 64 GB  | 7       | 1344  | 286   | 1.96   |
 | Corsair   | Force LE SSD       | 240 GB | 4       | 709   | 0     | 1.94   |
 | Corsair   | Force GS           | 128 GB | 24      | 640   | 0     | 1.75   |
 | Corsair   | Force 3 SSD        | 480 GB | 1       | 598   | 0     | 1.64   |

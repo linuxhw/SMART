@@ -27,7 +27,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD110             | 120 GB | 7       | 653   | 146   | 1.62   |
 | SPCC      | 2.5" SSD           | 1 TB   | 1       | 402   | 0     | 1.10   |
 | SPCC      | SSD110             | 64 GB  | 5       | 595   | 4     | 1.08   |
-| SPCC      | SSD                | 240 GB | 68      | 403   | 160   | 0.90   |
+| SPCC      | SSD                | 240 GB | 68      | 404   | 160   | 0.90   |
 | SPCC      | SSD                | 64 GB  | 96      | 286   | 32    | 0.76   |
 | SPCC      | SSD                | 2 TB   | 1       | 263   | 0     | 0.72   |
 | SPCC      | M.2 SSD            | 256 GB | 6       | 246   | 0     | 0.68   |
@@ -35,7 +35,7 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | SSD B29            | 32 GB  | 1       | 204   | 0     | 0.56   |
 | SPCC      | SSD A20            | 64 GB  | 2       | 177   | 0     | 0.49   |
 | SPCC      | SSD162             | 120 GB | 9       | 454   | 569   | 0.46   |
-| SPCC      | SSD                | 512 GB | 82      | 187   | 44    | 0.43   |
+| SPCC      | SSD                | 512 GB | 82      | 188   | 44    | 0.43   |
 | SPCC      | SSD                | 55 GB  | 12      | 391   | 424   | 0.42   |
 | SPCC      | SSD                | 1 TB   | 49      | 161   | 1     | 0.42   |
 | SPCC      | SSD                | 256 GB | 113     | 145   | 1     | 0.39   |

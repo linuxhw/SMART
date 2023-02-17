@@ -34,7 +34,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SATA3 240GB SSD    | 240 GB | 2       | 253   | 0     | 0.69   |
 | Intenso   | SSD                | 256 GB | 26      | 192   | 0     | 0.53   |
 | Intenso   | SSD Sata III       | 240 GB | 8       | 188   | 0     | 0.52   |
-| Intenso   | SSD                | 128 GB | 51      | 145   | 1     | 0.38   |
+| Intenso   | SSD                | 128 GB | 51      | 146   | 1     | 0.38   |
 | Intenso   | 1TB SATA SSD       | 1 TB   | 1       | 108   | 0     | 0.30   |
 | Intenso   | SSD                | 480 GB | 5       | 106   | 0     | 0.29   |
 | Intenso   | lntenso SSD Sat... | 960 GB | 4       | 140   | 6     | 0.27   |

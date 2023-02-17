@@ -37,7 +37,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | HD204UI            | 2 TB   | 84      | 1203  | 61    | 2.81   |
 | Samsung   | HD400LD            | 400 GB | 5       | 1135  | 150   | 2.54   |
 | Samsung   | HD083GJ            | 80 GB  | 6       | 876   | 0     | 2.40   |
-| Samsung   | HD203WI            | 2 TB   | 9       | 906   | 2     | 2.35   |
+| Samsung   | HD203WI            | 2 TB   | 9       | 908   | 2     | 2.35   |
 | Samsung   | HE103SJ            | 1 TB   | 6       | 2421  | 24    | 2.31   |
 | Samsung   | HD300LJ            | 304 GB | 14      | 1247  | 245   | 2.28   |
 | Samsung   | HD103SJ            | 1 TB   | 223     | 1049  | 29    | 2.18   |
@@ -128,10 +128,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | HM121HI            | 120 GB | 14      | 508   | 1409  | 0.33   |
 | Samsung   | HD103UI            | 1 TB   | 8       | 774   | 443   | 0.32   |
 | Samsung   | HM080GI            | 80 GB  | 1       | 220   | 1     | 0.30   |
+| Samsung   | HN-M101XBB         | 1 TB   | 2       | 98    | 0     | 0.27   |
 | Samsung   | SP0401N            | 40 GB  | 1       | 95    | 0     | 0.26   |
 | Samsung   | HM250HJ            | 250 GB | 4       | 533   | 263   | 0.26   |
 | Samsung   | HM321HX            | 320 GB | 4       | 132   | 2     | 0.25   |
-| Samsung   | HN-M101XBB         | 1 TB   | 2       | 91    | 0     | 0.25   |
 | Samsung   | MP0402H            | 40 GB  | 11      | 245   | 15    | 0.25   |
 | Samsung   | HS082HB            | 80 GB  | 1       | 89    | 0     | 0.25   |
 | Samsung   | HD256GJ            | 250 GB | 4       | 404   | 260   | 0.23   |
@@ -231,7 +231,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SpinPoint V120CE       | 1      | 1       | 120   | 0     | 0.33   |
 | Samsung   | SpinPoint F1 EG        | 1      | 8       | 774   | 443   | 0.32   |
 | Samsung   | SpinPoint M            | 2      | 14      | 244   | 13    | 0.21   |
-| Samsung   | SpinPoint M8U (USB)    | 2      | 3       | 61    | 0     | 0.17   |
+| Samsung   | SpinPoint M8U (USB)    | 2      | 3       | 66    | 0     | 0.18   |
 | Samsung   | SpinPoint M40/60/80    | 9      | 27      | 471   | 406   | 0.16   |
 | Samsung   | SpinPoint N2           | 2      | 3       | 45    | 696   | 0.12   |
 | Samsung   | SpinPoint M5           | 6      | 143     | 356   | 437   | 0.11   |

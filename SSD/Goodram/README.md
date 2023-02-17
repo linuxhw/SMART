@@ -31,7 +31,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | C100               | 120 GB | 6       | 422   | 0     | 1.16   |
 | Goodram   | SSD                | 480 GB | 2       | 408   | 0     | 1.12   |
 | Goodram   | C40                | 120 GB | 8       | 384   | 2     | 0.98   |
-| Goodram   | SSDPR-CL100-480-G2 | 480 GB | 10      | 354   | 0     | 0.97   |
+| Goodram   | SSDPR-CL100-480-G2 | 480 GB | 10      | 355   | 0     | 0.98   |
 | Goodram   | IRP-SSDPR-S25B-240 | 240 GB | 2       | 340   | 0     | 0.93   |
 | Goodram   | SSD                | 120 GB | 55      | 341   | 1     | 0.93   |
 | Goodram   | SSDPR-CL100-120    | 120 GB | 2       | 316   | 0     | 0.87   |
@@ -40,7 +40,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | IRP-SSDPR-S25C-256 | 256 GB | 4       | 225   | 0     | 0.62   |
 | Goodram   | SSDPR-CX300-240    | 240 GB | 9       | 213   | 0     | 0.58   |
 | Goodram   | SSDPR-CL100-960-G3 | 960 GB | 4       | 189   | 0     | 0.52   |
-| Goodram   | SSDPR-CX300-120    | 120 GB | 13      | 188   | 0     | 0.52   |
+| Goodram   | SSDPR-CX300-120    | 120 GB | 13      | 189   | 0     | 0.52   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 21      | 184   | 0     | 0.51   |
 | Goodram   | IRIDIUM            | 480 GB | 3       | 181   | 0     | 0.50   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | 31      | 180   | 0     | 0.49   |
