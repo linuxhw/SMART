@@ -74,7 +74,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | 7L250R0            | 256 GB | 1       | 40    | 0     | 0.11   |
 | Maxtor    | 6L120P0            | 122 GB | 2       | 35    | 0     | 0.10   |
 | Maxtor    | 2F030L0            | 32 GB  | 1       | 33    | 0     | 0.09   |
-| Maxtor    | STM3500320AS       | 500 GB | 28      | 576   | 279   | 0.09   |
+| Maxtor    | STM3500320AS       | 500 GB | 29      | 597   | 270   | 0.09   |
 | Maxtor    | STM3320613AS       | 320 GB | 18      | 984   | 364   | 0.08   |
 | Maxtor    | 6L100M0            | 100 GB | 2       | 28    | 0     | 0.08   |
 | Maxtor    | 6B250S0            | 250 GB | 3       | 36    | 314   | 0.07   |
@@ -107,7 +107,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | 6Y120L0            | 122 GB | 9       | 27    | 26    | 0.02   |
 | Maxtor    | 6E030L0            | 32 GB  | 6       | 15    | 20    | 0.02   |
 | Maxtor    | 85400D5            | 5 GB   | 1       | 5613  | 1044  | 0.01   |
-| Maxtor    | 6Y080M0            | 80 GB  | 17      | 27    | 129   | 0.01   |
+| Maxtor    | 6Y080M0            | 80 GB  | 18      | 27    | 124   | 0.01   |
 | Maxtor    | 6Y080P0            | 82 GB  | 8       | 17    | 6     | 0.01   |
 | Maxtor    | 6L080P0            | 82 GB  | 3       | 11    | 10    | 0.01   |
 | Maxtor    | 4R060J0            | 64 GB  | 1       | 25    | 5     | 0.01   |
@@ -163,12 +163,12 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | Unknown                | 3      | 4       | 857   | 26    | 0.34   |
 | Maxtor    | Fireball 3             | 6      | 15      | 102   | 31    | 0.22   |
 | Maxtor    | MaXLine III            | 1      | 1       | 2421  | 46    | 0.14   |
-| Maxtor    | DiamondMax 22          | 4      | 55      | 765   | 347   | 0.09   |
+| Maxtor    | DiamondMax 22          | 4      | 56      | 772   | 342   | 0.09   |
 | Maxtor    | DiamondMax 10 (ATA/... | 23     | 101     | 25    | 101   | 0.04   |
 | Maxtor    | MaXLine III (ATA/13... | 4      | 7       | 17    | 34    | 0.02   |
 | Maxtor    | DiamondMax Plus 8      | 4      | 23      | 25    | 23    | 0.02   |
 | Maxtor    | DiamondMax 1750        | 1      | 1       | 5613  | 1044  | 0.01   |
-| Maxtor    | DiamondMax Plus 9      | 11     | 112     | 27    | 165   | 0.01   |
+| Maxtor    | DiamondMax Plus 9      | 11     | 113     | 27    | 164   | 0.01   |
 | Maxtor    | DiamondMax 16          | 3      | 5       | 24    | 25    | 0.00   |
 | Maxtor    | Fireball 541DX         | 1      | 12      | 23    | 165   | 0.00   |
 | Maxtor    | DiamondMax D540X-4D    | 2      | 5       | 23    | 159   | 0.00   |

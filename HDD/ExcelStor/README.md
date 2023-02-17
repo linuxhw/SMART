@@ -23,7 +23,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ExcelStor | J9250S             | 250 GB | 6       | 667   | 205   | 1.43   |
+| ExcelStor | J9250S             | 250 GB | 7       | 915   | 176   | 2.17   |
 | ExcelStor | J880               | 82 GB  | 1       | 469   | 0     | 1.29   |
 | ExcelStor | J360               | 64 GB  | 1       | 897   | 1     | 1.23   |
 | ExcelStor | J880S              | 82 GB  | 3       | 733   | 8     | 0.95   |
@@ -47,5 +47,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| ExcelStor | Jupiter                | 9      | 24      | 807   | 61    | 0.97   |
+| ExcelStor | Jupiter                | 9      | 25      | 871   | 59    | 1.20   |
 | ExcelStor | Unknown                | 1      | 1       | 0     | 1010  | 0.00   |

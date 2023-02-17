@@ -40,8 +40,8 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 2450 NVMe          | 512 GB | 1       | 59    | 0     | 0.16   |
 | Micron    | 2210_MTFDHBA1T0QFD | 1 TB   | 48      | 37    | 0     | 0.10   |
 | Micron    | MTFDHBA256TCK-1... | 256 GB | 38      | 31    | 1     | 0.08   |
-| Micron    | MTFDHBA512QFD      | 512 GB | 67      | 26    | 0     | 0.07   |
-| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 38      | 25    | 0     | 0.07   |
+| Micron    | MTFDHBA512QFD      | 512 GB | 68      | 26    | 0     | 0.07   |
+| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 40      | 25    | 0     | 0.07   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 11      | 22    | 0     | 0.06   |
 | Micron    | 2450 NVMe          | 256 GB | 2       | 21    | 0     | 0.06   |
 | Micron    | 2300 NVMe          | 1 TB   | 61      | 20    | 0     | 0.06   |
@@ -57,9 +57,9 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 9200_MTFDHAL1T9TCT | 1.9 TB | 1       | 305   | 24    | 0.03   |
 | Micron    | MTFDKBA512TFK-1... | 512 GB | 3       | 11    | 0     | 0.03   |
 | Micron    | MTFDKBA256TFK      | 256 GB | 3       | 11    | 0     | 0.03   |
-| Micron    | 2210S NVMe         | 512 GB | 4       | 11    | 0     | 0.03   |
+| Micron    | 2210S NVMe         | 512 GB | 5       | 11    | 0     | 0.03   |
 | Micron    | 2450_MTFDKBK1T0TFK | 1 TB   | 3       | 11    | 0     | 0.03   |
-| Micron    | 2450_MTFDKBA512TFK | 512 GB | 39      | 10    | 0     | 0.03   |
+| Micron    | 2450_MTFDKBA512TFK | 512 GB | 40      | 10    | 0     | 0.03   |
 | Micron    | 2300 NVMe          | 512 GB | 45      | 10    | 1     | 0.03   |
 | Micron    | 2300_MTFDHBA256TDV | 256 GB | 2       | 9     | 0     | 0.03   |
 | Micron    | MTFDHBA512TDV      | 512 GB | 31      | 9     | 0     | 0.03   |
@@ -67,20 +67,21 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDKBA1T0TFK      | 1 TB   | 1       | 8     | 0     | 0.02   |
 | Micron    | 7400_MTFDKBA480TDZ | 480 GB | 1       | 8     | 0     | 0.02   |
 | Micron    | MTFDKCD1T0TFK      | 1 TB   | 1       | 8     | 0     | 0.02   |
-| Micron    | MTFDKCD512TFK      | 512 GB | 18      | 7     | 0     | 0.02   |
+| Micron    | MTFDKBA512TFK      | 512 GB | 6       | 7     | 0     | 0.02   |
+| Micron    | MTFDKCD512TFK      | 512 GB | 19      | 7     | 0     | 0.02   |
 | Micron    | MTFDHBA1T0TDV-1... | 1 TB   | 10      | 6     | 0     | 0.02   |
-| Micron    | 3400_MTFDKBA512TFH | 512 GB | 20      | 5     | 0     | 0.02   |
-| Micron    | MTFDKBA512TFK      | 512 GB | 5       | 5     | 0     | 0.02   |
+| Micron    | 3400_MTFDKBA512TFH | 512 GB | 21      | 5     | 0     | 0.02   |
 | Micron    | MTFDKCD256TFK      | 256 GB | 4       | 5     | 0     | 0.01   |
 | Micron    | 3400_MTFDKBA1T0TFH | 1 TB   | 50      | 4     | 0     | 0.01   |
-| Micron    | MTFDKBA512TFH      | 512 GB | 16      | 4     | 0     | 0.01   |
+| Micron    | MTFDKBA2T0TFH-1... | 2 TB   | 1       | 4     | 0     | 0.01   |
 | Micron    | MTFDHBA256TDV-1... | 256 GB | 3       | 4     | 0     | 0.01   |
+| Micron    | MTFDKBA512TFH      | 512 GB | 17      | 4     | 0     | 0.01   |
 | Micron    | 2400_MTFDKBA512QFM | 512 GB | 4       | 4     | 0     | 0.01   |
 | Micron    | MTFDKBA512TFH-1... | 512 GB | 11      | 3     | 0     | 0.01   |
 | Micron    | 2400_MTFDKBA1T0QFM | 1 TB   | 1       | 3     | 0     | 0.01   |
 | Micron    | 3400 NVMe          | 512 GB | 7       | 2     | 0     | 0.01   |
 | Micron    | 2300 NVMe          | 256 GB | 1       | 2     | 0     | 0.01   |
-| Micron    | MTFDKBA1T0TFH-1... | 1 TB   | 8       | 2     | 0     | 0.01   |
+| Micron    | MTFDKBA1T0TFH-1... | 1 TB   | 9       | 2     | 0     | 0.01   |
 | Micron    | MTFDKBA1T0TFH      | 1 TB   | 16      | 2     | 0     | 0.01   |
 | Micron    | MTFDHBA1T0QFD      | 1 TB   | 1       | 1     | 0     | 0.00   |
 | Micron    | 7300_MTFDHBE960TDF | 960 GB | 2       | 1     | 0     | 0.00   |

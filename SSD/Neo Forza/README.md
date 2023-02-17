@@ -22,4 +22,5 @@ MTBF - avg. MTBF in years per sample.
 | Neo Forza | NFS011SA396-600... | 960 GB | 1       | 341   | 8     | 0.10   |
 | Neo Forza | NFS011SA324-600... | 240 GB | 1       | 2     | 0     | 0.01   |
 | Neo Forza | NFS121SA312-600... | 120 GB | 4       | 57    | 515   | 0.00   |
+| Neo Forza | NFS121SA324-600... | 240 GB | 1       | 1     | 6     | 0.00   |
 | Neo Forza | NFS011SA356-600... | 256 GB | 1       | 41    | 3130  | 0.00   |

@@ -40,7 +40,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | IRP-SSDPR-S25C-256 | 256 GB | 4       | 225   | 0     | 0.62   |
 | Goodram   | SSDPR-CX300-240    | 240 GB | 9       | 213   | 0     | 0.58   |
 | Goodram   | SSDPR-CL100-960-G3 | 960 GB | 4       | 189   | 0     | 0.52   |
-| Goodram   | SSDPR-CX300-120    | 120 GB | 13      | 189   | 0     | 0.52   |
+| Goodram   | SSDPR-CX300-120    | 120 GB | 14      | 187   | 0     | 0.51   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 21      | 184   | 0     | 0.51   |
 | Goodram   | IRIDIUM            | 480 GB | 3       | 181   | 0     | 0.50   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | 31      | 180   | 0     | 0.49   |
@@ -55,9 +55,9 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | SSDPR-CX400-256    | 256 GB | 22      | 107   | 0     | 0.29   |
 | Goodram   | SSDPR-CL100-240-G3 | 240 GB | 17      | 92    | 0     | 0.25   |
 | Goodram   | IRIDIUM PRO        | 240 GB | 1       | 60    | 0     | 0.17   |
-| Goodram   | SSDPR-CX400-512-G2 | 512 GB | 22      | 67    | 1     | 0.16   |
+| Goodram   | SSDPR-CL100-120-G3 | 120 GB | 16      | 59    | 0     | 0.16   |
 | Goodram   | SSDPR-CX400-128-G2 | 128 GB | 32      | 55    | 0     | 0.15   |
-| Goodram   | SSDPR-CL100-120-G3 | 120 GB | 15      | 41    | 0     | 0.11   |
+| Goodram   | SSDPR-CX400-512-G2 | 512 GB | 23      | 64    | 1     | 0.15   |
 | Goodram   | SSDPR-S400U-120-80 | 120 GB | 1       | 40    | 0     | 0.11   |
 | Goodram   | SSDPR-CX400-256-G2 | 256 GB | 25      | 31    | 0     | 0.09   |
 | Goodram   | IRP-SSDPR-S25C-512 | 512 GB | 4       | 24    | 0     | 0.07   |
@@ -81,4 +81,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Goodram   | Phison Driven OEM SSDs | 4      | 81      | 402   | 1     | 1.10   |
 | Goodram   | Phison Driven SSDs     | 6      | 95      | 154   | 0     | 0.42   |
-| Goodram   | Unknown                | 32     | 248     | 148   | 1     | 0.39   |
+| Goodram   | Unknown                | 32     | 251     | 148   | 1     | 0.39   |

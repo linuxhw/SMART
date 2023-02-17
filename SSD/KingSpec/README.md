@@ -46,8 +46,9 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | KSQ120             | 120 GB | 1       | 81    | 0     | 0.22   |
 | KingSpec  | NT-1TB             | 1 TB   | 4       | 79    | 0     | 0.22   |
 | KingSpec  | MT-64              | 64 GB  | 3       | 175   | 1     | 0.21   |
+| KingSpec  | P4-120             | 120 GB | 8       | 69    | 0     | 0.19   |
 | KingSpec  | P3-256             | 256 GB | 15      | 114   | 6     | 0.17   |
-| KingSpec  | P3-128             | 128 GB | 30      | 116   | 6     | 0.17   |
+| KingSpec  | P3-128             | 128 GB | 31      | 112   | 6     | 0.16   |
 | KingSpec  | P4-240             | 240 GB | 24      | 82    | 58    | 0.15   |
 | KingSpec  | MSH-256            | 256 GB | 4       | 49    | 0     | 0.14   |
 | KingSpec  | NT-512             | 512 GB | 18      | 55    | 1     | 0.14   |
@@ -55,7 +56,6 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | P4-60              | 64 GB  | 1       | 43    | 0     | 0.12   |
 | KingSpec  | Q-720              | 720 GB | 4       | 43    | 0     | 0.12   |
 | KingSpec  | NT-64              | 64 GB  | 1       | 41    | 0     | 0.11   |
-| KingSpec  | P4-120             | 120 GB | 7       | 38    | 0     | 0.10   |
 | KingSpec  | ACSC2M064mSA       | 64 GB  | 2       | 33    | 0     | 0.09   |
 | KingSpec  | ACSC4M512mSA       | 506 GB | 1       | 32    | 0     | 0.09   |
 | KingSpec  | KSD-SA25.7-016MJ   | 16 GB  | 2       | 30    | 0     | 0.08   |
@@ -89,5 +89,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| KingSpec  | Unknown                | 49     | 219     | 126   | 34    | 0.29   |
+| KingSpec  | Unknown                | 49     | 221     | 126   | 33    | 0.29   |
 | KingSpec  | JMicron/Maxiotek ba... | 3      | 48      | 95    | 43    | 0.22   |

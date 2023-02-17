@@ -112,6 +112,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LMT-64M6M-HP       | 64 GB  | 2       | 102   | 507   | 0.08   |
 | Lite-On   | LMH-128V2M-11 M... | 128 GB | 3       | 29    | 0     | 0.08   |
 | Lite-On   | LMT-512L9M-11 M... | 512 GB | 1       | 29    | 0     | 0.08   |
+| Lite-On   | LMT-128M3M         | 128 GB | 2       | 80    | 505   | 0.08   |
 | Lite-On   | LMS-32L6M          | 32 GB  | 1       | 28    | 0     | 0.08   |
 | Lite-On   | CV1-8B256-HP       | 256 GB | 4       | 27    | 0     | 0.08   |
 | Lite-On   | LMH-512V2M-11 M... | 512 GB | 1       | 26    | 0     | 0.07   |
@@ -120,7 +121,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CV5-8Q256          | 256 GB | 1       | 24    | 0     | 0.07   |
 | Lite-On   | CS1-SP16           | 16 GB  | 1       | 23    | 0     | 0.06   |
 | Lite-On   | IT LCS-256L9S-HP   | 256 GB | 1       | 113   | 4     | 0.06   |
-| Lite-On   | CV1-8B512-HP       | 512 GB | 3       | 22    | 0     | 0.06   |
+| Lite-On   | CV1-8B512-HP       | 512 GB | 4       | 22    | 0     | 0.06   |
 | Lite-On   | LCH-128V2S-HP      | 128 GB | 3       | 163   | 16    | 0.06   |
 | Lite-On   | LMT-256L9M-41 M... | 256 GB | 1       | 21    | 0     | 0.06   |
 | Lite-On   | IT L8T-256L9G-HP   | 256 GB | 3       | 15    | 0     | 0.04   |
@@ -155,7 +156,6 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LMT-256M6M-HP      | 256 GB | 2       | 79    | 649   | 0.00   |
 | Lite-On   | CV8-CE256-HP       | 256 GB | 1       | 135   | 1007  | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | 31      | 55    | 1007  | 0.00   |
-| Lite-On   | LMT-128M3M         | 128 GB | 1       | 44    | 1009  | 0.00   |
 | Lite-On   | CV8-8E256-HP       | 256 GB | 2       | 40    | 1007  | 0.00   |
 | Lite-On   | IT SCS-128L9S      | 128 GB | 1       | 35    | 1203  | 0.00   |
 | Lite-On   | IT LST-16S9G-HP    | 16 GB  | 1       | 6     | 1021  | 0.00   |
@@ -174,4 +174,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Lite-On   | Silicon Motion base... | 5      | 22      | 95    | 1     | 0.25   |
-| Lite-On   | Unknown                | 131    | 481     | 110   | 123   | 0.24   |
+| Lite-On   | Unknown                | 131    | 483     | 110   | 123   | 0.24   |

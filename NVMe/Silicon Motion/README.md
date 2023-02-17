@@ -59,6 +59,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | FPI1TBMWR7         | 1 TB   | 1       | 45    | 0     | 0.12   |
 | Silico... | MS10               | 1 TB   | 4       | 39    | 0     | 0.11   |
 | Silico... | 1TB                | 1 TB   | 1       | 38    | 0     | 0.11   |
+| Silico... | NV900-1T           | 1 TB   | 1       | 36    | 0     | 0.10   |
 | Silico... | KLLISRE            | 128 GB | 1       | 34    | 0     | 0.10   |
 | Silico... | PCIe SSD           | 256 GB | 1       | 34    | 0     | 0.10   |
 | Silico... | NVMe SSD           | 1 TB   | 1       | 33    | 0     | 0.09   |
@@ -82,6 +83,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | Qunion P20A 512... | 512 GB | 1       | 10    | 0     | 0.03   |
 | Silico... | YSSDM-128GN2000    | 128 GB | 1       | 9     | 0     | 0.02   |
 | Silico... | Inland NVMe SSD    | 256 GB | 2       | 6     | 0     | 0.02   |
+| Silico... | AEROFARA PCIe      | 512 GB | 1       | 5     | 0     | 0.01   |
 | Silico... | SK                 | 2 TB   | 1       | 3     | 0     | 0.01   |
 | Silico... | AAR512GN122321030  | 512 GB | 1       | 2     | 0     | 0.01   |
 | Silico... | NVMe               | 256 GB | 1       | 2     | 0     | 0.01   |
@@ -97,3 +99,4 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | ZTC-PCIEG3-001T    | 1 TB   | 1       | 0     | 0     | 0.00   |
 | Silico... | HX512GSSDM2PCIE    | 512 GB | 1       | 0     | 0     | 0.00   |
 | Silico... | NVME SSD           | 2 TB   | 1       | 0     | 0     | 0.00   |
+| Silico... | 256GB MEGA S3      | 256 GB | 1       | 0     | 0     | 0.00   |

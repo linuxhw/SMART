@@ -17,6 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| KLEVV     | NEO N400 SSD       | 480 GB | 1       | 141   | 0     | 0.39   |
 | KLEVV     | SSD NEO N500       | 240 GB | 1       | 127   | 0     | 0.35   |
 | KLEVV     | NEO N400 SSD       | 240 GB | 1       | 97    | 0     | 0.27   |
 | KLEVV     | NEO N610 SSD       | 512 GB | 2       | 1     | 0     | 0.00   |

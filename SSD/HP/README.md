@@ -31,9 +31,9 @@ MTBF - avg. MTBF in years per sample.
 | HP        | VK001920GWJPH      | 1.9 TB | 2       | 121   | 0     | 0.33   |
 | HP        | SSD S700 Pro       | 1 TB   | 5       | 105   | 0     | 0.29   |
 | HP        | SSD S700 Pro       | 128 GB | 3       | 90    | 0     | 0.25   |
-| HP        | SSD S700           | 1 TB   | 7       | 82    | 0     | 0.23   |
 | HP        | SSD S700 Pro       | 256 GB | 3       | 80    | 0     | 0.22   |
 | HP        | SSD S650           | 120 GB | 2       | 75    | 0     | 0.21   |
+| HP        | SSD S700           | 1 TB   | 8       | 73    | 0     | 0.20   |
 | HP        | SSD S650           | 240 GB | 2       | 61    | 0     | 0.17   |
 | HP        | VK000240GWCFD      | 240 GB | 1       | 52    | 0     | 0.14   |
 | HP        | SSD S600           | 240 GB | 7       | 38    | 1     | 0.09   |

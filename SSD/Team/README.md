@@ -49,9 +49,9 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253TD480G         | 480 GB | 3       | 146   | 0     | 0.40   |
 | Team      | T253X1960G         | 960 GB | 3       | 141   | 0     | 0.39   |
 | Team      | TM4PS7256G         | 256 GB | 1       | 111   | 0     | 0.30   |
+| Team      | T253X1480G         | 480 GB | 13      | 110   | 0     | 0.30   |
 | Team      | L7 EVO SSD         | 64 GB  | 2       | 109   | 0     | 0.30   |
 | Team      | TM8PS7256G         | 256 GB | 13      | 105   | 0     | 0.29   |
-| Team      | T253X1480G         | 480 GB | 12      | 101   | 0     | 0.28   |
 | Team      | TM8PS7001T         | 1 TB   | 6       | 97    | 0     | 0.27   |
 | Team      | T253A3512G         | 512 GB | 3       | 95    | 0     | 0.26   |
 | Team      | T253E2002T         | 2 TB   | 1       | 93    | 0     | 0.26   |
@@ -66,6 +66,8 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253X6002T         | 2 TB   | 1       | 27    | 0     | 0.07   |
 | Team      | L5 LITE SSD        | 64 GB  | 3       | 27    | 1     | 0.07   |
 | Team      | T253X5960G         | 960 GB | 1       | 21    | 0     | 0.06   |
+| Team      | TM4PS7512G         | 512 GB | 1       | 19    | 0     | 0.05   |
+| Team      | L5 SSD             | 240 GB | 1       | 18    | 0     | 0.05   |
 | Team      | T253512GB          | 512 GB | 2       | 18    | 0     | 0.05   |
 | Team      | TM8PS5256G         | 256 GB | 1       | 17    | 0     | 0.05   |
 | Team      | T2531TB            | 1 TB   | 3       | 7     | 0     | 0.02   |
@@ -76,6 +78,7 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253A3001T         | 1 TB   | 2       | 2     | 0     | 0.01   |
 | Team      | L3 EVO SSD         | 240 GB | 1       | 1     | 0     | 0.00   |
 | Team      | M8PS5 SSD          | 128 GB | 1       | 1     | 0     | 0.00   |
+| Team      | T253120GB          | 120 GB | 1       | 1     | 0     | 0.00   |
 | Team      | T253X6512G         | 512 GB | 1       | 0     | 0     | 0.00   |
 | Team      | T253E2512G         | 512 GB | 1       | 0     | 0     | 0.00   |
 
@@ -93,4 +96,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Team      | Silicon Motion base... | 5      | 22      | 242   | 0     | 0.66   |
-| Team      | Unknown                | 50     | 196     | 173   | 4     | 0.42   |
+| Team      | Unknown                | 53     | 200     | 171   | 4     | 0.42   |

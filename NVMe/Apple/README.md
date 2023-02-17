@@ -19,15 +19,15 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Apple     | SSD SM2048L        | 2 TB   | 2       | 61    | 0     | 0.17   |
 | Apple     | SSD AP1024M        | 1 TB   | 5       | 58    | 0     | 0.16   |
-| Apple     | SSD SM1024L        | 1 TB   | 4       | 51    | 0     | 0.14   |
+| Apple     | SSD SM1024L        | 1 TB   | 5       | 56    | 0     | 0.15   |
 | Apple     | SSD AP0512M        | 500 GB | 19      | 39    | 0     | 0.11   |
 | Apple     | SSD AP0512Q        | 500 GB | 2       | 39    | 0     | 0.11   |
 | Apple     | SSD AP1024J        | 1 TB   | 3       | 38    | 0     | 0.11   |
+| Apple     | SSD SM0032L        | 32 GB  | 28      | 35    | 0     | 0.10   |
+| Apple     | SSD SM0256L        | 256 GB | 17      | 34    | 0     | 0.10   |
 | Apple     | SSD SM0512L        | 500 GB | 12      | 38    | 85    | 0.09   |
-| Apple     | SSD SM0032L        | 32 GB  | 27      | 32    | 0     | 0.09   |
 | Apple     | SSD AP2048M        | 2 TB   | 2       | 32    | 0     | 0.09   |
 | Apple     | SSD AP8192N        | 8 TB   | 2       | 31    | 0     | 0.09   |
-| Apple     | SSD SM0256L        | 256 GB | 16      | 30    | 0     | 0.08   |
 | Apple     | SSD SM0128L        | 121 GB | 6       | 26    | 0     | 0.07   |
 | Apple     | SSD AP0512H        | 500 GB | 2       | 25    | 0     | 0.07   |
 | Apple     | SSD AP0512J        | 500 GB | 9       | 20    | 0     | 0.06   |

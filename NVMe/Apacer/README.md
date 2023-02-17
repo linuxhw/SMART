@@ -21,7 +21,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS2280P4           | 480 GB | 1       | 163   | 0     | 0.45   |
 | Apacer    | Z280 120G          | 120 GB | 2       | 126   | 0     | 0.35   |
 | Apacer    | AS2280P4           | 512 GB | 11      | 101   | 0     | 0.28   |
-| Apacer    | AS2280P4           | 256 GB | 37      | 52    | 0     | 0.14   |
+| Apacer    | AS2280P4           | 256 GB | 38      | 51    | 0     | 0.14   |
 | Apacer    | AS2280P4U          | 256 GB | 2       | 49    | 0     | 0.14   |
 | Apacer    | AS2280P4U          | 1 TB   | 1       | 35    | 0     | 0.10   |
 | Apacer    | 960GB PCIe Drive   | 960 GB | 1       | 7     | 0     | 0.02   |

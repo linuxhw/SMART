@@ -33,17 +33,17 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | SSD Sata III       | 250 GB | 1       | 295   | 0     | 0.81   |
 | Intenso   | SATA3 240GB SSD    | 240 GB | 2       | 253   | 0     | 0.69   |
 | Intenso   | SSD                | 256 GB | 26      | 192   | 0     | 0.53   |
-| Intenso   | SSD Sata III       | 240 GB | 8       | 188   | 0     | 0.52   |
-| Intenso   | SSD                | 128 GB | 51      | 146   | 1     | 0.38   |
+| Intenso   | SSD Sata III       | 240 GB | 9       | 186   | 0     | 0.51   |
+| Intenso   | SSD                | 128 GB | 53      | 142   | 1     | 0.37   |
 | Intenso   | 1TB SATA SSD       | 1 TB   | 1       | 108   | 0     | 0.30   |
 | Intenso   | SSD                | 480 GB | 5       | 106   | 0     | 0.29   |
 | Intenso   | lntenso SSD Sat... | 960 GB | 4       | 140   | 6     | 0.27   |
 | Intenso   | SSD SATA III       | 240 GB | 1       | 99    | 0     | 0.27   |
-| Intenso   | SSD Sata III       | 1 TB   | 4       | 99    | 0     | 0.27   |
 | Intenso   | SDVPSA1910256      | 256 GB | 1       | 92    | 0     | 0.25   |
 | Intenso   | SSD Sata III       | 120 GB | 30      | 114   | 83    | 0.23   |
-| Intenso   | SSD                | 120 GB | 26      | 101   | 80    | 0.23   |
+| Intenso   | SSD Sata III       | 1 TB   | 5       | 82    | 0     | 0.23   |
 | Intenso   | SSD Sata III       | 500 GB | 1       | 79    | 0     | 0.22   |
+| Intenso   | SSD                | 120 GB | 28      | 94    | 75    | 0.21   |
 | Intenso   | Memory Ghost SSD   | 512 GB | 1       | 66    | 0     | 0.18   |
 | Intenso   | SATA3 1TB SSD      | 1 TB   | 2       | 219   | 12    | 0.18   |
 | Intenso   | Morebeck-V602      | 120 GB | 1       | 64    | 0     | 0.18   |
@@ -98,6 +98,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Intenso   | Phison Driven OEM SSDs | 4      | 124     | 216   | 1     | 0.58   |
-| Intenso   | Silicon Motion base... | 8      | 113     | 95    | 46    | 0.23   |
+| Intenso   | Phison Driven OEM SSDs | 4      | 126     | 213   | 1     | 0.57   |
+| Intenso   | Silicon Motion base... | 8      | 117     | 94    | 44    | 0.22   |
 | Intenso   | Unknown                | 49     | 158     | 86    | 41    | 0.22   |

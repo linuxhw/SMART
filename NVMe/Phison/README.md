@@ -28,12 +28,12 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | Reletech P400 M... | 2 TB   | 1       | 272   | 0     | 0.75   |
 | Phison    | Sabrent Rocket 4.0 | 2 TB   | 19      | 268   | 0     | 0.73   |
 | Phison    | BPX                | 240 GB | 6       | 327   | 5     | 0.67   |
-| Phison    | Sabrent            | 1 TB   | 155     | 238   | 0     | 0.65   |
+| Phison    | Sabrent            | 1 TB   | 156     | 241   | 0     | 0.66   |
 | Phison    | ESO256GMFCH-E3C-2  | 256 GB | 1       | 235   | 0     | 0.65   |
 | Phison    | ESR512GTLCG-EAC-4  | 512 GB | 4       | 203   | 0     | 0.56   |
 | Phison    | Sabrent Rocket 4.0 | 1 TB   | 81      | 200   | 0     | 0.55   |
 | Phison    | Viper M.2 VPN100   | 1 TB   | 23      | 183   | 0     | 0.50   |
-| Phison    | PCIe SSD           | 1 TB   | 97      | 177   | 0     | 0.49   |
+| Phison    | PCIe SSD           | 1 TB   | 99      | 174   | 0     | 0.48   |
 | Phison    | E12-512G-PHISON... | 512 GB | 4       | 171   | 0     | 0.47   |
 | Phison    | TurtleArmor T3000  | 2 TB   | 1       | 158   | 0     | 0.43   |
 | Phison    | Sabrent Rocket 4.0 | 500 GB | 12      | 153   | 0     | 0.42   |
@@ -52,22 +52,22 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | M.2 PCIE G3x4 NVMe | 1 TB   | 3       | 102   | 0     | 0.28   |
 | Phison    | PM8128GPTCB3B-E82  | 128 GB | 1       | 100   | 0     | 0.28   |
 | Phison    | E12-1TB-PHISON-... | 1 TB   | 1       | 99    | 0     | 0.27   |
-| Phison    | Daten DS2000       | 512 GB | 3       | 94    | 0     | 0.26   |
 | Phison    | ESO128GTLC9-E8C-2  | 128 GB | 1       | 93    | 0     | 0.26   |
 | Phison    | PS5012-E12S-1T     | 1 TB   | 1       | 86    | 0     | 0.24   |
 | Phison    | Viper M.2 VPN110   | 512 GB | 1       | 85    | 0     | 0.23   |
 | Phison    | Sabrent Rocket Q4  | 1 TB   | 10      | 81    | 0     | 0.22   |
 | Phison    | Sabrent SB-RKT4... | 4 TB   | 2       | 77    | 0     | 0.21   |
 | Phison    | ESR01TBTLG-E6GB... | 1 TB   | 4       | 72    | 0     | 0.20   |
+| Phison    | Daten DS2000       | 512 GB | 4       | 71    | 0     | 0.20   |
 | Phison    | Metabox Perform... | 2 TB   | 1       | 66    | 0     | 0.18   |
 | Phison    | 512GB SM280512G... | 512 GB | 4       | 64    | 0     | 0.18   |
 | Phison    | Enmotus P200-90... | 900 GB | 1       | 61    | 0     | 0.17   |
 | Phison    | APS-SE20G-512      | 512 GB | 2       | 61    | 0     | 0.17   |
 | Phison    | SBX                | 256 GB | 2       | 60    | 0     | 0.17   |
 | Phison    | SWG256G-112HI      | 256 GB | 2       | 53    | 0     | 0.15   |
-| Phison    | ESR512GTLG-E6GB... | 512 GB | 4       | 53    | 0     | 0.15   |
 | Phison    | E12-512G-PHISON... | 512 GB | 2       | 50    | 0     | 0.14   |
 | Phison    | 1TB SM2801T24GK... | 1 TB   | 18      | 47    | 0     | 0.13   |
+| Phison    | ESR512GTLG-E6GB... | 512 GB | 5       | 43    | 0     | 0.12   |
 | Phison    | MSI M480           | 1 TB   | 2       | 38    | 0     | 0.11   |
 | Phison    | C-E80T256G4-P3D... | 256 GB | 1       | 34    | 0     | 0.09   |
 | Phison    | Sabrent ROCKET-PRO | 512 GB | 1       | 33    | 0     | 0.09   |
@@ -79,9 +79,9 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | E12-512G-PHISON... | 512 GB | 2       | 25    | 0     | 0.07   |
 | Phison    | NE-256             | 256 GB | 3       | 25    | 0     | 0.07   |
 | Phison    | PM8512GPTCB4B8T... | 512 GB | 2       | 23    | 0     | 0.06   |
+| Phison    | One-Netbook PCI... | 512 GB | 5       | 22    | 0     | 0.06   |
 | Phison    | ThinkPlus ST800... | 256 GB | 1       | 20    | 0     | 0.06   |
 | Phison    | DTGC-CP            | 256 GB | 1       | 19    | 0     | 0.05   |
-| Phison    | One-Netbook PCI... | 512 GB | 4       | 16    | 0     | 0.05   |
 | Phison    | ESMP128GTB3C2-E8   | 128 GB | 1       | 15    | 0     | 0.04   |
 | Phison    | 311CD0512GB        | 512 GB | 89      | 13    | 1     | 0.04   |
 | Phison    | 511BS0256GB        | 256 GB | 3       | 13    | 0     | 0.04   |

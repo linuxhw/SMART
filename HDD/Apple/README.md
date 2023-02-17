@@ -33,8 +33,8 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | HDD ST750LM022     | 752 GB | 3       | 523   | 0     | 1.43   |
 | Apple     | HDD ST500LM012     | 500 GB | 5       | 515   | 0     | 1.41   |
 | Apple     | HDD HTS545050A7... | 500 GB | 55      | 542   | 26    | 1.37   |
-| Apple     | HDD HTS541010A9... | 1 TB   | 27      | 474   | 10    | 1.06   |
 | Apple     | HDD ST2000DM001    | 2 TB   | 8       | 546   | 302   | 1.05   |
+| Apple     | HDD HTS541010A9... | 1 TB   | 28      | 465   | 9     | 1.05   |
 | Apple     | HDD HTS541075A9... | 752 GB | 2       | 323   | 0     | 0.89   |
 | Apple     | HDD ST1000LM024    | 1 TB   | 8       | 860   | 5     | 0.75   |
 | Apple     | HDD HTS547550A9... | 500 GB | 12      | 376   | 18    | 0.66   |
@@ -60,7 +60,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | Travelstar 7K750       | 1      | 4       | 960   | 0     | 2.63   |
 | Apple     | Western Digital Blue   | 1      | 1       | 594   | 0     | 1.63   |
 | Apple     | Barracuda              | 1      | 32      | 545   | 0     | 1.50   |
-| Apple     | Travelstar 5K1000      | 4      | 84      | 733   | 68    | 1.48   |
+| Apple     | Travelstar 5K1000      | 4      | 85      | 727   | 67    | 1.47   |
 | Apple     | SpinPoint              | 1      | 3       | 523   | 0     | 1.43   |
 | Apple     | Seagate Samsung Spi... | 1      | 5       | 515   | 0     | 1.41   |
 | Apple     | HGST Travelstar Z5K500 | 1      | 55      | 542   | 26    | 1.37   |

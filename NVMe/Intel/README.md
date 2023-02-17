@@ -36,7 +36,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKF512G7H     | 512 GB | 5       | 754   | 0     | 2.07   |
 | Intel     | SSDPE21K375GA      | 375 GB | 1       | 696   | 0     | 1.91   |
 | Intel     | SSDPE2MX450G7      | 450 GB | 4       | 658   | 0     | 1.80   |
-| Intel     | SSDPEKKW256G7      | 256 GB | 63      | 826   | 32    | 1.80   |
+| Intel     | SSDPEKKW256G7      | 256 GB | 64      | 818   | 32    | 1.78   |
 | Intel     | SSDPE21D480GA      | 480 GB | 6       | 643   | 0     | 1.76   |
 | Intel     | SSDPEKKW010T7      | 1 TB   | 5       | 1095  | 6     | 1.71   |
 | Intel     | SSDPEKKF256G7L     | 256 GB | 29      | 737   | 42    | 1.70   |
@@ -69,21 +69,21 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKF256G8H     | 256 GB | 1       | 232   | 0     | 0.64   |
 | Intel     | SSDPEKKW256G8L     | 256 GB | 6       | 220   | 0     | 0.60   |
 | Intel     | SSDPEKNW256G8      | 256 GB | 1       | 215   | 0     | 0.59   |
-| Intel     | SSDPEKKW128G8      | 128 GB | 17      | 212   | 0     | 0.58   |
+| Intel     | HBRPEKNX0202AHO    | 32 GB  | 47      | 221   | 9     | 0.59   |
+| Intel     | SSDPEKKW128G8      | 128 GB | 18      | 213   | 0     | 0.58   |
 | Intel     | SSDPEL1K100GA      | 100 GB | 2       | 382   | 5     | 0.58   |
-| Intel     | SSDPEKNW010T8      | 1 TB   | 238     | 208   | 5     | 0.57   |
+| Intel     | SSDPEKNW010T8      | 1 TB   | 239     | 208   | 5     | 0.57   |
 | Intel     | SSDPEKKW512G8      | 512 GB | 17      | 205   | 0     | 0.56   |
 | Intel     | HBRPEKNX0203AH     | 1 TB   | 16      | 205   | 0     | 0.56   |
-| Intel     | HBRPEKNX0202AHO    | 32 GB  | 46      | 208   | 9     | 0.55   |
 | Intel     | SSDPED1D960GAY     | 960 GB | 1       | 199   | 0     | 0.55   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 33      | 195   | 0     | 0.54   |
+| Intel     | HBRPEKNX0202AH     | 512 GB | 49      | 195   | 0     | 0.53   |
 | Intel     | SSDPEKKF256G8 NVMe | 256 GB | 12      | 190   | 0     | 0.52   |
 | Intel     | H10 HBRPEKNX010... | 256 GB | 3       | 188   | 0     | 0.52   |
-| Intel     | HBRPEKNX0202AH     | 512 GB | 48      | 184   | 0     | 0.51   |
 | Intel     | HBRPEKNX0101AHO    | 16 GB  | 19      | 176   | 0     | 0.48   |
+| Intel     | SSDPEKNW512G8      | 512 GB | 313     | 171   | 0     | 0.47   |
 | Intel     | HBRPEKNX0202ALO    | 32 GB  | 9       | 171   | 0     | 0.47   |
 | Intel     | 660p SSDPEKNW51... | 512 GB | 1       | 170   | 0     | 0.47   |
-| Intel     | SSDPEKNW512G8      | 512 GB | 308     | 170   | 0     | 0.47   |
 | Intel     | HBRPEKNX0101AO     | 16 GB  | 2       | 161   | 0     | 0.44   |
 | Intel     | MEMPEI1J016GAL     | 16 GB  | 2       | 146   | 0     | 0.40   |
 | Intel     | HBRPEKNX0101AH     | 256 GB | 18      | 146   | 0     | 0.40   |
@@ -93,7 +93,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEBKF128G7      | 128 GB | 3       | 500   | 10    | 0.39   |
 | Intel     | SSDPEKKF010T7      | 1 TB   | 1       | 139   | 0     | 0.38   |
 | Intel     | SSDPEK1W060GA      | 64 GB  | 2       | 139   | 0     | 0.38   |
-| Intel     | SSDPEKNW512G8L     | 512 GB | 46      | 137   | 0     | 0.38   |
+| Intel     | SSDPEKNW512G8L     | 512 GB | 47      | 134   | 0     | 0.37   |
 | Intel     | SSDPEKKF512G7      | 512 GB | 1       | 130   | 0     | 0.36   |
 | Intel     | HBRPEKNX0203AO     | 32 GB  | 3       | 130   | 0     | 0.36   |
 | Intel     | SSDPE2KE020T7      | 2 TB   | 4       | 127   | 0     | 0.35   |
@@ -109,24 +109,24 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW010T8H     | 1 TB   | 20      | 100   | 0     | 0.28   |
 | Intel     | SSDPE2KX040T8      | 4 TB   | 14      | 98    | 0     | 0.27   |
 | Intel     | SSDPEKNW010T9      | 1 TB   | 28      | 94    | 0     | 0.26   |
-| Intel     | SSDPEKNW512G8H     | 512 GB | 198     | 94    | 11    | 0.25   |
 | Intel     | HBRPEKNX0202A      | 512 GB | 37      | 92    | 0     | 0.25   |
+| Intel     | SSDPEKNW512G8H     | 512 GB | 200     | 94    | 11    | 0.25   |
 | Intel     | SSDPEMKF010T8 NVMe | 1 TB   | 25      | 98    | 42    | 0.24   |
 | Intel     | SSDPEMKF256G8 NVMe | 256 GB | 5       | 77    | 0     | 0.21   |
 | Intel     | SSDPEKKW010T8L     | 1 TB   | 2       | 75    | 0     | 0.21   |
 | Intel     | SSDPEKKF010T8L     | 1 TB   | 30      | 79    | 7     | 0.21   |
 | Intel     | SSDPE2MD400G4      | 400 GB | 1       | 74    | 0     | 0.21   |
 | Intel     | SSDPEKNU512GZL     | 512 GB | 3       | 69    | 0     | 0.19   |
-| Intel     | SSDPEKKF512G8L     | 512 GB | 41      | 74    | 4     | 0.19   |
 | Intel     | H10 HBRPEKNX020... | 1 TB   | 3       | 112   | 1     | 0.19   |
+| Intel     | SSDPEKKF512G8L     | 512 GB | 42      | 73    | 4     | 0.19   |
 | Intel     | SSDPEMKF512G8 NVMe | 512 GB | 19      | 67    | 0     | 0.18   |
 | Intel     | SSDPEKNU512G8L     | 512 GB | 2       | 66    | 0     | 0.18   |
-| Intel     | SSDPEKNU010TZ      | 1 TB   | 44      | 61    | 0     | 0.17   |
 | Intel     | SSDPEKKW020T8      | 2 TB   | 2       | 60    | 0     | 0.17   |
+| Intel     | SSDPEKNU010TZ      | 1 TB   | 45      | 60    | 0     | 0.17   |
 | Intel     | 670p SSDPEKNU51... | 512 GB | 9       | 41    | 0     | 0.11   |
 | Intel     | MEMPEK1W016GAL     | 16 GB  | 1       | 34    | 0     | 0.10   |
 | Intel     | SSDPEKNU512GZH     | 512 GB | 28      | 34    | 0     | 0.10   |
-| Intel     | SSDPEKNU512GZ      | 512 GB | 112     | 33    | 0     | 0.09   |
+| Intel     | SSDPEKNU512GZ      | 512 GB | 113     | 34    | 0     | 0.09   |
 | Intel     | MEMPEK1J032GA      | 32 GB  | 1       | 33    | 0     | 0.09   |
 | Intel     | HBRPEKNL0202AHO    | 32 GB  | 1       | 31    | 0     | 0.09   |
 | Intel     | HBRPEKNL0202AH     | 512 GB | 1       | 31    | 0     | 0.09   |
@@ -135,9 +135,9 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNU010TZH     | 1 TB   | 2       | 24    | 0     | 0.07   |
 | Intel     | SSDPEBKF256G7      | 256 GB | 1       | 21    | 0     | 0.06   |
 | Intel     | SSDPEKNW512GZL     | 512 GB | 22      | 16    | 0     | 0.05   |
+| Intel     | SSDPF2KX038T1      | 3.8 TB | 3       | 11    | 0     | 0.03   |
 | Intel     | SSDPE21D280GA      | 280 GB | 2       | 3     | 0     | 0.01   |
 | Intel     | SSDPEKKA256G7      | 256 GB | 2       | 1     | 0     | 0.01   |
 | Intel     | SSDPEDKE020T7      | 2 TB   | 2       | 1     | 0     | 0.00   |
-| Intel     | SSDPF2KX038T1      | 3.8 TB | 2       | 0     | 0     | 0.00   |
 | Intel     | SSDPE2KE016T8      | 1.6 TB | 2       | 0     | 0     | 0.00   |
 | Intel     | MEMPEK1J064GA      | 64 GB  | 1       | 0     | 0     | 0.00   |

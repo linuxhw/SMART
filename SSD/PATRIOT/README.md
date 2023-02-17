@@ -1,10 +1,10 @@
-AGI NVMe Drives
-===============
+PATRIOT Solid State Drives
+==========================
 
-This is a list of all tested AGI NVMe drive models and their MTBFs. See more
-info on reliability test in the [README](https://github.com/linuxhw/SMART).
+This is a list of all tested PATRIOT solid state drive models and their MTBFs. See
+more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-NVME by Model
+SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| AGI       | AGI512G16AI198     | 512 GB | 2       | 2     | 0     | 0.01   |
+| PATRIOT   | 256 GB P200 (IM... | 256 GB | 1       | 1     | 0     | 0.00   |

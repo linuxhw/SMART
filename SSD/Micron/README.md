@@ -27,13 +27,13 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | M510DC_MTFDDAK2... | 240 GB | 2       | 1322  | 0     | 3.62   |
 | Micron    | MTFDDAK064MAR-1... | 64 GB  | 1       | 1164  | 0     | 3.19   |
 | Micron    | MTFDDAK128MBF-1... | 128 GB | 1       | 1117  | 0     | 3.06   |
-| Micron    | M500_MTFDDAK480MAV | 480 GB | 1       | 1083  | 0     | 2.97   |
+| Micron    | MTFDDAK256MBF-1... | 256 GB | 5       | 1088  | 0     | 2.98   |
 | Micron    | MTFDDAK512TBN-1... | 512 GB | 1       | 1062  | 0     | 2.91   |
 | Micron    | 5100_MTFDDAK960TCB | 960 GB | 3       | 1048  | 0     | 2.87   |
+| Micron    | M500_MTFDDAK480MAV | 480 GB | 2       | 1036  | 0     | 2.84   |
 | Micron    | C400-MTFDDAK128MAM | 128 GB | 4       | 1032  | 0     | 2.83   |
 | Micron    | M600_MTFDDAK1T0MBF | 1 TB   | 8       | 929   | 0     | 2.55   |
 | Micron    | 5200_MTFDDAK1T9TDD | 1.9 TB | 1       | 893   | 0     | 2.45   |
-| Micron    | MTFDDAK256MBF-1... | 256 GB | 4       | 892   | 0     | 2.44   |
 | Micron    | C400-MTFDDAK512MAM | 512 GB | 1       | 870   | 0     | 2.39   |
 | Micron    | MTFDDAK256MAM-1K1  | 256 GB | 6       | 859   | 0     | 2.35   |
 | Micron    | M600_MTFDDAK512MBF | 512 GB | 2       | 855   | 0     | 2.34   |
@@ -150,13 +150,12 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Micron    | MX100/MX200/M5x0/M6... | 1      | 1       | 1083  | 0     | 2.97   |
 | Micron    | RealSSD m4/C400/P400   | 8      | 72      | 536   | 196   | 1.37   |
 | Micron    | 5100 Pro / 5200 / 5... | 4      | 14      | 493   | 0     | 1.35   |
 | Micron    | 5100 Pro / 5200 SSDs   | 6      | 22      | 562   | 16    | 1.23   |
 | Micron    | RealSSD m4/C400        | 3      | 10      | 336   | 304   | 0.84   |
 | Micron    | 5100 Pro / 52x0 / 5... | 9      | 18      | 337   | 3     | 0.71   |
-| Micron    | Client SSDs            | 36     | 252     | 282   | 85    | 0.61   |
+| Micron    | Client SSDs            | 37     | 255     | 294   | 84    | 0.64   |
 | Micron    | BX/MX1/2/3/500, M5/... | 11     | 227     | 254   | 97    | 0.57   |
 | Micron    | Unknown                | 34     | 95      | 309   | 121   | 0.46   |
 | Micron    | MX1/2/300, M5/600, ... | 1      | 1       | 11    | 0     | 0.03   |
