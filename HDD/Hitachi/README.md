@@ -93,7 +93,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HCS5C3232SLA380    | 320 GB | 4       | 903   | 1     | 2.29   |
 | Hitachi   | HTS722020K9SA00... | 200 GB | 1       | 835   | 0     | 2.29   |
 | Hitachi   | HUA723020ALA641    | 2 TB   | 60      | 1045  | 41    | 2.27   |
-| Hitachi   | HUS724030ALE641    | 3 TB   | 38      | 923   | 87    | 2.26   |
+| Hitachi   | HUS724030ALE641    | 3 TB   | 38      | 925   | 87    | 2.27   |
 | Hitachi   | HDS728040PLAT20    | 41 GB  | 5       | 979   | 1     | 2.25   |
 | Hitachi   | HCC543225A7A380    | 250 GB | 4       | 1159  | 1     | 2.21   |
 | Hitachi   | HTS723232L9SA62    | 320 GB | 1       | 804   | 0     | 2.20   |
@@ -108,14 +108,14 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HDS723030BLE640    | 3 TB   | 2       | 841   | 1010  | 2.01   |
 | Hitachi   | HUA722010CLA630    | 1 TB   | 6       | 1349  | 13    | 2.00   |
 | Hitachi   | HDT721010SLA360    | 1 TB   | 64      | 1373  | 25    | 1.98   |
-| Hitachi   | HDS721010CLA332    | 1 TB   | 207     | 1129  | 132   | 1.97   |
+| Hitachi   | HDS721010CLA332    | 1 TB   | 207     | 1130  | 132   | 1.97   |
 | Hitachi   | HDS5C1032CLA382    | 320 GB | 8       | 849   | 2     | 1.96   |
 | Hitachi   | HDT721016SLA380    | 160 GB | 28      | 1094  | 41    | 1.93   |
 | Hitachi   | HDS722580VLSA80    | 82 GB  | 6       | 976   | 337   | 1.90   |
 | Hitachi   | HDS721612PLA380    | 120 GB | 10      | 1092  | 158   | 1.89   |
 | Hitachi   | HDT725050VLA380    | 500 GB | 7       | 1581  | 8     | 1.88   |
 | Hitachi   | HDS721064CLA332    | 640 GB | 4       | 742   | 1     | 1.88   |
-| Hitachi   | HDP725025GLA380    | 250 GB | 56      | 1209  | 98    | 1.86   |
+| Hitachi   | HDP725025GLA380    | 250 GB | 56      | 1210  | 98    | 1.86   |
 | Hitachi   | HUA721010KLA330... | 1 TB   | 1       | 2715  | 3     | 1.86   |
 | Hitachi   | HDT721032SLA360    | 320 GB | 33      | 1134  | 12    | 1.78   |
 | Hitachi   | HDS5C4040ALE630    | 4 TB   | 6       | 646   | 0     | 1.77   |
@@ -123,8 +123,8 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS723220L9A360    | 200 GB | 1       | 630   | 0     | 1.73   |
 | Hitachi   | HDS5C1050CLA382    | 500 GB | 21      | 951   | 162   | 1.71   |
 | Hitachi   | HDP725032GLA360    | 320 GB | 27      | 949   | 60    | 1.71   |
+| Hitachi   | HDP725050GLA360    | 500 GB | 137     | 1227  | 75    | 1.70   |
 | Hitachi   | HDS721010KLA330    | 1 TB   | 17      | 987   | 12    | 1.70   |
-| Hitachi   | HDP725050GLA360    | 500 GB | 137     | 1226  | 75    | 1.70   |
 | Hitachi   | HCS5C1032CLA382    | 320 GB | 2       | 883   | 2     | 1.68   |
 | Hitachi   | HDS723020ALA640    | 2 TB   | 2       | 600   | 0     | 1.65   |
 | Hitachi   | HDS721616PLAT80    | 160 GB | 7       | 1042  | 18    | 1.64   |
@@ -162,7 +162,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS723216L9A362    | 160 GB | 1       | 439   | 0     | 1.20   |
 | Hitachi   | HCC547550A9E380    | 500 GB | 2       | 729   | 12    | 1.19   |
 | Hitachi   | HTE545025B9A300    | 250 GB | 1       | 430   | 0     | 1.18   |
-| Hitachi   | HDS721050CLA360    | 500 GB | 91      | 595   | 27    | 1.16   |
+| Hitachi   | HDS721050CLA360    | 500 GB | 91      | 596   | 27    | 1.17   |
 | Hitachi   | HDP725040GLA360    | 400 GB | 7       | 835   | 187   | 1.11   |
 | Hitachi   | HTS543280L9SA00    | 80 GB  | 1       | 398   | 0     | 1.09   |
 | Hitachi   | HDT721025SLA380    | 250 GB | 15      | 870   | 205   | 1.05   |
@@ -175,8 +175,8 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS725032A9A362    | 320 GB | 1       | 355   | 0     | 0.97   |
 | Hitachi   | HTS725032A9A360    | 320 GB | 6       | 655   | 235   | 0.97   |
 | Hitachi   | HTS545032B9A301    | 320 GB | 1       | 353   | 0     | 0.97   |
-| Hitachi   | HTS545050B9A300    | 500 GB | 185     | 648   | 223   | 0.96   |
-| Hitachi   | HDS721680PLA380    | 80 GB  | 61      | 948   | 227   | 0.95   |
+| Hitachi   | HTS545050B9A300    | 500 GB | 185     | 649   | 223   | 0.96   |
+| Hitachi   | HDS721680PLA380    | 80 GB  | 61      | 952   | 227   | 0.95   |
 | Hitachi   | HTS725050A9A362    | 500 GB | 7       | 411   | 45    | 0.94   |
 | Hitachi   | HCS5C1025CLA382    | 250 GB | 1       | 341   | 0     | 0.94   |
 | Hitachi   | HDT721050SLA380    | 500 GB | 2       | 431   | 3     | 0.93   |
@@ -207,7 +207,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS721010G9SA00    | 100 GB | 7       | 1056  | 176   | 0.67   |
 | Hitachi   | HTS722020K9A300    | 200 GB | 2       | 434   | 11    | 0.67   |
 | Hitachi   | HTS545032A7E380    | 320 GB | 38      | 426   | 207   | 0.67   |
-| Hitachi   | HTS545025B9SA00    | 250 GB | 4       | 238   | 0     | 0.65   |
+| Hitachi   | HTS545025B9SA00    | 250 GB | 4       | 240   | 0     | 0.66   |
 | Hitachi   | HTS543225A7A384    | 250 GB | 47      | 363   | 312   | 0.63   |
 | Hitachi   | HTS543216L9SA00    | 160 GB | 32      | 485   | 47    | 0.61   |
 | Hitachi   | HTS543216L9A300    | 160 GB | 70      | 512   | 174   | 0.59   |
@@ -230,6 +230,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS543232L9SA02    | 320 GB | 5       | 1029  | 19    | 0.49   |
 | Hitachi   | HTS421240H9AT00    | 40 GB  | 2       | 179   | 0     | 0.49   |
 | Hitachi   | HTS723232A7A364    | 320 GB | 88      | 529   | 536   | 0.48   |
+| Hitachi   | HTS545032B9A302    | 320 GB | 12      | 336   | 227   | 0.48   |
 | Hitachi   | HDS722512VLAT20    | 128 GB | 1       | 863   | 4     | 0.47   |
 | Hitachi   | HTS541080G9SA00    | 80 GB  | 10      | 410   | 66    | 0.47   |
 | Hitachi   | HDS722525VLAT80    | 250 GB | 2       | 2632  | 8     | 0.47   |
@@ -239,7 +240,6 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS725016A9A362    | 160 GB | 2       | 290   | 1     | 0.44   |
 | Hitachi   | HTS545025B9SA02    | 250 GB | 28      | 268   | 151   | 0.43   |
 | Hitachi   | HTS541010A9E680    | 1 TB   | 26      | 552   | 721   | 0.42   |
-| Hitachi   | HTS545032B9A302    | 320 GB | 12      | 315   | 227   | 0.42   |
 | Hitachi   | HTS545050A7E380    | 500 GB | 189     | 393   | 306   | 0.42   |
 | Hitachi   | HDS721010KLA33R... | 1 TB   | 1       | 3734  | 24    | 0.41   |
 | Hitachi   | HTS723225L9SA62    | 250 GB | 1       | 595   | 3     | 0.41   |
@@ -255,7 +255,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HTS541060G9AT00    | 64 GB  | 9       | 439   | 13    | 0.37   |
 | Hitachi   | HTS725032A7E630    | 320 GB | 6       | 783   | 685   | 0.37   |
 | Hitachi   | HTS541040G9AT00    | 40 GB  | 9       | 415   | 10    | 0.36   |
-| Hitachi   | HTS541612J9SA00    | 120 GB | 86      | 589   | 89    | 0.34   |
+| Hitachi   | HTS541612J9SA00    | 120 GB | 86      | 591   | 89    | 0.34   |
 | Hitachi   | TPH01204000GB 0    | 4 TB   | 1       | 122   | 0     | 0.33   |
 | Hitachi   | HTS541010G9SA00    | 100 GB | 19      | 402   | 80    | 0.33   |
 | Hitachi   | HTS543216L9SA02    | 160 GB | 11      | 198   | 8     | 0.33   |
@@ -353,7 +353,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | Deskstar 7K250 (SUN... | 1      | 1       | 5248  | 2     | 4.79   |
 | Hitachi   | Ultrastar A7K1000      | 6      | 30      | 2107  | 67    | 4.46   |
 | Hitachi   | Deskstar 7K3000        | 8      | 134     | 1538  | 75    | 3.64   |
-| Hitachi   | Deskstar 7K2000        | 2      | 59      | 1899  | 104   | 3.36   |
+| Hitachi   | Deskstar 7K2000        | 2      | 59      | 1900  | 104   | 3.36   |
 | Hitachi   | Ultrastar A7K2000      | 11     | 105     | 1701  | 59    | 3.32   |
 | Hitachi   | CinemaStar 5K2000      | 1      | 3       | 1986  | 4     | 3.22   |
 | Hitachi   | CinemaStar C5K500      | 2      | 4       | 1167  | 0     | 3.20   |
@@ -370,16 +370,16 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | Deskstar 7K1000        | 3      | 28      | 1225  | 12    | 2.20   |
 | Hitachi   | Deskstar T7K500        | 8      | 103     | 1246  | 48    | 2.00   |
 | Hitachi   | Deskstar 5K1000        | 3      | 43      | 974   | 91    | 1.99   |
-| Hitachi   | Ultrastar 7K4000       | 6      | 70      | 732   | 53    | 1.80   |
+| Hitachi   | Ultrastar 7K4000       | 6      | 70      | 733   | 53    | 1.80   |
 | Hitachi   | Deskstar 5K4000        | 1      | 6       | 646   | 0     | 1.77   |
 | Hitachi   | Deskstar 7K1000.C      | 16     | 819     | 927   | 81    | 1.76   |
 | Hitachi   | Deskstar 7K1000.B      | 11     | 180     | 1131  | 63    | 1.74   |
 | Hitachi   | Deskstar 7K80          | 6      | 103     | 876   | 26    | 1.70   |
-| Hitachi   | Deskstar P7K500        | 11     | 259     | 1136  | 86    | 1.61   |
+| Hitachi   | Deskstar P7K500        | 11     | 259     | 1137  | 86    | 1.61   |
 | Hitachi   | CinemaStar 7K500       | 1      | 1       | 573   | 0     | 1.57   |
 | Hitachi   | Deskstar T7K250        | 5      | 53      | 1042  | 97    | 1.46   |
 | Hitachi   | CinemaStar Z5K320      | 3      | 8       | 730   | 24    | 1.30   |
-| Hitachi   | Deskstar 7K160         | 7      | 209     | 949   | 129   | 1.22   |
+| Hitachi   | Deskstar 7K160         | 7      | 209     | 950   | 129   | 1.22   |
 | Hitachi   | CinemaStar C5K750      | 1      | 2       | 729   | 12    | 1.19   |
 | Hitachi   | Travelstar 7K750       | 2      | 75      | 799   | 355   | 1.00   |
 | Hitachi   | Travelstar 5K500.B     | 16     | 679     | 539   | 164   | 0.83   |
@@ -393,12 +393,12 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | Travelstar Z5K320      | 3      | 325     | 367   | 305   | 0.53   |
 | Hitachi   | Travelstar 7K100       | 6      | 26      | 573   | 68    | 0.52   |
 | Hitachi   | CinemaStar 5K1000.B    | 2      | 3       | 474   | 246   | 0.49   |
-| Hitachi   | Travelstar 5K250       | 10     | 299     | 551   | 165   | 0.49   |
+| Hitachi   | Travelstar 5K250       | 10     | 299     | 552   | 165   | 0.49   |
 | Hitachi   | Travelstar Z7K500      | 3      | 31      | 495   | 616   | 0.47   |
 | Hitachi   | Travelstar Z7K320      | 4      | 94      | 535   | 558   | 0.46   |
 | Hitachi   | Travelstar Z5K500      | 3      | 231     | 394   | 284   | 0.46   |
 | Hitachi   | Travelstar 5K320       | 12     | 256     | 520   | 217   | 0.46   |
-| Hitachi   | Travelstar 5K160       | 12     | 240     | 545   | 72    | 0.44   |
+| Hitachi   | Travelstar 5K160       | 12     | 240     | 546   | 72    | 0.44   |
 | Hitachi   | Travelstar 7K500       | 12     | 161     | 537   | 685   | 0.41   |
 | Hitachi   | Travelstar 5K500       | 1      | 6       | 520   | 5     | 0.40   |
 | Hitachi   | Travelstar 5K100       | 9      | 73      | 426   | 60    | 0.33   |

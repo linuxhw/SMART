@@ -26,8 +26,8 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSTFS30512GTTD  | 512 GB | 4       | 273   | 0     | 0.75   |
 | Gigaby... | GP-GSTFS30256GTTD  | 256 GB | 2       | 237   | 0     | 0.65   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 37      | 124   | 0     | 0.34   |
+| Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 37      | 107   | 0     | 0.29   |
 | Gigaby... | GP-GSTFS31480GNTD  | 480 GB | 4       | 104   | 0     | 0.29   |
-| Gigaby... | GP-GSTFS31240GNTD  | 240 GB | 37      | 103   | 0     | 0.28   |
 | Gigaby... | GP-GSTFS31100TNTD  | 1 TB   | 1       | 61    | 0     | 0.17   |
 | Gigaby... | GP-GSTFS31256GTND  | 256 GB | 3       | 19    | 0     | 0.05   |
 
@@ -45,4 +45,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Gigaby... | Unknown                | 4      | 10      | 168   | 0     | 0.46   |
-| Gigaby... | Phison Driven SSDs     | 3      | 78      | 113   | 0     | 0.31   |
+| Gigaby... | Phison Driven SSDs     | 3      | 78      | 115   | 0     | 0.32   |

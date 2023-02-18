@@ -34,7 +34,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | SSD                | 250 GB | 5       | 310   | 0     | 0.85   |
 | Seagate   | BarraCuda SSD Z... | 250 GB | 11      | 291   | 0     | 0.80   |
 | Seagate   | ZA480NM10001       | 480 GB | 1       | 261   | 0     | 0.72   |
-| Seagate   | BarraCuda 120 S... | 500 GB | 17      | 259   | 0     | 0.71   |
+| Seagate   | BarraCuda 120 S... | 500 GB | 17      | 260   | 0     | 0.71   |
 | Seagate   | SSD                | 1 TB   | 4       | 247   | 0     | 0.68   |
 | Seagate   | BarraCuda 120 S... | 1 TB   | 13      | 224   | 0     | 0.61   |
 | Seagate   | ST240HM000         | 240 GB | 1       | 206   | 0     | 0.56   |

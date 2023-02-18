@@ -56,7 +56,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT128M550SSD3      | 128 GB | 6       | 474   | 8     | 1.04   |
 | Crucial   | CT1050MX300SSD1    | 1 TB   | 35      | 545   | 46    | 1.03   |
 | Crucial   | CT512M550SSD1      | 512 GB | 10      | 839   | 180   | 1.00   |
-| Crucial   | CT275MX300SSD1     | 275 GB | 91      | 428   | 78    | 0.95   |
+| Crucial   | CT275MX300SSD1     | 275 GB | 91      | 430   | 78    | 0.96   |
 | Crucial   | CT525MX300SSD1     | 528 GB | 120     | 460   | 119   | 0.91   |
 | Crucial   | CT275MX300SSD4     | 275 GB | 26      | 429   | 3     | 0.90   |
 | Crucial   | CT250MX200SSD1     | 250 GB | 38      | 312   | 0     | 0.86   |
@@ -64,7 +64,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT128MX100SSD1     | 128 GB | 17      | 1073  | 72    | 0.76   |
 | Crucial   | M500IT_MTFDDAK1... | 128 GB | 1       | 267   | 0     | 0.73   |
 | Crucial   | CT960BX500SSD1     | 960 GB | 31      | 242   | 0     | 0.66   |
-| Crucial   | CT525MX300SSD4     | 528 GB | 24      | 300   | 77    | 0.64   |
+| Crucial   | CT525MX300SSD4     | 528 GB | 24      | 315   | 77    | 0.65   |
 | Crucial   | CT240BX300SSD1     | 240 GB | 10      | 233   | 0     | 0.64   |
 | Crucial   | CT960BX200SSD1     | 960 GB | 3       | 231   | 0     | 0.63   |
 | Crucial   | CT250MX500SSD4N    | 250 GB | 3       | 227   | 0     | 0.62   |
@@ -77,7 +77,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT256M225          | 256 GB | 1       | 200   | 0     | 0.55   |
 | Crucial   | M4-CT512M4SSD1     | 512 GB | 4       | 516   | 77    | 0.54   |
 | Crucial   | CT1000MX500SSD4    | 1 TB   | 51      | 189   | 0     | 0.52   |
-| Crucial   | CT250MX500SSD1     | 250 GB | 213     | 177   | 10    | 0.48   |
+| Crucial   | CT250MX500SSD1     | 250 GB | 213     | 179   | 10    | 0.49   |
 | Crucial   | CT500MX500SSD4N    | 500 GB | 3       | 172   | 0     | 0.47   |
 | Crucial   | CT2000BX500SSD1    | 2 TB   | 27      | 170   | 0     | 0.47   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 509     | 166   | 3     | 0.45   |
@@ -86,11 +86,11 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | FCCT512MX100SSD1   | 512 GB | 1       | 151   | 0     | 0.41   |
 | Crucial   | FCCT480M500SSD1    | 480 GB | 1       | 150   | 0     | 0.41   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 219     | 144   | 1     | 0.39   |
-| Crucial   | CT2000MX500SSD1    | 2 TB   | 128     | 140   | 8     | 0.38   |
+| Crucial   | CT2000MX500SSD1    | 2 TB   | 128     | 140   | 8     | 0.39   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 39      | 134   | 1     | 0.37   |
 | Crucial   | CT480BX300SSD1     | 480 GB | 16      | 130   | 0     | 0.36   |
 | Crucial   | CT250MX500SSD4     | 250 GB | 25      | 129   | 0     | 0.36   |
-| Crucial   | CT240BX500SSD1     | 240 GB | 455     | 126   | 1     | 0.34   |
+| Crucial   | CT240BX500SSD1     | 240 GB | 455     | 127   | 1     | 0.34   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 324     | 125   | 1     | 0.34   |
 | Crucial   | CT4000MX500SSD1    | 4 TB   | 3       | 110   | 0     | 0.30   |
 | Crucial   | CT1000BX500SSD1    | 1 TB   | 118     | 109   | 1     | 0.30   |
@@ -130,10 +130,10 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Crucial   | RealSSD m4/C400/P400   | 9      | 176     | 1005  | 190   | 2.38   |
+| Crucial   | RealSSD m4/C400/P400   | 9      | 176     | 1006  | 190   | 2.38   |
 | Crucial   | RealSSD C300/P300      | 3      | 25      | 1164  | 259   | 2.35   |
 | Crucial   | RealSSD m4/C400        | 2      | 15      | 832   | 135   | 2.17   |
-| Crucial   | BX/MX1/2/3/500, M5/... | 22     | 488     | 470   | 67    | 0.96   |
+| Crucial   | BX/MX1/2/3/500, M5/... | 22     | 488     | 471   | 67    | 0.96   |
 | Crucial   | Indilinx Barefoot b... | 1      | 1       | 200   | 0     | 0.55   |
 | Crucial   | Client SSDs            | 32     | 3007    | 205   | 7     | 0.50   |
 | Crucial   | Unknown                | 16     | 31      | 170   | 2     | 0.37   |

@@ -21,8 +21,8 @@ MTBF - avg. MTBF in years per sample.
 | SSSTC     | CL1-8D512          | 512 GB | 7       | 111   | 0     | 0.31   |
 | SSSTC     | CL1-3D256-Q11 NVMe | 256 GB | 16      | 102   | 0     | 0.28   |
 | SSSTC     | CL1-3D512-Q11 NVMe | 512 GB | 13      | 82    | 0     | 0.22   |
+| SSSTC     | CL1-4D256          | 256 GB | 35      | 67    | 0     | 0.19   |
 | SSSTC     | CL4-3D1024-Q11 ... | 1 TB   | 2       | 66    | 0     | 0.18   |
-| SSSTC     | CL1-4D256          | 256 GB | 35      | 65    | 0     | 0.18   |
 | SSSTC     | CL1-4D256-D22      | 256 GB | 1       | 46    | 0     | 0.13   |
 | SSSTC     | CL1-4D512          | 512 GB | 6       | 43    | 0     | 0.12   |
 | SSSTC     | CL1-8D256          | 256 GB | 13      | 37    | 0     | 0.10   |

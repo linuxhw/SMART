@@ -81,9 +81,9 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | 6B200M0            | 200 GB | 7       | 29    | 19    | 0.06   |
 | Maxtor    | 4K040H2            | 40 GB  | 2       | 249   | 19    | 0.06   |
 | Maxtor    | 6L200P0            | 208 GB | 5       | 22    | 5     | 0.06   |
+| Maxtor    | 6L080M0            | 80 GB  | 7       | 28    | 146   | 0.05   |
 | Maxtor    | STM3300622A        | 304 GB | 1       | 173   | 8     | 0.05   |
 | Maxtor    | 6L200M0            | 208 GB | 8       | 27    | 11    | 0.05   |
-| Maxtor    | 6L080M0            | 80 GB  | 7       | 23    | 146   | 0.05   |
 | Maxtor    | 6B300S0            | 304 GB | 2       | 17    | 1     | 0.05   |
 | Maxtor    | 6L080L0            | 82 GB  | 7       | 24    | 11    | 0.04   |
 | Maxtor    | 6B200P0            | 208 GB | 5       | 31    | 723   | 0.04   |

@@ -18,7 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Silico... | 128GB SSD          | 128 GB | 1       | 792   | 0     | 2.17   |
-| Silico... | Asgard AN3 2TNV... | 2 TB   | 14      | 652   | 0     | 1.79   |
+| Silico... | Asgard AN3 2TNV... | 2 TB   | 14      | 715   | 0     | 1.96   |
 | Silico... | NVME SSD           | 1 TB   | 3       | 343   | 0     | 0.94   |
 | Silico... | M Series NVMe S... | 256 GB | 4       | 277   | 0     | 0.76   |
 | Silico... | Asgard AN2 250N... | 250 GB | 3       | 207   | 0     | 0.57   |
@@ -40,9 +40,9 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | 1TB PCS PCIe M.... | 1 TB   | 4       | 88    | 0     | 0.24   |
 | Silico... | R5MP120G8          | 120 GB | 3       | 83    | 0     | 0.23   |
 | Silico... | SK                 | 128 GB | 1       | 81    | 0     | 0.22   |
+| Silico... | 256GB PCS PCIe ... | 256 GB | 7       | 81    | 0     | 0.22   |
 | Silico... | NE-128             | 128 GB | 16      | 76    | 5     | 0.21   |
 | Silico... | KingSSD-N201000    | 1 TB   | 1       | 76    | 0     | 0.21   |
-| Silico... | 256GB PCS PCIe ... | 256 GB | 7       | 76    | 0     | 0.21   |
 | Silico... | AITC M.2 FZ300     | 128 GB | 1       | 73    | 0     | 0.20   |
 | Silico... | WT PCIE-256GB      | 256 GB | 1       | 71    | 0     | 0.20   |
 | Silico... | NVME 512GB SSD     | 512 GB | 1       | 70    | 0     | 0.19   |
@@ -59,7 +59,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | FPI1TBMWR7         | 1 TB   | 1       | 45    | 0     | 0.12   |
 | Silico... | MS10               | 1 TB   | 4       | 39    | 0     | 0.11   |
 | Silico... | 1TB                | 1 TB   | 1       | 38    | 0     | 0.11   |
-| Silico... | NV900-1T           | 1 TB   | 1       | 36    | 0     | 0.10   |
+| Silico... | NV900-1T           | 1 TB   | 1       | 38    | 0     | 0.10   |
 | Silico... | KLLISRE            | 128 GB | 1       | 34    | 0     | 0.10   |
 | Silico... | PCIe SSD           | 256 GB | 1       | 34    | 0     | 0.10   |
 | Silico... | NVMe SSD           | 1 TB   | 1       | 33    | 0     | 0.09   |

@@ -29,7 +29,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8PCP3512F-A01    | 512 GB | 1       | 180   | 0     | 0.49   |
 | Kingston  | SA2000M8500G       | 500 GB | 142     | 175   | 0     | 0.48   |
 | Kingston  | SEDC1000BM8240G    | 240 GB | 3       | 173   | 0     | 0.47   |
-| Kingston  | SA2000M8250G       | 250 GB | 107     | 166   | 0     | 0.45   |
+| Kingston  | SA2000M8250G       | 250 GB | 107     | 166   | 0     | 0.46   |
 | Kingston  | RBUSNS8154P3512GJ1 | 512 GB | 21      | 164   | 0     | 0.45   |
 | Kingston  | RBUSNS8154P3512GJ5 | 512 GB | 6       | 143   | 0     | 0.39   |
 | Kingston  | SA2000M81000G      | 1 TB   | 167     | 143   | 19    | 0.39   |
@@ -37,7 +37,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SEDC1000BM8480G    | 480 GB | 1       | 136   | 0     | 0.37   |
 | Kingston  | SA1000M8480G       | 480 GB | 9       | 131   | 0     | 0.36   |
 | Kingston  | OM8PCP31024F-AI1   | 1 TB   | 9       | 114   | 0     | 0.31   |
-| Kingston  | SKC2500M81000G     | 1 TB   | 19      | 107   | 0     | 0.30   |
+| Kingston  | SKC2500M81000G     | 1 TB   | 19      | 108   | 0     | 0.30   |
 | Kingston  | OM8PCP3512F-AB     | 512 GB | 61      | 104   | 0     | 0.29   |
 | Kingston  | OM3PDP3128B-AH     | 128 GB | 1       | 102   | 0     | 0.28   |
 | Kingston  | RBUSNS8154P3256GJ3 | 256 GB | 28      | 99    | 0     | 0.27   |
@@ -62,9 +62,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SNVS2000G          | 2 TB   | 25      | 50    | 0     | 0.14   |
 | Kingston  | RBUSNS8154P3128GJ3 | 128 GB | 3       | 47    | 0     | 0.13   |
 | Kingston  | OM8PDP3256B-A01    | 256 GB | 11      | 45    | 0     | 0.13   |
-| Kingston  | SNVS250G           | 250 GB | 27      | 42    | 2     | 0.11   |
+| Kingston  | SNVS250G           | 250 GB | 27      | 43    | 2     | 0.11   |
 | Kingston  | SNVS1000G          | 1 TB   | 44      | 39    | 0     | 0.11   |
-| Kingston  | SNVS500G           | 500 GB | 123     | 38    | 0     | 0.10   |
+| Kingston  | SNVS500G           | 500 GB | 123     | 38    | 0     | 0.11   |
 | Kingston  | OM8PDP3512B-AA1    | 512 GB | 35      | 34    | 0     | 0.09   |
 | Kingston  | OM3PDP3-AD NVMe... | 256 GB | 16      | 33    | 0     | 0.09   |
 | Kingston  | OM3PDP3256B-A01    | 256 GB | 2       | 33    | 0     | 0.09   |

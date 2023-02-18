@@ -30,9 +30,9 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD7SN6S512G1122    | 512 GB | 1       | 1488  | 0     | 4.08   |
 | SanDisk   | SDSA6DM-016G-1006  | 16 GB  | 4       | 1413  | 0     | 3.87   |
 | SanDisk   | SD5SE2128G1002E    | 128 GB | 4       | 1285  | 0     | 3.52   |
+| SanDisk   | SDSSDRC032G        | 32 GB  | 9       | 1065  | 0     | 2.92   |
 | SanDisk   | SDSSDXP480G        | 480 GB | 1       | 1058  | 0     | 2.90   |
 | SanDisk   | SD8SB8U1T00        | 1 TB   | 1       | 1045  | 0     | 2.86   |
-| SanDisk   | SDSSDRC032G        | 32 GB  | 9       | 1017  | 0     | 2.79   |
 | SanDisk   | SD7SB7S512G1122    | 512 GB | 4       | 987   | 0     | 2.71   |
 | SanDisk   | SD7SB6S128G1122    | 128 GB | 8       | 975   | 0     | 2.67   |
 | SanDisk   | SD6SF1M064G1022    | 64 GB  | 2       | 963   | 0     | 2.64   |
@@ -54,7 +54,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD6SB2M-512G-1006  | 512 GB | 5       | 665   | 0     | 1.82   |
 | SanDisk   | SD7SB3Q-128G-1006  | 128 GB | 5       | 655   | 0     | 1.80   |
 | SanDisk   | SD7TB3Q-256G-1006  | 256 GB | 13      | 652   | 0     | 1.79   |
-| SanDisk   | Ultra II           | 480 GB | 46      | 645   | 1     | 1.70   |
+| SanDisk   | Ultra II           | 480 GB | 46      | 649   | 1     | 1.72   |
 | SanDisk   | SD8SBBU240G1122    | 240 GB | 5       | 621   | 0     | 1.70   |
 | SanDisk   | SDSSDHP256G        | 256 GB | 36      | 636   | 1     | 1.70   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 40      | 638   | 26    | 1.69   |
@@ -122,11 +122,11 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD9SB8W256G1122    | 256 GB | 1       | 370   | 0     | 1.02   |
 | SanDisk   | X300 M.2 2280      | 128 GB | 1       | 369   | 0     | 1.01   |
 | SanDisk   | SD8SN8U512G1002    | 512 GB | 25      | 365   | 0     | 1.00   |
-| SanDisk   | X400 M.2 2280      | 256 GB | 32      | 358   | 0     | 0.98   |
+| SanDisk   | X400 M.2 2280      | 256 GB | 32      | 363   | 0     | 1.00   |
 | SanDisk   | SD9SN8W512G1002    | 512 GB | 5       | 356   | 0     | 0.98   |
 | SanDisk   | SD8SB8U128G1001    | 128 GB | 4       | 351   | 0     | 0.96   |
+| SanDisk   | SD6SF1M128G1022I   | 128 GB | 2       | 454   | 1     | 0.95   |
 | SanDisk   | SD7SN6S-512G-1006  | 512 GB | 5       | 347   | 0     | 0.95   |
-| SanDisk   | SD6SF1M128G1022I   | 128 GB | 2       | 453   | 1     | 0.95   |
 | SanDisk   | SD7SB7S512G1001    | 512 GB | 3       | 346   | 0     | 0.95   |
 | SanDisk   | SSD U100           | 32 GB  | 11      | 347   | 92    | 0.95   |
 | SanDisk   | SD7UB2Q512G1122    | 512 GB | 3       | 345   | 0     | 0.95   |
@@ -155,13 +155,13 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8TB8U512G1001    | 512 GB | 5       | 296   | 0     | 0.81   |
 | SanDisk   | SD7SN6S-256G-1006  | 256 GB | 9       | 284   | 0     | 0.78   |
 | SanDisk   | SDSSDH3 512G       | 512 GB | 15      | 282   | 0     | 0.77   |
-| SanDisk   | SD8SN8U-256G-1006  | 256 GB | 60      | 301   | 69    | 0.77   |
+| SanDisk   | SD8SN8U-256G-1006  | 256 GB | 60      | 302   | 69    | 0.77   |
 | SanDisk   | SD9SN8W256G        | 256 GB | 4       | 273   | 0     | 0.75   |
 | SanDisk   | SD8SN8U128G1002    | 128 GB | 11      | 272   | 0     | 0.75   |
 | SanDisk   | SDSSDXPS960G       | 960 GB | 5       | 423   | 67    | 0.73   |
 | SanDisk   | SDSSDA240G         | 240 GB | 188     | 275   | 4     | 0.73   |
 | SanDisk   | SD9SN8W128G1102    | 128 GB | 12      | 265   | 0     | 0.73   |
-| SanDisk   | SDSSDA-1T00        | 1 TB   | 21      | 264   | 0     | 0.72   |
+| SanDisk   | SDSSDA-1T00        | 1 TB   | 21      | 265   | 0     | 0.73   |
 | SanDisk   | SD6SB2M512G1001    | 512 GB | 1       | 262   | 0     | 0.72   |
 | SanDisk   | SDSSDH32000G       | 2 TB   | 8       | 260   | 0     | 0.71   |
 | SanDisk   | SD5SG2256G1052E    | 256 GB | 5       | 392   | 1     | 0.71   |
@@ -191,8 +191,8 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD8TN8U512G1001    | 512 GB | 4       | 207   | 0     | 0.57   |
 | SanDisk   | SSD G5 BICS4       | 500 GB | 36      | 207   | 0     | 0.57   |
 | SanDisk   | SSD U100           | 16 GB  | 23      | 206   | 0     | 0.57   |
+| SanDisk   | SD8SN8U-128G-1006  | 128 GB | 50      | 234   | 83    | 0.56   |
 | SanDisk   | SD9SN8W256G1102    | 256 GB | 25      | 203   | 0     | 0.56   |
-| SanDisk   | SD8SN8U-128G-1006  | 128 GB | 50      | 233   | 83    | 0.56   |
 | SanDisk   | SD5SF2128G1014E    | 128 GB | 2       | 200   | 0     | 0.55   |
 | SanDisk   | SD9SN8W512G1102    | 512 GB | 3       | 199   | 0     | 0.55   |
 | SanDisk   | SD9SB8W512G1101    | 512 GB | 5       | 195   | 0     | 0.54   |
@@ -225,11 +225,11 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD9TN8W256G1001    | 256 GB | 3       | 117   | 0     | 0.32   |
 | SanDisk   | SDSSDH3 500G       | 500 GB | 50      | 116   | 1     | 0.32   |
 | SanDisk   | SDSSDH3 250G       | 250 GB | 12      | 115   | 0     | 0.32   |
-| SanDisk   | SSD PLUS           | 1 TB   | 124     | 156   | 75    | 0.31   |
+| SanDisk   | SSD PLUS           | 1 TB   | 124     | 157   | 75    | 0.32   |
 | SanDisk   | SSD PLUS           | 480 GB | 149     | 148   | 3     | 0.30   |
 | SanDisk   | SD6SB1M128G1002    | 128 GB | 1       | 110   | 0     | 0.30   |
+| SanDisk   | SSD PLUS           | 2 TB   | 7       | 107   | 0     | 0.29   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | 17      | 104   | 0     | 0.29   |
-| SanDisk   | SSD PLUS           | 2 TB   | 7       | 101   | 0     | 0.28   |
 | SanDisk   | SD7UB3Q128G1122    | 128 GB | 1       | 98    | 0     | 0.27   |
 | SanDisk   | ASMT109x- Volume   | 756 GB | 5       | 93    | 0     | 0.26   |
 | SanDisk   | SD8TN8U-256G-1016  | 256 GB | 1       | 86    | 0     | 0.24   |
@@ -309,8 +309,8 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Blue SA510 2.5  | 500 GB | 6       | 0     | 10    | 0.00   |
 | SanDisk   | SD9TB8W-256G-1006  | 256 GB | 1       | 171   | 984   | 0.00   |
 | SanDisk   | WD Blue SA510 M... | 1 TB   | 1       | 2     | 18    | 0.00   |
-| SanDisk   | SD9SB8W-128G-1006  | 128 GB | 1       | 83    | 992   | 0.00   |
 | SanDisk   | WD Green 2.5       | 240 GB | 2       | 0     | 0     | 0.00   |
+| SanDisk   | SD9SB8W-128G-1006  | 128 GB | 1       | 83    | 992   | 0.00   |
 | SanDisk   | WD Green M.2 2280  | 480 GB | 1       | 0     | 0     | 0.00   |
 | SanDisk   | TE22D10400GE8001   | 400 GB | 1       | 34    | 2047  | 0.00   |
 | SanDisk   | sandisk120         | 120 GB | 1       | 0     | 21    | 0.00   |
@@ -329,7 +329,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | SanDisk   | SATA Cloudspeed Max... | 3      | 4       | 333   | 0     | 0.91   |
-| SanDisk   | SanDisk based SSDs     | 35     | 482     | 336   | 19    | 0.82   |
-| SanDisk   | Marvell based SanDi... | 82     | 1683    | 301   | 37    | 0.74   |
+| SanDisk   | SanDisk based SSDs     | 35     | 482     | 337   | 19    | 0.82   |
+| SanDisk   | Marvell based SanDi... | 82     | 1683    | 302   | 37    | 0.74   |
 | SanDisk   | SandForce Driven SSDs  | 6      | 415     | 313   | 18    | 0.73   |
-| SanDisk   | Unknown                | 165    | 884     | 267   | 16    | 0.70   |
+| SanDisk   | Unknown                | 165    | 884     | 267   | 16    | 0.71   |

@@ -51,8 +51,8 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM4PS7256G         | 256 GB | 1       | 111   | 0     | 0.30   |
 | Team      | T253X1480G         | 480 GB | 13      | 110   | 0     | 0.30   |
 | Team      | L7 EVO SSD         | 64 GB  | 2       | 109   | 0     | 0.30   |
+| Team      | TM8PS7001T         | 1 TB   | 6       | 107   | 0     | 0.29   |
 | Team      | TM8PS7256G         | 256 GB | 13      | 105   | 0     | 0.29   |
-| Team      | TM8PS7001T         | 1 TB   | 6       | 97    | 0     | 0.27   |
 | Team      | T253A3512G         | 512 GB | 3       | 95    | 0     | 0.26   |
 | Team      | T253E2002T         | 2 TB   | 1       | 93    | 0     | 0.26   |
 | Team      | TM8PS7512G         | 512 GB | 14      | 92    | 0     | 0.25   |
@@ -96,4 +96,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Team      | Silicon Motion base... | 5      | 22      | 242   | 0     | 0.66   |
-| Team      | Unknown                | 53     | 200     | 171   | 4     | 0.42   |
+| Team      | Unknown                | 53     | 200     | 172   | 4     | 0.42   |

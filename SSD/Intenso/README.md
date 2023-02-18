@@ -63,7 +63,7 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | JAJM600M1TB        | 1 TB   | 4       | 32    | 0     | 0.09   |
 | Intenso   | SSD256GBS420       | 256 GB | 4       | 29    | 0     | 0.08   |
 | Intenso   | AFK-120GB          | 120 GB | 1       | 27    | 0     | 0.08   |
-| Intenso   | SSD                | 1 TB   | 3       | 18    | 0     | 0.05   |
+| Intenso   | SSD                | 1 TB   | 3       | 22    | 0     | 0.06   |
 | Intenso   | SSD                | 2 TB   | 1       | 14    | 0     | 0.04   |
 | Intenso   | SSD128GBCSU2-E7    | 128 GB | 1       | 14    | 0     | 0.04   |
 | Intenso   | TBYTE-SSD          | 128 GB | 1       | 11    | 0     | 0.03   |

@@ -22,15 +22,15 @@ MTBF - avg. MTBF in years per sample.
 | HP        | SSD M700           | 240 GB | 2       | 465   | 0     | 1.27   |
 | HP        | SSD M700           | 120 GB | 4       | 408   | 0     | 1.12   |
 | HP        | SSD S700 Pro       | 512 GB | 3       | 254   | 0     | 0.70   |
-| HP        | SSD S700           | 120 GB | 8       | 337   | 6     | 0.68   |
+| HP        | SSD S700           | 120 GB | 8       | 337   | 6     | 0.69   |
 | HP        | VK0240GDJXU        | 240 GB | 1       | 238   | 0     | 0.65   |
 | HP        | SSD S700           | 500 GB | 36      | 233   | 1     | 0.61   |
+| HP        | SSD S700 Pro       | 128 GB | 3       | 180   | 0     | 0.49   |
 | HP        | SSD S600           | 120 GB | 6       | 175   | 1     | 0.41   |
 | HP        | SSD S750           | 256 GB | 3       | 143   | 0     | 0.39   |
 | HP        | SSD S700           | 250 GB | 36      | 137   | 20    | 0.36   |
 | HP        | VK001920GWJPH      | 1.9 TB | 2       | 121   | 0     | 0.33   |
 | HP        | SSD S700 Pro       | 1 TB   | 5       | 105   | 0     | 0.29   |
-| HP        | SSD S700 Pro       | 128 GB | 3       | 90    | 0     | 0.25   |
 | HP        | SSD S700 Pro       | 256 GB | 3       | 80    | 0     | 0.22   |
 | HP        | SSD S650           | 120 GB | 2       | 75    | 0     | 0.21   |
 | HP        | SSD S700           | 1 TB   | 8       | 73    | 0     | 0.20   |

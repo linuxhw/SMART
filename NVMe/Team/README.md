@@ -26,7 +26,7 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM8FP4256G         | 256 GB | 3       | 72    | 0     | 0.20   |
 | Team      | TM8FP6512G         | 512 GB | 11      | 52    | 0     | 0.14   |
 | Team      | TM8FPD512G         | 512 GB | 4       | 36    | 0     | 0.10   |
-| Team      | TM8FP6001T         | 1 TB   | 12      | 31    | 0     | 0.09   |
+| Team      | TM8FP6001T         | 1 TB   | 12      | 36    | 0     | 0.10   |
 | Team      | TM8FP6128G         | 128 GB | 3       | 20    | 0     | 0.06   |
 | Team      | TM8FPD002T         | 2 TB   | 1       | 16    | 0     | 0.04   |
 | Team      | TM8FPD001T         | 1 TB   | 3       | 4     | 0     | 0.01   |

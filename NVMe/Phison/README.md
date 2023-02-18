@@ -31,9 +31,9 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | Sabrent            | 1 TB   | 156     | 241   | 0     | 0.66   |
 | Phison    | ESO256GMFCH-E3C-2  | 256 GB | 1       | 235   | 0     | 0.65   |
 | Phison    | ESR512GTLCG-EAC-4  | 512 GB | 4       | 203   | 0     | 0.56   |
-| Phison    | Sabrent Rocket 4.0 | 1 TB   | 81      | 200   | 0     | 0.55   |
+| Phison    | Sabrent Rocket 4.0 | 1 TB   | 81      | 202   | 0     | 0.56   |
 | Phison    | Viper M.2 VPN100   | 1 TB   | 23      | 183   | 0     | 0.50   |
-| Phison    | PCIe SSD           | 1 TB   | 99      | 174   | 0     | 0.48   |
+| Phison    | PCIe SSD           | 1 TB   | 99      | 178   | 0     | 0.49   |
 | Phison    | E12-512G-PHISON... | 512 GB | 4       | 171   | 0     | 0.47   |
 | Phison    | TurtleArmor T3000  | 2 TB   | 1       | 158   | 0     | 0.43   |
 | Phison    | Sabrent Rocket 4.0 | 500 GB | 12      | 153   | 0     | 0.42   |
@@ -53,6 +53,7 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | PM8128GPTCB3B-E82  | 128 GB | 1       | 100   | 0     | 0.28   |
 | Phison    | E12-1TB-PHISON-... | 1 TB   | 1       | 99    | 0     | 0.27   |
 | Phison    | ESO128GTLC9-E8C-2  | 128 GB | 1       | 93    | 0     | 0.26   |
+| Phison    | 512GB NVMe SSD     | 512 GB | 3       | 87    | 0     | 0.24   |
 | Phison    | PS5012-E12S-1T     | 1 TB   | 1       | 86    | 0     | 0.24   |
 | Phison    | Viper M.2 VPN110   | 512 GB | 1       | 85    | 0     | 0.23   |
 | Phison    | Sabrent Rocket Q4  | 1 TB   | 10      | 81    | 0     | 0.22   |
@@ -75,7 +76,6 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | Sabrent Rocket ... | 8 TB   | 1       | 31    | 0     | 0.09   |
 | Phison    | APS-SE20G-1T       | 1 TB   | 1       | 31    | 0     | 0.09   |
 | Phison    | Reletech P400 SSD  | 512 GB | 3       | 28    | 0     | 0.08   |
-| Phison    | 512GB NVMe SSD     | 512 GB | 3       | 26    | 0     | 0.07   |
 | Phison    | E12-512G-PHISON... | 512 GB | 2       | 25    | 0     | 0.07   |
 | Phison    | NE-256             | 256 GB | 3       | 25    | 0     | 0.07   |
 | Phison    | PM8512GPTCB4B8T... | 512 GB | 2       | 23    | 0     | 0.06   |

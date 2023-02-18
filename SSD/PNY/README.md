@@ -39,7 +39,7 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 960GB SSD    | 960 GB | 17      | 230   | 0     | 0.63   |
 | PNY       | CS900 480GB SSD    | 480 GB | 35      | 228   | 0     | 0.63   |
 | PNY       | SSD2SC240G5SA75... | 240 GB | 2       | 209   | 0     | 0.57   |
-| PNY       | CS900 240GB SSD    | 240 GB | 115     | 202   | 0     | 0.56   |
+| PNY       | CS900 240GB SSD    | 240 GB | 115     | 204   | 0     | 0.56   |
 | PNY       | SSD2SC240G1CS17... | 240 GB | 5       | 164   | 0     | 0.45   |
 | PNY       | SSD2SC240G1CS11... | 240 GB | 1       | 158   | 0     | 0.43   |
 | PNY       | EU SSD CS1311      | 120 GB | 1       | 150   | 0     | 0.41   |
@@ -55,11 +55,11 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS900 250GB SSD    | 250 GB | 13      | 74    | 0     | 0.20   |
 | PNY       | SSD2SC240G1CS17... | 240 GB | 1       | 59    | 0     | 0.16   |
 | PNY       | SSD2SC120G1LC76... | 120 GB | 1       | 56    | 0     | 0.16   |
+| PNY       | SSD2SC120G5LC70... | 120 GB | 1       | 50    | 0     | 0.14   |
 | PNY       | 480GB SATA SSD     | 480 GB | 1       | 44    | 0     | 0.12   |
 | PNY       | SSD2SC240G1CS27... | 240 GB | 1       | 43    | 0     | 0.12   |
-| PNY       | SSD2SC120G5LC70... | 120 GB | 1       | 42    | 0     | 0.12   |
 | PNY       | SSD2SC240G1SA75... | 240 GB | 4       | 43    | 22    | 0.11   |
-| PNY       | 1TB SATA SSD       | 1 TB   | 16      | 42    | 1     | 0.11   |
+| PNY       | 1TB SATA SSD       | 1 TB   | 16      | 46    | 1     | 0.11   |
 | PNY       | SSD2SC120G3LC70... | 120 GB | 2       | 390   | 510   | 0.11   |
 | PNY       | CS1211 480GB SS... | 480 GB | 1       | 38    | 0     | 0.11   |
 | PNY       | SSD2SC120G726A1... | 120 GB | 1       | 35    | 0     | 0.10   |
@@ -99,5 +99,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| PNY       | Phison Driven SSDs     | 10     | 342     | 251   | 0     | 0.69   |
+| PNY       | Phison Driven SSDs     | 10     | 342     | 252   | 0     | 0.69   |
 | PNY       | Unknown                | 52     | 171     | 141   | 49    | 0.29   |

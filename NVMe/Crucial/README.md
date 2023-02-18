@@ -24,7 +24,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000P2SSD8       | 1 TB   | 113     | 91    | 0     | 0.25   |
 | Crucial   | CT500P2SSD8        | 500 GB | 119     | 85    | 0     | 0.23   |
 | Crucial   | CT2000P2SSD8       | 2 TB   | 25      | 75    | 0     | 0.21   |
-| Crucial   | CT250P2SSD8        | 250 GB | 24      | 64    | 0     | 0.18   |
+| Crucial   | CT250P2SSD8        | 250 GB | 24      | 65    | 0     | 0.18   |
 | Crucial   | CT500P5SSD8        | 500 GB | 47      | 50    | 0     | 0.14   |
 | Crucial   | CT1000P5SSD8       | 1 TB   | 46      | 33    | 0     | 0.09   |
 | Crucial   | CT2000P3SSD8       | 2 TB   | 5       | 24    | 0     | 0.07   |

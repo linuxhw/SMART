@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MSI       | M390               | 1 TB   | 1       | 62    | 0     | 0.17   |
+| MSI       | M390               | 1 TB   | 1       | 63    | 0     | 0.17   |

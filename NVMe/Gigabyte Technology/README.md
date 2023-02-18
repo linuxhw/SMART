@@ -22,9 +22,9 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-GSM2NE3128GNTD  | 128 GB | 3       | 193   | 0     | 0.53   |
 | Gigaby... | GP-AG4500G         | 500 GB | 6       | 146   | 0     | 0.40   |
 | Gigaby... | GP-AG42TB          | 2 TB   | 4       | 123   | 0     | 0.34   |
+| Gigaby... | GP-AG41TB          | 1 TB   | 9       | 122   | 0     | 0.34   |
 | Gigaby... | GP-ASM2NE2256GTTDR | 256 GB | 2       | 114   | 0     | 0.31   |
 | Gigaby... | GP-ASM2NE6500GTTD  | 500 GB | 5       | 111   | 0     | 0.31   |
-| Gigaby... | GP-AG41TB          | 1 TB   | 9       | 99    | 0     | 0.27   |
 | Gigaby... | GP-GSM2NE3100TNTD  | 1 TB   | 13      | 96    | 0     | 0.27   |
 | Gigaby... | GP-ASM2NE6200TTTD  | 2 TB   | 6       | 81    | 0     | 0.22   |
 | Gigaby... | GP-GSM2NE8256GNTD  | 256 GB | 2       | 80    | 0     | 0.22   |

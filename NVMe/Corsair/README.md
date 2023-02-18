@@ -24,15 +24,15 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force MP500        | 960 GB | 1       | 424   | 0     | 1.16   |
 | Corsair   | Force MP600        | 2 TB   | 18      | 295   | 0     | 0.81   |
 | Corsair   | Force MP300        | 240 GB | 3       | 289   | 0     | 0.79   |
+| Corsair   | Force MP510        | 960 GB | 33      | 265   | 0     | 0.73   |
 | Corsair   | MP600 PRO XT       | 1 TB   | 1       | 261   | 0     | 0.72   |
-| Corsair   | Force MP510        | 960 GB | 33      | 259   | 0     | 0.71   |
 | Corsair   | Force MP600        | 500 GB | 16      | 251   | 0     | 0.69   |
-| Corsair   | Force MP600        | 1 TB   | 78      | 242   | 0     | 0.67   |
+| Corsair   | Force MP600        | 1 TB   | 78      | 243   | 0     | 0.67   |
 | Corsair   | Force MP510 1.9TB  | 1.9 TB | 12      | 238   | 0     | 0.65   |
 | Corsair   | Force MP300        | 120 GB | 3       | 223   | 0     | 0.61   |
 | Corsair   | MP600 PRO          | 1 TB   | 4       | 171   | 0     | 0.47   |
 | Corsair   | Force MP510        | 480 GB | 38      | 170   | 0     | 0.47   |
-| Corsair   | Force MP510        | 240 GB | 48      | 163   | 0     | 0.45   |
+| Corsair   | Force MP510        | 240 GB | 48      | 165   | 0     | 0.45   |
 | Corsair   | MP400              | 4 TB   | 2       | 134   | 0     | 0.37   |
 | Corsair   | Force MP510        | 4 TB   | 3       | 115   | 0     | 0.32   |
 | Corsair   | MP400              | 2 TB   | 7       | 97    | 0     | 0.27   |
@@ -42,7 +42,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | MP400              | 1 TB   | 6       | 48    | 0     | 0.13   |
 | Corsair   | MP600 PRO LPX      | 1 TB   | 1       | 40    | 0     | 0.11   |
 | Corsair   | MP600 PRO LPX      | 500 GB | 1       | 29    | 0     | 0.08   |
-| Corsair   | MP600 CORE         | 2 TB   | 5       | 17    | 0     | 0.05   |
+| Corsair   | MP600 CORE         | 2 TB   | 5       | 21    | 0     | 0.06   |
 | Corsair   | MP600 CORE         | 4 TB   | 2       | 8     | 0     | 0.02   |
 | Corsair   | MP600 PRO NH       | 1 TB   | 1       | 1     | 0     | 0.00   |
 | Corsair   | MP600 GS           | 1 TB   | 1       | 0     | 0     | 0.00   |

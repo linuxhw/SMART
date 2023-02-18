@@ -23,7 +23,7 @@ MTBF - avg. MTBF in years per sample.
 | QUMO      | SATA SSD           | 240 GB | 1       | 65    | 0     | 0.18   |
 | QUMO      | Q3DT-128GMCY       | 128 GB | 1       | 33    | 0     | 0.09   |
 | QUMO      | Q3DT-256GSCY       | 256 GB | 2       | 26    | 0     | 0.07   |
-| QUMO      | SSD                | 240 GB | 3       | 95    | 2     | 0.05   |
+| QUMO      | SSD                | 240 GB | 3       | 127   | 2     | 0.06   |
 | QUMO      | Q3DT-120GSCY       | 120 GB | 1       | 6     | 0     | 0.02   |
 | QUMO      | Q3DT-240GSCY       | 240 GB | 3       | 9     | 9     | 0.02   |
 | QUMO      | Q3DT-256GMSY-M2    | 256 GB | 2       | 3     | 0     | 0.01   |
