@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.4-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.1-desktop-2omv4050] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MK..52GSX
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 000039 ...
 Firmware Version: LV010M
 User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Mon May 24 14:14:25 2021 EST
+Local Time is:    Thu Feb 16 11:58:37 2023 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,9 +28,9 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
@@ -64,24 +64,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1281
-  4 Start_Stop_Count        -O--CK   100   100   000    -    7388
+  3 Spin_Up_Time            POS--K   100   100   001    -    1297
+  4 Start_Stop_Count        -O--CK   100   100   000    -    7690
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    45
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   085   085   000    -    6039
- 10 Spin_Retry_Count        PO--CK   247   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    6383
+  9 Power_On_Hours          -O--CK   084   084   000    -    6462
+ 10 Spin_Retry_Count        PO--CK   252   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    6677
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    2174
-192 Power-Off_Retract_Count -O--CK   096   096   000    -    2441
-193 Load_Cycle_Count        -O--CK   088   088   000    -    126866
-194 Temperature_Celsius     -O---K   100   100   000    -    37 (Min/Max 20/53)
+192 Power-Off_Retract_Count -O--CK   095   095   000    -    2647
+193 Load_Cycle_Count        -O--CK   086   086   000    -    147191
+194 Temperature_Celsius     -O---K   100   100   000    -    39 (Min/Max 20/53)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    40
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
-220 Disk_Shift              -O----   100   100   000    -    138
-222 Loaded_Hours            -O--CK   089   089   000    -    4460
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
+220 Disk_Shift              -O----   100   100   000    -    130
+222 Loaded_Hours            -O--CK   089   089   000    -    4757
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
 226 Load-in_Time            -OS--K   100   100   000    -    352
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 92 (device log contains only the most recent five errors)
+ATA Error Count: 93 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -124,6 +124,23 @@ ATA Error Count: 92 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 93 occurred at disk power-on lifetime: 6144 hours (256 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 10 50 a3 1a e0  Error: UNC 16 sectors at LBA = 0x001aa350 = 1745744
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 20 40 a3 1a e0 00      00:29:55.135  READ DMA EXT
+  35 00 e8 b8 1d 21 e0 00      00:29:55.130  WRITE DMA EXT
+  25 00 20 60 a9 b0 e0 00      00:29:55.129  READ DMA EXT
+  35 00 d8 e0 1c 21 e0 00      00:29:55.125  WRITE DMA EXT
+  35 00 e0 00 1c 21 e0 00      00:29:55.121  WRITE DMA EXT
 
 Error 92 occurred at disk power-on lifetime: 5950 hours (247 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -193,23 +210,6 @@ Error 89 occurred at disk power-on lifetime: 5949 hours (247 days + 21 hours)
   25 00 f0 e0 04 14 e0 00      00:03:22.278  READ DMA EXT
   25 00 20 20 e2 01 e0 00      00:03:22.265  READ DMA EXT
 
-Error 88 occurred at disk power-on lifetime: 5871 hours (244 days + 15 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 08 50 a3 1a e0  Error: UNC 8 sectors at LBA = 0x001aa350 = 1745744
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 08 50 a3 1a e0 00      00:06:02.151  READ DMA EXT
-  25 00 08 20 75 36 e0 00      00:06:02.141  READ DMA EXT
-  25 00 20 60 5f 08 e0 00      00:06:02.140  READ DMA EXT
-  25 00 20 40 5f 08 e0 00      00:06:02.137  READ DMA EXT
-  25 00 20 20 5f 08 e0 00      00:06:02.136  READ DMA EXT
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -234,8 +234,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     --/37 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     --/39 Celsius
 Lifetime    Min/Max Temperature:     --/53 Celsius
 
 SCT Temperature History Version:     2
@@ -243,7 +243,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (298)
+Temperature History Size (Index):    478 (170)
 
 Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
 SCT (Get) Error Recovery Control command failed

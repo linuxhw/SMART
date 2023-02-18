@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-8-amd64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.56-generic-1rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Aug 13 09:39:24 2021 MSK
+Local Time is:    Sat Aug 14 00:23:06 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,7 +63,7 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11565
+  9 Power_On_Hours          -O--CK   100   100   000    -    11579
  12 Power_Cycle_Count       -O--CK   100   100   000    -    391
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
@@ -72,22 +72,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 169 Bad_Block_Rate          ------   100   100   000    -    16
 170 Bad_Blk_Ct_Erl/Lat      ------   100   100   010    -    0/11
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    248 (Average 212)
+173 MaxAvgErase_Ct          ------   100   100   000    -    248 (Average 213)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    65
-194 Temperature_Celsius     -O---K   075   042   000    -    25 (Min/Max 17/42)
+194 Temperature_Celsius     -O---K   070   042   000    -    30 (Min/Max 17/42)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
 231 SSD_Life_Left           ------   078   078   000    -    78
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    19241
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    13071
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    3752
-244 Average_Erase_Count     ------   100   100   000    -    212
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    19315
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    13135
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    3803
+244 Average_Erase_Count     ------   100   100   000    -    213
 245 Max_Erase_Count         ------   100   100   000    -    248
-246 Total_Erase_Count       ------   100   100   000    -    814712
+246 Total_Erase_Count       ------   100   100   000    -    817072
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -147,13 +147,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4             391  ---  Lifetime Power-On Resets
-0x01  0x010  4           11565  ---  Power-on Hours
-0x01  0x018  6     27413611799  ---  Logical Sectors Written
-0x01  0x028  6      7868918083  ---  Logical Sectors Read
+0x01  0x010  4           11579  ---  Power-on Hours
+0x01  0x018  6     27546929124  ---  Logical Sectors Written
+0x01  0x028  6      7976441240  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              25  ---  Current Temperature
+0x05  0x008  1              30  ---  Current Temperature
 0x05  0x020  1              42  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
@@ -174,8 +174,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          231  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           42  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           48  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           85  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

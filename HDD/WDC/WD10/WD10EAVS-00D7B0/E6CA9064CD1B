@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.14-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.0-desktop-0.rc2.1omv2301] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Green
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01A01
 User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Thu Nov  4 16:55:14 2021 GMT
+Local Time is:    Wed Feb 15 14:07:01 2023 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -27,8 +27,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   184   152   021    -    5783
-  4 Start_Stop_Count        -O--CK   089   089   000    -    11087
+  3 Spin_Up_Time            POS--K   174   152   021    -    6266
+  4 Start_Stop_Count        -O--CK   089   089   000    -    11155
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   003   003   000    -    70976
+  7 Seek_Error_Rate         -OSR-K   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   001   001   000    -    80154
  10 Spin_Retry_Count        -O--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2026
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    105
-193 Load_Cycle_Count        -O--CK   197   197   000    -    11084
-194 Temperature_Celsius     -O---K   116   098   000    -    34
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    2094
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    122
+193 Load_Cycle_Count        -O--CK   197   197   000    -    11152
+194 Temperature_Celsius     -O---K   121   098   000    -    29
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -126,10 +126,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     32/39 Celsius
-Lifetime    Min/Max Temperature:     33/53 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     26/30 Celsius
+Lifetime    Min/Max Temperature:     19/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -137,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (275)
+Temperature History Size (Index):    478 (297)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -156,8 +156,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
-0x8000  4       167176  Vendor specific
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x8000  4       361080  Vendor specific
 
 
 

@@ -1,3 +1,6 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.118-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Device Model:     PLEXTOR PX-128S3C
 Serial Number:    --
@@ -7,10 +10,11 @@ User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Oct 16 22:16:03 2019 MSK
+Local Time is:    Thu Feb 16 21:23:00 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,13 +65,13 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    1953
- 12 Power_Cycle_Count       PO----   100   100   000    -    849
+  9 Power_On_Hours          -O----   100   100   000    -    4712
+ 12 Power_Cycle_Count       PO----   100   100   000    -    1903
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       PO----   100   100   000    -    0
 172 Unknown_Attribute       PO----   100   100   000    -    0
-173 Unknown_Attribute       PO----   100   100   000    -    21
-174 Unknown_Attribute       PO----   100   100   000    -    17
+173 Unknown_Attribute       PO----   100   100   000    -    71
+174 Unknown_Attribute       PO----   100   100   000    -    24
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    0
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   000    -    0
@@ -79,9 +83,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO----   100   100   000    -    0
 232 Available_Reservd_Space PO----   100   100   010    -    100
-233 Media_Wearout_Indicator PO----   100   100   000    -    3673
-241 Total_LBAs_Written      PO----   100   100   000    -    59214
-242 Total_LBAs_Read         PO----   100   100   000    -    39824
+233 Media_Wearout_Indicator PO----   100   100   000    -    13974
+241 Total_LBAs_Written      PO----   100   100   000    -    142625
+242 Total_LBAs_Read         PO----   100   100   000    -    104047
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,13 +116,18 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%       353         -
+# 1  Extended offline    Completed without error       00%      4636         -
+# 2  Extended offline    Completed without error       00%      4630         -
+# 3  Extended offline    Completed without error       00%      4531         -
+# 4  Extended offline    Completed without error       00%      4446         -
+# 5  Extended offline    Completed without error       00%      4247         -
+# 6  Extended offline    Completed without error       00%      2866         -
+# 7  Extended offline    Completed without error       00%       353         -
 
 Selective Self-tests/Logging not supported
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
-SCT Support Level:                   0
 Device State:                        Active (0)
 Current Temperature:                    45 Celsius
 Power Cycle Min/Max Temperature:     -1/ 0 Celsius
@@ -130,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (20)
+Temperature History Size (Index):    128 (44)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -139,20 +148,20 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             849  ---  Lifetime Power-On Resets
-0x01  0x010  4            1953  ---  Power-on Hours
-0x01  0x018  6      3880697149  ---  Logical Sectors Written
-0x01  0x020  6        61936192  ---  Number of Write Commands
-0x01  0x028  6      2609948782  ---  Logical Sectors Read
-0x01  0x030  6        45246573  ---  Number of Read Commands
+0x01  0x008  4            1903  ---  Lifetime Power-On Resets
+0x01  0x010  4            4712  ---  Power-on Hours
+0x01  0x018  6       757193337  ---  Logical Sectors Written
+0x01  0x020  6       142731328  ---  Number of Write Commands
+0x01  0x028  6      2523875552  ---  Logical Sectors Read
+0x01  0x030  6       111593568  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4          107830  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4          107839  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4          500038  ---  Number of Hardware Resets
-0x06  0x018  4            2613  ---  Number of Interface CRC Errors
+0x06  0x008  4         1140248  ---  Number of Hardware Resets
+0x06  0x018  4            2616  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -170,7 +179,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

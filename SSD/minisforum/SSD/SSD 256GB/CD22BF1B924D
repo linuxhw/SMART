@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.17.1-desktop-2omv4050] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.4-desktop-1omv2301] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     minisforum
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
 TRIM Command:     Available
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Apr 23 11:47:05 2022 CEST
+Local Time is:    Thu Feb 16 18:11:56 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,16 +62,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    47
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    21
+  9 Power_On_Hours          -O--C-   100   100   000    -    587
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    269
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   084   084   010    -    60
-173 Unknown_Attribute       -O--C-   100   100   000    -    65538
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    9
+173 Unknown_Attribute       -O--C-   100   100   000    -    983061
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    10
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    99
-241 Total_LBAs_Written      -O--C-   100   100   000    -    120
+231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    98
+241 Total_LBAs_Written      -O--C-   100   100   000    -    1265
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -118,10 +118,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              21  ---  Lifetime Power-On Resets
-0x01  0x010  4              47  ---  Power-on Hours
-0x01  0x018  6       251799385  ---  Logical Sectors Written
-0x01  0x028  6       277074997  ---  Logical Sectors Read
+0x01  0x008  4             269  ---  Lifetime Power-On Resets
+0x01  0x010  4             587  ---  Power-on Hours
+0x01  0x018  6      2653560822  ---  Logical Sectors Written
+0x01  0x028  6      1300683042  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -131,7 +131,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

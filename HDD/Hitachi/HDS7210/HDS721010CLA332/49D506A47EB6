@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Feb 13 12:01:31 2022 GMT
+Local Time is:    Thu Feb 16 16:42:29 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,17 +65,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   138   138   054    -    87
-  3 Spin_Up_Time            POS---   124   124   024    -    296 (Average 316)
-  4 Start_Stop_Count        -O--C-   097   097   000    -    14419
+  3 Spin_Up_Time            POS---   118   118   024    -    320 (Average 321)
+  4 Start_Stop_Count        -O--C-   097   097   000    -    15745
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   138   138   020    -    31
-  9 Power_On_Hours          -O--C-   095   095   000    -    36129
+  9 Power_On_Hours          -O--C-   095   095   000    -    39663
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    14409
-192 Power-Off_Retract_Count -O--CK   088   088   000    -    14419
-193 Load_Cycle_Count        -O--C-   088   088   000    -    14419
-194 Temperature_Celsius     -O----   230   230   000    -    26 (Min/Max 15/45)
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    15735
+192 Power-Off_Retract_Count -O--CK   087   087   000    -    15745
+193 Load_Cycle_Count        -O--C-   087   087   000    -    15745
+194 Temperature_Celsius     -O----   222   222   000    -    27 (Min/Max 15/45)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -126,8 +126,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     23/26 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     24/27 Celsius
 Lifetime    Min/Max Temperature:     15/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -136,7 +136,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (91)
+Temperature History Size (Index):    128 (9)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -145,24 +145,24 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4           14409  ---  Lifetime Power-On Resets
-0x01  0x010  4           36129  ---  Power-on Hours
-0x01  0x018  6     22476851431  ---  Logical Sectors Written
-0x01  0x020  6       288872980  ---  Number of Write Commands
-0x01  0x028  6    600379967451  ---  Logical Sectors Read
-0x01  0x030  6       423784814  ---  Number of Read Commands
+0x01  0x008  4           15735  ---  Lifetime Power-On Resets
+0x01  0x010  4           39663  ---  Power-on Hours
+0x01  0x018  6     23134912694  ---  Logical Sectors Written
+0x01  0x020  6       294403576  ---  Number of Write Commands
+0x01  0x028  6    711585507006  ---  Logical Sectors Read
+0x01  0x030  6       437877228  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           36089  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           36089  ---  Head Flying Hours
-0x03  0x018  4           14419  ---  Head Load Events
+0x03  0x008  4           39620  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           39620  ---  Head Flying Hours
+0x03  0x018  4           15745  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4            1592  ---  Read Recovery Attempts
+0x03  0x028  4            1622  ---  Read Recovery Attempts
 0x03  0x030  4               2  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            4653  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            5975  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
+0x05  0x008  1              27  ---  Current Temperature
 0x05  0x010  1              30  N--  Average Short Term Temperature
 0x05  0x018  1              29  N--  Average Long Term Temperature
 0x05  0x020  1              45  ---  Highest Temperature
@@ -176,8 +176,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           27650  ---  Number of Hardware Resets
-0x06  0x010  4           13236  ---  Number of ASR Events
+0x06  0x008  4           31664  ---  Number of Hardware Resets
+0x06  0x010  4           15918  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
