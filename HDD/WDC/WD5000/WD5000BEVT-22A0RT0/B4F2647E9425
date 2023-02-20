@@ -10,13 +10,13 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Jul  4 11:16:18 2022 CEST
+Local Time is:    Mon Jul 25 17:15:30 2022 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
@@ -63,18 +63,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   186   151   021    -    1666
-  4 Start_Stop_Count        -O--CK   031   031   000    -    69232
+  3 Spin_Up_Time            POS--K   187   151   021    -    1608
+  4 Start_Stop_Count        -O--CK   031   031   000    -    69534
   5 Reallocated_Sector_Ct   PO--CK   130   130   140    NOW  558
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   078   078   000    -    16414
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   078   078   000    -    16502
  10 Spin_Retry_Count        -O--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   000    -    9976
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    6672
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1292
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1433888
-194 Temperature_Celsius     -O---K   106   092   000    -    41
+ 12 Power_Cycle_Count       -O--CK   090   090   000    -    10237
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    6695
+192 Power-Off_Retract_Count -O--CK   198   198   000    -    1503
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1436709
+194 Temperature_Celsius     -O---K   098   092   000    -    49
 196 Reallocated_Event_Count -O--CK   001   001   000    -    209
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 39192 (device log contains only the most recent 24 errors)
+Device Error Count: 39202 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,141 +124,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 39192 [15] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39202 [1] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 03 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: WP at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:03.994  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:03.993  SET FEATURES [Enable write cache]
-  61 00 08 00 68 00 00 da 00 63 a0 40 00     01:15:03.433  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:03.306  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:03.305  SET FEATURES [Enable write cache]
+  61 00 80 00 f0 00 01 89 00 ce 18 40 00     01:21:41.013  WRITE FPDMA QUEUED
+  61 00 08 00 f0 00 00 b3 00 5e 98 40 00     01:21:41.012  WRITE FPDMA QUEUED
+  61 00 08 00 f0 00 00 7b 00 eb 68 40 00     01:21:41.011  WRITE FPDMA QUEUED
+  61 00 08 00 f0 00 00 8f 00 64 f0 40 00     01:21:41.011  WRITE FPDMA QUEUED
+  61 00 80 00 f0 00 01 88 00 ce 98 40 00     01:21:41.010  WRITE FPDMA QUEUED
 
-Error 39191 [14] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39201 [0] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: WP at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:03.993  SET FEATURES [Enable write cache]
-  61 00 08 00 68 00 00 da 00 63 a0 40 00     01:15:03.433  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:03.306  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:03.305  SET FEATURES [Enable write cache]
-  61 00 12 00 60 00 04 6a 00 26 30 40 00     01:15:02.731  WRITE FPDMA QUEUED
+  61 00 08 00 d0 00 00 7b 00 eb 68 40 00     01:21:37.786  WRITE FPDMA QUEUED
+  61 00 08 00 d0 00 00 8f 00 64 f0 40 00     01:21:37.786  WRITE FPDMA QUEUED
+  61 00 08 00 d0 00 00 b3 00 5e 98 40 00     01:21:37.786  WRITE FPDMA QUEUED
+  61 00 08 00 d0 00 00 8c 00 60 58 40 00     01:21:37.785  WRITE FPDMA QUEUED
+  60 00 08 00 80 00 01 8a 00 2c 20 40 00     01:21:37.785  READ FPDMA QUEUED
 
-Error 39190 [13] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39200 [23] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 03 00 00 a0 00 00 00 a0 00  Device Fault; Error: ABRT at LBA = 0xa0000000 = 2684354560
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: WP at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 08 00 68 00 00 da 00 63 a0 40 00     01:15:03.433  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:03.306  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:03.305  SET FEATURES [Enable write cache]
-  61 00 12 00 60 00 04 6a 00 26 30 40 00     01:15:02.731  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Disable SATA feature]
+  61 00 80 00 a0 00 01 87 00 ce 18 40 00     01:21:34.600  WRITE FPDMA QUEUED
+  60 00 40 00 c0 00 01 ad 00 27 48 40 00     01:21:34.595  READ FPDMA QUEUED
+  60 00 18 00 d8 00 01 f4 00 26 48 40 00     01:21:34.593  READ FPDMA QUEUED
+  60 00 10 00 a8 00 01 29 00 20 98 40 00     01:21:34.590  READ FPDMA QUEUED
+  61 00 08 00 a8 00 00 b3 00 5e 90 40 00     01:21:34.590  WRITE FPDMA QUEUED
 
-Error 39189 [12] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39199 [22] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 03 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: UNC at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:03.306  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:03.305  SET FEATURES [Enable write cache]
-  61 00 12 00 60 00 04 6a 00 26 30 40 00     01:15:02.731  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Enable write cache]
+  60 01 00 00 30 00 0a 1a 00 22 d6 40 00     01:21:31.438  READ FPDMA QUEUED
+  60 01 00 00 20 00 0a 19 00 22 d6 40 00     01:21:31.438  READ FPDMA QUEUED
+  60 01 00 00 10 00 0a 18 00 22 d6 40 00     01:21:31.434  READ FPDMA QUEUED
+  60 01 00 00 08 00 0a 17 00 22 d6 40 00     01:21:31.426  READ FPDMA QUEUED
+  60 01 00 00 f8 00 0a 16 00 22 d6 40 00     01:21:31.425  READ FPDMA QUEUED
 
-Error 39188 [11] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39198 [21] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: UNC at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:03.305  SET FEATURES [Enable write cache]
-  61 00 12 00 60 00 04 6a 00 26 30 40 00     01:15:02.731  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Enable write cache]
-  61 00 38 00 58 00 04 52 00 48 f8 40 00     01:15:02.060  WRITE FPDMA QUEUED
+  60 00 10 00 18 00 01 db 00 2d 30 40 00     01:21:28.425  READ FPDMA QUEUED
+  60 00 08 00 10 00 01 c2 00 2a e8 40 00     01:21:28.425  READ FPDMA QUEUED
+  60 01 00 00 f8 00 0a 1c 00 22 d6 40 00     01:21:28.425  READ FPDMA QUEUED
+  60 01 00 00 f0 00 0a 1b 00 22 d6 40 00     01:21:28.425  READ FPDMA QUEUED
+  60 01 00 00 e8 00 0a 1a 00 22 d6 40 00     01:21:28.425  READ FPDMA QUEUED
 
-Error 39187 [10] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39197 [20] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 03 00 00 a0 00 00 00 a0 00  Device Fault; Error: ABRT at LBA = 0xa0000000 = 2684354560
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: WP at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 12 00 60 00 04 6a 00 26 30 40 00     01:15:02.731  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Enable write cache]
-  61 00 38 00 58 00 04 52 00 48 f8 40 00     01:15:02.060  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:01.929  SET FEATURES [Disable SATA feature]
+  61 00 08 00 f8 00 00 b6 00 62 38 40 00     01:21:25.440  WRITE FPDMA QUEUED
+  60 00 10 00 f0 00 01 db 00 2d 30 40 00     01:21:25.440  READ FPDMA QUEUED
+  61 00 08 00 e8 00 00 8c 00 60 50 40 00     01:21:25.440  WRITE FPDMA QUEUED
+  60 00 40 00 e0 00 01 75 00 5d 7a 40 00     01:21:25.440  READ FPDMA QUEUED
+  60 00 08 00 d8 00 01 c2 00 2a e8 40 00     01:21:25.440  READ FPDMA QUEUED
 
-Error 39186 [9] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39196 [19] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 03 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: UNC at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Enable write cache]
-  61 00 38 00 58 00 04 52 00 48 f8 40 00     01:15:02.060  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:01.929  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:01.929  SET FEATURES [Enable write cache]
+  60 00 08 00 f8 00 01 dc 00 2d 40 40 00     01:21:22.433  READ FPDMA QUEUED
+  60 00 80 00 f0 00 01 bd 00 26 c0 40 00     01:21:22.433  READ FPDMA QUEUED
+  60 00 08 00 e8 00 01 15 00 1d 68 40 00     01:21:22.433  READ FPDMA QUEUED
+  61 00 08 00 e0 00 00 d0 00 eb c8 40 00     01:21:22.433  WRITE FPDMA QUEUED
+  61 00 01 00 d8 00 01 16 00 98 60 40 00     01:21:22.433  WRITE FPDMA QUEUED
 
-Error 39185 [8] occurred at disk power-on lifetime: 16234 hours (676 days + 10 hours)
+Error 39195 [18] occurred at disk power-on lifetime: 16493 hours (687 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
+  40 -- 51 01 00 00 00 0a 22 16 c5 40 00  Error: UNC at LBA = 0x0a2216c5 = 170006213
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:02.628  SET FEATURES [Enable write cache]
-  61 00 38 00 58 00 04 52 00 48 f8 40 00     01:15:02.060  WRITE FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 a0 00     01:15:01.929  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     01:15:01.929  SET FEATURES [Enable write cache]
-  61 00 08 00 50 00 02 4a 00 24 58 40 00     01:15:01.357  WRITE FPDMA QUEUED
+  60 00 08 00 f8 00 01 ba 00 2b c0 40 00     01:21:19.435  READ FPDMA QUEUED
+  60 00 08 00 f0 00 01 e0 00 22 18 40 00     01:21:19.435  READ FPDMA QUEUED
+  60 00 08 00 e8 00 01 e7 00 2c f8 40 00     01:21:19.435  READ FPDMA QUEUED
+  60 00 08 00 e0 00 01 dc 00 2d 40 40 00     01:21:19.435  READ FPDMA QUEUED
+  60 00 80 00 d8 00 01 bd 00 26 c0 40 00     01:21:19.435  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -278,9 +278,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     39/40 Celsius
-Lifetime    Min/Max Temperature:     28/57 Celsius
+Current Temperature:                    49 Celsius
+Power Cycle Min/Max Temperature:     49/50 Celsius
+Lifetime    Min/Max Temperature:      ?/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -291,7 +291,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (14)
+Temperature History Size (Index):    128 (57)
 
 SCT Error Recovery Control command not supported
 
@@ -308,7 +308,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4          239  Vendor specific
+0x8000  4          283  Vendor specific
 
