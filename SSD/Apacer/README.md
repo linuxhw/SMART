@@ -36,7 +36,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS510S             | 256 GB | 3       | 194   | 1     | 0.53   |
 | Apacer    | 8GB SATA Flash ... | 8 GB   | 4       | 186   | 52    | 0.49   |
 | Apacer    | AS340              | 120 GB | 24      | 128   | 0     | 0.35   |
-| Apacer    | AS350              | 240 GB | 20      | 131   | 1     | 0.35   |
+| Apacer    | AS350              | 240 GB | 20      | 132   | 1     | 0.35   |
 | Apacer    | AS450              | 120 GB | 1       | 115   | 0     | 0.32   |
 | Apacer    | AS350              | 256 GB | 55      | 106   | 0     | 0.29   |
 | Apacer    | 16GB SATA Flash... | 16 GB  | 13      | 339   | 19    | 0.29   |

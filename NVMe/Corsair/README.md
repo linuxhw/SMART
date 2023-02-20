@@ -42,7 +42,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | MP400              | 1 TB   | 6       | 48    | 0     | 0.13   |
 | Corsair   | MP600 PRO LPX      | 1 TB   | 1       | 40    | 0     | 0.11   |
 | Corsair   | MP600 PRO LPX      | 500 GB | 1       | 29    | 0     | 0.08   |
-| Corsair   | MP600 CORE         | 2 TB   | 5       | 21    | 0     | 0.06   |
+| Corsair   | MP600 CORE         | 2 TB   | 5       | 22    | 0     | 0.06   |
 | Corsair   | MP600 CORE         | 4 TB   | 2       | 8     | 0     | 0.02   |
 | Corsair   | MP600 PRO NH       | 1 TB   | 1       | 1     | 0     | 0.00   |
 | Corsair   | MP600 GS           | 1 TB   | 1       | 0     | 0     | 0.00   |

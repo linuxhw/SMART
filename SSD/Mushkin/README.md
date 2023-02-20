@@ -49,7 +49,7 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDE3240GB      | 240 GB | 2       | 139   | 0     | 0.38   |
 | Mushkin   | MKNSSDAT60GB-V     | 64 GB  | 1       | 106   | 0     | 0.29   |
 | Mushkin   | MKNSSDCR480GB      | 480 GB | 1       | 55    | 0     | 0.15   |
-| Mushkin   | MKNSSDRE2TB        | 2 TB   | 2       | 48    | 0     | 0.13   |
+| Mushkin   | MKNSSDRE2TB        | 2 TB   | 2       | 49    | 0     | 0.14   |
 | Mushkin   | MKNSSDS21TB        | 1 TB   | 12      | 35    | 26    | 0.09   |
 | Mushkin   | MKNSSDRE512GB      | 512 GB | 1       | 31    | 0     | 0.09   |
 | Mushkin   | MKNSSDTR240GB      | 240 GB | 2       | 20    | 0     | 0.05   |

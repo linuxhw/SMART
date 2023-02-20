@@ -94,9 +94,9 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNC128GBSJ      | 128 GB | 2       | 316   | 0     | 0.87   |
 | Toshiba   | THNSNJ512G8NY      | 512 GB | 1       | 315   | 0     | 0.86   |
 | Toshiba   | THNSNJ128GMCT      | 128 GB | 1       | 306   | 0     | 0.84   |
+| Toshiba   | TR200              | 480 GB | 22      | 303   | 0     | 0.83   |
 | Toshiba   | THNSNH060GMCT      | 64 GB  | 1       | 292   | 0     | 0.80   |
 | Toshiba   | Q300               | 120 GB | 9       | 292   | 0     | 0.80   |
-| Toshiba   | TR200              | 480 GB | 22      | 290   | 0     | 0.80   |
 | Toshiba   | THNSNC128GMLJ      | 128 GB | 2       | 284   | 0     | 0.78   |
 | Toshiba   | THNSFJ256GMCT      | 256 GB | 1       | 275   | 0     | 0.75   |
 | Toshiba   | A100               | 240 GB | 11      | 265   | 0     | 0.73   |

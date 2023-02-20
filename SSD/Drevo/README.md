@@ -46,4 +46,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Drevo     | Unknown                | 6      | 9       | 321   | 544   | 0.55   |
-| Drevo     | Silicon Motion base... | 2      | 13      | 263   | 27    | 0.23   |
+| Drevo     | Silicon Motion base... | 2      | 13      | 264   | 27    | 0.23   |

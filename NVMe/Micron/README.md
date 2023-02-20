@@ -20,8 +20,8 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDHAL3T2MCE-1... | 3.2 TB | 1       | 645   | 0     | 1.77   |
 | Micron    | 9300_MTFDHAL15T... | 15.... | 3       | 333   | 0     | 0.91   |
 | Micron    | 7300_MTFDHBE6T4TDG | 6.4 TB | 2       | 293   | 0     | 0.80   |
+| Micron    | 9300_MTFDHAL6T4TDR | 6.4 TB | 2       | 201   | 0     | 0.55   |
 | Micron    | 9200_MTFDHAL1T6TCU | 1.6 TB | 1       | 200   | 0     | 0.55   |
-| Micron    | 9300_MTFDHAL6T4TDR | 6.4 TB | 2       | 171   | 0     | 0.47   |
 | Micron    | 2200V_MTFDHBA25... | 256 GB | 2       | 133   | 0     | 0.37   |
 | Micron    | 2200S NVMe         | 512 GB | 51      | 114   | 0     | 0.31   |
 | Micron    | 7400_MTFDKBG3T8TDZ | 3.8 TB | 4       | 106   | 0     | 0.29   |

@@ -38,12 +38,12 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Blast              | 120 GB | 13      | 432   | 0     | 1.19   |
 | Patriot   | Pyro SSD           | 120 GB | 2       | 386   | 0     | 1.06   |
 | Patriot   | Blaze              | 64 GB  | 7       | 291   | 0     | 0.80   |
-| Patriot   | Burst              | 480 GB | 44      | 271   | 1     | 0.72   |
+| Patriot   | Burst              | 480 GB | 44      | 273   | 1     | 0.72   |
 | Patriot   | Burst              | 960 GB | 12      | 239   | 0     | 0.66   |
 | Patriot   | Spark              | 128 GB | 9       | 234   | 0     | 0.64   |
 | Patriot   | Blaze              | 120 GB | 8       | 208   | 0     | 0.57   |
 | Patriot   | Burst              | 240 GB | 100     | 196   | 0     | 0.54   |
-| Patriot   | Burst              | 120 GB | 107     | 183   | 0     | 0.50   |
+| Patriot   | Burst              | 120 GB | 107     | 185   | 0     | 0.51   |
 | Patriot   | P200               | 2 TB   | 3       | 322   | 16    | 0.34   |
 | Patriot   | Burst Elite        | 960 GB | 2       | 120   | 0     | 0.33   |
 | Patriot   | P210               | 1 TB   | 5       | 129   | 1     | 0.32   |
@@ -84,6 +84,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Patriot   | Phison Driven SSDs     | 11     | 316     | 249   | 1     | 0.68   |
+| Patriot   | Phison Driven SSDs     | 11     | 316     | 250   | 1     | 0.68   |
 | Patriot   | Unknown                | 32     | 127     | 199   | 33    | 0.44   |
 | Patriot   | Silicon Motion base... | 4      | 21      | 170   | 35    | 0.23   |

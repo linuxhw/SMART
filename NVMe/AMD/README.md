@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| AMD       | R5MP120G8          | 120 GB | 10      | 244   | 0     | 0.67   |
+| AMD       | R5MP120G8          | 120 GB | 10      | 246   | 0     | 0.67   |
 | AMD       | R5MP240G8          | 240 GB | 6       | 217   | 0     | 0.60   |
 | AMD       | R5MP128G8          | 128 GB | 1       | 116   | 0     | 0.32   |
 | AMD       | R5MP256G8          | 256 GB | 1       | 107   | 0     | 0.29   |

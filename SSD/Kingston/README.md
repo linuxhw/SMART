@@ -97,7 +97,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV300S37A240G     | 240 GB | 19      | 387   | 1     | 0.98   |
 | Kingston  | SHPM2280P2H-480G   | 480 GB | 4       | 487   | 2     | 0.98   |
 | Kingston  | SUV400S37120G      | 120 GB | 206     | 374   | 50    | 0.96   |
-| Kingston  | SHFS37A240G        | 240 GB | 45      | 373   | 159   | 0.95   |
+| Kingston  | SHFS37A240G        | 240 GB | 45      | 374   | 159   | 0.96   |
 | Kingston  | SA400S371920G      | 1.9 TB | 5       | 346   | 0     | 0.95   |
 | Kingston  | SUV300S37A120G     | 120 GB | 48      | 349   | 1     | 0.94   |
 | Kingston  | SMS200S3240G       | 240 GB | 7       | 676   | 436   | 0.94   |

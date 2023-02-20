@@ -29,8 +29,8 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP310              | 64 GB  | 1       | 1015  | 0     | 2.78   |
 | ADATA     | SP800              | 32 GB  | 2       | 1001  | 0     | 2.74   |
 | ADATA     | SX930              | 480 GB | 2       | 869   | 0     | 2.38   |
+| ADATA     | SSD S599           | 55 GB  | 1       | 836   | 0     | 2.29   |
 | ADATA     | SSD S510           | 120 GB | 11      | 844   | 1     | 2.28   |
-| ADATA     | SSD S599           | 55 GB  | 1       | 832   | 0     | 2.28   |
 | ADATA     | SP600              | 128 GB | 14      | 800   | 0     | 2.19   |
 | ADATA     | SP600              | 256 GB | 14      | 783   | 0     | 2.15   |
 | ADATA     | SP600FA3-256GM     | 256 GB | 1       | 735   | 0     | 2.02   |
@@ -77,7 +77,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP920SS            | 128 GB | 10      | 442   | 8     | 0.54   |
 | ADATA     | SX900              | 256 GB | 11      | 670   | 483   | 0.52   |
 | ADATA     | SSD                | 32 GB  | 3       | 286   | 6     | 0.50   |
-| ADATA     | SU800              | 1 TB   | 34      | 201   | 19    | 0.49   |
+| ADATA     | SU800              | 1 TB   | 34      | 202   | 19    | 0.49   |
 | ADATA     | SU635              | 240 GB | 28      | 185   | 38    | 0.49   |
 | ADATA     | SU900              | 1 TB   | 5       | 178   | 1     | 0.49   |
 | ADATA     | AXNS381E-128GM-B   | 128 GB | 2       | 175   | 0     | 0.48   |
@@ -88,7 +88,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SP550              | 960 GB | 1       | 154   | 0     | 0.42   |
 | ADATA     | SU800              | 128 GB | 52      | 185   | 3     | 0.41   |
 | ADATA     | SU650              | 480 GB | 38      | 175   | 165   | 0.39   |
-| ADATA     | SU810NS38 SATA ... | 256 GB | 12      | 138   | 0     | 0.38   |
+| ADATA     | SU810NS38 SATA ... | 256 GB | 12      | 142   | 0     | 0.39   |
 | ADATA     | SU630              | 960 GB | 10      | 143   | 1     | 0.38   |
 | ADATA     | SU650NS38          | 480 GB | 6       | 137   | 0     | 0.38   |
 | ADATA     | SU800              | 256 GB | 86      | 163   | 37    | 0.38   |
@@ -98,7 +98,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU655              | 240 GB | 6       | 171   | 7     | 0.33   |
 | ADATA     | SSD S511           | 64 GB  | 3       | 450   | 679   | 0.33   |
 | ADATA     | SP550              | 240 GB | 42      | 130   | 79    | 0.33   |
-| ADATA     | SU650              | 120 GB | 155     | 135   | 57    | 0.33   |
+| ADATA     | SU650              | 120 GB | 156     | 134   | 56    | 0.32   |
 | ADATA     | SU700              | 120 GB | 12      | 170   | 2     | 0.32   |
 | ADATA     | SSD SX900 512GB... | 512 GB | 2       | 116   | 0     | 0.32   |
 | ADATA     | SU800              | 2 TB   | 8       | 124   | 1     | 0.29   |
@@ -169,4 +169,4 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | JMicron based SSDs     | 7      | 45      | 540   | 1     | 1.42   |
 | ADATA     | SandForce Driven SSDs  | 15     | 131     | 514   | 4     | 1.24   |
 | ADATA     | Unknown                | 78     | 521     | 214   | 122   | 0.38   |
-| ADATA     | Silicon Motion base... | 23     | 748     | 145   | 37    | 0.35   |
+| ADATA     | Silicon Motion base... | 23     | 749     | 145   | 37    | 0.35   |

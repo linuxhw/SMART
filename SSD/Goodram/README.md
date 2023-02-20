@@ -40,7 +40,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | IRP-SSDPR-S25C-256 | 256 GB | 4       | 225   | 0     | 0.62   |
 | Goodram   | SSDPR-CL100-960-G3 | 960 GB | 4       | 223   | 0     | 0.61   |
 | Goodram   | SSDPR-CX300-240    | 240 GB | 9       | 213   | 0     | 0.58   |
-| Goodram   | SSDPR-CX300-120    | 120 GB | 14      | 191   | 0     | 0.52   |
+| Goodram   | SSDPR-CX300-120    | 120 GB | 14      | 191   | 0     | 0.53   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 21      | 184   | 0     | 0.51   |
 | Goodram   | IRIDIUM            | 480 GB | 3       | 181   | 0     | 0.50   |
 | Goodram   | SSDPR-CX400-128    | 128 GB | 31      | 180   | 0     | 0.49   |

@@ -18,7 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Silico... | 128GB SSD          | 128 GB | 1       | 792   | 0     | 2.17   |
-| Silico... | Asgard AN3 2TNV... | 2 TB   | 14      | 715   | 0     | 1.96   |
+| Silico... | Asgard AN3 2TNV... | 2 TB   | 14      | 717   | 0     | 1.97   |
 | Silico... | NVME SSD           | 1 TB   | 3       | 343   | 0     | 0.94   |
 | Silico... | M Series NVMe S... | 256 GB | 4       | 277   | 0     | 0.76   |
 | Silico... | Asgard AN2 250N... | 250 GB | 3       | 207   | 0     | 0.57   |
