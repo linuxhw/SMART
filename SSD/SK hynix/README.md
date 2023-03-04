@@ -122,5 +122,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| SK hynix  | SATA SSDs              | 46     | 515     | 309   | 85    | 0.62   |
-| SK hynix  | Unknown                | 39     | 132     | 301   | 133   | 0.35   |
+| SK hynix  | SATA SSDs              | 53     | 544     | 308   | 91    | 0.60   |
+| SK hynix  | Unknown                | 32     | 103     | 303   | 115   | 0.40   |

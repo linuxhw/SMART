@@ -92,5 +92,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | WDC       | Blue and Green SSDs    | 6      | 93      | 322   | 1     | 0.87   |
-| WDC       | Unknown                | 8      | 20      | 252   | 247   | 0.62   |
-| WDC       | Blue / Red / Green ... | 40     | 2360    | 203   | 3     | 0.53   |
+| WDC       | Unknown                | 7      | 14      | 301   | 353   | 0.72   |
+| WDC       | Blue / Red / Green ... | 41     | 2366    | 203   | 3     | 0.53   |

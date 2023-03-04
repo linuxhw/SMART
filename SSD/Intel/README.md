@@ -260,7 +260,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Intel     | X25-E SSDs             | 2      | 4       | 2237  | 0     | 6.13   |
 | Intel     | Dell Certified Inte... | 2      | 6       | 1247  | 1     | 3.15   |
-| Intel     | 730 and DC S35x0/36... | 35     | 132     | 1239  | 102   | 2.98   |
+| Intel     | 730 and DC S35x0/36... | 37     | 134     | 1249  | 100   | 3.01   |
 | Intel     | X18-M/X25-M G1 SSDs    | 4      | 4       | 1037  | 0     | 2.84   |
 | Intel     | 320 Series SSDs        | 13     | 115     | 787   | 20    | 1.98   |
 | Intel     | 520 Series SSDs        | 9      | 169     | 829   | 193   | 1.84   |
@@ -268,13 +268,13 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | S3520 Series SSDs      | 4      | 4       | 977   | 1     | 1.56   |
 | Intel     | 330/335 Series SSDs    | 6      | 87      | 787   | 1     | 1.49   |
 | Intel     | 510 Series SSDs        | 2      | 6       | 388   | 0     | 1.06   |
-| Intel     | S4510/S4610/S4500/S... | 16     | 116     | 379   | 27    | 0.97   |
+| Intel     | S4510/S4610/S4500/S... | 17     | 117     | 376   | 27    | 0.96   |
 | Intel     | 53x and Pro 1500/25... | 18     | 204     | 476   | 7     | 0.87   |
 | Intel     | Dell Certified Inte... | 3      | 3       | 265   | 0     | 0.73   |
 | Intel     | X18-M/X25-M/X25-V G... | 14     | 75      | 754   | 17    | 0.63   |
-| Intel     | Unknown                | 66     | 229     | 238   | 76    | 0.50   |
+| Intel     | Unknown                | 56     | 200     | 242   | 77    | 0.50   |
 | Intel     | 53x and Pro 2500 Se... | 2      | 2       | 177   | 0     | 0.49   |
 | Intel     | 311/313 Series SSDs    | 1      | 3       | 197   | 10    | 0.44   |
-| Intel     | 545s Series SSDs       | 11     | 139     | 149   | 1     | 0.37   |
+| Intel     | 545s Series SSDs       | 18     | 165     | 139   | 12    | 0.34   |
 | Intel     | SSD Pro 5400s Series   | 1      | 1       | 42    | 0     | 0.12   |
 | Intel     | 540 Series SSDs        | 9      | 41      | 28    | 271   | 0.03   |

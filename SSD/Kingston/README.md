@@ -266,6 +266,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | JMicron based SSDs     | 13     | 60      | 645   | 3     | 1.18   |
 | Kingston  | SSDNow UV400           | 1      | 38      | 421   | 78    | 1.03   |
 | Kingston  | SSDNow UV400/500       | 13     | 572     | 343   | 58    | 0.83   |
-| Kingston  | Unknown                | 121    | 371     | 260   | 77    | 0.60   |
-| Kingston  | Phison Driven SSDs     | 27     | 3233    | 202   | 1     | 0.52   |
-| Kingston  | Silicon Motion base... | 4      | 85      | 48    | 1     | 0.13   |
+| Kingston  | Unknown                | 111    | 324     | 266   | 88    | 0.60   |
+| Kingston  | Phison Driven SSDs     | 34     | 3267    | 203   | 1     | 0.52   |
+| Kingston  | Silicon Motion base... | 7      | 98      | 47    | 1     | 0.13   |

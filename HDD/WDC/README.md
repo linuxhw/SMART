@@ -2137,7 +2137,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | RE                     | 35     | 120     | 1139  | 62    | 2.21   |
 | WDC       | RE4                    | 28     | 257     | 1146  | 30    | 2.15   |
 | WDC       | Caviar Green           | 180    | 3004    | 1105  | 69    | 2.07   |
-| WDC       | Red                    | 37     | 1466    | 878   | 10    | 1.98   |
+| WDC       | Red                    | 41     | 1512    | 854   | 10    | 1.93   |
 | WDC       | Raptor                 | 17     | 32      | 1340  | 13    | 1.85   |
 | WDC       | Caviar SE              | 171    | 696     | 979   | 31    | 1.81   |
 | WDC       | Ultrastar He10/12      | 4      | 129     | 646   | 0     | 1.77   |
@@ -2154,7 +2154,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | Caviar Blue EIDE       | 18     | 131     | 731   | 50    | 1.19   |
 | WDC       | Scorpio Blue EIDE      | 8      | 13      | 426   | 0     | 1.17   |
 | WDC       | HGST Ultrastar He10    | 2      | 68      | 400   | 2     | 1.10   |
-| WDC       | Elements / My Passport | 88     | 779     | 492   | 24    | 1.09   |
+| WDC       | Elements / My Passport | 91     | 783     | 491   | 23    | 1.09   |
 | WDC       | Blue                   | 64     | 1330    | 380   | 17    | 0.95   |
 | WDC       | Purple                 | 36     | 283     | 437   | 12    | 0.93   |
 | WDC       | Scorpio Black          | 59     | 395     | 545   | 92    | 0.92   |
@@ -2167,17 +2167,19 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | Blue Mobile            | 151    | 3448    | 296   | 22    | 0.68   |
 | WDC       | Protege                | 8      | 15      | 669   | 30    | 0.60   |
 | WDC       | Shrek LT 2.5           | 6      | 14      | 381   | 3     | 0.59   |
+| WDC       | Ultrastar              | 6      | 100     | 212   | 1     | 0.57   |
 | WDC       | Black P10              | 3      | 10      | 195   | 0     | 0.53   |
-| WDC       | White Label            | 13     | 130     | 179   | 1     | 0.47   |
+| WDC       | Unknown                | 32     | 45      | 309   | 54    | 0.48   |
 | WDC       | Blue UltraSlim         | 4      | 5       | 170   | 0     | 0.47   |
 | WDC       | Black UltraSlim        | 1      | 2       | 596   | 10    | 0.43   |
-| WDC       | Internal Use HDD       | 13     | 88      | 151   | 13    | 0.40   |
-| WDC       | Unknown                | 37     | 67      | 229   | 37    | 0.38   |
-| WDC       | Red Plus               | 8      | 109     | 125   | 1     | 0.34   |
+| WDC       | Internal Use HDD       | 10     | 84      | 148   | 13    | 0.40   |
+| WDC       | Red Plus               | 5      | 49      | 136   | 0     | 0.37   |
 | WDC       | IU HA500               | 1      | 7       | 117   | 0     | 0.32   |
 | WDC       | Ultrastar DC HC530     | 2      | 17      | 113   | 1     | 0.31   |
 | WDC       | Scorpio EIDE           | 11     | 15      | 343   | 61    | 0.31   |
+| WDC       | White Label            | 10     | 54      | 115   | 1     | 0.30   |
 | WDC       | IU CB500               | 3      | 31      | 105   | 66    | 0.28   |
 | WDC       | Caviar WDxxxBA         | 1      | 1       | 296   | 20    | 0.04   |
+| WDC       | Ultrastar DC HC650     | 1      | 12      | 11    | 0     | 0.03   |
 | WDC       | eServer                | 1      | 1       | 10    | 0     | 0.03   |
 | WDC       | Ultrastar DC HC330     | 1      | 1       | 1     | 0     | 0.00   |

@@ -807,7 +807,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | Constellation CS       | 4      | 25      | 1230  | 196   | 2.51   |
 | Seagate   | Desktop HDD.15         | 6      | 208     | 1052  | 111   | 2.40   |
 | Seagate   | Exos X12               | 1      | 20      | 973   | 9     | 2.38   |
-| Seagate   | Enterprise Capacity... | 20     | 263     | 910   | 16    | 2.23   |
+| Seagate   | Enterprise Capacity... | 21     | 264     | 906   | 16    | 2.22   |
 | Seagate   | Constellation ES.3     | 8      | 120     | 1097  | 161   | 2.19   |
 | Seagate   | Enterprise NAS HDD     | 4      | 7       | 778   | 1     | 2.09   |
 | Seagate   | Pipeline HD 5900.2     | 9      | 211     | 977   | 114   | 2.02   |
@@ -858,7 +858,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | FireCuda 3.5           | 2      | 110     | 428   | 24    | 0.94   |
 | Seagate   | Barracuda LP           | 4      | 116     | 875   | 363   | 0.94   |
 | Seagate   | Barracuda              | 2      | 8       | 325   | 0     | 0.89   |
-| Seagate   | Exos 7E8               | 14     | 72      | 326   | 29    | 0.84   |
+| Seagate   | Exos 7E8               | 13     | 71      | 331   | 29    | 0.85   |
 | Seagate   | Momentus 7200.5        | 4      | 175     | 597   | 135   | 0.82   |
 | Seagate   | SpinPoint M8 (AF)      | 6      | 1714    | 433   | 42    | 0.82   |
 | Seagate   | Laptop Thin SSHD       | 1      | 3       | 284   | 0     | 0.78   |

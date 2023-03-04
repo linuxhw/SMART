@@ -135,7 +135,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | RealSSD m4/C400        | 2      | 15      | 832   | 135   | 2.17   |
 | Crucial   | BX/MX1/2/3/500, M5/... | 22     | 488     | 471   | 67    | 0.96   |
 | Crucial   | Indilinx Barefoot b... | 1      | 1       | 200   | 0     | 0.55   |
-| Crucial   | Client SSDs            | 32     | 3007    | 205   | 7     | 0.50   |
-| Crucial   | Unknown                | 16     | 31      | 170   | 2     | 0.37   |
+| Crucial   | Client SSDs            | 33     | 3010    | 205   | 7     | 0.50   |
+| Crucial   | Unknown                | 15     | 28      | 177   | 2     | 0.38   |
 | Crucial   | MX1/2/300, M5/600, ... | 1      | 12      | 1064  | 100   | 0.26   |
 | Crucial   | Silicon Motion base... | 7      | 144     | 94    | 1     | 0.26   |

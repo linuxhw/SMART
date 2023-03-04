@@ -1688,10 +1688,10 @@ MTBF - avg. MTBF in years per sample.
 | Quantum   | Fireball Plus AS       | 2      | 2       | 845   | 0     | 2.32   |
 | Samsung   | SpinPoint F3 RE        | 1      | 6       | 2421  | 24    | 2.31   |
 | Hitachi   | CinemaStar P7K500      | 4      | 10      | 999   | 2     | 2.28   |
-| Seagate   | Enterprise Capacity... | 20     | 263     | 910   | 16    | 2.23   |
 | HP        | RE3                    | 1      | 2       | 814   | 0     | 2.23   |
 | Hitachi   | CinemaStar 5K320       | 2      | 7       | 976   | 2     | 2.23   |
 | Toshiba   | 3.5" MG03ACAxxx(Y) ... | 4      | 42      | 966   | 12    | 2.22   |
+| Seagate   | Enterprise Capacity... | 21     | 264     | 906   | 16    | 2.22   |
 | HGST      | CinemaStar Z7K500      | 1      | 1       | 810   | 0     | 2.22   |
 | WDC       | RE                     | 35     | 120     | 1139  | 62    | 2.21   |
 | Hitachi   | Deskstar 7K1000        | 3      | 28      | 1225  | 12    | 2.20   |
@@ -1707,12 +1707,12 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | Pipeline HD 5900.2     | 9      | 211     | 977   | 114   | 2.02   |
 | Hitachi   | Deskstar T7K500        | 8      | 103     | 1246  | 48    | 2.00   |
 | Hitachi   | Deskstar 5K1000        | 3      | 43      | 974   | 91    | 1.99   |
-| WDC       | Red                    | 37     | 1466    | 878   | 10    | 1.98   |
 | HGST      | Ultrastar He8          | 4      | 48      | 1011  | 3     | 1.98   |
 | HGST      | Unknown                | 6      | 12      | 772   | 4     | 1.98   |
 | IBM/Hi... | Deskstar GXP-180       | 4      | 9       | 1314  | 16    | 1.97   |
 | Seagate   | Barracuda 7200.8       | 10     | 67      | 1299  | 104   | 1.95   |
 | Seagate   | BarraCuda 3.5 (CMR)    | 3      | 8       | 840   | 8     | 1.94   |
+| WDC       | Red                    | 41     | 1512    | 854   | 10    | 1.93   |
 | Samsung   | SpinPoint F3           | 6      | 436     | 951   | 38    | 1.93   |
 | Seagate   | U9                     | 3      | 7       | 690   | 0     | 1.89   |
 | Maxtor    | MaXLine Pro 500        | 1      | 6       | 743   | 1     | 1.87   |
@@ -1811,7 +1811,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | SV35                   | 8      | 75      | 498   | 113   | 1.11   |
 | Seagate   | Barracuda ES.2         | 6      | 58      | 1075  | 305   | 1.11   |
 | WDC       | HGST Ultrastar He10    | 2      | 68      | 400   | 2     | 1.10   |
-| WDC       | Elements / My Passport | 88     | 779     | 492   | 24    | 1.09   |
+| WDC       | Elements / My Passport | 91     | 783     | 491   | 23    | 1.09   |
 | HPE       | Seagate Enterprise     | 1      | 1       | 395   | 0     | 1.08   |
 | Toshiba   | X300                   | 7      | 153     | 432   | 21    | 1.08   |
 | Toshiba   | 2.5" HDD MQ04ABB       | 1      | 5       | 393   | 0     | 1.08   |
@@ -1840,7 +1840,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SpinPoint S166         | 3      | 107     | 848   | 433   | 0.94   |
 | Seagate   | FireCuda 3.5           | 2      | 110     | 428   | 24    | 0.94   |
 | Seagate   | Barracuda LP           | 4      | 116     | 875   | 363   | 0.94   |
-| Toshiba   | N300/MN NAS HDD        | 4      | 54      | 378   | 1     | 0.93   |
 | WDC       | Purple                 | 36     | 283     | 437   | 12    | 0.93   |
 | WDC       | Scorpio Black          | 59     | 395     | 545   | 92    | 0.92   |
 | Toshiba   | 2.5" HDD MK..75GSX     | 1      | 2       | 399   | 538   | 0.91   |
@@ -1849,10 +1848,11 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | Barracuda              | 2      | 8       | 325   | 0     | 0.89   |
 | Toshiba   | 2.5" HDD MK..59GSXP... | 1      | 5       | 439   | 15    | 0.87   |
 | Samsung   | SpinPoint P80 SD       | 7      | 284     | 815   | 376   | 0.87   |
+| Toshiba   | N300/MN NAS HDD        | 8      | 76      | 360   | 3     | 0.86   |
 | WDC       | Blue SSHD              | 2      | 3       | 312   | 0     | 0.86   |
+| Seagate   | Exos 7E8               | 13     | 71      | 331   | 29    | 0.85   |
 | MediaMax  | WL5000                 | 1      | 1       | 308   | 0     | 0.85   |
 | Toshiba   | 2.5" HDD MQ02ABF       | 1      | 14      | 316   | 1     | 0.85   |
-| Seagate   | Exos 7E8               | 14     | 72      | 326   | 29    | 0.84   |
 | Hitachi   | Travelstar 5K500.B     | 16     | 679     | 539   | 164   | 0.83   |
 | WDC       | Scorpio Blue           | 254    | 3112    | 463   | 70    | 0.82   |
 | Toshiba   | MG05ACA Enterprise ... | 1      | 2       | 300   | 0     | 0.82   |
@@ -1885,7 +1885,6 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 2.5" HDD               | 18     | 93      | 492   | 56    | 0.70   |
 | Samsung   | SpinPoint P80          | 18     | 156     | 653   | 150   | 0.70   |
 | Fujitsu   | MJA BH                 | 9      | 65      | 485   | 155   | 0.69   |
-| Toshiba   | N300 NAS HDD           | 4      | 22      | 316   | 8     | 0.69   |
 | Toshiba   | 2.5" HDD H200          | 2      | 6       | 251   | 0     | 0.69   |
 | Toshiba   | 2.5" HDD MK..75GSX     | 4      | 170     | 538   | 368   | 0.68   |
 | Hitachi   | Travelstar 7K200       | 10     | 38      | 557   | 148   | 0.68   |
@@ -1931,13 +1930,14 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 3.5" HDD DT01ACA       | 3      | 15      | 210   | 0     | 0.58   |
 | Toshiba   | 2.5" HDD MK..59GSM     | 1      | 24      | 512   | 445   | 0.58   |
 | Maxtor    | DiamondMax 17          | 2      | 13      | 408   | 180   | 0.57   |
+| WDC       | Ultrastar              | 6      | 100     | 212   | 1     | 0.57   |
 | Hitachi   | Travelstar 4K120       | 5      | 17      | 670   | 25    | 0.56   |
 | Seagate   | Momentus XT            | 2      | 27      | 689   | 126   | 0.56   |
 | Hitachi   | Travelstar 5K1000      | 3      | 38      | 512   | 601   | 0.56   |
 | Seagate   | BarraCuda 3.5 (SMR)    | 5      | 676     | 226   | 41    | 0.56   |
 | Fujitsu   | MHZ BH                 | 13     | 354     | 314   | 116   | 0.55   |
 | Seagate   | Momentus 5400.7 (AF)   | 2      | 23      | 522   | 295   | 0.55   |
-| Toshiba   | MG08ACA Enterprise ... | 2      | 25      | 201   | 0     | 0.55   |
+| Toshiba   | MG08ACA Enterprise ... | 3      | 29      | 199   | 0     | 0.55   |
 | Toshiba   | 2.5" HDD MQ04UBF       | 1      | 86      | 220   | 2     | 0.54   |
 | WDC       | Black P10              | 3      | 10      | 195   | 0     | 0.53   |
 | Hitachi   | Travelstar Z5K320      | 3      | 325     | 367   | 305   | 0.53   |
@@ -1962,7 +1962,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SpinPoint P120         | 6      | 130     | 971   | 626   | 0.49   |
 | Seagate   | Momentus 7200 FDE.2    | 2      | 3       | 374   | 565   | 0.49   |
 | Apple     | MK..65GSXF             | 1      | 6       | 256   | 69    | 0.48   |
-| WDC       | White Label            | 13     | 130     | 179   | 1     | 0.47   |
+| WDC       | Unknown                | 32     | 45      | 309   | 54    | 0.48   |
 | ASMedia   | Unknown                | 1      | 1       | 172   | 0     | 0.47   |
 | WDC       | Blue UltraSlim         | 4      | 5       | 170   | 0     | 0.47   |
 | Hitachi   | Travelstar Z7K500      | 3      | 31      | 495   | 616   | 0.47   |
@@ -1989,15 +1989,14 @@ MTBF - avg. MTBF in years per sample.
 | MARSHAL   | Unknown                | 6      | 10      | 288   | 287   | 0.42   |
 | Toshiba   | 2.5" HDD MK..58GSX     | 1      | 8       | 930   | 10    | 0.41   |
 | Hitachi   | Travelstar 7K500       | 12     | 161     | 537   | 685   | 0.41   |
-| Toshiba   | MG08                   | 2      | 5       | 150   | 0     | 0.41   |
 | Seagate   | Laptop Ultrathin       | 1      | 9       | 200   | 4     | 0.41   |
 | Toshiba   | 2.5" HDD MK..46GSX     | 4      | 60      | 536   | 137   | 0.41   |
 | Toshiba   | 2.5" HDD MQ04ABF       | 2      | 531     | 168   | 54    | 0.41   |
 | HGST      | Travelstar Z5K500      | 8      | 819     | 349   | 393   | 0.41   |
-| WDC       | Internal Use HDD       | 13     | 88      | 151   | 13    | 0.40   |
 | Seagate   | Momentus Thin          | 9      | 288     | 435   | 553   | 0.40   |
 | MediaMax  | WL320                  | 1      | 1       | 146   | 0     | 0.40   |
 | Hitachi   | Travelstar 5K500       | 1      | 6       | 520   | 5     | 0.40   |
+| WDC       | Internal Use HDD       | 10     | 84      | 148   | 13    | 0.40   |
 | Toshiba   | 2.5" HDD MK..63GSX     | 2      | 26      | 624   | 69    | 0.39   |
 | Toshiba   | 1.8" HDD               | 5      | 15      | 374   | 11    | 0.39   |
 | Toshiba   | MG07ACA Enterprise ... | 4      | 32      | 142   | 0     | 0.39   |
@@ -2006,7 +2005,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 2.5" HDD MK..65GSX     | 13     | 330     | 496   | 278   | 0.39   |
 | Seagate   | Momentus 5400.6        | 12     | 1385    | 487   | 458   | 0.39   |
 | HP        | Barracuda ES.2         | 1      | 1       | 138   | 0     | 0.38   |
-| WDC       | Unknown                | 37     | 67      | 229   | 37    | 0.38   |
+| WDC       | Red Plus               | 5      | 49      | 136   | 0     | 0.37   |
 | Samsung   | HM100UX (S2 Portable)  | 1      | 2       | 214   | 4     | 0.37   |
 | Fujitsu   | MHW AT                 | 2      | 3       | 494   | 5     | 0.37   |
 | HGST      | Deskstar 5K4000        | 1      | 2       | 133   | 0     | 0.37   |
@@ -2019,7 +2018,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SpinPoint MP5          | 3      | 19      | 378   | 308   | 0.34   |
 | Toshiba   | 1.8" HDD MK..16GSG     | 1      | 3       | 272   | 4     | 0.34   |
 | Toshiba   | 2.5" HDD MK..52GSX     | 5      | 125     | 547   | 153   | 0.34   |
-| WDC       | Red Plus               | 8      | 109     | 125   | 1     | 0.34   |
 | Maxtor    | Unknown                | 3      | 4       | 857   | 26    | 0.34   |
 | Samsung   | SpinPoint V120CE       | 1      | 1       | 120   | 0     | 0.33   |
 | Lenovo    | Seagate Enterprise     | 1      | 2       | 120   | 0     | 0.33   |
@@ -2037,6 +2035,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | SV35.2                 | 3      | 8       | 609   | 881   | 0.31   |
 | WDC       | Ultrastar DC HC530     | 2      | 17      | 113   | 1     | 0.31   |
 | WDC       | Scorpio EIDE           | 11     | 15      | 343   | 61    | 0.31   |
+| WDC       | White Label            | 10     | 54      | 115   | 1     | 0.30   |
 | Toshiba   | 2.5" HDD MQ02ABF..H    | 2      | 10      | 197   | 205   | 0.29   |
 | IBM       | Travelstar 25GS, 18... | 2      | 2       | 156   | 3     | 0.29   |
 | Quantum   | Fireball lct15         | 2      | 2       | 248   | 3     | 0.29   |
@@ -2113,6 +2112,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | Caviar WDxxxBA         | 1      | 1       | 296   | 20    | 0.04   |
 | Samsung   | SpinPoint N3A          | 1      | 1       | 11    | 0     | 0.03   |
 | IBM       | Unknown                | 1      | 1       | 1423  | 124   | 0.03   |
+| WDC       | Ultrastar DC HC650     | 1      | 12      | 11    | 0     | 0.03   |
 | WDC       | eServer                | 1      | 1       | 10    | 0     | 0.03   |
 | Toshiba   | 2.5" HDD               | 3      | 3       | 301   | 66    | 0.03   |
 | Samsung   | SpinPoint T            | 1      | 1       | 469   | 51    | 0.02   |
@@ -2128,6 +2128,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | DiamondMax Plus 9      | 11     | 113     | 27    | 164   | 0.01   |
 | Seagate   | ST1.2 CompactFlash     | 1      | 1       | 3     | 0     | 0.01   |
 | MARSHAL   | 2.5" HDD               | 1      | 1       | 2     | 0     | 0.01   |
+| Toshiba   | MG08                   | 1      | 1       | 2     | 0     | 0.01   |
 | HGST      | Proliant HardDrive     | 1      | 1       | 765   | 406   | 0.01   |
 | Fujitsu   | MHY BS                 | 1      | 1       | 2382  | 1317  | 0.00   |
 | Hitachi   | Ultrastar 5K3000       | 1      | 1       | 1045  | 595   | 0.00   |
@@ -2167,7 +2168,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG         | Models | Samples | Days  | Err   | MTBF |
 |-------------|--------|---------|-------|-------|------|
-| Advantech   | 1      | 1       | 2258  | 0     | 6.19   |
 | HP          | 29     | 89      | 1424  | 102   | 2.40   |
 | Quantum     | 10     | 10      | 675   | 2     | 1.44   |
 | WDC         | 2085   | 25496   | 684   | 39    | 1.37   |
@@ -2184,13 +2184,11 @@ MTBF - avg. MTBF in years per sample.
 | Fujitsu     | 102    | 836     | 401   | 105   | 0.67   |
 | Maxtor      | 112    | 781     | 507   | 253   | 0.63   |
 | IBM/Hitachi | 18     | 49      | 602   | 46    | 0.56   |
-| ASMedia     | 1      | 1       | 172   | 0     | 0.47   |
 | MediaMax    | 25     | 32      | 415   | 58    | 0.41   |
 | MARSHAL     | 7      | 11      | 262   | 261   | 0.38   |
 | China       | 4      | 4       | 199   | 596   | 0.32   |
 | Lenovo      | 2      | 6       | 91    | 0     | 0.25   |
 | IBM         | 8      | 9       | 709   | 28    | 0.20   |
-| AMP         | 1      | 1       | 68    | 0     | 0.19   |
 | Synology    | 1      | 7       | 39    | 0     | 0.11   |
 | CLOVER      | 3      | 4       | 20    | 0     | 0.06   |
 
@@ -3734,14 +3732,14 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | Nytro XF1230 SATA SSD  | 1      | 2       | 1236  | 0     | 3.39   |
 | HPE       | Unknown                | 7      | 7       | 1185  | 0     | 3.25   |
 | Intel     | Dell Certified Inte... | 2      | 6       | 1247  | 1     | 3.15   |
-| Intel     | 730 and DC S35x0/36... | 35     | 132     | 1239  | 102   | 2.98   |
+| Intel     | 730 and DC S35x0/36... | 37     | 134     | 1249  | 100   | 3.01   |
 | SK        | hynix SATA SSDs        | 1      | 1       | 1054  | 0     | 2.89   |
 | Intel     | X18-M/X25-M G1 SSDs    | 4      | 4       | 1037  | 0     | 2.84   |
 | Crucial   | RealSSD m4/C400/P400   | 9      | 176     | 1006  | 190   | 2.38   |
 | Crucial   | RealSSD C300/P300      | 3      | 25      | 1164  | 259   | 2.35   |
+| Transcend | Unknown                | 27     | 62      | 936   | 35    | 2.30   |
 | Crucial   | RealSSD m4/C400        | 2      | 15      | 832   | 135   | 2.17   |
 | Radeon    | Indilinx Barefoot 3... | 1      | 4       | 778   | 0     | 2.13   |
-| Transcend | Unknown                | 30     | 68      | 859   | 32    | 2.11   |
 | TCSUNB0W  | Unknown                | 1      | 1       | 767   | 0     | 2.10   |
 | Toshiba   | HG2 Series             | 2      | 9       | 760   | 0     | 2.08   |
 | Micro ... | Unknown                | 1      | 1       | 722   | 0     | 1.98   |
@@ -3777,6 +3775,7 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | OCZ/Toshiba Trion SSDs | 6      | 59      | 492   | 1     | 1.29   |
 | Samsung   | Samsung based SSDs     | 352    | 9655    | 479   | 8     | 1.26   |
 | ADATA     | SandForce Driven SSDs  | 15     | 131     | 514   | 4     | 1.24   |
+| Team      | Phison Driven SSDs     | 2      | 8       | 450   | 0     | 1.23   |
 | Micron    | 5100 Pro / 5200 SSDs   | 6      | 22      | 562   | 16    | 1.23   |
 | Transcend | JMicron based SSDs     | 7      | 22      | 453   | 46    | 1.21   |
 | Toshiba   | HG6 Series             | 1      | 7       | 443   | 0     | 1.21   |
@@ -3800,7 +3799,7 @@ MTBF - avg. MTBF in years per sample.
 | KingShare | Unknown                | 2      | 2       | 373   | 0     | 1.02   |
 | Redapple  | Unknown                | 1      | 1       | 363   | 0     | 1.00   |
 | addlink   | Unknown                | 2      | 4       | 359   | 0     | 0.98   |
-| Intel     | S4510/S4610/S4500/S... | 16     | 116     | 379   | 27    | 0.97   |
+| Intel     | S4510/S4610/S4500/S... | 17     | 117     | 376   | 27    | 0.96   |
 | Crucial   | BX/MX1/2/3/500, M5/... | 22     | 488     | 471   | 67    | 0.96   |
 | THU       | Unknown                | 1      | 1       | 339   | 0     | 0.93   |
 | SanDisk   | SATA Cloudspeed Max... | 3      | 4       | 333   | 0     | 0.91   |
@@ -3820,38 +3819,38 @@ MTBF - avg. MTBF in years per sample.
 | XSTAR     | Unknown                | 2      | 2       | 286   | 0     | 0.78   |
 | Toshiba   | JMicron based SSDs     | 1      | 2       | 284   | 0     | 0.78   |
 | Corsair   | Phison Driven SSDs     | 2      | 18      | 315   | 4     | 0.75   |
-| SanDisk   | Marvell based SanDi... | 82     | 1683    | 302   | 37    | 0.74   |
+| SanDisk   | Marvell based SanDi... | 84     | 1685    | 302   | 38    | 0.74   |
 | ZOTAC     | Unknown                | 3      | 4       | 268   | 0     | 0.74   |
 | SanDisk   | SandForce Driven SSDs  | 6      | 415     | 313   | 18    | 0.73   |
 | Intel     | Dell Certified Inte... | 3      | 3       | 265   | 0     | 0.73   |
 | Exascend  | Unknown                | 1      | 1       | 264   | 0     | 0.73   |
+| WDC       | Unknown                | 7      | 14      | 301   | 353   | 0.72   |
+| SanDisk   | Unknown                | 163    | 882     | 267   | 14    | 0.71   |
 | Micron    | 5100 Pro / 52x0 / 5... | 9      | 18      | 337   | 3     | 0.71   |
-| SanDisk   | Unknown                | 165    | 884     | 267   | 16    | 0.71   |
 | TAISU     | Unknown                | 2      | 2       | 254   | 0     | 0.70   |
 | PNY       | Phison Driven SSDs     | 10     | 342     | 252   | 0     | 0.69   |
 | Patriot   | Phison Driven SSDs     | 11     | 316     | 250   | 1     | 0.68   |
-| Seagate   | Unknown                | 24     | 114     | 282   | 36    | 0.67   |
+| Seagate   | Unknown                | 22     | 111     | 284   | 37    | 0.67   |
 | Team      | Silicon Motion base... | 5      | 22      | 242   | 0     | 0.66   |
 | Smart     | Unknown                | 3      | 3       | 241   | 0     | 0.66   |
 | G.Skill   | Unknown                | 1      | 1       | 241   | 0     | 0.66   |
 | GALAX     | Unknown                | 3      | 10      | 238   | 0     | 0.65   |
 | Yunhai... | Unknown                | 2      | 2       | 236   | 0     | 0.65   |
 | Hoodisk   | Phison Driven OEM SSDs | 5      | 27      | 236   | 0     | 0.65   |
-| Micron    | Client SSDs            | 37     | 255     | 295   | 84    | 0.64   |
 | VENO S... | Unknown                | 2      | 2       | 234   | 0     | 0.64   |
+| Micron    | Client SSDs            | 38     | 256     | 293   | 83    | 0.64   |
 | Innodisk  | Unknown                | 9      | 14      | 232   | 1     | 0.64   |
 | Intel     | X18-M/X25-M/X25-V G... | 14     | 75      | 754   | 17    | 0.63   |
 | Kston     | Unknown                | 3      | 7       | 230   | 0     | 0.63   |
 | GAMER     | Unknown                | 1      | 1       | 230   | 0     | 0.63   |
 | LVCARDS   | Unknown                | 1      | 1       | 229   | 0     | 0.63   |
 | Plextor   | M3/M5/M6/M7 Series ... | 13     | 49      | 231   | 74    | 0.63   |
-| SK hynix  | SATA SSDs              | 46     | 515     | 309   | 85    | 0.62   |
 | BlitzWolf | Unknown                | 1      | 1       | 225   | 0     | 0.62   |
-| WDC       | Unknown                | 8      | 20      | 252   | 247   | 0.62   |
 | Smartbuy  | Phison Driven SSDs     | 6      | 183     | 236   | 1     | 0.61   |
 | ASUS      | Unknown                | 1      | 1       | 221   | 0     | 0.61   |
 | BlueRay   | Unknown                | 5      | 5       | 246   | 1     | 0.60   |
-| Kingston  | Unknown                | 121    | 371     | 260   | 77    | 0.60   |
+| SK hynix  | SATA SSDs              | 53     | 544     | 308   | 91    | 0.60   |
+| Kingston  | Unknown                | 111    | 324     | 266   | 88    | 0.60   |
 | Hyundai   | Unknown                | 7      | 10      | 218   | 0     | 0.60   |
 | Silicon   | Motion based OEM SSDs  | 5      | 8       | 217   | 0     | 0.60   |
 | Transcend | JMicron/Maxiotek ba... | 5      | 9       | 218   | 112   | 0.57   |
@@ -3870,24 +3869,26 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | Phison Driven SSDs     | 3      | 64      | 197   | 0     | 0.54   |
 | JIESHUO   | Unknown                | 1      | 1       | 196   | 0     | 0.54   |
 | SuperM... | SATA DOM (SuperDOM)    | 1      | 2       | 193   | 0     | 0.53   |
-| WDC       | Blue / Red / Green ... | 40     | 2360    | 203   | 3     | 0.53   |
+| WDC       | Blue / Red / Green ... | 41     | 2366    | 203   | 3     | 0.53   |
 | Advantech | Unknown                | 10     | 11      | 191   | 0     | 0.52   |
-| Kingston  | Phison Driven SSDs     | 27     | 3233    | 202   | 1     | 0.52   |
+| Seagate   | IronWolf (Pro) 125 ... | 2      | 3       | 190   | 0     | 0.52   |
+| Kingston  | Phison Driven SSDs     | 34     | 3267    | 203   | 1     | 0.52   |
 | DERLER    | Unknown                | 1      | 1       | 188   | 0     | 0.52   |
 | OCZ       | Intrepid 3000 SSDs     | 4      | 4       | 331   | 255   | 0.51   |
 | Plextor   | Unknown                | 35     | 113     | 198   | 1     | 0.51   |
 | Reeinno   | Unknown                | 2      | 3       | 183   | 0     | 0.50   |
 | Phison    | Driven OEM SSDs        | 10     | 105     | 182   | 0     | 0.50   |
-| Crucial   | Client SSDs            | 32     | 3007    | 205   | 7     | 0.50   |
-| Intel     | Unknown                | 66     | 229     | 238   | 76    | 0.50   |
+| Crucial   | Client SSDs            | 33     | 3010    | 205   | 7     | 0.50   |
+| Intel     | Unknown                | 56     | 200     | 242   | 77    | 0.50   |
 | minisf... | Unknown                | 2      | 3       | 181   | 0     | 0.50   |
 | DeTech    | Unknown                | 1      | 3       | 179   | 0     | 0.49   |
 | Intel     | 53x and Pro 2500 Se... | 2      | 2       | 177   | 0     | 0.49   |
 | SPCC      | Unknown                | 28     | 80      | 330   | 231   | 0.48   |
 | HP        | Unknown                | 23     | 138     | 185   | 6     | 0.48   |
 | Apple     | Unknown                | 4      | 12      | 358   | 245   | 0.47   |
+| Micron    | Unknown                | 33     | 94      | 312   | 122   | 0.47   |
+| Mushkin   | Silicon Motion base... | 9      | 16      | 170   | 0     | 0.47   |
 | Gigaby... | Unknown                | 4      | 10      | 168   | 0     | 0.46   |
-| Micron    | Unknown                | 34     | 95      | 309   | 121   | 0.46   |
 | Imation   | Unknown                | 2      | 2       | 168   | 0     | 0.46   |
 | Best M... | Unknown                | 1      | 1       | 167   | 0     | 0.46   |
 | Ramaxel   | Unknown                | 5      | 8       | 202   | 1     | 0.45   |
@@ -3896,7 +3897,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | 311/313 Series SSDs    | 1      | 3       | 197   | 10    | 0.44   |
 | Samgporse | Unknown                | 1      | 1       | 156   | 0     | 0.43   |
 | Goodram   | Phison Driven SSDs     | 6      | 95      | 154   | 0     | 0.42   |
-| Team      | Unknown                | 53     | 200     | 172   | 4     | 0.42   |
 | ADTEC     | Unknown                | 1      | 2       | 152   | 0     | 0.42   |
 | OCZ       | Unknown                | 10     | 15      | 652   | 137   | 0.42   |
 | BRAVEE... | Unknown                | 3      | 3       | 151   | 0     | 0.41   |
@@ -3906,31 +3906,31 @@ MTBF - avg. MTBF in years per sample.
 | JASTER    | Unknown                | 1      | 3       | 147   | 0     | 0.40   |
 | Gigabyte  | Unknown                | 4      | 9       | 146   | 0     | 0.40   |
 | Apacer    | SDM5/5A/5A-M Series... | 2      | 5       | 153   | 42    | 0.40   |
+| Verbatim  | Unknown                | 6      | 30      | 149   | 34    | 0.40   |
 | KingDian  | Silicon Motion base... | 10     | 88      | 148   | 2     | 0.40   |
 | Union ... | Unknown                | 1      | 12      | 145   | 0     | 0.40   |
 | Goodram   | Unknown                | 32     | 251     | 149   | 1     | 0.40   |
+| SK hynix  | Unknown                | 32     | 103     | 303   | 115   | 0.40   |
 | Plextor   | M3/M5 (Pro) Series ... | 3      | 17      | 205   | 62    | 0.39   |
 | EAGET     | Unknown                | 2      | 2       | 141   | 0     | 0.39   |
+| Team      | Unknown                | 51     | 192     | 160   | 4     | 0.39   |
 | MENGMI    | Unknown                | 1      | 1       | 139   | 0     | 0.38   |
+| Crucial   | Unknown                | 15     | 28      | 177   | 2     | 0.38   |
 | ADATA     | Unknown                | 78     | 521     | 214   | 122   | 0.38   |
 | WINTEN    | Unknown                | 1      | 1       | 138   | 0     | 0.38   |
 | KingFast  | Silicon Motion base... | 4      | 51      | 140   | 61    | 0.38   |
 | AMD       | Silicon Motion base... | 3      | 47      | 156   | 6     | 0.38   |
-| Intel     | 545s Series SSDs       | 11     | 139     | 149   | 1     | 0.37   |
-| Crucial   | Unknown                | 16     | 31      | 170   | 2     | 0.37   |
 | Super ... | Unknown                | 7      | 13      | 161   | 1     | 0.37   |
 | UNIC2     | Unknown                | 2      | 6       | 135   | 0     | 0.37   |
 | MACROVIP  | Unknown                | 1      | 1       | 134   | 0     | 0.37   |
 | KingDian  | Unknown                | 18     | 62      | 146   | 143   | 0.37   |
 | Maxtor    | Unknown                | 3      | 20      | 132   | 0     | 0.36   |
 | Phison    | Unknown                | 19     | 36      | 134   | 1     | 0.36   |
-| SK hynix  | Unknown                | 39     | 132     | 301   | 133   | 0.35   |
 | ADATA     | Silicon Motion base... | 23     | 749     | 145   | 37    | 0.35   |
 | Chiprex   | Unknown                | 1      | 1       | 126   | 0     | 0.35   |
 | Londisk   | Unknown                | 4      | 19      | 123   | 0     | 0.34   |
+| Intel     | 545s Series SSDs       | 18     | 165     | 139   | 12    | 0.34   |
 | Hypertec  | Unknown                | 1      | 2       | 371   | 512   | 0.33   |
-| Mushkin   | Silicon Motion base... | 6      | 13      | 121   | 0     | 0.33   |
-| Verbatim  | Unknown                | 7      | 37      | 123   | 28    | 0.33   |
 | Inland    | Unknown                | 4      | 5       | 119   | 0     | 0.33   |
 | TwinMOS   | Unknown                | 3      | 4       | 132   | 1     | 0.33   |
 | LDLC      | Unknown                | 14     | 55      | 157   | 10    | 0.32   |
@@ -3945,14 +3945,13 @@ MTBF - avg. MTBF in years per sample.
 | Vaseky    | Unknown                | 20     | 32      | 113   | 4     | 0.30   |
 | Apacer    | AS340 SSDs             | 4      | 73      | 121   | 30    | 0.30   |
 | BAITITON  | Unknown                | 10     | 15      | 142   | 3     | 0.30   |
-| Mushkin   | Unknown                | 22     | 42      | 164   | 104   | 0.30   |
 | Kingmax   | Unknown                | 5      | 68      | 243   | 310   | 0.30   |
 | AirDisk   | Unknown                | 1      | 3       | 108   | 0     | 0.30   |
 | ZTC       | Unknown                | 3      | 6       | 108   | 0     | 0.30   |
 | PNY       | Unknown                | 52     | 171     | 141   | 49    | 0.29   |
 | Zheino    | Silicon Motion base... | 1      | 3       | 106   | 0     | 0.29   |
-| Transcend | Silicon Motion base... | 50     | 429     | 111   | 16    | 0.29   |
 | TREKSTOR  | Unknown                | 1      | 1       | 105   | 0     | 0.29   |
+| Transcend | Silicon Motion base... | 53     | 435     | 110   | 16    | 0.29   |
 | MARVELL   | based SanDisk SSDs     | 1      | 1       | 105   | 0     | 0.29   |
 | GLOWAY    | Unknown                | 13     | 21      | 117   | 67    | 0.29   |
 | KingSpec  | Unknown                | 49     | 221     | 126   | 33    | 0.29   |
@@ -3977,6 +3976,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | IronWolf 110 SATA SSD  | 3      | 6       | 92    | 0     | 0.25   |
 | Lite-On   | Silicon Motion base... | 5      | 22      | 95    | 1     | 0.25   |
 | VisionTek | Unknown                | 1      | 2       | 88    | 0     | 0.24   |
+| Mushkin   | Unknown                | 19     | 39      | 147   | 112   | 0.24   |
 | Dogfish   | Unknown                | 8      | 22      | 96    | 1     | 0.24   |
 | AXIOM     | Unknown                | 1      | 1       | 87    | 0     | 0.24   |
 | Lumino... | Unknown                | 5      | 5       | 87    | 0     | 0.24   |
@@ -4050,8 +4050,8 @@ MTBF - avg. MTBF in years per sample.
 | Avant     | Unknown                | 3      | 4       | 432   | 254   | 0.13   |
 | Win Me... | Unknown                | 3      | 5       | 48    | 0     | 0.13   |
 | XrayDisk  | Unknown                | 11     | 59      | 54    | 37    | 0.13   |
-| Kingston  | Silicon Motion base... | 4      | 85      | 48    | 1     | 0.13   |
 | Kross ... | Unknown                | 2      | 3       | 47    | 0     | 0.13   |
+| Kingston  | Silicon Motion base... | 7      | 98      | 47    | 1     | 0.13   |
 | XPG       | Unknown                | 1      | 3       | 46    | 0     | 0.13   |
 | S3+       | Unknown                | 7      | 9       | 91    | 6     | 0.13   |
 | RCESSD    | Unknown                | 1      | 2       | 46    | 0     | 0.13   |
@@ -4137,6 +4137,7 @@ MTBF - avg. MTBF in years per sample.
 | NFORCE    | Unknown                | 1      | 1       | 14    | 0     | 0.04   |
 | BR        | Unknown                | 5      | 5       | 14    | 0     | 0.04   |
 | ADLINK    | Unknown                | 1      | 1       | 13    | 0     | 0.04   |
+| Verbatim  | Silicon Motion base... | 1      | 7       | 13    | 0     | 0.04   |
 | Origin... | Unknown                | 1      | 1       | 171   | 12    | 0.04   |
 | SomnAm... | Unknown                | 1      | 1       | 25    | 1     | 0.04   |
 | Getrich   | Unknown                | 1      | 1       | 12    | 0     | 0.04   |
@@ -4176,12 +4177,12 @@ MTBF - avg. MTBF in years per sample.
 | kingch... | Unknown                | 1      | 1       | 5     | 0     | 0.02   |
 | BUFFALO   | Unknown                | 1      | 1       | 5     | 0     | 0.02   |
 | QIANGHE   | Unknown                | 1      | 1       | 73    | 12    | 0.02   |
+| UMAX      | Silicon Motion base... | 1      | 3       | 5     | 0     | 0.02   |
 | Goldenfir | Unknown                | 3      | 3       | 32    | 11    | 0.01   |
 | ShiJi     | Unknown                | 5      | 8       | 5     | 0     | 0.01   |
 | Protectli | Unknown                | 1      | 2       | 4     | 0     | 0.01   |
 | Veno      | Unknown                | 1      | 2       | 4     | 0     | 0.01   |
 | Reletech  | Unknown                | 1      | 1       | 4     | 0     | 0.01   |
-| UMAX      | Unknown                | 2      | 4       | 4     | 0     | 0.01   |
 | ASint     | Unknown                | 1      | 1       | 4     | 0     | 0.01   |
 | MicroD... | Unknown                | 1      | 2       | 4     | 0     | 0.01   |
 | PHINOCOM  | Unknown                | 1      | 1       | 4     | 0     | 0.01   |
@@ -4223,6 +4224,7 @@ MTBF - avg. MTBF in years per sample.
 | HP Phison | Unknown                | 3      | 4       | 427   | 1034  | 0.00   |
 | X-ENERGY  | Unknown                | 1      | 1       | 0     | 0     | 0.00   |
 | Bliksem   | Unknown                | 1      | 1       | 10    | 28    | 0.00   |
+| UMAX      | Unknown                | 1      | 1       | 0     | 0     | 0.00   |
 | SUNTRSI   | Unknown                | 1      | 1       | 0     | 0     | 0.00   |
 | DERLAR    | Unknown                | 1      | 1       | 0     | 0     | 0.00   |
 | MAX SPEED | Unknown                | 1      | 1       | 0     | 0     | 0.00   |
@@ -4258,23 +4260,13 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG         | Models | Samples | Days  | Err   | MTBF |
 |-------------|--------|---------|-------|-------|------|
-| Espada      | 1      | 1       | 2060  | 0     | 5.65   |
-| EXBOM       | 1      | 1       | 1829  | 0     | 5.01   |
-| SMART       | 1      | 1       | 1374  | 0     | 3.77   |
-| TANCA       | 1      | 1       | 1246  | 0     | 3.42   |
 | HPE         | 7      | 7       | 1185  | 0     | 3.25   |
-| SK          | 1      | 1       | 1054  | 0     | 2.89   |
 | Radeon      | 1      | 4       | 778   | 0     | 2.13   |
-| TCSUNB0W    | 1      | 1       | 767   | 0     | 2.10   |
-| Micro Ce... | 1      | 1       | 722   | 0     | 1.98   |
 | Corsair     | 62     | 325     | 800   | 88    | 1.67   |
 | OCZ         | 104    | 840     | 745   | 29    | 1.64   |
-| Galaxy      | 1      | 1       | 578   | 0     | 1.58   |
-| SATADOM     | 1      | 1       | 574   | 0     | 1.57   |
 | Hajaan      | 1      | 2       | 555   | 0     | 1.52   |
 | SandForce   | 4      | 4       | 621   | 359   | 1.44   |
 | MyDigita... | 4      | 13      | 515   | 0     | 1.41   |
-| ADROITLARK  | 1      | 1       | 493   | 0     | 1.35   |
 | Axiom       | 3      | 3       | 473   | 0     | 1.30   |
 | SuperMicro  | 3      | 5       | 467   | 0     | 1.28   |
 | Samsung     | 393    | 9756    | 480   | 8     | 1.27   |
@@ -4283,25 +4275,18 @@ MTBF - avg. MTBF in years per sample.
 | Apple       | 28     | 380     | 417   | 13    | 1.10   |
 | Toshiba     | 119    | 627     | 420   | 9     | 1.09   |
 | OYUNKEY     | 2      | 3       | 512   | 44    | 1.08   |
-| DIERYA      | 1      | 1       | 385   | 0     | 1.06   |
-| FCS         | 1      | 1       | 381   | 0     | 1.05   |
 | CFD         | 3      | 3       | 375   | 0     | 1.03   |
 | KingShare   | 2      | 2       | 373   | 0     | 1.02   |
-| Redapple    | 1      | 1       | 363   | 0     | 1.00   |
 | addlink     | 2      | 4       | 359   | 0     | 0.98   |
-| THU         | 1      | 1       | 339   | 0     | 0.93   |
 | Palit       | 8      | 14      | 314   | 0     | 0.86   |
-| Aura        | 1      | 1       | 310   | 0     | 0.85   |
 | XSTAR       | 2      | 2       | 286   | 0     | 0.78   |
 | Kingston    | 224    | 6092    | 317   | 23    | 0.76   |
 | Mushkin     | 44     | 90      | 366   | 118   | 0.75   |
 | SanDisk     | 291    | 3468    | 299   | 27    | 0.74   |
 | ZOTAC       | 3      | 4       | 268   | 0     | 0.74   |
-| Exascend    | 1      | 1       | 264   | 0     | 0.73   |
 | Micron      | 113    | 714     | 321   | 101   | 0.70   |
 | TAISU       | 2      | 2       | 254   | 0     | 0.70   |
 | Smart       | 3      | 3       | 241   | 0     | 0.66   |
-| G.Skill     | 1      | 1       | 241   | 0     | 0.66   |
 | Seagate     | 34     | 136     | 272   | 31    | 0.66   |
 | GALAX       | 3      | 10      | 238   | 0     | 0.65   |
 | Crucial     | 93     | 3899    | 281   | 25    | 0.65   |
@@ -4309,11 +4294,7 @@ MTBF - avg. MTBF in years per sample.
 | Hoodisk     | 5      | 27      | 236   | 0     | 0.65   |
 | VENO SCORP  | 2      | 2       | 234   | 0     | 0.64   |
 | Kston       | 3      | 7       | 230   | 0     | 0.63   |
-| GAMER       | 1      | 1       | 230   | 0     | 0.63   |
-| LVCARDS     | 1      | 1       | 229   | 0     | 0.63   |
-| BlitzWolf   | 1      | 1       | 225   | 0     | 0.62   |
 | Smartbuy    | 17     | 203     | 232   | 1     | 0.61   |
-| ASUS        | 1      | 1       | 221   | 0     | 0.61   |
 | BlueRay     | 5      | 5       | 246   | 1     | 0.60   |
 | Hyundai     | 7      | 10      | 218   | 0     | 0.60   |
 | Patriot     | 47     | 464     | 232   | 11    | 0.60   |
@@ -4324,15 +4305,12 @@ MTBF - avg. MTBF in years per sample.
 | Innodisk    | 16     | 30      | 249   | 105   | 0.56   |
 | PNY         | 62     | 513     | 215   | 17    | 0.56   |
 | BIOSTAR     | 3      | 4       | 203   | 0     | 0.56   |
-| Quaroni     | 1      | 1       | 201   | 0     | 0.55   |
 | SPCC        | 37     | 799     | 240   | 69    | 0.55   |
 | WDC         | 54     | 2473    | 208   | 5     | 0.54   |
-| JIESHUO     | 1      | 1       | 196   | 0     | 0.54   |
 | Silicon     | 6      | 9       | 195   | 0     | 0.54   |
 | Goodram     | 42     | 427     | 198   | 1     | 0.54   |
 | Gigabyte    | 7      | 73      | 191   | 0     | 0.53   |
 | Advantech   | 10     | 11      | 191   | 0     | 0.52   |
-| DERLER      | 1      | 1       | 188   | 0     | 0.52   |
 | Reeinno     | 2      | 3       | 183   | 0     | 0.50   |
 | minisforum  | 2      | 3       | 181   | 0     | 0.50   |
 | ADATA       | 128    | 1474    | 223   | 62    | 0.50   |
@@ -4342,26 +4320,20 @@ MTBF - avg. MTBF in years per sample.
 | Plextor     | 69     | 399     | 188   | 39    | 0.46   |
 | Imation     | 2      | 2       | 168   | 0     | 0.46   |
 | KingFast    | 13     | 88      | 170   | 35    | 0.46   |
-| Best Memory | 1      | 1       | 167   | 0     | 0.46   |
 | Ramaxel     | 5      | 8       | 202   | 1     | 0.45   |
 | ExeGate     | 6      | 8       | 162   | 0     | 0.45   |
 | Team        | 58     | 222     | 179   | 4     | 0.44   |
-| Samgporse   | 1      | 1       | 156   | 0     | 0.43   |
 | ADTEC       | 1      | 2       | 152   | 0     | 0.42   |
 | BRAVEEAGLE  | 3      | 3       | 151   | 0     | 0.41   |
 | JASTER      | 1      | 3       | 147   | 0     | 0.40   |
 | Union Me... | 1      | 12      | 145   | 0     | 0.40   |
 | EAGET       | 2      | 2       | 141   | 0     | 0.39   |
 | KingDian    | 28     | 150     | 147   | 60    | 0.39   |
-| MENGMI      | 1      | 1       | 139   | 0     | 0.38   |
-| WINTEN      | 1      | 1       | 138   | 0     | 0.38   |
 | Super Ta... | 7      | 13      | 161   | 1     | 0.37   |
 | UNIC2       | 2      | 6       | 135   | 0     | 0.37   |
-| MACROVIP    | 1      | 1       | 134   | 0     | 0.37   |
 | Maxtor      | 3      | 20      | 132   | 0     | 0.36   |
 | Drevo       | 8      | 22      | 287   | 238   | 0.36   |
 | China       | 196    | 1165    | 139   | 16    | 0.36   |
-| Chiprex     | 1      | 1       | 126   | 0     | 0.35   |
 | Londisk     | 4      | 19      | 123   | 0     | 0.34   |
 | Hypertec    | 1      | 2       | 371   | 512   | 0.33   |
 | Gigabyte... | 7      | 88      | 121   | 0     | 0.33   |
@@ -4371,18 +4343,13 @@ MTBF - avg. MTBF in years per sample.
 | TwinMOS     | 3      | 4       | 132   | 1     | 0.33   |
 | LDLC        | 14     | 55      | 157   | 10    | 0.32   |
 | Apacer      | 31     | 355     | 128   | 17    | 0.32   |
-| HXY         | 1      | 1       | 115   | 0     | 0.32   |
 | TCSUNBOW    | 9      | 26      | 112   | 0     | 0.31   |
 | Silicon ... | 3      | 3       | 111   | 0     | 0.31   |
-| SFAS        | 1      | 1       | 111   | 0     | 0.31   |
-| SuperSSpeed | 1      | 1       | 110   | 0     | 0.30   |
 | Vaseky      | 20     | 32      | 113   | 4     | 0.30   |
 | BAITITON    | 10     | 15      | 142   | 3     | 0.30   |
 | Kingmax     | 5      | 68      | 243   | 310   | 0.30   |
 | AirDisk     | 1      | 3       | 108   | 0     | 0.30   |
 | ZTC         | 3      | 6       | 108   | 0     | 0.30   |
-| TREKSTOR    | 1      | 1       | 105   | 0     | 0.29   |
-| MARVELL     | 1      | 1       | 105   | 0     | 0.29   |
 | GLOWAY      | 13     | 21      | 117   | 67    | 0.29   |
 | tigo        | 4      | 5       | 103   | 0     | 0.28   |
 | e2e4        | 4      | 9       | 103   | 0     | 0.28   |
@@ -4398,9 +4365,7 @@ MTBF - avg. MTBF in years per sample.
 | Biostar     | 6      | 8       | 96    | 0     | 0.26   |
 | Lexar       | 12     | 119     | 96    | 1     | 0.26   |
 | EZCOOL      | 2      | 2       | 95    | 0     | 0.26   |
-| GOWE        | 1      | 1       | 284   | 2     | 0.26   |
 | VisionTek   | 1      | 2       | 88    | 0     | 0.24   |
-| AXIOM       | 1      | 1       | 87    | 0     | 0.24   |
 | LuminouTek  | 5      | 5       | 87    | 0     | 0.24   |
 | ShanDianZhe | 3      | 9       | 87    | 0     | 0.24   |
 | Lite-On     | 136    | 505     | 110   | 117   | 0.24   |
@@ -4412,22 +4377,18 @@ MTBF - avg. MTBF in years per sample.
 | SMI         | 8      | 8       | 82    | 245   | 0.23   |
 | BIWIN       | 7      | 29      | 94    | 107   | 0.23   |
 | BHT         | 9      | 29      | 82    | 0     | 0.23   |
-| Nfortec     | 1      | 1       | 82    | 0     | 0.22   |
 | ASENNO      | 3      | 6       | 140   | 4     | 0.22   |
 | GS Nanotech | 4      | 5       | 77    | 0     | 0.21   |
 | INNOVATI... | 14     | 35      | 79    | 1     | 0.21   |
-| SPEED UP    | 1      | 1       | 75    | 0     | 0.21   |
 | Wdstars     | 2      | 2       | 71    | 0     | 0.20   |
 | Varro       | 3      | 3       | 71    | 0     | 0.19   |
 | XUM         | 2      | 4       | 69    | 0     | 0.19   |
 | V-GeN       | 14     | 16      | 69    | 0     | 0.19   |
 | Indilinx    | 8      | 10      | 71    | 2     | 0.19   |
 | Dogfish     | 11     | 56      | 72    | 1     | 0.19   |
-| ViperTeq    | 1      | 1       | 68    | 0     | 0.19   |
 | Gost        | 2      | 2       | 68    | 0     | 0.19   |
 | Hikvision   | 22     | 69      | 71    | 1     | 0.18   |
 | TAMMUZ      | 4      | 4       | 66    | 0     | 0.18   |
-| KLONER      | 1      | 1       | 66    | 0     | 0.18   |
 | Kingchuxing | 8      | 15      | 65    | 0     | 0.18   |
 | HGST        | 1      | 2       | 65    | 0     | 0.18   |
 | FORESEE     | 10     | 66      | 65    | 0     | 0.18   |
@@ -4443,20 +4404,15 @@ MTBF - avg. MTBF in years per sample.
 | Foxline     | 13     | 30      | 93    | 34    | 0.17   |
 | TEKET       | 1      | 2       | 59    | 0     | 0.16   |
 | ORICO       | 5      | 5       | 94    | 1     | 0.16   |
-| EYOTA       | 1      | 1       | 58    | 0     | 0.16   |
 | ASMedia     | 1      | 4       | 55    | 0     | 0.15   |
 | Acer        | 4      | 9       | 55    | 0     | 0.15   |
-| Aoluska     | 1      | 1       | 54    | 0     | 0.15   |
 | PUSKILL     | 3      | 3       | 53    | 0     | 0.15   |
 | Teutons     | 2      | 2       | 53    | 0     | 0.15   |
 | KINGBANK    | 2      | 7       | 53    | 0     | 0.15   |
-| IPLEX       | 1      | 1       | 52    | 0     | 0.14   |
-| JUHOR       | 1      | 1       | 52    | 0     | 0.14   |
 | VISIPRO     | 3      | 6       | 51    | 3     | 0.14   |
 | HEORIADY    | 3      | 4       | 49    | 0     | 0.14   |
 | JD          | 2      | 2       | 169   | 53    | 0.14   |
 | Qumo        | 5      | 10      | 169   | 204   | 0.14   |
-| Greenliant  | 1      | 1       | 49    | 0     | 0.13   |
 | Anobit      | 1      | 2       | 48    | 1     | 0.13   |
 | Avant       | 3      | 4       | 432   | 254   | 0.13   |
 | Win Memory  | 3      | 5       | 48    | 0     | 0.13   |
@@ -4465,30 +4421,18 @@ MTBF - avg. MTBF in years per sample.
 | XPG         | 1      | 3       | 46    | 0     | 0.13   |
 | S3+         | 7      | 9       | 91    | 6     | 0.13   |
 | RCESSD      | 1      | 2       | 46    | 0     | 0.13   |
-| LENSEN      | 1      | 1       | 46    | 0     | 0.13   |
-| MARSHAL     | 1      | 1       | 44    | 0     | 0.12   |
 | Netac       | 31     | 239     | 50    | 15    | 0.12   |
-| FATTYDOVE   | 1      | 1       | 44    | 0     | 0.12   |
-| PRETEC      | 1      | 1       | 44    | 0     | 0.12   |
-| ORIGIN I... | 1      | 1       | 43    | 0     | 0.12   |
 | GSemi       | 1      | 2       | 41    | 0     | 0.11   |
 | Fordisk     | 2      | 2       | 41    | 0     | 0.11   |
 | Faspeed     | 15     | 16      | 43    | 1     | 0.11   |
 | QUMO        | 12     | 19      | 57    | 2     | 0.11   |
-| Dogeish     | 1      | 1       | 40    | 0     | 0.11   |
 | Solid       | 3      | 6       | 42    | 1     | 0.11   |
-| MediaRange  | 1      | 1       | 39    | 0     | 0.11   |
 | Goldkey     | 2      | 2       | 39    | 0     | 0.11   |
 | Fanxiang    | 7      | 9       | 38    | 0     | 0.11   |
 | Star Drive  | 3      | 6       | 38    | 0     | 0.11   |
 | Kingrich    | 6      | 7       | 121   | 2     | 0.10   |
 | Yeyian      | 3      | 5       | 37    | 0     | 0.10   |
 | KIOXIA-E... | 3      | 43      | 36    | 0     | 0.10   |
-| TOPMORE     | 1      | 1       | 36    | 0     | 0.10   |
-| NTC         | 1      | 1       | 35    | 0     | 0.10   |
-| Hanye       | 1      | 1       | 35    | 0     | 0.10   |
-| TakeMS      | 1      | 1       | 34    | 0     | 0.10   |
-| RESCUE      | 1      | 1       | 34    | 0     | 0.10   |
 | RX7         | 3      | 3       | 36    | 4     | 0.10   |
 | Teclast     | 18     | 42      | 43    | 26    | 0.09   |
 | ANACOMDA    | 2      | 2       | 34    | 0     | 0.09   |
@@ -4496,152 +4440,68 @@ MTBF - avg. MTBF in years per sample.
 | Gateway     | 2      | 4       | 33    | 0     | 0.09   |
 | AEGO        | 1      | 3       | 33    | 0     | 0.09   |
 | ORTIAL      | 3      | 11      | 30    | 0     | 0.08   |
-| KingPower   | 1      | 1       | 29    | 0     | 0.08   |
 | TEXTORM     | 4      | 8       | 30    | 5     | 0.08   |
 | ACPI        | 3      | 3       | 29    | 0     | 0.08   |
 | OSCOO       | 5      | 5       | 30    | 18    | 0.08   |
 | Silicon ... | 2      | 2       | 27    | 0     | 0.08   |
-| Tammuz      | 1      | 1       | 27    | 0     | 0.08   |
-| SenDisk     | 1      | 1       | 27    | 0     | 0.08   |
 | i-FlashDisk | 2      | 2       | 27    | 0     | 0.07   |
-| HECTRON     | 1      | 1       | 26    | 0     | 0.07   |
 | Rogueware   | 2      | 2       | 25    | 0     | 0.07   |
-| Pasoul      | 1      | 1       | 25    | 0     | 0.07   |
-| Wdxsky      | 1      | 1       | 25    | 0     | 0.07   |
 | MidasForce  | 4      | 9       | 25    | 0     | 0.07   |
 | Eluktro     | 2      | 2       | 428   | 508   | 0.07   |
 | KeepData    | 2      | 4       | 24    | 0     | 0.07   |
 | KLLISRE     | 3      | 3       | 24    | 0     | 0.07   |
 | Wibtek      | 3      | 10      | 23    | 11    | 0.07   |
-| SNR         | 1      | 1       | 23    | 0     | 0.07   |
 | Supersonic  | 2      | 2       | 23    | 0     | 0.06   |
 | WALRAM      | 5      | 17      | 25    | 6     | 0.06   |
 | RECADATA    | 2      | 2       | 23    | 0     | 0.06   |
 | ZHITAI      | 3      | 5       | 21    | 0     | 0.06   |
-| ELSKY       | 1      | 1       | 21    | 0     | 0.06   |
 | Valuetech   | 2      | 2       | 21    | 0     | 0.06   |
-| GHIA        | 1      | 1       | 20    | 0     | 0.06   |
 | Dell        | 3      | 9       | 20    | 0     | 0.06   |
-| XUNZHE      | 1      | 1       | 20    | 0     | 0.05   |
-| Force Le    | 1      | 1       | 19    | 0     | 0.05   |
 | JUMPER      | 1      | 2       | 19    | 0     | 0.05   |
 | SCY         | 2      | 4       | 18    | 0     | 0.05   |
 | Kimtigo     | 1      | 4       | 18    | 0     | 0.05   |
-| Hyperdisk   | 1      | 1       | 18    | 0     | 0.05   |
-| UMIS        | 1      | 1       | 18    | 0     | 0.05   |
-| Yeestor     | 1      | 1       | 17    | 0     | 0.05   |
 | Kingspeed   | 2      | 2       | 17    | 0     | 0.05   |
-| LDNDISK     | 1      | 1       | 16    | 0     | 0.05   |
-| Goldendisk  | 1      | 1       | 16    | 0     | 0.04   |
-| MOVESPEED   | 1      | 1       | 15    | 0     | 0.04   |
-| RevuAhn     | 1      | 1       | 14    | 0     | 0.04   |
-| NFORCE      | 1      | 1       | 14    | 0     | 0.04   |
 | BR          | 5      | 5       | 14    | 0     | 0.04   |
-| ADLINK      | 1      | 1       | 13    | 0     | 0.04   |
-| Origin I... | 1      | 1       | 171   | 12    | 0.04   |
-| SomnAmbu... | 1      | 1       | 25    | 1     | 0.04   |
-| Getrich     | 1      | 1       | 12    | 0     | 0.04   |
 | RAMOS       | 2      | 2       | 12    | 0     | 0.04   |
-| KUIJIA      | 1      | 1       | 12    | 0     | 0.03   |
 | EVM         | 1      | 2       | 12    | 0     | 0.03   |
 | Microtech   | 2      | 2       | 12    | 0     | 0.03   |
 | Azerty      | 2      | 3       | 12    | 0     | 0.03   |
-| Wicgtyp     | 1      | 1       | 12    | 0     | 0.03   |
 | Gigastone   | 2      | 2       | 12    | 0     | 0.03   |
 | AXIOMTEK    | 3      | 28      | 11    | 0     | 0.03   |
 | DGM         | 1      | 2       | 79    | 21    | 0.03   |
 | ACOS        | 1      | 2       | 48    | 508   | 0.03   |
-| KUU         | 1      | 1       | 10    | 0     | 0.03   |
 | DUEX        | 2      | 2       | 538   | 531   | 0.03   |
 | Zozt        | 2      | 3       | 9     | 0     | 0.03   |
 | Maximus     | 2      | 5       | 9     | 0     | 0.03   |
 | VERICO      | 1      | 2       | 8     | 0     | 0.02   |
-| BaseTech    | 1      | 1       | 8     | 0     | 0.02   |
 | MIXZA       | 1      | 2       | 8     | 0     | 0.02   |
-| ATP         | 1      | 1       | 8     | 0     | 0.02   |
 | TMI         | 3      | 3       | 8     | 0     | 0.02   |
 | FASTDISK    | 6      | 6       | 7     | 0     | 0.02   |
 | Digma       | 4      | 6       | 7     | 2     | 0.02   |
-| Mach Xtreme | 1      | 1       | 7     | 0     | 0.02   |
-| ALLIED      | 1      | 1       | 7     | 0     | 0.02   |
 | INDMEM      | 5      | 6       | 7     | 0     | 0.02   |
 | 2-Power     | 3      | 4       | 6     | 2     | 0.02   |
 | KODAK       | 4      | 4       | 6     | 0     | 0.02   |
-| POLION      | 1      | 1       | 6     | 0     | 0.02   |
-| Pear        | 1      | 1       | 6     | 0     | 0.02   |
-| geonix      | 1      | 1       | 6     | 0     | 0.02   |
-| QNIX        | 1      | 1       | 6     | 0     | 0.02   |
-| J.ZAO       | 1      | 1       | 5     | 0     | 0.02   |
-| kingchuxing | 1      | 1       | 5     | 0     | 0.02   |
-| BUFFALO     | 1      | 1       | 5     | 0     | 0.02   |
-| QIANGHE     | 1      | 1       | 73    | 12    | 0.02   |
 | Goldenfir   | 3      | 3       | 32    | 11    | 0.01   |
 | ShiJi       | 5      | 8       | 5     | 0     | 0.01   |
 | Protectli   | 1      | 2       | 4     | 0     | 0.01   |
 | Veno        | 1      | 2       | 4     | 0     | 0.01   |
-| Reletech    | 1      | 1       | 4     | 0     | 0.01   |
 | UMAX        | 2      | 4       | 4     | 0     | 0.01   |
-| ASint       | 1      | 1       | 4     | 0     | 0.01   |
 | MicroDream  | 1      | 2       | 4     | 0     | 0.01   |
-| PHINOCOM    | 1      | 1       | 4     | 0     | 0.01   |
-| ROKOT       | 1      | 1       | 3     | 0     | 0.01   |
-| Pacific Sun | 1      | 1       | 3     | 0     | 0.01   |
 | Seapiy      | 2      | 2       | 3     | 0     | 0.01   |
-| Aarvex      | 1      | 1       | 3     | 0     | 0.01   |
-| ShineDisk   | 1      | 1       | 3     | 0     | 0.01   |
 | IOD         | 1      | 2       | 3     | 0     | 0.01   |
-| TurXun      | 1      | 1       | 3     | 0     | 0.01   |
-| GOKE        | 1      | 1       | 3     | 0     | 0.01   |
-| Pichau      | 1      | 1       | 3     | 0     | 0.01   |
-| KOOTION     | 1      | 1       | 2     | 0     | 0.01   |
 | Cactus      | 1      | 2       | 2     | 0     | 0.01   |
-| SOLIDATA    | 1      | 1       | 2420  | 1019  | 0.01   |
 | MaxDigital  | 3      | 3       | 16    | 222   | 0.01   |
-| VSEVEN      | 1      | 1       | 2     | 0     | 0.01   |
-| Philips     | 1      | 1       | 1     | 0     | 0.01   |
 | DEPO        | 1      | 2       | 1     | 108   | 0.00   |
-| PATRIOT     | 1      | 1       | 1     | 0     | 0.00   |
-| SXMicro     | 1      | 1       | 1     | 0     | 0.00   |
-| Mcpoint     | 1      | 1       | 6     | 3     | 0.00   |
 | Xinhaike    | 1      | 2       | 1     | 0     | 0.00   |
 | VICKTER     | 1      | 3       | 1     | 0     | 0.00   |
-| SOYO        | 1      | 1       | 1     | 0     | 0.00   |
 | SATAFIRM    | 1      | 3       | 126   | 88    | 0.00   |
 | LEQIXIANG   | 1      | 3       | 1     | 2     | 0.00   |
-| Emphase     | 1      | 1       | 907   | 1017  | 0.00   |
-| Leqixiang   | 1      | 1       | 0     | 0     | 0.00   |
-| Maxmemory   | 1      | 1       | 0     | 0     | 0.00   |
 | iODD        | 3      | 4       | 0     | 0     | 0.00   |
-| Reeioon     | 1      | 1       | 232   | 377   | 0.00   |
-| Gritronix   | 1      | 1       | 22    | 37    | 0.00   |
 | SSSTC       | 3      | 10      | 33    | 907   | 0.00   |
-| POWER X     | 1      | 1       | 0     | 0     | 0.00   |
-| Liren       | 1      | 1       | 0     | 0     | 0.00   |
-| VNYEZ       | 1      | 1       | 0     | 0     | 0.00   |
-| T-CREATE    | 1      | 1       | 0     | 0     | 0.00   |
 | HP Phison   | 3      | 4       | 427   | 1034  | 0.00   |
-| X-ENERGY    | 1      | 1       | 0     | 0     | 0.00   |
-| Bliksem     | 1      | 1       | 10    | 28    | 0.00   |
-| SUNTRSI     | 1      | 1       | 0     | 0     | 0.00   |
-| DERLAR      | 1      | 1       | 0     | 0     | 0.00   |
-| MAX SPEED   | 1      | 1       | 0     | 0     | 0.00   |
-| Tronos      | 1      | 1       | 0     | 0     | 0.00   |
-| Bamba       | 1      | 1       | 60    | 249   | 0.00   |
-| Myung       | 1      | 1       | 228   | 1015  | 0.00   |
 | Dahua       | 3      | 3       | 0     | 0     | 0.00   |
-| Hitachi     | 1      | 1       | 0     | 0     | 0.00   |
-| MaiChai     | 1      | 1       | 0     | 0     | 0.00   |
 | tecmiyo     | 2      | 2       | 7     | 27    | 0.00   |
-| Wellcomm... | 1      | 1       | 13    | 71    | 0.00   |
-| Xinsujie    | 1      | 1       | 0     | 0     | 0.00   |
-| KINGPAN     | 1      | 1       | 0     | 0     | 0.00   |
-| Wintec      | 1      | 1       | 0     | 0     | 0.00   |
 | DOGGO       | 1      | 2       | 0     | 0     | 0.00   |
-| KDATA       | 1      | 1       | 0     | 0     | 0.00   |
-| TXRUI       | 1      | 1       | 0     | 0     | 0.00   |
-| EGON        | 1      | 1       | 0     | 11    | 0.00   |
-| JIAWEI      | 1      | 1       | 47    | 3057  | 0.00   |
-| Zebronics   | 1      | 1       | 13    | 1012  | 0.00   |
 
 NVME by Model
 -------------
@@ -6174,17 +6034,11 @@ MTBF - avg. MTBF in years per sample.
 | MFG         | Models | Samples | Days  | Err   | MTBF |
 |-------------|--------|---------|-------|-------|------|
 | ZOTAC       | 1      | 2       | 919   | 0     | 2.52   |
-| Avant       | 1      | 1       | 891   | 0     | 2.44   |
 | addlink     | 1      | 16      | 340   | 0     | 0.93   |
 | Aura        | 1      | 4       | 339   | 0     | 0.93   |
-| tigo        | 1      | 1       | 313   | 0     | 0.86   |
 | KINGBANK    | 1      | 2       | 312   | 0     | 0.86   |
-| OYUNKEY     | 1      | 1       | 310   | 0     | 0.85   |
-| Reeinno     | 1      | 1       | 284   | 0     | 0.78   |
-| Ramsta      | 1      | 1       | 276   | 0     | 0.76   |
 | Intel       | 124    | 2144    | 261   | 7     | 0.68   |
 | Corsair     | 30     | 319     | 243   | 1     | 0.66   |
-| BAITITON    | 1      | 1       | 232   | 0     | 0.64   |
 | Toshiba     | 108    | 1218    | 224   | 2     | 0.61   |
 | LDLC        | 3      | 5       | 212   | 0     | 0.58   |
 | AMD         | 5      | 19      | 210   | 0     | 0.58   |
@@ -6199,10 +6053,8 @@ MTBF - avg. MTBF in years per sample.
 | SPCC        | 11     | 164     | 155   | 33    | 0.42   |
 | XPG         | 14     | 230     | 155   | 20    | 0.40   |
 | Phison      | 95     | 789     | 147   | 2     | 0.40   |
-| BIOSTAR     | 1      | 1       | 144   | 0     | 0.40   |
 | T-FORCE     | 7      | 15      | 139   | 0     | 0.38   |
 | Lenovo      | 9      | 79      | 144   | 3     | 0.37   |
-| SNR         | 1      | 1       | 135   | 0     | 0.37   |
 | Lite-On     | 27     | 97      | 134   | 3     | 0.37   |
 | ADATA       | 62     | 733     | 136   | 17    | 0.36   |
 | Hikvision   | 16     | 29      | 127   | 0     | 0.35   |
@@ -6213,7 +6065,6 @@ MTBF - avg. MTBF in years per sample.
 | Seagate     | 27     | 140     | 116   | 0     | 0.32   |
 | Zheino      | 2      | 4       | 115   | 0     | 0.32   |
 | Silicon ... | 83     | 267     | 112   | 1     | 0.31   |
-| ASint       | 1      | 1       | 111   | 0     | 0.31   |
 | Patriot     | 14     | 50      | 110   | 0     | 0.30   |
 | Gigabyte    | 18     | 82      | 107   | 13    | 0.29   |
 | XrayDisk    | 2      | 7       | 106   | 0     | 0.29   |
@@ -6221,13 +6072,10 @@ MTBF - avg. MTBF in years per sample.
 | PNY         | 22     | 104     | 112   | 1     | 0.29   |
 | Dell        | 7      | 14      | 104   | 0     | 0.29   |
 | ZHITAI      | 6      | 10      | 95    | 0     | 0.26   |
-| Hyundai     | 1      | 1       | 95    | 0     | 0.26   |
 | Team        | 14     | 59      | 96    | 52    | 0.26   |
 | Goodram     | 9      | 31      | 93    | 1     | 0.25   |
 | KIOXIA      | 51     | 872     | 92    | 2     | 0.25   |
 | Kingston    | 78     | 1435    | 92    | 3     | 0.25   |
-| AXIOM       | 1      | 1       | 87    | 0     | 0.24   |
-| Qunion      | 1      | 1       | 87    | 0     | 0.24   |
 | KIOXIA-E... | 7      | 43      | 84    | 0     | 0.23   |
 | HUAWEI      | 2      | 10      | 78    | 0     | 0.22   |
 | WDC         | 171    | 3587    | 77    | 2     | 0.21   |
@@ -6236,13 +6084,9 @@ MTBF - avg. MTBF in years per sample.
 | Apacer      | 9      | 59      | 73    | 0     | 0.20   |
 | Acer        | 2      | 3       | 68    | 0     | 0.19   |
 | ORICO       | 2      | 4       | 67    | 0     | 0.18   |
-| MSI         | 1      | 1       | 65    | 0     | 0.18   |
 | SK hynix    | 115    | 2221    | 59    | 1     | 0.16   |
 | UMIS        | 19     | 205     | 57    | 1     | 0.16   |
 | V-GeN       | 4      | 4       | 55    | 0     | 0.15   |
-| minisforum  | 1      | 1       | 54    | 0     | 0.15   |
-| SETHRISE    | 1      | 1       | 54    | 0     | 0.15   |
-| INDMEM      | 1      | 1       | 313   | 5     | 0.14   |
 | SSSTC       | 25     | 168     | 52    | 0     | 0.14   |
 | Netac       | 7      | 39      | 51    | 27    | 0.13   |
 | SanDisk     | 68     | 434     | 44    | 0     | 0.12   |
@@ -6257,7 +6101,6 @@ MTBF - avg. MTBF in years per sample.
 | Apple       | 28     | 299     | 22    | 4     | 0.06   |
 | Union Me... | 10     | 70      | 20    | 0     | 0.06   |
 | Star Drive  | 1      | 13      | 20    | 0     | 0.06   |
-| Phytium     | 1      | 1       | 18    | 0     | 0.05   |
 | SMI         | 1      | 2       | 17    | 0     | 0.05   |
 | Fanxiang    | 3      | 5       | 17    | 0     | 0.05   |
 | J.ZAO       | 3      | 3       | 16    | 0     | 0.05   |
@@ -6268,21 +6111,12 @@ MTBF - avg. MTBF in years per sample.
 | Timetec     | 1      | 3       | 13    | 0     | 0.04   |
 | BIWIN       | 6      | 39      | 13    | 0     | 0.04   |
 | Solid St... | 8      | 15      | 13    | 0     | 0.04   |
-| Kingmax     | 1      | 1       | 12    | 0     | 0.03   |
-| UDinfo      | 1      | 1       | 10    | 0     | 0.03   |
 | imation     | 2      | 2       | 9     | 0     | 0.03   |
 | VICKTER     | 1      | 2       | 8     | 0     | 0.02   |
 | WALRAM      | 4      | 5       | 6     | 0     | 0.02   |
-| EAGET       | 1      | 1       | 5     | 0     | 0.02   |
 | ExeGate     | 2      | 2       | 5     | 0     | 0.01   |
-| MAXIO       | 1      | 1       | 4     | 0     | 0.01   |
 | Intenso     | 2      | 2       | 4     | 0     | 0.01   |
-| NTC         | 1      | 1       | 2     | 0     | 0.01   |
 | AGI         | 1      | 2       | 2     | 0     | 0.01   |
-| Western ... | 1      | 1       | 1     | 0     | 0.01   |
 | EMTEC       | 2      | 2       | 1     | 0     | 0.01   |
-| GLOWAY      | 1      | 1       | 1     | 0     | 0.00   |
 | Kllisre     | 1      | 2       | 1     | 0     | 0.00   |
-| POWER X     | 1      | 1       | 0     | 0     | 0.00   |
-| Yangtze ... | 1      | 1       | 0     | 0     | 0.00   |
 
