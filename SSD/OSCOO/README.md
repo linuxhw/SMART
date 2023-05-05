@@ -20,5 +20,6 @@ MTBF - avg. MTBF in years per sample.
 | OSCOO     | OSC M.2            | 120 GB | 1       | 89    | 0     | 0.25   |
 | OSCOO     | OSC SSD            | 512 GB | 1       | 32    | 0     | 0.09   |
 | OSCOO     | OSC mSATA          | 256 GB | 1       | 21    | 0     | 0.06   |
+| OSCOO     | OSC M.2            | 128 GB | 1       | 3     | 0     | 0.01   |
 | OSCOO     | OSC SSD            | 128 GB | 1       | 0     | 0     | 0.00   |
 | OSCOO     | OSC SSD            | 120 GB | 1       | 9     | 89    | 0.00   |

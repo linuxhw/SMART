@@ -17,9 +17,10 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Faspeed   | F510-120G          | 120 GB | 1       | 173   | 0     | 0.47   |
+| Faspeed   | F510-120G          | 120 GB | 2       | 542   | 0     | 1.49   |
 | Faspeed   | H7-240G            | 240 GB | 1       | 109   | 0     | 0.30   |
 | Faspeed   | H5-60G PLUS        | 64 GB  | 1       | 90    | 0     | 0.25   |
+| Faspeed   | K7L-120G           | 120 GB | 1       | 84    | 0     | 0.23   |
 | Faspeed   | K5-120G            | 120 GB | 2       | 77    | 0     | 0.21   |
 | Faspeed   | K7N8-256GF         | 256 GB | 1       | 44    | 0     | 0.12   |
 | Faspeed   | K7-512G-CD         | 512 GB | 1       | 34    | 0     | 0.10   |

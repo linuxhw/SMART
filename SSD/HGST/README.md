@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| HGST      | HUSKY SSD          | 128 GB | 2       | 65    | 0     | 0.18   |
+| HGST      | HUSKY SSD          | 128 GB | 3       | 48    | 0     | 0.13   |

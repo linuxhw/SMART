@@ -53,7 +53,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PH6-CE120          | 120 GB | 12      | 201   | 0     | 0.55   |
 | Plextor   | PX-256M5P          | 256 GB | 1       | 183   | 0     | 0.50   |
 | Plextor   | PX-256M5S          | 256 GB | 17      | 267   | 113   | 0.50   |
-| Plextor   | PX-128M5S          | 128 GB | 57      | 176   | 1     | 0.46   |
+| Plextor   | PX-128M5S          | 128 GB | 58      | 177   | 1     | 0.47   |
 | Plextor   | PX-256M5M          | 256 GB | 4       | 158   | 0     | 0.44   |
 | Plextor   | PX-256S2C          | 256 GB | 2       | 153   | 0     | 0.42   |
 | Plextor   | PX-256M3           | 256 GB | 2       | 236   | 1     | 0.41   |
@@ -65,7 +65,7 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-512S2G          | 512 GB | 3       | 127   | 0     | 0.35   |
 | Plextor   | PH6-CE240-L2       | 240 GB | 1       | 121   | 0     | 0.33   |
 | Plextor   | PX-AG128M6e        | 128 GB | 4       | 229   | 2     | 0.33   |
-| Plextor   | PX-128M5Pro        | 128 GB | 57      | 103   | 0     | 0.28   |
+| Plextor   | PX-128M5Pro        | 128 GB | 58      | 103   | 0     | 0.28   |
 | Plextor   | PX-256M8VG         | 256 GB | 4       | 96    | 0     | 0.26   |
 | Plextor   | PX-G256M6e         | 256 GB | 3       | 91    | 0     | 0.25   |
 | Plextor   | PX-128S3C          | 128 GB | 14      | 90    | 0     | 0.25   |
@@ -74,15 +74,15 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-256M6V          | 256 GB | 2       | 85    | 0     | 0.23   |
 | Plextor   | PX-128M5M          | 128 GB | 12      | 84    | 0     | 0.23   |
 | Plextor   | PX-256M8VC         | 256 GB | 9       | 71    | 0     | 0.20   |
-| Plextor   | PX-128M6S          | 128 GB | 36      | 85    | 136   | 0.19   |
 | Plextor   | PX-256M6M          | 256 GB | 4       | 73    | 1     | 0.19   |
-| Plextor   | PX-128M6Pro        | 128 GB | 13      | 74    | 1     | 0.18   |
+| Plextor   | PX-128M6S          | 128 GB | 37      | 83    | 132   | 0.18   |
 | Plextor   | PX-256M6S          | 256 GB | 12      | 77    | 179   | 0.18   |
+| Plextor   | PX-128M6Pro        | 128 GB | 14      | 76    | 1     | 0.18   |
 | Plextor   | PX-256S1G          | 256 GB | 1       | 61    | 0     | 0.17   |
 | Plextor   | PX-256M6Pro        | 256 GB | 3       | 91    | 2     | 0.15   |
-| Plextor   | PX-128M6M          | 128 GB | 7       | 70    | 513   | 0.14   |
+| Plextor   | PX-128M6M          | 128 GB | 8       | 76    | 449   | 0.14   |
 | Plextor   | PX-512M3           | 512 GB | 1       | 1402  | 31    | 0.12   |
-| Plextor   | PX-64M5M           | 64 GB  | 1       | 34    | 0     | 0.10   |
+| Plextor   | PX-64M5M           | 64 GB  | 2       | 28    | 0     | 0.08   |
 | Plextor   | PX-256M6GV-2280    | 256 GB | 1       | 26    | 0     | 0.07   |
 | Plextor   | PX-128S2C          | 128 GB | 2       | 24    | 0     | 0.07   |
 | Plextor   | PX-128S1G          | 128 GB | 2       | 23    | 0     | 0.07   |
@@ -106,7 +106,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Plextor   | M3/M5/M6/M7 Series ... | 13     | 49      | 231   | 74    | 0.63   |
-| Plextor   | Unknown                | 35     | 113     | 198   | 1     | 0.51   |
-| Plextor   | M3/M5/M6 Series SSDs   | 18     | 220     | 173   | 50    | 0.41   |
+| Plextor   | M3/M5/M6/M7 Series ... | 13     | 50      | 229   | 72    | 0.62   |
+| Plextor   | Unknown                | 35     | 114     | 197   | 1     | 0.51   |
+| Plextor   | M3/M5/M6 Series SSDs   | 18     | 224     | 171   | 49    | 0.40   |
 | Plextor   | M3/M5 (Pro) Series ... | 3      | 17      | 205   | 62    | 0.39   |

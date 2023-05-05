@@ -32,6 +32,7 @@ MTBF - avg. MTBF in years per sample.
 | Quantum   | FIREBALLlct15 30   | 32 GB  | 1       | 391   | 1     | 0.54   |
 | Quantum   | FIREBALLlct15 15   | 16 GB  | 1       | 183   | 0     | 0.50   |
 | Quantum   | FIREBALLlct20 10   | 10 GB  | 1       | 42    | 0     | 0.12   |
+| Quantum   | FIREBALLlct20 20   | 20 GB  | 1       | 4429  | 162   | 0.07   |
 | Quantum   | FIREBALLlct15 10   | 10 GB  | 1       | 105   | 5     | 0.05   |
 
 HDD by Family
@@ -50,5 +51,5 @@ MTBF - avg. MTBF in years per sample.
 | Quantum   | Unknown                | 1      | 1       | 1486  | 0     | 4.07   |
 | Quantum   | Fireball Plus AS       | 2      | 2       | 845   | 0     | 2.32   |
 | Quantum   | Fireball               | 2      | 2       | 579   | 0     | 1.59   |
-| Quantum   | Fireball lct20         | 3      | 3       | 640   | 2     | 0.63   |
+| Quantum   | Fireball lct20         | 4      | 4       | 1587  | 42    | 0.49   |
 | Quantum   | Fireball lct15         | 2      | 2       | 248   | 3     | 0.29   |

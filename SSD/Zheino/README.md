@@ -47,6 +47,7 @@ MTBF - avg. MTBF in years per sample.
 | Zheino    | CHN25SATAS1 032    | 32 GB  | 4       | 10    | 0     | 0.03   |
 | Zheino    | CHN25SATAS1 064    | 64 GB  | 2       | 4     | 0     | 0.01   |
 | Zheino    | CHN-25SATAA3-360   | 360 GB | 1       | 87    | 21    | 0.01   |
+| Zheino    | CHN-NGFFSA2242-256 | 256 GB | 1       | 1     | 0     | 0.00   |
 
 SSD by Family
 -------------
@@ -62,4 +63,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Zheino    | Silicon Motion base... | 1      | 3       | 106   | 0     | 0.29   |
-| Zheino    | Unknown                | 23     | 39      | 99    | 1     | 0.22   |
+| Zheino    | Unknown                | 24     | 40      | 97    | 1     | 0.22   |

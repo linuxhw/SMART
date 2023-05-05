@@ -18,4 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | ANACOMDA  | A1                 | 120 GB | 1       | 60    | 0     | 0.17   |
+| ANACOMDA  | TB 240GB SSD       | 240 GB | 1       | 15    | 0     | 0.04   |
 | ANACOMDA  | TT 256GB SSD       | 256 GB | 1       | 8     | 0     | 0.02   |

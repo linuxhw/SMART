@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| Hitachi   | HUAXUAN S800 128G  | 128 GB | 1       | 128   | 0     | 0.35   |
 | Hitachi   | HDSSD240GJP3       | 240 GB | 1       | 0     | 0     | 0.00   |

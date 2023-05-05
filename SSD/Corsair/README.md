@@ -29,18 +29,18 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Neutron XTI SSD    | 480 GB | 1       | 1717  | 0     | 4.70   |
 | Corsair   | CMFSSD-256GBG2D    | 256 GB | 1       | 1693  | 0     | 4.64   |
 | Corsair   | Force GT           | 240 GB | 4       | 1689  | 1     | 4.25   |
-| Corsair   | Force 3 SSD        | 180 GB | 6       | 1681  | 1     | 3.88   |
+| Corsair   | Force 3 SSD        | 180 GB | 7       | 1665  | 1     | 3.94   |
 | Corsair   | Force GS           | 360 GB | 1       | 1291  | 0     | 3.54   |
 | Corsair   | Force SSD          | 120 GB | 1       | 1271  | 0     | 3.48   |
-| Corsair   | Force 3 SSD        | 240 GB | 12      | 1344  | 88    | 3.32   |
 | Corsair   | Force GT           | 180 GB | 3       | 1205  | 0     | 3.30   |
+| Corsair   | Force 3 SSD        | 240 GB | 13      | 1266  | 81    | 3.14   |
 | Corsair   | Force LS SSD       | 960 GB | 1       | 1129  | 0     | 3.09   |
 | Corsair   | Force GS           | 480 GB | 3       | 1884  | 15    | 3.02   |
 | Corsair   | Force GS           | 180 GB | 3       | 1087  | 0     | 2.98   |
 | Corsair   | CMFSSD-128GBG2D    | 128 GB | 1       | 954   | 0     | 2.62   |
-| Corsair   | Force GT           | 120 GB | 21      | 1118  | 2     | 2.50   |
-| Corsair   | Force 3 SSD        | 120 GB | 43      | 961   | 61    | 2.34   |
-| Corsair   | Force 3 SSD        | 64 GB  | 20      | 863   | 1     | 2.28   |
+| Corsair   | Force GT           | 120 GB | 22      | 1144  | 2     | 2.60   |
+| Corsair   | Force 3 SSD        | 120 GB | 44      | 961   | 59    | 2.35   |
+| Corsair   | Force 3 SSD        | 64 GB  | 21      | 855   | 1     | 2.27   |
 | Corsair   | Neutron SSD        | 256 GB | 2       | 801   | 0     | 2.20   |
 | Corsair   | Force GT           | 64 GB  | 8       | 948   | 4     | 2.17   |
 | Corsair   | CSSD-F115GB2-A     | 115 GB | 1       | 781   | 0     | 2.14   |
@@ -49,22 +49,23 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force LE SSD       | 240 GB | 4       | 709   | 0     | 1.94   |
 | Corsair   | Force GS           | 128 GB | 24      | 640   | 0     | 1.75   |
 | Corsair   | Force 3 SSD        | 480 GB | 1       | 598   | 0     | 1.64   |
+| Corsair   | Neutron SSD        | 64 GB  | 6       | 807   | 3     | 1.64   |
 | Corsair   | CSSD-V64GB2        | 64 GB  | 2       | 597   | 0     | 1.64   |
-| Corsair   | Force GS           | 240 GB | 7       | 1232  | 18    | 1.38   |
 | Corsair   | Force GT           | 90 GB  | 4       | 610   | 1     | 1.36   |
 | Corsair   | Force 3 SSD        | 90 GB  | 7       | 473   | 0     | 1.30   |
+| Corsair   | Force GS           | 240 GB | 8       | 1112  | 17    | 1.22   |
 | Corsair   | Force LE200 SSD    | 240 GB | 10      | 435   | 6     | 0.99   |
 | Corsair   | Force LS SSD       | 480 GB | 2       | 970   | 1     | 0.96   |
 | Corsair   | Force LE SSD       | 480 GB | 5       | 339   | 0     | 0.93   |
 | Corsair   | Neutron XT SSD     | 480 GB | 3       | 561   | 2     | 0.92   |
-| Corsair   | Neutron SSD        | 64 GB  | 5       | 540   | 3     | 0.79   |
 | Corsair   | CMFSSD-32D1        | 32 GB  | 1       | 566   | 1     | 0.78   |
 | Corsair   | Force LE SSD       | 120 GB | 4       | 253   | 0     | 0.69   |
 | Corsair   | Neutron XTI SSD    | 240 GB | 2       | 244   | 0     | 0.67   |
 | Corsair   | Force LS SSD       | 64 GB  | 31      | 378   | 134   | 0.64   |
-| Corsair   | CSSD-V60GB2        | 64 GB  | 3       | 323   | 6     | 0.53   |
+| Corsair   | CSSD-V60GB2        | 64 GB  | 4       | 279   | 4     | 0.50   |
+| Corsair   | Force LE200 SSD    | 120 GB | 9       | 174   | 0     | 0.48   |
 | Corsair   | Force LS SSD       | 240 GB | 3       | 348   | 505   | 0.45   |
-| Corsair   | Force LE200 SSD    | 120 GB | 8       | 164   | 0     | 0.45   |
+| Corsair   | Force LX SSD       | 128 GB | 1       | 159   | 0     | 0.44   |
 | Corsair   | Force LS SSD       | 120 GB | 18      | 419   | 428   | 0.43   |
 | Corsair   | Performance Pro    | 128 GB | 3       | 492   | 408   | 0.41   |
 | Corsair   | CSSD-F180GB2       | 180 GB | 1       | 149   | 0     | 0.41   |
@@ -79,6 +80,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force LX SSD       | 256 GB | 2       | 20    | 0     | 0.06   |
 | Corsair   | CSSD-F80GB2-A      | 80 GB  | 1       | 18    | 0     | 0.05   |
 | Corsair   | Neutron SSD        | 240 GB | 1       | 2126  | 114   | 0.05   |
+| Corsair   | FORCE LX SSD       | 128 GB | 1       | 11    | 0     | 0.03   |
 | Corsair   | Neutron XT SSD     | 240 GB | 2       | 1342  | 286   | 0.01   |
 | Corsair   | Neutron GTX SSD    | 128 GB | 1       | 1173  | 291   | 0.01   |
 | Corsair   | CSSD-V128GB2       | 128 GB | 1       | 3     | 0     | 0.01   |
@@ -99,7 +101,8 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Corsair   | SandForce Driven SSDs  | 31     | 242     | 877   | 95    | 1.94   |
-| Corsair   | Unknown                | 25     | 60      | 670   | 92    | 0.91   |
+| Corsair   | SandForce Driven SSDs  | 31     | 248     | 878   | 93    | 1.95   |
+| Corsair   | Unknown                | 26     | 63      | 677   | 88    | 0.98   |
 | Corsair   | Indilinx Barefoot b... | 4      | 5       | 372   | 1     | 0.83   |
-| Corsair   | Phison Driven SSDs     | 2      | 18      | 315   | 4     | 0.75   |
+| Corsair   | Phison Driven SSDs     | 2      | 19      | 312   | 4     | 0.75   |
+| Corsair   | Silicon Motion base... | 1      | 1       | 11    | 0     | 0.03   |

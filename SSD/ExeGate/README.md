@@ -20,6 +20,7 @@ MTBF - avg. MTBF in years per sample.
 | ExeGate   | EX280461RUS        | 128 GB | 1       | 917   | 0     | 2.51   |
 | ExeGate   | EX276536RUS        | 120 GB | 1       | 353   | 0     | 0.97   |
 | ExeGate   | EX276687RUS        | 120 GB | 1       | 26    | 0     | 0.07   |
+| ExeGate   | EX276688RUS        | 240 GB | 1       | 3     | 0     | 0.01   |
 | ExeGate   | EX276690RUS(960GB) | 960 GB | 3       | 0     | 0     | 0.00   |
-| ExeGate   | EX280463RUS(512GB) | 512 GB | 1       | 0     | 0     | 0.00   |
+| ExeGate   | EX280463RUS(512GB) | 512 GB | 2       | 0     | 0     | 0.00   |
 | ExeGate   | EX276536RUS(120GB) | 120 GB | 1       | 0     | 0     | 0.00   |

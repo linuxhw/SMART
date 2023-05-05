@@ -18,21 +18,22 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | UMIS      | RPIRJ512VME2OWD    | 512 GB | 1       | 208   | 0     | 0.57   |
-| UMIS      | RPJTJ256MED1OWX    | 256 GB | 5       | 131   | 0     | 0.36   |
-| UMIS      | RPJTJ512MEE1OWX    | 512 GB | 40      | 95    | 0     | 0.26   |
+| UMIS      | RPJTJ256MED1OWX    | 256 GB | 6       | 146   | 0     | 0.40   |
+| UMIS      | RPJTJ512MEE1OWX    | 512 GB | 44      | 92    | 0     | 0.25   |
 | UMIS      | RPEYJ512VMM2QWY    | 512 GB | 1       | 84    | 0     | 0.23   |
 | UMIS      | RPITJ512VME2OWD    | 512 GB | 6       | 78    | 0     | 0.22   |
 | UMIS      | RPJTJ128MED1MWX    | 128 GB | 6       | 84    | 16    | 0.21   |
-| UMIS      | RPJTJ128MEE1MWX    | 128 GB | 7       | 73    | 0     | 0.20   |
-| UMIS      | RPJTJ256MEE1OWX    | 256 GB | 53      | 61    | 0     | 0.17   |
+| UMIS      | RPJTJ128MEE1MWX    | 128 GB | 9       | 59    | 0     | 0.16   |
+| UMIS      | RPJTJ256MEE1OWX    | 256 GB | 58      | 59    | 0     | 0.16   |
 | UMIS      | RPITJ1TBVME2HWD    | 1 TB   | 2       | 56    | 0     | 0.15   |
-| UMIS      | RPFTJ128PDD2EWX    | 128 GB | 27      | 38    | 0     | 0.11   |
-| UMIS      | RPETJ512MGE2QDQ    | 512 GB | 6       | 34    | 0     | 0.09   |
+| UMIS      | RPFTJ128PDD2EWX    | 128 GB | 29      | 46    | 0     | 0.13   |
+| UMIS      | RPETJ512MGE2QDQ    | 512 GB | 9       | 41    | 0     | 0.11   |
+| UMIS      | RPFTJ256PDD2MWX    | 256 GB | 23      | 34    | 0     | 0.10   |
 | UMIS      | LENSE40256GMSP3... | 256 GB | 2       | 31    | 0     | 0.09   |
-| UMIS      | RPFTJ256PDD2MWX    | 256 GB | 20      | 30    | 0     | 0.08   |
 | UMIS      | RPETJ256MGE2MDQ    | 256 GB | 3       | 30    | 0     | 0.08   |
 | UMIS      | RPETJ1T24MGE2QDQ   | 1 TB   | 3       | 16    | 0     | 0.05   |
-| UMIS      | RPJTJ512MGE1QDQ    | 512 GB | 18      | 11    | 0     | 0.03   |
+| UMIS      | RPJTJ512MGE1QDQ    | 512 GB | 23      | 11    | 0     | 0.03   |
+| UMIS      | RPJTJ512MGE1QDY    | 512 GB | 2       | 5     | 0     | 0.02   |
 | UMIS      | RPJTJ256MGE1QDQ    | 256 GB | 1       | 3     | 0     | 0.01   |
 | UMIS      | RPITJ512PED2OWX    | 512 GB | 1       | 3     | 0     | 0.01   |
 | UMIS      | RPIRJ256VME2MWD    | 256 GB | 3       | 0     | 0     | 0.00   |

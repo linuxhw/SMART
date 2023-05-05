@@ -18,16 +18,16 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Patriot   | Hellfire M2        | 240 GB | 3       | 400   | 0     | 1.10   |
-| Patriot   | P300               | 512 GB | 1       | 311   | 0     | 0.85   |
 | Patriot   | Scorch M2          | 512 GB | 4       | 300   | 0     | 0.82   |
+| Patriot   | P300               | 512 GB | 2       | 187   | 0     | 0.51   |
 | Patriot   | Scorch M2          | 128 GB | 6       | 173   | 0     | 0.48   |
 | Patriot   | Hellfire M2        | 480 GB | 1       | 96    | 0     | 0.26   |
 | Patriot   | P300               | 128 GB | 7       | 90    | 0     | 0.25   |
 | Patriot   | Scorch M2          | 256 GB | 6       | 88    | 0     | 0.24   |
+| Patriot   | M.2 P300           | 256 GB | 8       | 64    | 0     | 0.18   |
 | Patriot   | P300               | 256 GB | 5       | 64    | 0     | 0.18   |
 | Patriot   | M.2 P310           | 240 GB | 1       | 21    | 0     | 0.06   |
-| Patriot   | M.2 P300           | 128 GB | 4       | 17    | 0     | 0.05   |
-| Patriot   | M.2 P300           | 256 GB | 6       | 13    | 0     | 0.04   |
+| Patriot   | M.2 P300           | 128 GB | 5       | 18    | 0     | 0.05   |
 | Patriot   | P300               | 1 TB   | 2       | 7     | 0     | 0.02   |
 | Patriot   | M.2 P300           | 512 GB | 3       | 4     | 0     | 0.01   |
 | Patriot   | M.2 P400           | 512 GB | 1       | 0     | 0     | 0.00   |

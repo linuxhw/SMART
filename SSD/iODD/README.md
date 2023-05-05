@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| iODD      | MST1000-256        | 256 GB | 1       | 1     | 0     | 0.00   |
+| iODD      | MST1000-256        | 256 GB | 2       | 21    | 0     | 0.06   |
 | iODD      | MST1001-512        | 512 GB | 2       | 0     | 0     | 0.00   |
 | iODD      | MST1000 - 256      | 256 GB | 1       | 0     | 0     | 0.00   |

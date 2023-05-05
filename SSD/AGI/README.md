@@ -20,6 +20,7 @@ MTBF - avg. MTBF in years per sample.
 | AGI       | AGI960G17AI178     | 960 GB | 2       | 174   | 0     | 0.48   |
 | AGI       | AGI240G18AI238     | 240 GB | 2       | 136   | 0     | 0.37   |
 | AGI       | AGI240G06AI138     | 240 GB | 1       | 54    | 0     | 0.15   |
+| AGI       | AGI500GIMAI238     | 500 GB | 2       | 13    | 0     | 0.04   |
 | AGI       | AGI480G18AI238     | 480 GB | 1       | 7     | 0     | 0.02   |
-| AGI       | AGI500GIMAI238     | 500 GB | 1       | 4     | 0     | 0.01   |
+| AGI       | AGI120G06AI138     | 120 GB | 1       | 3     | 0     | 0.01   |
 | AGI       | AGI1T0G17AI178     | 1 TB   | 1       | 53    | 34    | 0.00   |

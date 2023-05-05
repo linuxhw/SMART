@@ -17,6 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| AXIOMTEK  | FSA128GMC2T        | 128 GB | 26      | 12    | 0     | 0.03   |
+| AXIOMTEK  | FSA008G300SC1T     | 8 GB   | 1       | 13    | 0     | 0.04   |
+| AXIOMTEK  | FSA128GMC2T        | 128 GB | 28      | 12    | 0     | 0.03   |
 | AXIOMTEK  | FSA016G300MC4T-H   | 16 GB  | 1       | 0     | 0     | 0.00   |
 | AXIOMTEK  | FSA128GMC5T        | 128 GB | 1       | 0     | 0     | 0.00   |

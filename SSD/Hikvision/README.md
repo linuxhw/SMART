@@ -20,17 +20,17 @@ MTBF - avg. MTBF in years per sample.
 | Hikvision | HKVSN HS-SSD-C1... | 240 GB | 1       | 391   | 0     | 1.07   |
 | Hikvision | HKVSN HS-SSD-E1... | 128 GB | 1       | 263   | 0     | 0.72   |
 | Hikvision | HS-SSD-E100N 256G  | 256 GB | 3       | 153   | 0     | 0.42   |
-| Hikvision | HS-SSD-C100 960G   | 960 GB | 2       | 130   | 0     | 0.36   |
+| Hikvision | HS-SSD-E100N 512G  | 512 GB | 2       | 137   | 0     | 0.38   |
 | Hikvision | HS-SSD-C100        | 480 GB | 2       | 130   | 0     | 0.36   |
-| Hikvision | HS-SSD-E100 512G   | 512 GB | 3       | 114   | 0     | 0.31   |
-| Hikvision | HS-SSD-C100 240G   | 240 GB | 13      | 64    | 0     | 0.18   |
-| Hikvision | HS-SSD-C100 480G   | 480 GB | 3       | 63    | 0     | 0.17   |
+| Hikvision | HS-SSD-E100 512G   | 512 GB | 4       | 88    | 0     | 0.24   |
+| Hikvision | HS-SSD-C100 960G   | 960 GB | 3       | 88    | 0     | 0.24   |
+| Hikvision | HS-SSD-E100 256G   | 256 GB | 6       | 72    | 0     | 0.20   |
 | Hikvision | HS-SSD-C100 120G   | 120 GB | 17      | 63    | 0     | 0.17   |
-| Hikvision | HS-SSD-E100 256G   | 256 GB | 4       | 46    | 0     | 0.13   |
-| Hikvision | HS-SSD-E100 1024G  | 1 TB   | 4       | 36    | 0     | 0.10   |
+| Hikvision | HS-SSD-C100 240G   | 240 GB | 15      | 57    | 0     | 0.16   |
+| Hikvision | HS-SSD-C100 480G   | 480 GB | 4       | 53    | 0     | 0.15   |
+| Hikvision | HS-SSD-E100 1024G  | 1 TB   | 5       | 145   | 1     | 0.14   |
 | Hikvision | HKVSN HS-SSD-C1... | 120 GB | 1       | 30    | 0     | 0.08   |
-| Hikvision | HS-SSD-E100N 512G  | 512 GB | 1       | 26    | 0     | 0.07   |
-| Hikvision | HS-SSD-E100 128G   | 128 GB | 5       | 37    | 1     | 0.05   |
+| Hikvision | HS-SSD-E100 128G   | 128 GB | 7       | 38    | 1     | 0.07   |
 | Hikvision | HS-SSD-Minder(S... | 240 GB | 1       | 9     | 0     | 0.03   |
 | Hikvision | HS-SSD-G100N 256G  | 256 GB | 1       | 5     | 0     | 0.02   |
 | Hikvision | HS-SSD-J100N       | 256 GB | 2       | 5     | 0     | 0.01   |

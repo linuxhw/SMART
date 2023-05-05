@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SK        | SKhynix SC300 H... | 256 GB | 1       | 1054  | 0     | 2.89   |
+| SK        | SKhynix SC300 H... | 256 GB | 2       | 672   | 0     | 1.84   |

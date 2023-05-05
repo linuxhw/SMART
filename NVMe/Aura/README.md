@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Aura      | Pro X2             | 960 GB | 4       | 339   | 0     | 0.93   |
+| Aura      | Pro X2             | 960 GB | 5       | 287   | 0     | 0.79   |

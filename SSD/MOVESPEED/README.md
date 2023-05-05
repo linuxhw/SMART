@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| MOVESPEED | YSSDJQB-2TSQ       | 2 TB   | 1       | 17    | 0     | 0.05   |
 | MOVESPEED | YSSDMDS-256GSQ-MG  | 256 GB | 1       | 15    | 0     | 0.04   |

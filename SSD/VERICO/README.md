@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| VERICO    | SSD                | 240 GB | 1       | 177   | 0     | 0.49   |
 | VERICO    | SSD                | 120 GB | 2       | 8     | 0     | 0.02   |

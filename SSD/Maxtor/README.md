@@ -18,5 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Maxtor    | Z1 SSD             | 480 GB | 5       | 177   | 0     | 0.49   |
+| Maxtor    | Z1 SSD             | 960 GB | 2       | 166   | 0     | 0.46   |
 | Maxtor    | Z1 SSD             | 240 GB | 14      | 118   | 0     | 0.32   |
-| Maxtor    | Z1 SSD             | 960 GB | 1       | 114   | 0     | 0.31   |

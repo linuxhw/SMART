@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Valuetech | 256GB SSD          | 256 GB | 1       | 40    | 0     | 0.11   |
-| Valuetech | Basics             | 256 GB | 1       | 2     | 0     | 0.01   |
+| Valuetech | Basics             | 256 GB | 2       | 18    | 0     | 0.05   |

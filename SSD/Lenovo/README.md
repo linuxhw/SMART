@@ -25,3 +25,4 @@ MTBF - avg. MTBF in years per sample.
 | Lenovo    | SSD SL700          | 1 TB   | 2       | 26    | 0     | 0.07   |
 | Lenovo    | SSD SL700 M.2 128G | 128 GB | 1       | 14    | 0     | 0.04   |
 | Lenovo    | SSD SL700          | 4 TB   | 1       | 12    | 0     | 0.04   |
+| Lenovo    | Thinklife SSD S... | 512 GB | 1       | 0     | 0     | 0.00   |

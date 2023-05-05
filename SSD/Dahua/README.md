@@ -17,6 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| Dahua     | C800A SSD          | 120 GB | 2       | 33    | 0     | 0.09   |
+| Dahua     | C800 2.5 inch S... | 256 GB | 1       | 5     | 0     | 0.02   |
 | Dahua     | C800A SSD          | 240 GB | 1       | 0     | 0     | 0.00   |
 | Dahua     | C800 2.5 inch S... | 120 GB | 1       | 0     | 0     | 0.00   |
-| Dahua     | C800A SSD          | 120 GB | 1       | 0     | 0     | 0.00   |

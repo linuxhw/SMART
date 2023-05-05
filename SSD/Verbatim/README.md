@@ -26,10 +26,10 @@ MTBF - avg. MTBF in years per sample.
 | Verbatim  | SATA-III SSD       | 256 GB | 1       | 503   | 0     | 1.38   |
 | Verbatim  | Vi500 S3 120GB SSD | 120 GB | 6       | 264   | 0     | 0.73   |
 | Verbatim  | SATA-III SSD       | 128 GB | 2       | 279   | 508   | 0.64   |
-| Verbatim  | Vi550 S3 SSD       | 128 GB | 18      | 94    | 0     | 0.26   |
+| Verbatim  | Vi550 S3 SSD       | 128 GB | 19      | 107   | 0     | 0.29   |
 | Verbatim  | Vi500 S3 240GB SSD | 240 GB | 2       | 45    | 0     | 0.12   |
 | Verbatim  | Vi560 SATA III ... | 256 GB | 1       | 38    | 0     | 0.10   |
-| Verbatim  | Vi550 S3           | 1 TB   | 7       | 13    | 0     | 0.04   |
+| Verbatim  | Vi550 S3           | 1 TB   | 16      | 12    | 0     | 0.03   |
 
 SSD by Family
 -------------
@@ -44,5 +44,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Verbatim  | Unknown                | 6      | 30      | 149   | 34    | 0.40   |
-| Verbatim  | Silicon Motion base... | 1      | 7       | 13    | 0     | 0.04   |
+| Verbatim  | Unknown                | 6      | 31      | 155   | 33    | 0.42   |
+| Verbatim  | Silicon Motion base... | 1      | 16      | 12    | 0     | 0.03   |

@@ -24,21 +24,23 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Smartbuy  | SSD                | 90 GB  | 2       | 661   | 0     | 1.81   |
-| Smartbuy  | SSD                | 64 GB  | 9       | 372   | 0     | 1.02   |
+| Smartbuy  | SSD                | 64 GB  | 10      | 393   | 0     | 1.08   |
 | Smartbuy  | mSata              | 128 GB | 3       | 312   | 0     | 0.86   |
 | Smartbuy  | SSD                | 240 GB | 36      | 328   | 1     | 0.78   |
-| Smartbuy  | SSD                | 64 GB  | 28      | 257   | 0     | 0.71   |
+| Smartbuy  | SSD                | 64 GB  | 29      | 259   | 0     | 0.71   |
+| Smartbuy  | SSD                | 120 GB | 94      | 217   | 1     | 0.58   |
 | Smartbuy  | m.2 S10-2280T      | 128 GB | 1       | 206   | 0     | 0.57   |
 | Smartbuy  | m.2 S11-2280S      | 128 GB | 1       | 202   | 0     | 0.56   |
+| Smartbuy  | SSD                | 1 TB   | 1       | 197   | 0     | 0.54   |
 | Smartbuy  | SSD                | 480 GB | 2       | 195   | 0     | 0.54   |
-| Smartbuy  | SSD                | 120 GB | 92      | 199   | 1     | 0.53   |
 | Smartbuy  | mSata              | 64 GB  | 1       | 186   | 0     | 0.51   |
 | Smartbuy  | m.2 S11-2280       | 128 GB | 3       | 167   | 0     | 0.46   |
 | Smartbuy  | SSD                | 120 GB | 7       | 167   | 0     | 0.46   |
-| Smartbuy  | SSD                | 240 GB | 11      | 121   | 0     | 0.33   |
-| Smartbuy  | SSD                | 512 GB | 2       | 55    | 0     | 0.15   |
+| Smartbuy  | SSD                | 240 GB | 12      | 111   | 0     | 0.31   |
+| Smartbuy  | SSD                | 480 GB | 3       | 92    | 0     | 0.25   |
 | Smartbuy  | mSata              | 256 GB | 3       | 51    | 0     | 0.14   |
 | Smartbuy  | m.2 S11-2280       | 256 GB | 1       | 13    | 0     | 0.04   |
+| Smartbuy  | SSD                | 1 TB   | 1       | 9     | 0     | 0.03   |
 | Smartbuy  | 120GB STELS        | 128 GB | 1       | 0     | 0     | 0.00   |
 
 SSD by Family
@@ -54,5 +56,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Smartbuy  | Phison Driven SSDs     | 6      | 183     | 236   | 1     | 0.61   |
-| Smartbuy  | Unknown                | 11     | 20      | 201   | 0     | 0.55   |
+| Smartbuy  | Phison Driven SSDs     | 8      | 192     | 243   | 1     | 0.63   |
+| Smartbuy  | Unknown                | 11     | 19      | 206   | 0     | 0.57   |

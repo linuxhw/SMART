@@ -26,18 +26,18 @@ MTBF - avg. MTBF in years per sample.
 | KingDian  | N400               | 240 GB | 1       | 871   | 0     | 2.39   |
 | KingDian  | N480-240GB         | 240 GB | 1       | 351   | 0     | 0.96   |
 | KingDian  | S280               | 1 TB   | 7       | 338   | 0     | 0.93   |
+| KingDian  | S400               | 120 GB | 19      | 179   | 0     | 0.49   |
 | KingDian  | S370               | 128 GB | 1       | 178   | 0     | 0.49   |
 | KingDian  | S400 XT            | 240 GB | 1       | 177   | 0     | 0.49   |
-| KingDian  | S400               | 120 GB | 18      | 170   | 0     | 0.47   |
 | KingDian  | S280-240GB         | 240 GB | 16      | 194   | 232   | 0.46   |
 | KingDian  | S280               | 480 GB | 9       | 160   | 0     | 0.44   |
 | KingDian  | S400               | 240 GB | 1       | 154   | 0     | 0.42   |
-| KingDian  | S280               | 240 GB | 19      | 136   | 0     | 0.38   |
+| KingDian  | S280               | 240 GB | 22      | 140   | 0     | 0.39   |
 | KingDian  | S400               | 480 GB | 3       | 136   | 0     | 0.37   |
 | KingDian  | S180               | 64 GB  | 18      | 133   | 63    | 0.36   |
 | KingDian  | S200               | 64 GB  | 11      | 129   | 12    | 0.29   |
-| KingDian  | S280-120GB         | 120 GB | 10      | 117   | 396   | 0.29   |
 | KingDian  | S370               | 512 GB | 2       | 102   | 0     | 0.28   |
+| KingDian  | S280-120GB         | 120 GB | 11      | 135   | 361   | 0.27   |
 | KingDian  | SSD-S400           | 120 GB | 1       | 287   | 2     | 0.26   |
 | KingDian  | S280               | 120 GB | 17      | 90    | 0     | 0.25   |
 | KingDian  | P10                | 250 GB | 1       | 75    | 0     | 0.21   |
@@ -65,5 +65,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| KingDian  | Silicon Motion base... | 10     | 88      | 148   | 2     | 0.40   |
-| KingDian  | Unknown                | 18     | 62      | 146   | 143   | 0.37   |
+| KingDian  | Silicon Motion base... | 10     | 92      | 151   | 2     | 0.41   |
+| KingDian  | Unknown                | 18     | 63      | 149   | 141   | 0.36   |

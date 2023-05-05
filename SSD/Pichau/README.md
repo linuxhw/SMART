@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Pichau    | Gaming PG256X      | 256 GB | 1       | 3     | 0     | 0.01   |
+| Pichau    | Gaming PG256X      | 256 GB | 2       | 108   | 0     | 0.30   |

@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ZHITAI    | SC001 Active 1T... | 1 TB   | 2       | 50    | 0     | 0.14   |
+| ZHITAI    | SC001 Active 1T... | 1 TB   | 3       | 35    | 0     | 0.10   |
+| ZHITAI    | SC001 Active 51... | 512 GB | 2       | 6     | 0     | 0.02   |
 | ZHITAI    | SC001 Active 25... | 256 GB | 2       | 3     | 0     | 0.01   |
-| ZHITAI    | SC001 Active 51... | 512 GB | 1       | 0     | 0     | 0.00   |

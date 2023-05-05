@@ -20,18 +20,19 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | GP-ASM2NE2512GTTDR | 512 GB | 1       | 603   | 0     | 1.65   |
 | Gigabyte  | GP-AG42TB          | 2 TB   | 1       | 516   | 0     | 1.41   |
 | Gigabyte  | GP-ASM2NE6200TTTD  | 2 TB   | 3       | 206   | 0     | 0.57   |
-| Gigabyte  | GP-AG70S2TB        | 2 TB   | 1       | 204   | 0     | 0.56   |
-| Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 8       | 198   | 0     | 0.54   |
 | Gigabyte  | GP-ASM2NE6100TTTD  | 1 TB   | 6       | 191   | 0     | 0.52   |
+| Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 9       | 180   | 0     | 0.49   |
 | Gigabyte  | GP-GSM2NE8256GNTD  | 256 GB | 2       | 150   | 0     | 0.41   |
-| Gigabyte  | GP-AG41TB          | 1 TB   | 12      | 131   | 0     | 0.36   |
-| Gigabyte  | GP-GSM2NE3512GNTD  | 512 GB | 6       | 103   | 0     | 0.28   |
-| Gigabyte  | GP-AG4500G         | 500 GB | 4       | 95    | 0     | 0.26   |
+| Gigabyte  | GP-GSM2NE3512GNTD  | 512 GB | 8       | 144   | 0     | 0.39   |
+| Gigabyte  | GP-AG4500G         | 500 GB | 5       | 132   | 0     | 0.36   |
+| Gigabyte  | GP-ASM2NE6500GTTD  | 500 GB | 5       | 123   | 0     | 0.34   |
+| Gigabyte  | GP-AG41TB          | 1 TB   | 14      | 118   | 0     | 0.32   |
+| Gigabyte  | GP-AG70S2TB        | 2 TB   | 2       | 105   | 0     | 0.29   |
 | Gigabyte  | GP-AG70S1TB        | 1 TB   | 4       | 86    | 0     | 0.24   |
-| Gigabyte  | GP-ASM2NE6500GTTD  | 500 GB | 3       | 57    | 0     | 0.16   |
 | Gigabyte  | GP-GSM2NE3128GNTD  | 128 GB | 4       | 54    | 0     | 0.15   |
-| Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 19      | 22    | 0     | 0.06   |
-| Gigabyte  | AG4512G-SI B10     | 512 GB | 3       | 13    | 0     | 0.04   |
-| Gigabyte  | G325E500G          | 500 GB | 1       | 4     | 0     | 0.01   |
-| Gigabyte  | AG470S1TB-SI B10   | 1 TB   | 3       | 2     | 0     | 0.01   |
-| Gigabyte  | GP-GM30512G-G      | 512 GB | 1       | 47    | 1011  | 0.00   |
+| Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 23      | 49    | 0     | 0.14   |
+| Gigabyte  | G325E500G          | 500 GB | 2       | 31    | 0     | 0.09   |
+| Gigabyte  | AG4512G-SI B10     | 512 GB | 5       | 13    | 0     | 0.04   |
+| Gigabyte  | AG470S1TB-SI B10   | 1 TB   | 4       | 5     | 0     | 0.02   |
+| Gigabyte  | GP-GM30512G-G      | 512 GB | 2       | 30    | 551   | 0.00   |
+| Gigabyte  | GP-GM301TB-G       | 1 TB   | 1       | 86    | 1012  | 0.00   |
