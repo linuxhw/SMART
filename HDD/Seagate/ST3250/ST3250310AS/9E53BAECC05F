@@ -1,3 +1,6 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.5.19-generic-1rosa-x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
 Device Model:     ST3250310AS
@@ -7,7 +10,7 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri May 17 03:22:56 2019 MSK
+Local Time is:    Thu Apr  8 01:09:58 2021 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,8 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  38)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      ( 121)	The previous self-test completed having
+					the read element of the test failed.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -54,17 +57,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7868
+  4 Start_Stop_Count        -O--CK   090   090   020    -    10954
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   087   060   030    -    476677532
-  9 Power_On_Hours          -O--CK   063   063   000    -    32434
+  7 Seek_Error_Rate         POSR--   087   060   030    -    494458310
+  9 Power_On_Hours          -O--CK   060   060   000    -    35206
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7582
+ 12 Power_Cycle_Count       -O--CK   088   088   020    -    13274
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
 190 Airflow_Temperature_Cel -O---K   066   048   045    -    34 (Min/Max 12/52)
 194 Temperature_Celsius     -O---K   034   052   000    -    34 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   068   059   000    -    25719048
+195 Hardware_ECC_Recovered  -O-RC-   084   059   000    -    52794460
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   051   000    -    4212
@@ -258,23 +261,25 @@ Error 4010 [9] occurred at disk power-on lifetime: 29783 hours (1240 days + 23 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      60%     32061         -
-# 2  Extended offline    Interrupted (host reset)      10%     31704         -
-# 3  Extended offline    Aborted by host               70%     31403         -
-# 4  Extended offline    Completed without error       00%     30759         -
-# 5  Extended offline    Completed without error       00%     30727         -
-# 6  Extended offline    Aborted by host               50%     29967         -
-# 7  Extended offline    Aborted by host               30%     28232         -
-# 8  Extended offline    Interrupted (host reset)      40%     27968         -
-# 9  Extended offline    Interrupted (host reset)      90%     27717         -
-#10  Extended offline    Interrupted (host reset)      90%     27634         -
-#11  Extended offline    Aborted by host               90%     27563         -
-#12  Extended offline    Interrupted (host reset)      90%     26393         -
-#13  Extended offline    Interrupted (host reset)      90%     25669         -
-#14  Extended offline    Interrupted (host reset)      60%     25668         -
-#15  Extended offline    Interrupted (host reset)      60%     25258         -
-#16  Extended offline    Interrupted (host reset)      70%     25143         -
-#17  Extended offline    Interrupted (host reset)      80%     25053         -
+# 1  Extended offline    Completed: read failure       90%     34654         81196361587745
+# 2  Extended offline    Aborted by host               50%     34108         -
+# 3  Extended offline    Interrupted (host reset)      30%     32927         -
+# 4  Extended offline    Interrupted (host reset)      90%     32540         -
+# 5  Extended offline    Interrupted (host reset)      60%     32061         -
+# 6  Extended offline    Interrupted (host reset)      10%     31704         -
+# 7  Extended offline    Aborted by host               70%     31403         -
+# 8  Extended offline    Completed without error       00%     30759         -
+# 9  Extended offline    Completed without error       00%     30727         -
+#10  Extended offline    Aborted by host               50%     29967         -
+#11  Extended offline    Aborted by host               30%     28232         -
+#12  Extended offline    Interrupted (host reset)      40%     27968         -
+#13  Extended offline    Interrupted (host reset)      90%     27717         -
+#14  Extended offline    Interrupted (host reset)      90%     27634         -
+#15  Extended offline    Aborted by host               90%     27563         -
+#16  Extended offline    Interrupted (host reset)      90%     26393         -
+#17  Extended offline    Interrupted (host reset)      90%     25669         -
+#18  Extended offline    Interrupted (host reset)      60%     25668         -
+#19  Extended offline    Interrupted (host reset)      60%     25258         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -289,11 +294,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 34 Celsius
-Power Cycle Max Temperature:          0 Celsius
-Lifetime    Max Temperature:          0 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     --/ 0 Celsius
+Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
 SCT Data Table command not supported
 
@@ -305,14 +309,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           62  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           61  Transition from drive PhyRdy to drive PhyNRdy
-0x8002  2           13  Vendor specific
-0x8003  2           51  Vendor specific
+0x0009  2           11  Transition from drive PhyRdy to drive PhyNRdy
+0x8002  2            0  Vendor specific
+0x8003  2            4  Vendor specific
 0x8004  2            0  Vendor specific
 
