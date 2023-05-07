@@ -7,7 +7,7 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Dec 23 11:44:00 2018 MSK
+Local Time is:    Tue Apr 30 18:25:36 2019 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -25,9 +25,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  38)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -55,17 +54,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7262
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7703
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   086   060   030    -    426232593
-  9 Power_On_Hours          -O--CK   065   065   000    -    31323
+  7 Seek_Error_Rate         POSR--   086   060   030    -    459138750
+  9 Power_On_Hours          -O--CK   064   064   000    -    32239
  10 Spin_Retry_Count        PO--C-   100   099   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    7054
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7494
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   065   048   045    -    35 (Min/Max 12/52)
-194 Temperature_Celsius     -O---K   035   052   000    -    35 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   071   059   000    -    154385319
+190 Airflow_Temperature_Cel -O---K   069   048   045    -    31 (Min/Max 12/52)
+194 Temperature_Celsius     -O---K   031   052   000    -    31 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   069   059   000    -    35062510
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   051   000    -    4212
@@ -259,20 +258,23 @@ Error 4010 [9] occurred at disk power-on lifetime: 29783 hours (1240 days + 23 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     30759         -
-# 2  Extended offline    Completed without error       00%     30727         -
-# 3  Extended offline    Aborted by host               50%     29967         -
-# 4  Extended offline    Aborted by host               30%     28232         -
-# 5  Extended offline    Interrupted (host reset)      40%     27968         -
-# 6  Extended offline    Interrupted (host reset)      90%     27717         -
-# 7  Extended offline    Interrupted (host reset)      90%     27634         -
-# 8  Extended offline    Aborted by host               90%     27563         -
-# 9  Extended offline    Interrupted (host reset)      90%     26393         -
-#10  Extended offline    Interrupted (host reset)      90%     25669         -
-#11  Extended offline    Interrupted (host reset)      60%     25668         -
-#12  Extended offline    Interrupted (host reset)      60%     25258         -
-#13  Extended offline    Interrupted (host reset)      70%     25143         -
-#14  Extended offline    Interrupted (host reset)      80%     25053         -
+# 1  Extended offline    Interrupted (host reset)      60%     32061         -
+# 2  Extended offline    Interrupted (host reset)      10%     31704         -
+# 3  Extended offline    Aborted by host               70%     31403         -
+# 4  Extended offline    Completed without error       00%     30759         -
+# 5  Extended offline    Completed without error       00%     30727         -
+# 6  Extended offline    Aborted by host               50%     29967         -
+# 7  Extended offline    Aborted by host               30%     28232         -
+# 8  Extended offline    Interrupted (host reset)      40%     27968         -
+# 9  Extended offline    Interrupted (host reset)      90%     27717         -
+#10  Extended offline    Interrupted (host reset)      90%     27634         -
+#11  Extended offline    Aborted by host               90%     27563         -
+#12  Extended offline    Interrupted (host reset)      90%     26393         -
+#13  Extended offline    Interrupted (host reset)      90%     25669         -
+#14  Extended offline    Interrupted (host reset)      60%     25668         -
+#15  Extended offline    Interrupted (host reset)      60%     25258         -
+#16  Extended offline    Interrupted (host reset)      70%     25143         -
+#17  Extended offline    Interrupted (host reset)      80%     25053         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -289,7 +291,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 35 Celsius
+Current Temperature:                 31 Celsius
 Power Cycle Max Temperature:          0 Celsius
 Lifetime    Max Temperature:          0 Celsius
 
@@ -303,14 +305,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           19  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            3  Vendor specific
+0x8003  2           13  Vendor specific
 0x8004  2            0  Vendor specific
 

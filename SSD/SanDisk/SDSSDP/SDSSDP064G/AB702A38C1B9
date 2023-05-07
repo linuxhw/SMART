@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-62-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.13.0-22-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      1.8 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Nov  7 19:03:54 2021 CET
+Local Time is:    Thu Dec  9 07:52:08 2021 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,20 +60,20 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    22217
- 12 Power_Cycle_Count       -O----   100   100   000    -    4772
-165 Total_Write/Erase_Count -O----   100   100   000    -    6029274
+  9 Power_On_Hours          -O----   100   100   000    -    22451
+ 12 Power_Cycle_Count       -O----   100   100   000    -    4827
+165 Total_Write/Erase_Count -O----   100   100   000    -    6110797
 171 Program_Fail_Count      -O----   100   100   000    -    0
 172 Erase_Fail_Count        -O----   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O----   100   100   000    -    1548
-174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    208
+173 Avg_Write/Erase_Count   -O----   100   100   000    -    1568
+174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    234
 187 Reported_Uncorrect      -O----   100   100   000    -    0
-194 Temperature_Celsius     -O---K   060   040   000    -    40 (Min/Max 15/53)
-230 Perc_Write/Erase_Count  -O----   100   100   000    -    5160
+194 Temperature_Celsius     -O---K   077   023   000    -    23 (Min/Max 15/53)
+230 Perc_Write/Erase_Count  -O----   100   100   000    -    5226
 232 Perc_Avail_Resrvd_Space PO----   100   100   005    -    0
-234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    2319
-241 Total_LBAs_Written      -O----   100   100   000    -    26147851537
-242 Total_LBAs_Read         -O----   100   100   000    -    25306376040
+234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    2328
+241 Total_LBAs_Written      -O----   100   100   000    -    26603108929
+242 Total_LBAs_Read         -O----   100   100   000    -    25383218200
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,9 +99,90 @@ Address    Access  R/W   Size  Description
 0xa3       GPL,SL  VS       1  Device vendor specific log
 0xa6-0xa7  GPL,SL  VS     255  Device vendor specific log
 
-Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
 SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
-No Errors Logged
+Device Error Count: 4
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 45 16d+13:40:55.765  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 44 13d+06:08:44.612  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 43  9d+22:36:33.459  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 42  6d+15:04:22.306  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 41  3d+07:32:11.153  NOP [Abort queued commands]
+
+Error 3 [2] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 35 16d+13:40:55.765  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 34 13d+06:08:44.612  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 33  9d+22:36:33.459  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 32  6d+15:04:22.306  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 31  3d+07:32:11.153  NOP [Abort queued commands]
+
+Error 2 [1] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 25 16d+13:40:55.765  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 24 13d+06:08:44.612  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 23  9d+22:36:33.459  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 22  6d+15:04:22.306  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 21  3d+07:32:11.153  NOP [Abort queued commands]
+
+Error 1 [0] occurred at disk power-on lifetime: 43981 hours (1832 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 15 16d+13:40:55.765  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 14 13d+06:08:44.612  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 13  9d+22:36:33.459  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 12  6d+15:04:22.306  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 11  3d+07:32:11.153  NOP [Abort queued commands]
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -127,11 +208,11 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              40  ---  Current Temperature
+0x05  0x008  1              23  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              52  ---  Highest Temperature
-0x05  0x028  1              28  ---  Lowest Temperature
+0x05  0x028  1              26  ---  Lowest Temperature
 0x05  0x030  1              40  ---  Highest Average Short Term Temperature
 0x05  0x038  1              40  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -141,7 +222,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              51  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              52  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
