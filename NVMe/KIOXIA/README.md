@@ -26,7 +26,7 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KXG60ZNV512G       | 512 GB | 32      | 147   | 0     | 0.40   |
 | KIOXIA    | KBG40ZPZ512G NVMe  | 512 GB | 16      | 136   | 0     | 0.38   |
 | KIOXIA    | KXG50PNV2T04       | 2 TB   | 1       | 136   | 0     | 0.37   |
-| KIOXIA    | KXG60PNV2T04       | 2 TB   | 7       | 124   | 0     | 0.34   |
+| KIOXIA    | KXG60PNV2T04       | 2 TB   | 7       | 125   | 0     | 0.34   |
 | KIOXIA    | KXG6AZNV512G       | 512 GB | 3       | 121   | 0     | 0.33   |
 | KIOXIA    | KBG40ZPZ1T02 NVMe  | 1 TB   | 18      | 119   | 0     | 0.33   |
 | KIOXIA    | KBG30ZMV256G       | 256 GB | 28      | 119   | 36    | 0.32   |
@@ -45,13 +45,13 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG30ZMV128G       | 128 GB | 2       | 64    | 0     | 0.18   |
 | KIOXIA    | KBG40ZNS128G BG4A  | 128 GB | 4       | 64    | 0     | 0.18   |
 | KIOXIA    | KBG40ZNV256G       | 256 GB | 103     | 58    | 0     | 0.16   |
-| KIOXIA    | KBG4AZNS1T02       | 1 TB   | 1       | 49    | 0     | 0.14   |
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 133     | 49    | 0     | 0.14   |
+| KIOXIA    | KBG4AZNS1T02       | 1 TB   | 1       | 49    | 0     | 0.14   |
 | KIOXIA    | KXG60ZNV256G NVMe  | 256 GB | 9       | 46    | 0     | 0.13   |
 | KIOXIA    | KBG5AZNV1T02 LA    | 1 TB   | 4       | 41    | 0     | 0.11   |
 | KIOXIA    | KXG70PN84T09 NVMe  | 4 TB   | 4       | 37    | 0     | 0.10   |
 | KIOXIA    | KXG70PNV2T04 NVMe  | 2 TB   | 13      | 35    | 0     | 0.10   |
-| KIOXIA    | KBG50ZNV512G       | 512 GB | 21      | 25    | 0     | 0.07   |
+| KIOXIA    | KBG50ZNV512G       | 512 GB | 21      | 26    | 0     | 0.07   |
 | KIOXIA    | KBG40ZNS1T02 NVMe  | 1 TB   | 8       | 24    | 0     | 0.07   |
 | KIOXIA    | KBG50ZNS512G NVMe  | 512 GB | 9       | 22    | 0     | 0.06   |
 | KIOXIA    | KBG30ZMV512G       | 512 GB | 5       | 22    | 0     | 0.06   |

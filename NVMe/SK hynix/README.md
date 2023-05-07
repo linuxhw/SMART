@@ -61,13 +61,13 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC401 HFS256GD9... | 256 GB | 16      | 71    | 0     | 0.20   |
 | SK hynix  | SKHynix_HFS256G... | 256 GB | 21      | 64    | 0     | 0.18   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 51      | 64    | 0     | 0.18   |
-| SK hynix  | BC711 NVMe         | 256 GB | 36      | 63    | 0     | 0.17   |
+| SK hynix  | BC711 NVMe         | 256 GB | 36      | 64    | 0     | 0.18   |
 | SK hynix  | HFM256GDHTNG-8310A | 256 GB | 20      | 63    | 0     | 0.17   |
-| SK hynix  | PC300 NVMe         | 1 TB   | 10      | 62    | 0     | 0.17   |
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | 40      | 62    | 0     | 0.17   |
+| SK hynix  | PC300 NVMe         | 1 TB   | 10      | 62    | 0     | 0.17   |
 | SK hynix  | HFM001TD3JX013N    | 1 TB   | 95      | 61    | 0     | 0.17   |
+| SK hynix  | SKHynix_HFM512G... | 512 GB | 50      | 60    | 0     | 0.17   |
 | SK hynix  | BC501 HFM128GDJ... | 128 GB | 8       | 60    | 0     | 0.17   |
-| SK hynix  | SKHynix_HFM512G... | 512 GB | 50      | 60    | 0     | 0.16   |
 | SK hynix  | HFB1M8MO331C0MR    | 256 GB | 3       | 60    | 0     | 0.16   |
 | SK hynix  | PC711 NVMe         | 512 GB | 37      | 58    | 0     | 0.16   |
 | SK hynix  | PC711 HFS001TDE... | 1 TB   | 5       | 58    | 0     | 0.16   |
@@ -112,7 +112,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM512GDJTNI-82A0A | 512 GB | 52      | 18    | 0     | 0.05   |
 | SK hynix  | HFM001TD3JX016N    | 1 TB   | 1       | 18    | 0     | 0.05   |
 | SK hynix  | HFM256GDHTNG-8510B | 256 GB | 14      | 18    | 0     | 0.05   |
-| SK hynix  | BC511 HFM512GDJ... | 512 GB | 54      | 17    | 0     | 0.05   |
+| SK hynix  | BC511 HFM512GDJ... | 512 GB | 54      | 18    | 0     | 0.05   |
 | SK hynix  | BC501 HFM512GDJ... | 512 GB | 30      | 17    | 0     | 0.05   |
 | SK hynix  | BC511 HFM256GDJ... | 256 GB | 68      | 17    | 0     | 0.05   |
 | SK hynix  | BC501A NVMe        | 128 GB | 12      | 17    | 0     | 0.05   |

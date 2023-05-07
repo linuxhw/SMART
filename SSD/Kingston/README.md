@@ -49,7 +49,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMSM151S3128GD     | 128 GB | 2       | 692   | 0     | 1.90   |
 | Kingston  | SVP200S390G        | 90 GB  | 1       | 686   | 0     | 1.88   |
 | Kingston  | SHFS37A480G        | 480 GB | 3       | 675   | 0     | 1.85   |
-| Kingston  | SKC400S37512G      | 512 GB | 10      | 670   | 0     | 1.84   |
+| Kingston  | SKC400S37512G      | 512 GB | 10      | 674   | 0     | 1.85   |
 | Kingston  | RBUSNS8280S3128GH2 | 128 GB | 6       | 664   | 0     | 1.82   |
 | Kingston  | SH100S3240G        | 240 GB | 4       | 1136  | 2     | 1.81   |
 | Kingston  | SKC300S37A480G     | 480 GB | 2       | 643   | 0     | 1.76   |
@@ -68,7 +68,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SMSM150S324G2      | 24 GB  | 6       | 513   | 0     | 1.41   |
 | Kingston  | SMS100S264G        | 64 GB  | 6       | 517   | 2     | 1.38   |
 | Kingston  | RBU-SNS8152S3128GF | 128 GB | 2       | 498   | 0     | 1.37   |
-| Kingston  | SKC400S371T        | 1 TB   | 2       | 1245  | 25    | 1.33   |
+| Kingston  | SKC400S371T        | 1 TB   | 2       | 1255  | 25    | 1.33   |
 | Kingston  | SVP200S37A60G      | 64 GB  | 15      | 558   | 3     | 1.33   |
 | Kingston  | SM2280S3G2480G     | 480 GB | 6       | 517   | 21    | 1.29   |
 | Kingston  | SM2280S3G2240G     | 240 GB | 7       | 467   | 0     | 1.28   |
@@ -202,10 +202,10 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | KF-S42240-4R       | 240 GB | 1       | 47    | 0     | 0.13   |
 | Kingston  | SKC600256G         | 256 GB | 46      | 46    | 0     | 0.13   |
 | Kingston  | RBU-SC152S37128GG2 | 128 GB | 1       | 45    | 0     | 0.12   |
+| Kingston  | SKC600MS1024G      | 1 TB   | 3       | 43    | 0     | 0.12   |
 | Kingston  | SH103S3480G        | 480 GB | 1       | 40    | 0     | 0.11   |
 | Kingston  | SKC6002048G        | 2 TB   | 7       | 46    | 10    | 0.10   |
 | Kingston  | SKC6001024G        | 1 TB   | 17      | 37    | 0     | 0.10   |
-| Kingston  | SKC600MS1024G      | 1 TB   | 3       | 30    | 0     | 0.08   |
 | Kingston  | A400 960G          | 960 GB | 1       | 30    | 0     | 0.08   |
 | Kingston  | SKC600MS512G       | 512 GB | 4       | 30    | 0     | 0.08   |
 | Kingston  | OM8P0S3512B-A0     | 512 GB | 1       | 29    | 0     | 0.08   |
@@ -271,4 +271,4 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SSDNow UV400/500       | 14     | 643     | 360   | 58    | 0.88   |
 | Kingston  | Unknown                | 113    | 336     | 271   | 88    | 0.60   |
 | Kingston  | Phison Driven SSDs     | 36     | 3535    | 208   | 1     | 0.53   |
-| Kingston  | Silicon Motion base... | 7      | 112     | 46    | 1     | 0.12   |
+| Kingston  | Silicon Motion base... | 7      | 112     | 46    | 1     | 0.13   |

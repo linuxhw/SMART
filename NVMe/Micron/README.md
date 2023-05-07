@@ -28,7 +28,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 7400_MTFDKBG3T8TDZ | 3.8 TB | 4       | 106   | 0     | 0.29   |
 | Micron    | MTFDHBA1T0QFD-1... | 1 TB   | 3       | 91    | 0     | 0.25   |
 | Micron    | 7300_MTFDHBG3T8TDF | 3.8 TB | 1       | 89    | 0     | 0.25   |
-| Micron    | 2200S NVMe         | 1 TB   | 16      | 88    | 1     | 0.24   |
+| Micron    | 2200S NVMe         | 1 TB   | 16      | 90    | 1     | 0.24   |
 | Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | 5       | 86    | 0     | 0.24   |
 | Micron    | 2200 NVMe          | 512 GB | 3       | 85    | 0     | 0.23   |
 | Micron    | 2200V_MTFDHBA51... | 512 GB | 42      | 78    | 0     | 0.21   |
@@ -43,15 +43,15 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 2210S NVMe         | 512 GB | 7       | 34    | 0     | 0.09   |
 | Micron    | 2450 NVMe          | 256 GB | 4       | 31    | 0     | 0.09   |
 | Micron    | MTFDHBA512QFD      | 512 GB | 76      | 31    | 0     | 0.09   |
-| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 49      | 28    | 0     | 0.08   |
+| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 49      | 29    | 0     | 0.08   |
 | Micron    | MTFDKCD256TFK      | 256 GB | 8       | 28    | 0     | 0.08   |
 | Micron    | MTFDKBA1T0TFK-1... | 1 TB   | 1       | 26    | 0     | 0.07   |
 | Micron    | MTFDKBA512TFK-1... | 512 GB | 8       | 25    | 0     | 0.07   |
 | Micron    | 2450 NVMe          | 512 GB | 5       | 23    | 0     | 0.06   |
 | Micron    | 2300 NVMe          | 1 TB   | 63      | 22    | 0     | 0.06   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 14      | 20    | 0     | 0.06   |
+| Micron    | MTFDKCD1T0TFK      | 1 TB   | 7       | 20    | 0     | 0.06   |
 | Micron    | 3400 NVMe          | 1 TB   | 7       | 19    | 0     | 0.05   |
-| Micron    | MTFDKCD1T0TFK      | 1 TB   | 7       | 19    | 0     | 0.05   |
 | Micron    | MTFDKBA256TFK-1... | 256 GB | 1       | 17    | 0     | 0.05   |
 | Micron    | MTFDHBA256TCK      | 256 GB | 8       | 19    | 28    | 0.05   |
 | Micron    | 2300 NVMe          | 512 GB | 51      | 16    | 1     | 0.04   |

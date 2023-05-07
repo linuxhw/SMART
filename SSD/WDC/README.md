@@ -47,7 +47,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS200T2B0B-00YS70 | 2 TB   | 29      | 255   | 0     | 0.70   |
 | WDC       | WDS240G1G0B-00RC30 | 240 GB | 9       | 298   | 32    | 0.66   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 113     | 234   | 0     | 0.64   |
-| WDC       | WDS200T2B0A-00SM50 | 2 TB   | 28      | 247   | 37    | 0.61   |
+| WDC       | WDS200T2B0A-00SM50 | 2 TB   | 28      | 248   | 37    | 0.61   |
 | WDC       | WDS500G2B0A-00SM50 | 500 GB | 347     | 218   | 1     | 0.60   |
 | WDC       | WDS500G2B0B        | 500 GB | 12      | 218   | 0     | 0.60   |
 | WDC       | WDS500G2B0B-00YS70 | 500 GB | 136     | 217   | 8     | 0.58   |

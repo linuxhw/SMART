@@ -30,7 +30,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500MX200SSD3     | 500 GB | 5       | 1066  | 0     | 2.92   |
 | Crucial   | C300-CTFDDAC064MAG | 64 GB  | 10      | 1187  | 202   | 2.76   |
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 75      | 1042  | 109   | 2.68   |
-| Crucial   | M4-CT064M4SSD2     | 64 GB  | 30      | 1052  | 174   | 2.57   |
+| Crucial   | M4-CT064M4SSD2     | 64 GB  | 30      | 1053  | 174   | 2.57   |
 | Crucial   | M4-CT256M4SSD1     | 256 GB | 4       | 957   | 253   | 2.38   |
 | Crucial   | CT120M500SSD3      | 120 GB | 6       | 876   | 6     | 2.20   |
 | Crucial   | M4-CT128M4SSD3     | 128 GB | 3       | 801   | 0     | 2.20   |

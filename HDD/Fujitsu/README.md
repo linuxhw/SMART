@@ -64,7 +64,7 @@ MTBF - avg. MTBF in years per sample.
 | Fujitsu   | MHT2040AH          | 40 GB  | 4       | 370   | 3     | 0.76   |
 | Fujitsu   | MHV2080AH          | 80 GB  | 9       | 495   | 9     | 0.75   |
 | Fujitsu   | MHZ2200BH G2       | 200 GB | 1       | 269   | 0     | 0.74   |
-| Fujitsu   | MHV2100BH          | 100 GB | 8       | 505   | 15    | 0.72   |
+| Fujitsu   | MHV2100BH          | 100 GB | 8       | 506   | 15    | 0.72   |
 | Fujitsu   | MHT2060BH          | 64 GB  | 3       | 411   | 683   | 0.70   |
 | Fujitsu   | MJA2500BH FFS G1   | 500 GB | 1       | 246   | 0     | 0.67   |
 | Fujitsu   | MHZ2320BH G2       | 320 GB | 27      | 468   | 332   | 0.67   |

@@ -22,7 +22,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | H20 HBRPEKNL020... | 32 GB  | 93CEB7F6C207 | 6705  | 0     | 18.37  |
 | Intel     | H10 HBRPEKNX020... | 32 GB  | DFAA7374E960 | 6581  | 0     | 18.03  |
 | Intel     | MEMPEK1J016GAD     | 16 GB  | BAEB5E43005D | 6220  | 0     | 17.04  |
-| Intel     | H10 HBRPEKNX020... | 32 GB  | 387998FDCF10 | 6049  | 0     | 16.57  |
+| Intel     | H10 HBRPEKNX020... | 32 GB  | 387998FDCF10 | 6171  | 0     | 16.91  |
 | Intel     | SSDPEKKF256G7L     | 256 GB | 4A22E573ADE4 | 5919  | 0     | 16.22  |
 | Intel     | MEMPEK1J016GAD     | 16 GB  | 2ACC5937944B | 5778  | 0     | 15.83  |
 | Intel     | SSDPEKKF256G7H     | 256 GB | DAA144DFE271 | 5327  | 0     | 14.60  |
@@ -41,7 +41,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKF256G7H     | 256 GB | 18BF7D15B34A | 2428  | 0     | 6.65   |
 | Toshiba   | THNSN5512GPU7 NVMe | 512 GB | B241F9A564E3 | 2298  | 0     | 6.30   |
 | Intel     | SSDPEKKF256G7L     | 256 GB | 828B05BC6652 | 2284  | 0     | 6.26   |
-| Samsung   | SSD 950 PRO        | 512 GB | A177FB4E25C1 | 2254  | 0     | 6.18   |
+| Samsung   | SSD 950 PRO        | 512 GB | A177FB4E25C1 | 2257  | 0     | 6.18   |
 | Samsung   | SSD 950 PRO        | 256 GB | 0424742A04E8 | 2249  | 0     | 6.16   |
 | Intel     | SSDPEKKW256G7      | 256 GB | 15478CA8263C | 2249  | 0     | 6.16   |
 | Intel     | SSDPEKKW128G7      | 128 GB | 00217973F771 | 4176  | 1     | 5.72   |
@@ -100,8 +100,8 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPE2MX450G7      | 450 GB | 45ED890E8792 | 1410  | 0     | 3.86   |
 | Toshiba   | KXG50PNV1T02 NVMe  | 1 TB   | 99592A1CD62E | 1410  | 0     | 3.86   |
 | Samsung   | MZVLV256HCHP-000L1 | 256 GB | BDD73DB1B6BC | 1400  | 0     | 3.84   |
+| Samsung   | SSD 950 PRO        | 512 GB | 861A8F7B8589 | 1399  | 0     | 3.83   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 562E33532209 | 1390  | 0     | 3.81   |
-| Samsung   | SSD 950 PRO        | 512 GB | 861A8F7B8589 | 1379  | 0     | 3.78   |
 | Intel     | SSDPEDMW400G4      | 400 GB | 786AF628F6A8 | 1375  | 0     | 3.77   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | F3FBF31B63D2 | 1371  | 0     | 3.76   |
 | Samsung   | SSD 950 PRO        | 512 GB | 308FE1AA287B | 1371  | 0     | 3.76   |
@@ -109,12 +109,13 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 950 PRO        | 512 GB | 19C13C8CA7C1 | 1363  | 0     | 3.74   |
 | Intel     | SSDPEDMD400G4      | 400 GB | AFCFAA64278E | 1362  | 0     | 3.73   |
 | Intel     | SSDPEDMW012T4      | 1.2 TB | D2D10BB59F24 | 1360  | 0     | 3.73   |
+| Samsung   | MZVKW1T0HMLH-00000 | 1 TB   | 1C0FFFF35F7D | 1356  | 0     | 3.72   |
 | Samsung   | SSD 950 PRO        | 256 GB | EB14EC8E99E5 | 1355  | 0     | 3.71   |
 | Intel     | SSDPEDMD400G4      | 400 GB | BBEB0DB72E9A | 1354  | 0     | 3.71   |
-| Samsung   | MZVKW1T0HMLH-00000 | 1 TB   | 1C0FFFF35F7D | 1349  | 0     | 3.70   |
 | Samsung   | SSD 950 PRO        | 512 GB | AC3E36FF6792 | 1349  | 0     | 3.70   |
 | Samsung   | SSD 950 PRO        | 256 GB | 92E976CF2727 | 1345  | 0     | 3.68   |
 | Intel     | SSDPEDMD400G4      | 400 GB | ACA28EE9D63B | 1342  | 0     | 3.68   |
+| AMD       | R5MP120G8          | 120 GB | 1D2331C1E2BA | 1337  | 0     | 3.66   |
 | Corsair   | Force MP500        | 120 GB | 8AB42B2333F0 | 1334  | 0     | 3.65   |
 | Toshiba   | THNSN5512GPUK NVMe | 512 GB | 52196CD5688D | 1323  | 0     | 3.63   |
 | Samsung   | MZVPV512HDGL-000H1 | 512 GB | E2F85B7D55E2 | 1321  | 0     | 3.62   |
@@ -132,7 +133,6 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDHL250GB-D8   | 250 GB | 4EA1097EFA62 | 1290  | 0     | 3.53   |
 | Samsung   | SSD 950 PRO        | 256 GB | 5816B0AFF70D | 1288  | 0     | 3.53   |
 | Samsung   | SSD 960 PRO        | 512 GB | 62A9360ADA0E | 1277  | 0     | 3.50   |
-| AMD       | R5MP120G8          | 120 GB | 1D2331C1E2BA | 1269  | 0     | 3.48   |
 | Toshiba   | RD400              | 1 TB   | 974892B059DC | 1268  | 0     | 3.48   |
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | 13498B3421FF | 1263  | 0     | 3.46   |
 | Intel     | SSDPEKKW256G7      | 256 GB | 50D63A486FFE | 1261  | 0     | 3.46   |
@@ -421,8 +421,8 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | H10 HBRPEKNX020... | 512 GB | 8DCAC33DE387 | 824   | 0     | 2.26   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | AA4DF5CEA6DA | 823   | 0     | 2.26   |
 | Corsair   | Force MP600        | 1 TB   | B9EA28D08DDD | 823   | 0     | 2.26   |
+| Corsair   | Force MP600        | 1 TB   | EACBF9DA62FC | 823   | 0     | 2.26   |
 | Intel     | SSDPEDMW012T4      | 1.2 TB | E4FE8EBFC897 | 823   | 0     | 2.26   |
-| Corsair   | Force MP600        | 1 TB   | EACBF9DA62FC | 822   | 0     | 2.25   |
 | WDC       | WDS250G3X0C-00SJG0 | 250 GB | 893411885AE5 | 821   | 0     | 2.25   |
 | Crucial   | CT500P1SSD8        | 500 GB | E2685EBC7D81 | 821   | 0     | 2.25   |
 | ADATA     | SX8200PNP          | 256 GB | 5B984182C82E | 820   | 0     | 2.25   |
@@ -547,10 +547,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 500 GB | 0094C7792BF0 | 754   | 0     | 2.07   |
 | ADATA     | SX6000NP           | 256 GB | 3627E0C94D21 | 753   | 0     | 2.06   |
 | Corsair   | Force MP600        | 1 TB   | 9A5DE9A0BA10 | 752   | 0     | 2.06   |
+| WDC       | WDS100T1X0E-00AFY0 | 1 TB   | 1C3320D23080 | 752   | 0     | 2.06   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 8E922E3DD87D | 751   | 0     | 2.06   |
 | Apacer    | AS2280P4           | 256 GB | 4F87BE7280F2 | 751   | 0     | 2.06   |
 | Samsung   | SSD 960 EVO        | 250 GB | 6AAC3B2C9FDF | 751   | 0     | 2.06   |
-| WDC       | WDS100T1X0E-00AFY0 | 1 TB   | 1C3320D23080 | 751   | 0     | 2.06   |
 | Phison    | Sabrent            | 1 TB   | D22C288EE6B8 | 750   | 0     | 2.06   |
 | Phison    | PCIe SSD           | 240 GB | 8B0622179864 | 750   | 0     | 2.06   |
 | Toshiba   | THNSN5256GPU7      | 256 GB | 70944D46AA04 | 750   | 0     | 2.05   |
@@ -679,6 +679,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force MP510        | 480 GB | 4533B04665A6 | 691   | 0     | 1.89   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | DE42DC381280 | 690   | 0     | 1.89   |
 | Intel     | SSDPEKKF256G7H     | 256 GB | C37375EF250A | 690   | 0     | 1.89   |
+| Crucial   | CT500P2SSD8        | 500 GB | 2C3E9B0328CE | 689   | 0     | 1.89   |
 | Toshiba   | THNSN5512GPUK NVMe | 512 GB | 76CF8462888F | 689   | 0     | 1.89   |
 | Samsung   | MZVPV128HDGM-00000 | 128 GB | E963A3D57233 | 688   | 0     | 1.89   |
 | Samsung   | MZVPV128HDGM-00000 | 128 GB | F6D4D5136B07 | 688   | 0     | 1.89   |
@@ -716,7 +717,6 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000P1SSD8       | 1 TB   | 6D1F09EB1EBE | 675   | 0     | 1.85   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | C613690A1D4E | 675   | 0     | 1.85   |
 | Samsung   | SSD 960 EVO        | 500 GB | 31D680BFAF33 | 675   | 0     | 1.85   |
-| Crucial   | CT500P2SSD8        | 500 GB | 2C3E9B0328CE | 674   | 0     | 1.85   |
 | ADATA     | SX8200NP           | 480 GB | 8B7EED06F24A | 674   | 0     | 1.85   |
 | Samsung   | PM951 NVMe         | 512 GB | CF3307A3025D | 673   | 0     | 1.85   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 4D41335BD2CF | 673   | 0     | 1.85   |
@@ -820,11 +820,11 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | BA40CD715C86 | 635   | 0     | 1.74   |
 | Corsair   | Force MP300        | 480 GB | 078871CCA126 | 635   | 0     | 1.74   |
 | Kingston  | SA2000M8500G       | 500 GB | BAB088F5053F | 635   | 0     | 1.74   |
+| Toshiba   | KXG50ZNV512G       | 512 GB | 30E798BED488 | 634   | 0     | 1.74   |
 | Corsair   | Force MP510        | 240 GB | 5A3244D66167 | 634   | 0     | 1.74   |
 | Toshiba   | KXG6AZNV1T02       | 1 TB   | 1B3D46E1C9C7 | 633   | 0     | 1.74   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 1CCD3EA212A7 | 633   | 0     | 1.74   |
 | Corsair   | Force MP510        | 960 GB | C08A61E40BA7 | 632   | 0     | 1.73   |
-| Toshiba   | KXG50ZNV512G       | 512 GB | 30E798BED488 | 632   | 0     | 1.73   |
 | Intel     | SSDPEKKW128G7      | 128 GB | 48649EFBE03F | 632   | 0     | 1.73   |
 | Mushkin   | MKNSSDHL250GB-D8   | 250 GB | 1DDBCFD4F578 | 632   | 0     | 1.73   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | DDF397E3F11A | 631   | 0     | 1.73   |
@@ -889,6 +889,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZFLV128HCGR-000MV | 128 GB | 0F33E6D900D6 | 613   | 0     | 1.68   |
 | Phison    | Sabrent Rocket 4.0 | 2 TB   | 54251E0458CC | 613   | 0     | 1.68   |
 | Samsung   | MZVLW128HEGR-000L1 | 128 GB | 8B3727D1B7F6 | 612   | 0     | 1.68   |
+| Kingston  | SA2000M8250G       | 250 GB | D11187B5BCCB | 612   | 0     | 1.68   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 685FF01CFE82 | 612   | 0     | 1.68   |
 | Samsung   | PM951 NVMe         | 512 GB | 0D522176F3D8 | 612   | 0     | 1.68   |
 | Toshiba   | KBG40ZNS512G NVMe  | 512 GB | 6F9E40641EAD | 612   | 0     | 1.68   |
@@ -896,7 +897,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | MEMPEK1J016GAH     | 16 GB  | 479A2D0D6FFF | 611   | 0     | 1.68   |
 | addlink   | M.2 PCIE G3x4 NVMe | 1 TB   | F5A5B1637091 | 610   | 0     | 1.67   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 2C48B995D0CD | 610   | 0     | 1.67   |
-| Kingston  | SA2000M8250G       | 250 GB | D11187B5BCCB | 610   | 0     | 1.67   |
 | KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | 6764D1236499 | 610   | 0     | 1.67   |
 | Toshiba   | KXG50ZNV512G       | 512 GB | 14D9126C1AED | 610   | 0     | 1.67   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | F9C67738FD19 | 609   | 0     | 1.67   |
@@ -908,6 +908,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKW512G7      | 512 GB | 4790197593F9 | 606   | 0     | 1.66   |
 | KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | C8BE35257ED9 | 606   | 0     | 1.66   |
 | Kingston  | SA2000M81000G      | 1 TB   | 9CA27464588D | 605   | 0     | 1.66   |
+| Toshiba   | KXG50ZNV256G       | 256 GB | BC64C18846B1 | 605   | 0     | 1.66   |
 | XPG       | GAMMIX S11 Pro     | 256 GB | C650BC68C51E | 605   | 0     | 1.66   |
 | Samsung   | SSD 960 EVO        | 500 GB | 15CDC4CBB529 | 604   | 0     | 1.66   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 925884D00A4A | 604   | 0     | 1.66   |
@@ -921,7 +922,6 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | GP-ASM2NE2512GTTDR | 512 GB | A3D7C11D7911 | 603   | 0     | 1.65   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | E1CB075DED68 | 602   | 0     | 1.65   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 6A9A8704177F | 602   | 0     | 1.65   |
-| Toshiba   | KXG50ZNV256G       | 256 GB | BC64C18846B1 | 602   | 0     | 1.65   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 99377CC0D315 | 602   | 0     | 1.65   |
 | ADATA     | SX8200PNP          | 1 TB   | 42F4330C85E3 | 601   | 0     | 1.65   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 87A2255D82BA | 601   | 0     | 1.65   |
@@ -929,6 +929,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 4A1161C68F07 | 600   | 0     | 1.64   |
 | Samsung   | MZVLV256HCHP-00000 | 256 GB | E608BC92012E | 600   | 0     | 1.64   |
 | Samsung   | SSD 970 PRO        | 512 GB | E2C0BE9517D2 | 599   | 0     | 1.64   |
+| Samsung   | SSD 980 PRO        | 1 TB   | 96BDCE79C48E | 599   | 0     | 1.64   |
 | ADATA     | SX8200PNP          | 2 TB   | 7FEF69F77D29 | 599   | 0     | 1.64   |
 | Intel     | SSDPEKKW256G7      | 256 GB | EE9873F7EA48 | 598   | 0     | 1.64   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 309B2D7D1579 | 598   | 0     | 1.64   |
@@ -982,7 +983,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVPW256HEGL-000H1 | 256 GB | C0C145E04573 | 583   | 0     | 1.60   |
 | Samsung   | SSD 960 PRO        | 512 GB | 2BE681570A6F | 583   | 0     | 1.60   |
 | Intel     | SSDPEKKW512G8      | 512 GB | 9A42C6905033 | 582   | 0     | 1.60   |
-| Samsung   | SSD 980 PRO        | 1 TB   | 96BDCE79C48E | 582   | 0     | 1.60   |
 | Samsung   | SSD 950 PRO        | 512 GB | 15E2A88A208A | 582   | 0     | 1.60   |
 | Kingston  | SA2000M8250G       | 250 GB | 9C37981DEA8E | 582   | 0     | 1.60   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 5B4F37BBCD62 | 582   | 0     | 1.59   |
@@ -1102,6 +1102,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 950 PRO        | 256 GB | 5867DC3646DD | 553   | 0     | 1.52   |
 | Toshiba   | KXG50PNV2T04 1.6TB | 1.6 TB | 07BF2BB7E808 | 553   | 0     | 1.52   |
 | Lenovo    | LENSE20256GMSP3... | 256 GB | 5EA5A726AE7E | 552   | 0     | 1.51   |
+| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | B838838609CB | 552   | 0     | 1.51   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | C7E91F672540 | 552   | 0     | 1.51   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 4EEB842BEDBB | 552   | 0     | 1.51   |
 | Intel     | SSDPEKKW512G7      | 512 GB | 179C603CE634 | 1104  | 1     | 1.51   |
@@ -1111,7 +1112,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 55A357764680 | 551   | 0     | 1.51   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 3A684EFC2859 | 551   | 0     | 1.51   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | 198205D635A2 | 550   | 0     | 1.51   |
-| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | B838838609CB | 550   | 0     | 1.51   |
 | Samsung   | SSD 960 EVO        | 500 GB | C1BCFFDB204B | 550   | 0     | 1.51   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 7C80C00839CF | 550   | 0     | 1.51   |
 | Intel     | SSDPEKKF256G8 NVMe | 256 GB | CF34A1511B97 | 550   | 0     | 1.51   |
@@ -1130,6 +1130,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG60ZNV256G NVMe  | 256 GB | 628E4DAC81AF | 543   | 0     | 1.49   |
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | 10CC55230D8E | 543   | 0     | 1.49   |
 | Toshiba   | THNSN5256GPUK NVMe | 256 GB | EF285EAAED6A | 543   | 0     | 1.49   |
+| WDC       | CL SN720 SDAQNT... | 512 GB | 45DAFC52843D | 543   | 0     | 1.49   |
 | Samsung   | SSD 970 PRO        | 512 GB | B9376DA81F07 | 542   | 0     | 1.49   |
 | SK hynix  | PC601 HFS512GD9... | 512 GB | 76BF052F64FB | 542   | 0     | 1.49   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 8B2D5691C246 | 541   | 0     | 1.48   |
@@ -1137,6 +1138,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2X0C-00L350 | 500 GB | 737338EB78A1 | 541   | 0     | 1.48   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 0FFCE89CF911 | 541   | 0     | 1.48   |
 | ADATA     | SX8200PNP          | 512 GB | 46EF316D5DE7 | 541   | 0     | 1.48   |
+| Team      | TM8FP2240G         | 240 GB | EA49FD620E0A | 541   | 0     | 1.48   |
 | Samsung   | SSD 960 PRO        | 1 TB   | DDF36AD62753 | 541   | 0     | 1.48   |
 | SK hynix  | PC401 NVMe         | 256 GB | 31615786B5D8 | 540   | 0     | 1.48   |
 | Toshiba   | THNSN51T02DUK NVMe | 1 TB   | C06E54F41903 | 540   | 0     | 1.48   |
@@ -1147,15 +1149,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | 4E17D7ABE5CD | 539   | 0     | 1.48   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | C8A9942819CF | 539   | 0     | 1.48   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 8AE51B7CA569 | 539   | 0     | 1.48   |
+| WDC       | CL SN720 SDAQNT... | 512 GB | ADA4AEEC511F | 539   | 0     | 1.48   |
 | Intel     | SSDPEKNW512G8L     | 512 GB | C32112D76814 | 539   | 0     | 1.48   |
 | Lite-On   | CA1-8D256-HP       | 256 GB | 1F0C8EC0CBA1 | 539   | 0     | 1.48   |
 | Patriot   | Hellfire M2        | 240 GB | AFB0B41F17DE | 538   | 0     | 1.48   |
-| Team      | TM8FP2240G         | 240 GB | EA49FD620E0A | 538   | 0     | 1.48   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | D03FC0543169 | 538   | 0     | 1.48   |
 | KIOXIA    | KBG40ZNS512G NVMe  | 512 GB | 8234B548A34D | 538   | 0     | 1.48   |
 | KIOXIA    | KXG60PNV1T02 NVMe  | 1 TB   | C156A26A1D6C | 538   | 0     | 1.47   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 350CEF3A98F2 | 538   | 0     | 1.47   |
-| WDC       | CL SN720 SDAQNT... | 512 GB | 45DAFC52843D | 537   | 0     | 1.47   |
 | Toshiba   | THNSN5256GPU7      | 256 GB | 8EA659A14BFB | 537   | 0     | 1.47   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 23A77088E3BB | 537   | 0     | 1.47   |
 | Corsair   | Force MP600        | 1 TB   | 85AC7BC25117 | 537   | 0     | 1.47   |
@@ -1174,7 +1175,6 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS1TMTE220S        | 1 TB   | E4C09788C3B8 | 535   | 0     | 1.47   |
 | KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | C208559BD17A | 534   | 0     | 1.46   |
 | Kingston  | SA2000M8250G       | 250 GB | 77DC225E83D6 | 534   | 0     | 1.46   |
-| WDC       | CL SN720 SDAQNT... | 512 GB | ADA4AEEC511F | 533   | 0     | 1.46   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | ED84B3FB83ED | 533   | 0     | 1.46   |
 | Samsung   | MZQLB7T6HMLA-00007 | 7.6 TB | 5AD0759EE50C | 533   | 0     | 1.46   |
 | Kingston  | SA2000M81000G      | 1 TB   | 7D7E3C2B6A53 | 533   | 0     | 1.46   |
@@ -1330,6 +1330,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 1 TB   | 2B487F3B0FD5 | 498   | 0     | 1.37   |
 | Corsair   | Force MP510        | 480 GB | C4F71078FEB6 | 498   | 0     | 1.37   |
 | Crucial   | CT500P5SSD8        | 500 GB | 4018E3B00A4F | 498   | 0     | 1.36   |
+| Intel     | SSDPEKNW512G8      | 512 GB | 7DAB8943B878 | 497   | 0     | 1.36   |
 | KIOXIA    | KBG40ZNV256G       | 256 GB | B5ACBF132033 | 497   | 0     | 1.36   |
 | Silico... | NE-256             | 256 GB | 598C7995F856 | 497   | 0     | 1.36   |
 | Samsung   | SSD 970 EVO        | 500 GB | AE7CB11E838E | 497   | 0     | 1.36   |
@@ -1360,7 +1361,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | 68FAB9237E10 | 492   | 0     | 1.35   |
 | Toshiba   | THNSF5256GPUK      | 256 GB | 45FB6E481392 | 492   | 0     | 1.35   |
 | WDC       | WDS250G1B0C-00S6U0 | 250 GB | 58BA4F7F362A | 492   | 0     | 1.35   |
-| Intel     | SSDPEKNW512G8      | 512 GB | 7DAB8943B878 | 492   | 0     | 1.35   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | 4695F20C781B | 492   | 0     | 1.35   |
 | Intel     | SSDPEKNW512G8      | 512 GB | DA07CCED434E | 491   | 0     | 1.35   |
 | J.ZAO     | 5 SERIES 512GB SSD | 512 GB | 342E5BD85870 | 491   | 0     | 1.35   |
@@ -1474,6 +1474,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | NE-256             | 256 GB | BBE2E61DE478 | 473   | 0     | 1.30   |
 | Kingston  | SA2000M81000G      | 1 TB   | 5483D6A02ED2 | 472   | 0     | 1.29   |
 | KIOXIA    | KXG60ZNV1T02       | 1 TB   | 651B9B74CD93 | 471   | 0     | 1.29   |
+| WDC       | PC SN520 SDAPNU... | 256 GB | F43F33BCFBD8 | 471   | 0     | 1.29   |
 | Samsung   | SSD 970 EVO        | 250 GB | E536FA9E449F | 471   | 0     | 1.29   |
 | SK hynix  | PC401 NVMe         | 256 GB | C0581D4766DD | 470   | 0     | 1.29   |
 | Samsung   | MZVLV256HCHP-00000 | 256 GB | 42E42ABEC402 | 470   | 0     | 1.29   |
@@ -2287,8 +2288,8 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 38DA1228E74A | 363   | 0     | 1.00   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 5D952497F317 | 363   | 0     | 1.00   |
 | Gigaby... | GP-GSM2NE3100TNTD  | 1 TB   | 9C71C2495BB6 | 363   | 0     | 1.00   |
-| Intel     | SSDPEKNW512G8      | 512 GB | 03500974AA82 | 363   | 0     | 1.00   |
 | Samsung   | PM991 NVMe         | 256 GB | A276C08C62E1 | 363   | 0     | 1.00   |
+| Intel     | SSDPEKNW512G8      | 512 GB | 03500974AA82 | 363   | 0     | 1.00   |
 | KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | E10EB911C727 | 363   | 0     | 1.00   |
 | Kingston  | SKC2000M81000G     | 1 TB   | D4A6CE0D9415 | 363   | 0     | 1.00   |
 | SK hynix  | HFS256GD9TNG-62A0A | 256 GB | 27E50059EE53 | 363   | 0     | 1.00   |
@@ -2513,8 +2514,8 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW010T8      | 1 TB   | E47306678779 | 340   | 0     | 0.93   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 2824F6E7A6F6 | 340   | 0     | 0.93   |
 | Samsung   | SSD 970 PRO        | 1 TB   | F2B87B7741E9 | 340   | 0     | 0.93   |
-| KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | D07BFF74ACFA | 340   | 0     | 0.93   |
 | ADATA     | SX8200PNP          | 512 GB | EC8CA975753D | 340   | 0     | 0.93   |
+| KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | D07BFF74ACFA | 340   | 0     | 0.93   |
 | ADATA     | SX8200NP           | 960 GB | 8A1898C2E9E2 | 339   | 0     | 0.93   |
 | ADATA     | SX8200PNP          | 256 GB | 41341EE1C45C | 339   | 0     | 0.93   |
 | Samsung   | SSD 970 PRO        | 512 GB | 9042147D1B4E | 339   | 0     | 0.93   |
@@ -2633,6 +2634,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KBG30ZMV256G       | 256 GB | 15EEAFCADCDF | 329   | 0     | 0.90   |
 | SK hynix  | PC401 NVMe         | 256 GB | 9BA1C5A79A5A | 329   | 0     | 0.90   |
 | Corsair   | Force MP510        | 480 GB | 183B3E5CEE8A | 329   | 0     | 0.90   |
+| Kingch... | 512GB              | 512 GB | E575FDC6EBF9 | 329   | 0     | 0.90   |
 | WDC       | WDBA3V0010BNC-WRSN | 1 TB   | A7545CCF44F8 | 329   | 0     | 0.90   |
 | Kingston  | SA2000M81000G      | 1 TB   | 93353A6A0F35 | 329   | 0     | 0.90   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | F1E44260F4BC | 329   | 0     | 0.90   |
@@ -2667,7 +2669,6 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 35C2E10A12C2 | 327   | 0     | 0.90   |
 | Samsung   | MZVLB1T0HALR-00000 | 1 TB   | 9CDA4E74CF84 | 327   | 0     | 0.90   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 4C402A0B833C | 327   | 0     | 0.90   |
-| Kingch... | 512GB              | 512 GB | E575FDC6EBF9 | 327   | 0     | 0.90   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 15C08FC0B481 | 327   | 0     | 0.90   |
 | SK hynix  | PC601 NVMe         | 512 GB | C597C4E32F0C | 327   | 0     | 0.90   |
 | Samsung   | MZVLV256HCHP-000H1 | 256 GB | 82F1F8747D05 | 327   | 0     | 0.90   |
@@ -2687,7 +2688,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW512G8      | 512 GB | 8D13314C0398 | 326   | 0     | 0.89   |
 | Samsung   | MZVLB1T0HALR-00000 | 1 TB   | 910CFF2E5997 | 325   | 0     | 0.89   |
 | Samsung   | SSD 960 EVO        | 250 GB | 23893A92E535 | 325   | 0     | 0.89   |
-| WDC       | PC SN520 SDAPNU... | 256 GB | F43F33BCFBD8 | 325   | 0     | 0.89   |
 | Kingston  | SA2000M81000G      | 1 TB   | F74E6F031712 | 325   | 0     | 0.89   |
 | SK hynix  | PC611 NVMe         | 1 TB   | 407EA50205EE | 325   | 0     | 0.89   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | C9F70440585D | 325   | 0     | 0.89   |
@@ -2696,6 +2696,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | 9193726BE29C | 324   | 0     | 0.89   |
 | XPG       | SPECTRIX S40G      | 1 TB   | 26475BCD056C | 324   | 0     | 0.89   |
 | Kingston  | SA2000M81000G      | 1 TB   | 44AF153F8123 | 324   | 0     | 0.89   |
+| Intel     | SSDPEKNW020T8      | 2 TB   | 199807CC1907 | 324   | 0     | 0.89   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 201F008FD220 | 324   | 0     | 0.89   |
 | Kingston  | SA2000M81000G      | 1 TB   | 3A607739BAC5 | 324   | 0     | 0.89   |
 | WDC       | PC SN520 SDAPMU... | 128 GB | B0C0F1237750 | 324   | 0     | 0.89   |
@@ -2722,6 +2723,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | FBA0B0DCAF5B | 323   | 0     | 0.89   |
 | KIOXIA    | KXG60ZNV1T02       | 1 TB   | 495F3A48A064 | 323   | 0     | 0.88   |
 | WDC       | PC SN520 SDAPMU... | 512 GB | B9A41FDDE5F8 | 323   | 0     | 0.88   |
+| ADATA     | SX8200PNP          | 512 GB | C4266C4ECC79 | 322   | 0     | 0.88   |
 | Toshiba   | KXG60PNV2T04 NV... | 2 TB   | 598BF7BBA783 | 322   | 0     | 0.88   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 1733E1F0781C | 322   | 0     | 0.88   |
 | SSSTC     | CL1-3D256-Q11 NVMe | 256 GB | 609A685FD519 | 322   | 0     | 0.88   |
@@ -2793,7 +2795,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2X0C-00L350 | 500 GB | 08C7E3457145 | 317   | 0     | 0.87   |
 | Kingston  | SKC2000M8500G      | 500 GB | 15B2210BA24B | 317   | 0     | 0.87   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 1E26F3323C53 | 317   | 0     | 0.87   |
-| ADATA     | SX8200PNP          | 512 GB | C4266C4ECC79 | 317   | 0     | 0.87   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | D3E0F8F7FF71 | 317   | 0     | 0.87   |
 | Samsung   | SSD 970 EVO        | 500 GB | 4EB87C23A3AE | 317   | 0     | 0.87   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 983A7E18815D | 317   | 0     | 0.87   |
@@ -2883,9 +2884,10 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | M.2 PCIe SSD       | 512 GB | 169D6FB2D2EC | 309   | 0     | 0.85   |
 | Toshiba   | THNSF5256GPUK      | 256 GB | 510EF4AEA715 | 309   | 0     | 0.85   |
 | Samsung   | SSD 960 PRO        | 512 GB | 186DA41AE709 | 309   | 0     | 0.85   |
-| Samsung   | SSD 970 PRO        | 512 GB | 86B80F023150 | 309   | 0     | 0.85   |
-| Toshiba   | KXG50ZNV512G       | 512 GB | E32792C04A96 | 309   | 0     | 0.85   |
 | Intel     | SSDPEKKF512G8L     | 512 GB | 0E0D66719927 | 309   | 0     | 0.85   |
+| Samsung   | SSD 970 PRO        | 512 GB | 86B80F023150 | 309   | 0     | 0.85   |
+| Phison    | Sabrent            | 2 TB   | F6E41BB6BD3A | 309   | 0     | 0.85   |
+| Toshiba   | KXG50ZNV512G       | 512 GB | E32792C04A96 | 309   | 0     | 0.85   |
 | KIOXIA    | KXG60ZNV256G       | 256 GB | B2E4F1B65535 | 309   | 0     | 0.85   |
 | Phison    | PCIe SSD           | 256 GB | 8455F422320B | 309   | 0     | 0.85   |
 | Seagate   | FireCuda 520 SS... | 500 GB | D485BDBB9C5B | 309   | 0     | 0.85   |
@@ -2907,7 +2909,6 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDHBA512TCK      | 512 GB | AC1B24DEE74C | 307   | 0     | 0.84   |
 | Toshiba   | THNSN5256GPU7      | 256 GB | 5D21A3EAF3CB | 307   | 0     | 0.84   |
 | Kingston  | SA2000M8500G       | 500 GB | A3E4F1E40F0F | 307   | 0     | 0.84   |
-| Phison    | Sabrent            | 2 TB   | F6E41BB6BD3A | 307   | 0     | 0.84   |
 | Corsair   | Force MP510        | 240 GB | 78B2864CB0CA | 307   | 0     | 0.84   |
 | Intel     | HBRPEKNX0202AH     | 512 GB | 913E1D28AC25 | 306   | 0     | 0.84   |
 | WDC       | PC SN730 NVMe      | 512 GB | 4C51322E11F6 | 306   | 0     | 0.84   |
@@ -2942,6 +2943,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | EA33D08CA011 | 303   | 0     | 0.83   |
 | ADATA     | SX8200PNP          | 2 TB   | 561B659B2FE7 | 303   | 0     | 0.83   |
 | Corsair   | MP400              | 2 TB   | 50B75C808799 | 303   | 0     | 0.83   |
+| WDC       | WDS500G2B0C-00PXH0 | 500 GB | 8D657C1131D1 | 303   | 0     | 0.83   |
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | D1C0D71C91EF | 303   | 0     | 0.83   |
 | SK hynix  | PC711 NVMe         | 1 TB   | 28EBA44C9430 | 303   | 0     | 0.83   |
 | SK hynix  | HFM256GDHTNG-8310A | 256 GB | C805DB85C590 | 303   | 0     | 0.83   |
@@ -2949,7 +2951,6 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KBG30ZMV512G       | 512 GB | 422D53F11B40 | 303   | 0     | 0.83   |
 | Samsung   | MZVL21T0HCLR-00BL2 | 1 TB   | 800F78921276 | 303   | 0     | 0.83   |
 | WDC       | WDS250G3X0C-00SJG0 | 250 GB | C039D22D2FAB | 303   | 0     | 0.83   |
-| WDC       | WDS500G2B0C-00PXH0 | 500 GB | 8D657C1131D1 | 303   | 0     | 0.83   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 3F0BA29C59C9 | 303   | 0     | 0.83   |
 | SK hynix  | BC501 HFM256GDJ... | 256 GB | 4A040D7F2451 | 303   | 0     | 0.83   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 8AC7FC19C1C0 | 303   | 0     | 0.83   |
@@ -2967,6 +2968,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDHBA256TCK-1... | 256 GB | F1BE79F87E93 | 302   | 0     | 0.83   |
 | Toshiba   | RC500              | 250 GB | 40862BA0254F | 302   | 0     | 0.83   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | B6D7ABBF7096 | 302   | 0     | 0.83   |
+| KIOXIA    | KXG60ZNV1T02 NVMe  | 1 TB   | 95D2F4ACC155 | 302   | 0     | 0.83   |
 | Phison    | Sabrent Rocket Q   | 1 TB   | B0E1D014BE1C | 302   | 0     | 0.83   |
 | Samsung   | SSD 970 PRO        | 512 GB | B6B8975881C2 | 302   | 0     | 0.83   |
 | Samsung   | MZVPV512HDGL-000H1 | 512 GB | 9DADA89A1115 | 301   | 0     | 0.83   |
@@ -2985,10 +2987,10 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX8200PNP          | 512 GB | F943ADB13214 | 301   | 0     | 0.82   |
 | Samsung   | PM981 NVMe         | 1 TB   | 7EAAFFB87AF6 | 300   | 0     | 0.82   |
 | Samsung   | SSD 960 PRO        | 1 TB   | 4AEF5D853D82 | 601   | 1     | 0.82   |
+| Intel     | SSDPEKNW512G8L     | 512 GB | B8B71325C051 | 300   | 0     | 0.82   |
 | Samsung   | MZVLW1T0HMLH-000L2 | 1 TB   | FA04FA625E7D | 300   | 0     | 0.82   |
 | Samsung   | MZVKV512HAJH-000L1 | 512 GB | 52338E5CC26A | 300   | 0     | 0.82   |
 | Samsung   | SSD 980 PRO        | 500 GB | 25657A9D62A3 | 300   | 0     | 0.82   |
-| Intel     | SSDPEKNW020T8      | 2 TB   | 199807CC1907 | 300   | 0     | 0.82   |
 | ADATA     | SX8200PNP          | 1 TB   | C69D591E3C78 | 300   | 0     | 0.82   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | 57B740C11161 | 300   | 0     | 0.82   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 36802D321203 | 300   | 0     | 0.82   |
@@ -3063,7 +3065,6 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG40ZPZ1T02 NVMe  | 1 TB   | 572E1FD1CEEF | 295   | 0     | 0.81   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 5739EE29C1B9 | 295   | 0     | 0.81   |
 | Samsung   | MZVKW1T0HMLH-000H1 | 1 TB   | 4E71BFACB967 | 295   | 0     | 0.81   |
-| Intel     | SSDPEKNW512G8L     | 512 GB | B8B71325C051 | 295   | 0     | 0.81   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | A92871370B50 | 295   | 0     | 0.81   |
 | Samsung   | MZVLW512HMJP-000L2 | 512 GB | 9BCF0D7EC4B9 | 295   | 0     | 0.81   |
 | WDC       | WDS500G2X0C-00L350 | 500 GB | 1C9C17522DF3 | 295   | 0     | 0.81   |
@@ -3107,6 +3108,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000P2SSD8       | 1 TB   | 0CD843B1A328 | 292   | 0     | 0.80   |
 | KIOXIA    | KBG30ZMV256G       | 256 GB | D53AA01B38F4 | 292   | 0     | 0.80   |
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | A98B61716DFD | 292   | 0     | 0.80   |
+| KIOXIA    | KBG40ZNV512G       | 512 GB | 19661645E4BC | 292   | 0     | 0.80   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 79EF44A526A3 | 292   | 0     | 0.80   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 5AFAACAD2019 | 292   | 0     | 0.80   |
 | Intel     | SSDPEKKF512G8L     | 512 GB | 8C983BB6D099 | 292   | 0     | 0.80   |
@@ -3228,6 +3230,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M81000G      | 1 TB   | 1DBEE05A98EF | 284   | 0     | 0.78   |
 | Toshiba   | THNSN5512GPU7      | 512 GB | 8F13466979A2 | 284   | 0     | 0.78   |
 | Samsung   | MZVPV256HDGL-00000 | 256 GB | D4A2C7A905B6 | 283   | 0     | 0.78   |
+| Intel     | SSDPEKKF256G8 NVMe | 256 GB | 1D4C74EEB0A0 | 283   | 0     | 0.78   |
 | WDC       | WDS500G1B0C-00S6U0 | 500 GB | 16B13DB414F4 | 283   | 0     | 0.78   |
 | Phison    | PCIe SSD           | 512 GB | 97F41810C71A | 283   | 0     | 0.78   |
 | KIOXIA    | KBG40ZNV256G       | 256 GB | 2A0BC59CCEE5 | 283   | 0     | 0.78   |
@@ -3242,7 +3245,6 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX8200PNP          | 1 TB   | 095668E51E30 | 282   | 0     | 0.77   |
 | Kingston  | SA2000M81000G      | 1 TB   | EDFCF8B5DC89 | 282   | 0     | 0.77   |
 | Phison    | Sabrent Rocket ... | 1 TB   | 68B316631A8C | 282   | 0     | 0.77   |
-| KIOXIA    | KXG60ZNV1T02 NVMe  | 1 TB   | 95D2F4ACC155 | 282   | 0     | 0.77   |
 | SK hynix  | PC611 NVMe         | 512 GB | B0E936D10FB8 | 282   | 0     | 0.77   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 34A36276D0F6 | 282   | 0     | 0.77   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 2F45A6CEA92F | 282   | 0     | 0.77   |
@@ -3290,7 +3292,6 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2000P2SSD8       | 2 TB   | 833411B379BF | 279   | 0     | 0.77   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | 01D9F4B0A921 | 279   | 0     | 0.77   |
 | Toshiba   | KXG50ZNV512G       | 512 GB | EBF06DB583B5 | 279   | 0     | 0.77   |
-| Intel     | SSDPEKKF256G8 NVMe | 256 GB | 1D4C74EEB0A0 | 279   | 0     | 0.76   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | BCE0A8A25C2D | 279   | 0     | 0.76   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 3E35BAB23BBA | 279   | 0     | 0.76   |
 | Intel     | SSDPEKNW512G8L     | 512 GB | 9FA9000689FD | 278   | 0     | 0.76   |
@@ -3369,7 +3370,6 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 13022665C5AB | 274   | 0     | 0.75   |
 | SK hynix  | SKHynix_HFS256G... | 256 GB | F836E7C76D55 | 274   | 0     | 0.75   |
 | Corsair   | MP600 PRO          | 1 TB   | 5F36EC0FFF87 | 274   | 0     | 0.75   |
-| KIOXIA    | KBG40ZNV512G       | 512 GB | 19661645E4BC | 274   | 0     | 0.75   |
 | Phison    | Sabrent            | 1 TB   | 4C403D562C94 | 274   | 0     | 0.75   |
 | Samsung   | SSD 960 EVO        | 250 GB | DA6B7B4BAF01 | 274   | 0     | 0.75   |
 | Gigaby... | GP-ASM2NE6100TTTD  | 1 TB   | C7993981DC99 | 274   | 0     | 0.75   |
@@ -3562,6 +3562,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500P5SSD8        | 500 GB | 59D8EC889628 | 262   | 0     | 0.72   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 775D6E4F311C | 262   | 0     | 0.72   |
 | Crucial   | CT500P5SSD8        | 500 GB | 201D37CE1DDC | 262   | 0     | 0.72   |
+| SK hynix  | SKHynix_HFM512G... | 512 GB | 6735A435120C | 262   | 0     | 0.72   |
 | Transcend | TS128GMTE110S      | 128 GB | 3EB891FE9BAA | 261   | 0     | 0.72   |
 | Samsung   | SSD 960 EVO        | 250 GB | 89836729B5D5 | 261   | 0     | 0.72   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 3FA1894B12E5 | 261   | 0     | 0.72   |
@@ -3647,12 +3648,12 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M81000G      | 1 TB   | C4E4D5B94AB1 | 257   | 0     | 0.71   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | C05303E6E4BE | 257   | 0     | 0.71   |
 | Toshiba   | RC500              | 500 GB | F3AEFE4ED994 | 257   | 0     | 0.71   |
+| Samsung   | SSD 960 EVO        | 500 GB | 8638A70840CB | 257   | 0     | 0.70   |
 | XPG       | GAMMIX S11 Pro     | 512 GB | 24E258AAC170 | 257   | 0     | 0.70   |
 | Crucial   | CT500P1SSD8        | 500 GB | 29F6975B3117 | 257   | 0     | 0.70   |
 | Kingston  | SA2000M8500G       | 500 GB | 626346E0C7B4 | 257   | 0     | 0.70   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | BB18D6317784 | 257   | 0     | 0.70   |
 | Corsair   | Force MP500        | 240 GB | 0B838D8D1855 | 256   | 0     | 0.70   |
-| Samsung   | SSD 960 EVO        | 500 GB | 8638A70840CB | 256   | 0     | 0.70   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | D9B747464933 | 256   | 0     | 0.70   |
 | HP        | SSD EX900          | 250 GB | 6A5F7AE3B3C1 | 256   | 0     | 0.70   |
 | Samsung   | MZVLW128HEGR-000L2 | 128 GB | 43646A855998 | 256   | 0     | 0.70   |
@@ -3896,6 +3897,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KBG40ZNS256G NVMe  | 256 GB | CD67EAF5D001 | 244   | 0     | 0.67   |
 | Lite-On   | CL1-4D128          | 128 GB | 9101E09BCB2D | 244   | 0     | 0.67   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 3C08F95D8E40 | 244   | 0     | 0.67   |
+| Intel     | SSDPEKNW512G8H     | 512 GB | C940392D2275 | 244   | 0     | 0.67   |
 | Samsung   | SSD 970 EVO        | 500 GB | 47D494EF0C76 | 244   | 0     | 0.67   |
 | Samsung   | SSD 970 EVO        | 500 GB | 8B891B164493 | 244   | 0     | 0.67   |
 | Silico... | NE-1TB             | 1 TB   | 030FFBC8FBC3 | 244   | 0     | 0.67   |
@@ -3912,7 +3914,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | AE79391E4511 | 243   | 0     | 0.67   |
 | Toshiba   | KXG50ZNV256G       | 256 GB | 17672D3EFCF4 | 243   | 0     | 0.67   |
 | Micron    | 2210_MTFDHBA512QFD | 512 GB | A329530669A4 | 243   | 0     | 0.67   |
-| Intel     | SSDPEKNW512G8H     | 512 GB | C940392D2275 | 243   | 0     | 0.67   |
 | SK hynix  | PC601 NVMe         | 512 GB | F9BEDAC114B1 | 243   | 0     | 0.67   |
 | Samsung   | SSD 960 EVO        | 250 GB | BCAEEE0CCAA7 | 243   | 0     | 0.67   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 6AECE65007FF | 243   | 0     | 0.67   |
@@ -3926,6 +3927,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M8250G       | 250 GB | C09C53BC010D | 243   | 0     | 0.67   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | AD4425FD536F | 243   | 0     | 0.67   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 35F1EBA6735B | 243   | 0     | 0.67   |
+| SK hynix  | BC711 NVMe         | 256 GB | 18691110BC55 | 243   | 0     | 0.67   |
 | KIOXIA    | KBG30ZMV256G       | 256 GB | DAF8A75D698C | 243   | 0     | 0.67   |
 | SK hynix  | PC601 NVMe         | 256 GB | 6B114889E050 | 243   | 0     | 0.67   |
 | Micron    | 2200S NVMe         | 512 GB | 9B1355B209B1 | 242   | 0     | 0.67   |
@@ -3956,6 +3958,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW512G8H     | 512 GB | AB70921287DB | 241   | 0     | 0.66   |
 | Apacer    | AS2280P4           | 240 GB | 7731BB2CD499 | 241   | 0     | 0.66   |
 | Kingston  | SA1000M8240G       | 240 GB | F8A41E489ABA | 241   | 0     | 0.66   |
+| Intel     | SSDPEKNW010T8      | 1 TB   | 599F5AB9F722 | 241   | 0     | 0.66   |
 | Samsung   | MZVLW256HEHP-000L2 | 256 GB | AE6C5532BE70 | 241   | 0     | 0.66   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 57F63A1B23EF | 241   | 0     | 0.66   |
 | Toshiba   | THNSN5256GPUK      | 256 GB | E8EC74F662AF | 241   | 0     | 0.66   |
@@ -4043,6 +4046,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | CAFDB5162AC7 | 237   | 0     | 0.65   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 0A135B9FC596 | 237   | 0     | 0.65   |
 | WDC       | WDS500G1B0C-00S6U0 | 500 GB | 56891F2B3769 | 237   | 0     | 0.65   |
+| HP        | SSD EX900          | 500 GB | 9237D033B566 | 237   | 0     | 0.65   |
 | Toshiba   | KXG5AZNV256G       | 256 GB | C2AD574CABE4 | 237   | 0     | 0.65   |
 | SK hynix  | PC611 NVMe         | 1 TB   | 18EC5C5A1645 | 237   | 0     | 0.65   |
 | SK hynix  | SKHynix_HFS256G... | 256 GB | F0F8B4DFDBE1 | 237   | 0     | 0.65   |
@@ -4057,7 +4061,6 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | P300               | 128 GB | BFCCF2EF0E8B | 237   | 0     | 0.65   |
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | AE351C3B65EF | 237   | 0     | 0.65   |
 | Samsung   | SSD 960 EVO        | 250 GB | 0304744E5FD9 | 237   | 0     | 0.65   |
-| HP        | SSD EX900          | 500 GB | 9237D033B566 | 237   | 0     | 0.65   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | DBCE24C3FFA9 | 237   | 0     | 0.65   |
 | Samsung   | KUS030202M-B000    | 256 GB | B30AB86ADB05 | 237   | 0     | 0.65   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 85EB285EB504 | 237   | 0     | 0.65   |
@@ -4148,7 +4151,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 307D40945545 | 232   | 0     | 0.64   |
 | Samsung   | SSD 960 EVO        | 500 GB | CEFF1A7AD367 | 232   | 0     | 0.64   |
 | Seagate   | FireCuda 510 SS... | 500 GB | FD213E592331 | 232   | 0     | 0.64   |
-| Intel     | SSDPEKNW010T8      | 1 TB   | 599F5AB9F722 | 232   | 0     | 0.64   |
 | Phison    | PCIe SSD           | 1 TB   | 9BDE16C387DC | 232   | 0     | 0.64   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 10D8E5C69763 | 232   | 0     | 0.64   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 8578592D8117 | 232   | 0     | 0.64   |
@@ -4226,6 +4228,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW512G8      | 512 GB | 5D1B6A2B8A11 | 228   | 0     | 0.63   |
 | Patriot   | Scorch M2          | 256 GB | 3DBE3CFCD115 | 228   | 0     | 0.63   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | C9114DC4824A | 228   | 0     | 0.63   |
+| Crucial   | CT500P1SSD8        | 500 GB | B40AF5F63176 | 228   | 0     | 0.63   |
 | Phison    | Sabrent Rocket 4.0 | 2 TB   | 9B06960A9A89 | 228   | 0     | 0.63   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | D25481645AC2 | 228   | 0     | 0.63   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | 2BFFF9BC0313 | 228   | 0     | 0.63   |
@@ -4259,11 +4262,11 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 18FB1A5F3401 | 226   | 0     | 0.62   |
 | LDLC      | 120GB              | 120 GB | 15A334B301E8 | 226   | 0     | 0.62   |
 | ADATA     | SX8200PNP          | 512 GB | 3B63BEA25828 | 226   | 0     | 0.62   |
+| Intel     | SSDPEKNW010T9      | 1 TB   | DA4A47E35A58 | 226   | 0     | 0.62   |
 | XPG       | GAMMIX S11 Pro     | 512 GB | F9061FEA99B3 | 226   | 0     | 0.62   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 1465D643FCF5 | 226   | 0     | 0.62   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 7D7E9B43A5F8 | 226   | 0     | 0.62   |
 | ADATA     | SX8200PNP          | 2 TB   | 004272B62610 | 226   | 0     | 0.62   |
-| Intel     | SSDPEKNW010T9      | 1 TB   | DA4A47E35A58 | 226   | 0     | 0.62   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | E6D0840887D9 | 226   | 0     | 0.62   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 01D57C761F20 | 225   | 0     | 0.62   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | 74619173EA81 | 225   | 0     | 0.62   |
@@ -4280,8 +4283,6 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA... | PRO SSD            | 2 TB   | 15875DED7973 | 225   | 0     | 0.62   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 6708B1A38667 | 225   | 0     | 0.62   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | F6F945DF94D7 | 225   | 0     | 0.62   |
-| SK hynix  | SKHynix_HFM512G... | 512 GB | 6735A435120C | 225   | 0     | 0.62   |
-| Crucial   | CT500P1SSD8        | 500 GB | B40AF5F63176 | 225   | 0     | 0.62   |
 | Intel     | SSDPEKNW512G8L     | 512 GB | 6EFDBA6C02D4 | 225   | 0     | 0.62   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | F9E1C37823AE | 225   | 0     | 0.62   |
 | Kingston  | SA2000M81000G      | 1 TB   | A9CF9292B260 | 224   | 0     | 0.62   |
@@ -4469,6 +4470,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | PM981 NVMe         | 512 GB | D3976C28D2DC | 217   | 0     | 0.60   |
 | Samsung   | SSD 970 EVO        | 500 GB | DDE95A5492E6 | 217   | 0     | 0.60   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 57953148C30B | 217   | 0     | 0.60   |
+| WDC       | PC SN530 SDBPNP... | 512 GB | B6181F76599F | 217   | 0     | 0.60   |
 | WDC       | WDS500G2X0C-00L350 | 500 GB | 3B74B3552B71 | 217   | 0     | 0.60   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | 7F7016C7CF30 | 217   | 0     | 0.60   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | 94752891CF2B | 217   | 0     | 0.60   |
@@ -4507,7 +4509,6 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | Sabrent            | 512 GB | 80A0943E125E | 215   | 0     | 0.59   |
 | Lenovo    | LENSE20256GMSP3... | 256 GB | 40152F40F98F | 215   | 0     | 0.59   |
 | Intel     | MEMPEK1J016GA      | 16 GB  | 94B87FC9D954 | 215   | 0     | 0.59   |
-| SK hynix  | BC711 NVMe         | 256 GB | 18691110BC55 | 215   | 0     | 0.59   |
 | Toshiba   | KBG30ZMV256G       | 256 GB | 7E82529B5543 | 215   | 0     | 0.59   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | D14D44240BF0 | 215   | 0     | 0.59   |
 | Kingston  | RBUSNS8154P3256GJ  | 256 GB | 75B9C05BC49E | 215   | 0     | 0.59   |
@@ -4602,6 +4603,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | BarraCuda 510 S... | 500 GB | D09ED8ADC70D | 211   | 0     | 0.58   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | F3759C4D1656 | 210   | 0     | 0.58   |
 | SSSTC     | CL1-4D256          | 256 GB | 920E2B3667E4 | 210   | 0     | 0.58   |
+| Samsung   | SSD 970 EVO        | 500 GB | 673FA44C6EA2 | 210   | 0     | 0.58   |
 | SanDisk   | Extreme Pro        | 1 TB   | 61A8603A7AFF | 210   | 0     | 0.58   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 059B3AC4FFC1 | 210   | 0     | 0.58   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | E267E9448A2C | 210   | 0     | 0.58   |
@@ -4642,6 +4644,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW010T8      | 1 TB   | F7D7FB4FCF3C | 209   | 0     | 0.57   |
 | Toshiba   | KBG30ZMS128G NVMe  | 128 GB | 4194D7B5F849 | 209   | 0     | 0.57   |
 | Intel     | SSDPEKNW512G8      | 512 GB | B0F2813104BD | 209   | 0     | 0.57   |
+| Kingston  | SA2000M81000G      | 1 TB   | 3B0042A68747 | 209   | 0     | 0.57   |
 | WDC       | WDS100T3XHC-00SJG0 | 1 TB   | 57C709F0319E | 209   | 0     | 0.57   |
 | Lenovo    | LENSE20256GMSP3... | 256 GB | 2E9F7CE57942 | 209   | 0     | 0.57   |
 | Intel     | SSDPEKKF512G8 NVMe | 512 GB | E8C4336B406F | 209   | 0     | 0.57   |
@@ -4719,7 +4722,6 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force MP510        | 960 GB | 00F25C01909B | 206   | 0     | 0.56   |
 | Samsung   | MZVL2512HCJQ-00B00 | 512 GB | 7453EAA66DF7 | 206   | 0     | 0.56   |
 | Lite-On   | CX2-8B512-Q11 NVMe | 512 GB | 8FE626763818 | 206   | 0     | 0.56   |
-| Samsung   | SSD 970 EVO        | 500 GB | 673FA44C6EA2 | 206   | 0     | 0.56   |
 | Samsung   | SSD 980            | 1 TB   | 12142F755201 | 411   | 1     | 0.56   |
 | Kingston  | SA2000M81000G      | 1 TB   | 0D4F5D2796ED | 205   | 0     | 0.56   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 70D4EA044774 | 205   | 0     | 0.56   |
@@ -5061,6 +5063,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M81000G      | 1 TB   | 636A9ED5C6B6 | 192   | 0     | 0.53   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | AB2190F74B5B | 192   | 0     | 0.53   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | 8BAC0301C77F | 192   | 0     | 0.53   |
+| Samsung   | SSD 960 EVO        | 500 GB | 63D28B897B9A | 192   | 0     | 0.53   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | C1011D3E8399 | 192   | 0     | 0.53   |
 | WDC       | WDS256G1X0C-00ENX0 | 256 GB | 52898BE4794C | 192   | 0     | 0.53   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | F03C425259F6 | 192   | 0     | 0.53   |
@@ -5087,7 +5090,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS480G2G0C-00AJM0 | 480 GB | 8685DA4B8110 | 191   | 0     | 0.53   |
 | ADATA     | SX8200PNP          | 256 GB | 536A56A3B0FA | 191   | 0     | 0.52   |
 | Samsung   | SSD 970 EVO        | 500 GB | A7241E893E84 | 191   | 0     | 0.52   |
-| Samsung   | SSD 960 EVO        | 500 GB | 63D28B897B9A | 191   | 0     | 0.52   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 7AFDE0F31982 | 191   | 0     | 0.52   |
 | UMIS      | RPJTJ512MEE1OWX    | 512 GB | A1DA4B4132D3 | 191   | 0     | 0.52   |
 | SPCC      | M.2 PCIe SSD       | 256 GB | 06EDFDAB79B1 | 191   | 0     | 0.52   |
@@ -5143,6 +5145,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SHGP31-1000GM-2    | 1 TB   | EF5A607E7736 | 189   | 0     | 0.52   |
 | Samsung   | SSD 960 PRO        | 1 TB   | 1AB86C9D4E41 | 189   | 0     | 0.52   |
 | Mushkin   | MKNSSDHL500GB-D8   | 500 GB | DB4A8FE943BD | 189   | 0     | 0.52   |
+| UMIS      | RPJTJ512MEE1OWX    | 512 GB | 46E595924F55 | 189   | 0     | 0.52   |
 | Samsung   | SSD 970 EVO        | 500 GB | 191682F143C8 | 189   | 0     | 0.52   |
 | Toshiba   | RC100              | 240 GB | F2C5250A1A30 | 189   | 0     | 0.52   |
 | SK hynix  | SHGP31-1000GM-2    | 1 TB   | 4AFFF7D1B382 | 189   | 0     | 0.52   |
@@ -5283,6 +5286,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM512GDJTNG-8310A | 512 GB | A5A07B963E4B | 184   | 0     | 0.51   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | F88FC7055975 | 184   | 0     | 0.51   |
 | Toshiba   | THNSF5512GPUK      | 512 GB | 851958868B90 | 184   | 0     | 0.51   |
+| Samsung   | 980 PRO with He... | 2 TB   | 207C2F506520 | 184   | 0     | 0.51   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 1582D460C18B | 184   | 0     | 0.51   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D591B2C91016 | 184   | 0     | 0.51   |
 | UMIS      | RPJTJ512MEE1OWX    | 512 GB | 5EB7251F913E | 184   | 0     | 0.51   |
@@ -5330,7 +5334,6 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force MP510        | 240 GB | 3D87FDFB0279 | 182   | 0     | 0.50   |
 | HP        | SSD EX900          | 250 GB | 48B7CD157E60 | 182   | 0     | 0.50   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | 50F9EE4182E7 | 182   | 0     | 0.50   |
-| UMIS      | RPJTJ512MEE1OWX    | 512 GB | 46E595924F55 | 182   | 0     | 0.50   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 37ADC86562D1 | 182   | 0     | 0.50   |
 | KIOXIA    | KBG40ZPZ1T02 NVMe  | 1 TB   | 484B4D51710A | 182   | 0     | 0.50   |
 | SK hynix  | HFM128GDHTNG-8310B | 128 GB | D8F1B257FDD8 | 182   | 0     | 0.50   |
@@ -5357,6 +5360,7 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KXG60ZNV1T02 NVMe  | 1 TB   | 69388A6FB51A | 181   | 0     | 0.50   |
 | Kingston  | SNVS500G           | 500 GB | 47A1630C4E80 | 181   | 0     | 0.50   |
 | Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 41FB6B7F92C1 | 181   | 0     | 0.50   |
+| Samsung   | SSD 970 EVO        | 1 TB   | DCCD18BD339B | 181   | 0     | 0.50   |
 | Samsung   | SSD 970 PRO        | 512 GB | AE90E730A07B | 181   | 0     | 0.50   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | 4F8A61C8159E | 181   | 0     | 0.50   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | 4C4D14A9B985 | 181   | 0     | 0.50   |
@@ -5411,6 +5415,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M8500G       | 500 GB | 4E2A4DC5B411 | 180   | 0     | 0.49   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | E405DA1DA00B | 180   | 0     | 0.49   |
 | Phison    | SBXe               | 960 GB | 16CEAEDE7F0B | 179   | 0     | 0.49   |
+| WDC       | PC SN530 SDBPNP... | 512 GB | 98FDD1A4C3B7 | 179   | 0     | 0.49   |
 | Kingston  | SNVS1000GB         | 1 TB   | A22F1B37B3E3 | 179   | 0     | 0.49   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | 27D1849631BE | 179   | 0     | 0.49   |
 | Transcend | TS256GMTE220S      | 256 GB | 5A3FCB1616BF | 179   | 0     | 0.49   |
@@ -5520,13 +5525,13 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 SDAPNU... | 512 GB | 0392C7FE24A3 | 177   | 0     | 0.49   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | ACB416A4B773 | 177   | 0     | 0.49   |
 | Samsung   | SSD 980 PRO        | 1 TB   | AC56D884A0A3 | 177   | 0     | 0.49   |
+| Samsung   | MZVLB512HAJQ-00000 | 512 GB | 9D4181F22C91 | 177   | 0     | 0.49   |
 | Transcend | TS1TMTE220S        | 1 TB   | 55EC8380B683 | 177   | 0     | 0.49   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 6ED1FF461BAB | 177   | 0     | 0.49   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | 59CF5D5623C3 | 177   | 0     | 0.49   |
 | Samsung   | SSD 970 EVO        | 250 GB | 246E4BFAF251 | 177   | 0     | 0.49   |
 | Toshiba   | KBG40ZNS512G NVMe  | 512 GB | DEFD9CC2FBE2 | 177   | 0     | 0.49   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 8C404063F9A9 | 176   | 0     | 0.48   |
-| Samsung   | MZVLB512HAJQ-00000 | 512 GB | 9D4181F22C91 | 176   | 0     | 0.48   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 9B778AC50855 | 176   | 0     | 0.48   |
 | WDC       | PC SN520 NVMe      | 128 GB | 2BDE1EEF9C1A | 176   | 0     | 0.48   |
 | Crucial   | CT500P1SSD8        | 500 GB | 134C67783C6F | 176   | 0     | 0.48   |
@@ -5543,12 +5548,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 0C23D2B38AA8 | 176   | 0     | 0.48   |
 | Toshiba   | KXG60ZNV1T02 NVMe  | 1 TB   | D09F670E7C49 | 176   | 0     | 0.48   |
 | XPG       | GAMMIX S11 Pro     | 1 TB   | 90F89948A82E | 176   | 0     | 0.48   |
+| Intel     | SSDPEKKF010T8L     | 1 TB   | B8D2490CA679 | 176   | 0     | 0.48   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 57297503B1FE | 176   | 0     | 0.48   |
 | Samsung   | MZVLB256HAHQ-000L2 | 256 GB | AC2B6444C13C | 176   | 0     | 0.48   |
 | Plextor   | PX-1TM8PeG         | 1 TB   | D211668BF970 | 176   | 0     | 0.48   |
-| Samsung   | 980 PRO with He... | 2 TB   | 207C2F506520 | 176   | 0     | 0.48   |
 | Kingston  | OM8PCP3512F-AB     | 512 GB | CA49C13EF657 | 176   | 0     | 0.48   |
-| Intel     | SSDPEKKF010T8L     | 1 TB   | B8D2490CA679 | 176   | 0     | 0.48   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | A0CE3AE11B96 | 176   | 0     | 0.48   |
 | Kingston  | SA2000M8500G       | 500 GB | F51253A44590 | 176   | 0     | 0.48   |
 | Samsung   | SSD 970 EVO        | 500 GB | 763ABDD388B2 | 176   | 0     | 0.48   |
@@ -5564,6 +5568,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 SDAPNU... | 256 GB | DF0435FA6FCF | 175   | 0     | 0.48   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | 19921665A1A0 | 175   | 0     | 0.48   |
 | Toshiba   | KBG40ZNS512G NVMe  | 512 GB | B1BE8BFAA2BD | 175   | 0     | 0.48   |
+| Samsung   | MZVLW256HEHP-00000 | 256 GB | AA99FA52CD84 | 175   | 0     | 0.48   |
 | UMIS      | RPJTJ256MEE1OWX    | 256 GB | DD17783638C5 | 175   | 0     | 0.48   |
 | SanDisk   | WD Blue SN570      | 500 GB | 67C3A8C1B2CD | 175   | 0     | 0.48   |
 | Corsair   | MP400              | 4 TB   | 390CF8696918 | 175   | 0     | 0.48   |
@@ -5662,6 +5667,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 250 GB | E3887D805AC7 | 172   | 0     | 0.47   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 530ED07F2375 | 172   | 0     | 0.47   |
 | Micron    | 2200S NVMe         | 512 GB | 8477B3188E1E | 172   | 0     | 0.47   |
+| Kingston  | SA2000M8250G       | 250 GB | 3BFF8F010629 | 171   | 0     | 0.47   |
 | SK hynix  | HFM001TD3JX013N    | 1 TB   | 2396222A6BE8 | 171   | 0     | 0.47   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 51C0E31D5665 | 171   | 0     | 0.47   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | C03E39D3D31D | 171   | 0     | 0.47   |
@@ -5685,7 +5691,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC601 NVMe         | 512 GB | 1FA6EBC7111E | 171   | 0     | 0.47   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | B2C218FDA83A | 171   | 0     | 0.47   |
 | SK hynix  | PC300 NVMe         | 1 TB   | 9EA8E0900372 | 171   | 0     | 0.47   |
-| Kingston  | SA2000M8250G       | 250 GB | 3BFF8F010629 | 171   | 0     | 0.47   |
 | SK hynix  | BC501 HFM512GDJ... | 512 GB | 4448DA3843D8 | 171   | 0     | 0.47   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | BC6125593830 | 171   | 0     | 0.47   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 37635BB37DC1 | 171   | 0     | 0.47   |
@@ -5693,6 +5698,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 SDAPNU... | 128 GB | 893216501A01 | 171   | 0     | 0.47   |
 | Samsung   | PM961 NVMe         | 512 GB | 7BC076A51556 | 171   | 0     | 0.47   |
 | Micron    | 2210_MTFDHBA1T0QFD | 1 TB   | 8F315154C08D | 171   | 0     | 0.47   |
+| SK hynix  | SKHynix_HFS001T... | 1 TB   | 33D9D1FE1517 | 171   | 0     | 0.47   |
 | UMIS      | RPJTJ512MEE1OWX    | 512 GB | 82BB0390640F | 171   | 0     | 0.47   |
 | Kingston  | SA2000M81000G      | 1 TB   | 41C7068DEAAC | 171   | 0     | 0.47   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 627FA89D714F | 171   | 0     | 0.47   |
@@ -5742,7 +5748,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 250 GB | BE852802929A | 169   | 0     | 0.46   |
 | WDC       | PC SN530 SDBPTP... | 1 TB   | 3F4F9BFDD4EF | 169   | 0     | 0.46   |
 | Toshiba   | KXG60ZNV256G NVMe  | 256 GB | 6E5B2A3F3D52 | 169   | 0     | 0.46   |
-| WDC       | PC SN530 SDBPNP... | 512 GB | B6181F76599F | 169   | 0     | 0.46   |
 | Samsung   | SSD 960 EVO        | 250 GB | 451FA98785C7 | 169   | 0     | 0.46   |
 | Toshiba   | KXG60ZNV1T02 NV... | 1 TB   | 377C83E74C73 | 169   | 0     | 0.46   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | A822A842082C | 168   | 0     | 0.46   |
@@ -5776,7 +5781,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS256G... | 256 GB | A63FBDEE41F9 | 167   | 0     | 0.46   |
 | Samsung   | MZFLV128HCGR-000MV | 128 GB | BACACC350DC5 | 167   | 0     | 0.46   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 0A7F734B17B1 | 167   | 0     | 0.46   |
-| Kingston  | SA2000M81000G      | 1 TB   | 3B0042A68747 | 167   | 0     | 0.46   |
 | Seagate   | FireCuda 520 SS... | 1 TB   | 57CB1ECA0286 | 167   | 0     | 0.46   |
 | ADATA     | SWORDFISH          | 1 TB   | 17EE9B86CAB9 | 167   | 0     | 0.46   |
 | Samsung   | SSD 980 PRO        | 1 TB   | F590E1317752 | 167   | 0     | 0.46   |
@@ -5835,6 +5839,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS256G... | 256 GB | 3B1F854431A5 | 165   | 0     | 0.45   |
 | Toshiba   | KBG40ZNT512G ME... | 512 GB | 6305EEC527E0 | 165   | 0     | 0.45   |
 | Intel     | SSDPEKNU010TZ      | 1 TB   | CCE1F191414C | 165   | 0     | 0.45   |
+| Kingston  | SNVS500G           | 500 GB | 3B7CDC528F7A | 165   | 0     | 0.45   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | B61D4A7BA5BD | 165   | 0     | 0.45   |
 | KIOXIA    | KXG60PNV2T04 NVMe  | 2 TB   | 3316458E58C6 | 165   | 0     | 0.45   |
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | 9AFCD24F6C22 | 165   | 0     | 0.45   |
@@ -5853,7 +5858,6 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | D2F93FE9941E | 165   | 0     | 0.45   |
 | Seagate   | FireCuda 520 SS... | 2 TB   | 331A3BB72587 | 165   | 0     | 0.45   |
 | Silico... | R5MP480G8          | 480 GB | 32CFBC898ECC | 165   | 0     | 0.45   |
-| Kingston  | SNVS500G           | 500 GB | 3B7CDC528F7A | 165   | 0     | 0.45   |
 | Samsung   | MZVKW512HMJP-000L7 | 512 GB | 6C18836E1B71 | 165   | 0     | 0.45   |
 | WDC       | WDS100T1X0E-00AFY0 | 1 TB   | 11FCC6004051 | 165   | 0     | 0.45   |
 | WDC       | WDS250G2B0C-00PXH0 | 250 GB | 2D95D891CC28 | 165   | 0     | 0.45   |
@@ -5898,12 +5902,11 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 1A560884FD79 | 164   | 0     | 0.45   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | CB5E20EAF133 | 164   | 0     | 0.45   |
 | Kingston  | SA2000M81000G      | 1 TB   | 6D61C1F47674 | 164   | 0     | 0.45   |
-| SK hynix  | SKHynix_HFS001T... | 1 TB   | 33D9D1FE1517 | 164   | 0     | 0.45   |
+| Intel     | SSDPEKKF256G8L     | 256 GB | 2814E39F35C4 | 164   | 0     | 0.45   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | F6E0856CBA43 | 164   | 0     | 0.45   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 2CA00AAE8DC8 | 164   | 0     | 0.45   |
 | Intel     | SSDPEKKW128G8      | 128 GB | AA2C8E57FAD4 | 164   | 0     | 0.45   |
 | KIOXIA    | KBG40ZNS512G NVMe  | 512 GB | 3517544E91C9 | 164   | 0     | 0.45   |
-| Intel     | SSDPEKKF256G8L     | 256 GB | 2814E39F35C4 | 164   | 0     | 0.45   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | 2670C2218F58 | 164   | 0     | 0.45   |
 | Samsung   | PM981 NVMe         | 512 GB | 8CD08E432CAA | 163   | 0     | 0.45   |
 | Silico... | NVME SSD           | 512 GB | 4264B0CFBE47 | 163   | 0     | 0.45   |
@@ -6157,7 +6160,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M8250G       | 250 GB | 3E9CA2842038 | 156   | 0     | 0.43   |
 | SK hynix  | BC711 NVMe         | 512 GB | 7A005927B798 | 156   | 0     | 0.43   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 333B2298AE4C | 156   | 0     | 0.43   |
-| WDC       | PC SN530 SDBPNP... | 512 GB | 98FDD1A4C3B7 | 156   | 0     | 0.43   |
 | Toshiba   | KXG60ZNV512G NVMe  | 512 GB | 83D03F9CEF4B | 156   | 0     | 0.43   |
 | XPG       | GAMMIX S11 Pro     | 512 GB | 7D88159824AD | 156   | 0     | 0.43   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 0EC8BCBE8E04 | 156   | 0     | 0.43   |
@@ -6165,7 +6167,6 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | NVME SSD           | 1 TB   | 7876E86DE932 | 156   | 0     | 0.43   |
 | Corsair   | MP600 PRO          | 1 TB   | AD87F34726DD | 156   | 0     | 0.43   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 074B37AD8855 | 156   | 0     | 0.43   |
-| Samsung   | MZVLW256HEHP-00000 | 256 GB | AA99FA52CD84 | 156   | 0     | 0.43   |
 | Samsung   | SSD 960 EVO        | 250 GB | 26D2C32E6B8A | 156   | 0     | 0.43   |
 | Phison    | ESR01TBTLG-E6GB... | 1 TB   | CB764B6BFC33 | 156   | 0     | 0.43   |
 | Toshiba   | KBG30ZMV512G       | 512 GB | D8AEBF6396CA | 156   | 0     | 0.43   |
@@ -6186,6 +6187,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | EAEA5B4ABB32 | 155   | 0     | 0.43   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 5A5D2E07F03B | 155   | 0     | 0.43   |
 | Intel     | SSDPEKKW256G8      | 256 GB | C49773BC6A5C | 155   | 0     | 0.43   |
+| Samsung   | MZVLB512HAJQ-000L2 | 512 GB | A95175E439B7 | 155   | 0     | 0.43   |
 | Intel     | HBRPEKNX0202AH     | 512 GB | 31EA768D877B | 155   | 0     | 0.43   |
 | Samsung   | SSD 970 EVO        | 500 GB | 179E22DD29CD | 155   | 0     | 0.43   |
 | KIOXIA    | KBG40ZPZ256G NVMe  | 256 GB | E26ECA4CA44C | 155   | 0     | 0.43   |
@@ -6236,6 +6238,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 62D10C53B389 | 154   | 0     | 0.42   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 100ACF0A0813 | 153   | 0     | 0.42   |
 | Toshiba   | KXG50ZNV1T02 NVMe  | 1 TB   | 4BFA8678A059 | 153   | 0     | 0.42   |
+| SK hynix  | SKHynix_HFS001T... | 1 TB   | E96BF3864931 | 153   | 0     | 0.42   |
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | 9D6EBE3ED5A6 | 153   | 0     | 0.42   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 6CE5F18DD0A5 | 153   | 0     | 0.42   |
 | Intel     | SSDPEKKW010T8      | 1 TB   | 4D465AA41B33 | 153   | 0     | 0.42   |
@@ -6245,7 +6248,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 36C43E801F47 | 153   | 0     | 0.42   |
 | Corsair   | MP400              | 2 TB   | 24AD242B28DB | 153   | 0     | 0.42   |
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | 203B7CCB8A10 | 153   | 0     | 0.42   |
-| SK hynix  | SKHynix_HFS001T... | 1 TB   | E96BF3864931 | 153   | 0     | 0.42   |
 | Kingston  | OM8PCP3512F-AB     | 512 GB | CEE8875B6AEC | 153   | 0     | 0.42   |
 | Crucial   | CT500P2SSD8        | 500 GB | CAFE2A57EF88 | 153   | 0     | 0.42   |
 | Lite-On   | CL1-8D512          | 512 GB | CF250A6D8F89 | 153   | 0     | 0.42   |
@@ -6333,6 +6335,8 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC601 NVMe         | 512 GB | 9DAC75712CC6 | 151   | 0     | 0.41   |
 | Samsung   | SSD 970 EVO        | 500 GB | 0E642EC8ACBF | 151   | 0     | 0.41   |
 | Phison    | Daten DS2000       | 256 GB | C448FF1495AE | 151   | 0     | 0.41   |
+| Phison    | Sabrent Rocket ... | 4 TB   | 12358C13DF99 | 151   | 0     | 0.41   |
+| Phison    | Sabrent Rocket ... | 4 TB   | 2BA1A7429BDE | 151   | 0     | 0.41   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | FF2CF20B6C94 | 151   | 0     | 0.41   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | D2F1984EF330 | 151   | 0     | 0.41   |
 | Corsair   | Force MP600        | 1 TB   | 76B95287E460 | 151   | 0     | 0.41   |
@@ -6352,7 +6356,6 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG40ZNS512G NVMe  | 512 GB | 11017864370F | 150   | 0     | 0.41   |
 | Samsung   | SSD 970 EVO        | 1 TB   | CA861BB25E1D | 150   | 0     | 0.41   |
 | KIOXIA    | KXG60ZNV512G       | 512 GB | 473BF93F22B3 | 150   | 0     | 0.41   |
-| Samsung   | MZVLB512HAJQ-000L2 | 512 GB | A95175E439B7 | 150   | 0     | 0.41   |
 | Samsung   | SSD 960 EVO        | 500 GB | 7230C2C36C6A | 150   | 0     | 0.41   |
 | WDC       | WDBA3V0010BNC-WRSN | 1 TB   | 5B24FF187F0E | 150   | 0     | 0.41   |
 | Phison    | PP3-8D256          | 256 GB | D356C091A9CB | 150   | 0     | 0.41   |
@@ -6390,6 +6393,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | F101B2EE125C | 149   | 0     | 0.41   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | 65EFBE9246FC | 149   | 0     | 0.41   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | F081753C903F | 149   | 0     | 0.41   |
+| Intel     | SSDPEKNU512GZ      | 512 GB | 197CF0F729B0 | 149   | 0     | 0.41   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | C14B29E6DCB9 | 149   | 0     | 0.41   |
 | SSSTC     | CL1-3D256-Q11 NVMe | 256 GB | 82FF18617235 | 149   | 0     | 0.41   |
 | Kingston  | OM8PCP3512F-AA     | 512 GB | 6DCA76090F2F | 149   | 0     | 0.41   |
@@ -6406,6 +6410,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG6APNV2T04       | 2 TB   | F4634A6AD5F2 | 149   | 0     | 0.41   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 675915A6E2FA | 149   | 0     | 0.41   |
 | Samsung   | SSD 970 EVO        | 250 GB | E7D2A524998E | 149   | 0     | 0.41   |
+| WDC       | WDS500G3X0C-00SJG0 | 500 GB | 273F1C0BCB1E | 149   | 0     | 0.41   |
 | KIOXIA    | KBG40ZNV256G       | 256 GB | AE46DC0D68C3 | 149   | 0     | 0.41   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | BC47598E3672 | 149   | 0     | 0.41   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 73103AA3DC58 | 149   | 0     | 0.41   |
@@ -6444,7 +6449,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 512 GB | BB8F14583504 | 148   | 0     | 0.41   |
 | SK hynix  | PC401 NVMe         | 256 GB | A6EFB13F0723 | 148   | 0     | 0.41   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | EAD1D45710CD | 148   | 0     | 0.41   |
-| WDC       | WDS500G3X0C-00SJG0 | 500 GB | 273F1C0BCB1E | 148   | 0     | 0.41   |
 | Kingston  | RBUSNS8154P3128GJ  | 128 GB | 8E263417E7D5 | 148   | 0     | 0.41   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 45A9F3C61678 | 148   | 0     | 0.41   |
 | Samsung   | PM981a NVMe        | 1 TB   | 24DB638ADBEF | 148   | 0     | 0.41   |
@@ -6463,7 +6467,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | B76D86099B35 | 147   | 0     | 0.40   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 19D74117DF0E | 147   | 0     | 0.40   |
 | ADATA     | SX8200PNP          | 1 TB   | F857ECB00221 | 147   | 0     | 0.40   |
-| Samsung   | SSD 970 EVO        | 1 TB   | DCCD18BD339B | 147   | 0     | 0.40   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 7776BD084AA3 | 147   | 0     | 0.40   |
 | Mushkin   | MKNSSDPE2TB-D8     | 2 TB   | CCDC06B64CE9 | 147   | 0     | 0.40   |
 | Phison    | Sabrent Rocket ... | 512 GB | 947F0B594DA7 | 147   | 0     | 0.40   |
@@ -6516,10 +6519,12 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | FD1BDAF7E122 | 146   | 0     | 0.40   |
 | Toshiba   | KBG40ZNT512G ME... | 512 GB | 5C056AF530CC | 146   | 0     | 0.40   |
 | WDC       | PC SN520 SDAPMU... | 512 GB | CC1B058EED66 | 146   | 0     | 0.40   |
+| Intel     | H10 HBRPEKNX020... | 1 TB   | 7FF7D985B5AD | 292   | 1     | 0.40   |
 | Intel     | HBRPEKNX0101AH     | 256 GB | 93BC3BBFA4A2 | 146   | 0     | 0.40   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 61453A916164 | 146   | 0     | 0.40   |
 | WDC       | PC SN520 SDAPMU... | 512 GB | 4A9FEE570AA5 | 146   | 0     | 0.40   |
 | Phison    | Sabrent            | 1 TB   | F46A332735A7 | 146   | 0     | 0.40   |
+| SK hynix  | HFM512GDJTNG-8310A | 512 GB | F289611087FD | 146   | 0     | 0.40   |
 | SK hynix  | PC601 NVMe         | 512 GB | 5282F277D29F | 146   | 0     | 0.40   |
 | Samsung   | SSD 970 EVO        | 250 GB | 503E98DF4B86 | 146   | 0     | 0.40   |
 | Intel     | SSDPEKNW512G8      | 512 GB | CF90732BDA1E | 146   | 0     | 0.40   |
@@ -6566,6 +6571,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 500 GB | B91495FC3A6C | 145   | 0     | 0.40   |
 | Samsung   | SSD 970 PRO        | 512 GB | EDA38DF46995 | 145   | 0     | 0.40   |
 | Kingston  | SNVS1000G          | 1 TB   | 82BEAA9A0D7B | 145   | 0     | 0.40   |
+| Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | E9D32E9A0284 | 145   | 0     | 0.40   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | D5558196EC12 | 145   | 0     | 0.40   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 8CD147310B76 | 145   | 0     | 0.40   |
 | Toshiba   | KXG50ZNV512G NVMe  | 512 GB | 67988BA4313F | 145   | 0     | 0.40   |
@@ -6576,7 +6582,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM512GD3JX013N    | 512 GB | 4839EA3D4E77 | 145   | 0     | 0.40   |
 | KIOXIA    | KBG40ZNS512G NVMe  | 512 GB | FD19B0E4350A | 145   | 0     | 0.40   |
 | PNY       | CS3040 1TB SSD     | 1 TB   | 997FFE82AD84 | 145   | 0     | 0.40   |
-| Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | E9D32E9A0284 | 145   | 0     | 0.40   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 1F177F820E7A | 145   | 0     | 0.40   |
 | Intel     | HBRPEKNX0202AH     | 512 GB | A9999939CBF1 | 145   | 0     | 0.40   |
 | Intel     | SSDPEKKF256G7H     | 256 GB | 994198B09B7D | 145   | 0     | 0.40   |
@@ -6672,7 +6677,6 @@ MTBF - avg. MTBF in years per sample.
 | Lenovo    | LENSE20512GMSP3... | 512 GB | F1D6CD45195A | 142   | 0     | 0.39   |
 | Intel     | HBRPEKNX0202AO     | 32 GB  | 6F36B0D750F1 | 142   | 0     | 0.39   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 15030E932933 | 142   | 0     | 0.39   |
-| SK hynix  | HFM512GDJTNG-8310A | 512 GB | F289611087FD | 142   | 0     | 0.39   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | F9416ABEF3EA | 142   | 0     | 0.39   |
 | Toshiba   | KXG50PNV2T04       | 2 TB   | 17532BBAFCB9 | 142   | 0     | 0.39   |
 | ADATA     | SX8200PNP          | 256 GB | D1E4F7DB604E | 142   | 0     | 0.39   |
@@ -6799,6 +6803,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEMKF512G8 NVMe | 512 GB | AD7A79C583E0 | 139   | 0     | 0.38   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | E0AE316F8FA0 | 139   | 0     | 0.38   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 4D77F736D102 | 139   | 0     | 0.38   |
+| Toshiba   | KBG30ZMV512G       | 512 GB | 3B656E467E1A | 139   | 0     | 0.38   |
 | WDC       | WDS256G1X0C-00ENX0 | 256 GB | C4FF1E50427A | 139   | 0     | 0.38   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 9DFF6000332C | 138   | 0     | 0.38   |
 | Samsung   | SSD 970 EVO        | 250 GB | DE2D4058E266 | 138   | 0     | 0.38   |
@@ -6810,9 +6815,9 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 SDAPNU... | 512 GB | 7B3DD2EB7E2F | 138   | 0     | 0.38   |
 | Kingston  | SA2000M8250G       | 250 GB | DD97418B0C35 | 138   | 0     | 0.38   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 799BC7AA1D82 | 138   | 0     | 0.38   |
-| Toshiba   | KBG30ZMV512G       | 512 GB | 3B656E467E1A | 138   | 0     | 0.38   |
 | Samsung   | SSD 960 PRO        | 512 GB | AA8B97B18C6E | 138   | 0     | 0.38   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | CD149797EE74 | 138   | 0     | 0.38   |
+| Silico... | PCIe-8 SSD         | 512 GB | 3EE5EE8108E6 | 138   | 0     | 0.38   |
 | Seagate   | FireCuda 520 SS... | 500 GB | 6145140DCFEA | 138   | 0     | 0.38   |
 | Seagate   | FireCuda 520 SS... | 500 GB | F0E168723188 | 138   | 0     | 0.38   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | 7404CF0B9ECB | 138   | 0     | 0.38   |
@@ -6823,7 +6828,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | E3AB58CEF023 | 138   | 0     | 0.38   |
 | Phison    | Sabrent            | 2 TB   | C808EDD726B2 | 138   | 0     | 0.38   |
 | Samsung   | SSD 970 EVO        | 500 GB | 0F107DAC60F6 | 138   | 0     | 0.38   |
-| Silico... | PCIe-8 SSD         | 512 GB | 3EE5EE8108E6 | 138   | 0     | 0.38   |
 | ADATA     | SX8200PNP          | 512 GB | D48155100DFF | 138   | 0     | 0.38   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 50F0227EEC0F | 138   | 0     | 0.38   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 244D2E3E43E6 | 138   | 0     | 0.38   |
@@ -6849,7 +6853,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 SDAPNU... | 512 GB | 73152B6730F8 | 137   | 0     | 0.38   |
 | Kingston  | RBUSNS8154P3512GJ  | 512 GB | DAE2624D08BE | 137   | 0     | 0.38   |
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 6041BF443A85 | 137   | 0     | 0.38   |
-| Intel     | H10 HBRPEKNX020... | 1 TB   | 7FF7D985B5AD | 275   | 1     | 0.38   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 16F275BFA27D | 137   | 0     | 0.38   |
 | SK hynix  | BC711 NVMe         | 512 GB | E02CBF4543AD | 137   | 0     | 0.38   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | FC7CC2C92469 | 137   | 0     | 0.38   |
@@ -6880,6 +6883,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX8200PNP          | 512 GB | B3855F9DD075 | 136   | 0     | 0.37   |
 | Samsung   | MZVLB512HBJQ-000H1 | 512 GB | 78395DF9E13A | 136   | 0     | 0.37   |
 | Samsung   | MZVLB2T0HMLB-000H1 | 2 TB   | CED4AEFA24E8 | 136   | 0     | 0.37   |
+| Toshiba   | THNSN5512GPUK NVMe | 512 GB | C9B0E7F2D2B2 | 136   | 0     | 0.37   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | 53759AC3C2A0 | 136   | 0     | 0.37   |
 | Toshiba   | KXG50ZNV1T02 NVMe  | 1 TB   | E37F164A67E0 | 136   | 0     | 0.37   |
 | Samsung   | MZVLV256HCHP-000L2 | 256 GB | B6D59C6A9131 | 136   | 0     | 0.37   |
@@ -6907,6 +6911,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 9EFA13CB6CFB | 136   | 0     | 0.37   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 03294F6AFB6C | 135   | 0     | 0.37   |
 | Samsung   | SSD 960 EVO        | 250 GB | F2B40547EEBF | 135   | 0     | 0.37   |
+| WDC       | PC SN520 SDAPNU... | 256 GB | DE1EE8EA5C13 | 135   | 0     | 0.37   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | 19A8C333808F | 135   | 0     | 0.37   |
 | SNR       | ML480M             | 480 GB | 47CB38D55509 | 135   | 0     | 0.37   |
 | Samsung   | SSD 970 EVO        | 250 GB | 76FAE6486C98 | 135   | 0     | 0.37   |
@@ -6936,7 +6941,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | CD5EBACC0991 | 135   | 0     | 0.37   |
 | addlink   | M.2 PCIE G3x4 NVMe | 2 TB   | D6351579C322 | 135   | 0     | 0.37   |
 | SK hynix  | SKHynix_HFS256G... | 256 GB | 2043CADB73B6 | 135   | 0     | 0.37   |
-| WDC       | PC SN520 SDAPNU... | 256 GB | DE1EE8EA5C13 | 135   | 0     | 0.37   |
 | PNY       | CS3030 2TB SSD     | 2 TB   | BBCAE7F71DB7 | 135   | 0     | 0.37   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 12DBCB715FCB | 135   | 0     | 0.37   |
 | Toshiba   | KXG60ZNV512G       | 512 GB | 422C03795798 | 135   | 0     | 0.37   |
@@ -6986,17 +6990,18 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG40ZNV256G       | 256 GB | 6CFA85664C9A | 134   | 0     | 0.37   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 37E4199172EB | 134   | 0     | 0.37   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 971C0093FEFC | 134   | 0     | 0.37   |
+| Kingston  | OM8PCP3512F-AB     | 512 GB | C4079259E7D6 | 134   | 0     | 0.37   |
 | Kingston  | SNVS500G           | 500 GB | FE640CC96C76 | 134   | 0     | 0.37   |
 | Samsung   | MZVLW128HEGR-000L2 | 128 GB | CC54661FE737 | 134   | 0     | 0.37   |
 | Crucial   | CT500P1SSD8        | 500 GB | 6FD2BCC989C1 | 134   | 0     | 0.37   |
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 081821493A6C | 134   | 0     | 0.37   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 92F3799C88A9 | 134   | 0     | 0.37   |
 | Samsung   | MZVLW128HEGR-000L2 | 128 GB | 3FAE4AFC6C59 | 134   | 0     | 0.37   |
+| WDC       | WDS100T1X0E-00AFY0 | 1 TB   | 26F1C9E3738C | 134   | 0     | 0.37   |
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | CFA0A5A2DBAD | 134   | 0     | 0.37   |
 | WDC       | PC SN530 NVMe      | 512 GB | BC0497673DB6 | 134   | 0     | 0.37   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | 3B36CA132AE7 | 134   | 0     | 0.37   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 607EC051EAF0 | 134   | 0     | 0.37   |
-| Kingston  | OM8PCP3512F-AB     | 512 GB | C4079259E7D6 | 133   | 0     | 0.37   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 4642884BA81A | 133   | 0     | 0.37   |
 | Samsung   | SSD 970 PRO        | 512 GB | 94B66ACA990F | 133   | 0     | 0.37   |
 | Seagate   | FireCuda 510 SS... | 500 GB | 0E1E63811204 | 133   | 0     | 0.37   |
@@ -7014,7 +7019,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 1A9BC9F6DE30 | 133   | 0     | 0.37   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 56394520C9D7 | 133   | 0     | 0.37   |
 | Samsung   | SSD 970 EVO        | 1 TB   | D431F0978D16 | 133   | 0     | 0.37   |
-| Toshiba   | THNSN5512GPUK NVMe | 512 GB | C9B0E7F2D2B2 | 133   | 0     | 0.37   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 701174419038 | 133   | 0     | 0.37   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | 8800CC0F5D17 | 133   | 0     | 0.37   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | 8E185E893F02 | 133   | 0     | 0.37   |
@@ -7238,6 +7242,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Force MP600        | 2 TB   | D83A038AECE1 | 128   | 0     | 0.35   |
 | SanDisk   | Ultra 3D NVMe      | 500 GB | 570DAA822844 | 128   | 0     | 0.35   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | 4166D36279A4 | 128   | 0     | 0.35   |
+| Silico... | PCIe-8 SSD         | 256 GB | FCD04533AF96 | 128   | 0     | 0.35   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 23FCA8EC6347 | 128   | 0     | 0.35   |
 | WDC       | WDS100T1X0E-00AFY0 | 1 TB   | 5D4B427BF0F8 | 128   | 0     | 0.35   |
 | Micron    | 2210_MTFDHBA512QFD | 512 GB | C197E7568EB5 | 128   | 0     | 0.35   |
@@ -7282,6 +7287,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M8250G       | 250 GB | BC8085754573 | 127   | 0     | 0.35   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | C2C39F3E19DD | 127   | 0     | 0.35   |
 | WDC       | WDS250G1B0C-00S6U0 | 250 GB | 2FFFCB7DE1EA | 127   | 0     | 0.35   |
+| XPG       | GAMMIX S11 Pro     | 512 GB | A1C895953A64 | 127   | 0     | 0.35   |
 | XPG       | GAMMIX S11 Pro     | 512 GB | A7201D470DC2 | 127   | 0     | 0.35   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | C95009D49A80 | 127   | 0     | 0.35   |
 | KIOXIA    | KXG60ZNV256G       | 256 GB | F85183085346 | 127   | 0     | 0.35   |
@@ -7347,10 +7353,10 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | M.2 PCIE SSD       | 256 GB | 3D42E29845DE | 126   | 0     | 0.35   |
 | Samsung   | MZVLB1T0HALR-000H1 | 1 TB   | 2D37337EF5CB | 126   | 0     | 0.35   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 0185F8297BE6 | 126   | 0     | 0.35   |
-| Silico... | PCIe-8 SSD         | 256 GB | FCD04533AF96 | 126   | 0     | 0.35   |
 | SK hynix  | PC611 NVMe         | 512 GB | 7819DCED09AF | 126   | 0     | 0.35   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 4A3F850ACC0E | 126   | 0     | 0.35   |
 | Kingston  | SA2000M81000G      | 1 TB   | BCFF6849B0BD | 126   | 0     | 0.35   |
+| Corsair   | Force MP510        | 240 GB | F4D62F2E1B0D | 126   | 0     | 0.35   |
 | Kingston  | SKC2000M81000G     | 1 TB   | E4D4F8D5C748 | 126   | 0     | 0.35   |
 | ADATA     | SX8200PNP          | 512 GB | 9B8B31FE7BEF | 126   | 0     | 0.35   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 0D6E85F059D6 | 126   | 0     | 0.35   |
@@ -7431,7 +7437,6 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT250P2SSD8        | 250 GB | FE3DD32CBA27 | 124   | 0     | 0.34   |
 | Toshiba   | KBG30ZMV256G       | 256 GB | 2B8620A68C65 | 124   | 0     | 0.34   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 590D89290AFE | 124   | 0     | 0.34   |
-| XPG       | GAMMIX S11 Pro     | 512 GB | A1C895953A64 | 124   | 0     | 0.34   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 8CE13DAA75FA | 124   | 0     | 0.34   |
 | SK hynix  | PC401 HFS256GD9... | 256 GB | 860CBD3659F5 | 124   | 0     | 0.34   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 0A9C52B1E959 | 124   | 0     | 0.34   |
@@ -7588,7 +7593,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | B6458FC594A9 | 363   | 2     | 0.33   |
 | Samsung   | SSD 970 EVO        | 500 GB | 29DBFEC26B74 | 121   | 0     | 0.33   |
 | SanDisk   | WD PC SN810 SDC... | 512 GB | F67926E5B181 | 121   | 0     | 0.33   |
-| Intel     | SSDPEKNU512GZ      | 512 GB | 197CF0F729B0 | 120   | 0     | 0.33   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | DEBFFB50CB47 | 120   | 0     | 0.33   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | 55C1316C31B1 | 120   | 0     | 0.33   |
 | ADATA     | SX8200PNP          | 512 GB | CAA07BC74959 | 120   | 0     | 0.33   |
@@ -7603,8 +7607,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 0C13F148D7D6 | 120   | 0     | 0.33   |
 | Apple     | SSD SM0032L        | 32 GB  | 375167E36754 | 120   | 0     | 0.33   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 667E0B3801EE | 120   | 0     | 0.33   |
-| Phison    | Sabrent Rocket ... | 4 TB   | 12358C13DF99 | 120   | 0     | 0.33   |
-| Phison    | Sabrent Rocket ... | 4 TB   | 2BA1A7429BDE | 120   | 0     | 0.33   |
 | Crucial   | CT1000P5SSD8       | 1 TB   | 2B7971390237 | 120   | 0     | 0.33   |
 | Intel     | SSDPEKKF512G8 NVMe | 512 GB | B3603DC8AF1E | 120   | 0     | 0.33   |
 | Samsung   | MZFLV512HCJH-000MV | 512 GB | 1F630947C2CF | 120   | 0     | 0.33   |
@@ -7632,6 +7634,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | 05880228192D | 120   | 0     | 0.33   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 3B9B131A1066 | 120   | 0     | 0.33   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 1D1916359E21 | 240   | 1     | 0.33   |
+| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | CABD9B1FC09D | 120   | 0     | 0.33   |
 | Samsung   | PM981 NVMe         | 512 GB | C78DD7487809 | 120   | 0     | 0.33   |
 | Micron    | 2210_MTFDHBA1T0QFD | 1 TB   | 4FE378104830 | 119   | 0     | 0.33   |
 | Kingston  | SA2000M8250G       | 250 GB | 78A363FE823A | 119   | 0     | 0.33   |
@@ -7745,7 +7748,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBUSNS8154P3256GJ5 | 256 GB | FAE036E12E31 | 117   | 0     | 0.32   |
 | Kingston  | SNVS500G           | 500 GB | AAB940E3E6D3 | 117   | 0     | 0.32   |
 | Kingston  | SKC2500M81000G     | 1 TB   | 8943B809DEA1 | 117   | 0     | 0.32   |
-| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | CABD9B1FC09D | 117   | 0     | 0.32   |
 | SanDisk   | WD Green SN350     | 1 TB   | 310429ED484C | 117   | 0     | 0.32   |
 | Samsung   | PM981 NVMe         | 1 TB   | 7D1CC5E36266 | 117   | 0     | 0.32   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 61D2CBA95E02 | 117   | 0     | 0.32   |
@@ -7897,7 +7899,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB256HAHQ-000L2 | 256 GB | 9BAC0F71D725 | 114   | 0     | 0.31   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 4CE1C2B9529F | 114   | 0     | 0.31   |
 | ADATA     | SX6000NP           | 512 GB | A2BD83B04F55 | 114   | 0     | 0.31   |
-| Corsair   | Force MP510        | 240 GB | F4D62F2E1B0D | 114   | 0     | 0.31   |
 | Samsung   | SSD 970 EVO        | 500 GB | 4C9849ADE9AE | 114   | 0     | 0.31   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | 57CCD965812B | 114   | 0     | 0.31   |
 | Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 16C655A28EB3 | 114   | 0     | 0.31   |
@@ -8056,7 +8057,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0101AL     | 256 GB | 0365355D66CE | 111   | 0     | 0.31   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 3A97B6C1CE47 | 111   | 0     | 0.31   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 58EB4FD37E73 | 111   | 0     | 0.31   |
-| WDC       | WDS100T1X0E-00AFY0 | 1 TB   | 26F1C9E3738C | 111   | 0     | 0.31   |
 | Corsair   | Force MP510        | 960 GB | 0E9441D07502 | 111   | 0     | 0.31   |
 | XPG       | GAMMIX S70 BLADE   | 512 GB | 2D91B32A67D8 | 111   | 0     | 0.31   |
 | Hikvision | HS-SSD-C2000Pro... | 1 TB   | AD4E89F00157 | 111   | 0     | 0.31   |
@@ -8168,6 +8168,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | 39B1A42B66C3 | 109   | 0     | 0.30   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 2BFECB8BA9F9 | 109   | 0     | 0.30   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 5C0678179A93 | 109   | 0     | 0.30   |
+| Samsung   | MZVLB512HBJQ-000L7 | 512 GB | DAD8ECD69F5C | 109   | 0     | 0.30   |
 | Samsung   | PM981 NVMe         | 512 GB | ED9DBCAE3439 | 109   | 0     | 0.30   |
 | SK hynix  | HFS256GD9TNG-62A0A | 256 GB | 8E99F640AFAD | 109   | 0     | 0.30   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | A12501061A8E | 109   | 0     | 0.30   |
@@ -8194,6 +8195,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 250 GB | A99925BDDC51 | 109   | 0     | 0.30   |
 | Samsung   | SSD 970 EVO        | 500 GB | A249AB4217ED | 109   | 0     | 0.30   |
 | ADATA     | SX8200PNP          | 2 TB   | 67A617A61ED5 | 109   | 0     | 0.30   |
+| KIOXIA    | KXG60PNV2T04       | 2 TB   | FCE3EA22E497 | 109   | 0     | 0.30   |
 | Toshiba   | KXG50ZNV512G       | 512 GB | 0054CD84AE17 | 109   | 0     | 0.30   |
 | XPG       | SPECTRIX S40G      | 1 TB   | 87E2BDFA564E | 109   | 0     | 0.30   |
 | ADATA     | SX6000LNP          | 512 GB | D7AA1868A9E7 | 109   | 0     | 0.30   |
@@ -8209,6 +8211,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 96EE10AA5FEC | 108   | 0     | 0.30   |
 | SSSTC     | CL1-4D256          | 256 GB | 2CF04071BAD1 | 108   | 0     | 0.30   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | CEA8FF15A1B2 | 108   | 0     | 0.30   |
+| SanDisk   | WD Blue SN570      | 1 TB   | B5BE21D40031 | 108   | 0     | 0.30   |
 | XPG       | GAMMIX S11 Pro     | 2 TB   | 4702C683FD75 | 108   | 0     | 0.30   |
 | Samsung   | SSD 970 EVO        | 500 GB | 725BFA65BA51 | 108   | 0     | 0.30   |
 | HP        | SSD EX920          | 256 GB | FF896A84AE1A | 325   | 2     | 0.30   |
@@ -8219,12 +8222,12 @@ MTBF - avg. MTBF in years per sample.
 | Team      | TM8FP6256G         | 256 GB | CB5C4405635A | 108   | 0     | 0.30   |
 | KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | F974E3E1D07A | 108   | 0     | 0.30   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 4D04B2413BDF | 108   | 0     | 0.30   |
-| Samsung   | MZVLB512HBJQ-000L7 | 512 GB | DAD8ECD69F5C | 108   | 0     | 0.30   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 41A2FE43C36D | 108   | 0     | 0.30   |
 | Transcend | TS512GMTE220S      | 512 GB | 0B37DA0C7D05 | 108   | 0     | 0.30   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 2288D8654AF9 | 108   | 0     | 0.30   |
 | SanDisk   | WD_BLACK SN850     | 1 TB   | DA49CA0BD671 | 108   | 0     | 0.30   |
 | WDC       | PC SN520 NVMe      | 512 GB | E65B6D561CFD | 108   | 0     | 0.30   |
+| Corsair   | Force MP510        | 240 GB | A3A14EC8DB99 | 108   | 0     | 0.30   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | 54C34806D8B4 | 108   | 0     | 0.30   |
 | LDLC      | F8+M.2 480         | 480 GB | 51D024641B45 | 108   | 0     | 0.30   |
 | Kingston  | SA1000M8240G       | 240 GB | 942E291CF236 | 108   | 0     | 0.30   |
@@ -8432,12 +8435,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 99B0F30A85DB | 104   | 0     | 0.29   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 5AE661AA4654 | 104   | 0     | 0.29   |
 | Transcend | TS512GMTE110S      | 512 GB | 3B7BFA56A67C | 104   | 0     | 0.29   |
+| Crucial   | CT250P2SSD8        | 250 GB | C646BE86E762 | 104   | 0     | 0.29   |
 | Gigabyte  | GP-GSM2NE3512GNTD  | 512 GB | D0CE0DD244A1 | 104   | 0     | 0.29   |
 | Intel     | SSDPEKNW020T8      | 2 TB   | 41E80443C4FA | 104   | 0     | 0.29   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 63E053DB4EAD | 104   | 0     | 0.29   |
 | Samsung   | SSD 970 EVO        | 250 GB | 72C4A7C56DEB | 104   | 0     | 0.29   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | EEF2B40373F3 | 104   | 0     | 0.29   |
-| Crucial   | CT250P2SSD8        | 250 GB | C646BE86E762 | 104   | 0     | 0.29   |
 | Gigabyte  | GP-ASM2NE6200TTTD  | 2 TB   | 30237489E7E7 | 104   | 0     | 0.29   |
 | SK hynix  | HFM256GDJTNG-8310A | 256 GB | D3B87EE8694F | 104   | 0     | 0.29   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 6CE27EF561F3 | 104   | 0     | 0.29   |
@@ -8679,10 +8682,10 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKW128G7      | 128 GB | 2B67FC4CD678 | 100   | 0     | 0.28   |
 | Kingston  | OM8PCP3512F-AB     | 512 GB | 22E271DAB9F2 | 100   | 0     | 0.28   |
 | SK hynix  | HFM512GD3JX013N    | 512 GB | B36361080F82 | 100   | 0     | 0.28   |
+| Samsung   | SSD 970 EVO Plus   | 1 TB   | 56AB5D089DDE | 100   | 0     | 0.28   |
 | WDC       | PC SN520 NVMe      | 128 GB | 22ADF70E5D2B | 100   | 0     | 0.28   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | D82047777DCC | 100   | 0     | 0.28   |
 | SK hynix  | PC711 NVMe         | 512 GB | BABABD336F20 | 100   | 0     | 0.28   |
-| Samsung   | SSD 970 EVO Plus   | 1 TB   | 56AB5D089DDE | 100   | 0     | 0.28   |
 | Silico... | PCIe-8 SSD         | 512 GB | B5BF42A33B3A | 100   | 0     | 0.28   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | F6AF13946B5E | 100   | 0     | 0.27   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 552A26A77AC7 | 100   | 0     | 0.27   |
@@ -8710,7 +8713,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M81000G      | 1 TB   | 81FD89AC0BC6 | 99    | 0     | 0.27   |
 | Kingston  | SA2000M8250G       | 250 GB | 51C835F41259 | 99    | 0     | 0.27   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | A46A3D55B13F | 99    | 0     | 0.27   |
-| KIOXIA    | KXG60PNV2T04       | 2 TB   | FCE3EA22E497 | 99    | 0     | 0.27   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | 2592D53FEF33 | 99    | 0     | 0.27   |
 | Samsung   | SSD 960 EVO        | 500 GB | 2B4CCE08C3F0 | 99    | 0     | 0.27   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | A5C49C37A64E | 99    | 0     | 0.27   |
@@ -8855,6 +8857,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 41739959EF47 | 97    | 0     | 0.27   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 1E6DEC2C4276 | 97    | 0     | 0.27   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 5B9D86C15565 | 97    | 0     | 0.27   |
+| Micron    | 2200S NVMe         | 1 TB   | 67DC02EE82DC | 97    | 0     | 0.27   |
 | Micron    | 2210_MTFDHBA1T0QFD | 1 TB   | C41EFE30FF4A | 97    | 0     | 0.27   |
 | Transcend | TS512GMTE220S      | 512 GB | F0A4B7E11C13 | 97    | 0     | 0.27   |
 | Samsung   | MZALQ256HBJD-00BL2 | 256 GB | 5DB8A00BE02A | 97    | 0     | 0.27   |
@@ -8912,7 +8915,6 @@ MTBF - avg. MTBF in years per sample.
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | 5033337E7548 | 96    | 0     | 0.26   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 243CB9CEE899 | 96    | 0     | 0.26   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 25DD8BE1B5FA | 96    | 0     | 0.26   |
-| Corsair   | Force MP510        | 240 GB | A3A14EC8DB99 | 96    | 0     | 0.26   |
 | Kingston  | SFYRD2000G         | 2 TB   | 6AE16BD187FD | 96    | 0     | 0.26   |
 | Patriot   | Hellfire M2        | 480 GB | 723B2C463841 | 96    | 0     | 0.26   |
 | UMIS      | RPJTJ256MEE1OWX    | 256 GB | D4A6909CFF5D | 96    | 0     | 0.26   |
@@ -9057,6 +9059,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | 6F4336D08206 | 94    | 0     | 0.26   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | C7F1C344FCB3 | 94    | 0     | 0.26   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 1BDB23EB4C7B | 94    | 0     | 0.26   |
+| Kingston  | OM8PDP3512B-A01    | 512 GB | A70B7F092BD2 | 94    | 0     | 0.26   |
 | SK hynix  | SKHynix_HFM256G... | 256 GB | 1E073DF0A6D3 | 94    | 0     | 0.26   |
 | Toshiba   | KBG40ZNS512G NVMe  | 512 GB | 12C92D08B652 | 94    | 0     | 0.26   |
 | KIOXIA    | KBG50ZNV512G       | 512 GB | E3CFCEF9A122 | 94    | 0     | 0.26   |
@@ -9433,17 +9436,18 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW010T8      | 1 TB   | 8B43D823F300 | 88    | 0     | 0.24   |
 | Kingston  | SA2000M81000G      | 1 TB   | 433F812B70CF | 88    | 0     | 0.24   |
 | Phison    | Viper M.2 VPN100   | 1 TB   | 8CB5A214499C | 88    | 0     | 0.24   |
+| Samsung   | MZFLV256HCHP-000MV | 256 GB | 8DE335551059 | 88    | 0     | 0.24   |
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | 7C2D83E84735 | 88    | 0     | 0.24   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | BA9056C35F7A | 88    | 0     | 0.24   |
 | KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | 82DBF09B1788 | 88    | 0     | 0.24   |
 | SK hynix  | HFM256GDJTNG-8310A | 256 GB | 93278DD5BC20 | 88    | 0     | 0.24   |
-| Samsung   | MZFLV256HCHP-000MV | 256 GB | 8DE335551059 | 88    | 0     | 0.24   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | B3FF77802BCD | 88    | 0     | 0.24   |
 | Micron    | 2200S NVMe         | 512 GB | A438BF09401D | 88    | 0     | 0.24   |
 | Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | 961EF51BBB4C | 88    | 0     | 0.24   |
 | Toshiba   | THNSF5256GPU7      | 256 GB | E65D6F5BDC6A | 88    | 0     | 0.24   |
 | Crucial   | CT500P1SSD8        | 500 GB | AD2D83EB92FB | 88    | 0     | 0.24   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | C3754A3F76CF | 88    | 0     | 0.24   |
+| SanDisk   | WD_BLACK SN770     | 1 TB   | 21F29976B68A | 88    | 0     | 0.24   |
 | SK hynix  | HFS256GD9TNG-62A0A | 256 GB | 71FB64AC7767 | 88    | 0     | 0.24   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 1284B48A0B0F | 88    | 0     | 0.24   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | DD7898EA8985 | 88    | 0     | 0.24   |
@@ -9464,6 +9468,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | C709676FB583 | 87    | 0     | 0.24   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | F2A420054B7B | 87    | 0     | 0.24   |
 | Corsair   | Force MP510        | 960 GB | 0AD4AB43C0CC | 87    | 0     | 0.24   |
+| Phison    | Sabrent Rocket Q   | 2 TB   | 2007305FB085 | 87    | 0     | 0.24   |
 | Samsung   | MZVLQ1T0HBLB-00B00 | 1 TB   | 81207371EA87 | 87    | 0     | 0.24   |
 | Samsung   | SSD 970 EVO        | 250 GB | E8D9CCD5B4CA | 87    | 0     | 0.24   |
 | AXIOM     | 500GB              | 500 GB | 7F15756D7C5B | 87    | 0     | 0.24   |
@@ -9509,7 +9514,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLW128HEGR-000H1 | 128 GB | 88AFC5E94284 | 87    | 0     | 0.24   |
 | KIOXIA    | KXG60ZNV1T02 NVMe  | 1 TB   | 83DFA5686519 | 87    | 0     | 0.24   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 4CDDFFD7E25E | 87    | 0     | 0.24   |
-| SanDisk   | WD Blue SN570      | 1 TB   | B5BE21D40031 | 87    | 0     | 0.24   |
 | XrayDisk  | 256GB              | 256 GB | 69C9CA1724AD | 87    | 0     | 0.24   |
 | SK hynix  | HFM256GDJTNI-82A0A | 256 GB | 8E8889012329 | 87    | 0     | 0.24   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 788585557F09 | 87    | 0     | 0.24   |
@@ -9787,7 +9791,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLW512HMJP-00000 | 512 GB | CE1127F6B837 | 83    | 0     | 0.23   |
 | Samsung   | SSD 970 EVO        | 500 GB | 166A104A18D9 | 83    | 0     | 0.23   |
 | KIOXIA    | KBG40ZNS128G NVMe  | 128 GB | 93FF344045C3 | 83    | 0     | 0.23   |
-| Kingston  | OM8PDP3512B-A01    | 512 GB | A70B7F092BD2 | 83    | 0     | 0.23   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 9F9FA337FE18 | 83    | 0     | 0.23   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 739646D5FD55 | 83    | 0     | 0.23   |
 | T-CREATE  | TM8FPF002T         | 2 TB   | EAE1E875FCBE | 83    | 0     | 0.23   |
@@ -10006,7 +10009,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 1 TB   | E02B32E32F2F | 80    | 0     | 0.22   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 1A69816C6666 | 80    | 0     | 0.22   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | 72329721FC04 | 80    | 0     | 0.22   |
-| Phison    | Sabrent Rocket Q   | 2 TB   | 2007305FB085 | 80    | 0     | 0.22   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | E08F31F43C29 | 80    | 0     | 0.22   |
 | SanDisk   | Extreme Pro        | 2 TB   | 1EB045A24668 | 80    | 0     | 0.22   |
 | AMD       | R5MP120G8          | 120 GB | 5600AF2A7F82 | 80    | 0     | 0.22   |
@@ -10185,6 +10187,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN730 SDBPNT... | 1 TB   | 0BBB8B1D4CEA | 78    | 0     | 0.21   |
 | Kingston  | RBUSNS8154P3512GJ1 | 512 GB | 046F80026D4C | 77    | 0     | 0.21   |
 | Samsung   | MZVLB1T0HALR-00000 | 1 TB   | FB20D4907AF7 | 77    | 0     | 0.21   |
+| Samsung   | SSD 970 EVO        | 250 GB | 9D9B918CABD8 | 77    | 0     | 0.21   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | 794E1DCE4053 | 77    | 0     | 0.21   |
 | Mushkin   | MKNSSDPL500GB-D8   | 500 GB | F325236428B1 | 77    | 0     | 0.21   |
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | AF0FEC5A1AC4 | 77    | 0     | 0.21   |
@@ -10194,6 +10197,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 NVMe      | 128 GB | A74324B206E4 | 77    | 0     | 0.21   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | AE26A1CF351F | 77    | 0     | 0.21   |
 | Kingston  | SA2000M8250G       | 250 GB | D3A698E59905 | 77    | 0     | 0.21   |
+| Samsung   | KUS020203M-B000    | 128 GB | DF8E59CEBDDC | 77    | 0     | 0.21   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | A48DE3DF1BA6 | 77    | 0     | 0.21   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 505C21806A91 | 77    | 0     | 0.21   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | A99FA5C03A7C | 77    | 0     | 0.21   |
@@ -10249,6 +10253,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0202A      | 512 GB | 7F54C4EB6D8F | 77    | 0     | 0.21   |
 | SPCC      | M.2 PCIe SSD       | 256 GB | E1021E6B5169 | 77    | 0     | 0.21   |
 | Samsung   | SSD 970 PRO        | 512 GB | D4D5D7049EAE | 77    | 0     | 0.21   |
+| WDC       | PC SN730 SDBPNT... | 1 TB   | 31EA74815388 | 77    | 0     | 0.21   |
 | WDC       | WDS200T2B0C-00PXH0 | 2 TB   | A6F371365A5C | 77    | 0     | 0.21   |
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | F85B87439570 | 77    | 0     | 0.21   |
 | Toshiba   | KBG30ZMT256G       | 256 GB | 023468534E3A | 77    | 0     | 0.21   |
@@ -10334,7 +10339,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 1 TB   | 75F904BDCC47 | 76    | 0     | 0.21   |
 | Seagate   | FireCuda 520 SS... | 1 TB   | 88C042EC436C | 76    | 0     | 0.21   |
 | SK hynix  | PC401 NVMe         | 512 GB | 9FC568F767CA | 151   | 1     | 0.21   |
-| Samsung   | KUS020203M-B000    | 128 GB | DF8E59CEBDDC | 75    | 0     | 0.21   |
 | Transcend | TS256GMTE220S      | 256 GB | 05F94EBC5344 | 75    | 0     | 0.21   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 75778B3485D9 | 75    | 0     | 0.21   |
 | Intel     | SSDPEKKF512G8 NVMe | 512 GB | A674707FCB9E | 75    | 0     | 0.21   |
@@ -10382,7 +10386,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 256 GB | FAC0F771575D | 75    | 0     | 0.21   |
 | WDC       | WDS480G2G0C-00AJM0 | 480 GB | A587F4A56F68 | 75    | 0     | 0.21   |
 | Samsung   | MZVLW256HEHP-000L2 | 256 GB | 5B7AF848E8B1 | 75    | 0     | 0.21   |
-| Samsung   | SSD 970 EVO        | 250 GB | 9D9B918CABD8 | 75    | 0     | 0.21   |
 | WDC       | WDS100T3XHC-00SJG0 | 1 TB   | F3BC5A48508A | 75    | 0     | 0.21   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 93DE4CE891E7 | 75    | 0     | 0.21   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D4027CF6969C | 75    | 0     | 0.21   |
@@ -10474,7 +10477,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | BC511 NVMe         | 256 GB | BD654DE0D91A | 74    | 0     | 0.20   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 0A32015E9D70 | 74    | 0     | 0.20   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | A9FF8B45F7F1 | 74    | 0     | 0.20   |
-| Micron    | 2200S NVMe         | 1 TB   | 67DC02EE82DC | 74    | 0     | 0.20   |
 | Phison    | Sabrent            | 1 TB   | 4FE80010567B | 74    | 0     | 0.20   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | B3889B903C9A | 74    | 0     | 0.20   |
 | UMIS      | RPJTJ512MEE1OWX    | 512 GB | B17374D3416F | 74    | 0     | 0.20   |
@@ -10650,6 +10652,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | 712184387A6A | 71    | 0     | 0.20   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 5CDDDAB2567D | 71    | 0     | 0.20   |
 | Silico... | NE-512             | 512 GB | FB4DD3E4895E | 71    | 0     | 0.20   |
+| XPG       | GAMMIX S11 Pro     | 512 GB | EF38DEA5CDE8 | 71    | 0     | 0.20   |
 | HP        | SSD EX900          | 1 TB   | 33CC9A0C483E | 71    | 0     | 0.20   |
 | KLLISRE   | 512GB              | 512 GB | D9B43D31F0AA | 71    | 0     | 0.20   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 9A62DB04E1F4 | 71    | 0     | 0.20   |
@@ -10682,7 +10685,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | FABA994771D1 | 71    | 0     | 0.20   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 36A10905673A | 71    | 0     | 0.20   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | ADF09E2E2F3E | 71    | 0     | 0.20   |
-| WDC       | PC SN730 SDBPNT... | 1 TB   | 31EA74815388 | 71    | 0     | 0.20   |
 | WDC       | WDBRPG5000ANC-WRSN | 500 GB | 16C0F4EDCC55 | 71    | 0     | 0.20   |
 | YMTC      | PC005              | 512 GB | 04E4895D2B2D | 71    | 0     | 0.20   |
 | Samsung   | PM981a NVMe        | 512 GB | B98B76C01227 | 71    | 0     | 0.20   |
@@ -10903,6 +10905,8 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC711 NVMe         | 512 GB | 2D95F02E65F3 | 68    | 0     | 0.19   |
 | Samsung   | SSD 960 PRO        | 512 GB | BA3C6564597A | 68    | 0     | 0.19   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 9C93A559AC8C | 68    | 0     | 0.19   |
+| Seagate   | FireCuda 520 SS... | 2 TB   | 75E20C18F526 | 68    | 0     | 0.19   |
+| Toshiba   | KBG30ZMS256G NVMe  | 256 GB | 0B407B2D6EC4 | 68    | 0     | 0.19   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 2DC4F3E4F624 | 68    | 0     | 0.19   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 079BBE51E373 | 68    | 0     | 0.19   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | B3BAC6B4E1A9 | 68    | 0     | 0.19   |
@@ -10946,7 +10950,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 512 GB | EB8989A72821 | 68    | 0     | 0.19   |
 | Kingston  | SFYRD2000G         | 2 TB   | F7523E48AEDF | 68    | 0     | 0.19   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 1864A6678B9C | 68    | 0     | 0.19   |
-| SanDisk   | WD_BLACK SN770     | 1 TB   | 21F29976B68A | 68    | 0     | 0.19   |
 | SK hynix  | PC401 NVMe         | 512 GB | B61F99B61A53 | 68    | 0     | 0.19   |
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | 6C6266D890C8 | 68    | 0     | 0.19   |
 | Samsung   | MZVLV256HCHP-00000 | 256 GB | 7B24FBCD3D16 | 68    | 0     | 0.19   |
@@ -10960,6 +10963,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | SSD EX900          | 250 GB | D7C30CA05B86 | 68    | 0     | 0.19   |
 | KIOXIA    | KBG30ZMV512G       | 512 GB | 9F08F1B4B758 | 68    | 0     | 0.19   |
 | Samsung   | SSD 970 PRO        | 512 GB | 6484506D7B7E | 68    | 0     | 0.19   |
+| WDC       | PC SN730 SDBPNT... | 512 GB | FCFFE0622CB8 | 68    | 0     | 0.19   |
 | ADATA     | SX6000PNP          | 256 GB | 0CF4D39026E8 | 68    | 0     | 0.19   |
 | Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 6213FA87F188 | 68    | 0     | 0.19   |
 | Intel     | SSDPEKNW512G8L     | 512 GB | 4C3AD4DDBF6D | 68    | 0     | 0.19   |
@@ -10978,6 +10982,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC711 NVMe         | 1 TB   | 983209974C21 | 67    | 0     | 0.19   |
 | Samsung   | SSD 970 EVO        | 500 GB | 9639C87312A5 | 67    | 0     | 0.19   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 66725B21416F | 67    | 0     | 0.19   |
+| Toshiba   | KXG5AZNV512G       | 512 GB | BC5156D7974D | 67    | 0     | 0.19   |
 | UMIS      | RPJTJ256MEE1OWX    | 256 GB | 3DCE1EB40E4C | 67    | 0     | 0.19   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 736623174102 | 67    | 0     | 0.19   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 955FCC9E0915 | 67    | 0     | 0.19   |
@@ -11002,7 +11007,6 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 2450_MTFDKBA512TFK | 512 GB | 84E610F505B5 | 67    | 0     | 0.19   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 877B5499C4C0 | 67    | 0     | 0.19   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 9DADAD335D09 | 67    | 0     | 0.19   |
-| Seagate   | FireCuda 520 SS... | 2 TB   | 75E20C18F526 | 67    | 0     | 0.19   |
 | Toshiba   | KXG50ZNV256G NVMe  | 256 GB | 38453639054A | 67    | 0     | 0.19   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 4DCDD0B25AE7 | 67    | 0     | 0.19   |
 | Intel     | SSDPEKNU010TZ      | 1 TB   | D7C6CC4D96E3 | 67    | 0     | 0.19   |
@@ -11035,7 +11039,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | A8FD23237F3D | 67    | 0     | 0.18   |
 | Samsung   | MZVLW512HMJP-000L7 | 512 GB | 4C26BBF28160 | 67    | 0     | 0.18   |
 | Samsung   | SSD 980 PRO        | 2 TB   | CB7AFA7AB312 | 67    | 0     | 0.18   |
-| Toshiba   | KXG5AZNV512G       | 512 GB | BC5156D7974D | 67    | 0     | 0.18   |
 | Toshiba   | THNSN5256GPUK NVMe | 256 GB | 36BE3E1A7EFA | 67    | 0     | 0.18   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | F05011332406 | 67    | 0     | 0.18   |
 | Phison    | Sabrent Rocket Q   | 1 TB   | CEC35799CAF5 | 67    | 0     | 0.18   |
@@ -11189,6 +11192,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG60ZNV256G       | 256 GB | 8C7AB13A08FF | 65    | 0     | 0.18   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | A320CD145BE6 | 65    | 0     | 0.18   |
 | Crucial   | CT1000P5SSD8       | 1 TB   | 78753FDD9043 | 65    | 0     | 0.18   |
+| Crucial   | CT500P3SSD8        | 500 GB | 42553FB2A20E | 65    | 0     | 0.18   |
 | Kingston  | SA2000M81000G      | 1 TB   | D6AFAF6DCA30 | 65    | 0     | 0.18   |
 | Intel     | HBRPEKNX0202AH     | 512 GB | 02CB9A068A2B | 65    | 0     | 0.18   |
 | KIOXIA... | PRO SSD            | 1 TB   | 0EDD19BE7ADF | 65    | 0     | 0.18   |
@@ -11227,7 +11231,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | B9CD1BCC00B9 | 65    | 0     | 0.18   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | AB903E55C6A5 | 65    | 0     | 0.18   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | F0FDDA867143 | 65    | 0     | 0.18   |
-| WDC       | PC SN730 SDBPNT... | 512 GB | FCFFE0622CB8 | 65    | 0     | 0.18   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 83F412CE32DD | 65    | 0     | 0.18   |
 | SPCC      | M.2 PCIe SSD       | 128 GB | B760EFF07A6C | 65    | 0     | 0.18   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 3A9B2AEB0B0A | 65    | 0     | 0.18   |
@@ -11521,6 +11524,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | C8453265B8DA | 62    | 0     | 0.17   |
 | XPG       | SX8200PNP-512GT-S  | 512 GB | 7CC07FAAD0F9 | 62    | 0     | 0.17   |
 | Kingston  | OM8PCP3512F-AI1    | 512 GB | 107BC3449789 | 62    | 0     | 0.17   |
+| Kingston  | SKC2500M82000G     | 2 TB   | 4CB132648889 | 62    | 0     | 0.17   |
 | Micron    | 2210_MTFDHBA512QFD | 512 GB | E6196AE74653 | 62    | 0     | 0.17   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | F714D36FA836 | 62    | 0     | 0.17   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 5C5E7FF58232 | 62    | 0     | 0.17   |
@@ -11605,12 +11609,11 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 9C7B79DA1D47 | 61    | 0     | 0.17   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 622CEDB2E1B1 | 61    | 0     | 0.17   |
 | KIOXIA    | KBG40ZPZ1T02 NVMe  | 1 TB   | 261CF67C6EAE | 61    | 0     | 0.17   |
-| Kingston  | SKC2500M82000G     | 2 TB   | 4CB132648889 | 61    | 0     | 0.17   |
 | Samsung   | SSD 970 EVO        | 500 GB | 2049944B8805 | 61    | 0     | 0.17   |
+| WDC       | PC SN530 NVMe      | 512 GB | DD4020DB0BE7 | 61    | 0     | 0.17   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | 7A08271B969F | 61    | 0     | 0.17   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 58498E408E9D | 61    | 0     | 0.17   |
 | Samsung   | SSD 970 EVO        | 1 TB   | A197080BAE07 | 61    | 0     | 0.17   |
-| Toshiba   | KBG30ZMS256G NVMe  | 256 GB | 0B407B2D6EC4 | 61    | 0     | 0.17   |
 | Kingston  | OM3PDP3256B-A01    | 256 GB | 6E067BE7DECE | 61    | 0     | 0.17   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 3E1D1C75AA85 | 61    | 0     | 0.17   |
 | Samsung   | MZVLQ512HALU-000H1 | 512 GB | 5B85B18CA5A4 | 61    | 0     | 0.17   |
@@ -11846,7 +11849,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | 6272F5405844 | 59    | 0     | 0.16   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 301C4269B4C2 | 59    | 0     | 0.16   |
 | Samsung   | SSD 980 PRO        | 1 TB   | E524DC86FDDB | 59    | 0     | 0.16   |
-| WDC       | PC SN530 NVMe      | 512 GB | DD4020DB0BE7 | 59    | 0     | 0.16   |
 | Phison    | PCIe SSD           | 512 GB | F75243A7F54C | 59    | 0     | 0.16   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 266C0871A782 | 59    | 0     | 0.16   |
 | Samsung   | SSD 970 EVO        | 500 GB | 0372AB9BA395 | 59    | 0     | 0.16   |
@@ -11945,6 +11947,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB1T0HALR-00000 | 1 TB   | 0146C009F07C | 58    | 0     | 0.16   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | 031F820A2A83 | 58    | 0     | 0.16   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 24C4CCB0FB2A | 58    | 0     | 0.16   |
+| Samsung   | PM991 NVMe         | 512 GB | 3870A7ED2C61 | 58    | 0     | 0.16   |
 | SK hynix  | PC601 HFS512GD9... | 512 GB | F095007ED533 | 58    | 0     | 0.16   |
 | Samsung   | MZVLB1T0HALR-000L2 | 1 TB   | 53DFEBE1FF2F | 58    | 0     | 0.16   |
 | Samsung   | MZVLB512HAJQ-000H1 | 512 GB | 3096A326AD0C | 58    | 0     | 0.16   |
@@ -12090,7 +12093,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | C4CCCC600495 | 57    | 0     | 0.16   |
 | Samsung   | MZVLW128HEGR-000L1 | 128 GB | D6287DBB520F | 57    | 0     | 0.16   |
 | Samsung   | PM981a NVMe        | 1 TB   | AAC6AFD6C783 | 57    | 0     | 0.16   |
-| Samsung   | PM991 NVMe         | 512 GB | 3870A7ED2C61 | 57    | 0     | 0.16   |
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | 0F1AC3B83310 | 56    | 0     | 0.16   |
 | Samsung   | MZVLQ512HBLU-00B00 | 512 GB | 4F08F18290B1 | 56    | 0     | 0.16   |
 | Samsung   | SSD 960 EVO        | 250 GB | A11C32F2770E | 56    | 0     | 0.16   |
@@ -12125,6 +12127,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | SSD EX900          | 250 GB | BB2453590C57 | 56    | 0     | 0.16   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | D48123E8B42D | 56    | 0     | 0.16   |
 | Samsung   | SSD 970 EVO        | 1 TB   | CB34EAFD5CB4 | 56    | 0     | 0.16   |
+| WDC       | WDS100T1X0E-00AFY0 | 1 TB   | A346A76747C2 | 56    | 0     | 0.16   |
 | Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 93AB2F3E54DE | 56    | 0     | 0.16   |
 | Micron    | 2210_MTFDHBA512QFD | 512 GB | A7CC40FE5E57 | 56    | 0     | 0.16   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 50E982ACB4F3 | 56    | 0     | 0.16   |
@@ -12169,6 +12172,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980 PRO        | 500 GB | C1882395C18F | 56    | 0     | 0.15   |
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | 43819CEC870E | 56    | 0     | 0.15   |
 | Crucial   | CT1000P5SSD8       | 1 TB   | 1CDBFFEA2B2C | 56    | 0     | 0.15   |
+| Micron    | MTFDHBA512QFD      | 512 GB | 0C2AB862E30F | 56    | 0     | 0.15   |
 | SK hynix  | PC611 NVMe         | 512 GB | 902F527BF54E | 56    | 0     | 0.15   |
 | Samsung   | MZALQ256HAJD-000L1 | 256 GB | 6C4F1EE96962 | 56    | 0     | 0.15   |
 | Samsung   | MZVLB1T0HALR-000L2 | 1 TB   | 00D4367F7CC9 | 56    | 0     | 0.15   |
@@ -12222,6 +12226,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2000P2SSD8       | 2 TB   | 1C1FDBF0676B | 55    | 0     | 0.15   |
 | Crucial   | CT500P2SSD8        | 500 GB | 1C676E736B94 | 55    | 0     | 0.15   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | 03C9F6E031D2 | 55    | 0     | 0.15   |
+| KIOXIA    | KBG50ZNV512G       | 512 GB | 9FCBA311031C | 55    | 0     | 0.15   |
 | KIOXIA    | KXG60ZNV512G       | 512 GB | FD18655CB1B1 | 55    | 0     | 0.15   |
 | Kingston  | SA2000M81000G      | 1 TB   | 4F7294505BA5 | 55    | 0     | 0.15   |
 | Samsung   | MZALQ512HBLU-00BL1 | 512 GB | C9F36AE6D735 | 55    | 0     | 0.15   |
@@ -12291,7 +12296,6 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | NE-128             | 128 GB | 508E12B826FD | 55    | 0     | 0.15   |
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | 5CD79493EE79 | 55    | 0     | 0.15   |
 | WDC       | PC SN730 SDBPNT... | 256 GB | 8818A21EB69F | 55    | 0     | 0.15   |
-| XPG       | GAMMIX S11 Pro     | 512 GB | EF38DEA5CDE8 | 55    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 2A99AA0C749A | 55    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 2A5AD9C53949 | 55    | 0     | 0.15   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 0C878ED0C0A3 | 55    | 0     | 0.15   |
@@ -12304,7 +12308,6 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000P2SSD8       | 1 TB   | B80616C1970C | 55    | 0     | 0.15   |
 | Kingston  | OM8SBP3512K-AH     | 512 GB | 8505C06863F4 | 55    | 0     | 0.15   |
 | Kingston  | SNVS1000G          | 1 TB   | F10222D011C8 | 55    | 0     | 0.15   |
-| Micron    | MTFDHBA512QFD      | 512 GB | 0C2AB862E30F | 55    | 0     | 0.15   |
 | SK hynix  | SHPP41-2000GM      | 2 TB   | 93148FFE87A7 | 55    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO        | 500 GB | 7AE41D2D7438 | 55    | 0     | 0.15   |
 | Apple     | SSD AP1024M        | 1 TB   | EDA4A7885705 | 55    | 0     | 0.15   |
@@ -12338,6 +12341,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 1 TB   | C123C50BD52D | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO        | 500 GB | 57C83D340599 | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | DE84D6DC7240 | 54    | 0     | 0.15   |
+| Samsung   | SSD 970 EVO Plus   | 1 TB   | F869F5C7B0DC | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | DD9421D31558 | 54    | 0     | 0.15   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 841970C52930 | 54    | 0     | 0.15   |
 | Intel     | SSDPEKKW128G8      | 128 GB | 56DF1308E8E3 | 54    | 0     | 0.15   |
@@ -12358,7 +12362,6 @@ MTBF - avg. MTBF in years per sample.
 | minisf... | 512GB              | 512 GB | 6F5FADB61D36 | 54    | 0     | 0.15   |
 | SETHRISE  | Nvme 512G          | 512 GB | 15969C92F28F | 54    | 0     | 0.15   |
 | SK hynix  | HFM128GDJTNG-8310A | 128 GB | 8686014757B9 | 54    | 0     | 0.15   |
-| Samsung   | SSD 970 EVO Plus   | 1 TB   | F869F5C7B0DC | 54    | 0     | 0.15   |
 | XPG       | GAMMIX S11 Pro     | 1 TB   | 2C4027DD2F57 | 54    | 0     | 0.15   |
 | Apple     | SSD AP0256M        | 256 GB | 687B6F72863A | 54    | 0     | 0.15   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | 623EE7178CCD | 54    | 0     | 0.15   |
@@ -12418,7 +12421,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SNVS500G           | 500 GB | 0486B9E8C12B | 54    | 0     | 0.15   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 171F05A0343F | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 4CE497BF625C | 54    | 0     | 0.15   |
-| WDC       | WDS100T1X0E-00AFY0 | 1 TB   | A346A76747C2 | 54    | 0     | 0.15   |
 | Micron    | MTFDHBA512QFD      | 512 GB | 35F45850F9EB | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | E505AADE2BDE | 54    | 0     | 0.15   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | B4AF9300DEA8 | 54    | 0     | 0.15   |
@@ -12456,6 +12458,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 23125007B88F | 53    | 0     | 0.15   |
 | SPCC      | M.2 PCIe SSD       | 512 GB | E368F2A696D0 | 53    | 0     | 0.15   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 0D9F1D120AF9 | 53    | 0     | 0.15   |
+| Samsung   | SSD 970 EVO Plus   | 500 GB | 2AED170BF3A2 | 53    | 0     | 0.15   |
 | WDC       | WD BLACK SDBPNT... | 256 GB | D35515633BBF | 53    | 0     | 0.15   |
 | Kingston  | SNVS250G           | 250 GB | 70B18979FC42 | 53    | 0     | 0.15   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 2132C03D8538 | 53    | 0     | 0.15   |
@@ -12694,6 +12697,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SA2000M81000G      | 1 TB   | E124FD3C3E1C | 51    | 0     | 0.14   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 56E3D4F6C7F0 | 51    | 0     | 0.14   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | C6D8704DA779 | 51    | 0     | 0.14   |
+| Samsung   | MZVLB512HBJQ-000   | 512 GB | C0D4D68A0278 | 51    | 0     | 0.14   |
 | Samsung   | PM991a NVMe        | 256 GB | 8030B0D48177 | 51    | 0     | 0.14   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 257D36A3F905 | 51    | 0     | 0.14   |
 | KIOXIA    | KBG40ZNS512G NVMe  | 512 GB | 5A32E232DFFD | 51    | 0     | 0.14   |
@@ -12729,7 +12733,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0101AH     | 256 GB | 690906BBD612 | 51    | 0     | 0.14   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | F06A0A3D7E8E | 51    | 0     | 0.14   |
 | Samsung   | MZVKW512HMJP-000L7 | 512 GB | 6F3B4F0715A0 | 51    | 0     | 0.14   |
-| Samsung   | MZVLB512HBJQ-000   | 512 GB | C0D4D68A0278 | 51    | 0     | 0.14   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 4350E049ECD5 | 51    | 0     | 0.14   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | CDFCAEAC6948 | 51    | 0     | 0.14   |
 | Samsung   | MZVLB1T0HALR-00000 | 1 TB   | D1C1E0666486 | 51    | 0     | 0.14   |
@@ -12770,6 +12773,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZALQ512HALU-000L1 | 512 GB | 7C22BCFB1AA4 | 50    | 0     | 0.14   |
 | Samsung   | MZVLW128HEGR-000L2 | 128 GB | 5AEE2319A060 | 50    | 0     | 0.14   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | B1B92061415A | 50    | 0     | 0.14   |
+| WDC       | PC SN530 SDBPNP... | 512 GB | EE8FE88456E0 | 50    | 0     | 0.14   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | A1BB7DD78307 | 50    | 0     | 0.14   |
 | Samsung   | SSD 960 EVO        | 500 GB | 69BA1C91EC6F | 50    | 0     | 0.14   |
 | Toshiba   | KXG50ZNV512G       | 512 GB | 0AF48EF50C0B | 50    | 0     | 0.14   |
@@ -12792,6 +12796,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | BC711 NVMe         | 256 GB | CE679C0AC8F9 | 50    | 0     | 0.14   |
 | Samsung   | PM981a NVMe        | 2 TB   | FD86495F9072 | 50    | 0     | 0.14   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | BBFE2B7A3CDE | 50    | 0     | 0.14   |
+| WDC       | PC SN530 SDBPNP... | 256 GB | 7F9A887E4B58 | 50    | 0     | 0.14   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | D6D67CCF3A91 | 50    | 0     | 0.14   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 275AA08AAEDA | 50    | 0     | 0.14   |
 | ADATA     | SX8200PNP          | 256 GB | 357851AC54DB | 50    | 0     | 0.14   |
@@ -12822,7 +12827,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0202ALO    | 32 GB  | 5A0FD4535D69 | 50    | 0     | 0.14   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | AD508900E0ED | 50    | 0     | 0.14   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | BD8C75ABB2A7 | 50    | 0     | 0.14   |
-| Samsung   | SSD 970 EVO Plus   | 500 GB | 2AED170BF3A2 | 50    | 0     | 0.14   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 40E254D4DCF4 | 50    | 0     | 0.14   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | E12241E832BB | 50    | 0     | 0.14   |
 | Kingston  | SNVS1000G          | 1 TB   | 6B3849431DB5 | 50    | 0     | 0.14   |
@@ -12894,7 +12898,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 026BBA2A8872 | 49    | 0     | 0.14   |
 | Silico... | NVME SSD           | 128 GB | 87D9116BF547 | 49    | 0     | 0.14   |
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | 67D8BE683FDF | 49    | 0     | 0.14   |
-| WDC       | PC SN530 SDBPNP... | 256 GB | 7F9A887E4B58 | 49    | 0     | 0.14   |
 | ADATA     | SX8200PNP          | 512 GB | 52EC22ECA300 | 49    | 0     | 0.14   |
 | Toshiba   | KBG30ZMT128G       | 128 GB | 1390845E0116 | 49    | 0     | 0.14   |
 | UMIS      | RPJTJ128MED1MWX    | 128 GB | 190228F52C8C | 49    | 0     | 0.14   |
@@ -13088,6 +13091,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | 57BF35899EF1 | 48    | 0     | 0.13   |
 | Samsung   | SSD 980 PRO        | 250 GB | 11ACEEC6E22A | 48    | 0     | 0.13   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | A0D90D26DFF0 | 48    | 0     | 0.13   |
+| Crucial   | CT1000P2SSD8       | 1 TB   | 0643E5AC8CB5 | 48    | 0     | 0.13   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 4569BE06388C | 48    | 0     | 0.13   |
 | Intel     | SSDPEMKF256G8H     | 256 GB | A6115D8F5586 | 48    | 0     | 0.13   |
 | SK hynix  | HFM512GD3JX016N    | 512 GB | C028E27C98CB | 48    | 0     | 0.13   |
@@ -13232,6 +13236,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDHBA512QFD      | 512 GB | 92B22B46D1FA | 46    | 0     | 0.13   |
 | SK hynix  | PC801 NVMe         | 1 TB   | 97C56953A57D | 46    | 0     | 0.13   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 2CE83AD4C489 | 46    | 0     | 0.13   |
+| Crucial   | CT2000P2SSD8       | 2 TB   | D943AF6E9257 | 46    | 0     | 0.13   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 64762DDBCFE9 | 46    | 0     | 0.13   |
 | ADATA     | SX6000PNP          | 1 TB   | FA80A6D751D6 | 46    | 0     | 0.13   |
 | Samsung   | PM981 NVMe         | 512 GB | C9CC0088F4E4 | 46    | 0     | 0.13   |
@@ -13386,6 +13391,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 256 GB | E7B5739D7934 | 45    | 0     | 0.12   |
 | Kingston  | RBUSNS8154P3512GJ3 | 512 GB | C9B4D892E889 | 45    | 0     | 0.12   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | EA3483A16117 | 45    | 0     | 0.12   |
+| Samsung   | SSD 970 EVO Plus   | 2 TB   | 85A592677518 | 45    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 5BAEE36551BE | 45    | 0     | 0.12   |
 | KIOXIA    | KBG50ZNV512G       | 512 GB | 10362EAFC0F1 | 45    | 0     | 0.12   |
 | Kingston  | SFYRD2000G         | 2 TB   | 600CDEF5022A | 45    | 0     | 0.12   |
@@ -13461,6 +13467,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDHBA512QFD      | 512 GB | 4BFC4716528E | 44    | 0     | 0.12   |
 | Samsung   | SSD 980 PRO        | 500 GB | CBDD1CC5CF74 | 44    | 0     | 0.12   |
 | Kingston  | SFYRS1000G         | 1 TB   | 345B87F591A1 | 44    | 0     | 0.12   |
+| Phison    | Sabrent Rocket 4.0 | 500 GB | 733054C23BB0 | 44    | 0     | 0.12   |
 | Samsung   | MZVLB256HAHQ-000H1 | 256 GB | FE253DF6FEFA | 44    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | E905506F5DED | 44    | 0     | 0.12   |
 | Intel     | SSDPEKKF512G8L     | 512 GB | 0B184F342CEF | 44    | 0     | 0.12   |
@@ -13515,7 +13522,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW512G8H     | 512 GB | A73709F39A60 | 44    | 0     | 0.12   |
 | Micron    | 2200S NVMe         | 512 GB | A942871CC2BF | 44    | 0     | 0.12   |
 | Micron    | 3400_MTFDKBA1T0TFH | 1 TB   | 776A172C0B7D | 44    | 0     | 0.12   |
-| Phison    | Sabrent Rocket 4.0 | 500 GB | 733054C23BB0 | 44    | 0     | 0.12   |
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | E364CE338641 | 44    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 90AAB196A20E | 44    | 0     | 0.12   |
 | WDC       | PC SN730 NVMe      | 512 GB | F8F2FE417E88 | 44    | 0     | 0.12   |
@@ -13565,7 +13571,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 0D0A78A42F38 | 43    | 0     | 0.12   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | C2EE7935869A | 43    | 0     | 0.12   |
 | Samsung   | SSD 960 EVO        | 250 GB | 98D4BDBB722B | 43    | 0     | 0.12   |
-| Samsung   | SSD 970 EVO Plus   | 2 TB   | 85A592677518 | 43    | 0     | 0.12   |
 | Samsung   | SSD 980            | 1 TB   | 4CC4E4061AE8 | 43    | 0     | 0.12   |
 | Samsung   | SSD 980 PRO        | 500 GB | 613B4A0C5C29 | 43    | 0     | 0.12   |
 | XPG       | GAMMIX S50 Lite    | 1 TB   | 75AF63D1011C | 43    | 0     | 0.12   |
@@ -13601,6 +13606,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS2280P4           | 512 GB | 720EA04A9B92 | 43    | 0     | 0.12   |
 | Intel     | HBRPEKNX0202AH     | 512 GB | 3AE7B38DE23D | 43    | 0     | 0.12   |
 | Intel     | SSDPEKNU010TZ      | 1 TB   | 5725005F0D08 | 43    | 0     | 0.12   |
+| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 9577403EBD51 | 43    | 0     | 0.12   |
 | Samsung   | MZVLB1T0HALR-000H1 | 1 TB   | 6B361DAA15BC | 43    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | BC9192F43856 | 43    | 0     | 0.12   |
 | Toshiba   | KXG6AZNV512G       | 512 GB | 7F0258A7CA52 | 43    | 0     | 0.12   |
@@ -13610,7 +13616,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM256GDJTNG-8310A | 256 GB | A288CE22E69E | 43    | 0     | 0.12   |
 | Samsung   | MZVL21T0HCLR-00BL2 | 1 TB   | 81A2FB3103CA | 43    | 0     | 0.12   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 6800C290E90F | 43    | 0     | 0.12   |
-| WDC       | PC SN530 SDBPNP... | 512 GB | EE8FE88456E0 | 43    | 0     | 0.12   |
 | WDC       | WDS250G2X0C-00L350 | 250 GB | D2C84029A0B0 | 43    | 0     | 0.12   |
 | Intel     | SSDPEKNW010T8H     | 1 TB   | 66A75EDDC3BC | 43    | 0     | 0.12   |
 | Samsung   | MZALQ256HAJD-000L2 | 256 GB | D46C4BD8A995 | 43    | 0     | 0.12   |
@@ -13671,6 +13676,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 PRO        | 512 GB | F3EBD5960266 | 43    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | CB55EE7D8F38 | 43    | 0     | 0.12   |
 | SanDisk   | WD_BLACK SN770     | 500 GB | CED342460960 | 43    | 0     | 0.12   |
+| Silico... | 1TB MEGA S3        | 1 TB   | 824AC96F891A | 43    | 0     | 0.12   |
 | Toshiba   | KBG40ZMT128G ME... | 128 GB | 95A92A5B5AAF | 43    | 0     | 0.12   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 886F0E5C36B4 | 43    | 0     | 0.12   |
 | WDC       | PC SN530 NVMe      | 512 GB | 88EFBC6EE8CC | 43    | 0     | 0.12   |
@@ -13724,7 +13730,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ512HBLU-00BTW | 512 GB | F4905E7E9D0D | 42    | 0     | 0.12   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | FE1AB830A787 | 42    | 0     | 0.12   |
 | Samsung   | SSD 980 PRO        | 2 TB   | 5900550599D5 | 42    | 0     | 0.12   |
-| Silico... | 1TB MEGA S3        | 1 TB   | 824AC96F891A | 42    | 0     | 0.12   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | 54B252A4B7BC | 42    | 0     | 0.12   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 89BF9645EC8D | 42    | 0     | 0.12   |
 | Kingston  | OM8PDP3512B-AI1    | 512 GB | 2B9C2AEFE39D | 42    | 0     | 0.12   |
@@ -13732,6 +13737,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ256HAJD-00000 | 256 GB | 0C063AF02989 | 42    | 0     | 0.12   |
 | Silico... | PCIe-8 SSD         | 512 GB | B2604F4C15C7 | 42    | 0     | 0.12   |
 | Toshiba   | KXG60ZNV512G       | 512 GB | 40635F38FBF7 | 42    | 0     | 0.12   |
+| Samsung   | MZVLB256HBHQ-00000 | 256 GB | CB034FFEB1B6 | 42    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 227FFCBEC41B | 42    | 0     | 0.12   |
 | Silico... | NE-512             | 512 GB | 48B2CEEF5767 | 42    | 0     | 0.12   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 3E7A9065662A | 42    | 0     | 0.12   |
@@ -13744,7 +13750,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | F09B39EE01D3 | 42    | 0     | 0.12   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | D4727518C60A | 42    | 0     | 0.12   |
 | SK hynix  | PC611 NVMe         | 1 TB   | 0094B2E25DC2 | 42    | 0     | 0.12   |
-| Samsung   | MZVLB256HBHQ-00000 | 256 GB | CB034FFEB1B6 | 42    | 0     | 0.12   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 2C554A992301 | 42    | 0     | 0.12   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 40E000F10D40 | 42    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO        | 500 GB | 59C672CC6097 | 42    | 0     | 0.12   |
@@ -13786,6 +13791,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 1 TB   | 6EF7B684BFA6 | 42    | 0     | 0.12   |
 | WDC       | PC SN730 NVMe      | 512 GB | 5C1AF3D2A4DC | 42    | 0     | 0.12   |
 | ADATA     | IM2P33F3 NVMe      | 256 GB | 47BDED261B6F | 42    | 0     | 0.12   |
+| SPCC      | M.2 PCIe SSD       | 1 TB   | C2DC9DFB4847 | 42    | 0     | 0.12   |
 | Samsung   | SSD 960 EVO        | 500 GB | C77592A10B89 | 42    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO        | 500 GB | 1A8A0A8D511A | 42    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | DCD3C564A451 | 42    | 0     | 0.12   |
@@ -13819,6 +13825,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | 93959DF41C25 | 42    | 0     | 0.12   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 69D5B254205F | 42    | 0     | 0.12   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 9E8F36144A0C | 41    | 0     | 0.11   |
+| Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | B18B842BFBAF | 41    | 0     | 0.11   |
 | Intel     | HBRPEKNX0202AL     | 512 GB | EEDC60411461 | 41    | 0     | 0.11   |
 | Kingston  | SA2000M81000G      | 1 TB   | 2C809C13052D | 41    | 0     | 0.11   |
 | Kingston  | SFYRD2000G         | 2 TB   | A877F286752E | 41    | 0     | 0.11   |
@@ -13832,7 +13839,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | PM981a NVMe        | 512 GB | 5FCB0635EACE | 41    | 0     | 0.11   |
 | Samsung   | SSD 980 PRO        | 2 TB   | 29A8F6382C7D | 41    | 0     | 0.11   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 8F0429BEBCED | 41    | 0     | 0.11   |
-| Crucial   | CT1000P2SSD8       | 1 TB   | 0643E5AC8CB5 | 41    | 0     | 0.11   |
 | Samsung   | MZVLQ256HAJD-000H1 | 256 GB | EABC24552724 | 41    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 1A1562534AAC | 41    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 9345D81D7C0F | 41    | 0     | 0.11   |
@@ -13953,7 +13959,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SNVS500G           | 500 GB | 5E68CDEF7C10 | 41    | 0     | 0.11   |
 | SK hynix  | HFM256GDHTNG-8310A | 256 GB | 17D725AF4508 | 41    | 0     | 0.11   |
 | SK hynix  | HFM512GD3JX013N    | 512 GB | B4410CA8AA0B | 41    | 0     | 0.11   |
-| SPCC      | M.2 PCIe SSD       | 1 TB   | C2DC9DFB4847 | 41    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | E62E7EFD7408 | 41    | 0     | 0.11   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 5145E364DE46 | 41    | 0     | 0.11   |
 | ADATA     | SX8200PNP          | 512 GB | A04E327A8E84 | 41    | 0     | 0.11   |
@@ -14025,7 +14030,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLW512HMJP-000L7 | 512 GB | 8630E01A5580 | 40    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 868582F45BA4 | 40    | 0     | 0.11   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | BC6C5E2B3CFC | 40    | 0     | 0.11   |
-| Crucial   | CT2000P2SSD8       | 2 TB   | D943AF6E9257 | 40    | 0     | 0.11   |
 | Intel     | SSDPEKKW256G8      | 256 GB | 12A4FB038A5D | 40    | 0     | 0.11   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | E8BDB93F3CCE | 40    | 0     | 0.11   |
 | KIOXIA    | KBG40ZNS1T02 NVMe  | 1 TB   | E3CABC664C88 | 40    | 0     | 0.11   |
@@ -14187,14 +14191,13 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKF512G8L     | 512 GB | F4210F0AAFD0 | 39    | 0     | 0.11   |
 | Kingston  | OM8PCP3512F-AI1    | 512 GB | 19B97B2E19FB | 39    | 0     | 0.11   |
 | Kingston  | SA2000M8500G       | 500 GB | 3836AB9C226B | 39    | 0     | 0.11   |
-| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 9577403EBD51 | 39    | 0     | 0.11   |
+| Samsung   | MZALQ512HBLU-00BL2 | 512 GB | 3895A66BFD97 | 39    | 0     | 0.11   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | 69FD7998940F | 39    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 11BFDA0E411C | 39    | 0     | 0.11   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | BE78B03A0381 | 39    | 0     | 0.11   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | A985A5FD2D1C | 39    | 0     | 0.11   |
 | Phison    | 311CD0512GB        | 512 GB | A1E52D206961 | 39    | 0     | 0.11   |
 | SK hynix  | SKHynix_HFM256G... | 256 GB | FEE01FD62EDB | 39    | 0     | 0.11   |
-| Samsung   | MZALQ512HBLU-00BL2 | 512 GB | 3895A66BFD97 | 39    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 11DDEE353026 | 39    | 0     | 0.11   |
 | Samsung   | SSD 980            | 1 TB   | D149208D965D | 39    | 0     | 0.11   |
 | Toshiba   | KBG30ZMV512G       | 512 GB | EE60D329531F | 39    | 0     | 0.11   |
@@ -14256,6 +14259,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SWORDFISH          | 1 TB   | 13F32A5FBB88 | 39    | 0     | 0.11   |
 | SK hynix  | BC501 HFM256GDJ... | 256 GB | B0B8217A175B | 39    | 0     | 0.11   |
 | SK hynix  | SKHynix_HFM256G... | 256 GB | BC6945921D48 | 39    | 0     | 0.11   |
+| Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 9AF7AC087750 | 39    | 0     | 0.11   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | C8C27990AE3D | 39    | 0     | 0.11   |
 | Toshiba   | KXG6AZNV1T02       | 1 TB   | CE4E0B7D51A9 | 39    | 0     | 0.11   |
 | WDC       | PC SN520 NVMe      | 256 GB | 0CB4336C2F9A | 39    | 0     | 0.11   |
@@ -14263,7 +14267,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | B90DC5892C14 | 39    | 0     | 0.11   |
 | ADATA     | SX6000LNP          | 256 GB | ACDBED0017FB | 39    | 0     | 0.11   |
 | Crucial   | CT500P2SSD8        | 500 GB | F0B1E76BD463 | 39    | 0     | 0.11   |
-| Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 9AF7AC087750 | 39    | 0     | 0.11   |
 | Seagate   | FireCuda 510 SS... | 500 GB | 03E89B5B4B3C | 39    | 0     | 0.11   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | 004D4AEAA686 | 39    | 0     | 0.11   |
 | WDC       | PC SN730 NVMe      | 512 GB | CE9BA205BBB3 | 39    | 0     | 0.11   |
@@ -14286,7 +14289,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 512 GB | C452B9EC67A3 | 38    | 0     | 0.11   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | C0BA7B1B322E | 38    | 0     | 0.11   |
 | XPG       | GAMMIX S70 BLADE   | 1 TB   | 432701A28281 | 38    | 0     | 0.11   |
-| KIOXIA    | KBG50ZNV512G       | 512 GB | 9FCBA311031C | 38    | 0     | 0.11   |
 | SK hynix  | BC711 NVMe         | 512 GB | DB9722D21434 | 38    | 0     | 0.11   |
 | SK hynix  | HFS256GD9TNG-62A0A | 256 GB | 2F44C223B6E3 | 38    | 0     | 0.11   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 23739D44630E | 38    | 0     | 0.11   |
@@ -14447,7 +14449,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN730 SDBQNT... | 256 GB | B6689760125A | 37    | 0     | 0.10   |
 | Apple     | SSD AP0256N        | 256 GB | FE85918B135A | 37    | 0     | 0.10   |
 | Apple     | SSD AP0512N        | 500 GB | 1534585DC1CD | 37    | 0     | 0.10   |
-| Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | B18B842BFBAF | 37    | 0     | 0.10   |
 | SK hynix  | BC711 NVMe         | 128 GB | BC456FDFD5F0 | 37    | 0     | 0.10   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | CF6663D1CC0D | 37    | 0     | 0.10   |
 | Samsung   | MZVLB512HBJQ-000H1 | 512 GB | 4A0E4F3DFDBE | 37    | 0     | 0.10   |
@@ -14644,6 +14645,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | 27F06227E47C | 36    | 0     | 0.10   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 39F1DE48A721 | 36    | 0     | 0.10   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 7449D3E24537 | 36    | 0     | 0.10   |
+| WDC       | WDS200T2B0C-00PXH0 | 2 TB   | 9C373C3C5C1D | 36    | 0     | 0.10   |
 | WDC       | WDS960G2G0C-00AJM0 | 960 GB | A1612A0CB6AA | 36    | 0     | 0.10   |
 | SK hynix  | BC501 HFM256GDJ... | 256 GB | 73A5740FE48C | 36    | 0     | 0.10   |
 | SK hynix  | BC511 NVMe         | 512 GB | A05D9CB01A2D | 36    | 0     | 0.10   |
@@ -14660,7 +14662,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 7B00048ADEE2 | 36    | 0     | 0.10   |
 | ShiJi     | 1TB M.2-NVMe       | 1 TB   | 126A3A100C1E | 36    | 0     | 0.10   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 961666D63869 | 36    | 0     | 0.10   |
-| WDC       | WDS200T2B0C-00PXH0 | 2 TB   | 9C373C3C5C1D | 36    | 0     | 0.10   |
 | Samsung   | SSD 970 EVO        | 1 TB   | A46DAA93A522 | 400   | 10    | 0.10   |
 | SK hynix  | BC711 HFM512GD3... | 512 GB | 4C51AEDF3927 | 36    | 0     | 0.10   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 1B6C12439ED5 | 36    | 0     | 0.10   |
@@ -14672,6 +14673,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPMP... | 512 GB | 74B27A0E8D10 | 36    | 0     | 0.10   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | A28721B334F5 | 36    | 0     | 0.10   |
 | Apple     | SSD AP0256M        | 256 GB | F3CB74E51B09 | 36    | 0     | 0.10   |
+| Corsair   | MP600 CORE         | 2 TB   | CD7F67F1BF60 | 36    | 0     | 0.10   |
 | Samsung   | MZVLB1T0HALR-000L7 | 1 TB   | E3E9781D3F79 | 36    | 0     | 0.10   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | DA4A94418E6A | 36    | 0     | 0.10   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | E5647C950505 | 36    | 0     | 0.10   |
@@ -14684,7 +14686,6 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG40ZNV256G       | 256 GB | 550740FAD09D | 36    | 0     | 0.10   |
 | Micron    | 2200S NVMe         | 512 GB | D314B253DAE0 | 36    | 0     | 0.10   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 46E57DEF3371 | 36    | 0     | 0.10   |
-| Corsair   | MP600 CORE         | 2 TB   | CD7F67F1BF60 | 36    | 0     | 0.10   |
 | Kingston  | OM8PDP3256B-AA1    | 256 GB | 41558F6E9AF6 | 36    | 0     | 0.10   |
 | SK hynix  | HFM512GD3JX013N    | 512 GB | 38A4C9F3C891 | 36    | 0     | 0.10   |
 | Samsung   | MZALQ512HALU-000L1 | 512 GB | 7130E0323046 | 36    | 0     | 0.10   |
@@ -14852,6 +14853,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN730 SDBQNT... | 512 GB | 2F1861FA780F | 35    | 0     | 0.10   |
 | WDC       | WDS100T1X0E-00AFY0 | 1 TB   | EA5EE9E8046E | 35    | 0     | 0.10   |
 | ADATA     | IM2P33F8A-512GD    | 512 GB | EFD3FE96AF26 | 35    | 0     | 0.10   |
+| Intel     | SSDPEKKF010T8 NVMe | 1 TB   | 1166BF612C25 | 35    | 0     | 0.10   |
 | Lexar     | 1TB SSD            | 1 TB   | 7BFF3E1EF029 | 35    | 0     | 0.10   |
 | SK hynix  | HFM001TD3JX013N    | 1 TB   | 2D8F157FB819 | 35    | 0     | 0.10   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | E52880FAA174 | 35    | 0     | 0.10   |
@@ -14920,7 +14922,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 250 GB | 22939A18E1CE | 34    | 0     | 0.09   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 7CB121DF76C0 | 34    | 0     | 0.09   |
 | Crucial   | CT500P3PSSD8       | 500 GB | 45610B7AFF6F | 34    | 0     | 0.09   |
-| Intel     | SSDPEKKF010T8 NVMe | 1 TB   | 1166BF612C25 | 34    | 0     | 0.09   |
 | Kingston  | SA2000M8500G       | 500 GB | 2E39A9F251C0 | 34    | 0     | 0.09   |
 | Micron    | 2450_MTFDKBA512TFK | 512 GB | 06E86802DBAC | 34    | 0     | 0.09   |
 | Phison    | MSI M390           | 1 TB   | 094AC5D6A002 | 34    | 0     | 0.09   |
@@ -15076,6 +15077,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KBG30ZMT512G       | 512 GB | 101F1DF28AD1 | 33    | 0     | 0.09   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | BB0BC5C2BD81 | 33    | 0     | 0.09   |
 | Kingston  | SA1000M8240G       | 240 GB | 3BDA386BE590 | 33    | 0     | 0.09   |
+| SK hynix  | HFM512GD3JX013N    | 512 GB | B228BE431346 | 33    | 0     | 0.09   |
 | SK hynix  | HFM512GD3JX016N    | 512 GB | BC7527B4BA99 | 33    | 0     | 0.09   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 0443BB2282E5 | 33    | 0     | 0.09   |
 | Samsung   | SSD 960 PRO        | 512 GB | 0ED727E955F7 | 33    | 0     | 0.09   |
@@ -15264,13 +15266,14 @@ MTBF - avg. MTBF in years per sample.
 | Gigaby... | GP-ASM2NE6200TTTD  | 2 TB   | 3E41F75F17E5 | 32    | 0     | 0.09   |
 | Kingston  | OM3PDP3-AD NVMe... | 512 GB | 3336FFB87EB2 | 32    | 0     | 0.09   |
 | Phison    | Viper M.2 VP4100   | 1 TB   | DAF77DF67C6C | 32    | 0     | 0.09   |
-| SK hynix  | HFM512GD3JX013N    | 512 GB | B228BE431346 | 32    | 0     | 0.09   |
 | SPCC      | M.2 PCIe SSD       | 1 TB   | 7EEAA70A0AE4 | 32    | 0     | 0.09   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 914584C6A410 | 32    | 0     | 0.09   |
 | Samsung   | SSD 960 EVO        | 250 GB | CF7AAAEDBC6E | 32    | 0     | 0.09   |
 | WDC       | PC SN530 NVMe      | 512 GB | 093B65735726 | 32    | 0     | 0.09   |
+| Apple     | SSD AP0512M        | 500 GB | 23E60CA6BC99 | 32    | 0     | 0.09   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 83165A12C326 | 32    | 0     | 0.09   |
 | Intel     | HBRPEKNX0101A      | 256 GB | C345855B7A7E | 32    | 0     | 0.09   |
+| KIOXIA    | KBG40ZNV256G       | 256 GB | 5ABA1416CC20 | 32    | 0     | 0.09   |
 | Kingston  | SA2000M81000G      | 1 TB   | 45940D84200F | 32    | 0     | 0.09   |
 | SSSTC     | CL1-8D256          | 256 GB | A86ED1A371FB | 32    | 0     | 0.09   |
 | Samsung   | MZALQ128HBHQ-000L2 | 128 GB | EE7885EF0879 | 32    | 0     | 0.09   |
@@ -15287,7 +15290,6 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD AP0512N        | 500 GB | F546169A21E1 | 32    | 0     | 0.09   |
 | Crucial   | CT500P3SSD8        | 500 GB | 97C14966FE97 | 32    | 0     | 0.09   |
 | Intel     | SSDPEKKW256G8      | 256 GB | F8D8EEB0C034 | 32    | 0     | 0.09   |
-| KIOXIA    | KBG40ZNV256G       | 256 GB | 5ABA1416CC20 | 32    | 0     | 0.09   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 861D714172CF | 32    | 0     | 0.09   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | A6AE2B3D92B3 | 32    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 35246D80FFA1 | 32    | 0     | 0.09   |
@@ -15350,12 +15352,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | FC5AAB386C98 | 31    | 0     | 0.09   |
 | XPG       | SX8200PNP-512GT-S  | 512 GB | CDD685CFCE28 | 31    | 0     | 0.09   |
 | Apple     | SSD AP0512J        | 500 GB | 756627708A62 | 31    | 0     | 0.09   |
-| Apple     | SSD AP0512M        | 500 GB | 23E60CA6BC99 | 31    | 0     | 0.09   |
 | SK hynix  | SKHynix_HFS256G... | 256 GB | 3289ACF29FF5 | 31    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO        | 250 GB | 54A90CE005CF | 31    | 0     | 0.09   |
 | Intel     | SSDPEMKF256G8H     | 256 GB | 560C77C52801 | 31    | 0     | 0.09   |
 | SSSTC     | CA6-8D2048-Q11 ... | 2 TB   | 544A17DED3F6 | 31    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 8681BC91C2E5 | 31    | 0     | 0.09   |
+| Samsung   | SSD 980 PRO        | 2 TB   | CDA7A530BA2B | 31    | 0     | 0.09   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 5B89D3731C40 | 31    | 0     | 0.09   |
 | Apple     | SSD SM0032L        | 32 GB  | 0456374C1D42 | 31    | 0     | 0.09   |
 | Crucial   | CT500P5PSSD8       | 500 GB | 99FF26F4EA7E | 31    | 0     | 0.09   |
@@ -15601,13 +15603,14 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 1 TB   | 1297E4F5ABEA | 30    | 0     | 0.08   |
 | ADATA     | FALCON             | 2 TB   | 6CE688C40196 | 30    | 0     | 0.08   |
 | Phison    | 511BS0512GB        | 512 GB | 46BC944F1CC3 | 30    | 0     | 0.08   |
+| Samsung   | MZALQ256HAJD-000L2 | 256 GB | F091B720621A | 30    | 0     | 0.08   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | EBA1E31BEE8C | 30    | 0     | 0.08   |
 | SK hynix  | PC711 NVMe         | 512 GB | 4AE702B8FDEB | 30    | 0     | 0.08   |
-| Samsung   | MZALQ256HAJD-000L2 | 256 GB | F091B720621A | 30    | 0     | 0.08   |
 | Samsung   | MZVLQ512HBLU-00BH1 | 512 GB | 9FB26E8266D4 | 30    | 0     | 0.08   |
 | Samsung   | PM981a NVMe        | 1 TB   | 88950B3CBA17 | 30    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO        | 250 GB | 80F58779F3B7 | 30    | 0     | 0.08   |
 | Samsung   | SSD 980            | 1 TB   | 3CCED62D6890 | 30    | 0     | 0.08   |
+| Samsung   | SSD 980 PRO        | 1 TB   | D00EA0D66AB0 | 30    | 0     | 0.08   |
 | Samsung   | SSD 980 PRO        | 2 TB   | F165BEE4C998 | 30    | 0     | 0.08   |
 | Seagate   | FireCuda 520 SS... | 2 TB   | F9AA749D569D | 30    | 0     | 0.08   |
 | Silico... | NVME SSD           | 128 GB | 4933019C8D86 | 30    | 0     | 0.08   |
@@ -15707,10 +15710,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 1D8EFA7336DE | 29    | 0     | 0.08   |
 | Goodram   | SSDPR-PX500-256-80 | 256 GB | 4142D44A7221 | 29    | 0     | 0.08   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | F6E8632F4039 | 29    | 0     | 0.08   |
+| SanDisk   | WD_BLACK SN750 SE  | 250 GB | 67663DD6E8BD | 29    | 0     | 0.08   |
 | YMTC      | PC005              | 512 GB | EE3B28B9A2FB | 29    | 0     | 0.08   |
 | Intel     | HBRPEKNX0202AO     | 32 GB  | F6E8BA552068 | 29    | 0     | 0.08   |
 | Intel     | SSDPEKNW010T8H     | 1 TB   | CE1F43B4A456 | 29    | 0     | 0.08   |
-| SanDisk   | WD_BLACK SN750 SE  | 250 GB | 67663DD6E8BD | 29    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 64615763178C | 59    | 1     | 0.08   |
 | Crucial   | CT500P5SSD8        | 500 GB | 0442169B69CC | 29    | 0     | 0.08   |
 | KIOXIA    | KXG60ZNV512G       | 512 GB | 76121672E0CC | 29    | 0     | 0.08   |
@@ -15750,6 +15753,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 46CE51DF23B2 | 29    | 0     | 0.08   |
 | ADATA     | SX6000NP           | 128 GB | 765ADE424B58 | 29    | 0     | 0.08   |
 | KIOXIA    | KXG60PNV2T04       | 2 TB   | 541888AD9F83 | 29    | 0     | 0.08   |
+| Phison    | 311CD0512GB        | 512 GB | 0D31924DB4FC | 29    | 0     | 0.08   |
 | Samsung   | MZVLB512HBJQ-000H1 | 512 GB | 9180EF101917 | 29    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 5504285A2F66 | 29    | 0     | 0.08   |
 | UMIS      | RPJTJ256MEE1OWX    | 256 GB | 331F9A63E935 | 29    | 0     | 0.08   |
@@ -15759,6 +15763,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | RBUSNS8154P3128GJ  | 128 GB | 8298AD81D2D8 | 29    | 0     | 0.08   |
 | Lenovo    | LENSE20256GMSP3... | 256 GB | E36C145DE138 | 29    | 0     | 0.08   |
 | Micron    | 2200S NVMe         | 512 GB | B143909869FC | 29    | 0     | 0.08   |
+| Samsung   | MZVL21T0HCLR-00BL7 | 1 TB   | D8261E2DA604 | 29    | 0     | 0.08   |
 | Samsung   | MZVLB512HBJQ-000H1 | 512 GB | 5DF120D0C374 | 29    | 0     | 0.08   |
 | WDC       | PC SN530 SDBPMP... | 256 GB | B4C33B4F2603 | 29    | 0     | 0.08   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | 5004E7F18430 | 29    | 0     | 0.08   |
@@ -15862,6 +15867,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | NVME SSD           | 256 GB | 5315CD8DFDB0 | 28    | 0     | 0.08   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | 3C6C6298DE84 | 28    | 0     | 0.08   |
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | 5D2F68F35329 | 28    | 0     | 0.08   |
+| Samsung   | MZALQ512HBLU-00BL2 | 512 GB | 0A772628F3E7 | 28    | 0     | 0.08   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 01D88C180367 | 28    | 0     | 0.08   |
 | Samsung   | SSD 980 PRO        | 2 TB   | 11EBC31A7188 | 28    | 0     | 0.08   |
 | Toshiba   | KBG30ZMT256G       | 256 GB | DFB5748ADD56 | 28    | 0     | 0.08   |
@@ -15879,7 +15885,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ512HBLU-00B00 | 512 GB | 6ABE3C2D1711 | 28    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO        | 500 GB | 58A5C980ED36 | 28    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO        | 500 GB | F6A88F36A039 | 28    | 0     | 0.08   |
-| Samsung   | SSD 980 PRO        | 2 TB   | CDA7A530BA2B | 28    | 0     | 0.08   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 6C5364353B38 | 28    | 0     | 0.08   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | 72E0EB64346E | 28    | 0     | 0.08   |
 | Kingston  | SNVS1000G          | 1 TB   | 139CC5AD0783 | 28    | 0     | 0.08   |
@@ -15923,12 +15928,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980 PRO        | 500 GB | 60BBF6B8CC92 | 28    | 0     | 0.08   |
 | WDC       | WDS200T2B0C-00PXH0 | 2 TB   | 578BACFB927B | 28    | 0     | 0.08   |
 | SK hynix  | HFS256GD9TNG-62A0A | 256 GB | C56AB6B41CB4 | 28    | 0     | 0.08   |
-| Samsung   | MZVL21T0HCLR-00BL7 | 1 TB   | D8261E2DA604 | 28    | 0     | 0.08   |
 | Samsung   | MZVLQ1T0HALB-000H1 | 1 TB   | D861D17E1ACF | 28    | 0     | 0.08   |
 | Samsung   | PM981a NVMe        | 1 TB   | 7375A2B17AE2 | 28    | 0     | 0.08   |
 | Samsung   | PM981a NVMe        | 2 TB   | E8389AC6C0E0 | 28    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO        | 500 GB | 1624957FB302 | 56    | 1     | 0.08   |
-| Samsung   | SSD 980 PRO        | 1 TB   | D00EA0D66AB0 | 28    | 0     | 0.08   |
 | SanDisk   | WD Blue SN570      | 1 TB   | BE20D3E6A429 | 28    | 0     | 0.08   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 457A34DCB3A5 | 28    | 0     | 0.08   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | 8DE2EFEA049F | 28    | 0     | 0.08   |
@@ -16345,6 +16348,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZALQ256HBJD-00BL1 | 256 GB | C908DC0B4B7A | 26    | 0     | 0.07   |
 | Samsung   | MZVLW128HEGR-000L2 | 128 GB | BA1F735F95C8 | 26    | 0     | 0.07   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 64E8ED95AFF1 | 26    | 0     | 0.07   |
+| Toshiba   | KBG30ZMT256G       | 256 GB | 3C805328C3BC | 26    | 0     | 0.07   |
 | WDC       | PC SN530 SDBPMP... | 256 GB | 0A550F64A815 | 26    | 0     | 0.07   |
 | XPG       | GAMMIX S11 Pro     | 512 GB | 85A1945AE1E2 | 26    | 0     | 0.07   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 3D330D314297 | 26    | 0     | 0.07   |
@@ -16663,7 +16667,6 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG60ZNV1T02 NV... | 1 TB   | F078A334AFAD | 24    | 0     | 0.07   |
 | ADATA     | SX8200PNP          | 512 GB | CDA2F151A719 | 24    | 0     | 0.07   |
 | Kingston  | RBUSNS8154P3256GJ  | 256 GB | 88FAF68E5926 | 24    | 0     | 0.07   |
-| Samsung   | MZALQ512HBLU-00BL2 | 512 GB | 0A772628F3E7 | 24    | 0     | 0.07   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | 9D64CBB4A372 | 24    | 0     | 0.07   |
 | Samsung   | SSD 970 PRO        | 1 TB   | FFFD7985A54F | 24    | 0     | 0.07   |
 | KIOXIA    | KXG60ZNV1T02 NVMe  | 1 TB   | DB326AC90F01 | 24    | 0     | 0.07   |
@@ -16739,6 +16742,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 NVMe      | 512 GB | 0417AFE00E60 | 24    | 0     | 0.07   |
 | SK hynix  | SHGP31-1000GM-2    | 1 TB   | CA989A2277BB | 24    | 0     | 0.07   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 062134E81015 | 24    | 0     | 0.07   |
+| Samsung   | MZVLQ1T0HBLB-00B00 | 1 TB   | E513703EE927 | 24    | 0     | 0.07   |
 | Samsung   | SSD 980 PRO        | 250 GB | 30B4F2007968 | 24    | 0     | 0.07   |
 | Silico... | ShiJi 512GB M.2... | 512 GB | 87B8FC083B97 | 24    | 0     | 0.07   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 241EC26A0456 | 24    | 0     | 0.07   |
@@ -16750,7 +16754,6 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | 311CD0512GB        | 512 GB | CFBB9BD5F506 | 24    | 0     | 0.07   |
 | SSSTC     | CL1-3D256          | 256 GB | 5CC51C920622 | 24    | 0     | 0.07   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 542915E3ED1E | 24    | 0     | 0.07   |
-| Samsung   | MZVLQ1T0HBLB-00B00 | 1 TB   | E513703EE927 | 24    | 0     | 0.07   |
 | Samsung   | PM981 NVMe         | 256 GB | 5D50531FE048 | 24    | 0     | 0.07   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D73DF1977E5F | 24    | 0     | 0.07   |
 | SK hynix  | PC711 NVMe         | 1 TB   | 7EECC56C57D3 | 23    | 0     | 0.07   |
@@ -16891,6 +16894,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 5468EDF3CA63 | 23    | 0     | 0.06   |
 | Samsung   | SSD 960 EVO        | 250 GB | F1A1919823FE | 23    | 0     | 0.06   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 81C26752337C | 23    | 0     | 0.06   |
+| Silico... | 256GB              | 256 GB | 3606F008BA55 | 23    | 0     | 0.06   |
 | Toshiba   | KBG30ZMT128G       | 128 GB | 54F747EC0514 | 23    | 0     | 0.06   |
 | Toshiba   | KBG30ZMV256G       | 256 GB | 568D9211488F | 23    | 0     | 0.06   |
 | UMIS      | RPFTJ256PDD2MWX    | 256 GB | CE9C5082A8E6 | 23    | 0     | 0.06   |
@@ -17010,7 +17014,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ256HAJD-00000 | 256 GB | 1D77ACF2F449 | 22    | 0     | 0.06   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 240E71CAF364 | 22    | 0     | 0.06   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 2DF6FA7CDE2B | 22    | 0     | 0.06   |
-| Toshiba   | KBG30ZMT256G       | 256 GB | 3C805328C3BC | 22    | 0     | 0.06   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 3B4BD5146B26 | 22    | 0     | 0.06   |
 | WDC       | PC SN530 SDBPNP... | 1 TB   | 4F8361A652C2 | 22    | 0     | 0.06   |
 | Apple     | SSD AP0256J        | 256 GB | 3D73E1198F77 | 22    | 0     | 0.06   |
@@ -17035,6 +17038,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKF010T8L     | 1 TB   | 1781DA24D843 | 22    | 0     | 0.06   |
 | Kingston  | SA2000M8250G       | 250 GB | 0468C9B4FC95 | 22    | 0     | 0.06   |
 | Phison    | Viper M.2 VPN100   | 512 GB | 9072E142BE32 | 22    | 0     | 0.06   |
+| Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 457B83DCF3F4 | 22    | 0     | 0.06   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | AA16F0C80051 | 22    | 0     | 0.06   |
 | Samsung   | SSD 970 EVO        | 500 GB | 94B89ACB6952 | 22    | 0     | 0.06   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 7DFF7C19F20B | 22    | 0     | 0.06   |
@@ -17222,6 +17226,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 NVMe      | 256 GB | FF743E7B1498 | 21    | 0     | 0.06   |
 | ADATA     | LEGEND 750         | 1 TB   | 75051E4EB5C2 | 21    | 0     | 0.06   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | F19E2BE5A710 | 21    | 0     | 0.06   |
+| Samsung   | MZALQ512HALU-000L2 | 512 GB | C04C9FF1CD14 | 21    | 0     | 0.06   |
 | Samsung   | PM981 NVMe         | 512 GB | D4BBC3058578 | 21    | 0     | 0.06   |
 | Samsung   | SSD 980            | 1 TB   | 233A74C8E16A | 21    | 0     | 0.06   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | 54171F08DC32 | 21    | 0     | 0.06   |
@@ -17242,6 +17247,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2000P3PSSD8      | 2 TB   | 09D76CDBC416 | 21    | 0     | 0.06   |
 | Intel     | HBRPEKNX0202AH     | 512 GB | F3C9E84DB6CB | 21    | 0     | 0.06   |
 | KIOXIA    | KXG60ZNV512G NVMe  | 512 GB | D1B6CB9C334E | 21    | 0     | 0.06   |
+| Micron    | MTFDKCD512TFK      | 512 GB | F2E8572AB802 | 21    | 0     | 0.06   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | FD2E2BA5B30E | 21    | 0     | 0.06   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 4C1619B6BA01 | 21    | 0     | 0.06   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | B077E2532687 | 21    | 0     | 0.06   |
@@ -17277,7 +17283,6 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500P1SSD8        | 500 GB | 9DBA5156B6E7 | 278   | 12    | 0.06   |
 | Intel     | SSDPEKNW512G8      | 512 GB | A8A32A3ECD55 | 21    | 0     | 0.06   |
 | Kingston  | OM8PDP3512B-A01    | 512 GB | 29A48375E272 | 21    | 0     | 0.06   |
-| Micron    | MTFDKCD512TFK      | 512 GB | F2E8572AB802 | 21    | 0     | 0.06   |
 | Samsung   | SSD 970 PRO        | 512 GB | 6B103777F351 | 21    | 0     | 0.06   |
 | Samsung   | SSD 980 PRO        | 500 GB | 07C51553F55C | 21    | 0     | 0.06   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 0859DE6A3FCA | 21    | 0     | 0.06   |
@@ -17494,7 +17499,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 SDAPMU... | 512 GB | A006B728FDD4 | 41    | 1     | 0.06   |
 | ADATA     | SX8100NP           | 4 TB   | 89C5D224E7D2 | 102   | 4     | 0.06   |
 | Phison    | 311CD0512GB        | 512 GB | 6654E2287530 | 20    | 0     | 0.06   |
-| Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | 457B83DCF3F4 | 20    | 0     | 0.06   |
 | Samsung   | MZVLB512HBJQ-00000 | 512 GB | 6390D866508A | 20    | 0     | 0.06   |
 | Samsung   | MZVLQ512HALU-000H1 | 512 GB | 902255243644 | 20    | 0     | 0.06   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | BA74999F3BD1 | 20    | 0     | 0.06   |
@@ -17616,6 +17620,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Blue SN570      | 500 GB | F32682DBDA7E | 19    | 0     | 0.05   |
 | Toshiba   | KXG6AZNV256G       | 256 GB | B73A02B13D49 | 19    | 0     | 0.05   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 3B1E406A151C | 19    | 0     | 0.05   |
+| WDC       | PC SN530 SDBPNP... | 256 GB | 731E7B3FF09F | 19    | 0     | 0.05   |
 | Lenovo    | LENSE30256GMSP3... | 256 GB | FAE0BD3A0C7D | 239   | 11    | 0.05   |
 | Crucial   | CT2000P2SSD8       | 2 TB   | 56835C1AF916 | 19    | 0     | 0.05   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 77555B5532F5 | 19    | 0     | 0.05   |
@@ -17638,7 +17643,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | CDBC713BDCB6 | 19    | 0     | 0.05   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 7B94B3CCF43B | 19    | 0     | 0.05   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 9101F64E073B | 19    | 0     | 0.05   |
-| Silico... | 256GB              | 256 GB | 3606F008BA55 | 19    | 0     | 0.05   |
 | Apple     | SSD AP0512M        | 500 GB | C4F0A67C9089 | 19    | 0     | 0.05   |
 | Kingston  | RBUSNS8154P3256GJ  | 256 GB | CEA9155E68C4 | 19    | 0     | 0.05   |
 | Micron    | 2300 NVMe          | 1 TB   | 2E224D1E9007 | 19    | 0     | 0.05   |
@@ -17662,7 +17666,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | EF424717C907 | 19    | 0     | 0.05   |
 | Seagate   | BarraCuda 510 S... | 1 TB   | 868DBEC64048 | 19    | 0     | 0.05   |
 | Star D... | PCIe SSD           | 1 TB   | 70E8DC6209AE | 19    | 0     | 0.05   |
-| Crucial   | CT500P3SSD8        | 500 GB | 42553FB2A20E | 19    | 0     | 0.05   |
 | Kingston  | OM3PDP3-AD NVMe... | 512 GB | F58B66F205A1 | 19    | 0     | 0.05   |
 | Lexar     | 512GB SSD          | 512 GB | 633D11BBAAB2 | 19    | 0     | 0.05   |
 | SK hynix  | BC511 HFM256GDJ... | 256 GB | D3BC76966770 | 19    | 0     | 0.05   |
@@ -17764,7 +17767,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | BC501A NVMe        | 128 GB | D50580630DCB | 19    | 0     | 0.05   |
 | SK hynix  | HFM512GDJTNG-8310A | 512 GB | C5F82D765BC7 | 19    | 0     | 0.05   |
 | SK hynix  | PC401 HFS256GD9... | 256 GB | AC6DC55E0389 | 19    | 0     | 0.05   |
-| Samsung   | MZALQ512HALU-000L2 | 512 GB | C04C9FF1CD14 | 19    | 0     | 0.05   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 0CDCCE570D2C | 19    | 0     | 0.05   |
 | Samsung   | MZVLQ256HBJD-00B   | 256 GB | 5347718EB18A | 19    | 0     | 0.05   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 64AB39900BDB | 19    | 0     | 0.05   |
@@ -17783,6 +17785,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS2280P4           | 256 GB | 418208D2B4B3 | 19    | 0     | 0.05   |
 | Kingston  | RBUSNS8154P3128GJ1 | 128 GB | 292E9FBCA219 | 19    | 0     | 0.05   |
 | SK hynix  | HFM512GDJTNI-82A0A | 512 GB | A0D29B1D8E49 | 19    | 0     | 0.05   |
+| Samsung   | MZALQ512HALU-000L2 | 512 GB | 10F197A09EDC | 19    | 0     | 0.05   |
 | Samsung   | MZVLB512HBJQ-00000 | 512 GB | 24A51B6686FA | 19    | 0     | 0.05   |
 | Samsung   | MZVLQ256HAJD-00000 | 256 GB | 4DA483630E35 | 19    | 0     | 0.05   |
 | Samsung   | MZVLQ512HALU-00000 | 512 GB | 1B5A60B1F20F | 19    | 0     | 0.05   |
@@ -17810,7 +17813,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNU512GZ      | 512 GB | 38104663987B | 19    | 0     | 0.05   |
 | SK hynix  | BC711 NVMe         | 512 GB | 2725CDBACF99 | 19    | 0     | 0.05   |
 | SK hynix  | HFS512GD9TNG-62A0A | 512 GB | 7278EDCD3030 | 19    | 0     | 0.05   |
-| Samsung   | MZALQ512HALU-000L2 | 512 GB | 10F197A09EDC | 19    | 0     | 0.05   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 765B4FDFF5B1 | 19    | 0     | 0.05   |
 | Samsung   | SSD 960 EVO        | 250 GB | BA2D3FE0954B | 19    | 0     | 0.05   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 89BBA0B74C00 | 19    | 0     | 0.05   |
@@ -17902,7 +17904,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 1 TB   | 4F07ABF2B8DC | 18    | 0     | 0.05   |
 | SanDisk   | WD_BLACK SN850X    | 1 TB   | 10C0DED99CCC | 18    | 0     | 0.05   |
 | Silico... | IM2P33F8BR1-512GB  | 512 GB | 8EAC42247153 | 18    | 0     | 0.05   |
-| WDC       | PC SN530 SDBPNP... | 256 GB | 731E7B3FF09F | 18    | 0     | 0.05   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 3AAD3CFC5230 | 18    | 0     | 0.05   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | 5C9CB8828BF6 | 18    | 0     | 0.05   |
 | Samsung   | SSD 970 PRO        | 512 GB | 1DF527578F6C | 112   | 5     | 0.05   |
@@ -18232,7 +18233,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | A9642F8BFB7E | 17    | 0     | 0.05   |
 | Apple     | SSD AP0128M        | 121 GB | 5C1BBA535D4F | 17    | 0     | 0.05   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | FE3FD7A948EB | 17    | 0     | 0.05   |
-| Phison    | 311CD0512GB        | 512 GB | 0D31924DB4FC | 17    | 0     | 0.05   |
+| Micron    | MTFDHBA1T0TDV-1... | 1 TB   | E42D8C3D1DCF | 17    | 0     | 0.05   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | CF61570D0AE4 | 17    | 0     | 0.05   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 282C00FFA5EC | 17    | 0     | 0.05   |
 | Toshiba   | KXG60ZNV512G KI... | 512 GB | F711CEBE36C6 | 17    | 0     | 0.05   |
@@ -18271,7 +18272,6 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX6000LNP          | 256 GB | F551E61EA666 | 17    | 0     | 0.05   |
 | ADATA     | SX6000PNP          | 256 GB | EC7167F41EEB | 17    | 0     | 0.05   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | A8CFA568533F | 17    | 0     | 0.05   |
-| Micron    | MTFDHBA1T0TDV-1... | 1 TB   | E42D8C3D1DCF | 17    | 0     | 0.05   |
 | Phison    | 311CD0512GB        | 512 GB | 2546F36468F5 | 17    | 0     | 0.05   |
 | SK hynix  | PC401 NVMe         | 512 GB | 943E25A1AC3C | 17    | 0     | 0.05   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | 11FD5311E4A8 | 17    | 0     | 0.05   |
@@ -18286,6 +18286,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HBJQ-00000 | 512 GB | 68FF5B234B20 | 17    | 0     | 0.05   |
 | Samsung   | SSD 970 EVO        | 500 GB | 5980A8E283DC | 17    | 0     | 0.05   |
 | Samsung   | SSD 970 EVO        | 500 GB | 6C2A77EF8418 | 17    | 0     | 0.05   |
+| Samsung   | SSD 970 EVO Plus   | 2 TB   | C05B4EBE4853 | 17    | 0     | 0.05   |
 | UMIS      | RPJTJ512MEE1OWX    | 512 GB | 9E4F3EEE46D9 | 17    | 0     | 0.05   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | 4ECD6C20AC19 | 17    | 0     | 0.05   |
 | Kingston  | SA2000M8500G       | 500 GB | 0C35E5CAE686 | 17    | 0     | 0.05   |
@@ -18680,7 +18681,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | PM981a NVMe        | 512 GB | 6FA6A5F22A37 | 16    | 0     | 0.04   |
 | Samsung   | PM9A1 NVMe         | 1 TB   | 3BE93D87202A | 16    | 0     | 0.04   |
 | Samsung   | PM9A1 NVMe         | 1 TB   | 4FB8BD896EE6 | 16    | 0     | 0.04   |
-| Samsung   | SSD 970 EVO Plus   | 2 TB   | C05B4EBE4853 | 16    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 24B634B566CD | 16    | 0     | 0.04   |
 | SanDisk   | WD Green SN350     | 1 TB   | C9CCA13E798D | 16    | 0     | 0.04   |
 | Team      | TM8FPD002T         | 2 TB   | 89E45431CA60 | 16    | 0     | 0.04   |
@@ -18716,6 +18716,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX6000LNP          | 128 GB | 6CF6F7CA9FFC | 15    | 0     | 0.04   |
 | Micron    | MTFDHBA512TCK      | 512 GB | BB3EDC61A434 | 15    | 0     | 0.04   |
 | SK hynix  | PC801 NVMe         | 512 GB | A3493CF78D0D | 15    | 0     | 0.04   |
+| Samsung   | MZVLQ1T0HBLB-00B   | 1 TB   | F39DF8567C9B | 15    | 0     | 0.04   |
 | Samsung   | PM991 NVMe         | 256 GB | FAC11DA81241 | 15    | 0     | 0.04   |
 | Samsung   | PM9A1 NVMe         | 1 TB   | EF7B52E2467D | 15    | 0     | 0.04   |
 | Samsung   | SSD 980            | 1 TB   | 5B4E909A6F26 | 15    | 0     | 0.04   |
@@ -18851,6 +18852,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ512HBLU-00BTW | 512 GB | C499F841C901 | 15    | 0     | 0.04   |
 | Samsung   | SSD 980            | 500 GB | A1DF195BB14B | 15    | 0     | 0.04   |
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | 7CF72E16DBC4 | 15    | 0     | 0.04   |
+| WDC       | PC SN530 SDBPMP... | 256 GB | 61DA24F55F79 | 15    | 0     | 0.04   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | 9B8E309E780E | 15    | 0     | 0.04   |
 | Apple     | SSD AP0256H        | 256 GB | A0043D891A00 | 15    | 0     | 0.04   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 8714804D495E | 15    | 0     | 0.04   |
@@ -18918,6 +18920,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8PCP3512F-AI1    | 512 GB | 26E75825CD67 | 15    | 0     | 0.04   |
 | Kingston  | SKC2500M8500G      | 500 GB | DCC72CB1D484 | 15    | 0     | 0.04   |
 | Phison    | Sabrent            | 1 TB   | 3611CE4E1DFB | 15    | 0     | 0.04   |
+| Samsung   | MZALQ512HBLU-00BL1 | 512 GB | 132D07FD536B | 15    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO        | 500 GB | 2AEECE86A4F7 | 15    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | F08B64AAABB2 | 15    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 0AF516A5F650 | 15    | 0     | 0.04   |
@@ -19020,7 +19023,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 15BE667FAD5D | 14    | 0     | 0.04   |
 | Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 07EAC17FCE3B | 14    | 0     | 0.04   |
 | Samsung   | MZQL23T8HCLS-00... | 3.8 TB | EA2BA4D9E56A | 14    | 0     | 0.04   |
-| Samsung   | MZVLQ1T0HBLB-00B   | 1 TB   | F39DF8567C9B | 14    | 0     | 0.04   |
 | Samsung   | MZVLQ256HAJD-00000 | 256 GB | 3A461F677A6D | 14    | 0     | 0.04   |
 | Samsung   | MZVLW256HEHP-000H1 | 256 GB | C99F6774A3BD | 14    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO        | 1 TB   | F4F839224A16 | 14    | 0     | 0.04   |
@@ -19063,6 +19065,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ512HBLU-00B   | 512 GB | C33ED079D113 | 14    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D9B9F240496B | 14    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | D8006213CFFF | 14    | 0     | 0.04   |
+| Samsung   | SSD 990 PRO        | 1 TB   | 248EF998E001 | 14    | 0     | 0.04   |
 | Crucial   | CT1000P3SSD8       | 1 TB   | 51637892D289 | 14    | 0     | 0.04   |
 | Crucial   | CT250P2SSD8        | 250 GB | DBFAB3133E02 | 14    | 0     | 0.04   |
 | Crucial   | CT250P5SSD8        | 250 GB | 1850E6A93041 | 14    | 0     | 0.04   |
@@ -19274,7 +19277,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNU512GZ      | 512 GB | AFDC932D07B1 | 14    | 0     | 0.04   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 39C236DAC796 | 14    | 0     | 0.04   |
 | SSSTC     | CL1-8D256          | 256 GB | 3A877F75B31B | 14    | 0     | 0.04   |
-| Samsung   | MZALQ512HBLU-00BL1 | 512 GB | 132D07FD536B | 14    | 0     | 0.04   |
 | Samsung   | MZALQ512HBLU-00BL2 | 512 GB | EC4B1F37F6A1 | 14    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | E81F8880B123 | 14    | 0     | 0.04   |
 | Silico... | PCIe-8 SSD         | 512 GB | CDC800D9F11E | 14    | 0     | 0.04   |
@@ -19362,6 +19364,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | E0517BC10B03 | 13    | 0     | 0.04   |
 | Micron    | MTFDHBA512TDV-1... | 512 GB | AC577BF07BCD | 13    | 0     | 0.04   |
 | SK hynix  | BC511 HFM256GDJ... | 256 GB | 6931E0FB3CDB | 13    | 0     | 0.04   |
+| SK hynix  | BC511 HFM512GDJ... | 512 GB | 48E6CFE24EED | 13    | 0     | 0.04   |
 | SK hynix  | HFM512GDJTNG-8310A | 512 GB | C49291ECB7F1 | 13    | 0     | 0.04   |
 | SK hynix  | SKHynix_HFM256G... | 256 GB | DC118B2EAA06 | 13    | 0     | 0.04   |
 | Samsung   | MZALQ128HBHQ-000L1 | 128 GB | 75F05AEDF7EA | 13    | 0     | 0.04   |
@@ -19391,6 +19394,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN730 SDBPNT... | 512 GB | 0A59E4C01FD4 | 13    | 0     | 0.04   |
 | Apple     | SSD AP1024J        | 1 TB   | E75D4097E6EF | 13    | 0     | 0.04   |
 | Crucial   | CT1000P5PSSD8      | 1 TB   | 406890A3DDC9 | 13    | 0     | 0.04   |
+| Crucial   | CT4000P3SSD8       | 4 TB   | 86065C94A733 | 13    | 0     | 0.04   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | C209E09AD79F | 13    | 0     | 0.04   |
 | Micron    | 2450_MTFDKBK512TFK | 512 GB | 2E1B3A4D506B | 13    | 0     | 0.04   |
 | Micron    | MTFDHBA256TCK-1... | 256 GB | F44E07E42904 | 13    | 0     | 0.04   |
@@ -19406,7 +19410,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN730 NVMe      | 1 TB   | 653C90A3C12D | 13    | 0     | 0.04   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | 180857D9DBBD | 13    | 0     | 0.04   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 7C39425A9F71 | 13    | 0     | 0.04   |
-| Crucial   | CT4000P3SSD8       | 4 TB   | 86065C94A733 | 13    | 0     | 0.04   |
 | HP        | SSD EX900          | 500 GB | 781821F21379 | 13    | 0     | 0.04   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | 25BEFCA354DE | 13    | 0     | 0.04   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 4002BFBC3AC4 | 13    | 0     | 0.04   |
@@ -19560,6 +19563,7 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 9FE548A6143B | 13    | 0     | 0.04   |
 | KIOXIA    | KXG60ZNV1T02       | 1 TB   | 5151B8D96DE8 | 13    | 0     | 0.04   |
 | Kingston  | SFYRS1000G         | 1 TB   | DD290BAC1FB1 | 13    | 0     | 0.04   |
+| Micron    | MTFDKCD1T0TFK      | 1 TB   | 36F4E294FE54 | 13    | 0     | 0.04   |
 | Phison    | Sabrent Rocket Q   | 1 TB   | D230536954E6 | 13    | 0     | 0.04   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 3881D5E69AAA | 13    | 0     | 0.04   |
 | Samsung   | MZVLW128HEGR-00000 | 128 GB | 48598245755F | 13    | 0     | 0.04   |
@@ -19674,6 +19678,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 1 TB   | 9C6E6F994658 | 12    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | E14775350810 | 12    | 0     | 0.04   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 1F4C7248703F | 12    | 0     | 0.04   |
+| Samsung   | SSD 980            | 1 TB   | 10A93F52DEA3 | 12    | 0     | 0.04   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 0EC7D150C1A9 | 12    | 0     | 0.04   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | 03D2C6E2A62E | 12    | 0     | 0.04   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 1425F9AD5532 | 12    | 0     | 0.04   |
@@ -19754,7 +19759,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 4294FC7FF09A | 12    | 0     | 0.03   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | FE0EAB927872 | 12    | 0     | 0.03   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 943C0C770507 | 12    | 0     | 0.03   |
-| WDC       | PC SN530 SDBPMP... | 256 GB | 61DA24F55F79 | 12    | 0     | 0.03   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | 07D65B4608F5 | 12    | 0     | 0.03   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | F689713D7529 | 12    | 0     | 0.03   |
 | WDC       | PC SN730 SDBQNT... | 1 TB   | C540862BCB3D | 12    | 0     | 0.03   |
@@ -19942,7 +19946,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 97DEFFF0BA21 | 12    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | D1EFBF28CF7C | 12    | 0     | 0.03   |
 | Samsung   | SSD 970 PRO        | 512 GB | CAA0EE973B8D | 12    | 0     | 0.03   |
-| Samsung   | SSD 980            | 1 TB   | 10A93F52DEA3 | 12    | 0     | 0.03   |
 | Samsung   | SSD 980            | 1 TB   | AB86ED97F71C | 12    | 0     | 0.03   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 0F5096AD8367 | 12    | 0     | 0.03   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | 3FD0801071D8 | 12    | 0     | 0.03   |
@@ -19980,6 +19983,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC801 NVMe         | 2 TB   | 7CD8D7363730 | 12    | 0     | 0.03   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | C091ABEF0127 | 12    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 95B807E6E898 | 12    | 0     | 0.03   |
+| Samsung   | SSD 970 EVO Plus   | 2 TB   | 23C1D375C7E6 | 12    | 0     | 0.03   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | E48FC4A6B53F | 12    | 0     | 0.03   |
 | Toshiba   | KXG6AZNV256G       | 256 GB | E87DB2EF5B57 | 12    | 0     | 0.03   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | 44A9C56CDD15 | 12    | 0     | 0.03   |
@@ -20058,6 +20062,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 1 TB   | 1FEED527B4CD | 11    | 0     | 0.03   |
 | Samsung   | SSD 980 PRO        | 1 TB   | D38CB3CEE620 | 11    | 0     | 0.03   |
 | Samsung   | SSD 980 PRO        | 500 GB | 54C4878F6AD0 | 11    | 0     | 0.03   |
+| Fanxiang  | S500PRO            | 250 GB | E4D7B21676C0 | 11    | 0     | 0.03   |
 | SK hynix  | HFM256GDJTNG-8310A | 256 GB | C99B9256D60D | 11    | 0     | 0.03   |
 | SK hynix  | HFM512GDJTNG-8310A | 512 GB | 21204B456BB2 | 11    | 0     | 0.03   |
 | SK hynix  | PC601 NVMe         | 512 GB | 812912DCFC3C | 11    | 0     | 0.03   |
@@ -20082,6 +20087,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS2280P4           | 256 GB | E980B9797C4B | 11    | 0     | 0.03   |
 | Apple     | SSD AP0128J        | 121 GB | 9A0DE975DB15 | 11    | 0     | 0.03   |
 | Crucial   | CT500P2SSD8        | 500 GB | E2A2F04AE00E | 11    | 0     | 0.03   |
+| Crucial   | CT500P5PSSD8       | 500 GB | EC4A39D1F4E4 | 11    | 0     | 0.03   |
 | Micron    | 2450_MTFDKBA512TFK | 512 GB | 040819ED0627 | 11    | 0     | 0.03   |
 | SK hynix  | HFM128GDHTNG-8310A | 128 GB | 873734420255 | 11    | 0     | 0.03   |
 | SK hynix  | SHPP41-2000GM      | 2 TB   | 0B76D31B959D | 11    | 0     | 0.03   |
@@ -20098,6 +20104,7 @@ MTBF - avg. MTBF in years per sample.
 | SSSTC     | CL1-8D512          | 512 GB | A4BFF1BB3F72 | 11    | 0     | 0.03   |
 | SSSTC     | LJ1-2W7680         | 962 GB | EC4BFB3009A4 | 11    | 0     | 0.03   |
 | Samsung   | MZALQ512HALU-000L1 | 512 GB | 33E9C9879F7C | 11    | 0     | 0.03   |
+| Samsung   | MZALQ512HBLU-00BL2 | 512 GB | 89D764DC0C4D | 11    | 0     | 0.03   |
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | 756C22DEB4D8 | 11    | 0     | 0.03   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | E65678343526 | 11    | 0     | 0.03   |
 | Samsung   | MZVLW128HEGR-00000 | 128 GB | 9A7D9C9BF0EA | 11    | 0     | 0.03   |
@@ -20189,6 +20196,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 1 TB   | C234167984D7 | 11    | 0     | 0.03   |
 | Samsung   | SSD 980 PRO        | 500 GB | 91B3203D5D4B | 11    | 0     | 0.03   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | D1FBEABF7A93 | 11    | 0     | 0.03   |
+| WDC       | PC SN730 SDBQNT... | 1 TB   | FEFEC00254FD | 11    | 0     | 0.03   |
 | Apple     | SSD AP0128H        | 121 GB | 9633D4D60C99 | 11    | 0     | 0.03   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 7083788FE062 | 11    | 0     | 0.03   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | F38B82D84F5F | 11    | 0     | 0.03   |
@@ -20206,7 +20214,6 @@ MTBF - avg. MTBF in years per sample.
 | Apple     | SSD AP0128H        | 121 GB | FC244E9BA20C | 11    | 0     | 0.03   |
 | BIWIN     | SSD                | 512 GB | 9326E2186DEA | 11    | 0     | 0.03   |
 | Crucial   | CT500P5SSD8        | 500 GB | 68A1F663DD0B | 11    | 0     | 0.03   |
-| Fanxiang  | S500PRO            | 250 GB | E4D7B21676C0 | 11    | 0     | 0.03   |
 | Intel     | HBRPEKNX0101AHO    | 16 GB  | C3F1D1D3F8B7 | 11    | 0     | 0.03   |
 | SK hynix  | SKHynix_HFM512G... | 512 GB | 7A5DAF8C0C06 | 11    | 0     | 0.03   |
 | Samsung   | MZVL2512HCJQ-00BL7 | 512 GB | 8FB7B28BFEBC | 11    | 0     | 0.03   |
@@ -20240,7 +20247,6 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | KXG60ZNV512G NV... | 512 GB | CB6218A709B6 | 11    | 0     | 0.03   |
 | WDC       | PC SN530 NVMe      | 512 GB | AB7C4B759C85 | 11    | 0     | 0.03   |
 | WDC       | PC SN720 SDAQNT... | 512 GB | 0ACB31B5FE01 | 11    | 0     | 0.03   |
-| WDC       | PC SN730 SDBQNT... | 1 TB   | FEFEC00254FD | 11    | 0     | 0.03   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | CC55359557B0 | 11    | 0     | 0.03   |
 | Micron    | MTFDKBA512TFK      | 512 GB | 37D801178F45 | 11    | 0     | 0.03   |
 | Phison    | 311CD0512GB        | 512 GB | E040BD44B2B3 | 11    | 0     | 0.03   |
@@ -20248,7 +20254,6 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | PCIe SSD           | 256 GB | 79E7E4C9175E | 11    | 0     | 0.03   |
 | SK hynix  | BC501 NVMe         | 256 GB | 1AFC84A69821 | 11    | 0     | 0.03   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 7D6BF898F738 | 11    | 0     | 0.03   |
-| Samsung   | MZALQ512HBLU-00BL2 | 512 GB | 89D764DC0C4D | 11    | 0     | 0.03   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 6EB392FBA797 | 11    | 0     | 0.03   |
 | Samsung   | MZVLB512HBJQ-00000 | 512 GB | E9F91D6DA6E7 | 11    | 0     | 0.03   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | FCD4500B0D89 | 11    | 0     | 0.03   |
@@ -20350,7 +20355,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SNVS500G           | 500 GB | 826B8FC67ED7 | 11    | 0     | 0.03   |
 | SK hynix  | HFM128GDHTNG-8310A | 128 GB | A64C65D63647 | 11    | 0     | 0.03   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 7DB78219FE1F | 11    | 0     | 0.03   |
-| Samsung   | SSD 970 EVO Plus   | 2 TB   | 23C1D375C7E6 | 11    | 0     | 0.03   |
 | Samsung   | SSD 980            | 500 GB | A34231858479 | 11    | 0     | 0.03   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | C1A37E30968B | 11    | 0     | 0.03   |
 | Seagate   | FireCuda 530 ZP... | 4 TB   | A37D24FC5C2B | 11    | 0     | 0.03   |
@@ -20414,6 +20418,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 7EE2DCCA688D | 10    | 0     | 0.03   |
 | Samsung   | PM981a NVMe        | 512 GB | 286D7D3B645E | 10    | 0     | 0.03   |
 | Samsung   | SSD 960 EVO        | 250 GB | 05E7DA6B9DDA | 10    | 0     | 0.03   |
+| Samsung   | SSD 980 PRO wit... | 1 TB   | 6DBDDBC7FF30 | 10    | 0     | 0.03   |
 | Silico... | Qunion P20A 512... | 512 GB | 71BD20AC6037 | 10    | 0     | 0.03   |
 | Toshiba   | KBG40ZNT512G ME... | 512 GB | 7E150DF65713 | 10    | 0     | 0.03   |
 | Toshiba   | KBG40ZNT512G ME... | 512 GB | D0B73220E8A4 | 10    | 0     | 0.03   |
@@ -20447,7 +20452,6 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | IM2P33F3A NVMe     | 256 GB | BC8EC0897423 | 10    | 0     | 0.03   |
 | Apple     | SSD SM0512L        | 500 GB | D958F9648327 | 10    | 0     | 0.03   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 1FE0E26B47FF | 10    | 0     | 0.03   |
-| Crucial   | CT500P5PSSD8       | 500 GB | EC4A39D1F4E4 | 10    | 0     | 0.03   |
 | Gigaby... | GP-ASM2NE6200TTTD  | 2 TB   | C28D4DD97FFB | 10    | 0     | 0.03   |
 | Intel     | HBRPEKNX0203AHO    | 32 GB  | 28DAC2BA7113 | 10    | 0     | 0.03   |
 | Intel     | SSDPEKNW512G8      | 512 GB | D284C807AAAA | 10    | 0     | 0.03   |
@@ -21026,6 +21030,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 EVO        | 250 GB | CA1AC026D02B | 9     | 0     | 0.03   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 0E597513E0B0 | 9     | 0     | 0.03   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 543B5C039E89 | 9     | 0     | 0.03   |
+| Samsung   | SSD 980 PRO        | 1 TB   | 12EB15FEECFD | 9     | 0     | 0.03   |
 | Samsung   | SSD 980 PRO        | 1 TB   | FD7F063EFCED | 9     | 0     | 0.03   |
 | WDC       | WDS100T1X0E-00AFY0 | 1 TB   | A83AF659FD3E | 9     | 0     | 0.03   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | FE87E4EA41F6 | 9     | 0     | 0.03   |
@@ -21075,6 +21080,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 500 GB | 5D40493D5B9D | 9     | 0     | 0.03   |
 | SanDisk   | WD PC SN735 SDB... | 1 TB   | DA7DB752CBF3 | 9     | 0     | 0.03   |
 | Toshiba   | KBG30ZMV256G KI... | 256 GB | DF225252F479 | 9     | 0     | 0.03   |
+| WDC       | PC SN730 SDBPNT... | 256 GB | 3B55F1F0E00D | 9     | 0     | 0.03   |
 | ADATA     | SX6000LNP          | 128 GB | 0915C18ADCED | 9     | 0     | 0.03   |
 | Crucial   | CT1000P5SSD8       | 1 TB   | 63EDD5D8C2E4 | 9     | 0     | 0.03   |
 | Intel     | SSDPEKKF256G8L     | 256 GB | 22ECD72E90AE | 9     | 0     | 0.03   |
@@ -21229,7 +21235,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 250 GB | 3B8C0AD4B70A | 8     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 79DBAC1D2EF1 | 8     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 1 TB   | CBF9FD5AB8C1 | 8     | 0     | 0.02   |
-| Samsung   | SSD 980 PRO wit... | 1 TB   | 6DBDDBC7FF30 | 8     | 0     | 0.02   |
 | Seagate   | FireCuda 510 SS... | 250 GB | 30F45BD645F3 | 8     | 0     | 0.02   |
 | WDC       | WDBA3V0010BNC-WRSN | 1 TB   | 638094AACE85 | 8     | 0     | 0.02   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | AB45426A172D | 8     | 0     | 0.02   |
@@ -21254,7 +21259,6 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | FireCuda 510 SS... | 2 TB   | FC837D40BF7D | 8     | 0     | 0.02   |
 | WDC       | PC SN520 NVMe      | 256 GB | 9F6FC93C3C83 | 8     | 0     | 0.02   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | D481E927B142 | 8     | 0     | 0.02   |
-| WDC       | PC SN730 SDBPNT... | 256 GB | 3B55F1F0E00D | 8     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 8C88A854A0B1 | 8     | 0     | 0.02   |
 | Kingston  | OM8PDP3256B-A01    | 256 GB | 705C3ABDE03B | 8     | 0     | 0.02   |
 | Phison    | Daten DS2000       | 512 GB | A77F8DB207A1 | 8     | 0     | 0.02   |
@@ -21281,6 +21285,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | D39947E6A4EC | 8     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | B7BEF835AF6D | 8     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 8FFA064C1EDE | 8     | 0     | 0.02   |
+| Samsung   | SSD 980 PRO        | 2 TB   | C0C72569C7B8 | 8     | 0     | 0.02   |
 | UMIS      | RPJTJ256MEE1OWX    | 256 GB | 71AAA38EE2CA | 8     | 0     | 0.02   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 12990EC56587 | 8     | 0     | 0.02   |
 | Apple     | SSD AP0128H        | 121 GB | B609E713A02F | 8     | 0     | 0.02   |
@@ -21405,6 +21410,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | PM991a NVMe        | 1 TB   | 740720255413 | 8     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 9A8FB15CED46 | 8     | 0     | 0.02   |
 | Samsung   | SSD 980            | 500 GB | 0115AC359846 | 8     | 0     | 0.02   |
+| SanDisk   | WD_BLACK SN770     | 1 TB   | D818ECBBBB47 | 8     | 0     | 0.02   |
 | Timetec   | 35TTFP6PCIE-1TB    | 1 TB   | 40672B62C97F | 8     | 0     | 0.02   |
 | Transcend | TS256GMTE220S      | 256 GB | 967CDF3F580A | 8     | 0     | 0.02   |
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | B615450A80FB | 8     | 0     | 0.02   |
@@ -21442,6 +21448,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Red SN700       | 1 TB   | E25892B2CBAD | 8     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | C11FBA147039 | 8     | 0     | 0.02   |
 | ADATA     | SWORDFISH          | 250 GB | C54D5683EA54 | 8     | 0     | 0.02   |
+| Crucial   | CT1000P3PSSD8      | 1 TB   | F804A5ED33AE | 8     | 0     | 0.02   |
 | Micron    | 2200V_MTFDHBA51... | 512 GB | A89B65CE5B45 | 8     | 0     | 0.02   |
 | Micron    | 2200V_MTFDHBA51... | 512 GB | F55DE12FFE93 | 8     | 0     | 0.02   |
 | SK hynix  | PC801 NVMe         | 1 TB   | 4E314C8952B3 | 8     | 0     | 0.02   |
@@ -21482,6 +21489,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ256HAJD-000H1 | 256 GB | 74ED91037681 | 8     | 0     | 0.02   |
 | Samsung   | MZVLQ512HALU-00000 | 512 GB | 3F55B9453F48 | 8     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 0B75A997446E | 8     | 0     | 0.02   |
+| Samsung   | SSD 970 EVO Plus   | 1 TB   | 50CD17C09A89 | 8     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | C34B40CCB076 | 8     | 0     | 0.02   |
 | Samsung   | SSD 980            | 1 TB   | 896B6085F179 | 8     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPNP... | 1 TB   | D740504F781D | 8     | 0     | 0.02   |
@@ -21680,7 +21688,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | C58474A1F925 | 7     | 0     | 0.02   |
 | WDC       | PC SN530 NVMe      | 512 GB | 1E23B4B3404E | 7     | 0     | 0.02   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | B66C9BD1CD74 | 7     | 0     | 0.02   |
-| Crucial   | CT1000P3PSSD8      | 1 TB   | F804A5ED33AE | 7     | 0     | 0.02   |
 | KIOXIA... | PLUS SSD           | 500 GB | BE0F8D28B9BE | 7     | 0     | 0.02   |
 | KIOXIA    | KBG40ZNS256G NVMe  | 256 GB | DA6757FCF2ED | 7     | 0     | 0.02   |
 | Kingston  | SA2000M8500G       | 500 GB | CBC44CAC68B5 | 7     | 0     | 0.02   |
@@ -21716,7 +21723,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 52CF9607F269 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 33E9D2834662 | 7     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 500 GB | CF3A9D097D79 | 7     | 0     | 0.02   |
-| SanDisk   | WD_BLACK SN770     | 1 TB   | D818ECBBBB47 | 7     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPMP... | 256 GB | 4FC18A3ACBF2 | 7     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | 5D1E05F22237 | 7     | 0     | 0.02   |
 | WDC       | WDS500G1B0C-00S6U0 | 500 GB | 35E4C9EE1CEE | 7     | 0     | 0.02   |
@@ -21751,7 +21757,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO        | 500 GB | 43D89AF6A163 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 33E9FD4FD103 | 7     | 0     | 0.02   |
 | Samsung   | SSD 980            | 1 TB   | F4B1397D5955 | 7     | 0     | 0.02   |
-| Samsung   | SSD 980 PRO        | 1 TB   | 12EB15FEECFD | 7     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 1D1060779C93 | 7     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 250 GB | A9DA51FCA31E | 7     | 0     | 0.02   |
 | Toshiba   | KBG40ZNT512G ME... | 512 GB | F9D947FA2EB5 | 7     | 0     | 0.02   |
@@ -21845,12 +21850,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ256HBJD-00BH1 | 256 GB | 0B1E4DAD9D41 | 7     | 0     | 0.02   |
 | Samsung   | MZVLQ256HBJD-00BH1 | 256 GB | A20EA7DBE895 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 24D05D52C3F5 | 7     | 0     | 0.02   |
-| Samsung   | SSD 970 EVO Plus   | 1 TB   | 50CD17C09A89 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 3AE53A081895 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | C016D5A6A390 | 7     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 250 GB | C0ACE177EE10 | 7     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 2 TB   | 9C25A91EF8A0 | 7     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 500 GB | 37881FF652E1 | 7     | 0     | 0.02   |
+| Silico... | PCIe-8 SSD         | 512 GB | 48503FA0EACE | 7     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPMU... | 256 GB | 0DFB2069A4E9 | 7     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 1 TB   | 3CE0D925213C | 7     | 0     | 0.02   |
 | XPG       | GAMMIX S50         | 1 TB   | 131DAC57E1CE | 7     | 0     | 0.02   |
@@ -21886,6 +21891,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | NE-256             | 256 GB | 718A902AC06A | 7     | 0     | 0.02   |
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | CFB305F61781 | 7     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 128 GB | 1E1998C68B03 | 7     | 0     | 0.02   |
+| WDC       | PC SN530 SDBPNP... | 512 GB | A2EFDCECE60F | 7     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | BBA77FC6E3AF | 7     | 0     | 0.02   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 5C0E84C21892 | 7     | 0     | 0.02   |
 | WDC       | WDS100T3XHC-00SJG0 | 1 TB   | FFD344FA1442 | 7     | 0     | 0.02   |
@@ -21897,9 +21903,9 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8PCP3512F-A02    | 512 GB | 033D0E4A218C | 7     | 0     | 0.02   |
 | MSI       | M371               | 1 TB   | 0184D287414E | 7     | 0     | 0.02   |
 | Micron    | MTFDKCD512TFK      | 512 GB | A73E370FD18D | 7     | 0     | 0.02   |
-| SK hynix  | BC511 HFM512GDJ... | 512 GB | 48E6CFE24EED | 7     | 0     | 0.02   |
 | SK hynix  | HFM512GDJTNG-8310A | 512 GB | EA5D355644B6 | 7     | 0     | 0.02   |
 | SK hynix  | PC801 NVMe         | 1 TB   | 8123D7BF8343 | 7     | 0     | 0.02   |
+| Samsung   | MZVL2512HCJQ-00BH1 | 512 GB | 01D14F21AA0C | 7     | 0     | 0.02   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 57CB8C859F12 | 7     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 500 GB | 157F10E43C33 | 7     | 0     | 0.02   |
 | Seagate   | BarraCuda 510 S... | 1 TB   | B099BCEB2D49 | 7     | 0     | 0.02   |
@@ -21934,7 +21940,6 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 2450_MTFDKBA512TFK | 512 GB | 3A917A3ED0B9 | 7     | 0     | 0.02   |
 | Micron    | 3400_MTFDKBA1T0TFH | 1 TB   | 58518EA615DC | 7     | 0     | 0.02   |
 | Phison    | 311CD0512GB        | 512 GB | 7C2CAE9D054A | 7     | 0     | 0.02   |
-| Samsung   | MZVL2512HCJQ-00BH1 | 512 GB | 01D14F21AA0C | 7     | 0     | 0.02   |
 | Samsung   | MZVLB512HAJQ-000L2 | 512 GB | 32AA52F4838E | 7     | 0     | 0.02   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 29D5A0D5C06D | 7     | 0     | 0.02   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | EDFE214047A5 | 7     | 0     | 0.02   |
@@ -22073,6 +22078,7 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KXG60ZNV1T02 NVMe  | 1 TB   | 645CA060C3EE | 7     | 0     | 0.02   |
 | Lite-On   | CX2-8B256-Q11 NVMe | 256 GB | 27729C01125C | 7     | 0     | 0.02   |
 | Phison    | Sabrent Rocket 4.0 | 1 TB   | 8CED677C588F | 7     | 0     | 0.02   |
+| Samsung   | MZVL2512HCJQ-00BL7 | 512 GB | 5F2DAFD75E1C | 7     | 0     | 0.02   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 88787DD579E0 | 7     | 0     | 0.02   |
 | Samsung   | PM991a NVMe        | 128 GB | D72B34457F83 | 7     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 250 GB | 79E3F63998E3 | 7     | 0     | 0.02   |
@@ -22104,8 +22110,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 500 GB | 29CB60D1F4CE | 7     | 0     | 0.02   |
 | Samsung   | SSD 980            | 500 GB | 599552E5976B | 7     | 0     | 0.02   |
 | SanDisk   | Ultra 3D NVMe      | 1 TB   | A86130FA3E5C | 7     | 0     | 0.02   |
-| Silico... | PCIe-8 SSD         | 512 GB | 48503FA0EACE | 7     | 0     | 0.02   |
 | Toshiba   | KXG60ZNV512G KI... | 512 GB | E3598216CA5D | 7     | 0     | 0.02   |
+| WDC       | PC SN530 NVMe      | 256 GB | 923190B5ACAB | 7     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 27C93337FA77 | 7     | 0     | 0.02   |
 | WDC       | PC SN730 NVMe      | 1 TB   | 3F892C9EEC1B | 7     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 1 TB   | 52D33C98C53F | 7     | 0     | 0.02   |
@@ -22162,6 +22168,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | PCIe-8 SSD         | 512 GB | C4F4E7651B89 | 6     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | B800FD71EAD5 | 6     | 0     | 0.02   |
 | WDC       | PC SN810 NVMe      | 512 GB | 6460A23EF35F | 6     | 0     | 0.02   |
+| Samsung   | SSD 980 PRO        | 1 TB   | B8CCD13EA30A | 456   | 65    | 0.02   |
 | Apple     | SSD AP8192N        | 8 TB   | AFFDC36CE071 | 6     | 0     | 0.02   |
 | Corsair   | Force MP300        | 240 GB | 1BB77B58866A | 6     | 0     | 0.02   |
 | Crucial   | CT1000P3SSD8       | 1 TB   | 84833F04FA75 | 6     | 0     | 0.02   |
@@ -22185,7 +22192,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 512 GB | 9FE88E1974CC | 6     | 0     | 0.02   |
 | WDC       | WD BLACK SDBPNT... | 512 GB | F470AD2F667D | 6     | 0     | 0.02   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 0EA76A41C87D | 6     | 0     | 0.02   |
-| Samsung   | SSD 980 PRO        | 1 TB   | B8CCD13EA30A | 455   | 65    | 0.02   |
 | Samsung   | PM961 NVMe         | 512 GB | D56D84107219 | 226   | 32    | 0.02   |
 | Crucial   | CT500P2SSD8        | 500 GB | FEBA2C0D28CD | 6     | 0     | 0.02   |
 | Goodram   | IRP-SSDPR-P44A-... | 4 TB   | 0EB6A4E439FF | 6     | 0     | 0.02   |
@@ -22264,6 +22270,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 4F6DD1DCA683 | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 21ACDAD481E0 | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 5B29204B7998 | 6     | 0     | 0.02   |
+| Samsung   | SSD 970 EVO Plus   | 250 GB | A21B4300B19A | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 PRO        | 512 GB | 3991ABB49A13 | 6     | 0     | 0.02   |
 | Samsung   | SSD 980            | 1 TB   | EE8EA3B24015 | 6     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 5268A3189B61 | 6     | 0     | 0.02   |
@@ -22279,7 +22286,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 91CAC2724E2C | 6     | 0     | 0.02   |
 | Samsung   | MZVLQ1T0HBLB-00BH1 | 1 TB   | 48DE024E6341 | 6     | 0     | 0.02   |
 | Samsung   | PM991 NVMe         | 512 GB | B3A86F41806D | 6     | 0     | 0.02   |
-| Samsung   | SSD 970 EVO Plus   | 250 GB | A21B4300B19A | 6     | 0     | 0.02   |
 | SanDisk   | WD_BLACK SN850X    | 1 TB   | 9EA97A8ECCFF | 6     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPMP... | 256 GB | 1AB44ABDAF7E | 6     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPMP... | 256 GB | DB304791F90F | 6     | 0     | 0.02   |
@@ -22307,6 +22313,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDBRPG5000ANC-WRSN | 500 GB | 4563F9F7C868 | 6     | 0     | 0.02   |
 | WDC       | WDS100T1X0E-00AFY0 | 1 TB   | 23B51DF20637 | 6     | 0     | 0.02   |
 | WDC       | WDS500G2B0C        | 500 GB | 7FA0695CC6B2 | 6     | 0     | 0.02   |
+| ADATA     | SM2P41C3 NVMe      | 512 GB | 8C9BB2E80088 | 6     | 0     | 0.02   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | A74DECC2D7AB | 6     | 0     | 0.02   |
 | KIOXIA    | KBG30ZMV256G       | 256 GB | 68D6E285661C | 6     | 0     | 0.02   |
 | KIOXIA    | KBG40ZNS1T02 NVMe  | 1 TB   | 43C936B0DC9B | 6     | 0     | 0.02   |
@@ -22439,6 +22446,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980 PRO        | 2 TB   | D795300A9470 | 6     | 0     | 0.02   |
 | UMIS      | RPFTJ256PDD2MWX    | 256 GB | C17438A5A871 | 6     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | D9B22749BEB8 | 6     | 0     | 0.02   |
+| WDC       | PC SN730 SDBPNT... | 256 GB | EFC94396B53A | 6     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 905FF2C4626E | 6     | 0     | 0.02   |
 | ADATA     | SX6000PNP          | 256 GB | 59649E9DA098 | 6     | 0     | 0.02   |
 | Apple     | SSD AP0128H        | 121 GB | D19C77C43E5D | 6     | 0     | 0.02   |
@@ -22521,9 +22529,9 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ1T0HBLB-00BH1 | 1 TB   | 814B9E82681A | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 007B4AEA308D | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO        | 500 GB | F2E06CE22DF5 | 6     | 0     | 0.02   |
+| Samsung   | SSD 970 EVO Plus   | 500 GB | 2CFC5BA0BBCF | 6     | 0     | 0.02   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 656CD089F662 | 6     | 0     | 0.02   |
 | Samsung   | SSD 980            | 500 GB | 04564F1DB4D9 | 6     | 0     | 0.02   |
-| Samsung   | SSD 980 PRO        | 2 TB   | C0C72569C7B8 | 6     | 0     | 0.02   |
 | Silico... | PCIe-8 SSD         | 256 GB | 424B290E0E67 | 6     | 0     | 0.02   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 3414FE2DC523 | 6     | 0     | 0.02   |
 | WDC       | PC SN810 NVMe      | 512 GB | C8D645F1775C | 6     | 0     | 0.02   |
@@ -22596,7 +22604,6 @@ MTBF - avg. MTBF in years per sample.
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | FCBBB9B3B383 | 6     | 0     | 0.02   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | 505607B63CCE | 6     | 0     | 0.02   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | 8BBF1674FB7B | 6     | 0     | 0.02   |
-| WDC       | PC SN730 SDBPNT... | 256 GB | EFC94396B53A | 6     | 0     | 0.02   |
 | WDC       | PC SN730 SDBPNT... | 256 GB | BB4D81DC5391 | 6     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | EDD9E920E819 | 6     | 0     | 0.02   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 7F83BCFF14EE | 6     | 0     | 0.02   |
@@ -22652,7 +22659,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D8848D7697AA | 6     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 922DC569B951 | 6     | 0     | 0.02   |
 | WALRAM    | 256G               | 256 GB | 28B267CD4606 | 6     | 0     | 0.02   |
-| WDC       | PC SN530 NVMe      | 256 GB | 923190B5ACAB | 6     | 0     | 0.02   |
 | WDC       | PC SN530 NVMe      | 512 GB | C353A55C50D4 | 6     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPNP... | 256 GB | 6707474DC84C | 6     | 0     | 0.02   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | D996F93959D1 | 6     | 0     | 0.02   |
@@ -22666,6 +22672,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW512GZL     | 512 GB | 88AAC576CEB4 | 6     | 0     | 0.02   |
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 42116496D0DF | 6     | 0     | 0.02   |
 | KIOXIA    | KBG50ZNV512G       | 512 GB | 00C6D0B481A6 | 6     | 0     | 0.02   |
+| Micron    | 3400_MTFDKBA1T0TFH | 1 TB   | 762F8D9B88AF | 6     | 0     | 0.02   |
 | SK hynix  | HFM128GDHTNG-8310B | 128 GB | 8BA80B9B5B28 | 6     | 0     | 0.02   |
 | SK hynix  | SKHynix_HFM256G... | 256 GB | 1207B47533D7 | 6     | 0     | 0.02   |
 | Samsung   | MZ9LQ256HBJD-00B   | 256 GB | B30F070026D1 | 6     | 0     | 0.02   |
@@ -22932,6 +22939,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980 PRO        | 2 TB   | DB00FA435099 | 5     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPNP... | 1 TB   | A74161263408 | 5     | 0     | 0.02   |
 | WDC       | PC SN530 SDBPTP... | 512 GB | FCCE38880A4D | 5     | 0     | 0.02   |
+| AGI       | AGI512G16AI198     | 512 GB | E748463E8C44 | 5     | 0     | 0.02   |
 | BIWIN     | SSD                | 512 GB | 7225360AB087 | 5     | 0     | 0.02   |
 | Intenso   | PCIe               | 240 GB | BAA75D015E92 | 5     | 0     | 0.02   |
 | KIOXIA    | KBG50ZNT512G LS    | 512 GB | 3BF6CA58EA42 | 5     | 0     | 0.02   |
@@ -22962,7 +22970,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | ACFA9210B89F | 94    | 16    | 0.02   |
 | Apple     | SSD AP0128H        | 121 GB | 747386391C45 | 5     | 0     | 0.02   |
 | Kingston  | SKC3000S1024G      | 1 TB   | DB7155020E92 | 5     | 0     | 0.02   |
-| Micron    | 3400_MTFDKBA1T0TFH | 1 TB   | 762F8D9B88AF | 5     | 0     | 0.02   |
 | Phison    | Sabrent Rocket Q4  | 1 TB   | 105867114FAD | 5     | 0     | 0.02   |
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | 1C4751EED04D | 5     | 0     | 0.02   |
 | Samsung   | MZVLB1T0HALR-00000 | 1 TB   | 64CA19AB9232 | 5     | 0     | 0.02   |
@@ -22994,6 +23001,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 6E58196C66F8 | 5     | 0     | 0.02   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 6AB24F41E23F | 5     | 0     | 0.02   |
 | Samsung   | SSD 980 PRO        | 500 GB | E3B1384D1A85 | 5     | 0     | 0.02   |
+| SanDisk   | WD_BLACK SN770     | 1 TB   | B77CE473BCEC | 5     | 0     | 0.02   |
 | Star D... | PCIe SSD           | 960 GB | 06939CADBA25 | 5     | 0     | 0.02   |
 | Toshiba   | RC500              | 500 GB | F8DF5DDC0875 | 5     | 0     | 0.02   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | BFA39256FCB9 | 5     | 0     | 0.02   |
@@ -23008,7 +23016,9 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW512G8      | 512 GB | EDC677AFB6AC | 5     | 0     | 0.01   |
 | KIOXIA    | KBG50ZNV512G       | 512 GB | 8254180B10B5 | 5     | 0     | 0.01   |
 | Kingston  | SKC2500M8250G      | 250 GB | 8BB5E4CF35A8 | 5     | 0     | 0.01   |
+| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | FD1DEBD1CE54 | 5     | 0     | 0.01   |
 | Micron    | 2450_MTFDKBA512TFK | 512 GB | C9574A367A5C | 5     | 0     | 0.01   |
+| Micron    | 2450_MTFDKBA512TFK | 512 GB | DCBE815EBE65 | 5     | 0     | 0.01   |
 | Micron    | MTFDHBA256TCK-1... | 256 GB | 9C3D1442CC28 | 5     | 0     | 0.01   |
 | Micron    | MTFDHBA512QFD      | 512 GB | 875C997EF2E1 | 5     | 0     | 0.01   |
 | SK hynix  | BC511 NVMe         | 256 GB | 2D0DF3F097CE | 5     | 0     | 0.01   |
@@ -23030,7 +23040,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 960 PRO        | 512 GB | 66B847FF1701 | 363   | 66    | 0.01   |
 | Corsair   | Force MP510        | 480 GB | 446F678A7F32 | 5     | 0     | 0.01   |
 | Goodram   | SSDPR-PX500-512-80 | 512 GB | 4F98554F011D | 5     | 0     | 0.01   |
-| Micron    | 2450_MTFDKBA512TFK | 512 GB | DCBE815EBE65 | 5     | 0     | 0.01   |
 | PNY       | CS1030 1TB SSD     | 1 TB   | 2A0D7D2BC382 | 5     | 0     | 0.01   |
 | PNY       | CS1030 1TB SSD     | 1 TB   | E95DAB40888D | 5     | 0     | 0.01   |
 | SK hynix  | BC501 HFM256GDJ... | 256 GB | B681FDD762AD | 5     | 0     | 0.01   |
@@ -23090,7 +23099,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | A7A81BD797C0 | 5     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 0F7BCD73F0D3 | 5     | 0     | 0.01   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 7504D9D9BE97 | 5     | 0     | 0.01   |
-| SanDisk   | WD_BLACK SN770     | 1 TB   | B77CE473BCEC | 5     | 0     | 0.01   |
 | Team      | TM8FPK002T         | 2 TB   | 03481DCC6F41 | 5     | 0     | 0.01   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | AEA305F63BC1 | 5     | 0     | 0.01   |
 | WDC       | WDS250G2B0C-00PXH0 | 250 GB | F9C448E49140 | 5     | 0     | 0.01   |
@@ -23171,6 +23179,7 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CA5-8D512          | 512 GB | 463B30498AF6 | 5     | 0     | 0.01   |
 | Micron    | 2200S NVMe         | 512 GB | 57E497CF0175 | 5     | 0     | 0.01   |
 | Micron    | 2450_MTFDKBA512TFK | 512 GB | 6F65FE2F18DC | 5     | 0     | 0.01   |
+| Micron    | 3400_MTFDKBA512TFH | 512 GB | 4393B9625667 | 5     | 0     | 0.01   |
 | Micron    | MTFDKBA512TFH-1... | 512 GB | 99F634760F59 | 5     | 0     | 0.01   |
 | Netac     | NVMe SSD           | 1 TB   | B5342C4AFE2D | 5     | 0     | 0.01   |
 | SK hynix  | BA HFS256GD9TNG... | 256 GB | DBB5FC04D701 | 5     | 0     | 0.01   |
@@ -23234,7 +23243,6 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KBG50ZNT512G LS    | 512 GB | 3B73536ACB05 | 5     | 0     | 0.01   |
 | Kingston  | RBUSNS8154P3128GJ1 | 128 GB | CF4AC4255220 | 5     | 0     | 0.01   |
 | Micron    | 2210_MTFDHBA512QFD | 512 GB | 2FD8F840DDF1 | 5     | 0     | 0.01   |
-| Micron    | 3400_MTFDKBA512TFH | 512 GB | 4393B9625667 | 5     | 0     | 0.01   |
 | Micron    | MTFDHBA1T0TDV-1... | 1 TB   | 1019F764759D | 5     | 0     | 0.01   |
 | Netac     | NVMe SSD           | 512 GB | E450C7A85CB8 | 5     | 0     | 0.01   |
 | Phison    | 311CD0512GB        | 512 GB | 3CD6DCED5B9C | 5     | 0     | 0.01   |
@@ -23278,7 +23286,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 6A1D20580459 | 5     | 0     | 0.01   |
 | SK hynix  | Skhynix BC501 NVMe | 512 GB | 8B8A438AEF25 | 5     | 0     | 0.01   |
 | Samsung   | MZALQ256HBJD-00BL1 | 256 GB | 43B8749A1E9D | 5     | 0     | 0.01   |
-| Samsung   | MZVL2512HCJQ-00BL7 | 512 GB | 5F2DAFD75E1C | 5     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | 321B5D2BEECC | 5     | 0     | 0.01   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | 06D09178A7A5 | 5     | 0     | 0.01   |
 | Samsung   | MZVLB512HAJQ-000L7 | 512 GB | BB68A4AB4A93 | 5     | 0     | 0.01   |
@@ -23366,6 +23373,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKNW010T9      | 1 TB   | 52B1368A4614 | 4     | 0     | 0.01   |
 | Intel     | SSDPEKNW010T9      | 1 TB   | E7F5E140C866 | 4     | 0     | 0.01   |
 | Lite-On   | CA3-8D512          | 512 GB | B6E4366E3D91 | 4     | 0     | 0.01   |
+| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | AAA46333E662 | 4     | 0     | 0.01   |
 | Micron    | MTFDHBA256TDV-1... | 256 GB | A9B35F267F21 | 4     | 0     | 0.01   |
 | Netac     | NVMe SSD           | 128 GB | A02C49A4B35D | 4     | 0     | 0.01   |
 | SSSTC     | CL1-8D256-HP       | 256 GB | AF54468E8ACA | 4     | 0     | 0.01   |
@@ -23423,7 +23431,6 @@ MTBF - avg. MTBF in years per sample.
 | Gigabyte  | GP-GSM2NE3100TNTD  | 1 TB   | 6EEE409FED4E | 4     | 0     | 0.01   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 2F09EF727DB3 | 4     | 0     | 0.01   |
 | KIOXIA    | KBG50ZNV512G       | 512 GB | 15238B305593 | 4     | 0     | 0.01   |
-| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | AAA46333E662 | 4     | 0     | 0.01   |
 | PNY       | CS3030 250GB SSD   | 250 GB | E190C0777AF8 | 4     | 0     | 0.01   |
 | SK hynix  | BC711 NVMe         | 1 TB   | 667AC285409C | 4     | 0     | 0.01   |
 | SK hynix  | PC711 NVMe         | 1 TB   | 30894E517677 | 4     | 0     | 0.01   |
@@ -23502,6 +23509,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS250G2X0C-00L350 | 250 GB | 97DEA4CCB520 | 4     | 0     | 0.01   |
 | ZHITAI    | PC005 Active       | 512 GB | 71697D07B65D | 4     | 0     | 0.01   |
 | Crucial   | CT1000P1SSD8       | 1 TB   | 5AC2936284C0 | 81    | 16    | 0.01   |
+| Apacer    | AS2280P4U          | 1 TB   | 434C8D6E42E5 | 4     | 0     | 0.01   |
 | Apple     | SSD AP0128H        | 121 GB | 649E7F642B3C | 4     | 0     | 0.01   |
 | Crucial   | CT500P2SSD8        | 500 GB | 51F014724725 | 4     | 0     | 0.01   |
 | KIOXIA... | G2 SSD             | 1 TB   | 6EE763A9036B | 4     | 0     | 0.01   |
@@ -23516,11 +23524,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ9LQ128HBHQ-000H1 | 128 GB | 1AE963692DD7 | 4     | 0     | 0.01   |
 | Samsung   | MZ9LQ512HBLU-00B   | 512 GB | EEA4E5F7E0D5 | 4     | 0     | 0.01   |
 | Samsung   | MZALQ512HBLU-00BL2 | 512 GB | A5951D764C79 | 4     | 0     | 0.01   |
+| Samsung   | MZVL22T0HBLB-00B00 | 2 TB   | 53C494EE98B8 | 4     | 0     | 0.01   |
 | Samsung   | MZVLQ512HALU-000H1 | 512 GB | E1AE1DDCEFA4 | 4     | 0     | 0.01   |
 | Samsung   | PM981 NVMe SED     | 512 GB | 0452DECDEFDA | 4     | 0     | 0.01   |
 | Samsung   | PM981a NVMe        | 512 GB | FD446DECDF52 | 4     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | BF2FAB80F761 | 4     | 0     | 0.01   |
-| Samsung   | SSD 970 EVO Plus   | 500 GB | 2CFC5BA0BBCF | 4     | 0     | 0.01   |
 | Samsung   | SSD 980            | 500 GB | F4779E92A3D8 | 4     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 82FBFCC2604D | 4     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | A40FC634BC57 | 4     | 0     | 0.01   |
@@ -23562,6 +23570,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980 PRO        | 1 TB   | 92FC2360E50D | 4     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 2 TB   | 1603AC9137EC | 4     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 500 GB | CFB14BA01288 | 4     | 0     | 0.01   |
+| SanDisk   | WD_BLACK SN770     | 500 GB | 337B8C022F39 | 4     | 0     | 0.01   |
 | Seagate   | FireCuda 520 SS... | 1 TB   | FADD3CAFD2B7 | 4     | 0     | 0.01   |
 | WDC       | PC SN810 NVMe      | 1 TB   | 7EE41D05A130 | 4     | 0     | 0.01   |
 | XPG       | GAMMIX S70 BLADE   | 1 TB   | F5B13B10A949 | 4     | 0     | 0.01   |
@@ -23653,7 +23662,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980 PRO        | 250 GB | D77087B21864 | 4     | 0     | 0.01   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 40380E11B912 | 4     | 0     | 0.01   |
 | SanDisk   | WD Green SN350     | 1 TB   | 7FCB5AE48F4F | 4     | 0     | 0.01   |
-| SanDisk   | WD_BLACK SN770     | 500 GB | 337B8C022F39 | 4     | 0     | 0.01   |
 | Seagate   | FireCuda 520 SS... | 1 TB   | 577076A044DF | 4     | 0     | 0.01   |
 | Toshiba   | KXG6AZNV256G       | 256 GB | 87B8A84A780A | 4     | 0     | 0.01   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 0096BF54A384 | 4     | 0     | 0.01   |
@@ -23712,6 +23720,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 500 GB | 6E0DB43C6EEF | 4     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 99AED785C48D | 4     | 0     | 0.01   |
 | SanDisk   | WD Blue SN570      | 1 TB   | 395FDC7DECB4 | 4     | 0     | 0.01   |
+| SanDisk   | WD PC SN810 SDC... | 2 TB   | D56E1EAC76B1 | 4     | 0     | 0.01   |
 | SanDisk   | WD_BLACK SN770     | 1 TB   | 230C8AE54521 | 4     | 0     | 0.01   |
 | SanDisk   | WD_BLACK SN770     | 1 TB   | C170951C9231 | 4     | 0     | 0.01   |
 | Toshiba   | KBG30ZMV256G KI... | 256 GB | BF8D1D01952D | 4     | 0     | 0.01   |
@@ -23747,7 +23756,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN810 NVMe      | 512 GB | C26B5E747239 | 4     | 0     | 0.01   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | DAA77EAFA7B3 | 4     | 0     | 0.01   |
 | Samsung   | MZVLW1T0HMLH-000L7 | 1 TB   | 03E46E1852D8 | 75    | 16    | 0.01   |
-| ADATA     | SM2P41C3 NVMe      | 512 GB | 8C9BB2E80088 | 4     | 0     | 0.01   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 8012F59A63F5 | 4     | 0     | 0.01   |
 | KIOXIA... | G2 SSD             | 1 TB   | 0A642342FFBD | 4     | 0     | 0.01   |
 | Kingston  | SA2000M8500G       | 500 GB | 76EC0C197643 | 4     | 0     | 0.01   |
@@ -23777,7 +23785,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN730 SDBPNT... | 1 TB   | CE4F03BA7A58 | 4     | 0     | 0.01   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | BA680730A468 | 4     | 0     | 0.01   |
 | ADATA     | IM2P33F8BR2-256GB  | 256 GB | 969038317671 | 4     | 0     | 0.01   |
-| AGI       | AGI512G16AI198     | 512 GB | E748463E8C44 | 4     | 0     | 0.01   |
 | Apple     | SSD AP0128H        | 121 GB | 0A7463E68893 | 4     | 0     | 0.01   |
 | Apple     | SSD AP0128H        | 121 GB | 897A74C49A78 | 4     | 0     | 0.01   |
 | Apple     | SSD AP0128H        | 121 GB | DA997D1617D2 | 4     | 0     | 0.01   |
@@ -23831,7 +23838,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 256 GB | AB3347DCE553 | 4     | 0     | 0.01   |
 | WDC       | PC SN730 SDBQNT... | 1 TB   | 9E9F8E1D901C | 4     | 0     | 0.01   |
 | WDC       | PC SN730 SDBQNT... | 512 GB | 098124157F3E | 4     | 0     | 0.01   |
-| Apacer    | AS2280P4U          | 1 TB   | 434C8D6E42E5 | 4     | 0     | 0.01   |
 | Crucial   | CT1000P3SSD8       | 1 TB   | C97097CD5E48 | 4     | 0     | 0.01   |
 | Kingston  | SA2000M8250G       | 250 GB | 87B5657A1C93 | 4     | 0     | 0.01   |
 | Micron    | MTFDHBA512QFD-1... | 512 GB | C84EE4F81C3F | 4     | 0     | 0.01   |
@@ -24018,6 +24024,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM512GD3JX016N    | 512 GB | 0F87DF10A32C | 4     | 0     | 0.01   |
 | SK hynix  | PC611 NVMe         | 1 TB   | 6B2AF198F7DD | 4     | 0     | 0.01   |
 | SK hynix  | SKHynix_HFM256G... | 256 GB | E9F875ACC7A4 | 4     | 0     | 0.01   |
+| SSSTC     | CL4-8D512          | 512 GB | 4FF61E02CA5A | 4     | 0     | 0.01   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | A087FDE0869F | 4     | 0     | 0.01   |
 | Samsung   | MZVL22T0HBLB-00B00 | 2 TB   | C9FD2BE3CC5C | 4     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | A0A6E74DCE0B | 4     | 0     | 0.01   |
@@ -24106,6 +24113,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | BC711 NVMe         | 512 GB | AEDF99832C77 | 3     | 0     | 0.01   |
 | SK hynix  | SKHynix_HFM256G... | 256 GB | B99EA502A66B | 3     | 0     | 0.01   |
 | SSSTC     | CL4-3D512-Q11 NVMe | 512 GB | E81B61DD422C | 3     | 0     | 0.01   |
+| Samsung   | MZVL2512HCJQ-00BH1 | 512 GB | A4E5065E6DE5 | 3     | 0     | 0.01   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 69C8FD322E99 | 3     | 0     | 0.01   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 8ED2A834CEF3 | 3     | 0     | 0.01   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | B437547EF0F5 | 3     | 0     | 0.01   |
@@ -24253,7 +24261,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980 PRO        | 2 TB   | D95D96FD97BA | 3     | 0     | 0.01   |
 | SanDisk   | Ultra 3D NVMe      | 2 TB   | 744C0C253264 | 3     | 0     | 0.01   |
 | SanDisk   | WD_BLACK SN770     | 500 GB | 0AACD83D0761 | 3     | 0     | 0.01   |
-| WDC       | PC SN530 SDBPNP... | 512 GB | A2EFDCECE60F | 3     | 0     | 0.01   |
 | WDC       | PC SN720 SDAPNT... | 256 GB | D7B74988EADD | 3     | 0     | 0.01   |
 | WDC       | PC SN730 SDBPNT... | 1 TB   | FF43BD105A89 | 3     | 0     | 0.01   |
 | WDC       | WDS200T1X0E-00AFY0 | 2 TB   | 5C15AB543C81 | 3     | 0     | 0.01   |
@@ -24398,6 +24405,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVL22T0HBLB-00BL7 | 2 TB   | 6F66A8F5265B | 3     | 0     | 0.01   |
 | Samsung   | MZVL2512HCJQ-00BL2 | 512 GB | 12ED72FB5833 | 3     | 0     | 0.01   |
 | Samsung   | MZVLB512HAJQ-00000 | 512 GB | 0024411BE66B | 3     | 0     | 0.01   |
+| Samsung   | MZVLQ1T0HBLB-00BTW | 1 TB   | DC7D84D9EE73 | 3     | 0     | 0.01   |
 | Samsung   | MZVLQ256HAJD-000H1 | 256 GB | F73B39F103C2 | 3     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | AF334DD32FE9 | 3     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | C9EDA26BE0A7 | 3     | 0     | 0.01   |
@@ -24433,7 +24441,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | EDA5D08ED86A | 3     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 834B7BF7DC0C | 3     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 9945797A95A7 | 3     | 0     | 0.01   |
-| SanDisk   | WD PC SN810 SDC... | 2 TB   | D56E1EAC76B1 | 3     | 0     | 0.01   |
 | SanDisk   | WD_BLACK SN850X    | 2 TB   | 223597E9C2F4 | 3     | 0     | 0.01   |
 | SanDisk   | WD_BLACK SN850X    | 2 TB   | 843B3CA870B6 | 3     | 0     | 0.01   |
 | Star D... | PCIe SSD           | 480 GB | 89DE98C5E376 | 3     | 0     | 0.01   |
@@ -24450,6 +24457,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8PDP3256B-AI1    | 256 GB | 4D2B472AF8C6 | 3     | 0     | 0.01   |
 | Micron    | MTFDHBA512QFD      | 512 GB | 856EAFCE7C7D | 3     | 0     | 0.01   |
 | Micron    | MTFDKBA1T0TFH-1... | 1 TB   | A307E257B13C | 3     | 0     | 0.01   |
+| Patriot   | M.2 P300           | 256 GB | 0A8382541D6A | 3     | 0     | 0.01   |
 | Phison    | 311CD0512GB        | 512 GB | 2C3A7368DC39 | 3     | 0     | 0.01   |
 | SK hynix  | BC511 NVMe         | 512 GB | B17910DE5C60 | 3     | 0     | 0.01   |
 | SK hynix  | HFM128GDGTNG-87A0A | 128 GB | 5AE8246A452E | 3     | 0     | 0.01   |
@@ -24458,8 +24466,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM512GDHTNG-8710B | 512 GB | CA5453787B58 | 3     | 0     | 0.01   |
 | Samsung   | MZALQ512HBLU-00BL2 | 512 GB | BEB7AEAE48B1 | 3     | 0     | 0.01   |
 | Samsung   | MZALQ512HBLU-00BL2 | 512 GB | CCF6DAA6295A | 3     | 0     | 0.01   |
-| Samsung   | MZVL2512HCJQ-00BH1 | 512 GB | A4E5065E6DE5 | 3     | 0     | 0.01   |
-| Samsung   | MZVLQ1T0HBLB-00BTW | 1 TB   | DC7D84D9EE73 | 3     | 0     | 0.01   |
 | Samsung   | PM981a NVMe        | 2 TB   | 3A048BC2D8FC | 3     | 0     | 0.01   |
 | Samsung   | PM991a NVMe        | 128 GB | 52F121C20B98 | 3     | 0     | 0.01   |
 | Samsung   | PM9A1 NVMe         | 1 TB   | 991549C3AE81 | 3     | 0     | 0.01   |
@@ -24642,7 +24648,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 1 TB   | A3E8840C2FBA | 3     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 4A0A3106FF60 | 3     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 2 TB   | CD3BBACEBF54 | 3     | 0     | 0.01   |
-| Samsung   | SSD 990 PRO        | 1 TB   | 248EF998E001 | 3     | 0     | 0.01   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | 5883340EF44E | 3     | 0     | 0.01   |
 | WDC       | PC SN530 NVMe      | 512 GB | 08FD695804A1 | 3     | 0     | 0.01   |
 | WDC       | PC SN530 NVMe      | 512 GB | 8B040F6A687E | 3     | 0     | 0.01   |
@@ -24819,12 +24824,10 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | CL1-3D256-Q11 NVMe | 256 GB | C77A8C4A5DA1 | 3     | 0     | 0.01   |
 | Micron    | 2400_MTFDKBA1T0QFM | 1 TB   | 96EFB7E1B675 | 3     | 0     | 0.01   |
 | Micron    | MTFDHBA512QFD-1... | 512 GB | 8E31CAF4716F | 3     | 0     | 0.01   |
-| Micron    | MTFDKCD1T0TFK      | 1 TB   | 36F4E294FE54 | 3     | 0     | 0.01   |
 | SK hynix  | BC511 NVMe         | 512 GB | 35E91A5458F1 | 3     | 0     | 0.01   |
 | SK hynix  | BC711 NVMe         | 512 GB | E2499D3250F9 | 3     | 0     | 0.01   |
 | SK hynix  | HFB1M8MQ331C0MR    | 128 GB | B9C9D71BC99C | 3     | 0     | 0.01   |
 | SK hynix  | PC801 NVMe         | 1 TB   | 105E25F6C633 | 3     | 0     | 0.01   |
-| Samsung   | MZVL22T0HBLB-00B00 | 2 TB   | 53C494EE98B8 | 3     | 0     | 0.01   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | 3421E090383D | 3     | 0     | 0.01   |
 | Samsung   | MZVLQ256HAJD-000   | 256 GB | C4CE7B7C23C6 | 3     | 0     | 0.01   |
 | Samsung   | MZVLQ256HAJD-000H1 | 256 GB | 57FEA17E1DD2 | 3     | 0     | 0.01   |
@@ -24906,7 +24909,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM512GD3JX013N    | 512 GB | B87A2444C6D2 | 2     | 0     | 0.01   |
 | SK hynix  | SKHynix_HFM512G... | 512 GB | 6B19FDFE6CC2 | 2     | 0     | 0.01   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | 5C22D06AAE51 | 2     | 0     | 0.01   |
-| SSSTC     | CL4-8D512          | 512 GB | 4FF61E02CA5A | 2     | 0     | 0.01   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 4E63B7FDBB24 | 2     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L2 | 1 TB   | 8DB4DBD5C403 | 2     | 0     | 0.01   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 7FDA2F13955B | 2     | 0     | 0.01   |
@@ -25030,6 +25032,7 @@ MTBF - avg. MTBF in years per sample.
 | KingFast  | 1TB                | 1 TB   | 160B4FCF8DA0 | 2     | 0     | 0.01   |
 | Kingston  | OM8PCP3512F-AI1    | 512 GB | 6920C0B1E56A | 2     | 0     | 0.01   |
 | Kingston  | SKC3000D2048G      | 2 TB   | 702763EDDC99 | 2     | 0     | 0.01   |
+| Kingston  | SNV2S500G          | 500 GB | 59F9E2B844E5 | 2     | 0     | 0.01   |
 | Lite-On   | CA1-8D128-HP       | 128 GB | 210FFAC791CB | 2     | 0     | 0.01   |
 | Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 72D20E668574 | 2     | 0     | 0.01   |
 | Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | 933E8ACF57B9 | 2     | 0     | 0.01   |
@@ -25229,6 +25232,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | C504E773DE3E | 2     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | AEE72940CB5C | 2     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 68390DD197B2 | 2     | 0     | 0.01   |
+| Samsung   | SSD 980            | 500 GB | DA63701E2F39 | 2     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | E2BDB7626BEF | 2     | 0     | 0.01   |
 | Seagate   | FireCuda 530 ZP... | 1 TB   | C26EF4774719 | 2     | 0     | 0.01   |
 | Toshiba   | KXG60ZNV1T02 KI... | 1 TB   | 784659B82749 | 2     | 0     | 0.01   |
@@ -25256,6 +25260,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZALQ256HAJD-000L2 | 256 GB | E7FE000C9E39 | 2     | 0     | 0.01   |
 | Samsung   | MZALQ512HBLU-00BL1 | 512 GB | 2A97C6E6C2B4 | 2     | 0     | 0.01   |
 | Samsung   | MZVL21T0HCLR-00BL7 | 1 TB   | 1F265481845F | 2     | 0     | 0.01   |
+| Samsung   | MZVL2512HCJQ-00B00 | 512 GB | EDD287B4EA61 | 2     | 0     | 0.01   |
 | Samsung   | MZVL2512HCJQ-00BL7 | 512 GB | 6C46C13D54D4 | 2     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000H1 | 1 TB   | 3B014ADF4740 | 2     | 0     | 0.01   |
 | Samsung   | MZVLB1T0HBLR-000L7 | 1 TB   | B33AF1F66551 | 2     | 0     | 0.01   |
@@ -25327,6 +25332,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 1 TB   | 568273320613 | 2     | 0     | 0.01   |
 | Samsung   | SSD 980            | 1 TB   | D4ED61CD120C | 2     | 0     | 0.01   |
 | Samsung   | SSD 980            | 1 TB   | EBF226045743 | 2     | 0     | 0.01   |
+| Samsung   | SSD 980 PRO        | 1 TB   | 4E1107935BF2 | 2     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | D05BD2A4A6C8 | 2     | 0     | 0.01   |
 | Samsung   | SSD 980 PRO        | 1 TB   | F35E1C11F594 | 2     | 0     | 0.01   |
 | SanDisk   | Extreme Pro        | 500 GB | F03418031E96 | 2     | 0     | 0.01   |
@@ -25384,7 +25390,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0203AH     | 1 TB   | A09B26E969F0 | 2     | 0     | 0.01   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | 277199F7F1FE | 2     | 0     | 0.01   |
 | Kingston  | OM8PCP31024F-AI1   | 1 TB   | 59CECE58546D | 2     | 0     | 0.01   |
-| Kingston  | SNV2S500G          | 500 GB | 59F9E2B844E5 | 2     | 0     | 0.01   |
 | Lite-On   | CA3-8D512          | 512 GB | AA2FCA120675 | 2     | 0     | 0.01   |
 | Micron    | MTFDHBA512QFD      | 512 GB | D3296B46C6D9 | 2     | 0     | 0.01   |
 | Mushkin   | MKNSSDPE2TB-D8     | 2 TB   | FEB5B01C5818 | 2     | 0     | 0.01   |
@@ -25413,7 +25418,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 67B0BDC7D3DB | 2     | 0     | 0.01   |
 | Samsung   | SSD 970 PRO        | 512 GB | 31946E430DCB | 2     | 0     | 0.01   |
 | Samsung   | SSD 980            | 1 TB   | 1B924E410F56 | 2     | 0     | 0.01   |
-| Samsung   | SSD 980 PRO        | 1 TB   | 4E1107935BF2 | 2     | 0     | 0.01   |
 | Silico... | NE-1TB             | 1 TB   | 866C25DDBCA9 | 2     | 0     | 0.01   |
 | Toshiba   | KXG60ZNV1T02 NV... | 1 TB   | CC5D8229C0B8 | 2     | 0     | 0.01   |
 | Union ... | RPFTJ256PDD2MWX    | 256 GB | 63C2D5AE212C | 2     | 0     | 0.01   |
@@ -25432,7 +25436,6 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | OM8PCP3512F-AA     | 512 GB | 62E8554AB057 | 2     | 0     | 0.01   |
 | Kingston  | SNVS1000G          | 1 TB   | 0EFBB8F4A17E | 2     | 0     | 0.01   |
 | Kingston  | SNVS250G           | 250 GB | 80A8524DE80F | 2     | 0     | 0.01   |
-| Micron    | 2450_MTFDKBA1T0TFK | 1 TB   | FD1DEBD1CE54 | 2     | 0     | 0.01   |
 | Micron    | 3400 NVMe          | 1 TB   | 31DEB19C39BF | 2     | 0     | 0.01   |
 | Micron    | MTFDKBA1T0TFH-1... | 1 TB   | 61C7DB30FC7C | 2     | 0     | 0.01   |
 | Phison    | 311CD0512GB        | 512 GB | 69A0B2446BE3 | 2     | 0     | 0.01   |
@@ -26051,7 +26054,6 @@ MTBF - avg. MTBF in years per sample.
 | SPCC      | M.2 PCIe SSD       | 512 GB | 7C549C1C5946 | 92    | 47    | 0.01   |
 | Samsung   | MZALQ256HAJD-000L2 | 256 GB | 38499C53F91D | 1     | 0     | 0.01   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | E2452771B90F | 1     | 0     | 0.01   |
-| Samsung   | MZVL2512HCJQ-00B00 | 512 GB | EDD287B4EA61 | 1     | 0     | 0.01   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | C45A70536A9D | 1     | 0     | 0.01   |
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 4A50AEB0BC28 | 1     | 0     | 0.01   |
 | Samsung   | MZVLQ1T0HBLB-00B00 | 1 TB   | C0CCC0FF3386 | 1     | 0     | 0.01   |
@@ -26205,6 +26207,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM256GDJTNG-8310A | 256 GB | 00B8C7DDA4D5 | 1     | 0     | 0.00   |
 | SK hynix  | HFM512GD3JX013N    | 512 GB | 2B26D63C7E8E | 1     | 0     | 0.00   |
 | SK hynix  | PC401 NVMe         | 256 GB | 60055A7628F7 | 1     | 0     | 0.00   |
+| SK hynix  | PC801 NVMe         | 2 TB   | E8DF96D32404 | 1     | 0     | 0.00   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | DAC9CDD2CE79 | 1     | 0     | 0.00   |
 | SPCC      | M.2 PCIe SSD       | 2 TB   | C75052BA7643 | 1     | 0     | 0.00   |
 | Samsung   | MZALQ256HBJD-00BL2 | 256 GB | DE6A173A9A62 | 1     | 0     | 0.00   |
@@ -26270,6 +26273,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC611 NVMe         | 1 TB   | 78A95845DABB | 1     | 0     | 0.00   |
 | SK hynix  | SKHynix_HFS512G... | 512 GB | B1BDDAED9567 | 1     | 0     | 0.00   |
 | Samsung   | 980 PRO with He... | 2 TB   | 2964E7B49B28 | 1     | 0     | 0.00   |
+| Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | FED7804C5485 | 1     | 0     | 0.00   |
 | Samsung   | MZVL21T0HCLR-00BL7 | 1 TB   | C6FC39403829 | 1     | 0     | 0.00   |
 | Samsung   | MZVL22T0HBLB-00B00 | 2 TB   | 3583C12C06D6 | 1     | 0     | 0.00   |
 | Samsung   | MZVL2512HCJQ-00BL2 | 512 GB | 166D5C10F5CC | 1     | 0     | 0.00   |
@@ -26439,6 +26443,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0202AO     | 32 GB  | 087C8E3B5D4D | 1     | 0     | 0.00   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | 3F3728F195C4 | 1     | 0     | 0.00   |
 | Intel     | SSDPEKNW010T8      | 1 TB   | 083C584D95C2 | 1     | 0     | 0.00   |
+| Intel     | SSDPEKNW010TZL     | 1 TB   | E55972FEFF06 | 1     | 0     | 0.00   |
 | Intel     | SSDPEKNW512G8      | 512 GB | D812DD34A467 | 1     | 0     | 0.00   |
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 035907D0C49E | 1     | 0     | 0.00   |
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 0DC89D6AFB90 | 1     | 0     | 0.00   |
@@ -26535,6 +26540,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D061B8F484CF | 1     | 0     | 0.00   |
 | Samsung   | SSD 980            | 500 GB | 5C42577B5059 | 1     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 00ED5522140A | 1     | 0     | 0.00   |
+| Samsung   | SSD 980 PRO        | 1 TB   | 87FE940F64FA | 1     | 0     | 0.00   |
 | Silico... | PCIe-8 SSD         | 512 GB | D025755B2097 | 1     | 0     | 0.00   |
 | Toshiba   | KBG40ZNT512G ME... | 512 GB | F81542A44A9F | 1     | 0     | 0.00   |
 | Toshiba   | KXG60ZNV512G NV... | 512 GB | EAC8F20058C2 | 1     | 0     | 0.00   |
@@ -26675,6 +26681,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN530 SDBPNP... | 512 GB | AECF4E22A6B8 | 1     | 0     | 0.00   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | 9A42BA334BC9 | 1     | 0     | 0.00   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | CC693A8461DB | 1     | 0     | 0.00   |
+| WDC       | PC SN530 SDBPTP... | 512 GB | B2AA4E3DA461 | 1     | 0     | 0.00   |
 | WDC       | PC SN730 NVMe      | 512 GB | 695EB73D85A5 | 1     | 0     | 0.00   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | 5DCB5628B170 | 1     | 0     | 0.00   |
 | WDC       | PC SN730 SDBQNT... | 1 TB   | 0EB768F1088A | 1     | 0     | 0.00   |
@@ -27078,7 +27085,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | ED73CFC33C05 | 1     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 694664B113EB | 1     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 1 TB   | 69A843BC6B6B | 1     | 0     | 0.00   |
-| Samsung   | SSD 980 PRO        | 1 TB   | 87FE940F64FA | 1     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 500 GB | 1E449EA6E933 | 1     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 500 GB | E662E00889F7 | 1     | 0     | 0.00   |
 | Samsung   | SSD 990 PRO        | 2 TB   | E8B8B6E5DCFE | 1     | 0     | 0.00   |
@@ -27160,6 +27166,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Blue SN570      | 2 TB   | 99B10BA6B6BA | 1     | 0     | 0.00   |
 | SanDisk   | WD Blue SN570      | 500 GB | 0A37A4536525 | 1     | 0     | 0.00   |
 | SanDisk   | WD Blue SN570      | 500 GB | EA104E5C3181 | 1     | 0     | 0.00   |
+| SanDisk   | WD_BLACK SN770     | 2 TB   | D7108ABDD69C | 1     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN770     | 2 TB   | DA41A67B9C0B | 1     | 0     | 0.00   |
 | Silico... | EDILOCA EN605      | 256 GB | 82C93151D48E | 1     | 0     | 0.00   |
 | Toshiba   | KXG60ZNV1T02 NV... | 1 TB   | 1DABD96FE0A1 | 1     | 0     | 0.00   |
@@ -27169,7 +27176,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | PC SN520 SDAPMU... | 128 GB | 3B171B9D8907 | 1     | 0     | 0.00   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | 6C75AC8F50CC | 1     | 0     | 0.00   |
 | WDC       | PC SN530 SDBPNP... | 512 GB | 8A9B5201F45F | 1     | 0     | 0.00   |
-| WDC       | PC SN530 SDBPTP... | 512 GB | B2AA4E3DA461 | 1     | 0     | 0.00   |
 | WDC       | PC SN730 NVMe      | 1 TB   | 68E499D51D08 | 1     | 0     | 0.00   |
 | WDC       | PC SN730 NVMe      | 1 TB   | 7989DFE2252A | 1     | 0     | 0.00   |
 | WDC       | PC SN730 SDBQNT... | 1 TB   | 006D3CE11C36 | 1     | 0     | 0.00   |
@@ -27298,7 +27304,6 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFM512GDHTNG-8710B | 512 GB | A3A24F12B8D6 | 1     | 0     | 0.00   |
 | SK hynix  | HFM512GDJTNG-8310A | 512 GB | 0E9E719238A5 | 1     | 0     | 0.00   |
 | SK hynix  | PC711 NVMe         | 1 TB   | 1260103D9A89 | 1     | 0     | 0.00   |
-| SK hynix  | PC801 NVMe         | 2 TB   | E8DF96D32404 | 1     | 0     | 0.00   |
 | SK hynix  | SHGP31-500GM       | 500 GB | FBAF48842CDE | 1     | 0     | 0.00   |
 | SK hynix  | SKHynix_HFS001T... | 1 TB   | E44CE03727E8 | 1     | 0     | 0.00   |
 | SPCC      | M.2 PCIe SSD       | 2 TB   | 0E2B3861308A | 1     | 0     | 0.00   |
@@ -27322,6 +27327,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLQ512HALU-000H1 | 512 GB | E6AEA7307C86 | 1     | 0     | 0.00   |
 | Samsung   | PM991a NVMe        | 256 GB | 0B43ADDE2094 | 1     | 0     | 0.00   |
 | Samsung   | PM9A1 NVMe         | 2 TB   | 09A60069C4F9 | 1     | 0     | 0.00   |
+| Samsung   | PM9A1 NVMe         | 512 GB | 358B01038B22 | 1     | 0     | 0.00   |
 | Samsung   | PM9A1 NVMe         | 512 GB | FBCD35AFAFED | 1     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 926956E777A0 | 1     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO        | 500 GB | 58415B776EEF | 1     | 0     | 0.00   |
@@ -27487,7 +27493,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | PM991a NVMe        | 512 GB | D5A0A2751072 | 1     | 0     | 0.00   |
 | Samsung   | PM991a NVMe        | 512 GB | F249414D94C1 | 1     | 0     | 0.00   |
 | Samsung   | PM9A1 NVMe         | 512 GB | 14CA2EA83B35 | 1     | 0     | 0.00   |
-| Samsung   | PM9A1 NVMe         | 512 GB | 358B01038B22 | 1     | 0     | 0.00   |
 | Samsung   | SSD 960 EVO        | 500 GB | 713A781DB547 | 1     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | FB4DFCEC559D | 1     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | DD3AB1FC2A5F | 1     | 0     | 0.00   |
@@ -27809,7 +27814,6 @@ MTBF - avg. MTBF in years per sample.
 | SSSTC     | CL1-8D256          | 256 GB | 8CCA78F8B3A5 | 0     | 0     | 0.00   |
 | Samsung   | MZALQ512HALU-000L2 | 512 GB | 8A2C2099B1AA | 0     | 0     | 0.00   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 3B4909A33530 | 0     | 0     | 0.00   |
-| Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | FED7804C5485 | 0     | 0     | 0.00   |
 | Samsung   | MZVL21T0HCLR-00BL2 | 1 TB   | E0B71E4E0852 | 0     | 0     | 0.00   |
 | Samsung   | MZVL21T0HCLR-00BL7 | 1 TB   | 6CC7638BB8E2 | 0     | 0     | 0.00   |
 | Samsung   | MZVL21T0HCLR-00BL7 | 1 TB   | E8FB3AE7EED4 | 0     | 0     | 0.00   |
@@ -27838,6 +27842,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | PM9B1 NVMe         | 1 TB   | FCE3955B6818 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO        | 500 GB | 10CB46C0BE54 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 83A4309F2675 | 0     | 0     | 0.00   |
+| Samsung   | SSD 970 EVO Plus   | 1 TB   | BF0BD3BA0227 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 93620E52857E | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 PRO        | 1 TB   | D906B4F41799 | 0     | 0     | 0.00   |
 | Samsung   | SSD 980            | 1 TB   | 8D55B1184403 | 0     | 0     | 0.00   |
@@ -27934,7 +27939,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 0CDD41D672F5 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 2DB6C2DA6DD1 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 5C4A0D3AEB59 | 0     | 0     | 0.00   |
-| Samsung   | SSD 970 EVO Plus   | 1 TB   | BF0BD3BA0227 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 9EFD9EF7EB05 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | EA7B891B7D68 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 0D700D5E1FC5 | 0     | 0     | 0.00   |
@@ -28033,13 +28037,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 250 GB | B5D7B1707639 | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 67E735184AAA | 0     | 0     | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | B1862C4BA296 | 0     | 0     | 0.00   |
-| Samsung   | SSD 980            | 500 GB | DA63701E2F39 | 0     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 1 TB   | CAAD9AC0E297 | 0     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 500 GB | 43D55C2A3674 | 0     | 0     | 0.00   |
 | Samsung   | SSD 980 PRO        | 500 GB | 8FAFB6D6B578 | 0     | 0     | 0.00   |
 | SanDisk   | WD PC SN540 SDD... | 512 GB | 61D5B569ED29 | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN770     | 1 TB   | 01BF70E6FE39 | 0     | 0     | 0.00   |
-| SanDisk   | WD_BLACK SN770     | 2 TB   | D7108ABDD69C | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN850X    | 1 TB   | EF974B72E1F9 | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN850X    | 4 TB   | DA5B5C1320F2 | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN850X HS | 1 TB   | D3C96201C0C8 | 0     | 0     | 0.00   |
@@ -28134,6 +28136,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | C8EC9B07CBFC | 0     | 0     | 0.00   |
 | Samsung   | MZVLB512HBJQ-000L7 | 512 GB | D54CE0A42F1F | 0     | 0     | 0.00   |
 | Samsung   | MZVLQ1T0HBLB-00BH1 | 1 TB   | CE72CCB09F4A | 0     | 0     | 0.00   |
+| Samsung   | MZVLQ512HBLU-00B07 | 512 GB | 095959036012 | 0     | 0     | 0.00   |
 | Samsung   | MZVLQ512HBLU-00BH1 | 512 GB | BEB9B935FDBA | 0     | 0     | 0.00   |
 | Samsung   | MZVLW256HEHP-000L2 | 256 GB | BAB6D092B55C | 0     | 0     | 0.00   |
 | Samsung   | PM981a NVMe        | 512 GB | 6DFC02FAD9E2 | 0     | 0     | 0.00   |
@@ -28191,7 +28194,6 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT500P2SSD8        | 500 GB | 73B596A0C020 | 0     | 0     | 0.00   |
 | Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 6FEFB383B6C1 | 0     | 0     | 0.00   |
 | Intel     | SSDPEKNU512GZ      | 512 GB | EFC790BA9D7F | 0     | 0     | 0.00   |
-| Intel     | SSDPEKNW010TZL     | 1 TB   | E55972FEFF06 | 0     | 0     | 0.00   |
 | Intel     | SSDPEKNW512G8H     | 512 GB | 036BA51EE175 | 0     | 0     | 0.00   |
 | KIOXIA    | KBG40ZNV512G       | 512 GB | 49E97F256AD5 | 0     | 0     | 0.00   |
 | KIOXIA    | KBG40ZPZ512G NVMe  | 512 GB | A2BFD4861A90 | 0     | 0     | 0.00   |
@@ -28818,6 +28820,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 24F373A466FC | 0     | 0     | 0.00   |
 | WDC       | WDS250G3X0C-00SJG0 | 250 GB | B2774F1A0443 | 0     | 0     | 0.00   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | E1FA78F83E32 | 0     | 0     | 0.00   |
+| Samsung   | SSD 960 EVO        | 250 GB | 64626CB05E32 | 64    | 112   | 0.00   |
 | Apacer    | AS2280P4           | 256 GB | D8E9C358CFFE | 172   | 309   | 0.00   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | F5120BB71D18 | 59    | 107   | 0.00   |
 | ADATA     | IM2P33F8A-001TD    | 1 TB   | 75B32908217A | 0     | 0     | 0.00   |
@@ -28951,7 +28954,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS240G2G0C-00AJM0 | 240 GB | 906598F95783 | 0     | 0     | 0.00   |
 | WDC       | WDS500G2B0C-00PXH0 | 500 GB | 7BA8938D76E3 | 0     | 0     | 0.00   |
 | XPG       | GAMMIX S70 BLADE   | 512 GB | E6F325FE17F3 | 0     | 0     | 0.00   |
-| Samsung   | SSD 960 EVO        | 250 GB | 64626CB05E32 | 58    | 112   | 0.00   |
 | ADATA     | FALCON             | 512 GB | E9ABDAE79E70 | 0     | 0     | 0.00   |
 | ADATA     | IM2P33F3A NVMe     | 256 GB | 44DEC1A11C3D | 0     | 0     | 0.00   |
 | ADATA     | IM2P33F3A NVMe     | 256 GB | 8B49883C66CF | 0     | 0     | 0.00   |
@@ -29028,7 +29030,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HBJQ-000L2 | 512 GB | 9BDA89444222 | 0     | 0     | 0.00   |
 | Samsung   | MZVLQ1T0HBLB-00BH1 | 1 TB   | 5A56B0152FD1 | 0     | 0     | 0.00   |
 | Samsung   | MZVLQ512HALU-000H1 | 512 GB | 30D492276490 | 0     | 0     | 0.00   |
-| Samsung   | MZVLQ512HBLU-00B07 | 512 GB | 095959036012 | 0     | 0     | 0.00   |
 | Samsung   | MZVLQ512HBLU-00B   | 512 GB | CD2759F203F8 | 0     | 0     | 0.00   |
 | Samsung   | MZVLQ512HBLU-00BH1 | 512 GB | 3F82DF813319 | 0     | 0     | 0.00   |
 | Samsung   | PM9A1 NVMe         | 1 TB   | BCCAFD2EAB6D | 0     | 0     | 0.00   |
@@ -29065,6 +29066,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD PC SN740 SDD... | 512 GB | EEE84792C37F | 0     | 0     | 0.00   |
 | SanDisk   | WD PC SN810 SDC... | 512 GB | 85C96D17C18C | 0     | 0     | 0.00   |
 | Seagate   | FireCuda 530 ZP... | 1 TB   | A4157FE909AA | 0     | 0     | 0.00   |
+| Silico... | Wodposit NVMe SSD  | 256 GB | DB3F8E61ED1C | 0     | 0     | 0.00   |
 | Toshiba   | KBG30ZMT256G       | 256 GB | 07B3880D4705 | 0     | 0     | 0.00   |
 | Toshiba   | KBG30ZMV256G KI... | 256 GB | 39159EA57A28 | 0     | 0     | 0.00   |
 | Toshiba   | KBG40ZNT256G ME... | 256 GB | C98A48D236EF | 0     | 0     | 0.00   |
@@ -30146,7 +30148,6 @@ MTBF - avg. MTBF in years per sample.
 | Mushkin   | MKNSSDPE2TB-D8     | 2 TB   | CCAE2C8F906E | 0     | 0     | 0.00   |
 | Netac     | NVMe SSD           | 1 TB   | 04FE2C1C42F5 | 0     | 0     | 0.00   |
 | Patriot   | M.2 P300           | 128 GB | CEDEC641A9B4 | 0     | 0     | 0.00   |
-| Patriot   | M.2 P300           | 256 GB | 0A8382541D6A | 0     | 0     | 0.00   |
 | Phison    | 311CD0512GB        | 512 GB | 46D946286AAA | 0     | 0     | 0.00   |
 | Phison    | MSI M390           | 250 GB | 90AE7E5301D0 | 0     | 0     | 0.00   |
 | Phison    | Sabrent Rocket ... | 1 TB   | 7116508CB3A1 | 0     | 0     | 0.00   |
@@ -30837,7 +30838,6 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD_BLACK SN850X    | 2 TB   | 77C8EE030009 | 0     | 0     | 0.00   |
 | Silico... | MS10               | 1 TB   | D83D9903FB1C | 0     | 0     | 0.00   |
 | Silico... | R5MP240G8          | 240 GB | 4228F5C31DEE | 0     | 0     | 0.00   |
-| Silico... | Wodposit NVMe SSD  | 256 GB | DB3F8E61ED1C | 0     | 0     | 0.00   |
 | Silico... | ZTC-PCIEG3-001T    | 1 TB   | 52F25575ECC8 | 0     | 0     | 0.00   |
 | Transcend | TS512GMTE220S      | 512 GB | 2A14B35AEE37 | 0     | 0     | 0.00   |
 | UMIS      | RPJTJ256MEE1OWX    | 256 GB | 591CA264E70F | 0     | 0     | 0.00   |
@@ -31094,6 +31094,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Blue SN570      | 1 TB   | CBED4401F8D0 | 0     | 0     | 0.00   |
 | SanDisk   | WD Blue SN570      | 500 GB | 61224E7CA3CE | 0     | 0     | 0.00   |
 | SanDisk   | WD Green SN350     | 1 TB   | B19BFB719815 | 0     | 0     | 0.00   |
+| SanDisk   | WD PC SN740 SDD... | 512 GB | 060EB1AF50A6 | 0     | 0     | 0.00   |
 | SanDisk   | WD PC SN810 SDC... | 2 TB   | AD5156316813 | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | DB5376FC701E | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | E88D3EDCCEB3 | 0     | 0     | 0.00   |
@@ -31373,7 +31374,6 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Blue SN570      | 2 TB   | BAD44566A63B | 0     | 0     | 0.00   |
 | SanDisk   | WD PC SN735 SDB... | 512 GB | 5E5A15272D61 | 0     | 0     | 0.00   |
 | SanDisk   | WD PC SN740 SDD... | 256 GB | 4ED98971CAF8 | 0     | 0     | 0.00   |
-| SanDisk   | WD PC SN740 SDD... | 512 GB | 060EB1AF50A6 | 0     | 0     | 0.00   |
 | SanDisk   | WD PC SN810 SDC... | 512 GB | 194D27475EB7 | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN750 SE  | 500 GB | 37DB17C4AAE8 | 0     | 0     | 0.00   |
 | SanDisk   | WD_BLACK SN770     | 1 TB   | B1BC6C5A760C | 0     | 0     | 0.00   |

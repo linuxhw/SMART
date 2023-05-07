@@ -71,8 +71,8 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | LEGEND 700         | 512 GB | 1       | 9     | 0     | 0.03   |
 | ADATA     | IM2P33F8ABR1-256GB | 256 GB | 3       | 8     | 0     | 0.02   |
 | ADATA     | NVMe IM2P33F4      | 256 GB | 2       | 7     | 0     | 0.02   |
-| ADATA     | IM2P33F8A-001TD    | 1 TB   | 3       | 6     | 0     | 0.02   |
 | ADATA     | SM2P41C3 NVMe      | 512 GB | 3       | 6     | 0     | 0.02   |
+| ADATA     | IM2P33F8A-001TD    | 1 TB   | 3       | 6     | 0     | 0.02   |
 | ADATA     | SWORDFISH          | 2 TB   | 3       | 5     | 0     | 0.02   |
 | ADATA     | LEGEND 710         | 512 GB | 2       | 4     | 0     | 0.01   |
 | ADATA     | IM2P33F8ABR1-512GB | 512 GB | 3       | 4     | 0     | 0.01   |

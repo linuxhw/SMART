@@ -47,7 +47,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDMCEAC120B3A     | 120 GB | 2       | 1373  | 0     | 3.76   |
 | Intel     | SSDSC2BB480G4      | 480 GB | 5       | 1302  | 0     | 3.57   |
 | Intel     | SSDSC2BB080G4      | 80 GB  | 10      | 1281  | 0     | 3.51   |
-| Intel     | SSDSA2CW080G3      | 80 GB  | 19      | 1290  | 1     | 3.43   |
+| Intel     | SSDSA2CW080G3      | 80 GB  | 19      | 1291  | 1     | 3.43   |
 | Intel     | SSDSC2BB120G4      | 120 GB | 3       | 1218  | 0     | 3.34   |
 | Intel     | SSDSA2BW160G3      | 160 GB | 3       | 1222  | 402   | 3.34   |
 | Intel     | SSDSC2BA800G4      | 800 GB | 4       | 1199  | 0     | 3.29   |
@@ -61,7 +61,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BB120G7R     | 120 GB | 5       | 1030  | 0     | 2.82   |
 | Intel     | SSDSC2CW180A3      | 180 GB | 17      | 1022  | 0     | 2.80   |
 | Intel     | SSDSC2BX200G4      | 200 GB | 2       | 969   | 0     | 2.66   |
-| Intel     | SSDSC2BB240G7      | 240 GB | 5       | 962   | 0     | 2.64   |
+| Intel     | SSDSC2BB240G7      | 240 GB | 5       | 963   | 0     | 2.64   |
 | Intel     | SSDSA2BW080G3H     | 80 GB  | 1       | 914   | 0     | 2.50   |
 | Intel     | SSDSC2CT060A3      | 64 GB  | 11      | 1114  | 1     | 2.48   |
 | Intel     | SSDMCEAW120A4      | 120 GB | 2       | 902   | 0     | 2.47   |
@@ -127,7 +127,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KG240G7      | 240 GB | 1       | 265   | 0     | 0.73   |
 | Intel     | SSDPAMM0008G1      | 8 GB   | 1       | 265   | 0     | 0.73   |
 | Intel     | SSDSC2BW080A4      | 80 GB  | 9       | 263   | 1     | 0.72   |
-| Intel     | SSDSC2MH250A2      | 250 GB | 1       | 251   | 0     | 0.69   |
+| Intel     | SSDSC2MH250A2      | 250 GB | 1       | 252   | 0     | 0.69   |
 | Intel     | SSDSCKJW180H6      | 180 GB | 3       | 250   | 0     | 0.69   |
 | Intel     | SSDSA1MH080G1GN    | 80 GB  | 1       | 244   | 0     | 0.67   |
 | Intel     | SSDSCKHF240A4L     | 240 GB | 3       | 272   | 370   | 0.64   |
@@ -271,7 +271,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | X18-M/X25-M G1 SSDs    | 4      | 4       | 1037  | 0     | 2.84   |
 | Intel     | Dell Certified Inte... | 2      | 7       | 1069  | 1     | 2.70   |
 | Intel     | S3520 Series SSDs      | 4      | 6       | 1396  | 1     | 2.26   |
-| Intel     | 320 Series SSDs        | 13     | 118     | 798   | 19    | 2.01   |
+| Intel     | 320 Series SSDs        | 13     | 118     | 798   | 19    | 2.02   |
 | Intel     | 520 Series SSDs        | 9      | 175     | 816   | 192   | 1.81   |
 | Intel     | 525 Series SSDs        | 3      | 9       | 722   | 1     | 1.56   |
 | Intel     | 330/335 Series SSDs    | 6      | 90      | 807   | 1     | 1.48   |

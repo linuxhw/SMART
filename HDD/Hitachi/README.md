@@ -131,7 +131,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | HDS721616PLAT80    | 160 GB | 7       | 1042  | 18    | 1.64   |
 | Hitachi   | HDS721010KLA330    | 1 TB   | 18      | 1197  | 14    | 1.63   |
 | Hitachi   | HCC545016B9A300    | 160 GB | 1       | 593   | 0     | 1.63   |
-| Hitachi   | HDS721050CLA362    | 500 GB | 220     | 831   | 62    | 1.60   |
+| Hitachi   | HDS721050CLA362    | 500 GB | 220     | 831   | 62    | 1.61   |
 | Hitachi   | HCS725032VLA380    | 320 GB | 1       | 573   | 0     | 1.57   |
 | Hitachi   | HDS721032CLA362    | 320 GB | 73      | 868   | 31    | 1.56   |
 | Hitachi   | HDT725050VLA360    | 500 GB | 11      | 873   | 20    | 1.53   |

@@ -20,7 +20,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | H10 HBRPEKNX010... | 16 GB  | 1       | 7082  | 0     | 19.40  |
 | Intel     | H20 HBRPEKNL020... | 32 GB  | 1       | 6705  | 0     | 18.37  |
 | Intel     | MEMPEK1J016GAD     | 16 GB  | 2       | 5999  | 0     | 16.44  |
-| Intel     | H10 HBRPEKNX020... | 32 GB  | 2       | 3203  | 0     | 8.78   |
+| Intel     | H10 HBRPEKNX020... | 32 GB  | 2       | 3264  | 0     | 8.94   |
 | Intel     | H10 HBRPEKNX020... | 32 GB  | 15      | 3084  | 0     | 8.45   |
 | Intel     | MT1600KEXUV        | 1.6 TB | 1       | 1720  | 0     | 4.71   |
 | Intel     | SSDPEDMW800G4      | 800 GB | 1       | 1691  | 0     | 4.64   |
@@ -59,7 +59,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPE2KX020T8      | 2 TB   | 8       | 329   | 0     | 0.90   |
 | Intel     | MEMPEK1W016GA      | 16 GB  | 9       | 322   | 0     | 0.88   |
 | Intel     | SSDPEKKF512G7L     | 512 GB | 6       | 407   | 213   | 0.87   |
-| Intel     | SSDPEKNW020T8      | 2 TB   | 74      | 309   | 1     | 0.81   |
+| Intel     | SSDPEKNW020T8      | 2 TB   | 74      | 309   | 1     | 0.82   |
 | Intel     | SSDPEK1W120GAH     | 118 GB | 2       | 296   | 0     | 0.81   |
 | Intel     | HBRPEKNX0203AHO    | 32 GB  | 17      | 285   | 0     | 0.78   |
 | Intel     | MEMPEK1J016GAL     | 16 GB  | 11      | 273   | 0     | 0.75   |
@@ -87,7 +87,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | HBRPEKNX0202ALO    | 32 GB  | 9       | 171   | 0     | 0.47   |
 | Intel     | 660p SSDPEKNW51... | 512 GB | 1       | 170   | 0     | 0.47   |
 | Intel     | HBRPEKNX0101AO     | 16 GB  | 2       | 161   | 0     | 0.44   |
-| Intel     | H10 HBRPEKNX020... | 1 TB   | 3       | 193   | 1     | 0.40   |
+| Intel     | H10 HBRPEKNX020... | 1 TB   | 3       | 198   | 1     | 0.41   |
 | Intel     | SSDPEKNW010T9      | 1 TB   | 31      | 146   | 0     | 0.40   |
 | Intel     | HBRPEKNX0101AH     | 256 GB | 18      | 146   | 0     | 0.40   |
 | Intel     | HBRPEKNX0202AL     | 512 GB | 10      | 146   | 0     | 0.40   |
@@ -139,7 +139,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEBKF256G7      | 256 GB | 1       | 21    | 0     | 0.06   |
 | Intel     | SSDPE21D280GA      | 280 GB | 2       | 3     | 0     | 0.01   |
 | Intel     | SSDPEKKA256G7      | 256 GB | 2       | 1     | 0     | 0.01   |
+| Intel     | SSDPEKNW010TZL     | 1 TB   | 1       | 1     | 0     | 0.00   |
 | Intel     | SSDPEDKE020T7      | 2 TB   | 2       | 1     | 0     | 0.00   |
-| Intel     | SSDPEKNW010TZL     | 1 TB   | 1       | 0     | 0     | 0.00   |
 | Intel     | SSDPE2KE016T8      | 1.6 TB | 2       | 0     | 0     | 0.00   |
 | Intel     | MEMPEK1J064GA      | 64 GB  | 1       | 0     | 0     | 0.00   |

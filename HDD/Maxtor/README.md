@@ -127,7 +127,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | STM3750330AS       | 752 GB | 1       | 995   | 1293  | 0.00   |
 | Maxtor    | 4D060H3            | 64 GB  | 1       | 18    | 31    | 0.00   |
 | Maxtor    | 91024U3            | 10 GB  | 1       | 607   | 1076  | 0.00   |
-| Maxtor    | 7Y250M0            | 250 GB | 3       | 21    | 45    | 0.00   |
+| Maxtor    | 7Y250M0            | 250 GB | 3       | 21    | 42    | 0.00   |
 | Maxtor    | 6Y160M0            | 160 GB | 8       | 18    | 166   | 0.00   |
 | Maxtor    | 7L300S0            | 304 GB | 3       | 13    | 40    | 0.00   |
 | Maxtor    | 6B120P0            | 122 GB | 1       | 0     | 0     | 0.00   |
@@ -175,7 +175,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | DiamondMax D540X-4D    | 2      | 5       | 23    | 159   | 0.00   |
 | Maxtor    | DiamondMax D540X-4G    | 1      | 2       | 20    | 218   | 0.00   |
 | Maxtor    | DiamondMax Plus 680... | 1      | 1       | 607   | 1076  | 0.00   |
-| Maxtor    | MaXLine Plus II        | 1      | 3       | 21    | 45    | 0.00   |
+| Maxtor    | MaXLine Plus II        | 1      | 3       | 21    | 42    | 0.00   |
 | Maxtor    | DiamondMax Plus 40 ... | 1      | 1       | 121   | 2068  | 0.00   |
 | Maxtor    | DiamondMax 40 VL Ul... | 1      | 1       | 8     | 396   | 0.00   |
 | Maxtor    | DiamondMax 3400 Ult... | 1      | 1       | 0     | 1152  | 0.00   |

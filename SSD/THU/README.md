@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | THU       | SSD 120G           | 120 GB | 1       | 339   | 0     | 0.93   |
-| THU       | SWORDBILL SATA3... | 128 GB | 1       | 11    | 0     | 0.03   |
+| THU       | SWORDBILL SATA3... | 128 GB | 1       | 12    | 0     | 0.03   |

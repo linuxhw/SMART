@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Acer      | SSD RE100 2.5      | 256 GB | 1       | 175   | 0     | 0.48   |
+| Acer      | SSD RE100 2.5      | 256 GB | 1       | 186   | 0     | 0.51   |
 | Acer      | SSD SA100          | 120 GB | 5       | 64    | 0     | 0.18   |
 | Acer      | SSD SA100          | 480 GB | 3       | 5     | 0     | 0.01   |
 | Acer      | SSD SA100          | 240 GB | 1       | 1     | 0     | 0.00   |

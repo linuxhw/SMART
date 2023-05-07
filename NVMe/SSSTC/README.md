@@ -25,8 +25,8 @@ MTBF - avg. MTBF in years per sample.
 | SSSTC     | CL4-3D1024-Q11 ... | 1 TB   | 2       | 66    | 0     | 0.18   |
 | SSSTC     | CL1-4D256          | 256 GB | 42      | 64    | 1     | 0.17   |
 | SSSTC     | CL1-8D512-HP       | 512 GB | 3       | 52    | 0     | 0.14   |
+| SSSTC     | CL4-8D512          | 512 GB | 4       | 49    | 0     | 0.14   |
 | SSSTC     | CL1-4D512          | 512 GB | 7       | 49    | 0     | 0.14   |
-| SSSTC     | CL4-8D512          | 512 GB | 4       | 49    | 0     | 0.13   |
 | SSSTC     | CL1-8D256          | 256 GB | 13      | 37    | 0     | 0.10   |
 | SSSTC     | CL1-8D256-HP       | 256 GB | 19      | 33    | 0     | 0.09   |
 | SSSTC     | CL1-4D128          | 128 GB | 8       | 20    | 0     | 0.06   |

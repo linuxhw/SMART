@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| INNOVA... | SSD_M.2_512GB_I... | 512 GB | 2       | 230   | 0     | 0.63   |
+| INNOVA... | SSD_M.2_512GB_I... | 512 GB | 2       | 235   | 0     | 0.64   |
 | INNOVA... | SSD                | 1 TB   | 3       | 207   | 0     | 0.57   |
 | INNOVA... | SSD_M.2_512GB_I... | 512 GB | 1       | 159   | 0     | 0.44   |
 | INNOVA... | SSD                | 240 GB | 4       | 117   | 0     | 0.32   |

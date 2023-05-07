@@ -38,8 +38,8 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AST280             | 480 GB | 1       | 223   | 0     | 0.61   |
 | Apacer    | AS510S             | 256 GB | 3       | 194   | 1     | 0.53   |
 | Apacer    | AS340              | 480 GB | 16      | 142   | 1     | 0.39   |
+| Apacer    | AS350              | 240 GB | 20      | 136   | 1     | 0.36   |
 | Apacer    | AS350              | 120 GB | 27      | 131   | 1     | 0.36   |
-| Apacer    | AS350              | 240 GB | 20      | 134   | 1     | 0.35   |
 | Apacer    | AS340              | 120 GB | 30      | 124   | 0     | 0.34   |
 | Apacer    | AS450              | 120 GB | 1       | 115   | 0     | 0.32   |
 | Apacer    | AS350              | 256 GB | 60      | 106   | 0     | 0.29   |

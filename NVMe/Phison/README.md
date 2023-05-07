@@ -50,8 +50,8 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | Viper M.2 VP4100   | 1 TB   | 7       | 128   | 0     | 0.35   |
 | Phison    | E12S-512G-PHISO... | 512 GB | 1       | 123   | 0     | 0.34   |
 | Phison    | APS-SE20G-2T       | 2 TB   | 1       | 122   | 0     | 0.34   |
+| Phison    | Sabrent Rocket ... | 1 TB   | 29      | 122   | 0     | 0.34   |
 | Phison    | BPXP               | 960 GB | 2       | 122   | 0     | 0.33   |
-| Phison    | Sabrent Rocket ... | 1 TB   | 29      | 120   | 0     | 0.33   |
 | Phison    | ESR01TBTLCG-EAC-4  | 1 TB   | 3       | 114   | 0     | 0.31   |
 | Phison    | TerransForce PM... | 512 GB | 1       | 113   | 0     | 0.31   |
 | Phison    | SBXe               | 480 GB | 3       | 110   | 0     | 0.30   |

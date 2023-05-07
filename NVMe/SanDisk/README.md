@@ -40,7 +40,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD Blue SN570 1... | 1 TB   | 6       | 29    | 0     | 0.08   |
 | SanDisk   | WD_BLACK SN850     | 500 GB | 5       | 26    | 0     | 0.07   |
 | SanDisk   | WD PC SN810 SDC... | 512 GB | 6       | 26    | 0     | 0.07   |
-| SanDisk   | WD_BLACK SN770     | 1 TB   | 46      | 23    | 0     | 0.06   |
+| SanDisk   | WD_BLACK SN770     | 1 TB   | 46      | 23    | 0     | 0.07   |
 | SanDisk   | WD_BLACK SN750 ... | 500 GB | 3       | 23    | 0     | 0.06   |
 | SanDisk   | WD_BLACK SN850X    | 4 TB   | 7       | 20    | 0     | 0.06   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 22      | 20    | 0     | 0.06   |
@@ -72,11 +72,11 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD PC SN740 SDD... | 512 GB | 1       | 2     | 0     | 0.01   |
 | SanDisk   | SN530 SDBPNPZ-2... | 256 GB | 3       | 2     | 0     | 0.01   |
 | SanDisk   | WD PC SN810 SDC... | 512 GB | 9       | 2     | 0     | 0.01   |
+| SanDisk   | WD PC SN810 SDC... | 2 TB   | 2       | 2     | 0     | 0.01   |
 | SanDisk   | WD PC SN810 SDC... | 1 TB   | 4       | 2     | 0     | 0.01   |
 | SanDisk   | WD PC SN735 SDB... | 256 GB | 2       | 1     | 0     | 0.01   |
 | SanDisk   | PC SN820 NVMe WD   | 4 TB   | 2       | 1     | 0     | 0.01   |
 | SanDisk   | WD PC SN740 SDD... | 256 GB | 1       | 1     | 0     | 0.01   |
-| SanDisk   | WD PC SN810 SDC... | 2 TB   | 2       | 1     | 0     | 0.00   |
 | SanDisk   | WD PC SN735 SDB... | 1 TB   | 9       | 1     | 0     | 0.00   |
 | SanDisk   | WD PC SN740 SDD... | 1 TB   | 1       | 1     | 0     | 0.00   |
 | SanDisk   | WD IX SN530 SDB... | 256 GB | 1       | 1     | 0     | 0.00   |

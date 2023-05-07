@@ -43,7 +43,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | R5MP120G8          | 120 GB | 3       | 83    | 0     | 0.23   |
 | Silico... | SK                 | 128 GB | 1       | 81    | 0     | 0.22   |
 | Silico... | 256GB PCS PCIe ... | 256 GB | 7       | 81    | 0     | 0.22   |
-| Silico... | PCIe-8 SSD         | 256 GB | 6       | 77    | 0     | 0.21   |
+| Silico... | PCIe-8 SSD         | 256 GB | 6       | 78    | 0     | 0.21   |
 | Silico... | KingSSD-N201000    | 1 TB   | 1       | 76    | 0     | 0.21   |
 | Silico... | NE-128             | 128 GB | 17      | 75    | 4     | 0.21   |
 | Silico... | AITC M.2 FZ300     | 128 GB | 1       | 73    | 0     | 0.20   |
@@ -60,7 +60,7 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | GV1TB              | 1 TB   | 1       | 46    | 0     | 0.13   |
 | Silico... | FPI1TBMWR7         | 1 TB   | 1       | 45    | 0     | 0.12   |
 | Silico... | EX-1TB PRO         | 1 TB   | 1       | 44    | 0     | 0.12   |
-| Silico... | 1TB MEGA S3        | 1 TB   | 1       | 42    | 0     | 0.12   |
+| Silico... | 1TB MEGA S3        | 1 TB   | 1       | 43    | 0     | 0.12   |
 | Silico... | PCIe-8 SSD         | 512 GB | 30      | 42    | 0     | 0.12   |
 | Silico... | MS10               | 1 TB   | 4       | 39    | 0     | 0.11   |
 | Silico... | 1TB                | 1 TB   | 1       | 38    | 0     | 0.11   |
@@ -79,8 +79,8 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | OSC PCIE           | 512 GB | 1       | 19    | 0     | 0.05   |
 | Silico... | NVMe SSD 256G      | 256 GB | 1       | 18    | 0     | 0.05   |
 | Silico... | ASint AS806        | 512 GB | 1       | 18    | 0     | 0.05   |
-| Silico... | 512GB              | 512 GB | 7       | 17    | 0     | 0.05   |
 | Silico... | 256GB              | 256 GB | 11      | 17    | 0     | 0.05   |
+| Silico... | 512GB              | 512 GB | 7       | 17    | 0     | 0.05   |
 | Silico... | 256GB NVME EVM     | 256 GB | 1       | 16    | 0     | 0.05   |
 | Silico... | SSD_M.2_PCI_NVM... | 1 TB   | 4       | 14    | 0     | 0.04   |
 | Silico... | PCIe-4 SSD         | 512 GB | 3       | 13    | 0     | 0.04   |
@@ -100,9 +100,9 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | RD-P380TIN-C256    | 256 GB | 1       | 0     | 0     | 0.00   |
 | Silico... | DC 256G            | 256 GB | 1       | 0     | 0     | 0.00   |
 | Silico... | NE-240             | 240 GB | 1       | 0     | 0     | 0.00   |
+| Silico... | Wodposit NVMe SSD  | 256 GB | 3       | 0     | 0     | 0.00   |
 | Silico... | FPE220M8SSD512G    | 512 GB | 1       | 0     | 0     | 0.00   |
 | Silico... | NVMe SSD           | 240 GB | 1       | 0     | 0     | 0.00   |
-| Silico... | Wodposit NVMe SSD  | 256 GB | 3       | 0     | 0     | 0.00   |
 | Silico... | HomeNet HN M2 SSD  | 256 GB | 1       | 0     | 0     | 0.00   |
 | Silico... | ZTC-PCIEG3-001T    | 1 TB   | 1       | 0     | 0     | 0.00   |
 | Silico... | APS-SE20           | 1 TB   | 1       | 74    | 590   | 0.00   |
