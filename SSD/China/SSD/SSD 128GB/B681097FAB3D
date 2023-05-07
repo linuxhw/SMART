@@ -13,7 +13,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Mar 20 19:11:42 2023 +05
+Local Time is:    Sat Mar 25 09:29:10 2023 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,12 +60,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    5152
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    1704
+  9 Power_On_Hours          -O--CK   100   100   050    -    5206
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    1710
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    7
-164 Unknown_Attribute       -O--CK   100   100   050    -    402445
+164 Unknown_Attribute       -O--CK   100   100   050    -    402447
 165 Unknown_Attribute       -O--CK   100   100   050    -    1657
 166 Unknown_Attribute       -O--CK   100   100   050    -    309
 167 Unknown_Attribute       -O--CK   100   100   050    -    405
@@ -85,7 +85,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
 241 Total_LBAs_Written      ----CK   100   100   050    -    400205
-242 Total_LBAs_Read         ----CK   100   100   050    -    371887
+242 Total_LBAs_Read         ----CK   100   100   050    -    371929
 245 Unknown_Attribute       -O--CK   100   100   050    -    342437
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -184,7 +184,7 @@ Error 42 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 a0 00  Error: ABRT
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
@@ -197,18 +197,19 @@ Error 42 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               90%      4525         -
+# 1  Extended offline    Completed without error       00%      5200         -
 # 2  Short offline       Aborted by host               90%      4525         -
-# 3  Extended offline    Interrupted (host reset)      90%      3981         -
-# 4  Extended offline    Completed without error       00%      3850         -
-# 5  Extended offline    Completed without error       00%      3624         -
-# 6  Short offline       Completed without error       00%      3209         -
-# 7  Extended offline    Completed without error       00%      2990         -
-# 8  Extended offline    Completed without error       00%      2905         -
-# 9  Extended offline    Completed without error       00%      2797         -
-#10  Extended offline    Interrupted (host reset)      90%      2736         -
-#11  Extended offline    Completed without error       00%      2643         -
-#12  Extended offline    Completed without error       00%      2578         -
+# 3  Short offline       Aborted by host               90%      4525         -
+# 4  Extended offline    Interrupted (host reset)      90%      3981         -
+# 5  Extended offline    Completed without error       00%      3850         -
+# 6  Extended offline    Completed without error       00%      3624         -
+# 7  Short offline       Completed without error       00%      3209         -
+# 8  Extended offline    Completed without error       00%      2990         -
+# 9  Extended offline    Completed without error       00%      2905         -
+#10  Extended offline    Completed without error       00%      2797         -
+#11  Extended offline    Interrupted (host reset)      90%      2736         -
+#12  Extended offline    Completed without error       00%      2643         -
+#13  Extended offline    Completed without error       00%      2578         -
 
 Selective Self-tests/Logging not supported
 
@@ -217,12 +218,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1704  ---  Lifetime Power-On Resets
-0x01  0x010  4            5152  ---  Power-on Hours
-0x01  0x018  6       458036186  ---  Logical Sectors Written
-0x01  0x020  6           48276  ---  Number of Write Commands
-0x01  0x028  6      2897160595  ---  Logical Sectors Read
-0x01  0x030  6          121862  ---  Number of Read Commands
+0x01  0x008  4            1710  ---  Lifetime Power-On Resets
+0x01  0x010  4            5206  ---  Power-on Hours
+0x01  0x018  6       458036194  ---  Logical Sectors Written
+0x01  0x020  6               1  ---  Number of Write Commands
+0x01  0x028  6      2899935973  ---  Logical Sectors Read
+0x01  0x030  6            9553  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -236,5 +237,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 

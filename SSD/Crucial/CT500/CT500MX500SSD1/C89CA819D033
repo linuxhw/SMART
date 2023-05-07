@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.1-arch1-1] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.13-arch1-1] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Mar  1 17:25:12 2023 CET
+Local Time is:    Mon May  1 11:02:18 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -67,17 +67,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    20
   5 Reallocate_NAND_Blk_Cnt -O--CK   099   099   010    -    5
-  9 Power_On_Hours          -O--CK   100   100   000    -    11090
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2716
+  9 Power_On_Hours          -O--CK   100   100   000    -    11322
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2864
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   081   081   000    -    289
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    163
+173 Ave_Block-Erase_Count   -O--CK   081   081   000    -    295
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    187
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    38
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    47
-194 Temperature_Celsius     -O---K   074   045   000    -    26 (Min/Max 0/55)
+194 Temperature_Celsius     -O---K   070   045   000    -    30 (Min/Max 0/55)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    5
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -85,9 +85,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   081   081   001    -    19
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    18
-246 Total_LBAs_Written      -O--CK   100   100   000    -    67587857914
-247 Host_Program_Page_Count -O--CK   100   100   000    -    1164386050
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    1850398763
+246 Total_LBAs_Written      -O--CK   100   100   000    -    69311919726
+247 Host_Program_Page_Count -O--CK   100   100   000    -    1193896729
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    1898624432
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -135,8 +135,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     18/26 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     20/30 Celsius
 Lifetime    Min/Max Temperature:      0/55 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -152,20 +152,20 @@ SCT Error Recovery Control command not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            2716  ---  Lifetime Power-On Resets
-0x01  0x010  4           11090  ---  Power-on Hours
-0x01  0x018  6      3163348474  ---  Logical Sectors Written
-0x01  0x020  6      1174973566  ---  Number of Write Commands
-0x01  0x028  6      1859530539  ---  Logical Sectors Read
-0x01  0x030  6       807030755  ---  Number of Read Commands
+0x01  0x008  4            2864  ---  Lifetime Power-On Resets
+0x01  0x010  4           11322  ---  Power-on Hours
+0x01  0x018  6       592442990  ---  Logical Sectors Written
+0x01  0x020  6      1187746589  ---  Number of Write Commands
+0x01  0x028  6      3798186649  ---  Logical Sectors Read
+0x01  0x030  6       825025941  ---  Number of Read Commands
 0x01  0x038  6      4294967296  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4              47  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             165  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             189  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
-0x05  0x010  1              27  ---  Average Short Term Temperature
-0x05  0x018  1              26  ---  Average Long Term Temperature
+0x05  0x008  1              30  ---  Current Temperature
+0x05  0x010  1              22  ---  Average Short Term Temperature
+0x05  0x018  1              22  ---  Average Long Term Temperature
 0x05  0x020  1              55  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
 0x05  0x030  1              45  ---  Highest Average Short Term Temperature
@@ -177,8 +177,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           18298  ---  Number of Hardware Resets
-0x06  0x010  4             618  ---  Number of ASR Events
+0x06  0x008  4           19632  ---  Number of Hardware Resets
+0x06  0x010  4             647  ---  Number of ASR Events
 0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              19  ---  Percentage Used Endurance Indicator

@@ -13,7 +13,7 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Mar 15 22:06:17 2023 EDT
+Local Time is:    Sat Mar 18 11:23:16 2023 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -69,13 +69,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
   7 Seek_Error_Rate         -O-R--   100   100   001    -    0
   8 Seek_Time_Performance   --S---   133   133   020    -    18
-  9 Power_On_Hours          -O--C-   098   098   000    -    19978
+  9 Power_On_Hours          -O--C-   098   098   000    -    20039
  10 Spin_Retry_Count        -O--C-   100   100   001    -    0
  12 Power_Cycle_Count       -O--CK   099   099   000    -    78
  22 Unknown_Attribute       PO---K   100   100   025    -    100
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    900
-193 Load_Cycle_Count        -O--C-   100   100   000    -    900
-194 Temperature_Celsius     -O----   030   030   000    -    46 (Min/Max 20/58)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    903
+193 Load_Cycle_Count        -O--C-   100   100   000    -    903
+194 Temperature_Celsius     -O----   028   028   000    -    47 (Min/Max 20/58)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -138,7 +138,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    46 Celsius
+Current Temperature:                    47 Celsius
 Power Cycle Min/Max Temperature:     43/52 Celsius
 Lifetime    Min/Max Temperature:     20/58 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -150,7 +150,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (6)
+Temperature History Size (Index):    128 (98)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -160,16 +160,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              78  ---  Lifetime Power-On Resets
-0x01  0x010  4           19978  ---  Power-on Hours
-0x01  0x018  6     41529934236  ---  Logical Sectors Written
-0x01  0x020  6       424261726  ---  Number of Write Commands
-0x01  0x028  6    693855249723  ---  Logical Sectors Read
-0x01  0x030  6      2462780850  ---  Number of Read Commands
-0x01  0x038  6     71923173950  ---  Date and Time TimeStamp
+0x01  0x010  4           20039  ---  Power-on Hours
+0x01  0x018  6     41550500684  ---  Logical Sectors Written
+0x01  0x020  6       425406630  ---  Number of Write Commands
+0x01  0x028  6    693932029259  ---  Logical Sectors Read
+0x01  0x030  6      2463713677  ---  Number of Read Commands
+0x01  0x038  6     72143793100  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           19841  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           19841  ---  Head Flying Hours
-0x03  0x018  4             900  ---  Head Load Events
+0x03  0x008  4           19901  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           19901  ---  Head Flying Hours
+0x03  0x018  4             903  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               2  ---  Read Recovery Attempts
 0x03  0x030  4               1  ---  Number of Mechanical Start Failures
@@ -178,8 +178,8 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x04  0x018  4               0  ---  Physical Element Status Changed
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              46  ---  Current Temperature
-0x05  0x010  1              45  N--  Average Short Term Temperature
+0x05  0x008  1              47  ---  Current Temperature
+0x05  0x010  1              47  N--  Average Short Term Temperature
 0x05  0x018  1              45  N--  Average Long Term Temperature
 0x05  0x020  1              58  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
@@ -192,8 +192,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             404  ---  Number of Hardware Resets
-0x06  0x010  4             135  ---  Number of ASR Events
+0x06  0x008  4             420  ---  Number of Hardware Resets
+0x06  0x010  4             139  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -214,7 +214,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

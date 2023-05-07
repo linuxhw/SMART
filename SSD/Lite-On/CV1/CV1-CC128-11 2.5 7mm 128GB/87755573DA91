@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.102-1-pve] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.104-1-pve] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Mar 27 11:55:07 2023 AEDT
+Local Time is:    Sat Apr  1 04:34:17 2023 AEDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 254
@@ -64,8 +64,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    4729
- 12 Power_Cycle_Count       PO----   100   100   000    -    2220
+  9 Power_On_Hours          -O----   100   100   000    -    4730
+ 12 Power_Cycle_Count       PO----   100   100   000    -    2228
 175 Program_Fail_Count_Chip PO----   100   100   000    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   000    -    64511
 177 Wear_Leveling_Count     PO----   100   100   000    -    1039
@@ -76,8 +76,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count_Total  PO----   100   100   000    -    64511
 187 Reported_Uncorrect      PO----   100   100   000    -    0
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    0
-241 Total_LBAs_Written      PO----   100   100   000    -    2053079
-242 Total_LBAs_Read         PO----   100   100   000    -    2763730
+241 Total_LBAs_Written      PO----   100   100   000    -    2054392
+242 Total_LBAs_Read         PO----   100   100   000    -    2764119
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -136,21 +136,21 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2220  ---  Lifetime Power-On Resets
-0x01  0x010  4            4729  ---  Power-on Hours
-0x01  0x018  6      1406621168  ---  Logical Sectors Written
-0x01  0x020  6      2867247802  ---  Number of Write Commands
-0x01  0x028  6       735192884  ---  Logical Sectors Read
-0x01  0x030  6      2335052781  ---  Number of Read Commands
+0x01  0x008  4            2228  ---  Lifetime Power-On Resets
+0x01  0x010  4            4730  ---  Power-on Hours
+0x01  0x018  6      1492659927  ---  Logical Sectors Written
+0x01  0x020  6      2867616134  ---  Number of Write Commands
+0x01  0x028  6       760723644  ---  Logical Sectors Read
+0x01  0x030  6      2335741373  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             979  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             981  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              55  ---  Current Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           55867  ---  Number of Hardware Resets
+0x06  0x008  4           55882  ---  Number of Hardware Resets
 0x06  0x018  4             149  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              34  ---  Percentage Used Endurance Indicator
@@ -171,7 +171,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

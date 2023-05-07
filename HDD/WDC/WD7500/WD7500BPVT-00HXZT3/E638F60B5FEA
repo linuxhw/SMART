@@ -13,7 +13,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Apr 29 16:48:38 2023 +05
+Local Time is:    Sun Apr 30 23:13:50 2023 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,16 +64,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   181   177   021    -    1941
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3853
+  3 Spin_Up_Time            POS--K   178   177   021    -    2066
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3859
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   063   063   000    -    27390
+  9 Power_On_Hours          -O--CK   063   063   000    -    27405
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3830
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    78
-193 Load_Cycle_Count        -O--CK   050   050   000    -    451764
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3836
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    82
+193 Load_Cycle_Count        -O--CK   050   050   000    -    451770
 194 Temperature_Celsius     -O---K   107   095   000    -    40
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    58
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 4220 (device log contains only the most recent 24 errors)
+Device Error Count: 4816 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,24 +125,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4220 [19] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 13 cd 11 37 40 00  Error: UNC at LBA = 0x13cd1137 = 332206391
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 f8 00 00 13 cd 11 37 40 08     07:53:38.371  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:53:38.371  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:53:38.370  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     07:53:38.367  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     07:53:38.366  SET FEATURES [Set transfer mode]
-
-Error 4219 [18] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
+Error 4816 [15] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -153,13 +136,13 @@ Error 4219 [18] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 08 00 00 13 cd 11 37 40 08     07:53:38.137  READ FPDMA QUEUED
-  60 00 01 00 00 00 00 13 cd 11 36 40 08     07:53:38.137  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:53:38.137  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:53:38.136  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     07:53:38.133  IDENTIFY DEVICE
+  60 00 02 00 18 00 00 13 cd 11 36 40 08     00:30:20.397  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:20.396  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:20.396  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:20.392  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:30:20.392  SET FEATURES [Set transfer mode]
 
-Error 4218 [17] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
+Error 4815 [14] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -170,13 +153,13 @@ Error 4218 [17] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 d0 00 00 13 cd 11 37 40 08     07:53:37.916  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:53:37.916  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:53:37.916  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     07:53:37.911  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     07:53:37.911  SET FEATURES [Set transfer mode]
+  60 00 01 00 f8 00 00 13 cd 11 37 40 08     00:30:20.174  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:20.173  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:20.173  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:20.169  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:30:20.169  SET FEATURES [Set transfer mode]
 
-Error 4217 [16] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
+Error 4814 [13] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -187,13 +170,13 @@ Error 4217 [16] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 b8 00 00 13 cd 11 37 40 08     07:53:37.681  READ FPDMA QUEUED
-  60 00 01 00 b0 00 00 13 cd 11 36 40 08     07:53:37.681  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:53:37.681  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:53:37.680  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     07:53:37.677  IDENTIFY DEVICE
+  60 00 01 00 00 00 00 13 cd 11 37 40 08     00:30:19.942  READ FPDMA QUEUED
+  60 00 01 00 30 00 00 13 cd 11 36 40 08     00:30:19.942  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:19.942  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:19.940  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:19.937  IDENTIFY DEVICE
 
-Error 4216 [15] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
+Error 4813 [12] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -204,13 +187,13 @@ Error 4216 [15] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 98 00 00 13 cd 11 37 40 08     07:53:37.469  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:53:37.469  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:53:37.469  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     07:53:37.465  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     07:53:37.465  SET FEATURES [Set transfer mode]
+  60 00 01 00 d0 00 00 13 cd 11 37 40 08     00:30:19.720  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:19.720  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:19.720  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:19.715  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:30:19.715  SET FEATURES [Set transfer mode]
 
-Error 4215 [14] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
+Error 4812 [11] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -221,13 +204,13 @@ Error 4215 [14] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 48 00 00 13 cd 11 37 40 08     07:53:37.237  READ FPDMA QUEUED
-  60 00 01 00 d0 00 00 13 cd 11 36 40 08     07:53:37.237  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:53:37.237  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:53:37.237  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     07:53:37.233  IDENTIFY DEVICE
+  60 00 01 00 28 00 00 13 cd 11 37 40 08     00:30:19.486  READ FPDMA QUEUED
+  60 00 01 00 10 00 00 13 cd 11 36 40 08     00:30:19.486  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:19.485  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:19.485  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:19.481  IDENTIFY DEVICE
 
-Error 4214 [13] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
+Error 4811 [10] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -238,13 +221,13 @@ Error 4214 [13] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 18 00 00 13 cd 11 37 40 08     07:53:37.017  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     07:53:37.017  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     07:53:37.017  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     07:53:37.013  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     07:53:37.013  SET FEATURES [Set transfer mode]
+  60 00 01 00 28 00 00 13 cd 11 37 40 08     00:30:19.264  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:19.264  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:19.264  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:19.260  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:30:19.260  SET FEATURES [Set transfer mode]
 
-Error 4213 [12] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 hours)
+Error 4810 [9] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -255,11 +238,28 @@ Error 4213 [12] occurred at disk power-on lifetime: 27379 hours (1140 days + 19 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 b0 00 00 13 cd 11 37 40 08     07:53:36.788  READ FPDMA QUEUED
-  60 00 01 00 78 00 00 13 cd 11 36 40 08     07:53:36.788  READ FPDMA QUEUED
-  60 00 08 00 a8 00 00 13 cd e2 fe 40 08     07:53:36.698  READ FPDMA QUEUED
-  60 00 08 00 a0 00 00 13 cd e2 f6 40 08     07:53:36.698  READ FPDMA QUEUED
-  60 00 08 00 98 00 00 13 cd e2 ee 40 08     07:53:36.698  READ FPDMA QUEUED
+  60 00 01 00 20 00 00 13 cd 11 37 40 08     00:30:19.038  READ FPDMA QUEUED
+  60 00 01 00 18 00 00 13 cd 11 36 40 08     00:30:19.038  READ FPDMA QUEUED
+  60 00 08 00 e0 00 00 13 cd e2 fe 40 08     00:30:18.932  READ FPDMA QUEUED
+  60 00 08 00 d8 00 00 13 cd e2 f6 40 08     00:30:18.932  READ FPDMA QUEUED
+  60 00 08 00 d0 00 00 13 cd e2 ee 40 08     00:30:18.932  READ FPDMA QUEUED
+
+Error 4809 [8] occurred at disk power-on lifetime: 27401 hours (1141 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 13 cd 11 37 40 00  Error: UNC at LBA = 0x13cd1137 = 332206391
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 01 00 30 00 00 13 cd 11 37 40 08     00:30:17.877  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:17.877  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:17.876  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:17.873  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:30:17.872  SET FEATURES [Set transfer mode]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -279,7 +279,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     25/40 Celsius
+Power Cycle Min/Max Temperature:     29/40 Celsius
 Lifetime    Min/Max Temperature:      0/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -291,7 +291,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (14)
+Temperature History Size (Index):    128 (1)
 
 SCT Error Recovery Control command not supported
 
@@ -309,12 +309,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2          117  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          516  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        19896  Vendor specific
+0x8000  4        16989  Vendor specific
 
 
 

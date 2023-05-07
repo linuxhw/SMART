@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Mar 15 22:06:16 2023 EDT
+Local Time is:    Sat Mar 18 11:23:15 2023 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -70,12 +70,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         -O-R--   100   100   067    -    0
   8 Seek_Time_Performance   --S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   097   097   000    -    26901
+  9 Power_On_Hours          -O--C-   097   097   000    -    26963
  10 Spin_Retry_Count        -O--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    87
  22 Helium_Level            PO---K   100   100   025    -    100
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    2181
-193 Load_Cycle_Count        -O--C-   099   099   000    -    2181
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    2185
+193 Load_Cycle_Count        -O--C-   099   099   000    -    2185
 194 Temperature_Celsius     -O----   175   175   000    -    37 (Min/Max 20/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -212,7 +212,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (113)
+Temperature History Size (Index):    128 (72)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -222,16 +222,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              87  ---  Lifetime Power-On Resets
-0x01  0x010  4           26901  ---  Power-on Hours
-0x01  0x018  6     59860071310  ---  Logical Sectors Written
-0x01  0x020  6       763381339  ---  Number of Write Commands
-0x01  0x028  6    715357785787  ---  Logical Sectors Read
-0x01  0x030  6      3641785951  ---  Number of Read Commands
-0x01  0x038  6     96846651850  ---  Date and Time TimeStamp
+0x01  0x010  4           26963  ---  Power-on Hours
+0x01  0x018  6     59961991582  ---  Logical Sectors Written
+0x01  0x020  6       765569686  ---  Number of Write Commands
+0x01  0x028  6    715469571443  ---  Logical Sectors Read
+0x01  0x030  6      3642866398  ---  Number of Read Commands
+0x01  0x038  6     97067271600  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           26643  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           26643  ---  Head Flying Hours
-0x03  0x018  4            2181  ---  Head Load Events
+0x03  0x008  4           26704  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           26704  ---  Head Flying Hours
+0x03  0x018  4            2185  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               1  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -240,7 +240,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              37  ---  Current Temperature
-0x05  0x010  1              36  N--  Average Short Term Temperature
+0x05  0x010  1              37  N--  Average Short Term Temperature
 0x05  0x018  1              36  N--  Average Long Term Temperature
 0x05  0x020  1              51  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
@@ -253,8 +253,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             343  ---  Number of Hardware Resets
-0x06  0x010  4              87  ---  Number of ASR Events
+0x06  0x008  4             351  ---  Number of Hardware Resets
+0x06  0x010  4              91  ---  Number of ASR Events
 0x06  0x018  4               3  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -274,8 +274,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

@@ -10,7 +10,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Oct 16 18:40:20 2020 CEST
+Local Time is:    Tue Oct 20 18:20:42 2020 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,21 +61,21 @@ SCT capabilities: 	       (0x0039)	SCT Status supported.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    2558
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    7084
+  9 Power_On_Hours          -O--C-   100   100   000    -    2571
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    7118
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    1
 169 Unknown_Attribute       PO--C-   099   099   010    -    65536
-173 Unknown_Attribute       -O--C-   200   200   000    -    502523625627
+173 Unknown_Attribute       -O--C-   200   200   000    -    506818658459
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    455
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    670
-194 Temperature_Celsius     -O---K   069   069   030    -    31 (Min/Max 30/40)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    674
+194 Temperature_Celsius     -O---K   075   075   030    -    25 (Min/Max 25/40)
 231 Temperature_Celsius     PO--CK   095   095   005    -    5
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    23185782016
-234 Unknown_Attribute       -O--CK   100   100   000    -    8418666823680
-241 Total_LBAs_Written      -O--CK   100   100   000    -    20163889003
-242 Total_LBAs_Read         -O--CK   100   100   000    -    14248647579
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    23278863616
+234 Unknown_Attribute       -O--CK   100   100   000    -    8479631327232
+241 Total_LBAs_Written      -O--CK   100   100   000    -    20235354026
+242 Total_LBAs_Read         -O--CK   100   100   000    -    14338659202
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -101,7 +101,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 1107 (device log contains only the most recent 256 errors)
+Device Error Count: 1121 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -117,139 +117,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1107 [82] occurred at disk power-on lifetime: 8 hours (0 days + 8 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
+Error 1121 [96] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
+  84 -- 51 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 a0 00 b4 ec 00 00 06 00 00 9f 00 00     00:00:22.688  NOP [Abort queued commands]
-  06 04 00 00 00 b4 00 00 00 00 00 9f 06     00:00:00.008  DATA SET MANAGEMENT
-  00 a0 00 38 a1 02 ff 06 10 00 8a 00 00 30d+18:49:34.368  NOP [Abort queued commands]
-  06 08 07 00 00 d4 a0 00 ec 00 00 89 45     00:00:00.008  DATA SET MANAGEMENT
-  00 00 00 00 00 00 00 00 00 00 00 00 00     13:58:51.648  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:54.000  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:53.900  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 ff     00:00:53.600  IDENTIFY DEVICE
+  a1 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:48.600  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:48.500  IDENTIFY DEVICE
 
-Error 1106 [81] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was sleeping.
+Error 1120 [95] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 89 00 00 d4 00 00 06 04
+  00 -- 58 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a0 e0 ef 06 87 00 00 ff 00 00 00 00 a0     00:07:08.200  PACKET
-  08 00 00 00 00 06 e0 a0 87 ec 00 00 08     00:00:00.002  DEVICE RESET
-  00 00 00 00 00 00 00 00 00 00 00 00 00  1d+09:52:43.264  NOP [Abort queued commands]
-  a0 d4 ec 06 89 00 00 00 00 00 00 00 a0     00:00:00.000  PACKET
-  08 00 00 00 00 06 d4 00 89 00 00 00 04     00:00:00.000  DEVICE RESET
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:54.000  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:53.900  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 ff     00:00:53.600  IDENTIFY DEVICE
+  a1 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:48.600  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:48.500  IDENTIFY DEVICE
 
-Error 1105 [80] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
-  When the command that caused the error occurred, the device was in a reserved state.
+Error 1119 [94] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 10 00 00 00 87 ec 06 e0 a0 08 00
+  84 -- 51 00 00 00 00 00 00 00 00 a0 08
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 00 00 00 00 00 00 00 00 00 00 00     00:08:46.147  NOP [Abort queued commands]
-  00 01 38 00 00 a0 00 00 00 00 84 51 80     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 00 00 08 01 1c 00 38 00 00 00 45d+22:45:08.736  NOP [Abort queued commands]
-  f0 01 22 ff 00 a0 00 00 00 00 00 e7 a0     00:04:22.145  [VENDOR SPECIFIC]
-  00 00 00 00 00 08 01 3c 00 22 00 00 00 45d+22:45:08.736  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:48.500  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:48.400  NOP [Abort queued commands]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 ff     00:00:48.100  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:42.800  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:42.700  NOP [Abort queued commands]
 
-Error 1104 [79] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
+Error 1118 [93] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
+  00 -- 58 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 43 03 00 07 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 a0 00 00 01 80 00 38 ec 00 00 17d+05:01:20.768  NOP [Abort queued commands]
-  1c 01 36 04 00 00 00 00 00 00 00 00 f0     00:08:44.289  RECALIBRATE [RET-4]
-  00 00 00 a0 00 ff 01 a0 00 22 ec 00 00 44d+23:27:02.656  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:48.500  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:48.400  NOP [Abort queued commands]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 ff     00:00:48.100  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:42.800  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:42.700  NOP [Abort queued commands]
 
-Error 1103 [78] occurred at disk power-on lifetime: 8 hours (0 days + 8 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
+Error 1117 [92] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
+  84 -- 51 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 a0 00 a0 ec 00 00 01 84 00 22 00 00     00:00:20.896  NOP [Abort queued commands]
-  01 04 00 00 00 3c 00 00 00 00 00 22 01     00:00:00.008  [RESERVED]
-  00 a0 00 ac e7 00 ff 01 00 00 20 00 00  6d+11:55:09.600  NOP [Abort queued commands]
-  01 08 07 00 00 48 a0 00 e7 00 00 20 43     00:00:00.008  [RESERVED]
-  00 00 00 00 00 00 00 00 00 00 00 00 00     13:58:51.648  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:42.800  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:42.700  NOP [Abort queued commands]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 ff     00:00:42.500  SET FEATURES [Enable SATA feature]
+  60 01 00 00 50 00 00 00 00 0b 00 40 08     00:00:42.400  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Enable SATA feature]
 
-Error 1102 [77] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in a reserved state.
+Error 1116 [91] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 22 00 00 3c 00 00 01 04
+  00 -- 58 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  a0 ac e7 01 20 00 00 ff 00 00 00 00 a0     00:01:14.100  PACKET
-  08 00 00 00 00 01 48 a0 20 e7 00 00 08     00:00:00.000  DEVICE RESET
-  00 00 00 00 00 00 00 00 00 00 00 00 00  1d+08:55:55.392  NOP [Abort queued commands]
-  a0 58 ec 05 93 00 00 00 00 84 00 00 a0     00:00:00.000  PACKET
-  08 00 00 00 00 05 f4 00 92 00 00 00 04     00:00:00.000  DEVICE RESET
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:42.800  IDENTIFY DEVICE
+  00 00 00 00 00 00 00 00 00 00 00 00 04     00:00:42.700  NOP [Abort queued commands]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 ff     00:00:42.500  SET FEATURES [Enable SATA feature]
+  60 01 00 00 50 00 00 00 00 0b 00 40 08     00:00:42.400  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Enable SATA feature]
 
-Error 1101 [76] occurred at disk power-on lifetime: 5 hours (0 days + 5 hours)
-  When the command that caused the error occurred, the device was sleeping.
+Error 1115 [90] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 7c 00 05 b0 00 08 00
+  84 -- 41 00 00 00 00 00 00 00 00 00 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 00 00 00 00 00 00 00 00 00 00 00     00:04:23.953  NOP [Abort queued commands]
-  00 05 93 00 00 a0 00 00 00 00 00 58 58     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 00 00 08 05 f4 00 92 00 00 00 45d+22:45:08.736  NOP [Abort queued commands]
-  c8 05 7d ff 00 00 4f 01 c2 09 d5 b0 14     00:04:22.149  READ DMA
-  00 00 00 00 00 08 05 b0 00 7c 00 00 00 45d+22:45:08.736  NOP [Abort queued commands]
+  60 01 00 00 50 00 00 00 00 0b 00 40 08     00:00:42.400  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:42.300  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Enable SATA feature]
 
-Error 1100 [75] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
+Error 1114 [89] occurred at disk power-on lifetime: 2563 hours (106 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
+  00 -- 50 00 50 00 00 00 00 0b 00 40 08   at LBA = 0x00000b00 = 2816
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 a9 03 39 09 00 00 00 00 00 01 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 a0 00 00 03 f4 00 3a ec 00 00 17d+05:01:20.768  NOP [Abort queued commands]
-  90 03 39 04 00 00 00 00 00 00 00 00 64     00:08:44.291  EXECUTE DEVICE DIAGNOSTIC
-  00 00 00 a0 00 ff 03 14 00 25 ec 00 00 45d+22:45:08.736  NOP [Abort queued commands]
+  60 01 00 00 50 00 00 00 00 0b 00 40 08     00:00:42.400  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:42.300  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:42.300  SET FEATURES [Enable SATA feature]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -284,7 +286,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (183)
+Temperature History Size (Index):    478 (217)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -303,7 +305,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

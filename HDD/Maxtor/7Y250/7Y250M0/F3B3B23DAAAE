@@ -10,7 +10,7 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sat Apr 22 16:10:11 2023 MDT
+Local Time is:    Mon Apr 24 19:13:37 2023 MDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,29 +55,29 @@ recommended polling time: 	 ( 106) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   187   180   063    -    13634
-  4 Start_Stop_Count        -O--CK   251   251   000    -    5100
-  5 Reallocated_Sector_Ct   PO--CK   252   252   063    -    15
+  3 Spin_Up_Time            POS--K   187   180   063    -    15435
+  4 Start_Stop_Count        -O--CK   251   251   000    -    5107
+  5 Reallocated_Sector_Ct   PO--CK   251   237   063    -    24
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   251   234   187    -    61418
-  9 Power_On_Minutes        -O--CK   010   010   000    -    188h+17m
+  8 Seek_Time_Performance   POS--K   248   234   187    -    60970
+  9 Power_On_Minutes        -O--CK   010   010   000    -    223h+06m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   241   241   000    -    5081
+ 12 Power_Cycle_Count       -O--CK   241   241   000    -    5088
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    50
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    2090
+194 Temperature_Celsius     -O--CK   253   253   000    -    54
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    935
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
-197 Current_Pending_Sector  ---R--   252   252   000    -    14
+197 Current_Pending_Sector  ---R--   253   238   000    -    10
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   191   133   000    -    65
+199 UDMA_CRC_Error_Count    ---R--   189   133   000    -    65
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    28
-202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
-203 Run_Out_Cancel          PO-R--   253   249   180    -    71
-204 Soft_ECC_Correction     -O-R--   253   252   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    12
+202 Data_Address_Mark_Errs  -O-R--   253   249   000    -    0
+203 Run_Out_Cancel          PO-R--   253   249   180    -    0
+204 Soft_ECC_Correction     -O-R--   253   249   000    -    0
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
@@ -99,9 +99,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 6608 inconsistent with error log pointer 5
+Warning: ATA error count 13917 inconsistent with error log pointer 5
 
-ATA Error Count: 6608 (device log contains only the most recent five errors)
+ATA Error Count: 13917 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -116,90 +116,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6608 occurred at disk power-on lifetime: 5786 hours (241 days + 2 hours)
+Error 13917 occurred at disk power-on lifetime: 13514 hours (563 days + 2 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 f8 40 64 9c ee  Error: UNC 248 sectors at LBA = 0x0e9c6440 = 245130304
+  40 51 08 e8 3b fd e0  Error: UNC 8 sectors at LBA = 0x00fd3be8 = 16595944
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 f8 40 64 9c ee 00      14:02:16.656  READ DMA
-  ec 00 00 00 00 00 a0 00      14:02:16.640  IDENTIFY DEVICE
-  ef 03 45 00 00 00 a0 00      14:02:16.640  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 00      14:02:16.640  IDENTIFY DEVICE
-  c8 00 08 38 64 9c ee 00      14:02:15.616  READ DMA
+  25 00 08 e8 3b fd e0 00      00:08:25.520  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:24.512  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:23.488  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 08 f8 3f fd e0 00      00:08:22.464  READ DMA EXT
 
-Error 6607 occurred at disk power-on lifetime: 5786 hours (241 days + 2 hours)
+Error 13916 occurred at disk power-on lifetime: 13514 hours (563 days + 2 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 08 38 64 9c ee  Error: UNC 8 sectors at LBA = 0x0e9c6438 = 245130296
+  40 51 08 e8 3b fd e0  Error: UNC 8 sectors at LBA = 0x00fd3be8 = 16595944
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 38 64 9c ee 00      14:02:15.616  READ DMA
-  ec 00 00 00 00 00 a0 00      14:02:15.600  IDENTIFY DEVICE
-  ef 03 45 00 00 00 a0 00      14:02:15.600  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 00      14:02:15.600  IDENTIFY DEVICE
-  c8 00 00 88 62 9c ee 00      14:02:14.560  READ DMA
+  25 00 08 e8 3b fd e0 00      00:08:24.512  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:23.488  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 08 f8 3f fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 10 e8 3f fd e0 00      00:08:22.464  READ DMA EXT
 
-Error 6606 occurred at disk power-on lifetime: 5786 hours (241 days + 2 hours)
+Error 13915 occurred at disk power-on lifetime: 13514 hours (563 days + 2 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 e8 88 62 9c ee  Error: UNC 232 sectors at LBA = 0x0e9c6288 = 245129864
+  40 51 08 e8 3b fd e0  Error: UNC 8 sectors at LBA = 0x00fd3be8 = 16595944
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 88 62 9c ee 00      14:02:14.560  READ DMA
-  c8 00 f8 a0 5a 9c ee 00      14:02:14.560  READ DMA
-  c8 00 08 98 5a 9c ee 00      14:02:14.560  READ DMA
-  c8 00 08 00 08 94 ee 00      14:02:14.544  READ DMA
-  c8 00 08 f8 07 94 ee 00      14:02:14.544  READ DMA
+  25 00 08 e8 3b fd e0 00      00:08:23.488  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 08 f8 3f fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 10 e8 3f fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 00 e8 3e fd e0 00      00:08:22.464  READ DMA EXT
 
-Error 6605 occurred at disk power-on lifetime: 5786 hours (241 days + 2 hours)
+Error 13914 occurred at disk power-on lifetime: 13514 hours (563 days + 2 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 40 38 64 9c ee  Error: UNC 64 sectors at LBA = 0x0e9c6438 = 245130296
+  40 51 08 e8 3b fd e0  Error: UNC 8 sectors at LBA = 0x00fd3be8 = 16595944
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 40 38 64 9c ee 00      14:01:30.656  READ DMA
-  ec 00 00 00 00 00 a0 00      14:01:30.640  IDENTIFY DEVICE
-  ef 03 45 00 00 00 a0 00      14:01:30.640  SET FEATURES [Set transfer mode]
-  ec 00 00 00 00 00 a0 00      14:01:30.640  IDENTIFY DEVICE
-  c8 00 00 88 62 9c ee 00      14:01:29.600  READ DMA
+  25 00 08 e8 3b fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 08 f8 3f fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 10 e8 3f fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 00 e8 3e fd e0 00      00:08:22.464  READ DMA EXT
+  25 00 00 e8 3d fd e0 00      00:08:22.464  READ DMA EXT
 
-Error 6604 occurred at disk power-on lifetime: 5786 hours (241 days + 2 hours)
+Error 13913 occurred at disk power-on lifetime: 13514 hours (563 days + 2 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 e8 88 62 9c ee  Error: UNC 232 sectors at LBA = 0x0e9c6288 = 245129864
+  40 51 00 e8 3b fd e0  Error: UNC at LBA = 0x00fd3be8 = 16595944
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 00 88 62 9c ee 00      14:01:29.600  READ DMA
-  c8 00 f8 a0 5a 9c ee 00      14:01:29.600  READ DMA
-  c8 00 08 98 5a 9c ee 00      14:01:29.600  READ DMA
-  c8 00 08 00 08 94 ee 00      14:01:29.584  READ DMA
-  c8 00 08 f8 07 94 ee 00      14:01:29.584  READ DMA
+  25 00 00 e8 3b fd e0 00      00:08:21.440  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:20.432  READ DMA EXT
+  25 00 08 e8 3b fd e0 00      00:08:19.408  READ DMA EXT
+  ea 00 00 00 00 00 a0 00      00:08:19.392  FLUSH CACHE EXT
+  25 00 08 e8 3b fd e0 00      00:08:18.400  READ DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
