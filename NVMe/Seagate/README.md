@@ -18,18 +18,18 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Seagate   | BarraCuda 510 S... | 500 GB | 4       | 238   | 0     | 0.65   |
-| Seagate   | FireCuda 510 SS... | 1 TB   | 11      | 228   | 0     | 0.63   |
+| Seagate   | FireCuda 510 SS... | 1 TB   | 11      | 231   | 0     | 0.64   |
 | Seagate   | FireCuda 510 SS... | 2 TB   | 4       | 207   | 0     | 0.57   |
+| Seagate   | FireCuda 520 SS... | 500 GB | 22      | 189   | 0     | 0.52   |
 | Seagate   | FireCuda 510 SS... | 1 TB   | 3       | 188   | 0     | 0.52   |
-| Seagate   | FireCuda 520 SS... | 500 GB | 22      | 182   | 0     | 0.50   |
-| Seagate   | FireCuda 520 SS... | 2 TB   | 16      | 173   | 0     | 0.47   |
+| Seagate   | FireCuda 520 SS... | 2 TB   | 16      | 175   | 0     | 0.48   |
 | Seagate   | FireCuda 510 SS... | 500 GB | 5       | 169   | 0     | 0.46   |
 | Seagate   | BarraCuda Q5 ZP... | 1 TB   | 4       | 142   | 0     | 0.39   |
 | Seagate   | FireCuda 520 SS... | 1 TB   | 17      | 123   | 0     | 0.34   |
 | Seagate   | BarraCuda 510 S... | 1 TB   | 5       | 120   | 0     | 0.33   |
 | Seagate   | FireCuda 530 ZP... | 4 TB   | 12      | 118   | 0     | 0.33   |
+| Seagate   | FireCuda 530 ZP... | 4 TB   | 4       | 118   | 0     | 0.33   |
 | Seagate   | FireCuda 530 ZP... | 2 TB   | 10      | 83    | 0     | 0.23   |
-| Seagate   | FireCuda 530 ZP... | 4 TB   | 4       | 70    | 0     | 0.19   |
 | Seagate   | FireCuda 530 ZP... | 2 TB   | 2       | 66    | 0     | 0.18   |
 | Seagate   | FireCuda 530 ZP... | 1 TB   | 3       | 61    | 0     | 0.17   |
 | Seagate   | BarraCuda 510 S... | 256 GB | 1       | 55    | 0     | 0.15   |

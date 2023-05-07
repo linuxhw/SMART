@@ -24,8 +24,8 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Zheino    | CHN-25SATAS3-256   | 256 GB | 2       | 284   | 0     | 0.78   |
+| Zheino    | CHN-25SATAA3-480   | 480 GB | 2       | 267   | 0     | 0.73   |
 | Zheino    | CHN25SATAS1 128    | 128 GB | 1       | 722   | 2     | 0.66   |
-| Zheino    | CHN-25SATAA3-480   | 480 GB | 2       | 238   | 0     | 0.65   |
 | Zheino    | CHN 25SATAA3 360   | 360 GB | 3       | 173   | 0     | 0.48   |
 | Zheino    | CHN 25SATAS3 128   | 128 GB | 1       | 151   | 0     | 0.42   |
 | Zheino    | CHN mSATA02M 256   | 256 GB | 2       | 219   | 1     | 0.37   |
@@ -63,4 +63,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Zheino    | Silicon Motion base... | 1      | 3       | 106   | 0     | 0.29   |
-| Zheino    | Unknown                | 24     | 40      | 97    | 1     | 0.22   |
+| Zheino    | Unknown                | 24     | 40      | 98    | 1     | 0.22   |

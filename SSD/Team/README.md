@@ -48,6 +48,7 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253X1120G         | 120 GB | 8       | 148   | 4     | 0.40   |
 | Team      | T253TD480G         | 480 GB | 3       | 146   | 0     | 0.40   |
 | Team      | T253X1960G         | 960 GB | 3       | 141   | 0     | 0.39   |
+| Team      | T253X2128G         | 128 GB | 5       | 136   | 0     | 0.37   |
 | Team      | T253X1480G         | 480 GB | 14      | 130   | 0     | 0.36   |
 | Team      | TEAML5Lite3D480G   | 480 GB | 4       | 129   | 0     | 0.35   |
 | Team      | TM4PS7256G         | 256 GB | 1       | 111   | 0     | 0.30   |
@@ -58,7 +59,6 @@ MTBF - avg. MTBF in years per sample.
 | Team      | T253E2002T         | 2 TB   | 1       | 93    | 0     | 0.26   |
 | Team      | TM8PS7512G         | 512 GB | 14      | 92    | 0     | 0.25   |
 | Team      | TEAMT2535T120G     | 120 GB | 1       | 85    | 0     | 0.23   |
-| Team      | T253X2128G         | 128 GB | 5       | 82    | 0     | 0.23   |
 | Team      | T2535T120G         | 120 GB | 5       | 111   | 2     | 0.23   |
 | Team      | T253X2256G         | 256 GB | 8       | 63    | 0     | 0.17   |
 | Team      | T253LE120G         | 120 GB | 8       | 58    | 0     | 0.16   |
@@ -72,14 +72,14 @@ MTBF - avg. MTBF in years per sample.
 | Team      | L5 SSD             | 240 GB | 1       | 18    | 0     | 0.05   |
 | Team      | TM8PS5256G         | 256 GB | 1       | 17    | 0     | 0.05   |
 | Team      | T2531TB            | 1 TB   | 5       | 8     | 0     | 0.02   |
-| Team      | T253256GB          | 256 GB | 4       | 6     | 0     | 0.02   |
+| Team      | T253256GB          | 256 GB | 4       | 8     | 0     | 0.02   |
 | Team      | TM4PS5128G         | 128 GB | 2       | 7     | 1     | 0.01   |
 | Team      | T253240GB          | 240 GB | 1       | 3     | 0     | 0.01   |
 | Team      | T253480GB          | 480 GB | 1       | 2     | 0     | 0.01   |
 | Team      | T253A3001T         | 1 TB   | 2       | 2     | 0     | 0.01   |
 | Team      | L3 EVO SSD         | 240 GB | 1       | 1     | 0     | 0.00   |
-| Team      | M8PS5 SSD          | 128 GB | 1       | 1     | 0     | 0.00   |
 | Team      | T253120GB          | 120 GB | 1       | 1     | 0     | 0.00   |
+| Team      | M8PS5 SSD          | 128 GB | 1       | 1     | 0     | 0.00   |
 | Team      | T253E2512G         | 512 GB | 1       | 0     | 0     | 0.00   |
 
 SSD by Family
@@ -97,4 +97,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Team      | Phison Driven SSDs     | 2      | 8       | 450   | 0     | 1.23   |
 | Team      | Silicon Motion base... | 5      | 24      | 260   | 0     | 0.71   |
-| Team      | Unknown                | 51     | 212     | 163   | 4     | 0.40   |
+| Team      | Unknown                | 51     | 212     | 165   | 4     | 0.40   |

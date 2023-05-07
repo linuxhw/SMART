@@ -25,7 +25,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | MARSHAL   | MAL2120SA-T54      | 120 GB | 1       | 1099  | 0     | 3.01   |
 | MARSHAL   | MAL2500HSA-T54L    | 500 GB | 1       | 143   | 0     | 0.39   |
-| MARSHAL   | MAL2500SA-T54      | 500 GB | 3       | 282   | 18    | 0.13   |
+| MARSHAL   | MAL2500SA-T54      | 500 GB | 3       | 287   | 18    | 0.14   |
 | MARSHAL   | MAL2750SA-T54      | 752 GB | 3       | 231   | 849   | 0.12   |
 | MARSHAL   | MAL2040SA-T54L     | 40 GB  | 1       | 2     | 0     | 0.01   |
 | MARSHAL   | MAL2020SA 80       | 20 GB  | 1       | 4     | 1     | 0.01   |
@@ -44,5 +44,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| MARSHAL   | Unknown                | 6      | 10      | 288   | 287   | 0.42   |
+| MARSHAL   | Unknown                | 6      | 10      | 289   | 287   | 0.42   |
 | MARSHAL   | 2.5" HDD               | 1      | 1       | 2     | 0     | 0.01   |

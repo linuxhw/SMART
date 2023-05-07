@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| JAMESD... | JD512              | 512 GB | 1       | 45    | 0     | 0.13   |
+| JAMESD... | JD512              | 512 GB | 1       | 46    | 0     | 0.13   |

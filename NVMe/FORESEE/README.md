@@ -20,7 +20,7 @@ MTBF - avg. MTBF in years per sample.
 | FORESEE   | P900F256GB         | 256 GB | 2       | 130   | 0     | 0.36   |
 | FORESEE   | P900F256GBH        | 256 GB | 2       | 118   | 0     | 0.33   |
 | FORESEE   | P900F128GBH        | 128 GB | 2       | 33    | 0     | 0.09   |
-| FORESEE   | VP1000F256G        | 256 GB | 4       | 7     | 0     | 0.02   |
+| FORESEE   | VP1000F256G        | 256 GB | 4       | 24    | 0     | 0.07   |
 | FORESEE   | XP2000F512G        | 512 GB | 1       | 5     | 0     | 0.01   |
 | FORESEE   | P78AF256GB         | 256 GB | 1       | 4     | 0     | 0.01   |
 | FORESEE   | XP1000F001T        | 1 TB   | 1       | 3     | 0     | 0.01   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EVM       | 512GB SSD          | 512 GB | 3       | 80    | 0     | 0.22   |
+| EVM       | 512GB SSD          | 512 GB | 3       | 82    | 0     | 0.23   |

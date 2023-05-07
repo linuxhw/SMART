@@ -18,7 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | BIWIN     | NI201_256GB        | 256 GB | 2       | 100   | 0     | 0.27   |
-| BIWIN     | SSD                | 512 GB | 12      | 52    | 0     | 0.14   |
+| BIWIN     | SSD                | 512 GB | 12      | 53    | 0     | 0.15   |
 | BIWIN     | SSD                | 1 TB   | 7       | 5     | 0     | 0.02   |
 | BIWIN     | NE-128             | 128 GB | 1       | 1     | 0     | 0.00   |
 | BIWIN     | AP323 512GB SSD    | 512 GB | 1       | 1     | 0     | 0.00   |

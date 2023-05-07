@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Hikvision | HS-SSD-E2000 2048G | 2 TB   | 1       | 653   | 0     | 1.79   |
+| Hikvision | HS-SSD-E2000 2048G | 2 TB   | 1       | 681   | 0     | 1.87   |
 | Hikvision | HS-SSD-E2000 512G  | 512 GB | 2       | 522   | 0     | 1.43   |
 | Hikvision | HS-SSD-E2000       | 256 GB | 2       | 229   | 0     | 0.63   |
 | Hikvision | HS-SSD-E1000 256G  | 256 GB | 4       | 171   | 0     | 0.47   |
@@ -29,11 +29,11 @@ MTBF - avg. MTBF in years per sample.
 | Hikvision | HS-SSD-E2000       | 512 GB | 1       | 47    | 0     | 0.13   |
 | Hikvision | HS-SSD-C2000Pro... | 1 TB   | 3       | 42    | 0     | 0.12   |
 | Hikvision | HS-SSD-E3000 512G  | 512 GB | 1       | 22    | 0     | 0.06   |
+| Hikvision | HS-SSD-E2000L 512G | 512 GB | 2       | 14    | 0     | 0.04   |
 | Hikvision | HS-SSD-C4000 2048G | 2 TB   | 1       | 13    | 0     | 0.04   |
 | Hikvision | HS-SSD-E3000 1024G | 1 TB   | 3       | 13    | 0     | 0.04   |
-| Hikvision | HS-SSD-E2000L 512G | 512 GB | 2       | 13    | 0     | 0.04   |
 | Hikvision | HS-SSD-E1000       | 128 GB | 1       | 8     | 0     | 0.02   |
 | Hikvision | HS-SSD-E3000 256G  | 256 GB | 4       | 7     | 0     | 0.02   |
 | Hikvision | HS-SSD-E1000 512G  | 512 GB | 1       | 2     | 0     | 0.01   |
-| Hikvision | HS-SSD-Desire(P... | 256 GB | 1       | 0     | 0     | 0.00   |
 | Hikvision | HS-SSD-Desire(P... | 512 GB | 2       | 0     | 0     | 0.00   |
+| Hikvision | HS-SSD-Desire(P... | 256 GB | 1       | 0     | 0     | 0.00   |

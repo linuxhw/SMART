@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Wdstars   | ssd w31-128G       | 128 GB | 1       | 114   | 0     | 0.31   |
-| Wdstars   | ssd nowm720A-512GB | 512 GB | 1       | 28    | 0     | 0.08   |
+| Wdstars   | ssd nowm720A-512GB | 512 GB | 1       | 46    | 0     | 0.13   |

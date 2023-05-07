@@ -23,11 +23,11 @@ MTBF - avg. MTBF in years per sample.
 | UMIS      | RPEYJ512VMM2QWY    | 512 GB | 1       | 84    | 0     | 0.23   |
 | UMIS      | RPITJ512VME2OWD    | 512 GB | 6       | 78    | 0     | 0.22   |
 | UMIS      | RPJTJ128MED1MWX    | 128 GB | 6       | 84    | 16    | 0.21   |
+| UMIS      | RPJTJ256MEE1OWX    | 256 GB | 58      | 65    | 0     | 0.18   |
 | UMIS      | RPJTJ128MEE1MWX    | 128 GB | 9       | 59    | 0     | 0.16   |
-| UMIS      | RPJTJ256MEE1OWX    | 256 GB | 58      | 59    | 0     | 0.16   |
 | UMIS      | RPITJ1TBVME2HWD    | 1 TB   | 2       | 56    | 0     | 0.15   |
 | UMIS      | RPFTJ128PDD2EWX    | 128 GB | 29      | 46    | 0     | 0.13   |
-| UMIS      | RPETJ512MGE2QDQ    | 512 GB | 9       | 41    | 0     | 0.11   |
+| UMIS      | RPETJ512MGE2QDQ    | 512 GB | 9       | 42    | 0     | 0.12   |
 | UMIS      | RPFTJ256PDD2MWX    | 256 GB | 23      | 34    | 0     | 0.10   |
 | UMIS      | LENSE40256GMSP3... | 256 GB | 2       | 31    | 0     | 0.09   |
 | UMIS      | RPETJ256MGE2MDQ    | 256 GB | 3       | 30    | 0     | 0.08   |

@@ -24,9 +24,9 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Leven     | JAJS600M256C       | 256 GB | 10      | 85    | 1     | 0.23   |
+| Leven     | JAJS600M512C       | 512 GB | 9       | 80    | 0     | 0.22   |
 | Leven     | JAJS300M120C       | 120 GB | 6       | 76    | 0     | 0.21   |
 | Leven     | JAJS300M240C       | 240 GB | 10      | 105   | 8     | 0.20   |
-| Leven     | JAJS600M512C       | 512 GB | 9       | 70    | 0     | 0.19   |
 | Leven     | JAJS600M128C       | 128 GB | 7       | 34    | 0     | 0.09   |
 | Leven     | JAJS300M480C       | 480 GB | 3       | 44    | 1     | 0.08   |
 | Leven     | JAJS500M120C-1     | 120 GB | 1       | 15    | 0     | 0.04   |
@@ -49,5 +49,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Leven     | Unknown                | 11     | 52      | 67    | 2     | 0.16   |
+| Leven     | Unknown                | 11     | 52      | 68    | 2     | 0.17   |
 | Leven     | Silicon Motion base... | 1      | 1       | 15    | 0     | 0.04   |

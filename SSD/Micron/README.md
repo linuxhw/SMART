@@ -38,7 +38,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5200_MTFDDAK1T9TDD | 1.9 TB | 1       | 893   | 0     | 2.45   |
 | Micron    | C400-MTFDDAK512MAM | 512 GB | 1       | 870   | 0     | 2.39   |
 | Micron    | MTFDDAK256MAM-1K1  | 256 GB | 7       | 744   | 0     | 2.04   |
-| Micron    | C400-MTFDDAK256MAM | 256 GB | 5       | 718   | 607   | 1.80   |
+| Micron    | C400-MTFDDAK256MAM | 256 GB | 5       | 726   | 607   | 1.80   |
 | Micron    | 1100 SATA          | 1 TB   | 1       | 632   | 0     | 1.73   |
 | Micron    | M600_MTFDDAT128MBF | 128 GB | 2       | 604   | 0     | 1.66   |
 | Micron    | MTFDDAK1T0MBF-1... | 1 TB   | 2       | 600   | 0     | 1.64   |
@@ -46,14 +46,14 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5200_MTFDDAK1T9TDC | 1.9 TB | 13      | 636   | 1     | 1.64   |
 | Micron    | MTFDDAK512MBF-1... | 512 GB | 7       | 648   | 3     | 1.63   |
 | Micron    | 5300_MTFDDAK1T9TDS | 1.9 TB | 1       | 589   | 0     | 1.61   |
-| Micron    | 5200_MTFDDAK480TDC | 480 GB | 6       | 584   | 0     | 1.60   |
+| Micron    | 5200_MTFDDAK480TDC | 480 GB | 6       | 587   | 0     | 1.61   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | 2       | 739   | 1     | 1.60   |
 | Micron    | M600_MTFDDAY512MBF | 512 GB | 2       | 555   | 0     | 1.52   |
 | Micron    | MTFDDAK512TBN-1... | 512 GB | 2       | 613   | 3     | 1.49   |
 | Micron    | M550_MTFDDAV128MAY | 128 GB | 1       | 543   | 0     | 1.49   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | 1       | 519   | 0     | 1.42   |
 | Micron    | M500DC_MTFDDAK2... | 240 GB | 1       | 515   | 0     | 1.41   |
-| Micron    | MTFDDAK128MAM-1J1  | 128 GB | 27      | 530   | 3     | 1.32   |
+| Micron    | MTFDDAK128MAM-1J1  | 128 GB | 27      | 531   | 3     | 1.33   |
 | Micron    | 5200_MTFDDAK240TDN | 240 GB | 10      | 472   | 0     | 1.30   |
 | Micron    | C400-MTFDDAC256MAM | 256 GB | 2       | 450   | 0     | 1.23   |
 | Micron    | M600_MTFDDAK128... | 128 GB | 1       | 445   | 0     | 1.22   |
@@ -67,8 +67,8 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5300_MTFDDAK960TDT | 960 GB | 6       | 339   | 0     | 0.93   |
 | Micron    | MTFDDAK960TDT-1... | 960 GB | 1       | 334   | 0     | 0.92   |
 | Micron    | MTFDDAK256MBF-1... | 256 GB | 7       | 326   | 0     | 0.90   |
+| Micron    | MTFDDAK256MAM-1K12 | 256 GB | 29      | 361   | 386   | 0.85   |
 | Micron    | M600_MTFDDAV256MBF | 256 GB | 12      | 309   | 0     | 0.85   |
-| Micron    | MTFDDAK256MAM-1K12 | 256 GB | 29      | 358   | 386   | 0.84   |
 | Micron    | M510DC_MTFDDAK9... | 960 GB | 2       | 908   | 5     | 0.80   |
 | Micron    | MTFDDAK960TCB-1... | 960 GB | 1       | 856   | 2     | 0.78   |
 | Micron    | 1100_MTFDDAK256TBN | 256 GB | 37      | 340   | 117   | 0.78   |
@@ -87,13 +87,13 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5200_MTFDDAK960TDN | 960 GB | 1       | 195   | 0     | 0.54   |
 | Micron    | 5300_MTFDDAK3T8TDT | 3.8 TB | 6       | 189   | 0     | 0.52   |
 | Micron    | MTFDDAV512MBF-1... | 512 GB | 5       | 189   | 0     | 0.52   |
-| Micron    | 5200_MTFDDAK480TDN | 480 GB | 4       | 188   | 0     | 0.52   |
+| Micron    | 5200_MTFDDAK480TDN | 480 GB | 4       | 189   | 0     | 0.52   |
 | Micron    | MTFDDAV480TCB-1... | 480 GB | 1       | 184   | 0     | 0.51   |
-| Micron    | MTFDDAK512MAM-1K1  | 512 GB | 4       | 418   | 717   | 0.45   |
+| Micron    | MTFDDAK512MAM-1K1  | 512 GB | 4       | 448   | 717   | 0.45   |
 | Micron    | 1300_MTFDDAK1T0TDL | 1 TB   | 2       | 149   | 0     | 0.41   |
 | Micron    | MTFDDAK512MBF-1... | 512 GB | 2       | 148   | 0     | 0.41   |
 | Micron    | 1100 SATA          | 256 GB | 44      | 169   | 26    | 0.38   |
-| Micron    | 5300_MTFDDAK480TDS | 480 GB | 10      | 135   | 0     | 0.37   |
+| Micron    | 5300_MTFDDAK480TDS | 480 GB | 10      | 137   | 0     | 0.38   |
 | Micron    | MTFDDAK960TDT      | 960 GB | 3       | 135   | 0     | 0.37   |
 | Micron    | MTFDDAK256TDL      | 256 GB | 10      | 124   | 0     | 0.34   |
 | Micron    | 5300_MTFDDAK960TDS | 960 GB | 2       | 181   | 1     | 0.33   |
@@ -102,6 +102,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 31      | 117   | 39    | 0.29   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 114     | 111   | 105   | 0.28   |
 | Micron    | 5100_MTFDDAK240TCB | 240 GB | 1       | 98    | 0     | 0.27   |
+| Micron    | MTFDDAK2T0TDL      | 2 TB   | 1       | 90    | 0     | 0.25   |
 | Micron    | MTFDDAK960TDN      | 960 GB | 2       | 84    | 0     | 0.23   |
 | Micron    | MTFDDAV256MBF-1... | 256 GB | 14      | 83    | 0     | 0.23   |
 | Micron    | MTFDDAV512TBN      | 512 GB | 1       | 81    | 0     | 0.22   |
@@ -140,7 +141,6 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5300_MTFDDAV480TDS | 480 GB | 2       | 0     | 0     | 0.00   |
 | Micron    | MTFDDAK256TDL-1... | 256 GB | 1       | 0     | 0     | 0.00   |
 | Micron    | MTFDDAK512TDL-1... | 512 GB | 1       | 0     | 0     | 0.00   |
-| Micron    | MTFDDAK2T0TDL      | 2 TB   | 1       | 0     | 0     | 0.00   |
 | Micron    | MTFDDAT064MAM-1J2  | 64 GB  | 2       | 120   | 1538  | 0.00   |
 | Micron    | MTFDDAV256TDL-1... | 256 GB | 14      | 26    | 1008  | 0.00   |
 
@@ -158,9 +158,9 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Micron    | 5100 Pro / 52x0 / 5... | 11     | 37      | 723   | 2     | 1.60   |
-| Micron    | RealSSD m4/C400/P400   | 9      | 80      | 548   | 215   | 1.36   |
+| Micron    | RealSSD m4/C400/P400   | 9      | 80      | 552   | 215   | 1.37   |
 | Micron    | 5100 Pro / 5200 SSDs   | 6      | 22      | 562   | 16    | 1.23   |
-| Micron    | 5100 Pro / 5200 / 5... | 4      | 23      | 381   | 0     | 1.04   |
+| Micron    | 5100 Pro / 5200 / 5... | 4      | 23      | 382   | 0     | 1.05   |
 | Micron    | RealSSD m4/C400        | 2      | 6       | 337   | 0     | 0.93   |
 | Micron    | BX/MX1/2/3/500, M5/... | 14     | 245     | 271   | 103   | 0.62   |
 | Micron    | Client SSDs            | 39     | 283     | 278   | 75    | 0.61   |

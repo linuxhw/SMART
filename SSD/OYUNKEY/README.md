@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| OYUNKEY   | SSD                | 360 GB | 1       | 1107  | 0     | 3.04   |
+| OYUNKEY   | SSD                | 360 GB | 1       | 1548  | 0     | 4.24   |
 | OYUNKEY   | SSD                | 120 GB | 2       | 215   | 66    | 0.10   |

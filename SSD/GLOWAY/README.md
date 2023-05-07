@@ -22,8 +22,8 @@ MTBF - avg. MTBF in years per sample.
 | GLOWAY    | STK720GS3-S7       | 720 GB | 1       | 163   | 0     | 0.45   |
 | GLOWAY    | STK1TS3-S7         | 1 TB   | 2       | 129   | 0     | 0.35   |
 | GLOWAY    | YCT512GS3-S7 Pro   | 512 GB | 2       | 111   | 0     | 0.31   |
+| GLOWAY    | FER120GS3-S7       | 120 GB | 6       | 60    | 1     | 0.13   |
 | GLOWAY    | WAR PRO T300 240G  | 240 GB | 1       | 42    | 0     | 0.12   |
-| GLOWAY    | FER120GS3-S7       | 120 GB | 6       | 48    | 1     | 0.10   |
 | GLOWAY    | STK4TS3-S7         | 4 TB   | 1       | 21    | 0     | 0.06   |
 | GLOWAY    | VAL32GS3-mSATA     | 32 GB  | 1       | 4     | 0     | 0.01   |
 | GLOWAY    | VAL128GS3-M.2-80   | 128 GB | 2       | 3     | 0     | 0.01   |

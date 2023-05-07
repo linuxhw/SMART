@@ -27,10 +27,10 @@ MTBF - avg. MTBF in years per sample.
 | KingFast  | SSD                | 32 GB  | 1       | 490   | 0     | 1.34   |
 | KingFast  | SSD                | 32 GB  | 2       | 440   | 0     | 1.21   |
 | KingFast  | SSD                | 64 GB  | 6       | 403   | 1     | 1.11   |
-| KingFast  | SSD                | 240 GB | 8       | 187   | 0     | 0.51   |
-| KingFast  | SSD                | 512 GB | 17      | 172   | 0     | 0.47   |
+| KingFast  | SSD                | 240 GB | 8       | 200   | 0     | 0.55   |
+| KingFast  | SSD                | 512 GB | 17      | 181   | 0     | 0.50   |
 | KingFast  | SSD                | 128 GB | 23      | 146   | 1     | 0.38   |
-| KingFast  | SSD                | 256 GB | 26      | 109   | 1     | 0.30   |
+| KingFast  | SSD                | 256 GB | 26      | 112   | 1     | 0.31   |
 | KingFast  | SSD                | 480 GB | 1       | 98    | 0     | 0.27   |
 | KingFast  | SSD                | 120 GB | 10      | 91    | 308   | 0.22   |
 | KingFast  | SSD                | 1 TB   | 5       | 76    | 0     | 0.21   |
@@ -51,4 +51,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | KingFast  | Unknown                | 9      | 41      | 200   | 1     | 0.54   |
-| KingFast  | Silicon Motion base... | 4      | 61      | 134   | 51    | 0.36   |
+| KingFast  | Silicon Motion base... | 4      | 61      | 140   | 51    | 0.38   |

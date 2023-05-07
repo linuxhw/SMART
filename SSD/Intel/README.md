@@ -47,13 +47,13 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDMCEAC120B3A     | 120 GB | 2       | 1373  | 0     | 3.76   |
 | Intel     | SSDSC2BB480G4      | 480 GB | 5       | 1302  | 0     | 3.57   |
 | Intel     | SSDSC2BB080G4      | 80 GB  | 10      | 1281  | 0     | 3.51   |
-| Intel     | SSDSA2CW080G3      | 80 GB  | 19      | 1289  | 1     | 3.43   |
+| Intel     | SSDSA2CW080G3      | 80 GB  | 19      | 1290  | 1     | 3.43   |
 | Intel     | SSDSC2BB120G4      | 120 GB | 3       | 1218  | 0     | 3.34   |
 | Intel     | SSDSA2BW160G3      | 160 GB | 3       | 1222  | 402   | 3.34   |
 | Intel     | SSDSC2BA800G4      | 800 GB | 4       | 1199  | 0     | 3.29   |
 | Intel     | SSDSA2CT040G3      | 40 GB  | 10      | 1194  | 0     | 3.27   |
 | Intel     | SSDSC2BB016T7      | 1.6 TB | 3       | 2032  | 2     | 3.19   |
-| Intel     | SSDSC2CW240A3      | 240 GB | 41      | 1140  | 0     | 3.12   |
+| Intel     | SSDSC2CW240A3      | 240 GB | 41      | 1144  | 0     | 3.14   |
 | Intel     | SSDSC2BB120G6      | 120 GB | 3       | 1133  | 0     | 3.11   |
 | Intel     | SSDSA2MH080G1HP    | 80 GB  | 1       | 1075  | 0     | 2.95   |
 | Intel     | SSDMCEAC120B3      | 120 GB | 3       | 1502  | 2     | 2.86   |
@@ -61,9 +61,10 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BB120G7R     | 120 GB | 5       | 1030  | 0     | 2.82   |
 | Intel     | SSDSC2CW180A3      | 180 GB | 17      | 1022  | 0     | 2.80   |
 | Intel     | SSDSC2BX200G4      | 200 GB | 2       | 969   | 0     | 2.66   |
+| Intel     | SSDSC2BB240G7      | 240 GB | 5       | 962   | 0     | 2.64   |
 | Intel     | SSDSA2BW080G3H     | 80 GB  | 1       | 914   | 0     | 2.50   |
+| Intel     | SSDSC2CT060A3      | 64 GB  | 11      | 1114  | 1     | 2.48   |
 | Intel     | SSDMCEAW120A4      | 120 GB | 2       | 902   | 0     | 2.47   |
-| Intel     | SSDSC2CT060A3      | 64 GB  | 11      | 1113  | 1     | 2.47   |
 | Intel     | SSDSA2CW120G3      | 120 GB | 25      | 1102  | 41    | 2.42   |
 | Intel     | SSDSC2BB800G7R     | 800 GB | 2       | 1166  | 1     | 2.40   |
 | Intel     | SSDSC2BB480G7      | 480 GB | 4       | 974   | 1     | 2.30   |
@@ -73,19 +74,19 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BB300G4      | 304 GB | 3       | 750   | 0     | 2.06   |
 | Intel     | SSDSC2BW240A3L     | 240 GB | 8       | 721   | 0     | 1.98   |
 | Intel     | SSDSC2KB019T8      | 1.9 TB | 18      | 895   | 1     | 1.94   |
-| Intel     | SSDSC2BB240G7      | 240 GB | 5       | 686   | 0     | 1.88   |
 | Intel     | SSDSC2BA200G4      | 200 GB | 10      | 730   | 1     | 1.85   |
 | Intel     | SSDSA2CW160G3      | 160 GB | 10      | 661   | 0     | 1.81   |
 | Intel     | SSDSC2CW480A3      | 480 GB | 6       | 640   | 0     | 1.76   |
-| Intel     | SSDSC2CT180A3      | 180 GB | 16      | 730   | 1     | 1.74   |
+| Intel     | SSDSC2CT180A3      | 180 GB | 16      | 739   | 1     | 1.75   |
 | Intel     | SSDSC2BP240G4      | 240 GB | 10      | 609   | 0     | 1.67   |
 | Intel     | SSDSC2KB480G8R     | 480 GB | 1       | 593   | 0     | 1.62   |
+| Intel     | SSDSC2BF180A5      | 180 GB | 3       | 1683  | 3     | 1.62   |
 | Intel     | SSDSCMMW180A3L     | 180 GB | 5       | 592   | 0     | 1.62   |
 | Intel     | SSDSC2BA400G4      | 400 GB | 4       | 584   | 0     | 1.60   |
 | Intel     | SSDSC2BA400G3      | 400 GB | 1       | 580   | 0     | 1.59   |
 | Intel     | SSDSC2BW180A3L     | 180 GB | 22      | 579   | 1     | 1.57   |
 | Intel     | SSDSC2CT080A4      | 80 GB  | 4       | 568   | 0     | 1.56   |
-| Intel     | SSDSC2BF180A5      | 180 GB | 3       | 1641  | 3     | 1.51   |
+| Intel     | SSDSC2BB480G6      | 480 GB | 1       | 546   | 0     | 1.50   |
 | Intel     | SSDSC2KB240G8      | 240 GB | 21      | 542   | 0     | 1.49   |
 | Intel     | SSDSC2KB960G8      | 960 GB | 36      | 559   | 1     | 1.47   |
 | Intel     | SSDSC2KG240G8      | 240 GB | 16      | 532   | 0     | 1.46   |
@@ -93,30 +94,29 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BX480G4      | 480 GB | 1       | 506   | 0     | 1.39   |
 | Intel     | SSDSA2BW120G3A     | 120 GB | 2       | 482   | 0     | 1.32   |
 | Intel     | SSDSC2CT240A4      | 240 GB | 17      | 754   | 3     | 1.31   |
+| Intel     | SSDSC2CT180A4      | 180 GB | 11      | 698   | 1     | 1.29   |
 | Intel     | SSDMCEAC240B3      | 240 GB | 3       | 456   | 0     | 1.25   |
 | Intel     | SSDSC2KB480G8      | 480 GB | 9       | 455   | 0     | 1.25   |
-| Intel     | SSDSC2CT120A3      | 120 GB | 29      | 817   | 1     | 1.24   |
+| Intel     | SSDSC2CT120A3      | 120 GB | 29      | 820   | 1     | 1.24   |
 | Intel     | SSDSC2BW180A3D     | 180 GB | 1       | 443   | 0     | 1.21   |
 | Intel     | SSDSC2BB012T7O     | 1.2 TB | 1       | 432   | 0     | 1.19   |
-| Intel     | SSDSC2BW180A4      | 180 GB | 14      | 645   | 4     | 1.17   |
+| Intel     | SSDSC2BW180A4      | 180 GB | 14      | 708   | 4     | 1.18   |
 | Intel     | SSDSC2CW120A3      | 120 GB | 61      | 720   | 367   | 1.12   |
-| Intel     | SSDSC2CT180A4      | 180 GB | 11      | 628   | 1     | 1.10   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 29      | 1043  | 5     | 1.09   |
+| Intel     | SSDSC2BW180A3H     | 180 GB | 18      | 403   | 1     | 1.07   |
 | Intel     | SSDSC2BW180A3      | 180 GB | 1       | 382   | 0     | 1.05   |
-| Intel     | SSDSC2BB480G6      | 480 GB | 1       | 381   | 0     | 1.04   |
 | Intel     | SSDSCIHF120A4H     | 120 GB | 2       | 381   | 0     | 1.04   |
-| Intel     | SSDSC2BW180A3H     | 180 GB | 18      | 386   | 1     | 1.02   |
 | Intel     | SSDSC2BW240A3H     | 240 GB | 1       | 369   | 0     | 1.01   |
 | Intel     | SSDSC2MH120A2      | 120 GB | 6       | 360   | 0     | 0.99   |
 | Intel     | SSDSC2KB038T8      | 3.8 TB | 7       | 359   | 0     | 0.98   |
 | Intel     | SSDSC2BW240A4      | 240 GB | 41      | 630   | 4     | 0.98   |
 | Intel     | SSDSC2CT240A3      | 240 GB | 6       | 714   | 1     | 0.96   |
 | Intel     | SSDSC2BF256A5 SATA | 256 GB | 2       | 352   | 0     | 0.96   |
-| Intel     | SSDSC2BW120A4      | 120 GB | 51      | 436   | 1     | 0.95   |
+| Intel     | SSDSC2BW120A4      | 120 GB | 51      | 441   | 1     | 0.96   |
 | Intel     | SSDSC2BW240H6      | 240 GB | 15      | 414   | 6     | 0.94   |
 | Intel     | SSDSC2KG480G7      | 480 GB | 3       | 342   | 3     | 0.92   |
+| Intel     | SSDSA2BW160G3L     | 160 GB | 19      | 330   | 0     | 0.90   |
 | Intel     | SSDSA2BW300G3H     | 304 GB | 2       | 327   | 0     | 0.90   |
-| Intel     | SSDSA2BW160G3L     | 160 GB | 19      | 326   | 0     | 0.89   |
 | Intel     | SSDSCMMW240A3L     | 240 GB | 5       | 354   | 1     | 0.87   |
 | Intel     | SSDSA2BW160G3H     | 160 GB | 16      | 379   | 1     | 0.86   |
 | Intel     | SSDSA2M040G2GC     | 40 GB  | 10      | 763   | 4     | 0.86   |
@@ -146,14 +146,14 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KB038T8R     | 3.8 TB | 1       | 188   | 0     | 0.52   |
 | Intel     | SSDSCKGF180A4H     | 180 GB | 2       | 181   | 0     | 0.50   |
 | Intel     | SSDSC2BF180A4L     | 180 GB | 16      | 233   | 21    | 0.47   |
-| Intel     | SSDSA2CW300G3      | 304 GB | 5       | 168   | 0     | 0.46   |
+| Intel     | SSDSA2CW300G3      | 304 GB | 5       | 170   | 0     | 0.47   |
 | Intel     | SSDMAEMC080G2L     | 80 GB  | 2       | 569   | 7     | 0.45   |
 | Intel     | SSDSA2M080G2HP     | 80 GB  | 3       | 169   | 1     | 0.45   |
 | Intel     | SSDSC2KI128G8      | 128 GB | 2       | 163   | 0     | 0.45   |
 | Intel     | SSDMAEXC024G3H     | 24 GB  | 3       | 197   | 10    | 0.44   |
+| Intel     | SSDSC2BW480A4      | 480 GB | 11      | 681   | 51    | 0.44   |
 | Intel     | SSDSCKJF180A5H REF | 180 GB | 4       | 154   | 0     | 0.42   |
 | Intel     | SSDSC2KG960G8      | 960 GB | 5       | 151   | 0     | 0.42   |
-| Intel     | SSDSC2BW480A4      | 480 GB | 11      | 671   | 51    | 0.41   |
 | Intel     | SSDSC2BF180A5H SED | 180 GB | 4       | 368   | 35    | 0.41   |
 | Intel     | SSDSA2M160G2GC     | 160 GB | 8       | 720   | 71    | 0.40   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 32      | 172   | 1     | 0.38   |
@@ -161,7 +161,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSCKKF128G8L     | 128 GB | 2       | 134   | 0     | 0.37   |
 | Intel     | SSDSC2BF180A4H     | 180 GB | 26      | 252   | 5     | 0.36   |
 | Intel     | SSDSC2KF128G8L     | 128 GB | 13      | 133   | 1     | 0.35   |
-| Intel     | SSDSC2BF240A5L     | 240 GB | 20      | 263   | 37    | 0.33   |
+| Intel     | SSDSC2BF240A5L     | 240 GB | 20      | 264   | 37    | 0.33   |
 | Intel     | SSDSCKGF240A5L     | 240 GB | 2       | 114   | 0     | 0.31   |
 | Intel     | SSDSC2KG019T8      | 1.9 TB | 4       | 110   | 0     | 0.30   |
 | Intel     | SSDSC2KB038TZ      | 3.8 TB | 1       | 110   | 0     | 0.30   |
@@ -175,15 +175,15 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDMCEAF180A4L     | 180 GB | 1       | 85    | 0     | 0.23   |
 | Intel     | SSDSCKGF256A5 SATA | 256 GB | 8       | 92    | 152   | 0.22   |
 | Intel     | SSDSCKKB240G8      | 240 GB | 2       | 81    | 0     | 0.22   |
+| Intel     | SSDSA2M080G2LE     | 80 GB  | 3       | 161   | 10    | 0.22   |
 | Intel     | SSDSC2KF180H6L     | 180 GB | 1       | 80    | 0     | 0.22   |
-| Intel     | SSDSA2M080G2LE     | 80 GB  | 3       | 160   | 10    | 0.22   |
 | Intel     | SSDSC2KI512G8      | 512 GB | 2       | 76    | 0     | 0.21   |
 | Intel     | SSDSCKKW512G8      | 512 GB | 1       | 69    | 0     | 0.19   |
 | Intel     | SSDSC2KI256G8      | 256 GB | 2       | 67    | 0     | 0.18   |
 | Intel     | SSDMCEAW180A4      | 180 GB | 2       | 65    | 0     | 0.18   |
 | Intel     | SSDSC2KW010T8      | 1 TB   | 1       | 504   | 7     | 0.17   |
+| Intel     | SSDSCKKF128G8 SATA | 128 GB | 10      | 72    | 2     | 0.17   |
 | Intel     | SSDSC2BF480A5L     | 480 GB | 1       | 62    | 0     | 0.17   |
-| Intel     | SSDSCKKF128G8 SATA | 128 GB | 10      | 68    | 2     | 0.16   |
 | Intel     | SSDSCKKF512G8 SATA | 512 GB | 3       | 57    | 0     | 0.16   |
 | Intel     | SSDSCKKF256H6 SATA | 256 GB | 10      | 104   | 18    | 0.16   |
 | Intel     | SSDSC2BB240G4I ... | 240 GB | 1       | 53    | 0     | 0.15   |
@@ -226,7 +226,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BA400G3R     | 400 GB | 1       | 2162  | 1028  | 0.01   |
 | Intel     | SSDSC2BB300G4R     | 304 GB | 2       | 2029  | 1029  | 0.01   |
 | Intel     | SSDSC2BG200G4R     | 200 GB | 1       | 1865  | 1028  | 0.00   |
-| Intel     | SSDSC2BB160G4T     | 160 GB | 2       | 1784  | 1028  | 0.00   |
+| Intel     | SSDSC2BB160G4T     | 160 GB | 2       | 1785  | 1028  | 0.00   |
 | Intel     | SSDSC2BA400G3T     | 400 GB | 1       | 1671  | 1029  | 0.00   |
 | Intel     | SSDSC2KW240H6      | 240 GB | 10      | 8     | 286   | 0.00   |
 | Intel     | SSDSC2BW120A3F     | 120 GB | 1       | 1540  | 1020  | 0.00   |
@@ -236,12 +236,12 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | N18A               | 240 GB | 2       | 1     | 0     | 0.00   |
 | Intel     | SSDSC2BA200G4R     | 200 GB | 2       | 1037  | 1028  | 0.00   |
 | Intel     | SSDSC2KG960G7R     | 960 GB | 2       | 1035  | 1028  | 0.00   |
+| Intel     | SSDSC2BA800G4R     | 800 GB | 1       | 1007  | 1027  | 0.00   |
 | Intel     | SSDSCKKF240H6L     | 240 GB | 3       | 52    | 376   | 0.00   |
 | Intel     | SSDSC2BB120G6R     | 120 GB | 1       | 980   | 1028  | 0.00   |
-| Intel     | SSDSC2BA800G4R     | 800 GB | 1       | 877   | 1027  | 0.00   |
 | Intel     | SSDSC2KW180H6      | 180 GB | 3       | 5     | 74    | 0.00   |
 | Intel     | SSDSCMMW120A3L     | 120 GB | 1       | 649   | 1017  | 0.00   |
-| Intel     | SSDSCKKF256G8H     | 256 GB | 10      | 71    | 188   | 0.00   |
+| Intel     | SSDSCKKF256G8H     | 256 GB | 10      | 73    | 188   | 0.00   |
 | Intel     | SSDMCEAW080A4 m... | 80 GB  | 2       | 515   | 1008  | 0.00   |
 | Intel     | SSDSCKKF256H6H     | 256 GB | 2       | 34    | 245   | 0.00   |
 | Intel     | SSDSC2KB960G7      | 960 GB | 4       | 0     | 0     | 0.00   |
@@ -267,20 +267,20 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Intel     | X25-E SSDs             | 2      | 4       | 2237  | 0     | 6.13   |
-| Intel     | 730 and DC S35x0/36... | 39     | 140     | 1246  | 118   | 2.92   |
+| Intel     | 730 and DC S35x0/36... | 39     | 140     | 1258  | 118   | 2.95   |
 | Intel     | X18-M/X25-M G1 SSDs    | 4      | 4       | 1037  | 0     | 2.84   |
 | Intel     | Dell Certified Inte... | 2      | 7       | 1069  | 1     | 2.70   |
 | Intel     | S3520 Series SSDs      | 4      | 6       | 1396  | 1     | 2.26   |
-| Intel     | 320 Series SSDs        | 13     | 118     | 797   | 19    | 2.01   |
-| Intel     | 520 Series SSDs        | 9      | 175     | 815   | 192   | 1.81   |
+| Intel     | 320 Series SSDs        | 13     | 118     | 798   | 19    | 2.01   |
+| Intel     | 520 Series SSDs        | 9      | 175     | 816   | 192   | 1.81   |
 | Intel     | 525 Series SSDs        | 3      | 9       | 722   | 1     | 1.56   |
-| Intel     | 330/335 Series SSDs    | 6      | 90      | 796   | 1     | 1.46   |
+| Intel     | 330/335 Series SSDs    | 6      | 90      | 807   | 1     | 1.48   |
 | Intel     | S4510/S4610/S4500/S... | 19     | 138     | 507   | 23    | 1.27   |
 | Intel     | 510 Series SSDs        | 2      | 7       | 344   | 0     | 0.94   |
-| Intel     | 53x and Pro 1500/25... | 19     | 219     | 470   | 8     | 0.85   |
+| Intel     | 53x and Pro 1500/25... | 19     | 219     | 476   | 8     | 0.86   |
 | Intel     | Dell Certified Inte... | 3      | 3       | 265   | 0     | 0.73   |
 | Intel     | X18-M/X25-M/X25-V G... | 14     | 80      | 735   | 17    | 0.61   |
-| Intel     | Unknown                | 59     | 217     | 260   | 80    | 0.49   |
+| Intel     | Unknown                | 59     | 217     | 261   | 80    | 0.50   |
 | Intel     | 311/313 Series SSDs    | 1      | 3       | 197   | 10    | 0.44   |
 | Intel     | 545s Series SSDs       | 18     | 173     | 142   | 12    | 0.35   |
 | Intel     | SSD Pro 5400s Series   | 1      | 1       | 42    | 0     | 0.12   |
