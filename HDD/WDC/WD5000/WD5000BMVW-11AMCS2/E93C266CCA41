@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.13-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Aug 22 20:49:25 2022 CEST
+Local Time is:    Mon Feb 20 21:28:36 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,18 +65,18 @@ SCT capabilities: 	       (0x7035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   199   199   051    -    201
-  3 Spin_Up_Time            POS--K   157   149   021    -    3116
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1316
+  1 Raw_Read_Error_Rate     POSR-K   199   199   051    -    224
+  3 Spin_Up_Time            POS--K   152   149   021    -    3366
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1505
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   199   198   000    -    23
-  9 Power_On_Hours          -O--CK   099   099   000    -    1122
+  7 Seek_Error_Rate         -OSR-K   200   198   000    -    0
+  9 Power_On_Hours          -O--CK   099   099   000    -    1364
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    762
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    358
-193 Load_Cycle_Count        -O--CK   199   199   000    -    5423
-194 Temperature_Celsius     -O---K   112   102   000    -    35
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    901
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    439
+193 Load_Cycle_Count        -O--CK   198   198   000    -    6460
+194 Temperature_Celsius     -O---K   126   102   000    -    21
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    6
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -111,7 +111,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 201 (device log contains only the most recent 24 errors)
+Device Error Count: 225 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -127,160 +127,162 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 201 [8] occurred at disk power-on lifetime: 994 hours (41 days + 10 hours)
+Error 225 [8] occurred at disk power-on lifetime: 1281 hours (53 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 04 00 00 00 05 c7 7f d0 40 00  Error: UNC 1024 sectors at LBA = 0x05c77fd0 = 96960464
+  40 -- 51 04 00 00 00 00 87 97 d8 40 00  Error: UNC 1024 sectors at LBA = 0x008797d8 = 8886232
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 04 00 00 00 05 c7 7d 70 40 00     00:51:07.675  READ DMA EXT
-  25 00 00 02 00 00 00 05 c7 7b 70 40 00     00:51:07.661  READ DMA EXT
-  25 00 00 01 00 00 00 05 c7 7a 70 40 00     00:51:07.659  READ DMA EXT
-  25 00 00 00 20 00 00 05 c7 7a 50 40 00     00:51:07.646  READ DMA EXT
-  25 00 00 04 00 00 00 05 c5 ba 50 40 00     00:51:07.473  READ DMA EXT
+  25 00 00 04 00 00 00 00 87 96 b8 40 00     00:44:41.834  READ DMA EXT
+  25 00 00 04 00 00 00 00 87 92 b8 40 00     00:44:41.775  READ DMA EXT
+  25 00 00 04 00 00 00 00 87 8e b8 40 00     00:44:41.514  READ DMA EXT
+  25 00 00 04 00 00 00 00 87 8a b8 40 00     00:44:41.475  READ DMA EXT
+  25 00 00 04 00 00 00 00 87 86 b8 40 00     00:44:41.235  READ DMA EXT
 
-Error 200 [7] occurred at disk power-on lifetime: 889 hours (37 days + 1 hours)
+Error 224 [7] occurred at disk power-on lifetime: 1167 hours (48 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  01 -- 51 00 08 00 00 05 aa f7 10 40 00  Error: AMNF 8 sectors at LBA = 0x05aaf710 = 95090448
+  40 -- 51 00 08 00 00 0a 9a 99 a8 40 00  Error: UNC 8 sectors at LBA = 0x0a9a99a8 = 177904040
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:36.703  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:32.829  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:28.955  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:25.081  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:21.208  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9a 99 a8 40 00     01:15:46.689  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9a 99 a8 40 00     01:15:44.159  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9a 99 a8 40 00     01:15:41.595  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:37.443  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:34.836  READ DMA EXT
 
-Error 199 [6] occurred at disk power-on lifetime: 889 hours (37 days + 1 hours)
+Error 223 [6] occurred at disk power-on lifetime: 1167 hours (48 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  01 -- 51 00 08 00 00 05 aa f7 10 40 00  Error: AMNF 8 sectors at LBA = 0x05aaf710 = 95090448
+  40 -- 51 00 08 00 00 0a 9a 99 a8 40 00  Error: UNC 8 sectors at LBA = 0x0a9a99a8 = 177904040
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:32.829  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:28.955  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:25.081  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:21.208  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:17.334  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9a 99 a8 40 00     01:15:44.159  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9a 99 a8 40 00     01:15:41.595  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:37.443  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:34.836  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:32.070  READ DMA EXT
 
-Error 198 [5] occurred at disk power-on lifetime: 889 hours (37 days + 1 hours)
+Error 222 [5] occurred at disk power-on lifetime: 1167 hours (48 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  01 -- 51 00 08 00 00 05 aa f7 10 40 00  Error: AMNF 8 sectors at LBA = 0x05aaf710 = 95090448
+  40 -- 51 00 08 00 00 0a 9a 99 a8 40 00  Error: UNC 8 sectors at LBA = 0x0a9a99a8 = 177904040
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:28.955  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:25.081  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:21.208  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:17.334  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:13.460  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9a 99 a8 40 00     01:15:41.595  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:37.443  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:34.836  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:32.070  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:29.540  READ DMA EXT
 
-Error 197 [4] occurred at disk power-on lifetime: 889 hours (37 days + 1 hours)
+Error 221 [4] occurred at disk power-on lifetime: 1167 hours (48 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  01 -- 51 00 08 00 00 05 aa f7 10 40 00  Error: AMNF 8 sectors at LBA = 0x05aaf710 = 95090448
+  40 -- 51 00 08 00 00 0a 9c 99 98 40 00  Error: UNC 8 sectors at LBA = 0x0a9c9998 = 178035096
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:25.081  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:21.208  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:17.334  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:13.460  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:09.586  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:37.443  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:34.836  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:32.070  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:29.540  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:27.010  READ DMA EXT
 
-Error 196 [3] occurred at disk power-on lifetime: 889 hours (37 days + 1 hours)
+Error 220 [3] occurred at disk power-on lifetime: 1167 hours (48 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  01 -- 51 00 08 00 00 05 aa f7 10 40 00  Error: AMNF 8 sectors at LBA = 0x05aaf710 = 95090448
+  40 -- 51 00 08 00 00 0a 9c 99 98 40 00  Error: UNC 8 sectors at LBA = 0x0a9c9998 = 178035096
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:21.208  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:17.334  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:13.460  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:09.586  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:05.712  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:34.836  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:32.070  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:29.540  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:27.010  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:24.445  READ DMA EXT
 
-Error 195 [2] occurred at disk power-on lifetime: 889 hours (37 days + 1 hours)
+Error 219 [2] occurred at disk power-on lifetime: 1167 hours (48 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  01 -- 51 00 08 00 00 05 aa f7 10 40 00  Error: AMNF 8 sectors at LBA = 0x05aaf710 = 95090448
+  40 -- 51 00 08 00 00 0a 9c 99 98 40 00  Error: UNC 8 sectors at LBA = 0x0a9c9998 = 178035096
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:17.334  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:13.460  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:09.586  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:05.712  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:01.837  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:32.070  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:29.540  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:27.010  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:24.445  READ DMA EXT
+  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00     01:15:17.081  SMART READ DATA
 
-Error 194 [1] occurred at disk power-on lifetime: 889 hours (37 days + 1 hours)
+Error 218 [1] occurred at disk power-on lifetime: 1167 hours (48 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  01 -- 51 00 08 00 00 05 aa f7 10 40 00  Error: AMNF 8 sectors at LBA = 0x05aaf710 = 95090448
+  40 -- 51 00 08 00 00 0a 9c 99 98 40 00  Error: UNC 8 sectors at LBA = 0x0a9c9998 = 178035096
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:13.460  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:09.586  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:05.712  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:48:01.837  READ DMA EXT
-  25 00 00 00 08 00 00 05 aa f7 10 40 00     01:47:57.964  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:29.540  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:27.010  READ DMA EXT
+  25 00 00 00 08 00 00 0a 9c 99 98 40 00     01:15:24.445  READ DMA EXT
+  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00     01:15:17.081  SMART READ DATA
+  25 00 00 00 08 00 00 0a 83 a3 00 40 00     01:14:17.801  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: read failure       90%      1111         95090448
-# 2  Extended offline    Completed: read failure       90%      1097         95090448
-# 3  Short offline       Completed: read failure       90%      1085         95090448
-# 4  Short offline       Completed: read failure       90%      1059         95090448
-# 5  Short offline       Completed: read failure       90%      1047         95090448
-# 6  Extended offline    Completed: read failure       90%      1046         95090448
-# 7  Short offline       Completed: read failure       90%      1042         95090448
-# 8  Short offline       Completed: read failure       90%      1019         95090448
-# 9  Short offline       Completed: read failure       90%      1015         95090448
-#10  Short offline       Completed: read failure       90%       999         95090448
-#11  Short offline       Completed: read failure       90%       998         95090448
-#12  Short offline       Completed: read failure       90%       994         95090448
-#13  Short offline       Completed: read failure       90%       874         96960464
-#14  Short offline       Completed: read failure       90%       866         96960464
-#15  Extended offline    Completed: read failure       90%       863         96960464
-#16  Extended offline    Completed: read failure       90%       715         96960464
+# 1  Short offline       Completed: read failure       90%      1363         8886232
+# 2  Extended offline    Completed: read failure       90%      1361         8886233
+# 3  Short offline       Completed: read failure       90%      1350         8886238
+# 4  Short offline       Completed: read failure       90%      1338         8886232
+# 5  Short offline       Completed: read failure       90%      1337         8886233
+# 6  Extended offline    Completed: read failure       90%      1332         95090448
+# 7  Short offline       Completed: read failure       90%      1311         8886233
+# 8  Short offline       Completed: read failure       90%      1294         8886234
+# 9  Short offline       Completed: read failure       90%      1287         8886239
+#10  Short offline       Completed: read failure       90%      1286         8886237
+#11  Short offline       Completed: read failure       90%      1282         8886239
+#12  Short offline       Completed: read failure       50%      1281         95090448
+#13  Extended offline    Completed: read failure       90%      1241         95090448
+#14  Short offline       Completed: read failure       90%      1240         95090448
+#15  Short offline       Completed: read failure       90%      1239         95090448
+#16  Short offline       Completed: read failure       90%      1235         95090448
+#17  Short offline       Completed: read failure       90%      1230         95090448
+#18  Short offline       Completed: read failure       90%      1228         95090448
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -296,8 +298,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     27/35 Celsius
+Current Temperature:                    20 Celsius
+Power Cycle Min/Max Temperature:     17/20 Celsius
 Lifetime    Min/Max Temperature:     14/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -309,7 +311,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (117)
+Temperature History Size (Index):    128 (119)
 
 SCT Error Recovery Control command not supported
 
@@ -327,12 +329,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         3253  Vendor specific
-
-
+0x8000  4          479  Vendor specific
 

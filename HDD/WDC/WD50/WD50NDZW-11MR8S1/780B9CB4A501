@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Elements / My Passport (USB, AF)
@@ -12,10 +12,10 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed May 26 17:08:51 2021 UTC
+Local Time is:    Sat Apr  1 21:17:23 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -30,14 +30,14 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
+Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
-					Auto Offline Data Collection: Disabled.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(  180) seconds.
+data collection: 		(  960) seconds.
 Offline data collection
 capabilities: 			 (0x1b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
@@ -55,7 +55,7 @@ Error logging capability:        (0x01)	Error logging supported.
 Short self-test routine 
 recommended polling time: 	 (   2) minutes.
 Extended self-test routine
-recommended polling time: 	 (   7) minutes.
+recommended polling time: 	 (  11) minutes.
 SCT capabilities: 	       (0x30b5)	SCT Status supported.
 					SCT Feature Control supported.
 					SCT Data Table supported.
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   253   051    -    0
-  3 Spin_Up_Time            POS--K   253   253   021    -    1825
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1283
+  3 Spin_Up_Time            POS--K   253   253   021    -    2025
+  4 Start_Stop_Count        -O--CK   096   096   000    -    4422
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    545
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   089   089   000    -    8743
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    258
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    59
-193 Load_Cycle_Count        -O--CK   200   200   000    -    2414
-194 Temperature_Celsius     -O---K   124   111   000    -    28
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    744
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    239
+193 Load_Cycle_Count        -O--CK   198   198   000    -    6867
+194 Temperature_Celsius     -O---K   119   108   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -117,17 +117,19 @@ SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed: read failure       60%      8274         954224
+# 2  Short offline       Completed: read failure       60%      8234         954224
 
 Selective Self-tests/Logging not supported
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     26/30 Celsius
-Lifetime    Min/Max Temperature:     18/41 Celsius
-Specified Max Operating Temperature:    28 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     33/35 Celsius
+Lifetime    Min/Max Temperature:     14/44 Celsius
+Specified Max Operating Temperature:    27 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -138,7 +140,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (102)
+Temperature History Size (Index):    128 (7)
 
 SCT Error Recovery Control command not supported
 
@@ -162,5 +164,5 @@ ID      Size     Value  Description
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        13063  Vendor specific
+0x8000  4          466  Vendor specific
 

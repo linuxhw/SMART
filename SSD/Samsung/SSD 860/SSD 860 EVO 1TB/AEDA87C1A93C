@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Apr 28 03:03:45 2023 CEST
+Local Time is:    Fri Apr 28 03:09:42 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -32,8 +32,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 243)	Self-test routine in progress...
-					30% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
@@ -71,7 +72,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   061   049   000    -    39
+190 Airflow_Temperature_Cel -O--CK   068   049   000    -    32
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    399
@@ -110,25 +111,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      7641         -
-# 2  Short offline       Completed without error       00%      7639         -
-# 3  Short offline       Completed without error       00%      7637         -
-# 4  Short offline       Completed without error       00%      7631         -
-# 5  Short offline       Completed without error       00%      7628         -
-# 6  Short offline       Completed without error       00%      7621         -
-# 7  Short offline       Completed without error       00%      7618         -
-# 8  Short offline       Completed without error       00%      7614         -
-# 9  Short offline       Completed without error       00%      7609         -
-#10  Short offline       Completed without error       00%      7600         -
-#11  Short offline       Completed without error       00%      7597         -
-#12  Short offline       Completed without error       00%      7592         -
-#13  Short offline       Completed without error       00%      7589         -
-#14  Short offline       Completed without error       00%      7585         -
-#15  Short offline       Completed without error       00%      7584         -
-#16  Short offline       Completed without error       00%      7581         -
-#17  Short offline       Completed without error       00%      7577         -
-#18  Short offline       Completed without error       00%      7574         -
-#19  Short offline       Completed without error       00%      7571         -
+# 1  Short offline       Completed without error       00%      7646         -
+# 2  Short offline       Completed without error       00%      7641         -
+# 3  Short offline       Completed without error       00%      7639         -
+# 4  Short offline       Completed without error       00%      7637         -
+# 5  Short offline       Completed without error       00%      7631         -
+# 6  Short offline       Completed without error       00%      7628         -
+# 7  Short offline       Completed without error       00%      7621         -
+# 8  Short offline       Completed without error       00%      7618         -
+# 9  Short offline       Completed without error       00%      7614         -
+#10  Short offline       Completed without error       00%      7609         -
+#11  Short offline       Completed without error       00%      7600         -
+#12  Short offline       Completed without error       00%      7597         -
+#13  Short offline       Completed without error       00%      7592         -
+#14  Short offline       Completed without error       00%      7589         -
+#15  Short offline       Completed without error       00%      7585         -
+#16  Short offline       Completed without error       00%      7584         -
+#17  Short offline       Completed without error       00%      7581         -
+#18  Short offline       Completed without error       00%      7577         -
+#19  Short offline       Completed without error       00%      7574         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -144,8 +145,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        DST executing in background (3)
-Current Temperature:                    39 Celsius
+Device State:                        Active (0)
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:     23/40 Celsius
 Lifetime    Min/Max Temperature:     17/50 Celsius
 Specified Max Operating Temperature:    70 Celsius
@@ -172,12 +173,12 @@ Page  Offset Size        Value Flags Description
 0x01  0x020  6        21003520  ---  Number of Write Commands
 0x01  0x028  6      4545557832  ---  Logical Sectors Read
 0x01  0x030  6        66952682  ---  Number of Read Commands
-0x01  0x038  6         2270000  ---  Date and Time TimeStamp
+0x01  0x038  6         2628000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              39  ---  Current Temperature
+0x05  0x008  1              32  ---  Current Temperature
 0x05  0x020  1              50  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
@@ -203,7 +204,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2          118  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2          119  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS

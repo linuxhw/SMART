@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-60-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-70-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Feb 20 00:23:39 2023 CET
+Local Time is:    Wed Apr 19 16:21:07 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,17 +62,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   000   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8811
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1486
+  9 Power_On_Hours          -O--CK   100   100   000    -    9388
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1569
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   002   002   000    -    47
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    312
+173 Ave_Block-Erase_Count   -O--CK   002   002   000    -    50
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    325
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    227
-183 SATA_Interfac_Downshift -O--CK   100   100   000    -    15
+183 SATA_Interfac_Downshift -O--CK   100   100   000    -    20
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   056   021   000    -    44 (Min/Max 6/79)
+194 Temperature_Celsius     -O---K   050   021   000    -    50 (Min/Max 6/79)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -80,9 +80,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   098   098   001    -    2
 206 Write_Error_Rate        -OSR--   000   000   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    6836463044
-247 Host_Program_Page_Count -O--CK   100   100   000    -    213639470
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    733640992
+246 Total_LBAs_Written      -O--CK   100   100   000    -    7285766706
+247 Host_Program_Page_Count -O--CK   100   100   000    -    227680209
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    790540576
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 14 (device log contains only the most recent 4 errors)
+Device Error Count: 294 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,25 +124,25 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 14 [1] log entry is empty
-Error 13 [0] log entry is empty
-Error 12 [3] log entry is empty
-Error 11 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 294 [1] log entry is empty
+Error 293 [0] log entry is empty
+Error 292 [3] log entry is empty
+Error 291 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
+  00 -- 00 00 00 00 00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  06 00 01 01 01 00 00 00 00 00 00 a0 08     00:00:00.000  DATA SET MANAGEMENT
-  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
-  06 00 01 01 01 00 00 00 00 00 00 a0 08     00:00:00.000  DATA SET MANAGEMENT
-  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
-  b0 00 d0 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ DATA
+  60 00 08 01 50 00 00 4f 00 03 18 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 88 00 00 b8 00 d6 a0 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 90 00 00 87 00 d7 00 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 f8 01 b8 00 00 98 00 e4 20 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 40 01 b8 00 00 a0 00 dc 18 00 00     00:00:00.000  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -154,12 +154,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1486  ---  Lifetime Power-On Resets
-0x01  0x010  4            8811  ---  Power-on Hours
-0x01  0x018  6      2541495748  ---  Logical Sectors Written
-0x01  0x020  6        87104680  ---  Number of Write Commands
-0x01  0x028  6      1951034621  ---  Logical Sectors Read
-0x01  0x030  6       132209830  ---  Number of Read Commands
+0x01  0x008  4            1569  ---  Lifetime Power-On Resets
+0x01  0x010  4            9388  ---  Power-on Hours
+0x01  0x018  6      2990799410  ---  Logical Sectors Written
+0x01  0x020  6       103593449  ---  Number of Write Commands
+0x01  0x028  6      2509847517  ---  Logical Sectors Read
+0x01  0x030  6       139062723  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -170,10 +170,10 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  4            0  Command failed due to ICRC error
-0x0002  4            0  R_ERR response for data FIS
+0x0001  4            1  Command failed due to ICRC error
+0x0002  4            1  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 
 
 

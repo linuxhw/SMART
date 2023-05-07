@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.4-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.12
@@ -10,10 +10,10 @@ Firmware Version: CC46
 User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue May 25 20:11:12 2021 CEST
+Local Time is:    Fri Mar 31 13:28:36 2023 CEST
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -22,7 +22,7 @@ http://knowledge.seagate.com/articles/en_US/FAQ/213891en
 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     128 (quiet), recommended: 254
+AAM feature is:   Disabled
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -70,28 +70,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   113   099   006    -    53470250
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    122894840
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   079   079   020    -    22274
+  4 Start_Stop_Count        -O--CK   076   076   020    -    24762
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   089   060   030    -    865863235
-  9 Power_On_Hours          -O--CK   072   072   000    -    25028
+  7 Seek_Error_Rate         POSR--   076   060   030    -    46088064
+  9 Power_On_Hours          -O--CK   067   067   000    -    29572
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   090   090   020    -    11107
+ 12 Power_Cycle_Count       -O--CK   088   088   020    -    12349
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   092   000    -    176096482867
+187 Reported_Uncorrect      -O--CK   098   098   000    -    2
+188 Command_Timeout         -O--CK   100   092   000    -    176096484981
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   057   046   045    -    43 (Min/Max 21/43)
-194 Temperature_Celsius     -O---K   043   054   000    -    43 (0 11 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   044   037   000    -    53470250
+190 Airflow_Temperature_Cel -O---K   077   046   045    -    23 (Min/Max 16/23)
+194 Temperature_Celsius     -O---K   023   054   000    -    23 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   042   033   000    -    122894840
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    52721 (131 237 0)
-241 Total_LBAs_Written      ------   100   253   000    -    2280104761
-242 Total_LBAs_Read         ------   100   253   000    -    1063918642
+240 Head_Flying_Hours       ------   100   253   000    -    60587 (127 118 0)
+241 Total_LBAs_Written      ------   100   253   000    -    127625428
+242 Total_LBAs_Read         ------   100   253   000    -    2262046956
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,29 +126,77 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 27068 hours (1127 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 0c d4 53 c1 00 00  Error: UNC at LBA = 0x0cd453c1 = 215241665
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 0c d4 53 c0 e0 00     00:40:48.994  READ DMA EXT
+  25 00 00 00 08 00 00 0c d4 53 c0 e0 00     00:40:46.270  READ DMA EXT
+  25 00 00 00 08 00 00 06 92 07 68 e0 00     00:40:46.269  READ DMA EXT
+  25 00 00 00 08 00 00 0c d5 52 88 e0 00     00:40:46.262  READ DMA EXT
+  25 00 00 00 08 00 00 0c d4 03 78 e0 00     00:40:46.256  READ DMA EXT
+
+Error 1 [0] occurred at disk power-on lifetime: 27068 hours (1127 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 0c d4 53 c1 00 00  Error: UNC at LBA = 0x0cd453c1 = 215241665
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 0c d4 53 c0 e0 00     00:40:46.270  READ DMA EXT
+  25 00 00 00 08 00 00 06 92 07 68 e0 00     00:40:46.269  READ DMA EXT
+  25 00 00 00 08 00 00 0c d5 52 88 e0 00     00:40:46.262  READ DMA EXT
+  25 00 00 00 08 00 00 0c d4 03 78 e0 00     00:40:46.256  READ DMA EXT
+  25 00 00 00 08 00 00 0c d5 31 a8 e0 00     00:40:46.252  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     24821         -
-# 2  Short offline       Completed without error       00%     23182         -
-# 3  Short offline       Completed without error       00%     22655         -
-# 4  Extended offline    Interrupted (host reset)      70%     22526         -
-# 5  Short offline       Completed without error       00%     22383         -
-# 6  Short offline       Completed without error       00%     22373         -
-# 7  Short offline       Completed without error       00%     22303         -
-# 8  Short offline       Completed without error       00%     22256         -
-# 9  Short offline       Completed without error       00%     22215         -
-#10  Short offline       Completed without error       00%     22209         -
-#11  Short offline       Completed without error       00%     22199         -
-#12  Short offline       Completed without error       00%     22153         -
-#13  Short offline       Completed without error       00%     22071         -
-#14  Short offline       Completed without error       00%     22062         -
-#15  Short offline       Completed without error       00%     22008         -
-#16  Short offline       Completed without error       00%     21987         -
-#17  Extended offline    Interrupted (host reset)      80%     21929         -
-#18  Short offline       Completed without error       00%     21918         -
-#19  Short offline       Completed without error       00%     21914         -
+# 1  Short offline       Completed without error       00%     29545         -
+# 2  Short offline       Completed without error       00%     29544         -
+# 3  Short offline       Completed without error       00%     29543         -
+# 4  Short offline       Completed without error       00%     29541         -
+# 5  Short offline       Completed without error       00%     29533         -
+# 6  Short offline       Completed without error       00%     29524         -
+# 7  Short offline       Completed without error       00%     29515         -
+# 8  Short offline       Completed without error       00%     29505         -
+# 9  Short offline       Completed without error       00%     29469         -
+#10  Extended offline    Completed without error       00%     29457         -
+#11  Short offline       Completed without error       00%     29417         -
+#12  Short offline       Completed without error       00%     29417         -
+#13  Short offline       Completed without error       00%     29416         -
+#14  Short offline       Completed without error       00%     29411         -
+#15  Short offline       Completed without error       00%     29401         -
+#16  Short offline       Completed without error       00%     29400         -
+#17  Short offline       Completed without error       00%     29395         -
+#18  Short offline       Interrupted (host reset)      60%     29258         -
+#19  Short offline       Completed without error       00%     29228         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -164,8 +212,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    43 Celsius
-Power Cycle Min/Max Temperature:     21/43 Celsius
+Current Temperature:                    22 Celsius
+Power Cycle Min/Max Temperature:     16/22 Celsius
 Lifetime    Min/Max Temperature:     11/53 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -174,7 +222,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (43)
+Temperature History Size (Index):    128 (112)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -186,7 +234,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

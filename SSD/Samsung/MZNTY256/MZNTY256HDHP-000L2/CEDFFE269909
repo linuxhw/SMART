@@ -1,5 +1,5 @@
-smartctl 7.0 2018-12-30 r4883 [x86_64-linux-5.4.0-47-generic] (local build)
-Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.19.0-40-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Samsung based SSDs
@@ -11,10 +11,11 @@ User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
+TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Sep 17 18:10:51 2020 PDT
+Local Time is:    Thu Apr 27 13:56:20 2023 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -64,23 +65,23 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    2875
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3002
+  9 Power_On_Hours          -O--CK   098   098   000    -    6163
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    5486
 170 Unused_Rsvd_Blk_Ct_Chip -O--CK   100   100   010    -    0
 171 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
 172 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
-173 Wear_Leveling_Count     PO--CK   095   095   005    -    41
-174 Unexpect_Power_Loss_Ct  -O--CK   099   099   000    -    104
+173 Wear_Leveling_Count     PO--CK   092   092   005    -    62
+174 Unexpect_Power_Loss_Ct  -O--CK   099   099   000    -    153
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    1732
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O--CK   066   033   000    -    34 (Min/Max 11/67)
-199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-233 Media_Wearout_Indicator PO--C-   094   094   001    -    15917382
-241 Total_LBAs_Written      -O--CK   099   099   000    -    8146
-242 Total_LBAs_Read         -O--CK   099   099   000    -    7190
-249 Unknown_Samsung_Attr    -O--CK   099   099   000    -    10624
+194 Temperature_Celsius     -O--CK   068   033   000    -    32 (Min/Max 11/67)
+199 CRC_Error_Count         -OSRCK   099   099   000    -    1
+233 Media_Wearout_Indicator PO--C-   092   092   001    -    15476980
+241 Total_LBAs_Written      -O--CK   099   099   000    -    12644
+242 Total_LBAs_Read         -O--CK   099   099   000    -    11321
+249 NAND_Writes_1GiB        -O--CK   099   099   000    -    15888
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +113,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       187         -
+# 1  Short offline       Completed without error       00%      4184         -
+# 2  Short offline       Completed without error       00%       187         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -129,9 +131,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     30/33 Celsius
-Lifetime    Min/Max Temperature:     18/63 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:      ?/31 Celsius
+Lifetime    Min/Max Temperature:     16/63 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -139,7 +141,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (106)
+Temperature History Size (Index):    128 (70)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -159,8 +161,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2         3214  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          629  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

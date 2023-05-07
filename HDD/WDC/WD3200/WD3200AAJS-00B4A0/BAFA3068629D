@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.2-desktop-1omv2390] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Blue Serial ATA
@@ -9,9 +9,9 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.03A01
 User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-Local Time is:    Wed May 11 21:50:40 2022 BST
+Local Time is:    Mon Mar  6 08:59:15 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -63,17 +63,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    4
-  3 Spin_Up_Time            PO----   155   150   021    -    3241
-  4 Start_Stop_Count        -O--CK   100   100   000    -    102
+  3 Spin_Up_Time            PO----   155   150   021    -    3233
+  4 Start_Stop_Count        -O--CK   100   100   000    -    103
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR--   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   049   049   000    -    37828
+  9 Power_On_Hours          -O--CK   045   045   000    -    40171
  10 Spin_Retry_Count        -O--C-   100   100   000    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   000    -    9516
-192 Power-Off_Retract_Count -O--CK   197   197   000    -    2419
-193 Load_Cycle_Count        -O--CK   197   197   000    -    9516
-194 Temperature_Celsius     -O---K   105   093   000    -    38
+ 12 Power_Cycle_Count       -O--CK   090   090   000    -    10094
+192 Power-Off_Retract_Count -O--CK   197   197   000    -    2448
+193 Load_Cycle_Count        -O--CK   197   197   000    -    10094
+194 Temperature_Celsius     -O---K   113   093   000    -    30
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   200   000    -    0
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 65 (device log contains only the most recent 24 errors)
+Device Error Count: 91 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -123,133 +123,133 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65 [16] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 91 [18] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 01 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 ad 42 19 1a 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 00 19 ad 00 1a 25 00 00 00     00:00:33.793  NOP [Abort queued commands]
-  0f ad 25 19 1a 00 01 00 83 00 00 00 00     00:27:25.229  [RESERVED]
-  00 02 00 00 85 19 9f 0f 1a 42 00 00 00     00:00:00.001  NOP [Abort queued commands]
+  00 46 61 82 e5 00 00 00 00 00 00 00 22     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 78 01 00 0a 82 41 22 e5 61 00 00 08     00:00:00.128  DEVICE RESET
+  22 35 61 82 e5 00 70 08 00 01 00 00 00     02:22:58.369  READ LONG [OBS-4]
+  08 08 08 00 d8 82 35 00 e5 61 00 00 08     00:00:10.256  DEVICE RESET
 
-Error 64 [15] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 90 [17] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 02 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 11 42 19 0f 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 04 00 00 87 19 03 0f 0f 42 00 00 00     00:00:33.538  NOP [Abort queued commands]
-  00 75 42 19 03 00 01 00 a0 00 00 00 0f     00:27:22.242  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 00 19 75 00 03 25 00 00 00     00:00:33.540  NOP [Abort queued commands]
+  00 89 61 82 d7 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 40 08 00 d0 82 89 21 d7 60 00 00 08     00:00:30.792  DEVICE RESET
+  22 89 60 82 d7 00 38 08 08 01 00 00 22     02:22:54.857  READ LONG [OBS-4]
+  08 28 08 00 d0 82 89 12 d7 61 00 00 08     00:00:00.048  DEVICE RESET
 
-Error 63 [14] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 89 [16] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 04 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 75 42 19 03 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 00 19 75 00 03 25 00 00 00     00:00:33.540  NOP [Abort queued commands]
-  0f 69 25 19 03 00 08 00 8b 00 00 00 00     00:27:19.273  [RESERVED]
-  00 08 00 00 83 18 3d 0f f7 42 00 00 00     00:00:00.001  NOP [Abort queued commands]
+  00 6d 61 82 c9 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 b8 08 00 50 82 6d 00 c9 61 00 00 08     00:00:24.824  DEVICE RESET
+  00 6d 61 82 c9 00 b0 08 b8 10 00 00 00     02:22:51.245  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 a0 08 00 38 82 6c 00 c9 61 00 00 08     00:00:20.648  DEVICE RESET
 
-Error 62 [13] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 88 [15] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 08 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 3d 42 18 f7 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 00 18 3d 00 f7 25 00 00 00     00:00:33.544  NOP [Abort queued commands]
-  0f 12 42 18 eb 00 10 00 83 00 00 00 0f     00:27:13.042  [RESERVED]
-  00 20 00 00 93 18 03 0f eb 42 00 00 00     00:00:29.456  NOP [Abort queued commands]
+  00 bb 61 82 bb 00 00 00 00 00 00 00 15     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 48 08 00 d0 82 ba 21 bb 60 00 00 08     00:00:28.752  DEVICE RESET
+  22 ba 61 82 bb 00 40 08 00 01 00 00 00     02:22:47.738  READ LONG [OBS-4]
+  08 00 00 00 00 82 96 00 bb ea 00 00 08     00:00:10.296  DEVICE RESET
 
-Error 61 [12] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 87 [14] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 10 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 12 42 18 eb 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 10 00 00 73 18 12 0f eb 42 00 00 00     00:00:33.552  NOP [Abort queued commands]
-  0f 03 25 18 eb 00 20 00 93 00 00 00 00     00:27:13.027  [RESERVED]
-  00 20 00 00 73 18 da 0f de 42 00 00 00     00:00:40.961  NOP [Abort queued commands]
+  00 78 60 82 ad 00 00 00 00 00 00 00 21     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 28 01 00 0a 82 77 22 ad 61 00 00 08     00:00:53.304  DEVICE RESET
+  22 53 60 82 ad 00 18 08 90 28 00 00 1d     02:22:44.051  READ LONG [OBS-4]
+  08 08 01 00 00 82 53 22 ad 61 00 00 08     00:00:22.544  DEVICE RESET
 
-Error 60 [11] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 86 [13] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 20 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 da 42 18 de 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 00 18 d9 00 de 25 00 00 00     00:00:29.472  NOP [Abort queued commands]
-  0f 4b 25 18 d3 00 40 00 73 00 00 00 00     00:27:06.956  [RESERVED]
-  00 40 00 00 33 18 4b 0f d3 42 00 00 00     00:00:00.001  NOP [Abort queued commands]
+  00 df 60 82 9f 00 00 00 00 00 00 00 21     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 80 01 00 0a 82 de 22 9f 60 00 00 08     00:00:53.384  DEVICE RESET
+  22 de 60 82 9f 00 78 08 00 01 00 00 1d     02:22:40.606  READ LONG [OBS-4]
+  08 60 08 00 e8 82 de 12 9f 61 00 00 08     00:00:22.640  DEVICE RESET
 
-Error 59 [10] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 85 [12] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 40 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 4c 42 18 d3 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 00 18 4b 00 d3 25 00 00 00     00:00:29.504  NOP [Abort queued commands]
-  0f 4b 25 18 d3 00 40 00 33 00 00 00 00     00:27:06.955  [RESERVED]
-  00 80 00 00 33 18 75 0f c6 42 00 00 00     00:00:00.001  NOP [Abort queued commands]
+  00 ee 61 82 91 00 00 00 00 00 00 00 22     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 50 08 00 d0 82 ed 21 91 60 00 00 08     00:00:02.720  DEVICE RESET
+  22 d8 ea 82 91 00 48 08 00 01 00 00 00     02:22:37.037  READ LONG [OBS-4]
+  08 02 10 00 00 82 d8 00 91 ef 00 00 08     00:00:00.000  DEVICE RESET
 
-Error 58 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 84 [11] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 80 00 51 00 00 e0 01 00 00
+  01 -- 00 01 00 00 51 00 00 40 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 75 42 18 c6 00 00 00 00 00 00 00 0f     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 01 00 00 a0 18 65 00 c6 25 00 00 00     00:00:13.184  NOP [Abort queued commands]
-  0f 64 25 18 c6 00 80 00 b3 00 00 00 00     00:27:03.653  [RESERVED]
-  00 00 00 00 b3 18 57 0f c6 42 00 00 00     00:00:00.001  NOP [Abort queued commands]
+  00 19 60 82 84 00 00 00 00 00 00 00 21     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  08 e0 01 00 0a 82 19 22 84 60 00 00 08     00:00:53.480  DEVICE RESET
+  22 19 61 82 84 00 d8 08 00 01 00 00 12     02:22:33.497  READ LONG [OBS-4]
+  08 00 00 00 00 82 b2 00 83 ea 00 00 08     00:00:30.920  DEVICE RESET
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -269,8 +269,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     25/39 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     24/30 Celsius
 Lifetime    Min/Max Temperature:     25/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -279,7 +279,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/85 Celsius
-Temperature History Size (Index):    128 (67)
+Temperature History Size (Index):    128 (13)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -298,8 +298,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        13024  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          477  Vendor specific
 
 
 

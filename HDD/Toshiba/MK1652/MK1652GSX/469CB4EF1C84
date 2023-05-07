@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.17.1-desktop-2omv4050] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.2-desktop-1omv2390] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MK..52GSX
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 000039 ...
 Firmware Version: LV011C
 User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jul 27 08:15:22 2022 BST
+Local Time is:    Mon Mar  6 18:01:26 2023 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,32 +64,32 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   050    -    0
   2 Throughput_Performance  POS---   100   100   050    -    0
-  3 Spin_Up_Time            PO----   100   100   002    -    1046
-  4 Start_Stop_Count        -O--CK   100   100   000    -    8146
+  3 Spin_Up_Time            PO----   100   100   002    -    1079
+  4 Start_Stop_Count        -O--CK   100   100   000    -    8934
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1
   7 Seek_Error_Rate         POSR--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   060   060   000    -    16286
+  9 Power_On_Hours          -O--CK   055   055   000    -    18216
  10 Spin_Retry_Count        PO--C-   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    7881
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    8669
 184 End-to-End_Error        -O--CK   100   100   001    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   097   000    -    261
+188 Command_Timeout         -O--CK   100   097   000    -    263
 189 High_Fly_Writes         -O-RCK   100   100   001    -    0
-190 Airflow_Temperature_Cel -O---K   058   020   045    Past 42 (Min/Max 22/43)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    740
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    39453274
-193 Load_Cycle_Count        -O--CK   050   050   000    -    509900
-194 Temperature_Celsius     -O---K   100   100   000    -    42 (Min/Max -6/80)
+190 Airflow_Temperature_Cel -O---K   066   020   045    Past 34 (Min/Max 26/34)
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    741
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    40829551
+193 Load_Cycle_Count        -O--CK   039   039   000    -    617625
+194 Temperature_Celsius     -O---K   100   100   000    -    34 (Min/Max -6/80)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    36
-222 Loaded_Hours            -O--CK   071   071   000    -    11951
+222 Loaded_Hours            -O--CK   067   067   000    -    13272
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    357
+226 Load-in_Time            -OS--K   100   100   000    -    328
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -152,8 +152,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    42 Celsius
-Power Cycle Min/Max Temperature:     22/43 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     26/34 Celsius
 Lifetime    Min/Max Temperature:     -6/80 Celsius
 Under/Over Temperature Limit Count:  31/105573
 
@@ -162,7 +162,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (112)
+Temperature History Size (Index):    478 (11)
 
 SCT Error Recovery Control command not supported
 
@@ -180,8 +180,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

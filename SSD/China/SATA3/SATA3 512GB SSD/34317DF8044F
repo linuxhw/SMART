@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-46-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.19.0-35-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Sep  9 20:35:07 2022 MSK
+Local Time is:    Fri Mar  3 15:18:14 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,35 +59,35 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
-  5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    5338
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    784
-160 Unknown_Attribute       -O--CK   100   100   050    -    0
-161 Unknown_Attribute       PO--CK   100   100   050    -    100
+  5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    4
+  9 Power_On_Hours          -O--CK   100   100   050    -    9187
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    1729
+160 Unknown_Attribute       -O--CK   100   100   050    -    1
+161 Unknown_Attribute       PO--CK   100   100   050    -    96
 163 Unknown_Attribute       -O--CK   100   100   050    -    17
-164 Unknown_Attribute       -O--CK   100   100   050    -    74812
-165 Unknown_Attribute       -O--CK   100   100   050    -    155
-166 Unknown_Attribute       -O--CK   100   100   050    -    5
-167 Unknown_Attribute       -O--CK   100   100   050    -    51
+164 Unknown_Attribute       -O--CK   100   100   050    -    138553
+165 Unknown_Attribute       -O--CK   100   100   050    -    355
+166 Unknown_Attribute       -O--CK   100   100   050    -    7
+167 Unknown_Attribute       -O--CK   100   100   050    -    95
 168 Unknown_Attribute       -O--CK   100   100   050    -    5050
 169 Unknown_Attribute       -O--CK   100   100   050    -    99
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   050    -    0
-178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
+178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    4
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    696
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    1504
 194 Temperature_Celsius     -O---K   100   100   050    -    40
 195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    0
-196 Reallocated_Event_Count -O--CK   100   100   050    -    0
-197 Current_Pending_Sector  -O--CK   100   100   050    -    0
-198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
+196 Reallocated_Event_Count -O--CK   100   100   050    -    1
+197 Current_Pending_Sector  -O--CK   100   100   050    -    4
+198 Offline_Uncorrectable   -O--CK   100   100   050    -    1
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
-232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    161876
-242 Total_LBAs_Read         ----CK   100   100   050    -    104148
-245 Unknown_Attribute       -O--CK   100   100   050    -    199138
+232 Available_Reservd_Space -O--CK   100   100   050    -    96
+241 Total_LBAs_Written      ----CK   100   100   050    -    271296
+242 Total_LBAs_Read         ----CK   100   100   050    -    241991
+245 Unknown_Attribute       -O--CK   100   100   050    -    351023
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,7 +116,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      90%       280         -
+# 1  Short offline       Completed without error       00%      9053         -
+# 2  Short offline       Interrupted (host reset)      90%       280         -
 
 Selective Self-tests/Logging not supported
 
@@ -125,12 +126,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             784  ---  Lifetime Power-On Resets
-0x01  0x010  4            5338  ---  Power-on Hours
-0x01  0x018  6      2018831490  ---  Logical Sectors Written
-0x01  0x020  6          281001  ---  Number of Write Commands
-0x01  0x028  6      2530483690  ---  Logical Sectors Read
-0x01  0x030  6           42781  ---  Number of Read Commands
+0x01  0x008  4            1729  ---  Lifetime Power-On Resets
+0x01  0x010  4            9187  ---  Power-on Hours
+0x01  0x018  6       599840691  ---  Logical Sectors Written
+0x01  0x020  6           58719  ---  Number of Write Commands
+0x01  0x028  6      2974249316  ---  Logical Sectors Read
+0x01  0x030  6           37342  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

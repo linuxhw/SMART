@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Nov  7 22:02:22 2021 
+Local Time is:    Sun Apr 16 07:43:40 2023 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -62,23 +62,23 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    65536
+  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   131   131   054    -    146
-  3 Spin_Up_Time            POS---   107   107   024    -    188 (Average 192)
-  4 Start_Stop_Count        -O--C-   099   099   000    -    6585
+  3 Spin_Up_Time            POS---   107   107   024    -    189 (Average 191)
+  4 Start_Stop_Count        -O--C-   099   099   000    -    6599
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    1
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   134   134   020    -    28
-  9 Power_On_Hours          -O--C-   095   095   000    -    38512
+  9 Power_On_Hours          -O--C-   095   095   000    -    38515
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    6248
-192 Power-Off_Retract_Count -O--CK   095   095   000    -    6785
-193 Load_Cycle_Count        -O--C-   095   095   000    -    6785
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    6262
+192 Power-Off_Retract_Count -O--CK   095   095   000    -    6799
+193 Load_Cycle_Count        -O--C-   095   095   000    -    6799
 194 Temperature_Celsius     -O----   187   187   000    -    32 (Min/Max 16/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    2
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    743
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    744
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 3632 (device log contains only the most recent 4 errors)
+Device Error Count: 3633 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,6 +120,23 @@ Device Error Count: 3632 (device log contains only the most recent 4 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3633 [0] occurred at disk power-on lifetime: 38513 hours (1604 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 01 98 00 00 08 33 07 9f e8 00  Error: ICRC, ABRT 408 sectors at LBA = 0x0833079f = 137562015
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 02 e8 00 00 08 33 06 50 e0 08     00:11:20.200  WRITE DMA EXT
+  35 00 00 04 18 00 00 08 32 fc 70 e0 08     00:11:20.200  WRITE DMA EXT
+  35 00 00 01 40 00 00 08 5b fe 00 e0 08     00:11:20.200  WRITE DMA EXT
+  35 00 00 05 f8 00 00 08 32 f6 78 e0 08     00:11:20.200  WRITE DMA EXT
+  35 00 00 07 50 00 00 08 32 ef 28 e0 08     00:11:20.200  WRITE DMA EXT
 
 Error 3632 [3] occurred at disk power-on lifetime: 34324 hours (1430 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -172,23 +189,6 @@ Error 3630 [1] occurred at disk power-on lifetime: 34324 hours (1430 days + 4 ho
   60 00 b0 00 a8 00 00 06 ff be c0 40 08  1d+08:45:49.200  READ FPDMA QUEUED
   60 08 00 00 a0 00 00 06 fe 27 88 40 08  1d+08:45:49.200  READ FPDMA QUEUED
 
-Error 3629 [0] occurred at disk power-on lifetime: 34293 hours (1428 days + 21 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 90 00 00 06 2f 96 90 46 00  Error: ICRC, ABRT at LBA = 0x062f9690 = 103782032
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 06 2f 96 20 40 08     01:29:36.900  READ FPDMA QUEUED
-  61 00 20 00 f0 00 00 08 e0 a6 68 40 08     01:29:35.800  WRITE FPDMA QUEUED
-  61 00 08 00 e8 00 00 08 e0 a6 48 40 08     01:29:35.800  WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 a0 08     01:29:33.200  FLUSH CACHE EXT
-  61 00 08 00 d8 00 00 07 d9 c7 d8 40 08     01:29:33.200  WRITE FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Completed without error       00%     32054         -
@@ -221,7 +221,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (66)
+Temperature History Size (Index):    128 (0)
 
 SCT Error Recovery Control:
            Read: Disabled

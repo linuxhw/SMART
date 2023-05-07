@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     HGST Travelstar 7K1000
@@ -11,10 +11,10 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Apr 21 18:36:20 2022 -03
+Local Time is:    Wed Apr 19 22:34:53 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,18 +65,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   162   162   040    -    95
-  3 Spin_Up_Time            POS---   120   120   033    -    1
-  4 Start_Stop_Count        -O--C-   098   098   000    -    3907
+  3 Spin_Up_Time            POS---   136   136   033    -    2
+  4 Start_Stop_Count        -O--C-   097   097   000    -    4747
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   138   138   040    -    34
-  9 Power_On_Hours          -O--C-   065   065   000    -    15415
+  9 Power_On_Hours          -O--C-   060   060   000    -    17668
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    3893
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    4593
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    387
-193 Load_Cycle_Count        -O--C-   091   091   000    -    92756
-194 Temperature_Celsius     -O----   115   115   000    -    52 (Min/Max 6/72)
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    404
+193 Load_Cycle_Count        -O--C-   082   082   000    -    183057
+194 Temperature_Celsius     -O----   206   206   000    -    29 (Min/Max 6/72)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -192,8 +192,19 @@ Error 6 [1] occurred at disk power-on lifetime: 10546 hours (439 days + 10 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     15177         -
-# 2  Short offline       Completed without error       00%     15173         -
+# 1  Short offline       Completed without error       00%     17619         -
+# 2  Short offline       Completed without error       00%     17611         -
+# 3  Short offline       Aborted by host               30%     17604         -
+# 4  Short offline       Completed without error       00%     17597         -
+# 5  Short offline       Completed without error       00%     17595         -
+# 6  Short offline       Completed without error       00%     17588         -
+# 7  Short offline       Interrupted (host reset)      40%     17569         -
+# 8  Short offline       Completed without error       00%     17567         -
+# 9  Short offline       Completed without error       00%     17486         -
+#10  Short offline       Completed without error       00%     17485         -
+#11  Short offline       Completed without error       00%     17480         -
+#12  Short offline       Completed without error       00%     15177         -
+#13  Short offline       Completed without error       00%     15173         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -209,10 +220,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    52 Celsius
-Power Cycle Min/Max Temperature:     50/52 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     17/29 Celsius
 Lifetime    Min/Max Temperature:      6/72 Celsius
-Specified Max Operating Temperature:    50 Celsius
+Specified Max Operating Temperature:    49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -220,7 +231,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (86)
+Temperature History Size (Index):    128 (93)
 
 SCT Error Recovery Control:
            Read: Disabled

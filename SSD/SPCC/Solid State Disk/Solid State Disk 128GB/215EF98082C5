@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.15.xm1-1.klp-xanmod-rosa2021.1-x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.12.xm1-1.klp-xanmod-rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available, deterministic
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Nov 20 14:52:59 2022 MSK
+Local Time is:    Sat Mar 11 11:33:00 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,34 +60,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    1981
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    950
+  9 Power_On_Hours          -O--CK   100   100   050    -    2525
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    1084
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    8
-164 Unknown_Attribute       -O--CK   100   100   050    -    68000
-165 Unknown_Attribute       -O--CK   100   100   050    -    146
-166 Unknown_Attribute       -O--CK   100   100   050    -    102
-167 Unknown_Attribute       -O--CK   100   100   050    -    137
+164 Unknown_Attribute       -O--CK   100   100   050    -    84597
+165 Unknown_Attribute       -O--CK   100   100   050    -    210
+166 Unknown_Attribute       -O--CK   100   100   050    -    128
+167 Unknown_Attribute       -O--CK   100   100   050    -    171
 168 Unknown_Attribute       -O--CK   100   100   050    -    7000
-169 Unknown_Attribute       -O--CK   100   100   050    -    99
+169 Unknown_Attribute       -O--CK   100   100   050    -    98
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   050    -    0
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    259
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    280
 194 Temperature_Celsius     -O---K   100   100   050    -    40
-195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    33359
+195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    51901
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    14
+199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    19
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    160549
-242 Total_LBAs_Read         ----CK   100   100   050    -    168136
-245 Unknown_Attribute       -O--CK   100   100   050    -    85050
+241 Total_LBAs_Written      ----CK   100   100   050    -    196915
+242 Total_LBAs_Read         ----CK   100   100   050    -    208430
+245 Unknown_Attribute       -O--CK   100   100   050    -    114741
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 14 (device log contains only the most recent 4 errors)
+Device Error Count: 19 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,10 +128,26 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 14 [1] log entry is empty
-Error 13 [0] log entry is empty
-Error 12 [3] log entry is empty
-Error 11 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 19 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
+Error 18 [1] log entry is empty
+Error 17 [0] log entry is empty
+Error 16 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -158,14 +174,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             950  ---  Lifetime Power-On Resets
-0x01  0x010  4            1981  ---  Power-on Hours
-0x01  0x018  6      1931808743  ---  Logical Sectors Written
-0x01  0x020  6           95036  ---  Number of Write Commands
-0x01  0x028  6      2429069366  ---  Logical Sectors Read
-0x01  0x030  6          321862  ---  Number of Read Commands
+0x01  0x008  4            1084  ---  Lifetime Power-On Resets
+0x01  0x010  4            2525  ---  Power-on Hours
+0x01  0x018  6        20148915  ---  Logical Sectors Written
+0x01  0x020  6          153775  ---  Number of Write Commands
+0x01  0x028  6       774771495  ---  Logical Sectors Read
+0x01  0x030  6          275675  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -177,7 +193,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           27  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           24  Device-to-host register FISes sent due to a COMRESET
 
 
 

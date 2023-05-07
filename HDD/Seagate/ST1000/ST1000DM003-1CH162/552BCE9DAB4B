@@ -1,5 +1,5 @@
-smartctl 7.0 2019-05-21 r4917 [x86_64-linux-5.3.18-150300.59.54-default] (SUSE RPM)
-Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.0-38-generic] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -11,14 +11,14 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Mar 16 17:06:52 2022 -05
+Local Time is:    Thu Mar 30 21:57:13 2023 -05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -29,20 +29,20 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
 data collection: 		(  584) seconds.
 Offline data collection
-capabilities: 			 (0x73) SMART execute Offline immediate.
+capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -62,30 +62,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   086   006    -    153220872
+  1 Raw_Read_Error_Rate     POSR--   120   086   006    -    236301104
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   088   088   020    -    12834
+  4 Start_Stop_Count        -O--CK   087   087   020    -    14271
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    796691172
-  9 Power_On_Hours          -O--CK   062   062   000    -    33489
+  7 Seek_Error_Rate         POSR--   089   060   030    -    817708869
+  9 Power_On_Hours          -O--CK   056   056   000    -    38666
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   020    -    8296
+ 12 Power_Cycle_Count       -O--CK   092   092   020    -    9187
 183 Runtime_Bad_Block       -O--CK   099   099   000    -    1
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   001   001   000    -    2232
-188 Command_Timeout         -O--CK   100   060   000    -    0 0 88
+188 Command_Timeout         -O--CK   100   060   000    -    0 0 92
 189 High_Fly_Writes         -O-RCK   094   094   000    -    6
-190 Airflow_Temperature_Cel -O---K   077   056   045    -    23 (0 44 23 18 0)
+190 Airflow_Temperature_Cel -O---K   064   055   045    -    36 (Min/Max 21/40 #44)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    3286
-193 Load_Cycle_Count        -O--CK   057   057   000    -    86786
-194 Temperature_Celsius     -O---K   023   044   000    -    23 (128 0 0 0 0)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    3853
+193 Load_Cycle_Count        -O--CK   032   032   000    -    137639
+194 Temperature_Celsius     -O---K   036   045   000    -    36 (128 0 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    4
-240 Head_Flying_Hours       ------   100   253   000    -    27344h+14m+57.424s
-241 Total_LBAs_Written      ------   100   253   000    -    123982911491
-242 Total_LBAs_Read         ------   100   253   000    -    258433255991
+240 Head_Flying_Hours       ------   100   253   000    -    30411h+26m+37.881s
+241 Total_LBAs_Written      ------   100   253   000    -    125944702522
+242 Total_LBAs_Read         ------   100   253   000    -    275482659236
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -276,25 +276,25 @@ Error 2376 [15] occurred at disk power-on lifetime: 13996 hours (583 days + 4 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     33472         -
-# 2  Short offline       Completed without error       00%     33463         -
-# 3  Short offline       Completed without error       00%     33449         -
-# 4  Short offline       Completed without error       00%     33448         -
-# 5  Short offline       Completed without error       00%     33408         -
-# 6  Short offline       Completed without error       00%     33400         -
-# 7  Short offline       Completed without error       00%     33386         -
-# 8  Short offline       Completed without error       00%     33371         -
-# 9  Extended offline    Interrupted (host reset)      90%     33355         -
-#10  Short offline       Completed without error       00%     33339         -
-#11  Short offline       Completed without error       00%     33332         -
-#12  Short offline       Completed without error       00%     33314         -
-#13  Short offline       Completed without error       00%     33305         -
-#14  Short offline       Completed without error       00%     33291         -
-#15  Short offline       Completed without error       00%     33279         -
-#16  Short offline       Completed without error       00%     33261         -
-#17  Short offline       Completed without error       00%     33248         -
-#18  Short offline       Completed without error       00%     33218         -
-#19  Short offline       Completed without error       00%     33203         -
+# 1  Short offline       Completed without error       00%     38396         -
+# 2  Short offline       Completed without error       00%     38379         -
+# 3  Short offline       Completed without error       00%     38365         -
+# 4  Short offline       Completed without error       00%     38348         -
+# 5  Short offline       Completed without error       00%     38332         -
+# 6  Short offline       Completed without error       00%     38318         -
+# 7  Short offline       Completed without error       00%     38302         -
+# 8  Short offline       Completed without error       00%     38288         -
+# 9  Short offline       Completed without error       00%     38276         -
+#10  Extended offline    Completed without error       00%     38263         -
+#11  Short offline       Completed without error       00%     38244         -
+#12  Short offline       Completed without error       00%     38234         -
+#13  Short offline       Completed without error       00%     38217         -
+#14  Short offline       Completed without error       00%     38185         -
+#15  Short offline       Completed without error       00%     38171         -
+#16  Short offline       Completed without error       00%     38157         -
+#17  Short offline       Completed without error       00%     38141         -
+#18  Short offline       Completed without error       00%     38127         -
+#19  Short offline       Completed without error       00%     38118         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -310,9 +310,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    20 Celsius
-Power Cycle Min/Max Temperature:     18/20 Celsius
-Lifetime    Min/Max Temperature:      5/44 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     21/40 Celsius
+Lifetime    Min/Max Temperature:      5/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -325,12 +325,10 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-
-
 

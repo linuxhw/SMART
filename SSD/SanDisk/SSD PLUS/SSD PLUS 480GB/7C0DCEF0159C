@@ -14,16 +14,16 @@ Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
-SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Feb  7 21:05:57 2022 GMT
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Mon Mar 27 20:02:01 2023 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -60,29 +60,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6322
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    4205
-165 Total_Write/Erase_Count -O--CK   100   100   000    -    4216
-166 Min_W/E_Cycle           -O--CK   100   100   ---    -    38
+  9 Power_On_Hours          -O--CK   100   100   000    -    8584
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    5651
+165 Total_Write/Erase_Count -O--CK   100   100   000    -    6433
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    55
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    0
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    96
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    109
 169 Total_Bad_Block         -O--CK   100   100   ---    -    492
 170 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    38
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    349
+173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    55
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    436
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    4
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   065   062   000    -    35 (Min/Max 8/62)
+194 Temperature_Celsius     -O---K   070   062   000    -    30 (Min/Max 8/62)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    3076 1852 3076
+230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    4646 2816 4646
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   005    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    19081
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    47430
-241 Total_Writes_GiB        ----CK   100   100   000    -    17896
-242 Total_Reads_GiB         ----CK   100   100   000    -    18421
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    27932
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    72370
+241 Total_Writes_GiB        ----CK   100   100   000    -    26460
+242 Total_Reads_GiB         ----CK   100   100   000    -    27128
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -197,7 +197,9 @@ Error 1 [0] occurred at disk power-on lifetime: 2295 hours (95 days + 15 hours)
   00 00 00 00 00 00 00 00 00 00 00 00 11  3d+07:32:11.153  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      90%      7507         -
+# 2  Short offline       Completed without error       00%      7367         -
 
 Selective Self-tests/Logging not supported
 
@@ -206,17 +208,17 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            4205  ---  Lifetime Power-On Resets
-0x01  0x010  4            6322  ---  Power-on Hours
-0x01  0x018  6     37531843904  ---  Logical Sectors Written
-0x01  0x028  6     38631826557  ---  Logical Sectors Read
-0x01  0x038  6            6322  ---  Date and Time TimeStamp
+0x01  0x008  4            5651  ---  Lifetime Power-On Resets
+0x01  0x010  4            8584  ---  Power-on Hours
+0x01  0x018  6     55492514826  ---  Logical Sectors Written
+0x01  0x028  6     56891985007  ---  Logical Sectors Read
+0x01  0x038  6            8584  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              35  ---  Current Temperature
+0x05  0x008  1              30  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              61  ---  Highest Temperature
-0x05  0x028  1              20  ---  Lowest Temperature
+0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1               -  ---  Highest Average Short Term Temperature
 0x05  0x038  1               -  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -226,7 +228,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               7  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              11  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -239,8 +241,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

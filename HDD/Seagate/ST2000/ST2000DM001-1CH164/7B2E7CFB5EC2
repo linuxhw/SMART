@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.16.xm1-1.klp-xanmod-rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -11,10 +11,10 @@ User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
 Form Factor:      3.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Apr 29 00:02:10 2022 -03
+Local Time is:    Sat Apr 22 20:46:50 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,30 +63,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    214198552
+  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    66213592
   3 Spin_Up_Time            PO----   095   094   000    -    0
-  4 Start_Stop_Count        -O--CK   084   084   020    -    16904
+  4 Start_Stop_Count        -O--CK   081   081   020    -    20416
   5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    1288
-  7 Seek_Error_Rate         POSR--   061   051   030    -    210528687058
-  9 Power_On_Hours          -O--CK   074   074   000    -    22841
+  7 Seek_Error_Rate         POSR--   061   051   030    -    210528748834
+  9 Power_On_Hours          -O--CK   071   071   000    -    25737
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5420
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6809
 183 Runtime_Bad_Block       -O--CK   094   094   000    -    6
 184 End-to-End_Error        -O--CK   010   010   099    NOW  90
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   094   000    -    25 26 91
 189 High_Fly_Writes         -O-RCK   095   095   000    -    5
-190 Airflow_Temperature_Cel -O---K   063   043   045    Past 37 (0 57 37 35 0)
+190 Airflow_Temperature_Cel -O---K   060   043   045    Past 40 (Min/Max 39/40 #57)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1163
-193 Load_Cycle_Count        -O--CK   068   068   000    -    65772
-194 Temperature_Celsius     -O---K   037   057   000    -    37 (0 11 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1190
+193 Load_Cycle_Count        -O--CK   062   062   000    -    77820
+194 Temperature_Celsius     -O---K   040   057   000    -    40 (0 11 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   156   000    -    649
-240 Head_Flying_Hours       ------   100   253   000    -    8264h+53m+23.480s
-241 Total_LBAs_Written      ------   100   253   000    -    19730276050
-242 Total_LBAs_Read         ------   100   253   000    -    11276191119
+240 Head_Flying_Hours       ------   100   253   000    -    8823h+59m+05.974s
+241 Total_LBAs_Written      ------   100   253   000    -    19779230209
+242 Total_LBAs_Read         ------   100   253   000    -    11314010642
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -161,8 +161,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     35/37 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     39/40 Celsius
 Lifetime    Min/Max Temperature:     11/57 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -176,12 +176,10 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           26  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           25  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-
-
 

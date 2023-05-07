@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Crucial/Micron RealSSD m4/C400/P400
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar  5 21:52:02 2022 CET
+Local Time is:    Sat Mar  4 17:33:42 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -68,14 +68,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    293
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1243
+  9 Power_On_Hours          -O--CK   100   100   000    -    1265
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2863
 170 Grown_Failing_Block_Ct  PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    138
-173 Wear_Leveling_Count     PO--CK   100   100   010    -    22
+173 Wear_Leveling_Count     PO--CK   098   098   010    -    73
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    0
-181 Non4k_Aligned_Access    -O---K   100   100   000    -    833 181 651
+181 Non4k_Aligned_Access    -O---K   100   100   000    -    1165 230 935
 183 SATA_Iface_Downshift    -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
@@ -87,7 +87,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    0
-202 Perc_Rated_Life_Used    ---RC-   100   100   000    -    0
+202 Perc_Rated_Life_Used    ---RC-   098   098   000    -    2
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -124,7 +124,8 @@ SMART Extended Self-test Log size 3449 not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%       358         -
+# 2  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -149,7 +150,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (287)
+Temperature History Size (Index):    478 (473)
 
 SCT Error Recovery Control:
            Read:     40 (4.0 seconds)
@@ -158,31 +159,31 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1243  ---  Lifetime Power-On Resets
-0x01  0x010  4             293  ---  Power-on Hours
-0x01  0x018  6      4692960930  ---  Logical Sectors Written
-0x01  0x020  6        60740676  ---  Number of Write Commands
-0x01  0x028  6      9681588325  ---  Logical Sectors Read
-0x01  0x030  6       193232038  ---  Number of Read Commands
+0x01  0x008  4            2863  ---  Lifetime Power-On Resets
+0x01  0x010  4            1265  ---  Power-on Hours
+0x01  0x018  6     16638887773  ---  Logical Sectors Written
+0x01  0x020  6       156196990  ---  Number of Write Commands
+0x01  0x028  6     16448508807  ---  Logical Sectors Read
+0x01  0x030  6       268482866  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1               0  ---  Current Temperature
 0x05  0x010  1               0  ---  Average Short Term Temperature
-0x05  0x018  1               -  ---  Average Long Term Temperature
+0x05  0x018  1               0  ---  Average Long Term Temperature
 0x05  0x020  1               0  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
 0x05  0x030  1               0  ---  Highest Average Short Term Temperature
 0x05  0x038  1               0  ---  Lowest Average Short Term Temperature
-0x05  0x040  1               -  ---  Highest Average Long Term Temperature
-0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
+0x05  0x040  1               0  ---  Highest Average Long Term Temperature
+0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               -  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               -  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              31  ---  Number of Hardware Resets
+0x06  0x008  4             293  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==

@@ -1,5 +1,5 @@
-smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.4.0-87-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-144-generic] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.8
@@ -10,13 +10,14 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Oct 14 10:20:48 2021 CDT
+Local Time is:    Tue Mar  7 11:41:22 2023 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -54,16 +55,16 @@ recommended polling time: 	 (  84) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   047   045   006    -    85238671
+  1 Raw_Read_Error_Rate     POSR--   046   045   006    -    99111845
   3 Spin_Up_Time            PO----   098   098   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    182
+  4 Start_Stop_Count        -O--CK   100   100   020    -    184
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    545699441
-  9 Power_On_Hours          -O--CK   001   001   000    -    89366
+  7 Seek_Error_Rate         POSR--   087   060   030    -    610797662
+  9 Power_On_Hours          -O--CK   001   001   000    -    101372
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    184
-194 Temperature_Celsius     -O---K   051   056   000    -    51 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   047   045   000    -    85238671
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    186
+194 Temperature_Celsius     -O---K   049   056   000    -    49 (0 15 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   046   045   000    -    99111845
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -86,7 +87,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -124,6 +125,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
 Read SATA Phy Event Counters failed

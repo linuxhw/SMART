@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.11.12-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.13-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Mar 17 18:18:28 2023 CET
+Local Time is:    Sat Mar 18 10:07:42 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -30,8 +30,8 @@ Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,22 +64,22 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   099   099   016    -    131072
-  2 Throughput_Performance  P-S---   137   137   054    -    89
-  3 Spin_Up_Time            POS---   134   134   024    -    282 (Average 285)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    1381
+  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
+  2 Throughput_Performance  P-S---   137   137   054    -    90
+  3 Spin_Up_Time            POS---   128   128   024    -    311 (Average 282)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    1389
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    29
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   140   140   020    -    30
-  9 Power_On_Hours          -O--C-   099   099   000    -    7129
+  9 Power_On_Hours          -O--C-   099   099   000    -    7140
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1323
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1508
-193 Load_Cycle_Count        -O--C-   099   099   000    -    1508
-194 Temperature_Celsius     -O----   193   193   000    -    31 (Min/Max 12/65)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1325
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1516
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1516
+194 Temperature_Celsius     -O----   214   214   000    -    28 (Min/Max 12/65)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    27
 197 Current_Pending_Sector  -O---K   100   100   000    -    20
-198 Offline_Uncorrectable   ---R--   100   100   000    -    7
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -104,7 +104,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 583 (device log contains only the most recent five errors)
+ATA Error Count: 584 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -118,6 +118,23 @@ ATA Error Count: 583 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 584 occurred at disk power-on lifetime: 7129 hours (297 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 11 9e 87 ab 0c  Error: UNC 17 sectors at LBA = 0x0cab879e = 212567966
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 20 8f 87 ab e0 00  23d+14:00:34.792  READ DMA EXT
+  25 00 08 b7 15 60 e0 00  23d+14:00:34.764  READ DMA EXT
+  25 00 08 df 93 60 e0 00  23d+14:00:34.651  READ DMA EXT
+  25 00 08 3f c1 c1 e0 00  23d+14:00:34.587  READ DMA EXT
+  25 00 08 0f 94 60 e0 00  23d+14:00:34.583  READ DMA EXT
 
 Error 583 occurred at disk power-on lifetime: 7025 hours (292 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -187,23 +204,6 @@ Error 580 occurred at disk power-on lifetime: 6876 hours (286 days + 12 hours)
   ef 03 46 00 00 00 a0 00   8d+20:36:28.748  SET FEATURES [Set transfer mode]
   25 00 80 bf 15 01 a0 04   8d+20:36:28.644  READ DMA EXT
 
-Error 579 occurred at disk power-on lifetime: 6876 hours (286 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 40 ff 15 01 01  Error: UNC 64 sectors at LBA = 0x010115ff = 16848383
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 80 bf 15 01 e1 00   8d+20:36:10.432  READ DMA EXT
-  25 00 80 3f 15 01 e1 00   8d+20:36:10.422  READ DMA EXT
-  25 00 80 ef 14 01 e0 00   8d+20:36:10.349  READ DMA EXT
-  ef 03 46 00 00 00 a0 00   8d+20:36:10.335  SET FEATURES [Set transfer mode]
-  25 00 80 bf 15 01 a0 04   8d+20:36:10.232  READ DMA EXT
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -222,9 +222,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     29/31 Celsius
+Device State:                        Active (0)
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     26/28 Celsius
 Lifetime    Min/Max Temperature:     12/65 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -233,7 +233,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (20)
+Temperature History Size (Index):    128 (30)
 
 Write SCT (Get) Error Recovery Control Command failed: Read of ATA output registers not implemented [JMicron]
 SCT (Get) Error Recovery Control command failed

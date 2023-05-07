@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.19.0-32-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.19.0-41-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Tue Feb 28 17:50:21 2023 CET
+Local Time is:    Wed Apr 26 15:12:11 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,20 +63,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    1
-  3 Spin_Up_Time            POS--K   136   133   021    -    4200
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8914
+  3 Spin_Up_Time            POS--K   136   133   021    -    4191
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8945
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   078   078   000    -    16340
+  9 Power_On_Hours          -O--CK   078   078   000    -    16441
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   000    -    8904
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8935
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   099   000    -    1
-190 Airflow_Temperature_Cel -O---K   056   039   040    Past 44
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    138
-193 Load_Cycle_Count        -O--CK   198   198   000    -    8914
+188 Command_Timeout         -O--CK   100   076   000    -    167506280488
+190 Airflow_Temperature_Cel -O---K   058   039   040    Past 42
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    142
+193 Load_Cycle_Count        -O--CK   198   198   000    -    8945
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -111,7 +111,157 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 39 (device log contains only the most recent 24 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 39 [14] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 03 08 00 80 08 e3 00  Error: UNC 8 sectors at LBA = 0x30b008008 = 13069484040
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 03 08 00 80 08 e3 08     00:58:05.247  READ DMA
+  35 00 00 04 28 00 05 a1 00 41 48 e0 08     00:57:58.956  WRITE DMA EXT
+  35 00 00 00 08 00 12 12 00 84 20 e0 08     00:57:58.956  WRITE DMA EXT
+  35 00 00 04 30 00 05 9d 00 41 18 e0 08     00:57:51.261  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:51.258  IDENTIFY DEVICE
+
+Error 38 [13] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 04 30 00 05 9d 00 41 18 e0 00  Error: IDNF 1072 sectors at LBA = 0x59d004118 = 24108876056
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 30 00 05 9d 00 41 18 e0 08     00:57:42.737  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:42.735  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:57:42.732  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:42.730  IDENTIFY DEVICE
+  35 00 00 04 30 00 05 9d 00 41 18 e0 08     00:57:34.218  WRITE DMA EXT
+
+Error 37 [12] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 04 30 00 05 9d 00 41 18 e0 00  Error: IDNF 1072 sectors at LBA = 0x59d004118 = 24108876056
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 30 00 05 9d 00 41 18 e0 08     00:57:34.218  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:34.215  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:57:34.213  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:34.211  IDENTIFY DEVICE
+  35 00 00 04 30 00 05 9d 00 41 18 e0 08     00:57:25.680  WRITE DMA EXT
+
+Error 36 [11] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 04 30 00 05 9d 00 41 18 e0 00  Error: IDNF 1072 sectors at LBA = 0x59d004118 = 24108876056
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 30 00 05 9d 00 41 18 e0 08     00:57:25.680  WRITE DMA EXT
+  35 00 00 04 00 00 12 0e 00 84 20 e0 08     00:57:25.678  WRITE DMA EXT
+  35 00 00 04 48 00 05 98 00 41 d0 e0 08     00:57:18.536  WRITE DMA EXT
+  35 00 00 04 50 00 05 94 00 41 80 e0 08     00:57:10.076  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:10.073  IDENTIFY DEVICE
+
+Error 35 [10] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 04 50 00 05 94 00 41 80 e0 00  Error: IDNF 1104 sectors at LBA = 0x594004180 = 23957881216
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 50 00 05 94 00 41 80 e0 08     00:57:01.553  WRITE DMA EXT
+  35 00 00 04 10 00 05 90 00 41 70 e0 08     00:57:01.551  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:01.548  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:57:01.546  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:57:01.544  IDENTIFY DEVICE
+
+Error 34 [9] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 04 10 00 05 8c 00 41 60 e0 00  Error: IDNF 1040 sectors at LBA = 0x58c004160 = 23823663456
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 10 00 05 8c 00 41 60 e0 08     00:56:53.037  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:53.035  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:56:53.034  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:53.032  IDENTIFY DEVICE
+  35 00 00 04 10 00 05 8c 00 41 60 e0 08     00:56:44.524  WRITE DMA EXT
+
+Error 33 [8] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 04 10 00 05 8c 00 41 60 e0 00  Error: IDNF 1040 sectors at LBA = 0x58c004160 = 23823663456
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 10 00 05 8c 00 41 60 e0 08     00:56:44.524  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:44.521  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:56:44.519  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:44.517  IDENTIFY DEVICE
+  35 00 00 04 10 00 05 8c 00 41 60 e0 08     00:56:36.008  WRITE DMA EXT
+
+Error 32 [7] occurred at disk power-on lifetime: 16428 hours (684 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 04 10 00 05 8c 00 41 60 e0 00  Error: IDNF 1040 sectors at LBA = 0x58c004160 = 23823663456
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 04 10 00 05 8c 00 41 60 e0 08     00:56:36.008  WRITE DMA EXT
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:36.006  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 08     00:56:36.004  SET FEATURES [Set transfer mode]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:56:36.001  IDENTIFY DEVICE
+  35 00 00 04 10 00 05 8c 00 41 60 e0 08     00:56:27.493  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -131,9 +281,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     25/47 Celsius
-Lifetime    Min/Max Temperature:     44/52 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     23/42 Celsius
+Lifetime    Min/Max Temperature:     24/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -141,7 +291,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (84)
+Temperature History Size (Index):    128 (46)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -161,7 +311,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        12895  Vendor specific
+0x8000  4         3974  Vendor specific
 
 
 

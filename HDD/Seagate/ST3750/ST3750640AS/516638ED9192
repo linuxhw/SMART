@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.79-generic-1rosa2021.1-x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.75-generic-1rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    750,156,374,016 bytes [750 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Feb 24 19:25:34 2023 MSK
+Local Time is:    Wed Mar  8 03:56:27 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,9 +29,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  18)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -56,19 +55,19 @@ recommended polling time: 	 ( 202) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   108   084   006    -    121473321
-  3 Spin_Up_Time            PO----   094   093   000    -    0
-  4 Start_Stop_Count        -O--CK   066   066   020    -    34826
+  1 Raw_Read_Error_Rate     POSR--   109   084   006    -    21828548
+  3 Spin_Up_Time            PO----   093   093   000    -    0
+  4 Start_Stop_Count        -O--CK   066   066   020    -    34862
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   087   060   030    -    634112996
-  9 Power_On_Hours          -O--CK   041   041   000    -    52112
+  7 Seek_Error_Rate         POSR--   087   060   030    -    640801435
+  9 Power_On_Hours          -O--CK   041   041   000    -    52253
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   091   091   020    -    9736
+ 12 Power_Cycle_Count       -O--CK   091   091   020    -    9763
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   059   042   045    Past 41 (Min/Max 32/44)
-194 Temperature_Celsius     -O---K   041   058   000    -    41 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   060   053   000    -    73262697
+190 Airflow_Temperature_Cel -O---K   060   042   045    Past 40 (Min/Max 24/42)
+194 Temperature_Celsius     -O---K   040   058   000    -    40 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   061   053   000    -    123989092
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   176   000    -    44375
@@ -262,7 +261,8 @@ Error 44346 [5] occurred at disk power-on lifetime: 36150 hours (1506 days + 6 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     50992         -
+# 1  Extended offline    Aborted by host               20%     52122         -
+# 2  Short offline       Completed without error       00%     50992         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -283,7 +283,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2          194  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           32  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

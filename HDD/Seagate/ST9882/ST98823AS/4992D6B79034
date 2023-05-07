@@ -1,5 +1,5 @@
-smartctl 6.6 2016-05-31 r4324 [i686-linux-5.0.0-32-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [i686-linux-5.10.0-21-686] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Momentus 5400.2
@@ -10,13 +10,14 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Feb  5 16:21:07 2023 CET
+Local Time is:    Tue Apr 18 13:33:21 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -56,23 +57,23 @@ SCT capabilities: 	       (0x0001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   103   097   006    -    5757864
+  1 Raw_Read_Error_Rate     POSR--   115   097   006    -    99535428
   3 Spin_Up_Time            PO----   094   094   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7776
+  4 Start_Stop_Count        -O--CK   093   093   020    -    7785
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    575522386
-  9 Power_On_Hours          -O--CK   076   076   000    -    21331
+  7 Seek_Error_Rate         POSR--   087   060   030    -    576340283
+  9 Power_On_Hours          -O--CK   076   076   000    -    21338
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   020    -    7331
+ 12 Power_Cycle_Count       -O--CK   093   093   020    -    7340
 187 Reported_Uncorrect      -O--CK   001   001   000    -    5670
 189 High_Fly_Writes         -O-RCK   094   094   000    -    6
-190 Airflow_Temperature_Cel -O---K   053   040   045    Past 47 (Min/Max 47/47)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    149
-193 Load_Cycle_Count        -O--CK   001   001   000    -    336766
-194 Temperature_Celsius     -O---K   047   060   000    -    47 (0 6 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   066   047   000    -    198171840
-197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967295
-198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967295
+190 Airflow_Temperature_Cel -O---K   069   040   045    Past 31 (Min/Max 21/31)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    156
+193 Load_Cycle_Count        -O--CK   001   001   000    -    336777
+194 Temperature_Celsius     -O---K   031   060   000    -    31 (0 6 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   064   047   000    -    58405936
+197 Current_Pending_Sector  -O--C-   100   001   000    -    1
+198 Offline_Uncorrectable   ----C-   100   001   000    -    1
 199 UDMA_CRC_Error_Count    -OSRCK   200   198   000    -    4
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
@@ -94,7 +95,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07           SL  R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10           SL  R/O      1  SATA NCQ Queued Error log
+0x10           SL  R/O      1  NCQ Command Error log
 0x11           SL  R/O      1  SATA Phy Event Counters log
 0x20           SL  R/O      1  Streaming performance log [OBS-8]
 0x21           SL  R/O      1  Write stream error log
@@ -231,17 +232,18 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 47 Celsius
-Power Cycle Max Temperature:          0 Celsius
-Lifetime    Max Temperature:          0 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     --/ 0 Celsius
+Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
 SCT Data Table command not supported
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

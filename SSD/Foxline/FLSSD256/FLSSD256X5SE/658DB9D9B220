@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.28-generic-1rosa2019.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.14-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     FOXLINE FLSSD256X5SE
@@ -10,10 +10,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Apr 16 18:01:06 2021 MSK
+Local Time is:    Tue Mar  7 19:52:32 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    3
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    28
+  9 Power_On_Hours          -O--C-   100   100   000    -    8433
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1245
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   000    -    81
-173 Unknown_Attribute       -O--C-   100   100   000    -    1
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    17
+173 Unknown_Attribute       -O--C-   100   100   000    -    4063306
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    63
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    100
-241 Total_LBAs_Written      -O--C-   100   100   000    -    68
+231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    97
+241 Total_LBAs_Written      -O--C-   100   100   000    -    12860
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,7 +98,26 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      8367         -
+# 2  Extended offline    Completed without error       00%      8146         -
+# 3  Extended offline    Interrupted (host reset)      00%      7616         -
+# 4  Extended offline    Completed without error       00%      5216         -
+# 5  Extended offline    Completed without error       00%      5094         -
+# 6  Extended offline    Completed without error       00%      4976         -
+# 7  Extended offline    Completed without error       00%      4731         -
+# 8  Extended offline    Completed without error       00%      4553         -
+# 9  Extended offline    Completed without error       00%      4510         -
+#10  Extended offline    Completed without error       00%      4128         -
+#11  Extended offline    Completed without error       00%      3959         -
+#12  Extended offline    Completed without error       00%      3766         -
+#13  Extended offline    Completed without error       00%      3618         -
+#14  Extended offline    Completed without error       00%      3564         -
+#15  Extended offline    Completed without error       00%      3493         -
+#16  Extended offline    Completed without error       00%      3436         -
+#17  Extended offline    Completed without error       00%      3347         -
+#18  Extended offline    Interrupted (host reset)      00%      3256         -
+#19  Extended offline    Completed without error       00%      2681         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -117,10 +136,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              28  ---  Lifetime Power-On Resets
-0x01  0x010  4               3  ---  Power-on Hours
-0x01  0x018  6       144186353  ---  Logical Sectors Written
-0x01  0x028  6        97541175  ---  Logical Sectors Read
+0x01  0x008  4            1245  ---  Lifetime Power-On Resets
+0x01  0x010  4            8433  ---  Power-on Hours
+0x01  0x018  6     26969427198  ---  Logical Sectors Written
+0x01  0x028  6     16603838275  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -128,10 +147,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              63  ---  Number of Hardware Resets
+0x06  0x008  4            7935  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -152,4 +171,6 @@ ID      Size     Value  Description
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint F1 DT
@@ -9,9 +9,9 @@ LU WWN Device Id: 5 0000f0 ...
 Firmware Version: 1AA01112
 User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7, ATA8-ACS T13/1699-D revision 3b
-Local Time is:    Thu Apr  7 19:36:20 2022 CEST
+Local Time is:    Fri Mar 31 20:26:44 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -31,8 +31,10 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  33)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      ( 137)	The previous self-test completed having
+					a test element that failed and the
+					device is suspected of having handling
+					damage.
 Total time to complete Offline 
 data collection: 		(11884) seconds.
 Offline data collection
@@ -64,29 +66,29 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   099   051    -    0
-  3 Spin_Up_Time            POS---   076   076   011    -    8150
-  4 Start_Stop_Count        -O--CK   086   086   000    -    14416
+  3 Spin_Up_Time            POS---   081   081   011    -    6620
+  4 Start_Stop_Count        -O--CK   085   085   000    -    15628
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    2
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    14433
-  9 Power_On_Hours          -O--CK   094   094   000    -    28067
+  9 Power_On_Hours          -O--CK   094   094   000    -    30767
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7042
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    7938
  13 Read_Soft_Error_Rate    -OSR--   100   099   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   001   001   099    NOW  727
 187 Reported_Uncorrect      -O--CK   100   100   000    -    148
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   076   057   000    -    24 (Min/Max 15/24)
-194 Temperature_Celsius     -O---K   074   056   000    -    26 (Min/Max 15/27)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    5542177
+190 Airflow_Temperature_Cel -O---K   077   057   000    -    23 (Min/Max 23/23)
+194 Temperature_Celsius     -O---K   077   056   000    -    23 (Min/Max 23/23)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1964
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   062   000    -    0
 200 Multi_Zone_Error_Rate   -O-R--   100   082   000    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   100   000    -    0
+201 Soft_Read_Error_Rate    -O-R--   253   253   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -257,10 +259,27 @@ Error 12403 [2] occurred at disk power-on lifetime: 22181 hours (924 days + 5 ho
 
 SMART Extended Self-test Log Version: 0 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      10%     16796         -
-# 2  Short offline       Aborted by host               00%     16767         -
-# 3  Short offline       Aborted by host               00%     16735         -
-# 4  Short offline       Aborted by host               00%       496         -
+# 1  Short offline       Completed: handling damage??  90%     30506         0
+# 2  Short offline       Aborted by host               90%     30491         -
+# 3  Short offline       Aborted by host               90%     30451         -
+# 4  Short offline       Aborted by host               90%     30416         -
+# 5  Short offline       Aborted by host               90%     30411         -
+# 6  Short offline       Aborted by host               90%     30213         -
+# 7  Short offline       Aborted by host               90%     30092         -
+# 8  Short offline       Aborted by host               90%     29885         -
+# 9  Short offline       Aborted by host               90%     29794         -
+#10  Extended offline    Aborted by host               90%     29794         -
+#11  Short offline       Aborted by host               90%     29779         -
+#12  Short offline       Aborted by host               90%     29725         -
+#13  Short offline       Aborted by host               90%     29706         -
+#14  Short offline       Aborted by host               90%     29701         -
+#15  Short offline       Aborted by host               90%     29665         -
+#16  Short offline       Aborted by host               90%     29660         -
+#17  Short offline       Aborted by host               90%     29629         -
+#18  Short offline       Aborted by host               90%     29441         -
+#19  Short offline       Aborted by host               90%     29410         -
+#20  Short offline       Aborted by host               90%     29358         -
+#21  Short offline       Aborted by host               90%     29338         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -277,8 +296,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     --/27 Celsius
+Current Temperature:                    23 Celsius
+Power Cycle Min/Max Temperature:     --/23 Celsius
 Lifetime    Min/Max Temperature:     --/45 Celsius
 
 SCT Temperature History Version:     2
@@ -286,7 +305,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (8)
+Temperature History Size (Index):    128 (72)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -298,7 +317,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
@@ -307,7 +326,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            7  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

@@ -10,7 +10,7 @@ User Capacity:    20,000,000,000 bytes [20.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-5 (minor revision not indicated)
-Local Time is:    Wed Feb 15 10:36:06 2023 GMT
+Local Time is:    Mon Mar 20 12:30:46 2023 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -25,8 +25,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -58,18 +58,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   200   200   051    -    0
-  3 Spin_Up_Time            POS---   094   093   021    -    2683
-  4 Start_Stop_Count        -O--CK   097   097   040    -    3176
+  3 Spin_Up_Time            POS---   094   093   021    -    2675
+  4 Start_Stop_Count        -O--CK   097   097   040    -    3188
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         PO-R--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   091   091   000    -    6622
+  7 Seek_Error_Rate         PO-R--   100   253   051    -    0
+  9 Power_On_Hours          -O--CK   091   091   000    -    6623
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1749
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1761
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   -O--C-   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    53
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    54
 200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -78,264 +78,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory not supported
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
 
-SMART Log Directory Version 1984
-Address    Access  R/W   Size  Description
-0x00           SL  R/O      1  Log Directory
-0x02           SL  R/O     28  Comprehensive SMART error log
-0x03           SL  R/O      4  Ext. Comprehensive SMART error log
-0x04           SL  R/O    147  Device Statistics log
-0x05           SL  R/O    105  Reserved for CFA
-0x06           SL  R/O     28  SMART self-test log
-0x07           SL  R/O     61  Extended self-test log
-0x08           SL  R/O    246  Power Conditions log
-0x09           SL  R/W     68  Selective self-test log
-0x0a           SL  R/W     80  Device Statistics Notification
-0x0b           SL  -       79  Reserved for CFA
-0x0c           SL  R/O     67  Pending Defects log
-0x0d           SL  R/O    237  LPS Mis-alignment log
-0x0e           SL  -      132  Reserved for ZAC-2
-0x0f           SL  R/O     78  Sense Data for Successful NCQ Cmds log
-0x10           SL  R/O     67  NCQ Command Error log
-0x11           SL  R/O     12  SATA Phy Event Counters log
-0x12           SL  R/O    110  SATA NCQ Non-Data log
-0x13           SL  R/O    182  SATA NCQ Send and Receive log
-0x14           SL  R/O      4  Hybrid Information log
-0x15           SL  R/W     52  Rebuild Assist log
-0x16           SL  -      245  Reserved for Serial ATA
-0x17           SL  -      190  Reserved for Serial ATA
-0x18           SL  -      160  Reserved
-0x19           SL  R/O    125  LBA Status log
-0x1a           SL  -      207  Reserved
-0x1b           SL  -      127  Reserved
-0x1c           SL  -      205  Reserved
-0x1d           SL  -      218  Reserved
-0x1e           SL  -       95  Reserved
-0x1f           SL  -      126  Reserved
-0x20           SL  R/O     54  Streaming performance log [OBS-8]
-0x21           SL  R/O    235  Write stream error log
-0x22           SL  R/O    252  Read stream error log
-0x23           SL  R/O    202  Delayed sector log [OBS-8]
-0x24           SL  R/O    151  Current Device Internal Status Data log
-0x25           SL  R/O    199  Saved Device Internal Status Data log
-0x26           SL  -      207  Reserved
-0x27           SL  -      195  Reserved
-0x28           SL  -       95  Reserved
-0x29           SL  -      187  Reserved
-0x2a           SL  -       98  Reserved
-0x2b           SL  -      130  Reserved
-0x2c           SL  -       97  Reserved
-0x2d           SL  -      254  Reserved
-0x2e           SL  -       69  Reserved
-0x2f           SL  -        2  Set Sector Configuration
-0x30           SL  R/O     99  IDENTIFY DEVICE data log
-0x31           SL  -       36  Reserved
-0x32           SL  -      247  Reserved
-0x33           SL  -       73  Reserved
-0x34           SL  -      232  Reserved
-0x35           SL  -       12  Reserved
-0x36           SL  -       19  Reserved
-0x37           SL  -       25  Reserved
-0x38           SL  -      128  Reserved
-0x39           SL  -       92  Reserved
-0x3a           SL  -       48  Reserved
-0x3b           SL  -      223  Reserved
-0x3c           SL  -      153  Reserved
-0x3d           SL  -        4  Reserved
-0x3e           SL  -      193  Reserved
-0x3f           SL  -       10  Reserved
-0x40           SL  -       50  Reserved
-0x41           SL  -      131  Reserved
-0x42           SL  -      146  Reserved
-0x43           SL  -      201  Reserved
-0x44           SL  -       24  Reserved
-0x45           SL  -       24  Reserved
-0x46           SL  -       77  Reserved
-0x47           SL  -       97  Reserved
-0x48           SL  -      107  Reserved
-0x49           SL  -      140  Reserved
-0x4a           SL  -       74  Reserved
-0x4b           SL  -       82  Reserved
-0x4c           SL  -      130  Reserved
-0x4d           SL  -       33  Reserved
-0x4e           SL  -      176  Reserved
-0x4f           SL  -      210  Reserved
-0x50           SL  -      203  Reserved
-0x51           SL  -       53  Reserved
-0x52           SL  -       39  Reserved
-0x53           SL  -       97  Reserved
-0x54           SL  -       46  Reserved
-0x55           SL  -       29  Reserved
-0x56           SL  -      236  Reserved
-0x57           SL  -       11  Reserved
-0x58           SL  -      145  Reserved
-0x59           SL  -       82  Reserved
-0x5a           SL  -        1  Reserved
-0x5b           SL  -        2  Reserved
-0x5c           SL  -      170  Reserved
-0x5d           SL  -      229  Reserved
-0x5e           SL  -      251  Reserved
-0x5f           SL  -      126  Reserved
-0x60           SL  -      224  Reserved
-0x61           SL  -      104  Reserved
-0x62           SL  -      130  Reserved
-0x63           SL  -      231  Reserved
-0x64           SL  -       18  Reserved
-0x65           SL  -      197  Reserved
-0x66           SL  -       45  Reserved
-0x67           SL  -      107  Reserved
-0x68           SL  -        3  Reserved
-0x69           SL  -       69  Reserved
-0x6a           SL  -       33  Reserved
-0x6b           SL  -      111  Reserved
-0x6c           SL  -       52  Reserved
-0x6d           SL  -       47  Reserved
-0x6e           SL  -       83  Reserved
-0x6f           SL  -        3  Reserved
-0x70           SL  -      172  Reserved
-0x71           SL  -      172  Reserved
-0x72           SL  -       10  Reserved
-0x73           SL  -       28  Reserved
-0x74           SL  -       27  Reserved
-0x75           SL  -      110  Reserved
-0x76           SL  -       37  Reserved
-0x77           SL  -      209  Reserved
-0x78           SL  -      132  Reserved
-0x79           SL  -      108  Reserved
-0x7a           SL  -      150  Reserved
-0x7b           SL  -       56  Reserved
-0x7c           SL  -        6  Reserved
-0x7d           SL  -       23  Reserved
-0x7e           SL  -       97  Reserved
-0x7f           SL  -      102  Reserved
-0x80           SL  R/W    228  Host vendor specific log
-0x81           SL  R/W    129  Host vendor specific log
-0x83           SL  R/W    185  Host vendor specific log
-0x84           SL  R/W    112  Host vendor specific log
-0x85           SL  R/W    246  Host vendor specific log
-0x86           SL  R/W      2  Host vendor specific log
-0x87           SL  R/W     82  Host vendor specific log
-0x88           SL  R/W    131  Host vendor specific log
-0x89           SL  R/W     78  Host vendor specific log
-0x8a           SL  R/W    106  Host vendor specific log
-0x8b           SL  R/W    232  Host vendor specific log
-0x8c           SL  R/W     88  Host vendor specific log
-0x8d           SL  R/W    250  Host vendor specific log
-0x8e           SL  R/W    114  Host vendor specific log
-0x8f           SL  R/W     63  Host vendor specific log
-0x90           SL  R/W     36  Host vendor specific log
-0x91           SL  R/W     46  Host vendor specific log
-0x92           SL  R/W    244  Host vendor specific log
-0x93           SL  R/W     45  Host vendor specific log
-0x94           SL  R/W     80  Host vendor specific log
-0x95           SL  R/W     81  Host vendor specific log
-0x96           SL  R/W    251  Host vendor specific log
-0x97           SL  R/W    131  Host vendor specific log
-0x98           SL  R/W      1  Host vendor specific log
-0x99           SL  R/W    125  Host vendor specific log
-0x9a           SL  R/W    232  Host vendor specific log
-0x9b           SL  R/W    158  Host vendor specific log
-0x9c           SL  R/W    145  Host vendor specific log
-0x9d           SL  R/W    103  Host vendor specific log
-0x9e           SL  R/W    101  Host vendor specific log
-0x9f           SL  R/W    152  Host vendor specific log
-0xa0           SL  VS      94  Device vendor specific log
-0xa1           SL  VS      64  Device vendor specific log
-0xa2           SL  VS       6  Device vendor specific log
-0xa3           SL  VS      32  Device vendor specific log
-0xa4           SL  VS     130  Device vendor specific log
-0xa5           SL  VS      18  Device vendor specific log
-0xa6           SL  VS     123  Device vendor specific log
-0xa7           SL  VS     108  Device vendor specific log
-0xa8           SL  VS     248  Device vendor specific log
-0xa9           SL  VS      64  Device vendor specific log
-0xaa           SL  VS     167  Device vendor specific log
-0xab           SL  VS     254  Device vendor specific log
-0xac           SL  VS     174  Device vendor specific log
-0xad           SL  VS     186  Device vendor specific log
-0xae           SL  VS      60  Device vendor specific log
-0xaf           SL  VS     109  Device vendor specific log
-0xb0           SL  VS      21  Device vendor specific log
-0xb1           SL  VS     205  Device vendor specific log
-0xb2           SL  VS     203  Device vendor specific log
-0xb3           SL  VS      41  Device vendor specific log
-0xb4           SL  VS       8  Device vendor specific log
-0xb5           SL  VS     173  Device vendor specific log
-0xb6           SL  VS      77  Device vendor specific log
-0xb7           SL  VS      54  Device vendor specific log
-0xb8           SL  VS     167  Device vendor specific log
-0xb9           SL  VS     188  Device vendor specific log
-0xba           SL  VS     105  Device vendor specific log
-0xbb           SL  VS     232  Device vendor specific log
-0xbc           SL  VS      70  Device vendor specific log
-0xbd           SL  VS       1  Device vendor specific log
-0xbe           SL  VS      21  Device vendor specific log
-0xbf           SL  VS      20  Device vendor specific log
-0xc0           SL  VS      65  Device vendor specific log
-0xc1           SL  VS     130  Device vendor specific log
-0xc2           SL  VS      97  Device vendor specific log
-0xc3           SL  VS     221  Device vendor specific log
-0xc4           SL  VS     136  Device vendor specific log
-0xc5           SL  VS      53  Device vendor specific log
-0xc6           SL  VS     229  Device vendor specific log
-0xc7           SL  VS     232  Device vendor specific log
-0xc8           SL  VS      70  Device vendor specific log
-0xc9           SL  VS     151  Device vendor specific log
-0xca           SL  VS      76  Device vendor specific log
-0xcb           SL  VS     232  Device vendor specific log
-0xcc           SL  VS     214  Device vendor specific log
-0xcd           SL  VS     174  Device vendor specific log
-0xce           SL  VS     123  Device vendor specific log
-0xcf           SL  VS     239  Device vendor specific log
-0xd0           SL  VS      59  Device vendor specific log
-0xd1           SL  VS     212  Device vendor specific log
-0xd2           SL  VS      60  Device vendor specific log
-0xd3           SL  VS     184  Device vendor specific log
-0xd4           SL  VS      18  Device vendor specific log
-0xd5           SL  VS      93  Device vendor specific log
-0xd6           SL  VS       2  Device vendor specific log
-0xd7           SL  VS      32  Device vendor specific log
-0xd8           SL  VS     239  Device vendor specific log
-0xd9           SL  VS      11  Device vendor specific log
-0xda           SL  VS      44  Device vendor specific log
-0xdb           SL  VS      48  Device vendor specific log
-0xdc           SL  VS     221  Device vendor specific log
-0xdd           SL  VS     186  Device vendor specific log
-0xde           SL  VS     124  Device vendor specific log
-0xdf           SL  VS      66  Device vendor specific log
-0xe0           SL  R/W      5  SCT Command/Status
-0xe1           SL  R/W    112  SCT Data Transfer
-0xe2           SL  -      107  Reserved
-0xe3           SL  -      129  Reserved
-0xe4           SL  -      134  Reserved
-0xe5           SL  -       32  Reserved
-0xe6           SL  -      160  Reserved
-0xe7           SL  -      240  Reserved
-0xe8           SL  -      146  Reserved
-0xe9           SL  -      103  Reserved
-0xea           SL  -       40  Reserved
-0xeb           SL  -       26  Reserved
-0xec           SL  -      178  Reserved
-0xed           SL  -        9  Reserved
-0xee           SL  -       57  Reserved
-0xef           SL  -       69  Reserved
-0xf0           SL  -      117  Reserved
-0xf1           SL  -      240  Reserved
-0xf2           SL  -       72  Reserved
-0xf3           SL  -       29  Reserved
-0xf4           SL  -      212  Reserved
-0xf5           SL  -       87  Reserved
-0xf6           SL  -      173  Reserved
-0xf7           SL  -      114  Reserved
-0xf8           SL  -      233  Reserved
-0xf9           SL  -      182  Reserved
-0xfa           SL  -      111  Reserved
-0xfb           SL  -      217  Reserved
-0xfc           SL  -       89  Reserved
-0xfd           SL  -      136  Reserved
-0xfe           SL  -      115  Reserved
-0xff           SL  -      137  Reserved
+General Purpose Log Directory not supported
 
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
@@ -351,11 +96,9 @@ Selective Self-tests/Logging not supported
 
 SCT Commands not supported
 
-Device Statistics page 0x00 is invalid (page=0x0a, nentries=161)
+Device Statistics (GP/SMART Log 0x04) not supported
 
 Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11) not supported
-
-
 

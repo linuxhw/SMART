@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Feb  7 13:35:34 2022 CST
+Local Time is:    Mon Apr  3 13:40:18 2023 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,19 +65,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    30289
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    414
-177 Wear_Leveling_Count     PO--C-   088   088   000    -    250
+  9 Power_On_Hours          -O--CK   092   092   000    -    39805
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    494
+177 Wear_Leveling_Count     PO--C-   085   085   000    -    314
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   076   049   000    -    24
+190 Airflow_Temperature_Cel -O--CK   070   049   000    -    30
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    85
-241 Total_LBAs_Written      -O--CK   099   099   000    -    235355041190
+235 POR_Recovery_Count      -O--C-   099   099   000    -    115
+241 Total_LBAs_Written      -O--CK   099   099   000    -    283292907145
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +110,25 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Interrupted (host reset)      60%     38777         -
+# 2  Short offline       Completed without error       00%     38438         -
+# 3  Extended offline    Interrupted (host reset)      30%     37765         -
+# 4  Short offline       Completed without error       00%     37290         -
+# 5  Extended offline    Completed without error       00%     37289         -
+# 6  Extended offline    Interrupted (host reset)      70%     35634         -
+# 7  Short offline       Completed without error       00%     35457         -
+# 8  Extended offline    Completed without error       00%     35453         -
+# 9  Short offline       Completed without error       00%     34612         -
+#10  Extended offline    Interrupted (host reset)      90%     34607         -
+#11  Extended offline    Completed without error       00%     33759         -
+#12  Short offline       Completed without error       00%     33752         -
+#13  Short offline       Completed without error       00%     33579         -
+#14  Short offline       Completed without error       00%     33345         -
+#15  Extended offline    Interrupted (host reset)      90%     33149         -
+#16  Short offline       Completed without error       00%     32788         -
+#17  Short offline       Completed without error       00%     32513         -
+#18  Extended offline    Aborted by host               90%     32508         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -127,9 +145,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     20/31 Celsius
-Lifetime    Min/Max Temperature:     19/48 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     24/35 Celsius
+Lifetime    Min/Max Temperature:     17/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -137,7 +155,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (126)
+Temperature History Size (Index):    128 (35)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -157,8 +175,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2          107  Device-to-host register FISes sent due to a COMRESET
+0x0009  2         9299  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           97  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
