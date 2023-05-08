@@ -13,11 +13,11 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Jan 14 00:22:44 2023 GMT
+Local Time is:    Tue Jan 17 07:11:32 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     127 (intermediate level with standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    45
-  3 Spin_Up_Time            POS--K   115   113   021    -    3241
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6052
+  3 Spin_Up_Time            POS--K   126   113   021    -    2675
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6103
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   093   093   000    -    5256
+  9 Power_On_Hours          -O--CK   093   093   000    -    5319
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1475
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    915
-193 Load_Cycle_Count        -O--CK   159   159   000    -    124436
-194 Temperature_Celsius     -O---K   112   089   000    -    31
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1500
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    931
+193 Load_Cycle_Count        -O--CK   159   159   000    -    124737
+194 Temperature_Celsius     -O---K   110   089   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    1
 198 Offline_Uncorrectable   ----CK   200   200   000    -    1
@@ -264,24 +264,24 @@ Error 38 [13] occurred at disk power-on lifetime: 3665 hours (152 days + 17 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Conveyance offline  Completed without error       00%      5126         -
-# 2  Extended offline    Completed: read failure       50%      5126         483433880
-# 3  Short offline       Completed without error       00%      5125         -
-# 4  Conveyance offline  Completed: read failure       90%      5117         483433880
-# 5  Short offline       Completed: read failure       90%      5117         483433880
-# 6  Extended offline    Completed: read failure       90%      5117         483433880
-# 7  Short offline       Completed: read failure       90%      3378         926196568
-# 8  Short offline       Completed: read failure       90%      3378         926196568
-# 9  Conveyance offline  Completed: read failure       90%      3378         926196568
-#10  Extended offline    Completed: read failure       90%      3353         926196568
-#11  Conveyance offline  Completed: read failure       90%      3353         926196568
-#12  Short offline       Completed without error       00%      3001         -
-#13  Conveyance offline  Completed without error       00%      3000         -
-#14  Extended offline    Interrupted (host reset)      60%      1362         -
-#15  Conveyance offline  Completed without error       00%      1273         -
-#16  Extended offline    Completed without error       00%      1271         -
-#17  Conveyance offline  Aborted by host               80%      1269         -
-#18  Extended offline    Aborted by host               50%       970         -
+# 1  Conveyance offline  Completed: read failure       90%      5264         483433880
+# 2  Extended offline    Completed: read failure       90%      5264         483433880
+# 3  Short offline       Completed: read failure       90%      5264         483433880
+# 4  Conveyance offline  Completed: read failure       90%      5261         483433880
+# 5  Conveyance offline  Completed without error       00%      5126         -
+# 6  Extended offline    Completed: read failure       50%      5126         483433880
+# 7  Short offline       Completed without error       00%      5125         -
+# 8  Conveyance offline  Completed: read failure       90%      5117         483433880
+# 9  Short offline       Completed: read failure       90%      5117         483433880
+#10  Extended offline    Completed: read failure       90%      5117         483433880
+#11  Short offline       Completed: read failure       90%      3378         926196568
+#12  Short offline       Completed: read failure       90%      3378         926196568
+#13  Conveyance offline  Completed: read failure       90%      3378         926196568
+#14  Extended offline    Completed: read failure       90%      3353         926196568
+#15  Conveyance offline  Completed: read failure       90%      3353         926196568
+#16  Short offline       Completed without error       00%      3001         -
+#17  Conveyance offline  Completed without error       00%      3000         -
+#18  Extended offline    Interrupted (host reset)      60%      1362         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -297,8 +297,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     19/31 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     28/33 Celsius
 Lifetime    Min/Max Temperature:      0/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -310,7 +310,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (79)
+Temperature History Size (Index):    128 (119)
 
 SCT Error Recovery Control command not supported
 
@@ -333,5 +333,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         4939  Vendor specific
+0x8000  4         7190  Vendor specific
 
