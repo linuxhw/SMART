@@ -61,5 +61,4 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | SSDs                   | 1      | 2       | 296   | 0     | 0.81   |
 | Apacer    | SDM5/5A/5A-M Series... | 1      | 6       | 274   | 35    | 0.73   |
 | Apacer    | AS340 SSDs             | 4      | 86      | 122   | 25    | 0.31   |
-| Apacer    | Unknown                | 13     | 264     | 111   | 13    | 0.30   |
 | Apacer    | SDM4 Series SSD Module | 2      | 22      | 445   | 25    | 0.26   |

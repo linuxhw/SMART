@@ -742,7 +742,6 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | SV35.5                 | 3      | 10      | 880   | 339   | 0.36   |
 | Seagate   | SpinPoint M8U (USB)    | 2      | 77      | 141   | 15    | 0.32   |
 | Seagate   | Exos X18               | 2      | 78      | 108   | 0     | 0.30   |
-| Seagate   | Unknown                | 10     | 39      | 210   | 128   | 0.28   |
 | Seagate   | MobileMax-2            | 1      | 2       | 169   | 3     | 0.26   |
 | Seagate   | DB35.4                 | 1      | 4       | 948   | 186   | 0.25   |
 | Seagate   | Momentus 5400.5        | 4      | 128     | 454   | 216   | 0.24   |

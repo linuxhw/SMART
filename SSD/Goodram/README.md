@@ -74,4 +74,3 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Goodram   | Phison Driven OEM SSDs | 3      | 84      | 406   | 1     | 1.11   |
 | Goodram   | Phison Driven SSDs     | 5      | 98      | 160   | 0     | 0.44   |
-| Goodram   | Unknown                | 27     | 273     | 156   | 1     | 0.42   |

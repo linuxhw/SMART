@@ -62,6 +62,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| SPCC      | Unknown                | 16     | 76      | 332   | 203   | 0.57   |
 | SPCC      | Phison Driven OEM SSDs | 8      | 776     | 226   | 43    | 0.56   |
 | SPCC      | Silicon Motion base... | 1      | 4       | 40    | 678   | 0.10   |

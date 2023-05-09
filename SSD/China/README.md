@@ -4,12 +4,6 @@ China Solid State Drives
 This is a list of all tested China solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -119,19 +113,3 @@ MTBF - avg. MTBF in years per sample.
 | China     | T120               | 120 GB | 2       | 0     | 0     | 0.00   |
 | China     | T60                | 64 GB  | 2       | 0     | 0     | 0.00   |
 | China     | MKSCE1BD060M4      | 64 GB  | 4       | 199   | 1016  | 0.00   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| China     | Phison Driven OEM SSDs | 11     | 350     | 221   | 1     | 0.59   |
-| China     | Unknown                | 85     | 866     | 114   | 19    | 0.28   |

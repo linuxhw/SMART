@@ -129,5 +129,4 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | JMicron/Maxiotek ba... | 3      | 26      | 570   | 4     | 1.50   |
 | ADATA     | JMicron based SSDs     | 5      | 45      | 541   | 1     | 1.43   |
 | ADATA     | SandForce Driven SSDs  | 12     | 138     | 526   | 12    | 1.24   |
-| ADATA     | Unknown                | 46     | 525     | 207   | 105   | 0.39   |
 | ADATA     | Silicon Motion base... | 23     | 812     | 152   | 39    | 0.37   |

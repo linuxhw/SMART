@@ -4,12 +4,6 @@ Lite-On Solid State Drives
 This is a list of all tested Lite-On solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -102,19 +96,3 @@ MTBF - avg. MTBF in years per sample.
 | Lite-On   | LMT-256M6M-HP      | 256 GB | 2       | 79    | 649   | 0.00   |
 | Lite-On   | CV8-8E128-HP       | 128 GB | 32      | 57    | 1007  | 0.00   |
 | Lite-On   | CV8-8E256-HP       | 256 GB | 2       | 40    | 1007  | 0.00   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| Lite-On   | Unknown                | 75     | 458     | 114   | 126   | 0.25   |
-| Lite-On   | Silicon Motion base... | 4      | 22      | 96    | 1     | 0.25   |

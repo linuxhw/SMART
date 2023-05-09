@@ -129,4 +129,3 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | RealSSD m4/C400        | 2      | 6       | 337   | 0     | 0.93   |
 | Micron    | BX/MX1/2/3/500, M5/... | 10     | 241     | 269   | 104   | 0.61   |
 | Micron    | Client SSDs            | 29     | 273     | 278   | 78    | 0.61   |
-| Micron    | Unknown                | 23     | 90      | 319   | 129   | 0.45   |

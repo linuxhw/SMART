@@ -4,12 +4,6 @@ Samsung Solid State Drives
 This is a list of all tested Samsung solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -334,19 +328,3 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZNLH128HBHQ-000H1 | 128 GB | 10      | 70    | 100   | 0.00   |
 | Samsung   | SSD PM810 TM       | 128 GB | 2       | 688   | 1107  | 0.00   |
 | Samsung   | MZNLH256HAJD-000H1 | 256 GB | 2       | 57    | 100   | 0.00   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| Samsung   | Samsung based SSDs     | 291    | 10377   | 486   | 8     | 1.28   |
-| Samsung   | Unknown                | 20     | 83      | 497   | 10    | 1.22   |

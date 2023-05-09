@@ -4,12 +4,6 @@ Smartbuy Solid State Drives
 This is a list of all tested Smartbuy solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -35,19 +29,3 @@ MTBF - avg. MTBF in years per sample.
 | Smartbuy  | SSD                | 240 GB | 12      | 111   | 0     | 0.31   |
 | Smartbuy  | SSD                | 480 GB | 3       | 92    | 0     | 0.25   |
 | Smartbuy  | mSata              | 256 GB | 3       | 51    | 0     | 0.14   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| Smartbuy  | Unknown                | 5      | 13      | 254   | 0     | 0.70   |
-| Smartbuy  | Phison Driven SSDs     | 7      | 191     | 245   | 1     | 0.64   |

@@ -63,7 +63,6 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Seagate   | Nytro XF1230 SATA SSD  | 1      | 2       | 1236  | 0     | 3.39   |
 | Seagate   | 600 Series             | 1      | 2       | 429   | 0     | 1.18   |
-| Seagate   | Unknown                | 17     | 113     | 281   | 37    | 0.66   |
 | Seagate   | IronWolf (Pro) 125 ... | 1      | 2       | 116   | 0     | 0.32   |
 | Seagate   | Nytro SATA SSD         | 3      | 10      | 65    | 0     | 0.18   |
 | Seagate   | IronWolf 110 SATA SSD  | 1      | 4       | 51    | 0     | 0.14   |

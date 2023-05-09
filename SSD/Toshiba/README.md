@@ -128,5 +128,4 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | HG6 Series             | 1      | 8       | 439   | 0     | 1.20   |
 | Toshiba   | HG5 Series             | 1      | 9       | 414   | 0     | 1.13   |
 | Toshiba   | HG5d Series            | 6      | 33      | 429   | 20    | 1.04   |
-| Toshiba   | Unknown                | 40     | 327     | 336   | 20    | 0.84   |
 | Toshiba   | JMicron based SSDs     | 1      | 2       | 284   | 0     | 0.78   |

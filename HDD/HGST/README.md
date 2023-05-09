@@ -121,7 +121,6 @@ MTBF - avg. MTBF in years per sample.
 | HGST      | Deskstar 7K4000        | 2      | 17      | 1371  | 123   | 3.09   |
 | HGST      | MegaScale 4000         | 2      | 26      | 1084  | 0     | 2.97   |
 | HGST      | Ultrastar 7K6000       | 9      | 76      | 1011  | 8     | 2.70   |
-| HGST      | Unknown                | 2      | 8       | 923   | 0     | 2.53   |
 | HGST      | Ultrastar He8          | 4      | 49      | 1016  | 3     | 2.01   |
 | HGST      | Travelstar 5K1500      | 1      | 8       | 874   | 133   | 1.82   |
 | HGST      | Ultrastar He10         | 4      | 44      | 602   | 1     | 1.51   |

@@ -56,4 +56,3 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Mushkin   | SandForce Driven SSDs  | 6      | 25      | 851   | 126   | 1.74   |
 | Mushkin   | Silicon Motion base... | 4      | 16      | 146   | 1     | 0.40   |
-| Mushkin   | Unknown                | 7      | 29      | 116   | 46    | 0.29   |

@@ -1621,7 +1621,6 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | Ultrastar DC HC550     | 3      | 42      | 251   | 0     | 0.69   |
 | WDC       | Ultrastar              | 5      | 108     | 250   | 1     | 0.68   |
 | WDC       | Black P10              | 2      | 9       | 206   | 0     | 0.57   |
-| WDC       | Unknown                | 11     | 31      | 210   | 1     | 0.43   |
 | WDC       | Internal Use HDD       | 9      | 102     | 160   | 11    | 0.43   |
 | WDC       | Black UltraSlim        | 1      | 2       | 596   | 10    | 0.43   |
 | WDC       | Scorpio EIDE           | 4      | 9       | 437   | 91    | 0.41   |

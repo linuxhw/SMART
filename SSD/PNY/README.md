@@ -4,12 +4,6 @@ PNY Solid State Drives
 This is a list of all tested PNY solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -52,19 +46,3 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS1311 32GB SSD    | 32 GB  | 2       | 20    | 0     | 0.06   |
 | PNY       | 500GB SATA SSD     | 500 GB | 2       | 14    | 0     | 0.04   |
 | PNY       | 240GB SATA SSD     | 240 GB | 2       | 2     | 0     | 0.01   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| PNY       | Phison Driven SSDs     | 8      | 366     | 255   | 0     | 0.70   |
-| PNY       | Unknown                | 21     | 162     | 114   | 7     | 0.30   |

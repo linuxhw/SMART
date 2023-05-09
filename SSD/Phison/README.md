@@ -55,4 +55,3 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Phison    | Phison Driven SSDs     | 1      | 3       | 283   | 0     | 0.78   |
 | Phison    | Driven OEM SSDs        | 9      | 104     | 183   | 0     | 0.50   |
-| Phison    | Unknown                | 6      | 26      | 111   | 1     | 0.30   |

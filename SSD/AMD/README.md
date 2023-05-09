@@ -4,12 +4,6 @@ AMD Solid State Drives
 This is a list of all tested AMD solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -34,19 +28,3 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | R5SL256G           | 256 GB | 6       | 22    | 4     | 0.05   |
 | AMD       | R5SL128G           | 128 GB | 7       | 19    | 0     | 0.05   |
 | AMD       | R3S60GBSM          | 64 GB  | 2       | 17    | 0     | 0.05   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| AMD       | Silicon Motion base... | 2      | 46      | 157   | 6     | 0.38   |
-| AMD       | Unknown                | 9      | 100     | 97    | 17    | 0.22   |

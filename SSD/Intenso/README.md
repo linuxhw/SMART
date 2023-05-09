@@ -72,4 +72,3 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Intenso   | Phison Driven OEM SSDs | 4      | 142     | 211   | 3     | 0.57   |
 | Intenso   | Silicon Motion base... | 7      | 132     | 85    | 40    | 0.20   |
-| Intenso   | Unknown                | 22     | 147     | 72    | 63    | 0.17   |

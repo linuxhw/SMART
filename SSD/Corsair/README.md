@@ -78,5 +78,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Corsair   | SandForce Driven SSDs  | 22     | 239     | 878   | 92    | 1.94   |
 | Corsair   | Indilinx Barefoot b... | 1      | 2       | 597   | 0     | 1.64   |
-| Corsair   | Unknown                | 14     | 51      | 601   | 81    | 0.77   |
 | Corsair   | Phison Driven SSDs     | 2      | 19      | 312   | 4     | 0.75   |

@@ -97,7 +97,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Transcend | Unknown                | 8      | 47      | 1190  | 1     | 2.96   |
 | Transcend | SandForce Driven SSDs  | 4      | 13      | 484   | 0     | 1.33   |
 | Transcend | JMicron based SSDs     | 4      | 19      | 394   | 54    | 1.05   |
 | Transcend | JMicron/Maxiotek ba... | 1      | 5       | 292   | 0     | 0.80   |

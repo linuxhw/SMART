@@ -127,7 +127,6 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | DiamondMax 21          | 14     | 320     | 792   | 383   | 1.05   |
 | Maxtor    | DiamondMax 17          | 2      | 13      | 408   | 180   | 0.57   |
 | Maxtor    | DiamondMax 20          | 6      | 33      | 638   | 634   | 0.52   |
-| Maxtor    | Unknown                | 2      | 4       | 1189  | 45    | 0.34   |
 | Maxtor    | Fireball 3             | 5      | 14      | 107   | 34    | 0.23   |
 | Maxtor    | DiamondMax 22          | 3      | 57      | 747   | 340   | 0.09   |
 | Maxtor    | DiamondMax D540X-4K    | 1      | 2       | 249   | 19    | 0.06   |

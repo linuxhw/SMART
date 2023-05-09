@@ -118,5 +118,4 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | BX/MX1/2/3/500, M5/... | 15     | 304     | 449   | 80    | 0.93   |
 | Crucial   | Client SSDs            | 33     | 3602    | 227   | 10    | 0.54   |
 | Crucial   | MX1/2/300, M5/600, ... | 1      | 13      | 1041  | 92    | 0.40   |
-| Crucial   | Unknown                | 7      | 23      | 156   | 2     | 0.30   |
 | Crucial   | Silicon Motion base... | 7      | 158     | 88    | 1     | 0.24   |

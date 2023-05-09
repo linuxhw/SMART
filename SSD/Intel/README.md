@@ -209,7 +209,6 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | 510 Series SSDs        | 1      | 6       | 360   | 0     | 0.99   |
 | Intel     | 53x and Pro 1500/25... | 15     | 215     | 466   | 8     | 0.83   |
 | Intel     | X18-M/X25-M/X25-V G... | 12     | 79      | 708   | 17    | 0.61   |
-| Intel     | Unknown                | 38     | 197     | 251   | 62    | 0.49   |
 | Intel     | 311/313 Series SSDs    | 1      | 3       | 197   | 10    | 0.44   |
 | Intel     | 545s Series SSDs       | 13     | 170     | 141   | 12    | 0.35   |
 | Intel     | 540 Series SSDs        | 8      | 42      | 27    | 293   | 0.03   |

@@ -4,12 +4,6 @@ Zheino Solid State Drives
 This is a list of all tested Zheino solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -35,19 +29,3 @@ MTBF - avg. MTBF in years per sample.
 | Zheino    | CHN 25SATA01M 030  | 32 GB  | 3       | 17    | 0     | 0.05   |
 | Zheino    | CHN25SATAS1 032    | 32 GB  | 4       | 10    | 0     | 0.03   |
 | Zheino    | CHN25SATAS1 064    | 64 GB  | 2       | 4     | 0     | 0.01   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| Zheino    | Silicon Motion base... | 1      | 3       | 106   | 0     | 0.29   |
-| Zheino    | Unknown                | 11     | 27      | 96    | 1     | 0.25   |

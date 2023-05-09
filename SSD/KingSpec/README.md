@@ -4,12 +4,6 @@ KingSpec Solid State Drives
 This is a list of all tested KingSpec solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -55,19 +49,3 @@ MTBF - avg. MTBF in years per sample.
 | KingSpec  | CHA-M2B7-M256      | 256 GB | 2       | 27    | 0     | 0.07   |
 | KingSpec  | P3-64              | 64 GB  | 3       | 7     | 28    | 0.02   |
 | KingSpec  | T-60               | 64 GB  | 4       | 12    | 88    | 0.02   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| KingSpec  | Unknown                | 29     | 225     | 127   | 34    | 0.28   |
-| KingSpec  | JMicron/Maxiotek ba... | 3      | 54      | 110   | 58    | 0.21   |

@@ -276,7 +276,6 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | Ultrastar A7K1000      | 3      | 31      | 1997  | 65    | 4.38   |
 | Hitachi   | CinemaStar C5K500      | 1      | 3       | 1359  | 0     | 3.72   |
 | Hitachi   | Deskstar 7K3000        | 6      | 136     | 1557  | 73    | 3.67   |
-| Hitachi   | Unknown                | 4      | 10      | 2003  | 214   | 3.47   |
 | Hitachi   | Ultrastar A7K2000      | 7      | 108     | 1756  | 56    | 3.43   |
 | Hitachi   | Deskstar 7K2000        | 2      | 63      | 1885  | 116   | 3.35   |
 | Hitachi   | CinemaStar 5K2000      | 1      | 4       | 1772  | 3     | 2.89   |

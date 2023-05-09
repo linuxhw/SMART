@@ -48,5 +48,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Innodisk  | 3IE3/3ME3/3ME4 SSDs    | 3      | 8       | 353   | 13    | 0.57   |
-| Innodisk  | Unknown                | 5      | 11      | 204   | 0     | 0.56   |
 | Innodisk  | 3IE2/3ME2/3MG2/3SE2... | 2      | 6       | 40    | 505   | 0.04   |

@@ -111,4 +111,3 @@ MTBF - avg. MTBF in years per sample.
 | OCZ       | Indilinx Barefoot_2... | 8      | 177     | 730   | 3     | 1.70   |
 | OCZ       | OCZ/Toshiba Trion SSDs | 6      | 61      | 485   | 1     | 1.28   |
 | OCZ       | Indilinx Barefoot 3... | 14     | 116     | 487   | 20    | 1.12   |
-| OCZ       | Unknown                | 4      | 9       | 178   | 0     | 0.49   |

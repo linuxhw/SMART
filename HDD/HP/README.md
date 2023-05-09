@@ -63,6 +63,5 @@ MTBF - avg. MTBF in years per sample.
 | HP        | 250GB SATA disk VB0... | 1      | 21      | 1159  | 4     | 2.25   |
 | HP        | RE3                    | 1      | 2       | 814   | 0     | 2.23   |
 | HP        | 500GB SATA disk MM0... | 1      | 15      | 1721  | 83    | 1.00   |
-| HP        | Unknown                | 1      | 2       | 360   | 0     | 0.99   |
 | HP        | Ultrastar 7K4000       | 1      | 2       | 1504  | 505   | 0.39   |
 | HP        | Seagate Constellati... | 1      | 2       | 133   | 40    | 0.33   |

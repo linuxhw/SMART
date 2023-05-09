@@ -4,12 +4,6 @@ Lexar Solid State Drives
 This is a list of all tested Lexar solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -34,19 +28,3 @@ MTBF - avg. MTBF in years per sample.
 | Lexar     | 240GB SSD          | 240 GB | 9       | 71    | 0     | 0.20   |
 | Lexar     | 512GB SSD          | 512 GB | 15      | 50    | 0     | 0.14   |
 | Lexar     | SSD                | 240 GB | 4       | 39    | 0     | 0.11   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| Lexar     | Unknown                | 10     | 100     | 109   | 1     | 0.30   |
-| Lexar     | 128GB SSD              | 1      | 32      | 79    | 0     | 0.22   |

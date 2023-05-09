@@ -296,7 +296,6 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 2.5" HDD MK..59GSXP... | 1      | 5       | 439   | 15    | 0.87   |
 | Toshiba   | 2.5" HDD MQ01ACF       | 2      | 139     | 383   | 43    | 0.82   |
 | Toshiba   | P300                   | 7      | 1007    | 319   | 7     | 0.82   |
-| Toshiba   | Unknown                | 10     | 27      | 309   | 44    | 0.79   |
 | Toshiba   | 2.5" HDD MQ01ABD       | 7      | 1458    | 402   | 140   | 0.73   |
 | Toshiba   | 2.5" HDD               | 12     | 94      | 513   | 56    | 0.70   |
 | Toshiba   | 2.5" HDD MQ04UBB       | 1      | 53      | 267   | 13    | 0.70   |

@@ -79,4 +79,3 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Team      | Phison Driven SSDs     | 1      | 7       | 514   | 0     | 1.41   |
 | Team      | Silicon Motion base... | 5      | 24      | 260   | 0     | 0.71   |
-| Team      | Unknown                | 34     | 197     | 171   | 4     | 0.42   |

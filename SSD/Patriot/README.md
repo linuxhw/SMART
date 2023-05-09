@@ -70,4 +70,3 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Patriot   | Phison Driven SSDs     | 11     | 333     | 253   | 1     | 0.69   |
 | Patriot   | Silicon Motion base... | 4      | 22      | 194   | 33    | 0.30   |
-| Patriot   | Unknown                | 16     | 131     | 98    | 8     | 0.26   |

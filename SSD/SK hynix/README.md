@@ -4,12 +4,6 @@ SK hynix Solid State Drives
 This is a list of all tested SK hynix solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-Contents
---------
-
-1. [ SSD by Model  ](#ssd-by-model)
-2. [ SSD by Family ](#ssd-by-family)
-
 SSD by Model
 ------------
 
@@ -86,19 +80,3 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS064G3AMNB-2200A | 64 GB  | 2       | 406   | 585   | 0.00   |
 | SK hynix  | HFS960G3H2X069N    | 960 GB | 2       | 1     | 0     | 0.00   |
 | SK hynix  | HFS256G3AMNB-2200A | 256 GB | 10      | 332   | 824   | 0.00   |
-
-SSD by Family
--------------
-
-Please take all columns into account when reading the table. Pay attention on the
-number of tested samples and power-on days. Simultaneous high values of both MTBF
-and errors are possible if only rare drives in the subset encounter errors.
-
-Days - avg. days per sample,
-Err  - avg. errors per sample,
-MTBF - avg. MTBF in years per sample.
-
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
-|-----------|------------------------|--------|---------|-------|-------|------|
-| SK hynix  | SATA SSDs              | 43     | 579     | 319   | 102   | 0.61   |
-| SK hynix  | Unknown                | 20     | 96      | 296   | 76    | 0.38   |

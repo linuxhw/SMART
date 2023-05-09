@@ -40,6 +40,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| HPE       | Unknown                | 1      | 2       | 2358  | 8     | 3.42   |
 | HPE       | Seagate Constellati... | 1      | 4       | 578   | 1     | 1.11   |
 | HPE       | Proliant HardDrive     | 1      | 2       | 127   | 0     | 0.35   |

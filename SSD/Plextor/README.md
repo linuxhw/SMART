@@ -90,6 +90,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Plextor   | M3/M5/M6/M7 Series ... | 11     | 48      | 233   | 75    | 0.63   |
-| Plextor   | Unknown                | 26     | 105     | 187   | 1     | 0.48   |
 | Plextor   | M3/M5/M6 Series SSDs   | 12     | 218     | 159   | 50    | 0.40   |
 | Plextor   | M3/M5 (Pro) Series ... | 3      | 17      | 205   | 62    | 0.39   |
