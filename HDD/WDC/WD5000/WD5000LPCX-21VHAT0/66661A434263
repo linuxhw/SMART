@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Oct 21 09:50:26 2022 MSK
+Local Time is:    Fri Oct 21 09:55:25 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,7 +64,7 @@ SCT capabilities: 	       (0x3035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    3
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    14
   3 Spin_Up_Time            POS--K   147   144   021    -    1633
   4 Start_Stop_Count        -O--CK   001   001   000    -    109107
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
@@ -75,10 +75,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  12 Power_Cycle_Count       -O--CK   098   098   000    -    2174
 191 G-Sense_Error_Rate      -O--CK   001   001   000    -    283
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    275
-193 Load_Cycle_Count        -O--CK   133   133   000    -    203873
+193 Load_Cycle_Count        -O--CK   133   133   000    -    203874
 194 Temperature_Celsius     -O---K   112   099   000    -    31
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    1
+197 Current_Pending_Sector  -O--CK   200   200   000    -    2
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
@@ -113,7 +113,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 12162 (device log contains only the most recent 24 errors)
+Device Error Count: 12165 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,6 +128,57 @@ Device Error Count: 12162 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12165 [20] occurred at disk power-on lifetime: 3259 hours (135 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 25 7b 0e 00 40 00  Error: UNC at LBA = 0x257b0e00 = 628821504
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 20 00 48 00 00 25 7b 0e 00 40 08     01:18:18.587  READ FPDMA QUEUED
+  60 00 08 00 40 00 00 25 7b 0e 20 40 08     01:18:18.587  READ FPDMA QUEUED
+  60 00 08 00 88 00 00 25 7c 07 98 40 08     01:18:18.586  READ FPDMA QUEUED
+  60 00 20 00 80 00 00 00 ab 39 00 40 08     01:18:18.553  READ FPDMA QUEUED
+  60 00 10 00 38 00 00 04 4f 35 98 40 08     01:18:18.544  READ FPDMA QUEUED
+
+Error 12164 [19] occurred at disk power-on lifetime: 3259 hours (135 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 25 7b 0e 00 40 00  Error: UNC at LBA = 0x257b0e00 = 628821504
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 40 00 00 25 86 9a d0 40 08     01:18:11.902  READ FPDMA QUEUED
+  60 00 08 00 88 00 00 04 43 25 28 40 08     01:18:11.018  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 04 43 79 08 40 08     01:18:11.016  READ FPDMA QUEUED
+  60 00 60 00 78 00 00 04 43 14 b0 40 08     01:18:11.016  READ FPDMA QUEUED
+  60 00 40 00 70 00 00 04 43 14 50 40 08     01:18:11.016  READ FPDMA QUEUED
+
+Error 12163 [18] occurred at disk power-on lifetime: 3259 hours (135 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 25 3b 02 f8 40 00  Error: UNC at LBA = 0x253b02f8 = 624624376
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 d8 00 70 00 00 25 7b 01 00 40 08     01:18:00.786  READ FPDMA QUEUED
+  60 00 28 00 68 00 00 25 7b 01 e0 40 08     01:18:00.786  READ FPDMA QUEUED
+  60 00 08 00 60 00 00 25 7b 01 d8 40 08     01:18:00.786  READ FPDMA QUEUED
+  60 00 e0 00 10 00 00 25 3b 02 08 40 08     01:18:00.774  READ FPDMA QUEUED
+  60 00 18 00 08 00 00 25 3b 02 f0 40 08     01:18:00.774  READ FPDMA QUEUED
 
 Error 12162 [17] occurred at disk power-on lifetime: 3257 hours (135 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -214,57 +265,6 @@ Error 12158 [13] occurred at disk power-on lifetime: 3257 hours (135 days + 17 h
   2f 00 00 00 01 00 00 00 00 00 00 e0 00     01:30:54.632  READ LOG EXT
   ef 00 10 00 02 00 00 00 00 00 00 a0 00     01:30:54.632  SET FEATURES [Enable SATA feature]
 
-Error 12157 [12] occurred at disk power-on lifetime: 3257 hours (135 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 08 00 00 02 17 52 d8 e2 00  Device Fault; Error: ABRT 8 sectors at LBA = 0x021752d8 = 35082968
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 08 00 00 02 17 52 d8 e2 00     01:30:54.633  READ DMA
-  2f 00 00 00 01 00 00 00 00 00 00 e0 00     01:30:54.632  READ LOG EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     01:30:54.632  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:30:54.631  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     01:30:54.631  SET FEATURES [Set transfer mode]
-
-Error 12156 [11] occurred at disk power-on lifetime: 3257 hours (135 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 00 e0 00     01:30:54.632  READ LOG EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     01:30:54.632  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:30:54.631  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     01:30:54.631  SET FEATURES [Set transfer mode]
-  2f 00 00 00 01 00 00 00 00 00 00 e0 00     01:30:54.630  READ LOG EXT
-
-Error 12155 [10] occurred at disk power-on lifetime: 3257 hours (135 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 02 00 00 00 00 00 00 a0 00  Device Fault; Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     01:30:54.632  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     01:30:54.631  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 00     01:30:54.631  SET FEATURES [Set transfer mode]
-  2f 00 00 00 01 00 00 00 00 00 00 e0 00     01:30:54.630  READ LOG EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     01:30:54.630  SET FEATURES [Enable SATA feature]
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Extended offline    Interrupted (host reset)      10%      3254         -
@@ -313,7 +313,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (104)
+Temperature History Size (Index):    128 (107)
 
 SCT Error Recovery Control command not supported
 
@@ -331,10 +331,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2        23558  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2        30369  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         4449  Vendor specific
+0x8000  4         4747  Vendor specific
 
