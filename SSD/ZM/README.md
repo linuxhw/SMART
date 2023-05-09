@@ -1,10 +1,10 @@
-MaxDigital Hard Drives
-======================
+ZM Solid State Drives
+=====================
 
-This is a list of all tested MaxDigital hard drive models and their MTBFs. See more
-info on reliability test in the [README](https://github.com/linuxhw/SMART).
+This is a list of all tested ZM solid state drive models and their MTBFs. See
+more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-HDD by Model
+SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MaxDig... | MD4000GBDS         | 4 TB   | 2       | 1483  | 0     | 4.07   |
-| MaxDig... | MD1TBLSSHD         | 1 TB   | 2       | 255   | 4     | 0.35   |
+| ZM        | SSD                | 256 GB | 1       | 0     | 0     | 0.00   |

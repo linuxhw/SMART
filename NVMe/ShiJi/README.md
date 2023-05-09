@@ -17,7 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ShiJi     | 512GB              | 512 GB | 1       | 64    | 0     | 0.18   |
 | ShiJi     | 1TB M.2-NVMe       | 1 TB   | 2       | 38    | 0     | 0.11   |
-| ShiJi     | 1TB                | 1 TB   | 1       | 3     | 3     | 0.00   |
 | ShiJi     | 512GB M.2-NVMe     | 512 GB | 2       | 21    | 508   | 0.00   |

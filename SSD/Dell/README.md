@@ -18,5 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Dell      | WR202KD032G E70... | 32 GB  | 6       | 24    | 0     | 0.07   |
-| Dell      | WR202KD128G E70... | 128 GB | 1       | 18    | 0     | 0.05   |
 | Dell      | WR202KD032G E70... | 32 GB  | 2       | 6     | 0     | 0.02   |

@@ -17,6 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| TrekStor  | TREKSTORSSD256GB   | 250 GB | 1       | 260   | 0     | 0.71   |
 | TrekStor  | TREKSTORSSD128GB   | 128 GB | 2       | 122   | 78    | 0.17   |
-| TrekStor  | TREKSTORSSD512GB   | 500 GB | 1       | 5     | 0     | 0.01   |

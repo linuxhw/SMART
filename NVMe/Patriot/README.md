@@ -21,13 +21,10 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Scorch M2          | 512 GB | 4       | 300   | 0     | 0.82   |
 | Patriot   | P300               | 512 GB | 2       | 187   | 0     | 0.51   |
 | Patriot   | Scorch M2          | 128 GB | 6       | 173   | 0     | 0.48   |
-| Patriot   | Hellfire M2        | 480 GB | 1       | 96    | 0     | 0.26   |
 | Patriot   | P300               | 128 GB | 7       | 90    | 0     | 0.25   |
 | Patriot   | Scorch M2          | 256 GB | 6       | 88    | 0     | 0.24   |
 | Patriot   | P300               | 256 GB | 5       | 64    | 0     | 0.18   |
 | Patriot   | M.2 P300           | 128 GB | 5       | 62    | 0     | 0.17   |
 | Patriot   | M.2 P300           | 256 GB | 9       | 57    | 0     | 0.16   |
-| Patriot   | M.2 P310           | 240 GB | 1       | 21    | 0     | 0.06   |
-| Patriot   | P300               | 1 TB   | 2       | 7     | 0     | 0.02   |
+| Patriot   | P300               | 1 TB   | 3       | 43    | 0     | 0.12   |
 | Patriot   | M.2 P300           | 512 GB | 3       | 4     | 0     | 0.01   |
-| Patriot   | M.2 P400           | 512 GB | 1       | 0     | 0     | 0.00   |

@@ -17,6 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| AGI       | AGI1T0G16AI198     | 1 TB   | 1       | 4     | 0     | 0.01   |
 | AGI       | AGI512G16AI198     | 512 GB | 4       | 1     | 0     | 0.00   |
-| AGI       | AGI256G16AI198     | 256 GB | 1       | 0     | 0     | 0.00   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Pear      | SSD                | 2 TB   | 1       | 6     | 0     | 0.02   |
+| Pear      | SSD                | 2 TB   | 1       | 7     | 0     | 0.02   |

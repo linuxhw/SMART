@@ -34,7 +34,6 @@ MTBF - avg. MTBF in years per sample.
 | Lexar     | 240GB SSD          | 240 GB | 9       | 71    | 0     | 0.20   |
 | Lexar     | 512GB SSD          | 512 GB | 15      | 50    | 0     | 0.14   |
 | Lexar     | SSD                | 240 GB | 4       | 39    | 0     | 0.11   |
-| Lexar     | 960GB SSD          | 960 GB | 1       | 38    | 0     | 0.10   |
 
 SSD by Family
 -------------
@@ -49,5 +48,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Lexar     | Unknown                | 11     | 101     | 109   | 1     | 0.30   |
+| Lexar     | Unknown                | 10     | 100     | 109   | 1     | 0.30   |
 | Lexar     | 128GB SSD              | 1      | 32      | 79    | 0     | 0.22   |

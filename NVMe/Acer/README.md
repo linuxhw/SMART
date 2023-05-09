@@ -18,5 +18,3 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Acer      | SSD FA100          | 1 TB   | 3       | 91    | 0     | 0.25   |
-| Acer      | SSD FA100          | 256 GB | 1       | 113   | 95    | 0.00   |
-| Acer      | SSD FA100          | 2 TB   | 1       | 1     | 0     | 0.00   |

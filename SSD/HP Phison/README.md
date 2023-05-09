@@ -18,6 +18,3 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | HP Phison | PSSBN016GA27MC0    | 16 GB  | 2       | 628   | 1032  | 0.00   |
-| HP Phison | PSSBN032GA27MC1    | 32 GB  | 1       | 373   | 1032  | 0.00   |
-| HP Phison | PSSBN008GA27MC0    | 8 GB   | 1       | 95    | 1023  | 0.00   |
-| HP Phison | PSSBN032GA27MC0    | 32 GB  | 1       | 81    | 1039  | 0.00   |

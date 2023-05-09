@@ -17,8 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| YMTC      | PC005              | 512 GB | 33      | 49    | 0     | 0.13   |
+| YMTC      | PC005              | 512 GB | 34      | 48    | 0     | 0.13   |
 | YMTC      | PC005              | 256 GB | 6       | 12    | 6     | 0.03   |
 | YMTC      | PC210-512GB-B      | 512 GB | 4       | 6     | 0     | 0.02   |
 | YMTC      | PC005              | 1 TB   | 2       | 2     | 0     | 0.01   |
-| YMTC      | YMSS1ED04B21MC     | 256 GB | 1       | 1     | 0     | 0.00   |

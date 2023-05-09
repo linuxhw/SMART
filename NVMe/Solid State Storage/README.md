@@ -18,10 +18,6 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Solid ... | CL1-3D512-Q11 N... | 512 GB | 2       | 47    | 0     | 0.13   |
-| Solid ... | SSSTC CL1-8D512    | 512 GB | 1       | 20    | 0     | 0.06   |
 | Solid ... | SSSTC CL1-4D256    | 256 GB | 3       | 11    | 0     | 0.03   |
 | Solid ... | SSSTC CL1-8D256-HP | 256 GB | 2       | 11    | 0     | 0.03   |
-| Solid ... | CL1-3D128-Q11 N... | 128 GB | 1       | 7     | 0     | 0.02   |
 | Solid ... | CL1-3D256-Q11 N... | 256 GB | 4       | 4     | 0     | 0.01   |
-| Solid ... | SSSTC CL1-4D256... | 256 GB | 1       | 0     | 0     | 0.00   |
-| Solid ... | SSSTC CL1-4D512    | 512 GB | 1       | 0     | 0     | 0.00   |

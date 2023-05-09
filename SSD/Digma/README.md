@@ -19,6 +19,4 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Digma     | 512GB RUN S9       | 512 GB | 2       | 13    | 0     | 0.04   |
 | Digma     | 1TB RUN S9         | 1 TB   | 3       | 7     | 0     | 0.02   |
-| Digma     | RUN Y2             | 128 GB | 1       | 7     | 0     | 0.02   |
-| Digma     | DGSR2512GS93T      | 512 GB | 1       | 6     | 0     | 0.02   |
 | Digma     | 256GB RUN S9       | 256 GB | 3       | 2     | 3     | 0.01   |

@@ -17,7 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MyDigi... | SB M2 SSD          | 240 GB | 1       | 1161  | 0     | 3.18   |
 | MyDigi... | BP5                | 240 GB | 4       | 845   | 0     | 2.32   |
 | MyDigi... | SC2 M2 SSD         | 120 GB | 2       | 449   | 0     | 1.23   |
 | MyDigi... | SB2                | 240 GB | 6       | 209   | 0     | 0.57   |

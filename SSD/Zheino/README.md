@@ -25,29 +25,16 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Zheino    | CHN-25SATAS3-256   | 256 GB | 2       | 284   | 0     | 0.78   |
 | Zheino    | CHN-25SATAA3-480   | 480 GB | 2       | 267   | 0     | 0.73   |
-| Zheino    | CHN25SATAS1 128    | 128 GB | 1       | 722   | 2     | 0.66   |
 | Zheino    | CHN 25SATAA3 360   | 360 GB | 3       | 173   | 0     | 0.48   |
-| Zheino    | CHN 25SATAS3 128   | 128 GB | 1       | 151   | 0     | 0.42   |
 | Zheino    | CHN mSATA02M 256   | 256 GB | 2       | 219   | 1     | 0.37   |
 | Zheino    | CHN mSATAM3 128    | 128 GB | 3       | 106   | 0     | 0.29   |
 | Zheino    | CHN-25SATAC3-120   | 120 GB | 2       | 68    | 0     | 0.19   |
-| Zheino    | CHN 25SATAC3 128   | 128 GB | 1       | 62    | 0     | 0.17   |
-| Zheino    | CHN 25SATAC3 120   | 120 GB | 1       | 58    | 0     | 0.16   |
 | Zheino    | CHN 25SATAA3 120   | 120 GB | 3       | 48    | 0     | 0.13   |
-| Zheino    | CHN mSATA02M 128   | 128 GB | 1       | 45    | 0     | 0.12   |
-| Zheino    | CHN-mSATAQ3-120    | 120 GB | 1       | 45    | 0     | 0.12   |
 | Zheino    | CHN 25SATA01M 060  | 64 GB  | 2       | 43    | 0     | 0.12   |
-| Zheino    | CHN-25SATAS3-128   | 128 GB | 1       | 42    | 0     | 0.12   |
-| Zheino    | CHN-mSATAM3-128    | 128 GB | 1       | 37    | 0     | 0.10   |
-| Zheino    | CHN-mSATAQ3-480    | 480 GB | 1       | 37    | 0     | 0.10   |
 | Zheino    | CHN 25SATAS3 256   | 256 GB | 2       | 34    | 0     | 0.10   |
-| Zheino    | CHN 25SATA01M 120  | 120 GB | 1       | 26    | 0     | 0.07   |
-| Zheino    | CHN25SATAS1 256    | 256 GB | 1       | 22    | 0     | 0.06   |
 | Zheino    | CHN 25SATA01M 030  | 32 GB  | 3       | 17    | 0     | 0.05   |
 | Zheino    | CHN25SATAS1 032    | 32 GB  | 4       | 10    | 0     | 0.03   |
 | Zheino    | CHN25SATAS1 064    | 64 GB  | 2       | 4     | 0     | 0.01   |
-| Zheino    | CHN-25SATAA3-360   | 360 GB | 1       | 87    | 21    | 0.01   |
-| Zheino    | CHN-NGFFSA2242-256 | 256 GB | 1       | 1     | 0     | 0.00   |
 
 SSD by Family
 -------------
@@ -63,4 +50,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Zheino    | Silicon Motion base... | 1      | 3       | 106   | 0     | 0.29   |
-| Zheino    | Unknown                | 24     | 40      | 98    | 1     | 0.22   |
+| Zheino    | Unknown                | 11     | 27      | 96    | 1     | 0.25   |

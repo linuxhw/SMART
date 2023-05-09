@@ -18,5 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | XSTAR     | SSD                | 120 GB | 2       | 228   | 0     | 0.63   |
-| XSTAR     | SSD                | 256 GB | 1       | 116   | 0     | 0.32   |
-| XSTAR     | SSD                | 128 GB | 1       | 0     | 8     | 0.00   |
+| XSTAR     | SSD                | 128 GB | 2       | 169   | 4     | 0.46   |

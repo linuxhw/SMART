@@ -17,15 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| GeIL      | ZENITH 120G R3     | 120 GB | 1       | 334   | 0     | 0.92   |
-| GeIL      | ZENITH 240G R3     | 240 GB | 1       | 161   | 0     | 0.44   |
 | GeIL      | ZENITH R3_120GB    | 120 GB | 3       | 160   | 0     | 0.44   |
-| GeIL      | ZENITH R3_240GB    | 240 GB | 1       | 157   | 0     | 0.43   |
 | GeIL      | R3_128GB           | 128 GB | 3       | 103   | 0     | 0.28   |
-| GeIL      | Z3_256GB           | 256 GB | 1       | 93    | 0     | 0.26   |
-| GeIL      | R3 120G            | 120 GB | 1       | 47    | 0     | 0.13   |
-| GeIL      | Z3_128GB           | 128 GB | 1       | 33    | 0     | 0.09   |
-| GeIL      | Zenith A3-PRO      | 240 GB | 1       | 6     | 0     | 0.02   |
-| GeIL      | Zenith A3          | 120 GB | 1       | 6     | 0     | 0.02   |
-| GeIL      | ZENITH-A3 120G     | 120 GB | 1       | 3     | 0     | 0.01   |
-| GeIL      | ZENITH S3-120GB    | 120 GB | 1       | 245   | 1021  | 0.00   |

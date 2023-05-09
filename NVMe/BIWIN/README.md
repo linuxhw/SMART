@@ -20,8 +20,4 @@ MTBF - avg. MTBF in years per sample.
 | BIWIN     | NI201_256GB        | 256 GB | 2       | 100   | 0     | 0.27   |
 | BIWIN     | SSD                | 512 GB | 12      | 53    | 0     | 0.15   |
 | BIWIN     | SSD                | 1 TB   | 7       | 5     | 0     | 0.02   |
-| BIWIN     | NE-128             | 128 GB | 1       | 1     | 0     | 0.00   |
-| BIWIN     | AP323 512GB SSD    | 512 GB | 1       | 1     | 0     | 0.00   |
-| BIWIN     | CE480T5D101-256    | 256 GB | 28      | 1     | 0     | 0.00   |
-| BIWIN     | CE480Y2D100-1TB    | 1 TB   | 1       | 0     | 0     | 0.00   |
-| BIWIN     | NE-512             | 512 GB | 1       | 0     | 0     | 0.00   |
+| BIWIN     | CE480T5D101-256    | 256 GB | 30      | 1     | 0     | 0.00   |

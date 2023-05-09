@@ -17,6 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| TwinMOS   | SSD SATA2.5"-120GB | 120 GB | 1       | 265   | 0     | 0.73   |
 | TwinMOS   | SSD                | 256 GB | 2       | 93    | 0     | 0.26   |
-| TwinMOS   | SSD                | 128 GB | 1       | 77    | 2     | 0.07   |

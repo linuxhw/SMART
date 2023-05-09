@@ -18,4 +18,3 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Zozt      | G3000 240          | 240 GB | 2       | 9     | 0     | 0.03   |
-| Zozt      | G3000 480          | 480 GB | 1       | 9     | 0     | 0.03   |

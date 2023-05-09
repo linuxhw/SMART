@@ -17,6 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| China     | SH00E480GB         | 480 GB | 1       | 108   | 0     | 0.30   |
-| China     | SH00E1TB           | 1 TB   | 1       | 108   | 0     | 0.30   |
 | China     | SK                 | 128 GB | 2       | 11    | 0     | 0.03   |

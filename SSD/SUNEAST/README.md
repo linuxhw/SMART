@@ -19,7 +19,3 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | SUNEAST   | SSD SE800          | 1 TB   | 2       | 341   | 87    | 0.29   |
 | SUNEAST   | SSD SE800          | 256 GB | 2       | 71    | 0     | 0.19   |
-| SUNEAST   | SSD SE800          | 1.9 TB | 1       | 60    | 0     | 0.16   |
-| SUNEAST   | SSD SE800 mSATA    | 480 GB | 1       | 42    | 0     | 0.12   |
-| SUNEAST   | SSD SE800          | 512 GB | 1       | 31    | 0     | 0.09   |
-| SUNEAST   | SSD SE800 mSATA    | 512 GB | 1       | 4     | 0     | 0.01   |
