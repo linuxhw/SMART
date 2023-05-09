@@ -13,7 +13,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5440
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Apr 23 19:28:06 2023 CEST
+Local Time is:    Thu May  4 17:36:07 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,15 +60,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    3524
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    111
+  9 Power_On_Hours          -O--CK   100   100   050    -    3648
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    112
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    63
-164 Unknown_Attribute       -O--CK   100   100   050    -    160984
-165 Unknown_Attribute       -O--CK   100   100   050    -    486
-166 Unknown_Attribute       -O--CK   100   100   050    -    1
-167 Unknown_Attribute       -O--CK   100   100   050    -    113
+164 Unknown_Attribute       -O--CK   100   100   050    -    173748
+165 Unknown_Attribute       -O--CK   100   100   050    -    549
+166 Unknown_Attribute       -O--CK   100   100   050    -    2
+167 Unknown_Attribute       -O--CK   100   100   050    -    122
 168 Unknown_Attribute       -O--CK   100   100   050    -    5050
 169 Unknown_Attribute       -O--CK   100   100   050    -    98
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
@@ -85,9 +85,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    733285
-242 Total_LBAs_Read         ----CK   100   100   050    -    698817
-245 Unknown_Attribute       -O--CK   100   100   050    -    960743
+241 Total_LBAs_Written      ----CK   100   100   050    -    783032
+242 Total_LBAs_Read         ----CK   100   100   050    -    744847
+245 Unknown_Attribute       -O--CK   100   100   050    -    1033367
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,79 +112,28 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 18 (device log contains only the most recent 4 errors)
-	CR     = Command Register
-	FEATR  = Features Register
-	COUNT  = Count (was: Sector Count) Register
-	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
-	LH     = LBA High (was: Cylinder High) Register    ]   LBA
-	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
-	LL     = LBA Low (was: Sector Number) Register     ]
-	DV     = Device (was: Device/Head) Register
-	DC     = Device Control Register
-	ER     = Error register
-	ST     = Status register
-Powered_Up_Time is measured from power on, and printed as
-DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
-SS=sec, and sss=millisec. It "wraps" after 49.710 days.
-
-Error 18 [1] log entry is empty
-Error 17 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
-  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
-  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
-  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
-
-Error 16 [3] log entry is empty
-Error 15 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
-  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
-  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
-  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
-
+Invalid Error Log index = 0x0000 (reserved = 0x00)
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      3516         -
-# 2  Short offline       Completed without error       00%      3514         -
-# 3  Short offline       Completed without error       00%      3472         -
-# 4  Short offline       Completed without error       00%      3448         -
-# 5  Short offline       Completed without error       00%      3418         -
-# 6  Short offline       Completed without error       00%      3389         -
-# 7  Extended offline    Completed without error       00%      3366         -
-# 8  Short offline       Completed without error       00%      3365         -
-# 9  Short offline       Completed without error       00%      3341         -
-#10  Short offline       Completed without error       00%      3317         -
-#11  Short offline       Completed without error       00%      3311         -
-#12  Short offline       Completed without error       00%      3282         -
-#13  Extended offline    Interrupted (host reset)      70%      3260         -
-#14  Short offline       Completed without error       00%      3259         -
-#15  Short offline       Completed without error       00%      3235         -
-#16  Short offline       Completed without error       00%      3211         -
-#17  Short offline       Completed without error       00%      3187         -
-#18  Short offline       Completed without error       00%      3157         -
-#19  Extended offline    Completed without error       00%      3135         -
+# 1  Short offline       Completed without error       00%      3626         -
+# 2  Short offline       Interrupted (host reset)      90%      3602         -
+# 3  Short offline       Completed without error       00%      3578         -
+# 4  Short offline       Interrupted (host reset)      90%      3555         -
+# 5  Short offline       Completed without error       00%      3531         -
+# 6  Extended offline    Completed without error       00%      3516         -
+# 7  Short offline       Completed without error       00%      3514         -
+# 8  Short offline       Completed without error       00%      3472         -
+# 9  Short offline       Completed without error       00%      3448         -
+#10  Short offline       Completed without error       00%      3418         -
+#11  Short offline       Completed without error       00%      3389         -
+#12  Extended offline    Completed without error       00%      3366         -
+#13  Short offline       Completed without error       00%      3365         -
+#14  Short offline       Completed without error       00%      3341         -
+#15  Short offline       Completed without error       00%      3317         -
+#16  Short offline       Completed without error       00%      3311         -
+#17  Short offline       Completed without error       00%      3282         -
+#18  Extended offline    Interrupted (host reset)      70%      3260         -
+#19  Short offline       Completed without error       00%      3259         -
 
 Selective Self-tests/Logging not supported
 
@@ -193,12 +142,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             111  ---  Lifetime Power-On Resets
-0x01  0x010  4            3524  ---  Power-on Hours
-0x01  0x018  6       811972046  ---  Logical Sectors Written
-0x01  0x020  6           18639  ---  Number of Write Commands
-0x01  0x028  6      2848010649  ---  Logical Sectors Read
-0x01  0x030  6          300704  ---  Number of Read Commands
+0x01  0x008  4             112  ---  Lifetime Power-On Resets
+0x01  0x010  4            3648  ---  Power-on Hours
+0x01  0x018  6      4072146086  ---  Logical Sectors Written
+0x01  0x020  6           48968  ---  Number of Write Commands
+0x01  0x028  6      1569692470  ---  Logical Sectors Read
+0x01  0x030  6          607045  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

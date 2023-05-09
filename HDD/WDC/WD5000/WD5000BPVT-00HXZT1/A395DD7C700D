@@ -10,11 +10,11 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Nov 15 14:55:23 2020 CET
+Local Time is:    Wed May  3 22:06:16 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
-APM level is:     254 (maximum performance)
+AAM level is:     254 (maximum performance), recommended: 128
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -25,12 +25,11 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 245)	Self-test routine in progress...
+					50% of test remaining.
 Total time to complete Offline 
 data collection: 		(14160) seconds.
 Offline data collection
@@ -61,17 +60,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    4
-  3 Spin_Up_Time            POS--K   204   176   021    -    766
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6951
+  3 Spin_Up_Time            POS--K   206   176   021    -    675
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7305
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   078   078   000    -    16577
+  9 Power_On_Hours          -O--CK   076   076   000    -    18134
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4948
-192 Power-Off_Retract_Count -O--CK   198   198   000    -    1806
-193 Load_Cycle_Count        -O--CK   174   174   000    -    79488
-194 Temperature_Celsius     -O---K   107   089   000    -    40
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5221
+192 Power-Off_Retract_Count -O--CK   198   198   000    -    1903
+193 Load_Cycle_Count        -O--CK   173   173   000    -    81530
+194 Temperature_Celsius     -O---K   099   089   000    -    48
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -109,24 +108,24 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     16558         -
-# 2  Extended offline    Completed without error       00%     16452         -
-# 3  Extended offline    Completed without error       00%     16354         -
-# 4  Extended offline    Completed without error       00%     16257         -
-# 5  Extended offline    Completed without error       00%     16166         -
-# 6  Extended offline    Completed without error       00%     16090         -
-# 7  Extended offline    Completed without error       00%     16014         -
-# 8  Extended offline    Completed without error       00%     15888         -
-# 9  Extended offline    Completed without error       00%     15800         -
-#10  Extended offline    Completed without error       00%     15718         -
-#11  Extended offline    Completed without error       00%     15417         -
-#12  Extended offline    Completed without error       00%     15352         -
-#13  Extended offline    Completed without error       00%     15261         -
-#14  Extended offline    Completed without error       00%     15169         -
-#15  Extended offline    Completed without error       00%     15076         -
-#16  Extended offline    Completed without error       00%     14988         -
-#17  Extended offline    Completed without error       00%     14928         -
-#18  Extended offline    Completed without error       00%     14845         -
+# 1  Extended offline    Completed without error       00%     18114         -
+# 2  Extended offline    Completed without error       00%     18105         -
+# 3  Extended offline    Completed without error       00%     18101         -
+# 4  Extended offline    Completed without error       00%     18098         -
+# 5  Extended offline    Completed without error       00%     18093         -
+# 6  Extended offline    Completed without error       00%     18088         -
+# 7  Extended offline    Completed without error       00%     18080         -
+# 8  Extended offline    Completed without error       00%     18077         -
+# 9  Extended offline    Interrupted (host reset)      20%     18062         -
+#10  Extended offline    Completed without error       00%     18053         -
+#11  Extended offline    Completed without error       00%     18050         -
+#12  Extended offline    Completed without error       00%     18046         -
+#13  Extended offline    Completed without error       00%     18027         -
+#14  Extended offline    Completed without error       00%     18022         -
+#15  Extended offline    Completed without error       00%     18015         -
+#16  Extended offline    Completed without error       00%     18011         -
+#17  Extended offline    Completed without error       00%     18002         -
+#18  Extended offline    Completed without error       00%     17990         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -141,10 +140,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     27/40 Celsius
-Lifetime    Min/Max Temperature:     27/58 Celsius
+Device State:                        DST executing in background (3)
+Current Temperature:                    47 Celsius
+Power Cycle Min/Max Temperature:     25/48 Celsius
+Lifetime    Min/Max Temperature:     25/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -155,7 +154,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (43)
 
 SCT Error Recovery Control command not supported
 
@@ -172,7 +171,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         3494  Vendor specific
+0x8000  4         5971  Vendor specific
 
