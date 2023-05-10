@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.20-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.4-xanmod1-x64v2] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Green
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 51.0AB51
 User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Sun Apr 17 11:33:52 2022 MSK
+Local Time is:    Wed Jun 22 10:44:34 2022 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,16 +63,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   176   167   021    -    6175
-  4 Start_Stop_Count        -O--CK   045   045   000    -    55575
+  3 Spin_Up_Time            POS--K   179   167   021    -    6008
+  4 Start_Stop_Count        -O--CK   043   043   000    -    57087
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   011   011   000    -    65697
+  9 Power_On_Hours          -O--CK   009   009   000    -    66899
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7114
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    145
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1123249
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7305
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    148
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1151171
 194 Temperature_Celsius     -O---K   117   092   000    -    33
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
@@ -112,24 +112,24 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      90%     65531         -
-# 2  Extended offline    Interrupted (host reset)      90%     65298         -
-# 3  Extended offline    Completed without error       00%     64288         -
-# 4  Extended offline    Interrupted (host reset)      70%     63972         -
-# 5  Extended offline    Interrupted (host reset)      90%     62644         -
-# 6  Extended offline    Interrupted (host reset)      90%     61406         -
-# 7  Extended offline    Interrupted (host reset)      90%     60673         -
-# 8  Extended offline    Interrupted (host reset)      90%     59129         -
-# 9  Extended offline    Interrupted (host reset)      90%     55033         -
-#10  Extended offline    Completed without error       00%     52835         -
-#11  Extended offline    Completed without error       00%     51970         -
-#12  Extended offline    Interrupted (host reset)      50%     51799         -
-#13  Extended offline    Interrupted (host reset)      90%     51628         -
-#14  Extended offline    Interrupted (host reset)      90%     51461         -
-#15  Extended offline    Completed without error       00%     51134         -
-#16  Extended offline    Completed without error       00%     50964         -
-#17  Extended offline    Interrupted (host reset)      90%     50790         -
-#18  Extended offline    Interrupted (host reset)      90%     49221         -
+# 1  Extended offline    Interrupted (host reset)      90%       885         -
+# 2  Extended offline    Interrupted (host reset)      90%     65531         -
+# 3  Extended offline    Interrupted (host reset)      90%     65298         -
+# 4  Extended offline    Completed without error       00%     64288         -
+# 5  Extended offline    Interrupted (host reset)      70%     63972         -
+# 6  Extended offline    Interrupted (host reset)      90%     62644         -
+# 7  Extended offline    Interrupted (host reset)      90%     61406         -
+# 8  Extended offline    Interrupted (host reset)      90%     60673         -
+# 9  Extended offline    Interrupted (host reset)      90%     59129         -
+#10  Extended offline    Interrupted (host reset)      90%     55033         -
+#11  Extended offline    Completed without error       00%     52835         -
+#12  Extended offline    Completed without error       00%     51970         -
+#13  Extended offline    Interrupted (host reset)      50%     51799         -
+#14  Extended offline    Interrupted (host reset)      90%     51628         -
+#15  Extended offline    Interrupted (host reset)      90%     51461         -
+#16  Extended offline    Completed without error       00%     51134         -
+#17  Extended offline    Completed without error       00%     50964         -
+#18  Extended offline    Interrupted (host reset)      90%     50790         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -146,7 +146,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     26/34 Celsius
+Power Cycle Min/Max Temperature:     33/37 Celsius
 Lifetime    Min/Max Temperature:      0/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -155,7 +155,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (303)
+Temperature History Size (Index):    478 (263)
 
 SCT Error Recovery Control command not supported
 
@@ -174,7 +174,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         6883  Vendor specific
+0x8000  4         9136  Vendor specific
 
 
 
