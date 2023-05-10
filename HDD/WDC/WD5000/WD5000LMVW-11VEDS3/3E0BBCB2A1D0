@@ -13,13 +13,13 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Mar 24 09:25:21 2023 GMT
+Local Time is:    Sun Apr  9 12:59:30 2023 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     127 (intermediate level with standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
@@ -31,8 +31,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 241)	Self-test routine in progress...
-					10% of test remaining.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		( 9840) seconds.
 Offline data collection
@@ -63,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    45
-  3 Spin_Up_Time            POS--K   117   113   021    -    3116
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6583
+  3 Spin_Up_Time            POS--K   118   113   021    -    3100
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6680
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    6010
+  9 Power_On_Hours          -O--CK   092   092   000    -    6134
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1662
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1047
-193 Load_Cycle_Count        -O--CK   158   158   000    -    127597
-194 Temperature_Celsius     -O---K   107   089   000    -    36
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1698
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1072
+193 Load_Cycle_Count        -O--CK   156   156   000    -    133904
+194 Temperature_Celsius     -O---K   103   089   000    -    40
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -263,24 +264,25 @@ Error 38 [13] occurred at disk power-on lifetime: 3665 hours (152 days + 17 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Conveyance offline  Completed without error       00%      6008         -
-# 2  Short offline       Completed without error       00%      5409         -
-# 3  Extended offline    Completed: read failure       50%      5408         483433880
-# 4  Conveyance offline  Completed without error       00%      5407         -
-# 5  Short offline       Completed without error       00%      5407         -
-# 6  Short offline       Completed: read failure       90%      5392         483433880
-# 7  Short offline       Completed: read failure       90%      5391         483433880
+# 1  Extended offline    Completed without error       00%      6010         -
+# 2  Conveyance offline  Completed without error       00%      6008         -
+# 3  Short offline       Completed without error       00%      5409         -
+# 4  Extended offline    Completed: read failure       50%      5408         483433880
+# 5  Conveyance offline  Completed without error       00%      5407         -
+# 6  Short offline       Completed without error       00%      5407         -
+# 7  Short offline       Completed: read failure       90%      5392         483433880
 # 8  Short offline       Completed: read failure       90%      5391         483433880
-# 9  Conveyance offline  Completed: read failure       90%      5391         483433880
-#10  Conveyance offline  Completed: read failure       90%      5264         483433880
-#11  Extended offline    Completed: read failure       90%      5264         483433880
-#12  Short offline       Completed: read failure       90%      5264         483433880
-#13  Conveyance offline  Completed: read failure       90%      5261         483433880
-#14  Conveyance offline  Completed without error       00%      5126         -
-#15  Extended offline    Completed: read failure       50%      5126         483433880
-#16  Short offline       Completed without error       00%      5125         -
-#17  Conveyance offline  Completed: read failure       90%      5117         483433880
-#18  Short offline       Completed: read failure       90%      5117         483433880
+# 9  Short offline       Completed: read failure       90%      5391         483433880
+#10  Conveyance offline  Completed: read failure       90%      5391         483433880
+#11  Conveyance offline  Completed: read failure       90%      5264         483433880
+#12  Extended offline    Completed: read failure       90%      5264         483433880
+#13  Short offline       Completed: read failure       90%      5264         483433880
+#14  Conveyance offline  Completed: read failure       90%      5261         483433880
+#15  Conveyance offline  Completed without error       00%      5126         -
+#16  Extended offline    Completed: read failure       50%      5126         483433880
+#17  Short offline       Completed without error       00%      5125         -
+#18  Conveyance offline  Completed: read failure       90%      5117         483433880
+11 of 11 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -295,9 +297,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        DST executing in background (3)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     17/36 Celsius
+Device State:                        Active (0)
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     18/40 Celsius
 Lifetime    Min/Max Temperature:      0/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -309,7 +311,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (48)
+Temperature History Size (Index):    128 (2)
 
 SCT Error Recovery Control command not supported
 
@@ -327,10 +329,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         7737  Vendor specific
+0x8000  4        16376  Vendor specific
 
