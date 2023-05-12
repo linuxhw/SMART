@@ -13,11 +13,11 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Apr  9 12:59:30 2023 IST
+Local Time is:    Tue Apr 11 13:06:31 2023 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    45
-  3 Spin_Up_Time            POS--K   118   113   021    -    3100
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6680
+  3 Spin_Up_Time            POS--K   117   113   021    -    3133
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6686
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    6134
+  9 Power_On_Hours          -O--CK   092   092   000    -    6147
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1698
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1072
-193 Load_Cycle_Count        -O--CK   156   156   000    -    133904
-194 Temperature_Celsius     -O---K   103   089   000    -    40
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1699
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1073
+193 Load_Cycle_Count        -O--CK   156   156   000    -    133912
+194 Temperature_Celsius     -O---K   112   089   000    -    31
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -298,8 +298,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     18/40 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     17/31 Celsius
 Lifetime    Min/Max Temperature:      0/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -311,7 +311,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (2)
+Temperature History Size (Index):    128 (17)
 
 SCT Error Recovery Control command not supported
 
@@ -334,5 +334,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        16376  Vendor specific
+0x8000  4         1459  Vendor specific
 
