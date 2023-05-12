@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Timetec   | MS05               | 256 GB | 3       | 42    | 1     | 0.11   |
+| Timetec   | MS05               | 256 GB | 3       | 64    | 1     | 0.17   |

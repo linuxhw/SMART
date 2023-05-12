@@ -171,7 +171,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SpinPoint              | 6      | 16      | 738   | 39    | 1.58   |
 | Samsung   | SpinPoint F1 DT        | 12     | 601     | 1070  | 190   | 1.43   |
 | Samsung   | SpinPoint M7U (USB)    | 1      | 5       | 407   | 0     | 1.12   |
-| Samsung   | SpinPoint T166         | 6      | 287     | 1039  | 420   | 1.10   |
+| Samsung   | SpinPoint T166         | 6      | 287     | 1040  | 420   | 1.10   |
 | Samsung   | SpinPoint F4           | 2      | 64      | 695   | 135   | 1.06   |
 | Samsung   | SpinPoint S166         | 3      | 113     | 891   | 446   | 0.99   |
 | Samsung   | SpinPoint P80 SD       | 7      | 290     | 819   | 372   | 0.90   |

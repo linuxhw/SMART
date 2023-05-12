@@ -115,15 +115,15 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MK3276GSX -63      | 320 GB | 9       | 426   | 62    | 0.63   |
 | Toshiba   | DT01ACA050 LENOVO  | 500 GB | 5       | 230   | 0     | 0.63   |
 | Toshiba   | Generic L200 Ha... | 2 TB   | 2       | 229   | 0     | 0.63   |
+| Toshiba   | MG06ACA800E        | 8 TB   | 14      | 227   | 0     | 0.62   |
 | Toshiba   | MK7559GSXF         | 752 GB | 13      | 619   | 204   | 0.62   |
-| Toshiba   | MG06ACA800E        | 8 TB   | 14      | 226   | 0     | 0.62   |
 | Toshiba   | MK8034GSX          | 80 GB  | 15      | 479   | 23    | 0.61   |
 | Toshiba   | MK3261GSYD         | 320 GB | 2       | 222   | 0     | 0.61   |
 | Toshiba   | MQ04ABD200         | 2 TB   | 17      | 221   | 0     | 0.61   |
 | Toshiba   | HDWR480            | 8 TB   | 3       | 220   | 0     | 0.60   |
+| Toshiba   | HDWR160            | 6 TB   | 7       | 219   | 0     | 0.60   |
 | Toshiba   | HDWT140            | 4 TB   | 3       | 218   | 0     | 0.60   |
 | Toshiba   | MQ01ABD100V        | 1 TB   | 11      | 330   | 5     | 0.60   |
-| Toshiba   | HDWR160            | 6 TB   | 7       | 216   | 0     | 0.59   |
 | Toshiba   | MQ01ABF050         | 500 GB | 712     | 295   | 94    | 0.59   |
 | Toshiba   | MK1656GSY          | 160 GB | 8       | 270   | 130   | 0.59   |
 | Toshiba   | MK6465GSXN         | 640 GB | 10      | 425   | 180   | 0.58   |
@@ -286,7 +286,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 2.5" HDD MQ01UBB       | 1      | 17      | 816   | 246   | 1.19   |
 | Toshiba   | Toshiba Enterprise     | 2      | 13      | 427   | 0     | 1.17   |
 | Toshiba   | X300                   | 7      | 161     | 473   | 22    | 1.15   |
-| Toshiba   | MG06ACA Enterprise ... | 4      | 30      | 402   | 0     | 1.10   |
+| Toshiba   | MG06ACA Enterprise ... | 4      | 30      | 403   | 0     | 1.10   |
 | Toshiba   | 2.5" HDD MQ01UBD       | 2      | 101     | 555   | 160   | 1.08   |
 | Toshiba   | 2.5" HDD MQ04ABB       | 1      | 5       | 393   | 0     | 1.08   |
 | Toshiba   | N300/MN NAS HDD        | 5      | 77      | 404   | 3     | 0.99   |

@@ -199,13 +199,13 @@ See top 1000 of tested HDD models in the [Top1000_HDD.md](/Top1000_HDD.md).
 | Seagate   | ST4000NM0085-1Y... | 4 TB   | 2       | 1468  | 0     | 4.02   |
 | HP        | MB2000GCWDA        | 2 TB   | 7       | 1775  | 2     | 4.02   |
 | Seagate   | ST6000NM0024       | 6 TB   | 5       | 1447  | 0     | 3.97   |
+| WDC       | WD20EARS-42S0XB0   | 2 TB   | 3       | 1447  | 0     | 3.97   |
 | WDC       | WD2500AAKS-61L9A0  | 250 GB | 4       | 1439  | 0     | 3.94   |
 | Hitachi   | HUA723020ALA640    | 2 TB   | 33      | 1480  | 1     | 3.94   |
 | WDC       | WD1200JS-00SGB0    | 120 GB | 3       | 1437  | 0     | 3.94   |
 | WDC       | WD3200AAJS-22RYA0  | 320 GB | 6       | 1471  | 1     | 3.93   |
 | WDC       | WD30EURS-73TLHY0   | 3 TB   | 2       | 1435  | 0     | 3.93   |
 | Seagate   | ST340212AS         | 40 GB  | 6       | 1654  | 35    | 3.92   |
-| WDC       | WD20EARS-42S0XB0   | 2 TB   | 3       | 1425  | 0     | 3.90   |
 | WDC       | WD15EARS-32MVWB0   | 1.5 TB | 3       | 1419  | 0     | 3.89   |
 | WDC       | WD5000KS-00MNB0    | 500 GB | 2       | 1417  | 0     | 3.88   |
 | WDC       | WD2500BMVU-11A04S0 | 250 GB | 2       | 1412  | 0     | 3.87   |
@@ -431,11 +431,11 @@ See top 1000 of tested HDD models in the [Top1000_HDD.md](/Top1000_HDD.md).
 | Toshiba   | MK3255GSXF         | 320 GB | 2       | 1185  | 1     | 2.74   |
 | Hitachi   | HDE721010SLA330    | 1 TB   | 13      | 1855  | 15    | 2.74   |
 | Seagate   | ST3500630AS        | 500 GB | 79      | 1505  | 204   | 2.73   |
+| WDC       | WD20EARX-00PASB0   | 2 TB   | 258     | 1261  | 83    | 2.73   |
 | Seagate   | ST1500LM003-9YH148 | 1.5 TB | 2       | 996   | 0     | 2.73   |
 | Seagate   | ST3400833AS        | 400 GB | 2       | 996   | 0     | 2.73   |
 | WDC       | WD5000AAKS-65A7B2  | 500 GB | 3       | 996   | 0     | 2.73   |
 | WDC       | WD2000FYYZ-05UL1B0 | 2 TB   | 2       | 996   | 0     | 2.73   |
-| WDC       | WD20EARX-00PASB0   | 2 TB   | 258     | 1260  | 83    | 2.73   |
 | WDC       | WD30EZRX-00MMMB0   | 3 TB   | 61      | 1307  | 34    | 2.73   |
 | HGST      | HUH721010ALN600    | 10 TB  | 5       | 995   | 0     | 2.73   |
 | Seagate   | ST3500414CS        | 500 GB | 33      | 1262  | 112   | 2.72   |
@@ -515,7 +515,7 @@ See top 1000 of tested HDD models in the [Top1000_HDD.md](/Top1000_HDD.md).
 | WDC       | WD20EARX-00MMMB0   | 2 TB   | 4       | 1284  | 4     | 2.49   |
 | Seagate   | ST4000NM0033-9Z... | 4 TB   | 40      | 1531  | 365   | 2.49   |
 | WDC       | WD40EFRX-68WT0N0   | 4 TB   | 178     | 1241  | 6     | 2.48   |
-| WDC       | WD5002ABYS-01B1B0  | 500 GB | 17      | 1398  | 3     | 2.48   |
+| WDC       | WD5002ABYS-01B1B0  | 500 GB | 17      | 1399  | 3     | 2.48   |
 | WDC       | WD2500JS-60NCB2    | 250 GB | 3       | 903   | 0     | 2.47   |
 | Seagate   | ST3000DM003-1F216N | 3 TB   | 6       | 1255  | 27    | 2.47   |
 | Seagate   | ST3500418ASQ       | 500 GB | 4       | 1387  | 259   | 2.47   |
@@ -754,7 +754,7 @@ See top 1000 of tested SSD models in the [Top1000_SSD.md](/Top1000_SSD.md).
 | Crucial   | M4-CT128M4SSD2     | 128 GB | 75      | 1042  | 109   | 2.68   |
 | Apple     | SSD SM128E         | 121 GB | 6       | 1323  | 4     | 2.68   |
 | Samsung   | SSD PM830 2.5" 7mm | 256 GB | 19      | 1027  | 54    | 2.68   |
-| Crucial   | M4-CT064M4SSD2     | 64 GB  | 31      | 1085  | 168   | 2.66   |
+| Crucial   | M4-CT064M4SSD2     | 64 GB  | 31      | 1085  | 168   | 2.67   |
 | Intel     | SSDSC2BX200G4      | 200 GB | 2       | 969   | 0     | 2.66   |
 | Micron    | MTFDDAK256MBF-1... | 256 GB | 7       | 965   | 0     | 2.65   |
 | SanDisk   | SD6SF1M064G1022    | 64 GB  | 2       | 963   | 0     | 2.64   |
@@ -854,7 +854,7 @@ See top 1000 of tested SSD models in the [Top1000_SSD.md](/Top1000_SSD.md).
 | SanDisk   | SDSSDHII960G       | 960 GB | 12      | 776   | 1     | 2.01   |
 | Toshiba   | THNSNJ256G8NU      | 256 GB | 7       | 731   | 0     | 2.01   |
 | Intel     | SSDSC2BW240A3L     | 240 GB | 9       | 727   | 0     | 1.99   |
-| Samsung   | SSD 840 EVO        | 120 GB | 224     | 786   | 17    | 1.99   |
+| Samsung   | SSD 840 EVO        | 120 GB | 224     | 787   | 17    | 1.99   |
 | Samsung   | SSD PM800 2.5"     | 128 GB | 5       | 724   | 0     | 1.99   |
 | PNY       | CS1311 240GB SSD   | 240 GB | 27      | 724   | 0     | 1.98   |
 | Samsung   | MZ7PA256HMDR-010H1 | 256 GB | 2       | 842   | 520   | 1.98   |
@@ -973,7 +973,7 @@ See top 1000 of tested SSD models in the [Top1000_SSD.md](/Top1000_SSD.md).
 | Toshiba   | THNS128GG4BBAA     | 128 GB | 4       | 592   | 0     | 1.62   |
 | Intel     | SSDSCMMW180A3L     | 180 GB | 5       | 592   | 0     | 1.62   |
 | Samsung   | MZ7TE512HMHP-000L2 | 512 GB | 5       | 591   | 0     | 1.62   |
-| Samsung   | SSD 750 EVO        | 250 GB | 106     | 597   | 1     | 1.61   |
+| Samsung   | SSD 750 EVO        | 250 GB | 106     | 597   | 1     | 1.62   |
 | SanDisk   | SD6SP1M128G1102    | 128 GB | 3       | 589   | 0     | 1.61   |
 | OCZ       | VERTEX4            | 128 GB | 101     | 644   | 1     | 1.61   |
 | Kingston  | RBU-SNS8100S3256GD | 256 GB | 6       | 587   | 0     | 1.61   |
@@ -1275,6 +1275,7 @@ MTBF - avg. MTBF in years per sample.
 | Dogfish     | 9      | 59      | 69    | 1     | 0.18   |
 | Leven       | 8      | 49      | 71    | 2     | 0.17   |
 | TrekStor    | 1      | 2       | 122   | 78    | 0.17   |
+| Timetec     | 1      | 3       | 64    | 1     | 0.17   |
 | EMTEC       | 5      | 39      | 61    | 0     | 0.17   |
 | SuperSSpeed | 1      | 2       | 312   | 23    | 0.17   |
 | Platinet    | 1      | 3       | 61    | 30    | 0.17   |
@@ -1295,7 +1296,6 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA-E... | 3      | 47      | 45    | 0     | 0.12   |
 | CFD         | 1      | 2       | 44    | 0     | 0.12   |
 | Qumo        | 2      | 7       | 124   | 146   | 0.11   |
-| Timetec     | 1      | 3       | 42    | 1     | 0.11   |
 | MidasForce  | 4      | 10      | 40    | 0     | 0.11   |
 | VERICO      | 1      | 2       | 36    | 0     | 0.10   |
 | OYUNKEY     | 1      | 2       | 215   | 66    | 0.10   |
@@ -1586,6 +1586,7 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | Corsair   | Force MP600        | 500 GB | 19      | 229   | 0     | 0.63   |
 | ADATA     | SX8200NP           | 240 GB | 6       | 251   | 20    | 0.62   |
 | XPG       | GAMMIX S70         | 2 TB   | 7       | 226   | 0     | 0.62   |
+| HP        | SSD EX950          | 1 TB   | 14      | 225   | 0     | 0.62   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 34      | 225   | 0     | 0.62   |
 | Kingston  | SKC2000M81000G     | 1 TB   | 6       | 225   | 0     | 0.62   |
 | Goodram   | IR-SSDPR-P34B-0... | 2 TB   | 5       | 225   | 0     | 0.62   |
@@ -1594,7 +1595,6 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | SanDisk   | Extreme Pro        | 1 TB   | 9       | 221   | 0     | 0.61   |
 | Corsair   | Force MP510 1.9TB  | 1.9 TB | 14      | 221   | 0     | 0.61   |
 | Intel     | SSDPEKKW256G8L     | 256 GB | 6       | 220   | 0     | 0.60   |
-| HP        | SSD EX950          | 1 TB   | 14      | 219   | 0     | 0.60   |
 | T-FORCE   | TM8FP7001T         | 1 TB   | 3       | 218   | 0     | 0.60   |
 | Intel     | HBRPEKNX0202AHO    | 32 GB  | 51      | 224   | 8     | 0.60   |
 | Transcend | TS128GMTE110S      | 128 GB | 18      | 218   | 0     | 0.60   |
@@ -1685,6 +1685,7 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | Intel     | SSDPEKNW512G8      | 512 GB | 328     | 176   | 0     | 0.48   |
 | Intel     | HBRPEKNX0101AHO    | 16 GB  | 19      | 176   | 0     | 0.48   |
 | Seagate   | FireCuda 520 SS... | 2 TB   | 16      | 175   | 0     | 0.48   |
+| Phison    | Sabrent Rocket Q   | 1 TB   | 81      | 175   | 0     | 0.48   |
 | Patriot   | Scorch M2          | 128 GB | 6       | 173   | 0     | 0.48   |
 | WDC       | PC SN520 SDAPNU... | 512 GB | 3       | 173   | 0     | 0.48   |
 | Kingston  | SEDC1000BM8240G    | 240 GB | 3       | 173   | 0     | 0.47   |
@@ -1697,7 +1698,6 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | Corsair   | MP600 PRO          | 1 TB   | 4       | 171   | 0     | 0.47   |
 | KIOXIA    | KXG60ZNV1T02 NVMe  | 1 TB   | 54      | 169   | 0     | 0.46   |
 | Seagate   | FireCuda 510 SS... | 500 GB | 5       | 169   | 0     | 0.46   |
-| Phison    | Sabrent Rocket Q   | 1 TB   | 81      | 168   | 0     | 0.46   |
 | OWC       | Aura N             | 960 GB | 2       | 168   | 0     | 0.46   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 5       | 176   | 2     | 0.46   |
 | Toshiba   | KXG60ZNV256G NVMe  | 256 GB | 23      | 165   | 0     | 0.45   |
@@ -1729,6 +1729,7 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | WDC       | WDS250G3X0C-00SJG0 | 250 GB | 26      | 152   | 0     | 0.42   |
 | SK hynix  | PC601A NVMe        | 1 TB   | 4       | 152   | 0     | 0.42   |
 | Phison    | PCIe SSD           | 2 TB   | 125     | 155   | 9     | 0.42   |
+| Kingston  | SKC2500M81000G     | 1 TB   | 21      | 152   | 0     | 0.42   |
 | Samsung   | MZVLW512HMJP-00000 | 512 GB | 22      | 153   | 1     | 0.42   |
 | Samsung   | MZVKW512HMJP-000L7 | 512 GB | 21      | 151   | 0     | 0.42   |
 | Samsung   | SSD 970 PRO        | 512 GB | 191     | 152   | 1     | 0.41   |
@@ -1740,15 +1741,14 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | Samsung   | MZVLV512HCJH-000H1 | 512 GB | 3       | 149   | 0     | 0.41   |
 | Plextor   | PX-256M8PeG        | 256 GB | 3       | 225   | 335   | 0.41   |
 | Lite-On   | CA3-8D512          | 512 GB | 9       | 148   | 0     | 0.41   |
+| Samsung   | SSD 970 EVO        | 250 GB | 174     | 153   | 2     | 0.40   |
 | KIOXIA    | KXG60ZNV512G       | 512 GB | 32      | 147   | 0     | 0.40   |
-| Samsung   | SSD 970 EVO        | 250 GB | 174     | 152   | 2     | 0.40   |
 | Hikvision | HS-SSD-E2000 256G  | 256 GB | 3       | 147   | 0     | 0.40   |
 | Plextor   | PX-512M8PeG        | 512 GB | 6       | 166   | 92    | 0.40   |
 | Crucial   | CT2000P1SSD8       | 2 TB   | 3       | 146   | 0     | 0.40   |
 | Intel     | SSDPEKNW010T9      | 1 TB   | 31      | 146   | 0     | 0.40   |
 | WDC       | WDS100T2B0C-00PXH0 | 1 TB   | 227     | 146   | 0     | 0.40   |
 | UMIS      | RPJTJ256MED1OWX    | 256 GB | 6       | 146   | 0     | 0.40   |
-| Kingston  | SKC2500M81000G     | 1 TB   | 21      | 146   | 0     | 0.40   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 27      | 146   | 0     | 0.40   |
 | Gigaby... | GP-AG4500G         | 500 GB | 6       | 146   | 0     | 0.40   |
 | Intel     | HBRPEKNX0101AH     | 256 GB | 18      | 146   | 0     | 0.40   |
@@ -1876,9 +1876,9 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | ADATA     | SX8100NP           | 512 GB | 14      | 113   | 74    | 0.29   |
 | Silico... | NE-512             | 512 GB | 19      | 107   | 0     | 0.29   |
 | WDC       | PC SN730 SDBPNT... | 512 GB | 19      | 107   | 0     | 0.29   |
+| WDC       | WDS500G2B0C-00PXH0 | 500 GB | 164     | 106   | 0     | 0.29   |
 | KIOXIA    | KBG40ZPZ256G NVMe  | 256 GB | 6       | 106   | 0     | 0.29   |
 | Seagate   | FireCuda 530 ZP... | 4 TB   | 14      | 106   | 0     | 0.29   |
-| WDC       | WDS500G2B0C-00PXH0 | 500 GB | 164     | 106   | 0     | 0.29   |
 | Micron    | 7400_MTFDKBG3T8TDZ | 3.8 TB | 4       | 106   | 0     | 0.29   |
 
 NVME by Vendor
@@ -1904,14 +1904,14 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba     | 85     | 1281    | 236   | 2     | 0.65   |
 | Plextor     | 13     | 46      | 254   | 37    | 0.62   |
 | LDLC        | 1      | 3       | 213   | 0     | 0.59   |
-| HP          | 10     | 122     | 224   | 23    | 0.54   |
+| HP          | 10     | 122     | 225   | 23    | 0.54   |
 | Transcend   | 9      | 88      | 189   | 0     | 0.52   |
 | Mushkin     | 5      | 33      | 192   | 33    | 0.51   |
 | OWC         | 1      | 2       | 168   | 0     | 0.46   |
 | SPCC        | 8      | 187     | 156   | 29    | 0.43   |
 | T-FORCE     | 5      | 13      | 155   | 0     | 0.42   |
 | Lexar       | 7      | 30      | 152   | 0     | 0.42   |
-| Phison      | 53     | 856     | 152   | 2     | 0.41   |
+| Phison      | 53     | 856     | 152   | 2     | 0.42   |
 | XPG         | 12     | 254     | 155   | 22    | 0.40   |
 | J.ZAO       | 2      | 4       | 139   | 0     | 0.38   |
 | Lenovo      | 5      | 79      | 146   | 3     | 0.38   |

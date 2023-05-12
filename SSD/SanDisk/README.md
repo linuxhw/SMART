@@ -123,6 +123,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3250G        | 250 GB | 26      | 332   | 4     | 0.89   |
 | SanDisk   | SD8SBBU120G1122    | 120 GB | 8       | 324   | 0     | 0.89   |
 | SanDisk   | SDSSDXP120G        | 120 GB | 2       | 319   | 0     | 0.88   |
+| SanDisk   | SDSSDH3 4T00       | 4 TB   | 14      | 313   | 0     | 0.86   |
 | SanDisk   | SD9SN8W256G1027    | 256 GB | 4       | 313   | 0     | 0.86   |
 | SanDisk   | SD8SN8U256G1002    | 256 GB | 12      | 311   | 0     | 0.85   |
 | SanDisk   | SDSSDXPS960G       | 960 GB | 7       | 768   | 57    | 0.85   |
@@ -137,7 +138,6 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SSD i100           | 32 GB  | 6       | 298   | 0     | 0.82   |
 | SanDisk   | SD8TB8U512G1001    | 512 GB | 5       | 296   | 0     | 0.81   |
 | SanDisk   | SD7SN6S-256G-1006  | 256 GB | 12      | 287   | 0     | 0.79   |
-| SanDisk   | SDSSDH3 4T00       | 4 TB   | 14      | 277   | 0     | 0.76   |
 | SanDisk   | SSD U100           | 32 GB  | 14      | 278   | 72    | 0.76   |
 | SanDisk   | SDSSDH3 512G       | 512 GB | 17      | 276   | 0     | 0.76   |
 | SanDisk   | SD9SN8W256G        | 256 GB | 4       | 273   | 0     | 0.75   |
@@ -149,7 +149,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SD5SG2256G1052E    | 256 GB | 5       | 392   | 1     | 0.71   |
 | SanDisk   | SSD PLUS 120 GB    | 120 GB | 51      | 344   | 2     | 0.69   |
 | SanDisk   | SD8SN8U128G1001    | 128 GB | 12      | 250   | 0     | 0.69   |
-| SanDisk   | SDSSDH3512G        | 512 GB | 44      | 256   | 1     | 0.68   |
+| SanDisk   | SDSSDH3512G        | 512 GB | 44      | 257   | 1     | 0.68   |
 | SanDisk   | SD6SN1M-256G-1006  | 256 GB | 7       | 346   | 1     | 0.67   |
 | SanDisk   | X600 M.2 2280 SATA | 128 GB | 19      | 236   | 0     | 0.65   |
 | SanDisk   | SSD i100           | 24 GB  | 35      | 252   | 30    | 0.63   |
@@ -262,7 +262,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| SanDisk   | SanDisk based SSDs     | 31     | 506     | 344   | 19    | 0.84   |
-| SanDisk   | Marvell based SanDi... | 70     | 1814    | 311   | 36    | 0.76   |
+| SanDisk   | SanDisk based SSDs     | 31     | 506     | 345   | 19    | 0.84   |
+| SanDisk   | Marvell based SanDi... | 70     | 1814    | 312   | 36    | 0.76   |
 | SanDisk   | SandForce Driven SSDs  | 6      | 441     | 314   | 17    | 0.74   |
 | SanDisk   | SATA Cloudspeed Max... | 1      | 2       | 124   | 0     | 0.34   |

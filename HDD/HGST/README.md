@@ -84,7 +84,7 @@ MTBF - avg. MTBF in years per sample.
 | HGST      | HCC545050A7E380    | 500 GB | 11      | 494   | 33    | 0.59   |
 | HGST      | HUS722T1TALA600    | 1 TB   | 4       | 197   | 0     | 0.54   |
 | HGST      | HTS545050A7E380    | 500 GB | 275     | 434   | 316   | 0.54   |
-| HGST      | HUS726T6TALE6L4    | 6 TB   | 12      | 189   | 0     | 0.52   |
+| HGST      | HUS726T6TALE6L4    | 6 TB   | 12      | 192   | 0     | 0.53   |
 | HGST      | HUS728T8TALE6L4    | 8 TB   | 27      | 174   | 2     | 0.47   |
 | HGST      | HTS541075A9E680    | 752 GB | 86      | 443   | 596   | 0.45   |
 | HGST      | HUS728T8TALE6L0    | 8 TB   | 9       | 158   | 0     | 0.43   |

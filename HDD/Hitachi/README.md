@@ -302,7 +302,7 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | Deskstar 7K160         | 6      | 215     | 934   | 131   | 1.19   |
 | Hitachi   | CinemaStar C5K750      | 1      | 2       | 729   | 12    | 1.19   |
 | Hitachi   | Travelstar 7K750       | 2      | 76      | 794   | 363   | 0.99   |
-| Hitachi   | Travelstar 5K500.B     | 13     | 713     | 538   | 167   | 0.82   |
+| Hitachi   | Travelstar 5K500.B     | 13     | 713     | 539   | 167   | 0.82   |
 | Hitachi   | Travelstar 5K750       | 3      | 507     | 551   | 406   | 0.75   |
 | Hitachi   | CinemaStar 5K1000.B    | 1      | 2       | 269   | 0     | 0.74   |
 | Hitachi   | CinemaStar 7K1000.B    | 1      | 3       | 246   | 0     | 0.67   |

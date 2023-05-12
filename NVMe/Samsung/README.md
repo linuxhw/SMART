@@ -69,7 +69,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVKW512HMJP-000L7 | 512 GB | 21      | 151   | 0     | 0.42   |
 | Samsung   | SSD 970 PRO        | 512 GB | 191     | 152   | 1     | 0.41   |
 | Samsung   | MZVLV512HCJH-000H1 | 512 GB | 3       | 149   | 0     | 0.41   |
-| Samsung   | SSD 970 EVO        | 250 GB | 174     | 152   | 2     | 0.40   |
+| Samsung   | SSD 970 EVO        | 250 GB | 174     | 153   | 2     | 0.40   |
 | Samsung   | MZVLW1T0HMLH-000L7 | 1 TB   | 13      | 150   | 2     | 0.40   |
 | Samsung   | MZ1LB3T8HMLA-00007 | 3.8 TB | 3       | 144   | 0     | 0.40   |
 | Samsung   | MZVLW256HEHP-00000 | 256 GB | 68      | 134   | 1     | 0.37   |

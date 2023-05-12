@@ -124,7 +124,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KG960G8      | 960 GB | 5       | 151   | 0     | 0.42   |
 | Intel     | SSDSC2BF180A5H SED | 180 GB | 4       | 368   | 35    | 0.41   |
 | Intel     | SSDSA2M160G2GC     | 160 GB | 8       | 720   | 71    | 0.40   |
-| Intel     | SSDSC2KW256G8      | 256 GB | 48      | 142   | 1     | 0.39   |
+| Intel     | SSDSC2KW256G8      | 256 GB | 48      | 143   | 1     | 0.39   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 32      | 172   | 1     | 0.38   |
 | Intel     | SSDSCKKF128G8L     | 128 GB | 2       | 134   | 0     | 0.37   |
 | Intel     | SSDSC2BF180A4H     | 180 GB | 26      | 252   | 5     | 0.36   |
