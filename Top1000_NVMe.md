@@ -216,11 +216,11 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS1TMTE220S        | 1 TB   | 11      | 230   | 0     | 0.63   |
 | KIOXIA... | SSD                | 1 TB   | 5       | 230   | 0     | 0.63   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 7       | 230   | 0     | 0.63   |
+| HP        | SSD EX950          | 1 TB   | 14      | 229   | 0     | 0.63   |
 | Hikvision | HS-SSD-E2000       | 256 GB | 2       | 229   | 0     | 0.63   |
 | Corsair   | Force MP600        | 500 GB | 19      | 229   | 0     | 0.63   |
 | ADATA     | SX8200NP           | 240 GB | 6       | 251   | 20    | 0.62   |
 | XPG       | GAMMIX S70         | 2 TB   | 7       | 226   | 0     | 0.62   |
-| HP        | SSD EX950          | 1 TB   | 14      | 225   | 0     | 0.62   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 34      | 225   | 0     | 0.62   |
 | Kingston  | SKC2000M81000G     | 1 TB   | 6       | 225   | 0     | 0.62   |
 | Goodram   | IR-SSDPR-P34B-0... | 2 TB   | 5       | 225   | 0     | 0.62   |
@@ -361,9 +361,9 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA... | SSD                | 500 GB | 12      | 154   | 0     | 0.42   |
 | KIOXIA    | KXG60PNV512G NVMe  | 512 GB | 3       | 153   | 0     | 0.42   |
 | WDC       | WDS250G3X0C-00SJG0 | 250 GB | 26      | 152   | 0     | 0.42   |
+| Kingston  | SKC2500M81000G     | 1 TB   | 21      | 152   | 0     | 0.42   |
 | SK hynix  | PC601A NVMe        | 1 TB   | 4       | 152   | 0     | 0.42   |
 | Phison    | PCIe SSD           | 2 TB   | 125     | 155   | 9     | 0.42   |
-| Kingston  | SKC2500M81000G     | 1 TB   | 21      | 152   | 0     | 0.42   |
 | Samsung   | MZVLW512HMJP-00000 | 512 GB | 22      | 153   | 1     | 0.42   |
 | Samsung   | MZVKW512HMJP-000L7 | 512 GB | 21      | 151   | 0     | 0.42   |
 | Samsung   | SSD 970 PRO        | 512 GB | 191     | 152   | 1     | 0.41   |
@@ -843,9 +843,9 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | PC711 HFS512GDE... | 512 GB | 12      | 46    | 0     | 0.13   |
 | Silico... | NVME SSD           | 128 GB | 10      | 46    | 0     | 0.13   |
 | KIOXIA    | KXG60ZNV256G NVMe  | 256 GB | 9       | 46    | 0     | 0.13   |
+| UMIS      | RPFTJ128PDD2EWX    | 128 GB | 29      | 46    | 0     | 0.13   |
 | WDC       | PC SN720 SDAPNT... | 512 GB | 7       | 46    | 0     | 0.13   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 343     | 46    | 1     | 0.13   |
-| UMIS      | RPFTJ128PDD2EWX    | 128 GB | 29      | 46    | 0     | 0.13   |
 | Goodram   | IR-SSDPR-P34B-5... | 512 GB | 2       | 45    | 0     | 0.13   |
 | Apple     | SSD SM0512L        | 500 GB | 14      | 49    | 73    | 0.13   |
 | Kingston  | OM8PDP3128B-AI1    | 128 GB | 3       | 45    | 0     | 0.13   |

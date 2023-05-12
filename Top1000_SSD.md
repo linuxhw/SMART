@@ -349,7 +349,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7TY256HDHP-000L1 | 256 GB | 2       | 585   | 0     | 1.60   |
 | Intel     | SSDSC2BA400G4      | 400 GB | 4       | 584   | 0     | 1.60   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | 2       | 739   | 1     | 1.60   |
-| SanDisk   | SDSSDP064G         | 64 GB  | 45      | 604   | 23    | 1.60   |
+| SanDisk   | SDSSDP064G         | 64 GB  | 45      | 605   | 23    | 1.60   |
 | Samsung   | SSD 850 EVO M.2    | 120 GB | 12      | 582   | 0     | 1.60   |
 | Crucial   | CT250MX200SSD3     | 250 GB | 5       | 580   | 0     | 1.59   |
 | Kingston  | SHSS37A120G        | 120 GB | 16      | 580   | 0     | 1.59   |
@@ -647,12 +647,12 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDBNCE5000PNC-WRSN | 500 GB | 2       | 398   | 0     | 1.09   |
 | Samsung   | MZ7LN128HCHP-000L1 | 128 GB | 7       | 398   | 0     | 1.09   |
 | Micron    | 1100_MTFDDAK2T0TBN | 2 TB   | 6       | 397   | 0     | 1.09   |
+| Goodram   | SSDPR-CL100-480-G2 | 480 GB | 11      | 397   | 0     | 1.09   |
 | Samsung   | MZMPC128HBFU-00000 | 128 GB | 6       | 397   | 0     | 1.09   |
 | Samsung   | SSD 860 PRO        | 1 TB   | 47      | 397   | 0     | 1.09   |
 | OCZ       | SOLID3             | 120 GB | 2       | 397   | 0     | 1.09   |
 | Toshiba   | TR150              | 240 GB | 31      | 395   | 0     | 1.08   |
 | OCZ       | VERTEX2            | 180 GB | 5       | 395   | 0     | 1.08   |
-| Goodram   | SSDPR-CL100-480-G2 | 480 GB | 11      | 394   | 0     | 1.08   |
 | Kingston  | SV200S3128G        | 128 GB | 12      | 600   | 2     | 1.08   |
 | SanDisk   | SD8SB8U-128G-1006  | 128 GB | 3       | 393   | 0     | 1.08   |
 | Smartbuy  | SSD                | 64 GB  | 10      | 393   | 0     | 1.08   |
@@ -692,8 +692,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7L37T6HBLA-00A07 | 7.6 TB | 3       | 379   | 0     | 1.04   |
 | Kingston  | RBU-SC152S37256GG2 | 256 GB | 2       | 379   | 0     | 1.04   |
 | SanDisk   | SDSSDHP064G        | 64 GB  | 9       | 378   | 0     | 1.04   |
+| Kingston  | SV300S37A240G      | 240 GB | 241     | 435   | 18    | 1.03   |
 | Kingston  | RBUSNS8180S3128GI  | 128 GB | 8       | 375   | 0     | 1.03   |
-| Kingston  | SV300S37A240G      | 240 GB | 241     | 434   | 18    | 1.03   |
 | Samsung   | MZ7LN128HAHQ-000L1 | 128 GB | 4       | 375   | 0     | 1.03   |
 | SanDisk   | SD6SB1M128G        | 128 GB | 3       | 375   | 0     | 1.03   |
 | Samsung   | MZYLF128HCHP-000L2 | 128 GB | 12      | 374   | 0     | 1.03   |

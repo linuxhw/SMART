@@ -61,7 +61,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SSD DP900 128GB... | 128 GB | 5       | 746   | 613   | 0.58   |
 | ADATA     | SU900              | 256 GB | 11      | 250   | 22    | 0.56   |
 | ADATA     | SP920SS            | 128 GB | 10      | 442   | 8     | 0.54   |
-| ADATA     | SU800              | 1 TB   | 34      | 217   | 19    | 0.52   |
+| ADATA     | SU800              | 1 TB   | 34      | 218   | 19    | 0.52   |
 | ADATA     | SX900              | 256 GB | 11      | 670   | 483   | 0.52   |
 | ADATA     | SU635              | 240 GB | 32      | 204   | 127   | 0.51   |
 | ADATA     | SU800NS38          | 512 GB | 11      | 229   | 71    | 0.50   |

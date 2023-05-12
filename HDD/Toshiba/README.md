@@ -48,7 +48,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MG06ACA600E        | 6 TB   | 8       | 749   | 0     | 2.05   |
 | Toshiba   | MQ01ABB200         | 2 TB   | 29      | 845   | 205   | 1.96   |
 | Toshiba   | MG04ACA600E        | 6 TB   | 3       | 715   | 0     | 1.96   |
-| Toshiba   | HDWE150            | 5 TB   | 27      | 734   | 1     | 1.94   |
+| Toshiba   | HDWE150            | 5 TB   | 27      | 736   | 1     | 1.94   |
 | Toshiba   | DT01ACA200         | 2 TB   | 350     | 719   | 35    | 1.83   |
 | Toshiba   | DT01ABA100V        | 1 TB   | 16      | 871   | 118   | 1.73   |
 | Toshiba   | MK5055GSXN         | 500 GB | 3       | 748   | 3     | 1.73   |
@@ -285,7 +285,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 2.5" HDD MQ03UBB       | 2      | 37      | 523   | 71    | 1.21   |
 | Toshiba   | 2.5" HDD MQ01UBB       | 1      | 17      | 816   | 246   | 1.19   |
 | Toshiba   | Toshiba Enterprise     | 2      | 13      | 427   | 0     | 1.17   |
-| Toshiba   | X300                   | 7      | 161     | 473   | 22    | 1.15   |
+| Toshiba   | X300                   | 7      | 161     | 474   | 22    | 1.15   |
 | Toshiba   | MG06ACA Enterprise ... | 4      | 30      | 403   | 0     | 1.10   |
 | Toshiba   | 2.5" HDD MQ01UBD       | 2      | 101     | 555   | 160   | 1.08   |
 | Toshiba   | 2.5" HDD MQ04ABB       | 1      | 5       | 393   | 0     | 1.08   |
@@ -295,7 +295,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | 2.5" HDD MQ02ABF       | 1      | 16      | 334   | 1     | 0.90   |
 | Toshiba   | 2.5" HDD MK..59GSXP... | 1      | 5       | 439   | 15    | 0.87   |
 | Toshiba   | 2.5" HDD MQ01ACF       | 2      | 139     | 383   | 43    | 0.82   |
-| Toshiba   | P300                   | 7      | 1007    | 319   | 7     | 0.82   |
+| Toshiba   | P300                   | 7      | 1007    | 320   | 7     | 0.82   |
 | Toshiba   | 2.5" HDD MQ01ABD       | 7      | 1458    | 402   | 140   | 0.73   |
 | Toshiba   | 2.5" HDD               | 12     | 94      | 513   | 56    | 0.70   |
 | Toshiba   | 2.5" HDD MQ04UBB       | 1      | 53      | 267   | 13    | 0.70   |

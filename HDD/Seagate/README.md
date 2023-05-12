@@ -114,8 +114,8 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | ST2000DL001-9VT156 | 2 TB   | 32      | 1144  | 260   | 2.09   |
 | Seagate   | ST1000VM002-1ET162 | 1 TB   | 12      | 975   | 12    | 2.09   |
 | Seagate   | ST3400620A         | 400 GB | 5       | 1706  | 115   | 2.09   |
+| Seagate   | ST12000NM0008-2... | 12 TB  | 12      | 823   | 2     | 2.06   |
 | Seagate   | ST10000VN0004-1... | 10 TB  | 40      | 946   | 8     | 2.06   |
-| Seagate   | ST12000NM0008-2... | 12 TB  | 12      | 819   | 2     | 2.05   |
 | Seagate   | ST3500312CS        | 500 GB | 134     | 998   | 119   | 2.05   |
 | Seagate   | ST3200826AS        | 200 GB | 19      | 1137  | 51    | 2.05   |
 | Seagate   | ST4000DM005-2DP166 | 4 TB   | 62      | 758   | 28    | 2.04   |
@@ -682,7 +682,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | Barracuda 7200.9       | 30     | 657     | 846   | 388   | 1.26   |
 | Seagate   | Barracuda 7200.12      | 16     | 2345    | 834   | 176   | 1.25   |
 | Seagate   | Video 3.5              | 1      | 6       | 453   | 0     | 1.24   |
-| Seagate   | Exos X14               | 5      | 31      | 490   | 3     | 1.24   |
+| Seagate   | Exos X14               | 5      | 31      | 491   | 3     | 1.24   |
 | Seagate   | Barracuda SpinPoint F3 | 2      | 77      | 600   | 7     | 1.23   |
 | Seagate   | SV35                   | 7      | 78      | 525   | 108   | 1.20   |
 | Seagate   | Momentus 5400.7        | 2      | 16      | 668   | 404   | 1.19   |

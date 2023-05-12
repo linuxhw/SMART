@@ -196,10 +196,10 @@ See top 1000 of tested HDD models in the [Top1000_HDD.md](/Top1000_HDD.md).
 | HP        | FB080C4080         | 80 GB  | 2       | 1472  | 0     | 4.04   |
 | WDC       | WD1200JB-00REA0    | 120 GB | 2       | 1515  | 1     | 4.03   |
 | HGST      | HUH721212ALE601    | 12 TB  | 8       | 1469  | 0     | 4.03   |
+| WDC       | WD20EARS-42S0XB0   | 2 TB   | 3       | 1469  | 0     | 4.02   |
 | Seagate   | ST4000NM0085-1Y... | 4 TB   | 2       | 1468  | 0     | 4.02   |
 | HP        | MB2000GCWDA        | 2 TB   | 7       | 1775  | 2     | 4.02   |
 | Seagate   | ST6000NM0024       | 6 TB   | 5       | 1447  | 0     | 3.97   |
-| WDC       | WD20EARS-42S0XB0   | 2 TB   | 3       | 1447  | 0     | 3.97   |
 | WDC       | WD2500AAKS-61L9A0  | 250 GB | 4       | 1439  | 0     | 3.94   |
 | Hitachi   | HUA723020ALA640    | 2 TB   | 33      | 1480  | 1     | 3.94   |
 | WDC       | WD1200JS-00SGB0    | 120 GB | 3       | 1437  | 0     | 3.94   |
@@ -613,7 +613,7 @@ MTBF - avg. MTBF in years per sample.
 | Apple       | 16     | 243     | 616   | 53    | 1.36   |
 | Magnetic... | 2      | 4       | 488   | 0     | 1.34   |
 | ExcelStor   | 3      | 21      | 802   | 62    | 1.27   |
-| Hitachi     | 234    | 6014    | 791   | 195   | 1.26   |
+| Hitachi     | 234    | 6014    | 792   | 195   | 1.26   |
 | Samsung     | 121    | 3486    | 846   | 231   | 1.20   |
 | Seagate     | 598    | 27474   | 624   | 175   | 1.07   |
 | HGST        | 79     | 3287    | 527   | 248   | 1.02   |
@@ -982,7 +982,7 @@ See top 1000 of tested SSD models in the [Top1000_SSD.md](/Top1000_SSD.md).
 | Samsung   | MZ7TY256HDHP-000L1 | 256 GB | 2       | 585   | 0     | 1.60   |
 | Intel     | SSDSC2BA400G4      | 400 GB | 4       | 584   | 0     | 1.60   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | 2       | 739   | 1     | 1.60   |
-| SanDisk   | SDSSDP064G         | 64 GB  | 45      | 604   | 23    | 1.60   |
+| SanDisk   | SDSSDP064G         | 64 GB  | 45      | 605   | 23    | 1.60   |
 | Samsung   | SSD 850 EVO M.2    | 120 GB | 12      | 582   | 0     | 1.60   |
 | Crucial   | CT250MX200SSD3     | 250 GB | 5       | 580   | 0     | 1.59   |
 | Kingston  | SHSS37A120G        | 120 GB | 16      | 580   | 0     | 1.59   |
@@ -1582,11 +1582,11 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | Transcend | TS1TMTE220S        | 1 TB   | 11      | 230   | 0     | 0.63   |
 | KIOXIA... | SSD                | 1 TB   | 5       | 230   | 0     | 0.63   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 7       | 230   | 0     | 0.63   |
+| HP        | SSD EX950          | 1 TB   | 14      | 229   | 0     | 0.63   |
 | Hikvision | HS-SSD-E2000       | 256 GB | 2       | 229   | 0     | 0.63   |
 | Corsair   | Force MP600        | 500 GB | 19      | 229   | 0     | 0.63   |
 | ADATA     | SX8200NP           | 240 GB | 6       | 251   | 20    | 0.62   |
 | XPG       | GAMMIX S70         | 2 TB   | 7       | 226   | 0     | 0.62   |
-| HP        | SSD EX950          | 1 TB   | 14      | 225   | 0     | 0.62   |
 | Intel     | H10 HBRPEKNX020... | 512 GB | 34      | 225   | 0     | 0.62   |
 | Kingston  | SKC2000M81000G     | 1 TB   | 6       | 225   | 0     | 0.62   |
 | Goodram   | IR-SSDPR-P34B-0... | 2 TB   | 5       | 225   | 0     | 0.62   |
@@ -1727,9 +1727,9 @@ See top 1000 of tested NVMe models in the [Top1000_NVMe.md](/Top1000_NVMe.md).
 | KIOXIA... | SSD                | 500 GB | 12      | 154   | 0     | 0.42   |
 | KIOXIA    | KXG60PNV512G NVMe  | 512 GB | 3       | 153   | 0     | 0.42   |
 | WDC       | WDS250G3X0C-00SJG0 | 250 GB | 26      | 152   | 0     | 0.42   |
+| Kingston  | SKC2500M81000G     | 1 TB   | 21      | 152   | 0     | 0.42   |
 | SK hynix  | PC601A NVMe        | 1 TB   | 4       | 152   | 0     | 0.42   |
 | Phison    | PCIe SSD           | 2 TB   | 125     | 155   | 9     | 0.42   |
-| Kingston  | SKC2500M81000G     | 1 TB   | 21      | 152   | 0     | 0.42   |
 | Samsung   | MZVLW512HMJP-00000 | 512 GB | 22      | 153   | 1     | 0.42   |
 | Samsung   | MZVKW512HMJP-000L7 | 512 GB | 21      | 151   | 0     | 0.42   |
 | Samsung   | SSD 970 PRO        | 512 GB | 191     | 152   | 1     | 0.41   |

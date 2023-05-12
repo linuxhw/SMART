@@ -52,7 +52,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | PLUS               | 480 GB | 9       | 595   | 0     | 1.63   |
 | SanDisk   | X300 2.5 7MM       | 256 GB | 3       | 595   | 0     | 1.63   |
 | SanDisk   | SD6SP1M128G1102    | 128 GB | 3       | 589   | 0     | 1.61   |
-| SanDisk   | SDSSDP064G         | 64 GB  | 45      | 604   | 23    | 1.60   |
+| SanDisk   | SDSSDP064G         | 64 GB  | 45      | 605   | 23    | 1.60   |
 | SanDisk   | Ultra II           | 960 GB | 36      | 613   | 1     | 1.59   |
 | SanDisk   | SSD U100           | 8 GB   | 2       | 575   | 0     | 1.58   |
 | SanDisk   | SD9SB8W128G1001    | 128 GB | 5       | 572   | 0     | 1.57   |
