@@ -1,5 +1,5 @@
 === START OF INFORMATION SECTION ===
-Model Family:     Seagate Laptop Thin HDD
+Model Family:     Seagate Laptop HDD
 Device Model:     ST500LT012-1DG142
 Serial Number:    --
 LU WWN Device Id: 5 000c50 ...
@@ -11,13 +11,14 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Apr 28 03:41:12 2023 CEST
+Local Time is:    Wed May 10 22:27:13 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
@@ -25,19 +26,20 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
-					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
-					the host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
 Offline data collection
-capabilities: 			 (0x73) SMART execute Offline immediate.
+capabilities: 			 (0x7b) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					No Offline surface scan supported.
+					Offline surface scan supported.
 					Self-test supported.
 					Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -59,29 +61,29 @@ SCT capabilities: 	       (0x1035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   106   099   006    -    11516336
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    125790832
   3 Spin_Up_Time            PO----   099   098   000    -    0
-  4 Start_Stop_Count        -O--CK   092   092   020    -    8291
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8321
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   083   060   030    -    209241434
-  9 Power_On_Hours          -O--CK   092   092   000    -    7745 (244 32 0)
+  7 Seek_Error_Rate         POSR--   083   060   030    -    211390081
+  9 Power_On_Hours          -O--CK   092   092   000    -    7836 (176 236 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5352
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5382
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   099   000    -    17180131355
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   053   045    -    38 (Min/Max 34/38)
+190 Airflow_Temperature_Cel -O---K   062   053   045    -    38 (Min/Max 24/38)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    87
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    912
-193 Load_Cycle_Count        -O--CK   001   001   000    -    273654
+193 Load_Cycle_Count        -O--CK   001   001   000    -    275132
 194 Temperature_Celsius     -O---K   038   047   000    -    38 (0 11 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   093   093   000    -    6794 (7 198 0)
-241 Total_LBAs_Written      ------   100   253   000    -    50792794223
-242 Total_LBAs_Read         ------   100   253   000    -    32874178102
+240 Head_Flying_Hours       ------   093   093   000    -    6878 (75 15 0)
+241 Total_LBAs_Written      ------   100   253   000    -    51136368270
+242 Total_LBAs_Read         ------   100   253   000    -    33216142091
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -100,7 +102,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x21       GPL     R/O      1  Write stream error log
 0x22       GPL     R/O      1  Read stream error log
@@ -124,25 +126,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               90%      7744         -
-# 2  Short offline       Aborted by host               70%      7744         -
-# 3  Extended offline    Completed without error       00%      7706         -
-# 4  Extended offline    Completed without error       00%      7534         -
-# 5  Short offline       Completed without error       00%      7499         -
-# 6  Extended offline    Completed without error       00%      7467         -
-# 7  Short offline       Aborted by host               90%      7418         -
-# 8  Extended offline    Completed without error       00%      7402         -
-# 9  Extended offline    Completed without error       00%      7208         -
-#10  Short offline       Completed without error       00%      6669         -
-#11  Short offline       Aborted by host               90%      5890         -
-#12  Short offline       Aborted by host               90%      5890         -
-#13  Short offline       Aborted by host               90%      5889         -
-#14  Short offline       Aborted by host               10%      5887         -
-#15  Short offline       Aborted by host               60%      5816         -
-#16  Short offline       Aborted by host               90%      5815         -
-#17  Short offline       Completed without error       00%      5814         -
-#18  Short offline       Aborted by host               30%      5801         -
-#19  Short offline       Aborted by host               40%      5712         -
+# 1  Extended offline    Completed without error       00%      7803         -
+# 2  Extended offline    Completed without error       00%      7751         -
+# 3  Short offline       Aborted by host               90%      7744         -
+# 4  Short offline       Aborted by host               70%      7744         -
+# 5  Extended offline    Completed without error       00%      7706         -
+# 6  Extended offline    Completed without error       00%      7534         -
+# 7  Short offline       Completed without error       00%      7499         -
+# 8  Extended offline    Completed without error       00%      7467         -
+# 9  Short offline       Aborted by host               90%      7418         -
+#10  Extended offline    Completed without error       00%      7402         -
+#11  Extended offline    Completed without error       00%      7208         -
+#12  Short offline       Completed without error       00%      6669         -
+#13  Short offline       Aborted by host               90%      5890         -
+#14  Short offline       Aborted by host               90%      5890         -
+#15  Short offline       Aborted by host               90%      5889         -
+#16  Short offline       Aborted by host               10%      5887         -
+#17  Short offline       Aborted by host               60%      5816         -
+#18  Short offline       Aborted by host               90%      5815         -
+#19  Short offline       Completed without error       00%      5814         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -157,12 +159,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
 Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     34/38 Celsius
+Power Cycle Min/Max Temperature:     24/38 Celsius
 Lifetime    Min/Max Temperature:     11/47 Celsius
-Lifetime    Average Temperature:        32 Celsius
+Specified Max Operating Temperature:    32 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -170,15 +171,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (14)
+Temperature History Size (Index):    128 (95)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           26  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           29  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

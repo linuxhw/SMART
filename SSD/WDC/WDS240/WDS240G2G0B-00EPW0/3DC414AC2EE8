@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.18.5-051805-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-71-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     WD Blue and Green SSDs
+Model Family:     WD Blue / Red / Green SSDs
 Device Model:     WDC WDS240G2G0B-00EPW0
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -11,10 +11,11 @@ User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
+TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jul  3 15:39:53 2022 CEST
+Local Time is:    Sat May 13 00:40:25 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,30 +60,30 @@ recommended polling time: 	 (  41) minutes.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    13
-  9 Power_On_Hours          -O--CK   100   100   000    -    6784
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    442
-165 Block_Erase_Count       -O--CK   100   100   000    -    613
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    9
+  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    14
+  9 Power_On_Hours          -O--CK   100   100   000    -    6829
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    521
+165 Block_Erase_Count       -O--CK   100   100   000    -    697
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    10
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    39
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    13
-169 Total_Bad_Blocks        -O--CK   100   100   ---    -    160
-170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    13
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    14
+169 Total_Bad_Blocks        -O--CK   100   100   ---    -    161
+170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    14
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    9
-174 Unexpected_Power_Loss   -O--CK   100   100   000    -    173
+173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    10
+174 Unexpected_Power_Loss   -O--CK   100   100   000    -    174
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   060   058   000    -    40 (Min/Max 9/58)
+194 Temperature_Celsius     -O---K   069   058   000    -    31 (Min/Max 9/58)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x014b0150014b
-232 Available_Reservd_Space PO--CK   100   100   005    -    97
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    2337
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    4890
-241 Host_Writes_GiB         ----CK   100   100   000    -    2067
-242 Host_Reads_GiB          ----CK   100   100   000    -    2671
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x016302000163
+232 Available_Reservd_Space PO--CK   100   100   005    -    96
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    2627
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    5555
+241 Host_Writes_GiB         ----CK   100   100   000    -    2368
+242 Host_Reads_GiB          ----CK   100   100   000    -    2840
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -267,13 +268,14 @@ Error 61 [60] occurred at disk power-on lifetime: 43981 hours (1832 days + 13 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      6774         -
-# 2  Extended offline    Completed without error       00%      6008         -
-# 3  Extended offline    Self-test routine in progress 20%      6008         -
-# 4  Extended offline    Self-test routine in progress 60%      6007         -
-# 5  Extended offline    Self-test routine in progress 70%      6007         -
-# 6  Short offline       Completed without error       00%      6006         -
-# 7  Short offline       Completed without error       00%       522         -
+# 1  Extended offline    Completed without error       00%      6795         -
+# 2  Short offline       Completed without error       00%      6774         -
+# 3  Extended offline    Completed without error       00%      6008         -
+# 4  Extended offline    Self-test routine in progress 20%      6008         -
+# 5  Extended offline    Self-test routine in progress 60%      6007         -
+# 6  Extended offline    Self-test routine in progress 70%      6007         -
+# 7  Short offline       Completed without error       00%      6006         -
+# 8  Short offline       Completed without error       00%       522         -
 
 Selective Self-tests/Logging not supported
 
@@ -282,17 +284,17 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             442  ---  Lifetime Power-On Resets
-0x01  0x010  4            6784  ---  Power-on Hours
-0x01  0x018  6      4335872479  ---  Logical Sectors Written
-0x01  0x028  6      5602271091  ---  Logical Sectors Read
-0x01  0x038  6            6784  ---  Date and Time TimeStamp
+0x01  0x008  4             521  ---  Lifetime Power-On Resets
+0x01  0x010  4            6829  ---  Power-on Hours
+0x01  0x018  6      4966747973  ---  Logical Sectors Written
+0x01  0x028  6      5956962787  ---  Logical Sectors Read
+0x01  0x038  6            6829  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              40  ---  Current Temperature
+0x05  0x008  1              31  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              52  ---  Highest Temperature
-0x05  0x028  1              22  ---  Lowest Temperature
+0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x030  1              40  ---  Highest Average Short Term Temperature
 0x05  0x038  1              40  ---  Lowest Average Short Term Temperature
 0x05  0x040  1               -  ---  Highest Average Long Term Temperature
@@ -315,8 +317,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2         2178  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           41  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error
