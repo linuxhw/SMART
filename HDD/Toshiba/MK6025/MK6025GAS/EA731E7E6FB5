@@ -1,0 +1,211 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.9.7-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Toshiba 2.5" HDD (30-60 GB)
+Device Model:     TOSHIBA MK6025GAS
+Serial Number:    --
+Firmware Version: KA200U
+User Capacity:    60,011,642,880 bytes [60.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database
+ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
+Local Time is:    Thu Jul 11 17:41:08 2024 BST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM level is:     128 (minimum power consumption without standby)
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  295) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  59) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Spin_Up_Time            POS--K   100   100   001    -    1219
+  4 Start_Stop_Count        -O--CK   100   100   000    -    3549
+  5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   050    -    0
+  8 Seek_Time_Performance   P-S---   100   100   050    -    0
+  9 Power_On_Hours          -O--CK   017   017   000    -    33495
+ 10 Spin_Retry_Count        PO--CK   170   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2230
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    95
+193 Load_Cycle_Count        -O--CK   001   001   000    -    2052404
+194 Temperature_Celsius     -O---K   100   100   000    -    31 (Min/Max 6/54)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+197 Current_Pending_Sector  -O--CK   100   100   000    -    0
+198 Offline_Uncorrectable   ----CK   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
+220 Disk_Shift              -O----   100   100   000    -    134
+222 Loaded_Hours            -O--CK   059   059   000    -    16734
+223 Load_Retry_Count        -O--CK   100   100   000    -    0
+224 Load_Friction           -O---K   100   100   000    -    0
+226 Load-in_Time            -OS--K   100   100   000    -    212
+240 Head_Flying_Hours       P-----   100   100   001    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 0
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 97 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 97 occurred at disk power-on lifetime: 32441 hours (1351 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 02 7d d0 6a e3  Error: UNC 2 sectors at LBA = 0x036ad07d = 57331837
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 3f d0 6a e3 00      00:03:27.472  READ DMA
+  ca 00 80 87 29 61 e3 00      00:03:27.472  WRITE DMA
+  ca 00 80 07 29 61 e3 00      00:03:27.471  WRITE DMA
+  ca 00 80 87 28 61 e3 00      00:03:27.470  WRITE DMA
+  ca 00 80 07 28 61 e3 00      00:03:27.469  WRITE DMA
+
+Error 96 occurred at disk power-on lifetime: 32441 hours (1351 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 02 7d d0 6a e3  Error: UNC 2 sectors at LBA = 0x036ad07d = 57331837
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 3f d0 6a e3 00      00:03:18.828  READ DMA
+  ca 00 10 ef 2b 5f e3 00      00:03:18.827  WRITE DMA
+  ca 00 80 6f 2b 5f e3 00      00:03:18.827  WRITE DMA
+  ca 00 80 ef 2a 5f e3 00      00:03:18.826  WRITE DMA
+  ca 00 80 6f 2a 5f e3 00      00:03:18.825  WRITE DMA
+
+Error 95 occurred at disk power-on lifetime: 32441 hours (1351 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 02 7d d0 6a e3  Error: UNC 2 sectors at LBA = 0x036ad07d = 57331837
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 3f d0 6a e3 00      00:03:10.165  READ DMA
+  ca 00 38 8f ba 22 e1 00      00:03:10.164  WRITE DMA
+  ca 00 80 0f ba 22 e1 00      00:03:10.163  WRITE DMA
+  ca 00 80 8f b9 22 e1 00      00:03:10.162  WRITE DMA
+  ca 00 80 0f b9 22 e1 00      00:03:10.162  WRITE DMA
+
+Error 94 occurred at disk power-on lifetime: 32441 hours (1351 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 02 7d d0 6a e3  Error: UNC 2 sectors at LBA = 0x036ad07d = 57331837
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 3f d0 6a e3 00      00:03:01.710  READ DMA
+  ca 00 80 8f b3 22 e1 00      00:03:01.709  WRITE DMA
+  ca 00 03 57 4c 02 e0 00      00:03:01.709  WRITE DMA
+  ca 00 20 3f 53 01 e0 00      00:03:01.709  WRITE DMA
+  c8 00 08 5f 3f 1a e6 00      00:03:01.708  READ DMA
+
+Error 93 occurred at disk power-on lifetime: 32440 hours (1351 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 02 7d d0 6a e3  Error: UNC 2 sectors at LBA = 0x036ad07d = 57331837
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 40 3f d0 6a e3 00      00:03:53.871  READ DMA
+  ca 00 80 c7 7f 56 e3 00      00:03:53.871  WRITE DMA
+  ca 00 80 47 7f 56 e3 00      00:03:53.870  WRITE DMA
+  ca 00 80 c7 7e 56 e3 00      00:03:53.869  WRITE DMA
+  ca 00 80 47 7e 56 e3 00      00:03:53.868  WRITE DMA
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
