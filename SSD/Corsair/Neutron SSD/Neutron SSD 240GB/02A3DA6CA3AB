@@ -1,0 +1,225 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.1.0-0.deb11.11-amd64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     Corsair Neutron SSD
+Serial Number:    --
+Firmware Version: M206
+User Capacity:    240,057,409,536 bytes [240 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+TRIM Command:     Available
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.5, 6.0 Gb/s
+Local Time is:    Wed Oct 11 14:03:15 2023 PDT
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Disabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  230) seconds.
+Offline data collection
+capabilities: 			 (0x1d) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Abort Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0002)	Does not save SMART data before
+					entering power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (   5) minutes.
+
+SMART Attributes Data Structure revision number: 0
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     -OSR-K   166   166   006    -    0
+  5 Reallocated_Sector_Ct   -O--CK   095   095   036    -    568
+  9 Power_On_Hours          -O--CK   075   075   000    -    22258
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    751
+171 Unknown_Attribute       -O--CK   253   253   000    -    0
+172 Unknown_Attribute       -O--CK   100   100   000    -    568
+181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
+182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    568
+194 Temperature_Celsius     -O----   028   000   000    -    28 (Min/Max 15/49)
+201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
+204 Soft_ECC_Correction     -O--CK   100   100   000    -    0
+231 Unknown_SSD_Attribute   -O--CK   100   100   000    -    1
+234 Unknown_Attribute       -O--CK   100   100   000    -    24925
+241 Total_LBAs_Written      -O--CK   100   100   000    -    7744
+242 Total_LBAs_Read         -O--CK   100   100   000    -    13426
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    24365
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      4  Comprehensive SMART error log
+0x03           SL  R/O      5  Ext. Comprehensive SMART error log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 6413 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6413 occurred at disk power-on lifetime: 22257 hours (927 days + 9 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  10 51 ff 00 4f c2 e0  Error: IDNF
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 06 4f c2 00 00      00:27:24.910  SMART READ LOG
+  60 00 b0 00 e7 58 40 40      00:27:24.910  READ FPDMA QUEUED
+  60 08 a8 e0 20 1a 40 40      00:27:24.910  READ FPDMA QUEUED
+  60 90 a0 78 31 61 40 40      00:27:24.910  READ FPDMA QUEUED
+  60 08 98 90 75 48 40 40      00:27:24.910  READ FPDMA QUEUED
+
+Error 6412 occurred at disk power-on lifetime: 22257 hours (927 days + 9 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 40 c0 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 80 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 40 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 00 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 c0 44 cc 40 40      00:26:46.680  READ DMA EXT
+
+Error 6411 occurred at disk power-on lifetime: 22257 hours (927 days + 9 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 40 c0 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 80 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 40 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 00 45 cc 40 40      00:26:46.680  READ DMA EXT
+  25 00 40 c0 44 cc 40 40      00:26:46.680  READ DMA EXT
+
+Error 6410 occurred at disk power-on lifetime: 22257 hours (927 days + 9 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ea 00 00 00 00 00 a0 a0      00:26:26.190  FLUSH CACHE EXT
+  60 08 f0 f8 33 11 40 40      00:26:26.190  READ FPDMA QUEUED
+  60 08 e8 e0 0c 11 40 40      00:26:26.180  READ FPDMA QUEUED
+  60 08 e0 78 82 11 40 40      00:26:26.180  READ FPDMA QUEUED
+  60 08 d8 98 82 11 40 40      00:26:26.180  READ FPDMA QUEUED
+
+Error 6409 occurred at disk power-on lifetime: 22257 hours (927 days + 9 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  10 51 00 00 4f c2 e0  Error: IDNF
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  b0 d5 01 06 4f c2 00 00      00:04:48.960  SMART READ LOG
+  60 c0 70 58 6a 59 40 40      00:04:48.960  READ FPDMA QUEUED
+  60 18 68 00 4a 95 40 40      00:04:48.960  READ FPDMA QUEUED
+  60 00 60 88 bd 49 40 40      00:04:48.960  READ FPDMA QUEUED
+  60 c0 58 b8 75 48 40 40      00:04:48.960  READ FPDMA QUEUED
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+Read SMART Self-test Log failed: scsi error badly formed scsi parameters
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
