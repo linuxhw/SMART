@@ -1,0 +1,277 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.46-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     R5SL120G
+Serial Number:    --
+LU WWN Device Id: 5 000000 ...
+Firmware Version: V0114
+User Capacity:    120,034,123,776 bytes [120 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+TRIM Command:     Available
+Device is:        Not in smartctl database 7.3/5528
+ATA Version is:   ACS-4 (minor revision not indicated)
+SATA Version is:  SATA 3.2, 3.0 Gb/s
+Local Time is:    Sat Oct 21 17:30:34 2023 MSK
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(65535) seconds.
+Offline data collection
+capabilities: 			 (0x79) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  30) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   6) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
+  5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    2327
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    793
+163 Unknown_Attribute       PO----   100   100   050    -    46
+166 Unknown_Attribute       ------   100   100   000    -    0
+167 Unknown_Attribute       -O---K   100   100   000    -    0
+172 Unknown_Attribute       -O--C-   100   100   000    -    0
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    238
+194 Temperature_Celsius     PO---K   070   070   000    -    30 (Min/Max 30/30)
+196 Reallocated_Event_Count ------   100   100   000    -    0
+198 Offline_Uncorrectable   -O--C-   100   100   000    -    0
+199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    6
+241 Total_LBAs_Written      -O--C-   100   100   000    -    2401
+242 Total_LBAs_Read         -O--C-   100   100   000    -    5123
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x04       GPL,SL  R/O      8  Device Statistics log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 6
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 6 [5] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 04 40 f4 35 34 00 c3 ac e4 00  Error: ICRC, ABRT 1088 sectors at LBA = 0xf4353400c3ac = 268509342909356
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 04 40 f4 35 34 00 c3 ac e4 00     00:00:00.000  READ DMA
+  c8 00 00 20 04 22 1e e4 f4 35 34 e8 00     00:00:00.000  READ DMA
+  c8 00 00 80 20 72 86 28 22 1e e4 e4 00     00:00:00.000  READ DMA
+  c8 00 00 03 80 79 27 a8 72 86 28 ed 00     00:00:00.000  READ DMA
+  c8 00 00 40 03 00 c2 e4 79 27 a8 e4 00     00:00:00.000  READ DMA
+
+Error 5 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 02 18 01 38 bc 01 38 5a e4 00  Error: ICRC, ABRT 536 sectors at LBA = 0x138bc01385a = 1343183992922
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 02 18 01 38 bc 01 38 5a e4 00     00:00:00.000  READ DMA
+  c8 00 00 08 02 63 e8 f0 01 38 bc e4 00     00:00:00.000  READ DMA
+  c8 00 00 08 08 5a 22 f0 63 e8 f0 ed 00     00:00:00.000  READ DMA
+  c8 00 00 10 08 03 05 a0 5a 22 f0 ed 00     00:00:00.000  READ DMA
+  c8 00 00 40 10 03 05 60 03 05 a0 e4 00     00:00:00.000  READ DMA
+
+Error 4 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 08 c7 b1 28 f5 49 f8 ed 08  Error: ICRC, ABRT 2056 sectors at LBA = 0xc7b12df549f8 = 219563794188792
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 08 08 c7 b1 28 f5 49 f8 ed 08     00:00:00.000  READ DMA
+  c8 00 00 08 08 f5 4a 90 c7 b1 28 ed 08     00:00:00.000  READ DMA
+  c8 00 00 08 08 e8 47 18 f5 4a 90 ed 08     00:00:00.000  READ DMA
+  c8 00 00 08 08 c5 bf 80 e8 47 18 ed 08     00:00:00.000  READ DMA
+  c8 00 00 10 08 c7 b1 00 c5 bf 80 ed 08     00:00:00.000  READ DMA
+
+Error 3 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 20 0a 03 7d 12 03 e5 4a e0 00  Error: ICRC, ABRT 8202 sectors at LBA = 0x37d1203e54a = 3835708040522
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 20 0a 03 7d 12 03 e5 4a e0 00     00:00:00.000  READ DMA
+  c8 00 00 08 20 02 30 70 03 7d 12 e0 00     00:00:00.000  READ DMA
+  c8 00 00 40 08 00 42 a8 02 30 70 e0 00     00:00:00.000  READ DMA
+  c8 00 00 20 40 13 98 78 00 42 a8 e0 00     00:00:00.000  READ DMA
+  c8 00 00 40 20 06 49 e2 13 98 78 e0 00     00:00:00.000  READ DMA
+
+Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 08 03 d9 72 03 e5 4a e0 00  Error: ICRC, ABRT 2056 sectors at LBA = 0x3d97203e54a = 4232455644490
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 08 08 03 d9 72 03 e5 4a e0 00     00:00:00.000  READ DMA
+  c8 00 00 10 08 03 d6 7a 03 d9 72 e0 00     00:00:00.000  READ DMA
+  c8 00 00 30 10 03 d6 42 03 d6 7a e0 00     00:00:00.000  READ DMA
+  c8 00 00 03 30 0a 99 a5 03 d6 42 e0 00     00:00:00.000  READ DMA
+  c8 00 00 08 03 07 f9 ba 0a 99 a5 e0 00     00:00:00.000  READ DMA
+
+Error 1 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 80 50 2d ea 12 2d ea 92 e8 00  Error: ICRC, ABRT 32848 sectors at LBA = 0x2dea1a2dea92 = 50483484813970
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 80 50 2d ea 12 2d ea 92 e8 00     00:00:00.000  READ DMA
+  c8 00 00 08 80 2d ea 0a 2d ea 12 e8 00     00:00:00.000  READ DMA
+  c8 00 00 28 08 2d e8 e2 2d ea 0a e8 00     00:00:00.000  READ DMA
+  c8 00 00 70 28 2d e7 f2 2d e8 e2 e8 00     00:00:00.000  READ DMA
+  c8 00 00 80 70 2d e8 62 2d e7 f2 e8 00     00:00:00.000  READ DMA
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+SMART Selective self-test log data structure revision number 0
+Note: revision number not 1 implies that no selective self-test has ever been run
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Commands not supported
+
+Device Statistics (GP Log 0x04)
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 1) ==
+0x01  0x008  4             793  ---  Lifetime Power-On Resets
+0x01  0x010  4            2327  ---  Power-on Hours
+0x01  0x018  6      5035650575  ---  Logical Sectors Written
+0x01  0x028  6     10743861196  ---  Logical Sectors Read
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
+0x05  0x008  1              30  ---  Current Temperature
+0x05  0x020  1              30  ---  Highest Temperature
+0x05  0x028  1              30  ---  Lowest Temperature
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x018  4               6  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
+
