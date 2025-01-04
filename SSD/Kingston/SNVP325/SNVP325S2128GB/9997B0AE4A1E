@@ -1,0 +1,176 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.8-200.fc39.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     JMicron/Maxiotek based SSDs
+Device Model:     KINGSTON SNVP325S2128GB
+Serial Number:    --
+Firmware Version: AGYA0201
+User Capacity:    128,035,676,160 bytes [128 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+TRIM Command:     Available
+Device is:        In smartctl database 7.3/5528
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.6, 3.0 Gb/s
+Local Time is:    Tue Dec 26 22:45:27 2023 WET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  540) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  10) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Unknown_JMF_Attribute   POS---   100   100   050    -    0
+  5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
+  7 Unknown_JMF_Attribute   PO-R--   100   100   050    -    0
+  8 Unknown_JMF_Attribute   P-S---   100   100   050    -    0
+  9 Power_On_Hours          -O--C-   100   100   000    -    25310
+ 10 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    7082
+167 Unknown_JMF_Attribute   -O---K   100   100   000    -    0
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+169 Unknown_JMF_Attribute   PO--C-   100   100   010    -    932136223152
+170 Bad_Block_Count         PO--C-   100   100   010    -    17 140 98
+173 Erase_Count             -O--C-   100   100   000    -    982 1160 1061
+175 Bad_Cluster_Table_Count PO--C-   100   100   010    -    0
+192 Unexpect_Power_Loss_Ct  -O--C-   100   100   000    -    782
+194 Temperature_Celsius     PO---K   077   056   030    -    23 (Min/Max 12/44)
+240 Unknown_JMF_Attribute   PO--C-   100   100   050    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O     51  Comprehensive SMART error log
+0x03       GPL     R/O     64  Ext. Comprehensive SMART error log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      1  Extended self-test log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
+Device Error Count: 2
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 [1] occurred at disk power-on lifetime: 20284 hours (845 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 05 40 00 00 0e aa 0b f0 e0 00  Error: ICRC, ABRT 1344 sectors at LBA = 0x0eaa0bf0 = 246025200
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 05 40 00 00 0e aa 0b f0 e0 00     03:50:39.364  WRITE DMA EXT
+  35 00 00 05 40 00 00 0e aa 06 b0 e0 00     03:50:39.364  WRITE DMA EXT
+  ca 00 00 00 40 00 00 00 a8 16 70 ee 00     03:50:39.363  WRITE DMA
+  35 00 00 05 40 00 00 0e a8 11 30 e0 00     03:50:39.360  WRITE DMA EXT
+  35 00 00 05 40 00 00 0e a8 0b f0 e0 00     03:50:39.357  WRITE DMA EXT
+
+Error 1 [0] occurred at disk power-on lifetime: 13138 hours (547 days + 10 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 08 08 00 00 98 75 24 98 e0 00  Error: ICRC, ABRT at LBA = 0x98752498 = 2557813912
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 00 00 08 08 75 23 98 75 24 98 e0 00     06:09:28.002  WRITE DMA
+  ca 00 00 00 08 00 00 00 75 23 98 e0 00     06:09:28.002  WRITE DMA
+  ca 00 00 00 08 00 00 00 75 23 80 e0 00     06:09:28.002  WRITE DMA
+  ca 00 00 00 08 00 00 00 75 23 50 e0 00     06:09:28.002  WRITE DMA
+  ca 00 00 00 08 00 00 00 75 23 30 e0 00     06:09:28.002  WRITE DMA
+
+SMART Extended Self-test Log Version: 1 (1 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     23051         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  4         6560  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
