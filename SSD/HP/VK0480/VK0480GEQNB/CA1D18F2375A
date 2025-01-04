@@ -1,0 +1,299 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.7.6-zen1-1-zen] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     VK0480GEQNB
+Serial Number:    --
+LU WWN Device Id: 5 001173 ...
+Firmware Version: RC43HPS1
+User Capacity:    480,103,981,056 bytes [480 GB]
+Sector Sizes:     512 bytes logical, 4096 bytes physical
+Rotation Rate:    Solid State Device
+Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
+Device is:        Not in smartctl database 7.3/5528
+ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
+SATA Version is:  ATA8-AST, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Tue Feb 27 23:16:14 2024 EST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Disabled
+DSN feature is:   Unavailable
+ATA Security is:  Unavailable
+Wt Cache Reorder: Unknown
+
+=== START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
+SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  937) seconds.
+Offline data collection
+capabilities: 			 (0x5d) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Abort Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x06)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 ( 512) minutes.
+SCT capabilities: 	       (0x003d)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   100   100   032    -    2
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1
+  9 Power_On_Hours          -O--CK   049   049   000    -    45545 (12 117 0)
+173 Unknown_Attribute       PO--CK   083   083   001    -    17
+180 Unused_Rsvd_Blk_Cnt_Tot PO-RCK   100   100   032    -    0
+194 Temperature_Celsius     -O---K   053   038   031    -    47 (Min/Max 13/62)
+196 Reallocated_Event_Count PO-RC-   100   100   010    -    1
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      1  Comprehensive SMART error log
+0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
+0x04       GPL,SL  R/O      1  Device Statistics log
+0x06           SL  R/O      1  SMART self-test log
+0x07       GPL     R/O      2  Extended self-test log
+0x09           SL  R/W      1  Selective self-test log
+0x0d       GPL     R/O      1  LPS Mis-alignment log
+0x10       GPL     R/O      1  NCQ Command Error log
+0x11       GPL     R/O      1  SATA Phy Event Counters log
+0x80-0x9f      SL  R/W      2  Host vendor specific log
+0xb5           SL  VS       1  Device vendor specific log
+0xb6       GPL     VS       1  Device vendor specific log
+0xd0       GPL     VS       1  Device vendor specific log
+0xd7       GPL     VS       1  Device vendor specific log
+0xe0       GPL,SL  R/W      1  SCT Command/Status
+0xe1       GPL,SL  R/W      1  SCT Data Transfer
+
+SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
+Device Error Count: 16 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 16 [3] occurred at disk power-on lifetime: 28717 hours (1196 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 41 01 00 00 00 0d 47 56 00 00 00  Error: ABRT at LBA = 0x0d475600 = 222778880
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 a0 00 00 0d 47 54 00 40 00  3d+06:06:04.169  READ FPDMA QUEUED
+  60 02 00 00 98 00 00 0d 47 52 00 40 00  3d+06:06:03.752  READ FPDMA QUEUED
+  60 02 00 00 90 00 00 0d 47 50 00 40 00  3d+06:06:03.334  READ FPDMA QUEUED
+  60 02 00 00 88 00 00 0d 47 4e 00 40 00  3d+06:06:02.917  READ FPDMA QUEUED
+  60 02 00 00 80 00 00 0d 47 4c 00 40 00  3d+06:06:02.499  READ FPDMA QUEUED
+
+Error 15 [2] occurred at disk power-on lifetime: 28029 hours (1167 days + 21 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 41 01 00 00 00 2c 34 29 00 00 00  Error: ABRT at LBA = 0x2c342900 = 741615872
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 f8 00 00 2c 34 28 00 40 00  7d+06:18:07.974  READ FPDMA QUEUED
+  60 02 00 00 f0 00 00 2c 34 26 00 40 00  7d+06:18:07.793  READ FPDMA QUEUED
+  60 02 00 00 e8 00 00 2c 34 24 00 40 00  7d+06:18:07.613  READ FPDMA QUEUED
+  60 02 00 00 e0 00 00 2c 34 22 00 40 00  7d+06:18:07.424  READ FPDMA QUEUED
+  60 02 00 00 d8 00 00 2c 34 20 00 40 00  7d+06:18:07.240  READ FPDMA QUEUED
+
+Error 14 [1] occurred at disk power-on lifetime: 27962 hours (1165 days + 2 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 41 01 00 00 00 2b 4d b1 00 00 00  Error: ABRT at LBA = 0x2b4db100 = 726511872
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 18 00 00 2b 4d b0 00 40 00  7d+03:40:49.322  READ FPDMA QUEUED
+  60 02 00 00 10 00 00 2b 4d ae 00 40 00  7d+03:40:49.143  READ FPDMA QUEUED
+  60 02 00 00 08 00 00 2b 4d ac 00 40 00  7d+03:40:48.959  READ FPDMA QUEUED
+  60 02 00 00 00 00 00 2b 4d aa 00 40 00  7d+03:40:48.778  READ FPDMA QUEUED
+  60 02 00 00 f8 00 00 2b 4d a8 00 40 00  7d+03:40:48.586  READ FPDMA QUEUED
+
+Error 13 [0] occurred at disk power-on lifetime: 27921 hours (1163 days + 9 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 41 01 00 00 00 2c c3 d3 00 00 00  Error: ABRT at LBA = 0x2cc3d300 = 751031040
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 a0 00 00 2c c3 d2 00 40 00  7d+07:50:03.654  READ FPDMA QUEUED
+  60 02 00 00 98 00 00 2c c3 d0 00 40 00  7d+07:50:03.459  READ FPDMA QUEUED
+  60 02 00 00 90 00 00 2c c3 ce 00 40 00  7d+07:50:03.275  READ FPDMA QUEUED
+  60 02 00 00 88 00 00 2c c3 cc 00 40 00  7d+07:50:03.078  READ FPDMA QUEUED
+  60 02 00 00 80 00 00 2c c3 ca 00 40 00  7d+07:50:02.889  READ FPDMA QUEUED
+
+SMART Extended Self-test Log Version: 1 (2 sectors)
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Offline             Interrupted (host reset)      00%     23580         -
+# 2  Short offline       Completed without error       00%     23507         -
+# 3  Short offline       Completed without error       00%     23500         -
+# 4  Short offline       Completed without error       00%     23483         -
+# 5  Short offline       Completed without error       00%     23461         -
+# 6  Short offline       Completed without error       00%     23454         -
+# 7  Short offline       Completed without error       00%     23429         -
+# 8  Short offline       Completed without error       00%     23411         -
+# 9  Short offline       Completed without error       00%     23385         -
+#10  Short offline       Completed without error       00%     23362         -
+#11  Short offline       Completed without error       00%     23334         -
+#12  Short offline       Completed without error       00%     23315         -
+#13  Short offline       Completed without error       00%     23294         -
+#14  Short offline       Completed without error       00%     23287         -
+#15  Short offline       Completed without error       00%     23267         -
+#16  Short offline       Completed without error       00%     23260         -
+#17  Short offline       Completed without error       00%     23246         -
+#18  Short offline       Completed without error       00%     23234         -
+#19  Short offline       Completed without error       00%     23215         -
+#20  Short offline       Completed without error       00%     23193         -
+#21  Short offline       Completed without error       00%     23174         -
+#22  Short offline       Completed without error       00%     23165         -
+#23  Short offline       Completed without error       00%     23151         -
+#24  Short offline       Completed without error       00%     23142         -
+#25  Short offline       Completed without error       00%     23118         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+SCT Status Version:                  3
+SCT Version (vendor specific):       0 (0x0000)
+Device State:                        Active (0)
+Current Temperature:                    47 Celsius
+Power Cycle Min/Max Temperature:     43/47 Celsius
+Lifetime    Min/Max Temperature:     13/62 Celsius
+Specified Max Operating Temperature:    69 Celsius
+Under/Over Temperature Limit Count:   0/0
+Vendor specific:
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 de
+
+SCT Temperature History Version:     2
+Temperature Sampling Period:         1 minute
+Temperature Logging Interval:        1 minute
+Min/Max recommended Temperature:      0/65 Celsius
+Min/Max Temperature Limit:            0/69 Celsius
+Temperature History Size (Index):    478 (47)
+
+SMART WRITE LOG does not return COUNT and LBA_LOW register
+SCT (Get) Error Recovery Control command failed
+
+Device Statistics (GP Log 0x04)
+Page  Offset Size        Value Flags Description
+0x01  =====  =               =  ===  == General Statistics (rev 1) ==
+0x01  0x008  4            2073  ---  Lifetime Power-On Resets
+0x01  0x010  4           45545  ---  Power-on Hours
+0x01  0x018  6    179113324719  ---  Logical Sectors Written
+0x01  0x020  6  42022076559128  ---  Number of Write Commands
+0x01  0x028  6   1822850767106  ---  Logical Sectors Read
+0x01  0x030  6  46112459930756  ---  Number of Read Commands
+0x01  0x038  6       753242752  ---  Date and Time TimeStamp
+0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
+0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4             108  ---  Resets Between Cmd Acceptance and Completion
+0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
+0x05  0x008  1              47  ---  Current Temperature
+0x05  0x010  1              45  ---  Average Short Term Temperature
+0x05  0x018  1              47  ---  Average Long Term Temperature
+0x05  0x020  1              62  ---  Highest Temperature
+0x05  0x028  1              13  ---  Lowest Temperature
+0x05  0x030  1              60  ---  Highest Average Short Term Temperature
+0x05  0x038  1              20  ---  Lowest Average Short Term Temperature
+0x05  0x040  1              60  ---  Highest Average Long Term Temperature
+0x05  0x048  1              26  ---  Lowest Average Long Term Temperature
+0x05  0x050  4               0  ---  Time in Over-Temperature
+0x05  0x058  1              69  ---  Specified Maximum Operating Temperature
+0x05  0x060  4              60  ---  Time in Under-Temperature
+0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
+0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
+0x06  0x008  4           30315  ---  Number of Hardware Resets
+0x06  0x010  4            9708  ---  Number of ASR Events
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
+0x07  0x008  1              17  ---  Percentage Used Endurance Indicator
+                                |||_ C monitored condition met
+                                ||__ D supports DSN
+                                |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x000a  2        32129  Device-to-host register FISes sent due to a COMRESET
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+
