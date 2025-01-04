@@ -1,0 +1,232 @@
+smartctl 7.3 2022-02-28 r5338 [i686-linux-6.1.0-21-686] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     SAMSUNG SpinPoint P80
+Device Model:     SAMSUNG SP1614N
+Serial Number:    --
+Firmware Version: TM100-24
+User Capacity:    160,041,885,696 bytes [160 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database 7.3/5319
+ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
+Local Time is:    Sat Jun 22 14:36:49 2024 CEST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM level is:     254 (maximum performance), recommended: 254
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 5760) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  96) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   051    -    296
+  3 Spin_Up_Time            POS---   063   051   000    -    6336
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7531
+  5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    3
+  7 Seek_Error_Rate         PO-R--   253   253   051    -    0
+  8 Seek_Time_Performance   --S--K   253   253   000    -    0
+  9 Power_On_Half_Minutes   -O--CK   098   098   000    -    11499h+21m
+ 10 Spin_Retry_Count        PO--C-   253   253   049    -    0
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3884
+194 Temperature_Celsius     -O---K   151   088   000    -    29
+195 Hardware_ECC_Recovered  -O-R--   100   100   000    -    598156798
+196 Reallocated_Event_Count -O--C-   099   099   000    -    3
+197 Current_Pending_Sector  PO--CK   253   253   010    -    0
+198 Offline_Uncorrectable   P---CK   253   253   010    -    0
+199 UDMA_CRC_Error_Count    PO-R--   100   100   051    -    0
+200 Multi_Zone_Error_Rate   PO-R--   100   100   051    -    0
+201 Soft_Read_Error_Rate    PO-R--   100   100   051    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory not supported
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      2  Comprehensive SMART error log
+0x06           SL  R/O      2  SMART self-test log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 225 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 225 occurred at disk power-on lifetime: 11228 hours (467 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 00 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 04 00 00 00 00 40 00      02:00:53.625  SET FEATURES [Enable auto DR] [OBS-4]
+  e5 00 00 00 00 00 40 00      02:00:33.250  CHECK POWER MODE
+  ec 00 01 00 00 00 40 00      02:00:19.500  IDENTIFY DEVICE
+  ec 00 01 00 00 00 40 00      01:59:05.250  IDENTIFY DEVICE
+  b0 da 00 00 4f c2 00 00      01:52:02.375  SMART RETURN STATUS
+
+Error 224 occurred at disk power-on lifetime: 11176 hours (465 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:00:36.938  SET FEATURES [Enable APM]
+  c8 00 20 35 4f 79 e0 00      00:00:36.875  READ DMA
+  c8 00 20 6d fc 78 e0 00      00:00:36.875  READ DMA
+  c8 00 60 1d dc 4e e0 00      00:00:36.875  READ DMA
+  c8 00 b8 7d 40 40 e0 00      00:00:36.875  READ DMA
+
+Error 223 occurred at disk power-on lifetime: 11171 hours (465 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:00:35.813  SET FEATURES [Enable APM]
+  c8 00 88 15 6d 17 e0 00      00:00:35.813  READ DMA
+  c8 00 08 8a 9d b3 e0 00      00:00:35.813  READ DMA
+  c8 00 08 82 9d b3 e0 00      00:00:35.813  READ DMA
+  c8 00 08 7a 9d b3 e0 00      00:00:35.813  READ DMA
+
+Error 222 occurred at disk power-on lifetime: 11162 hours (465 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:01:16.375  SET FEATURES [Enable APM]
+  c8 00 08 85 41 1c e0 00      00:01:16.375  READ DMA
+  c8 00 00 75 59 78 e0 00      00:01:16.313  READ DMA
+  c8 00 68 fd c6 57 e0 00      00:01:16.313  READ DMA
+  c8 00 20 dd c4 57 e0 00      00:01:16.313  READ DMA
+
+Error 221 occurred at disk power-on lifetime: 11162 hours (465 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 51 fe 00 00 00 40  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 05 fe 00 00 00 40 00      00:00:34.563  SET FEATURES [Enable APM]
+  c8 00 20 4d ca 3b e0 00      00:00:34.563  READ DMA
+  c8 00 60 da 71 b3 e0 00      00:00:34.563  READ DMA
+  c8 00 08 45 23 6f e0 00      00:00:34.500  READ DMA
+  c8 00 60 95 41 1c e0 00      00:00:34.500  READ DMA
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%     11489         -
+# 2  Extended offline    Completed without error       00%     11482         -
+# 3  Short offline       Completed without error       00%     11419         -
+# 4  Short offline       Completed without error       00%     11389         -
+# 5  Short offline       Completed without error       00%     11385         -
+# 6  Short offline       Completed without error       00%     11384         -
+# 7  Short offline       Completed without error       00%     11383         -
+# 8  Short offline       Completed without error       00%     11379         -
+# 9  Short offline       Completed without error       00%     11376         -
+#10  Short offline       Completed without error       00%     11375         -
+#11  Short offline       Completed without error       00%     11374         -
+#12  Short offline       Completed without error       00%     11370         -
+#13  Short offline       Completed without error       00%     11369         -
+#14  Short offline       Completed without error       00%     11363         -
+#15  Short offline       Completed without error       00%     11347         -
+#16  Short offline       Completed without error       00%     11345         -
+#17  Short offline       Completed without error       00%     11341         -
+#18  Short offline       Completed without error       00%     11334         -
+#19  Short offline       Completed without error       00%     11326         -
+#20  Short offline       Completed without error       00%     11320         -
+#21  Short offline       Completed without error       00%     11314         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+
