@@ -1,0 +1,208 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     IBM/Hitachi Deskstar 120GXP
+Device Model:     IC35L120AVVA07-0
+Serial Number:    --
+Firmware Version: VA6OA56A
+User Capacity:    120,000,000,000 bytes [120 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
+Local Time is:    Fri Mar 29 22:44:50 2024 GMT
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM level is:     254 (maximum performance), recommended: 128
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 3399) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  57) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   098   098   060    -    262144
+  2 Throughput_Performance  P-S---   147   147   050    -    268
+  3 Spin_Up_Time            POS---   091   091   024    -    375 (Average 366)
+  4 Start_Stop_Count        -O--C-   099   099   000    -    5589
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    10
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   136   136   020    -    31
+  9 Power_On_Hours          -O--C-   092   092   000    -    59792
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3247
+192 Power-Off_Retract_Count -O--CK   096   096   050    -    5837
+193 Load_Cycle_Count        -O--C-   096   096   050    -    5837
+194 Temperature_Celsius     -O----   114   114   000    -    48 (Min/Max 15/66)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    10
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    52
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+General Purpose Log Directory not supported
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 22 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 22 occurred at disk power-on lifetime: 59765 hours (2490 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 5f 08 60 f0  Error: ICRC, ABRT at LBA = 0x0060085f = 6293599
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 48 18 08 60 f0 00      00:27:37.100  READ DMA
+  ec 00 00 00 00 00 b0 00      00:26:38.000  IDENTIFY DEVICE
+  c4 00 08 50 08 60 f0 00      00:20:43.800  READ MULTIPLE
+  c8 00 08 50 08 60 f0 00      00:20:43.800  READ DMA
+  c4 00 08 98 24 00 f0 00      00:20:43.800  READ MULTIPLE
+
+Error 21 occurred at disk power-on lifetime: 59765 hours (2490 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 57 08 60 f0  Error: ICRC, ABRT at LBA = 0x00600857 = 6293591
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 50 08 60 f0 00      00:20:43.800  READ DMA
+  c4 00 08 98 24 00 f0 00      00:20:43.800  READ MULTIPLE
+  c8 00 08 98 24 00 f0 00      00:20:43.800  READ DMA
+  ec 00 00 00 00 00 b0 00      00:20:32.300  IDENTIFY DEVICE
+  ec 00 00 00 00 00 b0 00      00:20:32.300  IDENTIFY DEVICE
+
+Error 20 occurred at disk power-on lifetime: 59765 hours (2490 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 9f 24 00 f0  Error: ICRC, ABRT at LBA = 0x0000249f = 9375
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 98 24 00 f0 00      00:20:43.800  READ DMA
+  ec 00 00 00 00 00 b0 00      00:20:32.300  IDENTIFY DEVICE
+  ec 00 00 00 00 00 b0 00      00:20:32.300  IDENTIFY DEVICE
+  ec 00 00 00 00 00 b0 00      00:20:26.500  IDENTIFY DEVICE
+  ec 00 00 00 00 00 b0 00      00:20:18.800  IDENTIFY DEVICE
+
+Error 19 occurred at disk power-on lifetime: 59765 hours (2490 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 0f 08 00 f0  Error: ICRC, ABRT at LBA = 0x0000080f = 2063
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 10 00 08 00 f0 00      00:17:27.900  READ DMA
+  ca 00 08 20 09 00 f0 00      00:17:23.100  WRITE DMA
+  ca 00 08 08 ec 5d f0 00      00:17:18.200  WRITE DMA
+  ca 00 08 18 ec 5d f0 00      00:17:18.200  WRITE DMA
+  ca 00 08 d0 ec 5d f0 00      00:17:18.200  WRITE DMA
+
+Error 18 occurred at disk power-on lifetime: 59765 hours (2490 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 00 08 00 f0  Error: ICRC, ABRT at LBA = 0x00000800 = 2048
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 01 00 08 00 f0 00      00:17:15.200  READ DMA
+  c8 00 01 00 00 00 f0 00      00:17:09.200  READ DMA
+  c4 00 01 00 00 00 f0 00      00:17:09.200  READ MULTIPLE
+  c8 00 01 00 00 00 f0 00      00:17:09.200  READ DMA
+  c8 00 20 00 08 00 f0 00      00:17:07.000  READ DMA
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%         2         -
+# 2  Short offline       Completed without error       00%         1         -
+# 3  Short captive       Completed without error       00%         1         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+

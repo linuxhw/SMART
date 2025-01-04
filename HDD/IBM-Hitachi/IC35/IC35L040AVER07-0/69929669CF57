@@ -1,0 +1,218 @@
+smartctl 7.3 2022-02-28 r5338 [i686-linux-6.1.0-12-686] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     IBM Deskstar 60GXP
+Device Model:     IC35L040AVER07-0
+Serial Number:    --
+Firmware Version: ER4OA44A
+User Capacity:    41,174,138,880 bytes [41.1 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database 7.3/5319
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
+Local Time is:    Thu Oct 26 19:36:37 2023 CEST
+
+==> WARNING: IBM Deskstar 60GXP drives may need upgraded SMART firmware.
+Please see http://haque.net/dtla_update/
+
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Disabled
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		( 1383) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  23) minutes.
+
+SMART Attributes Data Structure revision number: 16
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     PO-R--   100   100   060    -    0
+  2 Throughput_Performance  P-S---   100   100   050    -    0
+  3 Spin_Up_Time            POS---   112   112   024    -    190 (Average 200)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    3124
+  5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
+  7 Seek_Error_Rate         PO-R--   100   100   067    -    0
+  8 Seek_Time_Performance   P-S---   100   100   020    -    0
+  9 Power_On_Hours          -O--C-   098   098   000    -    15363
+ 10 Spin_Retry_Count        PO--C-   100   100   060    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3080
+192 Power-Off_Retract_Count -O--CK   098   098   050    -    3132
+193 Load_Cycle_Count        -O--C-   098   098   050    -    3132
+194 Temperature_Celsius     -O----   166   166   000    -    33 (Min/Max 16/58)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+197 Current_Pending_Sector  -O---K   100   100   000    -    1
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+General Purpose Log Directory not supported
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 526 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 526 occurred at disk power-on lifetime: 15353 hours (639 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 90 50 b2 e4  Error: UNC 8 sectors at LBA = 0x04b25090 = 78794896
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 90 50 b2 e4 00      01:23:33.300  READ DMA
+  c8 00 08 30 24 b0 e4 00      01:23:33.300  READ DMA
+  c8 00 08 e8 37 b0 e4 00      01:23:33.300  READ DMA
+  c8 00 08 b0 24 b0 e4 00      01:23:33.300  READ DMA
+  c8 00 08 20 26 b0 e4 00      01:23:33.300  READ DMA
+
+Error 525 occurred at disk power-on lifetime: 556 hours (23 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 10 1f 2f e0  Error: UNC at LBA = 0x002f1f10 = 3088144
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 10 1f 2f e0 00      10:44:48.700  READ SECTOR(S)
+  20 00 01 17 41 08 e0 00      10:44:48.700  READ SECTOR(S)
+  fe a2 01 00 c0 fe ef 00      10:44:48.700  [VENDOR SPECIFIC]
+  fe a2 01 00 c0 fe ef 00      10:44:48.700  [VENDOR SPECIFIC]
+  fe a2 01 00 c0 fe ef 00      10:44:48.600  [VENDOR SPECIFIC]
+
+Error 524 occurred at disk power-on lifetime: 542 hours (22 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 10 1f 2f e0  Error: UNC at LBA = 0x002f1f10 = 3088144
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 10 1f 2f e0 00      00:19:32.100  READ SECTOR(S)
+  20 00 01 17 41 08 e0 00      00:19:32.100  READ SECTOR(S)
+  fe a2 01 00 c0 fe ef 00      00:19:32.000  [VENDOR SPECIFIC]
+  fe a2 01 00 c0 fe ef 00      00:19:32.000  [VENDOR SPECIFIC]
+  fe a2 01 00 c0 fe ef 00      00:19:32.000  [VENDOR SPECIFIC]
+
+Error 523 occurred at disk power-on lifetime: 542 hours (22 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 01 10 1f 2f e0  Error: UNC at LBA = 0x002f1f10 = 3088144
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  20 00 01 10 1f 2f e0 00      00:17:14.600  READ SECTOR(S)
+  20 00 01 17 41 08 e0 00      00:17:14.600  READ SECTOR(S)
+  fe a2 01 00 c0 fe ef 00      00:17:14.600  [VENDOR SPECIFIC]
+  fe a2 01 00 c0 fe ef 00      00:17:14.600  [VENDOR SPECIFIC]
+  fe a2 01 00 c0 fe ef 00      00:17:14.600  [VENDOR SPECIFIC]
+
+Error 522 occurred at disk power-on lifetime: 409 hours (17 days + 1 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 01 10 1f 2f e0  Error: UNC at LBA = 0x002f1f10 = 3088144
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  40 00 01 10 1f 2f e0 00      00:21:58.600  READ VERIFY SECTOR(S)
+  40 00 01 0f 1f 2f e0 00      00:21:58.600  READ VERIFY SECTOR(S)
+  40 00 02 11 1f 2f e0 00      00:21:58.500  READ VERIFY SECTOR(S)
+  40 00 02 0f 1f 2f e0 00      00:21:53.600  READ VERIFY SECTOR(S)
+  40 00 04 13 1f 2f e0 00      00:21:53.600  READ VERIFY SECTOR(S)
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     14333         -
+# 2  Short offline       Completed without error       00%     14333         -
+# 3  Short offline       Completed without error       00%      3076         -
+# 4  Short offline       Completed without error       00%       669         -
+# 5  Short offline       Completed without error       00%       562         -
+# 6  Short offline       Completed without error       00%       562         -
+# 7  Short offline       Completed without error       00%       557         -
+# 8  Short offline       Completed without error       00%       329         -
+# 9  Short offline       Completed without error       00%        53         -
+#10  Short offline       Completed without error       00%        45         -
+#11  Short offline       Completed without error       00%        44         -
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
