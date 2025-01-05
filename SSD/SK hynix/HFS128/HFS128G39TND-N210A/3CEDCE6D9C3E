@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.30] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.39] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database 7.3/5387
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat May 11 19:23:49 2024 IST
+Local Time is:    Wed Jul 17 02:43:01 2024 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,20 +22,20 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (  32)	The self-test routine was interrupted
 					by the host with a hard or soft reset.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(  105) seconds.
 Offline data collection
 capabilities: 			 (0x19) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -60,34 +60,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Retired_Block_Count     -O--CK   253   100   036    -    0
-  9 Power_On_Hours          -O--CK   087   087   000    -    12288
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    8422
-100 Total_Erase_Count       -O--CK   100   100   000    -    20368330
-168 Min_Erase_Count         -O--CK   045   045   000    -    591
-169 Max_Erase_Count         -O--CK   038   038   000    -    663
+  9 Power_On_Hours          -O--CK   086   086   000    -    12787
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    8753
+100 Total_Erase_Count       -O--CK   100   100   000    -    21705334
+168 Min_Erase_Count         -O--CK   041   038   000    -    634
+169 Max_Erase_Count         -O--CK   034   034   000    -    704
 171 Program_Fail_Count      -O--CK   253   253   000    -    0
 172 Erase_Fail_Count        -O--CK   253   253   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    286
+174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    303
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Unused_Rsvd_Blk_Cnt_Tot -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   042   042   000    -    622
+177 Wear_Leveling_Count     -O--CK   038   038   000    -    663
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    50
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    145
 180 Erase_Fail_Count        -O--CK   100   100   000    -    2495
 184 End-to-End_Error        -O--CK   253   253   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    1
 188 Command_Timeout         -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   049   000   000    -    49 (Min/Max 11/75)
+194 Temperature_Celsius     -O----   048   000   000    -    48 (Min/Max 11/75)
 195 Hardware_ECC_Recovered  -O--CK   001   001   000    -    4294967295
 196 Reallocated_Event_Count -O--CK   253   100   036    -    0
 198 Offline_Uncorrectable   -O--CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   253   253   000    -    0
-204 Soft_ECC_Correction     -OSR--   077   001   000    -    349
+204 Soft_ECC_Correction     -OSR--   097   001   000    -    285
 212 Phy_Error_Count         -O--CK   253   253   000    -    0
-234 Unknown_SK_hynix_Attrib -O--CK   100   100   000    -    85920
-241 Total_Writes_GB         -O--CK   100   100   000    -    21154
-242 Total_Reads_GB          -O--CK   100   100   000    -    22706
-250 Read_Retry_Count        -O--CK   100   100   000    -    20602164
+234 Unknown_SK_hynix_Attrib -O--CK   100   100   000    -    91565
+241 Total_Writes_GB         -O--CK   100   100   000    -    22851
+242 Total_Reads_GB          -O--CK   100   100   000    -    24207
+250 Read_Retry_Count        -O--CK   100   100   000    -    22556043
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,7 +114,8 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     12289         -
 
 Selective Self-tests/Logging not supported
 

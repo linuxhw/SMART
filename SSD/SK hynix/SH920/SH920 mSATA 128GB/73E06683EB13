@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Mar 15 09:05:49 2024 EST
+Local Time is:    Fri Mar 15 10:12:57 2024 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -35,7 +35,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(    3) seconds.
+data collection: 		(  201) seconds.
 Offline data collection
 capabilities: 			 (0x19) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -60,30 +60,30 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Retired_Block_Count     -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   086   086   000    -    13211
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    2989
-100 Total_Erase_Count       -O--CK   100   100   000    -    3999031
+  9 Power_On_Hours          -O--CK   086   086   000    -    13212
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    2991
+100 Total_Erase_Count       -O--CK   100   100   000    -    4043160
 171 Program_Fail_Count      -O--CK   253   253   000    -    0
 172 Erase_Fail_Count        -O--CK   253   100   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    129
+174 Unexpect_Power_Loss_Ct  ----CK   100   100   000    -    130
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Unused_Rsvd_Blk_Cnt_Tot -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   100   100   000    -    3705376
+177 Wear_Leveling_Count     -O--CK   100   100   000    -    3749056
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    10
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    26
 180 Erase_Fail_Count        -O--CK   100   100   000    -    2470
 181 Non4k_Aligned_Access    -O--CK   253   253   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   253   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    107
-194 Temperature_Celsius     -O----   040   000   000    -    40 (Min/Max 7/81)
-195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    300479894
+194 Temperature_Celsius     -O----   041   000   000    -    41 (Min/Max 7/81)
+195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    300539650
 201 Percent_Lifetime_Remain -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   033   000    -    0
 231 SSD_Life_Left           PO--CK   253   253   010    -    0
-234 Unknown_SK_hynix_Attrib -O--CK   100   100   ---    -    14364
-241 Total_Writes_GB         -O--CK   100   100   ---    -    6609
-242 Total_Reads_GB          -O--CK   100   100   ---    -    15330
-250 Read_Retry_Count        -O--CK   100   100   ---    -    142516
+234 Unknown_SK_hynix_Attrib -O--CK   100   100   ---    -    14527
+241 Total_Writes_GB         -O--CK   100   100   ---    -    6762
+242 Total_Reads_GB          -O--CK   100   100   ---    -    15334
+250 Read_Retry_Count        -O--CK   100   100   ---    -    142696
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 13601 (device log contains only the most recent 20 errors)
+Device Error Count: 13629 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -122,41 +122,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 13601 [0] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:18.790  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:13.060  READ DMA EXT
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.140  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.030  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.920  IDENTIFY DEVICE
-
-Error 13600 [19] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:18.790  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:13.060  READ DMA EXT
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.140  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:12.030  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.920  IDENTIFY DEVICE
-
-Error 13599 [18] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
+Error 13629 [8] occurred at disk power-on lifetime: 13212 hours (550 days + 12 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -167,13 +133,30 @@ Error 13599 [18] occurred at disk power-on lifetime: 13211 hours (550 days + 11 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.980  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.980  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.870  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.760  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.760  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:14.980  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:14.960  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:14.960  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:05.560  READ DMA EXT
 
-Error 13598 [17] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
+Error 13628 [7] occurred at disk power-on lifetime: 13212 hours (550 days + 12 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:15.000  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:14.980  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:14.960  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:14.960  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:05.560  READ DMA EXT
+
+Error 13627 [6] occurred at disk power-on lifetime: 13212 hours (550 days + 12 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -185,41 +168,7 @@ Error 13598 [17] occurred at disk power-on lifetime: 13211 hours (550 days + 11 
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
-Error 13597 [16] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:17.510  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:11.930  READ DMA EXT
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.410  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.310  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.190  IDENTIFY DEVICE
-
-Error 13596 [15] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:17.510  READ DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 40 40     00:00:11.930  READ DMA EXT
-  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.410  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.310  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.190  IDENTIFY DEVICE
-
-Error 13595 [14] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
+Error 13626 [5] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -230,13 +179,13 @@ Error 13595 [14] occurred at disk power-on lifetime: 13211 hours (550 days + 11 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.080  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.080  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.970  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.860  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:05.860  IDENTIFY DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.870  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.850  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.830  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.830  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 88 a0 00 40 40     00:00:32.270  READ DMA EXT
 
-Error 13594 [13] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
+Error 13625 [4] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -247,10 +196,68 @@ Error 13594 [13] occurred at disk power-on lifetime: 13211 hours (550 days + 11 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f5 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.870  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.850  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.830  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:34.830  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 88 a0 00 40 40     00:00:32.270  READ DMA EXT
+
+Error 13624 [3] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:27.690  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:27.690  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:27.690  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.640  IDENTIFY DEVICE
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:26.590  SET FEATURES [Disable SATA feature]
+
+Error 13623 [2] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:27.690  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:27.690  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:27.690  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.640  IDENTIFY DEVICE
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:26.590  SET FEATURES [Disable SATA feature]
+
+Error 13622 [1] occurred at disk power-on lifetime: 13211 hours (550 days + 11 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.640  IDENTIFY DEVICE
+  ef 00 90 00 06 00 00 00 00 00 00 00 00     00:00:26.590  SET FEATURES [Disable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.570  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:25.730  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:25.730  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         1         -
+# 1  Extended offline    Completed without error       00%     13211         -
+# 2  Short offline       Completed without error       00%     13211         -
+# 3  Short offline       Completed without error       00%         1         -
 
 Selective Self-tests/Logging not supported
 
@@ -272,5 +279,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 

@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.0-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Sep  3 15:34:31 2023 CEST
+Local Time is:    Thu Jul 25 13:42:12 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,19 +66,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    6641
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1388
-177 Wear_Leveling_Count     PO--C-   098   098   000    -    33
+  9 Power_On_Hours          -O--CK   098   098   000    -    8808
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1947
+177 Wear_Leveling_Count     PO--C-   098   098   000    -    48
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   071   057   000    -    29
+190 Airflow_Temperature_Cel -O--CK   069   057   000    -    31
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   099   099   000    -    14
-235 POR_Recovery_Count      -O--C-   099   099   000    -    96
-241 Total_LBAs_Written      -O--CK   099   099   000    -    19417743347
+235 POR_Recovery_Count      -O--C-   099   099   000    -    116
+241 Total_LBAs_Written      -O--CK   099   099   000    -    23727944898
 252 Unknown_Attribute       -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -114,9 +114,12 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3332         -
-# 2  Short offline       Aborted by host               80%         2         -
-# 3  Extended offline    Aborted by host               90%         2         -
+# 1  Short offline       Completed without error       00%      7041         -
+# 2  Short offline       Completed without error       00%      6722         -
+# 3  Short offline       Completed without error       00%      6665         -
+# 4  Short offline       Completed without error       00%      3332         -
+# 5  Short offline       Aborted by host               80%         2         -
+# 6  Extended offline    Aborted by host               90%         2         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -138,27 +141,27 @@ SCT (Get) Error Recovery Control command failed
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1388  ---  Lifetime Power-On Resets
-0x01  0x010  4            6641  ---  Power-on Hours
-0x01  0x018  6     19417743347  ---  Logical Sectors Written
-0x01  0x020  6       370196494  ---  Number of Write Commands
-0x01  0x028  6     23974603888  ---  Logical Sectors Read
-0x01  0x030  6       451740229  ---  Number of Read Commands
-0x01  0x038  6          594000  ---  Date and Time TimeStamp
+0x01  0x008  4            1947  ---  Lifetime Power-On Resets
+0x01  0x010  4            8808  ---  Power-on Hours
+0x01  0x018  6     23727944898  ---  Logical Sectors Written
+0x01  0x020  6       414912985  ---  Number of Write Commands
+0x01  0x028  6     27910772798  ---  Logical Sectors Read
+0x01  0x030  6       506847672  ---  Number of Read Commands
+0x01  0x038  6         1628000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               4  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
+0x05  0x008  1              31  ---  Current Temperature
 0x05  0x020  1              43  ---  Highest Temperature
-0x05  0x028  1              23  ---  Lowest Temperature
+0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             972  ---  Number of Hardware Resets
+0x06  0x008  4            2324  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4              14  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -175,14 +178,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
-
-
 
