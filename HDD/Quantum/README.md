@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Quantum   | FIREBALLP AS20.5   | 20 GB  | 2       | 483   | 0     | 1.32   |
+| Quantum   | FIREBALLP AS20.5   | 20 GB  | 2       | 483   | 0     | 1.33   |

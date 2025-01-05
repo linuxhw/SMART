@@ -18,12 +18,12 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | KingDian  | N400               | 240 GB | 2       | 1174  | 0     | 3.22   |
-| KingDian  | S280               | 1 TB   | 7       | 338   | 0     | 0.93   |
-| KingDian  | S280               | 480 GB | 12      | 185   | 0     | 0.51   |
-| KingDian  | S400               | 120 GB | 20      | 184   | 0     | 0.50   |
+| KingDian  | S280               | 1 TB   | 7       | 380   | 0     | 1.04   |
+| KingDian  | S400               | 120 GB | 20      | 209   | 0     | 0.58   |
+| KingDian  | S280               | 480 GB | 12      | 187   | 0     | 0.51   |
+| KingDian  | S280               | 120 GB | 21      | 180   | 0     | 0.49   |
 | KingDian  | S280-240GB         | 240 GB | 16      | 194   | 232   | 0.46   |
-| KingDian  | S280               | 120 GB | 21      | 161   | 0     | 0.44   |
-| KingDian  | S280               | 240 GB | 25      | 154   | 0     | 0.42   |
+| KingDian  | S280               | 240 GB | 25      | 168   | 0     | 0.46   |
 | KingDian  | S400               | 480 GB | 3       | 136   | 0     | 0.37   |
 | KingDian  | S180               | 64 GB  | 21      | 134   | 54    | 0.36   |
 | KingDian  | S370               | 512 GB | 2       | 102   | 0     | 0.28   |

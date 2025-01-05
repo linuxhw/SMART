@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MicroFrom | 512GB SATA3 SSD    | 512 GB | 2       | 87    | 0     | 0.24   |
+| MicroFrom | 512GB SATA3 SSD    | 512 GB | 2       | 129   | 0     | 0.35   |
 | MicroFrom | 256GB SATA3 SSD    | 256 GB | 4       | 2     | 0     | 0.01   |

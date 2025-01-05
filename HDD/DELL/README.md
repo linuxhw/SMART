@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| DELL      | WD4001FYYG-18SL3W0 | 4 TB   | 2       | 135   | 0     | 0.37   |
+| DELL      | WD4001FYYG-18SL3W0 | 4 TB   | 2       | 265   | 0     | 0.73   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SXMicro   | NF830              | 256 GB | 2       | 64    | 38    | 0.00   |
+| SXMicro   | NF830              | 256 GB | 2       | 99    | 39    | 0.01   |

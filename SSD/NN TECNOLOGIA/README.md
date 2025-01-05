@@ -1,7 +1,7 @@
-CONSISTENT Solid State Drives
-=============================
+NN TECNOLOGIA Solid State Drives
+================================
 
-This is a list of all tested CONSISTENT solid state drive models and their MTBFs. See
+This is a list of all tested NN TECNOLOGIA solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
 SSD by Model
@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| CONSIS... | SSD S6             | 256 GB | 8       | 23    | 0     | 0.06   |
+| NN TEC... | SSD                | 128 GB | 2       | 38    | 0     | 0.11   |

@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| tecmiyo   | SATA SSD           | 512 GB | 2       | 9     | 0     | 0.03   |
+| tecmiyo   | SATA SSD           | 512 GB | 2       | 33    | 0     | 0.09   |
 | tecmiyo   | SATA SSD           | 128 GB | 2       | 81    | 48    | 0.00   |

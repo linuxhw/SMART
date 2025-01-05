@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| J.ZAO     | 5 SERIES 512GB SSD | 512 GB | 2       | 267   | 0     | 0.73   |
+| J.ZAO     | 5 SERIES 512GB SSD | 512 GB | 2       | 566   | 0     | 1.55   |
 | J.ZAO     | QL SERIES 1TB SSD  | 1 TB   | 5       | 89    | 135   | 0.04   |

@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| China     | Generic S050 Ha... | 500 GB | 2       | 509   | 689   | 1.06   |
+| China     | Generic S050 Ha... | 500 GB | 2       | 644   | 481   | 1.06   |
 | China     | TP00250GB          | 250 GB | 2       | 155   | 0     | 0.43   |

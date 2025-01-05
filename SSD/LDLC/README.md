@@ -19,6 +19,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | LDLC      | F7+240GB           | 240 GB | 8       | 242   | 0     | 0.66   |
 | LDLC      | F7+480GB           | 480 GB | 9       | 208   | 15    | 0.56   |
+| LDLC      | SSD F6 PLUS M.2... | 960 GB | 2       | 188   | 0     | 0.52   |
 | LDLC      | SSD F7 PLUS 3D ... | 240 GB | 3       | 183   | 0     | 0.50   |
 | LDLC      | SSD                | 120 GB | 20      | 300   | 87    | 0.45   |
 | LDLC      | SSD                | 480 GB | 8       | 160   | 1     | 0.43   |
@@ -28,4 +29,3 @@ MTBF - avg. MTBF in years per sample.
 | LDLC      | F6+M.2 240         | 240 GB | 3       | 71    | 3     | 0.12   |
 | LDLC      | SSD                | 128 GB | 7       | 37    | 1     | 0.10   |
 | LDLC      | F6+M.2 120         | 120 GB | 2       | 31    | 0     | 0.09   |
-| LDLC      | SSD F6 PLUS M.2... | 960 GB | 2       | 17    | 0     | 0.05   |

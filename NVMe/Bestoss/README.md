@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Bestoss   | GM328              | 256 GB | 2       | 2     | 0     | 0.01   |
+| Bestoss   | GM328              | 256 GB | 2       | 31    | 0     | 0.09   |

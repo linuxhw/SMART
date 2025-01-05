@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | EYOTA     | SSD                | 120 GB | 2       | 204   | 0     | 0.56   |
-| EYOTA     | SSD                | 256 GB | 3       | 39    | 347   | 0.09   |
+| EYOTA     | SSD                | 256 GB | 3       | 39    | 355   | 0.09   |

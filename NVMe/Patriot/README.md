@@ -22,13 +22,13 @@ MTBF - avg. MTBF in years per sample.
 | Patriot   | Scorch M2          | 512 GB | 5       | 255   | 0     | 0.70   |
 | Patriot   | P300               | 512 GB | 3       | 184   | 0     | 0.51   |
 | Patriot   | Scorch M2          | 128 GB | 8       | 182   | 0     | 0.50   |
-| Patriot   | P300               | 128 GB | 8       | 150   | 0     | 0.41   |
+| Patriot   | P300               | 128 GB | 8       | 172   | 0     | 0.47   |
 | Patriot   | M.2 P300           | 2 TB   | 6       | 135   | 0     | 0.37   |
 | Patriot   | P300               | 1 TB   | 5       | 120   | 0     | 0.33   |
 | Patriot   | P300               | 256 GB | 7       | 104   | 0     | 0.29   |
 | Patriot   | Scorch M2          | 256 GB | 7       | 81    | 0     | 0.22   |
-| Patriot   | M.2 P300           | 512 GB | 17      | 73    | 1     | 0.20   |
-| Patriot   | M.2 P300           | 256 GB | 32      | 69    | 0     | 0.19   |
-| Patriot   | M.2 P300           | 128 GB | 23      | 83    | 7     | 0.16   |
+| Patriot   | M.2 P300           | 512 GB | 17      | 77    | 1     | 0.20   |
+| Patriot   | M.2 P300           | 256 GB | 32      | 70    | 0     | 0.19   |
+| Patriot   | M.2 P300           | 128 GB | 23      | 84    | 7     | 0.17   |
 | Patriot   | M.2 P300           | 1 TB   | 11      | 98    | 6     | 0.11   |
-| Patriot   | M.2 P310           | 240 GB | 4       | 10    | 0     | 0.03   |
+| Patriot   | M.2 P310           | 240 GB | 4       | 37    | 0     | 0.10   |

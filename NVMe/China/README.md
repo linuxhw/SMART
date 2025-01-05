@@ -17,9 +17,9 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| China     | NVME SSD           | 1 TB   | 6       | 312   | 0     | 0.86   |
+| China     | NVME SSD           | 1 TB   | 7       | 270   | 0     | 0.74   |
 | China     | NVME SSD           | 512 GB | 10      | 250   | 1     | 0.66   |
-| China     | NVME SSD           | 256 GB | 5       | 159   | 3     | 0.32   |
-| China     | 512GB SSD          | 512 GB | 75      | 45    | 0     | 0.13   |
-| China     | SK                 | 128 GB | 3       | 15    | 0     | 0.04   |
+| China     | NVME SSD           | 256 GB | 5       | 168   | 3     | 0.34   |
+| China     | 512GB SSD          | 512 GB | 75      | 54    | 0     | 0.15   |
+| China     | SK                 | 128 GB | 3       | 16    | 0     | 0.05   |
 | China     | NVMe SSD           | 512 GB | 3       | 12    | 0     | 0.03   |

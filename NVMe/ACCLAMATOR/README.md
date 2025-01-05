@@ -1,10 +1,10 @@
-CONSISTENT Solid State Drives
-=============================
+ACCLAMATOR NVMe Drives
+======================
 
-This is a list of all tested CONSISTENT solid state drive models and their MTBFs. See
-more info on reliability test in the [README](https://github.com/linuxhw/SMART).
+This is a list of all tested ACCLAMATOR NVMe drive models and their MTBFs. See more
+info on reliability test in the [README](https://github.com/linuxhw/SMART).
 
-SSD by Model
+NVME by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| CONSIS... | SSD S6             | 256 GB | 8       | 23    | 0     | 0.06   |
+| ACCLAM... | SSD                | 1 TB   | 3       | 99    | 0     | 0.27   |

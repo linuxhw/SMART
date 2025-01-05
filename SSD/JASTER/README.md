@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| JASTER    | SSD                | 128 GB | 3       | 147   | 0     | 0.40   |
+| JASTER    | SSD                | 128 GB | 3       | 174   | 0     | 0.48   |

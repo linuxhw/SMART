@@ -20,4 +20,7 @@ MTBF - avg. MTBF in years per sample.
 | Asgard    | AN3 2TNVMe-M.2-80  | 2 TB   | 2       | 654   | 0     | 1.79   |
 | Asgard    | AN3 1TNVMe-M.2-80  | 1 TB   | 2       | 472   | 0     | 1.30   |
 | Asgard    | AN2 250NVMe-M.2-80 | 250 GB | 2       | 246   | 0     | 0.67   |
+| Asgard    | AN512NVMe-M.2-80   | 512 GB | 2       | 214   | 0     | 0.59   |
+| Asgard    | AN2 500NVMe-M.2-80 | 500 GB | 3       | 120   | 0     | 0.33   |
+| Asgard    | AN3.0 1TNVMe-M.... | 1 TB   | 2       | 83    | 0     | 0.23   |
 | Asgard    | AN4+ 1TNVMe-M.2-80 | 1 TB   | 2       | 81    | 0     | 0.22   |

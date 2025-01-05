@@ -21,4 +21,4 @@ MTBF - avg. MTBF in years per sample.
 | Integral  | V Series SATA SSD  | 120 GB | 9       | 100   | 0     | 0.27   |
 | Integral  | V Series SATA SSD  | 240 GB | 16      | 92    | 0     | 0.25   |
 | Integral  | V Series SATA S... | 960 GB | 2       | 33    | 0     | 0.09   |
-| Integral  | V Series SATA S... | 1 TB   | 4       | 18    | 0     | 0.05   |
+| Integral  | V Series SATA S... | 1 TB   | 4       | 23    | 0     | 0.06   |

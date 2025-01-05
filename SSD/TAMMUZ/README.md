@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| TAMMUZ    | SSD                | 500 GB | 2       | 232   | 0     | 0.64   |
-| TAMMUZ    | SSD                | 120 GB | 3       | 43    | 0     | 0.12   |
+| TAMMUZ    | SSD                | 500 GB | 2       | 236   | 0     | 0.65   |
+| TAMMUZ    | SSD                | 120 GB | 3       | 159   | 0     | 0.44   |
 | TAMMUZ    | SSD                | 240 GB | 3       | 32    | 0     | 0.09   |
 | TAMMUZ    | SSD                | 256 GB | 2       | 26    | 0     | 0.07   |

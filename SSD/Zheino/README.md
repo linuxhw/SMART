@@ -18,11 +18,11 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Zheino    | CHN-25SATAS3-256   | 256 GB | 2       | 284   | 0     | 0.78   |
-| Zheino    | CHN-25SATAA3-480   | 480 GB | 2       | 267   | 0     | 0.73   |
+| Zheino    | CHN-25SATAA3-480   | 480 GB | 2       | 280   | 0     | 0.77   |
 | Zheino    | CHN 25SATAA3 120   | 120 GB | 4       | 210   | 0     | 0.58   |
 | Zheino    | CHN mSATAM3 128    | 128 GB | 4       | 183   | 0     | 0.50   |
 | Zheino    | CHN 25SATAA3 360   | 360 GB | 3       | 173   | 0     | 0.48   |
-| Zheino    | CHN 25SATAS3 128   | 128 GB | 2       | 148   | 0     | 0.41   |
+| Zheino    | CHN 25SATAS3 128   | 128 GB | 2       | 150   | 0     | 0.41   |
 | Zheino    | CHN25SATAS1 128    | 128 GB | 2       | 391   | 66    | 0.33   |
 | Zheino    | CHN mSATA02M 256   | 256 GB | 3       | 146   | 1     | 0.25   |
 | Zheino    | CHN-25SATAC3-120   | 120 GB | 3       | 86    | 0     | 0.24   |

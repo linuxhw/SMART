@@ -34,7 +34,7 @@ MTBF - avg. MTBF in years per sample.
 | Innodisk  | 2.5" SATA SSD 3... | 64 GB  | 5       | 28    | 0     | 0.08   |
 | Innodisk  | mSATA 3MG2-P       | 992 GB | 2       | 0     | 0     | 0.00   |
 | Innodisk  | mSATA 3TG6-P       | 240 GB | 2       | 0     | 0     | 0.00   |
-| Innodisk  | 2.5" SATA SSD 3... | 1.9 TB | 8       | 136   | 885   | 0.00   |
+| Innodisk  | 2.5" SATA SSD 3... | 1.9 TB | 8       | 142   | 885   | 0.00   |
 
 SSD by Family
 -------------
@@ -50,4 +50,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Innodisk  | 3IE3/3ME3/3ME4 SSDs    | 3      | 8       | 353   | 13    | 0.57   |
-| Innodisk  | 3IE2/3ME2/3MG2/3SE2... | 2      | 13      | 94    | 545   | 0.03   |
+| Innodisk  | 3IE2/3ME2/3MG2/3SE2... | 2      | 13      | 98    | 545   | 0.03   |

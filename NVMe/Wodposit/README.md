@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Wodposit  | NVMe SSD           | 1 TB   | 18      | 18    | 0     | 0.05   |
+| Wodposit  | NVMe SSD           | 1 TB   | 18      | 23    | 0     | 0.06   |
 | Wodposit  | SSD                | 512 GB | 4       | 6     | 0     | 0.02   |

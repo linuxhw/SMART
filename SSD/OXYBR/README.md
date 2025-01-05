@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| OXYBR     | SSD                | 480 GB | 2       | 5     | 0     | 0.01   |
+| OXYBR     | SSD                | 480 GB | 2       | 5     | 0     | 0.02   |

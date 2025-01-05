@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| GSemi     | GSDSM256TY2F1QGCX  | 256 GB | 3       | 43    | 8     | 0.08   |
+| GSemi     | GSDSM256TY2F1QGCX  | 256 GB | 3       | 94    | 8     | 0.22   |

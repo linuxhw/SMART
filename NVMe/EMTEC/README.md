@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EMTEC     | X300               | 256 GB | 3       | 343   | 0     | 0.94   |
+| EMTEC     | X300               | 256 GB | 3       | 349   | 0     | 0.96   |
 | EMTEC     | X300               | 500 GB | 2       | 3     | 0     | 0.01   |

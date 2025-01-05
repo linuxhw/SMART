@@ -23,5 +23,5 @@ MTBF - avg. MTBF in years per sample.
 | BIWIN     | SSD                | 128 GB | 18      | 62    | 172   | 0.11   |
 | BIWIN     | C6370_128GB        | 128 GB | 3       | 14    | 0     | 0.04   |
 | BIWIN     | SSD                | 64 GB  | 3       | 38    | 346   | 0.03   |
-| BIWIN     | CSE80H1A100-256G   | 256 GB | 3       | 7     | 0     | 0.02   |
+| BIWIN     | CSE80H1A100-256G   | 256 GB | 3       | 8     | 0     | 0.02   |
 | BIWIN     | G2242              | 64 GB  | 2       | 4     | 0     | 0.01   |

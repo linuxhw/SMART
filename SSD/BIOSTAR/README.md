@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| BIOSTAR   | S100-240GB         | 240 GB | 4       | 236   | 0     | 0.65   |
+| BIOSTAR   | S100-240GB         | 240 GB | 4       | 301   | 0     | 0.83   |
 | BIOSTAR   | S100-120GB         | 120 GB | 7       | 166   | 0     | 0.46   |
 | BIOSTAR   | S120-120GB         | 120 GB | 2       | 13    | 0     | 0.04   |

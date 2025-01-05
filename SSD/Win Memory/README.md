@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Win Me... | SWR256G-301II      | 256 GB | 4       | 122   | 0     | 0.33   |
+| Win Me... | SWR256G-301II      | 256 GB | 4       | 134   | 0     | 0.37   |
 | Win Me... | SWR256G-201II      | 256 GB | 2       | 58    | 0     | 0.16   |

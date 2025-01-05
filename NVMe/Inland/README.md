@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Inland    | NVMe SSD           | 1 TB   | 4       | 133   | 17    | 0.36   |
-| Inland    | TN320 NVMe SSD     | 1 TB   | 7       | 32    | 0     | 0.09   |
+| Inland    | TN320 NVMe SSD     | 1 TB   | 7       | 35    | 0     | 0.10   |
