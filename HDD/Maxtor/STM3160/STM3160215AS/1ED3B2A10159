@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Maxtor DiamondMax 21
@@ -10,7 +10,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Tue Jan 31 12:19:45 2023 GMT
+Local Time is:    Wed Aug 30 15:45:52 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -57,17 +57,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   083   083   020    -    17890
+  4 Start_Stop_Count        -O--CK   082   082   020    -    19059
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   075   060   030    -    35336415
-  9 Power_On_Hours          -O--CK   034   034   000    -    58323
+  7 Seek_Error_Rate         POSR--   081   060   030    -    154853636
+  9 Power_On_Hours          -O--CK   032   032   000    -    60218
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   085   085   020    -    16132
+ 12 Power_Cycle_Count       -O--CK   084   084   020    -    17302
 187 Reported_Uncorrect      -O--CK   058   058   000    -    42
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   056   049   045    -    44 (Min/Max 32/44)
-194 Temperature_Celsius     -O---K   044   051   000    -    44 (0 23 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   076   056   000    -    236438097
+190 Airflow_Temperature_Cel -O---K   060   049   045    -    40 (Min/Max 32/40)
+194 Temperature_Celsius     -O---K   040   051   000    -    40 (0 23 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   072   056   000    -    77669318
 197 Current_Pending_Sector  -O--C-   001   001   000    -    4294967294
 198 Offline_Uncorrectable   ----C-   001   001   000    -    4294967294
 199 UDMA_CRC_Error_Count    -OSRCK   200   114   000    -    4258
@@ -92,10 +92,10 @@ Address    Access  R/W   Size  Description
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
-0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
+0x20       GPL,SL  R/O      1  Streaming performance log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
-0x23       GPL,SL  R/O      1  Delayed sector log [OBS-8]
+0x23       GPL,SL  R/O      1  Delayed sector log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0       GPL,SL  VS       1  Device vendor specific log
 0xa1       GPL,SL  VS      20  Device vendor specific log
@@ -261,20 +261,25 @@ Error 39 [18] occurred at disk power-on lifetime: 41182 hours (1715 days + 22 ho
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     56507         -
-# 2  Short offline       Completed without error       00%     56501         -
-# 3  Short offline       Completed without error       00%     56494         -
-# 4  Short offline       Completed without error       00%     56487         -
-# 5  Short offline       Completed without error       00%     56482         -
-# 6  Short offline       Completed without error       00%     56477         -
-# 7  Short offline       Completed without error       00%     56473         -
-# 8  Short offline       Completed without error       00%     56466         -
-# 9  Short offline       Completed without error       00%     56463         -
-#10  Short offline       Completed without error       00%     56455         -
-#11  Short offline       Completed without error       00%     52621         -
-#12  Short offline       Completed without error       00%     52162         -
-#13  Short offline       Completed without error       00%     51982         -
-#14  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     60109         -
+# 2  Short offline       Completed without error       00%     59972         -
+# 3  Extended offline    Interrupted (host reset)      90%     59936         -
+# 4  Short offline       Completed without error       00%     58778         -
+# 5  Short offline       Aborted by host               50%     58770         -
+# 6  Short offline       Completed without error       00%     58761         -
+# 7  Short offline       Completed without error       00%     58753         -
+# 8  Short offline       Completed without error       00%     58746         -
+# 9  Short offline       Completed without error       00%     58741         -
+#10  Short offline       Completed without error       00%     58734         -
+#11  Short offline       Completed without error       00%     58725         -
+#12  Short offline       Completed without error       00%     58718         -
+#13  Short offline       Completed without error       00%     58708         -
+#14  Short offline       Completed without error       00%     58686         -
+#15  Short offline       Completed without error       00%     58672         -
+#16  Short offline       Completed without error       00%     58663         -
+#17  Short offline       Completed without error       00%     58648         -
+#18  Short offline       Completed without error       00%     56507         -
+#19  Short offline       Completed without error       00%     56501         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -295,7 +300,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

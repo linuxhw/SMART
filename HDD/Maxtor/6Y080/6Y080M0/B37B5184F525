@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-101-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,11 +10,11 @@ User Capacity:    81,964,302,336 bytes [81.9 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Tue Feb 15 00:35:06 2022 GMT
+Local Time is:    Mon Apr  1 21:29:16 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 192
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -55,24 +55,24 @@ recommended polling time: 	 (  37) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   226   223   063    -    6555
-  4 Start_Stop_Count        -O--CK   252   252   000    -    2958
+  3 Spin_Up_Time            POS--K   225   223   063    -    9562
+  4 Start_Stop_Count        -O--CK   252   252   000    -    3332
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   239   000    -    0
-  8 Seek_Time_Performance   POS--K   253   235   187    -    59342
-  9 Power_On_Minutes        -O--CK   001   001   000    -    611h+29m
+  8 Seek_Time_Performance   POS--K   253   235   187    -    38091
+  9 Power_On_Minutes        -O--CK   001   001   000    -    295h+06m
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   243   243   000    -    4080
+ 12 Power_Cycle_Count       -O--CK   242   242   000    -    4509
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   253   253   000    -    38
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    945
+194 Temperature_Celsius     -O--CK   253   253   000    -    42
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    812
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   195   175   000    -    24
+199 UDMA_CRC_Error_Count    ---R--   191   171   000    -    30
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   247   000    -    0
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
@@ -81,7 +81,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 205 Thermal_Asperity_Rate   -O-R--   253   252   000    -    0
 207 Spin_High_Current       -O-R-K   253   252   000    -    0
 208 Spin_Buzz               -O-R-K   253   252   000    -    0
-209 Offline_Seek_Performnce --S--K   147   107   000    -    0
+209 Offline_Seek_Performnce --S--K   144   107   000    -    0
  99 Unknown_Attribute       --S---   253   253   000    -    0
 100 Unknown_Attribute       --S---   253   253   000    -    0
 101 Unknown_Attribute       --S---   253   253   000    -    0
@@ -99,9 +99,9 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-Warning: ATA error count 31 inconsistent with error log pointer 5
+Warning: ATA error count 37 inconsistent with error log pointer 5
 
-ATA Error Count: 31 (device log contains only the most recent five errors)
+ATA Error Count: 37 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -116,116 +116,116 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 31 occurred at disk power-on lifetime: 33019 hours (1375 days + 19 hours)
+Error 37 occurred at disk power-on lifetime: 14469 hours (602 days + 21 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 98 f9 b0 e4  Error: ICRC, ABRT at LBA = 0x04b0f998 = 78707096
+  84 51 00 68 65 1c e2  Error: ICRC, ABRT at LBA = 0x021c6568 = 35415400
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 30 98 f9 b0 e4 00      01:38:40.064  READ DMA
-  c8 00 18 08 e8 af e4 00      01:38:40.048  READ DMA
-  c8 00 06 b8 e9 85 e1 00      01:38:40.032  READ DMA
-  ca 00 08 50 c7 7a e0 00      01:38:40.032  WRITE DMA
-  c8 00 08 68 86 63 e0 00      01:38:40.032  READ DMA
+  c8 00 80 68 65 1c e2 00      00:05:24.480  READ DMA
+  c8 00 80 e8 64 1c e2 00      00:05:24.480  READ DMA
+  c8 00 80 68 64 1c e2 00      00:05:24.480  READ DMA
+  c8 00 80 e8 63 1c e2 00      00:05:24.480  READ DMA
+  c8 00 80 68 63 1c e2 00      00:05:24.480  READ DMA
 
-Error 30 occurred at disk power-on lifetime: 29449 hours (1227 days + 1 hours)
+Error 36 occurred at disk power-on lifetime: 14447 hours (601 days + 23 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 85 e3 0d e0  Error: ICRC, ABRT at LBA = 0x000de385 = 910213
+  84 51 c0 90 c7 2e e8  Error: ICRC, ABRT at LBA = 0x082ec790 = 137283472
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 20 7f 85 e3 0d e0 00      00:03:41.440  READ DMA
-  c8 20 7e 08 e3 0d e0 00      00:03:41.440  READ DMA
-  c8 20 7f 8a e2 0d e0 00      00:03:41.424  READ DMA
-  c8 20 01 8a e2 0d e0 00      00:03:41.424  READ DMA
-  c8 20 7f 0b e2 0d e0 00      00:03:41.424  READ DMA
+  ca 00 00 50 c7 2e e8 00      05:19:56.528  WRITE DMA
+  ca 00 70 e0 c6 2e e8 00      05:19:56.528  WRITE DMA
+  ca 00 00 e0 c5 2e e8 00      05:19:56.512  WRITE DMA
+  ca 00 08 d8 c5 2e e8 00      05:19:56.512  WRITE DMA
+  ca 00 00 d8 c4 2e e8 00      05:19:56.512  WRITE DMA
 
-Error 29 occurred at disk power-on lifetime: 29449 hours (1227 days + 1 hours)
+Error 35 occurred at disk power-on lifetime: 14403 hours (600 days + 3 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 b8 11 01 e0  Error: ICRC, ABRT at LBA = 0x000111b8 = 70072
+  84 51 00 00 ad 8a e9  Error: ICRC, ABRT at LBA = 0x098aad00 = 160083200
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 20 01 b8 11 01 e0 00      00:21:44.192  READ DMA
-  c8 20 24 4f c8 d4 e4 00      00:21:44.176  READ DMA
-  c8 20 7f d0 c7 d4 e4 00      00:21:44.160  READ DMA
-  c8 20 7f 51 c7 d4 e4 00      00:21:44.160  READ DMA
-  c8 20 7f d2 c6 d4 e4 00      00:21:44.160  READ DMA
+  c8 00 00 00 ad 8a e9 00   3d+05:39:45.088  READ DMA
+  c8 00 00 00 1a 7a e9 00   3d+05:39:45.072  READ DMA
+  c8 00 00 08 0a 00 e0 00   3d+05:39:45.024  READ DMA
+  c8 00 20 08 00 00 e0 00   3d+05:39:45.024  READ DMA
+  c8 00 00 00 ac 8a e9 00   3d+05:39:45.024  READ DMA
 
-Error 28 occurred at disk power-on lifetime: 18654 hours (777 days + 6 hours)
+Error 34 occurred at disk power-on lifetime: 13772 hours (573 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 b2 28 55 e1  Error: ICRC, ABRT at LBA = 0x015528b2 = 22358194
+  84 51 00 e8 e5 08 e0  Error: ICRC, ABRT at LBA = 0x0008e5e8 = 583144
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 20 02 b2 28 55 e1 00      00:03:30.160  READ DMA
-  c8 20 02 00 28 63 e0 00      00:03:30.160  READ DMA
-  c8 20 10 80 24 04 e0 00      00:03:30.160  READ DMA
-  c8 20 02 12 2d 63 e0 00      00:03:30.144  READ DMA
-  c8 20 02 00 28 63 e0 00      00:03:30.144  READ DMA
+  c8 00 48 e8 e5 08 e0 00   2d+04:57:24.688  READ DMA
+  c8 00 48 e0 df 08 e0 00   2d+04:57:24.688  READ DMA
+  c8 00 48 38 df 08 e0 00   2d+04:57:24.688  READ DMA
+  c8 00 40 c0 de 08 e0 00   2d+04:57:24.688  READ DMA
+  c8 00 80 40 de 08 e0 00   2d+04:57:24.688  READ DMA
 
-Error 27 occurred at disk power-on lifetime: 18654 hours (777 days + 6 hours)
+Error 33 occurred at disk power-on lifetime: 12202 hours (508 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  84 51 00 88 1b 63 e0  Error: ICRC, ABRT at LBA = 0x00631b88 = 6495112
+  84 51 00 28 57 2b e0  Error: ICRC, ABRT at LBA = 0x002b5728 = 2840360
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 58 88 1b 63 e0 00      00:03:52.176  READ DMA
-  e7 00 00 00 00 00 a0 00      00:03:52.176  FLUSH CACHE
-  c8 00 a8 e0 1a 63 e0 00      00:03:52.176  READ DMA
-  c8 00 58 88 1a 63 e0 00      00:03:52.176  READ DMA
-  c8 00 a8 e0 19 63 e0 00      00:03:52.176  READ DMA
+  c8 00 30 28 57 2b e0 00   1d+21:41:11.712  READ DMA
+  c8 00 40 b2 df 2b e0 00   1d+21:41:11.712  READ DMA
+  c8 00 28 18 2a 0b e0 00   1d+21:41:11.696  READ DMA
+  ca 00 08 68 16 63 e0 00   1d+21:41:11.696  WRITE DMA
+  c8 00 20 e0 90 1c e0 00   1d+21:41:11.696  READ DMA
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      1478         -
-# 2  Short offline       Completed without error       00%      1478         -
-# 3  Extended offline    Completed without error       00%     56210         -
-# 4  Extended offline    Completed without error       00%     55635         -
-# 5  Short offline       Completed without error       00%     55118         -
-# 6  Short offline       Completed without error       00%     55118         -
-# 7  Short offline       Completed without error       00%     55059         -
-# 8  Short offline       Completed without error       00%     55055         -
-# 9  Short offline       Completed without error       00%     55033         -
-#10  Short offline       Completed without error       00%     55010         -
-#11  Short offline       Completed without error       00%     54988         -
-#12  Short offline       Completed without error       00%     54966         -
-#13  Short offline       Completed without error       00%     54943         -
-#14  Short offline       Completed without error       00%     54943         -
-#15  Short offline       Completed without error       00%     54854         -
-#16  Short offline       Completed without error       00%     54831         -
-#17  Short offline       Completed without error       00%     54809         -
-#18  Short offline       Completed without error       00%     54787         -
-#19  Short offline       Completed without error       00%     54768         -
-#20  Short offline       Completed without error       00%     54745         -
-#21  Short offline       Completed without error       00%     54723         -
+# 1  Short offline       Completed without error       00%     13823         -
+# 2  Short offline       Completed without error       00%     13801         -
+# 3  Short offline       Completed without error       00%     13785         -
+# 4  Short offline       Completed without error       00%     13756         -
+# 5  Short offline       Completed without error       00%     13734         -
+# 6  Short offline       Completed without error       00%     13712         -
+# 7  Short offline       Completed without error       00%     13689         -
+# 8  Short offline       Completed without error       00%     13667         -
+# 9  Short offline       Completed without error       00%     13644         -
+#10  Short offline       Completed without error       00%     13622         -
+#11  Short offline       Completed without error       00%     13600         -
+#12  Short offline       Completed without error       00%     13578         -
+#13  Short offline       Completed without error       00%     13555         -
+#14  Short offline       Completed without error       00%     13533         -
+#15  Short offline       Completed without error       00%     13511         -
+#16  Short offline       Completed without error       00%     13488         -
+#17  Short offline       Completed without error       00%     13466         -
+#18  Short offline       Completed without error       00%     13443         -
+#19  Short offline       Completed without error       00%     13421         -
+#20  Short offline       Completed without error       00%     13399         -
+#21  Short offline       Completed without error       00%     13376         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Jun 28 19:38:22 2024 CEST
+Local Time is:    Mon Oct 28 20:26:13 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -27,8 +27,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -62,22 +62,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   095   016    -    0
-  2 Throughput_Performance  POS---   132   100   054    -    140
-  3 Spin_Up_Time            PO----   119   100   024    -    324 (Average 320)
-  4 Start_Stop_Count        -O---K   100   100   000    -    1240
+  2 Throughput_Performance  POS---   100   100   054    -    0
+  3 Spin_Up_Time            PO----   118   100   024    -    324 (Average 324)
+  4 Start_Stop_Count        -O---K   100   100   000    -    1248
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    3 (0 1)
   7 Seek_Error_Rate         POSR--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   129   100   020    -    30
-  9 Power_On_Hours          -O--CK   099   099   000    -    8807
+  9 Power_On_Hours          -O--CK   099   099   000    -    8821
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1240
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1248
 184 End-to-End_Error        PO--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    262144
 188 Command_Timeout         -O--CK   100   093   000    -    9
-190 Airflow_Temperature_Cel -O---K   063   057   000    -    37 (Min/Max 26/37)
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1243
-193 Load_Cycle_Count        -O--CK   099   099   000    -    1243
-194 Temperature_Celsius     -O----   162   146   000    -    37 (Min/Max 12/43)
+190 Airflow_Temperature_Cel -O---K   070   057   000    -    30 (Min/Max 17/30)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1251
+193 Load_Cycle_Count        -O--CK   099   099   000    -    1251
+194 Temperature_Celsius     -O----   200   146   000    -    30 (Min/Max 12/43)
 196 Reallocated_Event_Count -O----   100   100   000    -    1
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
@@ -124,9 +124,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     26/37 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     17/30 Celsius
 Lifetime    Min/Max Temperature:     12/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -135,7 +135,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (89)
+Temperature History Size (Index):    128 (127)
 
 SCT Error Recovery Control:
            Read:     75 (7.5 seconds)

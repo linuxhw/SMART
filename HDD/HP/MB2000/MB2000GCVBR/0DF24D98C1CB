@@ -13,7 +13,7 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jul 14 22:15:37 2023 PDT
+Local Time is:    Thu Jul 27 10:42:45 2023 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,23 +65,23 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   209   205   021    -    4533
-  4 Start_Stop_Count        -O--CK   100   100   000    -    185
+  3 Spin_Up_Time            POS--K   253   205   021    -    1641
+  4 Start_Stop_Count        -O--CK   100   100   000    -    205
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    4438
+  9 Power_On_Hours          -O--CK   094   094   000    -    4737
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count PO--CK   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    184
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    203
 180 Unknown_HDD_Attribute   POSR-K   200   200   100    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   097   000    -    5
-190 Airflow_Temperature_Cel -O---K   062   053   045    -    38
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    89
-193 Load_Cycle_Count        -O--CK   200   200   000    -    96
-194 Temperature_Celsius     -O---K   112   103   000    -    38
+188 Command_Timeout         -O--CK   096   096   000    -    9
+190 Airflow_Temperature_Cel -O---K   061   053   045    -    39
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    97
+193 Load_Cycle_Count        -O--CK   200   200   000    -    108
+194 Temperature_Celsius     -O---K   111   103   000    -    39
 196 Reallocated_Event_Count PO--CK   200   200   140    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -94,36 +94,125 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory Version 1
-SMART           Log Directory Version 1 [multi-sector log support]
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
+Read GP Log Directory failed
+
+SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
+0x00           SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
 0x02           SL  R/O      5  Comprehensive SMART error log
-0x03       GPL     R/O      6  Ext. Comprehensive SMART error log
-0x04       GPL,SL  R/O      8  Device Statistics log
+0x04           SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
-0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters log
-0x24       GPL     R/O      1  Current Device Internal Status Data log
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
-0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
-0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
-0xb6       GPL     VS     556  Device vendor specific log
-0xb6       SL      VS       1  Device vendor specific log
-0xb7       GPL,SL  VS       1  Device vendor specific log
-0xbd       GPL,SL  VS       1  Device vendor specific log
-0xc0       GPL,SL  VS       1  Device vendor specific log
-0xc1       GPL     VS      24  Device vendor specific log
-0xe0       GPL,SL  R/W      1  SCT Command/Status
-0xe1       GPL,SL  R/W      1  SCT Data Transfer
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa0-0xa7      SL  VS      16  Device vendor specific log
+0xa8-0xb7      SL  VS       1  Device vendor specific log
+0xbd           SL  VS       1  Device vendor specific log
+0xc0           SL  VS       1  Device vendor specific log
+0xe0           SL  R/W      1  SCT Command/Status
+0xe1           SL  R/W      1  SCT Data Transfer
 
-SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
-SMART Extended Self-test Log Version: 1 (1 sectors)
+SMART Error Log Version: 1
+Warning: ATA error count 59705 inconsistent with error log pointer 1
+
+ATA Error Count: 59705 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 59705 occurred at disk power-on lifetime: 4737 hours (197 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 02 00 00 00 a0  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 10 02 00 00 00 a0 08      07:27:14.064  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 a0 08      07:27:14.062  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 08      07:27:14.062  SET FEATURES [Set transfer mode]
+  ef 10 02 00 00 00 a0 08      07:27:14.060  SET FEATURES [Enable SATA feature]
+
+Error 59704 occurred at disk power-on lifetime: 4737 hours (197 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 46 00 00 00 a0  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 03 46 00 00 00 a0 08      07:27:14.062  SET FEATURES [Set transfer mode]
+  ef 10 02 00 00 00 a0 08      07:27:14.060  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 a0 08      07:27:14.059  IDENTIFY DEVICE
+
+Error 59703 occurred at disk power-on lifetime: 4737 hours (197 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 02 00 00 00 a0  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 10 02 00 00 00 a0 08      07:27:14.060  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 a0 08      07:27:14.059  IDENTIFY DEVICE
+  ef 10 02 00 00 00 a0 08      07:27:14.035  SET FEATURES [Enable SATA feature]
+
+Error 59702 occurred at disk power-on lifetime: 4737 hours (197 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 02 00 00 00 a0  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 10 02 00 00 00 a0 08      07:27:14.035  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 a0 08      07:27:14.034  IDENTIFY DEVICE
+  ef 03 46 00 00 00 a0 08      07:27:14.034  SET FEATURES [Set transfer mode]
+  ef 10 02 00 00 00 a0 08      07:27:14.032  SET FEATURES [Enable SATA feature]
+
+Error 59701 occurred at disk power-on lifetime: 4737 hours (197 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  04 61 46 00 00 00 a0  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  ef 03 46 00 00 00 a0 08      07:27:14.034  SET FEATURES [Set transfer mode]
+  ef 10 02 00 00 00 a0 08      07:27:14.032  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 a0 08      07:27:14.031  IDENTIFY DEVICE
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%      3030         -
 # 2  Short offline       Completed without error       00%      3030         -
@@ -144,8 +233,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     36/39 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     38/40 Celsius
 Lifetime    Min/Max Temperature:     12/47 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -158,35 +247,35 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (62)
+Temperature History Size (Index):    478 (363)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
           Write:     70 (7.0 seconds)
 
-Device Statistics (GP Log 0x04)
+Device Statistics (SMART Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             184  ---  Lifetime Power-On Resets
-0x01  0x010  4            4438  ---  Power-on Hours
-0x01  0x018  6  23893808309134  ---  Logical Sectors Written
-0x01  0x020  6        53743031  ---  Number of Write Commands
-0x01  0x028  6     53912932740  ---  Logical Sectors Read
-0x01  0x030  6       124561177  ---  Number of Read Commands
+0x01  0x008  4             203  ---  Lifetime Power-On Resets
+0x01  0x010  4            4737  ---  Power-on Hours
+0x01  0x018  6  23898805480387  ---  Logical Sectors Written
+0x01  0x020  6        56910278  ---  Number of Write Commands
+0x01  0x028  6     57726249215  ---  Logical Sectors Read
+0x01  0x030  6       144039650  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            4353  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            4352  ---  Head Flying Hours
-0x03  0x018  4             186  ---  Head Load Events
+0x03  0x008  4            4651  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            4649  ---  Head Flying Hours
+0x03  0x018  4             206  ---  Head Load Events
 0x03  0x020  4             200  N--  Number of Reallocated Logical Sectors
-0x03  0x028  4              15  ---  Read Recovery Attempts
+0x03  0x028  4              16  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               5  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               9  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              38  ---  Current Temperature
-0x05  0x010  1              36  ---  Average Short Term Temperature
-0x05  0x018  1              33  ---  Average Long Term Temperature
+0x05  0x008  1              39  ---  Current Temperature
+0x05  0x010  1              39  ---  Average Short Term Temperature
+0x05  0x018  1              35  ---  Average Long Term Temperature
 0x05  0x020  1              47  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x05  0x030  1              42  ---  Highest Average Short Term Temperature
@@ -198,8 +287,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             992  ---  Number of Hardware Resets
-0x06  0x010  4           10988  ---  Number of ASR Events
+0x06  0x008  4            1079  ---  Number of Hardware Resets
+0x06  0x010  4           11012  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -207,22 +296,8 @@ Page  Offset Size        Value Flags Description
 
 Pending Defects log (GP Log 0x0c) not supported
 
-SATA Phy Event Counters (GP Log 0x11)
-ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
-0x0002  2            0  R_ERR response for data FIS
-0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2            0  R_ERR response for non-data FIS
-0x0006  2            0  R_ERR response for device-to-host non-data FIS
-0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
-0x000b  2            0  CRC errors within host-to-device FIS
-0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
-0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4       246376  Vendor specific
+ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
+Read SATA Phy Event Counters failed
 
 
 

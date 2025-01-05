@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Maxtor MaXLine Pro 500
@@ -9,17 +9,17 @@ LU WWN Device Id: 0 150500 ...
 Firmware Version: HA431DN0
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Wed May  3 09:18:52 2023 EDT
+Local Time is:    Tue Jan  2 14:08:25 2024 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, frozen [SEC2], Master PW ID: 0x5a5e
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -57,25 +57,25 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   185   166   063    -    18541
-  4 Start_Stop_Count        -O--CK   251   251   000    -    5829
+  3 Spin_Up_Time            POS--K   178   166   063    -    16948
+  4 Start_Stop_Count        -O--CK   251   251   000    -    5917
   5 Reallocated_Sector_Ct   PO--CK   253   253   063    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   249   236   187    -    63439
-  9 Power_On_Hours          -O--CK   111   111   000    -    49305
+  8 Seek_Time_Performance   POS--K   249   236   187    -    41012
+  9 Power_On_Hours          -O--CK   109   109   000    -    50029
  10 Spin_Retry_Count        PO-R-K   253   252   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   244   244   000    -    3862
+ 12 Power_Cycle_Count       -O--CK   243   243   000    -    3959
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
 190 Airflow_Temperature_Cel -O---K   057   047   000    -    0 (0 0 128 128 128)
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
 194 Temperature_Celsius     -O--CK   087   253   000    -    0 (0 0 0 0 128)
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    3647
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    2004
 196 Reallocated_Event_Count ---R--   253   253   000    -    0
 197 Current_Pending_Sector  ---R--   253   253   000    -    0
 198 Offline_Uncorrectable   ---R--   253   253   000    -    0
-199 UDMA_CRC_Error_Count    ---R--   139   001   000    -    15281
+199 UDMA_CRC_Error_Count    ---R--   119   001   000    -    15281
 200 Multi_Zone_Error_Rate   -O-R--   253   252   000    -    0
 201 Soft_Read_Error_Rate    -O-R--   253   252   000    -    0
 202 Data_Address_Mark_Errs  -O-R--   253   252   000    -    0
@@ -104,12 +104,12 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
-0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
+0x20       GPL,SL  R/O      1  Streaming performance log
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
 
 SMART Extended Comprehensive Error Log Version: 1 (4 sectors)
-Device Error Count: 1010 (device log contains only the most recent 16 errors)
+Device Error Count: 1011 (device log contains only the most recent 16 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,6 +124,23 @@ Device Error Count: 1010 (device log contains only the most recent 16 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1011 [2] occurred at disk power-on lifetime: 49548 hours (2064 days + 12 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 ff ff ff ff e0 00  Error: ABRT 1 sectors at LBA = 0xffffffff = 4294967295
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 01 00 00 00 00 00 3f e0 00     09:46:18.394  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     09:46:18.394  READ DMA EXT
+  25 00 00 00 01 00 00 01 fd 24 1c 40 00     09:46:16.858  READ DMA EXT
+  25 00 00 00 01 00 00 01 80 5e 5f 40 00     09:46:16.858  READ DMA EXT
+  25 00 00 00 01 00 00 01 fd 23 dd 40 00     09:46:16.857  READ DMA EXT
 
 Error 1010 [1] occurred at disk power-on lifetime: 48638 hours (2026 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -176,22 +193,22 @@ Error 1008 [15] occurred at disk power-on lifetime: 41017 hours (1709 days + 1 h
   60 00 20 00 28 00 00 39 3b b4 70 40 08     00:10:30.408  READ FPDMA QUEUED
   60 00 20 00 28 00 00 39 3b b4 70 40 08     00:10:30.400  READ FPDMA QUEUED
 
-Error 1007 [14] occurred at disk power-on lifetime: 41017 hours (1709 days + 1 hours)
+Error 1007 [14] occurred at disk power-on lifetime: 49548 hours (2064 days + 12 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 41 00 68 00 00 0f 44 eb 58 40 00  Error:  at LBA = 0x0f44eb58 = 256174936
+  04 -- 51 00 01 00 00 ff ff ff ff e0 00  Error: ABRT 1 sectors at LBA = 0xffffffff = 4294967295
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 68 00 00 0f 44 eb 58 40 08     00:01:25.234  READ FPDMA QUEUED
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:01:25.233  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:25.231  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:01:25.230  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:01:25.229  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  25 00 00 00 01 00 00 00 00 00 3f e0 00     09:46:18.394  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     09:46:18.394  READ DMA EXT
+  25 00 00 00 01 00 00 01 fd 24 1c 40 00     09:46:16.858  READ DMA EXT
+  25 00 00 00 01 00 00 01 80 5e 5f 40 00     09:46:16.858  READ DMA EXT
+  25 00 00 00 01 00 00 01 fd 23 dd 40 00     09:46:16.857  READ DMA EXT
 
 Error 1006 [13] occurred at disk power-on lifetime: 48638 hours (2026 days + 14 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -244,48 +261,31 @@ Error 1004 [11] occurred at disk power-on lifetime: 41017 hours (1709 days + 1 h
   60 00 20 00 28 00 00 39 3b b4 70 40 08     00:10:30.408  READ FPDMA QUEUED
   60 00 20 00 28 00 00 39 3b b4 70 40 08     00:10:30.400  READ FPDMA QUEUED
 
-Error 1003 [10] occurred at disk power-on lifetime: 41017 hours (1709 days + 1 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 41 00 68 00 00 0f 44 eb 58 40 00  Error:  at LBA = 0x0f44eb58 = 256174936
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 68 00 00 0f 44 eb 58 40 08     00:01:25.234  READ FPDMA QUEUED
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:01:25.233  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:01:25.231  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:01:25.230  SET FEATURES [Set transfer mode]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:01:25.229  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Offline             Interrupted (host reset)      60%     49304         -
-# 2  Offline             Interrupted (host reset)      60%     49299         -
-# 3  Offline             Interrupted (host reset)      60%     49297         -
-# 4  Offline             Interrupted (host reset)      60%     49297         -
-# 5  Offline             Interrupted (host reset)      60%     49291         -
-# 6  Offline             Interrupted (host reset)      60%     49278         -
-# 7  Offline             Interrupted (host reset)      60%     49264         -
-# 8  Offline             Interrupted (host reset)      60%     49251         -
-# 9  Offline             Interrupted (host reset)      60%     49238         -
-#10  Offline             Interrupted (host reset)      60%     49236         -
-#11  Offline             Interrupted (host reset)      60%     49232         -
-#12  Offline             Interrupted (host reset)      60%     49232         -
-#13  Offline             Interrupted (host reset)      60%     49231         -
-#14  Offline             Interrupted (host reset)      60%     49231         -
-#15  Offline             Interrupted (host reset)      60%     49228         -
-#16  Offline             Interrupted (host reset)      60%     49220         -
-#17  Offline             Interrupted (host reset)      60%     49215         -
-#18  Offline             Interrupted (host reset)      60%     49214         -
-#19  Offline             Interrupted (host reset)      60%     49204         -
-#20  Offline             Interrupted (host reset)      60%     49192         -
-#21  Offline             Interrupted (host reset)      60%     49179         -
+# 1  Offline             Interrupted (host reset)      60%     50026         -
+# 2  Offline             Interrupted (host reset)      60%     50023         -
+# 3  Offline             Interrupted (host reset)      60%     50010         -
+# 4  Offline             Interrupted (host reset)      60%     50005         -
+# 5  Offline             Interrupted (host reset)      60%     49997         -
+# 6  Offline             Interrupted (host reset)      60%     49997         -
+# 7  Offline             Interrupted (host reset)      60%     49993         -
+# 8  Offline             Interrupted (host reset)      60%     49993         -
+# 9  Offline             Interrupted (host reset)      60%     49993         -
+#10  Offline             Interrupted (host reset)      60%     49992         -
+#11  Offline             Interrupted (host reset)      60%     49981         -
+#12  Offline             Interrupted (host reset)      60%     49967         -
+#13  Offline             Interrupted (host reset)      60%     49955         -
+#14  Offline             Interrupted (host reset)      60%     49941         -
+#15  Offline             Interrupted (host reset)      60%     49940         -
+#16  Offline             Interrupted (host reset)      60%     49935         -
+#17  Offline             Interrupted (host reset)      60%     49931         -
+#18  Offline             Interrupted (host reset)      60%     49917         -
+#19  Offline             Interrupted (host reset)      60%     49910         -
+#20  Offline             Interrupted (host reset)      60%     49905         -
+#21  Offline             Interrupted (host reset)      60%     49891         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

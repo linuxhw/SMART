@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.5-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Fujitsu MHZ BH
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Tue Mar 14 22:24:08 2023 CET
+Local Time is:    Tue Oct 10 11:07:20 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -63,26 +63,26 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    199105
-  2 Throughput_Performance  P-S---   100   100   030    -    41222772
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    129849
+  2 Throughput_Performance  P-S---   100   100   030    -    39256634
   3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   099   099   000    -    890
+  4 Start_Stop_Count        -O--CK   099   099   000    -    912
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  7 Seek_Error_Rate         POSR--   100   100   047    -    3106
+  7 Seek_Error_Rate         POSR--   100   100   047    -    2602
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Hours          -O--CK   081   081   000    -    9839
+  9 Power_On_Hours          -O--CK   081   081   000    -    9864
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    867
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    359
-193 Load_Cycle_Count        -O--CK   091   091   000    -    189611
-194 Temperature_Celsius     -O---K   100   100   000    -    29 (Min/Max 8/50)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    47
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    889
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    370
+193 Load_Cycle_Count        -O--CK   091   091   000    -    190206
+194 Temperature_Celsius     -O---K   100   100   000    -    35 (Min/Max 8/50)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    8
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 6524)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   253   000    -    504
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    4766
-203 Run_Out_Cancel          -O----   100   100   000    -    2628564155395
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    21424
+203 Run_Out_Cancel          -O----   100   100   000    -    2628526603495
 240 Head_Flying_Hours       -OSRCK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
-0x23       GPL,SL  R/O      1  Delayed sector log [OBS-8]
+0x23       GPL,SL  R/O      1  Delayed sector log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa1       GPL,SL  VS       1  Device vendor specific log
 
@@ -278,8 +278,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     16/31 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     28/39 Celsius
 Lifetime    Min/Max Temperature:      8/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -288,7 +288,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (383)
+Temperature History Size (Index):    478 (104)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -307,8 +307,8 @@ ID      Size     Value  Description
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           28  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           27  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

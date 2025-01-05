@@ -1,3 +1,6 @@
+smartctl 7.3 2022-02-28 r5338 [i686-linux-5.15.117-generic-1rosa2021.1-i686] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi/HGST Travelstar Z5K500
 Device Model:     HGST HTS545025A7E680
@@ -8,14 +11,14 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Sep 16 15:44:17 2022 EDT
+Local Time is:    Tue Aug  1 00:37:53 2023 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -62,22 +65,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   198   198   040    -    127
-  3 Spin_Up_Time            POS---   222   222   033    -    1
-  4 Start_Stop_Count        -O--C-   100   100   000    -    773
+  3 Spin_Up_Time            POS---   215   215   033    -    1
+  4 Start_Stop_Count        -O--C-   100   100   000    -    1376
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   150   150   040    -    35
-  9 Power_On_Hours          -O--C-   099   099   000    -    622
+  9 Power_On_Hours          -O--C-   098   098   000    -    996
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    724
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1318
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    196
-193 Load_Cycle_Count        -O--C-   098   098   000    -    23474
-194 Temperature_Celsius     -O----   136   136   000    -    44 (Min/Max 15/54)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    309
+193 Load_Cycle_Count        -O--C-   097   097   000    -    37494
+194 Temperature_Celsius     -O----   142   142   000    -    42 (Min/Max 15/55)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-197 Current_Pending_Sector  -O---K   100   100   000    -    8
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    37
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -103,14 +106,97 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 37 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 37 [0] occurred at disk power-on lifetime: 924 hours (38 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 08 00 00 00 6f 4b f9 00 00  Error: ICRC, ABRT at LBA = 0x006f4bf9 = 7293945
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 03 ff 00 08 6f 4b f8 6f 4b f9 e0 02     00:50:18.723  WRITE DMA
+  ca 03 ff 00 08 6f 4b f0 6f 4b f1 e0 02     00:50:18.723  WRITE DMA
+  ca 03 ff 00 08 6f 4b e8 6f 4b e9 e0 02     00:50:18.722  WRITE DMA
+  ca 03 ff 00 08 2b 42 7f 6f 4b e1 e0 02     00:50:18.722  WRITE DMA
+  c8 03 ff 00 10 2b 42 6f 2b 42 70 e0 02     00:50:18.721  READ DMA
+
+Error 36 [3] occurred at disk power-on lifetime: 924 hours (38 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 04 00 00 00 6e 88 c3 00 00  Error: ICRC, ABRT at LBA = 0x006e88c3 = 7243971
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 03 ff 00 08 6e 88 be 6e 88 bf e0 02     00:49:43.444  WRITE DMA
+  ca 03 ff 00 08 6e 88 b6 6e 88 b7 e0 02     00:49:43.444  WRITE DMA
+  ca 03 ff 00 08 6e 88 ae 6e 88 af e0 02     00:49:43.443  WRITE DMA
+  ca 03 ff 00 08 6e 88 a6 6e 88 a7 e0 02     00:49:43.443  WRITE DMA
+  ca 03 ff 00 08 6e 88 9e 6e 88 9f e0 02     00:49:43.442  WRITE DMA
+
+Error 35 [2] occurred at disk power-on lifetime: 924 hours (38 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 04 00 00 00 6a b3 3c 00 00  Error: ICRC, ABRT at LBA = 0x006ab33c = 6992700
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 03 ff 00 10 6a b3 2f 6a b3 30 e0 02     00:48:14.468  WRITE DMA
+  ca 03 ff 00 0d 37 4b df 6a b3 23 e0 02     00:48:14.468  WRITE DMA
+  c8 03 ff 00 10 6a b3 22 37 4b d0 e0 02     00:48:14.468  READ DMA
+  ca 03 ff 00 08 6a b3 1a 6a b3 1b e0 02     00:48:14.467  WRITE DMA
+  ca 03 ff 00 08 6a b3 12 6a b3 13 e0 02     00:48:14.467  WRITE DMA
+
+Error 34 [1] occurred at disk power-on lifetime: 923 hours (38 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 04 00 00 00 62 f5 13 00 00  Error: ICRC, ABRT at LBA = 0x0062f513 = 6485267
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ca 03 ff 00 08 62 f5 0e 62 f5 0f e0 02     00:45:37.524  WRITE DMA
+  ca 03 ff 00 08 62 f5 06 62 f5 07 e0 02     00:45:37.523  WRITE DMA
+  ca 03 ff 00 08 3a d6 2f 62 f4 ff e0 02     00:45:37.523  WRITE DMA
+  c8 03 ff 00 10 3a d6 1f 3a d6 20 e0 02     00:45:37.522  READ DMA
+  c8 03 ff 00 10 62 f4 fe 3a d6 10 e0 02     00:45:37.522  READ DMA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       265         -
-# 2  Short offline       Completed without error       00%       192         -
-# 3  Short offline       Completed without error       00%        90         -
-# 4  Short offline       Aborted by host               60%        11         -
+# 1  Short offline       Completed without error       00%       838         -
+# 2  Short offline       Completed without error       00%       265         -
+# 3  Short offline       Completed without error       00%       192         -
+# 4  Short offline       Completed without error       00%        90         -
+# 5  Short offline       Aborted by host               60%        11         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -125,12 +211,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     38/45 Celsius
-Lifetime    Min/Max Temperature:     15/54 Celsius
-Lifetime    Average Temperature:        41 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     22/42 Celsius
+Lifetime    Min/Max Temperature:     15/55 Celsius
+Specified Max Operating Temperature:    42 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -138,7 +223,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (21)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -157,8 +242,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x0009  2         2976  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

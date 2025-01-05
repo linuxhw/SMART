@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [i686-linux-6.1.0-25-686-pae] (local build)
+smartctl 7.3 2022-02-28 r5338 [i686-linux-6.10.11+bpo-686-pae] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Mon Oct 28 01:07:03 2024 CET
+Local Time is:    Mon Oct 28 08:09:46 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -21,10 +21,12 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
+Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -63,18 +65,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
-  3 Spin_Up_Time            POS---   236   236   033    -    1
-  4 Start_Stop_Count        -O--C-   099   099   000    -    1847
+  3 Spin_Up_Time            POS---   241   241   033    -    0
+  4 Start_Stop_Count        -O--C-   099   099   000    -    1852
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   077   077   000    -    10503
+  9 Power_On_Hours          -O--C-   077   077   000    -    10510
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1541
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1544
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    70
-193 Load_Cycle_Count        -O--C-   059   059   000    -    412496
-194 Temperature_Celsius     -O----   148   148   000    -    37 (Min/Max 5/64)
+193 Load_Cycle_Count        -O--C-   059   059   000    -    412512
+194 Temperature_Celsius     -O----   144   144   000    -    38 (Min/Max 5/64)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -121,8 +123,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     33/40 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     37/41 Celsius
 Lifetime    Min/Max Temperature:      5/64 Celsius
 Specified Max Operating Temperature:    35 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -130,9 +132,8 @@ Under/Over Temperature Limit Count:   0/0
 Unexpected SCT status 0x0000 (action_code=5, function_code=0)
 Read SCT Temperature History failed
 
-SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+SMART WRITE LOG does not return COUNT and LBA_LOW register
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -141,8 +142,10 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           10  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
+
+
 

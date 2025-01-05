@@ -1,6 +1,9 @@
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-79-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Travelstar 5K250
-Device Model:     Hitachi HTS542512K9SA00
+Device Model:     HTS542512K9SA00
 Serial Number:    --
 LU WWN Device Id: 5 000cca ...
 Firmware Version: BB2OC31P
@@ -9,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Sat Nov 10 10:40:11 2018 CST
+Local Time is:    Sat Aug 19 09:55:55 2023 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -61,17 +64,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
   3 Spin_Up_Time            POS---   253   253   033    -    0
-  4 Start_Stop_Count        -O--C-   099   099   000    -    1965
+  4 Start_Stop_Count        -O--C-   098   098   000    -    3924
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   077   077   000    -    10390
+  9 Power_On_Hours          -O--C-   011   011   000    -    39218
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1956
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    3915
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    97
-193 Load_Cycle_Count        -O--C-   087   087   000    -    138999
-194 Temperature_Celsius     -O----   125   125   000    -    44 (Min/Max -1/54)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    204
+193 Load_Cycle_Count        -O--C-   061   061   000    -    390251
+194 Temperature_Celsius     -O----   105   105   000    -    52 (Min/Max -1/59)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -185,15 +188,25 @@ Error 298 [1] occurred at disk power-on lifetime: 4483 hours (186 days + 19 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Offline             Completed without error       00%         0         -
+# 1  Vendor (0xec)       Completed: read failure       00%         0         0
 # 2  Offline             Completed without error       00%         0         -
 # 3  Offline             Completed without error       00%         0         -
 # 4  Offline             Completed without error       00%         0         -
 # 5  Offline             Completed without error       00%         0         -
 # 6  Offline             Completed without error       00%         0         -
 # 7  Offline             Completed without error       00%         0         -
-# 8  Offline             Completed without error       00%         0         -
-# 9  Offline             Completed without error       00%         0         -
+# 8  Reserved (0x15)     Completed: electrical failure 100%         0         0
+# 9  Short offline       Interrupted (host reset)      90%     22240         -
+#10  Offline             Completed without error       00%         2         -
+#11  Offline             Completed without error       00%         0         -
+#12  Offline             Completed without error       00%         0         -
+#13  Offline             Completed without error       00%         0         -
+#14  Offline             Completed without error       00%         0         -
+#15  Offline             Completed without error       00%         0         -
+#16  Offline             Completed without error       00%         0         -
+#17  Offline             Completed without error       00%         0         -
+#18  Offline             Completed without error       00%         0         -
+#19  Offline             Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -208,12 +221,11 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     22/48 Celsius
-Lifetime    Min/Max Temperature:     -1/54 Celsius
-Lifetime    Average Temperature:        43 Celsius
+Current Temperature:                    52 Celsius
+Power Cycle Min/Max Temperature:     48/56 Celsius
+Lifetime    Min/Max Temperature:     -1/59 Celsius
+Specified Max Operating Temperature:    46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 Unexpected SCT status 0x0000 (action_code=5, function_code=0)
@@ -230,8 +242,8 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2           10  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           16  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

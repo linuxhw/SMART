@@ -7,7 +7,7 @@ User Capacity:    203,928,109,056 bytes [203 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Fri Jul  5 13:36:08 2024 CEST
+Local Time is:    Sat Jul 13 12:58:49 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 192
@@ -53,20 +53,20 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            POS--K   207   194   063    -    18318
-  4 Start_Stop_Count        -O--CK   249   249   000    -    8454
+  3 Spin_Up_Time            POS--K   207   194   063    -    10963
+  4 Start_Stop_Count        -O--CK   249   249   000    -    8465
   5 Reallocated_Sector_Ct   PO--CK   247   226   063    -    65
   6 Read_Channel_Margin     P-----   253   253   100    -    0
   7 Seek_Error_Rate         -O-R--   253   252   000    -    0
-  8 Seek_Time_Performance   POS--K   252   236   187    -    53892
-  9 Power_On_Minutes        -O--CK   211   211   000    -    579h+02m
+  8 Seek_Time_Performance   POS--K   252   236   187    -    32928
+  9 Power_On_Minutes        -O--CK   211   211   000    -    614h+40m
  10 Spin_Retry_Count        PO-R-K   253   217   157    -    0
  11 Calibration_Retry_Count PO-R-K   253   252   223    -    0
- 12 Power_Cycle_Count       -O--CK   235   235   000    -    7349
+ 12 Power_Cycle_Count       -O--CK   235   235   000    -    7355
 192 Power-Off_Retract_Count -O--CK   253   253   000    -    0
 193 Load_Cycle_Count        -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O--CK   034   253   000    -    34
-195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    21531
+194 Temperature_Celsius     -O--CK   034   253   000    -    26
+195 Hardware_ECC_Recovered  -O-R--   253   252   000    -    28154
 196 Reallocated_Event_Count ---R--   001   001   000    -    284
 197 Current_Pending_Sector  ---R--   247   226   000    -    65
 198 Offline_Uncorrectable   ---R--   001   001   000    -    815
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0x22       GPL,SL  R/O      1  Read stream error log
 
 SMART Extended Comprehensive Error Log Version: 1 (4 sectors)
-Device Error Count: 31310 (device log contains only the most recent 16 errors)
+Device Error Count: 31810 (device log contains only the most recent 16 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,7 +121,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 31310 [13] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31810 [1] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -132,13 +132,13 @@ Error 31310 [13] occurred at disk power-on lifetime: 14762 hours (615 days + 2 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:48.885  READ LOG EXT
-  60 00 00 00 a0 00 00 14 76 de 88 40 00     02:02:47.449  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:46.485  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:46.445  NOP [Abort queued commands]
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:46.344  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:45.820  READ LOG EXT
+  60 00 00 00 90 00 00 14 79 86 30 40 00     02:02:35.725  READ FPDMA QUEUED
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:34.765  SET FEATURES [Enable write cache]
+  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:34.718  NOP [Abort queued commands]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:34.621  READ LOG EXT
 
-Error 31309 [12] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31809 [0] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -149,13 +149,13 @@ Error 31309 [12] occurred at disk power-on lifetime: 14762 hours (615 days + 2 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:46.344  READ LOG EXT
-  60 00 00 00 98 00 00 14 76 de 88 40 00     02:02:44.922  READ FPDMA QUEUED
-  60 00 00 00 90 00 00 14 76 df 88 40 00     02:02:44.922  READ FPDMA QUEUED
-  60 00 00 00 90 00 00 14 76 df 88 40 00     02:02:33.558  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:33.093  SET FEATURES [Enable write cache]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:34.621  READ LOG EXT
+  60 00 00 00 88 00 00 14 79 86 30 40 00     02:02:24.517  READ FPDMA QUEUED
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:23.561  SET FEATURES [Enable write cache]
+  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:23.511  NOP [Abort queued commands]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:23.431  READ LOG EXT
 
-Error 31308 [11] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31808 [15] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -166,13 +166,13 @@ Error 31308 [11] occurred at disk power-on lifetime: 14762 hours (615 days + 2 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:03:02.601  READ LOG EXT
-  60 00 00 00 b0 00 00 14 76 de 88 40 00     02:02:52.497  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:51.534  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:51.487  NOP [Abort queued commands]
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:51.401  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:01:09.242  READ LOG EXT
+  60 00 00 00 b8 00 00 14 76 de 88 40 00     02:01:07.822  READ FPDMA QUEUED
+  60 00 00 00 b0 00 00 14 76 dd 88 40 00     02:01:07.822  READ FPDMA QUEUED
+  60 00 00 00 b0 00 00 14 76 dd 88 40 00     02:01:07.819  READ FPDMA QUEUED
+  60 00 00 00 a8 00 00 14 76 dc 88 40 00     02:01:07.819  READ FPDMA QUEUED
 
-Error 31307 [10] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31807 [14] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -183,13 +183,13 @@ Error 31307 [10] occurred at disk power-on lifetime: 14762 hours (615 days + 2 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:51.401  READ LOG EXT
-  60 00 00 00 a8 00 00 14 76 de 88 40 00     02:02:49.980  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:49.014  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:48.970  NOP [Abort queued commands]
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:48.885  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:01:07.196  READ LOG EXT
+  60 00 00 00 80 00 00 14 7d 6b 88 40 00     02:01:04.342  READ FPDMA QUEUED
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:01:03.399  SET FEATURES [Enable write cache]
+  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:01:03.345  NOP [Abort queued commands]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:01:03.263  READ LOG EXT
 
-Error 31306 [9] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31806 [13] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -200,13 +200,13 @@ Error 31306 [9] occurred at disk power-on lifetime: 14762 hours (615 days + 2 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:48.885  READ LOG EXT
-  60 00 00 00 a0 00 00 14 76 de 88 40 00     02:02:47.449  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:46.485  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:46.445  NOP [Abort queued commands]
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:46.344  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:45.820  READ LOG EXT
+  60 00 00 00 90 00 00 14 79 86 30 40 00     02:02:35.725  READ FPDMA QUEUED
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:34.765  SET FEATURES [Enable write cache]
+  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:34.718  NOP [Abort queued commands]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:34.621  READ LOG EXT
 
-Error 31305 [8] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31805 [12] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -217,13 +217,13 @@ Error 31305 [8] occurred at disk power-on lifetime: 14762 hours (615 days + 2 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:46.344  READ LOG EXT
-  60 00 00 00 98 00 00 14 76 de 88 40 00     02:02:44.922  READ FPDMA QUEUED
-  60 00 00 00 90 00 00 14 76 df 88 40 00     02:02:44.922  READ FPDMA QUEUED
-  60 00 00 00 90 00 00 14 76 df 88 40 00     02:02:33.558  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:33.093  SET FEATURES [Enable write cache]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:34.621  READ LOG EXT
+  60 00 00 00 88 00 00 14 79 86 30 40 00     02:02:24.517  READ FPDMA QUEUED
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:23.561  SET FEATURES [Enable write cache]
+  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:23.511  NOP [Abort queued commands]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:23.431  READ LOG EXT
 
-Error 31304 [7] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31804 [11] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -234,13 +234,13 @@ Error 31304 [7] occurred at disk power-on lifetime: 14762 hours (615 days + 2 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:03:02.601  READ LOG EXT
-  60 00 00 00 b0 00 00 14 76 de 88 40 00     02:02:52.497  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:51.534  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:51.487  NOP [Abort queued commands]
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:51.401  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:01:09.242  READ LOG EXT
+  60 00 00 00 b8 00 00 14 76 de 88 40 00     02:01:07.822  READ FPDMA QUEUED
+  60 00 00 00 b0 00 00 14 76 dd 88 40 00     02:01:07.822  READ FPDMA QUEUED
+  60 00 00 00 b0 00 00 14 76 dd 88 40 00     02:01:07.819  READ FPDMA QUEUED
+  60 00 00 00 a8 00 00 14 76 dc 88 40 00     02:01:07.819  READ FPDMA QUEUED
 
-Error 31303 [6] occurred at disk power-on lifetime: 14762 hours (615 days + 2 hours)
+Error 31803 [10] occurred at disk power-on lifetime: 14794 hours (616 days + 10 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -251,11 +251,11 @@ Error 31303 [6] occurred at disk power-on lifetime: 14762 hours (615 days + 2 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:51.401  READ LOG EXT
-  60 00 00 00 a8 00 00 14 76 de 88 40 00     02:02:49.980  READ FPDMA QUEUED
-  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:02:49.014  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:02:48.970  NOP [Abort queued commands]
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:02:48.885  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:01:07.196  READ LOG EXT
+  60 00 00 00 80 00 00 14 7d 6b 88 40 00     02:01:04.342  READ FPDMA QUEUED
+  ef 00 02 00 00 00 00 00 00 00 00 a0 00     02:01:03.399  SET FEATURES [Enable write cache]
+  00 00 00 00 00 00 00 00 00 00 10 e0 00     02:01:03.345  NOP [Abort queued commands]
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:01:03.263  READ LOG EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -282,8 +282,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     --/35 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     --/26 Celsius
 Lifetime    Min/Max Temperature:     --/60 Celsius
 
 SCT Temperature History Version:     2

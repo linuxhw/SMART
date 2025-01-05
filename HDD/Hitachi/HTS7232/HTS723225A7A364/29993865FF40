@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-18-amd64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.0-9-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     HTS723225A7A364
@@ -10,14 +10,14 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Apr 16 07:41:24 2024 UTC
+Local Time is:    Sun Apr 28 04:47:54 2024 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -40,11 +40,11 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 Total time to complete Offline 
 data collection: 		(   45) seconds.
 Offline data collection
-capabilities: 			 (0x5b) SMART execute Offline immediate.
-					Auto Offline data collection on/off support.
+capabilities: 			 (0x51) SMART execute Offline immediate.
+					No Auto Offline data collection support.
 					Suspend Offline collection upon new
 					command.
-					Offline surface scan supported.
+					No Offline surface scan supported.
 					Self-test supported.
 					No Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -68,21 +68,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   099   062    -    0
   2 Throughput_Performance  P-S--K   100   100   040    -    0
   3 Spin_Up_Time            PO---K   253   100   033    -    1
-  4 Start_Stop_Count        -O--CK   090   090   000    -    15817
+  4 Start_Stop_Count        -O--CK   090   090   000    -    15859
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         POSR-K   100   100   067    -    0
   8 Seek_Time_Performance   P-S--K   100   100   040    -    0
-  9 Power_On_Hours          -O--CK   088   088   000    -    5497
+  9 Power_On_Hours          -O--CK   088   088   000    -    5498
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    11242
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    11267
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    1082497368064
-188 Command_Timeout         -O--CK   099   077   000    -    1716930
-190 Airflow_Temperature_Cel -O---K   061   047   045    -    39 (Min/Max 31/40)
+188 Command_Timeout         -O--CK   100   077   000    -    1716960
+190 Airflow_Temperature_Cel -O---K   067   047   045    -    33 (Min/Max 32/38)
 191 G-Sense_Error_Rate      -O--CK   001   001   000    -    45378
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    19595563
-193 Load_Cycle_Count        -O--CK   071   071   000    -    294703
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    19726637
+193 Load_Cycle_Count        -O--CK   071   071   000    -    294785
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -215,8 +215,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     31/40 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     32/38 Celsius
 Lifetime    Min/Max Temperature:     -4/53 Celsius
 Specified Max Operating Temperature:    35 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -230,25 +230,25 @@ SCT (Get) Error Recovery Control command failed
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4           11242  ---  Lifetime Power-On Resets
-0x01  0x010  4            5497  ---  Power-on Hours
-0x01  0x018  6     12725130666  ---  Logical Sectors Written
-0x01  0x020  6       182070626  ---  Number of Write Commands
-0x01  0x028  6     21832813586  ---  Logical Sectors Read
-0x01  0x030  6       373590356  ---  Number of Read Commands
+0x01  0x008  4           11267  ---  Lifetime Power-On Resets
+0x01  0x010  4            5498  ---  Power-on Hours
+0x01  0x018  6     12732124605  ---  Logical Sectors Written
+0x01  0x020  6       182126929  ---  Number of Write Commands
+0x01  0x028  6     21874649952  ---  Logical Sectors Read
+0x01  0x030  6       374005592  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            4966  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            4944  ---  Head Flying Hours
-0x03  0x018  4          294703  ---  Head Load Events
+0x03  0x008  4            4967  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            4945  ---  Head Flying Hours
+0x03  0x018  4          294785  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4            4148  ---  Read Recovery Attempts
+0x03  0x028  4            4153  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4           12996  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4           13026  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              39  ---  Current Temperature
-0x05  0x010  1              28  N--  Average Short Term Temperature
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x010  1              29  N--  Average Short Term Temperature
 0x05  0x018  1              27  N--  Average Long Term Temperature
 0x05  0x020  1              53  ---  Highest Temperature
 0x05  0x028  1              -4  ---  Lowest Temperature
@@ -261,8 +261,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4              10  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           50453  ---  Number of Hardware Resets
-0x06  0x010  4           11378  ---  Number of ASR Events
+0x06  0x008  4           50480  ---  Number of Hardware Resets
+0x06  0x010  4           11402  ---  Number of ASR Events
 0x06  0x018  4              24  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -279,7 +279,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS

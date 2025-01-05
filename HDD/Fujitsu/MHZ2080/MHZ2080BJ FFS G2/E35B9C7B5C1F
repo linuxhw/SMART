@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.19.0-8-amd64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.10.4-100.fc39.x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Fujitsu MHZ BJ
@@ -9,14 +9,14 @@ LU WWN Device Id: 5 00000e ...
 Firmware Version: 0085001C
 User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Nov  1 22:44:41 2021 UTC
+Local Time is:    Thu Aug 29 19:59:57 2024 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     128 (quiet), recommended: 254
-APM feature is:   Disabled
+AAM level is:     254 (maximum performance), recommended: 254
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -30,8 +30,9 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      ( 121)	The previous self-test completed having
-					the read element of the test failed.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  263) seconds.
 Offline data collection
@@ -62,21 +63,21 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    50114
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    147553
   3 Spin_Up_Time            PO----   100   100   025    -    1
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  9 Power_On_Minutes        -O--CK   087   087   000    -    6702h+56m
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    4806
-191 G-Sense_Error_Rate      -O--C-   100   100   000    -    2208
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    133
-193 Load_Cycle_Count        -O--CK   098   098   000    -    1529008403246
-194 Temperature_Celsius     -O---K   100   085   000    -    40 (Min/Max -3/56)
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    101761731
-200 Multi_Zone_Error_Rate   -O--CK   100   100   000    -    179297334
-240 Head_Flying_Hours       -O--CK   100   100   000    -    390172
-241 Total_LBAs_Written      -O--CK   100   100   000    -    186270292836355
-242 Total_LBAs_Read         -O--CK   100   100   000    -    53578937335812
-254 Free_Fall_Sensor        -O--CK   100   100   000    -    356
+  9 Power_On_Minutes        -O--CK   086   086   000    -    7112h+57m
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    5336
+191 G-Sense_Error_Rate      -O--C-   100   100   000    -    2266
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    185
+193 Load_Cycle_Count        -O--CK   098   098   000    -    1571958080545
+194 Temperature_Celsius     -O---K   100   085   000    -    32 (Min/Max -3/56)
+199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    105845606
+200 Multi_Zone_Error_Rate   -O--CK   100   100   000    -    186215498
+240 Head_Flying_Hours       -O--CK   100   100   000    -    404191
+241 Total_LBAs_Written      -O--CK   100   100   000    -    195285947187203
+242 Total_LBAs_Read         -O--CK   100   100   000    -    55554269511684
+254 Free_Fall_Sensor        -O--CK   100   100   000    -    366
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -136,17 +137,21 @@ Error 1 [0] occurred at disk power-on lifetime: 6606 hours (275 days + 6 hours)
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: read failure       90%      6618         106051529
-# 2  Short offline       Completed: read failure       90%      6609         106051529
-# 3  Conveyance offline  Completed: read failure       90%      6609         106051529
-# 4  Short offline       Interrupted (host reset)      40%      5542         -
-# 5  Short offline       Interrupted (host reset)      30%      4525         -
-# 6  Short offline       Completed without error       00%      4077         -
-# 7  Short offline       Completed without error       00%      4030         -
-# 8  Short offline       Completed without error       00%       518         -
-# 9  Short offline       Completed without error       00%       518         -
-#10  Short offline       Completed without error       00%         1         -
-#11  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%      6932         -
+# 2  Extended offline    Completed without error       00%      6782         -
+# 3  Conveyance offline  Completed without error       00%      6781         -
+# 4  Short offline       Completed: read failure       90%      6618         106051529
+# 5  Short offline       Completed: read failure       90%      6609         106051529
+# 6  Conveyance offline  Completed: read failure       90%      6609         106051529
+# 7  Short offline       Interrupted (host reset)      40%      5542         -
+# 8  Short offline       Interrupted (host reset)      30%      4525         -
+# 9  Short offline       Completed without error       00%      4077         -
+#10  Short offline       Completed without error       00%      4030         -
+#11  Short offline       Completed without error       00%       518         -
+#12  Short offline       Completed without error       00%       518         -
+#13  Short offline       Completed without error       00%         1         -
+#14  Short offline       Completed without error       00%         0         -
+3 of 3 failed self-tests are outdated by newer successful extended offline self-test # 2
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -162,8 +167,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     38/41 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     27/32 Celsius
 Lifetime    Min/Max Temperature:     -3/56 Celsius
 Specified Max Operating Temperature:    38 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -173,7 +178,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    478 (400)
+Temperature History Size (Index):    478 (315)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -192,10 +197,12 @@ ID      Size     Value  Description
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4          174  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  4            0  R_ERR response for host-to-device data FIS, non-CRC
+
+
 

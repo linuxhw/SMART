@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-50-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.5.0-28-generic] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi/HGST Travelstar Z5K320
@@ -11,10 +11,10 @@ User Capacity:    320,072,933,376 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Oct 16 10:27:22 2022 CEST
+Local Time is:    Sun Apr 21 12:25:46 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,21 +66,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
   3 Spin_Up_Time            POS---   214   214   033    -    1
-  4 Start_Stop_Count        -O--C-   099   099   000    -    2485
+  4 Start_Stop_Count        -O--C-   099   099   000    -    2694
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   058   058   000    -    18794
+  9 Power_On_Hours          -O--C-   042   042   000    -    25699
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1212
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1421
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    168
-193 Load_Cycle_Count        -O--C-   098   098   000    -    26379
-194 Temperature_Celsius     -O----   193   193   000    -    31 (Min/Max 17/67)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    204
+193 Load_Cycle_Count        -O--C-   098   098   000    -    26999
+194 Temperature_Celsius     -O----   150   150   000    -    40 (Min/Max 17/67)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    3
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    1
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -107,7 +107,89 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 674 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 674 [1] occurred at disk power-on lifetime: 25659 hours (1069 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 1d 00 00 00 08 08 63 00 00  Error: UNC 29 sectors at LBA = 0x00080863 = 526435
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 40 00 00 00 08 08 40 40 00     00:00:07.938  READ DMA EXT
+  25 00 00 00 c0 00 00 25 40 06 40 40 00     00:00:07.932  READ DMA EXT
+  25 00 00 00 40 00 00 25 40 06 00 40 00     00:00:07.931  READ DMA EXT
+  25 00 00 01 00 00 00 25 40 07 00 40 00     00:00:07.921  READ DMA EXT
+  25 00 00 00 c0 00 00 25 40 04 40 40 00     00:00:07.919  READ DMA EXT
+
+Error 673 [0] occurred at disk power-on lifetime: 25659 hours (1069 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 9d 00 00 00 08 08 63 00 00  Error: UNC 157 sectors at LBA = 0x00080863 = 526435
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 c0 00 00 00 08 08 40 40 00     00:00:04.152  READ DMA EXT
+  25 00 00 01 00 00 00 00 08 09 00 40 00     00:00:04.128  READ DMA EXT
+  25 00 00 00 40 00 00 00 08 08 00 40 00     00:00:04.110  READ DMA EXT
+  25 00 00 00 40 00 00 00 00 08 00 40 00     00:00:04.024  READ DMA EXT
+  25 00 00 00 c0 00 00 25 3f fe 40 40 00     00:00:04.006  READ DMA EXT
+
+Error 672 [3] occurred at disk power-on lifetime: 25659 hours (1069 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 05 00 00 00 08 08 63 00 00  Error: UNC at LBA = 0x00080863 = 526435
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 d0 00 00 00 08 09 00 40 08     00:50:35.696  READ FPDMA QUEUED
+  60 00 08 00 c8 00 00 00 08 08 f0 40 08     00:50:35.696  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 00 08 08 e8 40 08     00:50:35.696  READ FPDMA QUEUED
+  60 00 08 00 b8 00 00 00 08 08 e0 40 08     00:50:35.696  READ FPDMA QUEUED
+  60 00 08 00 b0 00 00 00 08 08 d8 40 08     00:50:35.696  READ FPDMA QUEUED
+
+Error 671 [2] occurred at disk power-on lifetime: 25659 hours (1069 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 05 00 00 00 08 08 63 00 00  Error: UNC at LBA = 0x00080863 = 526435
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 30 00 28 00 00 00 08 09 08 40 08     00:50:32.174  READ FPDMA QUEUED
+  60 00 08 00 00 00 00 00 08 08 f8 40 08     00:50:32.173  READ FPDMA QUEUED
+  60 00 08 00 f8 00 00 00 08 09 00 40 08     00:50:32.173  READ FPDMA QUEUED
+  60 00 08 00 f0 00 00 00 08 08 f0 40 08     00:50:32.173  READ FPDMA QUEUED
+  60 00 08 00 e8 00 00 00 08 08 e8 40 08     00:50:32.173  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -126,10 +208,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     21/31 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     22/40 Celsius
 Lifetime    Min/Max Temperature:     17/67 Celsius
-Specified Max Operating Temperature:    29 Celsius
+Specified Max Operating Temperature:    30 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -137,7 +219,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (108)
+Temperature History Size (Index):    128 (68)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -146,26 +228,26 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1212  ---  Lifetime Power-On Resets
-0x01  0x010  4           18794  ---  Power-on Hours
-0x01  0x018  6      2959893428  ---  Logical Sectors Written
-0x01  0x020  6        29043777  ---  Number of Write Commands
-0x01  0x028  6      3519488623  ---  Logical Sectors Read
-0x01  0x030  6        36284990  ---  Number of Read Commands
+0x01  0x008  4            1421  ---  Lifetime Power-On Resets
+0x01  0x010  4           25699  ---  Power-on Hours
+0x01  0x018  6      3911035839  ---  Logical Sectors Written
+0x01  0x020  6        33280406  ---  Number of Write Commands
+0x01  0x028  6      4315747757  ---  Logical Sectors Read
+0x01  0x030  6        42347167  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            4502  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            4500  ---  Head Flying Hours
-0x03  0x018  4           26379  ---  Head Load Events
-0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4               4  ---  Read Recovery Attempts
+0x03  0x008  4           11368  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           11366  ---  Head Flying Hours
+0x03  0x018  4           26999  ---  Head Load Events
+0x03  0x020  4               2  ---  Number of Reallocated Logical Sectors
+0x03  0x028  4             755  ---  Read Recovery Attempts
 0x03  0x030  4               3  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            1424  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x008  4             527  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4            1718  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  ---  Current Temperature
-0x05  0x010  1              30  N--  Average Short Term Temperature
-0x05  0x018  1              32  N--  Average Long Term Temperature
+0x05  0x008  1              40  ---  Current Temperature
+0x05  0x010  1              35  N--  Average Short Term Temperature
+0x05  0x018  1              33  N--  Average Long Term Temperature
 0x05  0x020  1              67  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x05  0x030  1              46  N--  Highest Average Short Term Temperature
@@ -177,9 +259,9 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            5603  ---  Number of Hardware Resets
-0x06  0x010  4            2509  ---  Number of ASR Events
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4            7397  ---  Number of Hardware Resets
+0x06  0x010  4            2834  ---  Number of ASR Events
+0x06  0x018  4               1  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

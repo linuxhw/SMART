@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.11.0-41-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.15.0-88-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    40,027,029,504 bytes [40.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
-Local Time is:    Fri Dec 10 04:55:17 2021 CET
+Local Time is:    Sat Nov  4 09:55:46 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -56,19 +56,19 @@ SMART Attributes Data Structure revision number: 11
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     P--R-K   100   253   020    -    0
-  3 Spin_Up_Time            POS--K   080   080   020    -    2516
-  4 Start_Stop_Count        -O--CK   094   094   008    -    4208
-  5 Reallocated_Sector_Ct   PO--CK   100   099   020    -    1
+  3 Spin_Up_Time            POS--K   080   080   020    -    2548
+  4 Start_Stop_Count        -O--CK   094   094   008    -    4289
+  5 Reallocated_Sector_Ct   PO--CK   100   099   020    -    0
   7 Seek_Error_Rate         PO-R--   100   093   023    -    0
-  9 Power_On_Hours          -O--C-   058   058   001    -    27722
+  9 Power_On_Hours          -O--C-   040   040   001    -    39599
  10 Spin_Retry_Count        -OS--K   100   100   000    -    0
  11 Calibration_Retry_Count PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   008    -    4156
+ 12 Power_Cycle_Count       -O--CK   094   094   008    -    4237
  13 Read_Soft_Error_Rate    PO-R--   100   093   023    -    0
-194 Temperature_Celsius     -O---K   084   075   042    -    43
-195 Hardware_ECC_Recovered  -O-RC-   100   001   000    -    3680191024
+194 Temperature_Celsius     -O---K   084   075   042    -    41
+195 Hardware_ECC_Recovered  -O-RC-   100   001   000    -    209530072
 196 Reallocated_Event_Count ----C-   100   253   020    -    0
-197 Current_Pending_Sector  -O--CK   100   099   020    -    1
+197 Current_Pending_Sector  -O--CK   100   099   020    -    0
 198 Offline_Uncorrectable   ----C-   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O-RC-   186   186   000    -    14
                             ||||||_ K auto-keep
@@ -85,7 +85,7 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 156 (device log contains only the most recent five errors)
+ATA Error Count: 158 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -99,6 +99,40 @@ ATA Error Count: 156 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 158 occurred at disk power-on lifetime: 37539 hours (1564 days + 3 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 05 cb 3f ac e3  Error: UNC 5 sectors at LBA = 0x03ac3fcb = 61620171
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 03 08 c8 3f ac e3 ac      00:04:25.819  READ DMA
+  c8 04 00 78 3b 5c e4 5c      00:04:25.800  READ DMA
+  c8 01 00 78 af 7e e1 7e      00:04:25.788  READ DMA
+  c8 02 08 e0 24 51 e2 51      00:04:25.771  READ DMA
+  c8 04 00 78 3a 5c e4 5c      00:04:25.752  READ DMA
+
+Error 157 occurred at disk power-on lifetime: 37539 hours (1564 days + 3 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 59 3d cb 3f ac e3  Error: UNC 61 sectors at LBA = 0x03ac3fcb = 61620171
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 03 40 c8 3f ac e3 ac      00:04:17.957  READ DMA
+  c8 00 20 18 5b 75 e0 75      00:04:17.953  READ DMA
+  c8 00 10 68 64 75 e0 75      00:04:17.937  READ DMA
+  c8 03 00 80 a3 b7 e3 b7      00:04:17.925  READ DMA
+  c8 04 08 b8 4f 51 e4 51      00:04:17.910  READ DMA
 
 Error 156 occurred at disk power-on lifetime: 23989 hours (999 days + 13 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -150,40 +184,6 @@ Error 154 occurred at disk power-on lifetime: 23989 hours (999 days + 13 hours)
   40 04 08 57 9e 42 e4 42      00:03:10.445  READ VERIFY SECTOR(S)
   c8 00 01 00 00 00 e0 00      00:03:10.445  READ DMA
   40 04 08 4f 9e 42 e4 42      00:03:10.445  READ VERIFY SECTOR(S)
-
-Error 153 occurred at disk power-on lifetime: 23989 hours (999 days + 13 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 d1 08 57 9e 42 e4  Error: UNC at LBA = 0x04429e57 = 71474775
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  40 04 08 57 9e 42 e4 42      00:03:10.445  READ VERIFY SECTOR(S)
-  c8 00 01 00 00 00 e0 00      00:03:10.445  READ DMA
-  40 04 08 4f 9e 42 e4 42      00:03:10.445  READ VERIFY SECTOR(S)
-  c8 00 01 00 00 00 e0 00      00:03:10.441  READ DMA
-  40 04 10 4f 9e 42 e4 42      00:03:04.137  READ VERIFY SECTOR(S)
-
-Error 152 occurred at disk power-on lifetime: 23989 hours (999 days + 13 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 d1 08 57 9e 42 e4  Error: UNC at LBA = 0x04429e57 = 71474775
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  40 04 10 4f 9e 42 e4 42      00:03:04.137  READ VERIFY SECTOR(S)
-  40 04 10 3f 9e 42 e4 42      00:03:04.137  READ VERIFY SECTOR(S)
-  40 04 20 5f 9e 42 e4 42      00:03:04.112  READ VERIFY SECTOR(S)
-  c8 00 01 00 00 00 e0 00      00:03:04.108  READ DMA
-  40 04 20 3f 9e 42 e4 42      00:02:57.799  READ VERIFY SECTOR(S)
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

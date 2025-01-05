@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.20-generic-2rosa2021.1-x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [i686-linux-5.15.103-generic-1rosa2021.1-i686] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,11 +10,11 @@ User Capacity:    60,011,642,880 bytes [60.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
-Local Time is:    Mon Nov 13 16:13:50 2023 MSK
+Local Time is:    Thu Sep 26 11:59:47 2024 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     1 (minimum power consumption with standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -57,26 +57,26 @@ recommended polling time: 	 (   2) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    56539
-  2 Throughput_Performance  P-S---   100   100   030    -    17825792
-  3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1961
-  5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  7 Seek_Error_Rate         POSR--   100   100   047    -    2606
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    122606
+  2 Throughput_Performance  P-S---   100   100   030    -    17826064
+  3 Spin_Up_Time            PO----   100   100   025    -    0
+  4 Start_Stop_Count        -O--CK   099   099   000    -    2045
+  5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    1 (1999 1)
+  7 Seek_Error_Rate         POSR--   100   100   047    -    1647
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Seconds        -O--CK   047   047   000    -    26873h+44m+51s
+  9 Power_On_Seconds        -O--CK   047   047   000    -    26905h+36m+51s
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1598
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    142
-193 Load_Cycle_Count        -O--CK   080   080   000    -    200191
-194 Temperature_Celsius     -O---K   100   100   000    -    39 (Min/Max 17/59)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2561
-196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 6792)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1621
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    144
+193 Load_Cycle_Count        -O--CK   080   080   000    -    201237
+194 Temperature_Celsius     -O---K   100   100   000    -    44 (Min/Max 17/59)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1566
+196 Reallocated_Event_Count -O--CK   100   100   000    -    1 (1 6791)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    16110
-203 Run_Out_Cancel          -O----   100   100   000    -    2632715599131
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    21622
+203 Run_Out_Cancel          -O----   100   100   000    -    2632733949208
 240 Head_Flying_Hours       -OSRCK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -100,7 +100,38 @@ Address    Access  R/W   Size  Description
 0xa1       GPL,SL  VS       1  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 26891 hours (1120 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 6b 00 00 00 2e 4f c0 60 00  Error: ICRC, ABRT at LBA = 0x002e4fc0 = 3035072
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 68 00 00 00 2e 4a 48 60 00     00:13:20.310  WRITE FPDMA QUEUED
+  61 00 ac 00 60 00 00 00 2e 49 98 60 00     00:13:20.307  WRITE FPDMA QUEUED
+  61 01 00 00 58 00 00 00 2e 48 98 60 00     00:13:20.303  WRITE FPDMA QUEUED
+  61 01 00 00 50 00 00 00 2e 47 98 60 00     00:13:20.299  WRITE FPDMA QUEUED
+  61 01 00 00 48 00 00 00 2e 46 98 60 00     00:13:20.296  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
