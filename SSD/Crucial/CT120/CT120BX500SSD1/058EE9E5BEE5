@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Sep 27 17:48:29 2024 
+Local Time is:    Mon Oct  7 15:57:20 2024 
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,8 +62,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    6080
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    4349
+  9 Power_On_Hours          -O--CK   100   100   050    -    6124
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    4384
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
 173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    178
@@ -80,8 +80,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   089   089   001    -    89
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    14264427669
-247 Host_Program_Page_Count -O--CK   100   100   050    -    445763364
+246 Total_LBAs_Written      -O--CK   100   100   050    -    14264536058
+247 Host_Program_Page_Count -O--CK   100   100   050    -    445766751
 248 FTL_Program_Page_Count  -O--CK   100   100   050    -    537092224
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -120,12 +120,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            4349  ---  Lifetime Power-On Resets
-0x01  0x010  4            6080  ---  Power-on Hours
-0x01  0x018  6      1379525781  ---  Logical Sectors Written
-0x01  0x020  6       219843852  ---  Number of Write Commands
-0x01  0x028  6      2483609573  ---  Logical Sectors Read
-0x01  0x030  6       362439262  ---  Number of Read Commands
+0x01  0x008  4            4384  ---  Lifetime Power-On Resets
+0x01  0x010  4            6124  ---  Power-on Hours
+0x01  0x018  6      1379634170  ---  Logical Sectors Written
+0x01  0x020  6       219847657  ---  Number of Write Commands
+0x01  0x028  6      2485362242  ---  Logical Sectors Read
+0x01  0x030  6       362496440  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              17  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -139,7 +139,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           29  Device-to-host register FISes sent due to a COMRESET
 
 
 

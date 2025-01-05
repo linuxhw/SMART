@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.12-300.fc39.x86_64] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.9-300.fc40.x86_64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Nov 30 17:15:53 2023 -03
+Local Time is:    Sat May 25 21:45:54 2024 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,27 +63,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    6586
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    1890
+  9 Power_On_Hours          -O--CK   100   100   050    -    7996
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    5309
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    164
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    139
+173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    167
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    157
 180 Unused_Reserve_NAND_Blk -O--CK   100   100   050    -    100
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    0
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   063   032   050    Past 37 (Min/Max 28/68)
+194 Temperature_Celsius     -O---K   066   027   050    Past 34 (Min/Max 28/73)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    5
-202 Percent_Lifetime_Remain ----CK   090   090   001    -    90
+202 Percent_Lifetime_Remain ----CK   089   089   001    -    89
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    21104419135
-247 Host_Program_Page_Count -O--CK   100   100   050    -    659513097
-248 FTL_Program_Page_Count  -O--CK   100   100   050    -    884147664
+246 Total_LBAs_Written      -O--CK   100   100   050    -    22623880477
+247 Host_Program_Page_Count -O--CK   100   100   050    -    706996264
+248 FTL_Program_Page_Count  -O--CK   100   100   050    -    930264528
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -134,16 +134,16 @@ Error 12 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
+  00 -- 00 00 00 00 00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 00 01 01 00 00 00 00 00 00 e0 08     00:00:00.000  READ LOG EXT
-  ec 00 00 01 01 00 00 00 00 00 00 40 08     00:00:00.000  IDENTIFY DEVICE
-  ec 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  IDENTIFY DEVICE
-  ec 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  IDENTIFY DEVICE
-  2f 00 00 01 01 00 00 08 00 00 30 e0 08     00:00:00.000  READ LOG EXT
+  60 00 08 01 28 00 00 24 00 f9 20 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 28 00 00 24 00 f9 20 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 28 00 00 24 00 f9 20 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 28 00 00 24 00 f9 20 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 28 00 00 24 00 f9 20 00 00     00:00:00.000  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -155,12 +155,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1890  ---  Lifetime Power-On Resets
-0x01  0x010  4            6586  ---  Power-on Hours
-0x01  0x018  6      3924549951  ---  Logical Sectors Written
-0x01  0x020  6       352661929  ---  Number of Write Commands
-0x01  0x028  6      3219399457  ---  Logical Sectors Read
-0x01  0x030  6       335431902  ---  Number of Read Commands
+0x01  0x008  4            5309  ---  Lifetime Power-On Resets
+0x01  0x010  4            7996  ---  Power-on Hours
+0x01  0x018  6      1149043997  ---  Logical Sectors Written
+0x01  0x020  6       359240366  ---  Number of Write Commands
+0x01  0x028  6       313611004  ---  Logical Sectors Read
+0x01  0x030  6       380422323  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              13  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

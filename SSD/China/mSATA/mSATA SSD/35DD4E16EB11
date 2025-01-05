@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jan 30 19:18:16 2022 +05
+Local Time is:    Thu Jun 22 21:55:13 2023 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,22 +62,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    3151
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    472
+  9 Power_On_Hours          -O--C-   100   100   000    -    7612
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1895
 161 Unknown_Attribute       -O--C-   100   100   000    -    101
 163 Unknown_Attribute       PO----   100   100   050    -    5
-165 Unknown_Attribute       ------   100   100   000    -    58
+165 Unknown_Attribute       ------   100   100   000    -    99
 166 Unknown_Attribute       ------   100   100   000    -    0
-167 Unknown_Attribute       ------   100   100   000    -    31
+167 Unknown_Attribute       ------   100   100   000    -    75
 172 Unknown_Attribute       -O--C-   100   100   000    -    0
 173 Unknown_Attribute       -O---K   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    144
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    971
 194 Temperature_Celsius     PO---K   060   060   000    -    40 (Min/Max 30/90)
 196 Reallocated_Event_Count ------   100   100   000    -    0
 198 Offline_Uncorrectable   -O--C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    1589
-242 Total_LBAs_Read         -O--C-   100   100   000    -    1390
+241 Total_LBAs_Written      -O--C-   100   100   000    -    4114
+242 Total_LBAs_Read         -O--C-   100   100   000    -    4194
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,10 +106,19 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      3065         -
-# 2  Extended offline    Completed without error       00%      2957         -
-# 3  Extended offline    Completed without error       00%      2673         -
-# 4  Extended offline    Completed without error       00%      2519         -
+# 1  Extended offline    Completed without error       00%      7501         -
+# 2  Extended offline    Completed without error       00%      7363         -
+# 3  Extended offline    Completed without error       00%      7221         -
+# 4  Extended offline    Completed without error       00%      6964         -
+# 5  Extended offline    Completed without error       00%      6672         -
+# 6  Extended offline    Completed without error       00%      6207         -
+# 7  Extended offline    Completed without error       00%      6021         -
+# 8  Extended offline    Completed without error       00%      5298         -
+# 9  Extended offline    Completed without error       00%      5259         -
+#10  Extended offline    Completed without error       00%      3065         -
+#11  Extended offline    Completed without error       00%      2957         -
+#12  Extended offline    Completed without error       00%      2673         -
+#13  Extended offline    Completed without error       00%      2519         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -128,10 +137,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             472  ---  Lifetime Power-On Resets
-0x01  0x010  4            3151  ---  Power-on Hours
-0x01  0x018  6      3334044431  ---  Logical Sectors Written
-0x01  0x028  6      2916952864  ---  Logical Sectors Read
+0x01  0x008  4            1895  ---  Lifetime Power-On Resets
+0x01  0x010  4            7612  ---  Power-on Hours
+0x01  0x018  6      8629459818  ---  Logical Sectors Written
+0x01  0x028  6      8796144273  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -139,10 +148,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              90  ---  Highest Temperature
 0x05  0x028  1              30  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            2626  ---  Number of Hardware Resets
+0x06  0x008  4           10333  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -157,8 +166,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           52  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           52  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            9  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

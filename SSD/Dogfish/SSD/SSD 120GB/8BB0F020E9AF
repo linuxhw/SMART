@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.3-arch1-1] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.5-artix1-1] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,11 +13,11 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Oct 12 01:18:21 2023 EDT
+Local Time is:    Sun Oct 15 00:01:11 2023 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -60,15 +60,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    1628
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    1231
+  9 Power_On_Hours          -O--CK   100   100   050    -    1674
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    1234
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    14
-164 Unknown_Attribute       -O--CK   100   100   050    -    123488
-165 Unknown_Attribute       -O--CK   100   100   050    -    649
+164 Unknown_Attribute       -O--CK   100   100   050    -    127046
+165 Unknown_Attribute       -O--CK   100   100   050    -    671
 166 Unknown_Attribute       -O--CK   100   100   050    -    12
-167 Unknown_Attribute       -O--CK   100   100   050    -    84
+167 Unknown_Attribute       -O--CK   100   100   050    -    86
 168 Unknown_Attribute       -O--CK   100   100   050    -    5050
 169 Unknown_Attribute       -O--CK   100   100   050    -    99
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
@@ -77,7 +77,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    1051
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    1052
 194 Temperature_Celsius     -O---K   100   100   050    -    35
 195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    0
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
@@ -85,9 +85,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    645
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    68400
-242 Total_LBAs_Read         ----CK   100   100   050    -    42198
-245 Unknown_Attribute       -O--CK   100   100   050    -    131122
+241 Total_LBAs_Written      ----CK   100   100   050    -    70656
+242 Total_LBAs_Read         ----CK   100   100   050    -    42504
+245 Unknown_Attribute       -O--CK   100   100   050    -    134530
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,7 +137,7 @@ Error 54571 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: ABRT
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
@@ -158,12 +158,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1231  ---  Lifetime Power-On Resets
-0x01  0x010  4            1628  ---  Power-on Hours
-0x01  0x018  6       187729000  ---  Logical Sectors Written
-0x01  0x020  6           31565  ---  Number of Write Commands
-0x01  0x028  6      2765492725  ---  Logical Sectors Read
-0x01  0x030  6           39444  ---  Number of Read Commands
+0x01  0x008  4            1234  ---  Lifetime Power-On Resets
+0x01  0x010  4            1674  ---  Power-on Hours
+0x01  0x018  6       335587624  ---  Logical Sectors Written
+0x01  0x020  6           41467  ---  Number of Write Commands
+0x01  0x028  6      2785569083  ---  Logical Sectors Read
+0x01  0x030  6           52695  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -177,5 +177,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

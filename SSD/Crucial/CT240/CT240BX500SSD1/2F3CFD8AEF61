@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Oct  9 12:25:13 2024 EDT
+Local Time is:    Fri Oct 11 11:10:47 2024 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,8 +63,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    716
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    797
+  9 Power_On_Hours          -O--CK   100   100   050    -    723
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    800
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
 173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    7
@@ -73,7 +73,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    17
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   067   031   050    Past 33 (Min/Max 29/69)
+194 Temperature_Celsius     -O---K   066   031   050    Past 34 (Min/Max 29/69)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
@@ -134,16 +134,16 @@ Error 5652 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 68 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 68 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 68 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 68 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 08 00 68 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
+  2f 00 00 01 01 00 00 00 00 00 00 e0 08     00:00:00.000  READ LOG EXT
+  ec 00 00 01 01 00 00 00 00 00 00 40 08     00:00:00.000  IDENTIFY DEVICE
+  ec 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  IDENTIFY DEVICE
+  ec 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  IDENTIFY DEVICE
+  2f 00 00 01 01 00 00 08 00 00 30 e0 08     00:00:00.000  READ LOG EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -155,12 +155,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             797  ---  Lifetime Power-On Resets
-0x01  0x010  4             716  ---  Power-on Hours
+0x01  0x008  4             800  ---  Lifetime Power-On Resets
+0x01  0x010  4             723  ---  Power-on Hours
 0x01  0x018  6      1085458073  ---  Logical Sectors Written
 0x01  0x020  6         9790050  ---  Number of Write Commands
-0x01  0x028  6       879191425  ---  Logical Sectors Read
-0x01  0x030  6        13109015  ---  Number of Read Commands
+0x01  0x028  6       879233605  ---  Logical Sectors Read
+0x01  0x030  6        13109735  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

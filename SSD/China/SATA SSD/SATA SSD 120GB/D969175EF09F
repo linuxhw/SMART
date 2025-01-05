@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.13-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SATA SSD
@@ -10,10 +10,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Nov 26 16:11:18 2022 -03
+Local Time is:    Sat May 27 09:36:58 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,27 +62,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    7006
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    653
+  9 Power_On_Hours          -O--C-   100   100   000    -    7690
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    856
 160 Unknown_Attribute       -O--C-   100   100   000    -    0
 161 Unknown_Attribute       -O--C-   100   100   000    -    572
 163 Unknown_Attribute       PO----   100   100   050    -    44
-164 Unknown_Attribute       ------   100   100   000    -    101095
-165 Unknown_Attribute       ------   100   100   000    -    93
-166 Unknown_Attribute       ------   100   100   000    -    50
-167 Unknown_Attribute       ------   100   100   000    -    82
+164 Unknown_Attribute       ------   100   100   000    -    121069
+165 Unknown_Attribute       ------   100   100   000    -    100
+166 Unknown_Attribute       ------   100   100   000    -    55
+167 Unknown_Attribute       ------   100   100   000    -    99
 172 Unknown_Attribute       -O--C-   100   100   000    -    0
 173 Unknown_Attribute       -O---K   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    256
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    369
 194 Temperature_Celsius     PO---K   060   060   000    -    40 (Min/Max 33/40)
 195 Hardware_ECC_Recovered  ------   060   060   000    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   -O--C-   100   100   000    -    0
 224 Unknown_SSD_Attribute   ------   100   100   000    -    0
-228 Power-off_Retract_Count ------   100   100   000    -    82
-241 Total_LBAs_Written      -O--C-   100   100   000    -    147515
-242 Total_LBAs_Read         -O--C-   100   100   000    -    189900
-245 Unknown_Attribute       -O--C-   100   100   000    -    230067
+228 Power-off_Retract_Count ------   100   100   000    -    99
+241 Total_LBAs_Written      -O--C-   100   100   000    -    170948
+242 Total_LBAs_Read         -O--C-   100   100   000    -    198598
+245 Unknown_Attribute       -O--C-   100   100   000    -    264946
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,7 +111,9 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      6973         -
+# 1  Short offline       Completed without error       00%      7397         -
+# 2  Short offline       Completed without error       00%      7023         -
+# 3  Short offline       Completed without error       00%      6973         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -130,10 +132,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             653  ---  Lifetime Power-On Resets
-0x01  0x010  4            7006  ---  Power-on Hours
-0x01  0x018  6      9667602156  ---  Logical Sectors Written
-0x01  0x028  6     12445286457  ---  Logical Sectors Read
+0x01  0x008  4             856  ---  Lifetime Power-On Resets
+0x01  0x010  4            7690  ---  Power-on Hours
+0x01  0x018  6     11203280722  ---  Logical Sectors Written
+0x01  0x028  6     13015363882  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -143,7 +145,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

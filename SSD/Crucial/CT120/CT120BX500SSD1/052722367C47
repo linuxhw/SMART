@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Sep  2 20:52:35 2024 EDT
+Local Time is:    Mon Sep  2 21:05:09 2024 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -73,7 +73,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    17
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   066   032   050    Past 34 (Min/Max 19/68)
+194 Temperature_Celsius     -O---K   068   032   050    Past 32 (Min/Max 19/68)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
@@ -81,9 +81,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   094   094   001    -    94
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    3988281938
-247 Host_Program_Page_Count -O--CK   100   100   050    -    124633810
-248 FTL_Program_Page_Count  -O--CK   100   100   050    -    136056128
+246 Total_LBAs_Written      -O--CK   100   100   050    -    3988370786
+247 Host_Program_Page_Count -O--CK   100   100   050    -    124636587
+248 FTL_Program_Page_Count  -O--CK   100   100   050    -    136111424
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -134,16 +134,16 @@ Error 6 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 a0 00  Error: ABRT at LBA = 0x00000000 = 0
+  04 -- 51 00 00 00 00 00 00 00 00 a0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 48 00 68 00 00 d3 00 19 c0 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 48 00 68 00 00 d3 00 19 c0 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 48 00 68 00 00 d3 00 19 c0 00 00     00:00:00.000  READ FPDMA QUEUED
-  60 00 48 00 68 00 00 d3 00 19 c0 00 00     00:00:00.000  READ FPDMA QUEUED
+  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.000  FLUSH CACHE
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  e7 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:00.000  FLUSH CACHE
+  61 00 10 88 88 00 03 7e 00 ce 68 40 08     00:00:00.000  WRITE FPDMA QUEUED
+  61 00 08 58 58 00 06 12 00 d8 88 40 08     00:00:00.000  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -158,10 +158,10 @@ Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4           52458  ---  Lifetime Power-On Resets
 0x01  0x010  4           12830  ---  Power-on Hours
-0x01  0x018  6      3988281938  ---  Logical Sectors Written
-0x01  0x020  6        50304055  ---  Number of Write Commands
-0x01  0x028  6      3834169369  ---  Logical Sectors Read
-0x01  0x030  6        43897394  ---  Number of Read Commands
+0x01  0x018  6      3988370834  ---  Logical Sectors Written
+0x01  0x020  6        50312650  ---  Number of Write Commands
+0x01  0x028  6      3834586833  ---  Logical Sectors Read
+0x01  0x030  6        43900091  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
