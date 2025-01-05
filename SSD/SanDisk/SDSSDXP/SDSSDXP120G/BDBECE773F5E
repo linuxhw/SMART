@@ -1,3 +1,6 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-5.15.127-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Marvell based SanDisk SSDs
 Device Model:     SanDisk SDSSDXP120G
@@ -7,16 +10,18 @@ Firmware Version: R1311
 User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Feb 14 07:07:12 2018 EET
+Local Time is:    Tue Jan 16 13:35:42 2024 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
@@ -55,25 +60,25 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   253   100   ---    -    775
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    265
-166 Min_W/E_Cycle           -O--CK   100   100   ---    -    1
+  9 Power_On_Hours          -O--CK   253   100   ---    -    14413
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    4061
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    48
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    26
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    65
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    258
 169 Total_Bad_Block         -O--CK   100   100   ---    -    208
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    11
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    47
+173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    155
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    1133
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   070   040   ---    -    30 (Min/Max 22/40)
+194 Temperature_Celsius     -O---K   063   149   ---    -    37 (0 149 0 17 0)
 212 SATA_PHY_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    36
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    0 0 1296
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    1517
-241 Total_Writes_GiB        ----CK   253   253   ---    -    640
-242 Total_Reads_GiB         ----CK   253   253   ---    -    798
-243 Unknown_Attribute       -O--CK   100   100   ---    -    0
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    19892
+241 Total_Writes_GiB        ----CK   253   253   ---    -    7833
+242 Total_Reads_GiB         ----CK   253   253   ---    -    13335
+243 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -91,7 +96,7 @@ Address    Access  R/W   Size  Description
 0x04       GPL,SL  R/O      8  Device Statistics log
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
@@ -100,7 +105,26 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     14398         -
+# 2  Short offline       Completed without error       00%     14382         -
+# 3  Short offline       Completed without error       00%     14381         -
+# 4  Short offline       Completed without error       00%     14367         -
+# 5  Short offline       Completed without error       00%     14355         -
+# 6  Short offline       Completed without error       00%     14354         -
+# 7  Short offline       Completed without error       00%     13870         -
+# 8  Short offline       Completed without error       00%     13858         -
+# 9  Short offline       Completed without error       00%     13846         -
+#10  Extended offline    Completed without error       00%     13845         -
+#11  Extended offline    Completed without error       00%     13119         -
+#12  Short offline       Completed without error       00%     12995         -
+#13  Short offline       Completed without error       00%     12994         -
+#14  Short offline       Completed without error       00%     10497         -
+#15  Short offline       Completed without error       00%     10493         -
+#16  Short offline       Completed without error       00%     10478         -
+#17  Short offline       Completed without error       00%     10466         -
+#18  Short offline       Completed without error       00%     10460         -
+#19  Short offline       Completed without error       00%     10446         -
 
 Selective Self-tests/Logging not supported
 
@@ -109,10 +133,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

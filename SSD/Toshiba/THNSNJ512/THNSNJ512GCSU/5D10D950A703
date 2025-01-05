@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Dec 11 15:55:26 2023 CET
+Local Time is:    Mon Dec 11 16:35:57 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -70,17 +70,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    27650
+  9 Power_On_Hours          -O--C-   100   100   000    -    27651
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
  12 Power_Cycle_Count       -O--C-   100   100   000    -    3148
 167 SSD_Protect_Mode        -O---K   100   100   000    -    0
-168 SATA_PHY_Error_Count    -O--C-   100   100   000    -    958
+168 SATA_PHY_Error_Count    -O--C-   100   100   000    -    959
 169 Bad_Block_Count         PO--C-   100   100   010    -    100
 170 Unknown_Attribute       PO--C-   100   100   010    -    0
 173 Erase_Count             -O--C-   188   188   000    -    0
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    290
-194 Temperature_Celsius     -O---K   070   045   000    -    30 (Min/Max 4/55)
+194 Temperature_Celsius     -O---K   068   045   000    -    32 (Min/Max 4/55)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
                             ||||||_ K auto-keep
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 957 (device log contains only the most recent 256 errors)
+Device Error Count: 958 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,23 @@ Device Error Count: 957 (device log contains only the most recent 256 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 958 [189] occurred at disk power-on lifetime: 27651 hours (1152 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 88 00 00 0a ad 80 00 40 08  Error: ICRC, ABRT at LBA = 0x0aad8000 = 179142656
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 04 a8 00 88 00 00 0a ad 80 00 40 08     02:16:52.981  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     02:16:51.590  FLUSH CACHE EXT
+  61 00 08 00 40 00 00 1d d5 7b e8 40 08     02:16:51.590  WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     02:16:51.589  FLUSH CACHE EXT
+  61 00 c0 00 28 00 00 1d d5 7b 28 40 08     02:16:51.588  WRITE FPDMA QUEUED
 
 Error 957 [188] occurred at disk power-on lifetime: 27650 hours (1152 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -245,23 +262,6 @@ Error 951 [182] occurred at disk power-on lifetime: 27648 hours (1152 days + 0 h
   61 01 f0 00 50 00 00 30 53 54 f8 40 08     00:07:59.020  WRITE FPDMA QUEUED
   61 03 e0 00 48 00 00 30 53 b4 b8 40 08     00:07:59.017  WRITE FPDMA QUEUED
 
-Error 950 [181] occurred at disk power-on lifetime: 27648 hours (1152 days + 0 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 b8 00 00 23 d0 fe 40 40 08  Error: ICRC, ABRT at LBA = 0x23d0fe40 = 600899136
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 02 c0 00 b8 00 00 23 d0 fe 40 40 08     00:07:38.272  WRITE FPDMA QUEUED
-  61 05 40 00 b0 00 00 23 d0 f9 00 40 08     00:07:38.270  WRITE FPDMA QUEUED
-  61 02 c0 00 a8 00 00 23 d0 f6 40 40 08     00:07:38.210  WRITE FPDMA QUEUED
-  61 05 40 00 a0 00 00 23 d0 f1 00 40 08     00:07:38.208  WRITE FPDMA QUEUED
-  61 02 c0 00 98 00 00 23 d0 ee 40 40 08     00:07:38.208  WRITE FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%     27582         -
@@ -298,20 +298,20 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       3 (0x0003)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:     30/33 Celsius
 Lifetime    Min/Max Temperature:      4/55 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 04 00 01 01 00 05 05 00 00 00 00 00 00 00
-00 01 00 00 6b e6 ee 05 04 04 00 00 00 00 00 06
+00 01 00 00 eb ef ee 05 04 04 00 00 00 00 00 06
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/80 Celsius
-Temperature History Size (Index):    128 (85)
+Temperature History Size (Index):    128 (124)
 
 SCT Error Recovery Control:
            Read:    600 (60.0 seconds)
@@ -321,16 +321,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            3148  ---  Lifetime Power-On Resets
-0x01  0x018  6     68847917707  ---  Logical Sectors Written
-0x01  0x020  6      1490341980  ---  Number of Write Commands
-0x01  0x028  6    121452156832  ---  Logical Sectors Read
-0x01  0x030  6      2772977703  ---  Number of Read Commands
+0x01  0x018  6     68849789168  ---  Logical Sectors Written
+0x01  0x020  6      1490366429  ---  Number of Write Commands
+0x01  0x028  6    121456886750  ---  Logical Sectors Read
+0x01  0x030  6      2773031925  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               1  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              19  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              24  ---  Average Short Term Temperature
+0x05  0x008  1              32  ---  Current Temperature
+0x05  0x010  1              25  ---  Average Short Term Temperature
 0x05  0x018  1              24  ---  Average Long Term Temperature
 0x05  0x020  1              42  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
@@ -343,8 +343,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            7978  ---  Number of Hardware Resets
-0x06  0x018  4             958  ---  Number of Interface CRC Errors
+0x06  0x008  4            7985  ---  Number of Hardware Resets
+0x06  0x018  4             959  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              12  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -355,20 +355,20 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            9  Command failed due to ICRC error
-0x0002  4            9  R_ERR response for data FIS
+0x0001  2           10  Command failed due to ICRC error
+0x0002  4           10  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            9  R_ERR response for host-to-device data FIS
+0x0004  2           10  R_ERR response for host-to-device data FIS
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           19  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           20  Device-to-host register FISes sent due to a COMRESET
-0x000b  4            9  CRC errors within host-to-device FIS
-0x000d  4           10  Non-CRC errors within host-to-device FIS
-0x000f  2            9  R_ERR response for host-to-device data FIS, CRC
-0x0010  2           10  R_ERR response for host-to-device data FIS, non-CRC
+0x0009  4           26  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           27  Device-to-host register FISes sent due to a COMRESET
+0x000b  4           10  CRC errors within host-to-device FIS
+0x000d  4           11  Non-CRC errors within host-to-device FIS
+0x000f  2           10  R_ERR response for host-to-device data FIS, CRC
+0x0010  2           11  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
 

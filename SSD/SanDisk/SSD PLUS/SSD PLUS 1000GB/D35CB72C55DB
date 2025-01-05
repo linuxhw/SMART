@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar 11 09:18:20 2023 CET
+Local Time is:    Thu Nov 16 09:04:15 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,29 +61,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2329
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    228
-165 Total_Write/Erase_Count -O--CK   100   100   000    -    398
-166 Min_W/E_Cycle           -O--CK   100   100   ---    -    2
+  9 Power_On_Hours          -O--CK   100   100   000    -    5423
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    489
+165 Total_Write/Erase_Count -O--CK   100   100   000    -    634
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    3
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    0
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    5
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    9
 169 Total_Bad_Block         -O--CK   100   100   ---    -    1280
 170 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    2
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    15
+173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    3
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    25
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+187 Reported_Uncorrect      -O--CK   100   100   000    -    7060
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   065   053   000    -    35 (Min/Max 9/53)
+194 Temperature_Celsius     -O---K   067   053   000    -    33 (Min/Max 9/53)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    269 40 269
+230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    337 60 337
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   005    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    2224
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    6228
-241 Total_Writes_GiB        ----CK   100   100   000    -    2229
-242 Total_Reads_GiB         ----CK   100   100   000    -    2720
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    2948
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    9913
+241 Total_Writes_GiB        ----CK   100   100   000    -    3555
+242 Total_Reads_GiB         ----CK   100   100   000    -    6092
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -112,9 +112,159 @@ Address    Access  R/W   Size  Description
 0xa7       GPL,SL  VS       1  Device vendor specific log
 0xa9       GPL,SL  VS       3  Device vendor specific log
 
-Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
 SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
-No Errors Logged
+Device Error Count: 7060 (device log contains only the most recent 64 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 7060 [4] occurred at disk power-on lifetime: 5423 hours (225 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 7c 00 00 6d b4 00 3c a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:49.519  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:42.506  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:42.426  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:32.038  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:31.874  READ LOG EXT
+
+Error 7059 [3] occurred at disk power-on lifetime: 5423 hours (225 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6d b3 ff c0 a0 00  Error: UNC
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:42.506  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:42.426  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:32.038  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:31.874  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:31.791  FLUSH CACHE EXT
+
+Error 7058 [2] occurred at disk power-on lifetime: 5423 hours (225 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6d b3 ff c0 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:42.426  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:32.038  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:31.874  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:31.791  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:18.906  READ LOG EXT
+
+Error 7057 [1] occurred at disk power-on lifetime: 5423 hours (225 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6d b3 ff c0 a0 00  Error: UNC
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:32.038  READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:31.874  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:31.791  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:18.906  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:18.821  FLUSH CACHE EXT
+
+Error 7056 [0] occurred at disk power-on lifetime: 5423 hours (225 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 6d b3 ff c0 a0 00  Error: UNC
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:31.874  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:31.791  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:18.906  READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     00:06:18.821  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 08 30 a0 00     00:06:10.729  READ LOG EXT
+
+Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
+Error 7055 [63] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 45 16d+13:40:55.765  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 44 13d+06:08:44.612  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 43  9d+22:36:33.459  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 42  6d+15:04:22.306  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 41  3d+07:32:11.153  NOP [Abort queued commands]
+
+Error 7054 [62] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 35 16d+13:40:55.765  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 34 13d+06:08:44.612  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 33  9d+22:36:33.459  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 32  6d+15:04:22.306  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 31  3d+07:32:11.153  NOP [Abort queued commands]
+
+Error 7053 [61] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 25 16d+13:40:55.765  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 24 13d+06:08:44.612  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 23  9d+22:36:33.459  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 22  6d+15:04:22.306  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 21  3d+07:32:11.153  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -126,13 +276,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             228  ---  Lifetime Power-On Resets
-0x01  0x010  4            2329  ---  Power-on Hours
-0x01  0x018  6      4674781485  ---  Logical Sectors Written
-0x01  0x028  6      5705422977  ---  Logical Sectors Read
-0x01  0x038  6            2329  ---  Date and Time TimeStamp
+0x01  0x008  4             489  ---  Lifetime Power-On Resets
+0x01  0x010  4            5423  ---  Power-on Hours
+0x01  0x018  6      7456148883  ---  Logical Sectors Written
+0x01  0x028  6     12777381468  ---  Logical Sectors Read
+0x01  0x038  6            5423  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              35  ---  Current Temperature
+0x05  0x008  1              33  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              49  ---  Highest Temperature
@@ -146,7 +296,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-81-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.9.3-76060903-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Silicon Motion based SSDs
@@ -9,10 +9,11 @@ Firmware Version: N1126KB
 User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
+TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Aug 22 22:08:16 2021 EEST
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Fri Dec 20 23:39:33 2024 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -27,14 +28,14 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(   57) seconds.
+data collection: 		(    0) seconds.
 Offline data collection
 capabilities: 			 (0x71) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -61,34 +62,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    329
- 12 Power_Cycle_Count       ------   100   100   000    -    1411
+  9 Power_On_Hours          ------   100   100   000    -    452
+ 12 Power_Cycle_Count       ------   100   100   000    -    2576
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    45
 163 Initial_Bad_Block_Count ------   100   100   000    -    0
-164 Total_Erase_Count       ------   100   100   000    -    36546
-165 Max_Erase_Count         ------   100   100   000    -    88
-166 Min_Erase_Count         ------   100   100   000    -    0
-167 Average_Erase_Count     ------   100   100   000    -    35
+164 Total_Erase_Count       ------   100   100   000    -    59835
+165 Max_Erase_Count         ------   100   100   000    -    113
+166 Min_Erase_Count         ------   100   100   000    -    14
+167 Average_Erase_Count     ------   100   100   000    -    58
 168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
 169 Remaining_Lifetime_Perc ------   100   100   000    -    99
 175 Program_Fail_Count_Chip ------   100   100   000    -    0
 176 Erase_Fail_Count_Chip   ------   100   100   000    -    0
-177 Wear_Leveling_Count     ------   100   100   050    -    0
+177 Wear_Leveling_Count     ------   100   100   050    -    4
 178 Runtime_Invalid_Blk_Cnt ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    260
-194 Temperature_Celsius     ------   100   100   000    -    37
-195 Hardware_ECC_Recovered  ------   100   100   000    -    8885
+192 Power-Off_Retract_Count ------   100   100   000    -    371
+194 Temperature_Celsius     ------   100   100   000    -    18
+195 Hardware_ECC_Recovered  ------   100   100   000    -    21343
 196 Reallocated_Event_Count ------   100   100   016    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
-199 UDMA_CRC_Error_Count    ------   100   100   050    -    4
+199 UDMA_CRC_Error_Count    ------   100   100   050    -    22
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    76706
-242 Host_Reads_32MiB        ------   100   100   000    -    77204
-245 TLC_Writes_32MiB        ------   100   100   000    -    146184
+241 Host_Writes_32MiB       ------   100   100   000    -    127952
+242 Host_Reads_32MiB        ------   100   100   000    -    187664
+245 TLC_Writes_32MiB        ------   100   100   000    -    239340
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,8 +116,7 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       326         -
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -125,7 +125,7 @@ SMART Selective self-test log data structure revision number 1
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
-    7        0    65535  Read_scanning was completed without error
+    6        0    65535  Read_scanning was never started
 Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
@@ -135,21 +135,21 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1411  ---  Lifetime Power-On Resets
-0x01  0x010  4             329  ---  Power-on Hours
-0x01  0x018  6       732094697  ---  Logical Sectors Written
-0x01  0x020  6        61658091  ---  Number of Write Commands
-0x01  0x028  6       764702973  ---  Logical Sectors Read
-0x01  0x030  6        81562157  ---  Number of Read Commands
+0x01  0x008  4            2576  ---  Lifetime Power-On Resets
+0x01  0x010  4             452  ---  Power-on Hours
+0x01  0x018  6      4090510915  ---  Logical Sectors Written
+0x01  0x020  6        88431332  ---  Number of Write Commands
+0x01  0x028  6      3708860644  ---  Logical Sectors Read
+0x01  0x030  6       167809730  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             274  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             393  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (empty) ==
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3813  ---  Number of Hardware Resets
-0x06  0x018  4               4  ---  Number of Interface CRC Errors
+0x06  0x008  4            9689  ---  Number of Hardware Resets
+0x06  0x018  4              22  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

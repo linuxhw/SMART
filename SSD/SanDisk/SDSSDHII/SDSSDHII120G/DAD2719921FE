@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-68.5rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-5.10.184-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Marvell based SanDisk SSDs
@@ -11,10 +11,11 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Mar  9 17:50:14 2020 MSK
+Local Time is:    Tue Jun 18 01:16:55 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,26 +61,26 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   253   100   ---    -    6779
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    2084
-165 Total_Write/Erase_Count -O--CK   100   100   ---    -    670112941370
-166 Min_W/E_Cycle           -O--CK   100   100   ---    -    9
+  9 Power_On_Hours          -O--CK   253   100   ---    -    13583
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    3749
+165 Total_Write/Erase_Count -O--CK   100   100   ---    -    816169486033
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    15
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    13
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    52
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    57
 169 Total_Bad_Block         -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    22
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    180
+173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    35
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    237
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   072   051   ---    -    28 (Min/Max 20/51)
+194 Temperature_Celsius     -O---K   069   051   ---    -    31 (Min/Max 20/51)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    1542 1064 1542
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    1542 1792 1792
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    2504
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   ---    -    6997
-241 Total_Writes_GiB        ----CK   253   253   ---    -    5313
-242 Total_Reads_GiB         ----CK   253   253   ---    -    7935
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    4060
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   ---    -    9152
+241 Total_Writes_GiB        ----CK   253   253   ---    -    7170
+242 Total_Reads_GiB         ----CK   253   253   ---    -    9983
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -108,7 +109,8 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     12546         -
 
 Selective Self-tests/Logging not supported
 
@@ -117,13 +119,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2084  ---  Lifetime Power-On Resets
-0x01  0x018  6   1025272370078  ---  Logical Sectors Written
-0x01  0x020  6        69131217  ---  Number of Write Commands
-0x01  0x028  6   1350221127433  ---  Logical Sectors Read
-0x01  0x030  6        64166645  ---  Number of Read Commands
+0x01  0x008  4            3749  ---  Lifetime Power-On Resets
+0x01  0x018  6   1557013857353  ---  Logical Sectors Written
+0x01  0x020  6        94755432  ---  Number of Write Commands
+0x01  0x028  6   2118223902506  ---  Logical Sectors Read
+0x01  0x030  6       115458520  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -135,7 +137,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 
 
 

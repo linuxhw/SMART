@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.0-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Sep  1 15:43:13 2023 BST
+Local Time is:    Sun Jul 21 12:08:54 2024 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,24 +61,24 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   253   100   ---    -    1466
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    468
+  9 Power_On_Hours          -O--CK   253   100   ---    -    2455
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    1133
 166 Min_W/E_Cycle           -O--CK   100   100   ---    -    1
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    17
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    43
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    70
 169 Total_Bad_Block         -O--CK   100   100   ---    -    110
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    13
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    48
+173 Avg_Write/Erase_Count   -O--CK   100   100   ---    -    28
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   ---    -    91
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   059   060   ---    -    41 (Min/Max 15/60)
+194 Temperature_Celsius     -O---K   048   062   ---    -    52 (Min/Max 15/62)
 212 SATA_PHY_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    0 0 43
+230 Perc_Write/Erase_Count  -O--CK   100   100   ---    -    0 0 93
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   004    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    1785
-241 Total_Writes_GiB        ----CK   253   253   ---    -    780
-242 Total_Reads_GiB         ----CK   253   253   ---    -    709
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    3781
+241 Total_Writes_GiB        ----CK   253   253   ---    -    1858
+242 Total_Reads_GiB         ----CK   253   253   ---    -    1332
 243 Unknown_Marvell_Attr    -O--CK   100   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -106,7 +106,16 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      2454         -
+# 2  Short offline       Completed without error       00%         0         -
+# 3  Short offline       Interrupted (host reset)      00%      2445         -
+# 4  Short offline       Interrupted (host reset)      00%      2434         -
+# 5  Short offline       Completed without error       00%      2427         -
+# 6  Short offline       Completed without error       00%      2420         -
+# 7  Short offline       Completed without error       00%      2413         -
+# 8  Short offline       Interrupted (host reset)      00%      2409         -
+# 9  Short offline       Completed without error       00%      2394         -
 
 Selective Self-tests/Logging not supported
 
@@ -127,5 +136,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
 

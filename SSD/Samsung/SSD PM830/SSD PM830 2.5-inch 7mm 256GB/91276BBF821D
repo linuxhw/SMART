@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.11.16-lqx1-1-lqx] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.7.0-zen3-1-zen] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Samsung based SSDs
@@ -10,10 +10,11 @@ Firmware Version: CXM02D1Q
 User Capacity:    256,060,514,304 bytes [256 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Apr 28 00:07:43 2021 EDT
+Local Time is:    Mon Jan 15 20:52:10 2024 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -59,11 +60,11 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   093   093   000    -    32391
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    4268
+  9 Power_On_Hours          -O--CK   091   091   000    -    41011
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5003
 175 Program_Fail_Count_Chip -O--CK   100   100   010    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   010    -    0
-177 Wear_Leveling_Count     PO--C-   089   089   010    -    394
+177 Wear_Leveling_Count     PO--C-   088   088   010    -    425
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   094   094   010    -    244
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   094   094   010    -    478
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   094   094   010    -    7586
@@ -75,8 +76,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   253   253   000    -    405
 232 Available_Reservd_Space PO--C-   094   094   000    -    3788
-241 Total_LBAs_Written      -O--CK   124   124   000    -    21178970147
-242 Total_LBAs_Read         -O--CK   246   246   000    -    38094748690
+241 Total_LBAs_Written      -O--CK   010   010   000    -    26134287583
+242 Total_LBAs_Read         -O--CK   144   144   000    -    42517280874
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,8 +104,10 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%         1         -
-# 2  Short offline       Completed without error       00%         1         -
+# 1  Short offline       Completed without error       00%     40105         -
+# 2  Extended offline    Completed without error       00%     40105         -
+# 3  Extended offline    Completed without error       00%         1         -
+# 4  Short offline       Completed without error       00%         1         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -134,13 +137,11 @@ ID      Size     Value  Description
 0x0007  2         4096  R_ERR response for host-to-device non-data FIS
 0x0008  2         7952  Device-to-host non-data FIS retries
 0x0009  2         7953  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2         9259  Device-to-host register FISes sent due to a COMRESET
+0x000a  2        12339  Device-to-host register FISes sent due to a COMRESET
 0x000b  2         6145  CRC errors within host-to-device FIS
 0x000d  2         7953  Non-CRC errors within host-to-device FIS
 0x000f  2         8176  R_ERR response for host-to-device data FIS, CRC
 0x0010  2           15  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2        49153  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2        12112  R_ERR response for host-to-device non-data FIS, non-CRC
-
-
 

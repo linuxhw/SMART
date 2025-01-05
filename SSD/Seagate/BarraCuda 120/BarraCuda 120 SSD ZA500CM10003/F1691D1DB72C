@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.15.0-33-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.2.0-26-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     Seagate BarraCuda 120 SSD ZA500CM10003
@@ -10,10 +10,11 @@ User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Jun 28 09:10:23 2022 MDT
+Local Time is:    Mon Aug 28 10:21:00 2023 MDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,24 +62,24 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    11850
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    138
+  9 Power_On_Hours          -O--C-   100   100   000    -    22018
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    155
  16 Unknown_Attribute       -O--C-   100   100   000    -    1008
  17 Unknown_Attribute       -O--C-   100   100   000    -    1008
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   010    -    276
-173 Unknown_Attribute       -O--C-   100   100   000    -    4297982047
-174 Unknown_Attribute       -O--C-   100   100   000    -    75
+173 Unknown_Attribute       -O--C-   100   100   000    -    249114787998
+174 Unknown_Attribute       -O--C-   100   100   000    -    80
 177 Wear_Leveling_Count     ------   100   100   000    -    6
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    75
-194 Temperature_Celsius     PO---K   097   081   000    -    30 (Min/Max 18/46)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    80
+194 Temperature_Celsius     PO---K   096   081   000    -    31 (Min/Max 18/46)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Temperature_Celsius     PO--C-   100   100   000    -    96
+231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    93
 232 Available_Reservd_Space PO--C-   100   100   000    -    0
-233 Media_Wearout_Indicator PO-R--   100   100   000    -    8034
-235 Unknown_Attribute       PO-R--   100   100   000    -    16850513856
-241 Total_LBAs_Written      -O--C-   100   100   000    -    6208
-242 Total_LBAs_Read         -O--C-   100   100   000    -    2569
+233 Media_Wearout_Indicator PO-R--   100   100   000    -    20929
+235 Unknown_Attribute       PO-R--   100   100   000    -    43892946432
+241 Total_LBAs_Written      -O--C-   100   100   000    -    12706
+242 Total_LBAs_Read         -O--C-   100   100   000    -    4030
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -129,35 +130,35 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             138  ---  Lifetime Power-On Resets
-0x01  0x010  4           11850  ---  Power-on Hours
-0x01  0x018  6     13020274853  ---  Logical Sectors Written
-0x01  0x020  6     13142420533  ---  Number of Write Commands
-0x01  0x028  6      5388823547  ---  Logical Sectors Read
-0x01  0x030  6     12974534863  ---  Number of Read Commands
-0x01  0x038  6     42660226937  ---  Date and Time TimeStamp
+0x01  0x008  4             155  ---  Lifetime Power-On Resets
+0x01  0x010  4           22018  ---  Power-on Hours
+0x01  0x018  6     26647917580  ---  Logical Sectors Written
+0x01  0x020  6     13492634670  ---  Number of Write Commands
+0x01  0x028  6      8452630597  ---  Logical Sectors Read
+0x01  0x030  6     13034204126  ---  Number of Read Commands
+0x01  0x038  6     79267032554  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             180  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             243  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
+0x05  0x008  1              31  ---  Current Temperature
 0x05  0x010  1              30  ---  Average Short Term Temperature
-0x05  0x018  1               -  ---  Average Long Term Temperature
+0x05  0x018  1              30  ---  Average Long Term Temperature
 0x05  0x020  1              46  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
-0x05  0x030  1              31  ---  Highest Average Short Term Temperature
+0x05  0x030  1              38  ---  Highest Average Short Term Temperature
 0x05  0x038  1              29  ---  Lowest Average Short Term Temperature
-0x05  0x040  1               -  ---  Highest Average Long Term Temperature
-0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
+0x05  0x040  1              30  ---  Highest Average Long Term Temperature
+0x05  0x048  1              30  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             359  ---  Number of Hardware Resets
+0x06  0x008  4             478  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

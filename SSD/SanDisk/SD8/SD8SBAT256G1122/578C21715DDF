@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.87-1.el7.3.x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.52-1.el7.3.x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5417
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Feb 27 13:42:58 2023 MSK
+Local Time is:    Tue Jan 30 15:30:19 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -36,7 +36,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(  120) seconds.
+data collection: 		(    0) seconds.
 Offline data collection
 capabilities: 			 (0x11) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -60,25 +60,25 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   222   100   000    -    12766
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3357
+  9 Power_On_Hours          -O--CK   216   100   000    -    17624
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3372
 166 Unknown_Attribute       -O--CK   100   100   000    -    1
 167 Unknown_Attribute       -O--CK   100   100   000    -    0
-168 Unknown_Attribute       -O--CK   100   100   000    -    448
+168 Unknown_Attribute       -O--CK   100   100   000    -    498
 169 Unknown_Attribute       -O--CK   100   100   000    -    310
 170 Unknown_Attribute       -O--CK   100   100   000    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       -O--CK   100   100   ---    -    499
-174 Unknown_Attribute       -O--CK   100   100   000    -    2727
+173 Unknown_Attribute       -O--CK   100   100   ---    -    553
+174 Unknown_Attribute       -O--CK   100   100   000    -    2742
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   055   100   000    -    45 (Min/Max 0/69)
+194 Temperature_Celsius     -O---K   056   100   000    -    44 (Min/Max 0/69)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    1
-230 Unknown_SSD_Attribute   -O--CK   100   100   000    -    4383
+230 Unknown_SSD_Attribute   -O--CK   100   100   000    -    4879
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    81586
-241 Total_LBAs_Written      ----CK   253   253   000    -    17005
-242 Total_LBAs_Read         ----CK   253   253   000    -    20532
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    90525
+241 Total_LBAs_Written      ----CK   253   253   000    -    22054
+242 Total_LBAs_Read         ----CK   253   253   000    -    23983
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 
 Warning! SMART Extended Comprehensive Error Log Structure error: invalid SMART checksum.
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 1
+Device Error Count: 39 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,7 +119,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1 [0] occurred at disk power-on lifetime: 65535 hours (2730 days + 15 hours)
+Error 39 [3] occurred at disk power-on lifetime: 65535 hours (2730 days + 15 hours)
   When the command that caused the error occurred, the device was in a vendor specific state.
 
   After command completion occurred, registers were:
@@ -136,27 +136,78 @@ Error 1 [0] occurred at disk power-on lifetime: 65535 hours (2730 days + 15 hour
   ff ff ff ff ff ff ff ff ff ff ff ff ff 49d+17:02:47.295  [VENDOR SPECIFIC]
   ff ff ff ff ff ff ff ff ff ff ff ff ff 49d+17:02:47.295  [VENDOR SPECIFIC]
 
+Error 38 [2] occurred at disk power-on lifetime: 65535 hours (2730 days + 15 hours)
+  When the command that caused the error occurred, the device was in a vendor specific state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  ff -- ff ff ff ff ff ff ff ff ff ff ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ff ff ff ff ff ff ff ff ff ff ff ff ff 49d+17:02:47.295  [VENDOR SPECIFIC]
+  ff ff ff ff ff ff ff ff ff ff ff ff ff 49d+17:02:47.295  [VENDOR SPECIFIC]
+  ff ff ff ff ff ff ff ff ff ff ff ff ff 49d+17:02:47.295  [VENDOR SPECIFIC]
+  ff ff ff ff ff ff ff ff ff ff ff ff ff 49d+17:02:47.295  [VENDOR SPECIFIC]
+  ff ff ff ff ff ff ff ff ff ff ff ff ff 49d+17:02:47.295  [VENDOR SPECIFIC]
+
+Error 37 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
+Error 36 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     12552         -
-# 2  Extended offline    Completed without error       00%     11308         -
-# 3  Short offline       Completed without error       00%     11308         -
-# 4  Short offline       Aborted by host               90%      5220         -
-# 5  Short offline       Aborted by host               90%      5220         -
-# 6  Extended offline    Completed without error       00%       450         -
-# 7  Extended offline    Completed without error       00%       316         -
-# 8  Extended offline    Completed without error       00%       272         -
-# 9  Extended offline    Completed without error       00%       267         -
-#10  Extended offline    Completed without error       00%       223         -
-#11  Extended offline    Completed without error       00%       223         -
-#12  Extended offline    Completed without error       00%       211         -
-#13  Extended offline    Completed without error       00%       169         -
-#14  Extended offline    Completed without error       00%       118         -
-#15  Extended offline    Completed without error       00%        67         -
-#16  Extended offline    Completed without error       00%        61         -
-#17  Extended offline    Completed without error       00%        60         -
-#18  Extended offline    Completed without error       00%        57         -
-#19  Extended offline    Completed without error       00%        56         -
+# 1  Extended offline    Completed without error       00%     17240         -
+# 2  Extended offline    Completed without error       00%     15688         -
+# 3  Extended offline    Completed without error       00%     15569         -
+# 4  Short offline       Completed without error       00%     15474         -
+# 5  Extended offline    Completed without error       00%     15473         -
+# 6  Extended offline    Completed without error       00%     15156         -
+# 7  Extended offline    Completed without error       00%     15155         -
+# 8  Extended offline    Aborted by host               00%     15155         -
+# 9  Extended offline    Completed without error       00%     15097         -
+#10  Extended offline    Completed without error       00%     15097         -
+#11  Extended offline    Completed without error       00%     12552         -
+#12  Extended offline    Completed without error       00%     11308         -
+#13  Short offline       Completed without error       00%     11308         -
+#14  Short offline       Aborted by host               90%      5220         -
+#15  Short offline       Aborted by host               90%      5220         -
+#16  Extended offline    Completed without error       00%       450         -
+#17  Extended offline    Completed without error       00%       316         -
+#18  Extended offline    Completed without error       00%       272         -
+#19  Extended offline    Completed without error       00%       267         -
 
 Selective Self-tests/Logging not supported
 
@@ -165,13 +216,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            3357  ---  Lifetime Power-On Resets
+0x01  0x008  4            3372  ---  Lifetime Power-On Resets
 0x01  0x018  6               0  ---  Logical Sectors Written
 0x01  0x020  6               0  ---  Number of Write Commands
 0x01  0x028  6               0  ---  Logical Sectors Read
 0x01  0x030  6               0  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              16  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              18  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -183,5 +234,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           44  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 

@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.16-200.fc36.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.9-300.fc40.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     ST240HM000-1G5152
@@ -11,10 +11,10 @@ Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Aug  7 10:16:33 2022 EDT
+Local Time is:    Sat May 11 06:39:38 2024 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,22 +59,22 @@ recommended polling time: 	 (  38) minutes.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   166   166   006    -    0
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  9 Power_On_Hours          -O--CK   050   050   000    -    44915
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    3288
+  1 Raw_Read_Error_Rate     -OSR--   166   166   006    -    1415
+  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    11
+  9 Power_On_Hours          -O--CK   038   038   000    -    55006
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    3980
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
-172 Unknown_Attribute       -O--CK   100   100   000    -    0
+172 Unknown_Attribute       -O--CK   100   100   000    -    11
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
-182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   037   000   000    -    37 (Min/Max 14/58)
+182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    11
+194 Temperature_Celsius     -O---K   025   000   000    -    25 (Min/Max 13/58)
 201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
 204 Soft_ECC_Correction     -O--CK   100   100   000    -    0
-231 Unknown_SSD_Attribute   PO--C-   095   095   010    -    6
-234 Unknown_Attribute       -O--CK   100   100   000    -    86256
-241 Total_LBAs_Written      -O--CK   100   100   000    -    6563
-242 Total_LBAs_Read         -O--CK   100   100   000    -    4768
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    770
+231 Unknown_SSD_Attribute   PO--C-   094   094   010    -    7
+234 Unknown_Attribute       -O--CK   100   100   000    -    103971
+241 Total_LBAs_Written      -O--CK   100   100   000    -    7451
+242 Total_LBAs_Read         -O--CK   100   100   000    -    6626
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    21248
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -97,7 +97,7 @@ Address    Access  R/W   Size  Description
 0xb7       GPL,SL  VS       4  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 7701 (device log contains only the most recent 20 errors)
+Device Error Count: 61098 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -113,7 +113,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 7701 [0] occurred at disk power-on lifetime: 44915 hours (1871 days + 11 hours)
+Error 61098 [17] occurred at disk power-on lifetime: 55005 hours (2291 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -124,13 +124,13 @@ Error 7701 [0] occurred at disk power-on lifetime: 44915 hours (1871 days + 11 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     02:32:44.490  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:32:44.490  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:32:44.430  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 00 00     02:32:44.430  SET FEATURES [Set transfer mode]
-  ef 00 03 00 00 00 00 00 00 00 00 00 00     02:32:44.430  SET FEATURES [Set transfer mode]
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:02:59.440  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:59.440  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:02:59.380  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:02:59.380  SET FEATURES [Set transfer mode]
+  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:02:59.380  SET FEATURES [Set transfer mode]
 
-Error 7700 [19] occurred at disk power-on lifetime: 44915 hours (1871 days + 11 hours)
+Error 61097 [16] occurred at disk power-on lifetime: 55005 hours (2291 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -141,13 +141,13 @@ Error 7700 [19] occurred at disk power-on lifetime: 44915 hours (1871 days + 11 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     02:31:25.760  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:31:25.760  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:31:25.700  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 00 00     02:31:25.700  SET FEATURES [Set transfer mode]
-  ef 00 03 00 00 00 00 00 00 00 00 00 00     02:31:25.700  SET FEATURES [Set transfer mode]
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:00:18.010  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:18.010  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.970  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:00:17.970  SET FEATURES [Set transfer mode]
+  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:00:17.970  SET FEATURES [Set transfer mode]
 
-Error 7699 [18] occurred at disk power-on lifetime: 44915 hours (1871 days + 11 hours)
+Error 61096 [15] occurred at disk power-on lifetime: 54994 hours (2291 days + 10 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -158,13 +158,30 @@ Error 7699 [18] occurred at disk power-on lifetime: 44915 hours (1871 days + 11 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     02:30:07.110  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:30:07.110  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:30:07.050  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 00 00     02:30:07.050  SET FEATURES [Set transfer mode]
-  ef 00 03 00 00 00 00 00 00 00 00 00 00     02:30:07.050  SET FEATURES [Set transfer mode]
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     04:21:17.060  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     04:21:17.060  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     04:21:16.990  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     04:21:16.990  SET FEATURES [Set transfer mode]
+  ef 00 03 00 00 00 00 00 00 00 00 00 00     04:21:16.990  SET FEATURES [Set transfer mode]
 
-Error 7698 [17] occurred at disk power-on lifetime: 44913 hours (1871 days + 9 hours)
+Error 61095 [14] occurred at disk power-on lifetime: 54989 hours (2291 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 46 00 00 00 00 00 00 e0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:00:17.990  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.990  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:17.940  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:00:17.940  SET FEATURES [Set transfer mode]
+  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:00:17.940  SET FEATURES [Set transfer mode]
+
+Error 61094 [13] occurred at disk power-on lifetime: 54974 hours (2290 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -181,7 +198,7 @@ Error 7698 [17] occurred at disk power-on lifetime: 44913 hours (1871 days + 9 h
   ef 00 03 00 46 00 00 00 00 00 00 00 00     00:00:18.040  SET FEATURES [Set transfer mode]
   ef 00 03 00 00 00 00 00 00 00 00 00 00     00:00:18.040  SET FEATURES [Set transfer mode]
 
-Error 7697 [16] occurred at disk power-on lifetime: 44897 hours (1870 days + 17 hours)
+Error 61093 [12] occurred at disk power-on lifetime: 54956 hours (2289 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -192,13 +209,13 @@ Error 7697 [16] occurred at disk power-on lifetime: 44897 hours (1870 days + 17 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:24:49.110  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:24:49.110  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:24:49.050  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:24:49.050  SET FEATURES [Set transfer mode]
-  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:24:49.050  SET FEATURES [Set transfer mode]
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:44:53.750  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:44:53.750  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:44:53.680  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:44:53.680  SET FEATURES [Set transfer mode]
+  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:44:53.680  SET FEATURES [Set transfer mode]
 
-Error 7696 [15] occurred at disk power-on lifetime: 44897 hours (1870 days + 17 hours)
+Error 61092 [11] occurred at disk power-on lifetime: 54956 hours (2289 days + 20 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -209,13 +226,13 @@ Error 7696 [15] occurred at disk power-on lifetime: 44897 hours (1870 days + 17 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:23:37.380  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:23:37.380  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:23:37.320  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:23:37.320  SET FEATURES [Set transfer mode]
-  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:23:37.320  SET FEATURES [Set transfer mode]
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:43:00.520  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:43:00.520  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:43:00.450  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:43:00.450  SET FEATURES [Set transfer mode]
+  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:43:00.450  SET FEATURES [Set transfer mode]
 
-Error 7695 [14] occurred at disk power-on lifetime: 44897 hours (1870 days + 17 hours)
+Error 61091 [10] occurred at disk power-on lifetime: 54955 hours (2289 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -226,28 +243,11 @@ Error 7695 [14] occurred at disk power-on lifetime: 44897 hours (1870 days + 17 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:00:06.530  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.530  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:06.490  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:00:06.490  SET FEATURES [Set transfer mode]
-  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:00:06.490  SET FEATURES [Set transfer mode]
-
-Error 7694 [13] occurred at disk power-on lifetime: 44897 hours (1870 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 46 00 00 00 00 00 00 e0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     16:26:26.860  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     16:26:26.860  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     16:26:26.800  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 00 00     16:26:26.800  SET FEATURES [Set transfer mode]
-  ef 00 03 00 00 00 00 00 00 00 00 00 00     16:26:26.800  SET FEATURES [Set transfer mode]
+  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 00     00:00:18.050  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:18.050  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:18.010  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 00 00     00:00:18.010  SET FEATURES [Set transfer mode]
+  ef 00 03 00 00 00 00 00 00 00 00 00 00     00:00:18.000  SET FEATURES [Set transfer mode]
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -261,7 +261,7 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            3288  ---  Lifetime Power-On Resets
+0x01  0x008  4            3980  ---  Lifetime Power-On Resets
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -279,7 +279,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

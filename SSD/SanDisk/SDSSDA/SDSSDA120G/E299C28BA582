@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SandForce Driven SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      1.8 inches
 TRIM Command:     Available
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb 27 18:51:56 2022 CET
+Local Time is:    Wed Sep 20 19:08:02 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -30,14 +30,13 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x03)	Offline data collection activity
+					is in progress.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 247)	Self-test routine in progress...
+					70% of test remaining.
 Total time to complete Offline 
-data collection: 		(    0) seconds.
+data collection: 		(  120) seconds.
 Offline data collection
 capabilities: 			 (0x71) SMART execute Offline immediate.
 					No Auto Offline data collection support.
@@ -63,8 +62,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   071   100   000    -    71h+00m+00.000s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2712
+  9 Power_On_Hours_and_Msec -O--CK   076   100   000    -    76h+00m+00.000s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3064
 166 Unknown_Attribute       -O--CK   100   100   000    -    8
 167 Unknown_Attribute       -O--CK   100   100   000    -    0
 168 Unknown_Attribute       -O--CK   100   100   000    -    19
@@ -72,16 +71,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 170 Reserve_Block_Count     -O--CK   100   100   000    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Unknown_SandForce_Attr  -O--CK   100   100   ---    -    10
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1526
+173 Unknown_SandForce_Attr  -O--CK   100   100   ---    -    12
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1721
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   072   100   000    -    28 (Min/Max 0/44)
-199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    8
+194 Temperature_Celsius     -O---K   067   100   000    -    33 (Min/Max 0/44)
+199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    2173
 230 Life_Curve_Status       -O--CK   100   100   000    -    0
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 SandForce_Internal      -O--CK   100   100   000    -    1015
-241 Lifetime_Writes_GiB     ----CK   253   253   000    -    966
-242 Lifetime_Reads_GiB      ----CK   253   253   000    -    532
+233 SandForce_Internal      -O--CK   100   100   000    -    1204
+241 Lifetime_Writes_GiB     ----CK   253   253   000    -    1157
+242 Lifetime_Reads_GiB      ----CK   253   253   000    -    629
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 10 (device log contains only the most recent 4 errors)
+Device Error Count: 2175 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,15 +123,16 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 10 [1] log entry is empty
-Error 9 [0] log entry is empty
-Error 8 [3] log entry is empty
-Error 7 [2] log entry is empty
+Error 2175 [2] log entry is empty
+Error 2174 [1] log entry is empty
+Error 2173 [0] log entry is empty
+Error 2172 [3] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0x4b)       Self-test routine in progress 90%        69         -
-# 2  Short offline       Unknown status (0xb)          10%        69         -
-# 3  Short offline       Completed without error       00%        69         -
+# 1  Reserved (0x0d)     Completed without error       00%        72         -
+# 2  Vendor (0x4b)       Self-test routine in progress 90%        69         -
+# 3  Short offline       Unknown status (0xb)          10%        69         -
+# 4  Short offline       Completed without error       00%        69         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -150,24 +150,24 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2712  ---  Lifetime Power-On Resets
-0x01  0x010  4              71  ---  Power-on Hours
-0x01  0x018  6             966  ---  Logical Sectors Written
-0x01  0x020  6        15236558  ---  Number of Write Commands
-0x01  0x028  6             532  ---  Logical Sectors Read
-0x01  0x030  6        18630852  ---  Number of Read Commands
+0x01  0x008  4            3064  ---  Lifetime Power-On Resets
+0x01  0x010  4              76  ---  Power-on Hours
+0x01  0x018  6            1157  ---  Logical Sectors Written
+0x01  0x020  6        18823407  ---  Number of Write Commands
+0x01  0x028  6             629  ---  Logical Sectors Read
+0x01  0x030  6        21970455  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            1526  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            1723  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
-0x05  0x010  1             -77  ---  Average Short Term Temperature
-0x05  0x018  1              22  ---  Average Long Term Temperature
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x010  1             -51  ---  Average Short Term Temperature
+0x05  0x018  1            -118  ---  Average Long Term Temperature
 0x05  0x020  1              41  ---  Highest Temperature
 0x05  0x028  1               5  ---  Lowest Temperature
-0x05  0x030  1             -77  ---  Highest Average Short Term Temperature
+0x05  0x030  1             -51  ---  Highest Average Short Term Temperature
 0x05  0x038  1               7  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              -1  ---  Highest Average Long Term Temperature
 0x05  0x048  1               0  ---  Lowest Average Long Term Temperature
@@ -176,7 +176,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           16766  ---  Number of Hardware Resets
+0x06  0x008  4           19076  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

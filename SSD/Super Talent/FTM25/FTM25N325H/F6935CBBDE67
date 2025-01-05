@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.0-53-generic] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.6+bpo-amd64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     FTM25N325H
@@ -10,14 +10,14 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Nov 22 19:26:58 2022 CST
+Local Time is:    Wed Sep 11 03:37:57 2024 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -60,34 +60,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    17826
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    1087
+  9 Power_On_Hours          -O--CK   100   100   050    -    29952
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    1791
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    11
-164 Unknown_Attribute       -O--CK   100   100   050    -    335212
-165 Unknown_Attribute       -O--CK   100   100   050    -    2465
-166 Unknown_Attribute       -O--CK   100   100   050    -    367
-167 Unknown_Attribute       -O--CK   100   100   050    -    681
+164 Unknown_Attribute       -O--CK   100   100   050    -    422742
+165 Unknown_Attribute       -O--CK   100   100   050    -    3460
+166 Unknown_Attribute       -O--CK   100   100   050    -    422
+167 Unknown_Attribute       -O--CK   100   100   050    -    859
 168 Unknown_Attribute       -O--CK   100   100   050    -    7000
-169 Unknown_Attribute       -O--CK   100   100   050    -    91
+169 Unknown_Attribute       -O--CK   100   100   050    -    88
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   050    -    0
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    60
-194 Temperature_Celsius     -O---K   100   100   050    -    40
-195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    9327
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    157
+194 Temperature_Celsius     -O---K   100   100   050    -    42
+195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    12837
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    1
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    1104431
-242 Total_LBAs_Read         ----CK   100   100   050    -    1072308
-245 Unknown_Attribute       -O--CK   100   100   050    -    1291737
+241 Total_LBAs_Written      ----CK   100   100   050    -    1415378
+242 Total_LBAs_Read         ----CK   100   100   050    -    1322698
+245 Unknown_Attribute       -O--CK   100   100   050    -    1730774
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,7 +137,7 @@ Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 00 00  Error: ABRT
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
@@ -150,11 +150,12 @@ Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     17654         -
-# 2  Short offline       Completed without error       00%     13889         -
-# 3  Short offline       Completed without error       00%      8573         -
-# 4  Short offline       Interrupted (host reset)      40%      5354         -
-# 5  Short offline       Completed without error       00%      3591         -
+# 1  Short offline       Completed without error       00%     27365         -
+# 2  Short offline       Completed without error       00%     17654         -
+# 3  Short offline       Completed without error       00%     13889         -
+# 4  Short offline       Completed without error       00%      8573         -
+# 5  Short offline       Interrupted (host reset)      40%      5354         -
+# 6  Short offline       Completed without error       00%      3591         -
 
 Selective Self-tests/Logging not supported
 
@@ -163,14 +164,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1087  ---  Lifetime Power-On Resets
-0x01  0x010  4           17826  ---  Power-on Hours
-0x01  0x018  6      3660525804  ---  Logical Sectors Written
-0x01  0x020  6           48501  ---  Number of Write Commands
-0x01  0x028  6      1555319221  ---  Logical Sectors Read
-0x01  0x030  6          171633  ---  Number of Read Commands
+0x01  0x008  4            1791  ---  Lifetime Power-On Resets
+0x01  0x010  4           29952  ---  Power-on Hours
+0x01  0x018  6      2563943796  ---  Logical Sectors Written
+0x01  0x020  6          105709  ---  Number of Write Commands
+0x01  0x028  6       785009872  ---  Logical Sectors Read
+0x01  0x030  6          152516  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              12  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
