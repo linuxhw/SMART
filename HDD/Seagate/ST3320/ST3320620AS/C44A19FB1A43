@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.9-1-default] (SUSE RPM)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2021-09-14 r5237 [x86_64-linux-5.14.21-150500.55.28-default] (SUSE RPM)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 3.AAK
 User Capacity:    320,071,851,520 bytes [320 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Jul 10 01:52:58 2022 EEST
+Local Time is:    Sun Oct  8 23:28:20 2023 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  40)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (  23)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -54,19 +54,19 @@ recommended polling time: 	 ( 115) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   102   089   006    -    129837533
+  1 Raw_Read_Error_Rate     POSR--   112   089   006    -    199603341
   3 Spin_Up_Time            PO----   095   095   000    -    0
-  4 Start_Stop_Count        -O--CK   093   093   020    -    7631
+  4 Start_Stop_Count        -O--CK   092   092   020    -    8499
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   068   060   030    -    206511244941
-  9 Power_On_Hours          -O--CK   089   089   000    -    9663
+  7 Seek_Error_Rate         POSR--   068   060   030    -    206538532782
+  9 Power_On_Hours          -O--CK   088   088   000    -    10580
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5633
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    6076
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   064   055   045    -    36 (Min/Max 24/40)
-194 Temperature_Celsius     -O---K   036   045   000    -    36 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   061   051   000    -    24426386
+190 Airflow_Temperature_Cel -O---K   060   055   045    -    40 (Min/Max 40/41)
+194 Temperature_Celsius     -O---K   040   045   000    -    40 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   064   051   000    -    6778964
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -260,25 +260,25 @@ Error 299 [18] occurred at disk power-on lifetime: 699 hours (29 days + 3 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      80%      9661         -
-# 2  Short offline       Completed without error       00%      9635         -
-# 3  Short offline       Completed without error       00%      9621         -
-# 4  Short offline       Completed without error       00%      9586         -
-# 5  Extended offline    Interrupted (host reset)      90%      9570         -
-# 6  Short offline       Completed without error       00%      9562         -
-# 7  Short offline       Completed without error       00%      9540         -
-# 8  Extended offline    Interrupted (host reset)      70%      9480         -
-# 9  Extended offline    Interrupted (host reset)      70%      9393         -
-#10  Short offline       Completed without error       00%      9330         -
-#11  Extended offline    Interrupted (host reset)      90%      9308         -
-#12  Short offline       Completed without error       00%      9269         -
-#13  Extended offline    Interrupted (host reset)      60%      9262         -
-#14  Short offline       Completed without error       00%      9132         -
-#15  Extended offline    Interrupted (host reset)      80%      9080         -
-#16  Short offline       Completed without error       00%      9055         -
-#17  Short offline       Completed without error       00%      9049         -
-#18  Short offline       Completed without error       00%      9046         -
-#19  Short offline       Completed without error       00%      9024         -
+# 1  Extended offline    Aborted by host               70%     10579         -
+# 2  Short offline       Completed without error       00%     10562         -
+# 3  Short offline       Completed without error       00%     10523         -
+# 4  Extended offline    Aborted by host               70%     10492         -
+# 5  Extended offline    Aborted by host               80%     10461         -
+# 6  Short offline       Completed without error       00%     10440         -
+# 7  Short offline       Completed without error       00%     10398         -
+# 8  Short offline       Completed without error       00%     10397         -
+# 9  Short offline       Completed without error       00%     10390         -
+#10  Short offline       Completed without error       00%     10382         -
+#11  Short offline       Completed without error       00%     10381         -
+#12  Short offline       Completed without error       00%     10380         -
+#13  Short offline       Completed without error       00%     10376         -
+#14  Extended offline    Aborted by host               80%     10362         -
+#15  Short offline       Completed without error       00%     10347         -
+#16  Short offline       Completed without error       00%     10342         -
+#17  Extended offline    Aborted by host               70%     10336         -
+#18  Extended offline    Interrupted (host reset)      90%     10289         -
+#19  Short offline       Completed without error       00%     10230         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -299,7 +299,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           30  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

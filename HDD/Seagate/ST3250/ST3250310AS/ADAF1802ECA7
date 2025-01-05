@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.11+parrot-amd64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.158-0515158-generic] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Dec 23 16:54:23 2024 CET
+Local Time is:    Mon Dec 23 18:31:23 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,8 +19,7 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
-Another SCT command is executing, abort Feature Control
-(SCT ext_status_code 0xffff, action_code=4, function_code=2)
+Unexpected SCT status 0xffff (action_code=4, function_code=2)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
@@ -64,16 +63,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -O----   097   097   000    -    0
   4 Start_Stop_Count        -O--CK   096   096   020    -    4107
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   089   060   030    -    895772351
-  9 Power_On_Hours          -O--CK   077   077   000    -    20244
+  7 Seek_Error_Rate         POSR--   089   060   030    -    895921942
+  9 Power_On_Hours          -O--CK   077   077   000    -    20246
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       PO--CK   096   096   020    -    4116
 184 End-to-End_Error        PO--CK   100   253   097    -    0
 187 Reported_Uncorrect      -O-RCK   100   100   000    -    0
 189 High_Fly_Writes         -O---K   100   100   045    -    0
-190 Airflow_Temperature_Cel -O---K   069   055   000    -    31 (Min/Max 17/45)
-194 Temperature_Celsius     -O-RC-   031   045   000    -    31 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   069   066   000    -    95629207
+190 Airflow_Temperature_Cel -O---K   066   055   000    -    34 (Min/Max 17/45)
+194 Temperature_Celsius     -O-RC-   034   045   000    -    34 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   069   066   000    -    156178462
 197 Current_Pending_Sector  ----C-   100   100   000    -    0
 198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
@@ -132,7 +131,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
+Current Temperature:                    34 Celsius
 Power Cycle Min/Max Temperature:     --/46 Celsius
 Lifetime    Min/Max Temperature:     --/46 Celsius
 
@@ -148,7 +147,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Sun Aug 20 01:44:49 2023 CEST
+Local Time is:    Sun Aug 20 01:55:15 2023 CEST
 
 ==> WARNING: There are known problems with these drives,
 THIS DRIVE MAY OR MAY NOT BE AFFECTED,
@@ -29,7 +29,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -72,11 +72,11 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   112   099   006    -    166455635
+  1 Raw_Read_Error_Rate     POSR--   112   099   006    -    166505112
   3 Spin_Up_Time            PO----   094   088   000    -    0
   4 Start_Stop_Count        -O--CK   095   095   020    -    6068
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    2047
-  7 Seek_Error_Rate         POSR--   060   058   030    -    128885953023
+  7 Seek_Error_Rate         POSR--   060   058   030    -    128885953053
   9 Power_On_Hours          -O--CK   083   083   000    -    15549
  10 Spin_Retry_Count        PO--C-   100   100   097    -    123
  12 Power_Cycle_Count       -O--CK   097   037   020    -    3671
@@ -84,9 +84,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   099   000    -    4295032833
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   065   062   045    -    35 (Min/Max 30/35)
-194 Temperature_Celsius     -O---K   035   040   000    -    35 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   028   017   000    -    166455635
+190 Airflow_Temperature_Cel -O---K   064   062   045    -    36 (Min/Max 30/36)
+194 Temperature_Celsius     -O---K   036   040   000    -    36 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   028   017   000    -    166505112
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -294,17 +294,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     30/35 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     30/36 Celsius
 Lifetime    Min/Max Temperature:     16/38 Celsius
-Under/Over Temperature Limit Count:   0/357
+Under/Over Temperature Limit Count:   0/367
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (68)
+Temperature History Size (Index):    128 (78)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -316,7 +316,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

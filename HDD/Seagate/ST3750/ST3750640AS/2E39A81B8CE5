@@ -1,5 +1,5 @@
-smartctl 6.4 2014-10-07 r4002 [armv7l-linux-4.8.7-armv7-x4] (local build)
-Copyright (C) 2002-14, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.5.0-1013-oem] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
@@ -10,13 +10,14 @@ User Capacity:    750,156,374,016 bytes [750 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Fri Jan 20 00:27:27 2023 MSK
+Local Time is:    Tue Jun 18 23:06:48 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
@@ -57,17 +58,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   092   091   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    205
+  4 Start_Stop_Count        -O--CK   100   100   020    -    331
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   078   060   030    -    74322823
-  9 Power_On_Hours          -O--CK   089   089   000    -    10501
+  7 Seek_Error_Rate         POSR--   079   060   030    -    95967741
+  9 Power_On_Hours          -O--CK   088   088   000    -    11107
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    187
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    306
 187 Reported_Uncorrect      -O--CK   001   001   000    -    438
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   045   034   045    NOW  55 (Min/Max 32/55 #750)
-194 Temperature_Celsius     -O---K   055   066   000    -    55 (0 9 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   063   056   000    -    33357962
+190 Airflow_Temperature_Cel -O---K   069   029   045    Past 31 (4 119 31 31 0)
+194 Temperature_Celsius     -O---K   031   071   000    -    31 (0 9 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   092   056   000    -    156044510
 197 Current_Pending_Sector  -O--C-   097   095   000    -    74
 198 Offline_Uncorrectable   ----C-   097   095   000    -    74
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -90,7 +91,7 @@ Address    Access  R/W   Size  Description
 0x06       GPL,SL  R/O      1  SMART self-test log
 0x07       GPL,SL  R/O      1  Extended self-test log
 0x09       GPL,SL  R/W      1  Selective self-test log
-0x10       GPL,SL  R/O      1  SATA NCQ Queued Error log
+0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
 0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
@@ -129,16 +130,16 @@ Error 439 [18] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 56 00 00 80 44 40 00  Error: UNC at LBA = 0x5600008044 = 369367220292
+  40 -- 51 00 00 00 56 00 00 80 40 40 00  Error: UNC at LBA = 0x5600008040 = 369367220288
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:21.988  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:18.350  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:14.723  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 Error 438 [17] occurred at disk power-on lifetime: 10151 hours (422 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -146,16 +147,16 @@ Error 438 [17] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 56 00 00 80 44 40 00  Error: UNC at LBA = 0x5600008044 = 369367220292
+  40 -- 51 00 00 00 56 00 00 80 40 40 00  Error: UNC at LBA = 0x5600008040 = 369367220288
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:21.988  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:18.350  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:14.723  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 Error 437 [16] occurred at disk power-on lifetime: 10151 hours (422 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -163,16 +164,16 @@ Error 437 [16] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 56 00 00 80 44 40 00  Error: UNC at LBA = 0x5600008044 = 369367220292
+  40 -- 51 00 00 00 56 00 00 80 40 40 00  Error: UNC at LBA = 0x5600008040 = 369367220288
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:21.988  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:18.350  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:14.723  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:33:48.802  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 Error 436 [15] occurred at disk power-on lifetime: 10151 hours (422 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -180,16 +181,16 @@ Error 436 [15] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 56 00 00 80 44 40 00  Error: UNC at LBA = 0x5600008044 = 369367220292
+  40 -- 51 00 00 00 56 00 00 80 40 40 00  Error: UNC at LBA = 0x5600008040 = 369367220288
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:21.988  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:18.350  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:14.723  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 Error 435 [14] occurred at disk power-on lifetime: 10151 hours (422 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -197,16 +198,16 @@ Error 435 [14] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 56 00 00 80 44 40 00  Error: UNC at LBA = 0x5600008044 = 369367220292
+  40 -- 51 00 00 00 56 00 00 80 40 40 00  Error: UNC at LBA = 0x5600008040 = 369367220288
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 44 40 00     04:35:21.988  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:18.350  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:14.723  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 Error 434 [13] occurred at disk power-on lifetime: 10151 hours (422 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -219,11 +220,11 @@ Error 434 [13] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:18.350  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:14.723  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 Error 433 [12] occurred at disk power-on lifetime: 10151 hours (422 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -236,11 +237,11 @@ Error 433 [12] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:14.723  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 3c 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:33:48.802  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 38 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 Error 432 [11] occurred at disk power-on lifetime: 10151 hours (422 days + 23 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -253,11 +254,11 @@ Error 432 [11] occurred at disk power-on lifetime: 10151 hours (422 days + 23 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 40 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 3c 40 00     04:35:11.075  READ VERIFY SECTOR(S) EXT
-  42 00 00 00 04 00 56 00 00 80 3c 40 00     04:35:07.437  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:34.615  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:30.977  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:27.315  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:23.672  READ VERIFY SECTOR(S) EXT
+  42 00 00 00 08 00 56 00 00 80 40 40 00     04:34:21.624  READ VERIFY SECTOR(S) EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -282,9 +283,11 @@ SCT Commands not supported
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
+Pending Defects log (GP Log 0x0c) not supported
+
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

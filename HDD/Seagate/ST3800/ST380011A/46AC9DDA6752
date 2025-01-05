@@ -10,7 +10,7 @@ User Capacity:    80,025,280,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Sun Apr 30 09:17:10 2023 +05
+Local Time is:    Sun May 21 05:35:01 2023 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  37)	The self-test routine was interrupted
-					by the host with a hard or soft reset.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  430) seconds.
 Offline data collection
@@ -54,19 +55,19 @@ recommended polling time: 	 (  58) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   066   057   006    -    87160692
-  3 Spin_Up_Time            PO----   099   098   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1494
+  1 Raw_Read_Error_Rate     POSR--   065   057   006    -    15760230
+  3 Spin_Up_Time            PO----   098   098   000    -    0
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1663
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   076   060   030    -    42882932
-  9 Power_On_Hours          -O--CK   068   068   000    -    28175
+  7 Seek_Error_Rate         POSR--   077   060   030    -    51031642
+  9 Power_On_Hours          -O--CK   068   068   000    -    28606
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6422
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6506
 194 Temperature_Celsius     -O---K   040   058   000    -    40
-195 Hardware_ECC_Recovered  -O-RC-   066   057   000    -    87160692
+195 Hardware_ECC_Recovered  -O-RC-   065   057   000    -    15760230
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    17857
+199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    17927
 200 Multi_Zone_Error_Rate   ------   100   253   000    -    0
 202 Data_Address_Mark_Errs  -O--CK   100   253   000    -    0
                             ||||||_ K auto-keep
@@ -101,7 +102,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 9 (device log contains only the most recent five errors)
+ATA Error Count: 12 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -115,6 +116,57 @@ ATA Error Count: 9 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 12 occurred at disk power-on lifetime: 28272 hours (1178 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 00 58 19 fe e2  Error: ICRC, ABRT at LBA = 0x02fe1958 = 50207064
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 00 58 19 fe e2 00      00:08:12.758  READ DMA
+  c8 00 f0 70 97 48 e1 00      00:08:12.964  READ DMA
+  c8 00 00 d0 62 be e3 00      00:08:12.947  READ DMA
+  c8 00 00 00 58 f8 e0 00      00:08:12.929  READ DMA
+  c8 00 00 20 5c f8 e0 00      00:08:12.922  READ DMA
+
+Error 11 occurred at disk power-on lifetime: 28272 hours (1178 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 6f 90 ff e1  Error: ICRC, ABRT 1 sectors at LBA = 0x01ff906f = 33525871
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 28 48 90 ff e1 00      02:09:45.918  READ DMA
+  ca 00 00 e8 4d 72 e0 00      02:09:45.905  WRITE DMA
+  c8 00 08 40 85 67 e0 00      02:09:45.905  READ DMA
+  ca 00 00 e8 4b 72 e0 00      02:09:45.903  WRITE DMA
+  c8 00 08 d8 84 67 e0 00      02:09:45.888  READ DMA
+
+Error 10 occurred at disk power-on lifetime: 28272 hours (1178 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  84 51 01 97 26 9e e0  Error: ICRC, ABRT 1 sectors at LBA = 0x009e2697 = 10364567
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 00 08 90 26 9e e0 00      02:03:00.053  READ DMA
+  c8 00 08 98 91 ff e1 00      02:03:00.053  READ DMA
+  c8 00 08 90 21 9e e0 00      02:03:00.038  READ DMA
+  c8 00 08 c8 17 9e e0 00      02:03:00.020  READ DMA
+  c8 00 08 48 18 9e e0 00      02:03:00.006  READ DMA
 
 Error 9 occurred at disk power-on lifetime: 28020 hours (1167 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -150,69 +202,21 @@ Error 8 occurred at disk power-on lifetime: 28018 hours (1167 days + 10 hours)
   c8 00 40 00 08 00 e0 00      00:08:55.274  READ DMA
   c8 00 40 c0 f6 10 e8 00      00:08:55.272  READ DMA
 
-Error 7 occurred at disk power-on lifetime: 27997 hours (1166 days + 13 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 01 3f 54 db e0  Error: ICRC, ABRT 1 sectors at LBA = 0x00db543f = 14373951
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 00 3d 03 54 db e0 00      00:00:31.511  READ DMA EXT
-  25 00 03 00 54 db e0 00      00:00:31.510  READ DMA EXT
-  25 00 3c c4 53 db e0 00      00:00:31.510  READ DMA EXT
-  25 00 04 c0 53 db e0 00      00:00:31.509  READ DMA EXT
-  25 00 3b 85 53 db e0 00      00:00:31.509  READ DMA EXT
-
-Error 6 occurred at disk power-on lifetime: 24868 hours (1036 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 01 ef 7f 9f e5  Error: ICRC, ABRT 1 sectors at LBA = 0x059f7fef = 94339055
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 70 7f 9f e5 00      01:23:34.260  READ DMA
-  c4 00 80 f0 7e 9f e5 00      01:23:34.259  READ MULTIPLE
-  c8 00 80 f0 7e 9f e5 00      01:23:34.257  READ DMA
-  c8 00 80 70 7e 9f e5 00      01:23:34.254  READ DMA
-  c8 00 80 f0 7d 9f e5 00      01:23:34.253  READ DMA
-
-Error 5 occurred at disk power-on lifetime: 24868 hours (1036 days + 4 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  84 51 01 6f 7f 9f e5  Error: ICRC, ABRT 1 sectors at LBA = 0x059f7f6f = 94338927
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 80 f0 7e 9f e5 00      01:23:34.260  READ DMA
-  c8 00 80 70 7e 9f e5 00      01:23:34.259  READ DMA
-  c8 00 80 f0 7d 9f e5 00      01:23:34.257  READ DMA
-  c8 00 80 70 7d 9f e5 00      01:23:34.254  READ DMA
-  c8 00 80 f0 7c 9f e5 00      01:23:34.253  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      50%     28139         -
-# 2  Extended offline    Interrupted (host reset)      30%     25336         -
-# 3  Short offline       Completed without error       00%     25108         -
-# 4  Short offline       Completed without error       00%     17603         -
-# 5  Short offline       Completed without error       00%     15164         -
-# 6  Short offline       Completed without error       00%     15164         -
-# 7  Short offline       Completed without error       00%     13673         -
-# 8  Extended offline    Aborted by host               90%     13673         -
+# 1  Extended offline    Completed without error       00%     28586         -
+# 2  Extended offline    Interrupted (host reset)      70%     28454         -
+# 3  Extended offline    Interrupted (host reset)      80%     28295         -
+# 4  Extended offline    Interrupted (host reset)      50%     28139         -
+# 5  Extended offline    Interrupted (host reset)      30%     25336         -
+# 6  Short offline       Completed without error       00%     25108         -
+# 7  Short offline       Completed without error       00%     17603         -
+# 8  Short offline       Completed without error       00%     15164         -
+# 9  Short offline       Completed without error       00%     15164         -
+#10  Short offline       Completed without error       00%     13673         -
+#11  Extended offline    Aborted by host               90%     13673         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

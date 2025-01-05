@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.11-amd64] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.11.6-2-default] (SUSE RPM)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Oct 18 23:34:20 2024 PDT
+Local Time is:    Sun Nov 10 18:34:29 2024 PST
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -70,23 +70,23 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   114   088   006    -    239765350
+  1 Raw_Read_Error_Rate     POSR-K   114   088   006    -    243042884
   3 Spin_Up_Time            PO---K   096   093   000    -    0
-  4 Start_Stop_Count        -O--CK   074   074   020    -    27439
+  4 Start_Stop_Count        -O--CK   074   074   020    -    27569
   5 Reallocated_Sector_Ct   PO--CK   001   001   036    NOW  4095
-  7 Seek_Error_Rate         POSR-K   090   060   030    -    954282057
-  9 Power_On_Hours          -O--CK   059   059   000    -    36332
+  7 Seek_Error_Rate         POSR-K   090   060   030    -    954283985
+  9 Power_On_Hours          -O--CK   059   059   000    -    36505
  10 Spin_Retry_Count        PO--CK   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   088   088   020    -    12546
-180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    314747791
+ 12 Power_Cycle_Count       -O--CK   088   088   020    -    12611
+180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    316184615
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   001   001   000    -    966
 188 Command_Timeout         -O--CK   100   099   000    -    4295032833
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   065   059   045    -    35 (Min/Max 35/35)
-194 Temperature_Celsius     -O---K   035   041   000    -    35 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O-RCK   044   023   000    -    239765350
+190 Airflow_Temperature_Cel -O---K   067   059   045    -    33 (Min/Max 33/33)
+194 Temperature_Celsius     -O---K   033   041   000    -    33 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O-RCK   044   023   000    -    243042884
 196 Reallocated_Event_Count -O--CK   001   001   036    NOW  4095
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -278,8 +278,9 @@ Error 119 [18] occurred at disk power-on lifetime: 35683 hours (1486 days + 19 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short captive       Completed without error       00%         8         -
-# 2  Extended offline    Aborted by host               90%         0         -
+# 1  Short offline       Completed: unknown failure    90%     36503         0
+# 2  Short captive       Completed without error       00%         8         -
+# 3  Extended offline    Aborted by host               90%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -295,8 +296,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     35/35 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     33/33 Celsius
 Lifetime    Min/Max Temperature:     10/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -305,7 +306,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (53)
+Temperature History Size (Index):    128 (107)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -317,7 +318,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.12-arch1-1] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.7.0-arch3-1] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.11
@@ -10,10 +10,10 @@ Firmware Version: CC1H
 User Capacity:    1,500,301,910,016 bytes [1.50 TB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Dec 20 14:45:37 2022 CST
+Local Time is:    Mon Jan 22 15:54:29 2024 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     0 (vendor specific), recommended: 254
@@ -21,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -66,27 +66,27 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    228699306
+  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    179664227
   3 Spin_Up_Time            PO----   100   092   000    -    0
-  4 Start_Stop_Count        -O--CK   083   083   020    -    17862
+  4 Start_Stop_Count        -O--CK   082   082   020    -    19170
   5 Reallocated_Sector_Ct   PO--CK   002   002   036    NOW  4032
-  7 Seek_Error_Rate         POSR--   082   060   030    -    186772153
-  9 Power_On_Hours          -O--CK   045   045   000    -    48291
+  7 Seek_Error_Rate         POSR--   082   060   030    -    192458432
+  9 Power_On_Hours          -O--CK   040   040   000    -    53118
  10 Spin_Retry_Count        PO--C-   100   100   097    -    10
- 12 Power_Cycle_Count       -O--CK   089   037   020    -    12083
+ 12 Power_Cycle_Count       -O--CK   087   037   020    -    13385
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+187 Reported_Uncorrect      -O--CK   098   098   000    -    2
 188 Command_Timeout         -O--CK   100   099   000    -    8590393356
-189 High_Fly_Writes         -O-RCK   077   077   000    -    23
-190 Airflow_Temperature_Cel -O---K   067   050   045    -    33 (Min/Max 32/33)
-194 Temperature_Celsius     -O---K   033   050   000    -    33 (0 13 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   044   019   000    -    228699306
+189 High_Fly_Writes         -O-RCK   076   076   000    -    24
+190 Airflow_Temperature_Cel -O---K   065   050   045    -    35 (Min/Max 30/35)
+194 Temperature_Celsius     -O---K   035   050   000    -    35 (0 13 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   047   019   000    -    179664227
 197 Current_Pending_Sector  -O--C-   100   100   000    -    63
 198 Offline_Uncorrectable   ----C-   100   100   000    -    63
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    45815 (122 7 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1586330450
-242 Total_LBAs_Read         ------   100   253   000    -    3361183403
+240 Head_Flying_Hours       ------   100   253   000    -    50641 (112 162 0)
+241 Total_LBAs_Written      ------   100   253   000    -    2748104257
+242 Total_LBAs_Read         ------   100   253   000    -    626391038
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,7 +119,157 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 110 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 110 [9] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:36.534  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:36.533  IDENTIFY DEVICE
+  ff 00 00 00 00 00 00 00 00 00 00 00 00     00:01:36.222  [VENDOR SPECIFIC]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:01:36.221  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:31.190  IDENTIFY PACKET DEVICE
+
+Error 109 [8] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:36.533  IDENTIFY DEVICE
+  ff 00 00 00 00 00 00 00 00 00 00 00 00     00:01:36.222  [VENDOR SPECIFIC]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:01:36.221  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:31.190  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:31.190  IDENTIFY DEVICE
+
+Error 108 [7] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:31.190  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:31.190  IDENTIFY DEVICE
+  ff 00 00 00 00 00 00 00 00 00 00 00 00     00:01:30.877  [VENDOR SPECIFIC]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:01:30.877  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:30.850  IDENTIFY PACKET DEVICE
+
+Error 107 [6] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:31.190  IDENTIFY DEVICE
+  ff 00 00 00 00 00 00 00 00 00 00 00 00     00:01:30.877  [VENDOR SPECIFIC]
+  00 00 00 00 00 00 00 00 00 00 00 00 ff     00:01:30.877  NOP [Abort queued commands]
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:30.850  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:30.826  IDENTIFY DEVICE
+
+Error 106 [5] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  a1 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:30.850  IDENTIFY PACKET DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:30.826  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:01:30.797  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:01:30.786  READ LOG DMA EXT
+  61 00 00 00 18 00 57 01 00 44 e7 40 00     00:01:22.150  WRITE FPDMA QUEUED
+
+Error 105 [4] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:01:30.826  IDENTIFY DEVICE
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:01:30.797  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:01:30.786  READ LOG DMA EXT
+  61 00 00 00 18 00 57 01 00 44 e7 40 00     00:01:22.150  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 74 01 00 40 3f 40 00     00:01:22.149  WRITE FPDMA QUEUED
+
+Error 104 [3] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  2f 00 00 00 01 00 00 00 00 00 10 a0 00     00:01:30.797  READ LOG EXT
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:01:30.786  READ LOG DMA EXT
+  61 00 00 00 18 00 57 01 00 44 e7 40 00     00:01:22.150  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 74 01 00 40 3f 40 00     00:01:22.149  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 81 01 00 c0 3f 40 00     00:01:22.149  WRITE FPDMA QUEUED
+
+Error 103 [2] occurred at disk power-on lifetime: 48698 hours (2029 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 71 00 04 00 00 00 00 32 9d e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  47 00 00 00 01 00 00 00 00 00 10 a0 00     00:01:30.786  READ LOG DMA EXT
+  61 00 00 00 18 00 57 01 00 44 e7 40 00     00:01:22.150  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 74 01 00 40 3f 40 00     00:01:22.149  WRITE FPDMA QUEUED
+  61 00 00 00 08 00 81 01 00 c0 3f 40 00     00:01:22.149  WRITE FPDMA QUEUED
+  61 00 00 00 18 00 81 01 00 c0 5f 40 00     00:01:22.149  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -138,8 +288,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     32/33 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     30/35 Celsius
 Lifetime    Min/Max Temperature:     13/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -148,7 +298,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (95)
+Temperature History Size (Index):    128 (61)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -160,7 +310,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

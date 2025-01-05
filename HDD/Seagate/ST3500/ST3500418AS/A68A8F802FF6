@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.7-201.fsync.fc39.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.12
@@ -10,10 +10,10 @@ Firmware Version: HP35
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Sep 10 15:56:53 2022 NZST
+Local Time is:    Sat May  4 12:14:14 2024 NZST
 
 ==> WARNING: A firmware update for this drive may be available,
 see the following Seagate web pages:
@@ -68,24 +68,24 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   119   099   006    -    205748892
-  3 Spin_Up_Time            PO---K   098   097   000    -    0
+  1 Raw_Read_Error_Rate     POSR-K   117   099   006    -    133572626
+  3 Spin_Up_Time            PO---K   097   097   000    -    0
   4 Start_Stop_Count        -O--CK   037   037   020    -    65535
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    38
-  7 Seek_Error_Rate         POSR-K   078   060   030    -    64860789
-  9 Power_On_Hours          -O--CK   058   058   000    -    37312
+  5 Reallocated_Sector_Ct   PO--CK   099   099   036    -    41
+  7 Seek_Error_Rate         POSR-K   079   060   030    -    84481333
+  9 Power_On_Hours          -O--CK   054   054   000    -    40511
  10 Spin_Retry_Count        PO--CK   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   056   056   020    -    45235
-180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    48195534
-183 Runtime_Bad_Block       -O--CK   058   058   000    -    42
+ 12 Power_Cycle_Count       -O--CK   055   055   020    -    46240
+180 Unknown_HDD_Attribute   PO-R-K   100   100   000    -    1990464797
+183 Runtime_Bad_Block       -O--CK   001   001   000    -    156
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   099   000    -    404
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   068   058   045    -    32 (Min/Max 32/32)
-194 Temperature_Celsius     -O---K   032   042   000    -    32 (0 7 0 0 0)
-195 Hardware_ECC_Recovered  -O-RCK   025   006   000    -    205748892
-196 Reallocated_Event_Count -O--CK   100   100   036    -    38
+190 Airflow_Temperature_Cel -O---K   071   056   045    -    29 (Min/Max 11/29)
+194 Temperature_Celsius     -O---K   029   044   000    -    29 (0 7 0 0 0)
+195 Hardware_ECC_Recovered  -O-RCK   042   006   000    -    133572626
+196 Reallocated_Event_Count -O--CK   099   099   036    -    41
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    1
@@ -125,7 +125,15 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     37636         -
+# 2  Short offline       Completed without error       00%     37635         -
+# 3  Short offline       Completed without error       00%     37630         -
+# 4  Short offline       Completed without error       00%     37626         -
+# 5  Short offline       Completed without error       00%     37615         -
+# 6  Short offline       Completed without error       00%     37612         -
+# 7  Short offline       Completed without error       00%     37610         -
+# 8  Short offline       Completed without error       00%     37606         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -141,17 +149,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     32/32 Celsius
-Lifetime    Min/Max Temperature:      7/42 Celsius
-Under/Over Temperature Limit Count:   0/0
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     11/29 Celsius
+Lifetime    Min/Max Temperature:      7/44 Celsius
+Under/Over Temperature Limit Count:   2/0
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (83)
+Temperature History Size (Index):    128 (52)
 
 SCT Error Recovery Control:
            Read: Disabled

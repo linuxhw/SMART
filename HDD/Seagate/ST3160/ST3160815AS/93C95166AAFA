@@ -10,7 +10,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Dec 16 04:12:48 2023 EST
+Local Time is:    Wed Mar  6 21:03:50 2024 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,7 +18,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -58,17 +58,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    516
+  4 Start_Stop_Count        -O--CK   100   100   020    -    531
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   083   060   030    -    217368975
-  9 Power_On_Hours          -O--CK   050   050   000    -    44080
+  7 Seek_Error_Rate         POSR--   083   060   030    -    228041765
+  9 Power_On_Hours          -O--CK   048   048   000    -    46029
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    505
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    520
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   061   035   045    Past 39 (Min/Max 33/42 #380)
-194 Temperature_Celsius     -O---K   039   065   000    -    39 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   088   076   000    -    236297930
+190 Airflow_Temperature_Cel -O---K   058   035   045    Past 42 (Min/Max 40/42 #380)
+194 Temperature_Celsius     -O---K   042   065   000    -    42 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   099   076   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   197   000    -    20
@@ -160,25 +160,25 @@ Error 1 [0] occurred at disk power-on lifetime: 39221 hours (1634 days + 5 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     43863         -
-# 2  Extended offline    Completed without error       00%     43859         -
-# 3  Short offline       Completed without error       00%     43687         -
-# 4  Short offline       Completed without error       00%     43660         -
-# 5  Short offline       Completed without error       00%     43648         -
-# 6  Extended offline    Completed without error       00%     39204         -
-# 7  Extended offline    Completed without error       00%     38720         -
-# 8  Extended offline    Completed without error       00%     37548         -
-# 9  Extended offline    Completed without error       00%     37380         -
-#10  Extended offline    Completed without error       00%     37046         -
-#11  Extended offline    Completed without error       00%     36711         -
-#12  Extended offline    Completed without error       00%     36209         -
-#13  Extended offline    Completed without error       00%     36042         -
-#14  Extended offline    Completed without error       00%     35875         -
-#15  Extended offline    Completed without error       00%     35707         -
-#16  Extended offline    Completed without error       00%     35540         -
-#17  Extended offline    Completed without error       00%     35200         -
-#18  Extended offline    Completed without error       00%     35037         -
-#19  Extended offline    Completed without error       00%     34870         -
+# 1  Short offline       Completed without error       00%     45815         -
+# 2  Extended offline    Interrupted (host reset)      90%     45775         -
+# 3  Short offline       Completed without error       00%     45227         -
+# 4  Short offline       Completed without error       00%     45203         -
+# 5  Short offline       Completed without error       00%     45179         -
+# 6  Short offline       Completed without error       00%     45155         -
+# 7  Short offline       Completed without error       00%     45131         -
+# 8  Short offline       Completed without error       00%     45107         -
+# 9  Short offline       Completed without error       00%     45083         -
+#10  Extended offline    Completed without error       00%     45066         -
+#11  Short offline       Completed without error       00%     44598         -
+#12  Short offline       Completed without error       00%     44227         -
+#13  Short offline       Completed without error       00%     43863         -
+#14  Extended offline    Completed without error       00%     43859         -
+#15  Short offline       Completed without error       00%     43687         -
+#16  Short offline       Completed without error       00%     43660         -
+#17  Short offline       Completed without error       00%     43648         -
+#18  Extended offline    Completed without error       00%     39204         -
+#19  Extended offline    Completed without error       00%     38720         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -199,7 +199,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           60  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

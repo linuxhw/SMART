@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.10
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 3.AAE
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sun Jun 16 18:12:17 2024 BST
+Local Time is:    Tue Dec 31 22:56:32 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,19 +55,19 @@ recommended polling time: 	 ( 163) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   108   071   006    -    19809947
-  3 Spin_Up_Time            PO----   093   093   000    -    0
-  4 Start_Stop_Count        -O--CK   081   081   020    -    20116
+  1 Raw_Read_Error_Rate     POSR--   116   071   006    -    104142180
+  3 Spin_Up_Time            PO----   095   093   000    -    0
+  4 Start_Stop_Count        -O--CK   079   079   020    -    21608
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   079   060   030    -    56799225149
-  9 Power_On_Hours          -O--CK   061   061   000    -    34984
+  7 Seek_Error_Rate         POSR--   073   060   030    -    22352717
+  9 Power_On_Hours          -O--CK   058   058   000    -    36945
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   089   089   020    -    12076
+ 12 Power_Cycle_Count       -O--CK   088   088   020    -    13224
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   058   047   045    -    42 (Min/Max 41/42)
-194 Temperature_Celsius     -O---K   042   053   000    -    42 (0 17 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   082   052   000    -    109467785
+190 Airflow_Temperature_Cel -O---K   061   047   045    -    39 (Min/Max 39/39)
+194 Temperature_Celsius     -O---K   039   053   000    -    39 (0 17 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   096   052   000    -    75802208
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    15493
@@ -92,10 +92,10 @@ Address    Access  R/W   Size  Description
 0x09       GPL,SL  R/W      1  Selective self-test log
 0x10       GPL,SL  R/O      1  NCQ Command Error log
 0x11       GPL,SL  R/O      1  SATA Phy Event Counters log
-0x20       GPL,SL  R/O      1  Streaming performance log
+0x20       GPL,SL  R/O      1  Streaming performance log [OBS-8]
 0x21       GPL,SL  R/O      1  Write stream error log
 0x22       GPL,SL  R/O      1  Read stream error log
-0x23       GPL,SL  R/O      1  Delayed sector log
+0x23       GPL,SL  R/O      1  Delayed sector log [OBS-8]
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0       GPL,SL  VS       1  Device vendor specific log
 0xa1       GPL,SL  VS      20  Device vendor specific log
@@ -261,10 +261,14 @@ Error 922 [1] occurred at disk power-on lifetime: 16688 hours (695 days + 8 hour
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     34961         -
-# 2  Short offline       Completed without error       00%     34867         -
-# 3  Extended offline    Aborted by host               90%     34866         -
-# 4  Short offline       Completed without error       00%     11376         -
+# 1  Short offline       Completed without error       00%     36042         -
+# 2  Extended offline    Completed without error       00%     36008         -
+# 3  Short offline       Completed without error       00%     35040         -
+# 4  Short offline       Completed without error       00%     35035         -
+# 5  Short offline       Completed without error       00%     34961         -
+# 6  Short offline       Completed without error       00%     34867         -
+# 7  Extended offline    Aborted by host               90%     34866         -
+# 8  Short offline       Completed without error       00%     11376         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS

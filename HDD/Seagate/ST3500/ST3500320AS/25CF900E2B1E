@@ -1,3 +1,6 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.27-generic-3rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.11
 Device Model:     ST3500320AS
@@ -7,10 +10,10 @@ Firmware Version: SD1A
 User Capacity:    500,106,780,160 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Sep 24 19:14:29 2018 MSK
+Local Time is:    Fri May 10 14:41:14 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
@@ -28,8 +31,9 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
-					the host.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  634) seconds.
 Offline data collection
@@ -60,24 +64,24 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   091   006    -    184450418
+  1 Raw_Read_Error_Rate     POSR--   117   091   006    -    148164846
   3 Spin_Up_Time            PO----   095   091   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1087
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2665
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    14
-  7 Seek_Error_Rate         POSR--   064   060   030    -    403933812435
-  9 Power_On_Hours          -O--CK   077   077   000    -    20448
- 10 Spin_Retry_Count        PO--C-   100   100   097    -    5
- 12 Power_Cycle_Count       -O--CK   096   096   020    -    4360
+  7 Seek_Error_Rate         POSR--   064   060   030    -    412612644550
+  9 Power_On_Hours          -O--CK   072   072   000    -    24827
+ 10 Spin_Retry_Count        PO--C-   100   100   097    -    8
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6859
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    515
-188 Command_Timeout         -O--CK   100   087   000    -    214752428248
-189 High_Fly_Writes         -O-RCK   079   079   000    -    21
-190 Airflow_Temperature_Cel -O---K   069   051   045    -    31 (Min/Max 19/32)
-194 Temperature_Celsius     -O---K   031   049   000    -    31 (0 5 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   041   016   000    -    184450418
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   191   000    -    2632
+187 Reported_Uncorrect      -O--CK   001   001   000    -    533
+188 Command_Timeout         -O--CK   100   063   000    -    279178052131
+189 High_Fly_Writes         -O-RCK   076   076   000    -    24
+190 Airflow_Temperature_Cel -O---K   074   051   045    -    26 (Min/Max 19/26)
+194 Temperature_Celsius     -O---K   026   049   000    -    26 (0 5 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   038   016   000    -    148164846
+197 Current_Pending_Sector  -O--C-   100   100   000    -    1
+198 Offline_Uncorrectable   ----C-   100   100   000    -    1
+199 UDMA_CRC_Error_Count    -OSRCK   200   078   000    -    16413
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +114,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 514 (device log contains only the most recent 20 errors)
+Device Error Count: 534 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,7 +130,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 514 [13] occurred at disk power-on lifetime: 18350 hours (764 days + 14 hours)
+Error 534 [13] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -137,13 +141,13 @@ Error 514 [13] occurred at disk power-on lifetime: 18350 hours (764 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 09 85 00 75 90 e0 00     00:59:54.030  READ DMA EXT
-  25 00 00 01 00 00 09 84 00 75 90 e0 00     00:59:54.029  READ DMA EXT
-  25 00 00 01 00 00 09 83 00 75 90 e0 00     00:59:54.028  READ DMA EXT
-  25 00 00 01 00 00 09 39 00 75 90 e0 00     00:59:53.909  READ DMA EXT
-  25 00 00 01 00 00 09 38 00 75 90 e0 00     00:59:53.905  READ DMA EXT
+  25 00 00 00 80 00 09 85 00 75 e8 e0 00     02:54:58.748  READ DMA EXT
+  25 00 00 00 08 00 09 85 00 75 30 e0 00     02:54:58.747  READ DMA EXT
+  25 00 00 00 b0 00 09 85 00 75 38 e0 00     02:54:58.747  READ DMA EXT
+  25 00 00 00 f8 00 09 a8 00 84 d0 e0 00     02:54:58.732  READ DMA EXT
+  25 00 00 00 10 00 09 a8 00 84 c0 e0 00     02:54:58.725  READ DMA EXT
 
-Error 513 [12] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hours)
+Error 533 [12] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -154,13 +158,13 @@ Error 513 [12] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:29:06.656  READ FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 00 00     12:29:06.656  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     12:29:06.637  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:29:06.551  NOP [Abort queued commands]
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:29:03.616  READ FPDMA QUEUED
+  25 00 00 00 08 00 09 86 00 75 18 e0 00     02:37:23.586  READ DMA EXT
+  25 00 00 00 10 00 09 a3 00 05 28 e0 00     02:37:23.551  READ DMA EXT
+  35 00 00 00 18 00 00 32 00 00 60 e0 00     02:37:23.551  WRITE DMA EXT
+  ea 00 00 00 00 75 67 00 87 00 00 a0 00     02:37:23.464  FLUSH CACHE EXT
+  25 00 00 00 50 00 09 87 00 75 18 e0 00     02:37:23.464  READ DMA EXT
 
-Error 512 [11] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hours)
+Error 532 [11] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -171,13 +175,13 @@ Error 512 [11] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:29:03.616  READ FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 00 00     12:29:03.616  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     12:29:03.594  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:29:03.502  NOP [Abort queued commands]
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:29:00.626  READ FPDMA QUEUED
+  25 00 00 01 00 00 09 86 00 75 18 e0 00     02:37:20.594  READ DMA EXT
+  25 00 00 00 10 00 06 b8 00 4a 00 e0 00     02:37:20.543  READ DMA EXT
+  35 00 00 00 08 00 00 11 00 00 a0 e0 00     02:37:20.542  WRITE DMA EXT
+  25 00 00 00 50 00 09 87 00 75 18 e0 00     02:37:20.456  READ DMA EXT
+  25 00 00 01 00 00 09 86 00 75 18 e0 00     02:37:17.607  READ DMA EXT
 
-Error 511 [10] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hours)
+Error 531 [10] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -188,13 +192,13 @@ Error 511 [10] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:29:00.626  READ FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 00 00     12:29:00.625  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     12:29:00.615  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:29:00.520  NOP [Abort queued commands]
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:57.619  READ FPDMA QUEUED
+  25 00 00 01 00 00 09 86 00 75 18 e0 00     02:37:17.607  READ DMA EXT
+  25 00 00 00 10 00 0b b6 00 bb b0 e0 00     02:37:17.606  READ DMA EXT
+  25 00 00 00 10 00 0b b6 00 bb a0 e0 00     02:37:17.605  READ DMA EXT
+  25 00 00 00 18 00 0b ea 00 a8 c8 e0 00     02:37:17.604  READ DMA EXT
+  25 00 00 00 10 00 0b ea 00 a8 b8 e0 00     02:37:17.604  READ DMA EXT
 
-Error 510 [9] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hours)
+Error 530 [9] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -205,13 +209,13 @@ Error 510 [9] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:57.619  READ FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 00 00     12:28:57.619  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     12:28:57.604  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:28:57.513  NOP [Abort queued commands]
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:54.576  READ FPDMA QUEUED
+  25 00 00 00 08 00 09 86 00 75 18 e0 00     02:37:14.650  READ DMA EXT
+  25 00 00 00 80 00 0c 36 00 93 78 e0 00     02:37:14.648  READ DMA EXT
+  25 00 00 00 08 00 09 86 00 75 10 e0 00     02:37:14.648  READ DMA EXT
+  25 00 00 00 80 00 0c 35 00 93 f8 e0 00     02:37:14.647  READ DMA EXT
+  25 00 00 00 08 00 09 86 00 75 08 e0 00     02:37:14.647  READ DMA EXT
 
-Error 509 [8] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hours)
+Error 529 [8] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -222,13 +226,13 @@ Error 509 [8] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:54.576  READ FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 00 00     12:28:54.576  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     12:28:54.562  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:28:54.448  NOP [Abort queued commands]
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:51.547  READ FPDMA QUEUED
+  25 00 00 00 80 00 09 85 00 75 e8 e0 00     02:37:11.613  READ DMA EXT
+  25 00 00 00 08 00 0d dd 00 55 68 e0 00     02:37:11.520  READ DMA EXT
+  25 00 00 00 10 00 0b 5e 00 93 78 e0 00     02:37:11.502  READ DMA EXT
+  25 00 00 00 80 00 09 85 00 75 e8 e0 00     02:37:08.674  READ DMA EXT
+  25 00 00 00 10 00 09 85 00 75 00 e0 00     02:37:08.671  READ DMA EXT
 
-Error 508 [7] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hours)
+Error 528 [7] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -239,13 +243,13 @@ Error 508 [7] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:51.547  READ FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 00 00     12:28:51.547  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     12:28:51.535  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:28:51.441  NOP [Abort queued commands]
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:48.540  READ FPDMA QUEUED
+  25 00 00 00 80 00 09 85 00 75 e8 e0 00     02:37:08.674  READ DMA EXT
+  25 00 00 00 10 00 09 85 00 75 00 e0 00     02:37:08.671  READ DMA EXT
+  25 00 00 00 10 00 09 84 00 75 f0 e0 00     02:37:08.661  READ DMA EXT
+  25 00 00 00 10 00 0b b6 00 bb 60 e0 00     02:37:08.659  READ DMA EXT
+  25 00 00 00 10 00 0b b6 00 bb 50 e0 00     02:37:08.650  READ DMA EXT
 
-Error 507 [6] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hours)
+Error 527 [6] occurred at disk power-on lifetime: 21810 hours (908 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -256,11 +260,11 @@ Error 507 [6] occurred at disk power-on lifetime: 17286 hours (720 days + 6 hour
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:48.540  READ FPDMA QUEUED
-  ef 00 90 00 03 00 00 00 00 00 00 00 00     12:28:48.540  SET FEATURES [Disable SATA feature]
-  ef 00 02 00 00 00 00 00 00 00 00 00 00     12:28:48.524  SET FEATURES [Enable write cache]
-  00 00 00 00 00 00 00 00 00 00 00 00 ff     12:28:48.435  NOP [Abort queued commands]
-  60 00 00 00 80 00 09 86 00 75 18 40 00     12:28:45.500  READ FPDMA QUEUED
+  25 00 00 00 08 00 09 86 00 75 18 e0 00     02:17:05.940  READ DMA EXT
+  25 00 00 00 08 00 09 86 00 75 10 e0 00     02:17:05.939  READ DMA EXT
+  25 00 00 00 08 00 09 86 00 75 08 e0 00     02:17:05.939  READ DMA EXT
+  25 00 00 00 08 00 09 86 00 75 00 e0 00     02:17:05.939  READ DMA EXT
+  25 00 00 00 08 00 09 85 00 75 f8 e0 00     02:17:05.939  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -280,19 +284,18 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     18/32 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     19/26 Celsius
 Lifetime    Min/Max Temperature:      4/49 Celsius
-Under/Over Temperature Limit Count:   0/291
+Under/Over Temperature Limit Count:   0/229
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (10)
+Temperature History Size (Index):    128 (98)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -304,7 +307,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

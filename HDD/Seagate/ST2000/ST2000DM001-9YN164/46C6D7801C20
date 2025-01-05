@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.21-generic-8rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Barracuda 7200.14 (AF)
@@ -10,10 +10,10 @@ Firmware Version: CC4H
 User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun May 22 20:57:43 2022 +05
+Local Time is:    Sun Mar 31 13:35:21 2024 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -61,30 +61,30 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   093   006    -    211736512
+  1 Raw_Read_Error_Rate     POSR--   118   093   006    -    174895544
   3 Spin_Up_Time            PO----   094   094   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5831
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    4436014218
-  9 Power_On_Hours          -O--CK   054   054   000    -    40868
+  4 Start_Stop_Count        -O--CK   094   094   020    -    7142
+  5 Reallocated_Sector_Ct   PO--CK   073   051   036    -    36560
+  7 Seek_Error_Rate         POSR--   081   060   030    -    4436484290
+  9 Power_On_Hours          -O--CK   048   048   000    -    46160
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5424
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6729
 183 Runtime_Bad_Block       -O--CK   099   099   000    -    1
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    1166
+187 Reported_Uncorrect      -O--CK   001   001   000    -    1168
 188 Command_Timeout         -O--CK   100   098   000    -    0 0 36
 189 High_Fly_Writes         -O-RCK   099   099   000    -    1
-190 Airflow_Temperature_Cel -O---K   062   049   045    -    38 (Min/Max 19/41 #1)
+190 Airflow_Temperature_Cel -O---K   066   046   045    -    34 (0 1 34 34 0)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    254
-193 Load_Cycle_Count        -O--CK   001   001   000    -    205047
-194 Temperature_Celsius     -O---K   038   051   000    -    38 (128 0 0 0 0)
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    274
+193 Load_Cycle_Count        -O--CK   001   001   000    -    247650
+194 Temperature_Celsius     -O---K   034   054   000    -    34 (128 0 0 0 0)
+197 Current_Pending_Sector  -O--C-   093   093   000    -    1184
+198 Offline_Uncorrectable   ----C-   093   093   000    -    1184
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    13356h+37m+08.296s
-241 Total_LBAs_Written      ------   100   253   000    -    107806801551720
-242 Total_LBAs_Read         ------   100   253   000    -    273949189377982
+240 Head_Flying_Hours       ------   100   253   000    -    14825h+47m+15.768s
+241 Total_LBAs_Written      ------   100   253   000    -    109670597901915
+242 Total_LBAs_Read         ------   100   253   000    -    274996539573427
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,7 +120,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 1138 (device log contains only the most recent 20 errors)
+Device Error Count: 1140 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -135,6 +135,40 @@ Device Error Count: 1138 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1140 [19] occurred at disk power-on lifetime: 45279 hours (1886 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 18 c8 d9 e8 00 00  Error: UNC at LBA = 0x18c8d9e8 = 415816168
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 01 00 00 00 18 c8 d8 38 40 00     02:21:41.610  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 18 c8 a6 38 40 00     02:21:39.932  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 18 c8 a5 38 40 00     02:21:39.789  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 18 c8 a4 38 40 00     02:21:39.697  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 18 c8 a3 38 40 00     02:21:39.688  READ FPDMA QUEUED
+
+Error 1139 [18] occurred at disk power-on lifetime: 45279 hours (1886 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 18 c8 a4 b8 00 00  Error: UNC at LBA = 0x18c8a4b8 = 415802552
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 01 00 00 00 18 c8 a5 38 40 00     01:54:43.158  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 18 c8 a4 38 40 00     01:54:43.157  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 18 c8 a3 38 40 00     01:54:36.674  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 18 c8 a2 38 40 00     01:54:36.598  READ FPDMA QUEUED
+  60 00 00 00 80 00 00 cf 84 d7 00 40 00     01:54:36.598  READ FPDMA QUEUED
 
 Error 1138 [17] occurred at disk power-on lifetime: 14635 hours (609 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -238,61 +272,28 @@ Error 1133 [12] occurred at disk power-on lifetime: 14635 hours (609 days + 19 h
   35 00 00 00 20 00 00 29 4f 8a 60 e0 00     06:58:20.495  WRITE DMA EXT
   25 00 00 00 20 00 00 04 37 93 a0 e0 00     06:58:20.495  READ DMA EXT
 
-Error 1132 [11] occurred at disk power-on lifetime: 14635 hours (609 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 04 37 94 b0 00 00  Error: UNC at LBA = 0x043794b0 = 70751408
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 00 04 37 94 70 e0 00     06:52:21.155  READ DMA EXT
-  25 00 00 01 00 00 00 04 37 92 70 e0 00     06:52:18.438  READ DMA EXT
-  25 00 00 01 00 00 00 04 37 91 70 e0 00     06:52:18.204  READ DMA EXT
-  25 00 00 00 20 00 00 04 37 93 e0 e0 00     06:52:15.488  READ DMA EXT
-  35 00 00 00 20 00 00 29 5b 0e a0 e0 00     06:52:15.487  WRITE DMA EXT
-
-Error 1131 [10] occurred at disk power-on lifetime: 14635 hours (609 days + 19 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 04 37 93 f8 00 00  Error: UNC at LBA = 0x043793f8 = 70751224
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 01 00 00 00 04 37 92 70 e0 00     06:52:18.438  READ DMA EXT
-  25 00 00 01 00 00 00 04 37 91 70 e0 00     06:52:18.204  READ DMA EXT
-  25 00 00 00 20 00 00 04 37 93 e0 e0 00     06:52:15.488  READ DMA EXT
-  35 00 00 00 20 00 00 29 5b 0e a0 e0 00     06:52:15.487  WRITE DMA EXT
-  25 00 00 00 20 00 00 04 37 93 c0 e0 00     06:52:15.487  READ DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     40849         -
-# 2  Extended offline    Completed without error       00%     40792         -
-# 3  Extended offline    Interrupted (host reset)      00%     40742         -
-# 4  Extended offline    Completed without error       00%     40668         -
-# 5  Extended offline    Interrupted (host reset)      00%     40620         -
-# 6  Extended offline    Completed without error       00%     40550         -
-# 7  Extended offline    Completed without error       00%     40473         -
-# 8  Extended offline    Interrupted (host reset)      00%     40391         -
-# 9  Extended offline    Completed without error       00%     40339         -
-#10  Extended offline    Completed without error       00%     40271         -
-#11  Extended offline    Completed without error       00%     40216         -
-#12  Extended offline    Interrupted (host reset)      00%     40213         -
-#13  Extended offline    Interrupted (host reset)      00%     40147         -
-#14  Extended offline    Interrupted (host reset)      10%     40080         -
-#15  Extended offline    Interrupted (host reset)      00%     40014         -
-#16  Extended offline    Completed without error       00%     39955         -
-#17  Extended offline    Completed without error       00%     39902         -
-#18  Extended offline    Completed without error       00%     39847         -
-#19  Extended offline    Interrupted (host reset)      80%     39778         -
+# 1  Extended offline    Interrupted (host reset)      80%     46142         -
+# 2  Extended offline    Completed: read failure       50%     46076         2266041896
+# 3  Extended offline    Interrupted (host reset)      00%     46004         -
+# 4  Extended offline    Completed without error       00%     45954         -
+# 5  Extended offline    Interrupted (host reset)      40%     45881         -
+# 6  Extended offline    Completed: read failure       20%     45828         3413868936
+# 7  Extended offline    Completed: read failure       90%     45762         296708240
+# 8  Extended offline    Completed: read failure       90%     45706         631268456
+# 9  Extended offline    Completed: read failure       90%     45642         387579360
+#10  Extended offline    Completed: read failure       90%     45572         348416704
+#11  Extended offline    Completed: read failure       80%     45496         921393680
+#12  Extended offline    Interrupted (host reset)      00%     45430         -
+#13  Extended offline    Completed: read failure       70%     45355         1614005480
+#14  Extended offline    Completed: read failure       90%     45251         602883080
+#15  Extended offline    Completed without error       00%     45171         -
+#16  Extended offline    Completed without error       00%     45096         -
+#17  Extended offline    Completed without error       00%     45033         -
+#18  Extended offline    Completed without error       00%     44968         -
+#19  Extended offline    Interrupted (host reset)      70%     44899         -
+8 of 9 failed self-tests are outdated by newer successful extended offline self-test # 4
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -308,9 +309,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     19/41 Celsius
-Lifetime    Min/Max Temperature:     13/51 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     34/34 Celsius
+Lifetime    Min/Max Temperature:     13/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Data Table command not supported
@@ -323,7 +324,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
