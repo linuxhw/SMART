@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.14-300.fc38.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.5-200.fc38.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Intel 330/335 Series SSDs
@@ -11,10 +11,10 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic
-Device is:        In smartctl database 7.3/5417
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun May 14 12:36:25 2023 AEST
+Local Time is:    Thu Oct  5 15:18:32 2023 AEDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    5
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    956080h+25m+06.930s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    175
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    956222h+10m+28.010s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    180
 181 Program_Fail_Cnt_Total  -O--CK   000   000   000    -    5
 182 Erase_Fail_Count_Total  -O--CK   000   000   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    170
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    2331496
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    175
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    2344419
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   092   092   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    2331496
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    879057
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    70133
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    2344419
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    901273
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    70390
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -147,7 +147,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/ 4 Celsius
-Temperature History Size (Index):    28260 (50)
+Temperature History Size (Index):    28260 (422)
 Invalid Temperature History Size or Index
 
 SCT Error Recovery Control command not supported
@@ -155,16 +155,16 @@ SCT Error Recovery Control command not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             188  ---  Lifetime Power-On Resets
-0x01  0x010  4           61286  ---  Power-on Hours
-0x01  0x018  6    153997973840  ---  Logical Sectors Written
-0x01  0x028  6     59019241715  ---  Logical Sectors Read
+0x01  0x008  4             193  ---  Lifetime Power-On Resets
+0x01  0x010  4           61428  ---  Power-on Hours
+0x01  0x018  6    154844917812  ---  Logical Sectors Written
+0x01  0x028  6     60475159797  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4            2942  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4            3017  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            2942  ---  Number of Hardware Resets
-0x06  0x010  4            2592  ---  Number of ASR Events
+0x06  0x008  4            3017  ---  Number of Hardware Resets
+0x06  0x010  4            2649  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
@@ -182,8 +182,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

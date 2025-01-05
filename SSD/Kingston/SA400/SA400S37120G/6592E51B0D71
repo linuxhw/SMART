@@ -1,7 +1,8 @@
-smartctl 6.6 2017-11-05 r4594 [x86_64-linux-4.12.14-lp151.28.25-default] (SUSE RPM)
-Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2021-09-14 r5237 [x86_64-linux-5.14.21-150500.55.19-default] (SUSE RPM)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Phison Driven SSDs
 Device Model:     KINGSTON SA400S37120G
 Serial Number:    --
 LU WWN Device Id: 5 0026b7 ...
@@ -10,10 +11,11 @@ User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Mar 21 23:26:28 2022 -03
+Local Time is:    Wed Aug 23 23:38:33 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,31 +63,31 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-R--   099   099   000    -    875
-  9 Power_On_Hours          -O--C-   100   100   000    -    23350
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    888
+  9 Power_On_Hours          -O--C-   100   100   000    -    27733
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    1595
 148 Unknown_Attribute       ------   255   255   000    -    1
 149 Unknown_Attribute       ------   255   255   000    -    40
-167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    0
-169 Unknown_Attribute       ------   100   100   000    -    8
-170 Unknown_Attribute       PO--C-   100   100   010    -    9
-172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       ------   100   100   000    -    3997793
-181 Program_Fail_Cnt_Total  -O--C-   100   100   000    -    0
-182 Erase_Fail_Count_Total  ------   255   255   000    -    1
+167 Write_Protect_Mode      -O---K   100   100   000    -    0
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+169 Bad_Block_Rate          ------   100   100   000    -    8
+170 Bad_Blk_Ct_Erl/Lat      PO--C-   100   100   010    -    0/9
+172 Erase_Fail_Count        -O--CK   100   100   000    -    0
+173 MaxAvgErase_Ct          ------   100   100   000    -    124 (Average 83)
+181 Program_Fail_Count      -O--C-   100   100   000    -    0
+182 Erase_Fail_Count        ------   255   255   000    -    1
 187 Reported_Uncorrect      -O--CK   100   100   000    -    1
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    673
-194 Temperature_Celsius     PO---K   070   053   000    -    30 (Min/Max 14/47)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    1138
+194 Temperature_Celsius     PO---K   075   050   000    -    25 (Min/Max 14/50)
 196 Reallocated_Event_Count ------   100   100   000    -    2
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-218 Unknown_Attribute       ------   100   100   000    -    0
-231 Temperature_Celsius     PO--C-   100   100   000    -    93
-233 Media_Wearout_Indicator PO--C-   100   100   000    -    5525
-241 Total_LBAs_Written      -O--C-   100   100   000    -    5099
-242 Total_LBAs_Read         -O--C-   100   100   000    -    140531
-244 Unknown_Attribute       ------   100   100   000    -    61
-245 Unknown_Attribute       ------   100   100   000    -    97
-246 Unknown_Attribute       ------   100   100   000    -    361392
+199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
+218 CRC_Error_Count         ------   100   100   000    -    0
+231 SSD_Life_Left           PO--C-   100   100   000    -    91
+233 Flash_Writes_GiB        PO--C-   100   100   000    -    8140
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    9142
+242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    151023
+244 Average_Erase_Count     ------   100   100   000    -    83
+245 Max_Erase_Count         ------   100   100   000    -    124
+246 Total_Erase_Count       ------   100   100   000    -    492708
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -264,25 +266,25 @@ Error 628 [115] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     23328         -
-# 2  Short offline       Completed without error       00%     23316         -
-# 3  Short offline       Completed without error       00%     23302         -
-# 4  Short offline       Completed without error       00%     23293         -
-# 5  Short offline       Completed without error       00%     23284         -
-# 6  Short offline       Completed without error       00%     23278         -
-# 7  Short offline       Completed without error       00%     23270         -
-# 8  Short offline       Completed without error       00%     23256         -
-# 9  Short offline       Completed without error       00%     23243         -
-#10  Short offline       Completed without error       00%     23233         -
-#11  Short offline       Completed without error       00%     23227         -
-#12  Short offline       Completed without error       00%     23218         -
-#13  Short offline       Completed without error       00%     23213         -
-#14  Short offline       Completed without error       00%     23203         -
-#15  Extended offline    Completed without error       00%     23192         -
-#16  Short offline       Completed without error       00%     23177         -
-#17  Short offline       Completed without error       00%     23167         -
-#18  Short offline       Completed without error       00%     23149         -
-#19  Short offline       Completed without error       00%     23137         -
+# 1  Short offline       Completed without error       00%     27710         -
+# 2  Short offline       Completed without error       00%     27696         -
+# 3  Short offline       Completed without error       00%     27689         -
+# 4  Short offline       Completed without error       00%     27682         -
+# 5  Short offline       Completed without error       00%     27676         -
+# 6  Short offline       Completed without error       00%     27671         -
+# 7  Short offline       Completed without error       00%     27668         -
+# 8  Short offline       Completed without error       00%     27660         -
+# 9  Short offline       Completed without error       00%     27644         -
+#10  Short offline       Completed without error       00%     27635         -
+#11  Short offline       Completed without error       00%     27627         -
+#12  Short offline       Completed without error       00%     27622         -
+#13  Short offline       Completed without error       00%     27615         -
+#14  Short offline       Completed without error       00%     27611         -
+#15  Extended offline    Completed without error       00%     27606         -
+#16  Short offline       Completed without error       00%     27599         -
+#17  Short offline       Completed without error       00%     27591         -
+#18  Short offline       Completed without error       00%     27583         -
+#19  Short offline       Completed without error       00%     27575         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -301,20 +303,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             888  ---  Lifetime Power-On Resets
-0x01  0x010  4           23350  ---  Power-on Hours
-0x01  0x018  6     10694892730  ---  Logical Sectors Written
-0x01  0x028  6    294714877356  ---  Logical Sectors Read
+0x01  0x008  4            1595  ---  Lifetime Power-On Resets
+0x01  0x010  4           27733  ---  Power-on Hours
+0x01  0x018  6     19173739938  ---  Logical Sectors Written
+0x01  0x028  6    316719091840  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4             875  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x020  1              47  ---  Highest Temperature
+0x05  0x008  1              25  ---  Current Temperature
+0x05  0x020  1              50  ---  Highest Temperature
 0x05  0x028  1              14  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -329,8 +331,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           12  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

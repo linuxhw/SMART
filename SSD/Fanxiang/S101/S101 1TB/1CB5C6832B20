@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Jan  9 19:10:29 2024 UTC
+Local Time is:    Thu Jan 11 20:11:42 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,8 +65,8 @@ SMART Attributes Data Structure revision number: 20
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    2431
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    215
+  9 Power_On_Hours          -O--C-   100   100   000    -    2444
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    219
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 169 Unknown_Attribute       PO--C-   100   100   010    -    262152
@@ -74,18 +74,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 172 Unknown_Attribute       -O--CK   000   000   000    -    0
 173 Unknown_Attribute       -O--C-   100   100   000    -    51544326196
 175 Program_Fail_Count_Chip -O---K   100   100   010    -    0
-177 Wear_Leveling_Count     -O--C-   100   100   000    -    530719
+177 Wear_Leveling_Count     -O--C-   100   100   000    -    531186
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    268
 187 Reported_Uncorrect      -O--CK   100   000   000    -    0
-194 Temperature_Celsius     -O---K   041   041   000    -    41 (Min/Max 34/48)
+194 Temperature_Celsius     -O---K   042   042   000    -    42 (Min/Max 34/48)
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   -O--CK   100   000   000    -    0
 199 UDMA_CRC_Error_Count    -O--C-   100   100   000    -    0
 206 Unknown_SSD_Attribute   -O--CK   200   200   000    -    12
 207 Unknown_SSD_Attribute   -O--CK   200   200   000    -    72
 208 Unknown_SSD_Attribute   -O--CK   200   200   000    -    52
-241 Total_LBAs_Written      -O--CK   100   100   000    -    21678
-242 Total_LBAs_Read         -O--CK   100   100   000    -    23203
+241 Total_LBAs_Written      -O--CK   100   100   000    -    21739
+242 Total_LBAs_Read         -O--CK   100   100   000    -    23231
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,8 +131,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    48 Celsius
-Power Cycle Min/Max Temperature:      ?/48 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:      ?/43 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -141,20 +141,20 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (332)
+Temperature History Size (Index):    478 (364)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             215  ---  Lifetime Power-On Resets
-0x01  0x010  4            2431  ---  Power-on Hours
-0x01  0x018  6     45462608834  ---  Logical Sectors Written
-0x01  0x020  6       175594235  ---  Number of Write Commands
-0x01  0x028  6     48660487495  ---  Logical Sectors Read
-0x01  0x030  6       223640409  ---  Number of Read Commands
-0x01  0x038  6   2237837058124  ---  Date and Time TimeStamp
+0x01  0x008  4             219  ---  Lifetime Power-On Resets
+0x01  0x010  4            2444  ---  Power-on Hours
+0x01  0x018  6     45592039725  ---  Logical Sectors Written
+0x01  0x020  6       176419168  ---  Number of Write Commands
+0x01  0x028  6     48719701339  ---  Logical Sectors Read
+0x01  0x030  6       224023665  ---  Number of Read Commands
+0x01  0x038  6   2250768276512  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -172,7 +172,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           24  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           22  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

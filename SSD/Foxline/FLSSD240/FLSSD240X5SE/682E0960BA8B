@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [aarch64-linux-6.1.38-generic-1rosa2021.1-arm64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [aarch64-linux-6.1.58-generic-4rosa2021.15-arm64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     FOXLINE FLSSD240X5SE
@@ -10,10 +10,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 10 17:40:51 2023 MSK
+Local Time is:    Mon May 20 13:49:54 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -61,16 +61,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    276
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    90
+  9 Power_On_Hours          -O--C-   100   100   000    -    1455
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    136
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   100   100   010    -    323
-173 Unknown_Attribute       -O--C-   100   100   000    -    1
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    52
+173 Unknown_Attribute       -O--C-   100   100   000    -    65538
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    61
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
-218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    100
-241 Total_LBAs_Written      -O--C-   100   100   000    -    90
+218 Unknown_Attribute       PO-R--   100   100   050    -    1
+231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    99
+241 Total_LBAs_Written      -O--C-   100   100   000    -    402
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -98,7 +98,18 @@ SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      1441         -
+# 2  Extended offline    Completed without error       00%      1273         -
+# 3  Extended offline    Completed without error       00%      1105         -
+# 4  Extended offline    Completed without error       00%       937         -
+# 5  Extended offline    Completed without error       00%       769         -
+# 6  Extended offline    Completed without error       00%       601         -
+# 7  Extended offline    Completed without error       00%       433         -
+# 8  Extended offline    Completed without error       00%       350         -
+# 9  Extended offline    Completed without error       00%       334         -
+#10  Extended offline    Completed without error       00%       306         -
+#11  Extended offline    Completed without error       00%       277         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
@@ -117,10 +128,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              90  ---  Lifetime Power-On Resets
-0x01  0x010  4             276  ---  Power-on Hours
-0x01  0x018  6       190858633  ---  Logical Sectors Written
-0x01  0x028  6        90582249  ---  Logical Sectors Read
+0x01  0x008  4             136  ---  Lifetime Power-On Resets
+0x01  0x010  4            1455  ---  Power-on Hours
+0x01  0x018  6       844066853  ---  Logical Sectors Written
+0x01  0x028  6       558384535  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -128,8 +139,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              33  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             330  ---  Number of Hardware Resets
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4             699  ---  Number of Hardware Resets
+0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

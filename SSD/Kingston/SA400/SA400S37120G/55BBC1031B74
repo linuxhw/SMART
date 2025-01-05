@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-5.4.150-generic-1rosa2021.1-x86_64] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.21-generic-8rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Oct 15 16:10:31 2024 +07
+Local Time is:    Mon Oct 28 16:41:55 2024 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  ENABLED, PW level HIGH, not locked, frozen [SEC6]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -63,8 +63,8 @@ SMART Attributes Data Structure revision number: 5
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    18
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    86
+  9 Power_On_Hours          -O--CK   100   100   000    -    52
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    203
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -76,18 +76,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    59
-194 Temperature_Celsius     -O---K   025   026   000    -    26 (Min/Max 23/26)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    133
+194 Temperature_Celsius     -O---K   029   031   000    -    31 (Min/Max 28/31)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
 231 SSD_Life_Left           ------   100   100   000    -    100
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    66
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    62
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    27
-244 Average_Erase_Count     ------   100   100   000    -    0
-245 Max_Erase_Count         ------   100   100   000    -    1
-246 Total_Erase_Count       ------   100   100   000    -    227
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    118
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    111
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    76
+244 Average_Erase_Count     ------   100   100   000    -    1
+245 Max_Erase_Count         ------   100   100   000    -    2
+246 Total_Erase_Count       ------   100   100   000    -    432
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -124,5 +124,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 

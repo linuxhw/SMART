@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Aug 24 13:38:02 2024 +05
+Local Time is:    Sun Dec  8 01:54:40 2024 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Disabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,21 +65,21 @@ SMART Attributes Data Structure revision number: 20
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   ------+  100   100   050    -    0
-  9 Power_On_Hours          ------+  100   100   000    -    925
- 12 Power_Cycle_Count       ------+  100   100   000    -    163
+  9 Power_On_Hours          ------+  100   100   000    -    2813
+ 12 Power_Cycle_Count       ------+  100   100   000    -    274
 167 Unknown_Attribute       ------+  100   100   000    -    0
 168 Unknown_Attribute       ------+  100   100   000    -    0
 169 Unknown_Attribute       ------+  100   100   010    -    196614
-173 Unknown_Attribute       ------+  200   200   000    -    12898009187
+173 Unknown_Attribute       ------+  200   200   000    -    42971234532
 175 Program_Fail_Count_Chip ------+  100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot ------+  100   100   000    -    91
-192 Power-Off_Retract_Count ------+  100   100   000    -    95
-194 Temperature_Celsius     ------+  032   032   000    -    32 (Min/Max 23/36)
-231 Unknown_SSD_Attribute   ------+  097   097   005    -    3
-233 Media_Wearout_Indicator ------+  100   100   000    -    1280
-234 Unknown_Attribute       ------+  100   100   005    -    1428459
-241 Total_LBAs_Written      ------+  100   100   000    -    646
-242 Total_LBAs_Read         ------+  100   100   000    -    426
+192 Power-Off_Retract_Count ------+  100   100   000    -    137
+194 Temperature_Celsius     ------+  033   033   000    -    33 (Min/Max 23/36)
+231 Unknown_SSD_Attribute   ------+  093   093   005    -    7
+233 Media_Wearout_Indicator ------+  100   100   000    -    3263
+234 Unknown_Attribute       ------+  100   100   005    -    3203197
+241 Total_LBAs_Written      ------+  100   100   000    -    1419
+242 Total_LBAs_Read         ------+  100   100   000    -    827
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,12 +110,23 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%       795         -
-# 2  Extended offline    Completed without error       00%       663         -
-# 3  Extended offline    Completed without error       00%       495         -
-# 4  Extended offline    Completed without error       00%       361         -
-# 5  Extended offline    Completed without error       00%       244         -
-# 6  Extended offline    Completed without error       00%       108         -
+# 1  Extended offline    Completed without error       00%      2794         -
+# 2  Extended offline    Completed without error       00%      2671         -
+# 3  Extended offline    Completed without error       00%      2405         -
+# 4  Extended offline    Completed without error       00%      2283         -
+# 5  Extended offline    Completed without error       00%      2165         -
+# 6  Extended offline    Completed without error       00%      2024         -
+# 7  Extended offline    Completed without error       00%      1904         -
+# 8  Extended offline    Completed without error       00%      1783         -
+# 9  Extended offline    Completed without error       00%      1424         -
+#10  Extended offline    Completed without error       00%      1299         -
+#11  Extended offline    Completed without error       00%      1179         -
+#12  Extended offline    Completed without error       00%       795         -
+#13  Extended offline    Completed without error       00%       663         -
+#14  Extended offline    Completed without error       00%       495         -
+#15  Extended offline    Completed without error       00%       361         -
+#16  Extended offline    Completed without error       00%       244         -
+#17  Extended offline    Completed without error       00%       108         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -131,8 +142,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:      ?/32 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:      ?/36 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -141,22 +152,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (97)
+Temperature History Size (Index):    478 (276)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             163  ---  Lifetime Power-On Resets
-0x01  0x010  4             925  ---  Power-on Hours
-0x01  0x018  6      1356544215  ---  Logical Sectors Written
-0x01  0x020  6        13274319  ---  Number of Write Commands
-0x01  0x028  6       894562201  ---  Logical Sectors Read
-0x01  0x030  6         8744529  ---  Number of Read Commands
-0x01  0x038  6    853730188808  ---  Date and Time TimeStamp
+0x01  0x008  4             274  ---  Lifetime Power-On Resets
+0x01  0x010  4            2813  ---  Power-on Hours
+0x01  0x018  6      2977137729  ---  Logical Sectors Written
+0x01  0x020  6        39609804  ---  Number of Write Commands
+0x01  0x028  6      1734800140  ---  Logical Sectors Read
+0x01  0x030  6        18194255  ---  Number of Read Commands
+0x01  0x038  6   2565534123920  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              13  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              21  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

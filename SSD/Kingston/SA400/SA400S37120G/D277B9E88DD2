@@ -1,4 +1,8 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.117-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
+Model Family:     Phison Driven SSDs
 Device Model:     KINGSTON SA400S37120G
 Serial Number:    --
 LU WWN Device Id: 5 02b2a2 ...
@@ -7,10 +11,11 @@ Firmware Version: 03090004
 User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Feb 24 19:08:09 2020 +05
+Local Time is:    Wed Jul 19 02:13:38 2023 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -58,31 +63,31 @@ SMART Attributes Data Structure revision number: 5
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    451
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    604
+  9 Power_On_Hours          -O--CK   100   100   000    -    4902
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4964
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
-167 Unknown_Attribute       ------   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    0
-169 Unknown_Attribute       ------   100   100   000    -    158
-170 Unknown_Attribute       ------   100   100   010    -    64
-172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       ------   100   100   000    -    0
-181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
-182 Erase_Fail_Count_Total  ------   100   100   000    -    0
+167 Write_Protect_Mode      ------   100   100   000    -    0
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+169 Bad_Block_Rate          ------   100   100   000    -    158
+170 Bad_Blk_Ct_Erl/Lat      ------   100   100   010    -    0/64
+172 Erase_Fail_Count        -O--CK   100   100   000    -    0
+173 MaxAvgErase_Ct          ------   100   100   000    -    0
+181 Program_Fail_Count      -O--CK   100   100   000    -    0
+182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    219
-194 Temperature_Celsius     -O---K   025   026   000    -    26 (Min/Max 21/26)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    577
+194 Temperature_Celsius     -O---K   026   028   000    -    26 (Min/Max 24/28)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-218 Unknown_Attribute       -O--CK   100   100   000    -    0
-231 Temperature_Celsius     ------   100   100   000    -    100
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    1229
-241 Total_LBAs_Written      -O--CK   100   100   000    -    1146
-242 Total_LBAs_Read         -O--CK   100   100   000    -    617
-244 Unknown_Attribute       ------   100   100   000    -    9
-245 Unknown_Attribute       ------   100   100   000    -    11
-246 Unknown_Attribute       ------   100   100   000    -    4206
+199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
+218 CRC_Error_Count         -O--CK   100   100   000    -    0
+231 SSD_Life_Left           ------   093   093   000    -    93
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    10136
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    8977
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    10286
+244 Average_Erase_Count     ------   100   100   000    -    72
+245 Max_Erase_Count         ------   100   100   000    -    77
+246 Total_Erase_Count       ------   100   100   000    -    30792
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,7 +124,7 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 
 
 

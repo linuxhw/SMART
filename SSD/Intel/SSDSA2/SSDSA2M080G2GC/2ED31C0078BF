@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.103-generic-1rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-5.15.127-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Intel X18-M/X25-M/X25-V G2 SSDs
@@ -11,10 +11,10 @@ User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 1
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Apr  9 14:03:45 2023 MSK
+Local Time is:    Sun Mar  3 17:26:16 2024 MSK
 
 ==> WARNING: This drive may require a firmware update to
 fix possible drive hangs when reading SMART self-test log:
@@ -27,7 +27,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -69,13 +69,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    12
-  9 Power_On_Hours          -O--CK   100   100   000    -    31835
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    10718
-192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    388
-225 Host_Writes_32MiB       ----CK   200   200   000    -    1189996
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    4920
+  9 Power_On_Hours          -O--CK   100   100   000    -    32947
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    11004
+192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    412
+225 Host_Writes_32MiB       ----CK   200   200   000    -    1216134
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    5166
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
-228 Workload_Minutes        -O--CK   100   100   000    -    3743523474
+228 Workload_Minutes        -O--CK   100   100   000    -    3743328024
 232 Available_Reservd_Space PO--CK   099   099   010    -    0
 233 Media_Wearout_Indicator -O--CK   074   074   000    -    0
 184 End-to-End_Error        PO--CK   100   100   099    -    0
@@ -104,8 +104,7 @@ SMART Extended Comprehensive Error Log Version: 1 (8 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
-
+Invalid Self-test Log index = 0x0058 (reserved = 0x00)
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -130,8 +129,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
