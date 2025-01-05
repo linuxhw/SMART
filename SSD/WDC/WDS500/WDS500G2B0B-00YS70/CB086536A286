@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.15.0-41-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.4.3-1-MANJARO] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     WD Blue and Green SSDs
+Model Family:     WD Blue / Red / Green SSDs
 Device Model:     WDC  WDS500G2B0B-00YS70
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -11,18 +11,19 @@ User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      M.2
-Device is:        In smartctl database [for details use: -P show]
+TRIM Command:     Available, deterministic, zeroed
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Jul 21 02:26:10 2022 MSK
+Local Time is:    Sun Aug 13 01:19:12 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -60,29 +61,29 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    6217
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    2011
-165 Block_Erase_Count       -O--CK   100   100   ---    -    326547867282
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    1
+  9 Power_On_Hours          -O--CK   100   100   ---    -    10000
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    3010
+165 Block_Erase_Count       -O--CK   100   100   ---    -    554252175985
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    3
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    118
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    39
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    58
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    475
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    22
-174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    50
+173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    37
+174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    74
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   100   ---    -    6
-194 Temperature_Celsius     -O---K   068   058   ---    -    32 (Min/Max 17/58)
+188 Command_Timeout         -O--CK   100   100   ---    -    7
+194 Temperature_Celsius     -O---K   069   061   ---    -    31 (Min/Max 15/61)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   003   003   ---    -    0x032402140324
+230 Media_Wearout_Indicator -O--CK   005   005   ---    -    0x052203460522
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    11424
-234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    20008
-241 Host_Writes_GiB         ----CK   253   253   ---    -    15451
-242 Host_Reads_GiB          ----CK   253   253   ---    -    12365
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    18594
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    31754
+241 Host_Writes_GiB         ----CK   253   253   ---    -    23023
+242 Host_Reads_GiB          ----CK   253   253   ---    -    19736
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -129,14 +130,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            2011  ---  Lifetime Power-On Resets
-0x01  0x010  4            6217  ---  Power-on Hours
-0x01  0x018  6     32403802821  ---  Logical Sectors Written
-0x01  0x020  6       523856864  ---  Number of Write Commands
-0x01  0x028  6     25932201539  ---  Logical Sectors Read
-0x01  0x030  6  42396035599402  ---  Number of Read Commands
+0x01  0x008  4            3010  ---  Lifetime Power-On Resets
+0x01  0x010  4           10000  ---  Power-on Hours
+0x01  0x018  6     48283839988  ---  Logical Sectors Written
+0x01  0x020  6       769578831  ---  Number of Write Commands
+0x01  0x028  6     41389616462  ---  Logical Sectors Read
+0x01  0x030  6  52287570249221  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               3  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -148,5 +149,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 

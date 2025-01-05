@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.8.12-200.fc32.x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.0-284.30.1.el9_2.x86_64] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     WD Blue and Green SSDs
+Model Family:     WD Blue / Red / Green SSDs
 Device Model:     WDC WDS240G2G0A-00JH30
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -11,10 +11,11 @@ User Capacity:    240,065,183,744 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
+TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct 18 16:01:31 2020 CEST
+Local Time is:    Sun Nov 19 20:17:55 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -59,29 +60,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    1886
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    632
-165 Block_Erase_Count       -O--CK   100   100   000    -    2417
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    20
+  9 Power_On_Hours          -O--CK   100   100   000    -    5714
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    999
+165 Block_Erase_Count       -O--CK   100   100   000    -    3686
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    29
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    0
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    35
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    44
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    263
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    20
-174 Unexpected_Power_Loss   -O--CK   100   100   000    -    102
+173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    29
+174 Unexpected_Power_Loss   -O--CK   100   100   000    -    215
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   071   058   000    -    29 (Min/Max 15/58)
+194 Temperature_Celsius     -O---K   061   058   000    -    39 (Min/Max 13/58)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x065a0400065a
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x0a3505500a35
 232 Available_Reservd_Space PO--CK   100   100   005    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    4899
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    18432
-241 Host_Writes_GiB         ----CK   100   100   000    -    5954
-242 Host_Reads_GiB          ----CK   100   100   000    -    4922
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    7281
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    28109
+241 Host_Writes_GiB         ----CK   100   100   000    -    9320
+242 Host_Reads_GiB          ----CK   100   100   000    -    7507
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -125,27 +126,27 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             632  ---  Lifetime Power-On Resets
-0x01  0x010  4            1886  ---  Power-on Hours
-0x01  0x018  6     12487698223  ---  Logical Sectors Written
-0x01  0x028  6     10323658987  ---  Logical Sectors Read
-0x01  0x038  6            1886  ---  Date and Time TimeStamp
+0x01  0x008  4             999  ---  Lifetime Power-On Resets
+0x01  0x010  4            5714  ---  Power-on Hours
+0x01  0x018  6     19545884187  ---  Logical Sectors Written
+0x01  0x028  6     15745230923  ---  Logical Sectors Read
+0x01  0x038  6            5714  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
-0x05  0x010  1               -  ---  Average Short Term Temperature
-0x05  0x018  1               -  ---  Average Long Term Temperature
+0x05  0x008  1              39  ---  Current Temperature
+0x05  0x010  1              38  ---  Average Short Term Temperature
+0x05  0x018  1              37  ---  Average Long Term Temperature
 0x05  0x020  1              55  ---  Highest Temperature
-0x05  0x028  1              23  ---  Lowest Temperature
+0x05  0x028  1              19  ---  Lowest Temperature
 0x05  0x030  1              45  ---  Highest Average Short Term Temperature
 0x05  0x038  1              45  ---  Lowest Average Short Term Temperature
-0x05  0x040  1               -  ---  Highest Average Long Term Temperature
-0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
+0x05  0x040  1              37  ---  Highest Average Long Term Temperature
+0x05  0x048  1              37  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              95  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               5  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -158,11 +159,9 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2        10984  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           47  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           47  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error
-
-
 

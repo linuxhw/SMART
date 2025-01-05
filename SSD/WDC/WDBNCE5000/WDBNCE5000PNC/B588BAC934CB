@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Jan 22 17:05:00 2023 GMT
+Local Time is:    Sat Aug 19 23:32:58 2023 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,9 +60,9 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    2241
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    504
-165 Unknown_Attribute       -O--CK   100   100   ---    -    2555930
+  9 Power_On_Hours          -O--CK   100   100   ---    -    4618
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    882
+165 Unknown_Attribute       -O--CK   100   100   ---    -    4325422
 166 Unknown_Attribute       -O--CK   100   100   ---    -    0
 167 Unknown_Attribute       -O--CK   100   100   ---    -    52
 168 Unknown_Attribute       -O--CK   100   100   ---    -    1
@@ -71,18 +71,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Unknown_Attribute       -O--CK   100   100   ---    -    0
 172 Unknown_Attribute       -O--CK   100   100   ---    -    0
 173 Unknown_Attribute       -O--CK   100   100   ---    -    0
-174 Unknown_Attribute       -O--CK   100   100   ---    -    9
+174 Unknown_Attribute       -O--CK   100   100   ---    -    14
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   073   037   ---    -    27 (Min/Max 19/37)
+194 Temperature_Celsius     -O---K   072   037   ---    -    28 (Min/Max 18/37)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Unknown_SSD_Attribute   -O--CK   001   001   ---    -    21474836485
+230 Unknown_SSD_Attribute   -O--CK   001   001   ---    -    38654705673
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 Media_Wearout_Indicator -O--CK   100   100   ---    -    138
-234 Unknown_Attribute       -O--CK   100   100   ---    -    195
-241 Total_LBAs_Written      ----CK   253   253   ---    -    180
-242 Total_LBAs_Read         ----CK   253   253   ---    -    95
+233 Media_Wearout_Indicator -O--CK   100   100   ---    -    247
+234 Unknown_Attribute       -O--CK   100   100   ---    -    346
+241 Total_LBAs_Written      ----CK   253   253   ---    -    319
+242 Total_LBAs_Read         ----CK   253   253   ---    -    157
 244 Unknown_Attribute       -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -113,7 +113,8 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Interrupted (host reset)      00%      2857         -
 
 Selective Self-tests/Logging not supported
 
@@ -122,12 +123,12 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             504  ---  Lifetime Power-On Resets
-0x01  0x010  4            2241  ---  Power-on Hours
-0x01  0x018  6       379360896  ---  Logical Sectors Written
-0x01  0x020  6         1032504  ---  Number of Write Commands
-0x01  0x028  6       199822580  ---  Logical Sectors Read
-0x01  0x030  6     25771764838  ---  Number of Read Commands
+0x01  0x008  4             882  ---  Lifetime Power-On Resets
+0x01  0x010  4            4618  ---  Power-on Hours
+0x01  0x018  6       670521811  ---  Logical Sectors Written
+0x01  0x020  6         1861073  ---  Number of Write Commands
+0x01  0x028  6       329514767  ---  Logical Sectors Read
+0x01  0x030  6     25772880663  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -141,7 +142,7 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           19  Device-to-host register FISes sent due to a COMRESET
 
 
 
