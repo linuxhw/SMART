@@ -10,7 +10,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Dec 29 16:42:08 2022 CET
+Local Time is:    Fri Aug 18 14:35:05 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -18,7 +18,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -62,16 +62,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   177   176   021    -    6141
-  4 Start_Stop_Count        -O--CK   100   100   000    -    294
+  3 Spin_Up_Time            POS--K   183   176   021    -    5833
+  4 Start_Stop_Count        -O--CK   100   100   000    -    627
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1419
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   097   097   000    -    2846
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    234
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    17
-193 Load_Cycle_Count        -O--CK   200   200   000    -    276
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    302
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    28
+193 Load_Cycle_Count        -O--CK   200   200   000    -    598
 194 Temperature_Celsius     -O---K   114   108   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
@@ -115,12 +115,15 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      1015         -
-# 2  Short offline       Completed without error       00%       608         -
-# 3  Short offline       Completed without error       00%       590         -
-# 4  Short offline       Completed without error       00%       191         -
-# 5  Short offline       Completed without error       00%       182         -
-# 6  Short offline       Completed without error       00%       169         -
+# 1  Short offline       Completed without error       00%      2765         -
+# 2  Short offline       Completed without error       00%      1759         -
+# 3  Short offline       Completed without error       00%      1485         -
+# 4  Short offline       Completed without error       00%      1015         -
+# 5  Short offline       Completed without error       00%       608         -
+# 6  Short offline       Completed without error       00%       590         -
+# 7  Short offline       Completed without error       00%       191         -
+# 8  Short offline       Completed without error       00%       182         -
+# 9  Short offline       Completed without error       00%       169         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -137,8 +140,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     21/36 Celsius
-Lifetime    Min/Max Temperature:     20/42 Celsius
+Power Cycle Min/Max Temperature:     25/42 Celsius
+Lifetime    Min/Max Temperature:      2/42 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -149,7 +152,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (258)
+Temperature History Size (Index):    478 (361)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -158,39 +161,39 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4             234  ---  Lifetime Power-On Resets
-0x01  0x010  4            1419  ---  Power-on Hours
-0x01  0x018  6      7509337523  ---  Logical Sectors Written
-0x01  0x020  6        16706354  ---  Number of Write Commands
-0x01  0x028  6     10089101847  ---  Logical Sectors Read
-0x01  0x030  6        38283021  ---  Number of Read Commands
+0x01  0x008  4             302  ---  Lifetime Power-On Resets
+0x01  0x010  4            2846  ---  Power-on Hours
+0x01  0x018  6      9746992922  ---  Logical Sectors Written
+0x01  0x020  6        24316620  ---  Number of Write Commands
+0x01  0x028  6     14055115619  ---  Logical Sectors Read
+0x01  0x030  6        51240998  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            1378  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            1376  ---  Head Flying Hours
-0x03  0x018  4             294  ---  Head Load Events
+0x03  0x008  4            1679  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            1676  ---  Head Flying Hours
+0x03  0x018  4             627  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              15  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              19  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              35  ---  Current Temperature
-0x05  0x010  1              33  ---  Average Short Term Temperature
-0x05  0x018  1              33  ---  Average Long Term Temperature
+0x05  0x010  1              29  ---  Average Short Term Temperature
+0x05  0x018  1              27  ---  Average Long Term Temperature
 0x05  0x020  1              41  ---  Highest Temperature
 0x05  0x028  1              23  ---  Lowest Temperature
 0x05  0x030  1              40  ---  Highest Average Short Term Temperature
-0x05  0x038  1              31  ---  Lowest Average Short Term Temperature
+0x05  0x038  1              24  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              34  ---  Highest Average Long Term Temperature
-0x05  0x048  1              33  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              27  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              65  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1139  ---  Number of Hardware Resets
-0x06  0x010  4           88905  ---  Number of ASR Events
+0x06  0x008  4            1307  ---  Number of Hardware Resets
+0x06  0x010  4          153132  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -208,10 +211,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        38632  Vendor specific
+0x8000  4      2753677  Vendor specific
+
+
 

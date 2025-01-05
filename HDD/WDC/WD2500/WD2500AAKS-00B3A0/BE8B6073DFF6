@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.155-generic-1rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.81-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Blue (SATA)
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.03A01
 User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sat Feb  4 18:45:25 2023 MSK
+Local Time is:    Tue Apr  2 08:00:34 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -20,7 +20,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   151   148   021    -    3450
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1100
+  3 Spin_Up_Time            POS--K   150   148   021    -    3475
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3107
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    2526
+  9 Power_On_Hours          -O--CK   092   092   000    -    6334
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1056
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    124
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1100
-194 Temperature_Celsius     -O---K   092   082   000    -    51
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3016
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    256
+193 Load_Cycle_Count        -O--CK   199   199   000    -    3107
+194 Temperature_Celsius     -O---K   119   081   000    -    24
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -111,7 +111,25 @@ SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      6281         -
+# 2  Extended offline    Completed without error       00%      6199         -
+# 3  Extended offline    Completed without error       00%      6119         -
+# 4  Extended offline    Completed without error       00%      6068         -
+# 5  Extended offline    Completed without error       00%      5998         -
+# 6  Extended offline    Completed without error       00%      5880         -
+# 7  Extended offline    Completed without error       00%      5787         -
+# 8  Extended offline    Completed without error       00%      5649         -
+# 9  Extended offline    Completed without error       00%      5326         -
+#10  Extended offline    Completed without error       00%      5158         -
+#11  Extended offline    Completed without error       00%      5046         -
+#12  Extended offline    Interrupted (host reset)      20%      4988         -
+#13  Extended offline    Completed without error       00%      4951         -
+#14  Extended offline    Completed without error       00%      4828         -
+#15  Extended offline    Completed without error       00%      4777         -
+#16  Extended offline    Completed without error       00%      4697         -
+#17  Extended offline    Completed without error       00%      4654         -
+#18  Extended offline    Completed without error       00%      4611         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -127,9 +145,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    51 Celsius
-Power Cycle Min/Max Temperature:     23/51 Celsius
-Lifetime    Min/Max Temperature:     23/61 Celsius
+Current Temperature:                    23 Celsius
+Power Cycle Min/Max Temperature:     20/23 Celsius
+Lifetime    Min/Max Temperature:     20/62 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -137,7 +155,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (88)
+Temperature History Size (Index):    128 (1)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -156,8 +174,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        21777  Vendor specific
-
-
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          336  Vendor specific
 

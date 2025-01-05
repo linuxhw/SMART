@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.0-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar SE Serial ATA
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 21.02J21
 User Capacity:    250,058,268,160 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-6 (minor revision not indicated)
-Local Time is:    Mon Feb  7 11:47:30 2022 GMT
+Local Time is:    Mon Sep  4 19:22:25 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -61,20 +61,20 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   200   197   051    -    0
-  3 Spin_Up_Time            POS---   149   115   021    -    5091
-  4 Start_Stop_Count        -O--CK   072   072   040    -    28145
-  5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
+  1 Raw_Read_Error_Rate     PO-R--   200   129   051    -    0
+  3 Spin_Up_Time            POS---   126   115   021    -    6208
+  4 Start_Stop_Count        -O--CK   070   070   040    -    30113
+  5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    4
   7 Seek_Error_Rate         PO-R--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   040   040   000    -    44331
+  9 Power_On_Hours          -O--CK   033   033   000    -    49497
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count PO--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   086   086   000    -    14130
-194 Temperature_Celsius     -O---K   117   085   000    -    33
-196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--C-   200   200   000    -    0
+ 12 Power_Cycle_Count       -O--CK   084   084   000    -    16067
+194 Temperature_Celsius     -O---K   129   085   000    -    21
+196 Reallocated_Event_Count -O--CK   196   196   000    -    4
+197 Current_Pending_Sector  -O--C-   200   200   000    -    1
 198 Offline_Uncorrectable   -O--C-   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    27648
+199 UDMA_CRC_Error_Count    -O-R--   200   253   000    -    27656
 200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -90,7 +90,7 @@ General Purpose Log Directory not supported
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 385 (device log contains only the most recent five errors)
+ATA Error Count: 2968 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -105,90 +105,90 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 385 occurred at disk power-on lifetime: 34947 hours (1456 days + 3 hours)
+Error 2968 occurred at disk power-on lifetime: 49342 hours (2055 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 21 2e 00 e0  Error: UNC 8 sectors at LBA = 0x00002e21 = 11809
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 20 2e 00 00 00      00:12:45.300  READ DMA EXT
+  25 00 08 20 2e 00 00 00      00:12:45.300  READ DMA EXT
+  25 00 08 60 07 5e 00 00      00:12:45.300  READ DMA EXT
+  25 00 08 50 f2 5f 00 00      00:12:45.300  READ DMA EXT
+  25 00 08 58 07 5e 00 00      00:12:45.300  READ DMA EXT
+
+Error 2967 occurred at disk power-on lifetime: 49342 hours (2055 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 08 21 2e 00 e0  Error: UNC 8 sectors at LBA = 0x00002e21 = 11809
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 08 20 2e 00 00 00      00:12:43.200  READ DMA EXT
+  25 00 08 60 07 5e 00 00      00:12:43.200  READ DMA EXT
+  25 00 08 50 f2 5f 00 00      00:12:43.200  READ DMA EXT
+  25 00 08 58 07 5e 00 00      00:12:43.200  READ DMA EXT
+  25 00 08 f0 1e 78 04 00      00:12:43.200  READ DMA EXT
+
+Error 2966 occurred at disk power-on lifetime: 49342 hours (2055 days + 22 hours)
   When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 01 ca d5 1e 40  Error: UNC 1 sectors at LBA = 0x001ed5ca = 2020810
+  40 51 40 21 2e 00 e0  Error: UNC 64 sectors at LBA = 0x00002e21 = 11809
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 ff 01 ca d5 1e 03 00      01:34:57.200  READ DMA EXT
-  25 ff 01 c9 d5 1e 03 00      01:34:57.200  READ DMA EXT
-  25 ff 01 c8 d5 1e 03 00      01:34:57.200  READ DMA EXT
-  25 ff 01 c7 d5 1e 03 00      01:34:57.200  READ DMA EXT
-  25 ff 01 c6 d5 1e 03 00      01:34:57.200  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:48.250  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:48.250  READ DMA EXT
+  25 00 01 00 2e 00 00 00      00:18:48.250  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:48.250  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:48.250  READ DMA EXT
 
-Error 384 occurred at disk power-on lifetime: 34947 hours (1456 days + 3 hours)
+Error 2965 occurred at disk power-on lifetime: 49342 hours (2055 days + 22 hours)
   When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 35 ca d5 1e 40  Error: UNC 53 sectors at LBA = 0x001ed5ca = 2020810
+  40 51 40 21 2e 00 e0  Error: UNC 64 sectors at LBA = 0x00002e21 = 11809
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 ff 35 c2 d5 1e 03 00      01:34:55.150  READ DMA EXT
-  25 ff 01 c1 d5 1e 03 00      01:34:55.150  READ DMA EXT
-  25 ff 01 c0 d5 1e 03 00      01:34:55.150  READ DMA EXT
-  25 ff 01 bf d5 1e 03 00      01:34:55.150  READ DMA EXT
-  25 ff 01 be d5 1e 03 00      01:34:55.150  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:46.150  READ DMA EXT
+  25 00 01 00 2e 00 00 00      00:18:46.150  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:46.150  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:46.150  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:46.150  READ DMA EXT
 
-Error 383 occurred at disk power-on lifetime: 34947 hours (1456 days + 3 hours)
+Error 2964 occurred at disk power-on lifetime: 49342 hours (2055 days + 22 hours)
   When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
 
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  40 51 4e ca d5 1e 40  Error: UNC 78 sectors at LBA = 0x001ed5ca = 2020810
+  40 51 40 21 2e 00 e0  Error: UNC 64 sectors at LBA = 0x00002e21 = 11809
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 ff 4e a9 d5 1e 03 00      01:34:52.900  READ DMA EXT
-  25 ff 01 a8 d5 1e 03 00      01:34:52.900  READ DMA EXT
-  25 ff 01 a7 d5 1e 03 00      01:34:52.900  READ DMA EXT
-  25 ff 01 a6 d5 1e 03 00      01:34:52.900  READ DMA EXT
-  25 ff 01 a5 d5 1e 03 00      01:34:52.900  READ DMA EXT
-
-Error 382 occurred at disk power-on lifetime: 34947 hours (1456 days + 3 hours)
-  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 67 ca d5 1e 40  Error: UNC 103 sectors at LBA = 0x001ed5ca = 2020810
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 ff 67 90 d5 1e 03 00      01:34:50.800  READ DMA EXT
-  25 ff 01 8f d5 1e 03 00      01:34:50.800  READ DMA EXT
-  25 ff 01 8e d5 1e 03 00      01:34:50.800  READ DMA EXT
-  25 ff 01 8d d5 1e 03 00      01:34:50.800  READ DMA EXT
-  25 ff 01 8c d5 1e 03 00      01:34:50.800  READ DMA EXT
-
-Error 381 occurred at disk power-on lifetime: 34947 hours (1456 days + 3 hours)
-  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 80 ca d5 1e 40  Error: UNC 128 sectors at LBA = 0x001ed5ca = 2020810
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  25 ff 80 77 d5 1e 03 00      01:34:48.800  READ DMA EXT
-  25 ff 13 e4 d5 1e 03 00      01:34:48.800  READ DMA EXT
-  25 ff 01 e3 d5 1e 03 00      01:34:48.800  READ DMA EXT
-  25 ff 01 e2 d5 1e 03 00      01:34:48.800  READ DMA EXT
-  25 ff 01 e1 d5 1e 03 00      01:34:48.800  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:44.150  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:44.150  READ DMA EXT
+  25 00 40 00 2e 00 00 00      00:18:44.150  READ DMA EXT
+  25 00 40 c0 2d 00 00 00      00:18:44.150  READ DMA EXT
+  25 00 40 80 2d 00 00 00      00:18:44.150  READ DMA EXT
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
@@ -218,8 +218,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     --/37 Celsius
+Current Temperature:                    21 Celsius
+Power Cycle Min/Max Temperature:     --/25 Celsius
 Lifetime    Min/Max Temperature:     --/70 Celsius
 
 SCT Temperature History Version:     2
@@ -227,7 +227,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (123)
+Temperature History Size (Index):    128 (10)
 
 SCT Error Recovery Control:
            Read: Disabled

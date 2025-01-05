@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-21-amd64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-20-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Purple
@@ -10,10 +10,10 @@ Firmware Version: 80.00A80
 User Capacity:    3,000,592,982,016 bytes [3.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Apr 20 20:49:23 2023 BST
+Local Time is:    Mon Apr 15 15:37:13 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,17 +65,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   201   174   021    -    4950
-  4 Start_Stop_Count        -O--CK   100   100   000    -    980
+  3 Spin_Up_Time            POS--K   192   174   021    -    5383
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1101
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   047   047   000    -    38740
+  9 Power_On_Hours          -O--CK   039   039   000    -    44817
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    808
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    295
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1592
-194 Temperature_Celsius     -O---K   105   104   000    -    45
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    929
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    387
+193 Load_Cycle_Count        -O--CK   200   200   000    -    1661
+194 Temperature_Celsius     -O---K   109   098   000    -    41
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 67 (device log contains only the most recent 24 errors)
+Device Error Count: 229 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,7 +128,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 67 [18] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
+Error 229 [12] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -139,13 +139,13 @@ Error 67 [18] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:09.587  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:09.582  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:09.582  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:09.582  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:30:09.582  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:22:11.513  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 a6 d8 42 70 e0 08     00:22:11.513  WRITE DMA EXT
+  35 00 00 00 08 00 00 a6 d8 42 48 e0 08     00:22:11.513  WRITE DMA EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:22:11.512  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:22:11.512  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 66 [17] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
+Error 228 [11] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -156,13 +156,13 @@ Error 66 [17] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:02.549  FLUSH CACHE EXT
-  35 00 00 0a 00 00 00 7f 3c 9a 00 e0 08     00:30:02.546  WRITE DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:30:02.545  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:30:02.545  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:30:02.545  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:22:04.472  FLUSH CACHE EXT
+  35 00 00 00 10 00 00 a6 d8 41 d0 e0 08     00:22:04.471  WRITE DMA EXT
+  35 00 00 00 08 00 00 a6 d8 41 40 e0 08     00:22:04.471  WRITE DMA EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:22:04.471  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:22:04.471  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
 
-Error 65 [16] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
+Error 227 [10] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -173,30 +173,13 @@ Error 65 [16] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:55.510  FLUSH CACHE EXT
-  35 00 00 04 00 00 00 7f 3c a4 00 e0 08     00:29:55.509  WRITE DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:29:55.508  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:55.508  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:29:55.508  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:57.432  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 a6 d8 41 30 e0 08     00:21:57.432  WRITE DMA EXT
+  35 00 00 00 08 00 00 a6 d8 40 78 e0 08     00:21:57.432  WRITE DMA EXT
+  35 00 00 00 18 00 00 a6 d8 3f 88 e0 08     00:21:57.432  WRITE DMA EXT
+  35 00 00 00 08 00 00 a6 d8 3f 50 e0 08     00:21:57.432  WRITE DMA EXT
 
-Error 64 [15] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 0a 00 00 00 7f 3c 9a 00 e0 00  Error: IDNF 2560 sectors at LBA = 0x7f3c9a00 = 2134678016
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 0a 00 00 00 7f 3c 9a 00 e0 08     00:29:48.459  WRITE DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:29:48.459  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:48.459  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:29:48.459  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:29:48.459  SET FEATURES [Set transfer mode]
-
-Error 63 [14] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
+Error 226 [9] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -207,13 +190,13 @@ Error 63 [14] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:41.424  FLUSH CACHE EXT
-  35 00 00 0a 00 00 00 7f 3c 86 00 e0 08     00:29:40.187  WRITE DMA EXT
-  35 00 00 0a 00 00 00 7f 3c 90 00 e0 08     00:29:40.184  WRITE DMA EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:29:40.183  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:40.183  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:50.396  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 a6 d8 34 88 e0 08     00:21:50.396  WRITE DMA EXT
+  35 00 00 00 10 00 00 a6 d8 34 08 e0 08     00:21:50.395  WRITE DMA EXT
+  35 00 00 00 08 00 00 a6 d8 32 28 e0 08     00:21:50.395  WRITE DMA EXT
+  35 00 00 00 08 00 00 a6 d8 30 b8 e0 08     00:21:50.395  WRITE DMA EXT
 
-Error 62 [13] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
+Error 225 [8] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -224,30 +207,30 @@ Error 62 [13] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:33.147  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:29:33.147  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:33.147  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:29:33.146  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:29:33.146  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:43.348  FLUSH CACHE EXT
+  35 00 00 00 18 00 00 e9 e0 2d d0 e0 08     00:21:43.347  WRITE DMA EXT
+  35 00 00 00 08 00 00 76 dc 28 00 e0 08     00:21:37.622  WRITE DMA EXT
+  35 00 00 00 08 00 01 1a c9 a5 f8 e0 08     00:21:37.622  WRITE DMA EXT
+  35 00 00 00 08 00 00 a9 5c 2a 80 e0 08     00:21:37.622  WRITE DMA EXT
 
-Error 61 [12] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
+Error 224 [7] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  10 -- 51 00 00 00 00 7f 3c 86 00 40 00  Error: IDNF at LBA = 0x7f3c8600 = 2134672896
+  10 -- 51 00 08 00 00 76 dc 28 00 e0 00  Error: IDNF 8 sectors at LBA = 0x76dc2800 = 1994139648
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 0a 00 00 60 00 00 7f 3c 86 00 40 08     00:29:26.097  WRITE FPDMA QUEUED
-  61 0a 00 00 58 00 00 7f 3c 7c 00 40 08     00:29:26.097  WRITE FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:29:26.097  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:26.097  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:29:26.097  IDENTIFY DEVICE
+  35 00 00 00 08 00 00 76 dc 28 00 e0 08     00:21:30.560  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:26.690  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 e9 e0 2d c8 e0 08     00:21:26.690  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:25.422  FLUSH CACHE EXT
+  35 00 00 00 18 00 00 e9 e0 2d b0 e0 08     00:21:25.422  WRITE DMA EXT
 
-Error 60 [11] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hours)
+Error 223 [6] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -258,14 +241,32 @@ Error 60 [11] occurred at disk power-on lifetime: 38693 hours (1612 days + 5 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:29:19.063  FLUSH CACHE EXT
-  61 0a 00 00 78 00 00 7f 3c 72 00 40 08     00:29:07.436  WRITE FPDMA QUEUED
-  61 0a 00 00 70 00 00 7f 3c 46 00 40 08     00:29:07.436  WRITE FPDMA QUEUED
-  61 0a 00 00 68 00 00 7f 3c 68 00 40 08     00:29:07.436  WRITE FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:29:07.436  SET FEATURES [Enable SATA feature]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:21:12.402  FLUSH CACHE EXT
+  35 00 00 00 18 00 00 e9 e0 2d 90 e0 08     00:21:12.402  WRITE DMA EXT
+  35 00 00 00 08 00 00 a4 dc 08 00 e0 08     00:21:06.781  WRITE DMA EXT
+  35 00 00 00 18 00 00 a6 d8 4a 38 e0 08     00:21:06.781  WRITE DMA EXT
+  35 00 00 00 28 00 00 a6 d8 4a 08 e0 08     00:21:06.781  WRITE DMA EXT
+
+Error 222 [5] occurred at disk power-on lifetime: 44719 hours (1863 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 20 00 00 e9 e0 2d 48 e0 00  Error: IDNF 32 sectors at LBA = 0xe9e02d48 = 3923782984
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 20 00 00 e9 e0 2d 48 e0 08     00:20:41.236  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:20:36.194  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 e9 e0 2d 40 e0 08     00:20:36.193  WRITE DMA EXT
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:20:36.093  FLUSH CACHE EXT
+  35 00 00 00 08 00 00 a4 dc 08 00 e0 08     00:20:36.093  WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     41975         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -281,9 +282,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
-Power Cycle Min/Max Temperature:     43/45 Celsius
-Lifetime    Min/Max Temperature:      2/46 Celsius
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     25/41 Celsius
+Lifetime    Min/Max Temperature:      2/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -294,7 +295,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (177)
+Temperature History Size (Index):    478 (350)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -314,12 +315,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4       131310  Vendor specific
+0x8000  4        83554  Vendor specific
 
 
 

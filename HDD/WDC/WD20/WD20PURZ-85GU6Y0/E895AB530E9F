@@ -1,7 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-5.15.0-76-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Western Digital Purple (Pro)
 Device Model:     WDC WD20PURZ-85GU6Y0
 Serial Number:    --
 LU WWN Device Id: 5 0014ee ...
@@ -9,10 +10,10 @@ Firmware Version: 80.00A80
 User Capacity:    2,000,398,934,016 bytes [2.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Oct 29 12:37:29 2021 MSK
+Local Time is:    Wed Feb 14 06:57:45 2024 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,17 +65,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   175   167   021    -    4225
-  4 Start_Stop_Count        -O--CK   100   100   000    -    243
+  3 Spin_Up_Time            POS--K   174   167   021    -    4300
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1196
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   082   082   000    -    13769
+  9 Power_On_Hours          -O--CK   069   069   000    -    22904
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    243
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    65
-193 Load_Cycle_Count        -O--CK   200   200   000    -    319
-194 Temperature_Celsius     -O---K   113   098   000    -    34
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    889
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    154
+193 Load_Cycle_Count        -O--CK   200   200   000    -    1263
+194 Temperature_Celsius     -O---K   118   098   000    -    29
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -266,10 +267,14 @@ Error 2 [1] occurred at disk power-on lifetime: 10672 hours (444 days + 16 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     13612         -
-# 2  Extended offline    Completed without error       00%     13441         -
-# 3  Short offline       Completed without error       00%         5         -
-# 4  Extended offline    Aborted by host               10%         4         -
+# 1  Short offline       Completed without error       00%     22765         -
+# 2  Short offline       Completed without error       00%     22751         -
+# 3  Short offline       Completed without error       00%     13774         -
+# 4  Short offline       Completed without error       00%     13773         -
+# 5  Extended offline    Completed without error       00%     13612         -
+# 6  Extended offline    Completed without error       00%     13441         -
+# 7  Short offline       Completed without error       00%         5         -
+# 8  Extended offline    Aborted by host               10%         4         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -285,8 +290,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     25/36 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     22/29 Celsius
 Lifetime    Min/Max Temperature:     10/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -298,7 +303,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (251)
+Temperature History Size (Index):    478 (377)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -318,10 +323,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           74  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        83400  Vendor specific
+0x8000  4         4711  Vendor specific
 

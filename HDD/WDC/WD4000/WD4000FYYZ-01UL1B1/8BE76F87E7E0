@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.0-284.18.1.el9_2.x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2020-04-05 r5049 [x86_64-linux-4.18.0-490.el8.x86_64] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Re
@@ -11,10 +11,10 @@ User Capacity:    4,000,787,030,016 bytes [4.00 TB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-Local Time is:    Sat Jul 15 15:28:46 2023 CEST
+Local Time is:    Mon Feb 19 09:40:25 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM level is:     254 (maximum performance), recommended: 128
+AAM level is:     128 (quiet), recommended: 128
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -61,34 +61,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     P-----+  200   200   051    -    0
   2 Throughput_Performance  ------+  100   253   000    -    0
-  3 Spin_Up_Time            P----K+  152   148   021    -    11375
-  4 Start_Stop_Count        -O--C-+  100   100   000    -    19
+  3 Spin_Up_Time            P----K+  149   148   021    -    11516
+  4 Start_Stop_Count        -O--C-+  100   100   000    -    33
   5 Reallocated_Sector_Ct   P-----+  200   200   140    -    0
   7 Seek_Error_Rate         P--R-K+  100   253   051    -    0
   8 Seek_Time_Performance   ---RC-+  100   253   000    -    0
-  9 Power_On_Hours          -----K+  100   100   000    -    6
+  9 Power_On_Hours          -----K+  096   096   000    -    3422
  10 Spin_Retry_Count        P--R--+  100   253   051    -    0
  11 Calibration_Retry_Count ---R--+  100   253   051    -    0
- 12 Power_Cycle_Count       -----K+  100   100   000    -    19
+ 12 Power_Cycle_Count       -----K+  100   100   000    -    33
 180 Unused_Rsvd_Blk_Cnt_Tot ------+  200   200   100    -    0
 183 Runtime_Bad_Block       ---RC-+  100   100   000    -    0
 184 End-to-End_Error        PO-R-K+  100   100   097    -    0
 187 Reported_Uncorrect      ---RCK+  100   100   000    -    0
 188 Command_Timeout         --SR-K+  100   100   000    -    0
-190 Airflow_Temperature_Cel -O----+  065   060   000    -    35
+190 Airflow_Temperature_Cel -O----+  064   054   000    -    36
 191 G-Sense_Error_Rate      --S---+  100   100   000    -    0
-192 Power-Off_Retract_Count --S--K+  200   200   000    -    15
+192 Power-Off_Retract_Count --S--K+  200   200   000    -    29
 193 Load_Cycle_Count        --S--K+  200   200   000    -    3
-194 Temperature_Celsius     -O----+  117   112   000    -    35
-195 Hardware_ECC_Recovered  --S---+  100   253   000    -    0
+194 Temperature_Celsius     -O----+  116   106   000    -    36
+195 Hardware_ECC_Recovered  --S---+  200   200   000    -    0
 196 Reallocated_Event_Count -----K+  200   200   000    -    0
 197 Current_Pending_Sector  --S---+  200   200   000    -    0
 198 Offline_Uncorrectable   --S--K+  100   253   000    -    0
 199 UDMA_CRC_Error_Count    --S-C-+  200   200   000    -    0
-200 Multi_Zone_Error_Rate   PO---K+  100   253   051    -    0
-240 Head_Flying_Hours       ---RCK+  100   100   000    -    6
-241 Total_LBAs_Written      ----C-+  200   200   000    -    1127038371
-242 Total_LBAs_Read         ---R--+  200   200   000    -    61614793
+200 Multi_Zone_Error_Rate   PO---K+  200   200   051    -    0
+240 Head_Flying_Hours       ---RCK+  096   096   000    -    3232
+241 Total_LBAs_Written      ----C-+  200   200   000    -    22005594054
+242 Total_LBAs_Read         ---R--+  200   200   000    -    169842143841
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,7 +121,16 @@ SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      3157         -
+# 2  Extended offline    Completed without error       00%      2742         -
+# 3  Extended offline    Completed without error       00%      2309         -
+# 4  Extended offline    Completed without error       00%      1492         -
+# 5  Extended offline    Completed without error       00%       977         -
+# 6  Extended offline    Completed without error       00%       637         -
+# 7  Extended offline    Completed without error       00%       258         -
+# 8  Extended offline    Completed without error       00%       171         -
+# 9  Extended offline    Completed without error       00%       134         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -137,8 +146,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     24/24 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     27/27 Celsius
 Lifetime    Min/Max Temperature:     24/36 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -150,7 +159,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        0 minutes
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (37)
+Temperature History Size (Index):    478 (65)
 
 SCT Error Recovery Control command not supported
 
@@ -173,7 +182,7 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         1236  Vendor specific
+0x8000  4        38403  Vendor specific
 
 
 

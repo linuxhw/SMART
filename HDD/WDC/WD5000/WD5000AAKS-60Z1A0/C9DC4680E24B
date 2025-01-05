@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Blue (SATA)
@@ -10,10 +10,10 @@ Firmware Version: 06.01D06
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Form Factor:      3.5 inches
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Feb 13 16:35:51 2021 UTC
+Local Time is:    Wed Aug 30 16:36:22 2023 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -62,25 +62,25 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    2
-  3 Spin_Up_Time            POS--K   144   143   021    -    3783
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5142
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    32
+  3 Spin_Up_Time            POS--K   145   143   021    -    3708
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7038
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   028   028   000    -    52946
+  9 Power_On_Hours          -O--CK   009   009   000    -    67118
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5124
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7004
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   079   000    -    23
-188 Command_Timeout         -O--CK   100   099   000    -    7
-190 Airflow_Temperature_Cel -O---K   065   055   040    -    35 (Min/Max 18/37)
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    690
-193 Load_Cycle_Count        -O--CK   199   199   000    -    4451
+187 Reported_Uncorrect      -O--CK   100   070   000    -    53
+188 Command_Timeout         -O--CK   100   097   000    -    33
+190 Airflow_Temperature_Cel -O---K   067   055   040    -    33 (Min/Max 22/35)
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1152
+193 Load_Cycle_Count        -O--CK   199   199   000    -    5885
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    1
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 23
+Device Error Count: 53 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,162 +128,162 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 23 [22] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 53 [4] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 06 00 00 00 02 08 00 e0 00  Error: UNC 6 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 06 00 00 00 02 08 00 e0 00     00:00:24.766  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:24.765  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:24.764  RECALIBRATE [OBS-4]
-  25 20 20 00 06 00 00 00 02 08 00 e0 00     00:00:22.967  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:22.966  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     00:00:25.605  READ DMA EXT
+  25 20 20 00 17 00 00 06 1a 68 e9 e0 00     00:00:25.603  READ DMA EXT
+  25 20 20 00 29 00 00 06 1a 68 c0 e0 00     00:00:25.603  READ DMA EXT
+  25 20 20 00 02 00 00 00 02 08 3e e0 00     00:00:25.596  READ DMA EXT
+  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:25.596  READ DMA EXT
 
-Error 22 [21] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 52 [3] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 06 00 00 00 02 08 00 e0 00  Error: UNC 6 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 06 00 00 00 02 08 00 e0 00     00:00:22.967  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:22.966  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:22.965  RECALIBRATE [OBS-4]
-  25 20 20 00 06 00 00 00 02 08 00 e0 00     00:00:21.169  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:21.168  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     00:00:22.973  READ DMA EXT
+  25 20 20 00 0f 00 00 0c 02 66 f1 e0 00     00:00:22.973  READ DMA EXT
+  25 20 20 00 31 00 00 0c 02 66 c0 e0 00     00:00:22.972  READ DMA EXT
+  25 20 20 00 0e 00 00 0c 02 66 b2 e0 00     00:00:22.972  READ DMA EXT
+  25 20 20 00 32 00 00 0c 02 66 80 e0 00     00:00:22.972  READ DMA EXT
 
-Error 21 [20] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 51 [2] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 06 00 00 00 02 08 00 e0 00  Error: UNC 6 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 06 00 00 00 02 08 00 e0 00     00:00:21.169  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:21.168  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:21.167  RECALIBRATE [OBS-4]
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:19.371  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:19.370  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     00:00:20.357  READ DMA EXT
+  25 20 20 00 01 00 00 00 00 00 00 e0 00     00:00:20.357  READ DMA EXT
+  25 20 20 00 15 00 00 00 01 30 6b e0 00     00:00:20.356  READ DMA EXT
+  25 20 20 00 2b 00 00 00 01 30 40 e0 00     00:00:20.351  READ DMA EXT
+  25 20 20 00 22 00 00 00 03 d8 de e0 00     00:00:20.351  READ DMA EXT
 
-Error 20 [19] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 50 [1] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 3e 00 00 00 02 08 00 e0 00  Error: UNC 62 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:19.371  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:19.370  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:19.369  RECALIBRATE [OBS-4]
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:17.573  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:17.572  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     00:00:18.430  READ DMA EXT
+  25 20 20 00 2f 00 00 0c 05 f0 91 e0 00     00:00:18.430  READ DMA EXT
+  25 20 20 00 11 00 00 0c 05 f0 80 e0 00     00:00:18.429  READ DMA EXT
+  25 20 20 00 2d 00 00 0c 05 f0 13 e0 00     00:00:18.429  READ DMA EXT
+  25 20 20 00 13 00 00 0c 05 f0 00 e0 00     00:00:18.429  READ DMA EXT
 
-Error 19 [18] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 49 [0] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 3e 00 00 00 02 08 00 e0 00  Error: UNC 62 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:17.573  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:17.572  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:17.571  RECALIBRATE [OBS-4]
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:15.776  READ DMA EXT
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:13.987  READ DMA EXT
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     00:00:16.543  READ DMA EXT
+  25 20 20 00 16 00 00 06 1a 68 aa e0 00     00:00:16.542  READ DMA EXT
+  25 20 20 00 2a 00 00 06 1a 68 80 e0 00     00:00:16.526  READ DMA EXT
+  25 20 20 00 3b 00 00 22 ea 1e c5 e0 00     00:00:16.526  READ DMA EXT
+  25 20 20 00 05 00 00 22 ea 1e c0 e0 00     00:00:16.509  READ DMA EXT
 
-Error 18 [17] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 48 [23] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 3e 00 00 00 02 08 00 e0 00  Error: UNC 62 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:15.776  READ DMA EXT
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:13.987  READ DMA EXT
-  25 20 20 00 23 00 00 00 00 08 9d e0 00     00:00:13.986  READ DMA EXT
-  25 20 20 00 1d 00 00 00 00 08 80 e0 00     00:00:13.979  READ DMA EXT
-  25 20 20 00 01 00 00 00 00 00 3f e0 00     00:00:13.979  READ DMA EXT
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     05:55:24.607  READ DMA EXT
+  25 20 20 00 17 00 00 06 1a 68 e9 e0 00     05:55:24.604  READ DMA EXT
+  25 20 20 00 29 00 00 06 1a 68 c0 e0 00     05:55:24.604  READ DMA EXT
+  25 20 20 00 13 00 00 06 1a 67 ed e0 00     05:55:24.081  READ DMA EXT
+  25 20 20 00 2d 00 00 06 1a 67 c0 e0 00     05:55:24.081  READ DMA EXT
 
-Error 17 [16] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 47 [22] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 3e 00 00 00 02 08 00 e0 00  Error: UNC 62 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 3e 00 00 00 02 08 00 e0 00     00:00:13.987  READ DMA EXT
-  25 20 20 00 23 00 00 00 00 08 9d e0 00     00:00:13.986  READ DMA EXT
-  25 20 20 00 1d 00 00 00 00 08 80 e0 00     00:00:13.979  READ DMA EXT
-  25 20 20 00 01 00 00 00 00 00 3f e0 00     00:00:13.979  READ DMA EXT
-  25 20 20 00 3f 00 00 00 00 00 00 e0 00     00:00:13.970  READ DMA EXT
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     05:55:22.270  READ DMA EXT
+  25 20 20 00 1f 00 00 06 1a 6a e1 e0 00     05:55:22.269  READ DMA EXT
+  25 20 20 00 21 00 00 06 1a 6a c0 e0 00     05:55:22.269  READ DMA EXT
+  25 20 20 00 1e 00 00 06 1a 6a a2 e0 00     05:55:22.268  READ DMA EXT
+  25 20 20 00 22 00 00 06 1a 6a 80 e0 00     05:55:22.268  READ DMA EXT
 
-Error 16 [15] occurred at disk power-on lifetime: 52025 hours (2167 days + 17 hours)
+Error 46 [21] occurred at disk power-on lifetime: 57280 hours (2386 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 06 00 00 00 02 08 00 e0 00  Error: UNC 6 sectors at LBA = 0x00020800 = 133120
+  40 -- 51 00 0c 00 00 06 1c 68 00 e0 00  Error: UNC 12 sectors at LBA = 0x061c6800 = 102524928
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 20 20 00 06 00 00 00 02 08 00 e0 00     00:00:22.573  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:22.572  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 00 00 00 00 01 e0 00     00:00:22.571  RECALIBRATE [OBS-4]
-  25 20 20 00 06 00 00 00 02 08 00 e0 00     00:00:20.775  READ DMA EXT
-  91 00 20 00 3f 00 00 0f 00 00 00 ef 00     00:00:20.774  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  25 20 20 00 0c 00 00 06 1c 68 00 e0 00     05:55:20.452  READ DMA EXT
+  25 20 20 00 17 00 00 06 1a 68 e9 e0 00     05:55:20.450  READ DMA EXT
+  25 20 20 00 29 00 00 06 1a 68 c0 e0 00     05:55:20.450  READ DMA EXT
+  25 20 20 00 13 00 00 06 1a 67 ed e0 00     05:55:20.449  READ DMA EXT
+  25 20 20 00 2d 00 00 06 1a 67 c0 e0 00     05:55:20.449  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     50435         -
-# 2  Short offline       Completed without error       00%     50420         -
-# 3  Short offline       Completed without error       00%     50406         -
-# 4  Short offline       Completed without error       00%     50391         -
-# 5  Short offline       Completed without error       00%     50376         -
-# 6  Short offline       Completed without error       00%     50361         -
-# 7  Short offline       Completed without error       00%     50347         -
-# 8  Short offline       Completed without error       00%     50331         -
-# 9  Short offline       Completed without error       00%     50315         -
-#10  Short offline       Completed without error       00%     50300         -
-#11  Short offline       Completed without error       00%     50285         -
-#12  Short offline       Completed without error       00%     50270         -
-#13  Short offline       Completed without error       00%     50256         -
-#14  Short offline       Completed without error       00%     50240         -
-#15  Short offline       Completed without error       00%     50223         -
-#16  Short offline       Completed without error       00%     50218         -
-#17  Short offline       Completed without error       00%     48863         -
-#18  Short offline       Completed without error       00%     41230         -
+# 1  Short offline       Completed without error       00%     62236         -
+# 2  Short offline       Completed without error       00%     56042         -
+# 3  Short offline       Completed without error       00%     56030         -
+# 4  Short offline       Completed without error       00%     56014         -
+# 5  Short offline       Completed without error       00%     55695         -
+# 6  Short offline       Completed without error       00%     53413         -
+# 7  Short offline       Completed without error       00%     53398         -
+# 8  Short offline       Completed without error       00%     53383         -
+# 9  Short offline       Completed without error       00%     53370         -
+#10  Short offline       Completed without error       00%     53366         -
+#11  Short offline       Completed without error       00%     53293         -
+#12  Short offline       Completed without error       00%     53289         -
+#13  Extended offline    Completed without error       00%     53267         -
+#14  Short offline       Completed without error       00%     53251         -
+#15  Short offline       Completed without error       00%     53245         -
+#16  Short offline       Completed without error       00%     53233         -
+#17  Short offline       Completed without error       00%     53221         -
+#18  Short offline       Completed without error       00%     53205         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -299,9 +299,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     18/37 Celsius
-Lifetime    Min/Max Temperature:      ?/45 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     22/35 Celsius
+Lifetime    Min/Max Temperature:     33/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -309,7 +309,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (25)
+Temperature History Size (Index):    128 (20)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -328,7 +328,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        39763  Vendor specific
+0x8000  4        39661  Vendor specific
 

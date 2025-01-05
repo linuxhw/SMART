@@ -1,5 +1,5 @@
-smartctl 6.6 2017-11-05 r4594 [armv7l-linux-4.19.122-2-osmc] (local build)
-Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [armv7l-linux-5.10.78-7-osmc] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
@@ -13,7 +13,7 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Feb 20 11:37:23 2021 CET
+Local Time is:    Mon May 15 06:48:07 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   178   173   021    -    4100
-  4 Start_Stop_Count        -O--CK   100   100   000    -    120
+  3 Spin_Up_Time            POS--K   175   173   021    -    4216
+  4 Start_Stop_Count        -O--CK   100   100   000    -    442
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   085   085   000    -    11486
+  9 Power_On_Hours          -O--CK   058   058   000    -    30665
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
- 11 Calibration_Retry_Count -O--CK   100   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    89
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    47
-193 Load_Cycle_Count        -O--CK   001   001   000    -    783109
-194 Temperature_Celsius     -O---K   110   105   000    -    37
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    156
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    102
+193 Load_Cycle_Count        -O--CK   001   001   000    -    3333682
+194 Temperature_Celsius     -O---K   108   102   000    -    39
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -110,7 +110,157 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 8803 (device log contains only the most recent 24 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 8803 [18] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 20 00 00 be 5e f0 90 40 00  Device Fault; Error: ABRT 32 sectors at LBA = 0xbe5ef090 = 3193893008
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 03 00 20 00 00 be 5e f0 90 40 00     00:32:23.527  READ DMA EXT
+  35 00 03 00 f0 00 00 d5 6b 9d 98 40 00     00:32:23.523  WRITE DMA EXT
+  ef 00 03 00 46 00 00 00 6b 9d 98 00 00     00:32:23.523  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 6b 9d 98 00 00     00:32:23.522  SET FEATURES [Set transfer mode]
+  ec 00 d5 00 f0 00 00 00 6b 9d 98 00 00     00:32:23.522  IDENTIFY DEVICE
+
+Error 8802 [17] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 f0 00 00 d5 6b 9d 98 40 00  Device Fault; Error: ABRT 240 sectors at LBA = 0xd56b9d98 = 3580599704
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 03 00 f0 00 00 d5 6b 9d 98 40 00     00:32:23.523  WRITE DMA EXT
+  ef 00 03 00 46 00 00 00 6b 9d 98 00 00     00:32:23.523  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 6b 9d 98 00 00     00:32:23.522  SET FEATURES [Set transfer mode]
+  ec 00 d5 00 f0 00 00 00 6b 9d 98 00 00     00:32:23.522  IDENTIFY DEVICE
+  35 00 d5 00 f0 00 00 d5 6b 9d 98 40 00     00:31:23.220  WRITE DMA EXT
+
+Error 8801 [16] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 46 00 00 00 6b 9d 98 00 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 03 00 46 00 00 00 6b 9d 98 00 00     00:32:23.523  SET FEATURES [Set transfer mode]
+  ef 00 03 00 0c 00 00 00 6b 9d 98 00 00     00:32:23.522  SET FEATURES [Set transfer mode]
+  ec 00 d5 00 f0 00 00 00 6b 9d 98 00 00     00:32:23.522  IDENTIFY DEVICE
+  35 00 d5 00 f0 00 00 d5 6b 9d 98 40 00     00:31:23.220  WRITE DMA EXT
+  35 00 d5 00 f0 00 00 d5 6b 9c a8 40 00     00:31:20.555  WRITE DMA EXT
+
+Error 8800 [15] occurred at disk power-on lifetime: 25800 hours (1075 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 0c 00 00 00 6b 9d 98 00 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ef 00 03 00 0c 00 00 00 6b 9d 98 00 00     00:32:23.522  SET FEATURES [Set transfer mode]
+  ec 00 d5 00 f0 00 00 00 6b 9d 98 00 00     00:32:23.522  IDENTIFY DEVICE
+  35 00 d5 00 f0 00 00 d5 6b 9d 98 40 00     00:31:23.220  WRITE DMA EXT
+  35 00 d5 00 f0 00 00 d5 6b 9c a8 40 00     00:31:20.555  WRITE DMA EXT
+  35 00 d5 00 f0 00 00 d5 6b 9b b8 40 00     00:31:20.438  WRITE DMA EXT
+
+Error 8799 [14] occurred at disk power-on lifetime: 25785 hours (1074 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 8c 45 80 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.580  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.540  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.500  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.460  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.420  FLUSH CACHE
+
+Error 8798 [13] occurred at disk power-on lifetime: 25785 hours (1074 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 8c 45 80 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.540  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.500  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.460  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.420  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.380  FLUSH CACHE
+
+Error 8797 [12] occurred at disk power-on lifetime: 25785 hours (1074 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 8c 45 80 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.500  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.460  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.420  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.380  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.341  FLUSH CACHE
+
+Error 8796 [11] occurred at disk power-on lifetime: 25785 hours (1074 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 08 00 00 00 8c 45 80 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.460  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.420  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.380  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.341  FLUSH CACHE
+  e7 00 03 00 08 00 00 00 8c 45 80 00 00  1d+12:19:27.301  FLUSH CACHE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -146,11 +296,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     25/42 Celsius
-Lifetime    Min/Max Temperature:      2/42 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     35/42 Celsius
+Lifetime    Min/Max Temperature:      2/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -161,7 +310,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (370)
+Temperature History Size (Index):    478 (283)
 
 SCT Error Recovery Control command not supported
 
@@ -179,12 +328,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4      6783769  Vendor specific
-
-
+0x8000  4      8522460  Vendor specific
 
