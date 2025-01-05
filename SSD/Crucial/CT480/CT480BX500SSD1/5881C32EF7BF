@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-101-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-105-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Apr  7 14:30:46 2024 CEST
+Local Time is:    Tue May  7 10:43:27 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,7 +23,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -62,17 +62,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2868
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    591
+  9 Power_On_Hours          -O--CK   100   100   000    -    2905
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    730
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   090   090   000    -    71
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    554
+173 Ave_Block-Erase_Count   -O--CK   090   090   000    -    73
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    647
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    36
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   069   057   000    -    31 (Min/Max 20/43)
+194 Temperature_Celsius     -O---K   066   057   000    -    34 (Min/Max 19/43)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_ECC_Cnt -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -80,15 +80,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   090   090   001    -    10
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    11255959051
-247 Host_Program_Page_Count -O--CK   100   100   000    -    351748720
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    2201480640
+246 Total_LBAs_Written      -O--CK   100   100   000    -    12250764100
+247 Host_Program_Page_Count -O--CK   100   100   000    -    382836378
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    2224940640
 249 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
 250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    0
-251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    3027240244
+251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    4008527774
 252 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    12
 253 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    230
+254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    235
 223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    411
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -129,5 +129,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            1  R_ERR response for non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           16  Device-to-host register FISes sent due to a COMRESET
 

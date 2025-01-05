@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5417
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue May 30 00:27:31 2023 +07
+Local Time is:    Thu Jun  1 15:35:37 2023 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,28 +65,28 @@ SMART Attributes Data Structure revision number: 20
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   ------+  100   100   050    -    0
-  9 Power_On_Hours          ------+  100   100   000    -    522
- 12 Power_Cycle_Count       ------+  100   100   000    -    85
+  9 Power_On_Hours          ------+  100   100   000    -    576
+ 12 Power_Cycle_Count       ------+  100   100   000    -    89
 167 Unknown_Attribute       ------+  100   100   000    -    0
 168 Unknown_Attribute       ------+  100   100   000    -    0
 169 Unknown_Attribute       ------+  100   100   010    -    655380
 171 Unknown_Attribute       ------+  000   000   000    -    0
 172 Unknown_Attribute       ------+  000   000   000    -    0
-173 Unknown_Attribute       ------+  200   200   000    -    8590852102
+173 Unknown_Attribute       ------+  200   200   000    -    8590917639
 175 Program_Fail_Count_Chip ------+  100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot ------+  100   100   000    -    178
 187 Reported_Uncorrect      ------+  100   000   000    -    0
-192 Power-Off_Retract_Count ------+  100   100   000    -    71
-194 Temperature_Celsius     ------+  046   046   000    -    46 (Min/Max 36/56)
+192 Power-Off_Retract_Count ------+  100   100   000    -    74
+194 Temperature_Celsius     ------+  048   048   000    -    48 (Min/Max 36/56)
 206 Unknown_SSD_Attribute   ------+  200   200   000    -    2
-207 Unknown_SSD_Attribute   ------+  200   200   000    -    14
-208 Unknown_SSD_Attribute   ------+  200   200   000    -    6
+207 Unknown_SSD_Attribute   ------+  200   200   000    -    15
+208 Unknown_SSD_Attribute   ------+  200   200   000    -    7
 209 Unknown_SSD_Attribute   ------+  200   200   000    -    1
-210 Unknown_Attribute       ------+  200   200   000    -    100
-211 Unknown_Attribute       ------+  200   200   000    -    73
+210 Unknown_Attribute       ------+  200   200   000    -    118
+211 Unknown_Attribute       ------+  200   200   000    -    85
 231 Unknown_SSD_Attribute   ------+  100   100   005    -    0
-241 Total_LBAs_Written      ------+  100   100   000    -    431
-242 Total_LBAs_Read         ------+  100   100   000    -    179
+241 Total_LBAs_Written      ------+  100   100   000    -    494
+242 Total_LBAs_Read         ------+  100   100   000    -    197
 245 Unknown_Attribute       ------+  100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -135,8 +135,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    47 Celsius
-Power Cycle Min/Max Temperature:      ?/48 Celsius
+Current Temperature:                    50 Celsius
+Power Cycle Min/Max Temperature:      ?/53 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -145,22 +145,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (60)
+Temperature History Size (Index):    478 (414)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              85  ---  Lifetime Power-On Resets
-0x01  0x010  4             522  ---  Power-on Hours
-0x01  0x018  6       904611358  ---  Logical Sectors Written
-0x01  0x020  6        10932177  ---  Number of Write Commands
-0x01  0x028  6       377363800  ---  Logical Sectors Read
-0x01  0x030  6         8983898  ---  Number of Read Commands
-0x01  0x038  6    482915782052  ---  Date and Time TimeStamp
+0x01  0x008  4              89  ---  Lifetime Power-On Resets
+0x01  0x010  4             576  ---  Power-on Hours
+0x01  0x018  6      1037010401  ---  Logical Sectors Written
+0x01  0x020  6        12665369  ---  Number of Write Commands
+0x01  0x028  6       413350239  ---  Logical Sectors Read
+0x01  0x030  6         9843925  ---  Number of Read Commands
+0x01  0x038  6    530352604208  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -176,7 +176,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

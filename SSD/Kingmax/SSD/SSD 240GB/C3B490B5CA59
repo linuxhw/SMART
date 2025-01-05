@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.9-zen1-1-zen] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.4-arch2-1] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ACS-4 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 10 07:47:52 2023 +07
+Local Time is:    Mon Sep 25 17:17:42 2023 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,16 +62,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    5815
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1983
+  9 Power_On_Hours          -O--C-   100   100   000    -    6434
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2099
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   090   090   000    -    30
-173 Unknown_Attribute       -O--C-   100   100   000    -    29032919
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    744
+173 Unknown_Attribute       -O--C-   100   100   000    -    45286098
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    797
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    55
-241 Total_LBAs_Written      -O--C-   100   100   000    -    46803
+231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    30
+241 Total_LBAs_Written      -O--C-   100   100   000    -    72333
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -118,10 +118,10 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1983  ---  Lifetime Power-On Resets
-0x01  0x010  4            5815  ---  Power-on Hours
-0x01  0x018  6     98154077005  ---  Logical Sectors Written
-0x01  0x028  6     75878186079  ---  Logical Sectors Read
+0x01  0x008  4            2099  ---  Lifetime Power-On Resets
+0x01  0x010  4            6434  ---  Power-on Hours
+0x01  0x018  6    151695287716  ---  Logical Sectors Written
+0x01  0x028  6     87174495056  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -131,7 +131,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              44  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              69  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -146,8 +146,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  4          241  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           25  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
