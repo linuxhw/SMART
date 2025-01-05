@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.10-300.fc37.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.11-300.fc40.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Samsung SpinPoint M8 (AF)
@@ -11,10 +11,10 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
-SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Dec  4 08:50:32 2022 -03
+SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Thu Jun  6 14:16:37 2024 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -32,9 +32,8 @@ General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  25)	The self-test routine was aborted by
+					the host.
 Total time to complete Offline 
 data collection: 		(12480) seconds.
 Offline data collection
@@ -63,32 +62,32 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    9
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    18
   2 Throughput_Performance  -OS--K   056   056   000    -    11334
-  3 Spin_Up_Time            PO---K   092   090   025    -    2480
-  4 Start_Stop_Count        -O--CK   097   097   000    -    3566
+  3 Spin_Up_Time            PO---K   092   090   025    -    2477
+  4 Start_Stop_Count        -O--CK   096   096   000    -    4803
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    35834
+  9 Power_On_Hours          -O--CK   100   100   000    -    39740
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    231
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    3724
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    233
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5262
  13 Read_Soft_Error_Rate    -O-RCK   100   100   000    -    0
-181 Program_Fail_Cnt_Total  -O---K   099   099   000    -    43155794
-191 G-Sense_Error_Rate      -O---K   100   100   000    -    411
-192 Power-Off_Retract_Count -O---K   100   100   000    -    130
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1392907
-194 Temperature_Celsius     -O----   064   057   000    -    29 (Min/Max 7/44)
+181 Program_Fail_Cnt_Total  -O---K   099   099   000    -    43155802
+191 G-Sense_Error_Rate      -O---K   100   100   000    -    412
+192 Power-Off_Retract_Count -O---K   100   100   000    -    156
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1523782
+194 Temperature_Celsius     -O----   064   057   000    -    26 (Min/Max 7/44)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    2187
-240 Head_Flying_Hours       -O--CK   100   100   000    -    22765
-241 Total_LBAs_Written      -O--CK   098   090   000    -    2926199
-242 Total_LBAs_Read         -O--CK   094   088   000    -    8687995
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    2199
+240 Head_Flying_Hours       -O--CK   100   100   000    -    22977
+241 Total_LBAs_Written      -O--CK   095   090   000    -    7446367
+242 Total_LBAs_Read         -O--CK   090   088   000    -    14800188
 254 Free_Fall_Sensor        -O--CK   252   252   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -168,31 +167,32 @@ Error 1 [0] occurred at disk power-on lifetime: 18923 hours (788 days + 11 hours
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     35734         -
-# 2  Short offline       Aborted by host               90%     33664         -
-# 3  Short offline       Completed without error       00%     33664         -
-# 4  Short offline       Completed without error       00%     28539         -
-# 5  Short offline       Completed without error       00%     28538         -
-# 6  Short offline       Completed without error       00%     24697         -
-# 7  Extended offline    Completed without error       00%     23526         -
-# 8  Short offline       Completed without error       00%     23265         -
-# 9  Short offline       Completed without error       00%     23087         -
-#10  Short offline       Completed without error       00%     22073         -
-#11  Short offline       Aborted by host               80%     21361         -
-#12  Short offline       Aborted by host               90%     18924         -
-#13  Short offline       Interrupted (host reset)      90%     18923         -
-#14  Short offline       Aborted by host               90%     18923         -
-#15  Short offline       Completed without error       00%     18923         -
-#16  Short offline       Completed without error       00%     15959         -
-#17  Short offline       Completed without error       00%        17         -
-#18  Short offline       Aborted by host               80%        17         -
-#19  Short offline       Completed without error       00%        17         -
-#20  Short offline       Completed without error       00%         1         -
+# 1  Short offline       Aborted by host               90%     39275         -
+# 2  Short offline       Completed without error       00%     39256         -
+# 3  Short offline       Completed without error       00%     39256         -
+# 4  Short offline       Completed without error       00%     39256         -
+# 5  Short offline       Completed without error       00%     39256         -
+# 6  Short offline       Aborted by host               90%     39255         -
+# 7  Short offline       Completed without error       00%     35734         -
+# 8  Short offline       Aborted by host               90%     33664         -
+# 9  Short offline       Completed without error       00%     33664         -
+#10  Short offline       Completed without error       00%     28539         -
+#11  Short offline       Completed without error       00%     28538         -
+#12  Short offline       Completed without error       00%     24697         -
+#13  Extended offline    Completed without error       00%     23526         -
+#14  Short offline       Completed without error       00%     23265         -
+#15  Short offline       Completed without error       00%     23087         -
+#16  Short offline       Completed without error       00%     22073         -
+#17  Short offline       Aborted by host               80%     21361         -
+#18  Short offline       Aborted by host               90%     18924         -
+#19  Short offline       Interrupted (host reset)      90%     18923         -
+#20  Short offline       Aborted by host               90%     18923         -
+#21  Short offline       Completed without error       00%     18923         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Completed [00% left] (0-65535)
+    1        0        0  Aborted_by_host [90% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -204,8 +204,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     19/29 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     23/27 Celsius
 Lifetime    Min/Max Temperature:      6/44 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -215,7 +215,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (45)
+Temperature History Size (Index):    128 (96)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -235,8 +235,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

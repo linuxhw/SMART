@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SAMSUNG SpinPoint M7E (AF)
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue Apr  4 21:53:10 2023 -03
+Local Time is:    Fri Apr  5 02:32:55 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -32,9 +32,8 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  41)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		( 7800) seconds.
 Offline data collection
@@ -63,28 +62,28 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    30
+  1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    32
   2 Throughput_Performance  -OS--K   056   056   000    -    7029
-  3 Spin_Up_Time            PO---K   089   085   025    -    3412
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7715
+  3 Spin_Up_Time            PO---K   089   085   025    -    3409
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7925
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    16791
+  9 Power_On_Hours          -O--CK   100   100   000    -    16982
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 11 Calibration_Retry_Count -O--CK   100   100   000    -    830
- 12 Power_Cycle_Count       -O--CK   093   093   000    -    7766
-191 G-Sense_Error_Rate      -O---K   096   096   000    -    42500
+ 11 Calibration_Retry_Count -O--CK   100   100   000    -    867
+ 12 Power_Cycle_Count       -O--CK   093   093   000    -    7987
+191 G-Sense_Error_Rate      -O---K   096   096   000    -    43959
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   057   037   000    -    43 (Min/Max 18/64)
+194 Temperature_Celsius     -O----   063   037   000    -    37 (Min/Max 18/64)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   100   000    -    0
 198 Offline_Uncorrectable   ----CK   252   100   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    63
-200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    15053
-223 Load_Retry_Count        -O--CK   100   100   000    -    830
-225 Load_Cycle_Count        -O--CK   083   083   000    -    173782
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    75
+200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    15450
+223 Load_Retry_Count        -O--CK   100   100   000    -    867
+225 Load_Cycle_Count        -O--CK   083   083   000    -    175078
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 64 (device log contains only the most recent 8 errors)
+Device Error Count: 76 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,160 +125,170 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 64 [7] occurred at disk power-on lifetime: 15662 hours (652 days + 14 hours)
+Error 76 [3] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 63 00 00 33 aa 80 ad e0 00  Error: UNC 99 sectors at LBA = 0x33aa80ad = 866812077
+  84 -- 51 00 01 00 00 3a 38 60 2f e0 00  Error: ABRT at LBA = 0x3a38602f = 976773167
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 d0 00 00 33 aa 80 40 e0 08     00:00:00.032  READ DMA EXT
-  25 00 00 00 c8 00 00 33 aa 7f 10 e0 08     00:00:00.032  READ DMA EXT
-  25 00 00 00 10 00 00 33 aa 7f 00 e0 08     00:00:00.032  READ DMA EXT
-  25 00 00 00 88 00 00 33 aa 7e 10 e0 08     00:00:00.032  READ DMA EXT
-  25 00 00 00 88 00 00 33 aa 7d 88 e0 08     00:00:00.032  READ DMA EXT
+  24 03 03 00 01 00 00 3a 38 60 2f e0 00     00:00:00.051  READ SECTOR(S) EXT
+  24 03 03 00 01 00 00 3a 38 60 2f e0 00     00:00:00.051  READ SECTOR(S) EXT
+  ec 00 03 00 aa 00 00 00 02 00 01 a0 00     00:00:00.051  IDENTIFY DEVICE
+  08 00 03 00 aa 00 00 00 00 00 01 a0 00     00:00:00.051  DEVICE RESET
+  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:00.051  NOP [Abort queued commands]
 
-Error 63 [6] occurred at disk power-on lifetime: 7959 hours (331 days + 15 hours)
+Error 75 [2] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 a0 00
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.270  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.239  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.238  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.238  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.238  NOP [Abort queued commands]
+  25 03 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.045  READ DMA EXT
+  25 03 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.045  READ DMA EXT
+  24 03 03 00 01 00 00 3a 38 60 2f e0 00     00:00:00.045  READ SECTOR(S) EXT
+  c6 00 03 00 10 00 00 00 02 00 01 a0 00     00:00:00.045  SET MULTIPLE MODE
+  91 00 03 00 3f 00 00 00 02 00 01 af 00     00:00:00.045  INITIALIZE DEVICE PARAMETERS [OBS-6]
 
-Error 62 [5] occurred at disk power-on lifetime: 7959 hours (331 days + 15 hours)
+Error 74 [1] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 a0 00
+  84 -- 51 00 01 00 00 3a 38 60 2f e0 00  Error: ABRT at LBA = 0x3a38602f = 976773167
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.003  IDENTIFY DEVICE
+  24 03 03 00 01 00 00 3a 38 60 2f e0 00     00:00:00.045  READ SECTOR(S) EXT
+  c6 00 03 00 10 00 00 00 02 00 01 a0 00     00:00:00.045  SET MULTIPLE MODE
+  91 00 03 00 3f 00 00 00 02 00 01 af 00     00:00:00.045  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  ef 00 03 00 0c 00 00 00 02 00 01 a0 00     00:00:00.045  SET FEATURES [Set transfer mode]
+  ef 00 03 00 45 00 00 00 02 00 01 a0 00     00:00:00.045  SET FEATURES [Set transfer mode]
 
-Error 61 [4] occurred at disk power-on lifetime: 7959 hours (331 days + 15 hours)
+Error 73 [0] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.345  READ SECTOR(S)
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.345  READ SECTOR(S)
-  ef 00 03 00 08 00 00 00 00 00 00 a0 00     00:00:00.342  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.341  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.310  NOP [Abort queued commands]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.018  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.018  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.018  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.018  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
 
-Error 60 [3] occurred at disk power-on lifetime: 7959 hours (331 days + 15 hours)
+Error 72 [7] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.345  READ SECTOR(S)
-  ef 00 03 00 08 00 00 00 00 00 00 a0 00     00:00:00.342  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.341  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.310  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.309  NOP [Abort queued commands]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.018  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.018  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.018  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
 
-Error 59 [2] occurred at disk power-on lifetime: 7959 hours (331 days + 15 hours)
+Error 71 [6] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 00 00 00 00 00 00 00 a0 00
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.341  IDENTIFY DEVICE
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.310  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.309  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.309  NOP [Abort queued commands]
-  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:00.309  NOP [Abort queued commands]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
 
-Error 58 [1] occurred at disk power-on lifetime: 7959 hours (331 days + 15 hours)
+Error 70 [5] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.272  READ SECTOR(S)
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.272  READ SECTOR(S)
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.272  READ SECTOR(S)
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.272  READ SECTOR(S)
-  ef 00 03 00 08 00 00 00 00 00 00 a0 00     00:00:00.266  SET FEATURES [Set transfer mode]
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 03 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
 
-Error 57 [0] occurred at disk power-on lifetime: 7959 hours (331 days + 15 hours)
+Error 69 [4] occurred at disk power-on lifetime: 16981 hours (707 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ABRT at LBA = 0x00000000 = 0
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.272  READ SECTOR(S)
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.272  READ SECTOR(S)
-  20 00 03 00 01 00 00 00 00 00 00 e0 00     00:00:00.272  READ SECTOR(S)
-  ef 00 03 00 08 00 00 00 00 00 00 a0 00     00:00:00.266  SET FEATURES [Set transfer mode]
-  ec 00 00 00 01 00 00 00 00 00 01 a0 00     00:00:00.265  IDENTIFY DEVICE
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 03 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  25 03 00 00 01 00 00 00 00 00 00 e0 00     00:00:00.017  READ DMA EXT
+  c6 00 00 00 10 00 00 00 b0 01 16 e0 00     00:00:00.006  SET MULTIPLE MODE
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     16770         -
-# 2  Short offline       Completed without error       00%     16767         -
-# 3  Short offline       Completed without error       00%     16762         -
-# 4  Short offline       Completed without error       00%     16760         -
-# 5  Short offline       Completed without error       00%     16757         -
-# 6  Extended offline    Completed without error       00%     16748         -
-# 7  Short offline       Completed without error       00%     16743         -
-# 8  Short offline       Completed without error       00%     16728         -
-# 9  Short offline       Completed without error       00%     16722         -
-#10  Short offline       Completed without error       00%     16704         -
-#11  Short offline       Completed without error       00%     16662         -
-#12  Short offline       Completed without error       00%      9671         -
-#13  Short offline       Completed without error       00%      9657         -
-#14  Vendor (0x50)       Completed without error       00%        32         -
-#15  Vendor (0x50)       Completed without error       00%         0         -
+# 1  Extended offline    Interrupted (host reset)      90%     16958         -
+# 2  Extended offline    Aborted by host               80%     16955         -
+# 3  Short offline       Completed without error       00%     16949         -
+# 4  Short offline       Completed without error       00%     16929         -
+# 5  Short offline       Completed without error       00%     16925         -
+# 6  Short offline       Completed without error       00%     16922         -
+# 7  Short offline       Completed without error       00%     16891         -
+# 8  Short offline       Completed without error       00%     16890         -
+# 9  Extended offline    Aborted by host               60%     16886         -
+#10  Short offline       Completed without error       00%     16846         -
+#11  Short offline       Completed without error       00%     16830         -
+#12  Short offline       Completed without error       00%     16804         -
+#13  Short offline       Completed without error       00%     16770         -
+#14  Short offline       Completed without error       00%     16767         -
+#15  Short offline       Completed without error       00%     16762         -
+#16  Short offline       Completed without error       00%     16760         -
+#17  Short offline       Completed without error       00%     16757         -
+#18  Extended offline    Completed without error       00%     16748         -
+#19  Short offline       Completed without error       00%     16743         -
+#20  Short offline       Completed without error       00%     16728         -
+#21  Short offline       Completed without error       00%     16722         -
 
 SMART Selective self-test log data structure revision number 0
 Note: revision number not 1 implies that no selective self-test has ever been run
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
-    1        0        0  Completed [00% left] (0-65535)
+    1        0        0  Interrupted [90% left] (0-65535)
     2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
@@ -291,8 +300,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    43 Celsius
-Power Cycle Min/Max Temperature:     41/43 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     37/39 Celsius
 Lifetime    Min/Max Temperature:     18/64 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -302,7 +311,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (115)
+Temperature History Size (Index):    128 (6)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -322,8 +331,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4        61889  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           19  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            3  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
@@ -348,4 +357,6 @@ ID      Size     Value  Description
 0x8e0f  4            0  Vendor specific
 0x8e10  4            0  Vendor specific
 0x8e11  4            0  Vendor specific
+
+
 

@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Nov 16 21:14:20 2023 -03
+Local Time is:    Thu Nov 16 21:42:22 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -62,11 +62,11 @@ SCT capabilities: 	       (0x1085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   064   048   006    -    3106473
+  1 Raw_Read_Error_Rate     POSR--   064   048   006    -    3124804
   3 Spin_Up_Time            PO----   097   097   000    -    0
   4 Start_Stop_Count        -O--CK   095   095   020    -    5214
   5 Reallocated_Sector_Ct   PO--CK   098   098   010    -    2992
-  7 Seek_Error_Rate         POSR--   074   060   045    -    17296209684
+  7 Seek_Error_Rate         POSR--   074   060   045    -    17296209750
   9 Power_On_Hours          -O--CK   088   088   000    -    11191
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   096   096   020    -    4269
@@ -78,13 +78,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 190 Airflow_Temperature_Cel -O---K   058   044   040    -    42 (Min/Max 29/42)
 193 Load_Cycle_Count        -O--CK   097   097   000    -    6100
 194 Temperature_Celsius     -O---K   042   020   000    -    42 (0 20 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   001   001   000    -    3106473
+195 Hardware_ECC_Recovered  -O-RC-   001   001   000    -    3124804
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   001   000    -    135604
-240 Head_Flying_Hours       ------   100   253   000    -    9613h+59m+55.563s
+240 Head_Flying_Hours       ------   100   253   000    -    9614h+27m+57.767s
 241 Total_LBAs_Written      ------   100   253   000    -    28067802579
-242 Total_LBAs_Read         ------   100   253   000    -    54667922145
+242 Total_LBAs_Read         ------   100   253   000    -    54667940476
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -309,8 +309,8 @@ Page  Offset Size        Value Flags Description
 0x01  0x010  4           11191  ---  Power-on Hours
 0x01  0x018  6     28699061779  ---  Logical Sectors Written
 0x01  0x020  6       125854951  ---  Number of Write Commands
-0x01  0x028  6     55741937706  ---  Logical Sectors Read
-0x01  0x030  6       365930036  ---  Number of Read Commands
+0x01  0x028  6     55741956037  ---  Logical Sectors Read
+0x01  0x030  6       365930304  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4      3958010072  N--  Spindle Motor Power-on Hours
@@ -345,7 +345,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

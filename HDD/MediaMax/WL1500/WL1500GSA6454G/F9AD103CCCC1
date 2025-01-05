@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     WL1500GSA6454G
@@ -8,10 +8,10 @@ LU WWN Device Id: 0 000000 ...
 Firmware Version: 01.12B.3
 User Capacity:    1,500,301,910,016 bytes [1.50 TB]
 Sector Size:      512 bytes logical/physical
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database
 ATA Version is:   [No Information Found]
 SATA Version is:  SATA 2.6, 6.0 Gb/s
-Local Time is:    Sat Feb 13 14:51:35 2021 UTC
+Local Time is:    Wed Aug 30 11:45:50 2023 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -26,8 +26,8 @@ Wt Cache Reorder: Unavailable
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -58,14 +58,14 @@ recommended polling time: 	 (   5) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  3 Spin_Up_Time            PO--C-+  178   177   021    -    6100
+  3 Spin_Up_Time            PO--C-+  178   176   021    -    6083
   5 Reallocated_Sector_Ct   POSRC-+  200   200   140    -    0
-  9 Power_On_Hours          POS---+  099   099   000    -    1053
- 12 Power_Cycle_Count       PO-RC-+  100   100   000    -    681
+  9 Power_On_Hours          POS---+  095   095   000    -    4046
+ 12 Power_Cycle_Count       PO-RC-+  098   098   000    -    2694
 187 Reported_Uncorrect      PO-R--+  100   100   000    -    0
-193 Load_Cycle_Count        PO-R--+  200   200   000    -    588
-240 Head_Flying_Hours       PO-R--+  099   099   000    -    816
-242 Total_LBAs_Read         POS-C-+  200   200   000    -    7846254808
+193 Load_Cycle_Count        PO-R--+  200   200   000    -    2495
+240 Head_Flying_Hours       PO-R--+  095   095   000    -    3694
+242 Total_LBAs_Read         POS-C-+  200   200   000    -    35956895639
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,10 +99,20 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       956         -
-# 2  Short offline       Completed without error       00%       474         -
-# 3  Short offline       Completed without error       00%       474         -
-# 4  Short offline       Interrupted (host reset)      70%       239         -
+# 1  Short offline       Completed without error       00%      2409         -
+# 2  Short offline       Completed without error       00%      2186         -
+# 3  Short offline       Completed without error       00%      2174         -
+# 4  Short offline       Completed without error       00%      2173         -
+# 5  Short offline       Completed without error       00%      2108         -
+# 6  Short offline       Interrupted (host reset)      80%      1881         -
+# 7  Short offline       Interrupted (host reset)      80%      1873         -
+# 8  Short offline       Completed without error       00%      1832         -
+# 9  Short offline       Completed without error       00%      1300         -
+#10  Short offline       Completed without error       00%      1092         -
+#11  Short offline       Completed without error       00%       956         -
+#12  Short offline       Completed without error       00%       474         -
+#13  Short offline       Completed without error       00%       474         -
+#14  Short offline       Interrupted (host reset)      70%       239         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -132,9 +142,9 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          553  Vendor specific
+0x8000  4         4224  Vendor specific
 

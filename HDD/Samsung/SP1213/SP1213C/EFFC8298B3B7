@@ -7,7 +7,7 @@ User Capacity:    120,060,444,672 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 0
-Local Time is:    Sun Apr 25 16:11:21 2021 CEST
+Local Time is:    Sun Sep 29 16:11:42 2024 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -19,7 +19,9 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
@@ -52,24 +54,24 @@ recommended polling time: 	 (  75) minutes.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    0
+  1 Raw_Read_Error_Rate     POSR--   100   100   051    -    1042
   3 Spin_Up_Time            POS---   100   100   025    -    5696
-  4 Start_Stop_Count        -O--CK   088   088   000    -    12165
+  4 Start_Stop_Count        -O--CK   088   088   000    -    12491
   5 Reallocated_Sector_Ct   PO--CK   100   100   011    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Half_Minutes   -O--CK   095   095   000    -    27014h+40m
+  9 Power_On_Half_Minutes   -O--CK   095   095   000    -    27090h+25m
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4586
-194 Temperature_Celsius     -O---K   115   037   000    -    41
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    32040
-196 Reallocated_Event_Count -O--CK   100   100   000    -    1
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4730
+194 Temperature_Celsius     -O---K   133   037   000    -    35
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    37461
+196 Reallocated_Event_Count -O--CK   099   099   000    -    3
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Total_Offl_Uncorrectabl ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
 200 Multi_Zone_Error_Rate   -O-R--   100   100   051    -    0
-201 Soft_Read_Error_Rate    -O-R--   100   100   051    -    0
+201 Soft_Read_Error_Rate    -O-R--   100   100   051    -    32
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -90,7 +92,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 4704 (device log contains only the most recent five errors)
+ATA Error Count: 4767 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -105,7 +107,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4704 occurred at disk power-on lifetime: 27014 hours (1125 days + 14 hours)
+Error 4767 occurred at disk power-on lifetime: 27086 hours (1128 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -116,13 +118,13 @@ Error 4704 occurred at disk power-on lifetime: 27014 hours (1125 days + 14 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      00:46:56.625  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      00:46:56.625  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      00:46:56.625  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:45:58.125  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:45:56.625  IDENTIFY DEVICE
+  b1 c1 00 00 00 00 00 00      00:41:56.313  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00      00:41:56.313  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00      00:41:56.313  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:41:54.875  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:41:54.875  IDENTIFY DEVICE
 
-Error 4703 occurred at disk power-on lifetime: 27014 hours (1125 days + 14 hours)
+Error 4766 occurred at disk power-on lifetime: 27085 hours (1128 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -133,13 +135,13 @@ Error 4703 occurred at disk power-on lifetime: 27014 hours (1125 days + 14 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      00:41:22.563  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      00:41:22.563  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      00:41:22.563  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:41:22.250  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:41:15.875  IDENTIFY DEVICE
+  b1 c1 00 00 00 00 00 00      01:16:26.875  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00      01:16:26.875  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00      01:16:26.875  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      01:16:26.500  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      01:16:20.125  IDENTIFY DEVICE
 
-Error 4702 occurred at disk power-on lifetime: 27014 hours (1125 days + 14 hours)
+Error 4765 occurred at disk power-on lifetime: 27085 hours (1128 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -150,13 +152,13 @@ Error 4702 occurred at disk power-on lifetime: 27014 hours (1125 days + 14 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      00:09:01.813  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      00:09:01.813  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      00:09:01.813  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:04:19.000  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:04:17.313  IDENTIFY DEVICE
+  b1 c1 00 00 00 00 00 00      00:55:14.813  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00      00:55:14.813  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00      00:55:14.813  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:55:13.438  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:55:13.375  IDENTIFY DEVICE
 
-Error 4701 occurred at disk power-on lifetime: 27013 hours (1125 days + 13 hours)
+Error 4764 occurred at disk power-on lifetime: 27083 hours (1128 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -167,13 +169,13 @@ Error 4701 occurred at disk power-on lifetime: 27013 hours (1125 days + 13 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      00:53:03.000  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      00:53:03.000  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      00:53:03.000  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:52:44.563  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:52:43.000  IDENTIFY DEVICE
+  b1 c1 00 00 00 00 00 00      00:17:07.125  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00      00:17:07.125  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00      00:17:07.125  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:17:06.813  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:17:00.313  IDENTIFY DEVICE
 
-Error 4700 occurred at disk power-on lifetime: 27013 hours (1125 days + 13 hours)
+Error 4763 occurred at disk power-on lifetime: 27078 hours (1128 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -184,11 +186,11 @@ Error 4700 occurred at disk power-on lifetime: 27013 hours (1125 days + 13 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  b1 c1 00 00 00 00 00 00      00:51:09.563  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
-  f5 00 00 00 00 00 00 00      00:51:09.563  SECURITY FREEZE LOCK
-  ec 00 00 00 00 00 00 00      00:51:09.563  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:51:09.250  IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00      00:51:02.875  IDENTIFY DEVICE
+  b1 c1 00 00 00 00 00 00      00:24:17.875  DEVICE CONFIGURATION FREEZE LOCK [OBS-ACS-3]
+  f5 00 00 00 00 00 00 00      00:24:17.875  SECURITY FREEZE LOCK
+  ec 00 00 00 00 00 00 00      00:24:17.875  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:24:17.500  IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00      00:24:11.188  IDENTIFY DEVICE
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 

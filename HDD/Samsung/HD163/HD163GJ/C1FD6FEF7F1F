@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SAMSUNG HD163GJ
@@ -13,7 +13,7 @@ Form Factor:      3.5 inches
 Device is:        Not in smartctl database
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Mon Apr  3 17:17:48 2023 MSK
+Local Time is:    Mon Nov 27 13:57:57 2023 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -64,26 +64,26 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    5
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   083   083   025    -    5170
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1066
+  3 Spin_Up_Time            PO---K   084   083   025    -    5122
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1391
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    38246
+  9 Power_On_Hours          -O--CK   100   100   000    -    39161
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   252   252   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    635
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    790
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    1
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   057   050   000    -    43 (Min/Max 7/50)
+194 Temperature_Celsius     -O----   058   047   000    -    42 (Min/Max 7/53)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
 198 Offline_Uncorrectable   ----CK   252   252   000    -    0
-199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -OS-CK   100   100   000    -    171
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    0
 223 Load_Retry_Count        -O--CK   252   252   000    -    0
-225 Load_Cycle_Count        -O--CK   100   100   000    -    1089
+225 Load_Cycle_Count        -O--CK   100   100   000    -    1416
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,7 +109,153 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-No Errors Logged
+Device Error Count: 171 (device log contains only the most recent 8 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 171 [2] occurred at disk power-on lifetime: 39161 hours (1631 days + 17 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 68 04 00 00 00 00 00 00 40 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 02 00 00 01 03 68 02 40 08     00:00:26.810  READ FPDMA QUEUED
+  60 00 da 00 02 00 00 01 03 68 02 40 08     00:00:27.221  READ FPDMA QUEUED
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 08     00:00:26.888  SMART RETURN STATUS
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08     00:00:26.888  SMART READ DATA
+  b0 00 d1 00 01 00 00 00 c2 4f 00 00 08     00:00:26.888  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+
+Error 170 [1] occurred at disk power-on lifetime: 39135 hours (1630 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:29.832  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:29.832  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:29.832  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:29.785  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 40 00     00:00:29.785  NOP [Abort queued commands]
+
+Error 169 [0] occurred at disk power-on lifetime: 39134 hours (1630 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:27.775  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:27.774  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:27.774  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:27.769  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:27.769  NOP [Abort queued commands]
+
+Error 168 [7] occurred at disk power-on lifetime: 39134 hours (1630 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.193  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:26.193  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:26.193  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:26.163  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:26.163  NOP [Abort queued commands]
+
+Error 167 [6] occurred at disk power-on lifetime: 39127 hours (1630 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.005  IDENTIFY DEVICE
+
+Error 166 [5] occurred at disk power-on lifetime: 39111 hours (1629 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.173  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:11.173  NOP [Abort queued commands]
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:11.173  NOP [Abort queued commands]
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:11.173  IDENTIFY DEVICE
+  00 00 00 00 01 00 00 00 00 00 01 00 00     00:00:11.173  NOP [Abort queued commands]
+
+Error 165 [4] occurred at disk power-on lifetime: 39108 hours (1629 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 0a 20 00 00 00 00 00 00 40 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 00 09 0a 18 40 08     00:00:00.030  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 00 09 0a 18 40 00     00:00:00.320  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 00 09 0a 10 40 00     00:00:00.320  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 00 09 0a 08 40 00     00:00:00.320  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     00:00:00.320  SET FEATURES [Enable SATA feature]
+
+Error 164 [3] occurred at disk power-on lifetime: 39108 hours (1629 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 0b 50 00 00 00 00 00 00 40 00  Error: ICRC, ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 01 48 00 00 00 09 0a b8 40 08     00:00:00.030  READ FPDMA QUEUED
+  60 00 10 01 f8 00 00 00 09 0a 08 40 00     00:00:00.320  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 00 09 09 f8 40 00     00:00:00.320  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 00 09 09 f0 40 00     00:00:00.320  READ FPDMA QUEUED
+  60 00 10 00 08 00 00 00 09 09 e8 40 00     00:00:00.320  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -130,8 +276,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    43 Celsius
-Power Cycle Min/Max Temperature:     23/43 Celsius
+Current Temperature:                    42 Celsius
+Power Cycle Min/Max Temperature:     25/42 Celsius
 Lifetime    Min/Max Temperature:     11/61 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -141,7 +287,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (112)
+Temperature History Size (Index):    128 (73)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -153,40 +299,40 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  4            0  Command failed due to ICRC error
-0x0002  4            0  R_ERR response for data FIS
-0x0003  4            0  R_ERR response for device-to-host data FIS
+0x0001  4            1  Command failed due to ICRC error
+0x0002  4           12  R_ERR response for data FIS
+0x0003  4           12  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
-0x0005  4            0  R_ERR response for non-data FIS
-0x0006  4            0  R_ERR response for device-to-host non-data FIS
+0x0005  4            6  R_ERR response for non-data FIS
+0x0006  4            6  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
-0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          623  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           30  Device-to-host register FISes sent due to a COMRESET
+0x0008  4            6  Device-to-host non-data FIS retries
+0x0009  4          260  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           22  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  4            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  4            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  4            0  R_ERR response for host-to-device non-data FIS, non-CRC
-0x8e00  4            0  Vendor specific
-0x8e01  4            0  Vendor specific
+0x8e00  4            9  Vendor specific
+0x8e01  4           21  Vendor specific
 0x8e02  4            0  Vendor specific
 0x8e03  4            0  Vendor specific
 0x8e04  4            0  Vendor specific
 0x8e05  4            0  Vendor specific
-0x8e06  4            0  Vendor specific
-0x8e07  4            0  Vendor specific
-0x8e08  4            0  Vendor specific
-0x8e09  4            0  Vendor specific
-0x8e0a  4            0  Vendor specific
-0x8e0b  4            0  Vendor specific
-0x8e0c  4            0  Vendor specific
-0x8e0d  4            0  Vendor specific
-0x8e0e  4            0  Vendor specific
-0x8e0f  4            0  Vendor specific
-0x8e10  4            0  Vendor specific
-0x8e11  4            0  Vendor specific
+0x8e06  4         1236  Vendor specific
+0x8e07  4         4790  Vendor specific
+0x8e08  4           69  Vendor specific
+0x8e09  4            3  Vendor specific
+0x8e0a  4         4000  Vendor specific
+0x8e0b  4      8518016  Vendor specific
+0x8e0c  4        14794  Vendor specific
+0x8e0d  4           18  Vendor specific
+0x8e0e  4         1505  Vendor specific
+0x8e0f  4        22016  Vendor specific
+0x8e10  4         6020  Vendor specific
+0x8e11  4           18  Vendor specific
 
 
 
