@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-122.124.1rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.20-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Blue Serial ATA
@@ -9,9 +9,9 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.01B01
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
-Local Time is:    Mon Jun 26 01:47:19 2023 +05
+Local Time is:    Tue Jun 27 13:18:53 2023 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -68,13 +68,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   100   100   000    -    7
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR--   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    1920
+  9 Power_On_Hours          -O--CK   098   098   000    -    1934
  10 Spin_Retry_Count        -O--C-   100   253   000    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1227
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1236
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    463
-193 Load_Cycle_Count        -O--CK   200   200   000    -    1227
-194 Temperature_Celsius     -O---K   107   098   000    -    36
+193 Load_Cycle_Count        -O--CK   200   200   000    -    1236
+194 Temperature_Celsius     -O---K   113   098   000    -    30
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   199   000    -    0
 198 Offline_Uncorrectable   ----C-   100   253   000    -    0
@@ -270,9 +270,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     24/36 Celsius
-Lifetime    Min/Max Temperature:     25/45 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     28/30 Celsius
+Lifetime    Min/Max Temperature:     24/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -280,7 +280,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/85 Celsius
-Temperature History Size (Index):    128 (9)
+Temperature History Size (Index):    128 (112)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -299,8 +299,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
-0x8000  4        10938  Vendor specific
-
-
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          334  Vendor specific
 

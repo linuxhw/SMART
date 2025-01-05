@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Rotation Rate:    5200 rpm
 Device is:        In smartctl database
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat May  4 08:58:39 2024 WIB
+Local Time is:    Tue Nov  5 08:18:29 2024 WIB
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,23 +63,23 @@ SCT capabilities: 	       (0x7035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    276
-  3 Spin_Up_Time            POS--K   219   200   021    -    4033
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5090
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    366
+  3 Spin_Up_Time            POS--K   211   200   021    -    4441
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7070
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   199   000    -    0
-  9 Power_On_Hours          -O--CK   067   067   000    -    24397
+  7 Seek_Error_Rate         -OSR-K   200   198   000    -    0
+  9 Power_On_Hours          -O--CK   063   063   000    -    27503
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1330
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    880
-193 Load_Cycle_Count        -O--CK   112   112   000    -    266140
-194 Temperature_Celsius     -O---K   113   090   000    -    39
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1842
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1142
+193 Load_Cycle_Count        -O--CK   105   105   000    -    285381
+194 Temperature_Celsius     -O---K   116   090   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    77
-198 Offline_Uncorrectable   ----CK   200   200   000    -    1
+197 Current_Pending_Sector  -O--CK   200   200   000    -    103
+198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   ---R--   200   195   000    -    3
+200 Multi_Zone_Error_Rate   ---R--   194   194   000    -    1237
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 305 (device log contains only the most recent 24 errors)
+Device Error Count: 395 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,163 +126,162 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 305 [16] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 395 [10] occurred at disk power-on lifetime: 27281 hours (1136 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 00 00 00 40 00  Device Fault; Error: ABRT
+  40 -- 51 00 f0 00 00 30 eb 7c 60 40 00  Error: UNC 240 sectors at LBA = 0x30eb7c60 = 820739168
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:14.373  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.372  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.372  SET FEATURES [Disable SATA feature]
-  ec 00 90 00 01 00 00 00 00 00 00 00 00     03:32:14.112  IDENTIFY DEVICE
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:14.112  READ LOG EXT
+  25 00 00 00 f0 00 00 30 eb 7c 00 40 00     00:00:11.824  READ DMA EXT
+  25 00 00 00 08 00 00 98 88 00 00 40 00     00:00:11.799  READ DMA EXT
+  25 00 00 00 80 00 00 1e 00 2f 00 40 00     00:00:11.782  READ DMA EXT
+  25 00 00 00 08 00 00 98 87 fc 00 40 00     00:00:11.762  READ DMA EXT
+  25 00 00 00 20 00 00 22 40 3d e0 40 00     00:00:11.745  READ DMA EXT
 
-Error 304 [15] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 394 [9] occurred at disk power-on lifetime: 26726 hours (1113 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 06 00 00 00 00 00 00 00 00  Device Fault; Error: ABRT
+  04 -- 61 00 01 00 00 00 c2 4f 53 00 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.372  SET FEATURES [Disable SATA feature]
-  ec 00 90 00 01 00 00 00 00 00 00 00 00     03:32:14.112  IDENTIFY DEVICE
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:14.112  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.112  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.111  SET FEATURES [Disable SATA feature]
+  b0 00 d6 00 01 00 00 00 c2 4f 98 00 00     10:59:38.809  SMART WRITE LOG
+  b0 00 d5 00 01 00 00 00 c2 4f 80 00 00     10:57:21.174  SMART READ LOG
+  ec 00 90 00 01 00 00 00 00 00 00 00 00     10:57:21.173  IDENTIFY DEVICE
+  2f 00 90 00 01 00 00 00 00 00 00 40 00     10:57:21.173  READ LOG EXT
+  ec 00 90 00 06 00 00 00 21 18 c8 00 00     10:57:21.172  IDENTIFY DEVICE
 
-Error 303 [14] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 393 [8] occurred at disk power-on lifetime: 26691 hours (1112 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 00 00 00 40 00  Device Fault; Error: ABRT
+  04 -- 61 00 01 00 00 00 c2 4f 53 00 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:14.112  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.112  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.111  SET FEATURES [Disable SATA feature]
-  ec 00 90 00 01 00 00 00 00 00 00 00 00     03:32:13.855  IDENTIFY DEVICE
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.855  READ LOG EXT
+  b0 00 d6 00 01 00 00 00 c2 4f 98 00 00     00:25:05.776  SMART WRITE LOG
+  b0 00 d5 00 01 00 00 00 c2 4f 80 00 00     00:25:05.429  SMART READ LOG
+  ec 00 90 00 01 00 00 00 00 00 00 00 00     00:25:05.428  IDENTIFY DEVICE
+  2f 00 90 00 01 00 00 00 00 00 00 40 00     00:25:05.428  READ LOG EXT
+  ec 00 90 00 06 00 00 00 00 00 00 00 00     00:25:05.427  IDENTIFY DEVICE
 
-Error 302 [13] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 392 [7] occurred at disk power-on lifetime: 26472 hours (1103 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 06 00 00 00 00 00 00 00 00  Device Fault; Error: ABRT
+  04 -- 61 00 01 00 00 00 c2 4f 53 00 00  Device Fault; Error: ABRT
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:14.111  SET FEATURES [Disable SATA feature]
-  ec 00 90 00 01 00 00 00 00 00 00 00 00     03:32:13.855  IDENTIFY DEVICE
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.855  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.854  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.854  SET FEATURES [Disable SATA feature]
+  b0 00 d6 00 01 00 00 00 c2 4f 98 00 00     02:38:06.922  SMART WRITE LOG
+  b0 00 d5 00 01 00 00 00 c2 4f 80 00 00     02:38:06.881  SMART READ LOG
+  ec 00 90 00 01 00 00 00 00 00 00 00 00     02:38:06.880  IDENTIFY DEVICE
+  2f 00 90 00 01 00 00 00 00 00 00 40 00     02:38:06.880  READ LOG EXT
+  ec 00 90 00 06 00 00 00 40 51 30 00 00     02:38:06.880  IDENTIFY DEVICE
 
-Error 301 [12] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 391 [6] occurred at disk power-on lifetime: 26461 hours (1102 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 00 00 00 40 00  Device Fault; Error: ABRT
+  40 -- 51 00 f0 00 00 1e 00 2c 00 40 00  Error: UNC 240 sectors at LBA = 0x1e002c00 = 503327744
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.855  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.854  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.854  SET FEATURES [Disable SATA feature]
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.848  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.847  IDENTIFY DEVICE
+  25 00 d5 00 f0 00 00 1e 00 2c 00 40 00     00:12:05.094  READ DMA EXT
+  25 00 d5 00 08 00 00 16 80 2b f8 40 00     00:12:05.094  READ DMA EXT
+  25 00 d5 00 f0 00 00 0f 00 1a 08 40 00     00:12:05.088  READ DMA EXT
+  25 00 d5 00 08 00 00 00 00 09 08 40 00     00:12:05.088  READ DMA EXT
+  25 00 d5 00 f0 00 00 16 80 2b 08 40 00     00:12:05.084  READ DMA EXT
 
-Error 300 [11] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 390 [5] occurred at disk power-on lifetime: 26461 hours (1102 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 06 00 00 00 00 00 00 00 00  Device Fault; Error: ABRT
+  40 -- 51 00 f0 00 00 8c a8 0e 00 40 00  Error: UNC 240 sectors at LBA = 0x8ca80e00 = 2359823872
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.854  SET FEATURES [Disable SATA feature]
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.848  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.847  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.847  SET FEATURES [Disable SATA feature]
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.595  READ LOG EXT
+  25 00 d5 00 f0 00 00 8c a8 0e 00 40 00     00:11:59.503  READ DMA EXT
+  25 00 d5 00 08 00 00 e1 86 ce f0 40 00     00:11:55.560  READ DMA EXT
+  25 00 d5 00 08 00 00 30 ec 87 f0 40 00     00:11:55.560  READ DMA EXT
+  25 00 d5 00 30 00 00 30 ed 40 48 40 00     00:11:47.941  READ DMA EXT
+  25 00 d5 00 08 00 00 30 ec 87 80 40 00     00:11:47.927  READ DMA EXT
 
-Error 299 [10] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 389 [4] occurred at disk power-on lifetime: 26461 hours (1102 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 01 00 00 00 00 00 00 40 00  Device Fault; Error: ABRT
+  40 -- 51 00 08 00 00 e1 86 ce f0 40 00  Error: UNC 8 sectors at LBA = 0xe186cef0 = 3783708400
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.848  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.847  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.847  SET FEATURES [Disable SATA feature]
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.595  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.595  IDENTIFY DEVICE
+  25 00 d5 00 08 00 00 e1 86 ce f0 40 00     00:11:55.560  READ DMA EXT
+  25 00 d5 00 08 00 00 30 ec 87 f0 40 00     00:11:55.560  READ DMA EXT
+  25 00 d5 00 30 00 00 30 ed 40 48 40 00     00:11:47.941  READ DMA EXT
+  25 00 d5 00 08 00 00 30 ec 87 80 40 00     00:11:47.927  READ DMA EXT
+  25 00 d5 00 08 00 00 0f 00 18 08 40 00     00:11:47.911  READ DMA EXT
 
-Error 298 [9] occurred at disk power-on lifetime: 24386 hours (1016 days + 2 hours)
+Error 388 [3] occurred at disk power-on lifetime: 26461 hours (1102 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 06 00 00 00 00 00 00 00 00  Device Fault; Error: ABRT
+  40 -- 51 00 80 00 00 ca 97 07 00 40 00  Error: UNC 128 sectors at LBA = 0xca970700 = 3398895360
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.847  SET FEATURES [Disable SATA feature]
-  2f 00 90 00 01 00 00 00 00 00 00 40 00     03:32:13.595  READ LOG EXT
-  ec 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.595  IDENTIFY DEVICE
-  ef 00 90 00 06 00 00 00 00 00 00 00 00     03:32:13.594  SET FEATURES [Disable SATA feature]
-  e1 00 90 00 01 00 00 00 00 00 00 00 00     03:32:13.594  IDLE IMMEDIATE
+  25 00 d5 00 80 00 00 ca 97 07 00 40 00     00:11:42.880  READ DMA EXT
+  25 00 d5 00 68 00 00 65 89 2f 88 40 00     00:11:42.878  READ DMA EXT
+  25 00 d5 00 08 00 00 3c 18 7c 38 40 00     00:11:39.295  READ DMA EXT
+  25 00 d5 00 10 00 00 30 ed 40 28 40 00     00:11:36.624  READ DMA EXT
+  25 00 d5 00 70 00 00 31 33 25 00 40 00     00:11:36.622  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     23995         -
-# 2  Extended offline    Interrupted (host reset)      70%     23224         -
-# 3  Extended offline    Completed without error       00%     23030         -
-# 4  Short offline       Completed without error       00%     21560         -
-# 5  Extended offline    Interrupted (host reset)      10%     21039         -
-# 6  Extended offline    Interrupted (host reset)      60%     20500         -
-# 7  Short offline       Completed without error       00%     20298         -
-# 8  Extended offline    Completed without error       00%     20297         -
-# 9  Short offline       Completed without error       00%     19800         -
-#10  Extended offline    Interrupted (host reset)      40%     19373         -
-#11  Short offline       Completed without error       00%     19060         -
-#12  Extended offline    Completed without error       00%     16440         -
-#13  Short offline       Completed without error       00%     15716         -
-#14  Short offline       Completed without error       00%     15568         -
-#15  Short offline       Completed: read failure       10%     15535         10177336
-#16  Short offline       Completed without error       00%     15517         -
-#17  Short offline       Completed without error       00%     15493         -
-#18  Short offline       Completed without error       00%     15468         -
-1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Short offline       Completed without error       00%     27407         -
+# 2  Short offline       Completed without error       00%     27392         -
+# 3  Short offline       Completed without error       00%     27388         -
+# 4  Short offline       Completed without error       00%     27275         -
+# 5  Short offline       Completed without error       00%     27262         -
+# 6  Extended offline    Interrupted (host reset)      90%     26496         -
+# 7  Short offline       Completed without error       00%     25272         -
+# 8  Extended offline    Interrupted (host reset)      90%     25097         -
+# 9  Extended offline    Completed without error       00%     24481         -
+#10  Extended offline    Completed without error       00%     23995         -
+#11  Extended offline    Interrupted (host reset)      70%     23224         -
+#12  Extended offline    Completed without error       00%     23030         -
+#13  Short offline       Completed without error       00%     21560         -
+#14  Extended offline    Interrupted (host reset)      10%     21039         -
+#15  Extended offline    Interrupted (host reset)      60%     20500         -
+#16  Short offline       Completed without error       00%     20298         -
+#17  Extended offline    Completed without error       00%     20297         -
+#18  Short offline       Completed without error       00%     19800         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -298,8 +297,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     38/39 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     36/37 Celsius
 Lifetime    Min/Max Temperature:      0/62 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -311,8 +310,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (65535)
-Invalid Temperature History Size or Index
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control command not supported
 
@@ -335,5 +333,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          489  Vendor specific
+0x8000  4         1018  Vendor specific
 

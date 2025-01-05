@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.2.0-37-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.5.0-15-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Thu Nov 30 02:44:39 2023 MSK
+Local Time is:    Sun Feb  4 19:01:59 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,16 +65,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   139   139   054    -    70
-  3 Spin_Up_Time            POS---   143   143   024    -    433 (Average 369)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    1043
+  3 Spin_Up_Time            POS---   143   143   024    -    369 (Average 434)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    1064
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   126   126   020    -    32
-  9 Power_On_Hours          -O--C-   094   094   000    -    48207
+  8 Seek_Time_Performance   P-S---   124   124   020    -    33
+  9 Power_On_Hours          -O--C-   093   093   000    -    49654
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1037
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1804
-193 Load_Cycle_Count        -O--C-   099   099   000    -    1804
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1057
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1825
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1825
 194 Temperature_Celsius     -O----   153   153   000    -    39 (Min/Max 0/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -128,7 +128,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     23/39 Celsius
+Power Cycle Min/Max Temperature:     37/40 Celsius
 Lifetime    Min/Max Temperature:      0/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -137,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (127)
+Temperature History Size (Index):    128 (50)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -146,25 +146,25 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1037  ---  Lifetime Power-On Resets
-0x01  0x010  4           48207  ---  Power-on Hours
-0x01  0x018  6    793074818638  ---  Logical Sectors Written
-0x01  0x020  6      4367671712  ---  Number of Write Commands
-0x01  0x028  6    111711454010  ---  Logical Sectors Read
-0x01  0x030  6       549908427  ---  Number of Read Commands
+0x01  0x008  4            1057  ---  Lifetime Power-On Resets
+0x01  0x010  4           49654  ---  Power-on Hours
+0x01  0x018  6    795341988558  ---  Logical Sectors Written
+0x01  0x020  6      4388645882  ---  Number of Write Commands
+0x01  0x028  6    112722348659  ---  Logical Sectors Read
+0x01  0x030  6       555702023  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           48197  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           48197  ---  Head Flying Hours
-0x03  0x018  4            1804  ---  Head Load Events
+0x03  0x008  4           49644  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           49644  ---  Head Flying Hours
+0x03  0x018  4            1825  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4            3934  ---  Read Recovery Attempts
+0x03  0x028  4            3961  ---  Read Recovery Attempts
 0x03  0x030  4               6  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              39  ---  Current Temperature
-0x05  0x010  1              38  N--  Average Short Term Temperature
+0x05  0x010  1              39  N--  Average Short Term Temperature
 0x05  0x018  1              37  N--  Average Long Term Temperature
 0x05  0x020  1              51  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
@@ -177,8 +177,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            3904  ---  Number of Hardware Resets
-0x06  0x010  4            2914  ---  Number of ASR Events
+0x06  0x008  4            3983  ---  Number of Hardware Resets
+0x06  0x010  4            2972  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN

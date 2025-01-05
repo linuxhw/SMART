@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.8-arch1-1] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.12-arch1-1] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Aug 12 08:36:13 2023 CEST
+Local Time is:    Tue Aug 29 01:13:19 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,27 +64,27 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    168818855
+  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    123853108
   3 Spin_Up_Time            -O----   098   098   000    -    0
-  4 Start_Stop_Count        PO--CK   095   095   000    -    6075
-  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    3
-  7 Seek_Error_Rate         POSR--   081   060   030    -    124514401
-  9 Power_On_Hours          -O--CK   084   084   000    -    14247
+  4 Start_Stop_Count        PO--CK   095   095   000    -    6093
+  5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    6
+  7 Seek_Error_Rate         POSR--   081   060   030    -    125061994
+  9 Power_On_Hours          -O--CK   084   084   000    -    14336
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       PO--CK   095   037   020    -    6041
+ 12 Power_Cycle_Count       PO--CK   095   037   020    -    6059
 183 Runtime_Bad_Block       -O--CK   100   253   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   084   084   000    -    16
+187 Reported_Uncorrect      -O--CK   056   056   000    -    44
 188 Command_Timeout         -O--CK   100   095   000    -    17180131396
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   069   035   045    Past 31 (1 211 31 28 0)
+190 Airflow_Temperature_Cel -O---K   072   035   045    Past 28 (1 211 28 26 0)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    191
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    100
-193 Load_Cycle_Count        -O--CK   001   001   000    -    262686
-194 Temperature_Celsius     -O---K   031   065   000    -    31 (0 9 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   049   043   000    -    168818855
-196 Reallocated_Event_Count PO--CK   100   100   036    -    3
-197 Current_Pending_Sector  -O--C-   100   100   000    -    1
+193 Load_Cycle_Count        -O--CK   001   001   000    -    263449
+194 Temperature_Celsius     -O---K   028   065   000    -    28 (0 9 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   052   043   000    -    123853108
+196 Reallocated_Event_Count PO--CK   100   100   036    -    6
+197 Current_Pending_Sector  -O--C-   100   100   000    -    11
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
                             ||||||_ K auto-keep
@@ -119,7 +119,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 16
+Device Error Count: 44 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -135,148 +135,149 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 16 [15] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 44 [3] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 18 09 fa 00 00  Error: UNC at LBA = 0x2d1809fa = 756550138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:10:29.384  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:29.374  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     18:10:29.372  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     18:10:29.359  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:29.318  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 2d 18 09 f8 40 00     02:42:29.481  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:29.472  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:42:29.470  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     02:42:29.457  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:29.448  SET FEATURES [Enable SATA feature]
 
-Error 15 [14] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 43 [2] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 18 09 fa 00 00  Error: UNC at LBA = 0x2d1809fa = 756550138
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:10:26.733  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:26.723  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     18:10:26.721  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     18:10:26.675  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:26.665  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 2d 18 09 f8 40 00     02:42:26.806  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 18 09 f0 40 00     02:42:26.805  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 18 09 c0 40 00     02:42:26.805  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 18 09 b8 40 00     02:42:26.804  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 18 09 b0 40 00     02:42:26.804  READ FPDMA QUEUED
 
-Error 14 [13] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 42 [1] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 17 f0 8f 00 00  Error: UNC at LBA = 0x2d17f08f = 756543631
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:10:24.006  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:22.275  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     18:10:22.273  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     18:10:22.260  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:22.251  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 2d 17 f0 88 40 00     02:42:23.956  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:23.947  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:42:23.945  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     02:42:23.932  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:23.923  SET FEATURES [Enable SATA feature]
 
-Error 13 [12] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 41 [0] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 17 f0 8f 00 00  Error: UNC at LBA = 0x2d17f08f = 756543631
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:10:19.678  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:19.668  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     18:10:19.666  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     18:10:19.619  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:19.610  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 2d 17 f0 88 40 00     02:42:21.304  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:21.294  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:42:21.293  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     02:42:21.280  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:21.270  SET FEATURES [Enable SATA feature]
 
-Error 12 [11] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 40 [19] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 17 f0 8f 00 00  Error: UNC at LBA = 0x2d17f08f = 756543631
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:10:16.970  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:16.959  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     18:10:16.958  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     18:10:16.858  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:10:16.848  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 2d 17 f0 80 40 00     02:42:18.654  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 f0 78 40 00     02:42:18.653  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 f0 40 40 00     02:42:18.652  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 f0 38 40 00     02:42:18.652  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 f0 18 40 00     02:42:18.649  READ FPDMA QUEUED
 
-Error 11 [10] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 39 [18] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 17 c8 51 00 00  Error: UNC at LBA = 0x2d17c851 = 756533329
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:10:14.026  READ FPDMA QUEUED
-  61 00 00 00 08 00 00 0b 85 f4 a0 40 00     18:07:24.016  WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 05 00 19 a8 40 00     18:07:24.016  WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 05 00 08 28 40 00     18:07:24.016  WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 05 00 08 10 40 00     18:07:24.015  WRITE FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 c8 50 40 00     02:42:14.944  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:14.934  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:42:14.932  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     02:42:14.919  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:14.910  SET FEATURES [Enable SATA feature]
 
-Error 10 [9] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 38 [17] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 17 c8 51 00 00  Error: UNC at LBA = 0x2d17c851 = 756533329
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:01:45.953  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:01:45.913  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     18:01:45.911  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     18:01:45.898  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:01:45.888  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 2d 17 c8 50 40 00     02:42:12.389  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:12.380  SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     02:42:12.378  IDENTIFY DEVICE
+  ef 00 03 00 45 00 00 00 00 00 00 a0 00     02:42:12.365  SET FEATURES [Set transfer mode]
+  ef 00 10 00 02 00 00 00 00 00 00 a0 00     02:42:12.356  SET FEATURES [Enable SATA feature]
 
-Error 9 [8] occurred at disk power-on lifetime: 8335 hours (347 days + 7 hours)
+Error 37 [16] occurred at disk power-on lifetime: 14322 hours (596 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 2d 39 a1 6e 00 00  Error: UNC at LBA = 0x2d39a16e = 758751598
+  40 -- 51 00 00 00 00 2d 17 c8 51 00 00  Error: UNC at LBA = 0x2d17c851 = 756533329
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 08 00 00 2d 39 a1 68 40 00     18:01:43.250  READ FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:01:43.238  SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 00     18:01:43.237  IDENTIFY DEVICE
-  ef 00 03 00 45 00 00 00 00 00 00 a0 00     18:01:43.224  SET FEATURES [Set transfer mode]
-  ef 00 10 00 02 00 00 00 00 00 00 a0 00     18:01:43.214  SET FEATURES [Enable SATA feature]
+  60 00 00 00 08 00 00 2d 17 c8 50 40 00     02:42:09.708  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 c8 48 40 00     02:42:09.708  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 c8 40 40 00     02:42:09.708  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 c8 38 40 00     02:42:09.707  READ FPDMA QUEUED
+  60 00 00 00 08 00 00 2d 17 c8 18 40 00     02:42:09.707  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     13574         -
-# 2  Short offline       Completed without error       00%     13301         -
-# 3  Short offline       Completed without error       00%      9524         -
-# 4  Short offline       Aborted by host               90%      6900         -
+# 1  Short offline       Completed without error       00%     14261         -
+# 2  Short offline       Completed without error       00%     13574         -
+# 3  Short offline       Completed without error       00%     13301         -
+# 4  Short offline       Completed without error       00%      9524         -
+# 5  Short offline       Aborted by host               90%      6900         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -292,17 +293,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     28/31 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     26/28 Celsius
 Lifetime    Min/Max Temperature:      9/66 Celsius
-Under/Over Temperature Limit Count:   0/15
+Under/Over Temperature Limit Count:   0/2
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (56)
+Temperature History Size (Index):    128 (119)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -320,4 +321,6 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

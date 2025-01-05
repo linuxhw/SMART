@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.3.7-100.fc37.x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.3.7-200.fc38.x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,10 +10,10 @@ Firmware Version: 3.AAB
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5417
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Wed Jun 14 01:09:45 2023 AEST
+Local Time is:    Wed Jun 14 17:22:18 2023 AEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,12 +29,11 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
+Offline data collection status:  (0x02)	Offline data collection activity
 					was completed without error.
-					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      ( 249)	Self-test routine in progress...
+					90% of test remaining.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
@@ -64,18 +63,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            PO----   099   099   000    -    0
   4 Start_Stop_Count        -O--CK   098   098   020    -    2992
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    8898177161
-  9 Power_On_Hours          -O--CK   092   092   000    -    7492
+  7 Seek_Error_Rate         POSR--   081   060   030    -    8899491354
+  9 Power_On_Hours          -O--CK   092   092   000    -    7508
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
  12 Power_Cycle_Count       -O--CK   098   098   020    -    2915
 187 Reported_Uncorrect      -O--CK   098   098   000    -    2
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   039   045    Past 33 (Min/Max 10/61 #9)
+190 Airflow_Temperature_Cel -O---K   065   039   045    Past 35 (Min/Max 10/61 #9)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    97
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    1574
-193 Load_Cycle_Count        -O---K   004   004   000    -    192121
-194 Temperature_Celsius     -O-RC-   033   061   000    -    33 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   085   059   000    -    92942202
+193 Load_Cycle_Count        -O---K   004   004   000    -    192208
+194 Temperature_Celsius     -O-RC-   035   061   000    -    35 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   072   059   000    -    123925219
 197 Current_Pending_Sector  ----C-   100   100   000    -    8
 198 Offline_Uncorrectable   -OSRCK   100   100   000    -    8
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
@@ -170,12 +169,14 @@ SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%      7273         -
-# 2  Extended offline    Completed: read failure       10%      7270         469148495
-# 3  Short offline       Completed without error       00%      7267         -
-# 4  Extended offline    Aborted by host               10%      6955         -
-# 5  Short offline       Completed without error       00%      6953         -
-1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
+# 1  Short offline       Completed without error       00%      7494         -
+# 2  Extended offline    Completed without error       00%      7273         -
+# 3  Extended offline    Completed: read failure       10%      7270         469148495
+# 4  Short offline       Completed without error       00%      7267         -
+# 5  Extended offline    Aborted by host               10%      6955         -
+# 6  Short offline       Completed without error       00%      6953         -
+# 7  Extended offline    Self-test routine in progress 90%      7508         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 2
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -191,7 +192,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
+Current Temperature:                    35 Celsius
 Power Cycle Min/Max Temperature:     --/ 0 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
@@ -205,13 +206,13 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           21  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           15  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           27  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
 0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
