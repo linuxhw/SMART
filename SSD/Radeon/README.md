@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Radeon    | R7                 | 120 GB | 4       | 778   | 0     | 2.13   |
+| Radeon    | R7                 | 120 GB | 5       | 651   | 0     | 1.78   |

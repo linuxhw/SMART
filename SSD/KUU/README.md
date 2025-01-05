@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KUU       | SSD                | 256 GB | 1       | 10    | 0     | 0.03   |
+| KUU       | SSD                | 256 GB | 3       | 99    | 0     | 0.27   |
+| KUU       | SSD                | 512 GB | 3       | 13    | 3     | 0.04   |

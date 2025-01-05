@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| FCS       | SSD                | 240 GB | 1       | 381   | 0     | 1.05   |
+| FCS       | SSD                | 240 GB | 2       | 379   | 0     | 1.04   |

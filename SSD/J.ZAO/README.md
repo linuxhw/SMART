@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| J.ZAO     | 3 SERIES 2.5 IN... | 240 GB | 1       | 5     | 0     | 0.02   |
+| J.ZAO     | 3 SERIES 2.5 IN... | 120 GB | 2       | 123   | 0     | 0.34   |

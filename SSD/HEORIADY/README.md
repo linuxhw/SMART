@@ -18,3 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | HEORIADY  | HX-001 F 512G      | 512 GB | 2       | 32    | 0     | 0.09   |
+| HEORIADY  | M.2                | 512 GB | 2       | 24    | 0     | 0.07   |

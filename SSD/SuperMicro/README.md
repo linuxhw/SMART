@@ -23,8 +23,9 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SuperM... | SSD                | 32 GB  | 3       | 392   | 0     | 1.08   |
-| SuperM... | SSD                | 64 GB  | 2       | 193   | 0     | 0.53   |
+| SuperM... | SSD                | 128 GB | 2       | 1778  | 1     | 3.66   |
+| SuperM... | SSD                | 64 GB  | 3       | 478   | 0     | 1.31   |
+| SuperM... | SSD                | 32 GB  | 4       | 294   | 0     | 0.81   |
 
 SSD by Family
 -------------
@@ -39,5 +40,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| SuperM... | Silicon Motion base... | 1      | 3       | 392   | 0     | 1.08   |
-| SuperM... | SATA DOM (SuperDOM)    | 1      | 2       | 193   | 0     | 0.53   |
+| SuperM... | SATA DOM (SuperDOM)    | 2      | 5       | 998   | 1     | 2.25   |
+| SuperM... | Silicon Motion base... | 1      | 4       | 294   | 0     | 0.81   |

@@ -17,8 +17,13 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ZHITAI    | PC005 Active       | 1 TB   | 3       | 355   | 0     | 0.97   |
-| ZHITAI    | PC005 Active       | 512 GB | 2       | 27    | 0     | 0.08   |
-| ZHITAI    | TiPlus5000         | 1 TB   | 2       | 6     | 0     | 0.02   |
-| ZHITAI    | TiPlus7100         | 512 GB | 2       | 1     | 0     | 0.00   |
-| ZHITAI    | TiPro7000          | 1 TB   | 2       | 0     | 0     | 0.00   |
+| ZHITAI    | PC005 Active       | 1 TB   | 6       | 252   | 0     | 0.69   |
+| ZHITAI    | TiPlus7100         | 1 TB   | 8       | 140   | 0     | 0.39   |
+| ZHITAI    | TiPlus7100         | 512 GB | 4       | 110   | 0     | 0.30   |
+| ZHITAI    | PC005 Active       | 512 GB | 7       | 66    | 0     | 0.18   |
+| ZHITAI    | TiPlus5000         | 1 TB   | 16      | 61    | 0     | 0.17   |
+| ZHITAI    | TiPro7000          | 1 TB   | 4       | 46    | 0     | 0.13   |
+| ZHITAI    | TiPlus7100         | 2 TB   | 8       | 40    | 0     | 0.11   |
+| ZHITAI    | TiPlus5000         | 512 GB | 5       | 67    | 11    | 0.10   |
+| ZHITAI    | TiPlus5000         | 2 TB   | 2       | 3     | 0     | 0.01   |
+| ZHITAI    | Ti600              | 2 TB   | 3       | 2     | 0     | 0.01   |

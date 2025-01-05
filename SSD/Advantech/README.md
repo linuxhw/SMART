@@ -18,5 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Advantech | SQF-S25M8-128G-AAG | 128 GB | 2       | 142   | 0     | 0.39   |
-| Advantech | SATA CVB-CD128     | 128 GB | 2       | 12    | 0     | 0.03   |
+| Advantech | SATA CVB-CD128     | 128 GB | 4       | 135   | 0     | 0.37   |
 | Advantech | SQF-SHMM2-8G-S9C   | 8 GB   | 2       | 11    | 0     | 0.03   |

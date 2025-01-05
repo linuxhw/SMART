@@ -17,5 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| VISIPRO   | SDVPSA1910256      | 256 GB | 3       | 105   | 0     | 0.29   |
-| VISIPRO   | SSD                | 256 GB | 2       | 14    | 7     | 0.03   |
+| VISIPRO   | SDVPM21910128      | 128 GB | 3       | 125   | 0     | 0.34   |
+| VISIPRO   | SDVPSA1910256      | 256 GB | 4       | 118   | 0     | 0.33   |
+| VISIPRO   | SSD                | 256 GB | 3       | 10    | 5     | 0.02   |

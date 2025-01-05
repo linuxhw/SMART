@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KOOTION   | X12 SSD            | 480 GB | 1       | 2     | 0     | 0.01   |
+| KOOTION   | X12 SSD            | 480 GB | 4       | 80    | 5     | 0.17   |
+| KOOTION   | X12 SSD            | 512 GB | 3       | 20    | 0     | 0.06   |

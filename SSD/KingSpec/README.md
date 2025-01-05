@@ -19,33 +19,44 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | KingSpec  | SPK-SF12-M120      | 120 GB | 2       | 1069  | 0     | 2.93   |
 | KingSpec  | ACSC2M064S25       | 64 GB  | 3       | 607   | 0     | 1.67   |
-| KingSpec  | P3-2TB             | 2 TB   | 2       | 309   | 0     | 0.85   |
-| KingSpec  | Q-360              | 360 GB | 8       | 268   | 51    | 0.73   |
-| KingSpec  | P3-1TB             | 1 TB   | 8       | 228   | 0     | 0.63   |
-| KingSpec  | MT-512             | 512 GB | 2       | 203   | 0     | 0.56   |
-| KingSpec  | MT-1TB             | 1 TB   | 4       | 159   | 24    | 0.43   |
+| KingSpec  | P4-960             | 960 GB | 2       | 617   | 505   | 1.16   |
+| KingSpec  | P3-2TB             | 2 TB   | 8       | 306   | 0     | 0.84   |
+| KingSpec  | NT-2TB             | 2 TB   | 3       | 294   | 0     | 0.81   |
+| KingSpec  | Q-360              | 360 GB | 9       | 250   | 158   | 0.65   |
+| KingSpec  | P3-1TB             | 1 TB   | 27      | 216   | 0     | 0.59   |
+| KingSpec  | MT-128             | 128 GB | 19      | 194   | 1     | 0.53   |
+| KingSpec  | NT-1TB 2280        | 1 TB   | 3       | 177   | 0     | 0.49   |
+| KingSpec  | MT-1TB             | 1 TB   | 7       | 159   | 14    | 0.43   |
 | KingSpec  | ACJC2M032mSH       | 32 GB  | 2       | 145   | 0     | 0.40   |
-| KingSpec  | P4-480             | 480 GB | 8       | 132   | 0     | 0.36   |
+| KingSpec  | NT-128 2280        | 128 GB | 2       | 131   | 0     | 0.36   |
+| KingSpec  | Q-180              | 180 GB | 7       | 134   | 135   | 0.36   |
 | KingSpec  | T-64               | 64 GB  | 9       | 158   | 113   | 0.33   |
-| KingSpec  | MT-128             | 128 GB | 9       | 121   | 0     | 0.33   |
-| KingSpec  | Q-180              | 180 GB | 6       | 113   | 157   | 0.29   |
-| KingSpec  | NT-128             | 128 GB | 10      | 116   | 101   | 0.28   |
+| KingSpec  | NT-1TB             | 1 TB   | 9       | 109   | 0     | 0.30   |
+| KingSpec  | P4-120             | 120 GB | 14      | 105   | 0     | 0.29   |
 | KingSpec  | Q-90               | 90 GB  | 3       | 385   | 175   | 0.26   |
-| KingSpec  | NT-256             | 256 GB | 26      | 146   | 80    | 0.23   |
-| KingSpec  | P3-512             | 512 GB | 24      | 88    | 90    | 0.22   |
-| KingSpec  | MT-64              | 64 GB  | 3       | 175   | 1     | 0.21   |
-| KingSpec  | P4-120             | 120 GB | 9       | 70    | 0     | 0.19   |
+| KingSpec  | MT-512             | 512 GB | 6       | 90    | 0     | 0.25   |
+| KingSpec  | NT-128             | 128 GB | 13      | 99    | 78    | 0.24   |
+| KingSpec  | P4-480             | 480 GB | 13      | 88    | 0     | 0.24   |
+| KingSpec  | P3-512             | 512 GB | 52      | 88    | 61    | 0.22   |
+| KingSpec  | NT-256             | 256 GB | 38      | 122   | 79    | 0.21   |
+| KingSpec  | MT-64              | 64 GB  | 4       | 141   | 1     | 0.19   |
 | KingSpec  | MSH-128            | 128 GB | 3       | 67    | 0     | 0.19   |
-| KingSpec  | P3-128             | 128 GB | 34      | 110   | 7     | 0.16   |
-| KingSpec  | NT-1TB             | 1 TB   | 6       | 53    | 0     | 0.15   |
-| KingSpec  | P4-240             | 240 GB | 25      | 79    | 56    | 0.14   |
-| KingSpec  | P3-256             | 256 GB | 20      | 100   | 5     | 0.14   |
-| KingSpec  | MSH-256            | 256 GB | 4       | 49    | 0     | 0.14   |
-| KingSpec  | NT-512             | 512 GB | 18      | 55    | 1     | 0.14   |
-| KingSpec  | MT-256             | 256 GB | 12      | 72    | 8     | 0.13   |
+| KingSpec  | P3-128             | 128 GB | 56      | 99    | 7     | 0.18   |
+| KingSpec  | P3-256             | 256 GB | 45      | 83    | 3     | 0.17   |
+| KingSpec  | MT-256             | 256 GB | 15      | 75    | 7     | 0.15   |
+| KingSpec  | NT-512             | 512 GB | 21      | 73    | 146   | 0.14   |
+| KingSpec  | P4-240             | 240 GB | 38      | 64    | 37    | 0.13   |
+| KingSpec  | NT-512 2280        | 512 GB | 5       | 76    | 1     | 0.13   |
+| KingSpec  | MSH-256            | 256 GB | 5       | 44    | 0     | 0.12   |
+| KingSpec  | NT-2TB 2242        | 2 TB   | 2       | 43    | 0     | 0.12   |
 | KingSpec  | Q-720              | 720 GB | 6       | 82    | 46    | 0.10   |
 | KingSpec  | ACSC2M064mSA       | 64 GB  | 2       | 33    | 0     | 0.09   |
+| KingSpec  | ACSC2M256S25       | 256 GB | 2       | 32    | 0     | 0.09   |
 | KingSpec  | KSD-SA25.7-016MJ   | 16 GB  | 2       | 30    | 0     | 0.08   |
 | KingSpec  | CHA-M2B7-M256      | 256 GB | 2       | 27    | 0     | 0.07   |
+| KingSpec  | NT-256 2280        | 256 GB | 3       | 26    | 0     | 0.07   |
+| KingSpec  | MT-2TB             | 2 TB   | 2       | 17    | 0     | 0.05   |
+| KingSpec  | NT-512 2242        | 512 GB | 3       | 8     | 0     | 0.02   |
 | KingSpec  | P3-64              | 64 GB  | 3       | 7     | 28    | 0.02   |
 | KingSpec  | T-60               | 64 GB  | 4       | 12    | 88    | 0.02   |
+| KingSpec  | NT-128 2242        | 128 GB | 2       | 4     | 0     | 0.01   |

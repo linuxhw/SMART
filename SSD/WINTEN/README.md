@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| WINTEN    | WT200-SSD-256GB    | 256 GB | 1       | 138   | 0     | 0.38   |
+| WINTEN    | WT-M.2-256G        | 256 GB | 2       | 0     | 0     | 0.00   |

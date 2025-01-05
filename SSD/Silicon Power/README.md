@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Silico... | SP SolidState Disk | 64 GB  | 1       | 43    | 0     | 0.12   |
-| Silico... | ULTIMATE CF CARD   | 16 GB  | 1       | 12    | 0     | 0.03   |
+| Silico... | SP SolidState Disk | 64 GB  | 2       | 91    | 0     | 0.25   |

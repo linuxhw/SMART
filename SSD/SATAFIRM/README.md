@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SATAFIRM  | S11                | 240 GB | 4       | 123   | 68    | 0.01   |
+| SATAFIRM  | S11                | 240 GB | 5       | 189   | 55    | 0.26   |

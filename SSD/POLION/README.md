@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| POLION    | SSD                | 256 GB | 1       | 6     | 0     | 0.02   |
+| POLION    | SSD                | 256 GB | 2       | 3     | 0     | 0.01   |
+| POLION    | SSD                | 128 GB | 3       | 37    | 16    | 0.01   |

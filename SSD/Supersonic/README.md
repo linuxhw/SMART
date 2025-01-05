@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Supers... | SUPERSONIC256      | 256 GB | 2       | 3     | 0     | 0.01   |
+| Supers... | SUPERSONIC256      | 256 GB | 3       | 11    | 0     | 0.03   |

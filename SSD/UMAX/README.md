@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| UMAX      | 2242               | 512 GB | 3       | 11    | 0     | 0.03   |
+| UMAX      | 2242               | 512 GB | 4       | 185   | 0     | 0.51   |

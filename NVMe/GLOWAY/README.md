@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| GLOWAY    | YCT512NVMe-M.2-... | 512 GB | 1       | 1     | 0     | 0.00   |
+| GLOWAY    | YCT512NVMe-M.2-... | 512 GB | 2       | 278   | 0     | 0.76   |

@@ -19,9 +19,18 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | FORESEE   | P900F256GB         | 256 GB | 2       | 130   | 0     | 0.36   |
 | FORESEE   | P900F256GBH        | 256 GB | 2       | 118   | 0     | 0.33   |
+| FORESEE   | 512GB SSD          | 512 GB | 16      | 84    | 0     | 0.23   |
+| FORESEE   | VP1000F128G        | 128 GB | 3       | 71    | 0     | 0.20   |
+| FORESEE   | XP1000F001T        | 1 TB   | 3       | 45    | 0     | 0.13   |
+| FORESEE   | P900F128GH         | 128 GB | 8       | 45    | 0     | 0.12   |
 | FORESEE   | P900F128GBH        | 128 GB | 2       | 33    | 0     | 0.09   |
-| FORESEE   | VP1000F256G        | 256 GB | 4       | 24    | 0     | 0.07   |
-| FORESEE   | P900F128GH         | 128 GB | 3       | 2     | 0     | 0.01   |
-| FORESEE   | XP1000F512G        | 512 GB | 3       | 2     | 1     | 0.01   |
-| FORESEE   | VP1000F512G        | 512 GB | 4       | 1     | 0     | 0.00   |
-| FORESEE   | XP1000F256G        | 256 GB | 2       | 0     | 0     | 0.00   |
+| FORESEE   | P709F128G          | 128 GB | 6       | 24    | 0     | 0.07   |
+| FORESEE   | XP2000F512G        | 512 GB | 6       | 14    | 0     | 0.04   |
+| FORESEE   | XP1000F512G        | 512 GB | 35      | 29    | 1     | 0.04   |
+| FORESEE   | XP2100F512G        | 512 GB | 3       | 13    | 0     | 0.04   |
+| FORESEE   | VP1000F256G        | 256 GB | 12      | 12    | 0     | 0.03   |
+| FORESEE   | VP1000F512G        | 512 GB | 21      | 10    | 0     | 0.03   |
+| FORESEE   | XP2000G001T        | 1 TB   | 10      | 5     | 0     | 0.01   |
+| FORESEE   | XP2000F256G        | 256 GB | 2       | 5     | 0     | 0.01   |
+| FORESEE   | XP2100F001T        | 1 TB   | 3       | 3     | 0     | 0.01   |
+| FORESEE   | XP1000F256G        | 256 GB | 11      | 2     | 0     | 0.01   |

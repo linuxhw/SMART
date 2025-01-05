@@ -17,5 +17,8 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| SUNEAST   | SE900 SSD          | 128 GB | 2       | 238   | 0     | 0.65   |
 | SUNEAST   | SSD SE800          | 1 TB   | 2       | 341   | 87    | 0.29   |
 | SUNEAST   | SSD SE800          | 256 GB | 2       | 71    | 0     | 0.19   |
+| SUNEAST   | SE900 SSD          | 256 GB | 3       | 64    | 0     | 0.18   |
+| SUNEAST   | SSD SE800          | 512 GB | 2       | 25    | 0     | 0.07   |

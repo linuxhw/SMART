@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| CFD       | CSSD-MG4VT         | 1 TB   | 2       | 319   | 0     | 0.87   |
 | CFD       | CSSD-S6B480CG3VX   | 480 GB | 2       | 44    | 0     | 0.12   |

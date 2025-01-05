@@ -17,6 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ORTIAL    | SSD                | 512 GB | 2       | 141   | 0     | 0.39   |
-| ORTIAL    | SSD                | 128 GB | 4       | 45    | 0     | 0.12   |
-| ORTIAL    | SSD                | 256 GB | 8       | 35    | 0     | 0.10   |
+| ORTIAL    | SSD                | 128 GB | 5       | 168   | 4     | 0.12   |
+| ORTIAL    | SSD                | 256 GB | 12      | 39    | 0     | 0.11   |

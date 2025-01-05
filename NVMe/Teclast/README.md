@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Teclast   | 256GB NP900-2280   | 256 GB | 1       | 240   | 0     | 0.66   |
-| Teclast   | 128GB NP900-2280   | 128 GB | 1       | 2     | 0     | 0.01   |
+| Teclast   | BD 512GB SSD       | 512 GB | 3       | 49    | 0     | 0.14   |
+| Teclast   | 1TB SSD            | 1 TB   | 2       | 31    | 0     | 0.09   |

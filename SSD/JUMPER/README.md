@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| JUMPER    | SSD 256G           | 256 GB | 2       | 19    | 0     | 0.05   |
+| JUMPER    | SSD 256G           | 256 GB | 3       | 13    | 0     | 0.04   |

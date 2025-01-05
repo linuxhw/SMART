@@ -18,3 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | ORICO     | V500               | 128 GB | 3       | 44    | 0     | 0.12   |
+| ORICO     | J10                | 1 TB   | 2       | 1     | 0     | 0.00   |

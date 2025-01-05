@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ZTC       | SM201-256G         | 256 GB | 3       | 137   | 0     | 0.38   |
+| ZTC       | SM201-256G         | 256 GB | 4       | 116   | 0     | 0.32   |
 | ZTC       | SM201-512G         | 512 GB | 2       | 115   | 0     | 0.32   |

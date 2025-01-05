@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| POWER X   | SS1000-256GB       | 256 GB | 1       | 0     | 0     | 0.00   |
+| POWER X   | SS1000             | 512 GB | 3       | 40    | 8     | 0.04   |

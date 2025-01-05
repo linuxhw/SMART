@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| aigo      | SSD S500           | 512 GB | 1       | 83    | 0     | 0.23   |
+| aigo      | SSD S500           | 512 GB | 2       | 117   | 0     | 0.32   |

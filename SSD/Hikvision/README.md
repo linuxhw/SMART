@@ -17,15 +17,21 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Hikvision | HS-SSD-E100N 256G  | 256 GB | 3       | 153   | 0     | 0.42   |
-| Hikvision | HS-SSD-E100N 512G  | 512 GB | 2       | 137   | 0     | 0.38   |
-| Hikvision | HS-SSD-C100        | 480 GB | 2       | 130   | 0     | 0.36   |
-| Hikvision | HS-SSD-E100 512G   | 512 GB | 4       | 88    | 0     | 0.24   |
-| Hikvision | HS-SSD-C100 960G   | 960 GB | 3       | 88    | 0     | 0.24   |
-| Hikvision | HS-SSD-E100 256G   | 256 GB | 6       | 72    | 0     | 0.20   |
-| Hikvision | HS-SSD-C100 120G   | 120 GB | 17      | 63    | 0     | 0.17   |
-| Hikvision | HS-SSD-C100 240G   | 240 GB | 15      | 57    | 0     | 0.16   |
-| Hikvision | HS-SSD-C100 480G   | 480 GB | 4       | 53    | 0     | 0.15   |
-| Hikvision | HS-SSD-E100 1024G  | 1 TB   | 5       | 145   | 1     | 0.14   |
-| Hikvision | HS-SSD-E100 128G   | 128 GB | 7       | 38    | 1     | 0.07   |
+| Hikvision | HKVSN HS-SSD-C1... | 240 GB | 2       | 316   | 0     | 0.87   |
+| Hikvision | HS-SSD-E100 256G   | 256 GB | 18      | 165   | 0     | 0.45   |
+| Hikvision | HS-SSD-C100        | 480 GB | 3       | 146   | 0     | 0.40   |
+| Hikvision | HS-SSD-C100 240G   | 240 GB | 30      | 139   | 37    | 0.38   |
+| Hikvision | HS-SSD-E100N 512G  | 512 GB | 3       | 133   | 0     | 0.37   |
+| Hikvision | HS-SSD-C100 120G   | 120 GB | 28      | 122   | 0     | 0.34   |
+| Hikvision | HKVSN HS-SSD-C1... | 120 GB | 2       | 117   | 0     | 0.32   |
+| Hikvision | HS-SSD-E100 1024G  | 1 TB   | 10      | 160   | 1     | 0.31   |
+| Hikvision | HS-SSD-E100N 256G  | 256 GB | 5       | 111   | 0     | 0.30   |
+| Hikvision | HS-SSD-C100 960G   | 960 GB | 6       | 89    | 0     | 0.24   |
+| Hikvision | HS-SSD-C100 480G   | 480 GB | 11      | 76    | 0     | 0.21   |
+| Hikvision | HS-SSD-E100N 128G  | 128 GB | 4       | 72    | 0     | 0.20   |
+| Hikvision | HS-SSD-E100 512G   | 512 GB | 18      | 68    | 0     | 0.19   |
+| Hikvision | HS-SSD-E100 128G   | 128 GB | 11      | 57    | 1     | 0.14   |
+| Hikvision | HS-SSD-Minder(S... | 240 GB | 2       | 17    | 0     | 0.05   |
 | Hikvision | HS-SSD-J100N       | 256 GB | 2       | 5     | 0     | 0.01   |
+| Hikvision | HS-SSD-Minder(S... | 960 GB | 2       | 89    | 503   | 0.01   |
+| Hikvision | HS-SSD-Desire(S... | 512 GB | 2       | 2     | 0     | 0.01   |

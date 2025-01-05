@@ -17,6 +17,22 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Fanxiang  | S500PRO            | 1 TB   | 4       | 15    | 0     | 0.04   |
-| Fanxiang  | S500PRO            | 2 TB   | 4       | 3     | 0     | 0.01   |
-| Fanxiang  | S660               | 2 TB   | 2       | 0     | 0     | 0.00   |
+| Fanxiang  | S690               | 1 TB   | 2       | 187   | 0     | 0.51   |
+| Fanxiang  | S500PRO            | 1 TB   | 13      | 106   | 0     | 0.29   |
+| Fanxiang  | S500PRO            | 256 GB | 2       | 76    | 0     | 0.21   |
+| Fanxiang  | S500PRO            | 2 TB   | 8       | 64    | 0     | 0.18   |
+| Fanxiang  | S880               | 4 TB   | 6       | 63    | 0     | 0.17   |
+| Fanxiang  | S880               | 2 TB   | 7       | 62    | 0     | 0.17   |
+| Fanxiang  | S500Pro            | 1 TB   | 4       | 48    | 0     | 0.13   |
+| Fanxiang  | S660               | 1 TB   | 8       | 43    | 0     | 0.12   |
+| Fanxiang  | S770               | 1 TB   | 2       | 30    | 0     | 0.08   |
+| Fanxiang  | S660               | 2 TB   | 6       | 28    | 0     | 0.08   |
+| Fanxiang  | S880               | 1 TB   | 8       | 26    | 0     | 0.07   |
+| Fanxiang  | S500Pro            | 256 GB | 2       | 17    | 0     | 0.05   |
+| Fanxiang  | S770               | 2 TB   | 2       | 15    | 0     | 0.04   |
+| Fanxiang  | S501               | 256 GB | 3       | 12    | 0     | 0.03   |
+| Fanxiang  | S790               | 2 TB   | 2       | 12    | 0     | 0.03   |
+| Fanxiang  | S500Pro            | 512 GB | 4       | 10    | 0     | 0.03   |
+| Fanxiang  | S500Pro            | 2 TB   | 2       | 2     | 0     | 0.01   |
+| Fanxiang  | S542Pro            | 1 TB   | 2       | 1     | 0     | 0.01   |
+| Fanxiang  | S500PRO            | 512 GB | 2       | 1     | 0     | 0.00   |

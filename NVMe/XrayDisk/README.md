@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| XrayDisk  | 256GB              | 256 GB | 8       | 304   | 0     | 0.83   |
 | XrayDisk  | 512GB              | 512 GB | 3       | 181   | 0     | 0.50   |
-| XrayDisk  | 256GB              | 256 GB | 5       | 77    | 0     | 0.21   |
-| XrayDisk  | 512GB SSD          | 512 GB | 10      | 49    | 102   | 0.09   |
-| XrayDisk  | 1TB SSD            | 1 TB   | 4       | 19    | 0     | 0.05   |
+| XrayDisk  | 1TB SSD            | 1 TB   | 20      | 89    | 0     | 0.25   |
+| XrayDisk  | 1TB PRO            | 1 TB   | 6       | 51    | 0     | 0.14   |

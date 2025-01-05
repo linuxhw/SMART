@@ -23,7 +23,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Lenovo    | ST1000NM0055 91... | 1 TB   | 2       | 120   | 0     | 0.33   |
+| Lenovo    | ST1000NM0055 91... | 1 TB   | 4       | 257   | 0     | 0.70   |
 | Lenovo    | WD1004FBYZ-23YC... | 1 TB   | 4       | 76    | 0     | 0.21   |
 
 HDD by Family
@@ -39,5 +39,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Lenovo    | Seagate Enterprise     | 1      | 2       | 120   | 0     | 0.33   |
+| Lenovo    | Seagate Enterprise     | 1      | 4       | 257   | 0     | 0.70   |
 | Lenovo    | RE                     | 1      | 4       | 76    | 0     | 0.21   |

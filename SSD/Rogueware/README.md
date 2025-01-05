@@ -17,6 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Rogueware | 2.5" SATA NX100S   | 1 TB   | 1       | 48    | 0     | 0.13   |
-| Rogueware | 2.5'' SATA NX100S  | 512 GB | 1       | 3     | 0     | 0.01   |
-| Rogueware | 2.5" SATA NX100S   | 512 GB | 1       | 0     | 0     | 0.00   |
+| Rogueware | 2.5" SATA NX100S   | 512 GB | 4       | 41    | 0     | 0.11   |

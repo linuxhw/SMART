@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| DIERYA    | SSD                | 120 GB | 1       | 385   | 0     | 1.06   |
+| DIERYA    | SSD                | 120 GB | 2       | 237   | 0     | 0.65   |

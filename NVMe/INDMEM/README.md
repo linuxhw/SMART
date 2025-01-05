@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| INDMEM    | SSD DMPG3N         | 1 TB   | 1       | 313   | 5     | 0.14   |
+| INDMEM    | SSD DMPG3N         | 1 TB   | 2       | 174   | 3     | 0.12   |

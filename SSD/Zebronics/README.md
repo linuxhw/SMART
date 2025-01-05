@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Zebronics | ZEB-SD12           | 120 GB | 1       | 25    | 0     | 0.07   |
-| Zebronics | ZEB-SD24           | 240 GB | 1       | 13    | 1012  | 0.00   |
+| Zebronics | ZEB-SD13           | 128 GB | 2       | 21    | 0     | 0.06   |

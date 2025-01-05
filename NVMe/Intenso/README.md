@@ -17,4 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Intenso   | NVME               | 250 GB | 3       | 21    | 0     | 0.06   |
+| Intenso   | NVME               | 500 GB | 7       | 42    | 0     | 0.12   |
+| Intenso   | PCIe               | 480 GB | 5       | 28    | 0     | 0.08   |
+| Intenso   | JAJP600M1TB        | 1 TB   | 3       | 4     | 4     | 0.01   |

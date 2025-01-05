@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| GS Nan... | 256-16 GSPTA256... | 256 GB | 2       | 111   | 0     | 0.31   |
+| GS Nan... | 256-16 GSPTA256... | 256 GB | 3       | 90    | 0     | 0.25   |

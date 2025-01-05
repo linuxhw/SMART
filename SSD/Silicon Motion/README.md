@@ -17,6 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Silico... | AAR256GS122221030  | 256 GB | 1       | 151   | 0     | 0.41   |
-| Silico... | GSDSL256TY2AAQGCX  | 256 GB | 1       | 147   | 0     | 0.41   |
-| Silico... | AAR512GS021022030  | 512 GB | 1       | 36    | 0     | 0.10   |
+| Silico... | SM2246XT           | 128 GB | 2       | 10    | 0     | 0.03   |

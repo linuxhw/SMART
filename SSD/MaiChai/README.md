@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MaiChai   | SSD 512G           | 512 GB | 1       | 0     | 0     | 0.00   |
+| MaiChai   | SSD 512G           | 512 GB | 2       | 13    | 0     | 0.04   |

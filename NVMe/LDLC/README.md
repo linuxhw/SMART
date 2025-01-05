@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| LDLC      | F8+M.2 480         | 480 GB | 3       | 213   | 0     | 0.59   |
+| LDLC      | F8+M.2 480         | 480 GB | 7       | 222   | 0     | 0.61   |

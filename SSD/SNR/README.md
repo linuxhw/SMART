@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SNR       | ML 240             | 240 GB | 1       | 23    | 0     | 0.07   |
+| SNR       | ML1T               | 960 GB | 2       | 135   | 0     | 0.37   |
+| SNR       | ML120              | 120 GB | 5       | 0     | 0     | 0.00   |

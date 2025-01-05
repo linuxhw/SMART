@@ -17,5 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MaxDig... | MD4000GBDS         | 4 TB   | 2       | 1483  | 0     | 4.07   |
-| MaxDig... | MD1TBLSSHD         | 1 TB   | 2       | 255   | 4     | 0.35   |
+| MaxDig... | MD4000GBDS         | 4 TB   | 4       | 1326  | 70    | 2.06   |
+| MaxDig... | MD1TBLSSHD         | 1 TB   | 3       | 679   | 3     | 1.63   |
+| MaxDig... | MD4000GSA6472DVR 1 | 4 TB   | 2       | 132   | 0     | 0.36   |

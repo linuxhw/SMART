@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EAGET     | S500 SSD           | 128 GB | 1       | 259   | 0     | 0.71   |
-| EAGET     | SSD 120G           | 128 GB | 1       | 23    | 0     | 0.06   |
+| EAGET     | SSD                | 240 GB | 3       | 1     | 0     | 0.01   |

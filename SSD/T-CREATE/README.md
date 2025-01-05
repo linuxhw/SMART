@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| T-CREATE  | T253TA001T         | 1 TB   | 1       | 0     | 0     | 0.00   |
+| T-CREATE  | T253TA001T         | 1 TB   | 2       | 145   | 0     | 0.40   |

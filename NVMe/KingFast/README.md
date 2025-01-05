@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KingFast  | 1TB                | 1 TB   | 2       | 27    | 0     | 0.08   |
+| KingFast  | 1TB                | 1 TB   | 5       | 56    | 0     | 0.15   |
+| KingFast  | 512GB              | 512 GB | 5       | 51    | 0     | 0.14   |

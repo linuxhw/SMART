@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| imation   | M.2 PCIe 1TB SS... | 1 TB   | 1       | 16    | 0     | 0.04   |
-| imation   | M.2 PCIe 2TB SS... | 2 TB   | 1       | 2     | 0     | 0.01   |
+| imation   | M.2 PCIe 1TB SS... | 1 TB   | 2       | 47    | 0     | 0.13   |
+| imation   | M.2 PCIe 2TB SS... | 2 TB   | 2       | 40    | 0     | 0.11   |

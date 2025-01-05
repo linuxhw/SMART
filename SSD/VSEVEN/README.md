@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| VSEVEN    | V7 SSD             | 1 TB   | 2       | 17    | 0     | 0.05   |
+| VSEVEN    | V7 SSD             | 1 TB   | 3       | 95    | 0     | 0.26   |

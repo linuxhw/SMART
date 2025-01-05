@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Lumino... | NVME               | 512 GB | 1       | 54    | 0     | 0.15   |
+| Lumino... | NVME               | 512 GB | 2       | 27    | 0     | 0.08   |

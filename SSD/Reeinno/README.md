@@ -18,3 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Reeinno   | ST240GB S4S3       | 240 GB | 2       | 275   | 0     | 0.75   |
+| Reeinno   | FR256GB S4S3       | 256 GB | 2       | 34    | 0     | 0.09   |

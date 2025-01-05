@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Aoluska   | A6-120G            | 120 GB | 1       | 54    | 0     | 0.15   |
+| Aoluska   | A6-240G            | 240 GB | 2       | 225   | 0     | 0.62   |

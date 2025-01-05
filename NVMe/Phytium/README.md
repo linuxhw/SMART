@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Phytium   | S1200CYX1-T0M22... | 256 GB | 1       | 18    | 0     | 0.05   |
+| Phytium   | S1200CYX1-T0M22... | 256 GB | 2       | 258   | 0     | 0.71   |

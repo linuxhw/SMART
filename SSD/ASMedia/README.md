@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ASMedia   | ASMT109x- Fast     | 2 TB   | 4       | 55    | 0     | 0.15   |
+| ASMedia   | ASMT109x- Fast     | 2 TB   | 5       | 107   | 0     | 0.29   |
+| ASMedia   | ASMT109x- Volume   | 2 TB   | 2       | 52    | 0     | 0.14   |

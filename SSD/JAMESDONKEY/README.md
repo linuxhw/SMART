@@ -17,6 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| JAMESD... | JD240LE            | 240 GB | 1       | 206   | 0     | 0.56   |
-| JAMESD... | JD480              | 480 GB | 1       | 49    | 0     | 0.14   |
-| JAMESD... | JD120              | 120 GB | 1       | 44    | 0     | 0.12   |
+| JAMESD... | JD240              | 240 GB | 2       | 465   | 3     | 1.00   |
+| JAMESD... | JD120              | 120 GB | 2       | 106   | 0     | 0.29   |

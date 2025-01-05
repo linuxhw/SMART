@@ -18,55 +18,78 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | ADATA     | SX8000NP           | 128 GB | 2       | 680   | 0     | 1.86   |
-| ADATA     | SX8200NP           | 480 GB | 10      | 436   | 0     | 1.20   |
-| ADATA     | SX6000NP           | 256 GB | 4       | 387   | 0     | 1.06   |
-| ADATA     | SX7000NP           | 128 GB | 3       | 554   | 39    | 0.95   |
-| ADATA     | SX6000NP           | 128 GB | 7       | 362   | 167   | 0.83   |
-| ADATA     | SX6000NP           | 512 GB | 6       | 327   | 19    | 0.80   |
-| ADATA     | SX8200PNP          | 1 TB   | 131     | 247   | 6     | 0.67   |
+| ADATA     | SX8200NP           | 480 GB | 13      | 534   | 0     | 1.47   |
+| ADATA     | SX8200NP           | 240 GB | 8       | 368   | 15    | 0.96   |
+| ADATA     | SX6000NP           | 256 GB | 5       | 339   | 3     | 0.86   |
+| ADATA     | SX6000NP           | 128 GB | 9       | 332   | 130   | 0.78   |
+| ADATA     | SX8200PNP          | 1 TB   | 187     | 296   | 33    | 0.77   |
+| ADATA     | SX6000NP           | 512 GB | 7       | 326   | 17    | 0.71   |
+| ADATA     | SX8200PNP          | 512 GB | 178     | 256   | 1     | 0.70   |
+| ADATA     | SX8200PNP          | 2 TB   | 76      | 254   | 27    | 0.68   |
+| ADATA     | SX8200PNP          | 256 GB | 67      | 263   | 48    | 0.66   |
 | ADATA     | SX8200NP           | 960 GB | 3       | 239   | 0     | 0.66   |
-| ADATA     | SX8200NP           | 240 GB | 6       | 251   | 20    | 0.62   |
-| ADATA     | SX8200PNP          | 2 TB   | 55      | 203   | 0     | 0.56   |
-| ADATA     | SX7000NP           | 256 GB | 3       | 193   | 0     | 0.53   |
-| ADATA     | SX8200PNP          | 256 GB | 56      | 198   | 39    | 0.49   |
-| ADATA     | SX8200PNP          | 512 GB | 121     | 178   | 0     | 0.49   |
+| ADATA     | SX7000NP           | 128 GB | 5       | 446   | 37    | 0.58   |
+| ADATA     | SX7000NP           | 256 GB | 3       | 194   | 0     | 0.53   |
+| ADATA     | LEGEND 750         | 500 GB | 3       | 155   | 0     | 0.43   |
+| ADATA     | LEGEND 850         | 2 TB   | 3       | 143   | 0     | 0.39   |
+| ADATA     | LEGEND 800 GOLD    | 2 TB   | 5       | 116   | 0     | 0.32   |
 | ADATA     | SX8100NP           | 2 TB   | 4       | 335   | 254   | 0.32   |
-| ADATA     | SX8100NP           | 512 GB | 14      | 113   | 74    | 0.29   |
-| ADATA     | SX8100NP           | 1 TB   | 6       | 95    | 0     | 0.26   |
-| ADATA     | SX6000PNP          | 512 GB | 18      | 92    | 8     | 0.25   |
+| ADATA     | SX6000PNP          | 512 GB | 42      | 100   | 4     | 0.28   |
+| ADATA     | IM2P33F3 NVMe      | 256 GB | 32      | 100   | 1     | 0.27   |
+| ADATA     | SX6000LNP          | 256 GB | 29      | 94    | 0     | 0.26   |
+| ADATA     | SX8100NP           | 1 TB   | 9       | 93    | 0     | 0.26   |
 | ADATA     | IM2P33E8-001TD     | 1 TB   | 2       | 89    | 0     | 0.24   |
-| ADATA     | SX6000PNP          | 256 GB | 30      | 90    | 1     | 0.22   |
-| ADATA     | IM2P33F3 NVMe      | 512 GB | 9       | 78    | 1     | 0.20   |
-| ADATA     | SX6000LNP          | 256 GB | 18      | 66    | 0     | 0.18   |
-| ADATA     | SX6000LNP          | 512 GB | 16      | 57    | 0     | 0.16   |
-| ADATA     | IM2P33F3 NVMe      | 256 GB | 23      | 57    | 1     | 0.16   |
-| ADATA     | LEGEND 700         | 1 TB   | 2       | 51    | 0     | 0.14   |
-| ADATA     | SWORDFISH          | 250 GB | 11      | 50    | 0     | 0.14   |
+| ADATA     | SWORDFISH          | 2 TB   | 5       | 88    | 0     | 0.24   |
+| ADATA     | SX8100NP           | 512 GB | 21      | 124   | 62    | 0.24   |
+| ADATA     | LEGEND 960         | 1 TB   | 14      | 86    | 0     | 0.24   |
+| ADATA     | FALCON             | 1 TB   | 7       | 88    | 112   | 0.23   |
+| ADATA     | SX6000LNP          | 512 GB | 34      | 95    | 26    | 0.22   |
+| ADATA     | LEGEND 800         | 2 TB   | 10      | 74    | 0     | 0.21   |
+| ADATA     | LEGEND 850 LITE    | 2 TB   | 2       | 74    | 0     | 0.20   |
+| ADATA     | SX6000PNP          | 256 GB | 71      | 80    | 1     | 0.20   |
+| ADATA     | FALCON             | 256 GB | 3       | 73    | 0     | 0.20   |
+| ADATA     | IM2P33F3 NVMe      | 512 GB | 10      | 86    | 1     | 0.20   |
+| ADATA     | LEGEND 850 LITE    | 1 TB   | 4       | 70    | 0     | 0.19   |
+| ADATA     | LEGEND 840         | 1 TB   | 6       | 68    | 0     | 0.19   |
+| ADATA     | FALCON             | 512 GB | 15      | 65    | 0     | 0.18   |
+| ADATA     | SM2P41C3 NVMe      | 256 GB | 6       | 64    | 0     | 0.18   |
+| ADATA     | IM2P33F8BR1-128GB  | 128 GB | 10      | 58    | 0     | 0.16   |
+| ADATA     | LEGEND 800         | 1 TB   | 15      | 54    | 0     | 0.15   |
+| ADATA     | SM2P41C3 NVMe      | 512 GB | 14      | 52    | 0     | 0.14   |
+| ADATA     | SX6000LNP          | 1 TB   | 14      | 68    | 146   | 0.14   |
 | ADATA     | IM2P33F8BR2-1TB    | 1 TB   | 3       | 49    | 0     | 0.14   |
+| ADATA     | LEGEND 900         | 512 GB | 2       | 49    | 0     | 0.14   |
+| ADATA     | SWORDFISH          | 250 GB | 19      | 52    | 54    | 0.13   |
+| ADATA     | IM2P33F8ABR1-256GB | 256 GB | 6       | 48    | 0     | 0.13   |
 | ADATA     | IM2P33F8BR2-512GB  | 512 GB | 8       | 44    | 0     | 0.12   |
-| ADATA     | IM2P33F8BR2-256GB  | 256 GB | 6       | 42    | 0     | 0.12   |
-| ADATA     | FALCON             | 256 GB | 2       | 41    | 0     | 0.11   |
-| ADATA     | SX8100NP           | 256 GB | 3       | 77    | 33    | 0.11   |
-| ADATA     | FALCON             | 1 TB   | 5       | 41    | 157   | 0.09   |
+| ADATA     | SWORDFISH          | 500 GB | 11      | 40    | 0     | 0.11   |
+| ADATA     | LEGEND 700         | 1 TB   | 7       | 40    | 0     | 0.11   |
+| ADATA     | IM2P33F3A NVMe     | 512 GB | 44      | 39    | 3     | 0.10   |
+| ADATA     | SX6000PNP          | 1 TB   | 23      | 46    | 29    | 0.10   |
+| ADATA     | NVMe IM2P33F4      | 256 GB | 9       | 36    | 0     | 0.10   |
+| ADATA     | IM2P33F8BR2-256GB  | 256 GB | 8       | 34    | 0     | 0.10   |
+| ADATA     | SX6000LNP          | 128 GB | 30      | 35    | 1     | 0.09   |
 | ADATA     | FALCON             | 2 TB   | 4       | 32    | 0     | 0.09   |
-| ADATA     | SX6000PNP          | 1 TB   | 16      | 32    | 40    | 0.08   |
-| ADATA     | FALCON             | 512 GB | 6       | 27    | 0     | 0.08   |
-| ADATA     | SX6000LNP          | 128 GB | 22      | 25    | 0     | 0.07   |
-| ADATA     | SX6000LNP          | 1 TB   | 10      | 45    | 101   | 0.07   |
-| ADATA     | SWORDFISH          | 1 TB   | 21      | 22    | 48    | 0.06   |
-| ADATA     | IM2P33F3A NVMe     | 512 GB | 29      | 17    | 4     | 0.05   |
-| ADATA     | SWORDFISH          | 500 GB | 5       | 15    | 0     | 0.04   |
-| ADATA     | IM2P33F3A NVMe     | 256 GB | 41      | 19    | 46    | 0.04   |
+| ADATA     | LEGEND 960         | 2 TB   | 8       | 32    | 0     | 0.09   |
+| ADATA     | LEGEND 710         | 512 GB | 20      | 31    | 0     | 0.09   |
+| ADATA     | LEGEND 700         | 512 GB | 3       | 31    | 0     | 0.09   |
+| ADATA     | SWORDFISH          | 1 TB   | 30      | 35    | 68    | 0.08   |
+| ADATA     | SX8100NP           | 256 GB | 5       | 92    | 22    | 0.08   |
+| ADATA     | IM2P33F8A-001TD    | 1 TB   | 4       | 28    | 0     | 0.08   |
+| ADATA     | IM2P33F3A NVMe     | 256 GB | 68      | 36    | 60    | 0.07   |
+| ADATA     | LEGEND 750         | 1 TB   | 3       | 24    | 0     | 0.07   |
+| ADATA     | LEGEND 800         | 500 GB | 5       | 24    | 0     | 0.07   |
+| ADATA     | LEGEND 850         | 512 GB | 3       | 17    | 0     | 0.05   |
+| ADATA     | LEGEND 960         | 4 TB   | 2       | 16    | 0     | 0.05   |
+| ADATA     | LEGEND 710         | 1 TB   | 13      | 17    | 1     | 0.05   |
+| ADATA     | IM2P33F8ABR2-256GB | 256 GB | 13      | 16    | 1     | 0.05   |
 | ADATA     | IM2P33F8A-512GD    | 512 GB | 8       | 9     | 0     | 0.03   |
-| ADATA     | IM2P33F8BR1-128GB  | 128 GB | 5       | 9     | 0     | 0.03   |
-| ADATA     | IM2P33F8ABR1-256GB | 256 GB | 3       | 8     | 0     | 0.02   |
-| ADATA     | NVMe IM2P33F4      | 256 GB | 2       | 7     | 0     | 0.02   |
-| ADATA     | SM2P41C3 NVMe      | 512 GB | 3       | 6     | 0     | 0.02   |
-| ADATA     | IM2P33F8A-001TD    | 1 TB   | 3       | 6     | 0     | 0.02   |
-| ADATA     | SWORDFISH          | 2 TB   | 3       | 5     | 0     | 0.02   |
-| ADATA     | LEGEND 710         | 512 GB | 2       | 4     | 0     | 0.01   |
-| ADATA     | IM2P33F8ABR1-512GB | 512 GB | 3       | 4     | 0     | 0.01   |
+| ADATA     | SX8100NP           | 4 TB   | 3       | 314   | 392   | 0.02   |
+| ADATA     | LEGEND 710         | 256 GB | 2       | 4     | 0     | 0.01   |
+| ADATA     | IM2P33F8ABR1-1TB   | 1 TB   | 5       | 4     | 405   | 0.01   |
 | ADATA     | LEGEND 740         | 250 GB | 2       | 3     | 0     | 0.01   |
-| ADATA     | IM2P33F8ABR2-256GB | 256 GB | 7       | 3     | 0     | 0.01   |
-| ADATA     | IM2P33F8ABR1-1TB   | 1 TB   | 2       | 1     | 508   | 0.00   |
-| ADATA     | IM2P33F8-512GD     | 512 GB | 2       | 0     | 0     | 0.00   |
+| ADATA     | IM2P33F8ABR1-512GB | 512 GB | 4       | 3     | 0     | 0.01   |
+| ADATA     | IM2P33F8-512GD     | 512 GB | 3       | 2     | 0     | 0.01   |
+| ADATA     | IM2P33F8-256GD1    | 256 GB | 4       | 1     | 180   | 0.00   |
+| ADATA     | IM2P33F8ABR2-512GB | 512 GB | 8       | 1     | 0     | 0.00   |
+| ADATA     | LEGEND 840         | 512 GB | 2       | 0     | 0     | 0.00   |

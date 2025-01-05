@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Blackpcs  | SSDPro             | 480 GB | 2       | 0     | 0     | 0.00   |
+| Blackpcs  | SSDPro             | 480 GB | 3       | 7     | 0     | 0.02   |

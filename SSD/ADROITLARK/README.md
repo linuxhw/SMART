@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ADROIT... | SSD                | 48 GB  | 1       | 493   | 0     | 1.35   |
-| ADROIT... | SSD                | 120 GB | 1       | 459   | 0     | 1.26   |
+| ADROIT... | SSD                | 48 GB  | 2       | 256   | 0     | 0.70   |
