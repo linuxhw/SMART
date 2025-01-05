@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-109-generic] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.2.0-33-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Momentus XT
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue May  3 22:12:06 2022 MST
+Local Time is:    Thu Sep 21 14:12:30 2023 MST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -22,13 +22,11 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
-SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
-Warning: This result is based on an Attribute check.
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
@@ -65,24 +63,24 @@ SCT capabilities: 	       (0x1001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    135150300
-  3 Spin_Up_Time            PO----   098   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    182
+  1 Raw_Read_Error_Rate     POSR--   112   099   006    -    47873100
+  3 Spin_Up_Time            PO----   099   097   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    201
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   067   060   030    -    5915875
-  9 Power_On_Hours          -O--CK   098   098   000    -    2090
+  7 Seek_Error_Rate         POSR--   067   060   030    -    6096090
+  9 Power_On_Hours          -O--CK   098   098   000    -    2122
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    89
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    97
 184 End-to-End_Error        -O--CK   099   099   099    NOW  1
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   253   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   048   043   045    Past 52 (Min/Max 37/53 #40)
+190 Airflow_Temperature_Cel -O---K   065   043   045    Past 35 (0 40 35 26 0)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    46
-193 Load_Cycle_Count        -O--CK   100   100   000    -    354
-194 Temperature_Celsius     -O---K   052   057   000    -    52 (0 25 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   047   038   000    -    135150300
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    48
+193 Load_Cycle_Count        -O--CK   100   100   000    -    410
+194 Temperature_Celsius     -O---K   035   057   000    -    35 (0 25 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   043   038   000    -    47873100
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -122,7 +120,9 @@ SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Extended offline    Completed without error       00%      2120         -
+# 2  Short offline       Completed without error       00%      2118         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -138,10 +138,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    52 Celsius
-Power Cycle Min/Max Temperature:     37/53 Celsius
-Lifetime    Min/Max Temperature:     24/57 Celsius
-Under/Over Temperature Limit Count:   0/3
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     26/35 Celsius
+Lifetime    Min/Max Temperature:     23/57 Celsius
+Under/Over Temperature Limit Count:   0/1
 
 SCT Data Table command not supported
 
@@ -153,10 +153,12 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
+
+
 

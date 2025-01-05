@@ -1,5 +1,5 @@
-smartctl 7.0 2018-12-30 r4883 [x86_64-linux-3.10.0-1160.el7.x86_64] (local build)
-Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.3.7-100.fc37.x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Momentus 5400.4
@@ -10,14 +10,14 @@ Firmware Version: 3.AAB
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    5400 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Dec  6 12:05:20 2022 AEDT
+Local Time is:    Wed Jun 14 01:09:45 2023 AEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -29,19 +29,20 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
+Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
-					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  17)	The self-test routine was aborted by
-					the host.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
-capabilities: 			 (0x5b) SMART execute Offline immediate.
+capabilities: 			 (0x53) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					Offline surface scan supported.
+					No Offline surface scan supported.
 					Self-test supported.
 					No Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -61,22 +62,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
   3 Spin_Up_Time            PO----   099   099   000    -    0
-  4 Start_Stop_Count        -O--CK   098   098   020    -    2975
+  4 Start_Stop_Count        -O--CK   098   098   020    -    2992
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   081   060   030    -    8889619401
-  9 Power_On_Hours          -O--CK   093   093   000    -    7006
+  7 Seek_Error_Rate         POSR--   081   060   030    -    8898177161
+  9 Power_On_Hours          -O--CK   092   092   000    -    7492
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    2897
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+ 12 Power_Cycle_Count       -O--CK   098   098   020    -    2915
+187 Reported_Uncorrect      -O--CK   098   098   000    -    2
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   055   042   045    Past 45 (Min/Max 10/58 #1)
+190 Airflow_Temperature_Cel -O---K   067   039   045    Past 33 (Min/Max 10/61 #9)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    97
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1564
-193 Load_Cycle_Count        -O---K   027   027   000    -    147030
-194 Temperature_Celsius     -O-RC-   045   058   000    -    45 (0 10 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   084   060   000    -    197951033
-197 Current_Pending_Sector  ----C-   100   100   000    -    0
-198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1574
+193 Load_Cycle_Count        -O---K   004   004   000    -    192121
+194 Temperature_Celsius     -O-RC-   033   061   000    -    33 (0 10 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   085   059   000    -    92942202
+197 Current_Pending_Sector  ----C-   100   100   000    -    8
+198 Offline_Uncorrectable   -OSRCK   100   100   000    -    8
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O--CK   100   253   000    -    0
 202 Data_Address_Mark_Errs  ------   100   253   000    -    0
@@ -116,14 +117,65 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-No Errors Logged
+ATA Error Count: 2
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 2 occurred at disk power-on lifetime: 7271 hours (302 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 4f a3 f6 e0  Error: UNC at LBA = 0x00f6a34f = 16163663
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  24 00 01 4f a3 f6 e0 00      01:10:14.865  READ SECTOR(S) EXT
+  61 08 08 00 00 00 00 00      01:10:14.865  WRITE FPDMA QUEUED
+  61 08 08 00 00 00 00 00      01:10:14.865  WRITE FPDMA QUEUED
+  61 08 08 00 00 00 00 00      01:10:14.865  WRITE FPDMA QUEUED
+  61 08 08 00 00 00 00 00      01:10:14.865  WRITE FPDMA QUEUED
+
+Error 1 occurred at disk power-on lifetime: 7271 hours (302 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 51 00 4f a3 f6 e0  Error: UNC at LBA = 0x00f6a34f = 16163663
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  24 00 01 4f a3 f6 e0 00      01:10:10.846  READ SECTOR(S) EXT
+  61 08 08 00 00 00 00 00      01:09:59.720  WRITE FPDMA QUEUED
+  61 08 08 00 00 00 00 00      01:09:59.720  WRITE FPDMA QUEUED
+  61 08 08 00 00 00 00 00      01:09:59.720  WRITE FPDMA QUEUED
+  61 08 08 00 00 00 00 00      01:09:59.720  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Aborted by host               10%      6955         -
-# 2  Short offline       Completed without error       00%      6953         -
+# 1  Extended offline    Completed without error       00%      7273         -
+# 2  Extended offline    Completed: read failure       10%      7270         469148495
+# 3  Short offline       Completed without error       00%      7267         -
+# 4  Extended offline    Aborted by host               10%      6955         -
+# 5  Short offline       Completed without error       00%      6953         -
+1 of 1 failed self-tests are outdated by newer successful extended offline self-test # 1
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -139,7 +191,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
+Current Temperature:                    33 Celsius
 Power Cycle Min/Max Temperature:     --/ 0 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
@@ -153,14 +205,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           13  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           15  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            2  Vendor specific
+0x8003  2            1  Vendor specific
 0x8004  2            0  Vendor specific
 

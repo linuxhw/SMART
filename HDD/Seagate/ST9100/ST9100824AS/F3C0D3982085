@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.117] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    100,030,242,816 bytes [100 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Jan 12 13:59:18 2023 CET
+Local Time is:    Mon Aug 21 23:16:23 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,21 +55,21 @@ SCT capabilities: 	       (0x0001)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   094   006    -    165482875
+  1 Raw_Read_Error_Rate     POSR--   119   094   006    -    222733170
   3 Spin_Up_Time            -O----   096   094   000    -    0
-  4 Start_Stop_Count        PO--CK   090   090   020    -    10680
+  4 Start_Stop_Count        PO--CK   089   089   020    -    11351
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   086   060   030    -    467836415
-  9 Power_On_Hours          -O--CK   088   088   000    -    10584
+  7 Seek_Error_Rate         POSR--   087   060   030    -    519364172
+  9 Power_On_Hours          -O--CK   087   087   000    -    11617
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       PO--CK   092   092   020    -    8826
+ 12 Power_Cycle_Count       PO--CK   091   091   020    -    9457
 187 Reported_Uncorrect      -O--CK   001   001   000    -    125
-189 High_Fly_Writes         -O-RCK   076   076   000    -    24
-190 Airflow_Temperature_Cel -O---K   065   046   045    -    35 (Min/Max 16/36)
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    3959
-193 Load_Cycle_Count        -O--CK   001   001   000    -    241212
-194 Temperature_Celsius     -O---K   035   054   000    -    35 (0 7 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   071   051   000    -    211150022
+189 High_Fly_Writes         -O-RCK   072   072   000    -    28
+190 Airflow_Temperature_Cel -O---K   058   046   045    -    42 (Min/Max 26/43)
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    4106
+193 Load_Cycle_Count        -O--CK   001   001   000    -    263784
+194 Temperature_Celsius     -O---K   042   054   000    -    42 (0 7 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   062   051   000    -    44919996
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -111,7 +111,7 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 125 (device log contains only the most recent five errors)
+ATA Error Count: 126 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -125,6 +125,23 @@ ATA Error Count: 125 (device log contains only the most recent five errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 126 occurred at disk power-on lifetime: 10836 hours (451 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 01 01 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  00 00 01 00 00 00 00 00      02:45:08.379  NOP [Abort queued commands]
+  ec 00 01 01 00 00 a0 00      02:45:08.376  IDENTIFY DEVICE
+  ec 00 01 01 00 00 a0 00      02:45:08.376  IDENTIFY DEVICE
+  ec 00 01 01 00 00 a0 00      02:45:08.365  IDENTIFY DEVICE
+  00 00 06 00 00 00 00 ff      02:45:08.356  NOP [Abort queued commands]
 
 Error 125 occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -194,23 +211,6 @@ Error 122 occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
   c8 00 01 00 00 00 40 00      00:25:02.441  READ DMA
   ca 00 08 bf 8b 00 43 00      00:25:02.441  WRITE DMA
 
-Error 121 occurred at disk power-on lifetime: 2105 hours (87 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER ST SC SN CL CH DH
-  -- -- -- -- -- -- --
-  40 51 00 6b c1 eb 41  Error: UNC at LBA = 0x01ebc16b = 32227691
-
-  Commands leading to the command that caused the error were:
-  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
-  -- -- -- -- -- -- -- --  ----------------  --------------------
-  c8 00 08 67 c1 eb 41 00      00:25:02.431  READ DMA
-  ca 00 20 b7 75 23 4a 00      00:25:02.430  WRITE DMA
-  c8 00 20 6f 02 da 44 00      00:25:02.442  READ DMA
-  ca 00 80 37 75 23 4a 00      00:25:02.441  WRITE DMA
-  c8 00 80 ef 01 da 44 00      00:25:02.441  READ DMA
-
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
 SMART Self-test log structure revision number 1
@@ -234,7 +234,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
+Current Temperature:                    42 Celsius
 Power Cycle Min/Max Temperature:     --/ 0 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
@@ -248,7 +248,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           16  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

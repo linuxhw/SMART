@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Nov  4 01:25:18 2023 CET
+Local Time is:    Sat Nov  4 03:39:23 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -66,16 +66,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   142   142   054    -    71
   3 Spin_Up_Time            POS---   132   132   024    -    182 (Average 165)
-  4 Start_Stop_Count        -O--C-   099   099   000    -    4427
+  4 Start_Stop_Count        -O--C-   099   099   000    -    4428
   5 Reallocated_Sector_Ct   PO--CK   088   088   005    -    362
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   113   113   020    -    35
-  9 Power_On_Hours          -O--C-   099   099   000    -    12058
+  9 Power_On_Hours          -O--C-   099   099   000    -    12060
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    3152
-192 Power-Off_Retract_Count -O--CK   097   097   000    -    4566
-193 Load_Cycle_Count        -O--C-   097   097   000    -    4566
-194 Temperature_Celsius     -O----   214   214   000    -    28 (Min/Max 10/40)
+192 Power-Off_Retract_Count -O--CK   097   097   000    -    4567
+193 Load_Cycle_Count        -O--C-   097   097   000    -    4567
+194 Temperature_Celsius     -O----   240   240   000    -    25 (Min/Max 10/40)
 196 Reallocated_Event_Count -O--CK   088   088   000    -    386
 197 Current_Pending_Sector  -O---K   100   100   000    -    152
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -215,8 +215,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    28 Celsius
+Device State:                        Active (0)
+Current Temperature:                    25 Celsius
 Power Cycle Min/Max Temperature:     19/30 Celsius
 Lifetime    Min/Max Temperature:     10/40 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -226,7 +226,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (0)
+Temperature History Size (Index):    128 (6)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -236,15 +236,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4            3152  ---  Lifetime Power-On Resets
-0x01  0x010  4           12058  ---  Power-on Hours
+0x01  0x010  4           12060  ---  Power-on Hours
 0x01  0x018  6     15988050658  ---  Logical Sectors Written
 0x01  0x020  6        43564782  ---  Number of Write Commands
-0x01  0x028  6    629111336756  ---  Logical Sectors Read
-0x01  0x030  6       138003404  ---  Number of Read Commands
+0x01  0x028  6    629151001940  ---  Logical Sectors Read
+0x01  0x030  6       138003495  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4           10449  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           10448  ---  Head Flying Hours
-0x03  0x018  4            4566  ---  Head Load Events
+0x03  0x010  4           10449  ---  Head Flying Hours
+0x03  0x018  4            4567  ---  Head Load Events
 0x03  0x020  4             362  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4            3034  ---  Read Recovery Attempts
 0x03  0x030  4               7  ---  Number of Mechanical Start Failures
@@ -252,7 +252,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4              47  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
+0x05  0x008  1              25  ---  Current Temperature
 0x05  0x010  1              25  N--  Average Short Term Temperature
 0x05  0x018  1              25  N--  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
