@@ -15,7 +15,7 @@ TRIM Command:     Available
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Oct 13 17:33:44 2024 CEST
+Local Time is:    Sun Oct 27 08:36:52 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -24,10 +24,13 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Unavailable
-Wt Cache Reorder: Enabled
+Write SCT (Get) Feature Control Command failed: ATA return descriptor not supported by controller firmware
+Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: ATA return descriptor not supported by controller firmware
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -65,19 +68,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    4753
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1309
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    9
+  9 Power_On_Hours          -O--CK   099   099   000    -    4865
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1486
+177 Wear_Leveling_Count     PO--C-   099   099   000    -    10
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   099   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   074   046   000    -    26
+190 Airflow_Temperature_Cel -O--CK   072   046   000    -    28
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    178
-241 Total_LBAs_Written      -O--CK   099   099   000    -    14619653219
+235 POR_Recovery_Count      -O--C-   099   099   000    -    288
+241 Total_LBAs_Written      -O--CK   099   099   000    -    16505207684
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,9 +114,13 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Offline             Completed without error       00%      4728         -
-# 2  Short offline       Completed without error       00%      4705         -
-# 3  Short offline       Completed without error       00%      4705         -
+# 1  Offline             Completed without error       00%      4807         -
+# 2  Extended offline    Interrupted (host reset)      80%      4793         -
+# 3  Short offline       Completed without error       00%      4791         -
+# 4  Short offline       Completed without error       00%      4758         -
+# 5  Offline             Completed without error       00%      4728         -
+# 6  Short offline       Completed without error       00%      4705         -
+# 7  Short offline       Completed without error       00%      4705         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -130,21 +137,16 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     25/31 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     27/27 Celsius
 Lifetime    Min/Max Temperature:     21/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         1 minute
-Temperature Logging Interval:        10 minutes
-Min/Max recommended Temperature:      0/70 Celsius
-Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (66)
+Write SCT Data Table failed: SMART WRITE LOG SECTOR may cause problems, try with -T permissive to force
+Read SCT Temperature History failed
 
-SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+Write SCT (Get) Error Recovery Control Command failed: ATA return descriptor not supported by controller firmware
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
@@ -160,12 +162,14 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           18  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 
