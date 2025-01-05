@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.14.0-162.6.1.el9_1.0.1.x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.0 2018-12-30 r4883 [x86_64-linux-4.19.187] (local build)
+Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar Black
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Tue Jan 31 19:03:25 2023 PST
+Local Time is:    Wed Jul 19 16:16:37 2023 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -27,8 +27,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -63,23 +63,23 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    29
-  3 Spin_Up_Time            POS--K   238   228   021    -    8091
-  4 Start_Stop_Count        -O--CK   100   100   000    -    307
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    35
+  3 Spin_Up_Time            POS--K   230   228   021    -    8500
+  4 Start_Stop_Count        -O--CK   100   100   000    -    320
   5 Reallocated_Sector_Ct   PO--CK   199   199   140    -    1
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   074   074   000    -    19567
+  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   074   074   000    -    19586
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    305
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    249
-193 Load_Cycle_Count        -O--CK   200   200   000    -    307
-194 Temperature_Celsius     -O---K   112   094   000    -    38
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    318
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    257
+193 Load_Cycle_Count        -O--CK   200   200   000    -    320
+194 Temperature_Celsius     -O---K   106   094   000    -    44
 196 Reallocated_Event_Count -O--CK   199   199   000    -    1
-197 Current_Pending_Sector  -O--CK   200   200   000    -    2
-198 Offline_Uncorrectable   ----CK   200   200   000    -    0
+197 Current_Pending_Sector  -O--CK   200   200   000    -    10
+198 Offline_Uncorrectable   ----CK   200   200   000    -    8
 199 UDMA_CRC_Error_Count    -O--CK   200   082   000    -    235
-200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    16
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    15
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -130,16 +130,16 @@ Error 3 [2] occurred at disk power-on lifetime: 19230 hours (801 days + 6 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 55 0d 00 bc 90 e0 00  Error: UNC 8 sectors at LBA = 0x550d00bc90 = 365290372240
+  40 -- 51 00 08 00 00 55 bc 0d 90 e0 00  Error: UNC 8 sectors at LBA = 0x55bc0d90 = 1438387600
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 55 bc 0d 90 e0 08  2d+16:01:30.137  READ DMA EXT
-  25 00 00 00 08 00 00 51 f0 8d 30 e0 08  2d+16:01:30.133  READ DMA EXT
-  25 00 00 00 08 00 00 51 2c 55 b0 e0 08  2d+16:01:30.121  READ DMA EXT
-  25 00 00 00 08 00 00 63 80 1d 90 e0 08  2d+16:01:30.117  READ DMA EXT
-  25 00 00 00 08 00 00 64 10 8e 48 e0 08  2d+16:01:30.108  READ DMA EXT
+  25 00 00 00 08 00 bc 00 0d 55 90 e0 08  2d+16:01:30.137  READ DMA EXT
+  25 00 00 00 08 00 f0 00 8d 51 30 e0 08  2d+16:01:30.133  READ DMA EXT
+  25 00 00 00 08 00 2c 00 55 51 b0 e0 08  2d+16:01:30.121  READ DMA EXT
+  25 00 00 00 08 00 80 00 1d 63 90 e0 08  2d+16:01:30.117  READ DMA EXT
+  25 00 00 00 08 00 10 00 8e 64 48 e0 08  2d+16:01:30.108  READ DMA EXT
 
 Error 2 [1] occurred at disk power-on lifetime: 19215 hours (800 days + 15 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -147,16 +147,16 @@ Error 2 [1] occurred at disk power-on lifetime: 19215 hours (800 days + 15 hours
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 55 0d 00 bc 90 e0 00  Error: UNC 8 sectors at LBA = 0x550d00bc90 = 365290372240
+  40 -- 51 00 08 00 00 55 bc 0d 90 e0 00  Error: UNC 8 sectors at LBA = 0x55bc0d90 = 1438387600
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 55 bc 0d 90 e0 08  2d+01:27:19.149  READ DMA EXT
-  25 00 00 00 08 00 00 65 c0 ab 48 e0 08  2d+01:27:19.128  READ DMA EXT
-  25 00 00 00 68 00 00 65 c0 aa e0 e0 08  2d+01:27:19.127  READ DMA EXT
-  25 00 00 00 08 00 00 65 c0 aa d8 e0 08  2d+01:27:19.127  READ DMA EXT
-  25 00 00 00 68 00 00 65 c0 aa 70 e0 08  2d+01:27:19.127  READ DMA EXT
+  25 00 00 00 08 00 bc 00 0d 55 90 e0 08  2d+01:27:19.149  READ DMA EXT
+  25 00 00 00 08 00 c0 00 ab 65 48 e0 08  2d+01:27:19.128  READ DMA EXT
+  25 00 00 00 68 00 c0 00 aa 65 e0 e0 08  2d+01:27:19.127  READ DMA EXT
+  25 00 00 00 08 00 c0 00 aa 65 d8 e0 08  2d+01:27:19.127  READ DMA EXT
+  25 00 00 00 68 00 c0 00 aa 65 70 e0 08  2d+01:27:19.127  READ DMA EXT
 
 Error 1 [0] occurred at disk power-on lifetime: 19213 hours (800 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -164,19 +164,20 @@ Error 1 [0] occurred at disk power-on lifetime: 19213 hours (800 days + 13 hours
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 55 0d 00 bc 90 e0 00  Error: UNC 8 sectors at LBA = 0x550d00bc90 = 365290372240
+  40 -- 51 00 08 00 00 55 bc 0d 90 e0 00  Error: UNC 8 sectors at LBA = 0x55bc0d90 = 1438387600
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 55 bc 0d 90 e0 08  1d+23:24:33.387  READ DMA EXT
-  25 00 00 00 08 00 00 51 f0 8d 30 e0 08  1d+23:24:33.384  READ DMA EXT
-  25 00 00 00 08 00 00 51 2c 55 b0 e0 08  1d+23:24:33.372  READ DMA EXT
-  25 00 00 00 08 00 00 63 80 1d 90 e0 08  1d+23:24:33.366  READ DMA EXT
-  25 00 00 00 08 00 00 63 80 0d 90 e0 08  1d+23:24:33.359  READ DMA EXT
+  25 00 00 00 08 00 bc 00 0d 55 90 e0 08  1d+23:24:33.387  READ DMA EXT
+  25 00 00 00 08 00 f0 00 8d 51 30 e0 08  1d+23:24:33.384  READ DMA EXT
+  25 00 00 00 08 00 2c 00 55 51 b0 e0 08  1d+23:24:33.372  READ DMA EXT
+  25 00 00 00 08 00 80 00 1d 63 90 e0 08  1d+23:24:33.366  READ DMA EXT
+  25 00 00 00 08 00 80 00 0d 63 90 e0 08  1d+23:24:33.359  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     19581         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -191,10 +192,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     38/38 Celsius
-Lifetime    Min/Max Temperature:     19/56 Celsius
+Device State:                        Active (0)
+Current Temperature:                    44 Celsius
+Power Cycle Min/Max Temperature:     22/47 Celsius
+Lifetime    Min/Max Temperature:     44/56 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -202,7 +203,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (67)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -221,6 +222,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          106  Vendor specific
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        20261  Vendor specific
+
+
 

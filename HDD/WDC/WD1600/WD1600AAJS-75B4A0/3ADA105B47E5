@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.0-26-amd64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-13-amd64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 01.03A01
 User Capacity:    160,000,000,000 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.5, 3.0 Gb/s
-Local Time is:    Sat Nov 25 12:18:49 2023 CET
+Local Time is:    Wed Dec  6 01:36:08 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -20,7 +20,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,16 +65,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
   3 Spin_Up_Time            POS--K   150   146   021    -    3483
-  4 Start_Stop_Count        -O--CK   095   095   000    -    5620
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6017
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   002   002   000    -    71789
+  9 Power_On_Hours          -O--CK   002   002   000    -    71986
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5537
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1003
-193 Load_Cycle_Count        -O--CK   199   199   000    -    5618
-194 Temperature_Celsius     -O---K   107   087   000    -    36
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5933
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1013
+193 Load_Cycle_Count        -O--CK   198   198   000    -    6015
+194 Temperature_Celsius     -O---K   103   087   000    -    40
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -148,9 +148,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     34/36 Celsius
-Lifetime    Min/Max Temperature:     33/56 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     40/41 Celsius
+Lifetime    Min/Max Temperature:     39/56 Celsius
 Specified Max Operating Temperature:    32 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -159,7 +159,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (46)
+Temperature History Size (Index):    128 (32)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -178,6 +178,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         1954  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         4626  Vendor specific
 

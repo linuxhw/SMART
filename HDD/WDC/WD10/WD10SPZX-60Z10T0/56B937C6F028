@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Apr 15 20:04:50 2024 CEST
+Local Time is:    Mon Apr 15 20:44:05 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -68,8 +68,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            POS--K   057   056   021    -    1216
   4 Start_Stop_Count        -O--CK   100   100   000    -    3654
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR-K   100   100   030    -    21288
-  9 Power_On_Hours          -O--CK   100   100   000    -    11907
+  7 Seek_Error_Rate         POSR-K   100   100   030    -    21559
+  9 Power_On_Hours          -O--CK   100   100   000    -    11908
  10 Spin_Retry_Count        PO--CK   100   100   050    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1453
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
@@ -80,7 +80,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 191 G-Sense_Error_Rate      -O--CK   001   001   000    -    3188
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    236223201335
 193 Load_Cycle_Count        -O--CK   094   094   000    -    13828
-194 Temperature_Celsius     -O---K   036   047   000    -    36 (Min/Max 25/36)
+194 Temperature_Celsius     -O---K   037   047   000    -    37 (Min/Max 25/37)
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
@@ -120,7 +120,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 715 (device log contains only the most recent 24 errors)
+Device Error Count: 716 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -135,6 +135,23 @@ Device Error Count: 715 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 716 [19] occurred at disk power-on lifetime: 11908 hours (496 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 02 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b4 00 20 00 00 00 00 00 72 4c 6b e0 00     01:34:43.858  SANITIZE DEVICE
+  f5 00 00 00 00 00 00 00 00 00 00 e0 00     01:34:43.858  SECURITY FREEZE LOCK
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     01:34:43.710  READ DMA EXT
+  25 00 00 00 80 00 00 3a 46 48 20 e0 00     01:34:43.253  READ DMA EXT
+  25 00 00 00 40 00 00 3a 46 40 20 e0 00     01:34:43.253  READ DMA EXT
 
 Error 715 [18] occurred at disk power-on lifetime: 11906 hours (496 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -255,23 +272,6 @@ Error 709 [12] occurred at disk power-on lifetime: 11770 hours (490 days + 10 ho
   25 00 00 00 80 00 00 3a 46 48 20 e0 00  4d+19:30:29.713  READ DMA EXT
   25 00 00 00 40 00 00 3a 46 40 20 e0 00  4d+19:30:29.713  READ DMA EXT
 
-Error 708 [11] occurred at disk power-on lifetime: 11381 hours (474 days + 5 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 02 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b4 00 20 00 00 00 00 00 72 4c 6b e0 00  7d+02:35:14.941  SANITIZE DEVICE
-  f5 00 00 00 00 00 00 00 00 00 00 e0 00  7d+02:35:14.941  SECURITY FREEZE LOCK
-  25 00 00 00 01 00 00 00 00 00 00 e0 00  7d+02:35:14.792  READ DMA EXT
-  25 00 00 00 80 00 00 3a 46 48 20 e0 00  7d+02:35:14.334  READ DMA EXT
-  25 00 00 00 40 00 00 3a 46 40 20 e0 00  7d+02:35:14.334  READ DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%      3906         -
@@ -292,8 +292,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     25/36 Celsius
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     25/37 Celsius
 Lifetime    Min/Max Temperature:     13/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -305,7 +305,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (71)
+Temperature History Size (Index):    128 (109)
 
 SCT Error Recovery Control:
            Read:     85 (8.5 seconds)
@@ -325,11 +325,11 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         4486  Vendor specific
+0x8000  4         6839  Vendor specific
 

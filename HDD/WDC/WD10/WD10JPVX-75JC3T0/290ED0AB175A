@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-69-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.17-Unraid] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue Mobile
@@ -10,10 +10,10 @@ Firmware Version: 01.01A01
 User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5417
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Apr 17 10:27:52 2023 UTC
+Local Time is:    Sat Jun 17 18:01:54 2023 PDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,26 +64,26 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   189   178   021    -    1541
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1748
+  3 Spin_Up_Time            POS--K   182   178   021    -    1858
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1752
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   093   093   000    -    5314
+  9 Power_On_Hours          -O--CK   093   093   000    -    5766
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1550
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1554
 191 G-Sense_Error_Rate      -O--CK   071   071   000    -    29
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    133
-193 Load_Cycle_Count        -O--CK   122   122   000    -    235347
-194 Temperature_Celsius     -O---K   116   103   000    -    31
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    136
+193 Load_Cycle_Count        -O--CK   119   119   000    -    243231
+194 Temperature_Celsius     -O---K   108   103   000    -    39
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
-240 Head_Flying_Hours       -O--CK   095   095   000    -    4049
-241 Total_LBAs_Written      -O--CK   200   200   000    -    13116959200
-242 Total_LBAs_Read         -O--CK   200   200   000    -    8761435139
+240 Head_Flying_Hours       -O--CK   094   094   000    -    4477
+241 Total_LBAs_Written      -O--CK   200   200   000    -    13385663438
+242 Total_LBAs_Read         -O--CK   200   200   000    -    8780501979
 254 Free_Fall_Sensor        -O--CK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -135,10 +135,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     23/35 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     34/39 Celsius
 Lifetime    Min/Max Temperature:      6/44 Celsius
-Specified Max Operating Temperature:    25 Celsius
+Specified Max Operating Temperature:    26 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -149,7 +149,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (83)
+Temperature History Size (Index):    128 (28)
 
 SCT Error Recovery Control command not supported
 
@@ -167,10 +167,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           94  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           95  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           26  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           27  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4      1919005  Vendor specific
+0x8000  4        10490  Vendor specific
+
+
 

@@ -11,7 +11,7 @@ User Capacity:    160,041,885,696 bytes [160 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Wed Dec 13 17:42:24 2023 EET
+Local Time is:    Fri Nov 15 14:35:25 2024 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -19,7 +19,7 @@ APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -62,20 +62,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   187   185   021    -    1650
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6262
+  3 Spin_Up_Time            PO----   187   185   021    -    1633
+  4 Start_Stop_Count        -O--CK   094   094   000    -    6369
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   084   084   000    -    11935
+  9 Power_On_Hours          -O--CK   084   084   000    -    12196
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5348
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5452
 187 Reported_Uncorrect      -O--CK   100   080   000    -    34
 188 Command_Timeout         -O--CK   100   099   000    -    1
-190 Airflow_Temperature_Cel -O---K   067   032   040    Past 33
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1366
-193 Load_Cycle_Count        -O--CK   173   173   000    -    82564
-194 Temperature_Celsius     -O---K   114   079   000    -    33
+190 Airflow_Temperature_Cel -O---K   054   032   040    Past 46
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1442
+193 Load_Cycle_Count        -O--CK   163   163   000    -    112840
+194 Temperature_Celsius     -O---K   101   079   000    -    46
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   100   253   000    -    0
@@ -281,8 +281,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     --/26 Celsius
+Current Temperature:                    46 Celsius
+Power Cycle Min/Max Temperature:     --/46 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
 SCT Temperature History Version:     2
@@ -290,7 +290,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (88)
+Temperature History Size (Index):    128 (43)
 
 SCT Error Recovery Control:
            Read:     75 (7.5 seconds)
@@ -309,6 +309,6 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
-0x8000  4          347  Vendor specific
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x8000  4          608  Vendor specific
 

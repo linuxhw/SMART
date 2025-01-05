@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.5-desktop-1omv4090] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.9.0-desktop-0.rc2.1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Sep 23 20:37:36 2022 BST
+Local Time is:    Sat Apr  6 15:56:58 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,25 +64,25 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    29
-  3 Spin_Up_Time            POS--K   168   163   021    -    2558
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6714
+  3 Spin_Up_Time            POS--K   169   163   021    -    2525
+  4 Start_Stop_Count        -O--CK   093   093   000    -    7781
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    7
-  9 Power_On_Hours          -O--CK   053   053   000    -    34912
+  7 Seek_Error_Rate         -OSR-K   200   199   000    -    8
+  9 Power_On_Hours          -O--CK   045   045   000    -    40693
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   096   096   000    -    4332
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1385
-193 Load_Cycle_Count        -O--CK   120   120   000    -    240135
-194 Temperature_Celsius     -O---K   105   090   000    -    38
+ 12 Power_Cycle_Count       -O--CK   095   095   000    -    5399
+192 Power-Off_Retract_Count -O--CK   198   198   000    -    1698
+193 Load_Cycle_Count        -O--CK   117   117   000    -    250990
+194 Temperature_Celsius     -O---K   106   090   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
-240 Head_Flying_Hours       -O--CK   075   075   000    -    18599
-241 Total_LBAs_Written      -O--CK   200   200   000    -    204103010348
-242 Total_LBAs_Read         -O--CK   200   200   000    -    314410357549
+240 Head_Flying_Hours       -O--CK   074   074   000    -    19175
+241 Total_LBAs_Written      -O--CK   200   200   000    -    206412643076
+242 Total_LBAs_Read         -O--CK   200   200   000    -    317578299670
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +112,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 6418 (device log contains only the most recent 24 errors)
+Device Error Count: 10571 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,24 +128,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6418 [9] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08  1d+02:02:35.411  FLUSH CACHE EXT
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 08  1d+01:56:29.013  SMART RETURN STATUS
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08  1d+01:56:29.010  SMART READ DATA
-  b0 00 d1 00 01 00 00 00 c2 4f 00 00 08  1d+01:56:29.007  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  ec 00 00 00 01 00 00 00 00 00 00 00 08  1d+01:56:29.007  IDENTIFY DEVICE
-
-Error 6417 [8] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 hours)
+Error 10571 [10] occurred at disk power-on lifetime: 40693 hours (1695 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -156,13 +139,13 @@ Error 6417 [8] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 db 00 f8 00 00 00 c2 4f 00 00 08  1d+01:56:21.939  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
-  b0 00 d1 00 01 00 00 00 c2 4f 01 00 08  1d+01:56:21.935  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08  1d+01:56:21.933  SMART READ DATA
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 08  1d+01:56:19.818  SMART RETURN STATUS
-  b0 00 d2 00 f1 00 00 00 c2 4f 00 00 08  1d+01:56:17.735  SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 08     17:11:36.463  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  b0 00 d1 00 01 00 00 00 c2 4f 01 00 08     17:11:36.457  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08     17:11:36.454  SMART READ DATA
+  ec 00 00 00 01 00 00 00 00 00 00 00 08     17:11:36.454  IDENTIFY DEVICE
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 08     17:11:34.336  SMART RETURN STATUS
 
-Error 6416 [7] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 hours)
+Error 10570 [9] occurred at disk power-on lifetime: 40693 hours (1695 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -173,13 +156,13 @@ Error 6416 [7] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d8 00 00 00 00 00 c2 4f 01 00 08  1d+01:56:15.591  SMART ENABLE OPERATIONS
-  ec 00 00 00 01 00 00 00 00 00 00 00 08  1d+01:56:15.581  IDENTIFY DEVICE
-  ec 00 00 00 01 00 00 00 00 00 00 00 08  1d+01:56:15.580  IDENTIFY DEVICE
-  60 00 08 00 50 00 00 3a 38 30 80 40 08  1d+01:56:15.289  READ FPDMA QUEUED
-  60 00 08 00 48 00 00 00 00 00 00 40 08  1d+01:56:15.288  READ FPDMA QUEUED
+  b0 00 d8 00 00 00 00 00 c2 4f 01 00 08     17:11:32.165  SMART ENABLE OPERATIONS
+  ec 00 00 00 01 00 00 00 00 00 00 00 08     17:11:32.156  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 08     17:11:32.156  IDENTIFY DEVICE
+  60 00 80 00 20 00 00 10 7b 41 98 40 08     17:11:31.524  READ FPDMA QUEUED
+  60 00 d0 00 18 00 00 00 60 08 30 40 08     17:11:31.524  READ FPDMA QUEUED
 
-Error 6415 [6] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 hours)
+Error 10569 [8] occurred at disk power-on lifetime: 40693 hours (1695 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -190,13 +173,13 @@ Error 6415 [6] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08  1d+01:54:41.767  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08  1d+01:54:41.767  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  1d+01:54:41.767  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  1d+01:54:41.766  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  1d+01:54:41.766  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     17:10:57.284  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     17:10:57.284  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     17:10:57.284  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     17:10:57.283  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     17:10:57.283  SET FEATURES [Set transfer mode]
 
-Error 6414 [5] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 hours)
+Error 10568 [7] occurred at disk power-on lifetime: 40693 hours (1695 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -207,13 +190,47 @@ Error 6414 [5] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08  1d+01:54:37.536  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08  1d+01:54:37.536  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08  1d+01:54:37.536  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08  1d+01:54:37.536  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08  1d+01:54:37.536  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     17:10:52.598  FLUSH CACHE EXT
+  b0 00 d5 00 01 00 00 00 c2 4f 01 00 08     17:10:34.020  SMART READ LOG
+  b0 00 d5 00 01 00 00 00 c2 4f 06 00 08     17:10:34.019  SMART READ LOG
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08     17:10:34.013  SMART READ DATA
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 08     17:10:34.010  SMART RETURN STATUS
 
-Error 6413 [4] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 hours)
+Error 10567 [6] occurred at disk power-on lifetime: 40692 hours (1695 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 f8 00 00 00 c2 4f 00 00 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 db 00 f8 00 00 00 c2 4f 00 00 08     16:10:30.514  SMART EN/DISABLE AUTO OFFLINE [NS (SFF-8035i)]
+  b0 00 d1 00 01 00 00 00 c2 4f 01 00 08     16:10:30.508  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08     16:10:30.505  SMART READ DATA
+  ec 00 00 00 01 00 00 00 00 00 00 00 08     16:10:30.505  IDENTIFY DEVICE
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 08     16:10:28.388  SMART RETURN STATUS
+
+Error 10566 [5] occurred at disk power-on lifetime: 40692 hours (1695 days + 12 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 c2 4f 01 00 00  Device Fault; Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d8 00 00 00 00 00 c2 4f 01 00 08     16:10:26.238  SMART ENABLE OPERATIONS
+  ec 00 00 00 01 00 00 00 00 00 00 00 08     16:10:26.229  IDENTIFY DEVICE
+  ec 00 00 00 01 00 00 00 00 00 00 00 08     16:10:26.228  IDENTIFY DEVICE
+  60 00 80 00 98 00 00 10 7b 41 98 40 08     16:10:25.583  READ FPDMA QUEUED
+  60 00 d0 00 90 00 00 00 60 08 30 40 08     16:10:25.575  READ FPDMA QUEUED
+
+Error 10565 [4] occurred at disk power-on lifetime: 40692 hours (1695 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -224,13 +241,13 @@ Error 6413 [4] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08  1d+01:54:33.444  FLUSH CACHE EXT
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 08  1d+01:54:31.073  SMART RETURN STATUS
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08  1d+01:54:31.070  SMART READ DATA
-  b0 00 d1 00 01 00 00 00 c2 4f 00 00 08  1d+01:54:31.067  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  ec 00 00 00 01 00 00 00 00 00 00 00 08  1d+01:54:31.067  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     15:48:31.602  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     15:48:31.602  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     15:48:31.602  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     15:48:31.602  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     15:48:31.602  SET FEATURES [Set transfer mode]
 
-Error 6412 [3] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 hours)
+Error 10564 [3] occurred at disk power-on lifetime: 40692 hours (1695 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -241,34 +258,32 @@ Error 6412 [3] occurred at disk power-on lifetime: 34912 hours (1454 days + 16 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08  1d+01:53:56.671  FLUSH CACHE EXT
-  b0 00 da 00 00 00 00 00 c2 4f 00 00 08  1d+01:53:35.625  SMART RETURN STATUS
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 08  1d+01:53:35.619  SMART READ DATA
-  b0 00 d1 00 01 00 00 00 c2 4f 00 00 08  1d+01:53:35.616  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  ec 00 00 00 01 00 00 00 00 00 00 00 08  1d+01:53:35.616  IDENTIFY DEVICE
-
-Error 6411 [2] occurred at disk power-on lifetime: 34910 hours (1454 days + 14 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 61 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     23:37:20.209  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     23:37:20.209  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     23:37:20.209  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     23:37:20.209  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     23:37:20.209  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     15:48:26.891  FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 00 11 40 08     15:46:08.037  READ LOG EXT
+  b0 00 d5 00 01 00 00 00 c2 4f e0 00 08     15:46:08.036  SMART READ LOG
+  b0 00 d5 00 01 00 00 00 c2 4f e1 00 08     15:46:08.036  SMART READ LOG
+  b0 00 d6 00 01 00 00 00 c2 4f e0 00 08     15:46:08.036  SMART WRITE LOG
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     34759         -
-# 2  Short offline       Completed without error       00%     22827         -
-# 3  Extended offline    Completed without error       00%     18942         -
+# 1  Extended offline    Completed without error       00%     38040         -
+# 2  Extended offline    Completed without error       00%     37961         -
+# 3  Extended offline    Completed without error       00%     37928         -
+# 4  Extended offline    Completed without error       00%     37850         -
+# 5  Extended offline    Completed without error       00%     37745         -
+# 6  Extended offline    Completed without error       00%     37656         -
+# 7  Extended offline    Completed without error       00%     37591         -
+# 8  Extended offline    Completed without error       00%     37554         -
+# 9  Extended offline    Completed without error       00%     37464         -
+#10  Extended offline    Completed without error       00%     37367         -
+#11  Extended offline    Completed without error       00%     37299         -
+#12  Extended offline    Completed without error       00%     37194         -
+#13  Extended offline    Completed without error       00%     37121         -
+#14  Extended offline    Completed without error       00%     37021         -
+#15  Extended offline    Completed without error       00%     36908         -
+#16  Extended offline    Completed without error       00%     36808         -
+#17  Extended offline    Completed without error       00%     36724         -
+#18  Extended offline    Completed without error       00%     36641         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -284,7 +299,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
+Current Temperature:                    37 Celsius
 Power Cycle Min/Max Temperature:     18/38 Celsius
 Lifetime    Min/Max Temperature:      0/53 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -297,7 +312,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (438)
+Temperature History Size (Index):    478 (467)
 
 SCT Error Recovery Control command not supported
 
@@ -315,12 +330,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2          185  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2          178  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           78  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           76  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4        93829  Vendor specific
+0x8000  4        62345  Vendor specific
 
 
 

@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.70-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
@@ -9,10 +9,10 @@ LU WWN Device Id: 5 0014ee ...
 Firmware Version: 80.00A80
 User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun Oct 10 15:03:40 2021 +06
+Local Time is:    Sun Jun 18 07:05:50 2023 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,17 +63,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   171   170   021    -    2408
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7792
+  3 Spin_Up_Time            POS--K   174   169   021    -    2283
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8888
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    1
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   074   074   000    -    19424
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   069   069   000    -    22993
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5438
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    707
-193 Load_Cycle_Count        -O--CK   198   198   000    -    7084
-194 Temperature_Celsius     -O---K   119   089   000    -    24
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6401
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    835
+193 Load_Cycle_Count        -O--CK   198   198   000    -    8052
+194 Temperature_Celsius     -O---K   107   089   000    -    36
 196 Reallocated_Event_Count -O--CK   199   199   000    -    1
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -110,28 +110,178 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-No Errors Logged
+Device Error Count: 25566 (device log contains only the most recent 24 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 25566 [5] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 40 00 c0 00 00 00 04 1c 18 40 00     02:51:19.140  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:19.140  READ LOG EXT
+  61 00 08 00 b8 00 00 08 f1 b4 88 40 00     02:51:19.015  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:19.015  READ LOG EXT
+  61 00 40 00 b0 00 00 00 6c 82 48 40 00     02:51:18.891  WRITE FPDMA QUEUED
+
+Error 25565 [4] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 b8 00 00 08 f1 b4 88 40 00     02:51:19.015  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:19.015  READ LOG EXT
+  61 00 40 00 b0 00 00 00 6c 82 48 40 00     02:51:18.891  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.890  READ LOG EXT
+  61 00 18 00 a8 00 00 00 03 3a 88 40 00     02:51:18.766  WRITE FPDMA QUEUED
+
+Error 25564 [3] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 40 00 b0 00 00 00 6c 82 48 40 00     02:51:18.891  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.890  READ LOG EXT
+  61 00 18 00 a8 00 00 00 03 3a 88 40 00     02:51:18.766  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.640  READ LOG EXT
+  61 00 08 00 a0 00 00 00 02 02 f0 40 00     02:51:18.516  WRITE FPDMA QUEUED
+
+Error 25563 [2] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 18 00 a8 00 00 00 03 3a 88 40 00     02:51:18.766  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.640  READ LOG EXT
+  61 00 08 00 a0 00 00 00 02 02 f0 40 00     02:51:18.516  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.515  READ LOG EXT
+  61 00 08 00 98 00 00 00 0b 47 20 40 00     02:51:18.391  WRITE FPDMA QUEUED
+
+Error 25562 [1] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 a0 00 00 00 02 02 f0 40 00     02:51:18.516  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.515  READ LOG EXT
+  61 00 08 00 98 00 00 00 0b 47 20 40 00     02:51:18.391  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.265  READ LOG EXT
+  61 00 08 00 90 00 00 00 04 70 f0 40 00     02:51:18.141  WRITE FPDMA QUEUED
+
+Error 25561 [0] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 98 00 00 00 0b 47 20 40 00     02:51:18.391  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.265  READ LOG EXT
+  61 00 08 00 90 00 00 00 04 70 f0 40 00     02:51:18.141  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.140  READ LOG EXT
+  61 00 08 00 88 00 00 00 54 2a 50 40 00     02:51:18.016  WRITE FPDMA QUEUED
+
+Error 25560 [23] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 90 00 00 00 04 70 f0 40 00     02:51:18.141  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.140  READ LOG EXT
+  61 00 08 00 88 00 00 00 54 2a 50 40 00     02:51:18.016  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.016  READ LOG EXT
+  61 00 40 00 80 00 00 00 04 1c 18 40 00     02:51:17.891  WRITE FPDMA QUEUED
+
+Error 25559 [22] occurred at disk power-on lifetime: 20924 hours (871 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 61 00 00 00 00 00 00 00 00 e0 00  Device Fault; Error: ABRT at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 88 00 00 00 54 2a 50 40 00     02:51:18.016  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:18.016  READ LOG EXT
+  61 00 40 00 80 00 00 00 04 1c 18 40 00     02:51:17.891  WRITE FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     02:51:17.890  READ LOG EXT
+  61 00 40 00 78 00 00 00 6c 82 48 40 00     02:51:17.767  WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     18891         -
-# 2  Extended offline    Interrupted (host reset)      90%     18698         -
-# 3  Short offline       Completed without error       00%     18552         -
-# 4  Short offline       Completed without error       00%     18016         -
-# 5  Short offline       Completed without error       00%     18008         -
-# 6  Short offline       Completed without error       00%     17107         -
-# 7  Short offline       Completed without error       00%     17064         -
-# 8  Short offline       Completed without error       00%     17049         -
-# 9  Short offline       Completed without error       00%     17034         -
-#10  Short offline       Completed without error       00%     17024         -
-#11  Short offline       Completed without error       00%     17013         -
-#12  Short offline       Completed without error       00%     16998         -
-#13  Short offline       Completed without error       00%     16986         -
-#14  Short offline       Completed without error       00%     16979         -
-#15  Short offline       Completed without error       00%     15354         -
-#16  Short offline       Completed without error       00%     15347         -
-#17  Short offline       Completed without error       00%     15326         -
-#18  Short offline       Completed without error       00%     12552         -
+# 1  Extended offline    Aborted by host               60%     22816         -
+# 2  Short offline       Completed without error       00%     18891         -
+# 3  Extended offline    Interrupted (host reset)      90%     18698         -
+# 4  Short offline       Completed without error       00%     18552         -
+# 5  Short offline       Completed without error       00%     18016         -
+# 6  Short offline       Completed without error       00%     18008         -
+# 7  Short offline       Completed without error       00%     17107         -
+# 8  Short offline       Completed without error       00%     17064         -
+# 9  Short offline       Completed without error       00%     17049         -
+#10  Short offline       Completed without error       00%     17034         -
+#11  Short offline       Completed without error       00%     17024         -
+#12  Short offline       Completed without error       00%     17013         -
+#13  Short offline       Completed without error       00%     16998         -
+#14  Short offline       Completed without error       00%     16986         -
+#15  Short offline       Completed without error       00%     16979         -
+#16  Short offline       Completed without error       00%     15354         -
+#17  Short offline       Completed without error       00%     15347         -
+#18  Short offline       Completed without error       00%     15326         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -147,9 +297,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     21/23 Celsius
-Lifetime    Min/Max Temperature:     21/54 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     25/36 Celsius
+Lifetime    Min/Max Temperature:     25/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -160,7 +310,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (36)
+Temperature History Size (Index):    478 (374)
 
 SCT Error Recovery Control command not supported
 
@@ -178,12 +328,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2          632  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4          316  Vendor specific
+0x8000  4         1597  Vendor specific
 
 
 
