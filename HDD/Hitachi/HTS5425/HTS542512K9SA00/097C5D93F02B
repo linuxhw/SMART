@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.46-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.46-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Travelstar 5K250
@@ -9,14 +9,14 @@ LU WWN Device Id: 5 000cca ...
 Firmware Version: BB2OC39P
 User Capacity:    120,034,123,776 bytes [120 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS T13/1699-D revision 3f
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Sun Sep 17 12:57:25 2023 MSK
+Local Time is:    Sun Oct 15 15:51:04 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -27,8 +27,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -62,28 +62,28 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
-  2 Throughput_Performance  --S---   108   108   000    -    4432
+  2 Throughput_Performance  --S---   100   100   000    -    776
   3 Spin_Up_Time            POS---   253   253   033    -    0
-  4 Start_Stop_Count        -O--C-   094   094   000    -    10652
+  4 Start_Stop_Count        -O--C-   094   094   000    -    10679
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         -O-R--   100   100   000    -    0
-  8 Seek_Time_Performance   --S---   122   122   000    -    39
-  9 Power_On_Hours          -O--C-   064   064   000    -    15964
+  8 Seek_Time_Performance   --S---   100   100   000    -    0
+  9 Power_On_Hours          -O--C-   064   064   000    -    16062
  10 Spin_Retry_Count        -O--C-   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    10552
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    10579
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    595
-193 Load_Cycle_Count        -O--C-   082   082   000    -    185900
-194 Temperature_Celsius     -O----   161   161   000    -    34 (Min/Max 13/54)
+192 Power-Off_Retract_Count -O--CK   098   098   000    -    596
+193 Load_Cycle_Count        -O--C-   082   082   000    -    186076
+194 Temperature_Celsius     -O----   157   157   000    -    35 (Min/Max 13/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
-225 Load_Cycle_Count        -O--C-   082   082   000    -    185900
-240 Head_Flying_Hours       -O--CK   066   066   000    -    908961
-241 Total_LBAs_Written      -O--CK   100   100   000    -    23539261965
-242 Total_LBAs_Read         -O--CK   100   100   000    -    35564241268
+225 Load_Cycle_Count        -O--C-   082   082   000    -    186076
+240 Head_Flying_Hours       -O--CK   066   066   000    -    914844
+241 Total_LBAs_Written      -O--CK   100   100   000    -    24116999292
+242 Total_LBAs_Read         -O--CK   100   100   000    -    35823088893
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -206,8 +206,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     33/38 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     27/38 Celsius
 Lifetime    Min/Max Temperature:     13/54 Celsius
 Specified Max Operating Temperature:    37 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -226,8 +226,8 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0009  2            6  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           34  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

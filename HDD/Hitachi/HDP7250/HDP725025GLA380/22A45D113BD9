@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.0-23-amd64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-13-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Hitachi Deskstar P7K500
@@ -10,10 +10,10 @@ Firmware Version: GM0KA59A
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Tue Jun 27 17:16:15 2023 AEST
+Local Time is:    Wed Nov  8 22:08:21 2023 AEDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -28,8 +28,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -63,18 +63,18 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   132   132   054    -    144
-  3 Spin_Up_Time            POS---   107   107   024    -    187 (Average 195)
-  4 Start_Stop_Count        -O--C-   097   097   000    -    13038
+  2 Throughput_Performance  P-S---   131   131   054    -    148
+  3 Spin_Up_Time            POS---   103   103   024    -    194 (Average 201)
+  4 Start_Stop_Count        -O--C-   097   097   000    -    13065
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    3
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   136   136   020    -    27
-  9 Power_On_Hours          -O--C-   099   099   000    -    8417
+  8 Seek_Time_Performance   P-S---   100   100   020    -    0
+  9 Power_On_Hours          -O--C-   099   099   000    -    11251
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    12533
-192 Power-Off_Retract_Count -O--CK   090   090   000    -    13084
-193 Load_Cycle_Count        -O--C-   090   090   000    -    13084
-194 Temperature_Celsius     -O----   166   166   000    -    36 (Min/Max 7/55)
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    12560
+192 Power-Off_Retract_Count -O--CK   090   090   000    -    13185
+193 Load_Cycle_Count        -O--C-   090   090   000    -    13185
+194 Temperature_Celsius     -O----   146   146   000    -    41 (Min/Max 7/55)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    3
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -123,9 +123,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        Active (0)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     18/41 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     27/42 Celsius
 Lifetime    Min/Max Temperature:      7/55 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -134,7 +134,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (86)
+Temperature History Size (Index):    128 (15)
 
 SCT Error Recovery Control:
            Read: Disabled

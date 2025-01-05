@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-167-generic] (local build)
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.0-176-generic] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Thu Jan 25 12:01:37 2024 EET
+Local Time is:    Tue Apr 23 09:27:19 2024 EEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -28,8 +28,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,20 +64,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   132   132   054    -    140
-  3 Spin_Up_Time            POS---   122   122   024    -    304 (Average 325)
-  4 Start_Stop_Count        -O--C-   099   099   000    -    6409
+  3 Spin_Up_Time            POS---   117   117   024    -    325 (Average 329)
+  4 Start_Stop_Count        -O--C-   099   099   000    -    6570
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   131   131   020    -    29
-  9 Power_On_Hours          -O--C-   095   095   000    -    37456
+  9 Power_On_Hours          -O--C-   095   095   000    -    37967
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    6397
-192 Power-Off_Retract_Count -O--CK   095   095   000    -    6560
-193 Load_Cycle_Count        -O--C-   095   095   000    -    6560
-194 Temperature_Celsius     -O----   230   230   000    -    26 (Min/Max 15/50)
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    6556
+192 Power-Off_Retract_Count -O--CK   095   095   000    -    6728
+193 Load_Cycle_Count        -O--C-   095   095   000    -    6728
+194 Temperature_Celsius     -O----   222   222   000    -    27 (Min/Max 15/50)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-197 Current_Pending_Sector  -O---K   100   100   000    -    1
-198 Offline_Uncorrectable   ---R--   100   100   000    -    1
+197 Current_Pending_Sector  -O---K   100   100   000    -    0
+198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 13253 (device log contains only the most recent 4 errors)
+Device Error Count: 13338 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,7 +121,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 13253 [0] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 hours)
+Error 13338 [1] occurred at disk power-on lifetime: 37732 hours (1572 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -132,13 +132,13 @@ Error 13253 [0] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:38:47.100  READ DMA EXT
-  35 00 00 00 08 00 00 00 0b 10 a7 e0 00     01:38:47.100  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 02 45 0f e0 00     01:38:47.100  WRITE DMA EXT
-  25 00 00 00 01 00 00 00 00 00 00 e0 00     01:38:47.100  READ DMA EXT
-  35 00 00 00 08 00 00 0c 54 eb 47 e0 00     01:38:47.100  WRITE DMA EXT
+  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:24:26.300  READ DMA EXT
+  35 00 00 00 08 00 00 00 02 45 5f e0 00     01:24:26.300  WRITE DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     01:24:26.300  READ DMA EXT
+  35 00 00 00 08 00 00 0c 54 eb 47 e0 00     01:24:26.300  WRITE DMA EXT
+  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:24:21.900  READ DMA EXT
 
-Error 13252 [3] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 hours)
+Error 13337 [0] occurred at disk power-on lifetime: 37732 hours (1572 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -149,13 +149,13 @@ Error 13252 [3] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:38:42.600  READ DMA EXT
-  35 00 00 00 08 00 00 00 17 34 47 e0 00     01:38:42.600  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 17 1b 6f e0 00     01:38:42.600  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 04 9f 87 e0 00     01:38:42.600  WRITE DMA EXT
-  35 00 00 00 18 00 00 0c 55 c8 ef e0 00     01:38:42.600  WRITE DMA EXT
+  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:24:21.900  READ DMA EXT
+  35 00 00 00 08 00 00 00 17 39 8f e0 00     01:24:21.900  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 17 1a bf e0 00     01:24:21.900  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 16 62 27 e0 00     01:24:21.900  WRITE DMA EXT
+  35 00 00 00 30 00 00 0c 56 03 bf e0 00     01:24:21.900  WRITE DMA EXT
 
-Error 13251 [2] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 hours)
+Error 13336 [3] occurred at disk power-on lifetime: 37732 hours (1572 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -166,13 +166,13 @@ Error 13251 [2] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:38:38.200  READ DMA EXT
-  25 00 00 00 08 00 00 00 16 bf 67 e0 00     01:38:38.200  READ DMA EXT
-  25 00 00 00 60 00 00 02 3d 40 47 e0 00     01:38:38.200  READ DMA EXT
-  25 00 00 00 80 00 00 02 3d 3f c7 e0 00     01:38:38.200  READ DMA EXT
-  25 00 00 00 80 00 00 02 3d 3f 47 e0 00     01:38:38.200  READ DMA EXT
+  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:24:17.500  READ DMA EXT
+  35 00 00 00 08 00 00 0c 54 eb 3f e0 00     01:24:16.500  WRITE DMA EXT
+  35 00 00 00 08 00 00 0c 54 eb 4f e0 00     01:24:16.500  WRITE DMA EXT
+  35 00 00 00 28 00 00 0c 56 03 97 e0 00     01:24:16.500  WRITE DMA EXT
+  35 00 00 00 08 00 00 00 60 8b 57 e0 00     01:24:15.700  WRITE DMA EXT
 
-Error 13250 [1] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 hours)
+Error 13335 [2] occurred at disk power-on lifetime: 37732 hours (1572 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -183,11 +183,11 @@ Error 13250 [1] occurred at disk power-on lifetime: 37448 hours (1560 days + 8 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:38:12.000  READ DMA EXT
-  35 00 00 00 10 00 00 00 61 52 2f e0 00     01:38:12.000  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 0b 5e 87 e0 00     01:38:12.000  WRITE DMA EXT
-  25 00 00 00 40 00 00 00 02 7c 4f e0 00     01:38:12.000  READ DMA EXT
-  25 00 00 00 08 00 00 00 01 d7 01 e0 00     01:38:12.000  READ DMA EXT
+  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:23:31.700  READ DMA EXT
+  35 00 00 00 08 00 00 00 02 45 5f e0 00     01:23:31.700  WRITE DMA EXT
+  25 00 00 00 01 00 00 00 00 00 00 e0 00     01:23:31.700  READ DMA EXT
+  35 00 00 00 08 00 00 0c 54 eb 47 e0 00     01:23:31.700  WRITE DMA EXT
+  25 00 00 00 08 00 00 00 62 41 7f e0 00     01:23:27.300  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -205,9 +205,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     21/26 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     21/27 Celsius
 Lifetime    Min/Max Temperature:     15/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -216,7 +216,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (68)
+Temperature History Size (Index):    128 (56)
 
 SCT Error Recovery Control:
            Read: Disabled

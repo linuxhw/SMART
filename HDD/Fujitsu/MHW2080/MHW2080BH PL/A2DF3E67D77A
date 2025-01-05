@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.2.0-37-generic] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-arch1-1] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Fujitsu MHW BH
@@ -9,18 +9,18 @@ LU WWN Device Id: 5 00000e ...
 Firmware Version: 891F
 User Capacity:    80,026,361,856 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 2.5, 1.5 Gb/s
-Local Time is:    Mon Nov 27 14:11:21 2023 +03
+Local Time is:    Mon Nov 27 14:26:58 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, frozen [SEC2], Master PW ID: 0x0001
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -60,16 +60,16 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    10464
+  1 Raw_Read_Error_Rate     POSR--   100   100   046    -    50693
   2 Throughput_Performance  P-S---   100   100   030    -    19595264
   3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   097   097   000    -    13532
+  4 Start_Stop_Count        -O--CK   097   097   000    -    13545
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    0 (2000 0)
-  7 Seek_Error_Rate         POSR--   100   100   047    -    458
+  7 Seek_Error_Rate         POSR--   100   100   047    -    3269
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Hours          -O--CK   034   034   000    -    33113
+  9 Power_On_Hours          -O--CK   034   034   000    -    33116
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    10406
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    10419
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   253   253   000    -    0
 185 Unknown_Attribute       ----C-   253   253   000    -    0
@@ -77,17 +77,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   098   000    -    2
 188 Command_Timeout         -O--CK   100   099   000    -    4
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   067   051   000    -    33 (Min/Max 22/34)
+190 Airflow_Temperature_Cel -O---K   066   051   000    -    34 (Min/Max 30/35)
 191 G-Sense_Error_Rate      -O--CK   253   098   000    -    16580622
-192 Power-Off_Retract_Count -O--CK   086   086   000    -    244911769
-193 Load_Cycle_Count        -O--CK   085   085   000    -    306284
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    5
+192 Power-Off_Retract_Count -O--CK   086   086   000    -    245108380
+193 Load_Cycle_Count        -O--CK   085   085   000    -    306333
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    200
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0 (0 7009)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    3833
-203 Run_Out_Cancel          -O----   100   100   000    -    433694704027
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    20642
+203 Run_Out_Cancel          -O----   100   100   000    -    433688215937
 240 Head_Flying_Hours       -OSRCK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -185,8 +185,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     --/36 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     --/37 Celsius
 Lifetime    Min/Max Temperature:     --/51 Celsius
 
 SCT Temperature History Version:     2
@@ -194,7 +194,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (80)
+Temperature History Size (Index):    128 (119)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -213,8 +213,8 @@ ID      Size     Value  Description
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

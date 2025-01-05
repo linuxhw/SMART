@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.2.5-gentoo] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-gentoo] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 2.6, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Nov 22 17:23:37 2023 CET
+Local Time is:    Mon Nov 27 10:44:54 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,17 +66,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   062    -    0
   2 Throughput_Performance  P-S---   100   100   040    -    0
   3 Spin_Up_Time            POS---   222   222   033    -    1
-  4 Start_Stop_Count        -O--C-   097   097   000    -    5157
+  4 Start_Stop_Count        -O--C-   097   097   000    -    5163
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   100   100   040    -    0
-  9 Power_On_Hours          -O--C-   080   080   000    -    8768
+  9 Power_On_Hours          -O--C-   080   080   000    -    8882
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   097   097   000    -    5135
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    5141
 191 G-Sense_Error_Rate      -O-R--   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    3888840842
-193 Load_Cycle_Count        -O--C-   056   056   000    -    440832
-194 Temperature_Celsius     -O----   171   171   000    -    35 (Min/Max 7/53)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    3888840843
+193 Load_Cycle_Count        -O--C-   055   055   000    -    455168
+194 Temperature_Celsius     -O----   166   166   000    -    36 (Min/Max 7/53)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    108
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 363 (device log contains only the most recent 4 errors)
+Device Error Count: 364 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,6 +121,23 @@ Device Error Count: 363 (device log contains only the most recent 4 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 364 [3] occurred at disk power-on lifetime: 8879 hours (369 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 10 00 00 00 b6 30 f0 00 00  Error: UNC at LBA = 0x00b630f0 = 11940080
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 20 00 b8 00 00 00 b6 30 e0 40 00  6d+19:51:20.564  READ FPDMA QUEUED
+  60 00 20 00 b0 00 00 00 b6 ca 60 40 00  6d+19:51:20.561  READ FPDMA QUEUED
+  60 00 20 00 a8 00 00 00 b6 c6 20 40 00  6d+19:51:20.552  READ FPDMA QUEUED
+  60 00 20 00 a0 00 00 00 b6 44 a0 40 00  6d+19:51:20.544  READ FPDMA QUEUED
+  60 00 20 00 98 00 00 00 b6 99 60 40 00  6d+19:51:20.543  READ FPDMA QUEUED
 
 Error 363 [2] occurred at disk power-on lifetime: 8550 hours (356 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -173,23 +190,6 @@ Error 361 [0] occurred at disk power-on lifetime: 8550 hours (356 days + 6 hours
   60 00 08 00 00 00 00 01 b0 af 78 40 00     04:08:16.695  READ FPDMA QUEUED
   60 00 08 00 f8 00 00 01 b0 af 70 40 00     04:08:16.695  READ FPDMA QUEUED
 
-Error 360 [3] occurred at disk power-on lifetime: 8550 hours (356 days + 6 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 58 00 00 01 b0 af 88 01 00  Error: UNC at LBA = 0x01b0af88 = 28356488
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 80 00 00 01 b0 ae e0 40 00     04:08:13.586  READ FPDMA QUEUED
-  60 01 00 00 78 00 00 01 b0 ad e0 40 00     04:08:13.585  READ FPDMA QUEUED
-  60 01 00 00 70 00 00 01 b0 ac e0 40 00     04:08:13.584  READ FPDMA QUEUED
-  60 01 00 00 68 00 00 01 b0 ab e0 40 00     04:08:13.583  READ FPDMA QUEUED
-  60 01 00 00 60 00 00 01 b0 aa e0 40 00     04:08:13.583  READ FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed without error       00%      4730         -
@@ -226,8 +226,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     17/38 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     33/38 Celsius
 Lifetime    Min/Max Temperature:      7/53 Celsius
 Specified Max Operating Temperature:    35 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -237,7 +237,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (121)
+Temperature History Size (Index):    128 (125)
 
 SCT Error Recovery Control:
            Read: Disabled

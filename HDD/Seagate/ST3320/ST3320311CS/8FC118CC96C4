@@ -9,8 +9,8 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    5900 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
-SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Jun 12 15:41:29 2024 CEST
+SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 1.5 Gb/s)
+Local Time is:    Wed Jun 12 19:14:01 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -23,6 +23,7 @@ Wt Cache Reorder: Unknown
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
+See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -61,24 +62,24 @@ SCT capabilities: 	       (0x103b)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    82085403
+  1 Raw_Read_Error_Rate     POSR--   114   099   006    -    83006012
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3674
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3682
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   079   060   030    -    92634875
-  9 Power_On_Hours          -O--CK   093   093   000    -    6623
+  7 Seek_Error_Rate         POSR--   079   060   030    -    92645606
+  9 Power_On_Hours          -O--CK   093   093   000    -    6626
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   099   037   020    -    1842
-184 End-to-End_Error        -O--CK   100   100   099    -    0
+ 12 Power_Cycle_Count       -O--CK   099   037   020    -    1846
+184 End-to-End_Error        -O--CK   001   001   099    NOW  136
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   080   000    -    1466
+188 Command_Timeout         -O--CK   082   069   000    -    1914
 189 High_Fly_Writes         -O-RCK   001   001   000    -    350
-190 Airflow_Temperature_Cel -O---K   068   051   045    -    32 (Min/Max 32/32)
-194 Temperature_Celsius     -O---K   032   049   000    -    32 (0 8 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   047   038   000    -    82085403
+190 Airflow_Temperature_Cel -O---K   069   051   045    -    31 (Min/Max 31/32)
+194 Temperature_Celsius     -O---K   031   049   000    -    31 (0 8 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   047   038   000    -    83006012
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   127   000    -    79432
+199 UDMA_CRC_Error_Count    -OSRCK   200   127   000    -    91222
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,7 +113,38 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 6626 hours (276 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 12 d0 00 05 ff 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 00     01:29:05.693  FLUSH CACHE EXT
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 00     01:29:05.572  SMART RETURN STATUS
+  b0 00 d0 00 01 00 00 4f 00 c2 00 00 00     01:29:05.556  SMART READ DATA
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 00     01:29:05.546  SMART RETURN STATUS
+  b0 00 d1 00 01 00 00 4f 00 c2 00 00 00     01:29:05.435  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -150,17 +182,13 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     32/32 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     31/32 Celsius
 Lifetime    Min/Max Temperature:      8/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
-SCT Temperature History Version:     2
-Temperature Sampling Period:         2 minutes
-Temperature Logging Interval:        94 minutes
-Min/Max recommended Temperature:      1/61 Celsius
-Min/Max Temperature Limit:            2/60 Celsius
-Temperature History Size (Index):    128 (36)
+Write SCT Data Table failed: scsi error badly formed scsi parameters
+Read SCT Temperature History failed
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -172,12 +200,12 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
-0x0001  2            2  Command failed due to ICRC error
-0x0003  2            1  R_ERR response for device-to-host data FIS
-0x0004  2            1  R_ERR response for host-to-device data FIS
-0x0006  2            1  R_ERR response for device-to-host non-data FIS
-0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x000a  2         4995  Device-to-host register FISes sent due to a COMRESET
+0x0001  2         4663  Command failed due to ICRC error
+0x0003  2            3  R_ERR response for device-to-host data FIS
+0x0004  2         4660  R_ERR response for host-to-device data FIS
+0x0006  2            3  R_ERR response for device-to-host non-data FIS
+0x0007  2           59  R_ERR response for host-to-device non-data FIS
 
 
 
