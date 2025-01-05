@@ -1,0 +1,259 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.11.4-301.fc41.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     SanDisk based SSDs
+Device Model:     SanDisk iSSD P4 8GB
+Serial Number:    --
+LU WWN Device Id: 5 001b45 ...
+Firmware Version: SSD 9.14
+User Capacity:    8,012,390,400 bytes [8.01 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Form Factor:      1.8 inches
+TRIM Command:     Available
+Device is:        In smartctl database 7.3/5528
+ATA Version is:   ATA8-ACS T13/1699-D revision 2d
+SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Wed Dec 25 14:00:33 2024 EST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Unavailable
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Disabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(  120) seconds.
+Offline data collection
+capabilities: 			 (0x15) SMART execute Offline immediate.
+					No Auto Offline data collection support.
+					Abort Offline collection upon new
+					command.
+					No Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (   2) minutes.
+
+SMART Attributes Data Structure revision number: 1
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
+  9 Power_On_Hours          -O----   100   100   000    -    17743
+ 12 Power_Cycle_Count       -O----   100   100   000    -    4812
+171 Program_Fail_Count      -O----   100   100   000    -    87
+172 Erase_Fail_Count        -O----   100   100   000    -    15563232
+173 Avg_Write/Erase_Count   -O----   100   100   000    -    2689
+174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    1263
+187 Reported_Uncorrect      -O----   100   100   000    -    206
+199 UDMA_CRC_Error_Count    -O----   100   100   000    -    0
+230 Perc_Write/Erase_Count  -O----   089   100   000    -    0
+232 Perc_Avail_Resrvd_Space PO----   098   100   005    -    0
+234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    1773
+241 Total_LBAs_Written      -O----   100   100   000    -    18322603570
+242 Total_LBAs_Read         -O----   100   100   000    -    14093487635
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+General Purpose Log Directory Version 1
+SMART           Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00       GPL,SL  R/O      1  Log Directory
+0x03       GPL,SL  R/O     16  Ext. Comprehensive SMART error log
+0x06       GPL,SL  R/O      1  SMART self-test log
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
+
+SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
+Device Error Count: 180 (device log contains only the most recent 64 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 180 [51] occurred at disk power-on lifetime: 5 hours (0 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 ee be 00 e0 00     00:23:36.782  READ DMA
+  c8 00 00 00 68 00 00 00 ee bf 88 e0 00     00:23:36.781  READ DMA
+  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:23:36.781  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:23:36.780  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:23:36.780  IDENTIFY DEVICE
+
+Error 179 [50] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 00 00 00 00 e0 00  Error: UNC 8 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 80 00 00 00 ee bf 00 e0 00     00:23:36.733  READ DMA
+  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:23:36.732  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:23:36.732  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:23:36.732  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:23:36.732  SET FEATURES [Set transfer mode]
+
+Error 178 [49] occurred at disk power-on lifetime: 55 hours (2 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 f8 00 00 00 ee be 00 e0 00     00:23:36.646  READ DMA
+  25 00 00 02 00 00 00 00 ee bc 00 e0 00     00:23:36.644  READ DMA EXT
+  25 00 00 01 f8 00 00 00 00 0a 08 e0 00     00:23:36.641  READ DMA EXT
+  c8 00 00 00 f8 00 00 00 00 09 08 e0 00     00:23:36.639  READ DMA
+  c8 00 00 00 78 00 00 00 00 08 88 e0 00     00:23:36.638  READ DMA
+
+Error 177 [48] occurred at disk power-on lifetime: 5 hours (0 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 ee be 00 e0 00     00:00:32.760  READ DMA
+  c8 00 00 00 68 00 00 00 ee bf 88 e0 00     00:00:32.759  READ DMA
+  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:00:32.759  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:32.759  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:32.758  IDENTIFY DEVICE
+
+Error 176 [47] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 00 00 00 00 e0 00  Error: UNC 8 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 80 00 00 00 ee bf 00 e0 00     00:00:32.687  READ DMA
+  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:00:32.687  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:32.687  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:32.686  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:00:32.686  SET FEATURES [Set transfer mode]
+
+Error 175 [46] occurred at disk power-on lifetime: 6 hours (0 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 f8 00 00 00 ee be 00 e0 00     00:00:32.608  READ DMA
+  25 00 00 02 00 00 00 00 ee bc 00 e0 00     00:00:32.605  READ DMA EXT
+  25 00 00 01 f8 00 00 00 00 0a 08 e0 00     00:00:32.603  READ DMA EXT
+  c8 00 00 00 f8 00 00 00 00 09 08 e0 00     00:00:32.601  READ DMA
+  c8 00 00 00 78 00 00 00 00 08 88 e0 00     00:00:32.600  READ DMA
+
+Error 174 [45] occurred at disk power-on lifetime: 22 hours (0 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 00 00 00 00 e0 00  Error: UNC 8 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 80 00 00 00 ee bf 00 e0 00     00:00:15.140  READ DMA
+  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:00:15.140  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:15.140  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:15.138  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:00:15.138  SET FEATURES [Set transfer mode]
+
+Error 173 [44] occurred at disk power-on lifetime: 5 hours (0 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 00 00 00 e0 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 00 ee be 00 e0 00     00:00:15.102  READ DMA
+  ef 00 10 00 03 00 00 00 00 00 00 a0 00     00:00:15.101  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:15.101  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00     00:00:15.101  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 00     00:00:15.100  SET FEATURES [Set transfer mode]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
