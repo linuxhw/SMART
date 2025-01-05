@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.1-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     KINGSTON USNS8180S3512GJ
@@ -13,7 +13,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Jan 13 20:59:12 2023 GMT
+Local Time is:    Mon Dec 16 17:35:02 2024 GMT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -44,25 +44,25 @@ Error logging capability:        (0x01)	Error logging supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    12745
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    7115
+  9 Power_On_Hours          -O--C-   100   100   000    -    20086
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    11361
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       ------   100   100   000    -    3801210
+173 Unknown_Attribute       ------   100   100   000    -    7471284
 181 Program_Fail_Cnt_Total  -O--C-   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    234
-194 Temperature_Celsius     PO---K   045   016   000    -    55 (Min/Max 13/84)
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    402
+194 Temperature_Celsius     PO---K   042   016   000    -    58 (Min/Max 13/84)
 196 Reallocated_Event_Count ------   100   100   000    -    0
-218 Unknown_Attribute       ------   100   100   000    -    0
-231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    97
-233 Media_Wearout_Indicator PO--C-   100   100   000    -    26361
-241 Total_LBAs_Written      -O--C-   100   100   000    -    23553
-242 Total_LBAs_Read         -O--C-   100   100   000    -    13947
-244 Unknown_Attribute       ------   100   100   000    -    58
-245 Unknown_Attribute       ------   100   100   000    -    122
-246 Unknown_Attribute       ------   100   100   000    -    2613440
+218 Unknown_Attribute       ------   100   100   000    -    1
+231 Unknown_SSD_Attribute   PO--C-   100   100   000    -    94
+233 Media_Wearout_Indicator PO--C-   100   100   000    -    51556
+241 Total_LBAs_Written      -O--C-   100   100   000    -    49570
+242 Total_LBAs_Read         -O--C-   100   100   000    -    27986
+244 Unknown_Attribute       ------   100   100   000    -    114
+245 Unknown_Attribute       ------   100   100   000    -    180
+246 Unknown_Attribute       ------   100   100   000    -    5096704
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,20 +99,20 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            7115  ---  Lifetime Power-On Resets
-0x01  0x010  4           12745  ---  Power-on Hours
-0x01  0x018  6     49395274139  ---  Logical Sectors Written
-0x01  0x028  6     29249118324  ---  Logical Sectors Read
+0x01  0x008  4           11361  ---  Lifetime Power-On Resets
+0x01  0x010  4           20086  ---  Power-on Hours
+0x01  0x018  6    103956900785  ---  Logical Sectors Written
+0x01  0x028  6     58692716536  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              55  ---  Current Temperature
+0x05  0x008  1              58  ---  Current Temperature
 0x05  0x020  1              84  ---  Highest Temperature
 0x05  0x028  1              13  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -127,10 +127,12 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           15  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           15  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            6  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 

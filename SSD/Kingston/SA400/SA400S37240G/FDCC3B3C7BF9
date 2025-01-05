@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Phison Driven SSDs
@@ -14,11 +14,11 @@ TRIM Command:     Available
 Device is:        In smartctl database
 ATA Version is:   ACS-3 T13/2161-D revision 4
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Apr  7 21:55:32 2023 BST
+Local Time is:    Thu Dec  7 11:18:46 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM feature is:   Disabled
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -60,8 +60,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    100
-  9 Power_On_Hours          -O--CK   100   100   000    -    96
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    89
+  9 Power_On_Hours          -O--CK   100   100   000    -    276
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    506
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -73,18 +73,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    3
-194 Temperature_Celsius     -O---K   031   044   000    -    31 (Min/Max 13/44)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    11
+194 Temperature_Celsius     -O---K   035   052   000    -    35 (Min/Max 7/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   099   099   000    -    99
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    4
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    936
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    257
-244 Average_Erase_Count     ------   100   100   000    -    11
-245 Max_Erase_Count         ------   100   100   000    -    12
-246 Total_Erase_Count       ------   100   100   000    -    11293
+231 SSD_Life_Left           ------   095   095   000    -    95
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    372
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    4432
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    1258
+244 Average_Erase_Count     ------   100   100   000    -    55
+245 Max_Erase_Count         ------   100   100   000    -    63
+246 Total_Erase_Count       ------   100   100   000    -    55169
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -113,11 +113,21 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%        90         -
-# 2  Short offline       Completed without error       00%        70         -
-# 3  Short offline       Completed without error       00%        70         -
-# 4  Short offline       Completed without error       00%        70         -
-# 5  Short offline       Completed without error       00%        68         -
+# 1  Short offline       Aborted by host               80%       275         -
+# 2  Short offline       Interrupted (host reset)      80%       266         -
+# 3  Short offline       Completed without error       00%       242         -
+# 4  Short offline       Completed without error       00%       211         -
+# 5  Short offline       Aborted by host               90%       191         -
+# 6  Short offline       Aborted by host               90%       169         -
+# 7  Short offline       Completed without error       00%       146         -
+# 8  Short offline       Aborted by host               90%       146         -
+# 9  Short offline       Completed without error       00%       111         -
+#10  Short offline       Completed without error       00%       111         -
+#11  Short offline       Completed without error       00%        90         -
+#12  Short offline       Completed without error       00%        70         -
+#13  Short offline       Completed without error       00%        70         -
+#14  Short offline       Completed without error       00%        70         -
+#15  Short offline       Completed without error       00%        68         -
 
 Selective Self-tests/Logging not supported
 
@@ -126,14 +136,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              89  ---  Lifetime Power-On Resets
-0x01  0x010  4              96  ---  Power-on Hours
-0x01  0x018  6      1963764109  ---  Logical Sectors Written
-0x01  0x020  6           24002  ---  Number of Write Commands
-0x01  0x028  6       540356172  ---  Logical Sectors Read
-0x01  0x030  6           34973  ---  Number of Read Commands
+0x01  0x008  4             506  ---  Lifetime Power-On Resets
+0x01  0x010  4             276  ---  Power-on Hours
+0x01  0x018  6       704875447  ---  Logical Sectors Written
+0x01  0x020  6           36811  ---  Number of Write Commands
+0x01  0x028  6      2639696848  ---  Logical Sectors Read
+0x01  0x030  6           53169  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -145,7 +155,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
-
-
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 

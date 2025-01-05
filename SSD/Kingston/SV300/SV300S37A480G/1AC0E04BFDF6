@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.12.4-desktop-1omv4050] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.9.7-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SandForce Driven SSDs
@@ -11,10 +11,10 @@ User Capacity:    480,103,981,056 bytes [480 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Tue May 25 19:03:07 2021 BST
+Local Time is:    Mon Jul 22 20:07:25 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -32,7 +32,7 @@ General SMART Values:
 Offline data collection status:  (0x05)	Offline data collection activity
 					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Disabled.
-Self-test execution status:      (  25)	The self-test routine was aborted by
+Self-test execution status:      (  17)	The self-test routine was aborted by
 					the host.
 Total time to complete Offline 
 data collection: 		(    0) seconds.
@@ -62,30 +62,30 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    0/4241642
+  1 Raw_Read_Error_Rate     -O--CK   095   095   050    -    0/8487649
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   088   088   000    -    10981h+44m+02.390s
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6346
+  9 Power_On_Hours_and_Msec -O--CK   083   083   000    -    15257h+36m+48.810s
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8522
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    194
-177 Wear_Range_Delta        ------   000   000   000    -    2
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    210
+177 Wear_Range_Delta        ------   000   000   000    -    1
 181 Program_Fail_Count      -O-R--   100   100   000    -    0
 182 Erase_Fail_Count        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   030   052   000    -    30 (Min/Max 16/52)
-194 Temperature_Celsius     -O---K   030   052   000    -    30 (Min/Max 16/52)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/4241642
+189 Airflow_Temperature_Cel ------   039   052   000    -    39 (Min/Max 16/52)
+194 Temperature_Celsius     -O---K   039   052   000    -    39 (Min/Max 16/52)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/8487649
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/4241642
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/4241642
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/8487649
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/8487649
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
-231 SSD_Life_Left           ------   099   099   011    -    81604378625
-233 SandForce_Internal      -O--CK   000   000   000    -    22442
-234 SandForce_Internal      -O--CK   000   000   000    -    19839
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    19839
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    30445
-244 Unknown_Attribute       ------   099   099   010    -    4325415
+231 SSD_Life_Left           ------   098   098   011    -    81604378625
+233 SandForce_Internal      -O--CK   000   000   000    -    33072
+234 SandForce_Internal      -O--CK   000   000   000    -    32115
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    32115
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    48767
+244 Unknown_Attribute       ------   099   099   010    -    4653114
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,14 +114,17 @@ SMART Error Log not supported
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     10667         -
-# 2  Short offline       Completed without error       00%       129         -
-# 3  Short offline       Completed without error       00%       102         -
-# 4  Short offline       Completed without error       00%        87         -
-# 5  Short offline       Completed without error       00%        24         -
-# 6  Short offline       Completed without error       00%        18         -
-# 7  Short offline       Completed without error       00%         9         -
-# 8  Short offline       Completed without error       00%         7         -
+# 1  Short offline       Completed without error       00%     14851         -
+# 2  Short offline       Completed without error       00%     14846         -
+# 3  Short offline       Completed without error       00%     14846         -
+# 4  Short offline       Completed without error       00%     10667         -
+# 5  Short offline       Completed without error       00%       129         -
+# 6  Short offline       Completed without error       00%       102         -
+# 7  Short offline       Completed without error       00%        87         -
+# 8  Short offline       Completed without error       00%        24         -
+# 9  Short offline       Completed without error       00%        18         -
+#10  Short offline       Completed without error       00%         9         -
+#11  Short offline       Completed without error       00%         7         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -137,7 +140,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
+Current Temperature:                    39 Celsius
 Power Cycle Min/Max Temperature:     16/52 Celsius
 Lifetime    Min/Max Temperature:     16/52 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -147,27 +150,27 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (349)
+Temperature History Size (Index):    478 (136)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            6346  ---  Lifetime Power-On Resets
-0x01  0x010  4           10981  ---  Power-on Hours
-0x01  0x018  6     41607319795  ---  Logical Sectors Written
-0x01  0x028  6     63848864637  ---  Logical Sectors Read
+0x01  0x008  4            8522  ---  Lifetime Power-On Resets
+0x01  0x010  4           15257  ---  Power-on Hours
+0x01  0x018  6     67350952945  ---  Logical Sectors Written
+0x01  0x028  6    102273015164  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               4  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              34  ---  Average Short Term Temperature
-0x05  0x018  1              35  ---  Average Long Term Temperature
-0x05  0x020  1              51  ---  Highest Temperature
+0x05  0x008  1              39  ---  Current Temperature
+0x05  0x010  1              41  ---  Average Short Term Temperature
+0x05  0x018  1              33  ---  Average Long Term Temperature
+0x05  0x020  1              52  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
-0x05  0x030  1              42  ---  Highest Average Short Term Temperature
+0x05  0x030  1              43  ---  Highest Average Short Term Temperature
 0x05  0x038  1              24  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              35  ---  Highest Average Long Term Temperature
 0x05  0x048  1              27  ---  Lowest Average Long Term Temperature
@@ -177,7 +180,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4               0  ---  Number of Hardware Resets
-0x06  0x010  4           40011  ---  Number of ASR Events
+0x06  0x010  4           57846  ---  Number of ASR Events
 0x06  0x018  4               2  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
@@ -195,8 +198,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           20  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           20  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           12  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

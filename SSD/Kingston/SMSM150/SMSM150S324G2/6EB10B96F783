@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.15.6-2-MANJARO] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.3-arch1-1] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     KINGSTON SMSM150S324G2
@@ -9,10 +9,11 @@ User Capacity:    24,015,495,168 bytes [24.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      < 1.8 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+TRIM Command:     Available
+Device is:        Not in smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s
-Local Time is:    Sun Dec 12 03:52:07 2021 +0330
+Local Time is:    Thu Sep 21 08:12:28 2023 +0330
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -63,27 +64,27 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    17664
+  9 Power_On_Hours          -O--C-   100   100   000    -    20000
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    5377
-168 Unknown_Attribute       -O--C-   100   100   000    -    8
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    8512
+168 Unknown_Attribute       -O--C-   100   100   000    -    9
 170 Unknown_Attribute       PO----   100   100   010    -    21
-173 Unknown_Attribute       -O--C-   100   100   000    -    12517621
+173 Unknown_Attribute       -O--C-   100   100   000    -    17563920
 175 Program_Fail_Count_Chip -O--C-   100   100   010    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    299
-194 Temperature_Celsius     PO---K   036   039   000    -    36
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    437
+194 Temperature_Celsius     PO---K   040   041   000    -    40
 196 Reallocated_Event_Count -O----   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    PO-R--   100   100   050    -    0
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-233 Media_Wearout_Indicator PO-R--   100   100   000    -    4089
+233 Media_Wearout_Indicator PO-R--   100   100   000    -    5902
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    2773
-242 Total_LBAs_Read         -O--C-   100   100   000    -    1684
-244 Unknown_Attribute       -O----   100   100   050    -    191
-245 Unknown_Attribute       -O----   100   100   050    -    245
-246 Unknown_Attribute       -O----   100   100   050    -    1250807
+241 Total_LBAs_Written      -O--C-   100   100   000    -    4512
+242 Total_LBAs_Read         -O--C-   100   100   000    -    2429
+244 Unknown_Attribute       -O----   100   100   050    -    268
+245 Unknown_Attribute       -O----   100   100   050    -    272
+246 Unknown_Attribute       -O----   100   100   050    -    1752751
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -109,9 +110,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         3         -
-# 2  Short offline       Completed without error       00%         2         -
-# 3  Short offline       Completed without error       00%         2         -
+# 1  Short offline       Completed without error       00%        12         -
+# 2  Short offline       Completed without error       00%         0         -
+# 3  Short offline       Completed without error       00%         1         -
+# 4  Short offline       Completed without error       00%         0         -
+# 5  Short offline       Completed without error       00%         0         -
+# 6  Short offline       Completed without error       00%         0         -
+# 7  Short offline       Completed without error       00%         0         -
+# 8  Short offline       Completed without error       00%         0         -
+# 9  Short offline       Completed without error       00%         0         -
+#10  Short offline       Completed without error       00%         0         -
+#11  Short offline       Completed without error       00%         0         -
+#12  Short offline       Completed without error       00%         0         -
+#13  Short offline       Completed without error       00%         0         -
+#14  Short offline       Completed without error       00%        14         -
+#15  Short offline       Completed without error       00%         0         -
+#16  Short offline       Completed without error       00%         5         -
+#17  Short offline       Completed without error       00%        14         -
+#18  Short offline       Completed without error       00%         1         -
+#19  Short offline       Completed without error       00%         0         -
 
 Selective Self-tests/Logging not supported
 
@@ -129,7 +146,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4          112  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4          252  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     LITEONIT LAT-128M2S
@@ -10,10 +10,10 @@ User Capacity:    128,035,676,160 bytes [128 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 4a
 SATA Version is:  SATA 3.0, 6.0 Gb/s
-Local Time is:    Sun Nov 14 20:35:02 2021 CET
+Local Time is:    Fri Jan 19 20:12:21 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -63,11 +63,11 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO----   100   100   000    -    0 (0 112)
-  9 Power_On_Hours          PO----   100   100   000    -    8521
- 12 Power_Cycle_Count       PO----   100   100   000    -    4591
+  9 Power_On_Hours          PO----   100   100   000    -    9186
+ 12 Power_Cycle_Count       PO----   100   100   000    -    5666
 175 Program_Fail_Count_Chip PO----   100   100   010    -    0
 176 Erase_Fail_Count_Chip   PO----   100   100   010    -    0
-177 Wear_Leveling_Count     PO----   100   100   000    -    80185
+177 Wear_Leveling_Count     PO----   100   100   000    -    89558
 178 Used_Rsvd_Blk_Cnt_Chip  PO----   100   100   010    -    3
 179 Used_Rsvd_Blk_Cnt_Tot   PO----   100   100   010    -    7
 180 Unused_Rsvd_Blk_Cnt_Tot PO----   100   100   010    -    3801
@@ -76,8 +76,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      PO----   100   100   010    -    7
 195 Hardware_ECC_Recovered  PO----   100   100   000    -    1
 198 Offline_Uncorrectable   ------   100   100   000    -    0
-241 Total_LBAs_Written      PO----   100   100   000    -    1873877584
-242 Total_LBAs_Read         PO----   100   100   000    -    9739234
+241 Total_LBAs_Written      PO----   100   100   000    -    2004107904
+242 Total_LBAs_Read         PO----   100   100   000    -    10692818
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -124,16 +124,16 @@ Error 0 occurred at disk power-on lifetime: 768 hours (32 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  00 00 00 00 03 00 00   at LBA = 0x00000300 = 768
+  00 00 00 00 03 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  c5 00 00 90 20 20 38 00  46d+14:35:49.696  WRITE MULTIPLE
-  c5 00 00 90 20 20 38 00  46d+14:28:10.944  WRITE MULTIPLE
-  c5 00 00 90 20 20 38 00  46d+14:13:58.976  WRITE MULTIPLE
-  c5 00 00 90 20 20 38 00  46d+14:00:52.544  WRITE MULTIPLE
-  c5 00 00 90 20 20 38 00  46d+13:46:40.576  WRITE MULTIPLE
+  4a 00 00 10 20 90 7d 01  34d+22:35:40.480  [RESERVED]
+  4a 00 00 10 20 90 7d 01  34d+22:23:39.584  [RESERVED]
+  4a 00 00 10 20 90 7d 01  34d+22:16:00.832  [RESERVED]
+  4a 00 00 10 20 90 7d 01  34d+22:02:54.400  [RESERVED]
+  4a 00 00 10 20 90 7d 00  34d+21:50:53.504  [RESERVED]
 
 Error -1 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -141,16 +141,16 @@ Error -1 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  20 ef 38 c5 40 60 cd  Device Fault; Error: 
+  90 b3 7d 4a 40 60 c1
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  ef 20 38 c5 40 60 c0 20  27d+23:05:19.104  SET FEATURES [Set Time-ltd R/W WCT]
-  ef 20 38 c5 40 60 b4 20  27d+23:05:19.104  SET FEATURES [Set Time-ltd R/W WCT]
-  ef 20 38 c5 40 60 a7 20  27d+23:05:19.104  SET FEATURES [Set Time-ltd R/W WCT]
-  ef 20 38 c5 40 60 9b 20  27d+23:05:19.104  SET FEATURES [Set Time-ltd R/W WCT]
-  00 00 00 00 00 03 00 00  27d+23:05:19.104  NOP [Abort queued commands]
+  b3 90 7d 4a 40 60 b4 20   3d+02:33:55.457  [RESERVED]
+  b3 90 7d 4a 40 60 a8 20   3d+02:33:55.457  [RESERVED]
+  b3 90 7d 4a 40 60 9d 20   3d+02:33:55.457  [RESERVED]
+  b3 90 7d 4a 40 60 96 20   3d+02:33:55.457  [RESERVED]
+  00 00 00 00 00 03 00 00   3d+02:33:55.456  NOP [Abort queued commands]
 
 Error -2 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -158,16 +158,16 @@ Error -2 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  c5 00 40 60 8e ef 00
+  4a 00 40 60 8a b3 01
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  00 c5 40 60 82 ef 00 38   6d+05:43:24.928  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 c5 40 60 75 ef 00 38   6d+05:43:24.928  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 c5 40 60 69 ef 00 38   6d+05:43:24.928  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 c5 40 60 5d ef 00 38   6d+05:43:24.928  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 00 03 00 00 00 00   6d+05:43:24.928  NOP [Abort queued commands]
+  00 4a 40 60 7e b3 01 7d  27d+23:40:20.352  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 4a 40 60 73 b3 01 7d  27d+23:40:20.352  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 4a 40 60 6c b3 01 7d  27d+23:40:20.352  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 4a 40 60 5f b3 01 7d  27d+23:40:20.352  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 00 00 03 00 00 00 00  27d+23:40:20.352  NOP [Abort queued commands]
 
 Error -3 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -175,16 +175,16 @@ Error -3 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  60 00 50 ef 00 00 00
+  60 00 54 b3 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  90 60 44 ef 00 00 00 40  38d+07:06:29.792  EXECUTE DEVICE DIAGNOSTIC
-  90 60 38 ef 00 00 00 40  38d+07:06:29.792  EXECUTE DEVICE DIAGNOSTIC
-  90 60 2b ef 00 00 00 40  38d+07:06:29.792  EXECUTE DEVICE DIAGNOSTIC
-  90 60 1f ef 00 00 00 40  38d+07:06:29.792  EXECUTE DEVICE DIAGNOSTIC
-  90 03 00 00 00 00 00 00  38d+07:06:29.792  EXECUTE DEVICE DIAGNOSTIC
+  10 60 4d b3 01 00 00 40  14d+11:09:02.880  RECALIBRATE [OBS-4]
+  10 60 41 b3 01 00 00 40  14d+11:09:02.880  RECALIBRATE [OBS-4]
+  10 60 35 b3 01 00 00 40  14d+11:09:02.880  RECALIBRATE [OBS-4]
+  10 60 29 b3 01 00 00 40  14d+11:09:02.880  RECALIBRATE [OBS-4]
+  10 03 00 00 00 00 00 00  14d+11:09:02.880  RECALIBRATE [OBS-4]
 
 Error -4 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -192,16 +192,16 @@ Error -4 occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER ST SC SN CL CH DH
   -- -- -- -- -- -- --
-  ef 00 00 00 00 00 03   at LBA = 0x03000000 = 50331648
+  b3 00 01 00 00 00 03
 
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  20 ef 00 00 00 90 20 06  18d+16:34:17.528  READ SECTOR(S)
-  20 ee 00 00 00 90 20 f9  18d+16:34:17.528  READ SECTOR(S)
-  20 f0 00 00 00 90 20 1e  18d+16:34:17.528  READ SECTOR(S)
-  20 f0 00 00 00 90 20 11  18d+16:34:17.528  READ SECTOR(S)
-  20 00 00 00 00 90 20 00  18d+16:34:17.528  READ SECTOR(S)
+  90 b3 01 00 00 10 20 17  18d+16:33:46.109  EXECUTE DEVICE DIAGNOSTIC
+  90 b3 01 00 00 10 20 0a  18d+16:33:46.109  EXECUTE DEVICE DIAGNOSTIC
+  90 b4 01 00 00 10 20 0a  18d+16:33:46.109  EXECUTE DEVICE DIAGNOSTIC
+  90 b3 01 00 00 10 20 fd  18d+16:33:46.109  EXECUTE DEVICE DIAGNOSTIC
+  90 00 00 00 00 10 20 00  18d+16:33:46.109  EXECUTE DEVICE DIAGNOSTIC
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -239,10 +239,10 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
-0x0007  2           23  R_ERR response for host-to-device non-data FIS
+0x0007  2            5  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           23  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

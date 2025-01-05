@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     LITEON L8H-256V2G-HP
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      < 1.8 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Feb 14 01:17:33 2021 CET
+Local Time is:    Mon Nov 27 22:14:42 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,23 +66,23 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   002    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11025
+  9 Power_On_Hours          -O--CK   100   100   000    -    19481
  11 Unknown_SSD_Attribute   -O---K   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2143
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3778
 170 Unknown_Attribute       PO--CK   100   100   005    -    0
 171 Unknown_Attribute       -O---K   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       PO--CK   097   097   005    -    194
-174 Unknown_Attribute       -O--CK   100   100   000    -    207
+173 Unknown_Attribute       PO--CK   095   095   005    -    287
+174 Unknown_Attribute       -O--CK   100   100   000    -    312
 183 Runtime_Bad_Block       -O--CK   100   100   001    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    157
-241 Total_LBAs_Written      PO----   100   100   000    -    1106529
-242 Total_LBAs_Read         PO----   100   100   000    -    3647038
+199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    269
+241 Total_LBAs_Written      PO----   100   100   000    -    1571529
+242 Total_LBAs_Read         PO----   100   100   000    -    5039259
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,13 +114,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      8432         -
-# 2  Short offline       Completed without error       00%      8299         -
-# 3  Short offline       Completed without error       00%      8144         -
-# 4  Short offline       Completed without error       00%      8122         -
-# 5  Short offline       Completed without error       00%      5830         -
-# 6  Extended offline    Completed without error       00%      5120         -
-# 7  Short offline       Completed without error       00%      2147         -
+# 1  Short offline       Completed without error       00%     19318         -
+# 2  Short offline       Completed without error       00%     19317         -
+# 3  Short offline       Completed without error       00%     19300         -
+# 4  Extended offline    Completed without error       00%     19294         -
+# 5  Short offline       Completed without error       00%     15377         -
+# 6  Short offline       Completed without error       00%     11915         -
+# 7  Short offline       Completed without error       00%     11893         -
+# 8  Extended offline    Completed without error       00%     11881         -
+# 9  Short offline       Completed without error       00%     11860         -
+#10  Short offline       Completed without error       00%     11780         -
+#11  Short offline       Completed without error       00%     11748         -
+#12  Short offline       Completed without error       00%     11733         -
+#13  Extended offline    Completed without error       00%     11712         -
+#14  Short offline       Completed without error       00%     11651         -
+#15  Short offline       Completed without error       00%     11620         -
+#16  Short offline       Completed without error       00%     11616         -
+#17  Short offline       Completed without error       00%     11610         -
+#18  Short offline       Completed without error       00%     11600         -
+#19  Short offline       Completed without error       00%     11595         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -154,24 +166,24 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2143  ---  Lifetime Power-On Resets
-0x01  0x010  4           11025  ---  Power-on Hours
-0x01  0x018  6      3798089773  ---  Logical Sectors Written
-0x01  0x020  6      2306762723  ---  Number of Write Commands
-0x01  0x028  6      2789130725  ---  Logical Sectors Read
-0x01  0x030  6      4030327566  ---  Number of Read Commands
+0x01  0x008  4            3778  ---  Lifetime Power-On Resets
+0x01  0x010  4           19481  ---  Power-on Hours
+0x01  0x018  6      4207532068  ---  Logical Sectors Written
+0x01  0x020  6      2667293426  ---  Number of Write Commands
+0x01  0x028  6      3835405175  ---  Logical Sectors Read
+0x01  0x030  6       672360374  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (empty) ==
 0x03  =====  =               =  ===  == Rotating Media Statistics (empty) ==
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             280  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             465  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              55  ---  Current Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           24640  ---  Number of Hardware Resets
-0x06  0x018  4             157  ---  Number of Interface CRC Errors
+0x06  0x008  4           42574  ---  Number of Hardware Resets
+0x06  0x018  4             269  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -189,7 +201,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

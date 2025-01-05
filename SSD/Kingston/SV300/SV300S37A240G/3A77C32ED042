@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.0.2-zen1-1-zen] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.9-arch2-1] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     SandForce Driven SSDs
@@ -11,10 +11,10 @@ User Capacity:    240,057,409,536 bytes [240 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS, ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Oct 24 22:25:35 2022 CEST
+Local Time is:    Mon Nov  6 10:26:24 2023 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,11 +65,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0/0
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   054   054   000    -    40770h+38m+28.940s
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2611
+  9 Power_On_Hours_and_Msec -O--CK   049   049   000    -    45118h+32m+32.390s
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    3030
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    218
+174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    234
 177 Wear_Range_Delta        ------   000   000   000    -    97
 181 Program_Fail_Count      -O-R--   100   100   000    -    0
 182 Erase_Fail_Count        -O--CK   100   100   000    -    0
@@ -82,11 +82,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/0
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           ------   093   093   011    -    1
-233 SandForce_Internal      -O--CK   000   000   000    -    26917
-234 SandForce_Internal      -O--CK   000   000   000    -    14110
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    14110
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    11430
-244 Unknown_Attribute       ------   097   097   010    -    196673639
+233 SandForce_Internal      -O--CK   000   000   000    -    27181
+234 SandForce_Internal      -O--CK   000   000   000    -    14223
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    14223
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    11574
+244 Unknown_Attribute       ------   097   097   010    -    196673640
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -146,24 +146,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (191)
+Temperature History Size (Index):    478 (253)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            2611  ---  Lifetime Power-On Resets
-0x01  0x010  4           40770  ---  Power-on Hours
-0x01  0x018  6     29591586196  ---  Logical Sectors Written
-0x01  0x028  6     23972271612  ---  Logical Sectors Read
+0x01  0x008  4            3030  ---  Lifetime Power-On Resets
+0x01  0x010  4           45118  ---  Power-on Hours
+0x01  0x018  6     29828128181  ---  Logical Sectors Written
+0x01  0x028  6     24273665761  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              28  ---  Current Temperature
 0x05  0x010  1              26  ---  Average Short Term Temperature
-0x05  0x018  1              33  ---  Average Long Term Temperature
+0x05  0x018  1              32  ---  Average Long Term Temperature
 0x05  0x020  1              58  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x05  0x030  1              41  ---  Highest Average Short Term Temperature
@@ -176,7 +176,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4               0  ---  Number of Hardware Resets
-0x06  0x010  4           19195  ---  Number of ASR Events
+0x06  0x010  4           21857  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
@@ -195,7 +195,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            2  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
