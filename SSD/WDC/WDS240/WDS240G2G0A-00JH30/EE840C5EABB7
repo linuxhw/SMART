@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.10-arch1-1] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-arch1-1] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,11 +15,11 @@ TRIM Command:     Available, deterministic
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Aug 17 06:29:37 2023 CEST
+Local Time is:    Sat Aug 19 08:37:05 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM feature is:   Disabled
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -60,8 +60,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    16585
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    6004
+  9 Power_On_Hours          -O--CK   100   100   000    -    16596
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    6014
 165 Block_Erase_Count       -O--CK   100   100   000    -    2801
 166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    30
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    0
@@ -71,11 +71,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    30
-174 Unexpected_Power_Loss   -O--CK   100   100   000    -    545
+174 Unexpected_Power_Loss   -O--CK   100   100   000    -    546
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   064   049   000    -    36 (Min/Max 13/49)
+194 Temperature_Celsius     -O---K   063   049   000    -    37 (Min/Max 13/49)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
 230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x080006000800
 232 Available_Reservd_Space PO--CK   100   100   005    -    100
@@ -126,13 +126,13 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            6004  ---  Lifetime Power-On Resets
-0x01  0x010  4           16585  ---  Power-on Hours
+0x01  0x008  4            6014  ---  Lifetime Power-On Resets
+0x01  0x010  4           16596  ---  Power-on Hours
 0x01  0x018  6     19528371920  ---  Logical Sectors Written
-0x01  0x028  6     16223813498  ---  Logical Sectors Read
-0x01  0x038  6           16585  ---  Date and Time TimeStamp
+0x01  0x028  6     16224280345  ---  Logical Sectors Read
+0x01  0x038  6           16596  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              36  ---  Current Temperature
+0x05  0x008  1              37  ---  Current Temperature
 0x05  0x010  1               -  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              48  ---  Highest Temperature
@@ -159,7 +159,7 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            8  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           15  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
