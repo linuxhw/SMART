@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital AV-GP
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun May 21 06:13:51 2023 -03
+Local Time is:    Wed Jul 10 15:53:58 2024 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -20,7 +20,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -62,18 +62,18 @@ SCT capabilities: 	       (0x3037)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    631
-  3 Spin_Up_Time            POS--K   187   184   021    -    3633
-  4 Start_Stop_Count        -O--CK   093   093   000    -    7123
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    636
+  3 Spin_Up_Time            POS--K   185   184   021    -    3708
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8686
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   082   082   000    -    13606
+  9 Power_On_Hours          -O--CK   080   080   000    -    15254
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   000    -    5844
-192 Power-Off_Retract_Count -O--CK   198   198   000    -    1699
-193 Load_Cycle_Count        -O--CK   199   199   000    -    5423
-194 Temperature_Celsius     -O---K   123   094   000    -    20
+ 12 Power_Cycle_Count       -O--CK   094   094   000    -    6582
+192 Power-Off_Retract_Count -O--CK   198   198   000    -    1835
+193 Load_Cycle_Count        -O--CK   198   198   000    -    6850
+194 Temperature_Celsius     -O---K   121   094   000    -    22
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -264,13 +264,21 @@ Error 1093 [12] occurred at disk power-on lifetime: 12310 hours (512 days + 22 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Aborted by host               10%     12312         -
-# 2  Short offline       Aborted by host               50%      2164         -
-# 3  Extended offline    Aborted by host               90%      2115         -
-# 4  Extended offline    Aborted by host               90%      2115         -
-# 5  Short offline       Completed without error       00%      2115         -
-# 6  Short offline       Completed without error       00%      2115         -
-# 7  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     14780         -
+# 2  Short offline       Completed without error       00%     14773         -
+# 3  Short offline       Completed without error       00%     14667         -
+# 4  Short offline       Completed without error       00%     14664         -
+# 5  Short offline       Completed without error       00%     14638         -
+# 6  Short offline       Completed without error       00%     14632         -
+# 7  Short offline       Completed without error       00%     14624         -
+# 8  Short offline       Completed without error       00%     14619         -
+# 9  Short offline       Aborted by host               10%     12312         -
+#10  Short offline       Aborted by host               50%      2164         -
+#11  Extended offline    Aborted by host               90%      2115         -
+#12  Extended offline    Aborted by host               90%      2115         -
+#13  Short offline       Completed without error       00%      2115         -
+#14  Short offline       Completed without error       00%      2115         -
+#15  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -286,8 +294,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    20 Celsius
-Power Cycle Min/Max Temperature:     16/20 Celsius
+Current Temperature:                    22 Celsius
+Power Cycle Min/Max Temperature:     19/22 Celsius
 Lifetime    Min/Max Temperature:      0/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -296,7 +304,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (279)
+Temperature History Size (Index):    478 (171)
 
 SCT Error Recovery Control command not supported
 
@@ -315,7 +323,5 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4          439  Vendor specific
-
-
+0x8000  4          497  Vendor specific
 

@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.21-generic-8rosa2021.1-x86_64] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.47-generic-1rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -10,7 +10,7 @@ User Capacity:    80,000,000,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Thu Sep 12 22:01:52 2024 MSK
+Local Time is:    Fri Sep 13 20:38:02 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 128
@@ -26,8 +26,8 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -63,14 +63,14 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    0
-  3 Spin_Up_Time            PO----   183   163   021    -    1841
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2036
+  3 Spin_Up_Time            PO----   186   163   021    -    1658
+  4 Start_Stop_Count        -O--CK   098   098   000    -    2041
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         POSR--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   057   057   000    -    31960
+  7 Seek_Error_Rate         POSR--   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   057   057   000    -    31973
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1391
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1396
 190 Airflow_Temperature_Cel -O---K   062   045   045    Past 38
 194 Temperature_Celsius     -O---K   105   088   000    -    38
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
@@ -124,9 +124,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        Active (0)
+Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     --/43 Celsius
+Power Cycle Min/Max Temperature:     --/47 Celsius
 Lifetime    Min/Max Temperature:     --/57 Celsius
 
 SCT Temperature History Version:     2
@@ -134,7 +134,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (78)
+Temperature History Size (Index):    128 (30)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -147,8 +147,8 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         4865  Vendor specific
+0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
+0x8000  4         9273  Vendor specific
 
 
 

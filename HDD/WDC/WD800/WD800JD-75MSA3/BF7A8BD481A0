@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.14-desktop-1omv4002] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar SE Serial ATA
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 10.01E04
 User Capacity:    80,000,000,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Mon Jun  7 10:53:00 2021 -03
+Local Time is:    Sun Oct  6 20:40:24 2024 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -26,8 +26,8 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -63,20 +63,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    1347
-  3 Spin_Up_Time            PO----   192   159   021    -    1358
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2662
+  3 Spin_Up_Time            PO----   165   159   021    -    2750
+  4 Start_Stop_Count        -O--CK   097   097   000    -    3292
   5 Reallocated_Sector_Ct   PO--CK   196   196   140    -    31
   7 Seek_Error_Rate         POSR--   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   083   083   000    -    12629
+  9 Power_On_Hours          -O--CK   083   083   000    -    13088
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2653
-190 Airflow_Temperature_Cel -O---K   081   044   045    Past 19
-194 Temperature_Celsius     -O---K   124   087   000    -    19
+ 12 Power_Cycle_Count       -O--CK   097   097   000    -    3276
+190 Airflow_Temperature_Cel -O---K   071   036   045    Past 29
+194 Temperature_Celsius     -O---K   114   079   000    -    29
 196 Reallocated_Event_Count -O--CK   196   196   000    -    4
 197 Current_Pending_Sector  -O--C-   200   152   000    -    0
 198 Offline_Uncorrectable   ----C-   200   001   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2020
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2047
 200 Multi_Zone_Error_Rate   P--R--   200   001   051    Past 0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -251,7 +251,12 @@ Error 946 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%     12963         -
+# 2  Extended offline    Completed without error       00%     12962         -
+# 3  Short offline       Completed without error       00%     12959         -
+# 4  Short offline       Completed without error       00%     12957         -
+# 5  Short offline       Completed without error       00%     12870         -
+# 6  Short offline       Completed without error       00%         0         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -266,17 +271,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                     ? Celsius
-Power Cycle Min/Max Temperature:     --/19 Celsius
-Lifetime    Min/Max Temperature:     --/61 Celsius
+Device State:                        Active (0)
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     --/29 Celsius
+Lifetime    Min/Max Temperature:     --/65 Celsius
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/70 Celsius
-Temperature History Size (Index):    128 (19)
+Temperature History Size (Index):    128 (45)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -290,5 +295,5 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
-0x8000  4           70  Vendor specific
+0x8000  4          463  Vendor specific
 

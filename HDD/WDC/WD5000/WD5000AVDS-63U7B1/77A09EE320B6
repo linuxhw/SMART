@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-78-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-84-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sun Jul 30 23:50:37 2023 -03
+Local Time is:    Fri Sep 29 22:36:56 2023 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -62,20 +62,20 @@ SCT capabilities: 	       (0x3037)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    162
-  3 Spin_Up_Time            POS--K   188   186   021    -    3566
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1707
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    168
+  3 Spin_Up_Time            POS--K   190   186   021    -    3500
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1911
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   089   089   000    -    8639
+  9 Power_On_Hours          -O--CK   087   087   000    -    9680
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1604
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    1115
-193 Load_Cycle_Count        -O--CK   200   200   000    -    591
-194 Temperature_Celsius     -O---K   111   094   000    -    32
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1808
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1249
+193 Load_Cycle_Count        -O--CK   200   200   000    -    661
+194 Temperature_Celsius     -O---K   107   094   000    -    36
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    1
+197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    1997
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 217 (device log contains only the most recent 24 errors)
+Device Error Count: 223 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,108 @@ Device Error Count: 217 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 223 [6] occurred at disk power-on lifetime: 8671 hours (361 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 00 06 9d 71 01 e0 00  Error: UNC 1 sectors at LBA = 0x069d7101 = 110981377
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 06 9d 71 01 e0 00     00:10:56.760  READ DMA EXT
+  35 00 20 00 01 00 00 06 9d 71 00 e0 00     00:10:56.760  WRITE DMA EXT
+  25 00 20 00 01 00 00 06 9d 71 00 e0 00     00:10:56.749  READ DMA EXT
+  25 00 20 00 01 00 00 06 9d 71 01 e0 00     00:10:54.290  READ DMA EXT
+  25 00 20 00 01 00 00 06 9d 71 00 e0 00     00:10:54.289  READ DMA EXT
+
+Error 222 [5] occurred at disk power-on lifetime: 8671 hours (361 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 00 06 9d 71 01 e0 00  Error: UNC 1 sectors at LBA = 0x069d7101 = 110981377
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 06 9d 71 01 e0 00     00:10:54.290  READ DMA EXT
+  25 00 20 00 01 00 00 06 9d 71 00 e0 00     00:10:54.289  READ DMA EXT
+  25 00 20 00 01 00 00 06 9d 70 ff e0 00     00:10:54.289  READ DMA EXT
+  25 00 20 00 01 00 00 06 9d 70 fe e0 00     00:10:54.288  READ DMA EXT
+  25 00 20 00 01 00 00 06 9d 70 fd e0 00     00:10:54.288  READ DMA EXT
+
+Error 221 [4] occurred at disk power-on lifetime: 8671 hours (361 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 7f 00 00 06 9d 71 01 e0 00  Error: UNC 127 sectors at LBA = 0x069d7101 = 110981377
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 7f 00 00 06 9d 70 b6 e0 00     00:10:51.827  READ DMA EXT
+  25 00 20 00 7f 00 00 06 9d 70 37 e0 00     00:10:51.826  READ DMA EXT
+  25 00 20 00 7f 00 00 06 9d 6f b8 e0 00     00:10:51.826  READ DMA EXT
+  25 00 20 00 7f 00 00 06 9d 6f 39 e0 00     00:10:51.825  READ DMA EXT
+  25 00 20 00 7f 00 00 06 9d 6e ba e0 00     00:10:51.824  READ DMA EXT
+
+Error 220 [3] occurred at disk power-on lifetime: 8671 hours (361 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 00 00 ef 66 8f e0 00  Error: UNC 1 sectors at LBA = 0x00ef668f = 15689359
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 ef 66 8f e0 00     00:01:57.060  READ DMA EXT
+  35 00 20 00 01 00 00 00 ef 66 8e e0 00     00:01:57.059  WRITE DMA EXT
+  25 00 20 00 01 00 00 00 ef 66 8e e0 00     00:01:57.036  READ DMA EXT
+  25 00 20 00 01 00 00 00 ef 66 8f e0 00     00:01:54.582  READ DMA EXT
+  25 00 20 00 01 00 00 00 ef 66 8e e0 00     00:01:54.582  READ DMA EXT
+
+Error 219 [2] occurred at disk power-on lifetime: 8671 hours (361 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 01 00 00 00 ef 66 8f e0 00  Error: UNC 1 sectors at LBA = 0x00ef668f = 15689359
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 ef 66 8f e0 00     00:01:54.582  READ DMA EXT
+  25 00 20 00 01 00 00 00 ef 66 8e e0 00     00:01:54.582  READ DMA EXT
+  25 00 20 00 01 00 00 00 ef 66 8d e0 00     00:01:54.582  READ DMA EXT
+  25 00 20 00 01 00 00 00 ef 66 8c e0 00     00:01:54.581  READ DMA EXT
+  25 00 20 00 01 00 00 00 ef 66 8b e0 00     00:01:54.581  READ DMA EXT
+
+Error 218 [1] occurred at disk power-on lifetime: 8671 hours (361 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 7f 00 00 00 ef 66 8f e0 00  Error: UNC 127 sectors at LBA = 0x00ef668f = 15689359
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 7f 00 00 00 ef 66 6e e0 00     00:01:52.133  READ DMA EXT
+  25 00 20 00 7f 00 00 00 ef 65 ef e0 00     00:01:52.133  READ DMA EXT
+  25 00 20 00 7f 00 00 00 ef 65 70 e0 00     00:01:52.132  READ DMA EXT
+  25 00 20 00 7f 00 00 00 ef 64 f1 e0 00     00:01:52.132  READ DMA EXT
+  25 00 20 00 7f 00 00 00 ef 64 72 e0 00     00:01:52.131  READ DMA EXT
 
 Error 217 [0] occurred at disk power-on lifetime: 8533 hours (355 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -160,108 +262,6 @@ Error 216 [23] occurred at disk power-on lifetime: 8533 hours (355 days + 13 hou
   c8 00 00 00 08 00 00 00 f1 02 d0 e0 0a     01:47:04.603  READ DMA
   c8 00 00 00 08 00 00 00 f1 02 a8 e0 0a     01:47:04.584  READ DMA
 
-Error 215 [22] occurred at disk power-on lifetime: 8533 hours (355 days + 13 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 90 00 00 00 ef 66 8f e0 00  Error: UNC 144 sectors at LBA = 0x00ef668f = 15689359
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  c8 00 00 00 90 00 00 00 ef 66 00 e0 0a     01:40:50.549  READ DMA
-  25 00 00 04 00 00 00 12 4e cc 00 e0 0a     01:40:50.542  READ DMA EXT
-  25 00 00 04 00 00 00 12 4e c8 00 e0 0a     01:40:50.521  READ DMA EXT
-  ea 00 00 00 00 00 00 20 31 8d 5f e0 0a     01:40:50.492  FLUSH CACHE EXT
-  35 00 00 00 08 00 00 20 31 8d 58 e0 0a     01:40:50.492  WRITE DMA EXT
-
-Error 214 [21] occurred at disk power-on lifetime: 8171 hours (340 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 20 21 8f f1 e0 00  Error: UNC 8 sectors at LBA = 0x20218ff1 = 539070449
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 20 21 8f f0 e0 0a     00:59:58.016  READ DMA EXT
-  ca 00 00 00 08 00 00 00 4b 38 08 e0 0a     00:59:58.016  WRITE DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:59:58.016  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:59:58.012  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 0a     00:59:58.012  SET FEATURES [Set transfer mode]
-
-Error 213 [20] occurred at disk power-on lifetime: 8171 hours (340 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 20 21 8f f1 e0 00  Error: UNC 8 sectors at LBA = 0x20218ff1 = 539070449
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 20 21 8f f0 e0 0a     00:59:55.531  READ DMA EXT
-  25 00 00 00 08 00 00 20 21 8f e8 e0 0a     00:59:55.531  READ DMA EXT
-  25 00 00 00 08 00 00 20 21 8f e0 e0 0a     00:59:55.531  READ DMA EXT
-  25 00 00 00 08 00 00 20 21 8f d8 e0 0a     00:59:55.531  READ DMA EXT
-  25 00 00 00 08 00 00 20 21 8f d0 e0 0a     00:59:55.531  READ DMA EXT
-
-Error 212 [19] occurred at disk power-on lifetime: 8171 hours (340 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 d8 00 00 20 21 8f f1 e0 00  Error: UNC 216 sectors at LBA = 0x20218ff1 = 539070449
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 d8 00 00 20 21 8f 30 e0 0a     00:59:53.017  READ DMA EXT
-  25 00 00 00 c0 00 00 20 21 8e 08 e0 0a     00:59:53.016  READ DMA EXT
-  25 00 00 00 60 00 00 20 21 8d a8 e0 0a     00:59:53.015  READ DMA EXT
-  25 00 00 00 b0 00 00 20 21 8c 90 e0 0a     00:59:53.014  READ DMA EXT
-  25 00 00 00 48 00 00 20 21 8c 48 e0 0a     00:59:53.013  READ DMA EXT
-
-Error 211 [18] occurred at disk power-on lifetime: 8169 hours (340 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 20 21 8f f1 e0 00  Error: UNC 8 sectors at LBA = 0x20218ff1 = 539070449
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 20 21 8f f0 e0 0a     00:01:54.750  READ DMA EXT
-  c8 00 00 00 08 00 00 00 8c df c8 e0 0a     00:01:54.749  READ DMA
-  27 00 00 00 00 00 00 00 00 00 00 e0 0a     00:01:54.749  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 0a     00:01:54.747  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 0a     00:01:54.745  SET FEATURES [Set transfer mode]
-
-Error 210 [17] occurred at disk power-on lifetime: 8169 hours (340 days + 9 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 20 21 8f f1 e0 00  Error: UNC 8 sectors at LBA = 0x20218ff1 = 539070449
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 08 00 00 20 21 8f f0 e0 0a     00:01:52.242  READ DMA EXT
-  c8 00 00 00 08 00 00 04 d8 7e d8 e4 0a     00:01:52.242  READ DMA
-  25 00 00 00 08 00 00 20 21 8f e8 e0 0a     00:01:52.242  READ DMA EXT
-  c8 00 00 00 08 00 00 00 91 7a f0 e0 0a     00:01:52.226  READ DMA
-  25 00 00 00 08 00 00 20 21 8f e0 e0 0a     00:01:52.226  READ DMA EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
 # 1  Short offline       Completed: read failure       80%      8629         15689359
@@ -282,8 +282,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     32/33 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     26/36 Celsius
 Lifetime    Min/Max Temperature:      0/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -292,7 +292,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (219)
+Temperature History Size (Index):    478 (42)
 
 SCT Error Recovery Control command not supported
 
@@ -309,7 +309,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         3887  Vendor specific
+0x8000  4        26814  Vendor specific
 

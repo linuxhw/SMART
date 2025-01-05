@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-5.4.83-generic-2rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.20-generic-2rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Scorpio Black
@@ -10,10 +10,10 @@ Firmware Version: 01.01A01
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Sat Apr  3 12:17:18 2021 CEST
+Local Time is:    Sat Feb 24 12:11:08 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -28,8 +28,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,26 +64,26 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   177   170   021    -    2125
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6788
+  3 Spin_Up_Time            POS--K   177   170   021    -    2150
+  4 Start_Stop_Count        -O--CK   089   089   000    -    11257
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   050   050   000    -    36856
+  9 Power_On_Hours          -O--CK   044   044   000    -    41220
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6267
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    4613
-192 Power-Off_Retract_Count -O--CK   199   199   000    -    794
-193 Load_Cycle_Count        -O--CK   001   001   000    -    1655918
-194 Temperature_Celsius     -O---K   119   095   000    -    28
+ 12 Power_Cycle_Count       -O--CK   091   091   000    -    9430
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    4619
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    1078
+193 Load_Cycle_Count        -O--CK   001   001   000    -    1689225
+194 Temperature_Celsius     -O---K   109   095   000    -    38
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
-198 Offline_Uncorrectable   ----CK   100   253   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   195   000    -    20
-200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
-240 Head_Flying_Hours       -O--CK   059   059   000    -    30058
-241 Total_LBAs_Written      -O--CK   200   200   000    -    63728050727
-242 Total_LBAs_Read         -O--CK   200   200   000    -    98491805687
+198 Offline_Uncorrectable   ----CK   200   200   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   200   195   000    -    37
+200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
+240 Head_Flying_Hours       -O--CK   058   058   000    -    31040
+241 Total_LBAs_Written      -O--CK   200   200   000    -    66074994720
+242 Total_LBAs_Read         -O--CK   200   200   000    -    101428264641
 254 Free_Fall_Sensor        -O--CK   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -267,17 +267,24 @@ Error 1 [0] occurred at disk power-on lifetime: 36725 hours (1530 days + 5 hours
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      4055         -
-# 2  Short offline       Completed without error       00%      3680         -
-# 3  Short offline       Completed without error       00%      3303         -
-# 4  Short offline       Completed without error       00%      2826         -
-# 5  Short offline       Completed without error       00%      2625         -
-# 6  Short offline       Completed without error       00%      2101         -
-# 7  Short offline       Completed without error       00%      1670         -
-# 8  Short offline       Completed without error       00%      1337         -
-# 9  Short offline       Completed without error       00%      1113         -
-#10  Short offline       Completed without error       00%       749         -
-#11  Short offline       Completed without error       00%       213         -
+# 1  Short offline       Completed without error       00%     39936         -
+# 2  Short offline       Completed without error       00%     36959         -
+# 3  Short offline       Completed without error       00%     36956         -
+# 4  Short offline       Completed without error       00%     36950         -
+# 5  Short offline       Completed without error       00%     36949         -
+# 6  Offline             Interrupted (host reset)      00%     36945         -
+# 7  Short offline       Completed without error       00%     36939         -
+# 8  Short offline       Completed without error       00%     36936         -
+# 9  Short offline       Completed without error       00%     36932         -
+#10  Short offline       Completed without error       00%     36928         -
+#11  Short offline       Completed without error       00%     36921         -
+#12  Offline             Interrupted (host reset)      00%     36911         -
+#13  Short offline       Completed without error       00%     36908         -
+#14  Short offline       Completed without error       00%     36900         -
+#15  Short offline       Completed without error       00%     36895         -
+#16  Short offline       Completed without error       00%     36889         -
+#17  Short offline       Completed without error       00%     36885         -
+#18  Short offline       Completed without error       00%     36871         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -293,10 +300,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     27/28 Celsius
-Lifetime    Min/Max Temperature:     20/52 Celsius
-Specified Max Operating Temperature:    27 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     17/40 Celsius
+Lifetime    Min/Max Temperature:     17/52 Celsius
+Specified Max Operating Temperature:    26 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -307,7 +314,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (61)
+Temperature History Size (Index):    128 (59)
 
 SCT Error Recovery Control command not supported
 
@@ -324,7 +331,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         2547  Vendor specific
+0x8000  4         8042  Vendor specific
+
+
 

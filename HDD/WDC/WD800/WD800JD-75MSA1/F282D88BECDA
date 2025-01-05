@@ -1,3 +1,6 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.11-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Caviar SE Serial ATA
 Device Model:     WDC WD800JD-75MSA1
@@ -5,12 +8,12 @@ Serial Number:    --
 Firmware Version: 10.01E01
 User Capacity:    80,000,000,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ATA/ATAPI-7 (minor revision not indicated)
-Local Time is:    Sat Oct 31 17:01:54 2020 UTC
+Local Time is:    Sat Apr  6 21:26:07 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
-AAM feature is:   Disabled
+AAM level is:     128 (quiet), recommended: 128
 APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -23,8 +26,8 @@ SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,20 +63,20 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   051    -    2858
-  3 Spin_Up_Time            PO----   160   158   021    -    2958
-  4 Start_Stop_Count        -O--CK   098   098   000    -    2521
+  3 Spin_Up_Time            PO----   163   142   021    -    2850
+  4 Start_Stop_Count        -O--CK   096   096   000    -    4336
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         POSR--   100   253   051    -    0
-  9 Power_On_Hours          -O--CK   001   001   000    -    84187
+  7 Seek_Error_Rate         POSR--   200   200   051    -    0
+  9 Power_On_Hours          -O--CK   001   001   000    -    98760
  10 Spin_Retry_Count        PO--C-   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   051    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    2400
-190 Airflow_Temperature_Cel -O---K   065   039   045    Past 35
-194 Temperature_Celsius     -O---K   108   082   000    -    35
+ 12 Power_Cycle_Count       -O--CK   096   096   000    -    4204
+190 Airflow_Temperature_Cel -O---K   063   039   045    Past 37
+194 Temperature_Celsius     -O---K   106   082   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--C-   200   200   000    -    0
 198 Offline_Uncorrectable   ----C-   200   199   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2
 200 Multi_Zone_Error_Rate   P--R--   200   200   051    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -102,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 6891 (device log contains only the most recent 24 errors)
+Device Error Count: 6924 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,148 +121,149 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 6891 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6924 [11] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 02 60 0f 48 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f 02 00 48 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 76 60 0f 40 00 00 00 00 02 00 00 02     00:16:41.474  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f 76 00 40 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 3e c8 00 6f 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 00 00 2e 00 6f c6 00 00 00     00:00:16.392  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 26 91 00 6f 00 01 00 82 ff 00 00 0f     00:00:28.454  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 40 00 12 00 67 c8 00 00 00     00:00:00.063  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 6890 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6923 [10] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 76 60 0f 40 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f 76 00 40 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 9b 60 0f 38 00 00 00 00 02 00 00 02     00:16:39.542  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f 9b 00 38 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 12 c8 00 67 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 00 00 02 00 67 c6 00 00 00     00:00:16.392  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 f9 91 00 66 00 01 00 82 ff 00 00 0f     00:00:26.361  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 40 00 5f 00 5f c8 00 00 00     00:00:00.063  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 6889 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6922 [9] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 9b 60 0f 38 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f 9b 00 38 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 92 60 0f 30 00 00 00 00 02 00 00 02     00:16:37.531  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f 92 00 30 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 5f c8 00 5f 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 00 00 4e 00 5f c6 00 00 00     00:00:16.392  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 46 91 00 5f 00 01 00 82 ff 00 00 0f     00:00:24.390  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 24 ff 00 40 00 b2 00 57 c8 00 00 00     00:00:00.063  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 6888 [23] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6921 [8] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 92 60 0f 30 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f 92 00 30 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 eb 60 0f 28 00 00 00 00 02 00 00 02     00:16:35.474  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 08 00 da 0f db 00 28 60 00 00 00     00:00:51.216  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 b2 c8 00 57 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 00 00 a1 00 57 c6 00 00 00     00:00:16.420  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 8c 91 00 57 00 01 00 82 ff 00 00 0f     00:00:22.425  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 24 ff 00 40 00 bb 00 4f c8 00 00 00     00:00:00.063  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 6887 [22] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6920 [7] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 eb 60 0f 28 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 08 00 da 0f db 00 28 60 00 00 00     00:00:51.216  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 d7 ef 0f 28 00 03 00 00 90 00 00 00     00:16:33.499  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 38 00 c8 0f fd 02 20 60 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 bb c8 00 4f 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 00 00 aa 00 4f c6 00 00 00     00:00:16.420  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 a1 91 00 4f 00 01 00 82 ff 00 00 0f     00:00:20.385  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 24 ff 00 40 00 04 00 48 c8 00 00 00     00:00:00.063  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 6886 [21] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6919 [6] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 fd 60 0f 20 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 03 90 00 00 0f fd 00 20 ef 00 00 00     00:00:51.208  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 df 60 0f 20 00 00 00 00 02 00 00 00     00:16:31.484  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 10 38 00 c8 0f 4e 02 19 60 00 00 00     00:00:55.816  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 04 c8 00 48 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 24 ff 00 40 00 57 00 40 c8 00 00 00     00:00:16.420  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 57 c8 00 40 00 1b 00 25 ff 00 00 00     00:00:16.471  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 1a ff 00 e6 00 56 00 40 c8 00 00 00     00:00:00.037  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 6885 [20] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6918 [5] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 4e 60 0f 19 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 08 10 00 92 0f 41 00 19 60 00 00 00     00:00:51.216  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 41 ef 0f 19 00 03 00 00 90 00 00 00     00:16:29.505  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 18 38 00 c8 0f a1 02 11 60 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 57 c8 00 40 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 1b ff 00 25 00 57 00 40 c8 00 00 00     00:00:16.420  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 56 c8 00 40 00 25 00 00 ff 00 00 00     00:00:16.471  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 26 ff 00 c0 00 56 00 40 c8 00 00 00     00:00:58.906  NOP [Reserved subcommand] [OBS-ACS-2]
 
-Error 6884 [19] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 6917 [4] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 00 01 00 00 51 00 00 40 01 00 00
+  40 -- 00 01 00 00 51 00 00 e0 01 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 a1 60 0f 11 00 00 00 00 00 00 00 02     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 10 40 00 4b 0f 97 00 11 60 00 00 00     00:00:51.224  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 86 ef 0f 11 00 08 00 42 40 00 00 00     00:16:27.526  NOP [Reserved subcommand] [OBS-ACS-2]
-  00 00 02 00 00 0f 86 00 11 ef 00 00 00     00:00:00.003  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 2a c8 0a 3e 00 00 00 00 00 00 00 00     00:00:00.000  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 00 0a 1b 00 3e c6 00 00 00     00:00:16.392  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 12 91 0a 3e 00 01 00 82 ff 00 00 0f     00:11:11.250  NOP [Reserved subcommand] [OBS-ACS-2]
+  00 08 ff 00 40 0a 0e 00 36 c8 00 00 00     00:00:00.063  NOP [Reserved subcommand] [OBS-ACS-2]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      90%     18576         -
-# 2  Short offline       Completed without error       00%     18280         -
-# 3  Short offline       Completed without error       00%     17389         -
-# 4  Short offline       Completed without error       00%     17313         -
-# 5  Short offline       Interrupted (host reset)      90%     17304         -
-# 6  Short offline       Completed without error       00%     17292         -
-# 7  Short offline       Completed without error       00%     17289         -
-# 8  Short offline       Completed without error       00%     17281         -
-# 9  Short offline       Completed without error       00%     13668         -
-#10  Short offline       Completed without error       00%     13658         -
-#11  Short offline       Completed without error       00%     13629         -
-#12  Short offline       Completed without error       00%     13628         -
+# 1  Short offline       Completed without error       00%     19575         -
+# 2  Short offline       Interrupted (host reset)      90%     18576         -
+# 3  Short offline       Completed without error       00%     18280         -
+# 4  Short offline       Completed without error       00%     17389         -
+# 5  Short offline       Completed without error       00%     17313         -
+# 6  Short offline       Interrupted (host reset)      90%     17304         -
+# 7  Short offline       Completed without error       00%     17292         -
+# 8  Short offline       Completed without error       00%     17289         -
+# 9  Short offline       Completed without error       00%     17281         -
+#10  Short offline       Completed without error       00%     13668         -
+#11  Short offline       Completed without error       00%     13658         -
+#12  Short offline       Completed without error       00%     13629         -
+#13  Short offline       Completed without error       00%     13628         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -274,9 +278,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
-Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     --/39 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    37 Celsius
+Power Cycle Min/Max Temperature:     --/43 Celsius
 Lifetime    Min/Max Temperature:     --/63 Celsius
 
 SCT Temperature History Version:     2
@@ -284,7 +288,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/65 Celsius
 Min/Max Temperature Limit:            1/60 Celsius
-Temperature History Size (Index):    128 (84)
+Temperature History Size (Index):    128 (11)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -297,8 +301,8 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
-0x8000  4         8798  Vendor specific
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
+0x8000  4        25828  Vendor specific
 
 
 

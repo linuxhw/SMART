@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
@@ -13,7 +13,7 @@ Rotation Rate:    7200 rpm
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Mon Jan  9 11:15:28 2023 GMT
+Local Time is:    Tue Dec  5 14:36:58 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,17 +64,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   197   196   051    -    211528
-  3 Spin_Up_Time            POS--K   143   139   021    -    3825
-  4 Start_Stop_Count        -O--CK   087   087   000    -    13520
+  3 Spin_Up_Time            POS--K   141   139   021    -    3933
+  4 Start_Stop_Count        -O--CK   086   086   000    -    14354
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   061   061   000    -    28649
+  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   060   060   000    -    29851
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   087   087   000    -    13458
-192 Power-Off_Retract_Count -O--CK   198   198   000    -    1515
-193 Load_Cycle_Count        -O--CK   196   196   000    -    12005
-194 Temperature_Celsius     -O---K   102   089   000    -    41
+ 12 Power_Cycle_Count       -O--CK   086   086   000    -    14123
+192 Power-Off_Retract_Count -O--CK   198   198   000    -    1827
+193 Load_Cycle_Count        -O--CK   196   196   000    -    12527
+194 Temperature_Celsius     -O---K   108   089   000    -    35
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -265,11 +265,18 @@ Error 14913 [8] occurred at disk power-on lifetime: 23706 hours (987 days + 18 h
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      50%     25783         -
-# 2  Short offline       Completed without error       00%     24039         -
-# 3  Short offline       Completed without error       00%     23972         -
-# 4  Short offline       Completed without error       00%     23957         -
-# 5  Short offline       Completed without error       00%     23948         -
+# 1  Extended offline    Completed without error       00%     29134         -
+# 2  Short offline       Completed without error       00%     29094         -
+# 3  Short offline       Completed without error       00%     29087         -
+# 4  Short offline       Completed without error       00%     29079         -
+# 5  Short offline       Completed without error       00%     29061         -
+# 6  Short offline       Completed without error       00%     29057         -
+# 7  Short offline       Completed without error       00%     29029         -
+# 8  Extended offline    Interrupted (host reset)      50%     25783         -
+# 9  Short offline       Completed without error       00%     24039         -
+#10  Short offline       Completed without error       00%     23972         -
+#11  Short offline       Completed without error       00%     23957         -
+#12  Short offline       Completed without error       00%     23948         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -285,9 +292,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    41 Celsius
-Power Cycle Min/Max Temperature:     41/42 Celsius
-Lifetime    Min/Max Temperature:     23/54 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     31/35 Celsius
+Lifetime    Min/Max Temperature:      8/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -295,7 +302,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (418)
+Temperature History Size (Index):    478 (440)
 
 SCT Error Recovery Control command not supported
 
@@ -312,7 +319,9 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4          330  Vendor specific
+0x8000  4          713  Vendor specific
+
+
 

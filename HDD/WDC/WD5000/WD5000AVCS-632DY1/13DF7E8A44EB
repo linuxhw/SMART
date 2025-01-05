@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.18.12-desktop-3omv4090] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.9.7-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital AV-GP
@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s
-Local Time is:    Fri Nov 18 18:24:33 2022 GMT
+Local Time is:    Mon Jul 15 01:45:50 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     128 (quiet), recommended: 128
@@ -20,7 +20,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, frozen [SEC2], Master PW ID: 0x4434
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -62,22 +62,22 @@ SCT capabilities: 	       (0x3037)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    10
-  3 Spin_Up_Time            POS--K   188   186   021    -    3591
-  4 Start_Stop_Count        -O--CK   100   100   000    -    816
+  1 Raw_Read_Error_Rate     POSR-K   197   197   051    -    16
+  3 Spin_Up_Time            POS--K   212   187   021    -    2366
+  4 Start_Stop_Count        -O--CK   100   100   000    -    157
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    673
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   100   100   000    -    18
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    725
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    663
-193 Load_Cycle_Count        -O--CK   200   200   000    -    152
-194 Temperature_Celsius     -O---K   104   097   000    -    39
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    156
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    152
+193 Load_Cycle_Count        -O--CK   200   200   000    -    4
+194 Temperature_Celsius     -O---K   103   102   000    -    40
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
-197 Current_Pending_Sector  -O--CK   200   200   000    -    9
+197 Current_Pending_Sector  -O--CK   200   200   000    -    18
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   185   000    -    35
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   100   253   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 8
+Device Error Count: 26 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -126,145 +126,144 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 8 [7] occurred at disk power-on lifetime: 554 hours (23 days + 2 hours)
+Error 26 [1] occurred at disk power-on lifetime: 14 hours (0 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 61 52 17 40 00  Error: UNC at LBA = 0x00615217 = 6378007
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 78 00 00 00 64 fb 48 40 00     04:14:31.040  READ FPDMA QUEUED
-  60 00 08 00 70 00 00 00 64 82 18 40 00     04:14:31.037  READ FPDMA QUEUED
-  60 00 08 00 68 00 00 00 64 82 08 40 00     04:14:31.035  READ FPDMA QUEUED
-  60 00 08 00 60 00 00 00 64 81 f8 40 00     04:14:31.032  READ FPDMA QUEUED
-  60 00 40 00 58 00 00 03 6d 44 66 40 00     04:14:31.031  READ FPDMA QUEUED
+  60 00 30 00 a0 00 00 1d 04 2a b8 40 08     00:03:46.399  READ FPDMA QUEUED
+  60 00 50 00 98 00 00 1d 04 2a 68 40 08     00:03:46.399  READ FPDMA QUEUED
+  60 00 18 00 90 00 00 1d 04 2a 50 40 08     00:03:46.399  READ FPDMA QUEUED
+  60 00 08 00 88 00 00 1d 04 2a 48 40 08     00:03:46.399  READ FPDMA QUEUED
+  60 00 08 00 80 00 00 1d 04 2a 40 40 08     00:03:46.399  READ FPDMA QUEUED
 
-Error 7 [6] occurred at disk power-on lifetime: 554 hours (23 days + 2 hours)
+Error 25 [0] occurred at disk power-on lifetime: 14 hours (0 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 01 00 00 00 61 52 17 40 00  Error: UNC at LBA = 0x00615217 = 6378007
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 50 00 00 00 64 81 c8 40 00     04:14:28.343  READ FPDMA QUEUED
-  60 00 08 00 48 00 00 00 64 81 c0 40 00     04:14:28.343  READ FPDMA QUEUED
-  60 00 40 00 40 00 00 03 6d 32 96 40 00     04:14:28.323  READ FPDMA QUEUED
-  60 00 20 00 38 00 00 00 6d 8a e0 40 00     04:14:28.308  READ FPDMA QUEUED
-  60 00 20 00 30 00 00 00 61 52 00 40 00     04:14:28.308  READ FPDMA QUEUED
+  60 00 b0 00 c8 00 00 1d 04 2a 38 40 08     00:03:36.197  READ FPDMA QUEUED
+  60 00 08 00 c0 00 00 1d 04 2a 30 40 08     00:03:36.197  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 1d 04 2a 28 40 08     00:03:36.197  READ FPDMA QUEUED
+  60 00 08 00 a0 00 00 1d 04 2a 20 40 08     00:03:36.197  READ FPDMA QUEUED
+  60 00 08 00 98 00 00 1d 04 2a 18 40 08     00:03:36.197  READ FPDMA QUEUED
 
-Error 6 [5] occurred at disk power-on lifetime: 549 hours (22 days + 21 hours)
+Error 24 [23] occurred at disk power-on lifetime: 14 hours (0 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 9b 95 6d 40 00  Error: WP at LBA = 0x009b956d = 10196333
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 10 00 90 00 00 00 66 63 20 40 00     00:37:06.728  WRITE FPDMA QUEUED
-  61 00 18 00 88 00 00 00 66 63 00 40 00     00:37:06.728  WRITE FPDMA QUEUED
-  61 00 20 00 80 00 00 00 66 62 d8 40 00     00:37:06.727  WRITE FPDMA QUEUED
-  61 00 10 00 78 00 00 00 66 62 c0 40 00     00:37:06.727  WRITE FPDMA QUEUED
-  61 00 08 00 70 00 00 00 66 62 50 40 00     00:37:06.727  WRITE FPDMA QUEUED
+  60 00 40 00 40 00 00 1d 04 2a a8 40 08     00:03:30.036  READ FPDMA QUEUED
+  60 00 68 00 38 00 00 1d 04 2a 40 40 08     00:03:30.036  READ FPDMA QUEUED
+  60 00 08 00 30 00 00 1d 04 2a 38 40 08     00:03:30.036  READ FPDMA QUEUED
+  60 00 08 00 28 00 00 1d 04 2a 30 40 08     00:03:30.036  READ FPDMA QUEUED
+  60 00 08 00 20 00 00 1d 04 2a 28 40 08     00:03:30.036  READ FPDMA QUEUED
 
-Error 5 [4] occurred at disk power-on lifetime: 549 hours (22 days + 21 hours)
+Error 23 [22] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 01 00 00 00 9b 95 6d 40 00  Error: UNC at LBA = 0x009b956d = 10196333
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 40 00 90 00 00 00 9b 95 60 40 00     00:37:03.612  READ FPDMA QUEUED
-  61 00 08 00 88 00 00 00 50 c4 d8 40 00     00:37:03.611  WRITE FPDMA QUEUED
-  60 00 08 00 80 00 00 00 18 9e 98 40 00     00:37:03.611  READ FPDMA QUEUED
-  61 00 20 00 78 00 00 03 db df 20 40 00     00:37:03.610  WRITE FPDMA QUEUED
-  61 00 20 00 70 00 00 03 dc 08 20 40 00     00:37:03.610  WRITE FPDMA QUEUED
+  60 00 08 00 38 00 00 1d 04 29 f0 40 08     00:04:55.027  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:04:55.027  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:04:55.027  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:04:55.026  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:04:55.026  SET FEATURES [Set transfer mode]
 
-Error 4 [3] occurred at disk power-on lifetime: 548 hours (22 days + 20 hours)
+Error 22 [21] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 61 52 17 40 00  Error: UNC at LBA = 0x00615217 = 6378007
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 01 00 b0 00 00 00 61 52 17 40 00     00:03:10.687  READ FPDMA QUEUED
-  60 00 01 00 a8 00 00 00 61 52 16 40 00     00:03:10.687  READ FPDMA QUEUED
-  60 00 01 00 a0 00 00 00 61 52 15 40 00     00:03:10.687  READ FPDMA QUEUED
-  60 00 01 00 98 00 00 00 61 52 14 40 00     00:03:10.687  READ FPDMA QUEUED
-  60 00 01 00 90 00 00 00 61 52 13 40 00     00:03:10.687  READ FPDMA QUEUED
+  60 01 00 00 88 00 00 1d 04 29 e8 40 08     00:04:52.394  READ FPDMA QUEUED
+  60 01 00 00 80 00 00 1d 04 25 18 40 08     00:04:52.366  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 1d 04 08 00 40 08     00:04:52.366  READ FPDMA QUEUED
+  60 00 08 00 70 00 00 1d 04 07 f8 40 08     00:04:52.331  READ FPDMA QUEUED
+  60 00 08 00 68 00 00 00 00 2a e8 40 08     00:04:52.313  READ FPDMA QUEUED
 
-Error 3 [2] occurred at disk power-on lifetime: 548 hours (22 days + 20 hours)
+Error 21 [20] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 61 52 17 40 00  Error: UNC at LBA = 0x00615217 = 6378007
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 20 00 e8 00 00 00 61 52 60 40 00     00:03:08.073  READ FPDMA QUEUED
-  60 00 20 00 e0 00 00 00 61 52 40 40 00     00:03:08.073  READ FPDMA QUEUED
-  60 00 20 00 d8 00 00 00 61 52 20 40 00     00:03:08.073  READ FPDMA QUEUED
-  60 00 20 00 d0 00 00 00 61 52 00 40 00     00:03:08.072  READ FPDMA QUEUED
-  60 01 00 00 c8 00 00 00 61 51 00 40 00     00:03:08.072  READ FPDMA QUEUED
+  60 00 08 00 78 00 00 1d 04 29 f0 40 08     00:04:01.417  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:04:01.417  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:04:01.417  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:04:01.416  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:04:01.416  SET FEATURES [Set transfer mode]
 
-Error 2 [1] occurred at disk power-on lifetime: 548 hours (22 days + 20 hours)
+Error 20 [19] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 61 52 17 40 00  Error: UNC at LBA = 0x00615217 = 6378007
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 d8 00 00 00 61 52 10 40 00     00:03:02.340  READ FPDMA QUEUED
-  60 00 08 00 d0 00 00 00 61 52 08 40 00     00:03:02.331  READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     00:03:02.330  READ LOG EXT
-  60 00 80 00 c8 00 00 00 61 52 08 40 00     00:02:59.750  READ FPDMA QUEUED
-  60 00 80 00 c0 00 00 00 61 51 88 40 00     00:02:59.749  READ FPDMA QUEUED
+  60 01 00 00 b8 00 00 1d 04 29 e8 40 08     00:03:58.783  READ FPDMA QUEUED
+  60 01 00 00 b0 00 00 1d 04 25 18 40 08     00:03:58.756  READ FPDMA QUEUED
+  60 00 08 00 a8 00 00 1d 04 08 00 40 08     00:03:58.755  READ FPDMA QUEUED
+  60 00 08 00 a0 00 00 1d 04 07 f8 40 08     00:03:58.720  READ FPDMA QUEUED
+  60 00 08 00 98 00 00 00 00 2a e8 40 08     00:03:58.703  READ FPDMA QUEUED
 
-Error 1 [0] occurred at disk power-on lifetime: 548 hours (22 days + 20 hours)
+Error 19 [18] occurred at disk power-on lifetime: 12 hours (0 days + 12 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 61 52 17 40 00  Error: UNC at LBA = 0x00615217 = 6378007
+  40 -- 51 00 00 00 00 1d 04 29 f4 40 00  Error: UNC at LBA = 0x1d0429f4 = 486812148
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 80 00 c8 00 00 00 61 52 08 40 00     00:02:59.750  READ FPDMA QUEUED
-  60 00 80 00 c0 00 00 00 61 51 88 40 00     00:02:59.749  READ FPDMA QUEUED
-  60 00 80 00 b8 00 00 00 61 51 08 40 00     00:02:59.749  READ FPDMA QUEUED
-  60 00 80 00 b0 00 00 00 61 50 88 40 00     00:02:59.748  READ FPDMA QUEUED
-  60 00 80 00 a8 00 00 00 61 50 08 40 00     00:02:59.747  READ FPDMA QUEUED
+  60 00 08 00 b0 00 00 1d 04 29 f0 40 08     00:03:32.594  READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:03:32.594  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:32.594  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:32.593  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:03:32.593  SET FEATURES [Set transfer mode]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed: read failure       90%       595         6378007
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -280,9 +279,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     38/39 Celsius
-Lifetime    Min/Max Temperature:      0/46 Celsius
+Current Temperature:                    40 Celsius
+Power Cycle Min/Max Temperature:     40/40 Celsius
+Lifetime    Min/Max Temperature:     24/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -290,7 +289,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (415)
+Temperature History Size (Index):    478 (368)
 
 SCT Error Recovery Control command not supported
 
@@ -309,7 +308,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4          443  Vendor specific
+0x8000  4          472  Vendor specific
 
 
 

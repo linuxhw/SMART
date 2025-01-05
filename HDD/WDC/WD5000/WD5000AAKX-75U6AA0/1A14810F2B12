@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.7-x64v1-xanmod1-1] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.5.9-arch2-1] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
@@ -10,10 +10,10 @@ Firmware Version: 19.01H19
 User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Mar 25 11:27:05 2023 IST
+Local Time is:    Sun Oct 29 10:53:07 2023 IST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -64,25 +64,25 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    576
-  3 Spin_Up_Time            POS--K   143   140   021    -    3850
-  4 Start_Stop_Count        -O--CK   092   092   000    -    8615
+  3 Spin_Up_Time            POS--K   142   140   021    -    3858
+  4 Start_Stop_Count        -O--CK   091   091   000    -    9498
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   067   067   000    -    24140
+  9 Power_On_Hours          -O--CK   065   065   000    -    25596
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   092   092   000    -    8329
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    674
-193 Load_Cycle_Count        -O--CK   131   131   000    -    208642
-194 Temperature_Celsius     -O---K   103   095   000    -    40
+ 12 Power_Cycle_Count       -O--CK   091   091   000    -    9193
+192 Power-Off_Retract_Count -O--CK   199   199   000    -    811
+193 Load_Cycle_Count        -O--CK   129   129   000    -    213453
+194 Temperature_Celsius     -O---K   105   095   000    -    38
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   ---R--   200   200   000    -    0
-240 Head_Flying_Hours       -O--CK   071   071   000    -    21836
-241 Total_LBAs_Written      -O--CK   200   200   000    -    140723525188
-242 Total_LBAs_Read         -O--CK   200   200   000    -    199723682017
+240 Head_Flying_Hours       -O--CK   069   069   000    -    23144
+241 Total_LBAs_Written      -O--CK   200   200   000    -    152241940669
+242 Total_LBAs_Read         -O--CK   200   200   000    -    214306876061
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,7 +114,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 578 (device log contains only the most recent 24 errors)
+Device Error Count: 580 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -129,6 +129,40 @@ Device Error Count: 578 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 580 [3] occurred at disk power-on lifetime: 25554 hours (1064 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 67 c3 2c 40 00  Error: UNC at LBA = 0x0067c32c = 6800172
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 20 00 00 00 67 c3 28 40 00     00:00:23.144  READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00     00:00:23.144  READ LOG EXT
+  60 00 08 00 18 00 00 00 67 c3 28 40 00     00:00:21.282  READ FPDMA QUEUED
+  60 00 08 00 10 00 00 00 67 8e 78 40 00     00:00:21.281  READ FPDMA QUEUED
+  60 00 08 00 08 00 00 01 f0 81 00 40 00     00:00:21.281  READ FPDMA QUEUED
+
+Error 579 [2] occurred at disk power-on lifetime: 25554 hours (1064 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 00 67 c3 2c 40 00  Error: UNC at LBA = 0x0067c32c = 6800172
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 18 00 00 00 67 c3 28 40 00     00:00:21.282  READ FPDMA QUEUED
+  60 00 08 00 10 00 00 00 67 8e 78 40 00     00:00:21.281  READ FPDMA QUEUED
+  60 00 08 00 08 00 00 01 f0 81 00 40 00     00:00:21.281  READ FPDMA QUEUED
+  60 00 08 00 f8 00 00 00 67 8d 18 40 00     00:00:21.273  READ FPDMA QUEUED
+  60 00 08 00 f0 00 00 00 67 c5 e0 40 00     00:00:21.271  READ FPDMA QUEUED
 
 Error 578 [1] occurred at disk power-on lifetime: 23261 hours (969 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -232,60 +266,26 @@ Error 573 [20] occurred at disk power-on lifetime: 20039 hours (834 days + 23 ho
   60 01 00 00 80 00 00 00 63 ab 00 40 00     00:55:44.729  READ FPDMA QUEUED
   ea 00 00 00 00 00 00 00 00 00 00 e0 00     00:55:44.685  FLUSH CACHE EXT
 
-Error 572 [19] occurred at disk power-on lifetime: 20039 hours (834 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 63 a8 df 40 00  Error: UNC at LBA = 0x0063a8df = 6531295
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 50 00 00 00 63 a8 00 40 00     00:55:42.801  READ FPDMA QUEUED
-  60 01 00 00 48 00 00 00 03 a9 00 40 00     00:55:42.793  READ FPDMA QUEUED
-  61 00 08 00 40 00 00 21 8c 30 c8 40 00     00:55:42.793  WRITE FPDMA QUEUED
-  61 00 08 00 38 00 00 21 8c 30 08 40 00     00:55:42.793  WRITE FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00     00:55:42.792  READ LOG EXT
-
-Error 571 [18] occurred at disk power-on lifetime: 20039 hours (834 days + 23 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 00 63 a8 df 40 00  Error: UNC at LBA = 0x0063a8df = 6531295
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 30 00 00 00 63 a8 00 40 00     00:55:40.925  READ FPDMA QUEUED
-  60 00 20 00 28 00 00 00 11 0b 72 40 00     00:55:40.918  READ FPDMA QUEUED
-  60 01 00 00 20 00 00 00 66 e7 00 40 00     00:55:40.917  READ FPDMA QUEUED
-  60 01 00 00 18 00 00 00 66 e6 00 40 00     00:55:40.905  READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 e0 00     00:55:40.877  FLUSH CACHE EXT
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Interrupted (host reset)      80%     23957         -
-# 2  Short offline       Completed: read failure       60%     22988         2318329
-# 3  Short offline       Completed without error       00%     22988         -
-# 4  Short offline       Completed without error       00%     22984         -
-# 5  Short offline       Completed without error       00%     22977         -
-# 6  Short offline       Completed without error       00%     22622         -
-# 7  Short offline       Completed without error       00%     22329         -
-# 8  Extended offline    Completed without error       00%     22024         -
-# 9  Short offline       Completed without error       00%     22022         -
-#10  Short offline       Completed without error       00%     21281         -
-#11  Short offline       Completed without error       00%     21233         -
-#12  Short offline       Completed without error       00%     21233         -
-#13  Short offline       Completed without error       00%     20935         -
-#14  Short offline       Completed without error       00%     20007         -
-#15  Short offline       Completed without error       00%     19775         -
-#16  Short offline       Interrupted (host reset)      80%     19693         -
-#17  Short offline       Completed without error       00%     19385         -
-#18  Short offline       Completed without error       00%     19220         -
+# 1  Short offline       Completed without error       00%     25580         -
+# 2  Short offline       Completed without error       00%     25571         -
+# 3  Short offline       Completed without error       00%     25215         -
+# 4  Short offline       Interrupted (host reset)      80%     25017         -
+# 5  Short offline       Completed without error       00%     24798         -
+# 6  Short offline       Completed without error       00%     24771         -
+# 7  Short offline       Completed without error       00%     24768         -
+# 8  Short offline       Completed without error       00%     24762         -
+# 9  Short offline       Completed without error       00%     24653         -
+#10  Short offline       Completed without error       00%     24238         -
+#11  Short offline       Completed without error       00%     24151         -
+#12  Short offline       Completed without error       00%     24140         -
+#13  Short offline       Interrupted (host reset)      80%     23957         -
+#14  Short offline       Completed: read failure       60%     22988         2318329
+#15  Short offline       Completed without error       00%     22988         -
+#16  Short offline       Completed without error       00%     22984         -
+#17  Short offline       Completed without error       00%     22977         -
+#18  Short offline       Completed without error       00%     22622         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -301,8 +301,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    40 Celsius
-Power Cycle Min/Max Temperature:     40/41 Celsius
+Current Temperature:                    38 Celsius
+Power Cycle Min/Max Temperature:     36/40 Celsius
 Lifetime    Min/Max Temperature:      0/48 Celsius
 Specified Max Operating Temperature:    34 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -312,7 +312,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (372)
+Temperature History Size (Index):    478 (57)
 
 SCT Error Recovery Control command not supported
 
@@ -329,7 +329,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4         1945  Vendor specific
+0x8000  4         8789  Vendor specific
 
