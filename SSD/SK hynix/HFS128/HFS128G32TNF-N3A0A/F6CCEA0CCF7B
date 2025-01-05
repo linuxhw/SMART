@@ -14,7 +14,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Oct  5 21:59:57 2024 BST
+Local Time is:    Sat Oct  5 22:28:09 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,8 +66,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Retired_Block_Count     -O--CK   253   253   036    -    0
   9 Power_On_Hours          -O--CK   092   092   000    -    7217
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    4558
-100 Total_Erase_Count       -O--CK   100   100   000    -    3853616
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    4559
+100 Total_Erase_Count       -O--CK   100   100   000    -    3853840
 168 Min_Erase_Count         -O--CK   087   087   000    -    234
 169 Max_Erase_Count         -O--CK   083   083   000    -    303
 171 Program_Fail_Count      -O--CK   253   253   000    -    0
@@ -82,17 +82,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   253   253   000    -    0
 187 Reported_Uncorrect      -O--CK   253   253   000    -    0
 188 Command_Timeout         -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   028   009   000    -    28 (Min/Max 9/57)
+194 Temperature_Celsius     -O----   026   009   000    -    26 (Min/Max 9/57)
 195 Hardware_ECC_Recovered  -O--CK   253   253   000    -    0
 196 Reallocated_Event_Count -O--CK   253   253   036    -    0
 198 Offline_Uncorrectable   -O--CK   253   253   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   253   253   000    -    0
-212 Phy_Error_Count         -O--CK   100   100   000    -    38464
+212 Phy_Error_Count         -O--CK   100   100   000    -    38470
 233 Media_Wearout_Indicator PO--CK   085   085   001    -    85
 236 Unknown_SK_hynix_Attrib -O--CK   066   066   001    -    66
-241 Total_Writes_GB         -O--CK   100   100   000    -    23648
-242 Total_Reads_GB          -O--CK   100   100   000    -    55890
-249 NAND_Writes_GiB         -O--CK   100   100   000    -    36121
+241 Total_Writes_GB         -O--CK   100   100   000    -    23650
+242 Total_Reads_GB          -O--CK   100   100   000    -    55893
+249 NAND_Writes_GiB         -O--CK   100   100   000    -    36123
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -144,18 +144,18 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     27/28 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     26/28 Celsius
 Lifetime    Min/Max Temperature:      1/59 Celsius
 Specified Max Operating Temperature:    80 Celsius
-Under/Over Temperature Limit Count:  13/0
+Under/Over Temperature Limit Count:  18/0
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -20/80 Celsius
 Min/Max Temperature Limit:           -20/125 Celsius
-Temperature History Size (Index):    192 (88)
+Temperature History Size (Index):    192 (120)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -164,18 +164,18 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            4558  ---  Lifetime Power-On Resets
+0x01  0x008  4            4559  ---  Lifetime Power-On Resets
 0x01  0x010  4            7217  ---  Power-on Hours
-0x01  0x018  6     46188063609  ---  Logical Sectors Written
-0x01  0x020  6       422339310  ---  Number of Write Commands
-0x01  0x028  6    109160640511  ---  Logical Sectors Read
-0x01  0x030  6      2207973692  ---  Number of Read Commands
-0x01  0x038  6   1728038992097  ---  Date and Time TimeStamp
+0x01  0x018  6     46193060110  ---  Logical Sectors Written
+0x01  0x020  6       422366858  ---  Number of Write Commands
+0x01  0x028  6    109166041267  ---  Logical Sectors Read
+0x01  0x030  6      2208017134  ---  Number of Read Commands
+0x01  0x038  6   1728040625157  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
+0x05  0x008  1              26  ---  Current Temperature
 0x05  0x010  1              24  ---  Average Short Term Temperature
 0x05  0x018  1               -  ---  Average Long Term Temperature
 0x05  0x020  1              59  ---  Highest Temperature
@@ -186,10 +186,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              80  ---  Specified Maximum Operating Temperature
-0x05  0x060  4          306700  ---  Time in Under-Temperature
+0x05  0x060  4          306720  ---  Time in Under-Temperature
 0x05  0x068  1             -20  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           55034  ---  Number of Hardware Resets
+0x06  0x008  4           55041  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              15  ---  Percentage Used Endurance Indicator
@@ -202,5 +202,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
 

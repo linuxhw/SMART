@@ -12,7 +12,7 @@ TRIM Command:     Available
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Jan 26 16:14:36 2024 UTC
+Local Time is:    Sat Jan 27 09:13:38 2024 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -20,7 +20,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -59,15 +59,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   166   166   006    -    0
   5 Reallocated_Sector_Ct   -O--CK   253   253   036    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    7623
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    1357
-100 Unknown_Attribute       -O--CK   100   100   000    -    1407099
+  9 Power_On_Hours          -O--CK   092   092   000    -    7640
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    1365
+100 Unknown_Attribute       -O--CK   100   100   000    -    1407179
 171 Unknown_Attribute       -O--CK   253   253   000    -    0
 172 Unknown_Attribute       -O--CK   253   253   000    -    0
-174 Unknown_Attribute       ----CK   100   100   000    -    219
+174 Unknown_Attribute       ----CK   100   100   000    -    220
 175 Program_Fail_Count_Chip -O--CK   253   253   000    -    0
 176 Erase_Fail_Count_Chip   -O--CK   253   253   000    -    0
-177 Wear_Leveling_Count     -O--CK   100   100   000    -    1361856
+177 Wear_Leveling_Count     -O--CK   100   100   000    -    1361936
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   000    -    22
 179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   000    -    64
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    1984
@@ -77,15 +77,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    650
 188 Command_Timeout         -O--CK   253   253   000    -    0
 191 Unknown_SSD_Attribute   -O--CK   253   253   000    -    0
-194 Temperature_Celsius     -O----   033   000   000    -    33 (Min/Max 21/49)
-195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    20779736
+194 Temperature_Celsius     -O----   031   000   000    -    31 (Min/Max 21/49)
+195 Hardware_ECC_Recovered  -O--CK   100   099   000    -    20795145
 201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 204 Soft_ECC_Correction     -OSR--   100   100   ---    -    0
 231 Unknown_SSD_Attribute   PO--CK   253   253   ---    -    0
-234 Unknown_Attribute       -O--CK   100   100   ---    -    5201
-241 Total_LBAs_Written      -O--CK   100   100   ---    -    3522
-242 Total_LBAs_Read         -O--CK   100   100   ---    -    6440
-250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    5188
+234 Unknown_Attribute       -O--CK   100   100   ---    -    5208
+241 Total_LBAs_Written      -O--CK   100   100   ---    -    3527
+242 Total_LBAs_Read         -O--CK   100   100   ---    -    6445
+250 Read_Error_Retry_Rate   -O--CK   100   100   ---    -    5199
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -108,7 +108,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 4872 (device log contains only the most recent 20 errors)
+Device Error Count: 4905 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,86 +124,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4872 [11] occurred at disk power-on lifetime: 7623 hours (317 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 ff 00 08 00 00 06 4c d8 38 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 38 00 00 06 4c d8 00 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 07 00 00 06 4c d7 f9 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 39 00 00 06 4c d7 c0 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 06 00 00 06 4c d7 ba e0 e0     00:00:09.440  READ DMA EXT
-
-Error 4871 [10] occurred at disk power-on lifetime: 7623 hours (317 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 ff 00 08 00 00 06 4c d8 38 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 38 00 00 06 4c d8 00 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 07 00 00 06 4c d7 f9 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 39 00 00 06 4c d7 c0 e0 e0     00:00:09.440  READ DMA EXT
-  25 00 ff 00 06 00 00 06 4c d7 ba e0 e0     00:00:09.440  READ DMA EXT
-
-Error 4870 [9] occurred at disk power-on lifetime: 7623 hours (317 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  01 -- 50 00 01 00 00 00 00 00 01 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.120  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.120  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.110  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.110  NOP [Abort queued commands]
-  08 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.110  DEVICE RESET
-
-Error 4869 [8] occurred at disk power-on lifetime: 7623 hours (317 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 a0 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.110  NOP [Abort queued commands]
-  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.110  NOP [Abort queued commands]
-  08 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.110  DEVICE RESET
-
-Error 4868 [7] occurred at disk power-on lifetime: 7623 hours (317 days + 15 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 00 00 00 00 00 00 00 a0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  08 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:03.110  DEVICE RESET
-
-Error 4867 [6] occurred at disk power-on lifetime: 7623 hours (317 days + 15 hours)
+Error 4905 [4] occurred at disk power-on lifetime: 7628 hours (317 days + 20 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -215,7 +136,7 @@ Error 4867 [6] occurred at disk power-on lifetime: 7623 hours (317 days + 15 hou
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
-Error 4866 [5] occurred at disk power-on lifetime: 7622 hours (317 days + 14 hours)
+Error 4904 [3] occurred at disk power-on lifetime: 7625 hours (317 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -226,13 +147,13 @@ Error 4866 [5] occurred at disk power-on lifetime: 7622 hours (317 days + 14 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 ff 00 08 00 00 06 4c d8 38 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 38 00 00 06 4c d8 00 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 07 00 00 06 4c d7 f9 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 39 00 00 06 4c d7 c0 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 06 00 00 06 4c d7 ba e0 e0     00:00:11.070  READ DMA EXT
+  25 00 ff 00 08 00 00 06 4c d8 38 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 38 00 00 06 4c d8 00 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 07 00 00 06 4c d7 f9 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 39 00 00 06 4c d7 c0 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 06 00 00 06 4c d7 ba e0 e0     00:00:10.920  READ DMA EXT
 
-Error 4865 [4] occurred at disk power-on lifetime: 7622 hours (317 days + 14 hours)
+Error 4903 [2] occurred at disk power-on lifetime: 7625 hours (317 days + 17 hours)
   When the command that caused the error occurred, the device was in an unknown state.
 
   After command completion occurred, registers were:
@@ -243,11 +164,85 @@ Error 4865 [4] occurred at disk power-on lifetime: 7622 hours (317 days + 14 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 ff 00 08 00 00 06 4c d8 38 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 38 00 00 06 4c d8 00 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 07 00 00 06 4c d7 f9 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 39 00 00 06 4c d7 c0 e0 e0     00:00:11.070  READ DMA EXT
-  25 00 ff 00 06 00 00 06 4c d7 ba e0 e0     00:00:11.070  READ DMA EXT
+  25 00 ff 00 08 00 00 06 4c d8 38 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 38 00 00 06 4c d8 00 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 07 00 00 06 4c d7 f9 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 39 00 00 06 4c d7 c0 e0 e0     00:00:10.920  READ DMA EXT
+  25 00 ff 00 06 00 00 06 4c d7 ba e0 e0     00:00:10.920  READ DMA EXT
+
+Error 4902 [1] occurred at disk power-on lifetime: 7625 hours (317 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  01 -- 50 00 01 00 00 00 00 00 01 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.590  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.590  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.580  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.580  NOP [Abort queued commands]
+  08 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.580  DEVICE RESET
+
+Error 4901 [0] occurred at disk power-on lifetime: 7625 hours (317 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 a0 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.580  NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.580  NOP [Abort queued commands]
+  08 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.580  DEVICE RESET
+
+Error 4900 [19] occurred at disk power-on lifetime: 7625 hours (317 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 a0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  08 00 00 00 00 00 00 00 00 00 00 a0 a0     00:00:04.580  DEVICE RESET
+
+Error 4899 [18] occurred at disk power-on lifetime: 7625 hours (317 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+
+Error 4898 [17] occurred at disk power-on lifetime: 7625 hours (317 days + 17 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 ff   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 ff 00 08 00 00 06 4c d8 38 e0 e0     00:00:10.850  READ DMA EXT
+  25 00 ff 00 38 00 00 06 4c d8 00 e0 e0     00:00:10.850  READ DMA EXT
+  25 00 ff 00 07 00 00 06 4c d7 f9 e0 e0     00:00:10.850  READ DMA EXT
+  25 00 ff 00 39 00 00 06 4c d7 c0 e0 e0     00:00:10.850  READ DMA EXT
+  25 00 ff 00 06 00 00 06 4c d7 ba e0 e0     00:00:10.850  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -273,5 +268,5 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 

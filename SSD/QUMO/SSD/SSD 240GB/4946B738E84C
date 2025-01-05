@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.10.155-generic-1rosa2021.1-x86_64] (local build)
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.117-generic-1rosa2021.1-x86_64] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,7 +13,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ACS-2 T13/2015-D revision 3
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Wed Mar  1 11:54:21 2023 +05
+Local Time is:    Thu Sep  7 13:06:38 2023 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -60,34 +60,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    3
-  9 Power_On_Hours          -O--CK   100   100   050    -    9015
- 12 Power_Cycle_Count       -O--CK   100   100   050    -    2268
+  9 Power_On_Hours          -O--CK   100   100   050    -    10903
+ 12 Power_Cycle_Count       -O--CK   100   100   050    -    2771
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    92
 163 Unknown_Attribute       -O--CK   100   100   050    -    14
-164 Unknown_Attribute       -O--CK   100   100   050    -    185126
-165 Unknown_Attribute       -O--CK   100   100   050    -    593
-166 Unknown_Attribute       -O--CK   100   100   050    -    266
-167 Unknown_Attribute       -O--CK   100   100   050    -    349
+164 Unknown_Attribute       -O--CK   100   100   050    -    255035
+165 Unknown_Attribute       -O--CK   100   100   050    -    1407
+166 Unknown_Attribute       -O--CK   100   100   050    -    339
+167 Unknown_Attribute       -O--CK   100   100   050    -    481
 168 Unknown_Attribute       -O--CK   100   100   050    -    7000
-169 Unknown_Attribute       -O--CK   100   100   050    -    96
+169 Unknown_Attribute       -O--CK   100   100   050    -    94
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   050    -    0
 178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    3
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   050    -    196
+192 Power-Off_Retract_Count -O--CK   100   100   050    -    224
 194 Temperature_Celsius     -O---K   100   100   050    -    30
-195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    577920
+195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    944486
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    3
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    20
+199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    22
 232 Available_Reservd_Space -O--CK   100   100   050    -    92
-241 Total_LBAs_Written      ----CK   100   100   050    -    469417
-242 Total_LBAs_Read         ----CK   100   100   050    -    248368
-245 Unknown_Attribute       -O--CK   100   100   050    -    1261248
+241 Total_LBAs_Written      ----CK   100   100   050    -    585716
+242 Total_LBAs_Read         ----CK   100   100   050    -    311682
+245 Unknown_Attribute       -O--CK   100   100   050    -    1970689
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,28 +112,95 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Invalid Error Log index = 0x0000 (reserved = 0x00)
+Device Error Count: 22 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 22 [1] log entry is empty
+Error 21 [0] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
+Error 20 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
+Error 19 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      5429         -
-# 2  Extended offline    Interrupted (host reset)      80%      5416         -
-# 3  Short offline       Completed without error       00%      5402         -
-# 4  Short offline       Interrupted (host reset)      70%      5389         -
-# 5  Short offline       Completed without error       00%      5380         -
-# 6  Short offline       Completed without error       00%      5368         -
-# 7  Short offline       Completed without error       00%      5361         -
-# 8  Short offline       Completed without error       00%      5352         -
-# 9  Short offline       Interrupted (host reset)      80%      5345         -
-#10  Short offline       Completed without error       00%      5331         -
-#11  Short offline       Completed without error       00%      5321         -
-#12  Short offline       Interrupted (host reset)      90%      5309         -
-#13  Short offline       Interrupted (host reset)      80%      5295         -
-#14  Short offline       Completed without error       00%      5288         -
-#15  Short offline       Interrupted (host reset)      80%      5279         -
-#16  Short offline       Interrupted (host reset)      90%      5271         -
-#17  Short offline       Completed without error       00%      5257         -
-#18  Short offline       Completed without error       00%      5246         -
-#19  Short offline       Interrupted (host reset)      90%      5235         -
+# 1  Extended offline    Interrupted (host reset)      90%      9065         -
+# 2  Short offline       Completed without error       00%      5429         -
+# 3  Extended offline    Interrupted (host reset)      80%      5416         -
+# 4  Short offline       Completed without error       00%      5402         -
+# 5  Short offline       Interrupted (host reset)      70%      5389         -
+# 6  Short offline       Completed without error       00%      5380         -
+# 7  Short offline       Completed without error       00%      5368         -
+# 8  Short offline       Completed without error       00%      5361         -
+# 9  Short offline       Completed without error       00%      5352         -
+#10  Short offline       Interrupted (host reset)      80%      5345         -
+#11  Short offline       Completed without error       00%      5331         -
+#12  Short offline       Completed without error       00%      5321         -
+#13  Short offline       Interrupted (host reset)      90%      5309         -
+#14  Short offline       Interrupted (host reset)      80%      5295         -
+#15  Short offline       Completed without error       00%      5288         -
+#16  Short offline       Interrupted (host reset)      80%      5279         -
+#17  Short offline       Interrupted (host reset)      90%      5271         -
+#18  Short offline       Completed without error       00%      5257         -
+#19  Short offline       Completed without error       00%      5246         -
 
 Selective Self-tests/Logging not supported
 
@@ -142,14 +209,14 @@ SCT Commands not supported
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            2268  ---  Lifetime Power-On Resets
-0x01  0x010  4            9015  ---  Power-on Hours
-0x01  0x018  6       698942248  ---  Logical Sectors Written
-0x01  0x020  6           40294  ---  Number of Write Commands
-0x01  0x028  6      3392170503  ---  Logical Sectors Read
-0x01  0x030  6           44888  ---  Number of Read Commands
+0x01  0x008  4            2771  ---  Lifetime Power-On Resets
+0x01  0x010  4           10903  ---  Power-on Hours
+0x01  0x018  6      4025785436  ---  Logical Sectors Written
+0x01  0x020  6          274233  ---  Number of Write Commands
+0x01  0x028  6      3246559850  ---  Logical Sectors Read
+0x01  0x030  6          260709  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -160,6 +227,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            1  R_ERR response for non-data FIS
+0x000a  4           31  Device-to-host register FISes sent due to a COMRESET
 

@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.17.6-300.fc36.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.6.14-un-def-alt1] (ALT Sisyphus 7.2-alt1)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     SAMSUNG MZRPA128HMCD-000SO
@@ -10,10 +10,10 @@ User Capacity:    64,023,257,088 bytes [64.0 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        Not in smartctl database 7.3/5319
+Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS, ATA/ATAPI-7 T13/1532D revision 1
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sun May 22 19:14:55 2022 MSK
+Local Time is:    Tue Feb  6 01:56:58 2024 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -21,7 +21,7 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -31,8 +31,9 @@ General SMART Values:
 Offline data collection status:  (0x80)	Offline data collection activity
 					was never started.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      ( 121)	The previous self-test completed having
-					the read element of the test failed.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
 Total time to complete Offline 
 data collection: 		(  420) seconds.
 Offline data collection
@@ -57,12 +58,12 @@ recommended polling time: 	 (   7) minutes.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--CK   086   086   ---    -    67655
- 12 Power_Cycle_Count       -O--CK   099   099   ---    -    700
-178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   080   080   ---    -    194
-179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   082   082   ---    -    354
-180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   082   082   ---    -    1662
-183 Runtime_Bad_Block       PO--C-   099   099   ---    -    12
+  9 Power_On_Hours          -O--CK   085   085   ---    -    74353
+ 12 Power_Cycle_Count       -O--CK   099   099   ---    -    903
+178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   080   080   ---    -    196
+179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   082   082   ---    -    356
+180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   082   082   ---    -    1660
+183 Runtime_Bad_Block       PO--C-   099   099   ---    -    13
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -90,9 +91,25 @@ No Errors Logged
 Warning! SMART Extended Self-test Log Structure error: invalid SMART checksum.
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       90%      2103         2691072
-# 2  Extended offline    Completed: read failure       90%      2091         2691072
-# 3  Short offline       Completed without error       00%      1985         -
+# 1  Extended offline    Completed without error       00%      8790         -
+# 2  Extended offline    Completed without error       00%      8663         -
+# 3  Short offline       Completed without error       00%      8573         -
+# 4  Extended offline    Completed without error       00%      8489         -
+# 5  Extended offline    Completed without error       00%      8315         -
+# 6  Extended offline    Completed without error       00%      8141         -
+# 7  Extended offline    Completed without error       00%      7967         -
+# 8  Extended offline    Completed without error       00%      7794         -
+# 9  Extended offline    Completed without error       00%      7620         -
+#10  Extended offline    Completed without error       00%      7446         -
+#11  Extended offline    Completed without error       00%      7349         -
+#12  Short offline       Completed without error       00%      7315         -
+#13  Extended offline    Completed without error       00%      7227         -
+#14  Extended offline    Completed without error       00%      7054         -
+#15  Extended offline    Completed without error       00%      6880         -
+#16  Extended offline    Completed without error       00%      6706         -
+#17  Extended offline    Completed without error       00%      6532         -
+#18  Extended offline    Completed without error       00%      6358         -
+#19  Extended offline    Completed without error       00%      6227         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -121,8 +138,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           21  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

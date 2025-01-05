@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.3.1-1-default] (SUSE RPM)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2021-09-14 r5237 [x86_64-linux-5.14.21-150500.55.36-default] (SUSE RPM)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Samsung based SSDs
@@ -11,10 +11,10 @@ User Capacity:    500,107,862,016 bytes [500 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 TRIM Command:     Available
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat May 27 21:45:15 2023 CDT
+Local Time is:    Wed Nov 15 13:18:18 2023 CST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,12 +22,14 @@ APM feature is:   Unavailable
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, frozen [SEC2]
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Unexpected SCT status 0x0001 (action_code=4, function_code=2)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
 
 === START OF READ SMART DATA SECTION ===
+SMART Status not supported: Incomplete response, ATA output registers missing
 SMART overall-health self-assessment test result: PASSED
+Warning: This result is based on an Attribute check.
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
@@ -66,19 +68,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   091   091   000    -    42987
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    677
-177 Wear_Leveling_Count     PO--C-   012   012   000    -    1066
+  9 Power_On_Hours          -O--CK   090   090   000    -    47138
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    692
+177 Wear_Leveling_Count     PO--C-   006   006   000    -    1128
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   001   010    Past 0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   053   029   000    -    47
+190 Airflow_Temperature_Cel -O--CK   068   029   000    -    32
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   098   098   000    -    1887
-235 POR_Recovery_Count      -O--C-   099   099   000    -    437
-241 Total_LBAs_Written      -O--CK   099   099   000    -    400446206008
+235 POR_Recovery_Count      -O--C-   099   099   000    -    448
+241 Total_LBAs_Written      -O--CK   099   099   000    -    409191449692
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -86,49 +88,51 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
                             ||_____ O updated online
                             |______ P prefailure warning
 
-General Purpose Log Directory Version 1
-SMART           Log Directory Version 1 [multi-sector log support]
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error unsupported scsi opcode
+Read GP Log Directory failed
+
+SMART Log Directory Version 1 [multi-sector log support]
 Address    Access  R/W   Size  Description
-0x00       GPL,SL  R/O      1  Log Directory
+0x00           SL  R/O      1  Log Directory
 0x01           SL  R/O      1  Summary SMART error log
 0x02           SL  R/O      1  Comprehensive SMART error log
-0x03       GPL     R/O      1  Ext. Comprehensive SMART error log
 0x06           SL  R/O      1  SMART self-test log
-0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  NCQ Command Error log
-0x11       GPL     R/O      1  SATA Phy Event Counters log
-0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log
-0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
-0xa1       GPL,SL  VS      16  Device vendor specific log
-0xce       GPL,SL  VS      16  Device vendor specific log
-0xe0       GPL,SL  R/W      1  SCT Command/Status
-0xe1       GPL,SL  R/W      1  SCT Data Transfer
+0x30           SL  R/O      9  IDENTIFY DEVICE data log
+0x80-0x9f      SL  R/W     16  Host vendor specific log
+0xa1           SL  VS      16  Device vendor specific log
+0xce           SL  VS      16  Device vendor specific log
+0xe0           SL  R/W      1  SCT Command/Status
+0xe1           SL  R/W      1  SCT Data Transfer
 
-SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
 No Errors Logged
 
-SMART Extended Self-test Log Version: 1 (1 sectors)
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%       105         -
-# 2  Short offline       Completed without error       00%        83         -
-# 3  Short offline       Completed without error       00%        56         -
-# 4  Short offline       Completed without error       00%        31         -
-# 5  Short offline       Completed without error       00%         7         -
-# 6  Short offline       Completed without error       00%        64         -
-# 7  Short offline       Completed without error       00%        40         -
-# 8  Short offline       Completed without error       00%        16         -
-# 9  Short offline       Completed without error       00%        11         -
-#10  Short offline       Completed without error       00%         0         -
-#11  Short offline       Completed without error       00%        13         -
-#12  Short offline       Completed without error       00%         0         -
-#13  Short offline       Completed without error       00%         0         -
-#14  Short offline       Completed without error       00%        41         -
-#15  Short offline       Completed without error       00%        18         -
-#16  Short offline       Completed without error       00%         0         -
-#17  Short offline       Completed without error       00%         0         -
-#18  Extended offline    Completed without error       00%         2         -
-#19  Short offline       Completed without error       00%         0         -
+# 1  Short offline       Completed without error       00%      3616         -
+# 2  Short offline       Completed without error       00%      3592         -
+# 3  Short offline       Completed without error       00%      3568         -
+# 4  Short offline       Completed without error       00%      2351         -
+# 5  Short offline       Completed without error       00%      2327         -
+# 6  Short offline       Completed without error       00%      2303         -
+# 7  Short offline       Completed without error       00%      2279         -
+# 8  Short offline       Completed without error       00%      2256         -
+# 9  Short offline       Completed without error       00%      2232         -
+#10  Short offline       Completed without error       00%      2208         -
+#11  Extended offline    Completed without error       00%      2185         -
+#12  Short offline       Completed without error       00%      2159         -
+#13  Short offline       Completed without error       00%      2135         -
+#14  Short offline       Completed without error       00%      2111         -
+#15  Short offline       Completed without error       00%      2087         -
+#16  Short offline       Completed without error       00%      2063         -
+#17  Short offline       Completed without error       00%      2039         -
+#18  Short offline       Completed without error       00%      2015         -
+#19  Short offline       Completed without error       00%      1991         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -144,42 +148,25 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    47 Celsius
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
-Under/Over Temperature Limit Count:   0/207416
+Under/Over Temperature Limit Count:   0/225004
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    128 (83)
+Temperature History Size (Index):    128 (116)
 
-SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+SMART WRITE LOG does not return COUNT and LBA_LOW register
+SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
 
 Pending Defects log (GP Log 0x0c) not supported
 
-SATA Phy Event Counters (GP Log 0x11)
-ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
-0x0002  2            0  R_ERR response for data FIS
-0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2            0  R_ERR response for non-data FIS
-0x0006  2            0  R_ERR response for device-to-host non-data FIS
-0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
-0x000b  2            0  CRC errors within host-to-device FIS
-0x000d  2            0  Non-CRC errors within host-to-device FIS
-0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
-0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
-0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+ATA_READ_LOG_EXT (addr=0x11:0x00, page=0, n=1) failed: scsi error unsupported scsi opcode
+Read SATA Phy Event Counters failed
 
