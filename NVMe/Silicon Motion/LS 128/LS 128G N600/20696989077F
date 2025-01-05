@@ -1,5 +1,5 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-4.15.0-desktop-94.1rosa-x86_64] (local build)
-Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.127-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Number:                       LS 128G N600
@@ -8,14 +8,16 @@ Firmware Version:                   R0629A0
 PCI Vendor/Subsystem ID:            0x126f
 IEEE OUI Identifier:                0x000000
 Controller ID:                      1
+NVMe Version:                       1.3
 Number of Namespaces:               1
 Namespace 1 Size/Capacity:          128,035,676,160 [128 GB]
 Namespace 1 Formatted LBA Size:     512
 Namespace 1 IEEE EUI-64:            010000 ...
-Local Time is:                      Sun Jul 26 19:39:50 2020 MSK
+Local Time is:                      Sun Sep 10 21:55:28 2023 MSK
 Firmware Updates (0x06):            3 Slots
 Optional Admin Commands (0x0006):   Format Frmw_DL
 Optional NVM Commands (0x005f):     Comp Wr_Unc DS_Mngmt Wr_Zero Sav/Sel_Feat Timestmp
+Log Page Attributes (0x0f):         S/H_per_NS Cmd_Eff_Lg Ext_Get_Lg Telmtry_Lg
 Maximum Data Transfer Size:         64 Pages
 Warning  Comp. Temp. Threshold:     70 Celsius
 Critical Comp. Temp. Threshold:     80 Celsius
@@ -33,40 +35,42 @@ SMART overall-health self-assessment test result: PASSED
 
 SMART/Health Information (NVMe Log 0x02)
 Critical Warning:                   0x00
-Temperature:                        36 Celsius
+Temperature:                        41 Celsius
 Available Spare:                    100%
 Available Spare Threshold:          10%
 Percentage Used:                    0%
-Data Units Read:                    312,846 [160 GB]
-Data Units Written:                 271,239 [138 GB]
-Host Read Commands:                 4,705,122
-Host Write Commands:                3,690,466
-Controller Busy Time:               72,015
-Power Cycles:                       102
-Power On Hours:                     0
-Unsafe Shutdowns:                   51
+Data Units Read:                    1,837,921 [941 GB]
+Data Units Written:                 2,766,346 [1.41 TB]
+Host Read Commands:                 33,022,827
+Host Write Commands:                57,343,443
+Controller Busy Time:               13,320,111
+Power Cycles:                       639
+Power On Hours:                     3
+Unsafe Shutdowns:                   81
 Media and Data Integrity Errors:    0
 Error Information Log Entries:      0
 Warning  Comp. Temperature Time:    0
 Critical Comp. Temperature Time:    0
 
-Error Information (NVMe Log 0x01, max 256 entries)
+Error Information (NVMe Log 0x01, 16 of 256 entries)
 Num   ErrCount  SQId   CmdId  Status  PELoc          LBA  NSID    VS
-  0 2251804123595329   720  0x043d  0x0002  0x100  34359738368 40904  0xfb
-  1 539069935255552 15689  0x0016  0x001e  0x001 72057680016572824     0  0x08
-  2          2     8  0x0000  0x1a70  0x001 1125972921754449 76546808  0x06
-  3 325386997223129091     3  0x0000  0x0000  0x000 290133630779392 1777916  0x10
-  4 6259970668620616    30  0x0001  0x0098  0x4c3     16777236     0  0x50
-  6 128924188688     0  0x0000  0x0000  0x000 38622892841351816 524315  0x10
-  7 281595244787822    80  0x0454  0x001e  0x100  34359738368 116632  0xf6
-  8 537970423627776 15657  0x0016  0x001e  0x006 72057680016245400     0  0x08
-  9   16777217     8  0x0000  0xfad0  0x001 1126033052352349 78578376  0x16
- 10 337209427281117213    24  0x0100  0x0000  0x000 536870912000000 1457417  0x1e
- 11 38624413259777432    28  0x0008  0x0210  0x4fe           30     0  0xc8
- 13 103151763952     0  0x0000  0x0000  0x000 6259077315421384 262174  0x98
- 14 1126015879952200   720  0x046e  0x0000  0x000  34359738368 55272     -
- 15 518591531188224 15093  0x0016  0x001d 0xffdf 72057675709415472     0     -
- 16         25     8  0x0000  0x50c0  0x001 844515142019610 67699384  0x1e
- 17 323417290861379613    19  0x0100  0x0000  0x000 474542346600448 1717747  0x1a
-... (66 entries not shown)
+  0 1125960051858831   248  0x04ab  0x001a  0x000  34359738368 58608  0xa0
+  1 110638357544960  3220  0x0248  0x0006  0x004 72057671418905080     0  0x08
+  2   16777240     8  0x0000  0x6308  0x000 1125925714922596 69271912  0x12
+  3 331296734783668245     4  0x0000  0x0000  0x000 145513491988488 38277260  0x08
+  4 66163245345437936     7  0x0002  0x00e8  0x41d           16     0  0x78
+  5 34359738368 18520  0x0001  0x290e  0x0e9 295270102428024852     3     -
+  6 72057602710831720     0  0x0000  0x0008  0x000 66458339663469584 65549  0xd0
+  7 281539414400757   568  0x0478  0x0015  0x000  34359738368 16576  0x1b
+  8 473648993402888 13785  0x0248  0x001a  0x001 133211554032     0  0x08
+  9         26     0  0x0000  0xe790  0x001 281603836755186 75104664     -
+ 10 332704006587613198    26  0x0000  0x0000  0x000 253918466539520 15473886  0x0e
+ 11 93177168003088672     4  0x0001  0x01c8  0x4d8     16777235     0  0xe8
+ 12 34359738368 33848  0x0000  0x108a  0x248 293580427934040072     2     -
+ 13 72057606999507032     0  0x0000  0x0000  0x000 93177618974655592 65540     -
+ 14 1125934280413267   560  0x04f7  0x000d  0x000            0 87840  0xe4
+ 15 241102284128264  7020  0x00ec  0x000d  0x004 103154844296     0     -
+... (240 entries not read)
+
+
 

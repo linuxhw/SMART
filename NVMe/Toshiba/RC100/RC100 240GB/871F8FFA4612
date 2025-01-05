@@ -1,5 +1,5 @@
-smartctl 6.6 2017-11-05 r4594 [x86_64-linux-4.12.14-lp151.28.52-default] (SUSE RPM)
-Copyright (C) 2002-17, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.3.9-1-default] (SUSE RPM)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Number:                       TOSHIBA-RC100
@@ -8,14 +8,16 @@ Firmware Version:                   ADRA0101
 PCI Vendor/Subsystem ID:            0x1179
 IEEE OUI Identifier:                0x00080d
 Controller ID:                      0
+NVMe Version:                       1.2.1
 Number of Namespaces:               1
 Namespace 1 Size/Capacity:          240,057,409,536 [240 GB]
-Namespace 1 Formatted LBA Size:     512
+Namespace 1 Formatted LBA Size:     4096
 Namespace 1 IEEE EUI-64:            00080d ...
-Local Time is:                      Tue Jul  7 14:54:18 2020 CDT
+Local Time is:                      Tue Jul 11 23:33:33 2023 CDT
 Firmware Updates (0x12):            1 Slot, no Reset required
 Optional Admin Commands (0x0017):   Security Format Frmw_DL Self_Test
 Optional NVM Commands (0x0017):     Comp Wr_Unc DS_Mngmt Sav/Sel_Feat
+Log Page Attributes (0x02):         Cmd_Eff_Lg
 Maximum Data Transfer Size:         512 Pages
 Warning  Comp. Temp. Threshold:     82 Celsius
 Critical Comp. Temp. Threshold:     85 Celsius
@@ -30,11 +32,39 @@ St Op     Max   Active     Idle   RL RT WL WT  Ent_Lat  Ex_Lat
 
 Supported LBA Sizes (NSID 0x1)
 Id Fmt  Data  Metadt  Rel_Perf
- 0 -    4096       0         0
- 1 +     512       0         3
+ 0 +    4096       0         0
+ 1 -     512       0         3
 
 === START OF SMART DATA SECTION ===
-Read NVMe SMART/Health Information failed: NVMe Status 0x6002
+SMART overall-health self-assessment test result: PASSED
+
+SMART/Health Information (NVMe Log 0x02)
+Critical Warning:                   0x00
+Temperature:                        41 Celsius
+Available Spare:                    100%
+Available Spare Threshold:          10%
+Percentage Used:                    29%
+Data Units Read:                    24,710,679 [12.6 TB]
+Data Units Written:                 27,559,055 [14.1 TB]
+Host Read Commands:                 152,170,233
+Host Write Commands:                369,879,568
+Controller Busy Time:               6,833
+Power Cycles:                       6,976
+Power On Hours:                     5,322
+Unsafe Shutdowns:                   1,258
+Media and Data Integrity Errors:    0
+Error Information Log Entries:      13,843
+Warning  Comp. Temperature Time:    0
+Critical Comp. Temperature Time:    0
+Temperature Sensor 1:               41 Celsius
+Thermal Temp. 1 Transition Count:   915
+Thermal Temp. 2 Transition Count:   44
+Thermal Temp. 1 Total Time:         17076
+Thermal Temp. 2 Total Time:         53
+
+Error Information (NVMe Log 0x01, 16 of 64 entries)
+Num   ErrCount  SQId   CmdId  Status  PELoc          LBA  NSID    VS
+  0      13843     0  0x800f  0xc005  0x028            -     0     -
 
 
 
