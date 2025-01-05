@@ -33,12 +33,12 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS128GSSD340       | 128 GB | 11      | 418   | 0     | 1.15   |
 | Transcend | TS64GSSD320        | 64 GB  | 4       | 439   | 10    | 1.01   |
 | Transcend | TS256GSSD340       | 256 GB | 8       | 360   | 0     | 0.99   |
-| Transcend | TS256GSSD320       | 256 GB | 3       | 322   | 0     | 0.88   |
+| Transcend | TS256GSSD320       | 256 GB | 3       | 331   | 0     | 0.91   |
 | Transcend | TS64GMTS400S       | 64 GB  | 5       | 315   | 0     | 0.86   |
 | Transcend | TS32GSSD340        | 32 GB  | 2       | 289   | 0     | 0.79   |
 | Transcend | TS32GSSD370        | 32 GB  | 4       | 279   | 0     | 0.77   |
 | Transcend | TS240GSSD220S      | 240 GB | 47      | 284   | 1     | 0.74   |
-| Transcend | TS120GSSD220S      | 120 GB | 42      | 280   | 4     | 0.65   |
+| Transcend | TS120GSSD220S      | 120 GB | 42      | 281   | 4     | 0.65   |
 | Transcend | TS480GSSD220S      | 480 GB | 24      | 268   | 170   | 0.63   |
 | Transcend | TSA                | 1 TB   | 2       | 214   | 0     | 0.59   |
 | Transcend | TS240GMTS820S      | 240 GB | 15      | 188   | 5     | 0.49   |
@@ -53,9 +53,9 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS120GMTS420S      | 120 GB | 43      | 151   | 1     | 0.41   |
 | Transcend | TS4TSSD230S        | 4 TB   | 2       | 147   | 0     | 0.40   |
 | Transcend | TS256GSSD370       | 256 GB | 7       | 140   | 0     | 0.38   |
-| Transcend | TS128GSSD230S      | 128 GB | 29      | 126   | 1     | 0.34   |
-| Transcend | TS120GMTS820S      | 120 GB | 9       | 122   | 0     | 0.34   |
+| Transcend | TS128GSSD230S      | 128 GB | 29      | 129   | 1     | 0.35   |
 | Transcend | TS256GSSD370S      | 256 GB | 31      | 122   | 0     | 0.34   |
+| Transcend | TS120GMTS820S      | 120 GB | 9       | 122   | 0     | 0.34   |
 | Transcend | TS128GSSD360S      | 128 GB | 14      | 117   | 0     | 0.32   |
 | Transcend | TS32GSSD340K       | 32 GB  | 2       | 109   | 0     | 0.30   |
 | Transcend | TS128GMTS430S      | 128 GB | 13      | 110   | 1     | 0.30   |
@@ -66,7 +66,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS1TSSD370         | 1 TB   | 2       | 99    | 0     | 0.27   |
 | Transcend | TS128GSSD370S      | 128 GB | 43      | 94    | 0     | 0.26   |
 | Transcend | TS512GSSD370S      | 512 GB | 10      | 108   | 1     | 0.26   |
-| Transcend | TS256GMTS430S      | 256 GB | 29      | 90    | 0     | 0.25   |
+| Transcend | TS256GMTS430S      | 256 GB | 29      | 92    | 0     | 0.25   |
 | Transcend | TS500GSSD220Q      | 500 GB | 4       | 88    | 0     | 0.24   |
 | Transcend | TS64GMSA230S       | 64 GB  | 7       | 80    | 0     | 0.22   |
 | Transcend | TS128GMTS400S      | 128 GB | 3       | 79    | 0     | 0.22   |
@@ -77,7 +77,7 @@ MTBF - avg. MTBF in years per sample.
 | Transcend | TS240GMTS420S      | 240 GB | 37      | 91    | 53    | 0.20   |
 | Transcend | TS32GSSD370S       | 32 GB  | 20      | 70    | 0     | 0.19   |
 | Transcend | TS256GSSD360S      | 256 GB | 6       | 74    | 8     | 0.19   |
-| Transcend | TS256GMTS400S      | 256 GB | 4       | 66    | 0     | 0.18   |
+| Transcend | TS256GMTS400S      | 256 GB | 4       | 68    | 0     | 0.19   |
 | Transcend | TS32GMSA370        | 32 GB  | 5       | 55    | 0     | 0.15   |
 | Transcend | TS1TSSD225S        | 1 TB   | 3       | 54    | 0     | 0.15   |
 | Transcend | TS128GMTS800       | 128 GB | 16      | 53    | 1     | 0.14   |
@@ -112,7 +112,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Transcend | SandForce Driven SSDs  | 4      | 16      | 495   | 3     | 1.31   |
+| Transcend | SandForce Driven SSDs  | 4      | 16      | 497   | 3     | 1.31   |
 | Transcend | JMicron/Maxiotek ba... | 3      | 14      | 469   | 0     | 1.29   |
 | Transcend | JMicron based SSDs     | 4      | 21      | 393   | 48    | 1.05   |
 | Transcend | Silicon Motion base... | 47     | 637     | 138   | 16    | 0.36   |

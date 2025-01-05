@@ -22,8 +22,8 @@ MTBF - avg. MTBF in years per sample.
 | Vaseky    | V800-60G           | 64 GB  | 2       | 247   | 14    | 0.53   |
 | Vaseky    | V800-120G          | 120 GB | 4       | 165   | 0     | 0.45   |
 | Vaseky    | V900-128G          | 128 GB | 2       | 155   | 0     | 0.43   |
-| Vaseky    | V800-64G           | 64 GB  | 2       | 116   | 0     | 0.32   |
+| Vaseky    | V850-64G           | 64 GB  | 2       | 132   | 0     | 0.36   |
+| Vaseky    | V800-64G           | 64 GB  | 2       | 117   | 0     | 0.32   |
 | Vaseky    | V800-256G          | 256 GB | 4       | 72    | 0     | 0.20   |
-| Vaseky    | V850-64G           | 64 GB  | 2       | 55    | 0     | 0.15   |
 | Vaseky    | V800-128G          | 120 GB | 5       | 55    | 0     | 0.15   |
 | Vaseky    | V820-1TB           | 1 TB   | 2       | 13    | 43    | 0.04   |

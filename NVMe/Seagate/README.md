@@ -27,10 +27,10 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | FireCuda 520 SS... | 500 GB | 26      | 233   | 0     | 0.64   |
 | Seagate   | FireCuda 520 SS... | 2 TB   | 19      | 222   | 0     | 0.61   |
 | Seagate   | FireCuda 520 SS... | 1 TB   | 31      | 210   | 0     | 0.58   |
-| Seagate   | FireCuda 530 ZP... | 4 TB   | 21      | 179   | 0     | 0.49   |
+| Seagate   | FireCuda 530 ZP... | 4 TB   | 21      | 184   | 0     | 0.50   |
 | Seagate   | BarraCuda 510 S... | 250 GB | 2       | 177   | 0     | 0.48   |
 | Seagate   | FireCuda 510 SS... | 500 GB | 5       | 169   | 0     | 0.46   |
-| Seagate   | FireCuda 530 ZP... | 4 TB   | 4       | 139   | 0     | 0.38   |
+| Seagate   | FireCuda 530 ZP... | 4 TB   | 4       | 145   | 0     | 0.40   |
 | Seagate   | BarraCuda 510 S... | 256 GB | 2       | 130   | 0     | 0.36   |
 | Seagate   | FireCuda 530 ZP... | 500 GB | 8       | 121   | 0     | 0.33   |
 | Seagate   | BarraCuda 510 S... | 1 TB   | 5       | 120   | 0     | 0.33   |
@@ -38,11 +38,11 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | FireCuda 530 ZP... | 2 TB   | 5       | 102   | 0     | 0.28   |
 | Seagate   | BarraCuda Q5 ZP... | 500 GB | 12      | 100   | 0     | 0.27   |
 | Seagate   | FireCuda 530 ZP... | 2 TB   | 22      | 94    | 0     | 0.26   |
-| Seagate   | FireCuda 530 ZP... | 1 TB   | 30      | 90    | 0     | 0.25   |
+| Seagate   | FireCuda 530 ZP... | 1 TB   | 30      | 91    | 0     | 0.25   |
 | Seagate   | FireCuda 530 ZP... | 1 TB   | 6       | 77    | 0     | 0.21   |
 | Seagate   | FireCuda 530 ZP... | 500 GB | 5       | 64    | 0     | 0.18   |
+| Seagate   | ZP1000GM30004      | 1 TB   | 2       | 62    | 0     | 0.17   |
 | Seagate   | ZP500GV30012       | 500 GB | 2       | 24    | 0     | 0.07   |
 | Seagate   | IronWolf510 ZP9... | 960 GB | 3       | 20    | 0     | 0.06   |
 | Seagate   | ZP1000GV30012      | 1 TB   | 2       | 4     | 0     | 0.01   |
 | Seagate   | FireCuda 510 SS... | 250 GB | 2       | 4     | 0     | 0.01   |
-| Seagate   | ZP1000GM30004      | 1 TB   | 2       | 0     | 0     | 0.00   |

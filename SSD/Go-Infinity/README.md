@@ -18,5 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Go-Inf... | SSDAS256           | 256 GB | 3       | 40    | 0     | 0.11   |
+| Go-Inf... | SSD                | 240 GB | 2       | 1     | 0     | 0.00   |
 | Go-Inf... | SSD                | 256 GB | 2       | 1     | 0     | 0.00   |
-| Go-Inf... | SSD                | 240 GB | 2       | 0     | 0     | 0.00   |

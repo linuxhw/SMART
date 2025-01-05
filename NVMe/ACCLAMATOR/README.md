@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ACCLAM... | SSD                | 1 TB   | 3       | 99    | 0     | 0.27   |
+| ACCLAM... | SSD                | 1 TB   | 3       | 124   | 0     | 0.34   |

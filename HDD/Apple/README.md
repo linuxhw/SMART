@@ -23,17 +23,17 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Apple     | HDD ST3000DM001    | 3 TB   | 6       | 1258  | 340   | 2.76   |
+| Apple     | HDD ST3000DM001    | 3 TB   | 6       | 1289  | 340   | 2.84   |
 | Apple     | HDD ST2000LM003    | 2 TB   | 2       | 973   | 0     | 2.67   |
 | Apple     | HDD HTS727575A9... | 752 GB | 6       | 767   | 0     | 2.10   |
 | Apple     | HDD ST1000DM003    | 1 TB   | 81      | 800   | 55    | 1.87   |
 | Apple     | HDD ST500LM012     | 500 GB | 8       | 611   | 0     | 1.68   |
 | Apple     | HDD HTS541010A9... | 1 TB   | 122     | 856   | 125   | 1.62   |
-| Apple     | HDD ST750LM022     | 752 GB | 3       | 562   | 0     | 1.54   |
+| Apple     | HDD ST750LM022     | 752 GB | 3       | 570   | 0     | 1.56   |
 | Apple     | HDD HTS545050A7... | 500 GB | 84      | 550   | 34    | 1.34   |
 | Apple     | HDD ST1000LM024    | 1 TB   | 18      | 779   | 7     | 1.17   |
 | Apple     | HDD HUA722010CL... | 1 TB   | 4       | 502   | 55    | 1.14   |
-| Apple     | HDD HTS541010A9... | 1 TB   | 49      | 499   | 9     | 1.11   |
+| Apple     | HDD HTS541010A9... | 1 TB   | 49      | 500   | 9     | 1.11   |
 | Apple     | HDD ST2000DM001    | 2 TB   | 17      | 552   | 442   | 1.01   |
 | Apple     | HDD HTS541075A9... | 752 GB | 2       | 323   | 0     | 0.89   |
 | Apple     | HDD WD10EZES-40... | 1 TB   | 3       | 766   | 75    | 0.70   |
@@ -55,11 +55,11 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Apple     | Seagate Barracuda 7... | 1      | 6       | 1258  | 340   | 2.76   |
+| Apple     | Seagate Barracuda 7... | 1      | 6       | 1289  | 340   | 2.84   |
 | Apple     | Travelstar 7K750       | 1      | 6       | 767   | 0     | 2.10   |
 | Apple     | Barracuda              | 1      | 81      | 800   | 55    | 1.87   |
 | Apple     | Seagate Samsung Spi... | 1      | 8       | 611   | 0     | 1.68   |
-| Apple     | SpinPoint              | 1      | 3       | 562   | 0     | 1.54   |
+| Apple     | SpinPoint              | 1      | 3       | 570   | 0     | 1.56   |
 | Apple     | Travelstar 5K1000      | 3      | 173     | 749   | 91    | 1.47   |
 | Apple     | HGST Travelstar Z5K500 | 1      | 84      | 550   | 34    | 1.34   |
 | Apple     | Momentus               | 1      | 18      | 779   | 7     | 1.17   |

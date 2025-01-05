@@ -19,8 +19,8 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Lenovo    | E660 SSD-2.5-256G  | 256 GB | 2       | 300   | 0     | 0.82   |
 | Lenovo    | SSD SL700 480G     | 480 GB | 2       | 142   | 0     | 0.39   |
-| Lenovo    | E660 SSD-2.5-512G  | 512 GB | 2       | 89    | 0     | 0.24   |
+| Lenovo    | E660 SSD-2.5-512G  | 512 GB | 2       | 117   | 0     | 0.32   |
+| Lenovo    | Thinklife SSD S... | 512 GB | 2       | 109   | 0     | 0.30   |
 | Lenovo    | SSD SL700 120G     | 120 GB | 5       | 153   | 1     | 0.24   |
-| Lenovo    | Thinklife SSD S... | 512 GB | 2       | 68    | 0     | 0.19   |
 | Lenovo    | Thinklife SSD S... | 128 GB | 2       | 58    | 0     | 0.16   |
 | Lenovo    | SSD SL700          | 1 TB   | 2       | 26    | 0     | 0.07   |

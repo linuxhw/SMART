@@ -19,9 +19,9 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Plextor   | PX-512M9PeG        | 512 GB | 5       | 766   | 0     | 2.10   |
 | Plextor   | PX-256M9PeY        | 256 GB | 5       | 373   | 0     | 1.02   |
+| Plextor   | PX-512M9PGN +      | 512 GB | 3       | 336   | 0     | 0.92   |
 | Plextor   | PX-256M8PeGN       | 256 GB | 4       | 336   | 0     | 0.92   |
 | Plextor   | PX-256M9PeG        | 256 GB | 6       | 319   | 0     | 0.87   |
-| Plextor   | PX-512M9PGN +      | 512 GB | 3       | 302   | 0     | 0.83   |
 | Plextor   | PX-512M9PeGN       | 512 GB | 2       | 290   | 0     | 0.80   |
 | Plextor   | PX-256M8PeY        | 256 GB | 3       | 247   | 0     | 0.68   |
 | Plextor   | PX-512M8PeG        | 512 GB | 7       | 225   | 79    | 0.57   |

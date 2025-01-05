@@ -18,6 +18,6 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | S3+       | S3SSDC480XEU       | 480 GB | 2       | 188   | 0     | 0.52   |
-| S3+       | S3SSDC240          | 240 GB | 3       | 16    | 0     | 0.04   |
+| S3+       | S3SSDC240          | 240 GB | 3       | 16    | 0     | 0.05   |
 | S3+       | S3SSDC1T0          | 1 TB   | 2       | 7     | 0     | 0.02   |
 | S3+       | S3SSDA512-ECS-1    | 512 GB | 2       | 5     | 0     | 0.01   |

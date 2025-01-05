@@ -24,13 +24,13 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | CS3030 1TB SSD     | 1 TB   | 27      | 292   | 11    | 0.75   |
 | PNY       | CS2140 2TB SSD     | 2 TB   | 2       | 274   | 0     | 0.75   |
 | PNY       | CS1031 2TB SSD     | 2 TB   | 6       | 271   | 0     | 0.74   |
-| PNY       | CS2140 1TB SSD     | 1 TB   | 8       | 200   | 0     | 0.55   |
-| PNY       | CS1030 500GB SSD   | 500 GB | 5       | 197   | 0     | 0.54   |
+| PNY       | CS1030 500GB SSD   | 500 GB | 5       | 204   | 0     | 0.56   |
+| PNY       | CS2140 1TB SSD     | 1 TB   | 8       | 201   | 0     | 0.55   |
 | PNY       | CS2130 1TB SSD     | 1 TB   | 13      | 182   | 0     | 0.50   |
 | PNY       | CS1031 1TB SSD     | 1 TB   | 4       | 178   | 0     | 0.49   |
 | PNY       | CS2130 2TB SSD     | 2 TB   | 7       | 177   | 0     | 0.49   |
+| PNY       | CS3030 500GB SSD   | 500 GB | 32      | 183   | 1     | 0.44   |
 | PNY       | CS1030 2TB SSD     | 2 TB   | 6       | 159   | 0     | 0.44   |
-| PNY       | CS3030 500GB SSD   | 500 GB | 32      | 180   | 1     | 0.43   |
 | PNY       | CS3040 1TB SSD     | 1 TB   | 3       | 157   | 0     | 0.43   |
 | PNY       | CS3040 2TB SSD     | 2 TB   | 5       | 140   | 0     | 0.39   |
 | PNY       | CS2140 500GB SSD   | 500 GB | 5       | 95    | 0     | 0.26   |

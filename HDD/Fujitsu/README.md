@@ -34,7 +34,7 @@ MTBF - avg. MTBF in years per sample.
 | Fujitsu   | MHZ2320BH G1       | 320 GB | 19      | 931   | 17    | 1.38   |
 | Fujitsu   | MHW2120BH          | 120 GB | 41      | 542   | 48    | 1.24   |
 | Fujitsu   | MHY2250BH          | 250 GB | 12      | 669   | 117   | 1.24   |
-| Fujitsu   | MHW2080BH          | 80 GB  | 13      | 559   | 2     | 1.21   |
+| Fujitsu   | MHW2080BH          | 80 GB  | 13      | 560   | 2     | 1.21   |
 | Fujitsu   | MJA2250BH FFS G1   | 250 GB | 9       | 644   | 4     | 1.13   |
 | Fujitsu   | MHT2060BH          | 64 GB  | 6       | 484   | 342   | 1.11   |
 | Fujitsu   | MHV2040AH          | 40 GB  | 7       | 606   | 3     | 1.10   |
@@ -51,7 +51,7 @@ MTBF - avg. MTBF in years per sample.
 | Fujitsu   | MJA2160BH G2       | 160 GB | 16      | 440   | 247   | 0.89   |
 | Fujitsu   | MHZ2160BH G2       | 160 GB | 48      | 579   | 333   | 0.89   |
 | Fujitsu   | MHV2060BH          | 64 GB  | 15      | 437   | 5     | 0.86   |
-| Fujitsu   | MHY2160BH          | 160 GB | 37      | 426   | 236   | 0.84   |
+| Fujitsu   | MHY2160BH          | 160 GB | 37      | 427   | 236   | 0.85   |
 | Fujitsu   | MHW2080AT          | 80 GB  | 2       | 289   | 0     | 0.79   |
 | Fujitsu   | MHT2080AT PL       | 80 GB  | 2       | 277   | 0     | 0.76   |
 | Fujitsu   | MHT2080AH          | 80 GB  | 4       | 348   | 16    | 0.76   |
@@ -116,7 +116,7 @@ MTBF - avg. MTBF in years per sample.
 | Fujitsu   | MPA..MPG               | 1      | 2       | 1315  | 0     | 3.60   |
 | Fujitsu   | MHW BH                 | 9      | 108     | 531   | 71    | 1.01   |
 | Fujitsu   | MHZ BJ                 | 3      | 8       | 479   | 13    | 0.95   |
-| Fujitsu   | MHY BH                 | 5      | 154     | 489   | 175   | 0.74   |
+| Fujitsu   | MHY BH                 | 5      | 154     | 490   | 175   | 0.74   |
 | Fujitsu   | MHV                    | 22     | 149     | 380   | 24    | 0.68   |
 | Fujitsu   | MHX BT                 | 2      | 13      | 619   | 64    | 0.67   |
 | Fujitsu   | MJA BH                 | 9      | 85      | 487   | 175   | 0.64   |

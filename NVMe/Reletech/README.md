@@ -20,4 +20,4 @@ MTBF - avg. MTBF in years per sample.
 | Reletech  | P400 M.2 Pro Q2... | 2 TB   | 2       | 477   | 0     | 1.31   |
 | Reletech  | M.2 SSD            | 512 GB | 3       | 220   | 0     | 0.60   |
 | Reletech  | P600 M.2 PCIE3.0   | 2 TB   | 2       | 97    | 0     | 0.27   |
-| Reletech  | P400 SSD           | 512 GB | 4       | 64    | 0     | 0.18   |
+| Reletech  | P400 SSD           | 512 GB | 4       | 93    | 0     | 0.26   |

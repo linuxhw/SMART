@@ -19,7 +19,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Phison    | APS-SE20G-256      | 256 GB | 2       | 580   | 0     | 1.59   |
 | Phison    | ESO256GMFCH-E3C-2  | 256 GB | 3       | 517   | 0     | 1.42   |
-| Phison    | Sabrent Rocket Q   | 1 TB   | 163     | 503   | 7     | 1.36   |
+| Phison    | Sabrent Rocket Q   | 1 TB   | 163     | 504   | 7     | 1.36   |
 | Phison    | APS-SE20Q-1T       | 1 TB   | 3       | 446   | 0     | 1.22   |
 | Phison    | Neutron NX500      | 800 GB | 2       | 442   | 0     | 1.21   |
 | Phison    | ESR512GTLCG-EAC-4  | 512 GB | 8       | 390   | 0     | 1.07   |
@@ -28,9 +28,9 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | Metabox Perform... | 2 TB   | 6       | 367   | 0     | 1.01   |
 | Phison    | Sabrent Rocket 4.0 | 2 TB   | 26      | 363   | 0     | 0.99   |
 | Phison    | Sabrent            | 1 TB   | 239     | 330   | 0     | 0.91   |
-| Phison    | E12-256G-PHISON... | 256 GB | 4       | 320   | 0     | 0.88   |
+| Phison    | E12-256G-PHISON... | 256 GB | 4       | 321   | 0     | 0.88   |
 | Phison    | Viper M.2 VPN100   | 1 TB   | 37      | 309   | 0     | 0.85   |
-| Phison    | Sabrent Rocket 4.0 | 1 TB   | 119     | 297   | 0     | 0.81   |
+| Phison    | Sabrent Rocket 4.0 | 1 TB   | 119     | 297   | 0     | 0.82   |
 | Phison    | BPX                | 240 GB | 6       | 327   | 5     | 0.67   |
 | Phison    | Viper M.2 VPR100   | 512 GB | 2       | 237   | 0     | 0.65   |
 | Phison    | Viper M.2 VP4100   | 1 TB   | 9       | 231   | 0     | 0.63   |
@@ -38,37 +38,37 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | E12-256G-PHISON... | 256 GB | 3       | 220   | 0     | 0.60   |
 | Phison    | Sabrent Rocket ... | 1 TB   | 19      | 218   | 0     | 0.60   |
 | Phison    | SBXe               | 480 GB | 3       | 206   | 0     | 0.57   |
-| Phison    | Sabrent Rocket ... | 1 TB   | 42      | 203   | 0     | 0.56   |
-| Phison    | Sabrent SB-RKT4... | 8 TB   | 2       | 202   | 0     | 0.55   |
-| Phison    | Sabrent Rocket Q4  | 1 TB   | 16      | 188   | 0     | 0.52   |
+| Phison    | Sabrent SB-RKT4... | 8 TB   | 2       | 206   | 0     | 0.56   |
+| Phison    | Sabrent Rocket ... | 1 TB   | 42      | 204   | 0     | 0.56   |
+| Phison    | ESR01TBTLG-E6GB... | 1 TB   | 5       | 199   | 0     | 0.55   |
+| Phison    | Sabrent SB-RKT4... | 4 TB   | 7       | 198   | 0     | 0.54   |
+| Phison    | Sabrent Rocket Q4  | 1 TB   | 16      | 189   | 0     | 0.52   |
 | Phison    | E12-512G-PHISON... | 512 GB | 3       | 182   | 0     | 0.50   |
-| Phison    | Sabrent Rocket 4.0 | 500 GB | 29      | 179   | 0     | 0.49   |
-| Phison    | ESR01TBTLG-E6GB... | 1 TB   | 5       | 173   | 0     | 0.47   |
-| Phison    | PCIe SSD           | 2 TB   | 231     | 174   | 5     | 0.47   |
+| Phison    | Sabrent Rocket 4.0 | 500 GB | 29      | 180   | 0     | 0.49   |
+| Phison    | PCIe SSD           | 2 TB   | 231     | 175   | 5     | 0.48   |
 | Phison    | E12-1TB-PHISON-... | 1 TB   | 2       | 166   | 0     | 0.46   |
 | Phison    | 511BS0512GB        | 512 GB | 11      | 165   | 0     | 0.45   |
 | Phison    | BPXP               | 960 GB | 3       | 161   | 0     | 0.44   |
-| Phison    | Sabrent SB-RKT4... | 4 TB   | 7       | 159   | 0     | 0.44   |
 | Phison    | PS5012-E12S-512G   | 512 GB | 2       | 151   | 0     | 0.41   |
 | Phison    | ABSSDNVMe512GB     | 512 GB | 2       | 143   | 0     | 0.39   |
+| Phison    | Sabrent SB-1342... | 1 TB   | 2       | 140   | 0     | 0.38   |
 | Phison    | Sabrent SB-RKT4... | 2 TB   | 6       | 139   | 0     | 0.38   |
-| Phison    | Sabrent SB-1342... | 1 TB   | 2       | 139   | 0     | 0.38   |
 | Phison    | C-E80T256G4-P3D... | 256 GB | 2       | 118   | 0     | 0.32   |
 | Phison    | PSEDN128GA17DC0    | 128 GB | 2       | 117   | 0     | 0.32   |
 | Phison    | 512GB NVMe SSD     | 512 GB | 3       | 116   | 0     | 0.32   |
 | Phison    | SWG256G-112HI      | 256 GB | 3       | 116   | 0     | 0.32   |
-| Phison    | CFESR512GMTCT-E... | 512 GB | 17      | 112   | 0     | 0.31   |
-| Phison    | 511BS0256GB        | 256 GB | 28      | 112   | 0     | 0.31   |
+| Phison    | 511BS0256GB        | 256 GB | 28      | 114   | 0     | 0.31   |
+| Phison    | CFESR512GMTCT-E... | 512 GB | 17      | 113   | 0     | 0.31   |
 | Phison    | E15-512G-PHISON... | 512 GB | 4       | 100   | 0     | 0.27   |
+| Phison    | Sabrent SB-2130... | 1 TB   | 3       | 99    | 0     | 0.27   |
 | Phison    | E12-512G-PHISON... | 512 GB | 4       | 89    | 0     | 0.24   |
 | Phison    | E12S-1TB-PHISON... | 1 TB   | 2       | 87    | 0     | 0.24   |
 | Phison    | 511BS0512HB        | 512 GB | 10      | 85    | 0     | 0.23   |
 | Phison    | SBX                | 256 GB | 3       | 85    | 0     | 0.23   |
-| Phison    | Sabrent SB-2130... | 1 TB   | 3       | 71    | 0     | 0.20   |
 | Phison    | 512GB SM280512G... | 512 GB | 6       | 70    | 0     | 0.19   |
+| Phison    | ESO512GYLCT-EP3-2L | 512 GB | 25      | 70    | 0     | 0.19   |
 | Phison    | C-E80T512G4-P3D... | 512 GB | 4       | 69    | 0     | 0.19   |
 | Phison    | Viper M.2 VPN110   | 512 GB | 2       | 69    | 0     | 0.19   |
-| Phison    | ESO512GYLCT-EP3-2L | 512 GB | 25      | 69    | 0     | 0.19   |
 | Phison    | Daten DS2000       | 1 TB   | 6       | 68    | 0     | 0.19   |
 | Phison    | E19-512G-PHISON... | 512 GB | 4       | 65    | 0     | 0.18   |
 | Phison    | APS-SE20G-512      | 512 GB | 2       | 61    | 0     | 0.17   |

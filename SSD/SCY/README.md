@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | SCY       | N10C               | 256 GB | 2       | 78    | 0     | 0.21   |
-| SCY       | SNM4BBG12800D      | 128 GB | 10      | 37    | 0     | 0.10   |
+| SCY       | SNM4BBG12800D      | 128 GB | 10      | 38    | 0     | 0.10   |

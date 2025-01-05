@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| NN TEC... | SSD                | 128 GB | 2       | 38    | 0     | 0.11   |
+| NN TEC... | SSD                | 128 GB | 2       | 41    | 0     | 0.11   |

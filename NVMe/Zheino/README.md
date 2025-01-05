@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Zheino    | CHN-NGFFNV2280-256 | 256 GB | 2       | 139   | 0     | 0.38   |
+| Zheino    | CHN-NGFFNV2280-256 | 256 GB | 2       | 140   | 0     | 0.39   |
 | Zheino    | CHN-NGFFNV2280-1TB | 1 TB   | 2       | 98    | 0     | 0.27   |

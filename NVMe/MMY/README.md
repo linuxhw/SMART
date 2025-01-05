@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| MMY       | MMSP350            | 512 GB | 4       | 7     | 0     | 0.02   |
 | MMY       | HC512GP3KH2T       | 512 GB | 5       | 3     | 0     | 0.01   |

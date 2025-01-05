@@ -17,7 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Goodram   | IR-SSDPR-P34B-0... | 2 TB   | 6       | 493   | 0     | 1.35   |
+| Goodram   | IR-SSDPR-P34B-0... | 2 TB   | 6       | 525   | 0     | 1.44   |
 | Goodram   | SSDPR-PX500-01T-80 | 1 TB   | 7       | 412   | 0     | 1.13   |
 | Goodram   | IRP-SSDPR-P44A-... | 2 TB   | 2       | 365   | 0     | 1.00   |
 | Goodram   | IR-SSDPR-P34B-2... | 256 GB | 4       | 276   | 0     | 0.76   |
@@ -30,6 +30,6 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | IR-SSDPR-P34B-5... | 512 GB | 3       | 58    | 0     | 0.16   |
 | Goodram   | SSDPR-PX500-512... | 512 GB | 5       | 38    | 0     | 0.11   |
 | Goodram   | SSDPR-PX700-01T-80 | 1 TB   | 2       | 19    | 0     | 0.05   |
-| Goodram   | SSDPR-PX600-500-80 | 500 GB | 3       | 8     | 0     | 0.02   |
+| Goodram   | SSDPR-PX600-500-80 | 500 GB | 3       | 9     | 0     | 0.03   |
 | Goodram   | SSDPR-PX600-1K0-80 | 1 TB   | 3       | 1     | 0     | 0.01   |
 | Goodram   | SSDPR-PX700-04T-80 | 4 TB   | 3       | 1     | 0     | 0.00   |

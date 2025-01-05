@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| DeTech    | Development Tec... | 120 GB | 3       | 909   | 1     | 2.22   |
+| DeTech    | Development Tec... | 120 GB | 3       | 916   | 1     | 2.24   |
 | DeTech    | SSD                | 120 GB | 4       | 195   | 0     | 0.54   |

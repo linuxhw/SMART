@@ -38,7 +38,7 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | Neutron SSD        | 256 GB | 2       | 801   | 0     | 2.20   |
 | Corsair   | CSSD-V128GB2       | 128 GB | 2       | 752   | 0     | 2.06   |
 | Corsair   | Force GS           | 128 GB | 30      | 766   | 2     | 2.04   |
-| Corsair   | CSSD-F60GB2        | 64 GB  | 9       | 1541  | 258   | 2.00   |
+| Corsair   | CSSD-F60GB2        | 64 GB  | 9       | 1542  | 258   | 2.00   |
 | Corsair   | Force LE SSD       | 480 GB | 8       | 713   | 0     | 1.96   |
 | Corsair   | Force GS           | 240 GB | 10      | 1255  | 16    | 1.95   |
 | Corsair   | Force GT           | 64 GB  | 12      | 843   | 3     | 1.89   |

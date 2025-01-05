@@ -18,4 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | AirDisk   | 128GB SSD          | 128 GB | 7       | 145   | 0     | 0.40   |
-| AirDisk   | 256GB SSD          | 256 GB | 12      | 14    | 0     | 0.04   |
+| AirDisk   | 256GB SSD          | 256 GB | 12      | 20    | 0     | 0.06   |

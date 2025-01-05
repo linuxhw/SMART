@@ -18,7 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Ramsta    | SSD S800           | 240 GB | 3       | 582   | 338   | 1.56   |
+| Ramsta    | SSD S800           | 256 GB | 3       | 100   | 122   | 0.26   |
 | Ramsta    | SSD S600           | 480 GB | 2       | 668   | 79    | 0.23   |
 | Ramsta    | SSD S800           | 1 TB   | 2       | 268   | 37    | 0.21   |
-| Ramsta    | SSD S800           | 256 GB | 3       | 82    | 122   | 0.21   |
 | Ramsta    | SSD S800           | 128 GB | 3       | 9     | 0     | 0.03   |

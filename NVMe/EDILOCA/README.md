@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EDILOCA   | EN600 Pro          | 512 GB | 2       | 77    | 0     | 0.21   |
+| EDILOCA   | EN600 Pro          | 512 GB | 2       | 82    | 0     | 0.23   |
 | EDILOCA   | EN600 Pro          | 1 TB   | 2       | 0     | 0     | 0.00   |

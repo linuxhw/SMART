@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Turbox    | SSD                | 128 GB | 2       | 541   | 0     | 1.48   |
+| Turbox    | SSD                | 128 GB | 2       | 556   | 0     | 1.53   |

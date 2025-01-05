@@ -18,7 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | T-FORCE   | TM8FP5512G         | 512 GB | 2       | 455   | 0     | 1.25   |
-| T-FORCE   | TM8FP7001T         | 1 TB   | 12      | 272   | 84    | 0.68   |
+| T-FORCE   | TM8FP7001T         | 1 TB   | 12      | 273   | 84    | 0.68   |
 | T-FORCE   | TM8FP5001T         | 1 TB   | 5       | 246   | 0     | 0.68   |
 | T-FORCE   | TM8FP8001T         | 1 TB   | 4       | 240   | 0     | 0.66   |
 | T-FORCE   | TM8FP7002T         | 2 TB   | 5       | 110   | 0     | 0.30   |

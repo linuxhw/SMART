@@ -19,7 +19,7 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | OWC       | Mercury EXTREME... | 480 GB | 8       | 861   | 10    | 2.13   |
 | OWC       | Mercury Electra... | 1 TB   | 13      | 736   | 0     | 2.02   |
-| OWC       | Mercury Electra... | 480 GB | 16      | 318   | 1     | 0.75   |
+| OWC       | Mercury Electra... | 480 GB | 16      | 319   | 1     | 0.75   |
 | OWC       | Mercury Extreme... | 240 GB | 3       | 133   | 0     | 0.37   |
 | OWC       | Neptune 6G SSD     | 480 GB | 2       | 57    | 0     | 0.16   |
 | OWC       | 1.0TB Mercury E... | 1 TB   | 2       | 12    | 0     | 0.03   |

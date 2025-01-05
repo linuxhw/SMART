@@ -26,7 +26,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | M500_MTFDDAK960MAV | 960 GB | 3       | 2554  | 2     | 5.30   |
 | Micron    | C400-MTFDDAC128MAM | 128 GB | 3       | 1897  | 0     | 5.20   |
 | Micron    | M510DC_MTFDDAK2... | 240 GB | 2       | 1322  | 0     | 3.62   |
-| Micron    | 1100 SATA          | 1 TB   | 2       | 1299  | 0     | 3.56   |
+| Micron    | 1100 SATA          | 1 TB   | 2       | 1306  | 0     | 3.58   |
 | Micron    | M600_MTFDDAK1T0MBF | 1 TB   | 11      | 1149  | 0     | 3.15   |
 | Micron    | 5300_MTFDDAK480TDT | 480 GB | 2       | 1131  | 0     | 3.10   |
 | Micron    | 5200_MTFDDAK7T6TDC | 7.6 TB | 15      | 1360  | 1     | 3.06   |
@@ -39,10 +39,10 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAK128MBF-1... | 128 GB | 2       | 844   | 0     | 2.31   |
 | Micron    | 5100_MTFDDAK960TCB | 960 GB | 4       | 1023  | 15    | 2.23   |
 | Micron    | M500DC_MTFDDAK8... | 800 GB | 2       | 710   | 0     | 1.95   |
-| Micron    | MTFDDAK512MBF-1... | 512 GB | 11      | 731   | 2     | 1.91   |
+| Micron    | MTFDDAK512MBF-1... | 512 GB | 11      | 732   | 2     | 1.91   |
 | Micron    | M500_MTFDDAK480MAV | 480 GB | 4       | 1093  | 1     | 1.86   |
 | Micron    | 5200_MTFDDAK1T9TDD | 1.9 TB | 2       | 666   | 0     | 1.83   |
-| Micron    | MTFDDAK1T0TBN-1... | 1 TB   | 5       | 632   | 0     | 1.73   |
+| Micron    | MTFDDAK1T0TBN-1... | 1 TB   | 5       | 640   | 0     | 1.75   |
 | Micron    | C400-MTFDDAT128MAM | 128 GB | 4       | 628   | 517   | 1.67   |
 | Micron    | M600_MTFDDAT128MBF | 128 GB | 2       | 604   | 0     | 1.66   |
 | Micron    | MTFDDAK256MAM-1K1  | 256 GB | 9       | 604   | 0     | 1.66   |
@@ -64,7 +64,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAK256TBN-1... | 256 GB | 19      | 477   | 2     | 1.07   |
 | Micron    | M600_MTFDDAK128... | 128 GB | 2       | 373   | 0     | 1.02   |
 | Micron    | 5200_MTFDDAK960TDN | 960 GB | 2       | 370   | 0     | 1.02   |
-| Micron    | 1100_MTFDDAK256TBN | 256 GB | 52      | 420   | 84    | 1.00   |
+| Micron    | 1100_MTFDDAK256TBN | 256 GB | 52      | 422   | 84    | 1.01   |
 | Micron    | MTFDDAK512TBN-1... | 512 GB | 3       | 454   | 168   | 1.00   |
 | Micron    | 1100_MTFDDAK512TBN | 512 GB | 28      | 692   | 58    | 0.99   |
 | Micron    | 5210_MTFDDAK7T6QDE | 7.6 TB | 5       | 361   | 0     | 0.99   |
@@ -83,7 +83,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAK480TDT-1... | 480 GB | 4       | 259   | 0     | 0.71   |
 | Micron    | 1100 SATA          | 512 GB | 49      | 298   | 154   | 0.70   |
 | Micron    | 5300_MTFDDAK1T9TDS | 1.9 TB | 11      | 246   | 0     | 0.68   |
-| Micron    | MTFDDAK256TDL      | 256 GB | 17      | 275   | 1     | 0.67   |
+| Micron    | MTFDDAK256TDL      | 256 GB | 17      | 277   | 1     | 0.67   |
 | Micron    | 5400_MTFDDAK960TGA | 960 GB | 2       | 228   | 0     | 0.63   |
 | Micron    | 5100_MTFDDAV960TBY | 960 GB | 2       | 219   | 0     | 0.60   |
 | Micron    | 1300_MTFDDAK1T0TDL | 1 TB   | 3       | 217   | 0     | 0.60   |
@@ -93,12 +93,12 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5200_MTFDDAK480TDN | 480 GB | 4       | 189   | 0     | 0.52   |
 | Micron    | MTFDBAK128MAG-1G1  | 128 GB | 5       | 170   | 0     | 0.47   |
 | Micron    | MTFDDAK256TBN      | 256 GB | 4       | 166   | 0     | 0.46   |
-| Micron    | MTFDDAK512MAM-1K1  | 512 GB | 4       | 450   | 717   | 0.45   |
+| Micron    | MTFDDAK512MAM-1K1  | 512 GB | 4       | 461   | 717   | 0.45   |
 | Micron    | MTFDDAK512MBF-1... | 512 GB | 2       | 148   | 0     | 0.41   |
-| Micron    | 1100 SATA          | 256 GB | 70      | 166   | 31    | 0.38   |
+| Micron    | 1100 SATA          | 256 GB | 70      | 166   | 31    | 0.39   |
+| Micron    | 1100_MTFDDAV512TBN | 512 GB | 60      | 156   | 103   | 0.37   |
 | Micron    | MTFDDAV512TBN-1... | 512 GB | 9       | 144   | 149   | 0.37   |
 | Micron    | MTFDDAK960TDT      | 960 GB | 3       | 135   | 0     | 0.37   |
-| Micron    | 1100_MTFDDAV512TBN | 512 GB | 60      | 155   | 103   | 0.37   |
 | Micron    | C400-MTFDDAT064MAM | 64 GB  | 3       | 124   | 0     | 0.34   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 55      | 135   | 26    | 0.34   |
 | Micron    | 1100_MTFDDAV256TBN | 256 GB | 145     | 133   | 93    | 0.32   |
@@ -109,10 +109,10 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5300_MTFDDAK3T8TDT | 3.8 TB | 30      | 95    | 0     | 0.26   |
 | Micron    | MTFDDAK960TDN      | 960 GB | 2       | 84    | 0     | 0.23   |
 | Micron    | 1300 SATA          | 256 GB | 5       | 83    | 0     | 0.23   |
+| Micron    | 1300_MTFDDAK256TDL | 256 GB | 7       | 80    | 0     | 0.22   |
 | Micron    | MTFDDAK512TBN-1... | 512 GB | 7       | 239   | 357   | 0.22   |
 | Micron    | 1100 SATA 256GB... | 256 GB | 3       | 72    | 0     | 0.20   |
 | Micron    | MTFDDAV256TBN-1... | 256 GB | 25      | 69    | 1     | 0.19   |
-| Micron    | 1300_MTFDDAK256TDL | 256 GB | 7       | 68    | 0     | 0.19   |
 | Micron    | 1300_MTFDDAV256TDL | 256 GB | 2       | 58    | 0     | 0.16   |
 | Micron    | MTFDDAV512TDL-1... | 512 GB | 2       | 52    | 0     | 0.14   |
 | Micron    | MTFDDAK256MAY-1... | 256 GB | 8       | 988   | 57    | 0.14   |

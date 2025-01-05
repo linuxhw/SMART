@@ -17,13 +17,13 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| BAITITON  | BT58SSD09S         | 240 GB | 5       | 327   | 1     | 0.54   |
+| BAITITON  | BT58SSD09S         | 240 GB | 5       | 346   | 1     | 0.56   |
 | BAITITON  | BT58SSD07N         | 128 GB | 2       | 123   | 38    | 0.29   |
 | BAITITON  | BT58SSD10S         | 256 GB | 5       | 105   | 2     | 0.27   |
 | BAITITON  | BT58SSD07S         | 120 GB | 3       | 111   | 4     | 0.25   |
 | BAITITON  | BT58SSD10N         | 256 GB | 2       | 71    | 0     | 0.20   |
 | BAITITON  | BT58SSD11S         | 480 GB | 3       | 68    | 0     | 0.19   |
-| BAITITON  | BT58SSD12S         | 512 GB | 2       | 37    | 0     | 0.10   |
+| BAITITON  | BT58SSD12S         | 512 GB | 2       | 38    | 0     | 0.11   |
 | BAITITON  | BT58SSD10M         | 256 GB | 5       | 33    | 5     | 0.05   |
 | BAITITON  | BT58SSD08M         | 128 GB | 4       | 21    | 9     | 0.04   |
 | BAITITON  | BT58SSD13S         | 1 TB   | 2       | 3     | 0     | 0.01   |

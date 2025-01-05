@@ -101,7 +101,7 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor    | 6Y160P0            | 163 GB | 8       | 22    | 109   | 0.01   |
 | Maxtor    | 6B160M0            | 163 GB | 2       | 15    | 4     | 0.01   |
 | Maxtor    | 6Y200P0            | 208 GB | 2       | 20    | 9     | 0.01   |
-| Maxtor    | 6Y120P0            | 122 GB | 4       | 18    | 25    | 0.01   |
+| Maxtor    | 6Y120P0            | 122 GB | 4       | 18    | 24    | 0.01   |
 | Maxtor    | 2F020J0            | 21 GB  | 2       | 22    | 67    | 0.00   |
 | Maxtor    | 2B020H1            | 20 GB  | 14      | 21    | 193   | 0.00   |
 | Maxtor    | 4D040H2            | 41 GB  | 4       | 24    | 191   | 0.00   |

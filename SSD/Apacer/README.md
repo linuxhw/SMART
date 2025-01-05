@@ -35,15 +35,15 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS350              | 240 GB | 23      | 193   | 1     | 0.52   |
 | Apacer    | AS350              | 120 GB | 39      | 186   | 1     | 0.51   |
 | Apacer    | AST280             | 480 GB | 2       | 136   | 0     | 0.37   |
-| Apacer    | AS350              | 512 GB | 75      | 130   | 42    | 0.35   |
+| Apacer    | AS350              | 512 GB | 75      | 133   | 42    | 0.36   |
 | Apacer    | AS340              | 120 GB | 53      | 129   | 1     | 0.35   |
 | Apacer    | AS350              | 256 GB | 101     | 132   | 15    | 0.34   |
 | Apacer    | AS340              | 240 GB | 59      | 133   | 36    | 0.32   |
 | Apacer    | AS350              | 128 GB | 133     | 117   | 1     | 0.32   |
-| Apacer    | AS340              | 480 GB | 29      | 123   | 35    | 0.31   |
+| Apacer    | AS340              | 480 GB | 29      | 124   | 35    | 0.31   |
 | Apacer    | AS510S             | 64 GB  | 6       | 93    | 0     | 0.26   |
 | Apacer    | AS350              | 1 TB   | 18      | 84    | 62    | 0.23   |
-| Apacer    | AST280             | 120 GB | 8       | 74    | 0     | 0.20   |
+| Apacer    | AST280             | 120 GB | 8       | 76    | 0     | 0.21   |
 | Apacer    | 16GB SATA Flash... | 16 GB  | 20      | 402   | 21    | 0.20   |
 | Apacer    | AS340              | 960 GB | 4       | 53    | 0     | 0.15   |
 | Apacer    | AST280             | 240 GB | 5       | 53    | 0     | 0.15   |
@@ -64,6 +64,6 @@ MTBF - avg. MTBF in years per sample.
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Apacer    | SDM5/5A/5A-M Series... | 2      | 20      | 464   | 16    | 0.90   |
 | Apacer    | SSDs                   | 1      | 3       | 198   | 0     | 0.54   |
-| Apacer    | AS340/350 SSDs         | 6      | 389     | 133   | 15    | 0.36   |
+| Apacer    | AS340/350 SSDs         | 6      | 389     | 134   | 15    | 0.36   |
 | Apacer    | SDM4 Series SSD Module | 2      | 34      | 379   | 18    | 0.35   |
 | Apacer    | AS340 SSDs             | 4      | 145     | 127   | 22    | 0.32   |

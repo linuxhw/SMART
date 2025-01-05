@@ -22,7 +22,7 @@ MTBF - avg. MTBF in years per sample.
 | Fanxiang  | S500PRO            | 1 TB   | 13      | 110   | 0     | 0.30   |
 | Fanxiang  | S500Pro            | 1 TB   | 4       | 97    | 0     | 0.27   |
 | Fanxiang  | S880               | 4 TB   | 6       | 75    | 0     | 0.21   |
-| Fanxiang  | S880               | 2 TB   | 7       | 71    | 0     | 0.20   |
+| Fanxiang  | S880               | 2 TB   | 7       | 73    | 0     | 0.20   |
 | Fanxiang  | S500PRO            | 2 TB   | 8       | 69    | 0     | 0.19   |
 | Fanxiang  | S660               | 1 TB   | 8       | 46    | 0     | 0.13   |
 | Fanxiang  | S880               | 1 TB   | 8       | 41    | 0     | 0.11   |

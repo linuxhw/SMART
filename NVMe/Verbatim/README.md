@@ -17,4 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| Verbatim  | Vi3000 Internal... | 512 GB | 2       | 190   | 0     | 0.52   |
+| Verbatim  | Vi3000 Internal... | 1 TB   | 2       | 21    | 0     | 0.06   |
 | Verbatim  | Vi5000             | 1 TB   | 2       | 0     | 0     | 0.00   |

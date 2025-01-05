@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ACOS      | AS-512             | 512 GB | 2       | 149   | 507   | 0.12   |
+| ACOS      | AS-512             | 512 GB | 2       | 158   | 507   | 0.12   |

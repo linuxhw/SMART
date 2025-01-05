@@ -34,7 +34,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | MB1000EAMZE        | 1 TB   | 4       | 2174  | 519   | 3.55   |
 | HP        | MB2000EBUCF        | 2 TB   | 3       | 2111  | 4     | 3.21   |
 | HP        | FB160C4081         | 160 GB | 2       | 1164  | 44    | 2.91   |
-| HP        | MB2000GCVBR        | 2 TB   | 2       | 1022  | 0     | 2.80   |
+| HP        | MB2000GCVBR        | 2 TB   | 2       | 1025  | 0     | 2.81   |
 | HP        | MB1000GCWCV        | 1 TB   | 3       | 938   | 27    | 2.55   |
 | HP        | MB2000EBZQC        | 2 TB   | 8       | 1168  | 222   | 2.37   |
 | HP        | VB0250EAVER        | 250 GB | 24      | 1153  | 3     | 2.35   |

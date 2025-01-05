@@ -36,10 +36,10 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | SSD                | 250 GB | 6       | 377   | 0     | 1.03   |
 | Seagate   | SSD                | 500 GB | 2       | 364   | 0     | 1.00   |
 | Seagate   | BarraCuda SSD Z... | 1 TB   | 9       | 318   | 0     | 0.87   |
-| Seagate   | BarraCuda SSD Z... | 500 GB | 21      | 312   | 0     | 0.85   |
-| Seagate   | BarraCuda 120 S... | 500 GB | 29      | 307   | 0     | 0.84   |
+| Seagate   | BarraCuda SSD Z... | 500 GB | 21      | 313   | 0     | 0.86   |
+| Seagate   | BarraCuda 120 S... | 500 GB | 29      | 309   | 0     | 0.85   |
 | Seagate   | SSD                | 1 TB   | 4       | 247   | 0     | 0.68   |
-| Seagate   | IronWolfPro ZA4... | 480 GB | 2       | 215   | 0     | 0.59   |
+| Seagate   | IronWolfPro ZA4... | 480 GB | 2       | 218   | 0     | 0.60   |
 | Seagate   | BarraCuda 120 S... | 250 GB | 18      | 197   | 0     | 0.54   |
 | Seagate   | BarraCuda Q1 SS... | 240 GB | 8       | 192   | 0     | 0.53   |
 | Seagate   | BarraCuda SSD Z... | 2 TB   | 3       | 192   | 0     | 0.53   |
@@ -49,8 +49,8 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | XA480ME10063       | 480 GB | 4       | 104   | 0     | 0.29   |
 | Seagate   | FireCuda 120 SS... | 500 GB | 2       | 61    | 0     | 0.17   |
 | Seagate   | ZA1920NM10001      | 1.9 TB | 4       | 51    | 0     | 0.14   |
+| Seagate   | ST3                | 256 GB | 2       | 40    | 0     | 0.11   |
 | Seagate   | Nytro Client 14... | 256 GB | 2       | 33    | 0     | 0.09   |
-| Seagate   | ST3                | 256 GB | 2       | 21    | 0     | 0.06   |
 | Seagate   | XA1920LE10063      | 1.9 TB | 4       | 19    | 0     | 0.05   |
 
 SSD by Family
@@ -70,4 +70,4 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | 600 Series             | 1      | 2       | 429   | 0     | 1.18   |
 | Seagate   | Nytro SATA SSD         | 4      | 13      | 318   | 0     | 0.87   |
 | Seagate   | IronWolf 110 SATA SSD  | 2      | 6       | 163   | 0     | 0.45   |
-| Seagate   | IronWolf (Pro) 125 ... | 2      | 5       | 159   | 0     | 0.44   |
+| Seagate   | IronWolf (Pro) 125 ... | 2      | 5       | 160   | 0     | 0.44   |
