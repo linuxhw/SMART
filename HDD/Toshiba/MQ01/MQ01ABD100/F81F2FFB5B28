@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.2.6-desktop-1omv2390] (OpenMandriva Lx 7.3-3)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.12.1-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MQ01ABD...
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Fri Mar 31 11:01:13 2023 CEST
+Local Time is:    Sun Dec 15 10:48:22 2024 CET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,27 +65,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1948
-  4 Start_Stop_Count        -O--CK   100   100   000    -    19155
+  3 Spin_Up_Time            POS--K   100   100   001    -    2656
+  4 Start_Stop_Count        -O--CK   100   100   000    -    25953
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   085   085   000    -    6186
+  9 Power_On_Hours          -O--CK   079   079   000    -    8569
  10 Spin_Retry_Count        PO--CK   253   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    13464
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    109
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    1267
-193 Load_Cycle_Count        -O--CK   092   092   000    -    81780
-194 Temperature_Celsius     -O---K   100   100   000    -    27 (Min/Max 15/46)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    18605
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    127
+192 Power-Off_Retract_Count -O--CK   096   096   000    -    2183
+193 Load_Cycle_Count        -O--CK   089   089   000    -    118571
+194 Temperature_Celsius     -O---K   100   100   000    -    25 (Min/Max 15/48)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   097   097   000    -    1502
+222 Loaded_Hours            -O--CK   094   094   000    -    2596
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    267
+226 Load-in_Time            -OS--K   100   100   000    -    271
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -112,10 +112,60 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 7391 hours (307 days + 23 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f9 00 01 00 01 00 00 00 00 00 00 e0 00     00:01:15.847  SET MAX SET PASSWORD [OBS-ACS-3]
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:01:15.839  [RESERVED]
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:07.950  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:07.944  [RESERVED]
+  a0 00 00 00 00 00 00 00 f8 00 00 e0 00     00:00:03.797  PACKET
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%      8491         -
+# 2  Short offline       Completed without error       00%      8487         -
+# 3  Short offline       Completed without error       00%      8294         -
+# 4  Short offline       Completed without error       00%      8292         -
+# 5  Short offline       Completed without error       00%      7592         -
+# 6  Short offline       Completed without error       00%      7487         -
+# 7  Short offline       Completed without error       00%      7375         -
+# 8  Short offline       Completed without error       00%      7372         -
+# 9  Short offline       Completed without error       00%      7279         -
+#10  Short offline       Completed without error       00%      6850         -
+#11  Short offline       Completed without error       00%      6839         -
+#12  Short offline       Completed without error       00%      6837         -
+#13  Short offline       Completed without error       00%      6704         -
+#14  Short offline       Completed without error       00%      6529         -
+#15  Short offline       Completed without error       00%      6528         -
+#16  Short offline       Completed without error       00%      6527         -
+#17  Short offline       Completed without error       00%      6524         -
+#18  Short offline       Completed without error       00%      6521         -
+#19  Short offline       Aborted by host               20%      6519         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -130,10 +180,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     25/27 Celsius
-Lifetime    Min/Max Temperature:     15/46 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    25 Celsius
+Power Cycle Min/Max Temperature:     17/25 Celsius
+Lifetime    Min/Max Temperature:     15/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -141,7 +191,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (398)
+Temperature History Size (Index):    478 (339)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -150,31 +200,31 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4           13464  ---  Lifetime Power-On Resets
-0x01  0x010  4            5854  ---  Power-on Hours
-0x01  0x018  6     30562823011  ---  Logical Sectors Written
-0x01  0x020  6        29411417  ---  Number of Write Commands
-0x01  0x028  6    128633749152  ---  Logical Sectors Read
-0x01  0x030  6       479916783  ---  Number of Read Commands
+0x01  0x008  4           18605  ---  Lifetime Power-On Resets
+0x01  0x010  4            8059  ---  Power-on Hours
+0x01  0x018  6     37623076939  ---  Logical Sectors Written
+0x01  0x020  6        33855009  ---  Number of Write Commands
+0x01  0x028  6    139909266364  ---  Logical Sectors Read
+0x01  0x030  6       502750702  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4             109  ---  Overlimit Shock Events
+0x02  0x010  4             127  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            4882  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            1502  ---  Head Flying Hours
-0x03  0x018  4           81780  ---  Head Load Events
+0x03  0x008  4            6897  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2596  ---  Head Flying Hours
+0x03  0x018  4          118571  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4               0  ---  Read Recovery Attempts
+0x03  0x028  4               7  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             163  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             248  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              27  ---  Current Temperature
-0x05  0x010  1              30  N--  Average Short Term Temperature
-0x05  0x018  1              30  N--  Average Long Term Temperature
-0x05  0x020  1              46  ---  Highest Temperature
+0x05  0x008  1              25  ---  Current Temperature
+0x05  0x010  1              33  N--  Average Short Term Temperature
+0x05  0x018  1              33  N--  Average Long Term Temperature
+0x05  0x020  1              48  ---  Highest Temperature
 0x05  0x028  1              15  ---  Lowest Temperature
-0x05  0x030  1              38  N--  Highest Average Short Term Temperature
+0x05  0x030  1              39  N--  Highest Average Short Term Temperature
 0x05  0x038  1              27  N--  Lowest Average Short Term Temperature
 0x05  0x040  1              34  N--  Highest Average Long Term Temperature
 0x05  0x048  1              30  N--  Lowest Average Long Term Temperature
@@ -183,10 +233,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           90667  ---  Number of Hardware Resets
+0x06  0x008  4          119529  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              10  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              14  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -203,8 +253,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  4            9  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

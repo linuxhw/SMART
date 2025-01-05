@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.2-desktop-1omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Western Digital Blue
@@ -10,10 +10,10 @@ Firmware Version: 01.01A01
 User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    7200 rpm
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 1.5 Gb/s)
-Local Time is:    Sat Jun  4 17:01:23 2022 BST
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+Local Time is:    Sat May  4 06:58:22 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -31,9 +31,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 					Auto Offline Data Collection: Enabled.
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      (  34)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(10740) seconds.
 Offline data collection
@@ -64,17 +63,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   171   169   021    -    2441
-  4 Start_Stop_Count        -O--CK   094   094   000    -    6860
+  3 Spin_Up_Time            POS--K   173   169   021    -    2308
+  4 Start_Stop_Count        -O--CK   092   092   000    -    8861
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   083   083   000    -    12446
+  9 Power_On_Hours          -O--CK   078   078   000    -    16450
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   000    -    6690
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    284
-193 Load_Cycle_Count        -O--CK   198   198   000    -    6621
-194 Temperature_Celsius     -O---K   116   105   000    -    27
+ 12 Power_Cycle_Count       -O--CK   092   092   000    -    8684
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    371
+193 Load_Cycle_Count        -O--CK   198   198   000    -    8535
+194 Temperature_Celsius     -O---K   111   105   000    -    32
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -109,7 +108,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 1615 (device log contains only the most recent 24 errors)
+Device Error Count: 4936 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,7 +124,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 1615 [6] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4936 [15] occurred at disk power-on lifetime: 16448 hours (685 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -136,13 +135,13 @@ Error 1615 [6] occurred at disk power-on lifetime: 12446 hours (518 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:20.507  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:34:20.507  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:20.507  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:34:20.507  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:34:20.506  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:10.124  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:03:10.124  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:10.124  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:10.124  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:03:10.124  SET FEATURES [Set transfer mode]
 
-Error 1614 [5] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4935 [14] occurred at disk power-on lifetime: 16448 hours (685 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -153,13 +152,13 @@ Error 1614 [5] occurred at disk power-on lifetime: 12446 hours (518 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:16.260  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:34:16.260  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:16.260  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:34:16.260  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:34:16.248  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:05.887  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:03:05.887  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:05.887  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:05.886  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:03:05.886  SET FEATURES [Set transfer mode]
 
-Error 1613 [4] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4934 [13] occurred at disk power-on lifetime: 16448 hours (685 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -170,13 +169,13 @@ Error 1613 [4] occurred at disk power-on lifetime: 12446 hours (518 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:12.006  FLUSH CACHE EXT
-  2f 00 00 00 01 00 00 00 00 00 00 e0 08     00:34:12.005  READ LOG EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:34:12.005  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:12.005  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:34:12.005  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:01.642  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:03:01.642  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:03:01.642  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:03:01.641  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:03:01.641  SET FEATURES [Set transfer mode]
 
-Error 1612 [3] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4933 [12] occurred at disk power-on lifetime: 16448 hours (685 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -187,13 +186,13 @@ Error 1612 [3] occurred at disk power-on lifetime: 12446 hours (518 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:07.751  FLUSH CACHE EXT
-  ec 00 00 00 01 00 00 00 00 00 00 40 08     00:34:07.751  IDENTIFY DEVICE
-  c8 00 00 00 40 00 00 00 00 00 20 e0 08     00:34:07.751  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:34:07.750  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:07.750  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:57.411  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:02:57.411  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:57.411  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:02:57.410  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:02:57.410  SET FEATURES [Set transfer mode]
 
-Error 1611 [2] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4932 [11] occurred at disk power-on lifetime: 16448 hours (685 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -204,13 +203,13 @@ Error 1611 [2] occurred at disk power-on lifetime: 12446 hours (518 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:03.500  FLUSH CACHE EXT
-  c8 00 00 00 20 00 00 00 00 00 00 e0 08     00:34:03.473  READ DMA
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:34:03.472  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:34:03.472  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:34:03.472  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:53.178  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:02:53.178  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:53.174  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:02:53.173  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:02:53.173  SET FEATURES [Set transfer mode]
 
-Error 1610 [1] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4931 [10] occurred at disk power-on lifetime: 16448 hours (685 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -221,13 +220,13 @@ Error 1610 [1] occurred at disk power-on lifetime: 12446 hours (518 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:33:57.105  FLUSH CACHE EXT
-  e5 00 00 00 00 00 00 00 00 00 00 00 08     00:33:57.100  CHECK POWER MODE
-  25 00 00 00 08 00 00 3b 01 30 00 e0 08     00:33:57.078  READ DMA EXT
-  c8 00 00 00 08 00 00 01 fd 51 08 e1 08     00:33:57.074  READ DMA
-  c8 00 00 00 40 00 00 01 fd 30 20 e1 08     00:33:57.073  READ DMA
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:02:48.973  FLUSH CACHE EXT
+  60 00 08 00 f0 00 00 01 fd 28 00 40 08     00:02:48.968  READ FPDMA QUEUED
+  60 00 08 00 e8 00 00 01 d5 70 00 40 08     00:02:48.968  READ FPDMA QUEUED
+  60 00 08 00 e0 00 00 00 00 00 00 40 08     00:02:48.968  READ FPDMA QUEUED
+  60 00 68 00 d8 00 00 01 d5 6f 88 40 08     00:02:48.967  READ FPDMA QUEUED
 
-Error 1609 [0] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4930 [9] occurred at disk power-on lifetime: 16438 hours (684 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -238,13 +237,13 @@ Error 1609 [0] occurred at disk power-on lifetime: 12446 hours (518 days + 14 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:33:21.139  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:33:21.139  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:33:21.139  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:33:21.138  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:33:21.138  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:58.559  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:58.559  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:58.559  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:58.558  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:58.558  SET FEATURES [Set transfer mode]
 
-Error 1608 [23] occurred at disk power-on lifetime: 12446 hours (518 days + 14 hours)
+Error 4929 [8] occurred at disk power-on lifetime: 16438 hours (684 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -255,32 +254,32 @@ Error 1608 [23] occurred at disk power-on lifetime: 12446 hours (518 days + 14 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:33:16.879  FLUSH CACHE EXT
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:33:16.879  SET FEATURES [Enable SATA feature]
-  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:33:16.878  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:33:16.878  IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:33:16.878  SET FEATURES [Set transfer mode]
+  ea 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:54.338  FLUSH CACHE EXT
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08     00:00:54.338  SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 08     00:00:54.338  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08     00:00:54.337  IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08     00:00:54.337  SET FEATURES [Set transfer mode]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Interrupted (host reset)      60%     12187         -
-# 2  Extended offline    Completed without error       00%     12141         -
-# 3  Extended offline    Completed without error       00%     11987         -
-# 4  Extended offline    Interrupted (host reset)      10%     11598         -
-# 5  Extended offline    Completed without error       00%     11222         -
-# 6  Extended offline    Completed without error       00%     11030         -
-# 7  Extended offline    Interrupted (host reset)      90%     10608         -
-# 8  Extended offline    Completed without error       00%     10513         -
-# 9  Extended offline    Interrupted (host reset)      90%     10309         -
-#10  Extended offline    Completed without error       00%     10193         -
-#11  Extended offline    Interrupted (host reset)      80%     10175         -
-#12  Extended offline    Interrupted (host reset)      90%     10125         -
-#13  Extended offline    Interrupted (host reset)      90%     10100         -
-#14  Extended offline    Interrupted (host reset)      80%      9928         -
-#15  Extended offline    Completed without error       00%      9894         -
-#16  Extended offline    Completed without error       00%      9833         -
-#17  Extended offline    Interrupted (host reset)      50%      9419         -
-#18  Extended offline    Completed without error       00%      9398         -
+# 1  Extended offline    Interrupted (host reset)      20%     16450         -
+# 2  Extended offline    Completed without error       00%     16356         -
+# 3  Extended offline    Completed without error       00%     16215         -
+# 4  Extended offline    Completed without error       00%     16097         -
+# 5  Extended offline    Completed without error       00%     16034         -
+# 6  Extended offline    Completed without error       00%     15979         -
+# 7  Extended offline    Completed without error       00%     15919         -
+# 8  Extended offline    Completed without error       00%     15726         -
+# 9  Extended offline    Completed without error       00%     15689         -
+#10  Extended offline    Completed without error       00%     15651         -
+#11  Extended offline    Completed without error       00%     15610         -
+#12  Extended offline    Completed without error       00%     15466         -
+#13  Extended offline    Completed without error       00%     15379         -
+#14  Extended offline    Completed without error       00%     15340         -
+#15  Extended offline    Completed without error       00%     15302         -
+#16  Extended offline    Completed without error       00%     15222         -
+#17  Extended offline    Completed without error       00%     15132         -
+#18  Extended offline    Completed without error       00%     15093         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -296,8 +295,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     22/27 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     20/32 Celsius
 Lifetime    Min/Max Temperature:     16/38 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -309,7 +308,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (364)
+Temperature History Size (Index):    478 (74)
 
 SCT Error Recovery Control command not supported
 
@@ -320,19 +319,17 @@ Pending Defects log (GP Log 0x0c) not supported
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0002  2            1  R_ERR response for data FIS
+0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            1  R_ERR response for host-to-device data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           17  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2           18  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  2           21  Device-to-host register FISes sent due to a COMRESET
-0x000b  2            1  CRC errors within host-to-device FIS
-0x000f  2            1  R_ERR response for host-to-device data FIS, CRC
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4         2066  Vendor specific
-
-
+0x8000  4         7634  Vendor specific
 

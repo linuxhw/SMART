@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.11.5-300.fc41.x86_64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.11.5-300.fc41.x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba P300 (SMR)
@@ -15,7 +15,7 @@ Zoned Device:     Device managed zones
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Oct 31 11:20:50 2024 +04
+Local Time is:    Thu Oct 31 11:30:12 2024 +04
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -66,8 +66,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    3801
-  4 Start_Stop_Count        -O--CK   100   100   000    -    761
+  3 Spin_Up_Time            POS--K   100   100   001    -    3590
+  4 Start_Stop_Count        -O--CK   100   100   000    -    762
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
@@ -76,7 +76,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
  12 Power_Cycle_Count       -O--CK   100   100   000    -    344
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    1
-193 Load_Cycle_Count        -O--CK   100   100   000    -    953
+193 Load_Cycle_Count        -O--CK   100   100   000    -    954
 194 Temperature_Celsius     -O---K   100   100   000    -    22 (Min/Max 15/38)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
@@ -86,7 +86,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 222 Loaded_Hours            -O--CK   100   100   000    -    31
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    666
+226 Load-in_Time            -OS--K   100   100   000    -    653
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -146,7 +146,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (412)
+Temperature History Size (Index):    478 (414)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -159,15 +159,15 @@ Page  Offset Size        Value Flags Description
 0x01  0x010  4             721  ---  Power-on Hours
 0x01  0x018  6       821388856  ---  Logical Sectors Written
 0x01  0x020  6          570693  ---  Number of Write Commands
-0x01  0x028  6       146177021  ---  Logical Sectors Read
-0x01  0x030  6          393555  ---  Number of Read Commands
-0x01  0x038  6      2598402708  ---  Date and Time TimeStamp
+0x01  0x028  6       146177061  ---  Logical Sectors Read
+0x01  0x030  6          393557  ---  Number of Read Commands
+0x01  0x038  6      2598964982  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4               0  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
 0x03  0x008  4              48  ---  Spindle Motor Power-on Hours
 0x03  0x010  4              31  ---  Head Flying Hours
-0x03  0x018  4             953  ---  Head Load Events
+0x03  0x018  4             954  ---  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
 0x03  0x028  4               1  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -211,7 +211,7 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS

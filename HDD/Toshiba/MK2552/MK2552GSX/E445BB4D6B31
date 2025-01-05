@@ -1,5 +1,5 @@
-smartctl 6.6 2016-05-31 r4324 [x86_64-linux-5.3.0-51-generic] (local build)
-Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-25-amd64] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MK..52GSX
@@ -9,16 +9,17 @@ LU WWN Device Id: 5 000039 ...
 Firmware Version: LV010M
 User Capacity:    250,059,350,016 bytes [250 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5319
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Fri May  8 10:46:22 2020 CEST
+Local Time is:    Sun Sep 22 15:48:40 2024 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
 APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
+DSN feature is:   Unavailable
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 Write SCT (Get) Feature Control Command failed: scsi error medium or hardware error (serious)
 Wt Cache Reorder: Unknown (SCT Feature Control command failed)
@@ -65,27 +66,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1755
-  4 Start_Stop_Count        -O--CK   100   100   000    -    3189
+  3 Spin_Up_Time            POS--K   100   100   001    -    1803
+  4 Start_Stop_Count        -O--CK   100   100   000    -    3748
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    13
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   082   082   000    -    7404
- 10 Spin_Retry_Count        PO--CK   163   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2671
+  9 Power_On_Hours          -O--CK   081   081   000    -    7738
+ 10 Spin_Retry_Count        PO--CK   174   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    3230
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    199
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    389
-193 Load_Cycle_Count        -O--CK   084   084   000    -    164965
-194 Temperature_Celsius     -O---K   100   100   000    -    29 (Min/Max 10/58)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    672
+193 Load_Cycle_Count        -O--CK   084   084   000    -    167357
+194 Temperature_Celsius     -O---K   100   100   000    -    29 (Min/Max 8/58)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    12
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    111
-222 Loaded_Hours            -O--CK   087   087   000    -    5574
+222 Loaded_Hours            -O--CK   086   086   000    -    5644
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    377
+226 Load-in_Time            -OS--K   100   100   000    -    319
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -104,7 +105,7 @@ Address    Access  R/W   Size  Description
 0x06           SL  R/O      1  SMART self-test log
 0x07       GPL     R/O      1  Extended self-test log
 0x09           SL  R/W      1  Selective self-test log
-0x10       GPL     R/O      1  SATA NCQ Queued Error log
+0x10       GPL     R/O      1  NCQ Command Error log
 0x11       GPL     R/O      1  SATA Phy Event Counters log
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
@@ -161,11 +162,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
-SCT Support Level:                   1
 Device State:                        Active (0)
-Current Temperature:                 29 Celsius
-Power Cycle Max Temperature:         29 Celsius
-Lifetime    Max Temperature:         58 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     --/29 Celsius
+Lifetime    Min/Max Temperature:     --/58 Celsius
 
 Write SCT Data Table failed: scsi error medium or hardware error (serious)
 Read SCT Temperature History failed
@@ -174,6 +174,8 @@ Write SCT (Get) Error Recovery Control Command failed: scsi error medium or hard
 SCT (Get) Error Recovery Control command failed
 
 Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.0-27-lowlatency] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-56-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba L200 (CMR)
@@ -11,10 +11,10 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Sizes:     512 bytes logical, 4096 bytes physical
 Rotation Rate:    5400 rpm
 Form Factor:      2.5 inches
-Device is:        In smartctl database 7.3/5319
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Wed Apr 27 05:34:48 2022 PDT
+Local Time is:    Fri Jun  9 05:47:33 2023 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,27 +65,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1723
-  4 Start_Stop_Count        -O--CK   100   100   000    -    2042
+  3 Spin_Up_Time            POS--K   100   100   001    -    1737
+  4 Start_Stop_Count        -O--CK   100   100   000    -    2641
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   086   086   000    -    5793
- 10 Spin_Retry_Count        PO--CK   140   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    1939
+  9 Power_On_Hours          -O--CK   079   079   000    -    8583
+ 10 Spin_Retry_Count        PO--CK   152   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2528
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    7656
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    285
-193 Load_Cycle_Count        -O--CK   095   095   000    -    55561
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    353
+193 Load_Cycle_Count        -O--CK   092   092   000    -    87646
 194 Temperature_Celsius     -O---K   100   100   000    -    32 (Min/Max 12/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    87187
+199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    87190
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   092   092   000    -    3305
+222 Loaded_Hours            -O--CK   089   089   000    -    4463
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    267
+226 Load-in_Time            -OS--K   100   100   000    -    266
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -128,7 +128,58 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [221] occurred at disk power-on lifetime: 4421 hours (184 days + 5 hours)
+Error 65535 [224] occurred at disk power-on lifetime: 8512 hours (354 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 a8 00 00 0c 89 4e ff 40 00  Error: ICRC, ABRT at LBA = 0x0c894eff = 210325247
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 08 00 00 a8 00 00 0c 89 47 00 40 00     01:16:20.107  WRITE FPDMA QUEUED
+  60 00 08 00 a0 00 00 0f 7b 79 d0 40 00     01:16:20.106  READ FPDMA QUEUED
+  61 00 80 00 98 00 00 0c 89 46 80 40 00     01:16:20.073  WRITE FPDMA QUEUED
+  61 07 80 00 90 00 00 10 87 1b 00 40 00     01:16:20.073  WRITE FPDMA QUEUED
+  60 00 08 00 88 00 00 13 72 f8 00 40 00     01:16:20.072  READ FPDMA QUEUED
+
+Error 65534 [223] occurred at disk power-on lifetime: 6022 hours (250 days + 22 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 0d 84 d1 57 e0 00  Error: ICRC, ABRT at LBA = 0x0d84d157 = 226808151
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  35 00 00 00 80 00 00 0d 84 d0 d8 e0 00     02:09:14.111  WRITE DMA EXT
+  35 00 00 00 80 00 00 0d 84 d0 58 e0 00     02:09:14.110  WRITE DMA EXT
+  35 00 00 00 80 00 00 0d 84 cf d8 e0 00     02:09:14.109  WRITE DMA EXT
+  35 00 00 00 80 00 00 0d 84 cf 58 e0 00     02:09:14.108  WRITE DMA EXT
+  35 00 00 00 80 00 00 0d 84 ce d8 e0 00     02:09:14.107  WRITE DMA EXT
+
+Error 65533 [222] occurred at disk power-on lifetime: 6020 hours (250 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 68 00 00 01 89 ee c7 40 00  Error: ICRC, ABRT at LBA = 0x0189eec7 = 25816775
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 80 00 68 00 00 01 89 ee 48 40 00     00:08:24.303  WRITE FPDMA QUEUED
+  61 00 80 00 60 00 00 01 89 ed c8 40 00     00:08:24.303  WRITE FPDMA QUEUED
+  61 00 80 00 58 00 00 01 89 ed 48 40 00     00:08:24.302  WRITE FPDMA QUEUED
+  61 00 80 00 58 00 00 01 89 ec c8 40 00     00:08:24.302  WRITE FPDMA QUEUED
+  61 00 80 00 48 00 00 01 89 ec 48 40 00     00:08:24.301  WRITE FPDMA QUEUED
+
+Error 65532 [221] occurred at disk power-on lifetime: 4421 hours (184 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -145,7 +196,7 @@ Error 65535 [221] occurred at disk power-on lifetime: 4421 hours (184 days + 5 h
   35 00 00 01 00 00 00 01 93 c0 c0 e0 00     04:28:49.425  WRITE DMA EXT
   35 00 00 01 00 00 00 01 93 bf c0 e0 00     04:28:49.425  WRITE DMA EXT
 
-Error 65534 [220] occurred at disk power-on lifetime: 4420 hours (184 days + 4 hours)
+Error 65531 [220] occurred at disk power-on lifetime: 4420 hours (184 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -162,7 +213,7 @@ Error 65534 [220] occurred at disk power-on lifetime: 4420 hours (184 days + 4 h
   25 00 00 01 00 00 00 09 d4 e9 80 e0 00     04:11:37.474  READ DMA EXT
   25 00 00 01 00 00 00 09 d4 e8 80 e0 00     04:11:37.469  READ DMA EXT
 
-Error 65533 [219] occurred at disk power-on lifetime: 4420 hours (184 days + 4 hours)
+Error 65530 [219] occurred at disk power-on lifetime: 4420 hours (184 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -179,7 +230,7 @@ Error 65533 [219] occurred at disk power-on lifetime: 4420 hours (184 days + 4 h
   35 00 00 01 00 00 00 66 2d 02 60 e0 00     04:04:15.683  WRITE DMA EXT
   35 00 00 01 00 00 00 66 2d 01 60 e0 00     04:04:15.681  WRITE DMA EXT
 
-Error 65532 [218] occurred at disk power-on lifetime: 4420 hours (184 days + 4 hours)
+Error 65529 [218] occurred at disk power-on lifetime: 4420 hours (184 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -196,7 +247,7 @@ Error 65532 [218] occurred at disk power-on lifetime: 4420 hours (184 days + 4 h
   25 00 00 00 08 00 00 00 14 b6 70 e0 00     03:46:37.070  READ DMA EXT
   25 00 00 00 18 00 00 0a b6 ac c8 e0 00     03:46:37.039  READ DMA EXT
 
-Error 65531 [217] occurred at disk power-on lifetime: 4419 hours (184 days + 3 hours)
+Error 65528 [217] occurred at disk power-on lifetime: 4419 hours (184 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -212,57 +263,6 @@ Error 65531 [217] occurred at disk power-on lifetime: 4419 hours (184 days + 3 h
   35 00 00 01 00 00 00 09 c6 3f 20 e0 00     03:11:31.883  WRITE DMA EXT
   35 00 00 01 00 00 00 09 c6 3e 20 e0 00     03:11:31.882  WRITE DMA EXT
   25 00 00 00 40 00 00 08 cb d2 80 e0 00     03:11:31.874  READ DMA EXT
-
-Error 65530 [216] occurred at disk power-on lifetime: 4419 hours (184 days + 3 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 11 00 00 09 aa 67 0f e0 00  Error: ICRC, ABRT 17 sectors at LBA = 0x09aa670f = 162162447
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 01 00 00 00 09 aa 66 20 e0 00     03:09:05.015  WRITE DMA EXT
-  35 00 00 01 00 00 00 09 aa 65 20 e0 00     03:09:05.014  WRITE DMA EXT
-  35 00 00 01 00 00 00 09 aa 64 20 e0 00     03:09:05.012  WRITE DMA EXT
-  35 00 00 01 00 00 00 09 aa 63 20 e0 00     03:09:05.012  WRITE DMA EXT
-  35 00 00 01 00 00 00 09 aa 62 20 e0 00     03:09:05.011  WRITE DMA EXT
-
-Error 65529 [215] occurred at disk power-on lifetime: 4419 hours (184 days + 3 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 30 00 00 03 bd 63 90 e0 00  Error: ICRC, ABRT 48 sectors at LBA = 0x03bd6390 = 62743440
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 00 00 80 00 00 03 bd 63 40 e0 00     03:08:48.930  READ DMA EXT
-  25 00 00 00 80 00 00 03 bc ef 40 e0 00     03:08:48.907  READ DMA EXT
-  25 00 00 00 80 00 00 03 bc 96 c0 e0 00     03:08:48.898  READ DMA EXT
-  25 00 00 00 40 00 00 03 10 18 10 e0 00     03:08:48.891  READ DMA EXT
-  25 00 00 00 08 00 00 00 65 41 a8 e0 00     03:08:48.881  READ DMA EXT
-
-Error 65528 [214] occurred at disk power-on lifetime: 4419 hours (184 days + 3 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 f1 00 00 08 23 0c 7f e0 00  Error: ICRC, ABRT 241 sectors at LBA = 0x08230c7f = 136514687
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  35 00 00 01 00 00 00 08 23 0c 70 e0 00     03:04:54.593  WRITE DMA EXT
-  35 00 00 00 d8 00 00 08 23 0a 18 e0 00     03:04:54.593  WRITE DMA EXT
-  35 00 00 01 00 00 00 08 23 09 18 e0 00     03:04:54.592  WRITE DMA EXT
-  35 00 00 00 08 00 00 00 03 d8 f8 e0 00     03:04:54.592  WRITE DMA EXT
-  25 00 00 00 80 00 00 0a ba 0e c0 e0 00     03:04:54.573  READ DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -282,7 +282,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     22/37 Celsius
+Power Cycle Min/Max Temperature:     26/35 Celsius
 Lifetime    Min/Max Temperature:     12/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -291,7 +291,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (373)
+Temperature History Size (Index):    478 (25)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -300,28 +300,28 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4            1939  ---  Lifetime Power-On Resets
-0x01  0x010  4            5793  ---  Power-on Hours
-0x01  0x018  6     28275498028  ---  Logical Sectors Written
-0x01  0x020  6       274041592  ---  Number of Write Commands
-0x01  0x028  6     49902800667  ---  Logical Sectors Read
-0x01  0x030  6       537665088  ---  Number of Read Commands
+0x01  0x008  4            2528  ---  Lifetime Power-On Resets
+0x01  0x010  4            8583  ---  Power-on Hours
+0x01  0x018  6     38201984990  ---  Logical Sectors Written
+0x01  0x020  6       342806838  ---  Number of Write Commands
+0x01  0x028  6     67301864033  ---  Logical Sectors Read
+0x01  0x030  6       694614945  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4            7656  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            3027  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            3305  ---  Head Flying Hours
-0x03  0x018  4           55561  ---  Head Load Events
+0x03  0x008  4            5818  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            4463  ---  Head Flying Hours
+0x03  0x018  4           87646  ---  Head Load Events
 0x03  0x020  4              24  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               3  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             532  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             771  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              33  N--  Average Short Term Temperature
-0x05  0x018  1              29  N--  Average Long Term Temperature
+0x05  0x018  1              30  N--  Average Long Term Temperature
 0x05  0x020  1              54  ---  Highest Temperature
 0x05  0x028  1              12  ---  Lowest Temperature
 0x05  0x030  1              48  N--  Highest Average Short Term Temperature
@@ -333,10 +333,10 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           25956  ---  Number of Hardware Resets
-0x06  0x018  4           87187  ---  Number of Interface CRC Errors
+0x06  0x008  4           37381  ---  Number of Hardware Resets
+0x06  0x018  4           87190  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              14  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -353,8 +353,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           31  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           30  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           11  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

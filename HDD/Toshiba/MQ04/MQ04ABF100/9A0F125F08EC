@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.12-64] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-6.2.0-33-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -14,7 +14,7 @@ Zoned Device:     Device managed zones
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Dec  3 13:50:19 2022 EST
+Local Time is:    Wed Sep 27 14:28:45 2023 CDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -63,26 +63,26 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    2310
-  3 Spin_Up_Time            PO---K   100   100   002    -    1263
-  4 Start_Stop_Count        -O--CK   100   100   000    -    4412
+  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    2962
+  3 Spin_Up_Time            PO---K   100   100   002    -    1238
+  4 Start_Stop_Count        -O--CK   100   100   000    -    4934
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  7 Seek_Error_Rate         POSR-K   100   100   070    -    19155
-  9 Power_On_Hours          -O--CK   100   100   000    -    1839
+  7 Seek_Error_Rate         POSR-K   100   100   070    -    28945
+  9 Power_On_Hours          -O--CK   100   100   000    -    2037
  10 Spin_Retry_Count        PO--CK   100   100   050    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    842
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    1052
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    1
 184 End-to-End_Error        PO-RCK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    10
+188 Command_Timeout         -O--CK   100   100   000    -    479
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-191 G-Sense_Error_Rate      -O--CK   001   001   000    -    7068
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    575525617798
-193 Load_Cycle_Count        -O--CK   077   077   000    -    46396
-194 Temperature_Celsius     -O---K   036   048   000    -    36 (Min/Max 29/36)
+191 G-Sense_Error_Rate      -O--CK   001   001   000    -    7704
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    828928688321
+193 Load_Cycle_Count        -O--CK   076   076   000    -    48115
+194 Temperature_Celsius     -O---K   043   048   000    -    43 (Min/Max 19/43)
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    4
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,16 +114,117 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 5
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 5 [4] occurred at disk power-on lifetime: 1948 hours (81 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 00 00 00 45 1f 50 ff 40 00  Error: ICRC, ABRT at LBA = 0x451f50ff = 1159680255
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 04 00 00 00 00 00 45 1f 4d 00 40 00     00:05:54.082  WRITE FPDMA QUEUED
+  61 00 08 00 00 00 00 00 5d 97 30 40 00     00:05:54.081  WRITE FPDMA QUEUED
+  61 00 08 00 00 00 00 00 5d 97 40 40 00     00:05:54.081  WRITE FPDMA QUEUED
+  61 00 3d 00 00 00 00 1b 79 d5 81 40 00     00:05:54.080  WRITE FPDMA QUEUED
+  61 00 3d 00 00 00 00 1b 79 d5 44 40 00     00:05:54.079  WRITE FPDMA QUEUED
+
+Error 4 [3] occurred at disk power-on lifetime: 1948 hours (81 days + 4 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 00 00 00 00 60 01 ff 40 00  Error: ICRC, ABRT at LBA = 0x006001ff = 6291967
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 01 00 00 00 00 00 00 60 01 00 40 00     00:01:20.939  WRITE FPDMA QUEUED
+  60 01 00 00 00 00 00 00 60 00 00 40 00     00:01:20.938  READ FPDMA QUEUED
+  61 01 00 00 00 00 00 00 60 00 00 40 00     00:01:20.937  WRITE FPDMA QUEUED
+  60 01 00 00 00 00 00 00 5f ff 00 40 00     00:01:20.937  READ FPDMA QUEUED
+  61 01 00 00 00 00 00 00 5f ff 00 40 00     00:01:20.936  WRITE FPDMA QUEUED
+
+Error 3 [2] occurred at disk power-on lifetime: 1911 hours (79 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 00 00 00 1c a0 5c 2f 40 00  Error: ICRC, ABRT at LBA = 0x1ca05c2f = 480271407
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 04 00 00 08 00 00 1c a0 5c 30 40 00     00:02:01.664  WRITE FPDMA QUEUED
+  61 04 00 00 00 00 00 1c a0 58 30 40 00     00:02:01.664  WRITE FPDMA QUEUED
+  61 04 00 00 08 00 00 1c a0 54 30 40 00     00:02:01.646  WRITE FPDMA QUEUED
+  61 04 00 00 00 00 00 1c a0 50 30 40 00     00:02:01.646  WRITE FPDMA QUEUED
+  61 04 00 00 08 00 00 1c a0 4c 30 40 00     00:02:01.627  WRITE FPDMA QUEUED
+
+Error 2 [1] occurred at disk power-on lifetime: 1862 hours (77 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 08 00 00 00 6e 0a f7 40 00  Error: ICRC, ABRT at LBA = 0x006e0af7 = 7211767
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 04 00 00 08 00 00 00 6e 06 f8 40 00     00:02:07.998  WRITE FPDMA QUEUED
+  61 04 00 00 00 00 00 00 6e 02 f8 40 00     00:02:07.998  WRITE FPDMA QUEUED
+  61 04 00 00 08 00 00 00 6d fe f8 40 00     00:02:07.610  WRITE FPDMA QUEUED
+  61 04 00 00 00 00 00 00 6d fa f8 40 00     00:02:07.610  WRITE FPDMA QUEUED
+  35 00 00 04 00 00 00 00 6d f6 f8 40 00     00:02:07.469  WRITE DMA EXT
+
+Error 1 [0] occurred at disk power-on lifetime: 1854 hours (77 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 00 00 00 00 3d a8 17 40 00  Error: ICRC, ABRT at LBA = 0x003da817 = 4040727
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 20 00 18 00 00 12 cf 4f e0 40 00     00:00:38.882  WRITE FPDMA QUEUED
+  61 00 08 00 10 00 00 00 c7 25 28 40 00     00:00:38.882  WRITE FPDMA QUEUED
+  61 00 08 00 08 00 00 00 34 e6 20 40 00     00:00:38.882  WRITE FPDMA QUEUED
+  61 00 58 00 00 00 00 00 3d a7 c0 40 00     00:00:38.882  WRITE FPDMA QUEUED
+  60 00 20 00 10 00 00 00 be 5d 00 40 00     00:00:38.862  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      1671         -
-# 2  Short offline       Completed without error       00%      1658         -
-# 3  Short offline       Completed without error       00%      1578         -
-# 4  Short offline       Completed without error       00%      1033         -
-# 5  Short offline       Completed without error       00%      1033         -
-# 6  Short offline       Completed without error       00%       393         -
+# 1  Short offline       Completed without error       00%      1972         -
+# 2  Short offline       Completed without error       00%      1971         -
+# 3  Short offline       Completed without error       00%      1671         -
+# 4  Short offline       Completed without error       00%      1658         -
+# 5  Short offline       Completed without error       00%      1578         -
+# 6  Short offline       Completed without error       00%      1033         -
+# 7  Short offline       Completed without error       00%      1033         -
+# 8  Short offline       Completed without error       00%       393         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -138,9 +239,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     29/36 Celsius
+Device State:                        Active (0)
+Current Temperature:                    43 Celsius
+Power Cycle Min/Max Temperature:     19/43 Celsius
 Lifetime    Min/Max Temperature:     16/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -149,7 +250,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (187)
+Temperature History Size (Index):    478 (15)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -158,31 +259,31 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             842  ---  Lifetime Power-On Resets
-0x01  0x010  4            1839  ---  Power-on Hours
-0x01  0x018  6     17615625027  ---  Logical Sectors Written
-0x01  0x020  6       513365815  ---  Number of Write Commands
-0x01  0x028  6     17579349494  ---  Logical Sectors Read
-0x01  0x030  6       314338382  ---  Number of Read Commands
-0x01  0x038  6      6621468115  ---  Date and Time TimeStamp
+0x01  0x008  4            1052  ---  Lifetime Power-On Resets
+0x01  0x010  4            2037  ---  Power-on Hours
+0x01  0x018  6     21834401868  ---  Logical Sectors Written
+0x01  0x020  6       527444612  ---  Number of Write Commands
+0x01  0x028  6     21507492629  ---  Logical Sectors Read
+0x01  0x030  6       329751850  ---  Number of Read Commands
+0x01  0x038  6      7334267325  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4            7068  ---  Overlimit Shock Events
+0x02  0x010  4            7704  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            1831  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            1494  ---  Head Flying Hours
-0x03  0x018  4           46530  ---  Head Load Events
+0x03  0x008  4            1990  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            1603  ---  Head Flying Hours
+0x03  0x018  4           48308  ---  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
-0x03  0x028  4            2310  ---  Read Recovery Attempts
+0x03  0x028  4            2962  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4             134  ---  Number of High Priority Unload Events
+0x03  0x040  4             193  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              10  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             479  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              36  ---  Current Temperature
-0x05  0x010  1              36  N--  Average Short Term Temperature
-0x05  0x018  1              34  N--  Average Long Term Temperature
+0x05  0x008  1              43  ---  Current Temperature
+0x05  0x010  1              33  N--  Average Short Term Temperature
+0x05  0x018  1              33  N--  Average Long Term Temperature
 0x05  0x020  1              48  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              40  N--  Highest Average Short Term Temperature
@@ -194,9 +295,9 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            8807  ---  Number of Hardware Resets
-0x06  0x010  4            1134  ---  Number of ASR Events
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x008  4           11677  ---  Number of Hardware Resets
+0x06  0x010  4            4047  ---  Number of ASR Events
+0x06  0x018  4               4  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -214,8 +315,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           42  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           42  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

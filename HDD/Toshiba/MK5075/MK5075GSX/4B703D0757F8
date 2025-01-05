@@ -1,5 +1,5 @@
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.1-desktop-1omv2290] (OpenMandriva Lx 7.3-2)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.4.8-desktop-2omv2390] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Toshiba 2.5" HDD MK..75GSX
@@ -14,7 +14,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database
 ATA Version is:   ATA8-ACS (minor revision not indicated)
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
-Local Time is:    Sat Jan  7 13:56:12 2023 CET
+Local Time is:    Fri Aug 18 14:33:09 2023 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -29,8 +29,8 @@ Wt Cache Reorder: Enabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,27 +65,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
   2 Throughput_Performance  P-S---   100   100   050    -    0
-  3 Spin_Up_Time            POS--K   100   100   001    -    1766
-  4 Start_Stop_Count        -O--CK   100   100   000    -    3787
+  3 Spin_Up_Time            POS--K   100   100   001    -    2078
+  4 Start_Stop_Count        -O--CK   100   100   000    -    4336
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   082   082   000    -    7281
- 10 Spin_Retry_Count        PO--CK   175   100   030    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    3460
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    77
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    206
-193 Load_Cycle_Count        -O--CK   095   095   000    -    52875
-194 Temperature_Celsius     -O---K   100   100   000    -    29 (Min/Max 14/46)
+  9 Power_On_Hours          -O--CK   081   081   000    -    7607
+ 10 Spin_Retry_Count        PO--CK   186   100   030    -    0
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    4009
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    79
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    303
+193 Load_Cycle_Count        -O--CK   094   094   000    -    66331
+194 Temperature_Celsius     -O---K   100   100   000    -    41 (Min/Max 14/46)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    84
-222 Loaded_Hours            -O--CK   084   084   000    -    6602
+222 Loaded_Hours            -O--CK   083   083   000    -    6838
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    339
+226 Load-in_Time            -OS--K   100   100   000    -    240
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -111,7 +111,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 189
+Device Error Count: 211
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -127,7 +127,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 189 [188] occurred at disk power-on lifetime: 7218 hours (300 days + 18 hours)
+Error 211 [210] occurred at disk power-on lifetime: 7593 hours (316 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -138,98 +138,30 @@ Error 189 [188] occurred at disk power-on lifetime: 7218 hours (300 days + 18 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:24.657  SECURITY UNLOCK
-  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:00:24.656  IDENTIFY DEVICE
-  f2 10 00 06 00 00 00 00 00 00 00 e0 00     00:00:24.035  SECURITY UNLOCK
-  ef 00 10 00 06 00 00 00 00 00 00 e0 00     00:00:17.835  SET FEATURES [Enable SATA feature]
-  ec 90 00 01 00 00 00 01 00 00 00 e0 00     00:00:17.732  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:05.195  SECURITY UNLOCK
+  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:00:05.194  IDENTIFY DEVICE
+  f2 da 00 00 00 c2 4f 00 00 00 00 e0 00     00:00:04.980  SECURITY UNLOCK
+  b0 03 da 45 00 00 00 00 c2 4f 00 e0 00     00:00:03.253  SMART RETURN STATUS
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:03.253  SET FEATURES [Set transfer mode]
 
-Error 188 [187] occurred at disk power-on lifetime: 7218 hours (300 days + 18 hours)
+Error 210 [209] occurred at disk power-on lifetime: 7593 hours (316 days + 9 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 06 ff 00 00 00 00 00 00 e0 00
+  04 -- 51 00 ff c2 4f 00 00 00 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 10 00 06 00 00 00 00 00 00 00 e0 00     00:00:24.035  SECURITY UNLOCK
-  ef 00 10 00 06 00 00 00 00 00 00 e0 00     00:00:17.835  SET FEATURES [Enable SATA feature]
-  ec 90 00 01 00 00 00 01 00 00 00 e0 00     00:00:17.732  IDENTIFY DEVICE
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:17.630  [RESERVED]
-  ef da 90 00 06 c2 4f 00 00 00 00 e0 00     00:00:17.628  SET FEATURES [Disable SATA feature]
+  f2 da 00 00 00 c2 4f 00 00 00 00 e0 00     00:00:04.980  SECURITY UNLOCK
+  b0 03 da 45 00 00 00 00 c2 4f 00 e0 00     00:00:03.253  SMART RETURN STATUS
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:03.253  SET FEATURES [Set transfer mode]
+  ec ff 00 01 01 00 00 01 00 00 00 e0 00     00:00:03.252  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:03.238  [RESERVED]
 
-Error 187 [186] occurred at disk power-on lifetime: 7211 hours (300 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:07:51.015  SECURITY UNLOCK
-  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:07:51.014  IDENTIFY DEVICE
-  f2 10 00 06 00 00 00 00 00 00 00 e0 00     00:07:50.450  SECURITY UNLOCK
-  ef 00 10 00 06 00 00 00 00 00 00 e0 00     00:07:40.364  SET FEATURES [Enable SATA feature]
-  ec 90 00 01 00 00 00 01 00 00 00 e0 00     00:07:40.363  IDENTIFY DEVICE
-
-Error 186 [185] occurred at disk power-on lifetime: 7211 hours (300 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 06 ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 10 00 06 00 00 00 00 00 00 00 e0 00     00:07:50.450  SECURITY UNLOCK
-  ef 00 10 00 06 00 00 00 00 00 00 e0 00     00:07:40.364  SET FEATURES [Enable SATA feature]
-  ec 90 00 01 00 00 00 01 00 00 00 e0 00     00:07:40.363  IDENTIFY DEVICE
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:07:40.261  [RESERVED]
-  ef da 90 00 06 c2 4f 00 00 00 00 e0 00     00:07:40.259  SET FEATURES [Disable SATA feature]
-
-Error 185 [184] occurred at disk power-on lifetime: 7169 hours (298 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 06 ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 10 00 06 00 00 00 00 00 00 00 e0 00     00:38:44.742  SECURITY UNLOCK
-  ef 90 10 01 06 00 00 01 00 00 00 e0 00     00:38:44.742  SET FEATURES [Enable SATA feature]
-  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:38:44.642  [RESERVED]
-  ef 00 90 00 06 00 00 00 00 00 00 e0 00     00:38:44.640  SET FEATURES [Disable SATA feature]
-  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:44.640  IDENTIFY DEVICE
-
-Error 184 [183] occurred at disk power-on lifetime: 7169 hours (298 days + 17 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:44.075  SECURITY UNLOCK
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:38:38.274  SECURITY UNLOCK
-  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:38.273  IDENTIFY DEVICE
-  f2 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:37.733  SECURITY UNLOCK
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:38:28.896  SECURITY UNLOCK
-
-Error 183 [182] occurred at disk power-on lifetime: 7169 hours (298 days + 17 hours)
+Error 209 [208] occurred at disk power-on lifetime: 7581 hours (315 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -240,28 +172,96 @@ Error 183 [182] occurred at disk power-on lifetime: 7169 hours (298 days + 17 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:38:38.274  SECURITY UNLOCK
-  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:38.273  IDENTIFY DEVICE
-  f2 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:37.733  SECURITY UNLOCK
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:38:28.896  SECURITY UNLOCK
-  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:28.895  IDENTIFY DEVICE
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:00:05.204  SECURITY UNLOCK
+  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:00:05.203  IDENTIFY DEVICE
+  f2 da 00 00 00 c2 4f 00 00 00 00 e0 00     00:00:04.987  SECURITY UNLOCK
+  b0 03 da 45 00 00 00 00 c2 4f 00 e0 00     00:00:03.136  SMART RETURN STATUS
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:03.135  SET FEATURES [Set transfer mode]
 
-Error 182 [181] occurred at disk power-on lifetime: 7169 hours (298 days + 17 hours)
+Error 208 [207] occurred at disk power-on lifetime: 7581 hours (315 days + 21 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 ff ff 00 00 00 00 00 00 e0 00
+  04 -- 51 00 ff c2 4f 00 00 00 00 e0 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  f2 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:37.733  SECURITY UNLOCK
-  f2 00 00 00 00 00 00 00 00 00 00 e0 00     00:38:28.896  SECURITY UNLOCK
-  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     00:38:28.895  IDENTIFY DEVICE
-  f2 10 00 06 00 00 00 00 00 00 00 e0 00     00:38:28.308  SECURITY UNLOCK
-  ef 00 10 00 06 00 00 00 00 00 00 e0 00     00:38:21.750  SET FEATURES [Enable SATA feature]
+  f2 da 00 00 00 c2 4f 00 00 00 00 e0 00     00:00:04.987  SECURITY UNLOCK
+  b0 03 da 45 00 00 00 00 c2 4f 00 e0 00     00:00:03.136  SMART RETURN STATUS
+  ef 00 03 00 45 00 00 00 00 00 00 e0 00     00:00:03.135  SET FEATURES [Set transfer mode]
+  ec ff 00 01 01 00 00 01 00 00 00 e0 00     00:00:03.135  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     00:00:03.120  [RESERVED]
+
+Error 207 [206] occurred at disk power-on lifetime: 7574 hours (315 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     02:22:58.637  SECURITY UNLOCK
+  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     02:22:58.636  IDENTIFY DEVICE
+  f2 10 00 06 00 00 00 00 00 00 00 e0 00     02:22:58.054  SECURITY UNLOCK
+  ef 00 10 00 06 00 00 00 00 00 00 e0 00     02:22:32.490  SET FEATURES [Enable SATA feature]
+  ec 90 00 01 00 00 00 01 00 00 00 e0 00     02:22:32.489  IDENTIFY DEVICE
+
+Error 206 [205] occurred at disk power-on lifetime: 7574 hours (315 days + 14 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 06 ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 10 00 06 00 00 00 00 00 00 00 e0 00     02:22:58.054  SECURITY UNLOCK
+  ef 00 10 00 06 00 00 00 00 00 00 e0 00     02:22:32.490  SET FEATURES [Enable SATA feature]
+  ec 90 00 01 00 00 00 01 00 00 00 e0 00     02:22:32.489  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     02:22:32.387  [RESERVED]
+  ef da 90 00 06 c2 4f 00 00 00 00 e0 00     02:22:32.385  SET FEATURES [Disable SATA feature]
+
+Error 205 [204] occurred at disk power-on lifetime: 7565 hours (315 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 00 00 00 00 00 00 00 00 00 00 e0 00     01:27:15.661  SECURITY UNLOCK
+  ec 00 00 ff 00 00 00 00 00 00 00 e0 00     01:27:15.660  IDENTIFY DEVICE
+  f2 10 00 06 00 00 00 00 00 00 00 e0 00     01:27:15.054  SECURITY UNLOCK
+  ef 00 10 00 06 00 00 00 00 00 00 e0 00     01:26:55.182  SET FEATURES [Enable SATA feature]
+  ec 90 00 01 00 00 00 01 00 00 00 e0 00     01:26:55.173  IDENTIFY DEVICE
+
+Error 204 [203] occurred at disk power-on lifetime: 7565 hours (315 days + 5 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 06 ff 00 00 00 00 00 00 e0 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  f2 10 00 06 00 00 00 00 00 00 00 e0 00     01:27:15.054  SECURITY UNLOCK
+  ef 00 10 00 06 00 00 00 00 00 00 e0 00     01:26:55.182  SET FEATURES [Enable SATA feature]
+  ec 90 00 01 00 00 00 01 00 00 00 e0 00     01:26:55.173  IDENTIFY DEVICE
+  aa aa aa aa aa aa aa aa aa aa aa aa ff     01:26:55.066  [RESERVED]
+  ef da 90 00 06 c2 4f 00 00 00 00 e0 00     01:26:55.064  SET FEATURES [Disable SATA feature]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -288,9 +288,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     23/29 Celsius
+Device State:                        Active (0)
+Current Temperature:                    41 Celsius
+Power Cycle Min/Max Temperature:     32/42 Celsius
 Lifetime    Min/Max Temperature:     14/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -299,7 +299,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (333)
+Temperature History Size (Index):    478 (141)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -319,8 +319,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            5  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           12  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           23  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC
