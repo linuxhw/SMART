@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.10.74-generic-2rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.1.58-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Silicon Motion based SSDs
@@ -12,10 +12,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        In smartctl database [for details use: -P show]
+Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon May 16 09:19:58 2022 MSK
+Local Time is:    Sun Dec  3 19:30:41 2023 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,21 +65,21 @@ SCT capabilities: 	       (0x0031)	SCT Status supported.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    8315
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    1564
+  9 Power_On_Hours          -O--C-   100   100   000    -    13706
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    2390
 167 Average_Erase_Count     -O---K   100   100   000    -    0
-168 Max_Erase_Count_of_Spec -O--C-   100   100   000    -    1
+168 Max_Erase_Count_of_Spec -O--C-   100   100   000    -    3
 169 Remaining_Lifetime_Perc PO--C-   086   086   010    -    14155830
-173 Unknown_Attribute       -O--C-   200   200   000    -    743045791948
+173 Unknown_Attribute       -O--C-   200   200   000    -    1090944696619
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    1376
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    662
-194 Temperature_Celsius     -O---K   070   070   030    -    30 (Min/Max 9/61)
-231 SSD_Life_Left           PO--CK   087   087   005    -    13
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    49805320960
-234 Unknown_Attribute       -O--CK   100   100   000    -    42157703616
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    30816919708
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    21610288673
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    759
+194 Temperature_Celsius     -O---K   072   072   030    -    28 (Min/Max 9/61)
+231 SSD_Life_Left           PO--CK   081   081   005    -    19
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    75379338240
+234 Unknown_Attribute       -O--CK   100   100   000    -    71247955520
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    44374579508
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    31991916152
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -106,7 +106,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 1
+Device Error Count: 3
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,6 +121,40 @@ Device Error Count: 1
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 12847 hours (535 days + 7 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 78 00 00 04 89 f5 90 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     01:51:09.100  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     01:51:07.700  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     01:51:06.400  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     01:51:05.000  FLUSH CACHE EXT
+  06 00 01 00 01 00 00 00 00 00 00 e0 80     01:51:04.600  DATA SET MANAGEMENT
+
+Error 2 [1] occurred at disk power-on lifetime: 10165 hours (423 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 70 00 00 02 61 cc 22 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:01:00.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:01:00.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:01:00.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:01:00.500  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 80     00:01:00.500  FLUSH CACHE EXT
 
 Error 1 [0] occurred at disk power-on lifetime: 4864 hours (202 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -156,8 +190,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:      ?/37 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:      ?/31 Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -166,22 +200,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (32)
+Temperature History Size (Index):    478 (70)
 
 SCT Error Recovery Control command not supported
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1564  ---  Lifetime Power-On Resets
-0x01  0x010  4            8315  ---  Power-on Hours
-0x01  0x018  6     30816919708  ---  Logical Sectors Written
-0x01  0x020  6       313301992  ---  Number of Write Commands
-0x01  0x028  6     21610288673  ---  Logical Sectors Read
-0x01  0x030  6       307247667  ---  Number of Read Commands
-0x01  0x038  6 141543791765109  ---  Date and Time TimeStamp
+0x01  0x008  4            2390  ---  Lifetime Power-On Resets
+0x01  0x010  4           13706  ---  Power-on Hours
+0x01  0x018  6     44374579508  ---  Logical Sectors Written
+0x01  0x020  6       500219026  ---  Number of Write Commands
+0x01  0x028  6     31991916152  ---  Logical Sectors Read
+0x01  0x030  6       454695620  ---  Number of Read Commands
+0x01  0x038  6  12624988164388  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              35  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              50  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -190,14 +224,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            1  Command failed due to ICRC error
+0x0001  2            3  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

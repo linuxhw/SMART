@@ -1,4 +1,4 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-76-generic] (local build)
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-107-generic] (local build)
 Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,11 +15,11 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Mar 14 15:49:45 2024 +07
+Local Time is:    Thu May 16 21:33:18 2024 +07
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -48,14 +48,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   000    -    0
   5 Reallocated_Sector_Ct   POSR--   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2896
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    20362
+  9 Power_On_Hours          -O--CK   100   100   000    -    2965
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    20447
 169 Unknown_Apple_Attrib    -O---K   100   100   010    -    867757459168
-173 Wear_Leveling_Count     -O---K   179   179   100    -    1885532717588
-174 Host_Reads_MiB          ----CK   100   100   000    -    70914561
-175 Host_Writes_MiB         ----CK   100   100   000    -    37112406
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    634
-194 Temperature_Celsius     -O---K   032   032   000    -    68 (Min/Max 25/85)
+173 Wear_Leveling_Count     -O---K   179   179   100    -    1898417685014
+174 Host_Reads_MiB          ----CK   100   100   000    -    71194570
+175 Host_Writes_MiB         ----CK   100   100   000    -    37280037
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    635
+194 Temperature_Celsius     -O---K   035   035   000    -    65 (Min/Max 25/87)
 197 Current_Pending_Sector  -O--CK   000   000   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 244 Unknown_Attribute       -O----   000   000   000    -    0
@@ -97,5 +97,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           16  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 

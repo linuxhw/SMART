@@ -15,15 +15,15 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sat Feb 10 12:16:14 2024 EET
+Local Time is:    Sat Feb 10 14:58:03 2024 EET
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     128 (minimum power consumption without standby)
+APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Unavailable
 
 === START OF READ SMART DATA SECTION ===
@@ -48,14 +48,14 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   000    -    0
   5 Reallocated_Sector_Ct   POSR--   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    4257
+  9 Power_On_Hours          -O--CK   100   100   000    -    4260
  12 Power_Cycle_Count       -O--CK   100   100   000    -    25124
 169 Unknown_Apple_Attrib    -O---K   100   100   010    -    721728571104
 173 Wear_Leveling_Count     -O---K   176   176   100    -    2186187047537
-174 Host_Reads_MiB          ----CK   100   100   000    -    47773960
-175 Host_Writes_MiB         ----CK   100   100   000    -    42130945
+174 Host_Reads_MiB          ----CK   100   100   000    -    47776776
+175 Host_Writes_MiB         ----CK   100   100   000    -    42133552
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    140
-194 Temperature_Celsius     -O---K   044   044   000    -    56 (Min/Max 17/82)
+194 Temperature_Celsius     -O---K   042   042   000    -    58 (Min/Max 17/82)
 197 Current_Pending_Sector  -O--CK   000   000   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 244 Unknown_Attribute       -O----   000   000   000    -    0
@@ -97,5 +97,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
 

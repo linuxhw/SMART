@@ -1,5 +1,5 @@
-smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.16.7-desktop-1omv4003] (OpenMandriva Lx 7.2-2)
-Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.10.0-desktop-1omv2490] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Device Model:     ADATA SU700
@@ -11,10 +11,10 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
 TRIM Command:     Available, deterministic, zeroed
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        Not in smartctl database
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Feb  7 20:04:53 2022 EST
+Local Time is:    Sun Jul 21 20:36:28 2024 BST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -65,21 +65,21 @@ SCT capabilities: 	       (0x0039)	SCT Status supported.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    8486
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    2921
+  9 Power_On_Hours          -O--C-   100   100   000    -    8543
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    3153
 167 Unknown_Attribute       -O---K   100   100   000    -    0
-168 Unknown_Attribute       -O--C-   100   100   000    -    2
+168 Unknown_Attribute       -O--C-   100   100   000    -    0
 169 Unknown_Attribute       PO--C-   099   099   010    -    65542
-173 Unknown_Attribute       -O--C-   200   200   000    -    11986534873
+173 Unknown_Attribute       -O--C-   200   200   000    -    7692485093
 175 Program_Fail_Count_Chip PO--C-   087   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   020    -    911
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    0
-194 Temperature_Celsius     -O---K   063   063   030    -    37 (Min/Max 26/40)
-231 Unknown_SSD_Attribute   PO--CK   085   085   005    -    15
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    58694806656
-234 Unknown_Attribute       -O--CK   100   100   000    -    30943456837632
-241 Total_LBAs_Written      -O--CK   100   100   000    -    52559296964
-242 Total_LBAs_Read         -O--CK   100   100   000    -    54892996086
+194 Temperature_Celsius     -O---K   066   066   030    -    34 (Min/Max 34/40)
+231 Unknown_SSD_Attribute   PO--CK   084   084   005    -    16
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    63661893120
+234 Unknown_Attribute       -O--CK   100   100   000    -    31266830106624
+241 Total_LBAs_Written      -O--CK   100   100   000    -    57204482475
+242 Total_LBAs_Read         -O--CK   100   100   000    -    56010270782
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-Device Error Count: 4535 (device log contains only the most recent 256 errors)
+Device Error Count: 4662 (device log contains only the most recent 256 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -121,14 +121,142 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 4535 [182] log entry is empty
-Error 4534 [181] log entry is empty
-Error 4533 [180] log entry is empty
-Error 4532 [179] log entry is empty
-Error 4531 [178] log entry is empty
-Error 4530 [177] log entry is empty
-Error 4529 [176] log entry is empty
-Error 4528 [175] log entry is empty
+Error 4662 [53] occurred at disk power-on lifetime: 8533 hours (355 days + 13 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 38 00 00 04 91 11 30 40 08  Error: UNC at LBA = 0x04911130 = 76615984
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 b8 00 00 00 00 00 00 40 08     02:02:16.000  READ FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     02:02:14.000  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     02:02:14.000  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     02:01:53.200  FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 a0 08     02:01:53.200  FLUSH CACHE EXT
+
+Error 4661 [52] occurred at disk power-on lifetime: 8526 hours (355 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 04 00 00 00 00 71 a4 58 e0 00  Error: UNC 1024 sectors at LBA = 0x0071a458 = 7447640
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 04 00 00 00 00 71 a4 00 e0 00     00:05:39.100  READ DMA EXT
+  ef 00 03 00 46 00 00 00 00 00 00 e0 00     00:05:39.100  SET FEATURES [Set transfer mode]
+  e5 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:39.100  CHECK POWER MODE
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00     00:05:39.100  IDENTIFY DEVICE
+  ef 00 03 00 00 00 00 00 00 00 00 e0 00     00:05:39.100  SET FEATURES [Set transfer mode]
+
+Error 4660 [51] occurred at disk power-on lifetime: 8526 hours (355 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 04 00 00 00 00 71 a4 58 e0 00  Error: UNC 1024 sectors at LBA = 0x0071a458 = 7447640
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 04 00 00 00 00 71 a4 00 e0 00     00:05:28.600  READ DMA EXT
+  25 00 00 04 00 00 00 00 71 a0 00 e0 00     00:05:28.600  READ DMA EXT
+  25 00 00 04 00 00 00 00 71 9c 00 e0 00     00:05:28.500  READ DMA EXT
+  25 00 00 04 00 00 00 00 71 98 00 e0 00     00:05:28.500  READ DMA EXT
+  25 00 00 04 00 00 00 00 71 94 00 e0 00     00:05:28.500  READ DMA EXT
+
+Error 4659 [50] occurred at disk power-on lifetime: 8526 hours (355 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 1b f2 44 00 e0 00  Error: UNC 8 sectors at LBA = 0x1bf24400 = 468861952
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.700  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.600  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.400  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.200  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.100  READ DMA EXT
+
+Error 4658 [49] occurred at disk power-on lifetime: 8526 hours (355 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 1b f2 44 00 e0 00  Error: UNC 8 sectors at LBA = 0x1bf24400 = 468861952
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.600  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.400  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.200  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.100  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:18.900  READ DMA EXT
+
+Error 4657 [48] occurred at disk power-on lifetime: 8526 hours (355 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 1b f2 44 00 e0 00  Error: UNC 8 sectors at LBA = 0x1bf24400 = 468861952
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.400  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.200  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.100  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:18.900  READ DMA EXT
+  ef 00 03 00 46 00 00 00 00 00 00 e0 00     00:07:18.900  SET FEATURES [Set transfer mode]
+
+Error 4656 [47] occurred at disk power-on lifetime: 8526 hours (355 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 1b f2 44 00 e0 00  Error: UNC 8 sectors at LBA = 0x1bf24400 = 468861952
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.200  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.100  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:18.900  READ DMA EXT
+  ef 00 03 00 46 00 00 00 00 00 00 e0 00     00:07:18.900  SET FEATURES [Set transfer mode]
+  e5 00 00 00 00 00 00 00 00 00 00 e0 00     00:07:18.900  CHECK POWER MODE
+
+Error 4655 [46] occurred at disk power-on lifetime: 8526 hours (355 days + 6 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 1b f2 44 00 e0 00  Error: UNC 8 sectors at LBA = 0x1bf24400 = 468861952
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:19.100  READ DMA EXT
+  25 00 00 00 08 00 00 1b f2 44 00 e0 00     00:07:18.900  READ DMA EXT
+  ef 00 03 00 46 00 00 00 00 00 00 e0 00     00:07:18.900  SET FEATURES [Set transfer mode]
+  e5 00 00 00 00 00 00 00 00 00 00 e0 00     00:07:18.900  CHECK POWER MODE
+  ec 00 00 00 00 00 00 00 00 00 00 e0 00     00:07:18.900  IDENTIFY DEVICE
+
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -156,7 +284,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (126)
+Temperature History Size (Index):    478 (364)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -168,16 +296,18 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            2  Command failed due to ICRC error
+0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
+
 
