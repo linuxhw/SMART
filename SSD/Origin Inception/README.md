@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Origin... | TLC830 Pro Series  | 256 GB | 1       | 171   | 12    | 0.04   |
+| Origin... | TLC830 Pro Series  | 256 GB | 2       | 172   | 6     | 0.25   |

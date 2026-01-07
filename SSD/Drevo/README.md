@@ -18,7 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Drevo     | X1 pro             | 1 TB   | 2       | 451   | 9     | 1.19   |
-| Drevo     | X1 Pro SSD         | 128 GB | 4       | 336   | 18    | 0.65   |
-| Drevo     | X1 pro 256G        | 256 GB | 4       | 288   | 765   | 0.49   |
-| Drevo     | X1                 | 120 GB | 5       | 188   | 506   | 0.36   |
-| Drevo     | X1 SSD             | 120 GB | 18      | 237   | 48    | 0.27   |
+| Drevo     | X1                 | 120 GB | 6       | 348   | 422   | 0.82   |
+| Drevo     | X1 pro 256G        | 256 GB | 5       | 308   | 612   | 0.60   |
+| Drevo     | X1 Pro SSD         | 128 GB | 6       | 396   | 54    | 0.43   |
+| Drevo     | X1 SSD             | 120 GB | 22      | 270   | 85    | 0.30   |

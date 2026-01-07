@@ -17,8 +17,10 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Viper     | M.2 VPN100         | 1 TB   | 2       | 736   | 0     | 2.02   |
-| Viper     | VP4300             | 1 TB   | 2       | 129   | 0     | 0.35   |
-| Viper     | VP4300L            | 2 TB   | 5       | 32    | 0     | 0.09   |
-| Viper     | VP4300L            | 1 TB   | 3       | 7     | 0     | 0.02   |
+| Viper     | M.2 VPN100         | 1 TB   | 7       | 694   | 0     | 1.90   |
+| Viper     | VP4300             | 1 TB   | 3       | 99    | 0     | 0.27   |
+| Viper     | VP4300L            | 1 TB   | 7       | 97    | 0     | 0.27   |
+| Viper     | VP4300L            | 2 TB   | 14      | 55    | 0     | 0.15   |
+| Viper     | VP4300L            | 500 GB | 2       | 43    | 0     | 0.12   |
+| Viper     | VP4000M            | 2 TB   | 2       | 30    | 0     | 0.08   |
 | Viper     | VP4300             | 2 TB   | 2       | 1     | 0     | 0.00   |

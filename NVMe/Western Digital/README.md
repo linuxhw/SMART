@@ -18,4 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Wester... | SN730              | 500 GB | 4       | 223   | 1     | 0.60   |
-| Wester... | SN560E             | 500 GB | 2       | 18    | 0     | 0.05   |
+| Wester... | SN550E             | 2 TB   | 3       | 94    | 0     | 0.26   |
+| Wester... | SN560E             | 1 TB   | 4       | 10    | 0     | 0.03   |

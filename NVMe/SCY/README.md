@@ -17,5 +17,8 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SCY       | SMM5T1G51200D      | 512 GB | 6       | 11    | 0     | 0.03   |
-| SCY       | SMM5T1G25600D      | 256 GB | 8       | 2     | 0     | 0.01   |
+| SCY       | SMM78GG51200D      | 512 GB | 2       | 47    | 0     | 0.13   |
+| SCY       | S3000              | 128 GB | 2       | 18    | 0     | 0.05   |
+| SCY       | SMM5T1G51200D      | 512 GB | 8       | 15    | 0     | 0.04   |
+| SCY       | SMM5T1G25600D      | 256 GB | 11      | 12    | 0     | 0.03   |
+| SCY       | C3000              | 512 GB | 5       | 4     | 0     | 0.01   |

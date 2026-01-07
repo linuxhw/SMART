@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| GAMER     | L TA1D0120A        | 120 GB | 1       | 230   | 0     | 0.63   |
+| GAMER     | L TA1D0120A        | 120 GB | 3       | 250   | 0     | 0.69   |
+| GAMER     | L TA1D0480A        | 480 GB | 2       | 186   | 0     | 0.51   |

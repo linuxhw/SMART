@@ -17,4 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Rayson    | RS512GSSD510       | 512 GB | 2       | 0     | 0     | 0.00   |
+| Rayson    | RS1D0TSSD710       | 1 TB   | 7       | 32    | 0     | 0.09   |
+| Rayson    | RS512GSSD710       | 512 GB | 3       | 21    | 0     | 0.06   |
+| Rayson    | RS512GSSD510       | 512 GB | 14      | 5     | 0     | 0.02   |
+| Rayson    | RS1D0TSSD510       | 1 TB   | 2       | 1     | 0     | 0.00   |

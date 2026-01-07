@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| PCSPEC... | PCS3480            | 512 GB | 2       | 2     | 0     | 0.01   |
+| PCSPEC... | PCS3480            | 512 GB | 3       | 86    | 0     | 0.24   |
+| PCSPEC... | PCS3480            | 256 GB | 4       | 74    | 0     | 0.21   |

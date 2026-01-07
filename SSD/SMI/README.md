@@ -17,11 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SMI       | L06B B0KB          | 240 GB | 1       | 302   | 0     | 0.83   |
-| SMI       | SSD                | 256 GB | 1       | 211   | 0     | 0.58   |
-| SMI       | SSD DISK           | 500 GB | 1       | 62    | 0     | 0.17   |
-| SMI       | SSD DISK           | 256 GB | 1       | 34    | 0     | 0.09   |
-| SMI       | SSD DISK           | 497 GB | 1       | 33    | 0     | 0.09   |
-| SMI       | SSD DISK           | 128 GB | 1       | 13    | 0     | 0.04   |
-| SMI       | B17A               | 240 GB | 1       | 0     | 0     | 0.00   |
-| SMI       | SSD DISK           | 506 GB | 1       | 0     | 1957  | 0.00   |
+| SMI       | L06B B0KB          | 240 GB | 2       | 534   | 0     | 1.47   |

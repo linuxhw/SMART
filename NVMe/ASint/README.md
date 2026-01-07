@@ -17,4 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| ASint     | AS806              | 256 GB | 2       | 777   | 0     | 2.13   |
+| ASint     | AS806              | 512 GB | 7       | 126   | 0     | 0.35   |
 | ASint     | AS806              | 1 TB   | 2       | 25    | 0     | 0.07   |

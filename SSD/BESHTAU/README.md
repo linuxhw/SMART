@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| BESHTAU   | 1305RU             | 512 GB | 4       | 3     | 0     | 0.01   |
+| BESHTAU   | 1305RU             | 240 GB | 12      | 14    | 0     | 0.04   |

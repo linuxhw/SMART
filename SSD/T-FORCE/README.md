@@ -17,12 +17,14 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| T-FORCE   | SSD                | 500 GB | 8       | 350   | 0     | 0.96   |
 | T-FORCE   | SSD                | 250 GB | 5       | 333   | 0     | 0.91   |
-| T-FORCE   | SSD                | 500 GB | 5       | 167   | 0     | 0.46   |
-| T-FORCE   | SSD                | 240 GB | 5       | 149   | 0     | 0.41   |
-| T-FORCE   | T253TY002T         | 2 TB   | 3       | 136   | 0     | 0.37   |
-| T-FORCE   | SSD                | 1 TB   | 49      | 125   | 0     | 0.34   |
+| T-FORCE   | SSD                | 240 GB | 13      | 189   | 0     | 0.52   |
+| T-FORCE   | SSD                | 1 TB   | 84      | 165   | 0     | 0.45   |
+| T-FORCE   | SSD                | 512 GB | 33      | 129   | 1     | 0.35   |
+| T-FORCE   | SSD                | 2 TB   | 18      | 157   | 2     | 0.35   |
+| T-FORCE   | T253TY002T         | 2 TB   | 7       | 101   | 0     | 0.28   |
 | T-FORCE   | SSD                | 480 GB | 3       | 101   | 0     | 0.28   |
-| T-FORCE   | SSD                | 512 GB | 22      | 97    | 1     | 0.26   |
-| T-FORCE   | SSD                | 2 TB   | 4       | 197   | 1     | 0.25   |
-| T-FORCE   | SSD                | 256 GB | 4       | 47    | 0     | 0.13   |
+| T-FORCE   | T253TY004T         | 4 TB   | 3       | 94    | 0     | 0.26   |
+| T-FORCE   | SSD                | 256 GB | 11      | 48    | 0     | 0.13   |
+| T-FORCE   | T253TY001T         | 1 TB   | 2       | 33    | 0     | 0.09   |

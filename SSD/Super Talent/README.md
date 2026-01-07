@@ -18,8 +18,8 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Super ... | FTM48N325H         | 480 GB | 3       | 1120  | 340   | 1.20   |
-| Super ... | FTM1TN325H         | 1 TB   | 2       | 142   | 0     | 0.39   |
 | Super ... | FTM56N325H         | 256 GB | 5       | 191   | 1     | 0.34   |
+| Super ... | FTM1TN325H         | 1 TB   | 3       | 100   | 0     | 0.28   |
 | Super ... | FTM50N325H         | 500 GB | 2       | 56    | 0     | 0.15   |
 | Super ... | FNX256MORM         | 256 GB | 3       | 26    | 0     | 0.07   |
 | Super ... | FTM28N325H         | 128 GB | 2       | 56    | 1     | 0.06   |

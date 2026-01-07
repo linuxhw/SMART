@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| addlink   | M.2 PCIE G3x4 NVMe | 1 TB   | 34      | 308   | 0     | 0.84   |
-| addlink   | M.2 PCIE G4x4 NVMe | 4 TB   | 9       | 123   | 0     | 0.34   |
+| addlink   | M.2 PCIE G3x4 NVMe | 1 TB   | 39      | 367   | 0     | 1.01   |
+| addlink   | M.2 PCIE G4x4 NVMe | 2 TB   | 13      | 93    | 0     | 0.26   |

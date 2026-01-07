@@ -17,6 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| TEXTORM   | B5                 | 120 GB | 5       | 146   | 7     | 0.40   |
+| TEXTORM   | B5                 | 120 GB | 7       | 288   | 5     | 0.79   |
+| TEXTORM   | BM5                | 480 GB | 2       | 89    | 0     | 0.25   |
 | TEXTORM   | B5                 | 480 GB | 4       | 61    | 0     | 0.17   |
 | TEXTORM   | BM5                | 240 GB | 3       | 27    | 0     | 0.07   |

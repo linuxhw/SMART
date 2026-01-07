@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| HJDK      | SSD                | 256 GB | 3       | 51    | 0     | 0.14   |
-| HJDK      | SSD                | 512 GB | 4       | 28    | 0     | 0.08   |
+| HJDK      | SSD                | 128 GB | 3       | 85    | 0     | 0.23   |
+| HJDK      | SSD                | 512 GB | 5       | 22    | 0     | 0.06   |

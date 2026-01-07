@@ -17,23 +17,30 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KingSpec  | NE-256             | 256 GB | 4       | 225   | 0     | 0.62   |
-| KingSpec  | NE-128             | 128 GB | 6       | 172   | 0     | 0.47   |
-| KingSpec  | XG7000-2TB         | 2 TB   | 2       | 160   | 0     | 0.44   |
-| KingSpec  | NX-2TB 2280        | 2 TB   | 8       | 73    | 0     | 0.20   |
+| KingSpec  | NE-256             | 256 GB | 8       | 370   | 3     | 0.95   |
+| KingSpec  | NX-128 2280        | 128 GB | 2       | 231   | 0     | 0.63   |
+| KingSpec  | NE-128             | 128 GB | 9       | 203   | 0     | 0.56   |
+| KingSpec  | NE-512             | 512 GB | 20      | 194   | 0     | 0.53   |
+| KingSpec  | NE-512 2242        | 512 GB | 3       | 181   | 0     | 0.50   |
+| KingSpec  | XG7000-2TB         | 2 TB   | 3       | 165   | 0     | 0.45   |
+| KingSpec  | NX-1TB 2280        | 1 TB   | 16      | 118   | 19    | 0.23   |
+| KingSpec  | NX-2TB 2280        | 2 TB   | 12      | 98    | 1     | 0.21   |
+| KingSpec  | NE-1TB 2280        | 1 TB   | 15      | 80    | 1     | 0.21   |
+| KingSpec  | NXM-1TB 2242       | 1 TB   | 8       | 134   | 5     | 0.20   |
 | KingSpec  | NE-1TB             | 1 TB   | 3       | 70    | 0     | 0.19   |
-| KingSpec  | NX-1TB 2280        | 1 TB   | 8       | 64    | 0     | 0.18   |
-| KingSpec  | NXM-1TB 2242       | 1 TB   | 4       | 74    | 5     | 0.16   |
-| KingSpec  | NX-512             | 512 GB | 5       | 50    | 0     | 0.14   |
+| KingSpec  | NX-512             | 512 GB | 7       | 69    | 0     | 0.19   |
+| KingSpec  | XG7000-4TB 2280    | 4 TB   | 9       | 64    | 0     | 0.18   |
+| KingSpec  | XG7000-2TB 2242    | 2 TB   | 3       | 60    | 0     | 0.17   |
+| KingSpec  | XF-1TB 2280        | 1 TB   | 3       | 55    | 0     | 0.15   |
 | KingSpec  | NX-256             | 256 GB | 4       | 97    | 39    | 0.12   |
-| KingSpec  | NX-512 2280        | 512 GB | 12      | 42    | 0     | 0.12   |
-| KingSpec  | NE-1TB 2280        | 1 TB   | 3       | 35    | 0     | 0.10   |
-| KingSpec  | NE-512 2280        | 512 GB | 12      | 34    | 0     | 0.09   |
-| KingSpec  | NX-1TB             | 1 TB   | 4       | 81    | 37    | 0.07   |
-| KingSpec  | NE-512             | 512 GB | 13      | 25    | 0     | 0.07   |
-| KingSpec  | XG7000-2TB 2280    | 2 TB   | 3       | 19    | 0     | 0.05   |
-| KingSpec  | XG7000-4TB 2280    | 4 TB   | 2       | 17    | 0     | 0.05   |
-| KingSpec  | NX-128             | 128 GB | 2       | 14    | 0     | 0.04   |
-| KingSpec  | NX-256 2280        | 256 GB | 7       | 12    | 0     | 0.04   |
-| KingSpec  | NE-128 2280        | 128 GB | 2       | 2     | 0     | 0.01   |
-| KingSpec  | NE-256 2280        | 256 GB | 4       | 1     | 0     | 0.01   |
+| KingSpec  | NXM-128 2242       | 128 GB | 3       | 45    | 0     | 0.12   |
+| KingSpec  | XG7000-2TB 2280    | 2 TB   | 7       | 40    | 0     | 0.11   |
+| KingSpec  | NX-512 2280        | 512 GB | 19      | 32    | 1     | 0.09   |
+| KingSpec  | XG7000-1TB 2280    | 1 TB   | 2       | 28    | 0     | 0.08   |
+| KingSpec  | NE-512 2280        | 512 GB | 19      | 26    | 0     | 0.07   |
+| KingSpec  | NE-256 2280        | 256 GB | 11      | 25    | 0     | 0.07   |
+| KingSpec  | NX-1TB             | 1 TB   | 5       | 118   | 114   | 0.06   |
+| KingSpec  | NE-128 2280        | 128 GB | 4       | 19    | 0     | 0.05   |
+| KingSpec  | NX-256 2280        | 256 GB | 13      | 18    | 0     | 0.05   |
+| KingSpec  | NX-128             | 128 GB | 3       | 102   | 148   | 0.03   |
+| KingSpec  | NXM-256 2242       | 256 GB | 3       | 233   | 306   | 0.00   |

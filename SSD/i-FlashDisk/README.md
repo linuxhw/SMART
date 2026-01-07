@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| i-Flas... | K6                 | 64 GB  | 1       | 50    | 0     | 0.14   |
-| i-Flas... | K8                 | 64 GB  | 1       | 3     | 0     | 0.01   |
+| i-Flas... | K8                 | 64 GB  | 2       | 13    | 0     | 0.04   |

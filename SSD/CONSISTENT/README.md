@@ -17,4 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| CONSIS... | SSD S6             | 256 GB | 8       | 23    | 0     | 0.06   |
+| CONSIS... | M.2 S6             | 256 GB | 2       | 108   | 1     | 0.17   |
+| CONSIS... | SSD S6             | 256 GB | 12      | 22    | 0     | 0.06   |
+| CONSIS... | SSD S6             | 512 GB | 2       | 15    | 0     | 0.04   |

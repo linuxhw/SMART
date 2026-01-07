@@ -17,4 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Dahua     | C900 PLUS M.2 2... | 1 TB   | 2       | 91    | 0     | 0.25   |
+| Dahua     | C900 PLUS M.2 2... | 1 TB   | 3       | 67    | 0     | 0.19   |
+| Dahua     | C900 M.2 2280 N... | 1 TB   | 2       | 46    | 0     | 0.13   |
+| Dahua     | C970 M.2 2280 N... | 1 TB   | 5       | 4     | 0     | 0.01   |

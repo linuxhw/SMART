@@ -17,10 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| FASTDISK  | FASTDISK120G       | 120 GB | 1       | 15    | 0     | 0.04   |
-| FASTDISK  | SSD 60G            | 64 GB  | 1       | 14    | 0     | 0.04   |
-| FASTDISK  | SSD 120G           | 120 GB | 1       | 7     | 0     | 0.02   |
-| FASTDISK  | SSD 30G            | 32 GB  | 1       | 7     | 0     | 0.02   |
-| FASTDISK  | SSD                | 64 GB  | 1       | 1     | 0     | 0.00   |
-| FASTDISK  | SSD 32G            | 32 GB  | 1       | 0     | 0     | 0.00   |
-| FASTDISK  | SSD                | 120 GB | 1       | 26    | 1016  | 0.00   |
+| FASTDISK  | SSD 32G            | 32 GB  | 2       | 1365  | 0     | 3.74   |

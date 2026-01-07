@@ -17,5 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| HUADISK   | KPART512GBC2DVS    | 512 GB | 4       | 85    | 0     | 0.23   |
-| HUADISK   | KPART512GBC2DVT    | 512 GB | 36      | 29    | 0     | 0.08   |
+| HUADISK   | KPART512GBC2DVS    | 512 GB | 5       | 80    | 0     | 0.22   |
+| HUADISK   | HYV128X3(HXY)      | 128 GB | 3       | 44    | 1     | 0.11   |
+| HUADISK   | KPART512GBC2DVT    | 512 GB | 52      | 36    | 0     | 0.10   |

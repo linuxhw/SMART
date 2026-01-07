@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| G.Skill   | FM-25S3-120GBP3    | 120 GB | 2       | 756   | 510   | 0.33   |
+| G.Skill   | FM-25S3-120GBP3    | 120 GB | 3       | 695   | 704   | 0.22   |

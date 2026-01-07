@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EGON      | S10                | 120 GB | 1       | 0     | 11    | 0.00   |
+| EGON      | S10                | 120 GB | 2       | 14    | 9     | 0.00   |

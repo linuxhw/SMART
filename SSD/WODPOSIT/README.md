@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| WODPOSIT  | SSD WPSM28-256G    | 256 GB | 2       | 2     | 0     | 0.01   |
+| WODPOSIT  | SSD WPSM28-256G    | 256 GB | 3       | 3     | 0     | 0.01   |

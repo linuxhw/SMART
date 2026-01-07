@@ -18,16 +18,18 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | XPG       | GAMMIX S11         | 480 GB | 10      | 398   | 101   | 0.90   |
+| XPG       | GAMMIX S11 Pro     | 1 TB   | 201     | 295   | 1     | 0.80   |
 | XPG       | GAMMIX S50         | 1 TB   | 11      | 287   | 0     | 0.79   |
-| XPG       | GAMMIX S11 Pro     | 1 TB   | 175     | 269   | 1     | 0.73   |
 | XPG       | GAMMIX S70         | 1 TB   | 11      | 204   | 92    | 0.45   |
-| XPG       | GAMMIX S70 BLADE   | 1 TB   | 61      | 90    | 0     | 0.25   |
-| XPG       | GAMMIX S41         | 1 TB   | 13      | 229   | 243   | 0.23   |
-| XPG       | SPECTRIX S40G      | 1 TB   | 50      | 148   | 96    | 0.22   |
+| XPG       | GAMMIX S50 Lite    | 1 TB   | 27      | 147   | 0     | 0.40   |
+| XPG       | GAMMIX S70 BLADE   | 1 TB   | 87      | 129   | 1     | 0.34   |
+| XPG       | SPECTRIX S40G      | 1 TB   | 64      | 187   | 129   | 0.28   |
+| XPG       | GAMMIX S41         | 1 TB   | 15      | 220   | 210   | 0.26   |
+| XPG       | GAMMIX S5          | 1 TB   | 48      | 66    | 16    | 0.18   |
+| XPG       | SX8200PNP-512GT-S  | 512 GB | 5       | 63    | 0     | 0.17   |
 | XPG       | GAMMIX S7          | 1 TB   | 2       | 61    | 0     | 0.17   |
-| XPG       | GAMMIX S50 Lite    | 1 TB   | 22      | 60    | 0     | 0.17   |
-| XPG       | GAMMIX S5          | 1 TB   | 42      | 62    | 18    | 0.16   |
-| XPG       | SPECTRIX S20G      | 500 GB | 8       | 55    | 0     | 0.15   |
-| XPG       | SX8200PNP-512GT-S  | 512 GB | 4       | 52    | 0     | 0.14   |
-| XPG       | GAMMIX S11L        | 1 TB   | 5       | 26    | 0     | 0.07   |
-| XPG       | GAMMIX S50 CORE    | 1 TB   | 2       | 13    | 0     | 0.04   |
+| XPG       | SPECTRIX S20G      | 1 TB   | 9       | 50    | 0     | 0.14   |
+| XPG       | GAMMIX S11L        | 1 TB   | 6       | 38    | 0     | 0.11   |
+| XPG       | MARS 980 BLADE     | 4 TB   | 3       | 21    | 0     | 0.06   |
+| XPG       | GAMMIX S60         | 512 GB | 2       | 11    | 0     | 0.03   |
+| XPG       | GAMMIX S50 CORE    | 1 TB   | 5       | 11    | 0     | 0.03   |

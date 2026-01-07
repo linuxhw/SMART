@@ -18,16 +18,16 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | XrayDisk  | SSD                | 120 GB | 9       | 198   | 2     | 0.52   |
-| XrayDisk  | SSD                | 256 GB | 22      | 137   | 5     | 0.33   |
-| XrayDisk  | 128GB SSD          | 128 GB | 3       | 107   | 0     | 0.29   |
+| XrayDisk  | SSD                | 256 GB | 24      | 153   | 4     | 0.37   |
+| XrayDisk  | 128GB SSD          | 128 GB | 4       | 126   | 0     | 0.35   |
+| XrayDisk  | SSD                | 240 GB | 15      | 132   | 1     | 0.33   |
 | XrayDisk  | 2TB SSD            | 2 TB   | 2       | 99    | 0     | 0.27   |
-| XrayDisk  | SSD                | 128 GB | 13      | 108   | 1     | 0.23   |
-| XrayDisk  | 512GB SSD          | 512 GB | 30      | 96    | 35    | 0.23   |
-| XrayDisk  | SSD                | 512 GB | 6       | 83    | 169   | 0.22   |
+| XrayDisk  | SSD                | 128 GB | 17      | 109   | 3     | 0.25   |
+| XrayDisk  | 512GB SSD          | 512 GB | 38      | 88    | 27    | 0.22   |
+| XrayDisk  | SSD                | 512 GB | 7       | 76    | 165   | 0.19   |
+| XrayDisk  | 256GB SSD          | 256 GB | 23      | 61    | 0     | 0.17   |
 | XrayDisk  | 120GB SSD          | 120 GB | 3       | 53    | 0     | 0.15   |
-| XrayDisk  | SSD                | 240 GB | 13      | 66    | 1     | 0.15   |
-| XrayDisk  | 480GB SSD          | 480 GB | 6       | 46    | 0     | 0.13   |
-| XrayDisk  | 256GB SSD          | 256 GB | 14      | 21    | 0     | 0.06   |
-| XrayDisk  | 240GB SSD          | 240 GB | 12      | 26    | 92    | 0.05   |
+| XrayDisk  | 480GB SSD          | 480 GB | 7       | 44    | 0     | 0.12   |
+| XrayDisk  | 240GB SSD          | 240 GB | 13      | 41    | 85    | 0.05   |
 | XrayDisk  | SSD                | 1 TB   | 3       | 14    | 0     | 0.04   |
 | XrayDisk  | SSD                | 480 GB | 2       | 11    | 0     | 0.03   |

@@ -19,23 +19,24 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Lexar     | SSD                | 120 GB | 4       | 562   | 0     | 1.54   |
 | Lexar     | SSD                | 512 GB | 5       | 550   | 0     | 1.51   |
-| Lexar     | SSD                | 480 GB | 6       | 319   | 26    | 0.72   |
+| Lexar     | SSD                | 480 GB | 7       | 290   | 23    | 0.67   |
+| Lexar     | 480GB SSD          | 480 GB | 6       | 230   | 0     | 0.63   |
 | Lexar     | SSD                | 128 GB | 14      | 213   | 0     | 0.58   |
 | Lexar     | SSD                | 240 GB | 7       | 211   | 0     | 0.58   |
-| Lexar     | 480GB SSD          | 480 GB | 5       | 200   | 0     | 0.55   |
+| Lexar     | 1TB SSD            | 1 TB   | 28      | 224   | 2     | 0.54   |
+| Lexar     | 128GB SSD          | 128 GB | 75      | 192   | 1     | 0.52   |
 | Lexar     | 120GB SSD          | 120 GB | 2       | 188   | 0     | 0.52   |
-| Lexar     | 256GB SSD          | 256 GB | 54      | 165   | 0     | 0.45   |
-| Lexar     | 1TB SSD            | 1 TB   | 21      | 145   | 1     | 0.39   |
-| Lexar     | SSD NS100          | 2 TB   | 2       | 141   | 0     | 0.39   |
-| Lexar     | 128GB SSD          | 128 GB | 54      | 127   | 0     | 0.35   |
-| Lexar     | SSD NS100          | 1 TB   | 7       | 144   | 1     | 0.34   |
-| Lexar     | 240GB SSD          | 240 GB | 18      | 111   | 0     | 0.31   |
-| Lexar     | SSD NQ100          | 1.9 TB | 2       | 102   | 0     | 0.28   |
-| Lexar     | 512GB SSD          | 512 GB | 32      | 76    | 0     | 0.21   |
-| Lexar     | SSD NS100          | 512 GB | 21      | 45    | 0     | 0.13   |
-| Lexar     | SSD NS100          | 128 GB | 7       | 38    | 0     | 0.11   |
-| Lexar     | SSD NQ100          | 480 GB | 6       | 24    | 0     | 0.07   |
-| Lexar     | SSD NS100          | 256 GB | 10      | 23    | 0     | 0.06   |
-| Lexar     | SSD NQ100          | 240 GB | 9       | 14    | 0     | 0.04   |
-| Lexar     | SSD NQ100          | 960 GB | 3       | 7     | 0     | 0.02   |
-| Lexar     | SSD NM100          | 256 GB | 2       | 0     | 0     | 0.00   |
+| Lexar     | 256GB SSD          | 256 GB | 69      | 175   | 0     | 0.48   |
+| Lexar     | SSD NM100          | 256 GB | 3       | 148   | 0     | 0.41   |
+| Lexar     | SSD NQ100          | 960 GB | 9       | 121   | 0     | 0.33   |
+| Lexar     | 240GB SSD          | 240 GB | 24      | 107   | 0     | 0.30   |
+| Lexar     | 512GB SSD          | 512 GB | 43      | 104   | 5     | 0.27   |
+| Lexar     | SSD NS100          | 1 TB   | 17      | 107   | 1     | 0.27   |
+| Lexar     | SSD NQ100          | 1.9 TB | 3       | 94    | 0     | 0.26   |
+| Lexar     | SSD NM100          | 512 GB | 2       | 88    | 0     | 0.24   |
+| Lexar     | SSD NS100          | 2 TB   | 6       | 79    | 0     | 0.22   |
+| Lexar     | SSD NS100          | 256 GB | 23      | 59    | 44    | 0.16   |
+| Lexar     | SSD NS100          | 512 GB | 30      | 53    | 0     | 0.15   |
+| Lexar     | SSD NS100          | 128 GB | 17      | 35    | 0     | 0.10   |
+| Lexar     | SSD NQ100          | 480 GB | 9       | 22    | 1     | 0.06   |
+| Lexar     | SSD NQ100          | 240 GB | 14      | 18    | 1     | 0.05   |

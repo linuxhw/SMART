@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| CYX       | SSD-C1000          | 512 GB | 2       | 1     | 0     | 0.00   |
+| CYX       | SSD-C1000          | 512 GB | 3       | 17    | 0     | 0.05   |

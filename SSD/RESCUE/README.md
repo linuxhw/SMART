@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| RESCUE    | RESCUE08SM22AR1... | 120 GB | 1       | 34    | 0     | 0.10   |
+| RESCUE    | RESCUE10MX24LS2... | 256 GB | 2       | 108   | 0     | 0.30   |
+| RESCUE    | RESCUE08RM23AR1... | 120 GB | 2       | 57    | 0     | 0.16   |

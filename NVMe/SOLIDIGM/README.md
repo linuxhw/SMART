@@ -17,12 +17,16 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SOLIDIGM  | SSDPFKKW020X7      | 2 TB   | 2       | 223   | 0     | 0.61   |
-| SOLIDIGM  | P41PL NVMe         | 1 TB   | 3       | 108   | 0     | 0.30   |
-| SOLIDIGM  | P41PL NVMe         | 512 GB | 8       | 72    | 0     | 0.20   |
-| SOLIDIGM  | SSDPFINW010TZL     | 1 TB   | 4       | 59    | 0     | 0.16   |
-| SOLIDIGM  | SSDPFKNU010TZ      | 1 TB   | 32      | 55    | 0     | 0.15   |
-| SOLIDIGM  | SSDPFKNU020TZ      | 2 TB   | 16      | 36    | 0     | 0.10   |
-| SOLIDIGM  | SSDPFINW512GZL     | 512 GB | 19      | 31    | 0     | 0.09   |
-| SOLIDIGM  | SSDPFKNU512GZ      | 512 GB | 31      | 27    | 0     | 0.08   |
-| SOLIDIGM  | SSDPFKNU512GZH     | 512 GB | 11      | 10    | 0     | 0.03   |
+| SOLIDIGM  | SSDPFKKW512H7      | 512 GB | 4       | 184   | 0     | 0.50   |
+| SOLIDIGM  | SSDPFKKW010X7      | 1 TB   | 16      | 153   | 0     | 0.42   |
+| SOLIDIGM  | SSDPFKKW020X7      | 2 TB   | 21      | 137   | 0     | 0.38   |
+| SOLIDIGM  | P41PL NVMe         | 1 TB   | 6       | 103   | 0     | 0.28   |
+| SOLIDIGM  | SSDPFKNU010TZ      | 1 TB   | 45      | 104   | 1     | 0.28   |
+| SOLIDIGM  | SSDPFKNU010TZH     | 1 TB   | 2       | 98    | 0     | 0.27   |
+| SOLIDIGM  | SSDPFKNU020TZ      | 2 TB   | 22      | 87    | 0     | 0.24   |
+| SOLIDIGM  | SSDPFINW512GZL     | 512 GB | 31      | 70    | 0     | 0.19   |
+| SOLIDIGM  | SSDPFKNU512GZ      | 512 GB | 58      | 61    | 0     | 0.17   |
+| SOLIDIGM  | P41PL NVMe         | 512 GB | 17      | 54    | 0     | 0.15   |
+| SOLIDIGM  | SSDPFINW010TZL     | 1 TB   | 12      | 51    | 0     | 0.14   |
+| SOLIDIGM  | SSDPFKNU512GZH     | 512 GB | 18      | 27    | 0     | 0.07   |
+| SOLIDIGM  | SSDPFKNU512GZL     | 512 GB | 2       | 13    | 0     | 0.04   |

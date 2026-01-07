@@ -17,6 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| ASENNO    | AS25               | 240 GB | 2       | 153   | 0     | 0.42   |
+| ASENNO    | AS25               | 240 GB | 3       | 162   | 0     | 0.44   |
 | ASENNO    | AS25               | 1 TB   | 2       | 376   | 11    | 0.29   |
 | ASENNO    | AS25               | 120 GB | 3       | 1     | 0     | 0.01   |

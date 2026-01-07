@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Hanye     | N400-128GSY03      | 128 GB | 2       | 6     | 0     | 0.02   |
+| Hanye     | N400-128GSY03      | 128 GB | 3       | 37    | 0     | 0.10   |

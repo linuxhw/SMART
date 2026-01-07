@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| BAITITON  | BT58SSD08E         | 128 GB | 1       | 232   | 0     | 0.64   |
+| BAITITON  | BT58SSD08E         | 128 GB | 2       | 193   | 0     | 0.53   |

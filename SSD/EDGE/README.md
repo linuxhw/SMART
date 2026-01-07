@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EDGE      | Boost Pro SSD      | 1 TB   | 1       | 1222  | 0     | 3.35   |
+| EDGE      | SE847-V SSD        | 120 GB | 3       | 79    | 0     | 0.22   |

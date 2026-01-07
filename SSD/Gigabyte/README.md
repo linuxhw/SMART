@@ -17,10 +17,11 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 78      | 284   | 0     | 0.78   |
-| Gigabyte  | GP-GSTFS30256GTTD  | 256 GB | 4       | 282   | 0     | 0.77   |
-| Gigabyte  | GP-GSTFS31100TNTD  | 1 TB   | 10      | 280   | 0     | 0.77   |
-| Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 61      | 234   | 0     | 0.64   |
-| Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 19      | 184   | 0     | 0.51   |
-| Gigabyte  | GP-GSTFS31256GTND  | 256 GB | 20      | 184   | 0     | 0.50   |
-| Gigabyte  | GP-GSTFS31960GN... | 960 GB | 2       | 87    | 0     | 0.24   |
+| Gigabyte  | GP-GSTFS30512GTTD  | 512 GB | 2       | 1208  | 0     | 3.31   |
+| Gigabyte  | GP-GSTFS30256GTTD  | 256 GB | 5       | 367   | 0     | 1.01   |
+| Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 32      | 338   | 0     | 0.93   |
+| Gigabyte  | GP-GSTFS31100TNTD  | 1 TB   | 16      | 330   | 0     | 0.90   |
+| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 106     | 320   | 0     | 0.88   |
+| Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 81      | 264   | 0     | 0.73   |
+| Gigabyte  | GP-GSTFS31256GTND  | 256 GB | 23      | 166   | 0     | 0.46   |
+| Gigabyte  | GP-GSTFS31960GN... | 960 GB | 3       | 158   | 0     | 0.43   |

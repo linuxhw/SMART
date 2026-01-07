@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| VisionTek | 120GB DLX          | 120 GB | 2       | 437   | 0     | 1.20   |
 | VisionTek | SSD                | 120 GB | 2       | 88    | 0     | 0.24   |

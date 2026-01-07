@@ -17,12 +17,13 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Colorful  | SL500              | 256 GB | 5       | 259   | 0     | 0.71   |
-| Colorful  | SL500              | 512 GB | 8       | 148   | 0     | 0.41   |
-| Colorful  | SL300              | 120 GB | 6       | 143   | 7     | 0.34   |
-| Colorful  | SL500              | 240 GB | 8       | 123   | 4     | 0.21   |
-| Colorful  | SL300              | 128 GB | 6       | 71    | 169   | 0.17   |
-| Colorful  | SL500              | 480 GB | 3       | 38    | 65    | 0.08   |
+| Colorful  | SL500              | 256 GB | 11      | 213   | 0     | 0.58   |
+| Colorful  | SL500              | 512 GB | 10      | 176   | 0     | 0.48   |
+| Colorful  | SL300              | 120 GB | 7       | 129   | 6     | 0.30   |
+| Colorful  | SL500              | 240 GB | 9       | 141   | 3     | 0.28   |
+| Colorful  | CF400              | 256 GB | 3       | 89    | 0     | 0.25   |
+| Colorful  | SL300              | 128 GB | 7       | 70    | 145   | 0.18   |
+| Colorful  | SL500              | 480 GB | 5       | 49    | 39    | 0.12   |
 | Colorful  | SL300              | 64 GB  | 2       | 18    | 0     | 0.05   |
 | Colorful  | CF400              | 128 GB | 4       | 8     | 0     | 0.02   |
-| Colorful  | CF400              | 512 GB | 3       | 4     | 0     | 0.01   |
+| Colorful  | CF400              | 512 GB | 6       | 3     | 0     | 0.01   |

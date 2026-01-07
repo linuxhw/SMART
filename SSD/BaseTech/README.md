@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| BaseTech  | A400 m.2 256Gb     | 256 GB | 1       | 8     | 0     | 0.02   |
+| BaseTech  | SSDBTA400512GN     | 512 GB | 2       | 20    | 0     | 0.06   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SomnAm... | SSD                | 120 GB | 1       | 25    | 1     | 0.04   |
+| SomnAm... | SSD                | 120 GB | 2       | 323   | 7     | 0.08   |

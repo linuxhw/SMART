@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Foxline   | FLSSD512M80E13TCX5 | 512 GB | 2       | 40    | 0     | 0.11   |
-| Foxline   | FLSSD256M80E13TCX5 | 256 GB | 21      | 5     | 0     | 0.01   |
+| Foxline   | FLSSD256M80E13TCX5 | 256 GB | 26      | 21    | 0     | 0.06   |
+| Foxline   | FLSSD512M80E13TCX5 | 512 GB | 6       | 16    | 0     | 0.05   |

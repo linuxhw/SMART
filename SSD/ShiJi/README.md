@@ -17,8 +17,8 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| ShiJi     | SSD                | 128 GB | 8       | 196   | 49    | 0.20   |
 | ShiJi     | SSD                | 1 TB   | 5       | 43    | 0     | 0.12   |
-| ShiJi     | SSD                | 256 GB | 10      | 39    | 0     | 0.11   |
-| ShiJi     | SSD                | 128 GB | 5       | 102   | 73    | 0.08   |
+| ShiJi     | SSD                | 256 GB | 12      | 45    | 85    | 0.09   |
+| ShiJi     | SSD                | 512 GB | 8       | 29    | 0     | 0.08   |
 | ShiJi     | SSD                | 2 TB   | 2       | 10    | 0     | 0.03   |
-| ShiJi     | SSD                | 512 GB | 6       | 7     | 0     | 0.02   |

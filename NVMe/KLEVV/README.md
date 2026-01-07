@@ -17,5 +17,10 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| KLEVV     | CRAS C720 M.2 N... | 512 GB | 2       | 661   | 0     | 1.81   |
 | KLEVV     | CRAS C710 M.2 N... | 512 GB | 8       | 131   | 3     | 0.22   |
 | KLEVV     | CRAS C710 M.2 N... | 1 TB   | 5       | 43    | 22    | 0.12   |
+| KLEVV     | CRAS C910 M.2 N... | 2 TB   | 2       | 30    | 0     | 0.08   |
+| KLEVV     | CRAS C715 M.2 N... | 512 GB | 2       | 23    | 0     | 0.06   |
+| KLEVV     | CRAS C910 M.2 N... | 4 TB   | 2       | 8     | 0     | 0.02   |
+| KLEVV     | CRAS C730 M.2 N... | 2 TB   | 2       | 4     | 0     | 0.01   |

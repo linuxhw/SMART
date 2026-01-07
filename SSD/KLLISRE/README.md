@@ -17,6 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KLLISRE   | SSD                | 256 GB | 1       | 71    | 0     | 0.20   |
-| KLLISRE   | SSD                | 512 GB | 1       | 1     | 0     | 0.00   |
-| KLLISRE   | SSD                | 240 GB | 1       | 0     | 0     | 0.00   |
+| KLLISRE   | SSD                | 512 GB | 2       | 102   | 0     | 0.28   |

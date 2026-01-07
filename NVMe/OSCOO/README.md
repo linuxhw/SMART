@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| OSCOO     | OSC PCIe           | 256 GB | 2       | 170   | 0     | 0.47   |
+| OSCOO     | OSC PCIe           | 256 GB | 3       | 201   | 0     | 0.55   |

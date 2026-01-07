@@ -18,3 +18,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Bestoss   | S201               | 512 GB | 2       | 61    | 0     | 0.17   |
+| Bestoss   | S201               | 240 GB | 3       | 0     | 0     | 0.00   |

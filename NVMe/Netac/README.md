@@ -17,12 +17,13 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Netac     | NVMe SSD           | 500 GB | 18      | 192   | 0     | 0.53   |
-| Netac     | NVMe SSD           | 1 TB   | 44      | 97    | 1     | 0.24   |
-| Netac     | NVMe SSD           | 250 GB | 9       | 68    | 0     | 0.19   |
-| Netac     | NVMe SSD           | 256 GB | 18      | 65    | 0     | 0.18   |
-| Netac     | NVMe SSD           | 512 GB | 26      | 58    | 0     | 0.16   |
-| Netac     | NVMe SSD           | 128 GB | 5       | 93    | 202   | 0.16   |
-| Netac     | NVMe SSD           | 2 TB   | 21      | 61    | 71    | 0.13   |
-| Netac     | NS512GSSD530       | 512 GB | 7       | 2     | 0     | 0.01   |
-| Netac     | NS256GSSD530       | 256 GB | 4       | 2     | 0     | 0.01   |
+| Netac     | NVMe SSD           | 500 GB | 22      | 163   | 0     | 0.45   |
+| Netac     | NVMe SSD           | 128 GB | 8       | 181   | 126   | 0.43   |
+| Netac     | NVMe SSD           | 1 TB   | 63      | 147   | 1     | 0.37   |
+| Netac     | NVMe SSD           | 4 TB   | 3       | 128   | 0     | 0.35   |
+| Netac     | NVMe SSD           | 250 GB | 13      | 79    | 0     | 0.22   |
+| Netac     | NVMe SSD           | 256 GB | 24      | 68    | 0     | 0.19   |
+| Netac     | NVMe SSD           | 2 TB   | 30      | 85    | 51    | 0.18   |
+| Netac     | NVMe SSD           | 512 GB | 38      | 63    | 1     | 0.17   |
+| Netac     | NS512GSSD530       | 512 GB | 10      | 21    | 0     | 0.06   |
+| Netac     | NS256GSSD530       | 256 GB | 5       | 2     | 0     | 0.01   |

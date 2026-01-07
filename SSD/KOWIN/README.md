@@ -17,5 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KOWIN     | KAE2000A256NS47    | 256 GB | 2       | 171   | 0     | 0.47   |
-| KOWIN     | KAE2000A512HI47    | 512 GB | 2       | 17    | 0     | 0.05   |
+| KOWIN     | KAE2000A256NS47    | 256 GB | 3       | 114   | 0     | 0.31   |
+| KOWIN     | KAE2000A512NS87    | 512 GB | 2       | 68    | 0     | 0.19   |
+| KOWIN     | KAE2000A512HI47    | 512 GB | 3       | 37    | 0     | 0.10   |

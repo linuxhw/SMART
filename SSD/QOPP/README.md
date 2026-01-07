@@ -17,4 +17,7 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| QOPP      | Q600S 512G         | 512 GB | 2       | 2     | 0     | 0.01   |
+| QOPP      | Q600S 256G         | 256 GB | 4       | 68    | 0     | 0.19   |
+| QOPP      | Q600S 512G         | 512 GB | 4       | 28    | 0     | 0.08   |
+| QOPP      | Q600S              | 512 GB | 2       | 2     | 0     | 0.01   |
+| QOPP      | Q600MS 512G        | 512 GB | 2       | 2     | 0     | 0.01   |

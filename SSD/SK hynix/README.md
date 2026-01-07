@@ -18,75 +18,82 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | SK hynix  | SC300B SATA        | 256 GB | 3       | 1214  | 0     | 3.33   |
-| SK hynix  | SC311 SATA         | 1 TB   | 2       | 1058  | 0     | 2.90   |
+| SK hynix  | SC311 SATA         | 1 TB   | 3       | 935   | 0     | 2.56   |
 | SK hynix  | HFS120G32TND-N1A2A | 120 GB | 2       | 928   | 0     | 2.54   |
-| SK hynix  | SC300B SATA        | 512 GB | 5       | 867   | 0     | 2.38   |
-| SK hynix  | SC300 SATA         | 512 GB | 3       | 754   | 0     | 2.07   |
+| SK hynix  | SC300 SATA         | 512 GB | 4       | 920   | 0     | 2.52   |
+| SK hynix  | SC300B SATA        | 512 GB | 6       | 901   | 0     | 2.47   |
+| SK hynix  | HFS250G32TND-N1A0A | 250 GB | 2       | 772   | 0     | 2.12   |
 | SK hynix  | SC300 2.5 7MM      | 128 GB | 2       | 743   | 0     | 2.04   |
-| SK hynix  | SC300 M.2 2280     | 128 GB | 7       | 730   | 0     | 2.00   |
-| SK hynix  | SC300 2.5 7MM      | 256 GB | 6       | 660   | 0     | 1.81   |
+| SK hynix  | HFS128G39MNC-3310A | 128 GB | 2       | 693   | 0     | 1.90   |
+| SK hynix  | SC300 M.2 2280     | 128 GB | 8       | 672   | 0     | 1.84   |
+| SK hynix  | SC300 SATA         | 256 GB | 4       | 665   | 0     | 1.82   |
 | SK hynix  | HFS256G39MND-3510A | 256 GB | 4       | 656   | 0     | 1.80   |
-| SK hynix  | HFS512G39MND-3510A | 512 GB | 7       | 625   | 0     | 1.71   |
+| SK hynix  | SC300 2.5 7MM      | 256 GB | 8       | 635   | 0     | 1.74   |
 | SK hynix  | HFS120G32TND-N1A0A | 120 GB | 2       | 617   | 0     | 1.69   |
+| SK hynix  | HFS512G39MND-3510A | 512 GB | 9       | 581   | 0     | 1.59   |
+| SK hynix  | SC311 SATA         | 512 GB | 58      | 564   | 18    | 1.53   |
+| SK hynix  | SHGS31-1000GS-2    | 1 TB   | 46      | 549   | 1     | 1.45   |
 | SK hynix  | HFS512G39MND-3310A | 512 GB | 2       | 524   | 0     | 1.44   |
-| SK hynix  | SC311 SATA         | 512 GB | 43      | 507   | 25    | 1.38   |
-| SK hynix  | SC300 SATA         | 256 GB | 2       | 468   | 0     | 1.28   |
+| SK hynix  | SC311 SATA         | 256 GB | 169     | 477   | 1     | 1.28   |
 | SK hynix  | HFS256G39MND-3310A | 256 GB | 4       | 468   | 0     | 1.28   |
-| SK hynix  | SC311 SATA         | 256 GB | 137     | 460   | 1     | 1.26   |
-| SK hynix  | HFS256G32TND-N210A | 256 GB | 8       | 608   | 50    | 1.24   |
-| SK hynix  | HFS512G39TNF-N3A0A | 512 GB | 4       | 431   | 0     | 1.18   |
-| SK hynix  | HFS250G32TND-N1A2A | 250 GB | 4       | 728   | 516   | 1.14   |
-| SK hynix  | HFS128G39MNC-3510A | 128 GB | 4       | 401   | 0     | 1.10   |
-| SK hynix  | SC300 M.2 2280     | 256 GB | 9       | 397   | 0     | 1.09   |
-| SK hynix  | SC311 SATA         | 128 GB | 80      | 368   | 0     | 1.01   |
-| SK hynix  | SC300 mSATA        | 512 GB | 6       | 384   | 1     | 0.93   |
-| SK hynix  | SC308 SATA         | 512 GB | 11      | 585   | 189   | 0.83   |
-| SK hynix  | HFS256G39TNF-N3A0A | 256 GB | 18      | 295   | 0     | 0.81   |
-| SK hynix  | HFS512G32MND-3210A | 512 GB | 4       | 275   | 0     | 0.75   |
-| SK hynix  | SC401 SATA         | 256 GB | 15      | 272   | 44    | 0.71   |
+| SK hynix  | SC300 M.2 2280     | 256 GB | 13      | 459   | 0     | 1.26   |
+| SK hynix  | HFS256G32TND-N210A | 256 GB | 9       | 691   | 47    | 1.13   |
+| SK hynix  | SC311 SATA         | 128 GB | 95      | 407   | 0     | 1.12   |
+| SK hynix  | SC300 M.2 2280     | 512 GB | 2       | 406   | 0     | 1.11   |
+| SK hynix  | HFS128G39MNC-3510A | 128 GB | 5       | 405   | 0     | 1.11   |
+| SK hynix  | SC300 mSATA        | 512 GB | 9       | 560   | 113   | 1.09   |
+| SK hynix  | HFS512G39TNF-N3A0A | 512 GB | 6       | 406   | 1     | 0.98   |
+| SK hynix  | HFS250G32TND-N1A2A | 250 GB | 5       | 599   | 494   | 0.91   |
+| SK hynix  | SHGS31-250GS-2     | 250 GB | 3       | 330   | 0     | 0.91   |
+| SK hynix  | SC308 SATA         | 512 GB | 12      | 632   | 173   | 0.89   |
+| SK hynix  | SC401 SATA         | 256 GB | 25      | 324   | 27    | 0.85   |
+| SK hynix  | HFS256G39TNF-N3A0A | 256 GB | 20      | 287   | 0     | 0.79   |
+| SK hynix  | HFS256G32TNF-N3A0A | 256 GB | 11      | 272   | 0     | 0.75   |
+| SK hynix  | HFS480G32FEH-BA10A | 480 GB | 3       | 263   | 0     | 0.72   |
+| SK hynix  | HFS512G32MND-3210A | 512 GB | 5       | 257   | 0     | 0.71   |
+| SK hynix  | SHGS31-500GS-2     | 500 GB | 31      | 326   | 140   | 0.69   |
 | SK hynix  | HFS128G32TNF-N3A0A | 128 GB | 22      | 248   | 0     | 0.68   |
-| SK hynix  | SHGS31-1000GS-2    | 1 TB   | 35      | 262   | 1     | 0.64   |
-| SK hynix  | HFS256G32TNF-N3A0A | 256 GB | 10      | 220   | 0     | 0.60   |
-| SK hynix  | HFS256G39TND-N210A | 256 GB | 110     | 345   | 187   | 0.58   |
-| SK hynix  | HFS256G39TNH-73A0A | 256 GB | 6       | 208   | 297   | 0.57   |
+| SK hynix  | HFS250G32TND-3112A | 250 GB | 2       | 233   | 0     | 0.64   |
+| SK hynix  | SC210 2.5 7MM      | 128 GB | 9       | 602   | 11    | 0.60   |
+| SK hynix  | HFS256G39TND-N210A | 256 GB | 129     | 365   | 249   | 0.59   |
+| SK hynix  | SC401 SATA         | 512 GB | 24      | 468   | 321   | 0.57   |
 | SK hynix  | SC210 mSATA        | 128 GB | 5       | 493   | 16    | 0.55   |
-| SK hynix  | SC401 SATA         | 512 GB | 19      | 421   | 338   | 0.54   |
-| SK hynix  | SHGS31-500GS-2     | 500 GB | 27      | 260   | 73    | 0.54   |
-| SK hynix  | SC308 SATA         | 256 GB | 23      | 291   | 63    | 0.53   |
+| SK hynix  | HFS256G39TNH-73A0A | 256 GB | 7       | 197   | 255   | 0.54   |
 | SK hynix  | HFS128G3BMND-3210A | 128 GB | 5       | 191   | 0     | 0.52   |
-| SK hynix  | HFS128G39TND-N210A | 128 GB | 99      | 271   | 102   | 0.45   |
-| SK hynix  | HFS512G39TND-N210A | 512 GB | 15      | 377   | 505   | 0.45   |
+| SK hynix  | SC308 SATA         | 256 GB | 29      | 311   | 84    | 0.51   |
+| SK hynix  | HFS128G39TND-N210A | 128 GB | 114     | 302   | 179   | 0.45   |
+| SK hynix  | HFS512G39TND-N210A | 512 GB | 17      | 342   | 446   | 0.42   |
+| SK hynix  | HFS256G32TNH-73A0A | 256 GB | 13      | 234   | 116   | 0.39   |
 | SK hynix  | HFS128G39MND-3310A | 128 GB | 2       | 141   | 0     | 0.39   |
-| SK hynix  | SC308 SATA         | 128 GB | 17      | 246   | 94    | 0.38   |
-| SK hynix  | HFS256G32TNH-73A0A | 256 GB | 12      | 237   | 126   | 0.38   |
 | SK hynix  | HFS1T9G3H2X069N    | 1.9 TB | 4       | 132   | 0     | 0.36   |
-| SK hynix  | HFS256G3BTND-N210A | 256 GB | 10      | 159   | 1     | 0.36   |
+| SK hynix  | SC308 SATA         | 128 GB | 20      | 241   | 88    | 0.36   |
 | SK hynix  | SH920 2.5 7MM      | 256 GB | 12      | 809   | 93    | 0.35   |
-| SK hynix  | HFS128G39TNF-N3A0A | 128 GB | 8       | 164   | 1     | 0.34   |
-| SK hynix  | HFS128G32TND-N210A | 128 GB | 12      | 418   | 179   | 0.31   |
-| SK hynix  | HFS128G3BTND-N210A | 128 GB | 9       | 386   | 75    | 0.27   |
+| SK hynix  | HFS256G3BTND-N210A | 256 GB | 12      | 190   | 3     | 0.32   |
+| SK hynix  | HFS128G39TNF-N3A0A | 128 GB | 10      | 146   | 1     | 0.31   |
+| SK hynix  | HFS128G32TND-N210A | 128 GB | 14      | 405   | 313   | 0.27   |
 | SK hynix  | HFS256G39MND-2300A | 256 GB | 8       | 539   | 106   | 0.27   |
 | SK hynix  | HFS128G38MNB-2200A | 128 GB | 7       | 865   | 68    | 0.24   |
-| SK hynix  | HFS256G32MND-2900A | 256 GB | 5       | 353   | 25    | 0.20   |
+| SK hynix  | HFS128G3BTND-N210A | 128 GB | 12      | 407   | 416   | 0.21   |
+| SK hynix  | HFS256G32MND-2900A | 256 GB | 6       | 337   | 50    | 0.17   |
 | SK hynix  | HFS480G3H2X069N    | 480 GB | 8       | 60    | 0     | 0.17   |
-| SK hynix  | SC210 2.5 7MM      | 128 GB | 5       | 459   | 18    | 0.15   |
 | SK hynix  | HFS3T8G3H2X069N    | 3.8 TB | 64      | 49    | 0     | 0.14   |
 | SK hynix  | SC313 SATA         | 256 GB | 2       | 46    | 0     | 0.13   |
+| SK hynix  | VK1920GFLKL        | 1.9 TB | 2       | 41    | 0     | 0.11   |
 | SK hynix  | SH920 mSATA        | 256 GB | 7       | 583   | 154   | 0.10   |
 | SK hynix  | HFS1T9G32FEH-7A10A | 1.9 TB | 3       | 35    | 0     | 0.10   |
+| SK hynix  | HFS256G32MND-2200A | 256 GB | 14      | 527   | 113   | 0.09   |
 | SK hynix  | HFS960G32FEH-7A10A | 960 GB | 2       | 33    | 0     | 0.09   |
-| SK hynix  | HFS256G32MND-2200A | 256 GB | 7       | 338   | 88    | 0.07   |
-| SK hynix  | HFS060G32MNB-2000A | 64 GB  | 4       | 406   | 177   | 0.07   |
+| SK hynix  | HFS128G3AMNB-2200A | 128 GB | 14      | 529   | 331   | 0.08   |
 | SK hynix  | SC210 2.5 7MM      | 512 GB | 2       | 481   | 436   | 0.06   |
+| SK hynix  | HFS060G32MNB-2000A | 64 GB  | 5       | 442   | 150   | 0.06   |
 | SK hynix  | HFS1T9G32FEH-BA10A | 1.9 TB | 2       | 21    | 0     | 0.06   |
 | SK hynix  | HFS128G32MND-2200A | 128 GB | 3       | 264   | 128   | 0.05   |
 | SK hynix  | HFS128G39MNC-2300A | 128 GB | 5       | 417   | 197   | 0.05   |
 | SK hynix  | SH920 2.5 7MM      | 512 GB | 10      | 832   | 206   | 0.05   |
-| SK hynix  | SC210 mSATA        | 256 GB | 7       | 348   | 53    | 0.05   |
-| SK hynix  | HFS128G3AMNB-2200A | 128 GB | 9       | 408   | 455   | 0.04   |
-| SK hynix  | SH920 mSATA        | 128 GB | 7       | 284   | 146   | 0.03   |
+| SK hynix  | SC210 mSATA        | 256 GB | 8       | 336   | 49    | 0.04   |
+| SK hynix  | SH920 mSATA        | 128 GB | 8       | 331   | 130   | 0.04   |
+| SK hynix  | HFS256G3AMNB-2200A | 256 GB | 22      | 528   | 936   | 0.03   |
 | SK hynix  | SC210 2.5 7MM      | 256 GB | 7       | 507   | 530   | 0.01   |
-| SK hynix  | HFS064G3AMNB-2200A | 64 GB  | 2       | 406   | 585   | 0.00   |
 | SK hynix  | SH920 2.5 7MM      | 128 GB | 2       | 547   | 915   | 0.00   |
 | SK hynix  | HFS960G3H2X069N    | 960 GB | 2       | 1     | 0     | 0.00   |
-| SK hynix  | HFS256G3AMNB-2200A | 256 GB | 17      | 528   | 967   | 0.00   |
+| SK hynix  | HFS064G3AMNB-2200A | 64 GB  | 3       | 345   | 497   | 0.00   |

@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Biwintech | SSD SX500          | 512 GB | 1       | 11    | 0     | 0.03   |
+| Biwintech | SSD SX500          | 512 GB | 2       | 310   | 0     | 0.85   |

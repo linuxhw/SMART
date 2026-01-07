@@ -17,7 +17,12 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| FIKWOT    | FS810              | 250 GB | 2       | 82    | 0     | 0.23   |
-| FIKWOT    | FN203              | 1 TB   | 3       | 59    | 0     | 0.16   |
-| FIKWOT    | FN203              | 256 GB | 3       | 36    | 0     | 0.10   |
+| FIKWOT    | FS810              | 2 TB   | 5       | 125   | 0     | 0.34   |
+| FIKWOT    | FN203              | 1 TB   | 5       | 101   | 0     | 0.28   |
+| FIKWOT    | FS810              | 250 GB | 5       | 94    | 0     | 0.26   |
+| FIKWOT    | FS810              | 1 TB   | 3       | 89    | 0     | 0.24   |
+| FIKWOT    | FN203              | 256 GB | 4       | 37    | 0     | 0.10   |
+| FIKWOT    | FX815              | 512 GB | 4       | 24    | 0     | 0.07   |
+| FIKWOT    | FN203              | 512 GB | 2       | 17    | 0     | 0.05   |
+| FIKWOT    | FX815              | 2 TB   | 2       | 10    | 0     | 0.03   |
 | FIKWOT    | FS810              | 4 TB   | 4       | 2     | 0     | 0.01   |

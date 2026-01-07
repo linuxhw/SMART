@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| DERLER    | SSD                | 120 GB | 1       | 188   | 0     | 0.52   |
+| DERLER    | SSD                | 120 GB | 2       | 261   | 0     | 0.72   |

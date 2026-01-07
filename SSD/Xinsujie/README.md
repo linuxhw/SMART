@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Xinsujie  | XSJ-X100-128GB     | 128 GB | 1       | 0     | 0     | 0.00   |
+| Xinsujie  | XSJ-X100-128GB     | 128 GB | 2       | 15    | 7     | 0.00   |

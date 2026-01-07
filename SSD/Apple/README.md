@@ -23,32 +23,32 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Apple     | SSD SM768E         | 752 GB | 4       | 1234  | 0     | 3.38   |
-| Apple     | SSD SM1024F        | 1 TB   | 21      | 1231  | 1     | 3.28   |
-| Apple     | SSD TS256C         | 256 GB | 17      | 1125  | 1     | 2.73   |
-| Apple     | SSD SM128E         | 121 GB | 12      | 965   | 2     | 2.17   |
-| Apple     | SSD SM0512F        | 500 GB | 71      | 709   | 1     | 1.89   |
-| Apple     | SSD SM1024G        | 1 TB   | 14      | 681   | 0     | 1.87   |
-| Apple     | SSD SM0256F        | 256 GB | 62      | 686   | 1     | 1.86   |
+| Apple     | SSD SM1024F        | 1 TB   | 25      | 1149  | 1     | 2.95   |
+| Apple     | SSD SM768E         | 752 GB | 5       | 1001  | 0     | 2.74   |
+| Apple     | SSD TS256C         | 256 GB | 22      | 1050  | 1     | 2.60   |
+| Apple     | SSD SM1024G        | 1 TB   | 19      | 757   | 0     | 2.08   |
+| Apple     | SSD SM128E         | 121 GB | 14      | 888   | 2     | 2.03   |
+| Apple     | SSD SM0512F        | 500 GB | 87      | 713   | 1     | 1.91   |
 | Apple     | SSD SM0128F        | 121 GB | 5       | 675   | 0     | 1.85   |
-| Apple     | SSD SM512E         | 500 GB | 20      | 626   | 1     | 1.70   |
-| Apple     | SSD SD256E         | 256 GB | 5       | 536   | 0     | 1.47   |
-| Apple     | SSD SM0512G        | 500 GB | 55      | 527   | 0     | 1.44   |
-| Apple     | SSD SD512E         | 500 GB | 4       | 517   | 0     | 1.42   |
-| Apple     | SSD TS064C         | 64 GB  | 7       | 476   | 0     | 1.31   |
-| Apple     | SSD SM256E         | 256 GB | 26      | 469   | 0     | 1.29   |
+| Apple     | SSD SM0256F        | 256 GB | 79      | 678   | 1     | 1.84   |
+| Apple     | SSD SM512E         | 500 GB | 24      | 631   | 1     | 1.72   |
+| Apple     | SSD SD256E         | 256 GB | 7       | 593   | 0     | 1.63   |
+| Apple     | SSD SM0512G        | 500 GB | 78      | 596   | 1     | 1.60   |
+| Apple     | SSD SD512E         | 500 GB | 6       | 555   | 0     | 1.52   |
+| Apple     | SSD SM256E         | 256 GB | 38      | 526   | 2     | 1.42   |
+| Apple     | SSD TS064C         | 64 GB  | 12      | 498   | 0     | 1.37   |
 | Apple     | SSD TS128A         | 121 GB | 2       | 461   | 0     | 1.26   |
-| Apple     | SSD SM0256G        | 256 GB | 81      | 429   | 0     | 1.18   |
-| Apple     | SSD SM128C         | 121 GB | 7       | 430   | 9     | 0.94   |
-| Apple     | SSD SM0128G        | 121 GB | 199     | 340   | 2     | 0.89   |
-| Apple     | SSD TS128C         | 121 GB | 16      | 342   | 1     | 0.85   |
+| Apple     | SSD SM0256G        | 256 GB | 102     | 430   | 0     | 1.18   |
+| Apple     | SSD SM0128G        | 121 GB | 242     | 400   | 1     | 1.05   |
+| Apple     | SSD TS128C         | 121 GB | 19      | 350   | 1     | 0.88   |
+| Apple     | SSD SM128C         | 121 GB | 11      | 352   | 200   | 0.72   |
 | Apple     | SSD SD128E         | 121 GB | 4       | 237   | 0     | 0.65   |
-| Apple     | SSD SD0256F        | 256 GB | 21      | 140   | 1     | 0.35   |
-| Apple     | SSD SD0128F        | 121 GB | 73      | 122   | 1     | 0.32   |
-| Apple     | SSD SM256C         | 256 GB | 9       | 344   | 433   | 0.14   |
-| Apple     | SSD TS0128F        | 121 GB | 9       | 90    | 43    | 0.11   |
-| Apple     | SSD TS064E         | 64 GB  | 3       | 76    | 330   | 0.10   |
-| Apple     | SSD TS128E         | 121 GB | 18      | 72    | 111   | 0.09   |
+| Apple     | SSD SD0128F        | 121 GB | 107     | 153   | 1     | 0.41   |
+| Apple     | SSD SD0256F        | 256 GB | 24      | 135   | 1     | 0.34   |
+| Apple     | SSD SM256C         | 256 GB | 12      | 311   | 433   | 0.14   |
+| Apple     | SSD TS0128F        | 121 GB | 11      | 87    | 35    | 0.13   |
+| Apple     | SSD TS128E         | 121 GB | 21      | 71    | 145   | 0.08   |
+| Apple     | SSD TS064E         | 64 GB  | 4       | 67    | 261   | 0.07   |
 
 SSD by Family
 -------------
@@ -63,7 +63,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Apple     | JMicron/Maxiotek ba... | 2      | 33      | 746   | 1     | 1.82   |
-| Apple     | JMicron based SSDs     | 1      | 7       | 476   | 0     | 1.31   |
-| Apple     | SD/SM/TS E/F/G SSDs    | 18     | 686     | 470   | 2     | 1.25   |
-| Apple     | MacBook Air SSD        | 2      | 21      | 73    | 142   | 0.09   |
+| Apple     | JMicron/Maxiotek ba... | 3      | 53      | 674   | 1     | 1.71   |
+| Apple     | SD/SM/TS E/F/G SSDs    | 18     | 877     | 491   | 1     | 1.31   |
+| Apple     | MacBook Air SSD        | 2      | 25      | 71    | 163   | 0.08   |

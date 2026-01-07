@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Silico... | SM2246XT           | 128 GB | 2       | 10    | 0     | 0.03   |
+| Silico... | SM2246XT           | 120 GB | 3       | 13    | 0     | 0.04   |

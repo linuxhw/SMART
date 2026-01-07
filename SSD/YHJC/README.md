@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| YHJC      | YHS200A512HI47     | 512 GB | 2       | 119   | 0     | 0.33   |
+| YHJC      | YHS200A512HI47     | 512 GB | 7       | 64    | 0     | 0.18   |

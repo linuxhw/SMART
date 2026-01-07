@@ -17,26 +17,42 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Lexar     | SSD                | 256 GB | 9       | 522   | 0     | 1.43   |
+| Lexar     | SSD                | 256 GB | 14      | 486   | 0     | 1.33   |
 | Lexar     | 500GB SSD          | 500 GB | 14      | 147   | 1     | 0.37   |
+| Lexar     | SSD NM610PRO       | 1 TB   | 20      | 123   | 1     | 0.32   |
+| Lexar     | SSD NM620          | 2 TB   | 39      | 116   | 0     | 0.32   |
 | Lexar     | 250GB SSD          | 250 GB | 7       | 115   | 0     | 0.32   |
-| Lexar     | SSD NM610PRO       | 1 TB   | 11      | 113   | 0     | 0.31   |
-| Lexar     | SSD NM7A1          | 2 TB   | 5       | 94    | 0     | 0.26   |
-| Lexar     | SSD NM790          | 4 TB   | 40      | 70    | 0     | 0.19   |
-| Lexar     | SSD NM620          | 512 GB | 30      | 63    | 1     | 0.16   |
-| Lexar     | SSD NM620          | 1 TB   | 42      | 57    | 0     | 0.16   |
+| Lexar     | SSD NM7A1          | 2 TB   | 7       | 110   | 0     | 0.30   |
+| Lexar     | SSD NM760          | 1 TB   | 3       | 110   | 0     | 0.30   |
+| Lexar     | SSD NM7A1          | 1 TB   | 17      | 96    | 0     | 0.26   |
+| Lexar     | SSD NQ700          | 1 TB   | 2       | 96    | 0     | 0.26   |
+| Lexar     | SSD NM710          | 2 TB   | 21      | 89    | 0     | 0.25   |
+| Lexar     | SSD NM620          | 512 GB | 56      | 92    | 1     | 0.25   |
+| Lexar     | SSD NM620          | 1 TB   | 78      | 87    | 0     | 0.24   |
+| Lexar     | SSD NM790          | 4 TB   | 69      | 86    | 0     | 0.24   |
+| Lexar     | SSD NM710          | 1 TB   | 32      | 84    | 0     | 0.23   |
+| Lexar     | SSD NM710          | 500 GB | 3       | 81    | 0     | 0.22   |
+| Lexar     | SSD NQ790          | 2 TB   | 13      | 77    | 0     | 0.21   |
+| Lexar     | SSD NM800PRO       | 1 TB   | 5       | 63    | 0     | 0.18   |
+| Lexar     | SSD NM790          | 512 GB | 2       | 62    | 0     | 0.17   |
+| Lexar     | SSD NM790          | 2 TB   | 81      | 60    | 1     | 0.16   |
 | Lexar     | SSD NM800PRO       | 2 TB   | 3       | 54    | 0     | 0.15   |
-| Lexar     | SSD NQ790          | 2 TB   | 2       | 53    | 0     | 0.15   |
-| Lexar     | SSD NM790          | 2 TB   | 37      | 53    | 0     | 0.15   |
-| Lexar     | SSD NM620          | 2 TB   | 22      | 50    | 0     | 0.14   |
-| Lexar     | SSD NM710          | 500 GB | 2       | 44    | 0     | 0.12   |
-| Lexar     | SSD NM790          | 1 TB   | 28      | 41    | 0     | 0.12   |
-| Lexar     | SSD NM620          | 256 GB | 10      | 31    | 1     | 0.09   |
-| Lexar     | SSD NM710          | 1 TB   | 17      | 30    | 0     | 0.08   |
+| Lexar     | SSD PLAY           | 1 TB   | 3       | 52    | 0     | 0.14   |
+| Lexar     | SSD NM790          | 1 TB   | 55      | 48    | 0     | 0.13   |
+| Lexar     | SSD ARES           | 2 TB   | 2       | 48    | 0     | 0.13   |
+| Lexar     | SSD NQ790          | 4 TB   | 5       | 35    | 0     | 0.10   |
+| Lexar     | SSD NM620          | 256 GB | 22      | 31    | 1     | 0.08   |
+| Lexar     | SSD NM1090 PRO     | 2 TB   | 3       | 30    | 0     | 0.08   |
 | Lexar     | SSD NM610PRO       | 2 TB   | 9       | 29    | 0     | 0.08   |
-| Lexar     | SSD NM710          | 2 TB   | 8       | 27    | 0     | 0.07   |
-| Lexar     | SSD NQ790          | 1 TB   | 3       | 18    | 0     | 0.05   |
-| Lexar     | SSD NM7A1          | 1 TB   | 8       | 15    | 0     | 0.04   |
-| Lexar     | SSD NM800PRO       | 1 TB   | 3       | 11    | 0     | 0.03   |
-| Lexar     | SSD NM6A1          | 512 GB | 4       | 3     | 0     | 0.01   |
-| Lexar     | SSD NM760          | 1 TB   | 2       | 2     | 0     | 0.01   |
+| Lexar     | SSD ARES           | 4 TB   | 2       | 26    | 0     | 0.07   |
+| Lexar     | SSD NQ710          | 1 TB   | 3       | 23    | 0     | 0.07   |
+| Lexar     | SSD NM6A1          | 512 GB | 6       | 23    | 0     | 0.06   |
+| Lexar     | SSD EQ790          | 2 TB   | 2       | 21    | 0     | 0.06   |
+| Lexar     | SSD NQ700          | 2 TB   | 2       | 17    | 0     | 0.05   |
+| Lexar     | SSD NM6A1          | 1 TB   | 3       | 17    | 0     | 0.05   |
+| Lexar     | SSD NQ790          | 1 TB   | 13      | 15    | 0     | 0.04   |
+| Lexar     | SSD NM610 PRO      | 1 TB   | 2       | 3     | 0     | 0.01   |
+| Lexar     | SSD EQ790          | 1 TB   | 4       | 2     | 0     | 0.01   |
+| Lexar     | SSD NM610 PRO      | 500 GB | 4       | 0     | 0     | 0.00   |
+| Lexar     | SSD NQ780          | 1 TB   | 2       | 0     | 0     | 0.00   |
+| Lexar     | SSD NQ710          | 500 GB | 2       | 0     | 0     | 0.00   |

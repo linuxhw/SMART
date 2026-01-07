@@ -23,24 +23,24 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Apple     | HDD ST3000DM001    | 3 TB   | 6       | 1289  | 340   | 2.84   |
 | Apple     | HDD ST2000LM003    | 2 TB   | 2       | 973   | 0     | 2.67   |
+| Apple     | HDD ST3000DM001    | 3 TB   | 8       | 1071  | 293   | 2.14   |
 | Apple     | HDD HTS727575A9... | 752 GB | 6       | 767   | 0     | 2.10   |
-| Apple     | HDD ST1000DM003    | 1 TB   | 81      | 800   | 55    | 1.87   |
-| Apple     | HDD ST500LM012     | 500 GB | 8       | 611   | 0     | 1.68   |
-| Apple     | HDD HTS541010A9... | 1 TB   | 122     | 856   | 125   | 1.62   |
+| Apple     | HDD ST1000DM003    | 1 TB   | 110     | 858   | 74    | 2.09   |
+| Apple     | HDD HTS541010A9... | 1 TB   | 152     | 886   | 118   | 1.71   |
+| Apple     | HDD ST1000LM024    | 1 TB   | 24      | 901   | 13    | 1.58   |
 | Apple     | HDD ST750LM022     | 752 GB | 3       | 570   | 0     | 1.56   |
-| Apple     | HDD HTS545050A7... | 500 GB | 84      | 550   | 34    | 1.34   |
-| Apple     | HDD ST1000LM024    | 1 TB   | 18      | 779   | 7     | 1.17   |
+| Apple     | HDD ST500LM012     | 500 GB | 10      | 519   | 0     | 1.42   |
+| Apple     | HDD HTS545050A7... | 500 GB | 102     | 622   | 69    | 1.41   |
+| Apple     | HDD ST2000DM001    | 2 TB   | 25      | 627   | 587   | 1.17   |
 | Apple     | HDD HUA722010CL... | 1 TB   | 4       | 502   | 55    | 1.14   |
-| Apple     | HDD HTS541010A9... | 1 TB   | 49      | 500   | 9     | 1.11   |
-| Apple     | HDD ST2000DM001    | 2 TB   | 17      | 552   | 442   | 1.01   |
+| Apple     | HDD HTS541010A9... | 1 TB   | 65      | 476   | 26    | 1.04   |
+| Apple     | HDD WDC WD10EAL... | 1 TB   | 13      | 1155  | 172   | 0.98   |
 | Apple     | HDD HTS541075A9... | 752 GB | 2       | 323   | 0     | 0.89   |
-| Apple     | HDD WD10EZES-40... | 1 TB   | 3       | 766   | 75    | 0.70   |
-| Apple     | HDD HTS547550A9... | 500 GB | 17      | 381   | 18    | 0.63   |
-| Apple     | HDD WDC WD10EAL... | 1 TB   | 5       | 1099  | 75    | 0.56   |
-| Apple     | HDD TOSHIBA MK5... | 500 GB | 7       | 235   | 59    | 0.45   |
-| Apple     | HDD HTS547575A9... | 752 GB | 3       | 906   | 57    | 0.19   |
+| Apple     | HDD HTS547575A9... | 752 GB | 4       | 882   | 43    | 0.70   |
+| Apple     | HDD WD10EZES-40... | 1 TB   | 4       | 597   | 57    | 0.59   |
+| Apple     | HDD HTS547550A9... | 500 GB | 23      | 453   | 104   | 0.54   |
+| Apple     | HDD TOSHIBA MK5... | 500 GB | 9       | 277   | 47    | 0.49   |
 
 HDD by Family
 -------------
@@ -55,16 +55,15 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| Apple     | Seagate Barracuda 7... | 1      | 6       | 1289  | 340   | 2.84   |
 | Apple     | Travelstar 7K750       | 1      | 6       | 767   | 0     | 2.10   |
-| Apple     | Barracuda              | 1      | 81      | 800   | 55    | 1.87   |
-| Apple     | Seagate Samsung Spi... | 1      | 8       | 611   | 0     | 1.68   |
+| Apple     | Seagate Barracuda 7... | 2      | 118     | 872   | 88    | 2.09   |
+| Apple     | Momentus               | 1      | 24      | 901   | 13    | 1.58   |
 | Apple     | SpinPoint              | 1      | 3       | 570   | 0     | 1.56   |
-| Apple     | Travelstar 5K1000      | 3      | 173     | 749   | 91    | 1.47   |
-| Apple     | HGST Travelstar Z5K500 | 1      | 84      | 550   | 34    | 1.34   |
-| Apple     | Momentus               | 1      | 18      | 779   | 7     | 1.17   |
+| Apple     | Travelstar 5K1000      | 3      | 219     | 759   | 90    | 1.50   |
+| Apple     | Seagate Samsung Spi... | 1      | 10      | 519   | 0     | 1.42   |
+| Apple     | HGST Travelstar Z5K500 | 1      | 102     | 622   | 69    | 1.41   |
+| Apple     | Barracuda 7200.12      | 1      | 25      | 627   | 587   | 1.17   |
 | Apple     | Ultrastar A7K2000      | 1      | 4       | 502   | 55    | 1.14   |
-| Apple     | Barracuda 7200.12      | 1      | 17      | 552   | 442   | 1.01   |
-| Apple     | HGST Travelstar 5K750  | 2      | 20      | 460   | 24    | 0.57   |
-| Apple     | Western Digital Blue   | 1      | 5       | 1099  | 75    | 0.56   |
-| Apple     | MK..65GSXF             | 1      | 7       | 235   | 59    | 0.45   |
+| Apple     | Western Digital Blue   | 1      | 13      | 1155  | 172   | 0.98   |
+| Apple     | HGST Travelstar 5K750  | 2      | 27      | 516   | 95    | 0.56   |
+| Apple     | MK..65GSXF             | 1      | 9       | 277   | 47    | 0.49   |

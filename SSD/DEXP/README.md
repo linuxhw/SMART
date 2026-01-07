@@ -17,8 +17,9 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| DEXP      | SSD C100 512Gb     | 512 GB | 9       | 64    | 0     | 0.18   |
-| DEXP      | SSD C100 128Gb     | 128 GB | 12      | 39    | 0     | 0.11   |
-| DEXP      | SSD C100 1024Gb    | 1 TB   | 10      | 27    | 2     | 0.07   |
-| DEXP      | SSD C100 256Gb     | 256 GB | 13      | 15    | 0     | 0.04   |
+| DEXP      | SSD C100 512Gb     | 512 GB | 17      | 76    | 1     | 0.16   |
+| DEXP      | SSD C100 128Gb     | 128 GB | 22      | 61    | 1     | 0.14   |
+| DEXP      | Q100SMRIMY256      | 256 GB | 2       | 50    | 0     | 0.14   |
+| DEXP      | SSD C100 1024Gb    | 1 TB   | 12      | 46    | 1     | 0.13   |
+| DEXP      | SSD C100 256Gb     | 256 GB | 22      | 12    | 0     | 0.04   |
 | DEXP      | SSD C100 1Tb       | 1 TB   | 2       | 7     | 0     | 0.02   |

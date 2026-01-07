@@ -18,4 +18,5 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | BR        | 256GB              | 256 GB | 2       | 27    | 0     | 0.08   |
-| BR        | 512GB              | 512 GB | 3       | 12    | 0     | 0.03   |
+| BR        | 512GB              | 512 GB | 5       | 12    | 0     | 0.03   |
+| BR        | 1TB                | 1 TB   | 2       | 2     | 0     | 0.01   |

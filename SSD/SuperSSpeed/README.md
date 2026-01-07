@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SuperS... | S540               | 240 GB | 3       | 317   | 15    | 0.41   |
+| SuperS... | S540               | 240 GB | 6       | 235   | 177   | 0.40   |

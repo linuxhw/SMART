@@ -17,11 +17,11 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KingFast  | SSD                | 32 GB  | 2       | 440   | 0     | 1.21   |
 | KingFast  | SSD                | 64 GB  | 6       | 403   | 1     | 1.11   |
-| KingFast  | SSD                | 512 GB | 28      | 246   | 0     | 0.67   |
-| KingFast  | SSD                | 240 GB | 11      | 216   | 0     | 0.59   |
-| KingFast  | SSD                | 256 GB | 46      | 157   | 1     | 0.43   |
-| KingFast  | SSD                | 128 GB | 29      | 150   | 1     | 0.40   |
-| KingFast  | SSD                | 1 TB   | 13      | 87    | 0     | 0.24   |
-| KingFast  | SSD                | 120 GB | 15      | 164   | 208   | 0.23   |
+| KingFast  | SSD                | 32 GB  | 3       | 309   | 0     | 0.85   |
+| KingFast  | SSD                | 512 GB | 38      | 235   | 0     | 0.64   |
+| KingFast  | SSD                | 240 GB | 17      | 253   | 2     | 0.60   |
+| KingFast  | SSD                | 256 GB | 64      | 206   | 2     | 0.49   |
+| KingFast  | SSD                | 1 TB   | 21      | 187   | 1     | 0.49   |
+| KingFast  | SSD                | 128 GB | 33      | 170   | 1     | 0.46   |
+| KingFast  | SSD                | 120 GB | 18      | 188   | 173   | 0.33   |

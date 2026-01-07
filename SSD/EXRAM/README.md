@@ -17,5 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| EXRAM     | SSD                | 256 GB | 2       | 239   | 0     | 0.66   |
+| EXRAM     | SSD                | 256 GB | 3       | 161   | 0     | 0.44   |
 | EXRAM     | SSD                | 512 GB | 3       | 96    | 100   | 0.04   |

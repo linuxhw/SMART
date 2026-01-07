@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Aarvex    | 256GB SSD          | 256 GB | 2       | 2     | 0     | 0.01   |
+| Aarvex    | 256GB SSD          | 256 GB | 3       | 47    | 0     | 0.13   |

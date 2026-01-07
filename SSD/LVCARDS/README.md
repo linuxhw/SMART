@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| LVCARDS   | SSD128G            | 128 GB | 1       | 229   | 0     | 0.63   |
+| LVCARDS   | SSD240G            | 240 GB | 2       | 110   | 0     | 0.30   |

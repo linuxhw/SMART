@@ -17,4 +17,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Fury      | HyperX 3D          | 240 GB | 5       | 498   | 0     | 1.37   |
+| Fury      | HyperX 3D          | 240 GB | 8       | 860   | 0     | 2.36   |
+| Fury      | HyperX 3D          | 120 GB | 2       | 367   | 0     | 1.01   |

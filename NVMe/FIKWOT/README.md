@@ -17,6 +17,14 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| FIKWOT    | FN501 Pro          | 2 TB   | 2       | 404   | 0     | 1.11   |
+| FIKWOT    | FN960              | 1 TB   | 4       | 176   | 0     | 0.48   |
+| FIKWOT    | FN955              | 4 TB   | 5       | 90    | 0     | 0.25   |
 | FIKWOT    | FN955              | 2 TB   | 3       | 66    | 0     | 0.18   |
-| FIKWOT    | FN955              | 4 TB   | 2       | 56    | 0     | 0.15   |
+| FIKWOT    | FN950              | 1 TB   | 2       | 66    | 0     | 0.18   |
+| FIKWOT    | FN501 Pro          | 512 GB | 3       | 65    | 0     | 0.18   |
 | FIKWOT    | FN501 Pro          | 1 TB   | 4       | 35    | 0     | 0.10   |
+| FIKWOT    | FX991              | 2 TB   | 5       | 14    | 0     | 0.04   |
+| FIKWOT    | FX550              | 512 GB | 2       | 4     | 0     | 0.01   |
+| FIKWOT    | FX991              | 4 TB   | 2       | 0     | 0     | 0.00   |
+| FIKWOT    | FX991              | 1 TB   | 3       | 0     | 0     | 0.00   |

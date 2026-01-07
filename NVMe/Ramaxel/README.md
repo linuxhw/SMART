@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Ramaxel   | RPITJ256MEE1OWX    | 256 GB | 4       | 20    | 0     | 0.06   |
+| Ramaxel   | RPITJ256MEE1OWX    | 256 GB | 5       | 19    | 0     | 0.05   |

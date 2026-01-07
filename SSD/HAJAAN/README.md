@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| HAJAAN    | HS256E             | 256 GB | 2       | 335   | 0     | 0.92   |
+| HAJAAN    | HS256E             | 256 GB | 3       | 351   | 0     | 0.96   |

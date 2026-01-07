@@ -19,16 +19,24 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Patriot   | Hellfire M2        | 480 GB | 2       | 1152  | 0     | 3.16   |
 | Patriot   | Hellfire M2        | 240 GB | 3       | 400   | 0     | 1.10   |
-| Patriot   | Scorch M2          | 512 GB | 5       | 255   | 0     | 0.70   |
-| Patriot   | P300               | 512 GB | 3       | 184   | 0     | 0.51   |
-| Patriot   | Scorch M2          | 128 GB | 8       | 182   | 0     | 0.50   |
-| Patriot   | P300               | 128 GB | 8       | 173   | 0     | 0.48   |
-| Patriot   | M.2 P300           | 2 TB   | 6       | 135   | 0     | 0.37   |
+| Patriot   | P300               | 512 GB | 4       | 398   | 0     | 1.09   |
+| Patriot   | Scorch M2          | 512 GB | 6       | 364   | 0     | 1.00   |
+| Patriot   | P300               | 128 GB | 9       | 230   | 0     | 0.63   |
+| Patriot   | P300               | 256 GB | 8       | 223   | 0     | 0.61   |
+| Patriot   | Scorch M2          | 256 GB | 12      | 217   | 0     | 0.60   |
+| Patriot   | M.2 P310           | 1.9 TB | 2       | 214   | 0     | 0.59   |
+| Patriot   | M.2 P400           | 512 GB | 2       | 198   | 0     | 0.54   |
+| Patriot   | Scorch M2          | 128 GB | 9       | 196   | 0     | 0.54   |
+| Patriot   | M.2 P300           | 2 TB   | 8       | 150   | 0     | 0.41   |
 | Patriot   | P300               | 1 TB   | 5       | 120   | 0     | 0.33   |
-| Patriot   | P300               | 256 GB | 7       | 104   | 0     | 0.29   |
-| Patriot   | Scorch M2          | 256 GB | 7       | 81    | 0     | 0.22   |
-| Patriot   | M.2 P300           | 256 GB | 32      | 73    | 0     | 0.20   |
-| Patriot   | M.2 P300           | 512 GB | 17      | 77    | 1     | 0.20   |
-| Patriot   | M.2 P300           | 128 GB | 23      | 85    | 7     | 0.17   |
-| Patriot   | M.2 P300           | 1 TB   | 11      | 98    | 6     | 0.11   |
-| Patriot   | M.2 P310           | 240 GB | 4       | 37    | 0     | 0.10   |
+| Patriot   | M.2 P310           | 480 GB | 4       | 83    | 0     | 0.23   |
+| Patriot   | M.2 P300           | 256 GB | 54      | 77    | 0     | 0.21   |
+| Patriot   | M.2 P300           | 512 GB | 34      | 81    | 1     | 0.21   |
+| Patriot   | M.2 P310           | 240 GB | 8       | 71    | 0     | 0.19   |
+| Patriot   | M.2 P300           | 1 TB   | 23      | 92    | 3     | 0.18   |
+| Patriot   | M.2 P300           | 128 GB | 38      | 62    | 6     | 0.13   |
+| Patriot   | M.2 P320           | 256 GB | 6       | 23    | 0     | 0.07   |
+| Patriot   | P400L              | 250 GB | 2       | 15    | 0     | 0.04   |
+| Patriot   | P400L              | 1 TB   | 4       | 4     | 0     | 0.01   |
+| Patriot   | M.2 P320           | 512 GB | 5       | 0     | 0     | 0.00   |
+| Patriot   | P400L              | 2 TB   | 2       | 0     | 0     | 0.00   |

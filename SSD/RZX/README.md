@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| RZX       | 19SSD6G-480GB      | 480 GB | 2       | 134   | 0     | 0.37   |
+| RZX       | 19SSD6G-480GB      | 480 GB | 3       | 653   | 1     | 0.76   |

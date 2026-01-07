@@ -17,13 +17,21 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| YMTC      | PC005              | 512 GB | 48      | 101   | 0     | 0.28   |
-| YMTC      | PC005              | 1 TB   | 6       | 81    | 0     | 0.22   |
-| YMTC      | PC005              | 256 GB | 13      | 79    | 3     | 0.22   |
-| YMTC      | PC300-1TB-B        | 1 TB   | 20      | 51    | 0     | 0.14   |
+| YMTC      | PC005              | 1 TB   | 7       | 143   | 0     | 0.39   |
+| YMTC      | PC005              | 512 GB | 51      | 101   | 0     | 0.28   |
+| YMTC      | PC300-1TB-B        | 1 TB   | 31      | 98    | 0     | 0.27   |
+| YMTC      | PC005              | 256 GB | 14      | 85    | 3     | 0.23   |
+| YMTC      | YMSS1ED02B21MC     | 128 GB | 5       | 63    | 0     | 0.18   |
+| YMTC      | PC300-512GB-B      | 512 GB | 34      | 56    | 0     | 0.15   |
+| YMTC      | PC300-1TB-D        | 1 TB   | 11      | 33    | 0     | 0.09   |
 | YMTC      | PC210-512GB-B      | 512 GB | 5       | 21    | 0     | 0.06   |
-| YMTC      | PC300-512GB-B      | 512 GB | 20      | 19    | 0     | 0.05   |
-| YMTC      | PC300-1TB-D        | 1 TB   | 9       | 14    | 0     | 0.04   |
-| YMTC      | YMSS2ED08D25MC     | 1 TB   | 3       | 13    | 0     | 0.04   |
-| YMTC      | PC411-1TB-B        | 1 TB   | 2       | 0     | 0     | 0.00   |
+| YMTC      | YMSS2ED08D25MC     | 1 TB   | 21      | 19    | 0     | 0.05   |
+| YMTC      | PC411-1TB-D        | 1 TB   | 4       | 17    | 0     | 0.05   |
+| YMTC      | PC41Q-1TB-B        | 1 TB   | 4       | 16    | 0     | 0.05   |
+| YMTC      | PC411-1024GB-B     | 1 TB   | 2       | 16    | 0     | 0.04   |
+| YMTC      | PC411-2048GB-B     | 2 TB   | 2       | 12    | 0     | 0.03   |
+| YMTC      | PC411-1TB-B        | 1 TB   | 5       | 5     | 0     | 0.01   |
+| YMTC      | PC41Q-512GB-B      | 512 GB | 4       | 1     | 0     | 0.00   |
+| YMTC      | PC300-512GB-D      | 512 GB | 2       | 1     | 0     | 0.00   |
 | YMTC      | YMSS1ED04B21MC     | 256 GB | 2       | 0     | 0     | 0.00   |
+| YMTC      | YMSS2CD08D25MC     | 1 TB   | 2       | 0     | 0     | 0.00   |

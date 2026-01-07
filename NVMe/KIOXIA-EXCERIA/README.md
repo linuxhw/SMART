@@ -17,11 +17,12 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| KIOXIA... | SSD                | 250 GB | 3       | 329   | 0     | 0.90   |
-| KIOXIA... | SSD                | 1 TB   | 9       | 303   | 0     | 0.83   |
+| KIOXIA... | SSD                | 250 GB | 4       | 448   | 0     | 1.23   |
+| KIOXIA... | SSD                | 1 TB   | 14      | 328   | 0     | 0.90   |
 | KIOXIA... | PLUS SSD           | 1 TB   | 7       | 203   | 0     | 0.56   |
-| KIOXIA... | SSD                | 500 GB | 30      | 191   | 2     | 0.51   |
-| KIOXIA... | PLUS G2 SSD        | 500 GB | 16      | 179   | 0     | 0.49   |
-| KIOXIA... | PRO SSD            | 1 TB   | 8       | 100   | 0     | 0.28   |
-| KIOXIA... | G2 SSD             | 1 TB   | 51      | 73    | 0     | 0.20   |
-| KIOXIA... | PLUS G3 SSD        | 2 TB   | 11      | 23    | 0     | 0.06   |
+| KIOXIA... | SSD                | 500 GB | 37      | 190   | 2     | 0.51   |
+| KIOXIA... | PLUS G2 SSD        | 500 GB | 18      | 179   | 0     | 0.49   |
+| KIOXIA... | G2 SSD             | 1 TB   | 80      | 114   | 0     | 0.31   |
+| KIOXIA... | PRO SSD            | 1 TB   | 20      | 70    | 0     | 0.19   |
+| KIOXIA... | PLUS G3 SSD        | 2 TB   | 38      | 46    | 0     | 0.13   |
+| KIOXIA... | with Heatsink SSD  | 2 TB   | 2       | 3     | 0     | 0.01   |

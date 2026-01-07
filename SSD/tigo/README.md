@@ -17,4 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| tigo      | SSD                | 120 GB | 3       | 286   | 0     | 0.78   |
+| tigo      | SSD                | 240 GB | 2       | 282   | 0     | 0.78   |
+| tigo      | SSD                | 120 GB | 4       | 246   | 0     | 0.68   |
+| tigo      | SSD                | 128 GB | 2       | 201   | 0     | 0.55   |

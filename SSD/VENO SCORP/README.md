@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| VENO S... | SSD                | 240 GB | 1       | 326   | 0     | 0.89   |
-| VENO S... | SSD                | 256 GB | 1       | 142   | 0     | 0.39   |
+| VENO S... | SSD                | 256 GB | 2       | 545   | 0     | 1.49   |

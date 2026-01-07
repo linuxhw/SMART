@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| MACROVIP  | SSD                | 240 GB | 1       | 134   | 0     | 0.37   |
+| MACROVIP  | MV240GB            | 240 GB | 2       | 57    | 6     | 0.03   |

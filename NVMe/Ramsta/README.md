@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Ramsta    | R900 M.2 NVMe SSD  | 512 GB | 2       | 138   | 0     | 0.38   |
+| Ramsta    | R900 M.2 NVMe SSD  | 512 GB | 3       | 124   | 0     | 0.34   |
