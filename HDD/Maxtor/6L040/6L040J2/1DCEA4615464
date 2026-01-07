@@ -1,0 +1,205 @@
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.2-desktop-3omv2590] (OpenMandriva Lx 7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Maxtor DiamondMax Plus D740X
+Device Model:     MAXTOR 6L040J2
+Serial Number:    --
+Firmware Version: A93.0500
+User Capacity:    40,027,029,504 bytes [40.0 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        In smartctl database
+ATA Version is:   ATA/ATAPI-5 T13/1321D revision 1
+Local Time is:    Wed Jun 18 13:16:00 2025 BST
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+AAM feature is:   Disabled
+APM feature is:   Unavailable
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+DSN feature is:   Unavailable
+ATA Security is:  Disabled, frozen [SEC2]
+Wt Cache Reorder: Unavailable
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x80)	Offline data collection activity
+					was never started.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(   35) seconds.
+Offline data collection
+capabilities: 			 (0x1b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   2) minutes.
+Extended self-test routine
+recommended polling time: 	 (  20) minutes.
+
+SMART Attributes Data Structure revision number: 11
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     P--R-K   100   100   020    -    0
+  3 Spin_Up_Time            POS--K   081   080   020    -    2434
+  4 Start_Stop_Count        -O--CK   086   086   008    -    9686
+  5 Reallocated_Sector_Ct   PO--CK   100   099   020    -    0
+  7 Seek_Error_Rate         PO-R--   100   093   023    -    0
+  9 Power_On_Hours          -O--C-   066   066   001    -    22490
+ 10 Spin_Retry_Count        -OS--K   100   100   000    -    0
+ 11 Calibration_Retry_Count PO--C-   100   100   020    -    0
+ 12 Power_Cycle_Count       -O--CK   091   091   008    -    6356
+ 13 Read_Soft_Error_Rate    PO-R--   100   100   023    -    0
+194 Temperature_Celsius     -O---K   085   076   042    -    39
+195 Hardware_ECC_Recovered  -O-RC-   100   064   000    -    1002370
+196 Reallocated_Event_Count ----C-   100   253   020    -    0
+197 Current_Pending_Sector  -O--CK   100   099   020    -    0
+198 Offline_Uncorrectable   ----C-   100   253   000    -    0
+199 UDMA_CRC_Error_Count    -O-RC-   129   129   000    -    71
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+Read SMART Log Directory failed: scsi error badly formed scsi parameters
+
+ATA_READ_LOG_EXT (addr=0x00:0x00, page=0, n=1) failed: scsi error badly formed scsi parameters
+Read GP Log Directory failed
+
+SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
+
+SMART Error Log Version: 1
+ATA Error Count: 274 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 274 occurred at disk power-on lifetime: 18176 hours (757 days + 8 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 08 68 6c 54 f2  Error: UNC 8 sectors at LBA = 0x02546c68 = 39087208
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 02 08 68 6c 54 f2 54      00:01:21.877  READ DMA
+  f8 04 00 00 00 00 f0 a8      00:01:21.877  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 b0 00      00:01:21.874  IDENTIFY DEVICE
+  ef 00 45 00 00 00 b0 18      00:01:21.872  SET FEATURES [Reserved subcommand]
+  f8 00 00 00 00 00 f0 18      00:01:21.866  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 273 occurred at disk power-on lifetime: 18176 hours (757 days + 8 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 08 68 6c 54 f2  Error: UNC 8 sectors at LBA = 0x02546c68 = 39087208
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 02 08 68 6c 54 f2 54      00:01:16.830  READ DMA
+  f8 02 00 00 00 00 f0 54      00:01:16.830  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 04 00 00 00 00 b0 a8      00:01:16.827  IDENTIFY DEVICE
+  ef 04 45 00 00 00 b0 a8      00:01:16.825  SET FEATURES [Enable auto DR] [OBS-4]
+  f8 00 00 00 00 00 f0 00      00:01:16.819  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 272 occurred at disk power-on lifetime: 18176 hours (757 days + 8 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 08 68 6c 54 f2  Error: UNC 8 sectors at LBA = 0x02546c68 = 39087208
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 02 08 68 6c 54 f2 54      00:01:11.433  READ DMA
+  f8 04 00 00 00 00 f0 a8      00:01:11.413  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 02 00 00 00 00 b0 54      00:01:11.410  IDENTIFY DEVICE
+  ef 00 45 00 00 00 b0 00      00:01:11.407  SET FEATURES [Reserved subcommand]
+  f8 04 00 00 00 00 f0 a8      00:01:11.402  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 271 occurred at disk power-on lifetime: 18176 hours (757 days + 8 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 08 68 6c 54 f2  Error: UNC 8 sectors at LBA = 0x02546c68 = 39087208
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 02 08 68 6c 54 f2 54      00:01:06.001  READ DMA
+  f8 04 00 00 00 00 f0 a8      00:01:06.000  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 00 00 00 00 00 b0 00      00:01:05.997  IDENTIFY DEVICE
+  ef 02 45 00 00 00 b0 54      00:01:05.995  SET FEATURES [Enable write cache]
+  f8 04 00 00 00 00 f0 a8      00:01:05.989  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+Error 270 occurred at disk power-on lifetime: 18176 hours (757 days + 8 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  40 d1 08 68 6c 54 f2  Error: UNC 8 sectors at LBA = 0x02546c68 = 39087208
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  c8 02 08 68 6c 54 f2 54      00:01:00.588  READ DMA
+  f8 04 00 00 00 00 f0 a8      00:01:00.588  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+  ec 04 00 00 00 00 b0 a8      00:01:00.585  IDENTIFY DEVICE
+  ef 04 45 00 00 00 b0 a8      00:01:00.583  SET FEATURES [Enable auto DR] [OBS-4]
+  f8 00 00 00 00 00 f0 95      00:01:00.577  READ NATIVE MAX ADDRESS [OBS-ACS-3]
+
+SMART Extended Self-test Log (GP Log 0x07) not supported
+
+SMART Self-test log structure revision number 1
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
+
+Selective Self-tests/Logging not supported
+
+SCT Commands not supported
+
+Device Statistics (GP/SMART Log 0x04) not supported
+
+Pending Defects log (GP Log 0x0c) not supported
+
+SATA Phy Event Counters (GP Log 0x11) not supported
+
+
+
