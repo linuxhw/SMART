@@ -10,7 +10,7 @@ User Capacity:    80,025,280,000 bytes [80.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 2
-Local Time is:    Mon Aug 25 13:19:44 2025 +05
+Local Time is:    Sun Sep 21 21:32:27 2025 +05
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -55,16 +55,16 @@ recommended polling time: 	 (  58) minutes.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   068   059   006    -    205374544
+  1 Raw_Read_Error_Rate     POSR--   066   059   006    -    128769531
   3 Spin_Up_Time            PO----   098   098   000    -    0
-  4 Start_Stop_Count        -O--CK   099   099   020    -    1439
+  4 Start_Stop_Count        -O--CK   099   099   020    -    1474
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   087   060   030    -    552736005
-  9 Power_On_Hours          -O--CK   088   088   000    -    10991
+  7 Seek_Error_Rate         POSR--   087   060   030    -    563158205
+  9 Power_On_Hours          -O--CK   088   088   000    -    11142
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   094   094   020    -    6314
-194 Temperature_Celsius     -O---K   044   054   000    -    44
-195 Hardware_ECC_Recovered  -O-RC-   068   059   000    -    205374544
+ 12 Power_Cycle_Count       -O--CK   094   094   020    -    6408
+194 Temperature_Celsius     -O---K   048   054   000    -    48
+195 Hardware_ECC_Recovered  -O-RC-   066   059   000    -    128769531
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   148   000    -    340
@@ -100,7 +100,7 @@ Address    Access  R/W   Size  Description
 0xff       GPL     -    24064  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 270 (device log contains only the most recent 20 errors)
+Device Error Count: 272 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -115,6 +115,40 @@ Device Error Count: 270 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 272 [11] occurred at disk power-on lifetime: 6003 hours (250 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:01:56.786  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:01:55.930  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:02:09.498  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:02:09.498  RECALIBRATE [OBS-4]
+  00 00 00 00 10 00 0f 00 00 00 01 00 00     00:02:09.497  NOP [Abort queued commands]
+
+Error 271 [10] occurred at disk power-on lifetime: 6003 hours (250 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:01:56.786  READ DMA EXT
+  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:01:55.930  SET MULTIPLE MODE
+  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:01:55.930  INITIALIZE DEVICE PARAMETERS [OBS-6]
+  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:01:55.920  RECALIBRATE [OBS-4]
+  00 00 00 00 01 00 00 00 00 00 00 00 00     00:01:55.920  NOP [Abort queued commands]
 
 Error 270 [9] occurred at disk power-on lifetime: 6003 hours (250 days + 3 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -217,40 +251,6 @@ Error 265 [4] occurred at disk power-on lifetime: 6003 hours (250 days + 3 hours
   91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:01:46.368  INITIALIZE DEVICE PARAMETERS [OBS-6]
   10 00 20 00 01 00 01 00 00 00 01 e1 00     00:01:44.899  RECALIBRATE [OBS-4]
   00 00 00 00 01 00 00 00 00 00 00 00 00     00:01:44.210  NOP [Abort queued commands]
-
-Error 264 [3] occurred at disk power-on lifetime: 6003 hours (250 days + 3 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:01:56.786  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:01:55.930  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:02:09.498  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:02:09.498  RECALIBRATE [OBS-4]
-  00 00 00 00 10 00 0f 00 00 00 01 00 00     00:02:09.497  NOP [Abort queued commands]
-
-Error 263 [2] occurred at disk power-on lifetime: 6003 hours (250 days + 3 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 51 00 01 00 00 00 00 00 00 e0 00  Error: ICRC, ABRT 1 sectors at LBA = 0x00000000 = 0
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  25 00 20 00 01 00 00 00 00 00 00 e0 00     00:01:56.786  READ DMA EXT
-  c6 00 20 00 10 00 0f 00 00 00 01 ef 00     00:01:55.930  SET MULTIPLE MODE
-  91 00 20 00 3f 00 0f 00 00 00 01 ef 00     00:01:55.930  INITIALIZE DEVICE PARAMETERS [OBS-6]
-  10 00 20 00 01 00 01 00 00 00 01 e1 00     00:01:55.920  RECALIBRATE [OBS-4]
-  00 00 00 00 01 00 00 00 00 00 00 00 00     00:01:55.920  NOP [Abort queued commands]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error

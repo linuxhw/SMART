@@ -1,4 +1,4 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-79-generic] (local build)
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-37-generic] (local build)
 Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -13,8 +13,8 @@ Rotation Rate:    5900 rpm
 Form Factor:      3.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-2, ACS-3 T13/2161-D revision 3b
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Sep 15 12:30:08 2025 -03
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Wed Dec 17 21:07:39 2025 -03
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
@@ -22,7 +22,7 @@ APM level is:     254 (maximum performance)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
-ATA Security is:  Disabled, NOT FROZEN [SEC1]
+ATA Security is:  Disabled, frozen [SEC2]
 Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
@@ -65,26 +65,26 @@ SCT capabilities: 	       (0x10b9)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   099   006    -    179490224
-  3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   097   097   020    -    3216
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    676236228
-  9 Power_On_Hours          -O--CK   078   078   000    -    19467
+  1 Raw_Read_Error_Rate     POSR--   117   089   006    -    131645344
+  3 Spin_Up_Time            PO----   098   097   000    -    0
+  4 Start_Stop_Count        -O--CK   097   097   020    -    3807
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    72
+  7 Seek_Error_Rate         POSR--   088   060   030    -    698991585
+  9 Power_On_Hours          -O--CK   077   077   000    -    20821
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   098   098   020    -    3029
+ 12 Power_Cycle_Count       -O--CK   097   097   020    -    3623
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   096   000    -    201866543195
-189 High_Fly_Writes         -O-RCK   023   023   000    -    77
-190 Airflow_Temperature_Cel -O---K   065   054   045    -    35 (Min/Max 29/35)
+187 Reported_Uncorrect      -O--CK   001   001   000    -    423
+188 Command_Timeout         -O--CK   100   096   000    -    201866543199
+189 High_Fly_Writes         -O-RCK   018   018   000    -    82
+190 Airflow_Temperature_Cel -O---K   068   053   045    -    32 (Min/Max 31/34)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    993
-193 Load_Cycle_Count        -O--CK   099   099   000    -    3286
-194 Temperature_Celsius     -O---K   035   046   000    -    35 (0 18 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1315
+193 Load_Cycle_Count        -O--CK   099   099   000    -    3881
+194 Temperature_Celsius     -O---K   032   047   000    -    32 (0 18 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    3
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    4
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -123,7 +123,157 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 423 (device log contains only the most recent 20 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 423 [2] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a7 00 00  Error: UNC at LBA = 0x517f43a7 = 1367294887
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  24 20 20 00 01 00 00 51 7f 43 a7 e0 00     01:52:58.580  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:58.579  WRITE SECTORS(S) EXT
+  24 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:58.550  READ SECTOR(S) EXT
+  25 20 20 00 01 00 00 51 7f 43 a7 e0 00     01:52:57.920  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:57.919  READ SECTOR(S) EXT
+
+Error 422 [1] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a7 00 00  Error: UNC at LBA = 0x517f43a7 = 1367294887
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 20 20 00 01 00 00 51 7f 43 a7 e0 00     01:52:57.920  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:57.919  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:57.918  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:57.918  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:57.918  WRITE SECTORS(S) EXT
+
+Error 421 [0] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a6 00 00  Error: UNC at LBA = 0x517f43a6 = 1367294886
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  24 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:53.868  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:53.867  WRITE SECTORS(S) EXT
+  24 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:53.837  READ SECTOR(S) EXT
+  25 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:53.218  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:53.217  READ SECTOR(S) EXT
+
+Error 420 [19] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a6 00 00  Error: UNC at LBA = 0x517f43a6 = 1367294886
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 20 20 00 01 00 00 51 7f 43 a6 e0 00     01:52:53.218  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:53.217  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:53.216  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:53.216  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:53.215  WRITE SECTORS(S) EXT
+
+Error 419 [18] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a5 00 00  Error: UNC at LBA = 0x517f43a5 = 1367294885
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  24 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:49.165  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:49.165  WRITE SECTORS(S) EXT
+  24 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:49.135  READ SECTOR(S) EXT
+  25 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:48.515  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:48.514  READ SECTOR(S) EXT
+
+Error 418 [17] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a5 00 00  Error: UNC at LBA = 0x517f43a5 = 1367294885
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 20 20 00 01 00 00 51 7f 43 a5 e0 00     01:52:48.515  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:48.514  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:48.514  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a3 e0 00     01:52:48.514  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:48.513  WRITE SECTORS(S) EXT
+
+Error 417 [16] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a4 00 00  Error: UNC at LBA = 0x517f43a4 = 1367294884
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  24 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:44.463  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a3 e0 00     01:52:44.463  WRITE SECTORS(S) EXT
+  24 20 20 00 01 00 00 51 7f 43 a3 e0 00     01:52:44.433  READ SECTOR(S) EXT
+  25 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:43.803  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a3 e0 00     01:52:43.802  READ SECTOR(S) EXT
+
+Error 416 [15] occurred at disk power-on lifetime: 20445 hours (851 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 51 7f 43 a4 00 00  Error: UNC at LBA = 0x517f43a4 = 1367294884
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 20 20 00 01 00 00 51 7f 43 a4 e0 00     01:52:43.803  READ DMA EXT
+  24 20 20 00 01 00 00 51 7f 43 a3 e0 00     01:52:43.802  READ SECTOR(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a3 e0 00     01:52:43.802  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a2 e0 00     01:52:43.801  WRITE SECTORS(S) EXT
+  34 20 20 00 01 00 00 51 7f 43 a3 e0 00     01:52:43.801  WRITE SECTORS(S) EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -142,9 +292,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     29/36 Celsius
-Lifetime    Min/Max Temperature:     18/46 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     31/34 Celsius
+Lifetime    Min/Max Temperature:     18/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -152,7 +302,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        94 minutes
 Min/Max recommended Temperature:      1/61 Celsius
 Min/Max Temperature Limit:            2/60 Celsius
-Temperature History Size (Index):    128 (111)
+Temperature History Size (Index):    128 (96)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -164,7 +314,7 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

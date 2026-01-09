@@ -1,5 +1,5 @@
-smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.106-generic-1rosa2021.1-x86_64] (local build)
-Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.6.106-generic-1rosa2021.1-x86_64] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Fujitsu MHV
@@ -8,9 +8,9 @@ Serial Number:    --
 Firmware Version: 004200A0
 User Capacity:    112,403,595,264 bytes [112 GB]
 Sector Size:      512 bytes logical/physical
-Device is:        In smartctl database 7.3/5528
+Device is:        In smartctl database 7.5/5706
 ATA Version is:   ATA/ATAPI-7 T13/1532D revision 4a
-Local Time is:    Fri Oct 17 11:45:05 2025 MSK
+Local Time is:    Sun Nov  2 01:11:31 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM level is:     254 (maximum performance), recommended: 254
@@ -19,15 +19,14 @@ Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
 ATA Security is:  Disabled, frozen [SEC2]
-Wt Cache Reorder: Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
 See vendor-specific Attribute list for marginal Attributes.
 
 General SMART Values:
-Offline data collection status:  (0x80)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 					Auto Offline Data Collection: Enabled.
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -62,26 +61,26 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   043   046    Past 204002
+  1 Raw_Read_Error_Rate     POSR--   100   043   046    Past 239926
   2 Throughput_Performance  P-S---   100   100   030    -    27328924
   3 Spin_Up_Time            PO----   100   100   025    -    1
-  4 Start_Stop_Count        -O--CK   099   099   000    -    2645
+  4 Start_Stop_Count        -O--CK   099   099   000    -    2669
   5 Reallocated_Sector_Ct   PO--CK   100   100   024    -    58 (1962 38)
-  7 Seek_Error_Rate         POSR--   100   091   047    -    1865
+  7 Seek_Error_Rate         POSR--   100   091   047    -    2593
   8 Seek_Time_Performance   P-S---   100   100   019    -    0
-  9 Power_On_Seconds        -O--CK   088   088   000    -    6074h+11m+04s
+  9 Power_On_Seconds        -O--CK   088   088   000    -    6110h+16m+18s
  10 Spin_Retry_Count        PO--C-   100   100   020    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    2589
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    2613
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    15
-193 Load_Cycle_Count        -O--CK   097   097   000    -    74335
-194 Temperature_Celsius     -O---K   100   100   000    -    32 (Min/Max 9/52)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    5524
+193 Load_Cycle_Count        -O--CK   097   097   000    -    74373
+194 Temperature_Celsius     -O---K   100   100   000    -    35 (Min/Max 9/52)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    6369
 196 Reallocated_Event_Count -O--CK   100   100   000    -    58 (2 6729)
 197 Current_Pending_Sector  -O--C-   100   091   000    -    1
 198 Offline_Uncorrectable   ----C-   072   072   000    -    57
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    1
-200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    5806
-203 Run_Out_Cancel          -O----   100   100   000    -    3728039675455
+200 Multi_Zone_Error_Rate   POSR--   100   100   060    -    7728
+203 Run_Out_Cancel          -O----   100   100   000    -    3728044131724
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -272,9 +271,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  2
 SCT Version (vendor specific):       0 (0x0000)
-Device State:                        Active (0)
-Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     --/33 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     --/35 Celsius
 Lifetime    Min/Max Temperature:     --/52 Celsius
 
 SCT Temperature History Version:     2
@@ -282,7 +281,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/65 Celsius
-Temperature History Size (Index):    128 (4)
+Temperature History Size (Index):    128 (30)
 
 SCT Error Recovery Control:
            Read: Disabled

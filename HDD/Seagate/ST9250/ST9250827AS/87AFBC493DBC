@@ -10,11 +10,11 @@ Rotation Rate:    5400 rpm
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 1.5 Gb/s
-Local Time is:    Mon Oct 20 21:36:31 2025 CEST
+Local Time is:    Wed Oct 22 19:56:02 2025 CEST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Unavailable
-APM level is:     254 (maximum performance)
+APM level is:     128 (minimum power consumption without standby)
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 DSN feature is:   Unavailable
@@ -35,11 +35,11 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 Total time to complete Offline 
 data collection: 		(  426) seconds.
 Offline data collection
-capabilities: 			 (0x5b) SMART execute Offline immediate.
+capabilities: 			 (0x53) SMART execute Offline immediate.
 					Auto Offline data collection on/off support.
 					Suspend Offline collection upon new
 					command.
-					Offline surface scan supported.
+					No Offline surface scan supported.
 					Self-test supported.
 					No Conveyance Self-test supported.
 					Selective Self-test supported.
@@ -58,21 +58,21 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   253   006    -    0
-  3 Spin_Up_Time            PO----   100   099   000    -    0
-  4 Start_Stop_Count        -O--CK   095   095   020    -    5725
+  3 Spin_Up_Time            PO----   099   099   000    -    0
+  4 Start_Stop_Count        -O--CK   095   095   020    -    5734
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   074   060   030    -    77716978890
-  9 Power_On_Hours          -O--CK   095   095   000    -    5195
+  7 Seek_Error_Rate         POSR--   074   060   030    -    77717125353
+  9 Power_On_Hours          -O--CK   095   095   000    -    5196
  10 Spin_Retry_Count        PO--C-   100   100   034    -    0
- 12 Power_Cycle_Count       -O--CK   095   095   020    -    5912
+ 12 Power_Cycle_Count       -O--CK   095   095   020    -    5921
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   055   033   045    Past 45 (Min/Max 12/67 #342)
+190 Airflow_Temperature_Cel -O---K   065   033   045    Past 35 (Min/Max 12/67 #342)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    635
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1481
-193 Load_Cycle_Count        -O---K   072   072   000    -    57938
-194 Temperature_Celsius     -O-RC-   045   067   000    -    45 (0 12 0 0 0)
-195 Hardware_ECC_Recovered  -O--C-   079   048   000    -    133190518
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1488
+193 Load_Cycle_Count        -O---K   072   072   000    -    57965
+194 Temperature_Celsius     -O-RC-   035   067   000    -    35 (0 12 0 0 0)
+195 Hardware_ECC_Recovered  -O--C-   074   048   000    -    207478287
 197 Current_Pending_Sector  ----C-   100   100   000    -    0
 198 Offline_Uncorrectable   -OSRCK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   200   200   000    -    1
@@ -137,7 +137,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       521 (0x0209)
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
+Current Temperature:                    35 Celsius
 Power Cycle Min/Max Temperature:     --/ 0 Celsius
 Lifetime    Min/Max Temperature:     --/ 0 Celsius
 
@@ -151,14 +151,14 @@ Pending Defects log (GP Log 0x0c) not supported
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
 0x8002  2            0  Vendor specific
-0x8003  2            1  Vendor specific
+0x8003  2            0  Vendor specific
 0x8004  2            0  Vendor specific
 

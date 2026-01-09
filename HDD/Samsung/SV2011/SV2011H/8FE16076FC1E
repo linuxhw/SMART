@@ -1,4 +1,4 @@
-smartctl 7.3 2022-02-28 r5338 [i686-linux-6.1.57-0-lts] (local build)
+smartctl 7.3 2022-02-28 r5338 [i686-linux-6.1.60-0-lts] (local build)
 Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -9,7 +9,7 @@ User Capacity:    20,060,135,424 bytes [20.0 GB]
 Sector Size:      512 bytes logical/physical
 Device is:        Not in smartctl database 7.3/5319
 ATA Version is:   ATA/ATAPI-6 T13/1410D revision 1
-Local Time is:    Wed Nov  1 17:55:06 2023 EDT
+Local Time is:    Tue Nov  7 11:56:00 2023 EST
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 AAM feature is:   Disabled
@@ -55,13 +55,13 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-R--   100   100   051    -    0
-  4 Start_Stop_Count        -O--CK   100   100   000    -    140
+  4 Start_Stop_Count        -O--CK   100   100   000    -    144
   5 Reallocated_Sector_Ct   PO--CK   253   253   010    -    0
   7 Seek_Error_Rate         -O-R--   253   253   051    -    0
   8 Seek_Time_Performance   --S--K   253   253   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    227 (0 21 0)
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    126
-194 Temperature_Celsius     -O---K   181   103   000    -    19
+  9 Power_On_Hours          -O--CK   100   100   000    -    123 (0 28 0)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    129
+194 Temperature_Celsius     -O---K   118   103   000    -    40
 197 Current_Pending_Sector  -O--CK   253   253   010    -    0
 198 Offline_Uncorrectable   ----CK   253   253   010    -    0
 199 UDMA_CRC_Error_Count    -O-R--   100   100   000    -    0
@@ -87,7 +87,9 @@ Address    Access  R/W   Size  Description
 SMART Extended Comprehensive Error Log (GP Log 0x03) not supported
 
 SMART Error Log Version: 1
-ATA Error Count: 34305 (device log contains only the most recent five errors)
+Warning: ATA error count 35841 inconsistent with error log pointer 5
+
+ATA Error Count: 35841 (device log contains only the most recent five errors)
 	CR = Command Register [HEX]
 	FR = Features Register [HEX]
 	SC = Sector Count Register [HEX]
@@ -102,7 +104,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 34305 occurred at disk power-on lifetime: 11264 hours (469 days + 8 hours)
+Error 35841 occurred at disk power-on lifetime: 12544 hours (522 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -114,12 +116,12 @@ Error 34305 occurred at disk power-on lifetime: 11264 hours (469 days + 8 hours)
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
   a1 00 01 01 00 00 a0 00  29d+13:25:37.920  IDENTIFY PACKET DEVICE
+  ef 03 0c 01 c2 4f a0 00  24d+21:39:06.880  SET FEATURES [Set transfer mode]
+  08 00 01 01 00 00 a0 00  29d+13:25:37.920  DEVICE RESET
   00 00 01 01 00 00 00 00  40d+09:28:39.680  NOP [Abort queued commands]
-  e0 00 00 00 00 00 a0 00  40d+09:25:09.505  STANDBY IMMEDIATE
-  e7 00 08 d0 87 89 a0 00  40d+09:25:09.505  FLUSH CACHE
-  c8 00 08 d0 87 89 e0 00      04:36:06.785  READ DMA
+  e3 03 00 01 c2 4f a0 00  24d+21:39:06.880  IDLE
 
-Error 34304 occurred at disk power-on lifetime: 11264 hours (469 days + 8 hours)
+Error 35840 occurred at disk power-on lifetime: 12544 hours (522 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -132,11 +134,11 @@ Error 34304 occurred at disk power-on lifetime: 11264 hours (469 days + 8 hours)
   -- -- -- -- -- -- -- --  ----------------  --------------------
   08 00 01 01 00 00 a0 00  29d+13:25:37.920  DEVICE RESET
   00 00 01 01 00 00 00 00  40d+09:28:39.680  NOP [Abort queued commands]
-  e0 00 00 00 00 00 a0 00  40d+09:25:09.505  STANDBY IMMEDIATE
-  e7 00 08 d0 87 89 a0 00  40d+09:25:09.505  FLUSH CACHE
-  c8 00 08 d0 87 89 e0 00      04:36:06.785  READ DMA
+  e3 03 00 01 c2 4f a0 00  24d+21:39:06.880  IDLE
+  ef 03 45 01 c2 4f a0 00  24d+21:39:06.880  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 c2 4f a0 00  24d+21:39:06.880  SET FEATURES [Set transfer mode]
 
-Error 34303 occurred at disk power-on lifetime: 10240 hours (426 days + 16 hours)
+Error 35839 occurred at disk power-on lifetime: 12544 hours (522 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -147,13 +149,13 @@ Error 34303 occurred at disk power-on lifetime: 10240 hours (426 days + 16 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 01 01 00 00 a0 00  14d+00:58:51.520  IDENTIFY PACKET DEVICE
-  00 00 01 01 00 00 00 00  48d+03:54:28.480  NOP [Abort queued commands]
-  ca 00 08 20 0b 6a e0 00   1d+16:32:23.040  WRITE DMA
-  ca 00 08 98 0b 64 e0 00   1d+16:32:23.040  WRITE DMA
-  08 00 01 01 00 00 a0 00  14d+00:58:51.520  DEVICE RESET
+  a1 00 01 01 00 00 a0 00  29d+13:25:37.920  IDENTIFY PACKET DEVICE
+  ef 03 0c 01 c2 4f a0 00  24d+21:39:06.880  SET FEATURES [Set transfer mode]
+  08 00 01 01 00 00 a0 00  29d+13:25:37.920  DEVICE RESET
+  00 00 01 01 00 00 00 00  40d+09:28:39.680  NOP [Abort queued commands]
+  e3 03 00 01 c2 4f a0 00  24d+21:39:06.880  IDLE
 
-Error 34302 occurred at disk power-on lifetime: 10240 hours (426 days + 16 hours)
+Error 35838 occurred at disk power-on lifetime: 12544 hours (522 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -164,13 +166,13 @@ Error 34302 occurred at disk power-on lifetime: 10240 hours (426 days + 16 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  08 00 01 01 00 00 a0 00  14d+00:58:51.520  DEVICE RESET
-  00 00 01 01 00 00 00 00  24d+21:01:53.280  NOP [Abort queued commands]
-  00 00 01 01 00 00 00 00  48d+03:54:28.480  NOP [Abort queued commands]
-  ca 00 08 20 0b 6a e0 00   1d+16:32:23.040  WRITE DMA
-  ca 00 08 98 0b 64 e0 00   1d+16:32:23.040  WRITE DMA
+  08 00 01 01 00 00 a0 00  29d+13:25:37.920  DEVICE RESET
+  00 00 01 01 00 00 00 00  40d+09:28:39.680  NOP [Abort queued commands]
+  e3 03 00 01 c2 4f a0 00  24d+21:39:06.880  IDLE
+  ef 03 45 01 c2 4f a0 00  24d+21:39:06.880  SET FEATURES [Set transfer mode]
+  ef 03 0c 01 c2 4f a0 00  24d+21:39:06.880  SET FEATURES [Set transfer mode]
 
-Error 34301 occurred at disk power-on lifetime: 10240 hours (426 days + 16 hours)
+Error 35837 occurred at disk power-on lifetime: 12544 hours (522 days + 16 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -181,11 +183,11 @@ Error 34301 occurred at disk power-on lifetime: 10240 hours (426 days + 16 hours
   Commands leading to the command that caused the error were:
   CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
   -- -- -- -- -- -- -- --  ----------------  --------------------
-  a1 00 01 01 00 00 a0 00  40d+11:22:04.160  IDENTIFY PACKET DEVICE
-  00 00 01 01 00 00 00 00   1d+14:23:24.160  NOP [Abort queued commands]
-  00 00 01 01 00 00 00 00  29d+13:02:30.400  NOP [Abort queued commands]
-  e7 00 08 d0 87 89 a0 00  29d+13:02:30.400  FLUSH CACHE
-  c8 00 08 d0 87 89 e0 00  38d+20:35:32.480  READ DMA
+  a1 00 01 01 00 00 a0 00  29d+13:25:37.920  IDENTIFY PACKET DEVICE
+  e0 00 00 00 00 00 a0 00  15d+15:08:32.385  STANDBY IMMEDIATE
+  e7 00 08 d0 87 89 a0 00  15d+15:08:32.385  FLUSH CACHE
+  c8 00 08 d0 87 89 e0 00  24d+22:41:34.465  READ DMA
+  08 00 01 01 00 00 a0 00  29d+13:25:37.920  DEVICE RESET
 
 SMART Extended Self-test Log (GP Log 0x07) not supported
 
